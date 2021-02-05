@@ -1,0 +1,38 @@
+# c_tlacolula
+
+# County Title
+title=c_tlacolula
+
+# Settlements
+max_settlements=3
+
+b_tlacolula_de_matamoros_OA=castle
+b_san_pablo_villa_de_mitla_OA=temple
+#b_guelavia_OA=castle
+
+# Misc
+culture=zapotec
+religion=mictlantec
+terrain=hills
+
+#History
+
+850.1.1={
+	build_wonder=wonder_mausoleum_mitla
+}
+951.1.1={
+	set_wonder_stage=1
+	build_wonder_upgrade=upgrade_grand_mural
+	build_wonder_upgrade=upgrade_unmarked_tombs
+}
+1200.1.1={
+	set_wonder_stage=2
+	build_wonder_upgrade=upgrade_north_group
+}
+1553.1.1={
+	destroy_wonder_upgrade=upgrade_north_group
+}
+2437.11.31={
+	build_wonder_upgrade=upgrade_guiding_flame
+	build_wonder_upgrade=upgrade_north_group
+}

@@ -1,0 +1,471 @@
+###ÄNSI
+14400000={ #Gran Hijo del Sol
+	name="Eramarhandikua"
+	culture=purepecha
+	religion=sol_invicta
+	martial=5
+	diplomacy=6
+	stewardship=6
+	intrigue=4
+	learning=10
+	trait=charitable
+	trait=zealous
+	trait=trusting
+	trait=mastermind_theologian
+	2609.1.17={birth=yes}
+	2700.1.1={death=yes}
+}
+14400001={ #Arzobispo Primado del Sagrado Corazón
+	name="David"
+	culture=chilango
+	religion=sacred_heart
+	martial=5
+	diplomacy=6
+	stewardship=6
+	intrigue=4
+	learning=10
+	trait=charitable
+	trait=zealous
+	trait=marian_santa_muerte
+	trait=trusting
+	trait=mastermind_theologian
+	2603.1.17={birth=yes}
+	2700.1.1={death=yes}
+}
+14400002={ #Rey de Cristo
+	name="Nicolas"
+	culture=abajeno
+	religion=cristo_rey
+	martial=10
+	diplomacy=4
+	stewardship=4
+	intrigue=2
+	learning=3
+	trait=tough_soldier
+	trait=duelist
+	trait=strong
+	trait=brave
+	trait=trusting
+	trait=kind
+	trait=honest
+	2623.1.17={birth=yes}
+	2700.1.1={death=yes}
+}	
+14400003={ #Guerrero
+	name="Tlanesi"
+	dynasty=1428035
+	culture=nahua
+	religion=mictlantec
+	martial=3
+	diplomacy=4
+	stewardship=4
+	intrigue=4
+	learning=3
+	trait=intricate_webweaver
+	trait=mystic
+	trait=strong
+	trait=arbitrary
+	trait=deceitful
+	trait=ambitious
+	2576.1.17={birth=yes}
+	2639.1.12={death=yes}
+}
+14400004={ #Guerrero
+	name="Kuautleketski"
+	dynasty=1428035
+	culture=nahua
+	religion=mictlantec
+	martial=10
+	diplomacy=4
+	stewardship=4
+	intrigue=2
+	learning=3
+	trait=tough_soldier
+	trait=duelist
+	trait=strong
+	trait=brave
+	trait=trusting
+	trait=kind
+	trait=honest
+	father=14400003
+	2623.1.17={birth=yes}
+	2700.1.1={death=yes}
+}
+14400005={ #Menonite Governor Chihuahua - pre Luis
+	name="Jeremías"
+	dynasty=2029091 # Insbern
+	trait=craven
+	trait=humble
+	culture=plautdietsch
+	religion=anabaptist
+	2567.1.1={birth=yes}
+	2620.1.1={death=yes}
+}
+#2200051={ #Menonite Count Chihuahua - post Luis
+#	name="Friedrich" 
+#	dynasty=2029091
+#	female=no
+#	martial=7
+#	diplomacy=4
+#	stewardship=5
+#	intrigue=8
+#	learning=5
+#	trait=grey_eminence
+#	trait=mystic
+#	trait=deceitful 
+#	trait=cynical 
+#	trait=proud
+#	trait=ambitious
+#	disallow_random_traits=yes
+#	culture=plautdietsch
+#	religion=atomicist
+#	secret_religion="anabaptist"
+#	father=14400005
+#	2608.9.5={birth=yes}
+#	2627.4.3={add_spouse=2200052}
+#	2680.3.24={death=yes}
+#}
+#2200052={ #Ex-wife of Friedrich - Executed by Luis
+#	name="Justica"
+#	dna="ccbjdjbdibg" 
+#	female=yes
+#	martial=3
+#	diplomacy=6
+#	stewardship=5
+#	intrigue=8
+#	learning=8
+#	trait=mastermind_theologian
+#	trait=fair
+#	trait=mystic
+#	trait=heresiarch 
+#	trait=zealous
+#	trait=diligent 
+#	trait=shy 
+#	disallow_random_traits=yes
+#	culture=plautdietsch
+#	religion=anabaptist
+#	2610.5.1={birth=yes}
+#	2627.4.3={add_spouse=2200051}
+#	2629.12.25={death={
+#			death_reason=death_execution_burning
+#			killer=1810200
+#		}
+#	}
+#}
+14400006={ #Yaqui Governor Sonora - pre Luis
+	name="Mateo"
+	dynasty=1700008
+	trait=brave
+	trait=humble
+	trait=just
+	culture=yaqui
+	religion=sol_invicta
+	2573.2.28={birth=yes}
+	2645.4.16={death=yes}
+}
+14400007={ #Menomex Governor Durango - pre Luis
+	name="Daniel"
+	dynasty=4001017 #Braun
+	trait=zealous
+	trait=proud
+	trait=kind
+	culture=menomex
+	religion=sacred_heart
+	2579.3.22={birth=yes}
+	2634.5.2={death={
+			death_reason=death_battle_duel #Murdered in combat.
+			killer=14400008
+		}
+	}
+}
+14400008={ #Rarámuri intermediate Durango after Rahui - post Luis
+	name="Racó"
+	dynasty=1260000
+	trait=ambitious
+	trait=wroth
+	trait=stubborn
+	trait=envious
+	trait=drunkard
+	trait=cancer
+	culture=raramuri
+	father=1325118
+	religion=sol_invicta
+	2600.7.11={birth=yes}
+	2644.7.13={death={
+			death_reason=death_trait
+		}	
+	}
+}
+14400009={ #abajeno Bishop Zacatecas - post Luis
+	name="Jacob"
+	trait=stubborn
+	trait=proud
+	trait=brave
+	trait=gardener
+	trait=mastermind_theologian
+	culture=abajeno
+	religion=cristo_rey
+	2603.2.28={birth=yes}
+	2665.1.1={
+			death={
+			death_reason=death_execution_beheading
+			killer=1810240
+		}
+	}
+}
+14400010={ #abajeno Bishop Zacatecas - pre Luis
+	name="Isaac"
+	trait=chaste
+	trait=humble
+	trait=diligent
+	trait=martial_cleric
+	culture=abajeno
+	religion=cristo_rey
+	give_nickname=nick_the_old
+	2572.2.28={birth=yes}
+	2660.4.2={death=yes}
+}
+14400011={ #abajeno San Luis Potosí - pre Luis
+	name="German"
+	dynasty=1810002
+	trait=chaste
+	trait=humble
+	trait=diligent
+	trait=tough_soldier
+	trait=gardener
+	culture=abajeno
+	religion=sacred_heart
+	2572.1.28={birth=yes}
+	2617.8.9={death=yes}
+}
+14400012={ #abajeno San Luis Potosí Father Felipe - post Luis
+	name="Pedro"
+	dynasty=1810002
+	trait=content
+	trait=lustful
+	trait=greedy
+	trait=indulgent_wastrel
+	trait=slothful
+	trait=drunkard
+	culture=abajeno
+	religion=sacred_heart
+	father=14400011
+	2596.1.4={birth=yes}
+	2616.12.4={add_spouse=14400013}
+	2652.1.1={death=yes}
+}
+14400013={ #abajeno San Luis Potosí Mother Felipe - post Luis
+	name="Magdalena"
+	female=yes
+	trait=envious
+	trait=chaste
+	trait=greedy
+	trait=indulgent_wastrel
+	trait=wroth
+	trait=drunkard
+	culture=abajeno
+	religion=sacred_heart
+	2592.1.4={birth=yes}
+	2616.12.4={add_spouse=14400012}
+	2660.1.21={death=yes}
+}
+14400014={ #Tepehuán Durango
+	name="Tanok"
+	dynasty=4001112
+	trait=kind
+	trait=trusting
+	trait=indulgent_wastrel
+	trait=chaste
+	trait=diligent
+	culture=raramuri #basically assimilated as Rarámuri
+	religion=sol_invicta
+	2627.5.12={birth=yes}
+	2701.7.13={death=yes}
+}
+
+14400015={ #Nahua Sierra Norte Puebla
+	name="Próspero"
+	dynasty=4001113
+	trait=charitable
+	trait=trusting
+	trait=charismatic_negotiator
+	trait=diligent
+	culture=nahua
+	religion=sacred_heart
+	2623.3.12={birth=yes}
+	2701.7.13={death=yes}
+}
+
+14400016={ #Founder of del Zócalo
+	name="Moisés"
+	dynasty=1823005
+	trait=adopted_child
+	trait=charitable
+	trait=trusting
+	trait=gregarious
+	trait=robust
+	trait=tough_soldier
+	trait=diligent
+	trait=humble
+	culture=chilango
+	religion=sacred_heart
+	father=1810061
+	mother=1810062
+	2575.4.3={birth=yes}
+	2608.12.20={death={
+			death_reason=death_battle_duel #Murdered in combat.
+			killer=1810200
+		}
+	}
+}
+
+14400017={ #Wives for characters that should logically have them
+	name="María del Pilar"
+	female=yes
+	trait=charitable
+	trait=thrifty_clerk
+	trait=diligent
+	trait=stressed
+	trait=gregarious
+	trait=kind
+	culture=chilango
+	religion=sol_invicta
+	2636.3.12={birth=yes}
+	2665.10.12={add_spouse=1810170}
+}
+
+14400018={
+	name="Juana" # Tía Juana
+	female=yes
+	dynasty=1912065 # Caballero
+	father=1910002
+	martial=3
+	diplomacy=4
+	stewardship=7
+	intrigue=7
+	learning=6
+	culture=mediterranean
+	religion=cetic #sacred_heart
+	trait=ambitious
+	trait=deceitful
+	trait=lustful
+	trait=cynical
+	trait=imp_ex3
+	trait=way_cowl
+	trait=charismatic_negotiator
+	2620.7.21={birth=yes
+		culture=californio
+	}
+	2640.5.19={add_spouse=1910003}
+}
+
+14400019={
+	name="Catalina" # China Poblana
+	female=yes
+	dynasty=1519028 # Popoca
+	martial=3
+	diplomacy=6
+	stewardship=7
+	intrigue=7
+	learning=6
+	culture=chino
+	religion=sacred_heart
+	trait=musician
+	trait=zealous
+	trait=fair
+	2639.7.21={
+		birth=yes
+		give_nickname=nick_the_china
+	}
+	2658.5.19={add_spouse=1810095}
+}
+
+14400020={ # Mictlantec religion head
+	name="Tiboot"
+	culture=zapotec
+	religion=mictlantec
+	martial=5
+	diplomacy=6
+	stewardship=6
+	intrigue=4
+	learning=10
+	trait=charitable
+	trait=zealous
+	trait=trusting
+	trait=mastermind_theologian
+	2602.3.11={birth=yes}
+	2700.1.1={death=yes}
+}
+
+14400020={ # Rafael Téllez - Sinaloa patrician
+	name="Rafa"
+	dynasty=4001163 # Téllez
+	culture=tapatio
+	religion=sacred_heart
+	martial=7
+	diplomacy=2
+	stewardship=3
+	intrigue=8
+	learning=3
+	trait=greedy
+	trait=zealous
+	trait=ambitious
+	trait=envious
+	trait=tough_soldier
+	2612.2.13={birth=yes}
+	2638.3.19={add_spouse=14400021}
+	2700.1.1={death=yes}
+}
+
+14400021={ # wife of Rafa
+	name="Paola"
+	female=yes
+	culture=chinola
+	religion=sacred_heart
+	martial=2
+	diplomacy=5
+	stewardship=5
+	intrigue=2
+	learning=3
+	trait=shy
+	trait=trusting
+	trait=envious
+	2615.2.13={birth=yes}
+	2638.3.19={add_spouse=14400020}
+	2700.1.1={death=yes}
+}
+
+14400022={
+	name="Chalino"
+	dynasty=4001163 # Téllez
+	culture=chinola
+	religion=sacred_heart
+	martial=4
+	diplomacy=3
+	stewardship=5
+	intrigue=2
+	learning=5
+	trait=musician
+	trait=ambitious
+	trait=brave
+	mother=14400021
+	father=14400020
+	2653.7.10={birth=yes}
+}
+
+14400023={
+	name="Rosario"
+	female=yes
+	dynasty=4001163 # Téllez
+	culture=chinola
+	religion=sacred_heart
+	martial=2
+	diplomacy=6
+	stewardship=5
+	intrigue=3
+	learning=5
+	trait=shrewd
+	mother=14400021
+	father=14400020
+	2648.7.10={birth=yes}
+}

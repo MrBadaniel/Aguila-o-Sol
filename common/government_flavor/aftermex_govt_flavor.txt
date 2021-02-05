@@ -1,0 +1,132 @@
+# After the End religion specific flavor overrides
+
+government_flavor = {
+	name = gov_hereditary_tonal
+	graphics = GFX_evt_throne_room_mesoamerican
+	priority = 2
+	trigger = {
+		OR = {
+			government = feudal_government
+			government = theocratic_feudal_government
+		}
+		NOT = { has_law = succ_feudal_elective }
+		mercenary = no
+		relgion = tonaltec
+		tier = EMPEROR
+	}
+}
+
+government_flavor = {
+	name = gov_electorial_tonal
+	graphics = GFX_evt_throne_room_mesoamerican
+	priority = 2
+	trigger = {
+		OR = {
+			government = feudal_government
+			government = theocratic_feudal_government
+		}
+		has_law = succ_feudal_elective
+		relgion = tonaltec
+		tier = EMPEROR
+	}
+}
+
+government_flavor = {
+	name = gov_hijo
+	graphics = GFX_evt_pope
+	priority = 4
+	trigger = {
+		has_landed_title = k_hijo_del_sol
+		NOT = { trait = bad_priest_christian }
+	}
+}
+
+government_flavor = {
+	name = gov_hijo_bad
+	graphics = GFX_evt_pope
+	priority = 4
+	trigger = {
+		has_landed_title = k_hijo_del_sol
+		trait = bad_priest_christian
+	}
+}
+
+government_flavor = {
+	name = gov_king_mex
+	graphics = GFX_evt_camaraderie
+	priority = 2
+	trigger = {
+		government = mex_imperial_government
+		NOT = { tier = EMPEROR }
+	}
+}
+
+government_flavor = {
+	name = gov_mex
+	graphics = GFX_evt_throne_room_byzantine
+	priority = 2
+	trigger = {
+		government = mex_imperial_government
+		tier = EMPEROR
+	}
+}
+
+government_flavor = {
+	name = gov_aztec
+	graphics = GFX_evt_sun_temple
+	priority = 2
+	trigger = {
+		independent = yes
+		NOT = {
+			has_landed_title = e_mexico
+		}
+		OR = {
+			religion = mictlantec
+			religion = 
+		}
+	}
+}
+
+government_flavor = {
+	name = gov_duchy_viceroy_mex
+	graphics = GFX_evt_market_byzantine
+	priority = 2
+	trigger = {
+		is_vice_royalty = yes
+		tier = DUKE
+		OR = {
+			culture_group = mexicano
+			culture_group = norteno
+			culture_group = mesoamerican
+			culture_group = taracahita
+		}
+	}
+}
+
+government_flavor = {
+	name = gov_king_viceroy_mex
+	graphics = GFX_evt_victory_arch_byzantine
+	priority = 2
+	trigger = {
+		is_vice_royalty = yes
+		tier = KING
+		OR = {
+			culture_group = mexicano
+			culture_group = norteno
+			culture_group = mesoamerican
+			culture_group = taracahita
+		}
+	}
+}
+
+government_flavor = {
+	name = gov_aztec_empire
+	graphics = GFX_evt_sun_temple
+	priority = 3
+	trigger = {
+		independent = yes
+		has_landed_title = e_mexico
+		religion = mictlantec
+		}
+	}
+}

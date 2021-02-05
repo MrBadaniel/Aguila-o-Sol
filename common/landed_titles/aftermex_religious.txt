@@ -1,0 +1,125 @@
+k_hijo_del_sol = {
+	color={ 240 40 40 }
+	color2={ 255 255 255 }
+	
+	capital = 1740 #Guadalajara
+	
+	title = "HIJODELSOL"
+	title_female = "HIJADELSOL"
+	foa = "POPE_FOA"
+	short_name = yes
+	
+	# Always exists
+	landless = yes
+	
+	# Controls a religion
+	controls_religion = sol_invicta
+	
+	religion = sol_invicta
+	
+	# Cannot be held as a secondary title
+	primary = yes
+
+	assimilate = no
+	
+	dynasty_title_names = no 	# Will not be named "Seljuk", etc.
+}
+
+d_cristo_rey = {
+	color = { 0.9 0.9 0.0 }
+	color2 = { 1.0 1.0 1.0}
+	
+	capital = 1767 # Mexico City
+	
+	title = "CRISTOREY"
+	title_female = "CRISTOREINA"
+	foa = "CRISTO_FOA"
+	
+	dignity = 1000
+	
+	religion = cristo_rey
+	controls_religion = cristo_rey
+	landless = yes
+	primary = yes
+	short_name = yes
+	dynasty_title_names = no
+	caliphate = yes
+	
+	allow = {
+		religion = cristo_rey
+	}
+}
+
+d_tonaltec = {
+	color = { 0.9 0.9 0.0 }
+	color2 = { 1.0 1.0 1.0}
+	
+	capital = 1767 # Mexico City
+	
+	title = "INCARNATE"
+	foa = "INCARNATE_FOA"
+	
+	religion = tonaltec
+	controls_religion = tonaltec
+	dignity = 100
+	primary = yes
+	short_name = yes
+	dynasty_title_names = no
+	caliphate = yes
+	
+	allow = {
+		religion = tonaltec
+	}
+}
+k_sagrado_corazon = {
+	color={ 240 40 40 }
+	color2={ 255 255 255 }
+	
+	capital = 1767 #Mexico City
+	
+	title = "ARZOBISPO"
+	title_female = "ARZOBISPO"
+	foa = "ECUMENICAL_PATRIARCH_FOA"
+	title_prefix = "ARCHDIOCESE_OF"
+
+	short_name = yes
+	
+	# Always exists
+	landless = yes
+	
+	# Controls a religion
+	controls_religion = sacred_heart
+	
+	religion = sacred_heart
+	
+	# Cannot be held as a secondary title
+	primary = yes
+
+	assimilate = no
+	
+	dynasty_title_names = no 	# Will not be named "Seljuk", etc.
+}
+
+d_mictlantec = {
+	color = { 204 204 204 }
+	
+	capital = 1794 # Mitla 
+	
+	title = "GREAT_SEER"
+	foa = "POPE_FOA"
+	
+	short_name = yes
+	
+	# Always exists
+	landless = yes
+	
+	# Controls a religion
+	controls_religion = mictlantec
+	
+	religion = mictlantec
+	
+	# Cannot be held as a secondary title
+	primary = yes
+	
+	dynasty_title_names = no 	# Will not be named "Seljuk", etc.
+}

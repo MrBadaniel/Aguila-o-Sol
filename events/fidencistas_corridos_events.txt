@@ -1,0 +1,2291 @@
+
+namespace = Fidencista
+
+# You commission a corrido
+character_event = {
+	id = corrido.0
+	desc = corrido.0_DESC
+	picture = GFX_evt_runestone_raising_oldgods
+	border = GFX_event_normal_frame_diplomacy
+	
+	is_triggered_only = yes
+	
+	hide_from = yes
+	
+	option = { # Based on one of your traits
+		name = corrido.0_OPTA
+		
+		custom_tooltip = {
+			text = corrido_traits
+			hidden_tooltip = { 
+				character_event = { id = corrido.1 }
+			}
+		}
+	}
+	option = { # In memory of father
+		name = corrido.0_OPTB
+		trigger = {
+			father_even_if_dead = {
+				is_alive = no
+			}
+		}
+		if = {
+			limit = { father_even_if_dead = { death_reason = death_natural } }
+			hidden_tooltip = { narrative_event = { id = corrido.10 days = 60 random = 10 } }
+		}
+		if = {
+			limit = { father_even_if_dead = { death_reason = death_battle } }
+			hidden_tooltip = { narrative_event = { id = corrido.11 days = 60 random = 10 } }
+		}
+		if = {
+			limit = { 
+				father_even_if_dead = {
+					death_execution_trigger = yes
+					NOT = { killer = { character = ROOT } }
+				} 
+			}
+			hidden_tooltip = { narrative_event = { id = corrido.12 days = 60 random = 10 } }
+		}
+		if = {
+			limit = { 
+				father_even_if_dead = { 
+					death_murder_known_trigger = yes
+					NOT = { killer = { character = ROOT } }
+				}
+			}
+			hidden_tooltip = { narrative_event = { id = corrido.13 days = 60 random = 10 } }
+		}
+		if = {
+			limit = { 
+				father_even_if_dead = { 
+					OR = {
+						death_accident_trigger = yes
+						death_murder_unknown_trigger = yes
+					} 
+				}
+			}
+			hidden_tooltip = { narrative_event = { id = corrido.15 days = 60 random = 10 } }
+		}
+		if = {
+			limit = { 
+				father_even_if_dead = {
+					death_reason = death_dungeon
+					NOT = { killer = { character = ROOT } }
+				} 
+			}
+			hidden_tooltip = { narrative_event = { id = corrido.16 days = 60 random = 10 } }
+		}
+		if = {
+			limit = { 
+				father_even_if_dead = {
+					death_sacrificed_trigger = yes
+					NOT = { killer = { character = ROOT } }
+				} 
+			}
+			hidden_tooltip = { narrative_event = { id = corrido.17 days = 60 random = 10 } }
+		}
+		if = {
+			limit = { father_even_if_dead = { death_reason = death_duel } }
+			hidden_tooltip = { narrative_event = { id = corrido.18 days = 60 random = 10 } }
+		}
+		if = {
+			limit = { father_even_if_dead = { death_suicide_trigger = yes } }
+			hidden_tooltip = { narrative_event = { id = corrido.19 days = 60 random = 10 } }
+		}
+		if = {
+			limit = { 
+				father_even_if_dead = { 
+					OR = {
+						and = {
+							death_murder_known_trigger = yes
+							killer = { character = ROOT }
+						}
+						and = {
+							death_execution_trigger = yes
+							killer = { character = ROOT }
+						}
+						and = {
+							death_reason = death_dungeon 
+							killer = { character = ROOT }
+						}
+						and = {
+							death_sacrificed_trigger = yes
+							killer = { character = ROOT }
+						}
+					}
+				} 
+			}
+			hidden_tooltip = { narrative_event = { id = corrido.20 days = 60 random = 10 } }
+		}
+		if = {
+			limit = {
+				NOT = {
+					father_even_if_dead = {
+						OR = {
+							death_reason = death_natural
+							death_reason = death_battle
+							death_execution_trigger = yes
+							death_murder_known_trigger = yes
+							death_murder_unknown_trigger = yes
+							death_accident_trigger = yes
+							death_reason = death_dungeon
+							death_sacrificed_trigger = yes
+							death_reason = death_duel
+							death_suicide_trigger = yes
+						}
+					}
+				}
+			}
+			hidden_tooltip = { narrative_event = { id = corrido.21 days = 60 random = 10 } }
+		}
+		custom_tooltip = { text = corrido_composed }
+	}
+	option = { # In memory of mother
+		name = corrido.0_OPTC
+		trigger = {
+			mother_even_if_dead = {
+				is_alive = no
+			}
+		}
+		if = {
+			limit = { mother_even_if_dead = { death_reason = death_natural } }
+			hidden_tooltip = { narrative_event = { id = corrido.30 days = 60 random = 10 } }
+		}
+		if = {
+			limit = { 
+				mother_even_if_dead = {
+					death_execution_trigger = yes
+					NOT = { killer = { character = ROOT } }
+				} 
+			}
+			hidden_tooltip = { narrative_event = { id = corrido.31 days = 60 random = 10 } }
+		}
+		if = {
+			limit = { 
+				mother_even_if_dead = { 
+					death_murder_known_trigger = yes
+					NOT = { killer = { character = ROOT } }
+				}
+			}
+			hidden_tooltip = { narrative_event = { id = corrido.32 days = 60 random = 10 } }
+		}
+		if = {
+			limit = { 
+				mother_even_if_dead = { 
+					OR = {
+						death_accident_trigger = yes
+						death_murder_unknown_trigger = yes
+					}
+				}
+			}
+			hidden_tooltip = { narrative_event = { id = corrido.34 days = 60 random = 10 } }
+		}
+		if = {
+			limit = { 
+				mother_even_if_dead = { 
+					death_reason = death_dungeon
+					NOT = { killer = { character = ROOT } }
+				} 
+			}
+			hidden_tooltip = { narrative_event = { id = corrido.35 days = 60 random = 10 } }
+		}
+		if = {
+			limit = { 
+				mother_even_if_dead = {
+					death_sacrificed_trigger = yes
+					NOT = { killer = { character = ROOT } }
+				} 
+			}
+			hidden_tooltip = { narrative_event = { id = corrido.36 days = 60 random = 10 } }
+		}
+		if = {
+			limit = { mother_even_if_dead = { death_suicide_trigger = yes } }
+			hidden_tooltip = { narrative_event = { id = corrido.37 days = 60 random = 10 } }
+		}
+		if = {
+			limit = { 
+				mother_even_if_dead = { 
+					OR = {
+						and = {
+							death_murder_known_trigger = yes
+							killer = { character = ROOT }
+						}
+						and = {
+							death_execution_trigger = yes
+							killer = { character = ROOT }
+						}
+						and = {
+							death_reason = death_dungeon 
+							killer = { character = ROOT }
+						}
+						and = {
+							death_sacrificed_trigger = yes
+							killer = { character = ROOT }
+						}
+					}
+				} 
+			}
+			hidden_tooltip = { narrative_event = { id = corrido.38 days = 60 random = 10 } }
+		}
+		if = {
+			limit = {
+				NOT = {
+					mother_even_if_dead = { 
+						OR = {
+							death_reason = death_natural
+							death_execution_trigger = yes
+							death_murder_known_trigger = yes
+							death_murder_unknown_trigger = yes
+							death_accident_trigger = yes
+							death_reason = death_dungeon
+							death_sacrificed_trigger = yes
+							death_suicide_trigger = yes
+						}
+					}
+				}
+			}
+			hidden_tooltip = { narrative_event = { id = corrido.39 days = 60 random = 10 } }
+		}
+		custom_tooltip = { text = corrido_composed }
+	}
+}
+
+# Based on one of your traits
+character_event = {
+	id = corrido.1
+	desc = corrido.1_DESC
+	picture = GFX_evt_runestone_raising_oldgods
+	border = GFX_event_normal_frame_diplomacy
+	
+	is_triggered_only = yes
+	
+	hide_from = yes
+	
+	option = { # Generic
+		name = corrido.1_OPTA
+		trigger = {
+			is_smart_trigger = no
+			is_dumb_trigger = no
+			is_strong_trigger = no
+			NOT = {
+				trait = lunatic
+				trait = drunkard
+				trait = fair
+				trait = dwarf
+				trait = scholar
+				trait = impaler
+				trait = poet
+				trait = lustful
+				trait = gluttonous
+				trait = charitable
+				trait = kind
+				trait = proud
+				trait = humble
+				trait = brave
+				trait = just
+				trait = zealous
+				trait = cruel
+				trait = possessed
+			}
+		}
+		
+		custom_tooltip = {
+			text = corrido_composed
+			hidden_tooltip = { narrative_event = { id = corrido.50 days = 60 random = 10 } }
+		}
+	}
+	option = {
+		name = corrido.1_OPTB
+		tooltip_info = lunatic
+		trigger = {
+			trait = lunatic
+		}
+		
+		custom_tooltip = {
+			text = corrido_composed
+			hidden_tooltip = { narrative_event = { id = corrido.51 days = 60 random = 10 } }
+		}
+	}
+	option = {
+		name = corrido.1_OPTC
+		tooltip_info = drunkard
+		trigger = {
+			trait = drunkard
+			NOT = {
+				trait = lunatic
+				trait = possessed
+				is_dumb_trigger = yes
+			}
+		}
+		
+		custom_tooltip = { 
+			text = corrido_composed
+			hidden_tooltip = { narrative_event = { id = corrido.52 days = 60 random = 10 } }
+		}
+	}
+	option = {
+		name = corrido.1_OPTD
+		tooltip_info = fair
+		trigger = {
+			trait = fair
+			NOT = {
+				trait = lunatic
+				trait = possessed
+				is_dumb_trigger = yes
+			}
+		}
+		
+		custom_tooltip = {
+			text = corrido_composed
+			hidden_tooltip = { narrative_event = { id = corrido.53 days = 60 random = 10 } }
+		}
+	}
+	option = {
+		name = corrido.1_OPTE
+		tooltip_info = dwarf
+		trigger = {
+			trait = dwarf
+			NOT = {
+				trait = lunatic
+				trait = possessed
+				is_dumb_trigger = yes
+			}
+		}
+		
+		custom_tooltip = {
+			text = corrido_composed
+			hidden_tooltip = { narrative_event = { id = corrido.54 days = 60 random = 10 } }
+		}
+	}
+	option = {
+		name = corrido.1_OPTF
+		tooltip_info_custom = available_due_to_smart
+		trigger = {
+			is_smart_trigger = yes
+			NOT = {
+				trait = lunatic
+				trait = possessed
+				is_dumb_trigger = yes
+			}
+		}
+		
+		custom_tooltip = {
+			text = corrido_composed
+			hidden_tooltip = { narrative_event = { id = corrido.55 days = 60 random = 10 } }
+		}
+	}
+	option = {
+		name = corrido.1_OPTI
+		tooltip_info = imbecile
+		trigger = {
+			is_dumb_trigger = yes
+		}
+		
+		custom_tooltip = { 
+			text = corrido_composed
+			hidden_tooltip = { narrative_event = { id = corrido.56 days = 60 random = 10 } }
+		}
+	}
+	option = {
+		name = corrido.1_OPTJ
+		tooltip_info = strong
+		trigger = {
+			is_strong_trigger = yes
+			NOT = {
+				trait = lunatic
+				trait = possessed
+				is_dumb_trigger = yes
+			}
+		}
+		
+		custom_tooltip = {
+			text = corrido_composed
+			hidden_tooltip = { narrative_event = { id = corrido.57 days = 60 random = 10 } }
+		}
+	}
+	option = {
+		name = corrido.1_OPTK
+		tooltip_info = scholar
+		trigger = {
+			trait = scholar
+			NOT = {
+				trait = lunatic
+				trait = possessed
+				is_dumb_trigger = yes
+			}
+		}
+		
+		custom_tooltip = {
+			text = corrido_composed
+			hidden_tooltip = { narrative_event = { id = corrido.58 days = 60 random = 10 } }
+		}
+	}
+	option = {
+		name = corrido.1_OPTL
+		tooltip_info = impaler
+		trigger = {
+			trait = impaler
+			NOT = {
+				trait = lunatic
+				trait = possessed
+				is_dumb_trigger = yes
+			}
+		}
+		
+		custom_tooltip = {
+			text = corrido_composed
+			hidden_tooltip = { narrative_event = { id = corrido.59 days = 60 random = 10 } }
+		}
+	}
+	option = {
+		name = corrido.1_OPTM
+		tooltip_info = poet
+		trigger = {
+			trait = poet
+			NOT = {
+				trait = lunatic
+				trait = possessed
+				is_dumb_trigger = yes
+			}
+		}
+		
+		custom_tooltip = {
+			text = corrido_composed
+			hidden_tooltip = { narrative_event = { id = corrido.60 days = 60 random = 10 } }
+		}
+	}
+	option = {
+		name = corrido.1_OPTN
+		tooltip_info = lustful
+		trigger = {
+			trait = lustful
+			NOT = {
+				trait = lunatic
+				trait = possessed
+				is_dumb_trigger = yes
+			}
+		}
+		
+		custom_tooltip = {
+			text = corrido_composed
+			hidden_tooltip = { narrative_event = { id = corrido.61 days = 60 random = 10 } }
+		}
+	}
+	option = {
+		name = corrido.1_OPTO
+		tooltip_info = gluttonous
+		trigger = {
+			trait = gluttonous
+			NOT = {
+				trait = lunatic
+				trait = possessed
+				is_dumb_trigger = yes
+			}
+		}
+		
+		custom_tooltip = {
+			text = corrido_composed
+			hidden_tooltip = { narrative_event = { id = corrido.62 days = 60 random = 10 } }
+		}
+	}
+	option = {
+		name = corrido.1_OPTP
+		tooltip_info = charitable
+		trigger = {
+			trait = charitable
+			NOT = {
+				trait = lunatic
+				trait = possessed
+				is_dumb_trigger = yes
+			}
+		}
+		
+		custom_tooltip = {
+			text = corrido_composed
+			hidden_tooltip = { narrative_event = { id = corrido.63 days = 60 random = 10 } }
+		}
+	}
+	option = {
+		name = corrido.1_OPTQ
+		tooltip_info = kind
+		trigger = {
+			trait = kind
+			NOT = {
+				trait = lunatic
+				trait = possessed
+				is_dumb_trigger = yes
+			}
+		}
+		
+		custom_tooltip = {
+			text = corrido_composed
+			hidden_tooltip = { narrative_event = { id = corrido.64 days = 60 random = 10 } }
+		}
+	}
+	option = {
+		name = corrido.1_OPTR
+		tooltip_info = proud
+		trigger = {
+			trait = proud
+			NOT = {
+				trait = lunatic
+				trait = possessed
+				is_dumb_trigger = yes
+			}
+		}
+		
+		custom_tooltip = {
+			text = corrido_composed
+			hidden_tooltip = { narrative_event = { id = corrido.65 days = 60 random = 10 } }
+		}
+	}
+	option = {
+		name = corrido.1_OPTS
+		tooltip_info = humble
+		trigger = {
+			trait = humble
+			NOT = {
+				trait = lunatic
+				trait = possessed
+				is_dumb_trigger = yes
+			}
+		}
+		
+		custom_tooltip = { 
+			text = corrido_composed
+			hidden_tooltip = { narrative_event = { id = corrido.66 days = 60 random = 10 } }
+		}
+	}
+	option = {
+		name = corrido.1_OPTT
+		tooltip_info = brave
+		trigger = {
+			trait = brave
+			NOT = {
+				trait = lunatic
+				trait = possessed
+				is_dumb_trigger = yes
+			}
+		}
+		
+		custom_tooltip = {
+			text = corrido_composed
+			hidden_tooltip = { narrative_event = { id = corrido.67 days = 60 random = 10 } }
+		}
+	}
+	option = {
+		name = corrido.1_OPTU
+		tooltip_info = just
+		trigger = {
+			trait = just
+			NOT = {
+				trait = lunatic
+				trait = possessed
+				is_dumb_trigger = yes
+			}
+		}
+		
+		custom_tooltip = { 
+			text = corrido_composed
+			hidden_tooltip = { narrative_event = { id = corrido.68 days = 60 random = 10 } }
+		}
+	}
+	option = {
+		name = corrido.1_OPTV
+		tooltip_info = zealous
+		trigger = {
+			trait = zealous
+			religion_group = cult_of_saints
+			NOT = {
+				trait = lunatic
+				trait = possessed
+				is_dumb_trigger = yes
+			}
+		}
+
+		custom_tooltip = {
+			text = corrido_composed
+			hidden_tooltip = { narrative_event = { id = corrido.69 days = 60 random = 10 } }
+		}
+	}
+	option = {
+		name = corrido.1_OPTX
+		tooltip_info = cruel
+		trigger = {
+			trait = cruel
+			NOT = {
+				trait = lunatic
+				trait = possessed
+				is_dumb_trigger = yes
+			}
+		}
+		custom_tooltip = { 
+			text = corrido_composed
+			hidden_tooltip = { narrative_event = { id = corrido.71 days = 60 random = 10 } }
+		}
+	}
+	option = {
+		name = corrido.1_OPTY
+		tooltip_info = possessed
+		trigger = {
+			trait = possessed
+		}
+
+		custom_tooltip = { 
+			text = corrido_composed
+			hidden_tooltip = { narrative_event = { id = corrido.72 days = 60 random = 10 } }
+		}
+	}
+	option = {
+		name = corrido.1_OPTZ
+		tooltip_info = zealous
+		trigger = {
+			trait = zealous
+			religion_group = mesoamerican_gods
+			NOT = {
+				trait = lunatic
+				trait = possessed
+				is_dumb_trigger = yes
+			}
+		}
+		
+		custom_tooltip = {
+			text = corrido_composed
+			hidden_tooltip = { narrative_event = { id = corrido.70 days = 60 random = 10 } }
+		}
+			
+	}
+}
+
+# Father (Death by Natural Causes)
+narrative_event = {
+	id = corrido.10
+	title = EVTNAME_corrido.10
+	desc = corrido.10_DESC
+	picture = GFX_evt_runestone_raising_oldgods
+	border = GFX_event_narrative_frame_diplomacy
+	
+	is_triggered_only = yes
+	
+	hide_from = yes
+	
+	option = {
+		name = corrido.50_OPTA
+		prestige = 200
+		piety = 100
+		add_character_modifier = {
+			name = composed_ballad
+			duration = 730
+		}
+		if = {
+			limit = { ai = no }
+			chronicle = {
+				entry = CHRONICLE_corrido_FATHER
+				picture = GFX_evt_corrido_raising_oldgods
+			}
+		}
+	}
+}
+
+# Father (Death by Battle)
+narrative_event = {
+	id = corrido.11
+	title = EVTNAME_corrido.10
+	desc = corrido.11_DESC
+	picture = GFX_evt_corrido_raising_oldgods
+	border = GFX_event_narrative_frame_diplomacy
+	
+	is_triggered_only = yes
+	
+	hide_from = yes
+	
+	option = {
+		name = corrido.50_OPTA
+		prestige = 300
+		add_character_modifier = {
+			name = composed_ballad
+			duration = 730
+		}
+		if = {
+			limit = { ai = no }
+			chronicle = {
+				entry = CHRONICLE_corrido_FATHER
+				picture = GFX_evt_corrido_raising_oldgods
+			}
+		}
+	}
+}
+
+# Father (Death by Execution)
+narrative_event = {
+	id = corrido.12
+	title = EVTNAME_corrido.10
+	desc = corrido.12_DESC
+	picture = GFX_evt_corrido_raising_oldgods
+	border = GFX_event_narrative_frame_diplomacy
+	
+	is_triggered_only = yes
+	
+	hide_from = yes
+	
+	option = {
+		name = corrido.50_OPTA
+		prestige = 200
+		piety = 100
+		add_character_modifier = {
+			name = composed_ballad
+			duration = 730
+		}
+		if = {
+			limit = { ai = no }
+			chronicle = {
+				entry = CHRONICLE_corrido_FATHER
+				picture = GFX_evt_corrido_raising_oldgods
+			}
+		}
+	}
+}
+
+# Father (Death by Murder)
+narrative_event = {
+	id = corrido.13
+	title = EVTNAME_corrido.10
+	desc = corrido.13_DESC
+	picture = GFX_evt_corrido_raising_oldgods
+	border = GFX_event_narrative_frame_diplomacy
+	
+	is_triggered_only = yes
+	
+	hide_from = yes
+	
+	option = {
+		name = corrido.50_OPTA
+		prestige = 200
+		piety = 100
+		add_character_modifier = {
+			name = composed_ballad
+			duration = 730
+		}
+		if = {
+			limit = { ai = no }
+			chronicle = {
+				entry = CHRONICLE_corrido_FATHER
+				picture = GFX_evt_corrido_raising_oldgods
+			}
+		}
+	}
+}
+
+# Father (Death by Accident)
+narrative_event = {
+	id = corrido.15
+	title = EVTNAME_corrido.10
+	desc = corrido.15_DESC
+	picture = GFX_evt_corrido_raising_oldgods
+	border = GFX_event_narrative_frame_diplomacy
+	
+	is_triggered_only = yes
+	
+	hide_from = yes
+	
+	option = {
+		name = corrido.50_OPTA
+		prestige = 200
+		piety = 100
+		add_character_modifier = {
+			name = composed_ballad
+			duration = 730
+		}
+		if = {
+			limit = { ai = no }
+			chronicle = {
+				entry = CHRONICLE_corrido_FATHER
+				picture = GFX_evt_corrido_raising_oldgods
+			}
+		}
+	}
+}
+
+# Father (Death by Dungeon)
+narrative_event = {
+	id = corrido.16
+	title = EVTNAME_corrido.10
+	desc = corrido.16_DESC
+	picture = GFX_evt_corrido_raising_oldgods
+	border = GFX_event_narrative_frame_diplomacy
+	
+	is_triggered_only = yes
+	
+	hide_from = yes
+	
+	option = {
+		name = corrido.50_OPTA
+		prestige = 200
+		piety = 100
+		add_character_modifier = {
+			name = composed_ballad
+			duration = 730
+		}
+		if = {
+			limit = { ai = no }
+			chronicle = {
+				entry = CHRONICLE_RUNESTONE_FATHER
+				picture = GFX_evt_runestone_raising_oldgods
+			}
+		}
+	}
+}
+
+# Father (Death by Sacrifice)
+narrative_event = {
+	id = corrido.17
+	title = EVTNAME_corrido.10
+	desc = corrido.17_DESC
+	picture = GFX_evt_corrido_raising_oldgods
+	border = GFX_event_narrative_frame_diplomacy
+	
+	is_triggered_only = yes
+	
+	hide_from = yes
+	
+	option = {
+		name = corrido.50_OPTA
+		prestige = 200
+		piety = 100
+		add_character_modifier = {
+			name = composed_ballad
+			duration = 730
+		}
+		if = {
+			limit = { ai = no }
+			chronicle = {
+				entry = CHRONICLE_corrido_FATHER
+				picture = GFX_evt_corrido_raising_oldgods
+			}
+		}
+	}
+}
+
+# Father (Death by Duel)
+narrative_event = {
+	id = corrido.18
+	title = EVTNAME_corrido.10
+	desc = corrido.18_DESC
+	picture = GFX_evt_corrido_raising_oldgods
+	border = GFX_event_narrative_frame_diplomacy
+	
+	is_triggered_only = yes
+	
+	hide_from = yes
+	
+	option = {
+		name = corrido.50_OPTA
+		prestige = 250
+		add_character_modifier = {
+			name = composed_ballad
+			duration = 730
+		}
+		if = {
+			limit = { ai = no }
+			chronicle = {
+				entry = CHRONICLE_corrido_FATHER
+				picture = GFX_evt_corrido_raising_oldgods
+			}
+		}
+	}
+}
+
+# Father (Death by Suicide)
+narrative_event = {
+	id = corrido.19
+	title = EVTNAME_corrido.10
+	desc = corrido.19_DESC
+	picture = GFX_evt_corrido_raising_oldgods
+	border = GFX_event_narrative_frame_diplomacy
+	
+	is_triggered_only = yes
+	
+	hide_from = yes
+	
+	option = {
+		name = corrido.50_OPTA
+		prestige = 100
+		add_character_modifier = {
+			name = composed_ballad
+			duration = 730
+		}
+		if = {
+			limit = { ai = no }
+			chronicle = {
+				entry = CHRONICLE_corrido_FATHER
+				picture = GFX_evt_corrido_raising_oldgods
+			}
+		}
+	}
+}
+
+# Father (Death by Murder - YOU are the killer)
+narrative_event = {
+	id = corrido.20
+	title = EVTNAME_corrido.10
+	desc = corrido.20_DESC
+	picture = GFX_evt_corrido_raising_oldgods
+	border = GFX_event_narrative_frame_diplomacy
+	
+	is_triggered_only = yes
+	
+	hide_from = yes
+	
+	option = {
+		name = corrido.50_OPTA
+		prestige = 100
+		add_character_modifier = {
+			name = composed_ballad
+			duration = 730
+		}
+		if = {
+			limit = { ai = no }
+			chronicle = {
+				entry = CHRONICLE_corrido_FATHER
+				picture = GFX_evt_corrido_raising_oldgods
+			}
+		}
+	}
+}
+
+# Father (Death by Other Reasons)
+narrative_event = {
+	id = corrido.21
+	title = EVTNAME_corrido.10
+	desc = corrido.21_DESC
+	picture = GFX_evt_corrido_raising_oldgods
+	border = GFX_event_narrative_frame_diplomacy
+	
+	is_triggered_only = yes
+	
+	hide_from = yes
+	
+	option = {
+		name = corrido.50_OPTA
+		prestige = 200
+		piety = 100
+		add_character_modifier = {
+			name = composed_ballad
+			duration = 730
+		}
+		if = {
+			limit = { ai = no }
+			chronicle = {
+				entry = CHRONICLE_corrido_FATHER
+				picture = GFX_evt_corrido_raising_oldgods
+			}
+		}
+	}
+}
+
+# Mother (Death by Natural Causes)
+narrative_event = {
+	id = corrido.30
+	title = EVTNAME_corrido.30
+	desc = corrido.30_DESC
+	picture = GFX_evt_corrido_raising_oldgods
+	border = GFX_event_narrative_frame_diplomacy
+	
+	is_triggered_only = yes
+	
+	hide_from = yes
+	
+	option = {
+		name = corrido.50_OPTA
+		prestige = 200
+		piety = 100
+		add_character_modifier = {
+			name = composed_ballad
+			duration = 730
+		}
+		if = {
+			limit = { ai = no }
+			chronicle = {
+				entry = CHRONICLE_corrido_MOTHER
+				picture = GFX_evt_corrido_raising_oldgods
+			}
+		}
+	}
+}
+
+# Mother (Death by Execution)
+narrative_event = {
+	id = corrido.31
+	title = EVTNAME_corrido.30
+	desc = corrido.31_DESC
+	picture = GFX_evt_corrido_raising_oldgods
+	border = GFX_event_narrative_frame_diplomacy
+	
+	is_triggered_only = yes
+	
+	hide_from = yes
+	
+	option = {
+		name = corrido.50_OPTA
+		prestige = 200
+		piety = 100
+		add_character_modifier = {
+			name = composed_ballad
+			duration = 730
+		}
+		if = {
+			limit = { ai = no }
+			chronicle = {
+				entry = CHRONICLE_corrido_MOTHER
+				picture = GFX_evt_corrido_raising_oldgods
+			}
+		}
+	}
+}
+
+# Mother (Death by Murder)
+narrative_event = {
+	id = corrido.32
+	title = EVTNAME_corrido.30
+	desc = corrido.32_DESC
+	picture = GFX_evt_corrido_raising_oldgods
+	border = GFX_event_narrative_frame_diplomacy
+	
+	is_triggered_only = yes
+	
+	hide_from = yes
+	
+	option = {
+		name = corrido.50_OPTA
+		prestige = 200
+		piety = 100
+		add_character_modifier = {
+			name = composed_ballad
+			duration = 730
+		}
+		if = {
+			limit = { ai = no }
+			chronicle = {
+				entry = CHRONICLE_corrido_MOTHER
+				picture = GFX_evt_corrido_raising_oldgods
+			}
+		}
+	}
+}
+
+# Mother (Death by Accident)
+narrative_event = {
+	id = corrido.34
+	title = EVTNAME_corrido.30
+	desc = corrido.34_DESC
+	picture = GFX_evt_corrido_raising_oldgods
+	border = GFX_event_narrative_frame_diplomacy
+	
+	is_triggered_only = yes
+	
+	hide_from = yes
+	
+	option = {
+		name = corrido.50_OPTA
+		prestige = 200
+		piety = 100
+		add_character_modifier = {
+			name = composed_ballad
+			duration = 730
+		}
+		if = {
+			limit = { ai = no }
+			chronicle = {
+				entry = CHRONICLE_corrido_MOTHER
+				picture = GFX_evt_corrido_raising_oldgods
+			}
+		}
+	}
+}
+
+# Mother (Death by Dungeon)
+narrative_event = {
+	id = corrido.35
+	title = EVTNAME_corrido.30
+	desc = corrido.35_DESC
+	picture = GFX_evt_corrido_raising_oldgods
+	border = GFX_event_narrative_frame_diplomacy
+	
+	is_triggered_only = yes
+	
+	hide_from = yes
+	
+	option = {
+		name = corrido.50_OPTA
+		prestige = 200
+		piety = 100
+		add_character_modifier = {
+			name = composed_ballad
+			duration = 730
+		}
+		if = {
+			limit = { ai = no }
+			chronicle = {
+				entry = CHRONICLE_corrido_MOTHER
+				picture = GFX_evt_corrido_raising_oldgods
+			}
+		}
+	}
+}
+
+# Mother (Death by Sacrifice)
+narrative_event = {
+	id = corrido.36
+	title = EVTNAME_corrido.30
+	desc = corrido.36_DESC
+	picture = GFX_evt_corrido_raising_oldgods
+	border = GFX_event_narrative_frame_diplomacy
+	
+	is_triggered_only = yes
+	
+	hide_from = yes
+	
+	option = {
+		name = corrido.50_OPTA
+		prestige = 200
+		piety = 100
+		add_character_modifier = {
+			name = composed_ballad
+			duration = 730
+		}
+		if = {
+			limit = { ai = no }
+			chronicle = {
+				entry = CHRONICLE_corrido_MOTHER
+				picture = GFX_evt_corrido_raising_oldgods
+			}
+		}
+	}
+}
+
+# Mother (Death by Suicide)
+narrative_event = {
+	id = corrido.37
+	title = EVTNAME_corrido.30
+	desc = corrido.37_DESC
+	picture = GFX_evt_corrido_raising_oldgods
+	border = GFX_event_narrative_frame_diplomacy
+	
+	is_triggered_only = yes
+	
+	hide_from = yes
+	
+	option = {
+		name = corrido.50_OPTA
+		prestige = 100
+		add_character_modifier = {
+			name = composed_ballad
+			duration = 730
+		}
+		if = {
+			limit = { ai = no }
+			chronicle = {
+				entry = CHRONICLE_corrido_MOTHER
+				picture = GFX_evt_corrido_raising_oldgods
+			}
+		}
+	}
+}
+
+# Mother (Death by Murder - YOU are the killer)
+narrative_event = {
+	id = corrido.38
+	title = EVTNAME_corrido.30
+	desc = corrido.38_DESC
+	picture = GFX_evt_corrido_raising_oldgods
+	border = GFX_event_narrative_frame_diplomacy
+	
+	is_triggered_only = yes
+	
+	hide_from = yes
+	
+	option = {
+		name = corrido.50_OPTA
+		prestige = 100
+		add_character_modifier = {
+			name = composed_ballad
+			duration = 730
+		}
+		if = {
+			limit = { ai = no }
+			chronicle = {
+				entry = CHRONICLE_corrido_MOTHER
+				picture = GFX_evt_corrido_raising_oldgods
+			}
+		}
+	}
+}
+
+# Mother (Death by Other Reasons)
+narrative_event = {
+	id = corrido.39
+	title = EVTNAME_corrido.30
+	desc = corrido.39_DESC
+	picture = GFX_evt_corrido_raising_oldgods
+	border = GFX_event_narrative_frame_diplomacy
+	
+	is_triggered_only = yes
+	
+	hide_from = yes
+	
+	option = {
+		name = corrido.50_OPTA
+		prestige = 200
+		piety = 100
+		add_character_modifier = {
+			name = composed_ballad
+			duration = 730
+		}
+		if = {
+			limit = { ai = no }
+			chronicle = {
+				entry = CHRONICLE_corrido_MOTHER
+				picture = GFX_evt_corrido_raising_oldgods
+			}
+		}
+	}
+}
+
+# Generic
+narrative_event = {
+	id = corrido.50
+	title = EVTNAME_corrido.50
+	desc = {
+		text = corrido.50_DESC
+		trigger = {
+			mother_even_if_dead = { always = yes }
+			father_even_if_dead = { always = yes }
+		}
+	}
+	desc = {
+		text = EVTDESC_corrido.50_B
+		trigger = {
+			NOT = {
+				AND = {
+					mother_even_if_dead = { always = yes }
+					father_even_if_dead = { always = yes }
+				}
+			}
+		}
+	}
+	picture = GFX_evt_corrido_raising_oldgods
+	border = GFX_event_narrative_frame_diplomacy
+	
+	is_triggered_only = yes
+	
+	hide_from = yes
+	
+	option = {
+		name = corrido.50_OPTA
+		prestige = 200
+		piety = 100
+		add_character_modifier = {
+			name = composed_ballad
+			duration = 730
+		}
+		if = {
+			limit = { ai = no }
+			chronicle = {
+				entry = CHRONICLE_corrido_GENERIC
+				picture = GFX_evt_corrido_raising_oldgods
+			}
+		}
+	}
+}
+
+# Lunatic
+narrative_event = {
+	id = corrido.51
+	title = EVTNAME_corrido.50
+	desc = corrido.51_DESC
+	picture = GFX_evt_corrido_raising_oldgods
+	border = GFX_event_narrative_frame_diplomacy
+	
+	is_triggered_only = yes
+	
+	hide_from = yes
+	
+	option = {
+		name = corrido.50_OPTA
+		prestige = 100
+		add_character_modifier = {
+			name = composed_ballad
+			duration = 730
+		}
+		if = {
+			limit = { ai = no }
+			chronicle = {
+				entry = CHRONICLE_corrido_LUNATIC
+				picture = GFX_evt_corrido_raising_oldgods
+			}
+		}
+	}
+}
+
+# Drunkard
+narrative_event = {
+	id = corrido.52
+	title = EVTNAME_corrido.50
+	desc = {
+		trigger = {
+			mother_even_if_dead = { always = yes }
+			father_even_if_dead = { always = yes }
+		}
+		text = corrido.52_DESC
+	}
+	desc = {
+		trigger = {
+			NOT = {
+				AND = {
+					mother_even_if_dead = { always = yes }
+					father_even_if_dead = { always = yes }
+				}
+			}
+		}
+		text = corrido.52_DESC_B
+	}
+	picture = GFX_evt_corrido_raising_oldgods
+	border = GFX_event_narrative_frame_diplomacy
+	
+	is_triggered_only = yes
+	
+	hide_from = yes
+	
+	option = {
+		name = corrido.50_OPTA
+		prestige = 200
+		piety = 100
+		add_character_modifier = {
+			name = composed_ballad
+			duration = 730
+		}
+		if = {
+			limit = { ai = no }
+			chronicle = {
+				entry = CHRONICLE_corrido_DRUNKARD
+				picture = GFX_evt_corrido_raising_oldgods
+			}
+		}
+	}
+}
+
+# Fair
+narrative_event = {
+	id = corrido.53
+	title = EVTNAME_corrido.50
+	desc = {
+		trigger = {
+			mother_even_if_dead = { always = yes }
+			father_even_if_dead = { always = yes }
+		}
+		text = corrido.53_DESC
+	}
+	desc = {
+		trigger = {
+			NOT = {
+				AND = {
+					mother_even_if_dead = { always = yes }
+					father_even_if_dead = { always = yes }
+				}
+			}
+		}
+		text = corrido.53_DESC_B
+	}
+	picture = GFX_evt_corrido_raising_oldgods
+	border = GFX_event_narrative_frame_diplomacy
+	
+	is_triggered_only = yes
+	
+	hide_from = yes
+	
+	option = {
+		name = corrido.50_OPTA
+		prestige = 300
+		add_character_modifier = {
+			name = composed_ballad
+			duration = 730
+		}
+		if = {
+			limit = { ai = no }
+			chronicle = {
+				entry = CHRONICLE_corrido_FAIR
+				picture = GFX_evt_corrido_raising_oldgods
+			}
+		}
+	}
+}
+
+# Dwarf
+narrative_event = {
+	id = corrido.54
+	title = EVTNAME_corrido.50
+	desc = {
+		trigger = {
+			mother_even_if_dead = { always = yes }
+			father_even_if_dead = { always = yes }
+		}
+		text = corrido.54_DESC
+	}
+	desc = {
+		trigger = {
+			NOT = {
+				AND = {
+					mother_even_if_dead = { always = yes }
+					father_even_if_dead = { always = yes }
+				}
+			}
+		}
+		text = corrido.54_DESC_B
+	}
+	picture = GFX_evt_corrido_raising_oldgods
+	border = GFX_event_narrative_frame_diplomacy
+	
+	is_triggered_only = yes
+	
+	hide_from = yes
+	
+	option = {
+		name = corrido.50_OPTA
+		prestige = 200
+		piety = 100
+		add_character_modifier = {
+			name = composed_ballad
+			duration = 730
+		}
+		if = {
+			limit = { ai = no }
+			chronicle = {
+				entry = CHRONICLE_corrido_DWARF
+				picture = GFX_evt_corrido_raising_oldgods
+			}
+		}
+	}
+}
+
+# Genius
+narrative_event = {
+	id = corrido.55
+	title = EVTNAME_corrido.50
+	desc = {
+		trigger = {
+			mother_even_if_dead = { always = yes }
+			father_even_if_dead = { always = yes }
+		}
+		text = corrido.55_DESC
+	}
+	desc = {
+		trigger = {
+			NOT = {
+				AND = {
+					mother_even_if_dead = { always = yes }
+					father_even_if_dead = { always = yes }
+				}
+			}
+		}
+		text = corrido.55_DESC_B
+	}
+	picture = GFX_evt_corrido_raising_oldgods
+	border = GFX_event_narrative_frame_diplomacy
+	
+	is_triggered_only = yes
+	
+	hide_from = yes
+	
+	option = {
+		name = corrido.50_OPTA
+		prestige = 300
+		add_character_modifier = {
+			name = composed_ballad
+			duration = 730
+		}
+		if = {
+			limit = { ai = no }
+			chronicle = {
+				entry = CHRONICLE_corrido_GENIUS
+				picture = GFX_evt_corrido_raising_oldgods
+			}
+		}
+	}
+}
+
+# Imbecile
+narrative_event = {
+	id = corrido.56
+	title = EVTNAME_corrido.50
+	desc = {
+		trigger = {
+			mother_even_if_dead = { always = yes }
+			father_even_if_dead = { always = yes }
+		}
+		text = corrido.56_DESC
+	}
+	desc = {
+		trigger = {
+			NOT = {
+				AND = {
+					mother_even_if_dead = { always = yes }
+					father_even_if_dead = { always = yes }
+				}
+			}
+		}
+		text = corrido.56_DESC_B
+	}
+	picture = GFX_evt_corrido_raising_oldgods
+	border = GFX_event_narrative_frame_diplomacy
+	
+	is_triggered_only = yes
+	
+	hide_from = yes
+	
+	option = {
+		name = corrido.50_OPTA
+		prestige = 100
+		add_character_modifier = {
+			name = composed_ballad
+			duration = 730
+		}
+		if = {
+			limit = { ai = no }
+			chronicle = {
+				entry = CHRONICLE_corrido_IMBECILE
+				picture = GFX_evt_corrido_raising_oldgods
+			}
+		}
+	}
+}
+
+# Strong
+narrative_event = {
+	id = corrido.57
+	title = EVTNAME_corrido.50
+	desc = {
+		trigger = {
+			mother_even_if_dead = { always = yes }
+			father_even_if_dead = { always = yes }
+		}
+		text = corrido.57_DESC
+	}
+	desc = {
+		trigger = {
+			NOT = {
+				AND = {
+					mother_even_if_dead = { always = yes }
+					father_even_if_dead = { always = yes }
+				}
+			}
+		}
+		text = corrido.57_DESC_B
+	}
+	picture = GFX_evt_corrido_raising_oldgods
+	border = GFX_event_narrative_frame_diplomacy
+	
+	is_triggered_only = yes
+	
+	hide_from = yes
+	
+	option = {
+		name = corrido.50_OPTA
+		prestige = 300
+		add_character_modifier = {
+			name = composed_ballad
+			duration = 730
+		}
+		if = {
+			limit = { ai = no }
+			chronicle = {
+				entry = CHRONICLE_corrido_STRONG
+				picture = GFX_evt_corrido_raising_oldgods
+			}
+		}
+	}
+}
+
+# Scholar
+narrative_event = {
+	id = corrido.58
+	title = EVTNAME_corrido.50
+	desc = {
+		trigger = {
+			mother_even_if_dead = { always = yes }
+			father_even_if_dead = { always = yes }
+		}
+		text = corrido.58_DESC
+	}
+	desc = {
+		trigger = {
+			NOT = {
+				AND = {
+					mother_even_if_dead = { always = yes }
+					father_even_if_dead = { always = yes }
+				}
+			}
+		}
+		text = corrido.58_DESC_B
+	}
+	picture = GFX_evt_corrido_raising_oldgods
+	border = GFX_event_narrative_frame_diplomacy
+	
+	is_triggered_only = yes
+	
+	hide_from = yes
+	
+	option = {
+		name = corrido.50_OPTA
+		prestige = 200
+		piety = 100
+		add_character_modifier = {
+			name = composed_ballad
+			duration = 730
+		}
+		if = {
+			limit = { ai = no }
+			chronicle = {
+				entry = CHRONICLE_corrido_SCHOLAR
+				picture = GFX_evt_corrido_raising_oldgods
+			}
+		}
+	}
+}
+
+# Impaler
+narrative_event = {
+	id = corrido.59
+	title = EVTNAME_corrido.50
+	desc = {
+		trigger = {
+			mother_even_if_dead = { always = yes }
+			father_even_if_dead = { always = yes }
+		}
+		text = corrido.59_DESC
+	}
+	desc = {
+		trigger = {
+			NOT = {
+				AND = {
+					mother_even_if_dead = { always = yes }
+					father_even_if_dead = { always = yes }
+				}
+			}
+		}
+		text = corrido.59_DESC_B
+	}
+	picture = GFX_evt_corrido_raising_oldgods
+	border = GFX_event_narrative_frame_diplomacy
+	
+	is_triggered_only = yes
+	
+	hide_from = yes
+	
+	option = {
+		name = corrido.50_OPTA
+		prestige = 200
+		piety = 100
+		add_character_modifier = {
+			name = composed_ballad
+			duration = 730
+		}
+		if = {
+			limit = { ai = no }
+			chronicle = {
+				entry = CHRONICLE_corrido_IMPALER
+				picture = GFX_evt_corrido_raising_oldgods
+			}
+		}
+	}
+}
+
+# Poet
+narrative_event = {
+	id = corrido.60
+	title = EVTNAME_corrido.50
+	desc = {
+		trigger = {
+			mother_even_if_dead = { always = yes }
+			father_even_if_dead = { always = yes }
+		}
+		text = corrido.60_DESC
+	}
+	desc = {
+		trigger = {
+			NOT = {
+				AND = {
+					mother_even_if_dead = { always = yes }
+					father_even_if_dead = { always = yes }
+				}
+			}
+		}
+		text = corrido.60_DESC_B
+	}
+	picture = GFX_evt_corrido_raising_oldgods
+	border = GFX_event_narrative_frame_diplomacy
+	
+	is_triggered_only = yes
+	
+	hide_from = yes
+	
+	option = {
+		name = corrido.50_OPTA
+		prestige = 200
+		piety = 100
+		add_character_modifier = {
+			name = composed_ballad
+			duration = 730
+		}
+		if = {
+			limit = { ai = no }
+			chronicle = {
+				entry = CHRONICLE_corrido_POET
+				picture = GFX_evt_corrido_raising_oldgods
+			}
+		}
+	}
+}
+
+# Lustful
+narrative_event = {
+	id = corrido.61
+	title = EVTNAME_corrido.50
+	desc = {
+		trigger = {
+			mother_even_if_dead = { always = yes }
+			father_even_if_dead = { always = yes }
+		}
+		text = corrido.61_DESC
+	}
+	desc = {
+		trigger = {
+			NOT = {
+				AND = {
+					mother_even_if_dead = { always = yes }
+					father_even_if_dead = { always = yes }
+				}
+			}
+		}
+		text = corrido.61_DESC_B
+	}
+	picture = GFX_evt_corrido_raising_oldgods
+	border = GFX_event_narrative_frame_diplomacy
+	
+	is_triggered_only = yes
+	
+	hide_from = yes
+	
+	option = {
+		name = corrido.50_OPTA
+		prestige = 200
+		piety = 100
+		add_character_modifier = {
+			name = composed_ballad
+			duration = 730
+		}
+		if = {
+			limit = { ai = no }
+			chronicle = {
+				entry = CHRONICLE_corrido_LUSTFUL
+				picture = GFX_evt_corrido_raising_oldgods
+			}
+		}
+	}
+}
+
+# Gluttonous
+narrative_event = {
+	id = corrido.62
+	title = EVTNAME_corrido.50
+	desc = {
+		trigger = {
+			mother_even_if_dead = { always = yes }
+			father_even_if_dead = { always = yes }
+		}
+		text = corrido.62_DESC
+	}
+	desc = {
+		trigger = {
+			NOT = {
+				AND = {
+					mother_even_if_dead = { always = yes }
+					father_even_if_dead = { always = yes }
+				}
+			}
+		}
+		text = corrido.62_DESC_B
+	}
+	picture = GFX_evt_corrido_raising_oldgods
+	border = GFX_event_narrative_frame_diplomacy
+	
+	is_triggered_only = yes
+	
+	hide_from = yes
+	
+	option = {
+		name = corrido.50_OPTA
+		prestige = 200
+		piety = 100
+		add_character_modifier = {
+			name = composed_ballad
+			duration = 730
+		}
+		if = {
+			limit = { ai = no }
+			chronicle = {
+				entry = CHRONICLE_corrido_GLUTTONOUS
+				picture = GFX_evt_corrido_raising_oldgods
+			}
+		}
+	}
+}
+
+# Charitable
+narrative_event = {
+	id = corrido.63
+	title = EVTNAME_corrido.50
+	desc = {
+		trigger = {
+			mother_even_if_dead = { always = yes }
+			father_even_if_dead = { always = yes }
+		}
+		text = corrido.63_DESC
+	}
+	desc = {
+		trigger = {
+			NOT = {
+				AND = {
+					mother_even_if_dead = { always = yes }
+					father_even_if_dead = { always = yes }
+				}
+			}
+		}
+		text = corrido.63_DESC_B
+	}
+	picture = GFX_evt_corrido_raising_oldgods
+	border = GFX_event_narrative_frame_diplomacy
+	
+	is_triggered_only = yes
+	
+	hide_from = yes
+	
+	option = {
+		name = corrido.50_OPTA
+		prestige = 200
+		piety = 100
+		add_character_modifier = {
+			name = composed_ballad
+			duration = 730
+		}
+		if = {
+			limit = { ai = no }
+			chronicle = {
+				entry = CHRONICLE_corrido_CHARITABLE
+				picture = GFX_evt_corrido_raising_oldgods
+			}
+		}
+	}
+}
+
+# Kind
+narrative_event = {
+	id = corrido.64
+	title = EVTNAME_corrido.50
+	desc = {
+		trigger = {
+			mother_even_if_dead = { always = yes }
+			father_even_if_dead = { always = yes }
+		}
+		text = corrido.64_DESC
+	}
+	desc = {
+		trigger = {
+			NOT = {
+				AND = {
+					mother_even_if_dead = { always = yes }
+					father_even_if_dead = { always = yes }
+				}
+			}
+		}
+		text = corrido.64_DESC_B
+	}
+	picture = GFX_evt_corrido_raising_oldgods
+	border = GFX_event_narrative_frame_diplomacy
+	
+	is_triggered_only = yes
+	
+	hide_from = yes
+	
+	option = {
+		name = corrido.50_OPTA
+		prestige = 200
+		piety = 100
+		add_character_modifier = {
+			name = composed_ballad
+			duration = 730
+		}
+		if = {
+			limit = { ai = no }
+			chronicle = {
+				entry = CHRONICLE_corrido_KIND
+				picture = GFX_evt_corrido_raising_oldgods
+			}
+		}
+	}
+}
+
+# Proud
+narrative_event = {
+	id = corrido.65
+	title = EVTNAME_corrido.50
+	desc = {
+		trigger = {
+			mother_even_if_dead = { always = yes }
+			father_even_if_dead = { always = yes }
+		}
+		text = corrido.65_DESC
+	}
+	desc = {
+		trigger = {
+			NOT = {
+				AND = {
+					mother_even_if_dead = { always = yes }
+					father_even_if_dead = { always = yes }
+				}
+			}
+		}
+		text = corrido.65_DESC_B
+	}
+	picture = GFX_evt_corrido_raising_oldgods
+	border = GFX_event_narrative_frame_diplomacy
+	
+	is_triggered_only = yes
+	
+	hide_from = yes
+	
+	option = {
+		name = corrido.50_OPTA
+		prestige = 300
+		add_character_modifier = {
+			name = composed_ballad
+			duration = 730
+		}
+		if = {
+			limit = { ai = no }
+			chronicle = {
+				entry = CHRONICLE_corrido_PROUD
+				picture = GFX_evt_corrido_raising_oldgods
+			}
+		}
+	}
+}
+
+# Humble
+narrative_event = {
+	id = corrido.66
+	title = EVTNAME_corrido.50
+	desc = {
+		trigger = {
+			mother_even_if_dead = { always = yes }
+			father_even_if_dead = { always = yes }
+		}
+		text = corrido.66_DESC
+	}
+	desc = {
+		trigger = {
+			NOT = {
+				AND = {
+					mother_even_if_dead = { always = yes }
+					father_even_if_dead = { always = yes }
+				}
+			}
+		}
+		text = corrido.66_DESC_B
+	}
+	picture = GFX_evt_corrido_raising_oldgods
+	border = GFX_event_narrative_frame_diplomacy
+	
+	is_triggered_only = yes
+	
+	hide_from = yes
+	
+	option = {
+		name = corrido.50_OPTA
+		prestige = 200
+		piety = 100
+		add_character_modifier = {
+			name = composed_ballad
+			duration = 730
+		}
+		if = {
+			limit = { ai = no }
+			chronicle = {
+				entry = CHRONICLE_corrido_HUMBLE
+				picture = GFX_evt_corrido_raising_oldgods
+			}
+		}
+	}
+}
+
+# Brave
+narrative_event = {
+	id = corrido.67
+	title = EVTNAME_corrido.50
+	desc = {
+		trigger = {
+			mother_even_if_dead = { always = yes }
+			father_even_if_dead = { always = yes }
+		}
+		text = corrido.67_DESC
+	}
+	desc = {
+		trigger = {
+			NOT = {
+				AND = {
+					mother_even_if_dead = { always = yes }
+					father_even_if_dead = { always = yes }
+				}
+			}
+		}
+		text = corrido.67_DESC_B
+	}
+	picture = GFX_evt_corrido_raising_oldgods
+	border = GFX_event_narrative_frame_diplomacy
+	
+	is_triggered_only = yes
+	
+	hide_from = yes
+	
+	option = {
+		name = corrido.50_OPTA
+		prestige = 300
+		add_character_modifier = {
+			name = composed_ballad
+			duration = 730
+		}
+		if = {
+			limit = { ai = no }
+			chronicle = {
+				entry = CHRONICLE_corrido_BRAVE
+				picture = GFX_evt_corrido_raising_oldgods
+			}
+		}
+	}
+}
+
+# Just
+narrative_event = {
+	id = corrido.68
+	title = EVTNAME_corrido.50
+	desc = {
+		trigger = {
+			mother_even_if_dead = { always = yes }
+			father_even_if_dead = { always = yes }
+		}
+		text = corrido.68_DESC
+	}
+	desc = {
+		trigger = {
+			NOT = {
+				AND = {
+					mother_even_if_dead = { always = yes }
+					father_even_if_dead = { always = yes }
+				}
+			}
+		}
+		text = corrido.68_DESC_B
+	}
+	picture = GFX_evt_corrido_raising_oldgods
+	border = GFX_event_narrative_frame_diplomacy
+	
+	is_triggered_only = yes
+	
+	hide_from = yes
+	
+	option = {
+		name = corrido.50_OPTA
+		prestige = 200
+		piety = 100
+		add_character_modifier = {
+			name = composed_ballad
+			duration = 730
+		}
+		if = {
+			limit = { ai = no }
+			chronicle = {
+				entry = CHRONICLE_corrido_JUST
+				picture = GFX_evt_corrido_raising_oldgods
+			}
+		}
+	}
+}
+
+# Zealous (Cult of Saints)
+narrative_event = {
+	id = corrido.69
+	title = EVTNAME_corrido.50
+	desc = {
+		trigger = {
+			mother_even_if_dead = { always = yes }
+			father_even_if_dead = { always = yes }
+		}
+		text = corrido.69_DESC
+	}
+	desc = {
+		trigger = {
+			NOT = {
+				AND = {
+					mother_even_if_dead = { always = yes }
+					father_even_if_dead = { always = yes }
+				}
+			}
+		}
+		text = corrido.69_DESC_B
+	}
+	picture = GFX_evt_corrido_raising_oldgods
+	border = GFX_event_narrative_frame_diplomacy
+	
+	is_triggered_only = yes
+	
+	hide_from = yes
+	
+	option = {
+		name = corrido.50_OPTA
+		prestige = 200
+		piety = 100
+		add_character_modifier = {
+			name = composed_ballad
+			duration = 730
+		}
+		if = {
+			limit = { ai = no }
+			chronicle = {
+				entry = CHRONICLE_corrido_ZEALOUS_NORSE
+				picture = GFX_evt_corrido_raising_oldgods
+			}
+		}
+	}
+}
+
+# Zealous (Mesoamerican Gods)
+narrative_event = {
+	id = corrido.70
+	title = EVTNAME_corrido.50
+	desc = {
+		trigger = {
+			mother_even_if_dead = { always = yes }
+			father_even_if_dead = { always = yes }
+		}
+		text = corrido.70_DESC
+	}
+	desc = {
+		trigger = {
+			NOT = {
+				AND = {
+					mother_even_if_dead = { always = yes }
+					father_even_if_dead = { always = yes }
+				}
+			}
+		}
+		text = corrido.70_DESC_B
+	}
+	picture = GFX_evt_corrido_raising_oldgods
+	border = GFX_event_narrative_frame_diplomacy
+	
+	is_triggered_only = yes
+	
+	hide_from = yes
+	
+	option = {
+		name = corrido.50_OPTA
+		prestige = 200
+		piety = 100
+		add_character_modifier = {
+			name = composed_ballad
+			duration = 730
+		}
+		if = {
+			limit = { ai = no }
+			chronicle = {
+				entry = CHRONICLE_corrido_ZEALOUS_CHRISTIAN
+				picture = GFX_evt_corrido_raising_oldgods
+			}
+		}
+	}
+}
+
+# Cruel
+narrative_event = {
+	id = corrido.71
+	title = EVTNAME_corrido.50
+	desc = {
+		trigger = {
+			mother_even_if_dead = { always = yes }
+			father_even_if_dead = { always = yes }
+		}
+		text = corrido.71_DESC
+	}
+	desc = {
+		trigger = {
+			NOT = {
+				AND = {
+					mother_even_if_dead = { always = yes }
+					father_even_if_dead = { always = yes }
+				}
+			}
+		}
+		text = corrido.71_DESC_B
+	}
+	picture = GFX_evt_corrido_raising_oldgods
+	border = GFX_event_narrative_frame_diplomacy
+	
+	is_triggered_only = yes
+	
+	hide_from = yes
+	
+	option = {
+		name = corrido.50_OPTA
+		prestige = 200
+		piety = 100
+		add_character_modifier = {
+			name = composed_ballad
+			duration = 730
+		}
+		if = {
+			limit = { ai = no }
+			chronicle = {
+				entry = CHRONICLE_corrido_CRUEL
+				picture = GFX_evt_corrido_raising_oldgods
+			}
+		}
+	}
+}
+
+# Possessed
+narrative_event = {
+	id = corrido.72
+	title = EVTNAME_corrido.50
+	desc = corrido.72_DESC
+	picture = GFX_evt_corrido_raising_oldgods
+	border = GFX_event_narrative_frame_diplomacy
+	
+	is_triggered_only = yes
+	
+	hide_from = yes
+	
+	option = {
+		name = corrido.50_OPTA
+		prestige = 100
+		add_character_modifier = {
+			name = composed_ballad
+			duration = 730
+		}
+		if = {
+			limit = { ai = no }
+			chronicle = {
+				entry = CHRONICLE_corrido_POSSESSED
+				picture = GFX_evt_corrido_raising_oldgods
+			}
+		}
+	}
+}

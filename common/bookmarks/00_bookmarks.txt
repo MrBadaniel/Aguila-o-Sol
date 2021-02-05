@@ -1,0 +1,685 @@
+bm_the_seven_seas = {
+	name = "bm_the_seven_seas"
+	desc = "bm_the_seven_seas_desc"
+	date = 2666.7.4
+	
+	custom_start = yes				## Choosing "Custom Start" will open this bookmark
+	picture = GFX_pick_era_image_1
+	
+	selectable_character = {
+		id = 2300025 
+		age = 16
+		title = e_playercolnovorusskiy 
+		title_name = PLAYERCOL_NOVORUSSKIY 
+		character = {
+			religion="nousthreskeia"
+			#dna="agfab0i00e0"
+			#properties="0e0a0000000000"
+			culture="petropavlovskiy"
+			dynasty=1721136			
+		}
+	}
+	selectable_character = {
+		id = 2500035 
+		age = 36
+		title = e_playercoledokko 
+		title_name = PLAYERCOL_EDOKKO 
+		character = {
+			religion="shinto"
+			culture="edokko"
+			dynasty=1543268		
+		}
+	}
+	selectable_character = {
+		id = 1620220 
+		age = 26
+		title = k_redcoat_outpost 
+		title_name = REDCOAT_OUTPOST 
+		character = {
+			religion="thelemic"
+			culture="british"
+			#government = feudal_government
+			dynasty=1812076		
+		}
+	}
+	selectable_character = {
+		id = 1800051 
+		age = 40
+		title = k_revivalist_invasion 
+		title_name = REVIVALIST_INVASION_FORCE 
+		character = {
+			religion="revivalist"
+			culture="moroccan"
+			dynasty=1666097		
+		}
+	}
+
+}
+bm_the_cowboy_conquerors = {
+	name = "bm_the_cowboy_conquerors"
+	desc = "bm_the_cowboy_conquerors_desc"
+	date = 2666.7.4
+	
+	custom_start = yes				## Choosing "Custom Start" will open this bookmark
+	picture = GFX_pick_era_image_1
+	
+	selectable_character = {
+		id = 1491040 
+		age = 26
+		title = d_viceroy_host 
+		title_name = VICEROY_HOST 
+		character = {
+			religion="orientalist"
+			#dna="agfab0i00e0"
+			#properties="0e0a0000000000"
+			culture="arixan"
+			dynasty= 2031020			
+		}
+	}
+	selectable_character = {
+		id = 1836070 
+		age = 35
+		title = d_renovator_host 
+		title_name = d_renovator_host 
+		character = {
+			religion="falling_star"
+			#dna="agfab0i00e0"
+			#properties="0e0a0000000000"
+			culture="texan"
+		}
+	}
+
+}
+
+
+bm_indian_country = {
+	name = "BM_INDIAN_COUNTRY"
+	desc = "BM_INDIAN_COUNTRY_DESC"
+	date = 2666.7.4
+	
+	era = yes						## Will be shown on Era screen.
+	picture = GFX_pick_era_image_1
+	custom_start = yes				## Choosing "Custom Start" will open this bookmark
+	
+	selectable_character = {
+		id = 1875001 # Pakayoko II Nokona, King of Comancheria
+		age = 23
+		name = ERA_CHAR_NAME_PAHAYOKO
+		title = k_comancheria
+		title_name = COMANCHERIA
+		
+		character = {
+			female = no
+			dna="xhlgghchxen"
+			properties="a000ha000000"
+			religion="catholic"
+			culture="comanche"
+			government = feudal_government
+			dynasty=1491003
+		}
+	}
+	
+	selectable_character = {
+		id = 1875009 # Will-usdi Boudinot, Duke of Sequoyah
+		age = 45
+		name = ERA_CHAR_NAME_WILL_USDI
+		title = d_sequoyah
+		title_name = SEQUOYAH
+		
+		character = {
+			female = no
+			dna="ppyhxsskrlk"
+			properties="0o0c0d000000"
+			religion="catholic"
+			culture="cherokee"
+			government = feudal_government
+			dynasty=1491201
+		}
+	}
+	
+	selectable_character = {
+		id = 1889001 # Tasinagi Hokwoju, King of Lakotah
+		age = 53
+		name = ERA_CHAR_NAME_TASINAGI
+		title = k_lakotah
+		title_name = LAKOTAH
+		
+		character = {
+			female = no
+			dna="nopgghpfbnq"
+			properties="ai0bbb000000"
+			religion="peyotist"
+			culture="sioux"
+			government = feudal_government
+			dynasty=1491103
+		}
+	}
+	
+	selectable_character = {
+		id = 1667035 # Maskwa
+		age = 24
+		name = ERA_CHAR_NAME_MASKWA
+		title = d_saskatchewan
+		title_name = SASKATCHEWAN
+		
+		character = {
+			female = no
+			dna="vhojxtjxpzp"
+			properties="ei0jcj000000000000"
+			religion="peyotist"
+			culture="cree"
+			government = nomadic_government
+			dynasty=1491810
+		}
+	}
+	
+	selectable_character = {
+		id = 1491004 # Hastiin Dodge
+		age = 55
+		name = ERA_CHAR_NAME_HASTIIN
+		title = d_navajoland
+		title_name = NAVAJOLAND
+		
+		character = {
+			female = no
+			dna="morwlardcrs"
+			properties="kg0cgd000000000000"
+			religion="mormon"
+			culture="navajo"
+			government = mormon_government
+			dynasty=1491602
+		}
+	}
+	
+	selectable_character = {
+		id = 1788017 # Hiawatha Onondaga
+		age = 24
+		name = ERA_CHAR_NAME_HIAWATHA
+		title = d_onondaga
+		title_name = ONONDAGA
+		
+		character = {
+			female = no
+			dna="zluqrcnqgzt"
+			properties="ed0bdb000000000000"
+			religion="anabaptist"
+			culture="iroquois"
+			government = feudal_government
+			dynasty=2007014
+		}
+	}
+}
+
+bm_southern_knights = {
+	name = "BM_SOUTHERN_KNIGHTS"
+	desc = "BM_SOUTHERN_KNIGHTS_DESC"
+	date = 2666.7.4
+	
+	era = yes						## Will be shown on Era screen.
+	picture = GFX_pick_era_image_2
+	custom_start = yes				## Choosing "Custom Start" will open this bookmark
+	
+	
+	selectable_character = {
+		id = 1861001 # Algernon III of the Holy American Confederacy
+		age = 37
+		name = ERA_CHAR_NAME_ALGERNON
+		title = e_dixie
+		title_name = DIXIE
+		
+		character = {
+			female = no
+			dna="iycofobtueb"
+			properties="ail0d0000000"
+			religion="evangelical"
+			culture="southron"
+			government = feudal_government
+			dynasty=1782002
+		}
+	}
+	
+	selectable_character = {
+		id = 1933005 # Ellis Crockoone, Chief of the Tenesi
+		age = 38
+		name = ERA_CHAR_NAME_ELLIS
+		title = d_tenesi
+		title_name = TENESI
+		
+		character = {
+			female = no
+			dna="rnscfqvvmdz"
+			properties="cjtdad000000"
+			religion="revelationist"
+			culture="riverlander"
+			government = feudal_government
+			dynasty=1791017
+		}
+	}
+	
+	selectable_character = {
+		id = 3000000 # Huey Latimer, Duke of Black March
+		age = 31
+		name = ERA_CHAR_NAME_HUEY
+		title = d_black_belt
+		title_name = BLACK_BELT
+		
+		character = {
+			female = no
+			dna="cbbgqebntqu"
+			properties="0evdid000000"
+			religion="evangelical"
+			culture="tuskegean"
+			government = feudal_government
+			dynasty=1785000
+		}
+	}
+	
+	selectable_character = {
+		id = 1803060 # Louis Creaux
+		age = 41
+		name = ERA_CHAR_NAME_LOUIS
+		title = k_louisiana
+		title_name = LOUISIANA
+		
+		character = {
+			female = no
+			dna="fdpdfdjgcic"
+			properties="al0bcc000000000000"
+			religion="voodoo"
+			culture="cajun"
+			government = feudal_government
+			dynasty=1795000
+		}
+	}
+	
+	selectable_character = {
+		id = 1513001 # Elias Waltney
+		age = 38
+		name = ERA_CHAR_NAME_ELIAS
+		title = d_the_mouse
+		title_name = THE_MOUSE
+		
+		character = {
+			female = no
+			dna="fogbtixubaf"
+			properties="cj0qen000000000000"
+			religion="americanist"
+			culture="gulfard"
+			government = tribal_government
+			dynasty=1792014
+		}
+	}
+	
+	selectable_character = {
+		id = 2200017 # Ammon-Jaffar
+		age = 66
+		name = ERA_CHAR_NAME_AMMON_JAFFAR
+		title = d_suncoast
+		title_name = SUNCOAST
+		
+		character = {
+			female = no
+			dna="oruohdmdhfa"
+			properties="wb0dmd"
+			religion="orientalist"
+			culture="neomoor"
+			government = ghazi_government
+			dynasty=2031000
+		}
+	}
+}
+
+bm_ghosts_of_the_north = {
+	name = "BM_GHOSTS_OF_THE_NORTH"
+	desc = "BM_GHOSTS_OF_THE_NORTH_DESC"
+	date = 2666.7.4
+	
+	era = yes						## Will be shown on Era screen.
+	picture = GFX_pick_era_image_3
+	custom_start = yes				## Choosing "Custom Start" will open this bookmark
+	
+	selectable_character = {
+		id = 1997018 # Abram Lengacher, King of Deitscherei
+		age = 55
+		name = ERA_CHAR_NAME_ABRAM
+		title = k_deitscherei
+		title_name = DEITSCHEREI
+		
+		character = {
+			female = no
+			dna="zheewmcoafe"
+			properties="a000ja000000"
+			religion="anabaptist"
+			culture="deitsch"
+			government = feudal_government
+			dynasty=1779006
+		}
+	}
+	
+	selectable_character = {
+		id = 1788002 # Florell Laggard, Prince Mayor of New York
+		age = 38
+		name = ERA_CHAR_NAME_FLORELL
+		title = d_new_york
+		title_name = NEW_YORK
+		
+		character = {
+			female = no
+			dna="cmwxfbssauq"
+			properties="0b0eid000000"
+			religion="anabaptist"
+			culture="gothamite"
+			government = feudal_government
+			dynasty=1777009
+		}
+	}
+	
+	selectable_character = {
+		id = 1788001 # Baltus III Groot, King of Hudsonia
+		age = 35
+		name = ERA_CHAR_NAME_BALTUS
+		title = k_hudsonia
+		title_name = HUDSONIA
+		
+		character = {
+			female = no
+			dna="jwlvdfxkckn"
+			properties="ad0bib000000"
+			religion="anabaptist"
+			culture="hudsonian"
+			government = feudal_government
+			dynasty=1776000
+		}
+	}
+	
+	selectable_character = {
+		id = 1967004 # Coleman Kirkpatrick, Mayor of Detroit
+		age = 43
+		name = ERA_CHAR_NAME_COLEMAN
+		title = d_detroit
+		title_name = DETROIT
+		
+		character = {
+			female = no
+			dna="iwuuditjczh"
+			properties="ti0c0t000000"
+			religion="rust_cultist"
+			culture="motowner"
+			government = feudal_government
+			dynasty=1967002
+		}
+	}
+	
+	selectable_character = {
+		id = 1867007 # By Laurier, King of Ontario
+		age = 36
+		name = ERA_CHAR_NAME_BY
+		title = k_ontario
+		title_name = ONTARIO
+		
+		character = {
+			female = no
+			dna="fdujmhpdcgl"
+			properties="adf0aa0a0000"
+			religion="high_church"
+			culture="ontarian"
+			government = feudal_government
+			dynasty=1867015
+		}
+	}
+	
+		selectable_character = {
+		id = 1620100 # Paul Mahonic, Chief of Boston
+		age = 25
+		name = ERA_CHAR_NAME_PAUL
+		title = c_boston
+		title_name = BOSTON
+		
+		character = {
+			female = no
+			dna="xfodflqisqe"
+			properties="ci0jdj000000"
+			religion="occultist"
+			culture="yankee"
+			government = feudal_government
+			dynasty=1788046
+		}
+	}
+}
+
+bm_gods_and_kings = {
+	name = "BM_GODS_AND_KINGS"
+	desc = "BM_GODS_AND_KINGS_DESC"
+	date = 2666.7.4
+	
+	era = yes						## Will be shown on Era screen.
+	picture = GFX_pick_era_image_4
+	custom_start = yes				## Choosing "Custom Start" will open this bookmark
+	
+	selectable_character = {
+		id = 1910107 # Emperor Elton Yudkow of California
+		age = 52
+		name = ERA_CHAR_NAME_ELTON
+		title = e_california
+		title_name = CALIFORNIA
+		
+		character = {
+			female = no
+			dna="evnvttuxkeu"
+			properties="aizbd0000000"
+			religion="cetic"
+			culture="valleyan"
+			government = bureaucratic_government
+			dynasty=1851041
+		}
+	}
+	
+	selectable_character = {
+		id = 1845019 # Duchess Kaitlin Freeland of Portlandia
+		age = 38
+		name = ERA_CHAR_NAME_KAITLIN
+		title = d_portlandia
+		title_name = PORTLANDIA
+		
+		character = {
+			female = yes
+			dna="ibpbnmdplkm"
+			properties="cdbdid000000"
+			religion="gaian"
+			culture="cascadian"
+			government = feudal_government
+			dynasty=1845000
+		}
+	}
+	
+	selectable_character = {
+		id = 1200041 # King Skidegate of Puget
+		age = 50
+		name = ERA_CHAR_NAME_TSAA_HAMJUUWEE
+		title = k_vancouver
+		title_name = VANCOUVER
+		
+		character = {
+			female = no
+			dna="ikkpkcpoehk"
+			properties="he0dj"
+			religion="raven_tales"
+			culture="haida"
+			government = feudal_government
+			dynasty=1200003
+		}
+	}
+	
+	selectable_character = {
+		id = 1830006 # King Ammaron Anthophile of Deseret
+		age = 50
+		name = ERA_CHAR_NAME_AMMARON
+		title = k_deseret
+		title_name = DESERET
+		
+		character = {
+			female = no
+			dna="pxvwvkjbjyi"
+			properties="c0i0db000000"
+			religion="mormon"
+			culture="utahn"
+			government = mormon_government
+			dynasty=1830021
+		}
+	}
+	
+	selectable_character = {
+		id = 1910000 # King Gaston del Caballero of Baja
+		age = 24
+		name = ERA_CHAR_NAME_GASTON
+		title = k_baja_california
+		title_name = BAJA_CALIFORNIA
+		
+		character = {
+			female = no
+			dna="kofddhwotvf"
+			properties="eg0aab000000000000"
+			religion="cetic"
+			culture="mediterranean"
+			government = bureaucratic_government
+			dynasty=1912065
+		}
+	}
+	
+	selectable_character = {
+		id = 2200016 # Zakariyya
+		age = 17
+		name = ERA_CHAR_NAME_ZAKARIYYA
+		title = d_imamite
+		title_name = IMAMITE
+		
+		character = {
+			female = no
+			dna="axzhowapume"
+			properties="we0dld"
+			religion="imamite"
+			culture="anjalusi"
+			government = bureaucratic_government
+			dynasty=2030000
+		}
+	}
+}
+
+bm_south_of_the_border = {
+	name = "BM_SOUTH_OF_THE_BORDER"
+	desc = "BM_SOUTH_OF_THE_BORDER_DESC"
+	date = 2666.7.4
+	
+	era = yes						## Will be shown on Era screen.
+	picture = GFX_pick_era_image_5
+	custom_start = yes				## Choosing "Custom Start" will open this bookmark
+	
+	selectable_character = {
+		id = 2000011 # Portia Bustamante, Empress of the Caribbean
+		age = 55
+		name = ERA_CHAR_NAME_PORTIA
+		title = e_caribbean
+		title_name = CARIBBEAN
+		
+		character = {
+			female = yes
+			dna="vgvoafmoffj"
+			properties="akcad0000000"
+			religion="rastafarian"
+			culture="west_indian"
+			government = feudal_government
+			dynasty=2000000
+		}
+	}
+	
+	selectable_character = {
+		id = 1810083 # King Wenceslao Iturbide of Mexico
+		age = 55
+		name = ERA_CHAR_NAME_WENECESLAO
+		title = k_mexico
+		title_name = MEXICO
+		
+		character = {
+			female = no
+			dna="iddbkelneca"
+			properties="am0bea000000"
+			religion="sacred_heart"
+			culture="chilango"
+			government = feudal_government
+			dynasty=1519000
+		}
+	}
+	
+	selectable_character = {
+		id = 1325022 # Pinopiaa of Oaxaca
+		age = 20
+		name = ERA_CHAR_NAME_PINOPIAA
+		title = k_oaxaca
+		title_name = OAXACA
+		
+		character = {
+			female = yes
+			dna="0fgbk0dd0c0"
+			properties="wb00cc"
+			religion="mictlantec"
+			culture="zapotec"
+			government = feudal_government
+			dynasty=1115031
+		}
+	}
+		
+	selectable_character = {
+		id = 1810200 # Rey Luis "la Cucaracha" de Armas
+		age = 73
+		name = ERA_CHAR_NAME_LUIS
+		title = k_sierra_madre
+		title_name = SIERRA_MADRE
+		
+		character = {
+			female = no
+			dna="iyvhclauhqa"
+			properties="aobbba000000"
+			religion="atomicist"
+			culture="tejano"
+			government = feudal_government
+			dynasty=1815018
+		}
+	}
+	
+	selectable_character = {
+		id = 1650043 # King Jonathan Sulley of Moskitia
+		age = 59
+		name = ERA_CHAR_NAME_JONATHAN
+		title = k_mosquito
+		title_name = MOSQUITO
+		
+		character = {
+			female = no
+			dna="ejatbvxzhzz"
+			properties="eh0adb000000000000"
+			religion="falling_star"
+			culture="miskito"
+			government = feudal_government
+			dynasty=1650002
+		}
+	}
+	
+	selectable_character = {
+		id = 1800025 # Geert-Jan Zonnebeld
+		age = 46
+		name = ERA_CHAR_NAME_GEERT_JAN
+		title = k_guyana
+		title_name = GUYANA
+		
+		character = {
+			female = no
+			dna="ukastpijthk"
+			properties="wj00aa"
+			religion="traditionalist"
+			culture="sranan"
+			government = ghazi_government
+			dynasty=1603003
+		}
+	}
+}
+
