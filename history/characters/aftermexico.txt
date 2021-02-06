@@ -50,7 +50,30 @@
 	trait=honest
 	2623.1.17={birth=yes}
 	2700.1.1={death=yes}
-}	
+}
+
+14440002={ #Rey de Cristo
+	name="Porfirio"
+	culture=abajeno
+	religion=cristo_rey
+	martial=14
+	diplomacy=4
+	stewardship=4
+	intrigue=2
+	learning=14
+	trait=tough_soldier
+	trait=duelist
+	trait=zealous
+	trait=brave
+	trait=trusting
+	trait=kind
+	trait=celibate 
+	trait=honest
+	employer=14400002
+	2622.1.13={birth=yes}
+	2700.1.1={death=yes}
+}
+
 14400003={ #Guerrero
 	name="Tlanesi"
 	dynasty=1428035
@@ -469,3 +492,481 @@
 	father=14400020
 	2648.7.10={birth=yes}
 }
+
+14400024={ 
+	name="Adrián"
+	dynasty=4001078
+	culture=abajeno
+	religion=cristo_rey
+	martial=14
+	diplomacy=3
+	stewardship=4
+	intrigue=2
+	learning=2
+	trait=brilliant_strategist
+	trait=wroth
+	trait=ambitious
+	trait=brave
+	trait=mystic
+	father=14400035
+	mother=14400028
+	2548.11.18={birth=yes}
+	2608.12.23={death=yes}
+}
+
+14400035={ 
+	name="Pablo Pedro"
+	dynasty=4001078
+	culture=abajeno
+	religion=cristo_rey
+	martial=10
+	diplomacy=3
+	stewardship=1
+	intrigue=2
+	learning=10
+	trait=hunter
+	trait=gregarious
+	trait=proud
+	trait=arbitrary
+	trait=ambitious
+	trait=lustful
+	trait=inspiring_leader
+	trait=tough_soldier
+	father=14400034
+	2515.6.22={birth=yes}
+	2573.11.14={death=yes}
+}
+
+14400028={
+	name="América"
+	dynasty=1519000
+	female=yes
+	martial=8
+	diplomacy=4
+	stewardship=10
+	intrigue=4 
+	learning=10
+	culture=abajeno
+	religion=cristo_rey
+	disallow_random_traits=yes		
+	trait=erudite
+	trait=shrewd
+	trait=kind
+	trait=socializer
+	trait=musician
+	father=1810254
+	2518.1.24={birth=yes}
+	2548.11.18={add_spouse=14400035}
+	2577.10.18={death=yes}
+}
+
+14400025={ 
+	name="Sansón"
+	dynasty=4001078
+	culture=abajeno
+	religion=cristo_rey
+	martial=14
+	diplomacy=7
+	stewardship=1
+	intrigue=1
+	learning=12
+	trait=crusader
+	trait=strong
+	trait=shrewd
+	trait=distractible
+	trait=gregarious
+	trait=humble
+	trait=just
+	trait=ambitious
+	trait=lunatic
+	occluded=yes
+	trait=light_foot_leader
+	trait=brilliant_strategist
+	trait=legendary
+	2431.3.15={birth=yes}
+	2496.10.23={death=yes}
+}
+
+14400026={ 
+	name="Tristán"
+	dynasty=4001078
+	culture=abajeno
+	religion=cristo_rey
+	martial=7
+	diplomacy=5
+	stewardship=6
+	intrigue=4
+	learning=8
+	trait=logistics_expert
+	trait=duelist
+	trait=gregarious
+	trait=charitable
+	trait=proud
+	trait=brave
+	trait=wroth
+	trait=scarred
+	trait=diligent
+	trait=organizer
+	father=14400025
+	2452.2.16={birth=yes}
+	2510.3.19={death=yes}
+}
+
+14400034={
+	name="Lothario"
+	dynasty=4001078
+	culture=abajeno
+	religion=cristo_rey
+	martial=6
+	diplomacy=6
+	stewardship=12
+	intrigue=5
+	learning=8
+	trait=fortune_builder
+	trait=lustful
+	trait=poet
+	trait=charitable
+	trait=seducer
+	father=14400026
+	2493.9.17={birth=yes}
+	2553.2.29={death=yes}
+}
+
+14400029={
+	name="Guillermo"
+	dynasty=5001114
+	culture=abajeno
+	religion=cristo_rey
+	martial=8
+	learning=8
+	trait=skilled_tactician
+	trait=honest
+	trait=slothful
+	trait=patient
+	trait=kind
+	trait=brave
+	2556.1.31={birth=yes}
+	2614.12.11={death=yes}
+	}
+ 
+14400036={
+	name="Jorge"
+	dynasty=5001114
+	culture=abajeno
+	religion=cristo_rey
+	martial=10
+	learning=12
+	stewardship=14
+	trait=fortune_builder
+	trait=poet
+	trait=kind
+	trait=content
+	trait=lustful
+	trait=humble
+	trait=musician
+	father=14400029
+	2584.7.17={birth=yes}
+	2646.12.1={death=yes}
+}
+
+14400031={
+	name="Filomeno"
+	dynasty=5001114
+	culture=abajeno
+	religion=cristo_rey
+	martial=5
+	diplomacy=5
+	stewardship=8
+	intrigue=11
+	learning=8
+	trait=intricate_webweaver
+	trait=shrewd
+	trait=brave
+	trait=ambitious
+	trait=patient
+	father=14400036
+	2616.6.30={birth=yes}
+	2716.12.1={death=yes}
+}
+
+14400037={
+	name="Nazario"
+	dynasty=5001114
+	culture=abajeno
+	religion=cristo_rey
+	martial=10
+	diplomacy=10
+	stewardship=5
+	intrigue=10
+	learning=4
+	trait=charismatic_negotiator
+	trait=chaste
+	trait=just
+	trait=cruel
+	trait=deceitful
+	trait=charitable
+	father=14400031
+	mother=1810097
+	2645.4.25={birth=yes}
+	2700.4.23={death=yes}
+}
+
+14400033={
+	name="Sísifo"
+	dynasty=5001114
+	culture=abajeno
+	religion=cristo_rey
+	martial=12
+	diplomacy=7
+	stewardship=4
+	intrigue=5
+	learning=12
+	trait=skilled_tactician
+	trait=gregarious
+	trait=ambitious
+	trait=temperate
+	trait=just
+	father=14400031
+	mother=1810097
+	2648.9.30={birth=yes}
+	2703.7.12={death=yes}
+}
+
+14400038={
+	name="Jánik"
+	dynasty=5001115
+	culture=purepecha
+	religion=cristo_rey
+	martial=9
+	diplomacy=6
+	stewardship=6
+	intrigue=6
+	learning=6
+	trait=tough_soldier
+	trait=ambitious
+	trait=zealous
+	trait=greedy
+	trait=brave
+	trait=paranoid
+	father=14400039
+	mother=14400040
+	2635.11.28={birth=yes}
+	2706.6.3={death=yes}
+}
+
+14400040={
+	name="Mítani"
+	female=yes
+	culture=purepecha
+	religion=cristo_rey
+	martial=3
+	diplomacy=2
+	stewardship=4
+	intrigue=8
+	learning=7
+	trait=underhanded_rogue
+	trait=patient
+	trait=honest
+	2606.2.2={birth=yes}
+	2624.2.12={add_spouse=14400039}
+	2665.7.1={death=yes}
+}
+
+14400039={
+	name="Juánu"
+	dynasty=5001115
+	culture=purepecha
+	religion=cristo_rey
+	martial=8
+	diplomacy=8
+	stewardship=6
+	intrigue=8
+	learning=5
+	trait=naive_appeaser
+	trait=lustful
+	trait=slothful
+	trait=patient
+	trait=humble
+	trait=gardener
+	father=14400048
+	mother=14400047
+	2599.4.31={birth=yes}
+	2651.7.4={death=yes}
+}
+ 
+14400046={
+	name="Pamencha"
+	dynasty=5001115
+	culture=purepecha
+	religion=cristo_rey
+	martial=8
+	diplomacy=8
+	stewardship=8
+	intrigue=2
+	learning=2
+	trait=charismatic_negotiator
+	trait=peasant_leader
+	trait=greedy
+	trait=ambitious
+	trait=diligent
+	trait=kind
+	trait=brave
+	trait=zealous
+	trait=depressed
+	father=14400048
+	mother=14400047
+	2602.11.28={birth=yes}
+	2641.6.3={death=yes}
+}
+
+14400045={
+	name="Juana"
+	female=yes
+	culture=abajeno
+	religion=cristo_rey
+	martial=6
+	diplomacy=6
+	stewardship=6
+	intrigue=6
+	learning=6
+	trait=shy
+	trait=weak
+	trait=trusting
+	trait=envious
+	trait=depressed
+	trait=drunkard
+	2604.4.16={birth=yes}
+	2622.11.13={add_spouse=14400046}
+	2624.2.15={		
+			death={
+			death_reason = death_poor_health
+		}
+	}
+}
+
+14400041={
+	name="Coyotito"
+	dynasty=5001115
+	culture=purepecha
+	religion=cristo_rey
+	father=14400046
+	mother=14400045
+	2624.1.24={birth=yes}
+	2625.2.20={
+		death={
+			death_reason = death_murder_arrow
+			killer = 14400044 # Poor Coyotito
+		}
+	}
+}
+
+14400044={
+	name="Ponce"
+	trait=ambitious
+	trait=wroth
+	trait=stubborn
+	trait=envious
+	trait=physician
+	trait=detached_priest
+	culture=tapatio
+	religion=sacred_heart
+	2598.7.2={birth=yes}
+	2625.8.11={death={
+			death_reason = death_accident_boar
+		}	
+	}
+}
+		
+14400048={
+	name="Tomás"
+	dynasty=5001115
+	culture=abajeno
+	martial=10
+	diplomacy=4
+	stewardship=4
+	intrigue=2
+	learning=3
+	trait=temperate
+	trait=kind
+	trait=stubborn
+	trait=patient
+	trait=brave
+	trait=cancer
+	religion=cristo_rey
+	2574.5.6={birth=yes}
+	2617.7.19={death={
+			death_reason=death_trait
+		}	
+	}
+}
+
+14400047={
+	name="Chucha"
+	female=yes
+	culture=purepecha
+	religion=cristo_rey
+	martial=4
+	diplomacy=10
+	stewardship=8
+	intrigue=4
+	learning=6
+	trait=charismatic_negotiator
+	trait=kind
+	trait=gregarious
+	trait=diligent
+	trait=content
+	trait=ill
+	trait=just
+	2578.4.6={birth=yes}
+	2600.2.22={add_spouse=14400048}
+	2623.1.30={		
+			death={
+			death_reason = death_poor_health
+		}
+	}
+}
+
+14400042={
+	name="Tere"
+	female=yes
+	dynasty=5001115
+	culture=purepecha
+	religion=cristo_rey
+	martial=4
+	diplomacy=3
+	stewardship=8
+	intrigue=4
+	learning=8
+	trait=fortune_builder
+	trait=strong
+	trait=brave
+	trait=stubborn
+	trait=kind
+	trait=wroth
+	trait=one_eyed
+	trait=deceitful
+	father=14400039
+	mother=14400040
+	2640.11.5={birth=yes}
+	2691.7.13={death=yes}
+}
+
+14400043={
+	name="Niráni"
+	female=yes
+	dynasty=5001115
+	culture=purepecha
+	religion=cristo_rey
+	trait=grey_eminence
+	trait=kind
+	trait=gregarious
+	trait=diligent
+	trait=content
+	trait=craven
+	trait=just
+	father=14400039
+	mother=14400040
+	2645.5.8={birth=yes}
+	2691.7.14={death=yes}
+}
+

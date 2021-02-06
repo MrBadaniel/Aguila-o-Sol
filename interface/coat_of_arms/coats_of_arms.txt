@@ -158,12 +158,8 @@ culture =
 
 culture =
 {
-	religion = {
-		"cristo_rey"
-		"sacred_heart"
-		"patria_grande"
-	}
-
+	religion_group "cult_of_saints"
+	
 	templates = { 
 		"coa_plain:1"
 		"coa_party_per_fess:2"
@@ -288,8 +284,7 @@ culture =
 			noOfFrames = 10
 			color = 0
 			random = no # Do not use for random CoAs
-		}
-		
+		}	
 		
 		# WHEN ADDING NEW, ALWAYS ADD AT THE END !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!11111
 	}
