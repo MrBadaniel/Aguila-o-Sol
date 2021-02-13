@@ -31,19 +31,28 @@ d_cristo_rey = {
 	
 	capital = 1767 # Mexico City
 	
-	title = "CRISTOREY"
-	title_female = "CRISTOREINA"
-	foa = "CRISTO_FOA"
+	title = "PRELATE"
+	foa = "PRELATE_FOA"
 	
 	dignity = 1000
 	
 	religion = cristo_rey
 	controls_religion = cristo_rey
-	landless = yes
+
 	primary = yes
 	short_name = yes
 	dynasty_title_names = no
-	caliphate = yes
+	
+	culture = abajeno
+	religion = cristo_rey
+	
+	landless = yes
+	holy_order = yes
+
+	monthly_income = 10
+
+	mercenary_type = d_masked_knights_composition
+
 	
 	allow = {
 		religion = cristo_rey
