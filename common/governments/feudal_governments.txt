@@ -640,17 +640,31 @@ feudal_governments = {
 		frame_suffix = "_meximperial"
 		title_prefix = "mex_"
 		potential = {
-			NAND = {
-				religion = mormon
-				religion = woolleyite
-				religion = strangite
-				is_government_potential = military_governorate
-			}
-			primary_title = {
-				mexican_government_trigger = yes
-			}
-			is_patrician = no
-			is_theocracy = no
+            NAND = {
+                religion = mormon
+                religion = woolleyite
+                religion = strangite
+                is_government_potential = military_governorate
+            }
+            OR = {
+                primary_title = { 
+                    OR = {
+                    title = e_mexico
+                    title = k_mexico
+                        }                
+                }
+                top_liege = {
+                    primary_title = { 
+                    OR = {
+                    title = e_mexico
+                    title = k_mexico
+                        }
+                    }
+                }
+            }
+            is_patrician = no
+            is_theocracy = no
+        }
 		
 		color = { 143 12 125 }
 		
