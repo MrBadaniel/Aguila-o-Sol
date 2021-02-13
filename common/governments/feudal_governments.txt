@@ -646,11 +646,25 @@ feudal_governments = {
 				religion = strangite
 				is_government_potential = military_governorate
 			}
-			primary_title = {
-				mexican_government_trigger = yes
+			OR = {
+				primary_title = { 
+					OR = {
+					title = e_mexico
+					title = k_mexico
+						}				
+				}
+				top_liege = {
+					primary_title = { 
+					OR = {
+					title = e_mexico
+					title = k_mexico
+						}
+					}
+				}
 			}
 			is_patrician = no
 			is_theocracy = no
+			}
 		
 		color = { 143 12 125 }
 		
