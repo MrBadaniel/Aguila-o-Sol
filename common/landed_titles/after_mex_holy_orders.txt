@@ -1,28 +1,22 @@
 #### HOLY ORDERS ####
 
-d_cristeros = {
+d_san_patricios = {
+	color={ 34 177 76 }
+	color2={ 255 255 255 }
 
-	color = { 0.8 0.8 0.8  } #
-	color2= { 255 255 255 }
+	capital = 1778 # Xalapa
 	
-	graphical_culture = holygfx
-	
-	capital = 1787 # León, Guanajuato
-	
-	short_name = yes
-
-	title = "PRELATE"
-	foa = "PRELATE_FOA"
-	
-	dignity = -1000
-
-	culture = abajeno
 	religion = cristo_rey
-	
-	landless = yes
-	holy_order = yes
-	primary = yes
-	monthly_income = 10
+	culture = maritimer
 
-	mercenary_type = d_masked_knights_composition
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+
+	holy_order = yes
+	landless = yes
+	primary = yes
+	monthly_income = 2
+	strength_growth_per_century = 1.0
+
+	mercenary_type = d_san_patricios_composition
 }
