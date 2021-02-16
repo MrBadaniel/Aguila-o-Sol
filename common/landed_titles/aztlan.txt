@@ -47,6 +47,19 @@ e_aztlan = {
 				b_gadsden_AZ = {}
 			}
 			c_two_sun = {
+			
+				pagan_coa = {
+					template = 0
+					layer = {
+						texture = 0
+						texture_internal = 44
+						emblem = 0
+						color = 1
+						color = 5
+						color = 1
+					}
+					religion = occultist
+				}
 				color = { 183 196 41 }
 				color2= { 255 255 255 }
 
@@ -55,9 +68,9 @@ e_aztlan = {
 				b_sahuarita_AZ = {}
 				b_arivaca_AZ = {}
 				b_topawa_AZ = {}
-				b_nogales_AZ = {}
 				b_pisinemo_AZ = {}
 				b_catalina_AZ = {}
+				b_nogales_AZ = {}
 			}
 			c_sierra_vista = {
 				color = { 201 207 133 }
@@ -247,7 +260,7 @@ e_aztlan = {
 		color={ 168 95 62 }
 		color2={ 255 255 255 }
 		
-		capital = 795 #c_guaymas
+		capital = 793 #c_guaymas
 		
 		atomicist = 300
 		
@@ -598,18 +611,19 @@ e_aztlan = {
 				b_nombre_de_dios_CH = {}
 				b_el_saucito_CH  = {}
 			}
-			c_ahumada = { # 800
+			c_juarez = { # 800
 				color={ 200 109 128 }
 				color2={ 255 255 255 }
 				
-				b_los_medanos_CH = {}
-				b_villa_ahumada_CH = {}
+				b_ciudad_juarez_CH = {}
 				b_samalayuca_CH = {}
-				b_benito_juarez_CH = {}
-				b_el_dorado_CH = {}
-				b_el_cuarenta_CH = {}
-				b_cabras_CH = {}
-				b_miguel_hidalgo_CH = {}
+				b_villa_ahumada_CH = {}
+				b_anapra_CH = {}
+				b_san_isidro_CH = {}
+				b_sauzal_CH = {}
+						 
+					
+				b_granjero_CH = {}
 			}
 			c_guerrero = { # 802
 				color={ 137 118 128 }
@@ -652,6 +666,57 @@ e_aztlan = {
 				b_julimes_CH = {}
 				b_manuel_benavides_CH = {}
 				b_ojinaga_CH = {}
+			}
+		}
+		
+		d_comarca_lagunera = {
+			color={ 155 115 56 }
+			color2={ 255 255 255 }
+
+			capital = 816 # c_torreon
+
+			c_torreon = { # 816
+				color={ 194 143 82 }
+				color2={ 255 255 255 }
+				
+				holy_site = fidencista
+				
+				b_torreon_COA = {}
+				b_gomez_palacio_DU = {}
+				b_ciudad_lerdo_DU = {
+					used_for_dynasty_names = no
+					short_name = yes
+				}
+				b_matamoros_COA = {}
+				b_parras_de_la_fuente_COA = {}
+				b_viesca_COA = {}
+				b_hacienda_de_hornos_COA = {}
+				b_la_sagra_COA = {}
+			}
+			c_cuencame = {
+				color={ 106 58 52 }
+				color2={ 255 255 255 }
+				
+				b_nazas_DU = {}
+				b_guadalupe_victoria_DU = {}
+				b_rodeo_DU = {}
+				b_la_cadena_DU = {}
+				b_santa_clara_DU = {}
+				b_san_juan_guadalupe_DU = {}
+				b_simon_bolivar_DU = {}
+				b_cuencame_DU = {}
+			}
+			c_mapimi = {
+				color={ 142 64 66 }
+				color2={ 255 255 255 }
+				
+				b_villa_hidalgo_DU = {}
+				b_mapimi_DU = {}
+				b_inde_DU = {}
+				b_san_pedro_del_gallo_DU = {}
+				b_villa_ocampo_DU = {}
+				b_el_ciento_veinte_DU = {}
+				b_tlahualilo_de_zaragoza_DU = {}
 			}
 		}
 		d_casas_altas = {
@@ -768,31 +833,7 @@ e_aztlan = {
 				b_guanacevi_DU = {}
 				b_otaez_DU = {}
 			}
-			c_cuencame = {
-				color={ 106 58 52 }
-				color2={ 255 255 255 }
-				
-				b_nazas_DU = {}
-				b_guadalupe_victoria_DU = {}
-				b_rodeo_DU = {}
-				b_la_cadena_DU = {}
-				b_santa_clara_DU = {}
-				b_san_juan_guadalupe_DU = {}
-				b_simon_bolivar_DU = {}
-				b_cuencame_DU = {}
-			}
-			c_mapimi = {
-				color={ 142 64 66 }
-				color2={ 255 255 255 }
-				
-				b_villa_hidalgo_DU = {}
-				b_mapimi_DU = {}
-				b_inde_DU = {}
-				b_san_pedro_del_gallo_DU = {}
-				b_villa_ocampo_DU = {}
-				b_el_ciento_veinte_DU = {}
-				b_tlahualilo_de_zaragoza_DU = {}
-			}
+			
 		}
 	}
 
@@ -826,24 +867,6 @@ e_aztlan = {
 				b_arteaga_COA = {}
 				b_las_maravillas_COA = {}
 				b_gomez_farias_COA = {}
-			}
-			c_torreon = { # 816
-				color={ 194 143 82 }
-				color2={ 255 255 255 }
-				
-				holy_site = fidencista
-				
-				b_torreon_COA = {}
-				b_gomez_palacio_DU = {}
-				b_ciudad_lerdo_DU = {
-					used_for_dynasty_names = no
-					short_name = yes
-				}
-				b_matamoros_COA = {}
-				b_parras_de_la_fuente_COA = {}
-				b_viesca_COA = {}
-				b_hacienda_de_hornos_COA = {}
-				b_la_sagra_COA = {}
 			}
 			c_cuatrocienegas = { # 810
 				color={ 188 109 87 }
