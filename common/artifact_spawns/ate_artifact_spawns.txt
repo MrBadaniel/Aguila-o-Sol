@@ -168,7 +168,7 @@ divine_egg = {
 	}
 }
 
-obsidian_crown = {
+baston_del_pueblo = {
 	max_amount = 1
 	spawn_date = -1.1.1
 	
@@ -197,7 +197,7 @@ obsidian_crown = {
 	}
 
 	artifacts = {
-		obsidian_crown = { value = 1 }
+		baston_del_pueblo = { value = 1 }
 	}
 }
 
@@ -328,8 +328,8 @@ gachala_skull = {
 			OR = {
 				religion_group = cult_of_saints
 				religion_group = mesoamerican_gods
-				religion_group = apocalyptic
 				religion = falling_star
+				religion = cristo_rey
 			}
 		}
 	}
@@ -957,6 +957,7 @@ sacred_bundle = {
 			value = 100
 			is_landed = yes
 			religion_group = american_native
+			religion_group = mesoamerican_gods
 		}
 	}
 
@@ -987,9 +988,7 @@ golden_chacmool = {
 			value = 100
 			is_landed = yes
 			higher_tier_than = COUNT
-			OR = {
-				religion_group = mesoamerican_gods
-				religion = tonaltec
+			religion_group = mesoamerican_gods
 			}
 		}
 	}
@@ -1023,7 +1022,7 @@ death_whistle = {
 			higher_tier_than = COUNT
 			OR = {
 				religion = mictlantec
-				religion = tonaltec
+				religion = sol_invicta
 			}
 		}
 	}
@@ -1182,6 +1181,7 @@ ancient_rosary = {
 			is_landed = yes
 			OR = {
 				religion = catholic
+				religion = cristo_rey
 				religion_group = cult_of_saints
 			}
 		}
