@@ -1305,6 +1305,34 @@ d_nousthreskeia = {
 	}	
 	dynasty_title_names = no 	# Will not be named "Seljuk", etc. (lol)
 }
+d_sagrado_corazon = {
+	color={ 240 40 40 }
+	color2={ 255 255 255 }
+	
+	capital = 1767 #Mexico City
+	
+	title = "ARZOBISPO"
+	title_female = "ARZOBISPO"
+	foa = "ECUMENICAL_PATRIARCH_FOA"
+	title_prefix = "ARCHDIOCESE_OF"
+
+	short_name = yes
+	
+	# Always exists
+	landless = yes
+	
+	# Controls a religion
+	controls_religion = sacred_heart
+	
+	religion = sacred_heart
+	
+	# Cannot be held as a secondary title
+	primary = yes
+
+	assimilate = no
+	
+	dynasty_title_names = no 	# Will not be named "Seljuk", etc.
+}					 
 
 d_qabantajik = {
 	color = { 51 128 51 }
@@ -1357,6 +1385,7 @@ k_celeste = {
 		has_global_flag = celeste_formed
 		num_of_holy_sites = 3
 		piety = 1000
+		NOT = { has_landed_title = e_china_west_governor }
 	}
 	
 	dynasty_title_names = no	# Will not be named "Seljuk", etc.
