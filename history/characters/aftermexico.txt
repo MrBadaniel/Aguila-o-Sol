@@ -403,23 +403,6 @@
 	2658.5.19={add_spouse=1810095}
 }
 
-14400020={ # Mictlantec religion head
-	name="Tiboot"
-	culture=zapotec
-	religion=mictlantec
-	martial=5
-	diplomacy=6
-	stewardship=6
-	intrigue=4
-	learning=10
-	trait=charitable
-	trait=zealous
-	trait=trusting
-	trait=mastermind_theologian
-	2602.3.11={birth=yes}
-	2700.1.1={death=yes}
-}
-
 14400020={ # Rafael Téllez - Sinaloa patrician
 	name="Rafa"
 	dynasty=4001163 # Téllez
@@ -1052,18 +1035,18 @@
 14400052 = {
 	name="Julián"
 	dynasty=5001119
-	religion="cristo_rey"
-	culture="chilango"
-	trait="just"
-	trait="brave"
-	trait="ambitious"
-	trait="gregarious"
-	trait="diligent"
-	trait="proud"
-	trait="genius"
-	trait="legendary"
-	trait="grey_eminence"
-	trait="cough"
+	religion=cristo_rey
+	culture=chilango
+	trait=just
+	trait=brave
+	trait=ambitious
+	trait=gregarious
+	trait=diligent
+	trait=proud
+	trait=genius
+	trait=legendary
+	trait=grey_eminence
+	trait=cough
 	occluded=yes
 	2194.9.21={
 		birth=yes
@@ -1076,17 +1059,17 @@
 #Benemérito José María Palafox
 14400053 = {
 	name="José María"
-	religion="cristo_rey"
-	culture="chilango"
+	religion=cristo_rey
+	culture=chilango
 	dynasty=5001120
-	trait-"theologian"
-	trait="celibate"
-	trait="diligent"
-	trait="just"
-	trait="saint"
-	trait="legendary"
-	trait="zealous"
-	trait="mastermind_theologian"
+	trait=theologian
+	trait=celibate
+	trait=diligent
+	trait=just
+	trait=saint
+	trait=legendary
+	trait=zealous
+	trait=mastermind_theologian
 	occluded=yes
 	2225.11.1={
 		birth=yes
@@ -1098,10 +1081,10 @@
 
 #Horacio father of El Soldado
 14400059={
-	name="Horacio"
+	name=Horacio
 	dynasty=5001121
-	religion="cristo_rey"
-	culture="chilango"
+	religion=cristo_rey
+	culture=chilango
 	trait=indulgent_wastrel
 	trait=brave
 	trait=stubborn
@@ -1130,14 +1113,14 @@
 14400054={ 
 	name="Héctor"
 	dynasty=5001121
-	religion="cristo_rey"
-	culture="chilango"
+	religion=cristo_rey
+	culture=chilango
 	martial=15
 	diplomacy=3
 	stewardship=5
 	intrigue=5
 	learning=5
-	trait="duelist"
+	trait=duelist
 	trait=strong
 	trait=wrathful
 	trait=brave
@@ -1157,17 +1140,17 @@
 14400055 = {
 	name="Fernando"
 	dynasty=5001121
-	religion="cristo_rey"
-	culture="chilango"
-	trait="socializer"
-	trait="just"
-	trait="honest"
-	trait="diligent"
-	trait="proud"
-	trait="humble"
-	trait="legendary"
-	trait="grey_eminence"
-	trait="is_fat" #He happy like the Buddha
+	religion=cristo_rey
+	culture=chilango
+	trait=socializer
+	trait=just
+	trait=honest
+	trait=diligent
+	trait=proud
+	trait=humble
+	trait=legendary
+	trait=grey_eminence
+	trait=is_fat #He happy like the Buddha
 	mother=14400060
 	occluded=yes
 	2241.10.18={
@@ -1181,17 +1164,17 @@
 #Benemérito Agustín Escutia
 14400056 = {
 	name="Agustín"
-	religion="cristo_rey"
-	culture="chilango"
+	religion=cristo_rey
+	culture=chilango
 	dynasty=5001122
-	trait="architect"
-	trait="shrewd"
-	trait="erudite"
-	trait="diligent"
-	trait="patient"
-	trait="legendary"
-	trait="lefthanded"
-	trait="midas_touched"
+	trait=architect
+	trait=shrewd
+	trait=erudite
+	trait=diligent
+	trait=patient
+	trait=legendary
+	trait=lefthanded
+	trait=midas_touched
 	occluded=yes
 	2244.8.2={
 		birth=yes
@@ -1204,17 +1187,17 @@
 #Benemérito Bartolomé de la Guardia
 14400057 = {
 	name="Bartolomé"
-	religion="cristo_rey"
-	culture="chilango"
+	religion=cristo_rey
+	culture=chilango
 	dynasty=5001123
-	trait="scholar"
-	trait="poet"
-	trait="kind"
-	trait="erudite"
-	trait="diligent"
-	trait="temperate"
-	trait="legendary"
-	trait="mastermind_theologian"
+	trait=scholar
+	trait=poet
+	trait=kind
+	trait=erudite
+	trait=diligent
+	trait=temperate
+	trait=legendary
+	trait=mastermind_theologian
 	occluded=yes
 	2247.4.16={
 		birth=yes
@@ -1225,22 +1208,39 @@
 }
 
 #Benemérito Tadeo de la Guardia
-70518 = {
+14400058 = {
 	name="Tadeo"
-	religion="cristo_rey"
-	culture="chilango"
+	religion=cristo_rey
+	culture=chilango
 	dynasty=5001123
-	trait="gardener"
-	trait="adopted_child"
-	trait="gregarious"
-	trait="patient"
-	trait="proud"
-	trait="groomed"
-	trait="charismatic_negotiator"
+	trait=gardener
+	trait=adopted_child
+	trait=gregarious
+	trait=patient
+	trait=proud
+	trait=groomed
+	trait=charismatic_negotiator
 	2272.5.8={
 		birth=yes
 	}
 	2327.3.3={
 		death=yes
 	}
+}
+
+14400059={ # Mictlantec religion head
+	name="Tiboot"
+	culture=zapotec
+	religion=mictlantec
+	martial=5
+	diplomacy=6
+	stewardship=6
+	intrigue=4
+	learning=10
+	trait=charitable
+	trait=zealous
+	trait=trusting
+	trait=mastermind_theologian
+	2602.3.11={birth=yes}
+	2700.1.1={death=yes}
 }
