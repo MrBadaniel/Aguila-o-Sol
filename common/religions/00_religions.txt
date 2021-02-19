@@ -264,7 +264,12 @@ american_native = {
 
 		religious_clothing_head = 15
 		religious_clothing_priest = 15
+		intermarry = raven_tales
+		intermarry = raven_tales_reformed
+		intermarry = peyotist
+		intermarry = exovedate
 		intermarry = midewiwin
+		intermarry = orthodox
 
 		alternate_start = { always = no }
 	}
@@ -332,8 +337,11 @@ american_native = {
 		religious_clothing_head = 15
 		religious_clothing_priest = 15
 		intermarry = raven_tales
+		intermarry = raven_tales_reformed
 		intermarry = peyotist
 		intermarry = exovedate
+		intermarry = midewiwin_reformed
+		intermarry = orthodox
 	}
 	
 	raven_tales_reformed = {
@@ -365,7 +373,12 @@ american_native = {
 
 		religious_clothing_head = 15
 		religious_clothing_priest = 15
+		intermarry = peyotist
+		intermarry = midewiwin
+		intermarry = midewiwin_reformed
+		intermarry = exovedate
 		intermarry = raven_tales
+		intermarry = orthodox
 		
 		alternate_start = { always = no }
 	}
@@ -406,7 +419,10 @@ american_native = {
 		religious_clothing_priest = 15
 		intermarry = peyotist
 		intermarry = midewiwin
+		intermarry = midewiwin_reformed
 		intermarry = exovedate
+		intermarry = raven_tales_reformed
+		intermarry = orthodox
 	}
 }
 amero_syncretic = {
@@ -456,6 +472,7 @@ amero_syncretic = {
 		intermarry = raven_tales
 		intermarry = raven_tales_reformed
 		intermarry = exovedate
+		intermarry = orthodox
 	}
 	orthodox = {
 		graphical_culture = westerngfx
@@ -551,7 +568,7 @@ amero_syncretic = {
 		intermarry = midewiwin_reformed
 		intermarry = raven_tales
 		intermarry = raven_tales_reformed
-	}
+		intermarry = orthodox
 }
 
 christian = {
@@ -685,6 +702,7 @@ christian = {
 		intermarry = wormwoodist
 		intermarry = celeste
 		intermarry = exovedate
+		intermarry = orthodox			   
 		
 		intermarry = cetic
 		intermarry = gaian
@@ -847,6 +865,7 @@ christian = {
 		intermarry = exovedate
 		
 		intermarry = sacred_heart
+		intermarry = cristo_rey
 	}
 	
 	angeline = {
@@ -894,6 +913,7 @@ christian = {
 		intermarry = exovedate
 		
 		intermarry = sacred_heart
+		intermarry = cristo_rey
 	}
 
 	anabaptist = {
@@ -956,6 +976,7 @@ christian = {
 		intermarry = moravian
 		intermarry = wormwoodist
 		intermarry = celeste
+		intermarry = orthodox
 	}
 	
 	batenburger = {
@@ -1001,6 +1022,7 @@ christian = {
 		intermarry = moravian
 		intermarry = wormwoodist
 		intermarry = celeste
+		intermarry = orthodox
 	}
 
 	evangelical = {
@@ -1126,7 +1148,7 @@ christian = {
 		female_temple_holders = yes
 		allow_rivermovement = yes
 		
-		religious_clothing_head = 18
+		religious_clothing_head = 0
 		religious_clothing_priest = 2
 		
 		intermarry = catholic
@@ -1718,9 +1740,13 @@ cult_of_saints= {
 		intermarry = sedevacantist
 		intermarry = nestorian
 		intermarry = apostolic
+		intermarry = celeste
 		intermarry = falling_star
 		intermarry = moravian
 		intermarry = wormwoodist
+		intermarry = catholic
+		
+		intermarry = qabantajik
 	}
 	
 	patria_grande = {
@@ -1759,6 +1785,7 @@ cult_of_saints= {
 		intermarry = sacred_heart
 		
 		intermarry = apostolic
+		intermarry = celeste
 		intermarry = falling_star
 		intermarry = moravian
 		intermarry = wormwoodist
@@ -1868,7 +1895,8 @@ pacific = {
 		intermarry = nousthreskeia
 		intermarry = neognostic
 		intermarry = aphite
-
+		intermarry = qingzhen
+		intermarry = imamite
 	}
 	
 	gaian = {
@@ -2177,7 +2205,7 @@ mesoamerican_gods = {
 		secondary_event_pictures = mesoamerican
 		#saint/god traits: Dueños, Santos, Entidades
 		icon = 36
-		heresy_icon = 87
+		heresy_icon = 35
 		
 		color = { 0.9 0.5 0.0 }
 		
@@ -2245,7 +2273,7 @@ mesoamerican_gods = {
 		intermarry = sol_invicta
 		intermarry = neomayan
 		intermarry = qabantajik
-		intermarry = tonaltec
+		 
 		
 		intermarry = sacred_heart
 		
@@ -2319,69 +2347,13 @@ mesoamerican_gods = {
 		intermarry = mictlantec
 		intermarry = neomayan
 		intermarry = qabantajik
-		intermarry = tonaltec
+		 
 		
 		intermarry = sacred_heart
 		
 		intermarry = falling_star
 		intermarry = wormwoodist
 		intermarry = moravian
-	}
-	
-	tonaltec = {
-		graphical_culture = mesoamericangfx
-		
-		secondary_event_pictures = mesoamerican
-		
-		icon = 35
-		heresy_icon = 84
-		
-		color = { 0.9 0.2 0.0 }
-		
-		interface_skin = { mesoamerican_gods_interface pagan_interface }
-		
-		parent = sol_invicta
-		
-		high_god_name = GOD_QUETZALCOATL
-		
-		god_names = {
-			GOD_XIPE_TOTEC GOD_HUITZILOPOCHTLI GOD_TEZCATLIPOCA GOD_QUETZALCOATL GOD_THE_SERPENT
-		}
-		
-		evil_god_names = {
-			GOD_THE_DARKNESS GOD_THE_PHARISEES 
-		}
-		
-		unit_modifier = {
-			levy_size = 0.3
-			
-			key = "OFF_RELIGION"
-		}
-		
-		can_grant_divorce = yes
-		female_temple_holders = yes
-		priests_can_inherit = no
-		priests_can_marry = yes
-		allow_rivermovement = yes
-		allow_looting = yes
-		peace_prestige_loss = yes # Lose Prestige while at peace
-		aggression = 2.5
-		
-		crusade_name = CRUSADE
-		scripture_name = CODICE_XILITLA
-		priest_title = PRIEST
-		
-		religious_clothing_head = 13
-		religious_clothing_priest = 13
-		
-		intermarry = sol_invicta
-		intermarry = neomayan
-		intermarry = qabantajik
-		intermarry = mictlantec
-		
-		intermarry = sacred_heart
-		intermarry = falling_star
-	}
 	
 	qabantajik = {
 		graphical_culture = mesoamericangfx
@@ -2422,7 +2394,7 @@ mesoamerican_gods = {
 		intermarry = mictlantec
 		intermarry = neomayan
 		intermarry = sol_invicta
-		intermarry = tonaltec
+		 
 
 		intermarry = sacred_heart
 		intermarry = patria_grande
@@ -2467,7 +2439,7 @@ mesoamerican_gods = {
 		intermarry = mictlantec
 		intermarry = sol_invicta
 		intermarry = qabantajik
-		intermarry = tonaltec
+		 
 	}
 }
 
@@ -3091,6 +3063,7 @@ pagan_group = {
 		allow_viking_invasion = yes
 		allow_looting = yes
 		attacking_same_religion_piety_loss = yes
+		
 		aggression = 2.0 # AI aggression factor
 
 		dislike_tribal_organization = yes
@@ -3279,6 +3252,8 @@ pagan_group = {
 		religious_clothing_priest = 3
 		intermarry = occultist
 		intermarry = orientalist
+		intermarry = misrist
+		intermarry = pelagic
 
 	}	
 	
@@ -3338,6 +3313,8 @@ pagan_group = {
 		religious_clothing_priest = 3
 		intermarry = occultist_reformed
 		intermarry = orientalist
+		intermarry = misrist
+		intermarry = pelagic
 	}
 
 	thelemic_reformed = {
@@ -3378,6 +3355,7 @@ pagan_group = {
 		religious_clothing_priest = 3
 		intermarry = thelemic
 		intermarry = orientalist
+		intermarry = misrist
 
 	}	
 	
@@ -3418,6 +3396,7 @@ pagan_group = {
 		religious_clothing_priest = 3
 		intermarry = thelemic_reformed
 		intermarry = orientalist
+		intermarry = misrist
 
 	}
 
@@ -3694,6 +3673,7 @@ pagan_group = {
 		allow_in_ruler_designer = no
 		
 		intermarry = espiritista
+		intermarry = aria_de_machete
 	}	
 	
 	aria_de_machete = {
@@ -3748,6 +3728,7 @@ pagan_group = {
 		dislike_tribal_organization = yes
 		
 		intermarry = espiritista
+		intermarry = aria_de_machete_reformed
 		can_demand_religious_conversion = no
 	}
 }
@@ -3856,6 +3837,7 @@ nautical = {
 		religious_clothing_priest = 17
 		
 		intermarry = occultist
+		intermarry = occultist_reformed
 	}
 }
 
