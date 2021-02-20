@@ -181,11 +181,10 @@ TRIBAL_RET_5 = {
 			culture_group = plateau
 			culture_group = west_anglo
 			culture_group = norteno
-			culture = tejano
+			culture_group = texan_group
 			culture = neomexicano
 			culture = llanero
 			culture = gaucho
-			culture = adelsverer
 		}
 	}
 	
@@ -510,13 +509,13 @@ RETTYPE_CUL_TEXAS =
 	potential = {
 		is_nomadic = no
 		OR = {
+			culture_group = texan_group
 			culture_group = west_anglo
-			culture_group = chicano
 			culture = llanero
+			culture = neomexicano
 			culture = bravo
 			culture = menomex
 			culture = gaucho
-			culture = adelsverer
 		}
 	}
 
@@ -1745,8 +1744,8 @@ HORDE_RETTYPE_EUROPE = {
 		is_nomadic = yes
 		capital_scope = {
 			OR = {
-				bravon = world_northeast
-				bravon = world_southeast
+				region = world_northeast
+				region = world_southeast
 			}
 		}
 	}

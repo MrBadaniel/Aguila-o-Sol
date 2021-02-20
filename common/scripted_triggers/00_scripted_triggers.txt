@@ -2191,9 +2191,6 @@ has_minor_deity_trigger = {
 		has_character_modifier = follower_of_the_nameless
 		has_character_modifier = follower_of_the_tuatha
 		has_character_modifier = follower_of_nokomis
-		has_character_modifier = follower_of_moses
-		has_character_modifier = follower_of_jesus
-		has_character_modifier = follower_of_elias
 	}
 }
 
@@ -2360,9 +2357,6 @@ true_religion_sol_invicta_trigger = {
 }
 true_religion_mictlantec_trigger = {
 	true_religion = mictlantec
-}
-true_religion_tonaltec_trigger = {
-	true_religion = tonaltec
 }
 true_religion_qabantajik_trigger = {
 	true_religion = qabantajik
@@ -3633,10 +3627,6 @@ is_in_prevs_interesting_society_trigger = {
 			PREV = { interested_in_society = secret_religious_society_sol_invicta }
 		}
 		AND = {
-			society_member_of = secret_religious_society_tonaltec
-			PREV = { interested_in_society = secret_religious_society_tonaltec }
-		}
-		AND = {
 			society_member_of = secret_religious_society_mictlantec
 			PREV = { interested_in_society = secret_religious_society_mictlantec }
 		}
@@ -4082,12 +4072,6 @@ has_any_char_old_religion = {
 			}
 		}
 		AND = { 
-			has_character_flag = character_was_tonaltec
-			any_character = {
-				religion = tonaltec
-			}
-		}
-		AND = { 
 			has_character_flag = character_was_mictlantec
 			any_character = {
 				religion = mictlantec
@@ -4441,12 +4425,7 @@ has_illuminati_prerequisites = {
 
 has_cult_of_xolotl_prerequisites = {
 	has_common_devilworship_prerequisites = yes
-	OR = {
-		religion = mictlantec
-		religion = qabantajik
-		religion = neomayan
-		religion = tonaltec
-	}
+	religion_group = mesoamerican_gods
 }
 
 has_bohemian_grove_prerequisites = {
@@ -4844,13 +4823,6 @@ looting_artifact_event_religious_artifacts_trigger = {
 				has_artifact_flag = looted_artifact_tooltip_1
 				has_artifact_flag = sol_invicta
 				ROOT = { religion = sol_invicta }
-			}
-		}
-		NAND = {
-			any_artifact = {
-				has_artifact_flag = looted_artifact_tooltip_1
-				has_artifact_flag = tonaltec
-				ROOT = { religion = tonaltec }
 			}
 		}
 		NAND = {
@@ -6484,11 +6456,11 @@ likes_californian = { #both Californian and North Pacific
 }
 likes_cowboys = { #West Anglo and Rockland
 	OR = {
+		culture_group = texan_group
 		culture_group = west_anglo
 		culture_group = rockland
 		culture = bravo
 		culture = menomex
-		culture = tejano
 		culture = neomexicano
 	}
 }
@@ -7691,7 +7663,8 @@ this_is_warrior_culture_trigger = { #Not really about culture - Used in AI votin
 		religion = raven_tales
 		religion = thelemic
 		religion = qabantajik
-		religion = tonaltec
+		religion = cristo_rey
+		religion = sol_invicta
 		OR = {
 			has_religion_feature = religion_warlike
 			has_religion_feature = religion_feature_raven_tales_1
@@ -7727,7 +7700,6 @@ this_is_diplomatic_culture_trigger = { #Not really about culture - Used in AI vo
 		religion_group = oldworld
 		religion = rust_cultist
 		religion = chrome_cultist
-		religion = sol_invicta
 		religion = mictlantec
 		religion = neomayan
 		has_religion_feature = religion_cosmopolitan
@@ -9078,8 +9050,9 @@ dorados_events_default_trigger = {
 	prisoner = no
 	OR = {
 		culture_group = west_anglo
-		culture = bravo
-		culture = menomex
+		culture_group = texan_group
+		culture_group = norteno
+		culture = neomexicano
 	}
 	has_character_flag = serving_dorados
 	has_dlc = "The Old Gods"
@@ -9107,6 +9080,7 @@ mex_elective_politician_titles_trigger = { #Used in Imperial Elective to determi
 		has_job_title = job_treasurer
 		has_job_title = job_chancellor
 		has_minor_title = title_presidente
+		has_minor_title = title_tapado
 	} 
 }
 
@@ -9388,7 +9362,6 @@ has_character_was_religion_flag_trigger = {
 		has_character_flag = character_was_woolleyite
 		has_character_flag = character_was_strangite
 		has_character_flag = character_was_sol_invicta
-		has_character_flag = character_was_tonaltec
 		has_character_flag = character_was_mictlantec
 		has_character_flag = character_was_qabantajik
 		has_character_flag = character_was_neomayan
@@ -9788,6 +9761,7 @@ is_latin_american_trigger = {
 		culture_group = portuguese
 		culture_group = chicano
 		culture_group = orinocense
+		culture = tejano
 	}
 }
 is_accepting_of_homosexuality_trigger = {
