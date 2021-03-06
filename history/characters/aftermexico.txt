@@ -332,8 +332,7 @@
 	trait=humble
 	culture=chilango
 	religion=sacred_heart
-	father=1810061
-	mother=1810062
+	father=14400088
 	2575.4.3={birth=yes}
 	2608.12.20={death={
 			death_reason=death_battle_duel #Murdered in combat.
@@ -1632,7 +1631,6 @@
 	trait=arbitrary
 	trait=ambitious
 	trait=lustful
-	trait=skilled_tactician
 	trait=tough_soldier
 	father=14400078
 	2477.6.4={birth=yes}
@@ -1752,7 +1750,7 @@
 	trait=kind
 	2513.7.3={birth=yes}
 	2535.5.5={add_spouse=14400083}
-	2541.12.8={
+	2531.12.8={
 		religion=sacred_heart
 	}
 	2568.4.30={death=yes}
@@ -1772,7 +1770,7 @@
 	trait=thrifty_clerk
 	father=14400083
 	mother=14400102
-	2542.2.15={birth=yes}
+	2532.2.15={birth=yes}
 	2572.4.28 = {death = {
 			death_reason = death_murder_unknown_strangle
 			killer = 14400085
@@ -1796,7 +1794,7 @@
 	trait=thrifty_clerk
 	father=14400083
 	mother=14400103
-	2545.2.27={birth=yes}
+	2539.2.27={birth=yes}
 	2580.11.18={
 			death={
 			death_reason = death_battle
@@ -1852,122 +1850,533 @@
 	trait=intricate_webweaver
 	father=14400083
 	mother=14400102
-	2542.4.15={birth=yes}
+	2533.4.15={birth=yes}
 	2576.2.21= {death = {
 			death_reason = death_accident_drowning
 		}
 	}
 }
 
-#Epifanio 14400106
+#Benemérito Plutarco Nájera
+14400100={
+	name="Plutarco"
+	religion=sacred_heart
+	culture=chilango
+	dynasty=5001131
+	martial=10
+	learning=8
+	trait=skilled_tactician
+	trait=jungle_terrain_leader
+	trait=trickster
+	trait=marian_santa_muerte
+	trait=ambitious
+	trait=musician
+	trait=stubborn
+	trait=patient
+	trait=cruel
+	trait=brave
+	father=14400084
+	2551.1.31={birth=yes}
+	2582.6.20= {death = {
+			death_reason = death_rabble
+		}
+	}
+	}
+	
+14400107={
+	name="Herodes"
+	religion=sacred_heart
+	culture=chilango
+	dynasty=5001131
+	martial=8
+	trait=marian_santa_muerte
+	trait=familial_kinslayer
+	trait=brave
+	trait=wrathful
+	trait=stubborn
+	trait=deceitful
+	trait=intricate_webweaver
+	father=14400084
+	2556.1.31={birth=yes}
+	2614.12.11={death=yes}
+	}	
 
 
+#Benemérito Wenceslao II Nájera
+14400086={
+	name="Wenceslao"
+	religion=sacred_heart
+	culture=chilango
+	dynasty=5001131
+	trait=charitable
+	trait=zealous
+	trait=trusting
+	trait=scholarly_theologian
+	father=14400085
+	2554.6.15={birth=yes}
+	2580.10.30={death = {
+			death_reason = death_murder_unknown_poison 
+			killer = 14400107
+		}
+	}
+}
 
-#Alejandro II begats Plutarco the Uncrowned, Herodes and Gonzalo
-#Herodes and Beatríz begats León 2561.9.10 --> dies to Damian 2580.10.1
-#and León with Beatríz begats
-#Ulises 2580.5.13 --> 2582.5.6 
-#Gonzalo begats Epifanio 14400106 
-	#~2574.1.16={birth=yes}
-#and Cristóbal, Cristóbal and Neomí begat Américo de Annaba
-#Alejo I begats Wenceslao II and Alejo Elías, Alejo Elías begats Ernesto, Tláloc, and Damian
-#Ernesto begat Aristóteles 
+14400108={
+	name="León"
+	religion=sacred_heart
+	culture=chilango
+	dynasty=5001131
+	martial=8
+	learning=1
+	trait=honest
+	trait=slothful
+	trait=curious
+	trait=honest
+	trait=slow
+	father=14400084
+	2565.9.10={birth=yes}
+	2580.10.1={death=yes}
+	}
+	
+#Benemérito Alejo II Elías Nájera
+14400099={
+	name="Alejo Elías"
+	religion=sacred_heart
+	culture=chilango
+	dynasty=5001131
+	trait=ambitious
+	trait=cruel
+	trait=greedy
+	trait=gregarious
+	trait=sturdy
+	trait=drunkard
+	trait=fortune_builder
+	father=14400085
+	2555.1.12={birth=yes}
+	2582.2.22={death = {
+			death_reason = death_execution_impaling 
+			killer = 14400100
+		}
+	}
+}	
 
-#2572.4.28={
-#	holder=14400085 #Benemérito Alejo I Nájera
-#}
-#2576.2.21={
-#	holder=14400086 #Benemérito Wenceslao II Nájera
-#}
-#2580.10.30={
-#	holder=14400099 #Benemérito Alejo II Elías Nájera
-#}
-#2582.2.22={
-#	holder=14400100 #Benemérito Plutarco Nájera
-#}
-#2582.6.26={
-#	holder=14400087 #Benemérito Esaú Nájera
-#}
+14400109={
+	name="Ernesto"
+	religion=sacred_heart
+	culture=chilango
+	dynasty=5001131
+	trait=marian_el_santo
+	trait=proud
+	trait=patient
+	trait=tough_soldier
+	father=14400085
+	2558.1.12={birth=yes}
+	2700.1.1={death=yes}
+}
 
+14400111={
+	name="Damián"
+	religion=sacred_heart
+	culture=chilango
+	dynasty=5001131
+	trait=monk
+	trait=patient
+	trait=stressed
+	trait=craven
+	trait=mastermind_theologian
+	father=14400099
+	2575.11.2={birth=yes}
+	2625.8.4={death=yes}
+}
+
+14400110={
+	name="Tláloc"
+	religion=sacred_heart
+	culture=chilango
+	dynasty=5001131
+	trait=marian_el_santo
+	trait=brave
+	trait=trusting
+	trait=shrewd
+	trait=tough_soldier
+	father=14400099
+	2578.4.27={birth=yes}
+	2630.10.14={death=yes}
+}
+
+#Señor Conrado de Annaba
+14400115={
+	name="Conrado"
+	dynasty=5001132
+	culture=menomex
+	religion=sacred_heart
+	trait=marian_el_santo
+	trait=sympathy_christendom
+	trait=brave
+	trait=trusting
+	trait=dull
+	trait=tough_soldier
+	father=14400104
+	2558.1.12={birth=yes}
+	2582.6.1={death=yes}
+}
+
+#Benemérito Esaú de Annaba
+14400087={
+	name="Esaú"
+	dynasty=5001132
+	culture=menomex
+	religion=cristo_rey
+	trait=mastermind_theologian
+	trait=feeble
+	trait=stubborn
+	trait=diligent
+	trait=ambitious
+	trait=scholar
+	trait=zealous
+	trait=ambitious
+	trait=vomiting
+	father=14400104
+	2560.10.17={birth=yes}
+	2580.10.30={death = {
+			death_reason = death_poor_health 
+		}
+	}
+}
+
+14400114={
+	name="Beatríz"
+	dynasty=5001132
+	culture=menomex
+	religion=cristo_rey
+	female=yes
+	trait=honest
+	trait=trusting
+	trait=fair
+	trait=depressed
+	trait=nun
+	father=14400104
+	2562.1.22={birth=yes}
+	2600.10.1={death=yes}
+	}
+
+
+14400106={
+	name="Verónica"
+	female=yes
+	religion=sacred_heart
+	culture=chilango
+	dynasty=5001131
+	trait=twin
+	father=14400109
+	2578.3.4={birth=yes}
+	2580.11.19={death = {
+			death_reason = death_execution_burning 
+			killer = 14400107
+		}
+	}
+}
+
+14400113={
+	name="Paciencia"
+	female=yes
+	religion=sacred_heart
+	culture=chilango
+	dynasty=5001131
+	trait=twin
+	father=14400109
+	2578.3.4={birth=yes}
+	2580.11.19={death = {
+			death_reason = death_execution_burning 
+			killer = 14400107
+		}
+	}
+}
+
+
+#Benemérito Renato I Duque
+14400088={
+	name="Renato"
+	dynasty=5001133
+	culture=chilango
+	religion=sacred_heart
+	trait=thrifty_clerk
+	trait=slothful
+	trait=ambitious
+	trait=deceitful
+	trait=charitable
+	2537.4.15={birth=yes}
+	2591.1.12={death=yes}
+}
+
+#Benemérito Porfirio Duque
+14400089={
+	name="Porfirio"
+	dynasty=5001133
+	culture=chilango
+	religion=sacred_heart
+	martial=5
+	diplomacy=6
+	stewardship=6
+	intrigue=4
+	learning=5
+	trait=marian_guadalupe
+	trait=charitable
+	trait=lustful
+	trait=content
+	trait=naive_appeaser
+	father=14400088
+	2555.12.7={birth=yes}
+	2604.7.8={death=yes}
+}
+
+#Benemérito Renato II Duque
+14400090={
+	name="Renato"
+	dynasty=5001133
+	culture=chilango
+	religion=sacred_heart
+	martial=6
+	diplomacy=5
+	stewardship=5
+	intrigue=5
+	learning=5
+	trait=misguided_warrior
+	trait=hedonist
+	trait=depressed
+	trait=gluttonous
+	trait=proud
+	trait=charitable
+	trait=content
+	father=14400089
+	2555.12.7={birth=yes}
+	2608.5.13={
+			death={
+			death_reason = death_suicide_hanging
+		}
+	}
+}
+
+#Benemérito Heliodoro Duque
+14400091={
+	name="Heliodoro"
+	dynasty=5001133
+	culture=chilango
+	religion=sacred_heart
+	martial=2
+	diplomacy=5
+	stewardship=4
+	intrigue=5
+	learning=2
+	trait=marian_guadalupe
+	trait=naive_appeaser
+	trait=content
+	trait=proud
+	trait=kind
+	trait=monk
+	father=14400089
+	2558.11.28={birth=yes}
+	2638.2.8={death=yes}
+}
+
+#Benemérito Venustiano Gabsol
+14400092={ 
+	name="Venustiano"
+	dynasty=5001133
+	culture=jarocho
+	religion=sacred_heart
+	martial=14
+	diplomacy=7
+	stewardship=1
+	intrigue=10
+	learning=12
+	trait=marian_el_santo
+	trait=brawny
+	trait=distractible
+	trait=gregarious
+	trait=proud
+	trait=just
+	trait=ambitious
+	trait=light_foot_leader
+	2555.9.2={birth=yes}
+	2616.5.28={death=yes}
+}
+
+
+#Benemérito Fernando Gabsol
+14400093={
+	name="Fernando"
+	dynasty=5001133
+	culture=jarocho
+	religion=sacred_heart
+	trait=flamboyant_schemer
+	trait=marian_santa_muerte
+	trait=deceitful
+	trait=brave
+	trait=humble
+	trait=zealous
+	father=14400092
+	2579.3.26={birth=yes}
+	2629.2.17={death=yes}
+}
+
+#Benemérito Alejo II Gabsol
+14400094={ 
+	name="Alejo"
+	dynasty=5001133
+	culture=jarocho
+	religion=sacred_heart
+	trait=marian_guadalupe
+	trait=gregarious
+	trait=arbitrary
+	trait=artist
+	trait=lustful
+	trait=tough_soldier
+	father=14400093
+	2588.6.7={birth=yes}
+	2644.10.31={death=yes}
+}
+
+14400124={
+	name="Gustavo"
+	dynasty=5001133
+	culture=chilango
+	religion=sacred_heart
+	martial=6
+	diplomacy=6
+	stewardship=6
+	intrigue=6
+	learning=6
+	trait=grey_eminence
+	trait=humble
+	trait=chaste
+	trait=content
+	trait=trusting
+	father=14400091
+	2598.6.15={birth=yes}
+	2649.11.11={death=yes}
+}
+
+#Benemérito Julián Duque
+14400095={
+	name="Julián"
+	dynasty=5001133
+	culture=chilango
+	religion=sacred_heart
+	trait=sturdy
+	trait=just
+	trait=zealous
+	trait=arbitrary
+	trait=charismatic_negotiator
+	father=14400124
+	2625.6.16={birth=yes}
+	2651.3.4={death = {
+			death_reason = death_murder_unknown_poison 
+			killer = 14400096
+		}
+	}
+}
+
+14400117={
+	name="Octavio"
+	dynasty=5001133
+	culture=chilango
+	religion=sacred_heart
+	martial=5
+	diplomacy=0
+	stewardship=2
+	intrigue=3
+	learning=3
+	trait=fortune_builder
+	trait=brave
+	trait=shrewd
+	father=14400091
+	2601.5.2={birth=yes}
+	2664.2.11={death=yes}
+}
+
+14400116={
+	name="Heliodoro"
+	dynasty=5001133
+	culture=chilango
+	religion=sacred_heart
+	martial=5
+	diplomacy=3
+	stewardship=10
+	intrigue=1
+	learning=1
+	trait=thrifty_clerk
+	trait=content
+	trait=gardener
+	trait=brave
+	trait=brawny
+	2641.3.11={birth=yes}
+	2680.2.24={death=yes}
+}
+
+14400125={
+	name="Guillermo"
+	dynasty=5001133
+	culture=chilango
+	religion=sacred_heart
+	father=14400116
+	2665.2.25={birth=yes}
+	2765.2.25={death=yes}
+}
+
+#Benemérito Porfirio Gómez
+14400096={
+	name="Porfirio"
+	dynasty=5001135
+	culture=chilango
+	religion=sacred_heart
+	martial=8
+	diplomacy=8
+	stewardship=6
+	intrigue=8
+	learning=5
+	trait=marian_santa_muerte
+	trait=naive_appeaser
+	trait=chaste
+	trait=deceitful
+	trait=cruel
+	trait=ambitious
+	trait=patient
+	2597.12.23={birth=yes}
+	2657.2.20={death=yes}
+}
+
+14400098={ #Benemérito Urbano Falcón
+	name="Urbano"
+	dynasty=5001136
+	culture=chilango
+	religion=sacred_heart
+	trait=adopted_child
+	trait=greedy
+	trait=cynical
+	trait=ambitious
+	trait=robust
+	trait=tough_soldier
+	trait=diligent
+	trait=monk
+	2610.11.23={birth=yes}
+	2666.2.20={death=yes}
+}
+
+#Ernesto begat Aristóteles  14400112
 #Tláloc furthered House Nájera 
-#Damián begat Natas who was tonsured
-#Jebidías who begats Beatríz, Conrado, Esaú, and Neomí
-#Herodes kills baby Gokú and secretly murders young Epifanio, he is killed by Ernesto and battle (they kill eachother)
+
+#Herodes kills baby Aristóteles and secretly murders young Verónica and Paciencia, he is killed by Ernesto and battle (they kill eachother)
 #Jebidías dies of a cold lol
-#León dies of his wounds and Ulises is killed by Damian
+#León dies  is killed by Ernesto
 #Gonzalo is kiled by Alejo Elías in battle
-#Damián dies in battle
 #Conrado dies in battle
-#Natas is tonsured by Benemérito Renato Duque
 #Plutarco wins against Alejo Elías (who he executes) but is killed in a rabble (actually killed by his soldiers)
 #Cristóbal is like 6 while Neomí is 2
 #Beatríz is tonsured give her depressed trait
 
-#Civil War is between Duke Plutarco of Edomex vs Alejo Elías of Anahuac
-
-
-#2570.11.18={
-#	holder=14400084 #Benemérito Alejandro II Nájera
-#}
-#2572.4.28={
-#	holder=14400085 #Benemérito Alejo I Nájera
-#}
-#2576.2.21={
-#	holder=14400086 #Benemérito Wenceslao II Nájera
-#}
-#2580.10.30={
-#	holder=14400099 #Benemérito Alejo II Elías Nájera
-#}
-#2582.2.22={
-#	holder=14400100 #Benemérito Plutarco Nájera
-#}
-#2582.6.26={
-#	holder=14400087 #Benemérito Esaú Nájera
-#}
-#2585.3.31={
-#	holder=14400088 #Benemérito Renato I Duque
-#}
-#2591.1.12={
-#	holder=14400089 #Benemérito Porfirio Duque
-#}
-#2604.7.8={
-#	holder=14400090 #Benemérito Renato II Duque
-#}
-#2608.5.13={
-#	holder=14400091 #Benemérito Heliodoro Duque
-#}
-#2608.8.4={
-#	holder=14400092 #Benemérito Venustiano Gabsol
-#}
-#2616.5.28={
-#	holder=14400093 #Benemérito Fernando Gabsol
-#}
-#2629.2.17={
-#	holder=14400094 #Benemérito Alejo II Gabsol
-#}
-#2644.10.31={
-#	holder=14400095 #Benemérito Julián Duque
-#}
-#2651.3.4={
-#	holder=14400096 #Benemérito Porfirio Gómez
-#}
-#2657.2.20={
-#	holder=14400098 #Benemérito Urbano Falcón
-#}
-#2660.6.15={
-#	holder=14400061 #Benemérito Wenceslao III Paleolagos
-#}
-
-#Renato son of Porfirio
-#Heliodoro son of Porfirio
-#Venustiano Gabsol el Jarocho overthrows Heliodoro and tonsures him
-#Fernando Gabsol el hijo de Venustiano
-#Alejo Gabsol el hijo de Fernando
-#Julián Duque the great nephew if Renato II
-#Porfirio Gómez assiniates Julián Duque to take over
-#Urbano Falcón is elected 
-#Wenceslao III takes over and tonsures Urbano Falcón
-
 #Give Gabsol the duchy of Huasteca, county of tampico and panuco
-#give Duque the county of totonacapan
 #Give Tehuacan to Nájera
+
+#Alejo II Gabsol has a son named Cándido 14400118 who has two sons named Gerónimo 14400119 and Julián 14400120
+#2618 Tláloc has as son named Eusebio 14400121 who has a son named Iván 14400122 in 2660 and a daughter named Itati  14400123 in 26066
