@@ -716,9 +716,9 @@
 }
 
 14400038={
-	name="Jánik"
+	name="Diésel"
 	dynasty=5001115
-	culture=purepecha
+	culture=choyero
 	religion=cristo_rey
 	martial=9
 	diplomacy=6
@@ -738,9 +738,9 @@
 }
 
 14400040={
-	name="Mítani"
+	name="Apolonia"
 	female=yes
-	culture=purepecha
+	culture=choyero
 	religion=cristo_rey
 	martial=3
 	diplomacy=2
@@ -756,9 +756,9 @@
 }
 
 14400039={
-	name="Juánu"
+	name="Juan"
 	dynasty=5001115
-	culture=purepecha
+	culture=choyero
 	religion=cristo_rey
 	martial=8
 	diplomacy=8
@@ -778,9 +778,9 @@
 }
  
 14400046={
-	name="Pamencha"
+	name="Kino"
 	dynasty=5001115
-	culture=purepecha
+	culture=choyero
 	religion=cristo_rey
 	martial=8
 	diplomacy=8
@@ -805,7 +805,7 @@
 14400045={
 	name="Juana"
 	female=yes
-	culture=abajeno
+	culture=choyero
 	religion=cristo_rey
 	martial=6
 	diplomacy=6
@@ -830,12 +830,15 @@
 14400041={
 	name="Coyotito"
 	dynasty=5001115
-	culture=purepecha
+	culture=choyero
 	religion=cristo_rey
 	father=14400046
 	mother=14400045
 	2624.1.24={birth=yes}
-	2625.2.20={
+	2625.2.20={death={
+			death_reason = death_murder_arrow
+			killer = 14400044 # Poor Coyotito
+		}
 
 	}
 }
@@ -848,13 +851,10 @@
 	trait=envious
 	trait=physician
 	trait=detached_priest
-	culture=tapatio
+	culture=californio
 	religion=sacred_heart
 	2598.7.2={birth=yes}
-	2625.8.11={death={		death={
-			death_reason = death_murder_arrow
-			killer = 14400044 # Poor Coyotito
-		}
+	2625.8.11={death={		
 			death_reason = death_accident_boar
 		}	
 	}
@@ -863,7 +863,7 @@
 14400048={
 	name="Tomás"
 	dynasty=5001115
-	culture=abajeno
+	culture=choyero
 	martial=10
 	diplomacy=4
 	stewardship=4
@@ -884,9 +884,9 @@
 }
 
 14400047={
-	name="Chucha"
+	name="Dulce"
 	female=yes
-	culture=purepecha
+	culture=choyero
 	religion=cristo_rey
 	martial=4
 	diplomacy=10
@@ -910,10 +910,10 @@
 }
 
 14400042={
-	name="Tere"
+	name="Teresa"
 	female=yes
 	dynasty=5001115
-	culture=purepecha
+	culture=choyero
 	religion=cristo_rey
 	martial=4
 	diplomacy=3
@@ -935,10 +935,10 @@
 }
 
 14400043={
-	name="Niráni"
+	name="Sofía"
 	female=yes
 	dynasty=5001115
-	culture=purepecha
+	culture=choyero
 	religion=cristo_rey
 	trait=grey_eminence
 	trait=kind
@@ -1733,6 +1733,10 @@
 	2541.12.3={
 		give_nickname = nick_the_great
 		religion=sacred_heart
+		create_bloodline={
+			type=iturbide
+			has_dlc="Holy Fury"
+		}
 	}
 	2570.11.18={death=yes}
 }
