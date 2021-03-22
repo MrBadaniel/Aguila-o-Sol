@@ -44,6 +44,217 @@
 	}
 }
 
+#Benemérito Marco Agustín de la Guardia
+14450408 = {
+	name="Marco Agustín"
+	religion=cristo_rey
+	culture=chilango
+	dynasty=5001123
+	trait=hedonist
+	trait=proud
+	trait=uncouth
+	trait=wroth	
+	trait=paranoid
+	trait=arbitrary
+	trait=tough_soldier	
+	father=14400058
+	2299.2.14={
+		birth=yes
+	}
+	2341.2.27={
+			death={
+			death_reason = death_murder_unknown #There were rumors of Otón or Nicolás murdering him
+			}
+		}
+}
+	 
+#Benemérito Salim Clarencio
+14450409 = {
+	name="Salim"
+	religion=cristo_rey
+	culture=filastino
+	dynasty=5001138
+	trait=cynical
+	trait=greedy
+	trait=diligent
+	trait=ambitious
+	trait=fortune_builder	
+	2272.2.20={
+		birth=yes
+	}
+	2341.5.8={death={
+			death_reason=death_battle
+			killer=14450410
+		}
+	}
+}
+
+#Benemérito Otón Sotomayor
+14450410 = {
+	name="Otón"
+	religion=cristo_rey
+	culture=chilango
+	dynasty=5001139
+	trait=dull
+	trait="strong"
+	trait="cruel"
+	trait="ambitious"
+	trait="skilled_tactician"
+	2605.4.28={
+		birth=yes
+	}
+	2641.8.16={death={
+			death_reason=death_suicide
+		}
+	}
+}
+
+#Benemérito Vicente Lapuente
+14450411 = {
+	name="Vicente"
+	religion=cristo_rey
+	culture=chilango
+	dynasty=5001140
+	trait=duelist
+	trait=lustful
+	trait=charitable
+	trait=content
+	trait=underhanded_rogue
+	2289.8.15={
+		birth=yes
+	}
+	2341.12.22={death={
+			death_reason=death_battle_duel
+			killer=14450412
+		}
+	}
+}
+
+#Benemérito Nicolás Severo
+14450412 = {
+	name="Nicolás"
+	religion=cristo_rey
+	culture=tapatio
+	dynasty=5001141
+	trait=brave
+	trait=robust
+	trait=wroth
+	trait=patient
+	trait=ambitious	
+	trait=brilliant_strategist
+	2280.12.22={
+		birth=yes
+	}
+	2350.2.20={death=yes}
+}
+
+#Benemérito Flavio Severo
+14450413 = {
+	name="Flavio"
+	religion=cristo_rey
+	culture=tapatio
+	dynasty=5001141
+	trait=shrewd
+	trait=chaste
+	trait=slothful
+	trait=uncouth	
+	trait=scholarly_theologian 
+	father=14450412
+	2312.12.30={
+		birth=yes
+	}
+	2353.11.14={death = {
+			death_reason = death_murder_unknown_poison 
+			killer = 14450414
+		}
+	}
+}
+
+#Benemérito Epifanio Severo
+14450414 = {
+	name="Epifanio"
+	religion=cristo_rey
+	culture=tapatio
+	dynasty=5001141
+	trait=patient
+	trait=cruel
+	trait=paranoid
+	trait=envious
+	trait=proud	
+	trait=intricate_webweaver
+	father=14450412
+	2317.10.24={
+		birth=yes
+	}
+	2361.1.12={death = {
+			death_reason = death_murder_unknown_arrow 
+		}
+	}
+}
+
+#Benemérito Ulises Montserrat
+14450415 = {
+	name="Ulises"
+	religion=cristo_rey
+	culture=chilango
+	dynasty=5001142
+	trait=deceitful
+	trait=temperate
+	trait=ambitious
+	trait=gluttonous	
+	trait=charismatic_negotiator 
+	2296.6.16={
+		birth=yes
+	}
+	2366.10.19={death=yes}
+}
+
+#Benemérito Aureliano Hernández
+14450416 = {
+	name="Aureliano"
+	religion=cristo_rey
+	culture=chilango
+	dynasty=5001143
+	trait=honest
+	trait=humble
+	trait=kind
+	trait=falconer	
+	trait=fortune_builder
+	father=14450417
+	2309.9.27={
+		birth=yes
+	}
+	2374.4.26={death=yes}
+}
+
+14450417={
+	name="Pancho"
+	dynasty=5001143
+	trait=brave
+	trait=humble
+	trait=just
+	culture=chilango
+	religion=cristo_rey
+	2269.4.30={birth=yes}
+	2336.5.20={death=yes}
+}
+	
+14450418={
+	name="Lourdes"
+	dynasty=5001143
+	culture=chilango
+	religion=cristo_rey
+	female=yes
+	trait=fair
+	trait=honest
+	trait=trusting
+	trait=kind
+	father=14450417
+	2299.2.15={birth=yes}
+	2328.2.14={add_spouse=14450415}
+	2360.10.1={death=yes}
+	}	
+
 #Anselmo llorente, the first bishop of Costa Rica attended the sick people, people with cholera putting his life in risk. 
 #This is a inspired character. 
 #Also he had a based germÃ¡n succesor that was expulsed from Costa Rica.  centrano abajeno
