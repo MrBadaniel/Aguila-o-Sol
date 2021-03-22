@@ -393,21 +393,8 @@ e_centroamerica = {
 			color={ 222 228 252 }
 			color2={ 255 255 255 }
 			
-			capital = 1861 # c_tegucigalpa
+			capital = 724 # c_copan
 			
-			c_tegucigalpa = { # 1861
-				color={ 76 15 221 }
-				color2={ 255 255 255 }
-				
-				b_tegucigalpa_HN = {}
-				b_santa_ana_HN = {}
-				b_talanga_HN = {}
-				b_el_porvenir_HN = {}
-				b_comayaguela_HN = {}
-				b_sabanagrande_HN = {}
-				b_ojojona_HN = {}
-				b_guaimaca_HN = {}
-			}
 			c_comayagua = { # 1862
 				color={ 58 182 155 }
 				color2={ 255 255 255 }
@@ -445,9 +432,31 @@ e_centroamerica = {
 				b_ocotepeque_HN = {}
 				b_lepaera_HN = {}
 				b_jesus_de_otoro_HN = {}
-				b_jesus_de_otoro_HN = {}
+				b_masaguara_HN = {}
 				b_la_labor_HN = {}
 				b_san_andres_HN = {}
+			}
+		}
+		d_morazan = {
+			color={ 222 228 252 }
+			color2={ 255 255 255 }
+			
+			capital = 1861 # c_tegucigalpa
+			
+			c_tegucigalpa = { # 1861
+				color={ 76 15 221 }
+				color2={ 255 255 255 }
+				
+				b_tegucigalpa_HN = {
+					centrano = "Tegus" 
+				}
+				b_santa_ana_HN = {}
+				b_talanga_HN = {}
+				b_el_porvenir_HN = {}
+				b_comayaguela_HN = {}
+				b_sabanagrande_HN = {}
+				b_ojojona_HN = {}
+				b_suyapa_HN = {}
 			}
 			c_el_paraiso = { # 1863
 				color={ 120 157 193 }
