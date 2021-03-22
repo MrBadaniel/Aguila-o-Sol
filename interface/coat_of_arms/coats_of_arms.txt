@@ -68,32 +68,32 @@ culture =
 	}
 	
 	emblem = {
-		file = "gfx\\coats_of_arms\\solo_overlay_emblems.tga"
-		noOfFrames = 64
+		file = "gfx\\coats_of_arms\\emblem.tga"
+		noOfFrames = 25
 	}
 
 	# WHEN ADDING NEW, ALWAYS ADD AT THE END !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!11111
 	textures = {
-		texture = { 
-			file = "gfx\\coats_of_arms\\part1_solo.tga"
-			size = { x = 10 y = 50 }
-			noOfFrames = 500
+		texture = {
+			file = "gfx\\coats_of_arms\\pattern.tga"
+			size = { x = 10 y = 5 }
+			noOfFrames = 47
 			color = 2
 			emblem = no
 		}
-		texture = { 
-			file = "gfx\\coats_of_arms\\part2_solo.tga"
-			size = { x = 10 y = 24 }
-			noOfFrames = 240
+		texture = {
+			file = "gfx\\coats_of_arms\\pattern2.tga"
+			size = { x = 10 y = 3 }
+			noOfFrames = 22
 			color = 3
-			emblem = no		
+			emblem = no
 		}
-		texture = { 
-			file = "gfx\\coats_of_arms\\part3_solo.tga"
-			size = { x = 10 y = 24 }
-			noOfFrames = 205
-			color = 0
-			emblem = no					
+		texture = {
+			file = "gfx\\coats_of_arms\\pattern3.tga"
+			size = { x = 10 y = 5 }
+			noOfFrames = 44
+			color = 3
+			emblem = no
 		}
 		
 		texture = {
@@ -104,11 +104,11 @@ culture =
 			random = no # Do not use for random CoAs
 		}
 		texture = {
-			file = "gfx\\coats_of_arms\\part4_solo.tga"
-			size = { x = 10 y = 24 }
-			noOfFrames = 194
-			color = 3
-			emblem = no			
+			file = "gfx\\coats_of_arms\\pattern4.tga"
+			size = { x = 10 y = 5 }
+			noOfFrames = 45
+			color = 2
+			emblem = no
 		}
 		texture = {
 			file = "gfx\\coats_of_arms\\dynasties2.tga"
@@ -138,155 +138,20 @@ culture =
 			color = 0
 			random = no # Do not use for random CoAs
 		}
-		texture = { #9 from 4
-			file = "gfx\\coats_of_arms\\misc_solo.tga"
-			size = { x = 10 y = 18 }
-			noOfFrames = 180
-			emblem = no
-			color = 2
-			random = no			
-		}
-                texture = {
-			file = "gfx\\coats_of_arms\\starfirecoa.tga"
-			size = { x = 10 y = 15 }
-			noOfFrames = 1
-			color = 0
-			random = yes
-		}	
 		texture = {
-			file = "gfx\\coats_of_arms\\ate_dynasties_mex.tga"
-			size = { x = 10 y = 2 }
-			noOfFrames = 20
-			color = 0
-		}
-		# WHEN ADDING NEW, ALWAYS ADD AT THE END !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!11111
-	}
-}
-
-culture =
-{
-	religion_group = "cult_of_saints"
-
-	templates = { 
-		"coa_plain:1"
-		"coa_party_per_fess:2"
-		"coa_party_per_pale:2"
-		"coa_party_per_cross:4"
-		"coa_party_triangle:3"
-	}
-
-	color = {
-		{ 242 188 81 }	#0		Or (Gold)
-		{ 246 246 246 } #1		Argent (White)
-		{ 13 103 147 } 	#2		Azure (Blue)
-		{ 188 46 46 } 	#3		Gules (Red)
-		{ 62 147 62 } 	#4		Vert (Green)
-		{ 51 51 51 }	#5		Sable (Black)
-		{ 145 58 106 }	#6		Purpure (Purple)
-		{ 165 47 45 }	#7		Sanguine (Blood Red)
-		{ 191 117 50 }	#8		Tenné (Tawny)
-		{ 53 156 183 }	#9		Bleu-Celeste (Sky Blue)
-		{ 164 44 69 }	#10		Murrey (Mulberry) Burgundy
-		{ 31 74 31 }	#11		Dark green
-		{ 114 89 66 }	#12		Brunatre (Brown)
-		{ 50 173 192 }	#13		Turqouise
-		{ 25 166 118 }	#14		Teal
-	}
-	
-	rebel_colors = { 3 5 7 }
-
-	banned_colors = 
-	{ 
-		{ 0 1 }						#0		
-		{ 0 1 9}					#1		
-		{ 2 3 4 6 7 8 9 12 14 }		#2		
-		{ 2 3 4 7 9 10	}			#3		
-		{ 2 4 6 7 9 10 13 14}		#4		
-		{ 5 10 14 15}				#5		
-		{ 2 4 6 10 11 12 }			#6		
-		{ 2 3 4 7 8 10 13 }			#7		
-		{ 2 4 6 7 8 9 }				#8		
-		{ 2 3 4 8 9 10 11 13 }		#9		
-		{ 3 4 5 6 7 9 10 }			#10		
-		{ 6 9 11 }					#11
-		{ 6 12 }					#12
-		{ 4 7 9 13 14 }				#13
-		{ 2 4 13 14 }				#14
-	}
-	
-	emblem = {
-		file = "gfx\\coats_of_arms\\solo_overlay_emblems.tga"
-		noOfFrames = 64
-	}
-
-	# WHEN ADDING NEW, ALWAYS ADD AT THE END !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!11111
-	textures = {
-		texture = { 
-			file = "gfx\\coats_of_arms\\part1_solo_eastern.tga"
-			size = { x = 10 y = 50 }
-			noOfFrames = 500
-			color = 2
-			emblem = no
-		}
-		texture = { 
-			file = "gfx\\coats_of_arms\\part2_solo.tga"
-			size = { x = 10 y = 24 }
-			noOfFrames = 240
-			color = 3
-			emblem = no
-		}
-		texture = { 
-			file = "gfx\\coats_of_arms\\part3_solo.tga"
-			size = { x = 10 y = 24 }
-			noOfFrames = 205
-			color = 0
-			emblem = no							
-		}
-		
-		texture = {
-			file = "gfx\\coats_of_arms\\dynasties.tga"
-			size = { x = 16 y = 4 }
-			noOfFrames = 51
-			color = 0
-			random = no # Do not use for random CoAs
-		}
-		texture = { 
-			file = "gfx\\coats_of_arms\\part4_solo.tga"
-			size = { x = 10 y = 24 }
-			noOfFrames = 194
+			file = "gfx\\coats_of_arms\\pattern_early_med.tga"
+			size = { x = 10 y = 4 }
+			noOfFrames = 40
 			color = 3
 			emblem = no
 		}
 		texture = {
-			file = "gfx\\coats_of_arms\\dynasties2.tga"
-			size = { x = 16 y = 4 }
-			noOfFrames = 50
-			color = 0
-			random = no # Do not use for random CoAs
-		}
-		texture = {
-			file = "gfx\\coats_of_arms\\patricians.tga"
-			size = { x = 16 y = 2 }
-			noOfFrames = 25
-			color = 0
-			random = no # Do not use for random CoAs
-		}
-		texture = {
-			file = "gfx\\coats_of_arms\\dynasties3.tga"
-			size = { x = 16 y = 4 }
-			noOfFrames = 51
-			color = 0
-			random = no # Do not use for random CoAs
-		}
-		texture = { #9 (from 4)
-			file = "gfx\\coats_of_arms\\misc_solo.tga"
-			size = { x = 10 y = 18 }
-			noOfFrames = 180
+			file = "gfx\\coats_of_arms\\pattern_early_christian.tga"
+			size = { x = 10 y = 4 }
+			noOfFrames = 32
+			color = 3
 			emblem = no
-			color = 2
-			random = no			
-		}	
-		
+		}
 		# WHEN ADDING NEW, ALWAYS ADD AT THE END !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!11111
 	}
 }
@@ -301,7 +166,7 @@ culture =
 	}
 
 	templates = { 
-		"coa_plain_hellenic:1"
+		"coa_plain_old:1"
 		#"coa_party_per_fess:2"
 		#"coa_party_per_pale:2"
 		#"coa_party_per_cross:4"
@@ -348,16 +213,16 @@ culture =
 	}
 
 	emblem = {
-		file = "gfx\\coats_of_arms\\emblem.tga"
-		noOfFrames = 25
+		file = "gfx\\coats_of_arms\\emblem_muslim.dds"
+		noOfFrames = 1
 	}
 
 	# WHEN ADDING NEW, ALWAYS ADD AT THE END
 	textures = {
 		texture = {
-			file = "gfx\\coats_of_arms\\pattern_americana.tga"
-			size = { x = 10 y = 10 }
-			noOfFrames = 100
+			file = "gfx\\coats_of_arms\\pattern_american.tga"
+			size = { x = 10 y = 7 }
+			noOfFrames = 70
 			color = 3
 			emblem = no
 		}
@@ -388,7 +253,7 @@ culture =
 	}
 
 	templates = { 
-		"coa_plain_hellenic:1"
+		"coa_plain_muslim:1"
 		#"coa_party_per_fess:2"
 		#"coa_party_per_pale:2"
 		#"coa_party_per_cross:4"
@@ -433,8 +298,8 @@ culture =
 	}
 
 	emblem = {
-		file = "gfx\\coats_of_arms\\emblem.dds"
-		noOfFrames = 25
+		file = "gfx\\coats_of_arms\\emblem_muslim.dds"
+		noOfFrames = 1
 	}
 
 	# WHEN ADDING NEW, ALWAYS ADD AT THE END
@@ -458,7 +323,7 @@ culture =
 	}
 
 	templates = { 
-		"solo_norse_frame:1"
+		"coa_plain_pagan:1"
 	}
 
 	color = {
@@ -498,9 +363,9 @@ culture =
 	}
 
 	emblem = {
-		file = "gfx\\coats_of_arms\\solo_overlay_norse_t5.tga"	
-		noOfFrames = 12
-	}	
+		file = "gfx\\coats_of_arms\\emblem_muslim.dds"
+		noOfFrames = 1
+	}
 
 	# WHEN ADDING NEW, ALWAYS ADD AT THE END
 	textures = {
@@ -525,49 +390,7 @@ culture =
 			noOfFrames = 32
 			color = 2
 			emblem = no
-		}		
-		texture = {
-			file = "gfx\\coats_of_arms\\pattern_norse.tga"
-			size = { x = 10 y = 4 }
-			noOfFrames = 32
-			color = 2
-     		emblem = yes
-    	}
-		texture = {
-			file = "gfx\\coats_of_arms\\pattern2_norse.tga"
-			size = { x = 10 y = 4 }
-			noOfFrames = 32
-			color = 3
-			emblem = yes
 		}
-		texture = { 
-			file = "gfx\\coats_of_arms\\solo_nordic_pagan.tga"
-			size = { x = 10 y = 10 }
-			noOfFrames = 63
-			color = 2
-			emblem = yes
-		}
-		texture = {
-			file = "gfx\\coats_of_arms\\solo_slavic_pagan.tga"
-			size = { x = 10 y = 10 }
-			noOfFrames = 75
-			color = 2
-			emblem = yes
-		}
-		texture = {
-			file = "gfx\\coats_of_arms\\solo_baltic_pagan.tga"
-			size = { x = 10 y = 10 }
-			noOfFrames = 50
-			color = 2
-			emblem = yes
-		}
-		texture = {
-			file = "gfx\\coats_of_arms\\solo_finnic_pagan.tga"
-			size = { x = 10 y = 10 }
-			noOfFrames = 23
-			color = 2
-			emblem = yes
-		}	
 	}
 }
 
@@ -577,7 +400,7 @@ culture = {
 	}
 	
 	templates = { 
-		"solo_norse_frame:1"
+		"coa_plain_pagan:1"
 	}
 
 	color = {
@@ -642,11 +465,7 @@ culture =
 	}
 
 	templates = { 
-		"solo_norse_frame:1"
-		#"coa_party_per_fess:2"
-		#"coa_party_per_pale:2"
-		#"coa_party_per_cross:4"
-		#"coa_party_triangle:3"
+		"coa_plain_rust:1"
 	}
 
 	color = {
@@ -687,9 +506,9 @@ culture =
 	}
 
 	emblem = {
-		file = "gfx\\coats_of_arms\\solo_overlay_norse_t5.tga"	
-		noOfFrames = 12
-	}	
+		file = "gfx\\coats_of_arms\\emblem_muslim.dds"
+		noOfFrames = 1
+	}
 
 	# WHEN ADDING NEW, ALWAYS ADD AT THE END
 	textures = {
@@ -723,7 +542,11 @@ culture =
 	}
 
 	templates = { 
-		"solo_native_american_frame:1"
+		"coa_plain_indian:1"
+		#"coa_party_per_fess:2"
+		#"coa_party_per_pale:2"
+		#"coa_party_per_cross:4"
+		#"coa_party_triangle:3"
 	}
 
 	color = {
@@ -865,8 +688,12 @@ culture =
 		"brethren"
 	}
 
-	templates = { 	
-		"solo_nautical_frame:1"		
+	templates = { 
+		"coa_plain_indian:1"
+		#"coa_party_per_fess:2"
+		#"coa_party_per_pale:2"
+		#"coa_party_per_cross:4"
+		#"coa_party_triangle:3"
 	}
 
 	color = {
@@ -920,8 +747,12 @@ culture =
 		"pelagic"
 	}
 
-	templates = { 	
-		"solo_nautical_frame:1"		
+	templates = { 
+		"coa_plain_indian:1"
+		#"coa_party_per_fess:2"
+		#"coa_party_per_pale:2"
+		#"coa_party_per_cross:4"
+		#"coa_party_triangle:3"
 	}
 
 	color = {
@@ -984,7 +815,7 @@ culture =
 	}
 
 	templates = { 
-		"solo_norse_frame:1"
+		"coa_plain_pagan:1"
 		#"coa_party_per_fess:2"
 		#"coa_party_per_pale:2"
 		#"coa_party_per_cross:4"
@@ -1031,9 +862,9 @@ culture =
 	}
 
 	emblem = {
-		file = "gfx\\coats_of_arms\\solo_overlay_norse_t5.tga"	
-		noOfFrames = 12
-	}	
+		file = "gfx\\coats_of_arms\\emblem_muslim.dds"
+		noOfFrames = 1
+	}
 
 	# WHEN ADDING NEW, ALWAYS ADD AT THE END
 	textures = {
@@ -1055,7 +886,7 @@ culture =
 	}
 
 	templates = { 
-		"solo_zoroastrian_frame:1"
+		"coa_plain_pagan:1"
 	}
 
 	color = {
@@ -1127,7 +958,7 @@ culture = {
 	}
 	
 	templates = { 
-		"solo_atomic_frame:1"
+		"coa_plain_atom:1"
 	}
 
 	color = {
@@ -1163,9 +994,7 @@ culture = {
 		{ 9 0 1 2 4 6 8 12 13 }		# Light Green
 		{ 10 2 3 6 7 8 11 }			# Mulberry
 		{ 11 2 3 4 6 7 10 }			# Deep Blue
-		{ 12 2 4 6 8 9	}			# 
-		
-		
+		{ 12 2 4 6 8 9	}			# Turqouise
 		{ 13 0 1 9	}				# Silver
 	}
 
@@ -1201,7 +1030,7 @@ culture =
 	}
 
 	templates = { 
-		"solo_hellenic_frame:1"
+		"coa_plain_indian:1"
 	}
 
 	color = {
@@ -1402,7 +1231,7 @@ culture =
 	religion_group = "latter_day_saints"
 
 	templates = { 
-		"solo_celtic_frame:1"
+		"coa_plain_pagan:1"
 	}
 
 	color = {
@@ -1476,7 +1305,7 @@ culture =
 	}
 
 	templates = { 
-		"solo_norse_frame:1"
+		"coa_plain_pagan:1"
 		#"coa_party_per_fess:2"
 		#"coa_party_per_pale:2"
 		#"coa_party_per_cross:4"
@@ -1523,9 +1352,9 @@ culture =
 	}
 
 	emblem = {
-		file = "gfx\\coats_of_arms\\solo_overlay_norse_t5.tga"	
-		noOfFrames = 12
-	}	
+		file = "gfx\\coats_of_arms\\emblem_muslim.dds"
+		noOfFrames = 1
+	}
 
 	# WHEN ADDING NEW, ALWAYS ADD AT THE END
 	textures = {
@@ -1547,7 +1376,7 @@ culture =
 	}
 
 	templates = { 
-		"solo_zoroastrian_frame:1"
+		"coa_plain_pagan:1"
 	}
 
 	color = {
@@ -1596,81 +1425,6 @@ culture =
 
 	# WHEN ADDING NEW, ALWAYS ADD AT THE END
 	textures = {
-		texture = {
-			file = "gfx\\coats_of_arms\\pattern_caribbean.tga"
-			size = { x = 10 y = 6 }
-			noOfFrames = 57
-			color = 3
-			emblem = no
-		}
-	}
-}
-
-culture =
-{
-	religion = {
-		"santeria"
-		"candomble"
-	}
-
-	templates = { 
-		"solo_zoroastrian_frame:1"
-	}
-
-	color = {
-		{ 242 188 81 }	#0		Or (Gold)
-		{ 246 246 246 } #1		Argent (White)
-		{ 13 103 147 } 	#2		Azure (Blue)
-		{ 188 46 46 } 	#3		Gules (Red)
-		{ 62 147 62 } 	#4		Vert (Green)
-		{ 51 51 51 }	#5		Sable (Black)
-		{ 145 58 106 }	#6		Purpure (Purple)
-		{ 165 47 45 }	#7		Sanguine (Blood Red)
-		{ 191 117 50 }	#8		Tenné (Tawny)
-		{ 53 156 183 }	#9		Bleu-Celeste (Sky Blue)
-		{ 164 44 69 }	#10		Murrey (Mulberry) Burgundy
-		{ 31 74 31 }	#11		Dark green
-		{ 114 89 66 }	#12		Brunatre (Brown)
-		{ 50 173 192 }	#13		Turqouise
-		{ 25 166 118 }	#14		Teal
-	}
-	
-	rebel_colors = { 3 5 7 }
-
-	banned_colors = 
-	{ 
-		{ 0 1 }						#0		
-		{ 0 1 9}					#1		
-		{ 2 3 4 6 7 8 9 12 14 }		#2		
-		{ 2 3 4 7 9 10	}			#3		
-		{ 2 4 6 7 9 10 13 14}		#4		
-		{ 5 10 14 15}				#5		
-		{ 2 4 6 10 11 12 }			#6		
-		{ 2 3 4 7 8 10 13 }			#7		
-		{ 2 4 6 7 8 9 }				#8		
-		{ 2 3 4 8 9 10 11 13 }		#9		
-		{ 3 4 5 6 7 9 10 }			#10		
-		{ 6 9 11 }					#11
-		{ 6 12 }					#12
-		{ 4 7 9 13 14 }				#13
-		{ 2 4 13 14 }				#14
-	}
-
-	emblem = {
-		file = "gfx\\coats_of_arms\\emblem_muslim.dds"
-		noOfFrames = 1
-	}
-
-	# WHEN ADDING NEW, ALWAYS ADD AT THE END
-	textures = {
-		texture = {
-			file = "gfx\\coats_of_arms\\pattern_voodoo.tga"
-			size = { x = 10 y = 3 }
-			noOfFrames = 25
-			color = 3
-			emblem = no
-			#random = no
-		}
 		texture = {
 			file = "gfx\\coats_of_arms\\pattern_caribbean.tga"
 			size = { x = 10 y = 6 }
@@ -1685,10 +1439,12 @@ culture =
 {
 	religion = {
 		"voodoo"
+		"santeria"
+		"candomble"
 	}
 
 	templates = { 
-		"solo_norse_frame:1"
+		"coa_plain_pagan:1"
 	}
 
 	color = {
@@ -1731,9 +1487,9 @@ culture =
 	}
 
 	emblem = {
-		file = "gfx\\coats_of_arms\\solo_overlay_norse_t5.tga"	
-		noOfFrames = 12
-	}	
+		file = "gfx\\coats_of_arms\\emblem_muslim.dds"
+		noOfFrames = 1
+	}
 
 	# WHEN ADDING NEW, ALWAYS ADD AT THE END
 	textures = {
@@ -1758,88 +1514,12 @@ culture =
 culture = {
 	religion = {
 		"gaian"
-	}
-	
-	templates = { 
-		"solo_hellenic_frame:1"
-	}
-
-	color = {
-		{ 242 188 81 }	#0		Or (Gold)
-		{ 246 246 246 } #1		Argent (White)
-		{ 31 74 31 }	#2		Dark green
-		{ 188 46 46 } 	#3		Gules (Red)
-		{ 62 147 62 } 	#4		Vert (Green)
-		{ 51 51 51 }	#5		Sable (Black)
-		{ 114 89 66 }	#6	 	Brunatre (Brown)
-		{ 165 47 45 }	#7		Sanguine (Blood Red)
-		{ 229 138 56 }	#6		Orange (Orange)
-		{ 93 201 93 } 	#9 		Light Green
-		{ 164 44 69 }	#10		Murrey (Mulberry) Burgundy
-		{ 7 52 74 }		#11		Deep Blue
-		{ 50 173 192 }	#12		Turqouise
-		{ 203 202 202 }	#13		Cendree (Gray)
-	}
-	
-	rebel_colors = { 3 5 7 }
-	
-	banned_colors = 
-	{
-		{ 0 1 4 9 13 }				# Gold
-		{ 1 0 9 13 }				# White
-		{ 2 4 6 8 9 10 11 12 }		# Dark Green
-		{ 3 4 6 7 8 10 11 }			# Red
-		{ 4 0 2 3 6 8 9 11 12 }		# Green
-		{ 5 6 }						# Black
-		{ 6 2 3 4 5 7 8 9 10 11 12 } # Brown
-		{ 7 3 6 8 10 11 }			# Dark Red
-		{ 8 2 3 4 6 7 9 10 12 }		# Orange
-		{ 9 0 1 2 4 6 8 12 13 }		# Light Green
-		{ 10 2 3 6 7 8 11 }			# Mulberry
-		{ 11 2 3 4 6 7 10 }			# Deep Blue
-		{ 12 2 4 6 8 9	}			# Turqouise
-		{ 13 0 1 9	}				# Silver
-	}
-
-	emblem = {
-		file = "gfx\\coats_of_arms\\emblem_muslim.dds"
-		noOfFrames = 1
-	}
-
-	# WHEN ADDING NEW, ALWAYS ADD AT THE END
-	textures = {
-		texture = {
-			file = "gfx\\coats_of_arms\\pattern_gaian.tga"
-			size = { x = 10 y = 7 }
-			noOfFrames = 67
-			color = 3
-			emblem = no
-		}
-		texture = {
-			file = "gfx\\coats_of_arms\\pattern_celtic.tga"
-			size = { x = 10 y = 4 }
-			noOfFrames = 32
-			color = 2
-			emblem = no
-		}
-		texture = {
-			file = "gfx\\coats_of_arms\\pattern_pagan.tga"
-			size = { x = 10 y = 4 }
-			noOfFrames = 32
-			color = 2
-			emblem = no
-		}
-	}
-}
-
-culture = {
-	religion = {
 		"celtic_pagan"
 		"celtic_pagan_reformed"
 	}
 	
 	templates = { 
-		"solo_norse_frame:1"
+		"coa_plain_indian:1"
 	}
 
 	color = {
@@ -1891,13 +1571,6 @@ culture = {
 			size = { x = 10 y = 7 }
 			noOfFrames = 67
 			color = 3
-			emblem = no
-		}
-		texture = {
-			file = "gfx\\coats_of_arms\\pattern_celtic.tga"
-			size = { x = 10 y = 4 }
-			noOfFrames = 32
-			color = 2
 			emblem = no
 		}
 		texture = {
@@ -1917,7 +1590,7 @@ culture = {
 	}
 	
 	templates = { 
-		"solo_african_frame:1"
+		"coa_plain_indian:1"
 	}
 
 	color = {
@@ -1985,10 +1658,11 @@ culture = {
 	religion = {
 		"sol_invicta"
 		"mictlantec"
+		"tonaltec"
 	}
 
 	templates = { 
-		"coa_plain_aztec:1"
+		"coa_plain_meso:1"
 		#"coa_party_per_fess:2"
 		#"coa_party_per_pale:2"
 		#"coa_party_per_cross:4"
@@ -2065,7 +1739,7 @@ culture = {
 	}
 
 	templates = { 
-		"coa_plain_aztec:1"
+		"coa_plain_meso:1"
 		#"coa_party_per_fess:2"
 		#"coa_party_per_pale:2"
 		#"coa_party_per_cross:4"
@@ -2179,32 +1853,18 @@ culture =
 	}
 	
 	emblem = {
-		file = "gfx\\coats_of_arms\\solo_overlay_emblems.tga"
-		noOfFrames = 64
+		file = "gfx\\coats_of_arms\\emblem_muslim.dds"
+		noOfFrames = 1
 	}
 	
 	# WHEN ADDING NEW, ALWAYS ADD AT THE END !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!11111
 	textures = {
-		texture = { 
-			file = "gfx\\coats_of_arms\\part1_solo.tga"
-			size = { x = 10 y = 50 }
-			noOfFrames = 500
+		texture = {
+			file = "gfx\\coats_of_arms\\pattern.tga"
+			size = { x = 10 y = 5 }
+			noOfFrames = 47
 			color = 2
 			emblem = no
-		}
-		texture = { 
-			file = "gfx\\coats_of_arms\\part2_solo.tga"
-			size = { x = 10 y = 24 }
-			noOfFrames = 240
-			color = 3
-			emblem = no		
-		}
-		texture = { 
-			file = "gfx\\coats_of_arms\\part3_solo.tga"
-			size = { x = 10 y = 24 }
-			noOfFrames = 205
-			color = 0
-			emblem = no					
 		}
 		texture = {
 			file = "gfx\\coats_of_arms\\pattern_anabaptist.tga"
@@ -2278,13 +1938,6 @@ culture =
 			color = 3
 			emblem = no
 		}
-		texture = {
-			file = "gfx\\coats_of_arms\\misc_jewish.tga"
-			size = { x = 10 y = 10 }
-			noOfFrames = 20
-			color = 2
-			emblem = no
-		}
 		# WHEN ADDING NEW, ALWAYS ADD AT THE END !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!11111
 	}
 }
@@ -2293,7 +1946,7 @@ culture =
 	religion_group = "muslim"
 
 	templates = { 
-		"solo_islamic_frame:1"
+		"coa_plain_muslim:1"
 		#"coa_party_per_fess:2"
 		#"coa_party_per_pale:2"
 		#"coa_party_per_cross:4"
@@ -2342,18 +1995,18 @@ culture =
 
 	# WHEN ADDING NEW, ALWAYS ADD AT THE END
 	textures = {
-		texture = { #0
-			file = "gfx\\coats_of_arms\\solo_islamic_part1.tga"
-			size = { x = 10 y = 15 }
-			noOfFrames = 114
+		texture = {
+			file = "gfx\\coats_of_arms\\pattern_muslim.tga"
+			size = { x = 10 y = 4 }
+			noOfFrames = 35
 			color = 2
 			emblem = no
 		}
-		texture = { #1
-			file = "gfx\\coats_of_arms\\solo_islamic_part2.tga"
-			size = { x = 10 y = 10 }
-			noOfFrames = 93
-			color = 0
+		texture = {
+			file = "gfx\\coats_of_arms\\pattern2_muslim.tga"
+			size = { x = 10 y = 6 }
+			noOfFrames = 55
+			color = 3
 			emblem = no
 		}
 		texture = {
@@ -2373,6 +2026,7 @@ culture =
 		# WHEN ADDING NEW, ALWAYS ADD AT THE END !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!11111
 	}
 }
+
 culture =
 {
 	religion = {
