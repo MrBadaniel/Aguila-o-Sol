@@ -199,7 +199,7 @@
 	culture=chilango
 	dynasty=5001142
 	trait=deceitful
-	trait=temperate
+	trait=chaste
 	trait=ambitious
 	trait=gluttonous	
 	trait=charismatic_negotiator 
@@ -254,6 +254,521 @@
 	2328.2.14={add_spouse=14450415}
 	2360.10.1={death=yes}
 	}	
+
+#Benemérito Aureliano II Hernández
+14450419 = {
+	name="Aureliano"
+	religion=cristo_rey
+	culture=chilango
+	dynasty=5001143
+	trait=mystic
+	trait=zodiac_cancer
+	trait=shy
+	trait=brave
+	trait=patient	
+	trait=kind	
+	trait=skilled_tactician
+	father=14450416
+	2331.6.29={
+		birth=yes
+	}
+	2380.10.2={death=yes}
+}
+
+14450432 = {
+	name="Josefina"
+	religion=cristo_rey
+	culture=chilango
+	female=yes
+	dynasty=5001143
+	trait=fair
+	trait=honest
+	trait=content
+	trait=trusting
+	trait=flamboyant_schemer	
+	father=14450416
+	2339.1.22={
+		birth=yes
+	}
+	2386.11.12={death=yes}
+}
+
+14450434 = {
+	name="Fernando"
+	religion=cristo_rey
+	culture=chilango
+	dynasty=5001145
+	trait=tough_soldier
+	trait=content
+	trait=diligent
+	trait=trusting	
+	2338.12.4={
+		birth=yes
+	}
+	2359.10.14={add_spouse=14450432}
+	2382.3.2={death=yes}
+}
+	
+#Benemérito Eliyahu Carvajal	
+14450420 = {
+	name="Eliyahu"
+	religion=cristo_rey
+	culture=neoladino
+	dynasty=5001144
+	trait=sympathy_judaism
+	trait=gregarious
+	trait=groomed
+	trait=charitable
+	trait=arbitrary	
+	trait=charismatic_negotiator
+	2348.3.27={
+		birth=yes
+	}
+	2388.5.14={death={
+			death_reason=death_murder_strangle
+			killer=14450421 #Epifanio was cray-cray
+		}
+	}
+}
+	
+#Benemérito Epifanio el Falso	
+14450421 = {
+	name="Epifanio"
+	religion=cristo_rey
+	culture=chilango
+	dynasty=5001147
+	trait=peasant_leader
+	trait=bastard
+	trait=scarred_high
+	trait=uncouth
+	trait=envious
+	trait=stubborn
+	trait=zealous
+	trait=tough_soldier	
+	give_nickname =nick_el_falso
+	2355.1.2={
+		birth=yes
+	}
+	2390.1.7={death={
+			death_reason=death_battle
+			killer=14450422
+		}
+	}
+}
+	
+#Benemérito Agustín Aguilar	
+14450422 = {
+	name="Agustín"
+	religion=cristo_rey
+	culture=chilango
+	dynasty=5001145
+	trait=strategist
+	trait=quick
+	trait=ambitious
+	trait=envious
+	trait=cruel	
+	trait=temperate
+	trait=brilliant_strategist
+	father=14450432
+	mother=14450434
+	2360.1.28={
+		birth=yes
+	}
+	2408.2.23={death=yes}
+	}
+
+#Benemérito Héctor Aguilar	
+14450423 = {
+	name="Héctor"
+	religion=cristo_rey
+	culture=chilango
+	dynasty=5001145
+	trait=distractible
+	trait=kind	
+	trait=slothful
+	trait=content
+	trait=stressed	
+	trait=amateurish_plotter
+	father=14450432
+	mother=14450434
+	2363.2.13={
+		birth=yes
+	}
+		2412.3.30={death={
+			death_reason=death_trait
+		}	
+	}
+}
+
+#Ministro José Elías Guelatao
+14450424 = {
+	name="José Elías"
+	religion=reformista
+	culture=zapotec
+	dynasty=5001146
+	trait=bad_priest_christian
+	trait=cynical
+	trait=ambitious
+	trait=proud
+	trait=diligent	
+	trait=intricate_webweaver
+	2366.12.28={
+		birth=yes
+	}
+	2416.9.23={death={
+			death_reason=death_battle
+			killer=14450430 #Killed by Prelado Ezequiel in battle.
+		}
+	}
+}
+
+#Benemérito Ulises Aguilar	
+14450425 = {
+	name="Ulises"
+	religion=cristo_rey
+	culture=chilango
+	dynasty=5001145
+	trait=gamer
+	trait=charitable
+	trait=humble
+	trait=proud
+	trait=content	
+	trait=grey_eminence	
+	father=14450432
+	mother=14450434
+	2365.6.11={
+		birth=yes
+	}
+	2428.8.4={death=yes}
+	}
+
+#Prelado Tomás Moré  
+14450429={
+	name="Tomás"
+	culture=chilango
+	religion=cristo_rey
+	dynasty=5001152
+	trait=beatified
+	trait=honest
+	trait="brave"
+	trait="erudite"
+	trait="just"
+	trait="kind"
+	trait=mastermind_theologian
+	2368.2.7={birth=yes}
+	2415.7.6={
+		death={
+			death_reason=death_firing_squad
+			killer = 14450424 #RIP Thomas More
+		} 
+	}
+}		
+
+#Prelado Ezequiel 	
+14450430={
+	name="Ezequiel"
+	culture=chilango
+	religion=cristo_rey
+	trait=hunchback
+	trait=humble
+	trait=trusting
+	trait=kind
+	trait=brave
+	trait=mastermind_theologian
+	2372.2.12={birth=yes}
+	2438.6.15={death=yes}
+	}
+	
+#Benemérito Aureliano III Aguilar	
+14450426 = {
+	name="Aureliano"
+	religion=cristo_rey
+	culture=chilango
+	dynasty=5001145
+	trait=kind
+	trait=gluttonous
+	trait=craven
+	trait=just
+	trait=shrewd	
+	trait=fortune_builder
+	father=14450422
+	2387.12.4={
+		birth=yes
+	}
+	2439.9.26={death=yes}
+}
+	
+#Benemérito Venustiano Aguilar	
+14450427 = {
+	name="Venustiano"
+	religion=cristo_rey
+	culture=chilango
+	dynasty=5001145
+	trait=hedonist
+	trait=slothful
+	trait=craven
+	trait=gregarious
+	trait=charitable	
+	trait=intricate_webweaver
+	father=14450425
+	2491.6.14={
+		birth=yes
+	}
+	2450.12.5={death=yes}
+}	
+	
+	
+#Benemérito Cuauhtémoc Macehual
+14450428 = {
+	name="Cuauhtémoc"
+	religion=cristo_rey
+	culture=nahua
+	dynasty=5001151
+	trait=strategist
+	trait=quick
+	trait=ambitious
+	trait=envious
+	trait=cruel	
+	trait=temperate
+	trait=brilliant_strategist
+	2401.5.3={
+		birth=yes
+	}
+	2461.8.2={death=yes}
+	}
+
+#Benemérito Tenoch Macehual
+14450431 = {
+	name="Tenoch"
+	religion=cristo_rey
+	culture=nahua
+	dynasty=5001151
+	trait=gluttonous
+	trait=patient
+	trait=slothful
+	trait=arbitrary
+	trait=is_fat
+	trait=zealous	
+	trait=martial_cleric
+	father=14450428
+	2418.1.18={
+		birth=yes
+	}
+	2469.11.19={death=yes}
+	}
+	
+
+14450442 = {
+	name="Cipac"
+	religion=cristo_rey
+	culture=nahua
+	dynasty=5001151
+	trait=skilled_tactician
+	trait=lustful
+	trait=just
+	trait=brave
+	trait=deceitful
+	trait=martial_cleric
+	father=14450428
+	2419.2.28={
+		birth=yes
+	}
+	2469.11.19={death=yes}
+	}
+
+Benemérito Acalan Macehual	
+14450433 = {
+	name="Acalan"
+	religion=cristo_rey
+	culture=chilango
+	dynasty=5001151
+	trait=gregarious
+	trait=patient
+	trait=humble
+	trait=greedy
+	trait=pneumonic	
+	trait=charismatic_negotiator
+	father=14450442
+	2437.7.28={
+		birth=yes
+	}
+		2471.7.17={death={
+			death_reason=death_trait
+		}	
+	}
+
+#Benemérito Chárbel Macehual
+14450435 = {
+	name="Chárbel"
+	religion=cristo_rey
+	culture=chilango
+	dynasty=5001151
+	trait=theologian
+	trait=zealous #devoted
+	trait=kind
+	trait=erudite
+	trait=honest	
+	trait=scholarly_theologian	
+	father=14450431
+	2436.2.3={
+		birth=yes
+	}
+	2480.3.29={death=yes}
+	}
+
+14450443={
+	name=Tristán
+	religion=cristo_rey
+	culture=chilango
+	dynasty=5001151
+	trait=indulgent_wastrel
+	trait=patient
+	trait=stubborn
+	trait=kind
+	trait=greedy
+	father=14450442
+	2437.8.30={birth=yes}
+	2463.5.24={death={
+			death_reason=death_accident_drowning
+		}
+	}
+}
+
+#Benemérito Leopoldo Macehual
+14450436 = {
+	name="Leopoldo"
+	religion=cristo_rey
+	culture=chilango
+	dynasty=5001151
+	trait=lustful
+	trait=arbitrary
+	trait=charitable
+	trait=proud
+	trait=gregarious	
+	trait=tough_soldier
+	father=14450443
+	2457.5.25={
+		birth=yes
+	}
+	2481.8.20={death={
+			death_reason=death_battle
+			killer=14450438
+		}
+	}
+	}
+
+#Benemérito Doroteo Fierro
+14450438 = {
+	name="Doroteo"
+	religion=cristo_rey
+	culture=chilango
+	dynasty=5001153
+	trait=impaler
+	trait=giant
+	trait=brave
+	trait=ambitious
+	trait=wroth
+	trait=cruel	
+	trait=skilled_tactician	
+	2439.8.18={
+		birth=yes
+	}
+	2481.9.29={death={
+			death_reason=death_battle_duel
+			killer=14400074
+		}
+	}
+	}	
+
+#Benemérito Cristóbal Remigio
+14450437 = {
+	name="Cristóbal"
+	religion=cristo_rey
+	culture=chilango
+	dynasty=5001156
+	trait=groomed
+	trait=envious
+	trait=ambitious
+	trait=gregarious
+	trait=zealous	
+	trait=martial_cleric
+	2432.12.2={
+		birth=yes
+	}
+	2482.1.16={death={
+			death_reason=death_suicide_poison
+		}
+	}
+}
+
+#Benemérito León Macehual
+14450439 = {
+	name="León"
+	religion=cristo_rey
+	culture=chilango
+	dynasty=5001151
+	trait=bastard
+	trait=stutter
+	trait=timid
+	trait=idolizer
+	trait=trusting	
+	father=14450436
+	2472.9.12={
+		birth=yes
+	}
+	2482.4.27={death={
+			death_reason=death_murder_strangle
+			killer=14450441
+		}
+	}
+	}
+
+}
+
+#Benemérito Victorio Huarte
+14450440 = {
+	name="Victorio"
+	religion=cristo_rey
+	culture=chilango
+	dynasty=5001154
+	trait=dull
+	trait=lovers_pox	
+	trait=honest
+	trait=lustful
+	trait=content
+	trait=stubborn	
+	trait=indulgent_wastrel	
+	2435.11.23={
+		birth=yes
+	}
+	2482.7.7={death={
+			death_reason=death_murder_arrow
+			killer=14450441
+		}
+	}
+}
+
+
+#Benemérito Pío Ramírez
+14450441 = {
+	name="Pío"
+	religion=reformista
+	culture=chilango
+	dynasty=5001155
+	trait=cynical
+	trait=ambitious
+	trait=arbitrary
+	trait=humble
+	trait=patient	
+	trait=detached_priest
+	2440.2.25={
+		birth=yes
+	}
+	2482.10.19={death={
+			death_reason=death_rabble
+		}
+	}
+}
 
 #Anselmo llorente, the first bishop of Costa Rica attended the sick people, people with cholera putting his life in risk. 
 #This is a inspired character. 
