@@ -6232,9 +6232,19 @@ coat_of_arms = {
 1779206 = { name="Sensenich" culture=deitsch }
 1779207 = { name="Eash" culture=deitsch }
 1779208 = { name="Habsburgo" culture=deitsch }
-1779209 = { name="Habsburg" culture=deitsch }
-
-
+1779209 = { name="Habsburg" culture=deitsch 
+		coat_of_arms = {
+				religion = sacred_heart
+        template = 0
+        layer = {
+            texture = 9
+            texture_internal = 2
+            emblem = 0
+            color = 0
+            color = 0
+            color = 0
+        }
+    }}
 1780000 = { name="Salkins" culture=yankee }
 1780001 = { name="Pabodie" culture=yankee }
 1780002 = { name="Lovejoy" culture=yankee }
