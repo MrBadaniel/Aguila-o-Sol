@@ -124,3 +124,45 @@ dorado = {
 	
 	customizer = no
 }
+
+parroquia  = {
+    monthly_character_piety = 0.25 #balancing
+    learning = 1
+    
+    religious = yes # Lost immediately on religion change
+    
+    potential = { #this ensures that only moravians get it
+        religion = moravian
+    }
+    
+    opposites =  {
+        pastore
+    }
+    
+    opposite_opinion = -10
+    same_opinion = 10
+    
+    customizer = no
+    random = no
+}
+
+pastore = {
+    monthly_character_piety = 0.25
+    martial = 1
+    
+    religious = yes # Lost immediately on religion change
+    
+    potential = {
+        religion = moravian
+    }
+    
+    opposites =  {
+        parroquia
+    }
+    
+    opposite_opinion = -10
+    same_opinion = 10
+    
+    customizer = no
+    random = no
+}
