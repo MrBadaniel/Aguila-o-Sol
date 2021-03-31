@@ -132,7 +132,7 @@ e_lone_star = {
 		
 		d_rio_grande_valley = {
 			color = { 100 100 0 }
-			capital = 1224 # Nueces
+			capital = 1227 # Laredo
 
 			c_nueces = {
 				color = { 0 150 255 }
@@ -166,7 +166,7 @@ e_lone_star = {
 			c_webb = {
 				color = { 100 100 100 }
 				
-				tejano = "Nuestro Laredo"
+				tejano = "Laredo"
 				
 				b_laredo_TX = {}
 				b_rio_bravo_TX = {}
@@ -243,6 +243,49 @@ e_lone_star = {
 				b_toyah_TX = {}
 				b_lindsay_TX = {}
 			}
+			
+			c_white_sands = {
+				color = { 27 130 205 }
+				color2= { 255 255 255 }
+				
+				tejano = "Arenas Blancas"
+		        neomexicano = "Arenas Blancas"
+			
+				holy_site = atomicist
+				holy_site = aphite
+				
+				b_las_cruces_NM = {}
+				b_alamogordo_NM = {}
+				b_holloman_NM = {}
+				b_mesilla_NM = {}
+				b_radium_springs_NM = {
+					used_for_dynasty_names = no
+				}
+				b_rincon_NM = {}
+				b_salem_NM = {}
+				b_vado_NM = {}
+				b_truth_or_consequences_NM = {
+					used_for_dynasty_names = no
+				}
+			}
+			c_mescalero = {
+				color = { 122 90 55 }
+				color2= { 255 255 255 }
+				
+				tejano = "Mescalero"
+				neomexicano = "Mescalero"
+				
+				b_mescalero_NM = {}
+				b_carlsbad_NM = {}
+				b_artesia_NM = {}
+				b_dexter_NM = {}
+				b_hagerman_NM = {}
+				b_lake_arthur_NM = {
+					used_for_dynasty_names = no
+				}
+				b_atoka_NM = {}
+			}
+		}
 		}
 	}
 
@@ -1505,57 +1548,6 @@ e_lone_star = {
 				b_clovis_NM = {}
 				b_caprock_NM = {}
 				b_acme_NM = {}
-			}
-		}
-		d_mesilla = {
-			color = { 106 20 21 }
-			color2= { 255 255 255 }
-			
-			tejano = "Arenas Blancas"
-			neomexicano = "Arenas Blancas"
-						
-			capital = 755 #White Sands
-			
-			c_white_sands = {
-				color = { 27 130 205 }
-				color2= { 255 255 255 }
-				
-				tejano = "Arenas Blancas"
-		        	neomexicano = "Arenas Blancas"
-			
-				holy_site = atomicist
-				holy_site = aphite
-				
-				b_las_cruces_NM = {}
-				b_alamogordo_NM = {}
-				b_holloman_NM = {}
-				b_mesilla_NM = {}
-				b_radium_springs_NM = {
-					used_for_dynasty_names = no
-				}
-				b_rincon_NM = {}
-				b_salem_NM = {}
-				b_vado_NM = {}
-				b_truth_or_consequences_NM = {
-					used_for_dynasty_names = no
-				}
-			}
-			c_mescalero = {
-				color = { 122 90 55 }
-				color2= { 255 255 255 }
-				
-				tejano = "Mescaleros"
-			neomexicano = "Mescaleros"
-				
-				b_mescalero_NM = {}
-				b_carlsbad_NM = {}
-				b_artesia_NM = {}
-				b_dexter_NM = {}
-				b_hagerman_NM = {}
-				b_lake_arthur_NM = {
-					used_for_dynasty_names = no
-				}
-				b_atoka_NM = {}
 			}
 		}
 	}
