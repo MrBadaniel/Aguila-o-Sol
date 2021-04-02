@@ -2035,8 +2035,10 @@
 	name="Carmen"
 	female=yes
 	culture=filastino
-	religion=moravian
-	trait=scholarly_theologian
+	religion=penitente
+	trait=mastermind_theologian
+	trait=fair
+	trait=nun
 	trait=humble
 	trait=shy
 	trait=kind
@@ -2046,14 +2048,12 @@
 }
 
 1650133={ #Grandfather 1 (Diplomat, first landed ruler for both moskitia counties)
-	name="Hussayn"
+	name="Nicolás"
 	dynasty=2035001
 	culture=filastino
-	religion=moravian
-	secret_religion=traditionalist
+	religion=penitente
 	trait=grey_eminence
 	trait=quick
-	trait=sympathy_islam
 	trait=gregarious
 	trait=humble
 	trait=ambitious
@@ -2071,6 +2071,7 @@
 	culture=miskito
 	religion=moravian
 	trait=intricate_webweaver
+	trait=pastore
 	trait=cynical
 	trait=deceitful
 	trait=humble
@@ -2103,7 +2104,6 @@
 	trait=brilliant_strategist
 	trait=trsunni
 	trait=quick
-	trait=adventurer
 	trait=zealous
 	trait=proud
 	trait=ambitious
@@ -2130,12 +2130,11 @@
 	2619.2.14={death=yes}
 }
 
-1650138={ #Father 1 (for Ismail)
-	name="Ibrahim"
+1650138={ #Father 1
+	name="Salomón"
 	dynasty=2035001
 	culture=filastino
-	religion=moravian
-	secret_religion=traditionalist
+	religion=penitente
 	trait=intricate_webweaver
 	trait=deceitful
 	trait=ambitious
@@ -2154,13 +2153,14 @@
 	culture=centrano
 	religion=moravian
 	trait=fortune_builder
+	trait=parroquia
 	trait=diligent
 	trait=charitable
 	trait=patient
 	trait=temperate
 	2574.2.14={birth=yes}
 	2605.7.4={add_spouse=1650138}
-	2659.12.25={death=yes}
+	2649.12.25={death=yes}
 }
 
 1650140={
@@ -2180,30 +2180,29 @@
 	2695.6.4={death=yes}
 }
 
-1650141={ #Father 2 (for Fatima)
-	name="Ali"
-	dynasty=2035001
-	culture=filastino
+1650141={
+	name="Joaquín"
+	dynasty=5001158
+	culture=centrano
 	religion=moravian
-	secret_religion=traditionalist
 	trait=midas_touched
+	trait=pastore
 	trait=just
 	trait=content
 	trait=gregarious
 	trait=kind
-	father=1650133
-	mother=1650134
 	2588.3.22={birth=yes}
 	2609.10.20={add_spouse=1650142}
 	2659.12.6={death=yes}
 }
 
 1650142={ #Mother 2
-	name="Tania"
+	name="Georgina"
 	female=yes
 	culture=centrano
 	religion=moravian
 	trait=scholarly_theologian
+	trait=parroquia
 	trait=erudite
 	trait=shy
 	trait=humble
@@ -2249,11 +2248,10 @@
 }
 
 1650145={
-	name="Isma'il"
+	name="Daúd"
 	dynasty=2035001
 	culture=filastino
-	religion=moravian
-	secret_religion=traditionalist
+	religion=penitente
 	martial=7
 	diplomacy=6
 	trait=tough_soldier
@@ -2265,7 +2263,7 @@
 	father=1650138
 	mother=1650139
 	2630.4.12={birth=yes}
-	2649.12.10={add_spouse=1650155}
+	2649.12.10={add_spouse=14450442}
 	2695.2.19={death=yes}
 }
 
@@ -2273,9 +2271,9 @@
 	name="Musa"
 	dynasty=2035001
 	culture=filastino
-	religion=moravian
+	religion=penitente
 	father=1650145
-	mother=1650155
+	mother=14450442
 	2666.1.1={birth=yes}
 	2734.1.1={death=yes}
 }
@@ -2285,12 +2283,12 @@
 	female=yes
 	dynasty=2035001
 	culture=filastino
-	religion=moravian
+	religion=penitente
 	trait=wroth
 	trait=brave
 	trait=gluttonous
 	father=1650145
-	mother=1650155
+	mother=14450442
 	2664.3.13={birth=yes}
 	2734.7.26={death=yes}
 }
@@ -2380,20 +2378,45 @@
 	2790.5.11={death=yes}
 }
 
-1650155={
+14450442={
 	name="Fatima"
 	female=yes
-	dynasty=2035001
 	culture=filastino
-	religion=moravian
-	secret_religion=traditionalist
-	trait=slothful
-	trait=gluttonous
+	religion=penitente
+	trait=fair
+	trait=diligent
+	trait=lustful
 	trait=patient
+	2634.2.11={birth=yes}
+	2649.12.10={add_spouse=1650145}
+	2695.5.10={death=yes}
+}
+
+
+1650155={ #Chamelecón
+	name="Gregorio"
+	dynasty=5001158
+	culture=centrano
+	religion=moravian
+	trait=pastore
+	trait=robust
+	trait=patient
+	trait=gluttonous
+	trait=tough_soldier
 	father=1650141
 	mother=1650142
 	2627.2.11={birth=yes}
-	2649.12.10={add_spouse=1650145}
+	2695.5.10={death=yes}
+}
+
+14450443={ #Chamelecón
+	name="Toño"
+	dynasty=5001158
+	culture=centrano
+	religion=moravian
+	trait=pastore
+	father=1650155
+	2663.5.1={birth=yes}
 	2695.5.10={death=yes}
 }
 
