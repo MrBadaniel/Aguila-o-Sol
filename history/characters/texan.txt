@@ -1,4 +1,4 @@
-###ÄNSI
+###Ã„NSI
 1836000={
 	name="Abner" #
 	dynasty=1814003 # Hannegan
@@ -821,7 +821,7 @@
 }
 
 1836049={
-	name="Noé"
+	name="NoÃ©"
 	dynasty=1815002
 	dna="niheacibgmp"
 	culture=tejano
@@ -954,7 +954,7 @@
 }
 
 1836055={
-	name="Durán"
+	name="DurÃ¡n"
 	dynasty=1612019
 	culture=neomexicano
 	religion=atomicist
@@ -966,7 +966,7 @@
 }
 
 1836056={
-	name="Fé"
+	name="FÃ©"
 	female=yes
 	culture=neomexicano
 	religion=atomicist
@@ -1612,4 +1612,85 @@
 			killer=1836030
 		}
 	}
+
+
+
+2302227={
+	name="Don"
+	martial=12
+	dynasty=5001159
+	dna="aejeg0cbcc0"
+	religion=cristo_rey
+        trait=skilled_tactician	 
+	trait=reclusive
+	trait=quick
+	trait=ambitious
+	trait=wroth
+	trait=gamer
+	trait=unyielding_leader
+	trait=holy_warrior
+	culture=neomexicano
+	2641.3.19={
+		birth=yes
+	}
+	2661.4.26={
+		add_spouse = 2302228
+	}
+ }
+2302228={
+	name="Emma"
+	female=yes
+	dna="0jidj0bba00"
+	dynasty=5001153
+	religion=catholic
+        trait=fair
+	trait=musician
+	trait=quick
+	trait=kind
+	trait=zealous
+	culture=texan
+	2643.5.27={
+		birth=yes
+	}
+	2661.4.26={
+		add_spouse = 2302227
+	}
+ }
+2302229={
+	name="Anne-Marie"
+	female=yes
+	dna="bhcd00bba00"
+	dynasty=5001159
+	fat=230227
+	mot=230228
+	religion=cristo_rey
+        trait=fair
+	trait=adopted
+	trait=just
+	trait=kind
+	trait=brave
+	trait=timid
+	culture=creole
+	2659.11.19={
+		birth=yes
+	}
+ }
+2302230={
+	name="John"
+	dna="bfcbg0dbgc0"
+	dynasty=5001160
+	fat=230227
+	mot=230228
+	religion=americanist
+        trait=tough_soldier
+	trait=robust
+	trait=temperate
+	trait=cynical
+	trait=strong
+	trait=wroth
+	culture=texan
+	2631.7.4={
+		birth=yes
+	}
+ }
 }		 
