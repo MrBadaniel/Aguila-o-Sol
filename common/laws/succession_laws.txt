@@ -369,8 +369,9 @@ succession_laws = {
 					culture = metis
 					AND = {
 						religion = moravian
-						trait = parroquia
+						trait = pastoral
 					}
+				OR = {
 					AND = {
 						is_tribal = yes
 						OR = {
@@ -378,6 +379,11 @@ succession_laws = {
 							religion = celtic_pagan
 						}
 					}
+					AND = {
+					religion = moravian
+					trait=pastoral
+				}
+			}
 					has_religion_feature = religion_beatification
 					has_religion_feature = religion_feature_trailwalker
 					has_religion_feature = religion_feature_revelationist
@@ -449,13 +455,17 @@ succession_laws = {
 						religion_group = afro_syncretic
 						religion_group = american_native
 						culture = metis
-						AND = {
-							is_tribal = yes
-							OR = {
-								religion = occultist
-								religion = celtic_pagan
-							}
+						religion = moravian
+				OR = {
+					AND = {
+						is_tribal = yes
+						OR = {
+							religion = occultist
+							religion = celtic_pagan
 						}
+					}
+					religion = moravian
+				}
 						has_religion_feature = religion_beatification
 						has_religion_feature = religion_feature_trailwalker
 						has_religion_feature = religion_feature_revelationist
