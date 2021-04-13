@@ -2787,7 +2787,7 @@
 
 
 1670011={
-	name="Juanito"
+	name="Juan Víctor"
 	dynasty=1538031
 	culture=nicoyano
 	trait=parroquial
@@ -2799,6 +2799,7 @@
 	trait=ambitious
 	trait=diligent
 	father=14450451
+	give_nickname=nick_juanito
 	2470.1.1={birth=yes}
 	2540.1.1={
 		death={
@@ -2842,25 +2843,25 @@
 }
 
 1670013={
-	name="Diego"
+	name="Francisco"
 	dynasty=1538031
-	culture=istmeno #Working on changing Sarmiento Lore
+	culture=nicoyano 
 	religion=moravian
 	trait=parroquial
 	trait=scholarly_theologian
 	trait=humble
 	trait=zealous
 	trait=gregarious
-	trait=craven
+	trait=poet
 	father=1670012
 	2523.6.20={birth=yes}
 	2575.12.14={death=yes}
 }
 
 1670014={
-	name="Andrés" #Dies to his lover
+	name="Joaquín"
 	dynasty=1538031
-	culture=istmeno
+	culture=nicoyano
 	religion=moravian
 	trait=parroquial
 	trait=fortune_builder
@@ -2874,28 +2875,30 @@
 }
 
 1670015={
-	name="Javier"
+	name="José Dolores"
 	dynasty=1538031
-	culture=istmeno
+	culture=nicoyano
 	religion=moravian
 	trait=parroquial
-	trait=underhanded_rogue
-	trait=cynical
-	trait=honest
+	trait=brilliant_strategist
+	trait=zealous
+	trait=brave
 	trait=diligent
 	trait=patient
+	trait=humble
 	father=1670014
 	2579.10.16={birth=yes}
 	2612.12.14={death=yes}
 }
 
 1670016={
-	name="Gaspar"
+	name="Víctor"
 	dynasty=1538031
-	culture=istmeno
+	culture=nicoyano
 	religion=moravian
 	trait=parroquial
-	trait=underhanded_rogue
+	trait=strategist
+	trait=skilled_tactician
 	trait=cynical
 	trait=honest
 	trait=diligent
@@ -2905,10 +2908,27 @@
 	2657.5.1={death=yes}
 }
 
+1670021={
+	name="Gabriele"
+	dynasty=1538022
+	female=yes
+	culture=nicoyano
+	religion=moravian
+	trait=parroquial
+	trait=midas_touched
+	trait=gluttonous
+	trait=greedy
+	trait=cynical
+	trait=kind
+	2604.10.13={birth=yes}
+	2622.1.1={add_spouse=1670016}
+	2661.1.1={death=yes}
+}
+
 1670017={
-	name="Ruben"
+	name="Andrés"
 	dynasty=1538031
-	culture=istmeno
+	culture=nicoyano
 	religion=moravian
 	trait=parroquial
 	trait=skilled_tactician
@@ -2917,37 +2937,42 @@
 	trait=zealous
 	trait=diligent
 	father=1670016
+	mother=1670021
 	2623.12.19={birth=yes}
-	2650.1.1={add_spouse=1670021}
 	2700.1.1={death=yes}
 }
 
 1670018={
-	name="Dario"
+	name="Penteo"
 	dynasty=1538031
-	culture=istmeno
+	culture=nicoyano
 	religion=moravian
 	trait=parroquial
 	trait=intricate_webweaver
 	trait=cynical
-	trait=wroth
-	trait=greedy
+	trait=shy
+	trait=envious
+	trait=humble
+	trait=stubborn
 	father=1670016
+	mother=1670021
 	2625.3.24={birth=yes}
 	2645.1.1={add_spouse=1670019}
 	2700.1.1={death=yes}
 }
 
 1670019={
-	name="Carmen"
+	name="Helena"
 	dynasty=1538025
 	female=yes
-	culture=istmeno
+	culture=nicoyano
 	religion=moravian
 	trait=pastoral
 	trait=grey_eminence
 	trait=kind
-	trait=trusting
+	trait=deceitful
+	trai=lustful
+	trait=gregarious
 	2625.3.24={birth=yes}
 	2645.1.1={add_spouse=1670018}
 	2663.2.1={death={
@@ -2961,7 +2986,7 @@
 	name="Ximena"
 	dynasty=1538031
 	female=yes
-	culture=istmeno
+	culture=nicoyano
 	religion=moravian
 	trait=parroquial
 	father=1670018
@@ -2970,32 +2995,53 @@
 	2700.1.1={death=yes}
 }
 
-1670021={
-	name="Stephanie"
-	dynasty=1538022
-	female=yes
-	culture=istmeno
+14450452={
+	name="Dionisio"
+	dynasty=1538031
+	culture=nicoyano
 	religion=moravian
 	trait=parroquial
-	trait=midas_touched
-	trait=gluttonous
-	trait=greedy
-	trait=cynical
-	trait=kind
-	2630.10.13={birth=yes}
-	2650.1.1={add_spouse=1670017}
+	trait=genius
+	trait=robust
+	trait=lustful
+	trait=ambitious
+	trait=drunkard
+	trait=charitable
+	trait=charismatic_negotiator 
+	father=1670018
+	mother=1670019
+	2648.3.25={birth=yes}
+	2700.1.1={death=yes}
+}
+
+14450453={
+	name="Joaquín"
+	dynasty=1538031
+	culture=nicoyano
+	religion=moravian
+	trait=parroquial
+	dynasty=5001145
+	trait=distractible
+	trait=kind	
+	trait=diligent
+	trait=content	
+	trait=tough_soldier
+	father=1670018
+	mother=1670019
+	2650.2.12={birth=yes}
 	2700.1.1={death=yes}
 }
 
 1670022={
-	name="Stephanie"
+	name="María Josefa"
 	dynasty=1538031
 	female=yes
-	culture=istmeno
+	culture=nicoyano
 	religion=moravian
 	trait=parroquial
+	trait=legit_bastard
 	father=1670017
-	mother=1670021
-	2652.2.25={birth=yes}
+	mother=1670019
+	2662.2.25={birth=yes}
 	2700.1.1={death=yes}
 }
