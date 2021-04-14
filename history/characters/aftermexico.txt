@@ -680,7 +680,7 @@
 	trait=charitable
 	father=14400031
 	mother=1810097
-	2645.4.25={birth=yes}
+	2646.4.25={birth=yes}
 	2700.4.23={death=yes}
 }
 
@@ -764,7 +764,58 @@
 	father=14400048
 	mother=14400047
 	2602.4.31={birth=yes}
+	2624.2.12={add_spouse=14400040}
 	2651.7.4={death=yes}
+}
+
+14400048={
+	name="Tomás"
+	dynasty=5001115
+	culture=choyero
+	martial=10
+	diplomacy=4
+	stewardship=4
+	intrigue=2
+	learning=3
+	trait=temperate
+	trait=kind
+	trait=stubborn
+	trait=patient
+	trait=brave
+	trait=cancer
+	religion=navegante
+	2574.5.6={birth=yes}
+	2598.2.22={add_spouse=14400047}
+	2617.7.19={death={
+			death_reason=death_trait
+		}	
+	}
+}
+
+14400047={
+	name="Dulce"
+	female=yes
+	culture=choyero
+	religion=navegante
+	martial=4
+	diplomacy=10
+	stewardship=8
+	intrigue=4
+	learning=6
+	trait=charismatic_negotiator
+	trait=kind
+	trait=gregarious
+	trait=diligent
+	trait=content
+	trait=ill
+	trait=just
+	2578.4.6={birth=yes}
+	2598.2.22={add_spouse=14400048}
+	2623.1.30={		
+			death={
+			death_reason = death_poor_health
+		}
+	}
 }
  
 14400046={
@@ -845,55 +896,6 @@
 	religion=cetic
 	2598.7.2={birth=yes}
 	2647.8.11={death=yes}
-}
-		
-14400048={
-	name="Tomás"
-	dynasty=5001115
-	culture=choyero
-	martial=10
-	diplomacy=4
-	stewardship=4
-	intrigue=2
-	learning=3
-	trait=temperate
-	trait=kind
-	trait=stubborn
-	trait=patient
-	trait=brave
-	trait=cancer
-	religion=navegante
-	2574.5.6={birth=yes}
-	2617.7.19={death={
-			death_reason=death_trait
-		}	
-	}
-}
-
-14400047={
-	name="Dulce"
-	female=yes
-	culture=choyero
-	religion=navegante
-	martial=4
-	diplomacy=10
-	stewardship=8
-	intrigue=4
-	learning=6
-	trait=charismatic_negotiator
-	trait=kind
-	trait=gregarious
-	trait=diligent
-	trait=content
-	trait=ill
-	trait=just
-	2578.4.6={birth=yes}
-	2600.2.22={add_spouse=14400048}
-	2623.1.30={		
-			death={
-			death_reason = death_poor_health
-		}
-	}
 }
 
 14400042={
@@ -1116,7 +1118,7 @@
 	learning=5
 	trait=duelist
 	trait=strong
-	trait=wrathful
+	trait=wroth
 	trait=brave
 	trait=ambitious
 	trait=legendary
@@ -1308,7 +1310,7 @@
 	trait=greedy
 	father=1810068
 	mother=1810066
-	2609.7.19={birth=yes}
+	2608.7.19={birth=yes}
 	2689.11.9={death=yes}
 }
 
@@ -1411,11 +1413,10 @@
 	intrigue=5
 	learning=5
 	trait=brave
-	trait=skilled_tactician
 	trait=honest
 	trait=zealous
 	trait=skilled_tactician
-	2557.12.17={birth=yes}
+	2556.12.17={birth=yes}
 	2575.1.11={add_spouse=14400068}
 	2606.8.5={death=yes}
 }
@@ -1433,7 +1434,7 @@
 	trait=honest
 	trait=humble
 	trait=groomed
-	2560.6.16={birth=yes}
+	2559.6.16={birth=yes}
 	2610.10.1={death=yes}
 }
 
@@ -1719,6 +1720,7 @@
 	trait=elusive_shadow
 	father=14400081
 	2507.2.27={birth=yes}
+	2530.5.5={add_spouse=14400102}
 	2541.12.3={
 		give_nickname = nick_el_tizon
 		religion=sacred_heart
@@ -1743,7 +1745,7 @@
 	trait=shy
 	trait=kind
 	2513.7.3={birth=yes}
-	2535.5.5={add_spouse=14400083}
+	2530.5.5={add_spouse=14400083}
 	2531.12.8={
 		religion=sacred_heart
 	}
@@ -1889,7 +1891,7 @@
 	trait=marian_santa_muerte
 	trait=familial_kinslayer
 	trait=brave
-	trait=wrathful
+	trait=wroth
 	trait=stubborn
 	trait=deceitful
 	trait=intricate_webweaver
@@ -1930,7 +1932,6 @@
 	dynasty=5001131
 	martial=8
 	learning=1
-	trait=honest
 	trait=slothful
 	trait=curious
 	trait=honest
@@ -2064,7 +2065,6 @@
 	trait=ambitious
 	trait=scholar
 	trait=zealous
-	trait=ambitious
 	trait=vomiting
 	father=14400104
 	2560.10.17={birth=yes}
@@ -2135,7 +2135,7 @@
 	trait=ambitious
 	trait=deceitful
 	trait=charitable
-	2537.4.15={birth=yes}
+	2523.4.15={birth=yes}
 	2591.1.12={death=yes}
 }
 
@@ -2156,7 +2156,7 @@
 	trait=content
 	trait=naive_appeaser
 	father=14400088
-	2555.12.7={birth=yes}
+	2539.12.7={birth=yes}
 	2604.7.8={death=yes}
 }
 
@@ -2221,14 +2221,14 @@
 	intrigue=10
 	learning=12
 	trait=marian_el_santo
-	trait=brawny
+	trait=robust
 	trait=distractible
 	trait=gregarious
 	trait=proud
 	trait=just
 	trait=ambitious
 	trait=inspiring_leader
-	2555.9.2={birth=yes}
+	2550.9.2={birth=yes}
 	2616.5.28={death= {
 			death_reason = death_murder_strangle 
 			killer = 14400130
@@ -2250,7 +2250,7 @@
 	trait=humble
 	trait=zealous
 	father=14400092
-	2579.3.26={birth=yes}
+	2569.3.26={birth=yes}
 	2629.2.17={death=yes}
 }
 
@@ -2365,7 +2365,7 @@
 	trait=content
 	trait=gardener
 	trait=brave
-	trait=brawny
+	trait=robust
 	father=14400117
 	2641.3.11={birth=yes}
 	2680.2.24={death=yes}
@@ -2401,7 +2401,7 @@
 	religion=sacred_heart
 	mother=14400116
 	2665.2.25={birth=yes}
-	2765.2.25={death=yes}
+	2742.2.25={death=yes}
 }
 
 #Benemérito Porfirio Gómez
@@ -2471,7 +2471,7 @@
 	trait=curious
 	father=14400121
 	2660.8.29={birth=yes}
-	2760.2.20={death=yes}
+	2744.2.20={death=yes}
 }
 
 14400123={
@@ -2517,7 +2517,7 @@
 	trait=skilled_tactician
 	father=14400118
 	2639.2.7={birth=yes}
-	2739.10.3={death=yes}
+	2719.10.3={death=yes}
 }
 
 14400120={ 
@@ -2593,8 +2593,7 @@
 
 14450406={
 	name="Eréndira"
-	race=cajun
-	culture=trifinio
+	culture=cajun
 	religion=mormon_hotep
 	female=yes
 	trait=musician
@@ -2602,7 +2601,8 @@
 	trait=ambitious
 	trait=elusive_shadow
 	2630.10.21={birth=yes}
-	2648.6.15={add_spouse=14450402}
+	2648.6.15={add_spouse=14450402
+	culture=trifinio}
 	2700.10.1={death=yes}
 	}
 
