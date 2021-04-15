@@ -4,6 +4,27 @@ e_centroamerica = {
 	
 	capital = 1848 # c_san_salvador
 	
+	d_cocibolca = {
+		color={ 139 80 161 }
+		color2={ 255 255 255 }
+		
+		capital = 1867 # c_el_desaguadero
+		
+		allow = {
+			conditional_tooltip = {
+				trigger = {
+					d_cocibolca = {
+						is_titular = yes
+					}
+				}
+				d_cocibolca = {
+					is_titular = no
+				}
+			}
+			is_republic = yes
+		}
+	}
+	
 	k_guatemala = {
 		color={ 24 90 181 }
 		color2={ 255 255 255 }
@@ -398,7 +419,7 @@ e_centroamerica = {
 			}
 		}
 		d_altas_honduras = {
-			color={ 222 228 252 }
+			color={ 173 182 195 }
 			color2={ 255 255 255 }
 			
 			capital = 724 # c_copan
