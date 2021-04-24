@@ -25,16 +25,16 @@
 	name="José Antonio"
 	religion=cristo_rey
 	culture=chinola
-	trait="genius"
-	trait="poet"
-	trait="erudite"
-	trait="just"
-	trait="kind"
-	trait="humble"
-	trait="diligent"
-	trait="legendary"
-	trait="temperate"
-	trait="brave"
+	trait=genius
+	trait=poet
+	trait=erudite
+	trait=just
+	trait=kind
+	trait=humble
+	trait=diligent
+	trait=legendary
+	trait=temperate
+	trait=brave
 	trait=mastermind_theologian
 	2256.4.17={
 		birth=yes
@@ -345,7 +345,7 @@
 	trait=stubborn
 	trait=zealous
 	trait=tough_soldier	
-	give_nickname =nick_el_falso
+	give_nickname=nick_el_falso
 	2355.1.2={
 		birth=yes
 	}
@@ -450,10 +450,10 @@
 	dynasty=5001152
 	trait=beatified
 	trait=honest
-	trait="brave"
-	trait="erudite"
-	trait="just"
-	trait="kind"
+	trait=brave
+	trait=erudite
+	trait=just
+	trait=kind
 	trait=mastermind_theologian
 	2368.2.7={birth=yes}
 	2415.7.6={
@@ -555,10 +555,9 @@
 		birth=yes
 	}
 	2469.11.19={death=yes}
-	}
-	
+}
 
-14450442 = {
+14430442 = {
 	name="Cipac"
 	religion=cristo_rey
 	culture=nahua
@@ -772,12 +771,12 @@
 
 14450446 = {
 	name="Bonifacio"
-	religion="cristo_rey"
-	culture="chilango"
-	trait="diligent"
-	trait="patient"
-	trait="zealous"
-	trait="charismatic_negotiator"
+	religion=cristo_rey
+	culture=chilango
+	trait=diligent
+	trait=patient
+	trait=zealous
+	trait=charismatic_negotiator
 	2284.5.1 = {
 		birth=yes
 	}
@@ -788,12 +787,12 @@
 
 14450447 = {
 	name="José Pío"
-	religion="cristo_rey"
-	culture="chilango"
-	trait="honest"
-	trait="just"
-	trait="diligent"
-	trait="scholarly_theologian"
+	religion=cristo_rey
+	culture=chilango
+	trait=honest
+	trait=just
+	trait=diligent
+	trait=scholarly_theologian
 	2298.1.2 = {
 		birth=yes
 	}
@@ -804,14 +803,14 @@
 
 14450448 = {
 	name="Doroteo"
-	religion="cristo_rey"
-	culture="chilango"
-	trait="diligent"
-	trait="patient"
-	trait="zealous"
+	religion=cristo_rey
+	culture=chilango
+	trait=diligent
+	trait=patient
+	trait=zealous
 	trait=honest
 	trait=humble
-	trait="mastermind_theologian"
+	trait=mastermind_theologian
 	2300.4.14 = {
 		birth=yes
 	}
@@ -822,23 +821,27 @@
 
 14450449 = { #Justo Armas
 	name="Justo"
-	religion="moravian"
+	religion=moravian
 	learning=12
 	dynasty=5001150
-	culture="trifinio"
-	trait="parroquial"
-	trait="honest"
-	trait="zealous" #devout
+	dna="baaba0fajf0"
+	culture=deitsch
+	trait=parroquial
+	trait=honest
+	trait=zealous #devout
 	trait=brave
 	trait=humble
-	trait="skilled_tactician"
+	trait=skilled_tactician
 	2649.7.6 = {
 		birth=yes
+		culture=trifinio
 	}
 	2770.6.2 = {
 		death=yes #Never!
 	}
 }
+
+#
 
 
 #Patrician XXX XXX
@@ -862,6 +865,99 @@
 #	}
 #}
 
+14450456 = { #
+	name="Percival filRobert"
+	religion=evangelical 
+	culture=southron
+	dynasty=5001162
+	#trait=dorado #Look for Dorados
+	trait=erudite
+	trait=proud
+	trait=wroth
+	trait=charitable
+	trait=kind
+	trait=zealous
+	trait=martial_cleric
+	2645.7.25={birth=yes}
+	2666.1.1={effect={employer=14400061}}
+	2770.6.2 = {
+		death=yes
+	}
+}
+
+#Elbert 
+14450458 = {
+    name="Elbert"
+    culture=nicoyano 
+    dynasty=5001161
+	religion=moravian
+	trait=parroquial
+    trait=brave
+    trait=honest
+    trait=just
+    trait=lustful
+    trait=brawny
+	father=14450457
+    trait=tough_soldier	
+    2601.5.9={
+        birth=yes
+		}
+	2666.1.1={effect={employer=1670018}}
+	2700.7.3={
+        death=yes
+    }
+}
+
+#Carlos
+14450457 = {
+    name="Carlos"
+    culture=nicoyano 
+    dynasty=5001161
+	religion=moravian
+	trait=parroquial
+    trait=honest
+    trait=brave
+    trait=diligent
+    trait=just
+    trait=humble
+    trait=adventurer
+    trait=zealous
+    trait=midas_touched
+    occluded=yes
+    2581.8.7={
+        birth=yes
+		}
+  2651.7.3={
+        death=yes
+    }
+}
+
+#Francisco 
+14450459 = {
+    name="Francisco"
+    culture=nicoyano 
+    dynasty=5001161
+	religion=moravian
+	trait=pastoral
+    trait=theologian
+    trait=greedy
+    trait=patient
+    trait=chaste
+    trait=ambitious
+	trait=envious
+	father=14450458
+	trait=paranoid
+    trait=mastermind_theologian	
+    2620.5.9={
+        birth=yes
+		}
+	2666.1.1={effect={employer=1670018}}
+  2700.7.3={
+        death=yes
+    }
+}
+
+#14450462
 
 #Daúd
 #Anselmo llorente, the first bishop of Costa Rica attended the sick people, people with cholera putting his life in risk. 

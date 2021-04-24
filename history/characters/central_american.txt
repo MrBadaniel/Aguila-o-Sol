@@ -1059,7 +1059,7 @@
 1650054={
 	name="Jaime"
 	dynasty=1821005
-	culture=centrano
+	culture=trifinio
 	religion=moravian
 	martial=2
 	diplomacy=0
@@ -1078,7 +1078,7 @@
 1650055={
 	name="Álvaro"
 	dynasty=1650007
-	culture=centrano
+	culture=trifinio
 	religion=moravian
 	martial=3
 	diplomacy=7
@@ -1091,6 +1091,7 @@
 	trait=cynical
 	trait=deceitful
 	father=1650058
+	give_nickname=nick_el_rayo
 	2579.1.1={birth=yes}
 	2625.1.1={death=yes}
 }
@@ -1098,7 +1099,7 @@
 1650056={
 	name="Jaime"
 	dynasty=1650007
-	culture=centrano
+	culture=trifinio
 	religion=moravian
 	martial=1
 	diplomacy=4
@@ -1117,7 +1118,7 @@
 1650057={ #He very cool!
 	name="Plutón"
 	dynasty=1650007
-	culture=centrano
+	culture=trifinio
 	religion=penitente 
 	martial=4
 	diplomacy=9
@@ -1129,18 +1130,36 @@
 	trait=diligent
 	trait=proud
 	trait=cruel
-	trait=diligent
 	trait=ambitious
 	trait=shrewd
 	father=1650056
+	give_nickname=nick_el_invisible
 	2625.1.1={birth=yes}
 	2685.1.1={death=yes}
+}
+
+14450460 = {
+	name="Éter"
+	culture=trifinio
+	religion=penitente 
+	female=yes
+	trait=ugly
+	trait=weak
+	trait=honest
+	trait=content
+	trait=brave
+	trait=flamboyant_schemer	
+	2625.2.11={
+		birth=yes
+	}
+	2648.12.1={add_spouse=1650057}
+	2665.2.12={death=yes}
 }
 
 1650058={
 	name="Jaime"
 	dynasty=1650007
-	culture=centrano
+	culture=trifinio
 	religion=moravian
 	martial=2
 	diplomacy=2
@@ -1158,7 +1177,7 @@
 1650059={
 	name="Pablo"
 	dynasty=1650007
-	culture=centrano
+	culture=trifinio
 	religion=penitente
 	martial=3
 	diplomacy=2
@@ -1170,11 +1189,12 @@
 	trait=is_fat
 	trait=gluttonous
 	trait=ambitious 
-	trait=deceithful 
+	trait=deceitful 
 	trait=shrewd 
 	trait=craven
 	disallow_random_traits=yes
 	father=1650057
+	mother=14450460
 	2650.2.1={birth=yes}
 	2710.1.1={death=yes}
 }
@@ -1182,7 +1202,7 @@
 1650060={
 	name="Paúl"
 	dynasty=1650007
-	culture=centrano
+	culture=trifinio
 	religion=penitente
 	martial=2
 	diplomacy=5
@@ -1194,12 +1214,12 @@
 	trait=paranoid
 	trait=is_malnourished
 	trait=ambitious
-	trait=cynical
-	trait=deceithful
+	trait=deceitful
 	trait=envious
 	trait=craven
 	disallow_random_traits=yes
 	father=1650057
+	mother=14450460
 	2650.2.1={birth=yes}
 	2714.1.1={death=yes}
 }
@@ -2061,7 +2081,7 @@
 1650130={
 	name="Gilbratar"
 	dynasty=1821000
-	culture=centrano
+	culture=trifinio
 	religion=qabantajik
 	trait=brilliant_strategist
 	trait=dwarf
@@ -2211,7 +2231,7 @@
 1650139={ #Mother 1
 	name="Patricia"
 	female=yes
-	culture=centrano
+	culture=trifinio
 	religion=moravian
 	trait=fortune_builder
 	trait=parroquial
@@ -2244,7 +2264,7 @@
 1650141={
 	name="Joaquín"
 	dynasty=5001158
-	culture=centrano
+	culture=trifinio
 	religion=moravian
 	trait=midas_touched
 	trait=pastoral
@@ -2260,7 +2280,7 @@
 1650142={ #Mother 2
 	name="Georgina"
 	female=yes
-	culture=centrano
+	culture=trifinio
 	religion=moravian
 	trait=scholarly_theologian
 	trait=parroquial
@@ -2393,7 +2413,7 @@
 1650150={
 	name="Salazar"
 	dynasty=1821001
-	culture=centrano
+	culture=trifinio
 	religion=moravian
 	trait=parroquial
 	trait=indulgent_wastrel
@@ -2437,7 +2457,7 @@
 	trait=lustful
 	2643.3.16={birth=yes}
 	2666.7.2={add_spouse=1650149}
-	2790.5.11={death=yes}
+	2690.5.11={death=yes}
 }
 
 14450442={
@@ -2458,7 +2478,7 @@
 1650155={ #Chamelecón
 	name="Gregorio"
 	dynasty=5001158
-	culture=centrano
+	culture=trifinio
 	religion=moravian
 	trait=pastoral
 	trait=robust
@@ -2471,21 +2491,21 @@
 	2695.5.10={death=yes}
 }
 
-14450443={ #Chamelecón
+15450443={ #Chamelecón
 	name="Toño"
 	dynasty=5001158
-	culture=centrano
+	culture=trifinio
 	religion=moravian
 	trait=pastoral
 	father=1650155
-	2663.5.1={birth=yes}
+	2662.5.1={birth=yes}
 	2695.5.10={death=yes}
 }
 
 1650156={
 	name="Mario"
 	dynasty=1821005
-	culture=centrano
+	culture=trifinio
 	religion=moravian
 	martial=4
 	diplomacy=2
@@ -2506,7 +2526,7 @@
 1650158={
 	name="Nahún"
 	dynasty=1821005
-	culture=centrano
+	culture=trifinio
 	religion=moravian
 	martial=5
 	diplomacy=4
@@ -2703,7 +2723,7 @@
 1670005={
 	name="Toño"
 	dynasty=1821028
-	culture=centrano
+	culture=trifinio
 	religion=qabantajik
 	trait=tough_soldier
 	trait=wroth
@@ -2769,61 +2789,99 @@
 	2677.2.23={death=yes}
 }
 
-1670011={
-	name="Belisario"
+14450451={
+	name="José Manuel"
 	dynasty=1538031
-	culture=istmeno
+	culture=nicoyano
+	occluded=yes
 	trait=parroquial
 	religion=moravian
-	trait=tough_soldier
+	trait=legendary
+	trait=adventurer
+	trait=brilliant_strategist
+	trait=brave
+	trait=zealous
+	2440.2.12={birth=yes}
+	2500.11.15={death=yes}
+}
+
+
+1670011={
+	name="Juan Víctor"
+	dynasty=1538031
+	culture=nicoyano
+	trait=parroquial
+	religion=moravian
+	trait=brilliant_strategist
 	trait=brave
 	trait=just
 	trait=greedy
-	trait=slothful
+	trait=ambitious
+	trait=diligent
+	father=14450451
+	give_nickname=nick_juanito
 	2470.1.1={birth=yes}
-	2540.1.1={death=yes}
+	2540.1.1={
+		death={
+			death_reason=death_firing_squad
+		} 
+	}
 }
 
-1670012={
-	name="Bayano"
+14450450={
+	name="Joaquín"
 	dynasty=1538031
-	culture=istmeno
-	religion=moravian
+	culture=nicoyano
 	trait=parroquial
-	trait=thrifty_clerk
-	trait=just
-	trait=greedy
-	trait=gregarious
-	trait=craven
-	father=1670011
-	2499.12.31={birth=yes}
-	2553.4.4={death={
+	religion=moravian
+	trait=charitable
+	trait=content
+	trait=underhanded_rogue
+	father=14450451
+	2474.10.12={birth=yes}
+	2545.3.1={death={
 			death_reason=death_execution_hanging
 			killer=1811003
 		}
 	}
 }
 
-1670013={
-	name="Diego"
+1670012={
+	name="José María" 
 	dynasty=1538031
-	culture=istmeno
+	culture=nicoyano
+	religion=moravian
+	trait=parroquial
+	trait=fortune_builder
+	trait=just
+	trait=brave
+	trait=gregarious
+	trait=trusting
+	father=14450450
+	2499.12.26={birth=yes}
+	2553.4.4={death=yes}
+}
+
+1670013={
+	name="Francisco"
+	dynasty=1538031
+	culture=nicoyano 
 	religion=moravian
 	trait=parroquial
 	trait=scholarly_theologian
 	trait=humble
 	trait=zealous
 	trait=gregarious
-	trait=craven
+	trait=poet
 	father=1670012
 	2523.6.20={birth=yes}
 	2575.12.14={death=yes}
 }
 
 1670014={
-	name="Ignacio"
+	name="Joaquín"
 	dynasty=1538031
-	culture=istmeno
+	culture=nicoyano
 	religion=moravian
 	trait=parroquial
 	trait=fortune_builder
@@ -2837,28 +2895,30 @@
 }
 
 1670015={
-	name="Javier"
+	name="José Dolores"
 	dynasty=1538031
-	culture=istmeno
+	culture=nicoyano
 	religion=moravian
 	trait=parroquial
-	trait=underhanded_rogue
-	trait=cynical
-	trait=honest
+	trait=brilliant_strategist
+	trait=zealous
+	trait=brave
 	trait=diligent
 	trait=patient
+	trait=humble
 	father=1670014
 	2579.10.16={birth=yes}
 	2612.12.14={death=yes}
 }
 
 1670016={
-	name="Gaspar"
+	name="Víctor"
 	dynasty=1538031
-	culture=istmeno
+	culture=nicoyano
 	religion=moravian
 	trait=parroquial
-	trait=underhanded_rogue
+	trait=strategist
+	trait=skilled_tactician
 	trait=cynical
 	trait=honest
 	trait=diligent
@@ -2868,10 +2928,27 @@
 	2657.5.1={death=yes}
 }
 
+1670021={
+	name="Gabriele"
+	dynasty=1538022
+	female=yes
+	culture=nicoyano
+	religion=moravian
+	trait=parroquial
+	trait=midas_touched
+	trait=gluttonous
+	trait=greedy
+	trait=cynical
+	trait=kind
+	2604.10.13={birth=yes}
+	2622.1.1={add_spouse=1670016}
+	2661.1.1={death=yes}
+}
+
 1670017={
-	name="Ruben"
+	name="Andrés"
 	dynasty=1538031
-	culture=istmeno
+	culture=nicoyano
 	religion=moravian
 	trait=parroquial
 	trait=skilled_tactician
@@ -2880,39 +2957,79 @@
 	trait=zealous
 	trait=diligent
 	father=1670016
+	mother=1670021
 	2623.12.19={birth=yes}
-	2650.1.1={add_spouse=1670021}
 	2700.1.1={death=yes}
 }
 
 1670018={
-	name="Dario"
+	name="Penteo"
 	dynasty=1538031
-	culture=istmeno
+	culture=nicoyano
 	religion=moravian
 	trait=parroquial
 	trait=intricate_webweaver
 	trait=cynical
-	trait=wroth
-	trait=greedy
+	trait=shy
+	trait=envious
+	trait=humble
+	trait=stubborn
 	father=1670016
+	mother=1670021
 	2625.3.24={birth=yes}
 	2645.1.1={add_spouse=1670019}
+	2661.8.11={effect={add_rival=1670017}}
 	2700.1.1={death=yes}
 }
 
+14450454={
+	name="Leonardo"
+	dynasty=1538025
+	culture=nicoyano
+	religion=moravian
+	trait=pastoral
+	trait=gregarious
+	trait=proud
+	trait=poet
+	trait=grey_eminence
+	father=3000048
+	2547.11.5={birth=yes}
+	2613.4.12={death=yes}
+}
+
+14450455={
+	name="Javier"
+	dynasty=1538025
+	culture=nicoyano
+	religion=moravian
+	trait=pastoral
+	trait=elusive_shadow
+	trait=humble
+	trait=zealous
+	trait=diligent
+	trait=craven
+	father=14450454
+	2591.4.28={birth=yes}
+	2642.1.1={death=yes}
+}
+
+
 1670019={
-	name="Carmen"
+	name="Helena"
 	dynasty=1538025
 	female=yes
-	culture=istmeno
+	culture=nicoyano
 	religion=moravian
 	trait=pastoral
 	trait=grey_eminence
 	trait=kind
-	trait=trusting
+	trait=deceitful
+	trait=lustful
+	father=14450455
+	trait=gregarious
 	2625.3.24={birth=yes}
 	2645.1.1={add_spouse=1670018}
+	2661.1.2={effect={add_lover=1670017}}
 	2663.2.1={death={
 			death_reason=death_murder_unknown #Murdered.
 			killer=1670018
@@ -2924,7 +3041,7 @@
 	name="Ximena"
 	dynasty=1538031
 	female=yes
-	culture=istmeno
+	culture=nicoyano
 	religion=moravian
 	trait=parroquial
 	father=1670018
@@ -2933,32 +3050,70 @@
 	2700.1.1={death=yes}
 }
 
-1670021={
-	name="Stephanie"
-	dynasty=1538022
-	female=yes
-	culture=istmeno
+14450452={
+	name="Dionisio"
+	dynasty=1538031
+	culture=nicoyano
 	religion=moravian
 	trait=parroquial
-	trait=midas_touched
-	trait=gluttonous
-	trait=greedy
-	trait=cynical
-	trait=kind
-	2630.10.13={birth=yes}
-	2650.1.1={add_spouse=1670017}
+	trait=genius
+	trait=robust
+	trait=lustful
+	trait=ambitious
+	trait=drunkard
+	trait=charitable
+	trait=charismatic_negotiator 
+	father=1670018
+	mother=1670019
+	2648.3.25={birth=yes}
+	2700.1.1={death=yes}
+}
+
+14450453={
+	name="Joaquín"
+	dynasty=1538031
+	culture=nicoyano
+	religion=moravian
+	trait=parroquial
+	trait=distractible
+	trait=kind	
+	trait=diligent
+	trait=content	
+	trait=tough_soldier
+	father=1670018
+	mother=1670019
+	2650.2.12={birth=yes}
 	2700.1.1={death=yes}
 }
 
 1670022={
-	name="Stephanie"
+	name="María Josefa"
 	dynasty=1538031
 	female=yes
-	culture=istmeno
+	culture=nicoyano
 	religion=moravian
 	trait=parroquial
+	trait=legit_bastard
 	father=1670017
-	mother=1670021
-	2652.2.25={birth=yes}
+	mother=1670019
+	2662.2.25={birth=yes}
+	2664.2.12={effect={add_friend=1670017}}
 	2700.1.1={death=yes}
 }
+
+14450461={
+	name="Pedro"
+	dynasty=4501185
+	culture=mekatelyu
+	religion=moravian
+	martial=8
+	diplomacy=8
+	stewardship=4
+	intrigue=3
+	learning=1
+	trait=pastoral
+	father=1650163
+	2654.12.18={birth=yes}
+	2700.1.1={death=yes}
+}
+

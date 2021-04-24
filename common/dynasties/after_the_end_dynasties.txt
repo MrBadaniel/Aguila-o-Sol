@@ -2852,18 +2852,19 @@ coat_of_arms = {
 		}
 	}}
 1538030 = { name="Vespa" culture=istmeno used_for_random=no }
-1538031 = { name="Sarmiento" culture=istmeno 
-	coat_of_arms = {
-		template = 0
-		layer = {
-			texture = 8
-			texture_internal = 19
-			emblem = 0
-			color = 0
-			color = 0
-			color = 0
-		}
-	}}
+1538031 = { name="Portocarrero" culture=nicoyano 
+            coat_of_arms = {
+				religion = sacred_heart
+        template = 0
+        layer = {
+            texture = 9
+            texture_internal = 18
+            emblem = 0
+            color = 0
+            color = 0
+            color = 0
+        }
+    }}
 1538032 = { name="Chiari" culture=istmeno }
 1538033 = { name="Briceno" culture=istmeno }
 1538034 = { name="Bazán" culture=istmeno }
@@ -6230,8 +6231,21 @@ coat_of_arms = {
 1779205 = { name="Oberholtzer" culture=deitsch }
 1779206 = { name="Sensenich" culture=deitsch }
 1779207 = { name="Eash" culture=deitsch }
-1779208 = { name="Habsburgo" culture=deitsch }
-1779209 = { name="Habsburg" culture=deitsch 
+1779208 = { name="Habsburgo" culture=deitsch used_for_random=no
+            coat_of_arms = {
+				religion = sacred_heart
+        template = 0
+        layer = {
+            texture = 9
+            texture_internal = 2
+            emblem = 0
+            color = 0
+            color = 0
+            color = 0
+        }
+    }
+}
+1779209 = { name="Habsburgo" culture=deitsch used_for_random=no
 		coat_of_arms = {
 				religion = sacred_heart
         template = 0
@@ -9914,8 +9928,19 @@ coat_of_arms = {
 1821058 = { name= "Cuadra" culture=centrano }
 1821059 = { name= "Zeledón" culture=centrano }
 1821060 = { name= "Günther" culture=centrano }
-1650007 = { name="Flamazul" culture=centrano }
-
+1650007 = { name="Flamazul" culture=centrano 
+	coat_of_arms = {
+	    religion = sacred_heart
+		template = 0
+		layer = {
+			texture = 10
+			texture_internal = 1
+			emblem = 0
+			color = 0
+			color = 0
+			color = 0
+		}
+	}}
 
 1823000 = { name="Cimarrón" culture=jarocho }
 1823001 = { name="Pasquel" culture=jarocho }
@@ -9932,7 +9957,7 @@ coat_of_arms = {
 1823012 = { name="Covarrubias" culture=jarocho }
 1823013 = { name="Zorrilla" culture=jarocho }
 1823014 = { name="Nájera" culture=jarocho }
-1823015 = { name="Cabanas" culture=jarocho }
+1823015 = { name="Cabañas" culture=jarocho }
 1823016 = { name="Grijalva" culture=jarocho }
 1823017 = { name="Cházaro" culture=jarocho }
 1823018 = { name="Carranza" culture=jarocho }
@@ -15669,7 +15694,7 @@ coat_of_arms = {
 2034033 = { name="Gelecik" culture=tehrangeleno }
 
 2035000 = { name="Atala" culture=filastino }
-2035001 = { name="Balshe" culture=filastino 
+2035001 = { name="Simán" culture=filastino 
 	coat_of_arms = {
 		template = 0
 		layer = {

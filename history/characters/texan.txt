@@ -1269,6 +1269,7 @@
 		}
 	}
 	2666.1.1={add_claim=d_neches}
+	2751.12.25={death=yes}
 }
 
 2302208={
@@ -1315,6 +1316,7 @@
 			clr_character_flag=recieved_royal_marriage_aid_duty
 		}
 	}
+	2751.12.25={death=yes}
 }
 2302209={
 	name="Morgan" # AKA: Morgan the Brave
@@ -1343,6 +1345,7 @@
 		}
 	}
 	2666.4.2={add_spouse=2302208}
+	2751.12.25={death=yes}
 }
 2302211={
 	name="William" #Ironhorse
@@ -1362,6 +1365,7 @@
 	trait=stubborn
 	trait=tough_soldier
 	2630.7.3={birth=yes}
+	2751.12.25={death=yes}
 }
 
 2302212={
@@ -1378,6 +1382,7 @@
 	trait=fortune_builder
 	father=2302218
 	2628.2.1={birth=yes}
+	2751.12.25={death=yes}
 }
 2302213={
 	name="Jakeb"
@@ -1390,6 +1395,7 @@
 	trait=underhanded_rogue
 	father=2302218
 	2647.5.6={birth=yes}
+	2751.12.25={death=yes}
 }
 2302214={
 	name="Izak"
@@ -1398,6 +1404,7 @@
 	culture=czexan
 	father=2302218
 	2655.4.2={birth=yes}
+	2751.12.25={death=yes}
 }
 2302215={
 	name="Bohdan"
@@ -1406,6 +1413,7 @@
 	culture=czexan
 	father=2302218
 	2644.4.2={birth=yes}
+	2751.12.25={death=yes}
 }
 
 2302216={
@@ -1446,6 +1454,7 @@
 	trait=charismatic_negotiator
 	trait=tough_soldier
 	2651.2.9={birth=yes}
+	2751.12.25={death=yes}
 }
 2302218={
 	name="Bohdan"
@@ -1481,6 +1490,7 @@
 	2550.6.4={
 		add_friend = 2302220
 	}
+	2751.12.25={death=yes}
 }
 
 2302220={
@@ -1502,6 +1512,7 @@
 		give_nickname=nick_appletree
 		birth=yes
 	}
+	2751.12.25={death=yes}
 }
 
 2302221={
@@ -1550,6 +1561,7 @@
 	father = 2302221
 	mother = 2302225
 	2651.12.25={birth=yes}
+	2751.12.25={death=yes}
 }
 
 2302224={
@@ -1562,6 +1574,7 @@
 	father = 2302221
 	mother = 2302225
 	2645.12.25={birth=yes}
+	2751.12.25={death=yes}
 }
 
 
@@ -1613,7 +1626,7 @@
 		}
 	}
 
-
+}
 
 2302227={
 	name="Don"
@@ -1664,16 +1677,18 @@
 	fat=230227
 	mot=230228
 	religion=cristo_rey
-        trait=fair
+    trait=fair
 	trait=adopted
 	trait=just
 	trait=kind
 	trait=brave
 	trait=timid
 	culture=creole
+	father=2302227
 	2659.11.19={
 		birth=yes
 	}
+	2751.12.25={death=yes}
  }
 2302230={
 	name="John"
@@ -1692,5 +1707,5 @@
 	2631.7.4={
 		birth=yes
 	}
- }
-}		 
+	2751.12.25={death=yes}
+ }		 

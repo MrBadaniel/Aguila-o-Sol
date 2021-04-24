@@ -251,7 +251,18 @@
 4501182 = { name="Benneth" culture=mekatelyu }
 4501183 = { name="Byfield" culture=mekatelyu }
 4501184 = { name="Delisser" culture=mekatelyu }
-4501185 = { name="Okalegan" culture=mekatelyu }
+4501185 = { name="Okalegan" culture=mekatelyu 
+            coat_of_arms = {
+        template = 0
+        layer = {
+            texture = 8
+            texture_internal = 19
+            emblem = 0
+            color = 0
+            color = 0
+            color = 0
+        }
+    }}
 4501186 = { name="Nichols" culture=mekatelyu }
 4501187 = { name="Lewis" culture=mekatelyu }
 4501188 = { name="Little" culture=mekatelyu }
@@ -512,7 +523,19 @@
 5001147 = { name="Severo" culture=chilango }
 5001148 = { name="Albás" culture=chilango }
 5001149 = { name="Pátzcuaro" culture=purepecha }
-5001150 = { name="Armas" culture=centrano } #Hapsburg
+5001150 = { name="Armas" culture=centrano
+	coat_of_arms = {
+	    religion = sacred_heart
+		template = 0
+		layer = {
+			texture = 10
+			texture_internal = 0
+			emblem = 0
+			color = 0
+			color = 0
+			color = 0
+		}
+	}} #Hapsburg
 5001151 = { name="Macehual" culture=nahua }
 5001152 = { name="Moré" culture=chilango }
 5001153 = { name="Fierro" culture=chilango }
@@ -522,7 +545,20 @@
 5001157 = { name="Chebab" culture=filastino }
 5001158 = { name="Chamelecón" culture=centrano }
 
-5001159 = { name="Pelayo" culture=tejano }
+5001159 = { name="Pelayo" culture=tejano used_for_random=no
+            coat_of_arms = {
+				religion = sacred_heart
+        template = 0
+        layer = {
+            texture = 9
+            texture_internal = 19
+            emblem = 0
+            color = 0
+            color = 0
+            color = 0
+        }
+    }
+ }
 5001160 = { name="Pershing" culture=texan } 
 5001161 = { name="Carvajal" culture=nicoyano }
 5001162 = { name="Turral" culture=southron }
