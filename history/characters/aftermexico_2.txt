@@ -824,6 +824,7 @@
 	religion=moravian
 	learning=12
 	dynasty=5001150
+	culture=
 	dna="baaba0fajf0"
 	culture=deitsch
 	trait=parroquial
@@ -832,8 +833,10 @@
 	trait=brave
 	trait=humble
 	trait=skilled_tactician
-	2649.7.6 = {
-		birth=yes
+	2649.7.6 = {birth=yes
+		effect={set_character_flag=no_historical_family}
+	}
+	2650.7.6 = {
 		culture=trifinio
 	}
 	2770.6.2 = {
