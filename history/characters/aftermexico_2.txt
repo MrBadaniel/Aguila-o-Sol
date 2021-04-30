@@ -24,7 +24,7 @@
 14450401 = {
 	name="José Antonio"
 	religion=cristo_rey
-	culture=occidental
+	culture=chinola
 	trait=genius
 	trait=poet
 	trait=erudite
@@ -824,18 +824,16 @@
 	religion=moravian
 	learning=12
 	dynasty=5001150
-	culture=deitsch
 	dna="baaba0fajf0"
+	culture=deitsch
 	trait=parroquial
 	trait=honest
 	trait=zealous #devout
 	trait=brave
 	trait=humble
 	trait=skilled_tactician
-	2649.7.6 = {birth=yes
-		effect={set_character_flag=no_historical_family}
-	}
-	2650.7.6 = {
+	2649.7.6 = {
+		birth=yes
 		culture=trifinio
 	}
 	2770.6.2 = {
@@ -959,47 +957,7 @@
     }
 }
 
-14450461 = {
-    name="Simón"  # Hermano Mayor of the Penitentes
-    culture=trifinio 
-	religion=penitente
-    trait=theologian
-    trait=shy
-    trait=patient
-    trait=chaste
-    trait=ambitious
-	trait=paranoid
-    trait=mastermind_theologian	
-    2609.2.19={
-        birth=yes
-	}
-}
-
-14450462 = {
-    name="Germán"  # Father of Cibolero - friend and ally of Luis
-    culture=neomexicano 
-	religion=atomicist
-	trait=atom_bless
-    trait=theologian
-    trait=zealous
-    trait=patient
-    trait=dorado
-    trait=ambitious
-	trait=paranoid
-	trait=cancer
-	trait=adventurer
-    trait=mastermind_theologian	
-    2580.2.18={
-        birth=yes
-	}
-	2610.3.10={
-		effect={add_friend=14450462}
-	}
-	2625.2.3={
-		death=yes
-		death_reason=death_trait
-	}
-}
+#14450462
 
 #Daúd
 #Anselmo llorente, the first bishop of Costa Rica attended the sick people, people with cholera putting his life in risk. 

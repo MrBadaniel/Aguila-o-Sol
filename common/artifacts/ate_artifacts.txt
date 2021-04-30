@@ -45,7 +45,7 @@ ate_fingerbone_of_saint = {
 			religion_group = christian
 			religion_group = cult_of_saints
 			religion_group = latter_day_saints
-			religion_group = mesoamerican_gods
+			religion = sol_invicta
 		}
 	}
 	allowed_gift = {
@@ -53,7 +53,7 @@ ate_fingerbone_of_saint = {
 			religion_group = christian
 			religion_group = cult_of_saints
 			religion_group = latter_day_saints
-			religion_group = mesoamerican_gods
+			religion = sol_invicta
 		}
 	}
 	quality = 1
@@ -76,6 +76,7 @@ ate_ark_of_the_covenant = {
 			religion_group = cult_of_saints
 			religion_group = latter_day_saints
 			religion_group = jewish_group
+			religion = sol_invicta
 		}
 	}
 	allowed_gift = {
@@ -84,6 +85,7 @@ ate_ark_of_the_covenant = {
 			religion_group = cult_of_saints
 			religion_group = latter_day_saints
 			religion_group = jewish_group
+			religion = sol_invicta
 		}
 	}
 	quality = 5
@@ -740,16 +742,20 @@ obsidian_crown = { # Actually a scepter now
 	monthly_character_prestige = 0.5
 	diplomacy = 4
 	active = { 
-		religion_group = mesoamerican_gods
-		culture_group = mesoamerican
-		culture_group = taracahita
-		culture_group = mayan
+		OR = {
+			religion = mictlantec
+			religion = tonaltec
+			religion = sol_invicta
+			religion = qabantajik
+		}
 	}
 	allowed_gift = { 
-		religion_group = mesoamerican_gods
-		culture_group = mesoamerican
-		culture_group = taracahita
-		culture_group = mayan
+		OR = {
+			religion = mictlantec
+			religion = tonaltec
+			religion = sol_invicta
+			religion = qabantajik
+		}
 	}
 	quality = 4
 	indestructible = yes
@@ -1539,6 +1545,7 @@ stone_of_golgotha = {
 			religion_group = christian
 			religion_group = cult_of_saints
 			religion_group = latter_day_saints
+			religion = sol_invicta
 		}
 	}
 	allowed_gift = {
@@ -1546,6 +1553,7 @@ stone_of_golgotha = {
 			religion_group = christian
 			religion_group = cult_of_saints
 			religion_group = latter_day_saints
+			religion = sol_invicta
 		}
 	}
 	quality = 5
@@ -1670,22 +1678,11 @@ montezuma_headdress = {
 		religion_group = mesoamerican_gods
 		religion = sacred_heart
 		religion = cristo_rey
-		religion = reformista
-		culture_group = mexicano
-		culture_group = mesoamerican
-		culture_group = taracahita
-		culture_group = norteno
-		culture_group = mayan
 	}
 	allowed_gift = {
 		religion_group = mesoamerican_gods
 		religion = sacred_heart
 		religion = cristo_rey
-		culture_group = mexicano
-		culture_group = mesoamerican
-		culture_group = taracahita
-		culture_group = norteno
-		culture_group = mayan
 	}
 	flags = { religious mesoamerican unique headdress troops_morale }
 	picture = "GFX_crown_aztec_fylkir" #placeholder to the max
