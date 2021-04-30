@@ -2527,7 +2527,9 @@
 1810170={
 	name="Natanael"
 	dynasty=4201078
-	culture=tejano
+	dna="cdc0f0gc0b0"
+	properties="fm0k0k00000000000000000000000000000000"
+	culture=istmeno
 	religion=cristo_rey
 	trait=patient
 	trait=cynical
@@ -2747,7 +2749,9 @@
 1810200={
 	name="Luis"
 	dynasty=1815018
-	culture=bravo
+	dna="abba00fc0f0"
+	properties="ci0ihk0c0000000000000000000000000000000"
+	culture=anjalusi
 	religion=atomicist
 	martial=3
 	diplomacy=4
@@ -2757,15 +2761,26 @@
 	trait=strong
 	trait=brilliant_strategist
 	trait=adventurer
+	trait=dorado
 	trait=atom_bless
 	trait=just
 	trait=wroth
 	trait=zealous
 	trait=paranoid
+	trait=scarred
 	give_nickname=nick_the_cockroach
-	2586.5.8={birth=yes}
-	2620.1.31={add_spouse=1810201}
-	2656.8.24={effect={add_rival=1810226}}
+	2586.5.8={
+		birth=yes
+		culture=bravo
+	}
+	2610.3.10={
+		effect={add_artifact=old_world_shades}
+		effect={add_friend=14450462}
+	}
+	2615.1.31={add_spouse=1810201}
+	2656.8.24={
+		effect={add_rival=1810226}
+	}
 	2670.7.13={death=yes}
 }
 
@@ -3027,7 +3042,7 @@
 1810220={
 	name="Fernando"
 	dynasty=4401166
-	culture=chinola
+	culture=occidental
 	religion=navegante
 	trait=grey_eminence
 	trait=weak
@@ -3044,7 +3059,7 @@
 1810221={
 	name="Veronica"
 	female=yes
-	culture=chinola
+	culture=occidental
 	religion=navegante
 	trait=fortune_builder
 	trait=quick
@@ -3057,7 +3072,7 @@
 1810222={
 	name="Raúl"
 	dynasty=4401166
-	culture=chinola
+	culture=occidental
 	religion=navegante
 	trait=quick
 	father=1810220
@@ -3071,7 +3086,7 @@
 1810225={
 	name="Lázaro"
 	dynasty=1700008
-	culture=yaqui
+	culture=occidental
 	religion=sol_invicta
 	trait=grey_eminence
 	trait=brave
@@ -3092,7 +3107,7 @@
 1810226={
 	name="Amanda"
 	female=yes
-	culture=yaqui
+	culture=occidental
 	religion=sol_invicta
 	trait=midas_touched
 	trait=fair
@@ -3108,7 +3123,7 @@
 1810227={
 	name="Darío"
 	dynasty=1700008
-	culture=yaqui
+	culture=occidental
 	religion=atomicist
 	trait=fair
 	give_nickname=nick_the_unready
@@ -3135,7 +3150,7 @@
 1810229={
 	name="Félix"
 	dynasty=1700013
-	culture=arixan
+	culture=occidental
 	religion=atomicist
 	trait=scholarly_theologian
 	trait=atom_bless
@@ -3508,7 +3523,7 @@
 1810256={
 	name="Joaquín"
 	dynasty=1700025
-	culture=chinola
+	culture=occidental
 	religion=sol_invicta
 	martial=6
 	diplomacy=6
