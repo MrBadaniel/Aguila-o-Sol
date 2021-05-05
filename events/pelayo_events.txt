@@ -1,0 +1,31 @@
+narrative_event = {
+	id = pelayo.1
+	picture = GFX_evt_pelayo1
+	prisoner = no
+	has_character_flag = pelayo
+	desc = {
+		trigger = {
+			c_1836060 = {
+			has_landed_title = d_transpecos
+		}
+		}
+		mean_time_to_happen = {
+		days = 1
+	    }
+		option = {
+		name = EVTPL1
+		capital_scope = {
+			ROOT = {
+				spawn_unit = {
+					province = PREV
+					owner = ROOT
+					match_character = ROOT
+					match_mult = 0.75
+					attrition = 1.0
+				}
+				}
+		}
+	}
+}
+		text = EVTDESCPELAY01
+	}
