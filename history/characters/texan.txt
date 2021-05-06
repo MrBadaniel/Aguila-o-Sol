@@ -1634,14 +1634,17 @@
 	name="Don"
 	martial=12
 	dynasty=5001159
-	dna="aejeg0cbcc0"
+	dna="beadg0ic000"
+	fat=2302231
+	mot=2302232
 	religion=cristo_rey
-        trait=skilled_tactician	 
+    trait=skilled_tactician	 
 	trait=reclusive
 	trait=quick
 	trait=ambitious
 	trait=wroth
 	trait=gamer
+	trait=zealous
 	trait=unyielding_leader
 	trait=holy_warrior
 	culture=neomexicano
@@ -1653,16 +1656,17 @@
 	}
  }
 2302228={
-	name="Emma"
+	name="Selena"
 	female=yes
-	dna="0jidj0bba00"
+	dna="00ffb00bbc0"
 	dynasty=5001153
 	religion=catholic
-        trait=fair
+    trait=fair
 	trait=musician
 	trait=quick
 	trait=kind
-	trait=zealous
+	trait=chaste
+	trait=gregarious
 	culture=texan
 	2643.5.27={
 		birth=yes
@@ -1699,7 +1703,7 @@
 	fat=230227
 	mot=230228
 	religion=americanist
-        trait=tough_soldier
+    trait=tough_soldier
 	trait=robust
 	trait=temperate
 	trait=cynical
@@ -1711,3 +1715,81 @@
 	}
 	2751.12.25={death=yes}
  }		 
+2302231={
+	name="Daniel"
+	martial=12
+	dynasty=5001159
+	dna="00ffb00bbc0"
+	religion=cristo_rey
+    trait=tough_soldier	 
+	trait=kind
+	trait=quick
+	trait=strong
+	trait=content
+	trait=gregarious
+	trait=unyielding_leader
+	culture=neomexicano
+	2624.5.24={
+		birth=yes
+	}
+	2640.1.6={
+		add_spouse = 2302232
+	}
+ }
+2302232={
+	name="Diana"
+	female=yes
+	dna="00ffb00bbc0"
+	religion=catholic
+    trait=fair
+	trait=musician
+	trait=quick
+	trait=kind
+	trait=zealous
+	culture=texan
+	2625.11.19={
+		birth=yes
+	}
+	2640.1.6={
+		add_spouse = 2302231
+	}
+ }
+ 2302233={
+	name="Dorian"
+	dynasty=5001159
+	dna="chbai0ebbc0"
+	fat=2302231
+	mot=2302232
+	religion=cristo_rey
+    trait=tough_soldier	 
+	trait=strong
+	trait=robust
+	trait=giant
+	trait=shy
+	trait=kind
+	trait=berserker
+	trait=aggressive_leader
+	culture=neomexicano
+	2646.3.5={
+		birth=yes
+	}
+ }
+ 2302232={
+	name="Diana"
+	female=yes
+	dna="00ffb00bbc0"
+	dynasty=5001159
+	fat=2302231
+	mot=2302232
+	religion=cristo_rey
+	trait=intricate_webweaver
+    trait=fair
+	trait=proud
+	trait=quick
+	trait=arbitrary
+	trait=deceitful
+	culture=neomexicano
+	2650.5.20={
+		birth=yes
+	}
+ }
