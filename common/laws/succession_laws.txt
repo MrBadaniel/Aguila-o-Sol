@@ -1730,7 +1730,6 @@ succession_laws = {
 				title = k_hijo_del_sol
 				title = k_ursuline
 				title = d_quorum_of_the_twelve
-				title = k_hijo_del_sol
 				AND = {
 					title = d_celtic_pagan_reformed
 					has_religion_feature = religion_theocratic_head
@@ -1811,6 +1810,7 @@ succession_laws = {
 					NOT = { religion = high_church }
 					NOT = { religion = neogodbeite }
 					NOT = { religion = strangite }
+					NOT = { religion = sol_invicta }
 				}
 			}
 			holder_scope = { 
@@ -1861,6 +1861,7 @@ succession_laws = {
 					religion = high_church
 					religion = neogodbeite
 					religion = strangite
+					religion = sol_invicta
 				}
 				is_merchant_republic = no
 				OR = {

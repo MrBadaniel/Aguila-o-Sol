@@ -531,13 +531,17 @@ sword_michael = {
 	command_modifier = {
 		morale_defence = 0.2
 	}
-	active = { 
-		religion_group = christian
-		religion_group = cult_of_saints
+	active = {
+		OR = {
+			religion_group = christian
+			religion_group = cult_of_saints
+		}
 	}
 	allowed_gift = { 
-		religion_group = christian
-		religion_group = cult_of_saints
+		OR = {
+			religion_group = christian
+			religion_group = cult_of_saints
+		}
 	}
 	quality = 5
 	flags = { religious christian angel very_rare unique troops_morale }
@@ -1667,25 +1671,30 @@ montezuma_headdress = {
 	}
 	same_religion_opinion = 10
 	active = {
-		religion_group = mesoamerican_gods
-		religion = sacred_heart
-		religion = cristo_rey
-		religion = reformista
-		culture_group = mexicano
-		culture_group = mesoamerican
-		culture_group = taracahita
-		culture_group = norteno
-		culture_group = mayan
+		OR = {
+			religion_group = mesoamerican_gods
+			religion = sacred_heart
+			religion = cristo_rey
+			religion = reformista
+			culture_group = mexicano
+			culture_group = mesoamerican
+			culture_group = taracahita
+			culture_group = norteno
+			culture_group = mayan
+		}
 	}
 	allowed_gift = {
-		religion_group = mesoamerican_gods
-		religion = sacred_heart
-		religion = cristo_rey
-		culture_group = mexicano
-		culture_group = mesoamerican
-		culture_group = taracahita
-		culture_group = norteno
-		culture_group = mayan
+		OR = {
+			religion_group = mesoamerican_gods
+			religion = sacred_heart
+			religion = cristo_rey
+			religion = reformista
+			culture_group = mexicano
+			culture_group = mesoamerican
+			culture_group = taracahita
+			culture_group = norteno
+			culture_group = mayan
+		}
 	}
 	flags = { religious mesoamerican unique headdress troops_morale }
 	picture = "GFX_crown_aztec_fylkir" #placeholder to the max
