@@ -1104,7 +1104,7 @@
 	trait=just
 	father=14400105
 	2575.8.8={birth=yes}
-	2602.9.11={add_matrilineal_spouse=1810070} 
+	2601.9.11={add_matrilineal_spouse=1810070} 
 	2635.7.11={death=yes}
 }
 
@@ -1673,8 +1673,8 @@
 	trait=content
 	father=1810065
 	mother=1810070
-	2607.9.2={birth=yes}
-	2627.9.18={add_spouse=1810096}
+	2602.9.2={birth=yes}
+	2621.4.11={add_spouse=1810096}
 	2655.3.2={death=yes}
 }
 
@@ -1799,8 +1799,8 @@
 	trait=flamboyant_schemer
 	trait=duelist
 	trait=humble
-	2608.2.3={birth=yes}
-	2627.9.18={add_spouse=1810090}
+	2602.2.3={birth=yes}
+	2621.4.11={add_spouse=1810090}
 	2664.3.12={death=yes}
 }
 
@@ -1823,8 +1823,8 @@
 	trait=sympathy_cult_of_saints
 	father=1810090
 	mother=1810096
-	2630.9.13={birth=yes}
-	2648.12.23={add_spouse=14400031}
+	2623.9.13={birth=yes}
+	2640.3.12={add_spouse=14400031}
 	2687.10.6={death=yes}
 }
 
@@ -2774,10 +2774,10 @@
 		culture=bravo
 	}
 	2610.3.10={
-		effect={add_artifact=old_world_shades}
-		effect={add_friend=14450462}
+		effect={add_artifact=old_world_shades
+				add_friend=14450462}
 	}
-	2615.1.31={add_spouse=1810201}
+	2620.1.31={add_spouse=1810201}
 	2656.8.24={
 		effect={add_rival=1810226}
 	}
@@ -3496,7 +3496,7 @@
 	trait=shy
 	trait=trusting
 	father=1810253
-	2490.1.12={birth=yes}
+	2481.1.12={birth=yes}
 	2543.7.19={
 		death={
 			death_reason=death_execution
@@ -3536,4 +3536,16 @@
 	trait=gregarious
 	trait=zealous
 	2635.10.22={birth=yes}
+}
+
+1810257={
+	name="Margarita"
+	female=yes
+	dynasty=1519000
+	culture=chilango
+	religion=sacred_heart
+	father=1810252
+	2469.6.18={birth=yes}
+	2489.6.17={add_spouse=1650127}
+	2530.2.21={death=yes}
 }

@@ -287,7 +287,7 @@
 	trait=trusting
 	trait=flamboyant_schemer	
 	father=14450416
-	2339.1.22={
+	2334.1.22={
 		birth=yes
 	}
 	2386.11.12={death=yes}
@@ -302,10 +302,10 @@
 	trait=content
 	trait=diligent
 	trait=trusting	
-	2338.12.4={
+	2335.12.4={
 		birth=yes
 	}
-	2359.10.14={add_spouse=14450432}
+	2351.10.14={add_spouse=14450432}
 	2382.3.2={death=yes}
 }
 	
@@ -369,8 +369,8 @@
 	trait=cruel	
 	trait=temperate
 	trait=brilliant_strategist
-	father=14450432
-	mother=14450434
+	mother=14450432
+	father=14450434
 	2360.1.28={
 		birth=yes
 	}
@@ -389,8 +389,8 @@
 	trait=content
 	trait=stressed	
 	trait=amateurish_plotter
-	father=14450432
-	mother=14450434
+	mother=14450432
+	father=14450434
 	2363.2.13={
 		birth=yes
 	}
@@ -434,9 +434,9 @@
 	trait=proud
 	trait=content	
 	trait=grey_eminence	
-	father=14450432
-	mother=14450434
-	2365.6.11={
+	mother=14450432
+	father=14450434
+	2353.6.11={
 		birth=yes
 	}
 	2428.8.4={death=yes}
@@ -511,7 +511,7 @@
 	trait=charitable	
 	trait=intricate_webweaver
 	father=14450425
-	2390.6.14={
+	2372.6.14={
 		birth=yes
 	}
 	2452.5.1={death=yes}
@@ -531,7 +531,7 @@
 	trait=cruel	
 	trait=temperate
 	trait=brilliant_strategist
-	2401.5.3={
+	2390.5.3={
 		birth=yes
 	}
 	2461.8.2={death=yes}
@@ -569,7 +569,7 @@
 	trait=deceitful
 	trait=martial_cleric
 	father=14450428
-	2419.2.28={
+	2409.2.28={
 		birth=yes
 	}
 	2469.11.19={death=yes}
@@ -627,7 +627,7 @@
 	trait=kind
 	trait=greedy
 	father=14430442
-	2439.1.20={birth=yes}
+	2430.1.20={birth=yes}
 	2463.5.24={death={
 			death_reason=death_accident_drowning
 		}
@@ -647,7 +647,7 @@
 	trait=gregarious	
 	trait=tough_soldier
 	father=14450443
-	2457.5.25={
+	2452.5.25={
 		birth=yes
 	}
 	2481.8.20={death={
@@ -838,9 +838,6 @@
 	2650.7.6 = {
 		culture=trifinio
 	}
-	2770.6.2 = {
-		death=yes #Never!
-	}
 }
 
 #Patrician XXX XXX
@@ -879,7 +876,6 @@
 	trait=martial_cleric
 	2645.7.25={birth=yes}
 	2666.1.1={employer=14400061}
-	2770.6.2 = {death=yes}
 }
 
 #Elbert 
@@ -893,7 +889,7 @@
     trait=honest
     trait=just
     trait=lustful
-    trait=brawny
+    trait=robust
 	father=14450457
     trait=tough_soldier	
     2601.5.9={ birth=yes}
@@ -976,9 +972,11 @@
         birth=yes
 	}
 	2610.3.10={effect={add_friend=14450462}}
+	2624.5.26={add_spouse = 1836056}
 	2625.2.3={
-		death=yes
+		death={
 		death_reason=death_trait
+		}
 	}
 }
 
