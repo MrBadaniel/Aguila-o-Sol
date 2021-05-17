@@ -1019,9 +1019,47 @@
 	trait=deceitful
 	trait=w_face
 	give_nickname=nick_el_tigre
-	2640.2.19={birth=yes}
+	2640.2.19={birth=yes
+		effect={
+			set_character_flag=no_historical_family
+			set_character_flag=diversity
+			set_character_flag=physique
+		}
+	}
+	
 	2700.4.23={death=yes}
 }
+
+14450465={
+	name="Frida"
+	female=yes
+	culture=filastino
+	religion=cristo_rey
+	martial=14
+	diplomacy=14
+	stewardship=6
+	intrigue=5
+	learning=5
+	trait=fair
+	trait=grey_eminence
+	trait=lustful
+	trait=honest
+	trait=stubborn
+	trait=kind
+	2637.1.14={birth=yes
+		effect={
+			set_character_flag=no_historical_family
+			set_character_flag=diversity
+			set_character_flag=physique
+		}
+	}
+	2659.1.11={add_spouse=14400049}
+		2660.7.6 = {
+		culture=abajeno
+	}
+	2700.4.23={death=yes}
+}
+
 #Benemérito Julián de Jesús Jacaranda, Founder of the Empire
 14400052 = {
 	name="Julián de Jesús"
