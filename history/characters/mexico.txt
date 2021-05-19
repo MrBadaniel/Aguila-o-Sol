@@ -52,7 +52,7 @@
 	name="Pancho"
 	dynasty=1810016 # Reyes
 	culture=bravo
-	religion=fidencista
+	religion=sacred_heart
 	martial=5
 	diplomacy=3
 	stewardship=2
@@ -63,8 +63,9 @@
 	trait=trusting
 	trait=inspiring_leader
 	trait=skilled_tactician
+	trait=twin
 	father=1810001
-	2623.6.1={birth=yes}
+	2627.6.1={birth=yes}
 	2650.1.1={effect={add_rival=1810008}}
 	2700.1.1={death=yes}
 }
@@ -167,7 +168,7 @@
 	trait=deceitful
 	trait=greedy
 	trait=cynical
-	trait=sympathy_oldworld
+	trait=twin
 	father=1810001
 	2627.6.1={birth=yes}
 	2650.1.1={effect={add_rival=1810003}}
@@ -2199,10 +2200,11 @@
 }
 
 1810151={
-	name="Aureliano"
-	dynasty=1823024 #Arriaga
+	name="Manuela"
+	dynasty=1823024 #Madrina
 	dna="bkkkdknjhmg"
-	culture=jarocho
+	female=yes
+	culture=cholano
 	religion=neomayan
 	martial=5
 	diplomacy=3
@@ -2215,15 +2217,14 @@
 	trait=craven
 	trait=patient
 	2629.6.17={birth=yes}
-	2648.3.13={add_spouse=1810152}
+	2648.3.13={add_matrilineal_spouse=1810152}
 	2680.1.20={death=yes}
 }
 
 1810152={
-	name="Dolores"
-	female=yes
+	name="Rafael"
 	dna="obenailmdfm"
-	culture=cholano
+	culture=jarocho
 	religion=neomayan
 	martial=0
 	diplomacy=2
@@ -2235,8 +2236,10 @@
 	trait=cruel
 	trait=paranoid
 	trait=charitable
-	2631.10.25={birth=yes}
-	2648.3.13={add_spouse=1810151}
+	2631.10.25={
+		birth=yes
+		culture=cholano}
+	2648.3.13={add_matrilineal_spouse=1810151}
 	2682.4.19={death=yes}
 }
 
@@ -2258,10 +2261,9 @@
 	trait=lustful
 	trait=charitable
 	trait=diligent
-	father=1810151
-	mother=1810152
+	father=1810152
+	mother=1810151
 	2650.6.4={birth=yes
-		culture=jarocho
 		effect={
 			set_character_flag=diversity
 		}
@@ -2285,10 +2287,9 @@
 	trait=cynical
 	trait=proud
 	trait=ambitious
-	father=1810151
-	mother=1810152
+	father=1810152
+	mother=1810151
 	2656.6.12={birth=yes
-		culture=jarocho
 		effect={
 			set_character_flag=diversity
 		}
