@@ -39,6 +39,12 @@ spriteTypes = {
 		texturefile = "gfx\\interface\\government_icon_meximperial.dds"
 	}
 
+#Special
+	spriteType = {
+		name = "GFX_change_moravian_branch"
+		texturefile = "gfx\\interface\\decision_icon_change_moravian_branch.dds"
+	}
+
 # Traits
        spriteType = {
 		name = "GFX_trait_adelita"
@@ -60,6 +66,13 @@ spriteTypes = {
 		noOfFrames = 1
 		norefcount = yes
 		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_born_in_the_caul"
+		texturefile = "gfx/traits/born_in_the_caul.tga"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate_linear.lua"
 	}	
 
 #Event Pictures
