@@ -1360,3 +1360,20 @@ narrative_event = {
 		}
 	}
 }
+
+character_event = {
+	id = sacredheart.210
+	desc = EVTDESC_sacredheart_210
+	picture = GFX_evt_mysticcath
+	is_triggered_only = yes
+    border = GFX_event_normal_frame_religion
+	religion = sacred_heart
+	
+	option = {
+		name = EVTOPTA_sacredheart_210
+		add_trait = mystic
+		ai_chance = {
+			factor = 10
+		}
+	}
+}
