@@ -77,6 +77,7 @@ feudal_governments = {
 			NOT = { is_government_potential = order_government }
 			#NOT = { is_government_potential = colonial_government }
 			NOT = { is_government_potential = military_governorate }
+			NOT = { is_government_potential = usos_y_costumberes_government }
 			NAND = {
 				religion = gaian
 				higher_tier_than = BARON
@@ -147,6 +148,7 @@ feudal_governments = {
 			NOT = { is_government_potential = mex_imperial_government }
 			NOT = { is_government_potential = order_government }
 			NOT = { is_government_potential = military_governorate }
+			NOT = { is_government_potential = usos_y_costumberes_government }
 			is_patrician = no
 		}
 		
@@ -244,6 +246,7 @@ feudal_governments = {
 			NOT = { is_government_potential = mex_imperial_government }
 			NOT = { is_government_potential = order_government }
 			NOT = { is_government_potential = military_governorate }
+			NOT = { is_government_potential = usos_y_costumberes_government }
 			is_patrician = no
 		}
 		
@@ -344,6 +347,7 @@ feudal_governments = {
 			NOT = { is_government_potential = mex_imperial_government }
 			NOT = { is_government_potential = order_government }
 			NOT = { is_government_potential = military_governorate }
+			NOT = { is_government_potential = usos_y_costumberes_government }
 		}
 		
 		color = { 118 255 163 }
@@ -441,6 +445,7 @@ feudal_governments = {
 			NOT = { is_government_potential = order_government }
 			NOT = { is_government_potential = colonial_government }
 			NOT = { is_government_potential = military_governorate }
+			NOT = { is_government_potential = usos_y_costumberes_government }
 			is_patrician = no
 		}
 		
@@ -690,4 +695,95 @@ feudal_governments = {
 		court_size_modifier = 15
 		commanders = 3
 	}
+	
+	usos_y_costumberes_government = {
+		preferred_holdings = { CASTLE TEMPLE CITY }
+		allowed_holdings = { 
+			CASTLE 
+			TEMPLE
+			CITY
+			FORT
+			HOSPITAL
+		}
+		allowed_holdings_culture = { # Will not get the wrong government type penalty for tribes of the same culture
+			TRIBAL
+		}
+		accepts_liege_governments = { # Gets the wrong religion modifier instead
+			bureaucratic_government
+			ghazi_government
+			mormon_government
+			theocratic_feudal_government
+			military_governorate
+		}
+		free_revoke_on_governments_religion = { # Tribal vassals of other religions can have their titles revoked for free
+			tribal_government
+		}
+		potential = {
+			NAND = {
+				controls_religion = yes
+				religion = mictlantec
+			}
+			NAND = {
+				controls_religion = yes
+				religion = qabantajik
+			}
+			NAND = {
+				controls_religion = yes
+				religion = cristo_rey
+			}
+			NAND = {
+				controls_religion = yes
+				religion = sacred_heart
+			}
+			NAND = {
+				controls_religion = yes
+				religion = moravian
+			}
+			NAND = {
+				controls_religion = yes
+				religion = penitente
+			}
+			AND = {
+				OR = { 
+				religion_group = cult_of_saints
+				religion = mictlantec
+				religion = qabantajik
+				religion = cristo_rey
+				religion = sacred_heart
+				religion = moravian
+				religion = reformista
+				religion = penitente
+				religion = purificador		
+					}
+				OR = { 
+				culture_group = taracahita
+				culture_group = mesoamerican
+					}
+				}
+			NOT = { is_government_potential = colonial_government }
+			NOT = { is_government_potential = roman_imperial_government }
+			NOT = { is_government_potential = mex_imperial_government }
+			NOT = { is_government_potential = order_government }
+			NOT = { is_government_potential = military_governorate }
+			NOT = { is_government_potential = ghazi_government }
+			NOT = { is_government_potential = mormon_government }
+			is_patrician = no
+		}
+		
+		color = { 91 3 207 }
+		
+		dukes_called_kings = yes
+		barons_need_dynasty = yes
+
+		can_build_tribal = no
+		
+		ignore_in_vassal_limit_calculation = {
+			tribal_government
+		}
+		capital_move_delay = 600
+		
+		## Modifiers
+		court_size_modifier = 10
+	}	
+	
 }
