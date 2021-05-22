@@ -27,7 +27,7 @@ cristero = {
 	same_opinion_if_same_religion = 15
 	
 	ai_zeal = 10
-	customizer = no
+	customizer = yes
 	
 	male_insult = INSULT_FANATIC
 	female_insult = INSULT_FANATIC
@@ -48,7 +48,8 @@ adelita  = {
 
 	ai_zeal = 10
 	
-	customizer = no
+	customizer = yes
+	random = no
 
 	female_compliment = COMPL_VALKYRIE
 	female_compliment_adj = COMPL_VIKING_adj
@@ -86,7 +87,7 @@ unworthy = {
 	ai_zeal = -20
 	ai_ambition = -20
 	ai_rationality = 20
-	customizer = no
+	customizer = yes
 	random = no
 	
 	male_insult_adj = INSULT_WEAK
@@ -174,3 +175,41 @@ born_in_the_caul = {
 	male_compliment_adj = COMPL_CAUL_BORN
 	female_compliment_adj = COMPL_CAUL_BORN
 }
+
+############USED IN MEX IMPERIAL SUCCESSION##########
+
+tapado = {
+	hidden = yes
+	random = no
+	customizer = no
+	
+	opposites = { 
+		destapado
+		se_movio
+	}
+}
+
+se_movio = {
+	hidden = no
+	random = no
+	customizer = no
+	
+	opposites = { 
+		destapado
+		tapado
+	}
+}
+
+destapado = {
+	hidden = no
+	random = no
+	customizer = no
+	
+	opposites = { 
+		tapado
+		se_movio
+	}
+}
+
+######################################################
+	

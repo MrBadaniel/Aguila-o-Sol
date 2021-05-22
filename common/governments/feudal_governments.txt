@@ -756,11 +756,16 @@ feudal_governments = {
 		gets_religion_opinion_penalties = no
 		can_demand_religious_conversion = no
 		gives_religion_opinion_penalties = no
+		demesne_size = 2
 
 		can_build_tribal = no
 		
 		builds_with_prestige = {
 			CASTLE
+		}
+		
+		no_vassal_tax = {
+			uyc_government
 		}
 		
 		builds_with_piety = {

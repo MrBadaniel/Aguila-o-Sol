@@ -13,29 +13,22 @@
 #	The other fields are all character modifiers.
 
 
-title_fire_lighter = {
-	dignity = 3
-	grant_limit = 1
-	opinion_effect = 10
-	
-	monthly_salary = 0.25
-	monthly_prestige = 0.5
-	
-	show_as_title = yes
-	
-	is_unique = yes
+title_jefe_maximo = {
+	revoke_allowed = no
 	
 	allowed_to_hold = {
-		OR = {
-			male_can_hold_minor_title_trigger = yes
-			AND  = {
-				female_can_hold_minor_title_trigger = yes
-				has_law = true_cognatic_succession
-			}
+		AND = {
+			any_courtier = { at_location = ROOT }
+			is_landed = no  # no funny business
 		}
 	}
 	
-	allowed_to_grant = {
-		religion = sol_invicta
+	allowed_to_grant = {  # can leave this blank?
 	}
+	gain_effect = {
+	}
+	lose_effect = {
+	}
+
+	message = no
 }

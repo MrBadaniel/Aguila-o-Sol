@@ -36,10 +36,10 @@ republic_governments = {
 				religion = qingzhen
 				religion = exovedate
 				religion = nousthreskeia
-				religion = tonaltec
 				religion = patria_grande
 				religion = atomicist
 				religion = celeste
+				religion = reformista
 				has_religion_feature = religion_temporal_head
 				AND = {
 					OR = {
@@ -55,10 +55,10 @@ republic_governments = {
 						religion = qingzhen
 						religion = exovedate
 						religion = nousthreskeia
-						religion = tonaltec
 						religion = patria_grande
 						religion = atomicist
 						religion = celeste
+						religion = reformista
 					}
 					has_religion_features = no # Old saves, and campaigns without HF, need the Fylkirate to continue working
 				}
@@ -174,7 +174,7 @@ republic_governments = {
 				religion = patria_grande
 				religion = atomicist
 				religion = celeste
-				religion = tonaltec
+				religion = reformista
 				has_religion_feature = religion_temporal_head
 				AND = {
 					OR = {
@@ -193,7 +193,7 @@ republic_governments = {
 						religion = patria_grande
 						religion = atomicist
 						religion = celeste
-						religion = tonaltec
+						religion = reformista
 					}
 					has_religion_features = no # Old saves, and campaigns without HF, need the Fylkirate to continue working
 				}
@@ -295,6 +295,7 @@ republic_governments = {
 			ghazi_government
 			theocratic_feudal_government
 			mex_imperial_government
+			uyc_government
 		}
 		frame_suffix = "_colonial"
 		title_prefix = "city_"
@@ -387,6 +388,7 @@ republic_governments = {
 			merchant_republic_government
 			republic_government
 			mex_imperial_government
+			uyc_government
 		}
 		gets_religion_opinion_penalties = no
 		vassal_government_opinion_penalties = no

@@ -8,66 +8,29 @@
 mex_elective = {
 	elector_selection = {
 		days = -5 		
-		additive_modifier = { #Emperor is the only Elector.
+		additive_modifier = { #Emperor is only Elector.
 			value = 30
 			FROMFROM = { 
 				holder_scope = { character = ROOT }
 			}
 		}
+		additive_modifier = { #Aquí vive el presidente; el que manda vive enfrente...
+			value = 1000
+			has_minor_title = title_jefe_maximo
+		}
 	}
 	elector_vote_strength = { 
 		days = 5 # 1 elector = 5 votes.
-		additive_modifier = { #The Emperor's word is worth more than anybody else's by far.
+		additive_modifier = {
 			value = 195
 			localisation_key = tooltip_imperial_vote_strength_emperor_influence
 			FROMFROM = { 
 				holder_scope = { character = ROOT }
 			}
 		}
-		additive_modifier = { #Children are not leaders.
-			value = -40
-			localisation_key = tooltip_imperial_vote_strength_emperor_child
-			FROMFROM = { 
-				holder_scope = { character = ROOT }
-				OR = {
-					title = e_mexico
-					title = k_mexico
-				}
-			}
-			NOT = { is_adult = yes }
-		}
-		additive_modifier = { #Being a good orator.
-			value = 10 
-			localisation_key = tooltip_imperial_vote_strength_emperor_diplomacy
-			FROMFROM = { 
-				holder_scope = { character = ROOT }
-			}
-			is_adult = yes
-			diplomacy = 10
-			NOT = { diplomacy = 15 }
-		}
-		additive_modifier = { #Being a good orator.
-			value = 15
-			localisation_key = tooltip_imperial_vote_strength_emperor_diplomacy
-			FROMFROM = { 
-				holder_scope = { character = ROOT }
-			}
-			is_adult = yes
-			diplomacy = 15
-			NOT = { diplomacy = 20 }
-		}
-		additive_modifier = { #Being a good orator.
-			value = 20 
-			localisation_key = tooltip_imperial_vote_strength_emperor_diplomacy
-			FROMFROM = { 
-				holder_scope = { character = ROOT }
-			}
-			is_adult = yes
-			diplomacy = 20
-		}
 
 		##########################   Candidate's traits   ##########################
-
+		
 		#The heir
 		additive_modifier = { #Current ruler will always try to elect his player heir.
 			value = 50
@@ -670,8 +633,8 @@ mex_elective = {
 		}
 
 
-		#ROMAN ATTRIBUTES
-		additive_modifier = { # Roman Generals
+		#MEXICAN ATTRIBUTES
+		additive_modifier = { # Mexican Generals
 			value = 5
 			localisation_key = tooltip_feudal_elector_vote_commander_martial
 			FROM = { 
@@ -685,7 +648,7 @@ mex_elective = {
 				}
 			}
 		}
-		additive_modifier = { # Roman Generals
+		additive_modifier = { # Mexican Generals
 			value = 10
 			localisation_key = tooltip_feudal_elector_vote_commander_martial
 			FROM = { 
@@ -699,7 +662,7 @@ mex_elective = {
 				}
 			}
 		}
-		additive_modifier = { # Roman Generals
+		additive_modifier = { # Mexican Generals
 			value = 15
 			localisation_key = tooltip_feudal_elector_vote_commander_martial
 			FROM = { 
@@ -713,7 +676,7 @@ mex_elective = {
 				}
 			}
 		}
-		additive_modifier = { # Roman Generals
+		additive_modifier = { # Mexican Generals
 			value = 20
 			localisation_key = tooltip_feudal_elector_vote_commander_martial
 			FROM = { 
@@ -727,7 +690,7 @@ mex_elective = {
 				}
 			}
 		}
-		additive_modifier = { # Roman Generals
+		additive_modifier = { # Mexican Generals
 			value = 25
 			localisation_key = tooltip_feudal_elector_vote_commander_martial
 			FROM = { 
@@ -741,7 +704,7 @@ mex_elective = {
 				}
 			}
 		}
-		additive_modifier = { # Roman Generals
+		additive_modifier = { # Mexican Generals
 			value = 30
 			localisation_key = tooltip_feudal_elector_vote_commander_martial
 			FROM = { 
@@ -753,80 +716,10 @@ mex_elective = {
 			}
 		}
 
-		additive_modifier = { # Roman Orators
+		additive_modifier = { # Nadie aguanta un cañonazo de 50 mil pesos.
 			value = 5
 			localisation_key = tooltip_feudal_elector_vote_councilor_diplomacy
-			culture = roman
-			FROM = { 
-				ere_elective_politician_titles_trigger = yes
-				diplomacy = 10
-				NOT = { 
-					diplomacy = 12
-				}
-			}
-		}
-		additive_modifier = { # Roman Orators
-			value = 10
-			localisation_key = tooltip_feudal_elector_vote_councilor_diplomacy
-			culture = roman
-			FROM = { 
-				ere_elective_politician_titles_trigger = yes
-				diplomacy = 12
-				NOT = { 
-					diplomacy = 16
-				}
-			}
-		}
-		additive_modifier = { # Roman Orators
-			value = 15
-			localisation_key = tooltip_feudal_elector_vote_councilor_diplomacy
-			culture = roman
-			FROM = { 
-				ere_elective_politician_titles_trigger = yes
-				diplomacy = 16
-				NOT = { 
-					diplomacy = 18
-				}
-			}
-		}
-		additive_modifier = { # Roman Orators
-			value = 20
-			localisation_key = tooltip_feudal_elector_vote_councilor_diplomacy
-			culture = roman
-			FROM = { 
-				ere_elective_politician_titles_trigger = yes
-				diplomacy = 18
-				NOT = { 
-					diplomacy = 20
-				}
-			}
-		}
-		additive_modifier = { # Roman Orators
-			value = 25
-			localisation_key = tooltip_feudal_elector_vote_councilor_diplomacy
-			culture = roman
-			FROM = { 
-				ere_elective_politician_titles_trigger = yes
-				diplomacy = 20
-				NOT = { 
-					diplomacy = 25
-				}
-			}
-		}
-		additive_modifier = { # Roman Orators
-			value = 30
-			localisation_key = tooltip_feudal_elector_vote_councilor_diplomacy
-			culture = roman
-			FROM = { 
-				ere_elective_politician_titles_trigger = yes
-				diplomacy = 30
-			}
-		}
-
-		additive_modifier = { # Sneaky Byzantines
-			value = 5
-			localisation_key = tooltip_feudal_elector_vote_councilor_intrigue
-			culture = beltway
+			culture_group = mexicano
 			FROM = { 
 				ere_elective_politician_titles_trigger = yes
 				intrigue = 10
@@ -835,10 +728,10 @@ mex_elective = {
 				}
 			}
 		}
-		additive_modifier = { # Sneaky Byzantines
+		additive_modifier = { # Nadie aguanta un cañonazo de 50 mil pesos.
 			value = 10
-			localisation_key = tooltip_feudal_elector_vote_councilor_intrigue
-			culture = beltway
+			localisation_key = tooltip_feudal_elector_vote_councilor_diplomacy
+			culture_group = mexicano
 			FROM = { 
 				ere_elective_politician_titles_trigger = yes
 				intrigue = 12
@@ -847,10 +740,10 @@ mex_elective = {
 				}
 			}
 		}
-		additive_modifier = { # Sneaky Byzantines
+		additive_modifier = { # Nadie aguanta un cañonazo de 50 mil pesos.
 			value = 15
-			localisation_key = tooltip_feudal_elector_vote_councilor_intrigue
-			culture = beltway
+			localisation_key = tooltip_feudal_elector_vote_councilor_diplomacy
+			culture_group = mexicano
 			FROM = { 
 				ere_elective_politician_titles_trigger = yes
 				intrigue = 16
@@ -859,10 +752,10 @@ mex_elective = {
 				}
 			}
 		}
-		additive_modifier = { # Sneaky Byzantines
+		additive_modifier = { # Nadie aguanta un cañonazo de 50 mil pesos.
 			value = 20
-			localisation_key = tooltip_feudal_elector_vote_councilor_intrigue
-			culture = beltway
+			localisation_key = tooltip_feudal_elector_vote_councilor_diplomacy
+			culture_group = mexicano
 			FROM = { 
 				ere_elective_politician_titles_trigger = yes
 				intrigue = 18
@@ -871,10 +764,10 @@ mex_elective = {
 				}
 			}
 		}
-		additive_modifier = { # Sneaky Byzantines
+		additive_modifier = { # Nadie aguanta un cañonazo de 50 mil pesos.
 			value = 25
-			localisation_key = tooltip_feudal_elector_vote_councilor_intrigue
-			culture = beltway
+			localisation_key = tooltip_feudal_elector_vote_councilor_diplomacy
+			culture_group = mexicano
 			FROM = { 
 				ere_elective_politician_titles_trigger = yes
 				intrigue = 20
@@ -883,10 +776,10 @@ mex_elective = {
 				}
 			}
 		}
-		additive_modifier = { # Sneaky Byzantines
+		additive_modifier = { # Nadie aguanta un cañonazo de 50 mil pesos.
 			value = 30
-			localisation_key = tooltip_feudal_elector_vote_councilor_intrigue
-			culture = beltway
+			localisation_key = tooltip_feudal_elector_vote_councilor_diplomacy
+			culture_group = mexicano
 			FROM = { 
 				ere_elective_politician_titles_trigger = yes
 				intrigue = 30
@@ -3097,6 +2990,17 @@ mex_elective = {
 			opinion = {
 				who = FROM
 				value = 75
+			}
+		}
+		additive_modifier = { # El que quiera la Silla que se forme.
+			value = 1000
+			NOT = {
+				FROMFROM = { 
+				holder_scope = { character = ROOT }  # Benemérito vote not factored in
+				}
+			}
+			FROM = { 
+				trait = destapado
 			}
 		}
 	
