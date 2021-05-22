@@ -649,6 +649,8 @@ feudal_governments = {
 				religion = mormon
 				religion = woolleyite
 				religion = strangite
+				religion = mormon_hotep
+				religion = afromormon
 				is_government_potential = military_governorate
 			}
 			OR = {
@@ -671,7 +673,7 @@ feudal_governments = {
 			is_theocracy = no
 			}
 		
-		color = { 143 12 125 }
+		color = { 0 104 71 }
 		
 		dukes_called_kings = yes
 		barons_need_dynasty = yes
@@ -693,15 +695,14 @@ feudal_governments = {
 		free_retract_vassalage = yes
 		## Modifiers
 		court_size_modifier = 15
-		commanders = 3
+		commander_limit = 11
 	}
 	
 	uyc_government = {
-		preferred_holdings = { CASTLE TEMPLE CITY }
+		preferred_holdings = { CASTLE TEMPLE }
 		allowed_holdings = { 
 			CASTLE 
 			TEMPLE
-			CITY
 			FORT
 			HOSPITAL
 		}
@@ -717,76 +718,58 @@ feudal_governments = {
 		free_revoke_on_governments_religion = { # Tribal vassals of other religions can have their titles revoked for free
 			tribal_government
 		}
-		frame_suffix = "_colonial"
-		title_prefix = "city_"
+		frame_suffix = "_uyc"
+		title_prefix = "uyc_"
 		potential = {
 			NAND = {
 				controls_religion = yes
+				religion = mictlantec
+			}
+			NAND = {
+				controls_religion = yes
 				religion = qabantajik
 			}
-			NAND = {
-				controls_religion = yes
-				religion = cristo_rey
+			NOR = {
+				religion = sol_invicta
+				religion = neomayan
 			}
-			NAND = {
-				controls_religion = yes
-				religion = sacred_heart
-			}
-			NAND = {
-				controls_religion = yes
-				religion = moravian
-			}
-			NAND = {
-				controls_religion = yes
-				religion = penitente
-			}
-			AND = {
-				OR = { 
-				religion_group = cult_of_saints
+			OR = { 
 				religion = mictlantec
 				religion = qabantajik
-				religion = cristo_rey
-				religion = moravian
-				religion = reformista
-				religion = penitente
-				religion = purificador		
-					}
-				OR = { 
 				culture_group = taracahita
-				culture_group = mesoamerican
-					}
-				}
-				NOR = {
-				primary_title = { 
-					OR = {
-					title = e_mexico
-					title = k_mexico
-						}				
-				}
-				top_liege = {
-					primary_title = { 
-					OR = {
-					title = e_mexico
-					title = k_mexico
-						}
-					}
-				}
+				culture_group = mesoamerican	
 			}
-			#NOT = { is_government_potential = colonial_government }
+			NOT = { is_government_potential = colonial_government }
 			NOT = { is_government_potential = roman_imperial_government }
 			NOT = { is_government_potential = mex_imperial_government }
+			NOT = { is_government_potential = order_government }
 			NOT = { is_government_potential = military_governorate }
-			NOT = { is_government_potential = ghazi_government }
-			NOT = { is_government_potential = mormon_government }
 			is_patrician = no
 		}
 		
-		color = { 91 3 207 }
+		color = { 64 224 208 }
 		
 		dukes_called_kings = yes
 		barons_need_dynasty = yes
+		
+		uses_piety_for_law_change = yes
+		gets_religion_opinion_penalties = no
+		can_demand_religious_conversion = no
+		gives_religion_opinion_penalties = no
 
 		can_build_tribal = no
+		
+		builds_with_prestige = {
+			CASTLE
+		}
+		
+		builds_with_piety = {
+			TEMPLE
+		}
+		
+		vassal_call_to_arms = {
+			uyc_government
+		}
 		
 		ignore_in_vassal_limit_calculation = {
 			tribal_government
