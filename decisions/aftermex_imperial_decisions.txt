@@ -1,0 +1,33 @@
+decisions = {
+	restore_mexican_empire = {
+		only_independent = yes
+		is_high_prio = yes
+		ai_check_interval = 24
+		
+		potential = {
+			is_playable = yes
+			has_landed_title = k_mexico
+			is_adult = yes
+			prisoner = no
+			NOT = { trait = incapable }
+			NOT = { has_global_flag = rome_restored }
+			NOR = {
+				has_alternate_start_parameter = { key = religion_names value = random }
+			}
+		}
+		allow = {
+			primary_title = { title = k_mexico }
+			prestige = 30000
+			completely_controls = d_mexico
+			completely_controls = d_veracruz
+			completely_controls = k_mexico
+		}
+		effect = {
+			set_global_flag = rome_restored
+			narrative_event = { id = LoR.20 tooltip = EVTTOOLTIPLoR.20 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}
