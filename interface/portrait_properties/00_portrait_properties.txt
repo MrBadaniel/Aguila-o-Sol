@@ -4925,20 +4925,20 @@
 	#		}
 	#	}
 	#}
-	#13 = { 
-	#	factor = 100
-	#	hide_layers = { 5 = { } } #Hide layer 5 (headgear) when this frame is picked.
-	#	modifier = { #Aztec Fylkir Crown
-	#		factor = 0
-	#		NOR = { 
-	#			any_artifact = {
-	#				artifact_type = crown_aztec_fylkir
-	#				is_artifact_equipped = yes 
-	#			}
-	#			trait = dead_crown_aztec_fylkir
-	#		}
-	#	}
-	#}
+	13 = { 
+		factor = 100
+		hide_layers = { 5 = { } } #Hide layer 5 (headgear) when this frame is picked.
+		modifier = { #Aztec Fylkir Crown
+			factor = 0
+			NOR = { 
+				any_artifact = {
+					artifact_type = crown_mexico
+					is_artifact_equipped = yes 
+				}
+				trait = dead_crown_mexico
+			}
+		}
+	}
 	14 = { 
 		factor = 100
 		hide_layers = { 5 = { } } #Hide layer 5 (headgear) when this frame is picked.
@@ -4987,10 +4987,10 @@
 			factor = 0
 			NOR = { 
 				any_artifact = {
-					artifact_type = crown_mexico
+					artifact_type = baston_del_puebo
 					is_artifact_equipped = yes 
 				}
-				trait = dead_crown_mexico
+				trait = dead_baston_del_puebo
 			}
 		}
 	}
