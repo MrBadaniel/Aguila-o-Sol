@@ -21,6 +21,7 @@ e_lone_star = {
 		tejano = "Nuevo Méjico"
 		chino = "Nuevo México"
 		menomex = "Nuevo México"
+		altiplanense = "Nuevo México"
 		bravo = "Nuevo México"
 		abajeno = "Nuevo México"
 		chilango = "Nuevo México"
@@ -29,7 +30,6 @@ e_lone_star = {
 		californio = "Nuevo México"
 		occidental = "Nuevo México"
 		choyero = "Nuevo México"
-		yaqui = "Nuevo México"
 		neomexicano = "Nuevo México"
 		navajo = "Yootó Hahoodzo"
 
@@ -41,14 +41,25 @@ e_lone_star = {
 		
 		capital = 1224 # Nueces
 		
-		bravo = "Rio Bravo Norte"
+		chino = "Otro Lado"
+		menomex = "Otro Lado"
+		altiplanense = "Otro Lado"
+		bravo = "Otro Lado"
+		abajeno = "Otro Lado"
+		chilango = "Otro Lado"
+		tapatio = "Otro Lado"
+		jarocho = "Otro Lado"
+		californio = "Otro Lado"
+		occidental = "Otro Lado"
+		choyero = "Otro Lado"
+		
 
 		# Crusade target weight
 		catholic = 50
 		americanist = 50
 		d_middle_rio = {
 			color = { 174 132 163 }
-			capital = 1233 # Bexar
+			capital = 1233 # c_val_verde
 		
 			c_uvalde = {
 				texan = "West Nueces"
@@ -65,6 +76,18 @@ e_lone_star = {
 			c_val_verde = {
 				texan = "Southward"
 				tejano = "Del Rio"
+				chino = "Del Rio"
+				menomex = "Del Rio"
+				altiplanense = "Del Rio"
+				bravo = "Del Rio"
+				abajeno = "Del Rio"
+				chilango = "Del Rio"
+				tapatio = "Del Rio"
+				jarocho = "Del Rio"
+				californio = "Del Rio"
+				occidental = "Del Rio"
+				choyero = "Del Rio"
+				neomexicano = "Del Rio"
 			
 				color = { 155 127 161 }
 				b_ozona_TX = {}
@@ -78,9 +101,34 @@ e_lone_star = {
 			c_maverick = {
 				texan = "Winter Garden"
 				tejano = "Winter Garden"
+				bravo = "Igle pas"
+				chino = "Igle pas"
+				menomex = "Igle pas"
+				altiplanense = "Igle pas"
+				abajeno = "Igle pas"
+				chilango = "Igle pas"
+				tapatio = "Igle pas"
+				jarocho = "Igle pas"
+				californio = "Igle pas"
+				occidental = "Igle pas"
+				choyero = "Igle pas"
+				neomexicano = "Igle pas"
+				
 			
 				color = { 164 137 177 }
-				b_eagle_pass_TX = {}
+				b_eagle_pass_TX = {
+					bravo = "Igle pas"
+					chino = "Igle pas"
+					menomex = "Igle pas"
+					altiplanense = "Igle pas"
+					abajeno = "Igle pas"
+					chilango = "Igle pas"
+					tapatio = "Igle pas"
+					jarocho = "Igle pas"
+					californio = "Igle pas"
+					occidental = "Igle pas"
+					choyero = "Igle pas"
+				}
 				b_cotulla_TX = {}
 				b_encinal_TX = {}
 				b_crystal_city_TX = {}
@@ -92,7 +140,7 @@ e_lone_star = {
 		d_torian = {
 			color = { 212 225 180 }
 			color2= { 255 255 20 }
-			capital = 308 # Texarkana
+			capital = 308 # c_petroplex
 			
 			texan = "Hammerfall"
 			
@@ -139,6 +187,17 @@ e_lone_star = {
 				
 				texan = "Sparkle Bay"
 				tejano = "Corpus Christi"
+				bravo = "Corpus Christi"
+				chino = "Corpus Christi"
+				menomex = "Corpus Christi"
+				altiplanense = "Corpus Christi"
+				abajeno = "Corpus Christi"
+				chilango = "Corpus Christi"
+				tapatio = "Corpus Christi"
+				jarocho = "Corpus Christi"
+				californio = "Corpus Christi"
+				occidental = "Corpus Christi"
+				choyero = "Corpus Christi"
 				
 				b_corpus_christi_TX = {}
 				b_aransas_pass_TX = {
@@ -167,6 +226,17 @@ e_lone_star = {
 				color = { 100 100 100 }
 				
 				tejano = "Laredo"
+				bravo = "Laredo"
+				chino = "Laredo"
+				menomex = "Laredo"
+				altiplanense = "Laredo"
+				abajeno = "Laredo"
+				chilango = "Laredo"
+				tapatio = "Laredo"
+				jarocho = "Laredo"
+				californio = "Laredo"
+				occidental = "Laredo"
+				choyero = "Laredo"
 				
 				b_laredo_TX = {}
 				b_rio_bravo_TX = {}
@@ -180,9 +250,32 @@ e_lone_star = {
 				color = { 100 100 150 }
 				
 				tejano = "Edinburgo"
+				bravo = "MacAllen"
+				chino = "MacAllen"
+				menomex = "MacAllen"
+				altiplanense = "MacAllen"
+				abajeno = "MacAllen"
+				chilango = "MacAllen"
+				tapatio = "MacAllen"
+				jarocho = "MacAllen"
+				californio = "MacAllen"
+				occidental = "MacAllen"
+				choyero = "MacAllen"
+				
 				
 				b_edinburg_TX = {
 					tejano = "Edinburgo"
+					bravo = "MacAllen"
+					chino = "MacAllen"
+					menomex = "MacAllen"
+					altiplanense = "MacAllen"
+					abajeno = "MacAllen"
+					chilango = "MacAllen"
+					tapatio = "MacAllen"
+					jarocho = "MacAllen"
+					californio = "MacAllen"
+					occidental = "MacAllen"
+					choyero = "MacAllen"
 				}
 				b_falfurrias_TX = {}
 				b_rio_grande_city_TX = {}
@@ -232,6 +325,17 @@ e_lone_star = {
 				color2= { 255 255 255 }
 				
 				tejano = "Presidio"
+				bravo = "Presidio"
+				chino = "Presidio"
+				menomex = "Presidio"
+				altiplanense = "Presidio"
+				abajeno = "Presidio"
+				chilango = "Presidio"
+				tapatio = "Presidio"
+				jarocho = "Presidio"
+				californio = "Presidio"
+				occidental = "Presidio"
+				choyero = "Presidio"
 
 				b_fort_stockton_TX = {}
 				b_balmorhea_TX = {
@@ -250,6 +354,17 @@ e_lone_star = {
 				
 				tejano = "Arenas Blancas"
 		        neomexicano = "Arenas Blancas"
+				bravo = "Arenas Blancas"
+				chino = "Arenas Blancas"
+				menomex = "Arenas Blancas"
+				altiplanense = "Arenas Blancas"
+				abajeno = "Arenas Blancas"
+				chilango = "Arenas Blancas"
+				tapatio = "Arenas Blancas"
+				jarocho = "Arenas Blancas"
+				californio = "Arenas Blancas"
+				occidental = "Arenas Blancas"
+				choyero = "Arenas Blancas"
 			
 				holy_site = atomicist
 				holy_site = aphite
@@ -274,6 +389,17 @@ e_lone_star = {
 				
 				tejano = "Mescalero"
 				neomexicano = "Mescalero"
+				bravo = "Mescalero"
+				chino = "Mescalero"
+				menomex = "Mescalero"
+				altiplanense = "Mescalero"
+				abajeno = "Mescalero"
+				chilango = "Mescalero"
+				tapatio = "Mescalero"
+				jarocho = "Mescalero"
+				californio = "Mescalero"
+				occidental = "Mescalero"
+				choyero = "Mescalero"
 				
 				b_mescalero_NM = {}
 				b_carlsbad_NM = {}
@@ -292,7 +418,18 @@ e_lone_star = {
 		color = { 253 90 72 }
 		color2= { 255 255 20 }
 
-		tejano = "Tejas"
+		tejano = "Tejas Menor"
+		bravo = "Texas Menor"
+		chino = "Texas Menor"
+		menomex = "Texas Menor"
+		altiplanense = "Texas Menor"
+		abajeno = "Texas Menor"
+		chilango = "Texas Menor"
+		tapatio = "Texas Menor"
+		jarocho = "Texas Menor"
+		californio = "Texas Menor"
+		occidental = "Texas Menor"
+		choyero = "Texas Menor"
 		
 		# Crusade target weight
 		catholic = 100
@@ -466,11 +603,10 @@ e_lone_star = {
 				color = { 250 137 29 }
 				color2= { 255 255 20 }
 				texan = "Houston"
-				tejano = "Jiuston"
-				
+				tejano = "Iuston"
 				
 				b_houston_TX = {
-					tejano = "Jiuston"
+					tejano = "Iuston"
 				}
 				b_conroe_TX = {
 					used_for_dynasty_names = no
@@ -490,7 +626,7 @@ e_lone_star = {
 				color = { 114 112 160 }
 				color2= { 255 255 20 } 
 				texan = "Golden Triangle"
-				tejano = "Bemont"
+				tejano = "Bemónt"
 				b_beaumont_TX = {}
 				b_port_arthur_TX = {}
 				b_orange_TX = {}
@@ -755,8 +891,17 @@ e_lone_star = {
 				color2= { 255 255 20 }
 				
 				tejano = "San Sabá"
-				menomex = "San Sabá"
 				bravo = "San Sabá"
+				chino = "San Sabá"
+				menomex = "San Sabá"
+				altiplanense = "San Sabá"
+				abajeno = "San Sabá"
+				chilango = "San Sabá"
+				tapatio = "San Sabá"
+				jarocho = "San Sabá"
+				californio = "San Sabá"
+				occidental = "San Sabá"
+				choyero = "San Sabá"
 				
 				b_san_saba_TX = {}
 				b_richland_springs_TX = {}
@@ -781,6 +926,8 @@ e_lone_star = {
 				tejano = "San Antonio"
 				bravo = "San Antonio"
 				menomex = "San Antonio"
+				altiplanense = "San Antonio"
+				chino = "San Antonio"
 				choyero = "San Antonio"
 				chilango = "San Antonio"
 				abajeno = "San Antonio"
@@ -830,6 +977,7 @@ e_lone_star = {
 				color = { 120 190 75 }
 				color2= { 255 255 20 }
 				texaner = "Neu-Braunfels"
+				menomex = "Nei Braunfels"
 
 				b_new_braunfels_TX = {
 					rostmann = "Neu-Braunfels"
@@ -837,6 +985,7 @@ e_lone_star = {
 					texaner = "Neu-Braunfels"
 					deitsch = "Nei Braunfels"
 					plautdietsch = "Nei Braunfels"
+					menomex = "Nei Braunfels"
 
 					used_for_dynasty_names = no
 				}
@@ -865,11 +1014,33 @@ e_lone_star = {
 		d_golden_crescent = {
 			color = { 81 96 149 }
 			tejano = "Crescente Dorada"
+			bravo = "Crescente Dorada"
+			menomex = "Crescente Dorada"
+			altiplanense = "Crescente Dorada"
+			chino = "Crescente Dorada"
+			choyero = "Crescente Dorada"
+			chilango = "Crescente Dorada"
+			abajeno = "Crescente Dorada"
+			jarocho = "Crescente Dorada"
+			tapatio = "Crescente Dorada"
+			occidental = "Crescente Dorada"
+			
 			capital = 1228 # Goliad
 			c_gonzales = {
 				color = { 0 75 255 }
 				texan = "lavaca"
 				tejano = "Gonzáles"
+				bravo = "Gonzáles"
+				menomex = "Gonzáles"
+				altiplanense = "Gonzáles"
+				chino = "Gonzáles"
+				choyero = "Gonzáles"
+				chilango = "Gonzáles"
+				abajeno = "Gonzáles"
+				jarocho = "Gonzáles"
+				tapatio = "Gonzáles"
+				occidental = "Gonzáles"
+				
 				b_gonzales_TX = {}
 				b_nixon_TX = {
 					used_for_dynasty_names = no
@@ -926,7 +1097,6 @@ e_lone_star = {
 				color = { 155 132 100 }
 				color2= { 255 255 20 }
 				texan = "Aulorado"
-				
 				
 				b_columbus_TX = {}
 				b_garwood_TX = {}
@@ -1066,6 +1236,16 @@ e_lone_star = {
 		
 		texan = "Texahoma"
 		grangelander = "Texahoma"
+		bravo = "Comanchería"
+		menomex = "Comanchería"
+		altiplanense = "Comanchería"
+		chino = "Comanchería"
+		choyero = "Comanchería"
+		chilango = "Comanchería"
+		abajeno = "Comanchería"
+		jarocho = "Comanchería"
+		tapatio = "Comanchería"
+		occidental = "Comanchería"
 
 		capital = 322 # Lawton / Fort Sill
 
@@ -1173,6 +1353,16 @@ e_lone_star = {
 			color2= { 255 255 255 }
 			
 			tejano = "Llano Estacado"
+			bravo = "Llano Estacado"
+			menomex = "Llano Estacado"
+			altiplanense = "Llano Estacado"
+			chino = "Llano Estacado"
+			choyero = "Llano Estacado"
+			chilango = "Llano Estacado"
+			abajeno = "Llano Estacado"
+			jarocho = "Llano Estacado"
+			tapatio = "Llano Estacado"
+			occidental = "Llano Estacado"
 
 			capital = 316 # Lubbock
 		
@@ -1469,9 +1659,17 @@ e_lone_star = {
 			color2= { 255 255 255 }
 			
 			tejano = "Nuevo Méjico"
-			bravo = "Nuevo México"
 			neomexicano = "Nuevo México"
 			navajo = "Yootó Hahoodzo"
+			bravo = "Nuevo México"
+			menomex = "Nuevo México"
+			altiplanense = "Nuevo México"
+			chino = "Nuevo México"
+			choyero = "Nuevo México"
+			chilango = "Nuevo México"
+			abajeno = "Nuevo México"
+			jarocho = "Nuevo México"
+			tapatio = "Nuevo México"
 
 			capital = 339 # Santa Fe
 			
@@ -1495,6 +1693,15 @@ e_lone_star = {
 				
 				tejano = "Sandía"
 				neomexicano = "Sandía"
+				bravo = "Sandía"
+				menomex = "Sandía"
+				altiplanense = "Sandía"
+				chino = "Sandía"
+				choyero = "Sandía"
+				chilango = "Sandía"
+				abajeno = "Sandía"
+				jarocho = "Sandía"
+				tapatio = "Sandía"
 
 				b_albuquerque_NM = {}
 				b_rio_rancho_NM = {}
@@ -1512,7 +1719,7 @@ e_lone_star = {
 				tejano = "Santa Fé"
 				neomexicano = "Santa Fé"
 				
-				holy_site = sacred_heart
+				holy_site = fidencista
 
 				b_santa_fe_NM = {}
 				b_chamoyo_NM = {}

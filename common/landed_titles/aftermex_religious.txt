@@ -151,7 +151,7 @@ d_navegante = {
 	# Controls a religion
 	controls_religion = navegante
 	
-	religion = naveganteSinaloa
+	religion = navegante
 	
 	# Cannot be held as a secondary title
 	primary = yes
@@ -170,8 +170,12 @@ d_navegante = {
 			}
 			completely_controls = d_baja_sur
 			title = k_baja_california
-			title = d_nayarit
+			OR = {
+				title = d_nayarit
+				title = d_sonora
+				title = d_sinaloa
+			}
 		}
-	dynasty_title_names = no 	# Will not be named "Seljuk", etc.
 	}
+	dynasty_title_names = no 	# Will not be named "Seljuk", etc.
 }

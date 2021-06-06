@@ -192,7 +192,7 @@ targetted_decisions = {
 	
 	designate_tapado = {
 		only_playable = yes
-		filter = court
+		filer = sub_realm
 		ai_target_filter = dynasty
 		ai_check_interval = 24
 
@@ -205,62 +205,39 @@ targetted_decisions = {
 			has_regent = no
 			prisoner = no
 			is_adult = yes
+			#NOT = { trait = incapable }
 		}
 
 		potential = {
-			NOT = {	character = FROM }  #Not the current ruler.
+			NOT = {	character = FROM }
+			NOT = { trait = tapado }
 			OR = {
-				has_claim = { 
-					OR = {
-						title = k_mexico
-						title = e_mexico
-					} 
-				}
-				has_job_title = job_marshal
-				FROM = { is_liege_of = ROOT }
-				from_ruler_dynasty = yes
-				has_minor_title = title_commander
-			}
-			OR = { #Candidate should not be a landless Courtier that is about to inherit a Theocracy or Republic
 				AND = {
-					is_ruler = yes
-					is_landed = yes
+					OR = {
+						has_job_title = job_chancellor
+						has_job_title = job_marshal
+						has_job_title = job_treasurer
+						has_job_title = job_spymaster
+						has_job_title = job_spiritual
+						has_minor_title = title_commander
+						has_claim = e_mexico
+						has_claim = k_mexico
+					}
+					FROM = { is_liege_of = ROOT	}
 					is_republic = no
-					is_merchant_republic = no
 					is_theocracy = no
-				}
-				NOR = {
-					any_heir_title = {
-						is_republic = yes
-					}
-					any_heir_title = {
-						is_merchant_republic = yes
-					}
-					any_heir_title = {
-						is_theocracy = yes
-					}
-				}
-			}
-			OR = { #If the title controls the religion, candidates must be of the same religion.
-				FROM = { 
-					NOT = { 
-						controls_religion = yes
+					is_merchant_republic = no
+					NOT = {
+						trait = cat
+						trait = disinherited
+						trait = horse
+						AND = { 
+							trait = bastard 
+							is_ruler = no
+						}
 					}
 				}
-				religion = FROM
-			}
-			NOR = {
-				trait = cat
-				trait = disinherited
-				trait = horse
-				AND = { 
-					trait = bastard 
-					is_ruler = no
-				}
-				is_ascetic_trigger = yes
-				is_theocracy = yes
-				is_republic = yes
-				is_merchant_republic = yes
+				ROOT = {is_close_relative = FROM}
 			}
 		}
 					

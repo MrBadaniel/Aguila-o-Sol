@@ -1704,7 +1704,7 @@ e_mexico = {
 		capital = 1801 # c_chilpancingo
 		
 		d_guerrero = {
-			color={ 145 32 32 }
+			color={ 207 97 97 }
 			color2={ 255 255 255 }
 			
 			capital = 1801 # c_chilpancingo
@@ -1741,9 +1741,7 @@ e_mexico = {
 				b_ayutla_GR = {
 					mixtec = "Tatioo"
 				}
-			}
-			
-			
+			}			
 			
 			c_atenango_del_rio = {
 				color={ 112 67 134 }
@@ -1783,28 +1781,28 @@ e_mexico = {
 		}
 		
 		d_acapulco = {
-		color={ 207 43 43 }
-		color2={ 255 255 255 }
+			color={ 186 28 57 }
+			color2={ 255 255 255 }
+			
+			capital = 1805 # c_acapulco	
 		
-		allow = {
+			allow = {
 				conditional_tooltip = {
 					trigger = {
-						d_cocibolca = {
+						d_acapulco = {
 							is_titular = yes
 						}
 					}
-					d_cocibolca = {
+					d_acapulco = {
 						is_titular = no
 					}
 				}
 				is_republic = yes
 			}
-			
-			capital = 1805 # c_acapulco	
 		}
 		
 		d_costa_grande = {
-			color={ 207, 97, 97 }
+			color={ 107 0 0 }
 			color2={ 255 255 255 }
 			
 			capital = 1805 # c_acapulco			
