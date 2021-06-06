@@ -918,8 +918,8 @@ decisions = {
 				religion = fidencista
 				religion = cristo_rey
 			}
-			is_title_active = d_rurales
-			d_rurales = {
+			is_title_active = d_dorados
+			d_dorados = {
 				holder_scope = {
 					NOT = { has_truce = ROOT }
 					ROOT = { NOT = { has_truce = PREV } }
@@ -928,7 +928,7 @@ decisions = {
 					}
 					NOT = { num_of_count_titles = 3 }
 					independent = yes
-					primary_title = { title = d_rurales }
+					primary_title = { title = d_dorados }
 				}
 			}
 		}

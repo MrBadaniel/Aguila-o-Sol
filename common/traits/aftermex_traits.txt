@@ -306,11 +306,12 @@ marian_san_juditas = {
 ############USED IN MEX IMPERIAL SUCCESSION##########
 
 tapado = {
+	hidden = no
 	is_visible = {
 		OR = {
 			character = FROM
 			has_landed_title = k_mexico
-			had_landed_title = e_mexico
+			has_landed_title = e_mexico
 		}
 	}
 	random = no

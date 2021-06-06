@@ -1,20 +1,18 @@
+namespace = destape
+
 ### Designating the Tapado (sent to potential Tapado)
 character_event = {
 	id = destape.1
-	desc = destape.1_DESC
+	desc = EVTDESC_destape_1
 	picture = GFX_evt_viking_throneroom_oldgods
 	border = GFX_event_normal_frame_war
 
 	is_triggered_only = yes
 	
 	option = { #heck yeah
-		name = destape.1_OPTA		
+		name = EVTOPTA_destape_1		
 		add_trait = tapado
 		
-		opinion = {
-			who = FROMFROM
-			modifier = opinion_tapado
-		}
 		hidden_tooltip = {
 			FROMFROM = {
 				character_event = { id = destape.2 }
@@ -25,18 +23,17 @@ character_event = {
 		}
 	}
 	option = { #well, I don't wanna
-		name = destape.1_OPTB
-		custom_tooltip = { text = destape.1_OPTB_TOOLTIP }
+		name = EVTOPTB_destape_1
+		custom_tooltip = { text = EVTOPTB_destape_1_TOOLTIP }
 		hidden_tooltip = {
 			#FROM = {
 				add_character_modifier = {
- 					modifier = recently_declined_tapado
+ 					modifier = relieved_tapado_cooldown
  					days = 365
  					hidden = yes
 				}
 			#}
 		}
-
 		hidden_tooltip = {
 			FROMFROM = {
 				character_event = { id = destape.3 }
@@ -45,7 +42,7 @@ character_event = {
 		ai_chance = {
 			factor = 1
 			modifier = {
-				factor = 1000
+				factor = 70
 				OR = {
 					trait = severely_injured
 					trait = one_eyed
@@ -56,15 +53,6 @@ character_event = {
 					trait = content
 				}
 			}
-			modifier = {
-				factor = 100
-				NOT = {
-					opinion = {
-						who = liege
-						value = 0
-					}
-				}
-			}
 		}
 	}
 }
@@ -72,31 +60,64 @@ character_event = {
 ### Tapado accepts (sent to liege)
 character_event = {
 	id = destape.2
-	desc = destape.2_DESC
+	desc = EVTDESC_destape_2
 	picture = GFX_evt_viking_throneroom_oldgods
 	border = GFX_event_normal_frame_war
 
 	is_triggered_only = yes
 	
 	option = {
-		name = destape.2_OPTA
-		hidden_tooltip = {
-			wealth = -50
-			prestige = 50
-		}
+		name = EVTOPTA_destape_2
 	}
 }
 
 ### Tapado refuses (sent to liege)
 character_event = {
 	id = destape.3
-	desc = destape.3_DESC
+	desc = EVTDESC_destape_3
 	picture = GFX_evt_viking_throneroom_oldgods
 	border = GFX_event_normal_frame_war
 
 	is_triggered_only = yes
 	
 	option = {
-		name = destape.3_OPTA
+		name = EVTOPTA_destape_3
+	}
+}
+
+### Relieving Tapado (sent to target Tapado)
+character_event = {
+	id = destape.4
+	picture = GFX_evt_viking_throneroom_oldgods
+	border = GFX_event_normal_frame_war
+
+	is_triggered_only = yes
+
+	option = { #I accept
+		name = EVTOPTA_destape_4		
+		remove_trait = tapado
+		
+		hidden_tooltip = {
+			FROMFROM = {
+				character_event = { id = destape.5 }  # ok event
+			}
+		}
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+### Tapado accepts resignation(sent to liege)
+character_event = {
+	id = destape.5
+	desc = EVTDESC_destape_5
+	picture = GFX_evt_viking_throneroom_oldgods
+	border = GFX_event_normal_frame_war
+
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_destape_5
 	}
 }

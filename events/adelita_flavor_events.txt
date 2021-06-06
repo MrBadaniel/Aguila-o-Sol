@@ -8,6 +8,8 @@
 # by Milla Isaksson
 #############################################
 
+namespace = adelita
+namespace = dorado
 
 # Adelita comes to the aid of her liege (from event 79010)
 character_event = {
@@ -1548,12 +1550,12 @@ character_event = {
 		has_dlc = "Legacy of Rome"
 		in_command = no
 		OR = {
-			has_landed_title = e_byzantium
-			has_landed_title = e_roman_empire
+			has_landed_title = e_mexico
+			has_landed_title = k_mexico
 		}
 		capital_scope = { province_id = 496 }
 		any_vassal = {
-			has_landed_title = d_dorado_guard
+			has_landed_title = d_dorados
 		}
 	}
 	
@@ -1619,11 +1621,11 @@ character_event = {
 	trigger = {
 		has_dlc = "Legacy of Rome"
 		OR = {
-			has_landed_title = e_byzantium
-			has_landed_title = e_roman_empire
+			has_landed_title = e_mexico
+			has_landed_title = k_mexico
 		}
 		any_vassal = {
-			has_landed_title = d_dorado_guard
+			has_landed_title = d_dorados
 		}
 		any_child = {
 			ai = yes
@@ -1693,7 +1695,7 @@ character_event = {
 			culture = norse
 		}
 		hidden_tooltip = {
-			d_dorado_guard = {
+			d_dorados = {
 				holder_scope = {
 					new_character = { culture = PREV }
 				}
@@ -1754,19 +1756,19 @@ character_event = {
 	trigger = {
 		has_dlc = "Legacy of Rome"
 		OR = {
-			has_landed_title = b_galata
-			has_landed_title = b_hieron
-			has_landed_title = b_deuteron
-			has_landed_title = b_pempton
+			has_landed_title = b_mexico_MX
+			has_landed_title = b_chapultepec_MX
+			has_landed_title = b_villa_de_guadalupe_MX
+			has_landed_title = b_coyoacan_MX
 		}
 		liege = {
 			ai = no
 			OR = {
-				has_landed_title = e_byzantium
-				has_landed_title = e_roman_empire
+				has_landed_title = e_mexico
+				has_landed_title = k_mexico
 			}
 			any_vassal = {
-				has_landed_title = d_dorado_guard
+				has_landed_title = d_dorados
 			}
 		}
 	}
@@ -1804,7 +1806,7 @@ character_event = {
 			}
 		}
 		any_vassal = {
-			limit = { has_landed_title = d_dorado_guard }
+			limit = { has_landed_title = d_dorados }
 			opinion = {
 				modifier = opinion_bitter
 				who = ROOT
@@ -1816,7 +1818,7 @@ character_event = {
 	option = {
 		name = EVTOPTBLoR.851
 		any_vassal = {
-			limit = { has_landed_title = d_dorado_guard }
+			limit = { has_landed_title = d_dorados }
 			opinion = {
 				modifier = opinion_happy
 				who = ROOT

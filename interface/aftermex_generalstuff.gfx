@@ -62,28 +62,35 @@ spriteTypes = {
 		noOfFrames = 6
 		allwaystransparent = yes
 	}
-# Mexican Imperial Government Icon
+	# Mexican Imperial Government Icon
 	spriteType = {
 		name = "GFX_icon_mex_imperial_government"
 		texturefile = "gfx\\interface\\government_icon_meximperial.dds"
 	}
 	
-# UyC Government Icon
+	# UyC Government Icon
 	spriteType = {
 		name = "GFX_icon_uyc_government"
 		texturefile = "gfx\\interface\\government_icon_uyc.dds"
 	}
 
-#Special
+	#Special
 	spriteType = {
 		name = "GFX_change_moravian_branch"
 		texturefile = "gfx\\interface\\decision_icon_change_moravian_branch.dds"
 	}
 
-# Traits
+	# Traits
        spriteType = {
 		name = "GFX_trait_adelita"
 		texturefile = "gfx/traits/la_adelita.tga"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_tapado"
+		texturefile = "gfx/traits/tapado.tga"
 		noOfFrames = 1
 		norefcount = yes
 		effectFile = "gfx/FX/buttonstate.lua"
@@ -138,7 +145,7 @@ spriteTypes = {
 		effectFile = "gfx/FX/buttonstate_linear.lua"
 	}
 	spriteType = {
-		name = "GFX_destapadol"
+		name = "GFX_destapado"
 		texturefile = "gfx/traits/born_in_the_caul.tga"
 		noOfFrames = 1
 		norefcount = yes
@@ -152,28 +159,28 @@ spriteTypes = {
 		effectFile = "gfx/FX/buttonstate_linear.lua"
 	}
 
-#Event Pictures
-spriteType = {
-		name = "GFX_evt_pelayo1"
-		texturefile = "gfx\\event_pictures\mexicancatholic.dds"
-		allwaystransparent = yes
+	#Event Pictures
+	spriteType = {
+			name = "GFX_evt_pelayo1"
+			texturefile = "gfx\\event_pictures\mexicancatholic.dds"
+			allwaystransparent = yes
 	}
-	
-#Decision Pictures
-spriteType = {
-    name = "GFX_change_moravian_branch"
-    texturefile = "gfx\\interface\\decision_icon_change_moravian_branch.dds"
-  }
-spriteType = {
-    name = "GFX_restore_reformista_ministry"
-    texturefile = "gfx\\interface\\decision_icon_restore_reformista_ministry.dds"
-  }
-spriteType = {
-    name = "GFX_restore_mexico"
-    texturefile = "gfx\\interface\\decision_icon_restore_mexico.dds"
-  }
-spriteType = {
-    name = "GFX_restore_mexico"
-    texturefile = "gfx\\interface\\decision_icon_restore_mexico.dds"
-  }
+		
+	#Decision Pictures
+	spriteType = {
+		name = "GFX_change_moravian_branch"
+		texturefile = "gfx\\interface\\decision_icon_change_moravian_branch.dds"
+	}
+	spriteType = {
+		name = "GFX_restore_reformista_ministry"
+		texturefile = "gfx\\interface\\decision_icon_restore_reformista_ministry.dds"
+	}
+	spriteType = {
+		name = "GFX_restore_mexico"
+		texturefile = "gfx\\interface\\decision_icon_restore_mexico.dds"
+	}
+	spriteType = {
+		name = "GFX_restore_mexico"
+		texturefile = "gfx\\interface\\decision_icon_restore_mexico.dds"
+	}
 }
