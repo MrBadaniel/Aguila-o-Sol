@@ -10,7 +10,7 @@ character_event = {
 	is_triggered_only = yes
 	
 	option = { #heck yeah
-		name = EVTOPTA_destape_1		
+		name = EVTOPTA_destape_1
 		add_trait = tapado
 		
 		hidden_tooltip = {
@@ -119,5 +119,31 @@ character_event = {
 	
 	option = {
 		name = EVTOPTA_destape_5
+	}
+}
+
+### Lose Tapado trait by being exiled from realm
+character_event = {
+	id = destape.6
+	desc = DEBUG
+	is_triggered_only = yes # Triggered by on_death, on_yearly_pulse
+	hide_window = yes
+	
+	trigger = {
+		OR = {
+			trait = tapado
+			trait = destapado
+			trait = se_movio
+		}
+	}
+	
+	immediate = {
+		remove_trait = tapado
+		remove_trait destapado
+		remove_trait se_movio
+	}
+	
+	option = {
+		name = DEBUG
 	}
 }
