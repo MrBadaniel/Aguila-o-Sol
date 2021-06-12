@@ -3120,14 +3120,13 @@
 1810218={
 	name="Genaro"
 	dynasty=1260017
-	culture=menomex
-	religion=sol_invicta
-	trait=sympathy_cult_of_saints
+	culture=altiplanense
+	religion=sacred_heart
+	trait=sympathy_mesoamerican_gods
 	trait=kind
 	trait=slothful
 	2650.2.4={
 		birth=yes
-		culture=raramuri
 	}
 }
 
@@ -3317,31 +3316,28 @@
 }
 
 1810240={
-	name="Mariano"
-	dynasty=1260046
-	culture=raramuri
-	religion=sol_invicta
-	trait=brilliant_strategist
-	trait=holy_warrior
+	name="Eliseo"
+	dynasty=4201112
+	culture=abajeno
+	religion=sacred_heart
+	trait=fortune_builder
 	trait=strong
 	trait=ambitious
 	trait=zealous
-	trait=distractible
 	trait=stubborn
 	trait=trusting
 	trait=proud
-	trait=adventurer
-	give_nickname=nick_cuernoverde
+	trait=greedy
 	2645.5.8={birth=yes}
 	2662.1.31={add_spouse=1810241}
 	2701.7.13={death=yes}
 }
 
 1810241={
-	name="Rahuí"
+	name="Marisa"
 	female=yes
-	culture=raramuri
-	religion=sol_invicta
+	culture=altiplanense
+	religion=sacred_heart
 	trait=thrifty_clerk
 	trait=content
 	trait=patient
@@ -3353,11 +3349,11 @@
 }
 
 1810242={
-	name="Iyena"
+	name="Irena"
 	female=yes
-	dynasty=1260046
-	culture=raramuri
-	religion=sol_invicta
+	dynasty=4201112
+	culture=abajeno
+	religion=sacred_heart
 	trait=thrifty_clerk
 	trait=quick
 	trait=possessed
@@ -3368,10 +3364,10 @@
 }
 
 1810243={
-	name="Maparí"
-	dynasty=1260046
-	culture=raramuri
-	religion=sol_invicta
+	name="Melchor"
+	dynasty=4201112
+	culture=abajeno
+	religion=sacred_heart
 	trait=twin
 	trait=brave
 	trait=zealous
@@ -3382,10 +3378,10 @@
 }
 
 1810244={
-	name="Muripi"
-	dynasty=1260046
-	culture=raramuri
-	religion=sol_invicta
+	name="Arturo"
+	dynasty=4201112
+	culture=abajeno
+	religion=sacred_heart
 	trait=twin
 	trait=diligent
 	trait=zealous
@@ -3395,26 +3391,33 @@
 	2701.7.13={death=yes}
 }
 
-1810245={
+1810245={  # needs family
 	name="Taiyari"
 	dynasty=1428026 #Huichol
 	culture=raramuri
 	religion=sol_invicta
 	trait=ambitious
+	trait=zealous
 	trait=trusting
-	2612.5.8={birth=yes}
+	2612.5.8={
+		birth=yes
+		culture=altiplanense
+	}
 	2701.7.13={death=yes}
 }
 
-1810246={
-	name="Juana Belén"
+1810246={  # needs family
+	name="Belén"
 	female=yes
 	dynasty=1428033
-	culture=tapatio
+	culture=nahua
 	religion=sol_invicta
+	trait=poet
+	trait=grey_eminence
+	trait=zealous
 	2631.5.8={
 		birth=yes
-		culture=raramuri
+		culture=abajeno
 	}
 	2701.7.13={death=yes}
 }

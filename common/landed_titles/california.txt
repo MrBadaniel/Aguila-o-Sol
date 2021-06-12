@@ -38,17 +38,17 @@ e_california = {
 		jarocho = "Las Bajas"
 		abajeno = "Las Bajas"
 		
-		d_mexicali = {
-			color={ 255 237 215 }
-			color2={ 255 255 255 }
+		# d_mexicali = {
+			# color={ 255 237 215 }
+			# color2={ 255 255 255 }
 			
-			chino = "La Chinesca"
+			# chino = "La Chinesca"
 			
-			capital = 2003 # Mexicali
+			# capital = 2003 # Mexicali
 
-			culture = chino
-			religion = cetic
-		}
+			# culture = chino
+			# religion = cetic
+		# }
 		
 		
 		d_baja = {		
@@ -68,32 +68,32 @@ e_california = {
 				b_mexicali_BAJ = {
 					chino = "la Chinesca"
 				}
-				b_santa_isabel_BAJ = {}
-					  
+				b_santa_isabel_BAJ = {
+					cachanilla = "los Santorales"
+				}
 				b_los_algodones_BAJ = {}
-				b_guadalupe_victoria_BAJ = {}
-				b_san_felipe_BAJ = {}
-				b_puebla_BAJ = {}
-				b_progreso_BAJ = {}
+				b_guadalupe_victoria_BAJ = {
+					cachanilla = "el Cuarenta y Tres"
+				}
 				b_cuervos_BAJ = {}
-			}	
-			c_tijuana = { # 2002	
-				color={ 0 255 163 }
+				b_carranza_BAJ = {}
+				b_tecolotes_BAJ = {}
+				b_bataquez_BAJ = {}
+			}
+			c_playa_cortes = {
+				color={ 58 121 56 }
 				color2={ 255 255 255 }
 				
-				paiute = "Tiwana"
+				# paiute = "Tudupögoteze"
 				
-				holy_site = navegante
-				
-				b_la_joya_BAJ = {}
-				b_tijuana_BAJ = {}
-				b_rosarito_BAJ = {}
-				b_tecate_BAJ = {}
-				b_guadalupe_BAJ = {}
-				b_la_rumorosa_BAJ = {}
-				b_lomas_de_santa_ana_BAJ = {}
-				b_la_mision_BAJ = {}
-			}	
+				b_san_felipe_BAJ = {}
+				b_puertecitos_BAJ = {}
+				b_bahía_san_luis_gonzaga_BAJ = {}
+				b_calamajue_BAJ = {}
+				b_carriso_BAJ = {}
+				b_bufeo_BAJ = {}
+				b_matomi_BAJ = {}
+			}				
 		}
 		d_baja_sur = {		
 			color={ 245 212 251 }	
@@ -126,11 +126,7 @@ e_california = {
 				
 				b_loreto_BAJ = {}
 				b_mulege_BAJ = {}
-				b_ligui_BAJ = {}
-							
-								
-						 
-						   
+				b_ligui_BAJ = {}					   
 				b_el_huatamote_BAJ = {}
 				b_santa_rosalia_BAJ = {}
 				b_ensenada_blanca_BAJ = {}
@@ -144,16 +140,10 @@ e_california = {
 				
 				# paiute = "Komoduu"
 				
-					  
 				b_san_jose_de_comondu_BAJ = {}
-						  
 				b_ciudad_insurgentes_BAJ = {}
-				b_puerto_san_carlos_BAJ = {}
-					   
-						
-							 
+				b_puerto_san_carlos_BAJ = {}		 
 				b_adolfo_lopez_mateos_BAJ = {}
-							
 				b_ciudad_constitucion_BAJ = {}
 				b_las_barrancas_BAJ = {}
 				b_san_juanico_BAJ = {}
@@ -179,9 +169,27 @@ e_california = {
 			color={ 120 28 58 }	
 			color2={ 255 255 255 }	
 				
-			capital = 2004 # c_ensenada	
+			capital = 2002 # c_ensenada	
 			
 			# paiute = "Essenaada"
+			
+			c_tijuana = { # 2002	
+				color={ 0 255 163 }
+				color2={ 255 255 255 }
+				
+				paiute = "Tiwana"
+				
+				holy_site = navegante
+				
+				b_la_joya_BAJ = {}
+				b_tijuana_BAJ = {}
+				b_rosarito_BAJ = {}
+				b_tecate_BAJ = {}
+				b_guadalupe_BAJ = {}
+				b_la_rumorosa_BAJ = {}
+				b_lomas_de_santa_ana_BAJ = {}
+				b_la_mision_BAJ = {}
+			}
 			
 			c_ensenada = { # 2004	
 				color={ 110 38 53 }
@@ -191,13 +199,14 @@ e_california = {
 				
 						  
 				b_ensenada_BAJ = {}
+				b_maneadero_BAJ = {}
+				b_san_quentin_BAJ = {}
+				b_san_vicente_BAJ = {}
 				b_santo_tomas_BAJ = {}
 				b_real_del_castillo_BAJ = {}
 				b_camalu_BAJ = {}
-				b_maneadero_BAJ = {}
 				b_vicente_guerrero_BAJ = {}
-				b_lazaro_cardenas_BAJ = {}
-				b_punto_colonet_BAJ = {}
+				b_erendira_BAJ = {}
 			}	
 
 			c_el_arco = { # 2006	
@@ -238,30 +247,14 @@ e_california = {
 				
 					   
 				b_guerrero_negro_BAJ = {}
-				b_bahia_asuncion_BAJ = {}
 				b_isla_cedros_BAJ = {}
+				b_bahia_asuncion_BAJ = {}
 				b_bahia_tortugas_BAJ = {}
-						  
-				b_el_vizcaino_BAJ = {}
-							
+				b_el_vizcaino_BAJ = {}	
 				b_punta_abreojos_BAJ = {}
 				b_los_santitos_BAJ = {}
 				b_el_marasal_BAJ = {}
 				
-			}
-			c_playa_cortes = {
-				color={ 58 121 56 }
-				color2={ 255 255 255 }
-				
-				# paiute = "Tudupögoteze"
-				
-				b_puertecitos_BAJ = {}
-				b_bahía_san_luis_gonzaga_BAJ = {}
-				b_calamajue_BAJ = {}
-				b_carriso_BAJ = {}
-				b_bufeo_BAJ = {}
-				b_matomi_BAJ = {}
-				b_plan_nacional_agrario_BAJ = {}
 			}
 		}
 	}

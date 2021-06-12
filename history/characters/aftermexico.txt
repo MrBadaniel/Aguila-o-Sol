@@ -220,10 +220,7 @@
 	religion=cristo_rey
 	2603.2.28={birth=yes}
 	2665.1.1={
-			death={
-			death_reason=death_execution_beheading
-			killer=1810240
-		}
+		death=yes
 	}
 }
 14400010={ #abajeno Bishop Zacatecas - pre Luis
@@ -290,9 +287,12 @@
 	trait=indulgent_wastrel
 	trait=chaste
 	trait=diligent
-	culture=raramuri #basically assimilated as Rarámuri
+	culture=raramuri
 	religion=sol_invicta
-	2627.5.12={birth=yes}
+	2627.5.12={
+		birth=yes
+		culture=altiplanense
+	}
 	2701.7.13={death=yes}
 }
 
@@ -382,7 +382,7 @@
 	stewardship=7
 	intrigue=7
 	learning=6
-	culture=chino
+	culture=singaporean
 	religion=sacred_heart
 	trait=musician
 	trait=zealous
@@ -390,6 +390,7 @@
 	2639.7.21={
 		birth=yes
 		give_nickname=nick_the_china
+		culture=chilango
 	}
 	2658.5.19={add_spouse=1810095}
 }
