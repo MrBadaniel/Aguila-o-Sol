@@ -977,7 +977,7 @@
 		}
 }
 
-14400051={ # Rafael Téllez - Sinaloa patrician
+14400051={ # Rafael Téllez - Sinaloa patrician Hidalgo
 	name="Jorge"
 	dynasty=5001117
 	culture=abajeno
@@ -994,12 +994,6 @@
 	trait=slothful
 	trait=charismatic_negotiator
 	2638.2.13={birth=yes}
-	2651.12.25={
-		create_bloodline={
-			type=hidalgo
-			has_dlc="Holy Fury"
-		}
-	}
 	2700.12.12={death=yes}
 }
 
@@ -2806,6 +2800,12 @@
 	2158.4.17={
 		birth=yes
 	}
+	2165.12.3={
+		create_bloodline={
+			type=jacaranda
+			has_dlc="Holy Fury"
+		}
+	}
 	2217.8.15={
 		death=yes
 	}
@@ -2922,4 +2922,38 @@
 	father=72377916
 	2218.8.12={birth=yes}
 	2279.1.19 ={death=yes}
+}
+
+#Iván el Joven
+72377918 = {
+	name="Iván"
+	religion=cristo_rey
+	culture=chilango
+	dynasty=5001119
+	trait=robust	
+	trait=adventurer
+	trait=erudite
+	trait=brave
+	trait=legendary
+	trait=lefthanded
+	trait=skilled_tactician
+	father=14400056
+	2291.6.20={birth=yes}
+	2251.6.20={give_nickname=nick_el_joven}
+	2361.12.14={death=yes}
+}
+
+#Alejandro el hijo de Iván 
+72377919 = {
+	name="Alejandro"
+	religion=cristo_rey
+	culture=chilango
+	dynasty=5001119
+	trait=humble	
+	trait=chaste
+	trait=just	
+	trait=charismatic_negotiator
+	father=72377918
+	2316.5.15={birth=yes}
+	2381.11.4={death=yes}
 }
