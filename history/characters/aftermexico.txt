@@ -1079,6 +1079,7 @@
 	trait=grey_eminence
 	trait=cough
 	occluded=yes
+	father=72377912
 	2194.9.21={
 		birth=yes
 	}
@@ -1087,12 +1088,12 @@
 	}
 }
 
-#Benemérito José María Palafox
+#Benemérito José María Jacaranda
 14400053 = {
 	name="José María"
 	religion=cristo_rey
 	culture=chilango
-	dynasty=5001120
+	dynasty=5001119
 	trait=theologian
 	trait=celibate
 	trait=diligent
@@ -1101,6 +1102,7 @@
 	trait=legendary
 	trait=zealous
 	trait=mastermind_theologian
+	father=72377913
 	occluded=yes
 	2225.11.1={
 		birth=yes
@@ -1113,7 +1115,7 @@
 #Horacio father of El Soldado
 14400097={
 	name=Horacio
-	dynasty=5001121
+	dynasty=5001119
 	religion=cristo_rey
 	culture=chilango
 	trait=indulgent_wastrel
@@ -1123,15 +1125,16 @@
 	trait=stubborn
 	trait=kind
 	trait=wroth
+	father=72377911
 	2196.11.5={birth=yes}
 	2241.7.13={death=yes}
 }
 
-#Cecilia mother of Benemérito Fernando Suárez
+#Cecilia mother of Benemérito Fernando Jacaranda
 14400060={
 	name="Cecilia"
 	female=yes
-	dynasty=5001121
+	dynasty=5001119
 	religion=cristo_rey
 	culture=chilango
 	trait=charitable
@@ -1147,10 +1150,10 @@
 	2281.7.13={death=yes}
 }
 
-#Benemérito Héctor el Soldado Suárez
+#Benemérito Héctor el Soldado Jacaranda
 14400054={ 
 	name="Héctor"
-	dynasty=5001121
+	dynasty=5001119
 	religion=cristo_rey
 	culture=chilango
 	martial=15
@@ -1174,10 +1177,10 @@
 	2280.7.21={death=yes}
 }
 
-#Benemérito Fernando Suárez
+#Benemérito Fernando Jacaranda
 14400055 = {
 	name="Fernando"
-	dynasty=5001121
+	dynasty=5001119
 	religion=cristo_rey
 	culture=chilango
 	trait=socializer
@@ -1199,12 +1202,12 @@
 	}
 }
 
-#Benemérito Agustín Escutia
+#Benemérito Agustín Jacaranda
 14400056 = {
 	name="Agustín"
 	religion=cristo_rey
 	culture=chilango
-	dynasty=5001122
+	dynasty=5001119
 	trait=architect
 	trait=shrewd
 	trait=erudite
@@ -1214,6 +1217,7 @@
 	trait=lefthanded
 	trait=midas_touched
 	occluded=yes
+	father=72377914
 	2244.8.2={
 		birth=yes
 	}
@@ -1222,12 +1226,12 @@
 	}
 }
 
-#Benemérito Bartolomé de la Guardia
+#Benemérito Bartolomé Jacaranda
 14400057 = {
 	name="Bartolomé"
 	religion=cristo_rey
 	culture=chilango
-	dynasty=5001123
+	dynasty=5001119
 	trait=scholar
 	trait=poet
 	trait=kind
@@ -1238,6 +1242,7 @@
 	trait=mastermind_theologian
 	occluded=yes
 	give_nickname=nick_el_cronista
+	father=72377917
 	2247.4.16={
 		birth=yes
 	}
@@ -1246,12 +1251,12 @@
 	}
 }
 
-#Benemérito Tadeo de la Guardia
+#Benemérito Tadeo Jacaranda
 14400058 = {
 	name="Tadeo"
 	religion=cristo_rey
 	culture=chilango
-	dynasty=5001123
+	dynasty=5001119
 	trait=gardener
 	trait=adopted_child
 	trait=gregarious
@@ -1572,10 +1577,11 @@
 14400074={ 
 	name="Roldán"
 	dynasty=5001127
-	culture=abajeno
+	culture=bravo
 	religion=cristo_rey
 	trait=hunter
 	trait=shy
+	trait=dorado
 	trait=humble
 	trait=arbitrary
 	trait=ambitious
@@ -1589,7 +1595,7 @@
 14400075 = {
 	name="Filomeno"
 	religion=cristo_rey
-	culture=chilango
+	culture=abajeno
 	dynasty=5001128
 	trait=diligent
 	trait=arbitrary
@@ -1604,7 +1610,7 @@
 14400076={
 	name="Gabriel"
 	religion=cristo_rey
-	culture=chilango
+	culture=abajeno
 	dynasty=5001128
 	learning=5
 	trait=brave
@@ -1621,11 +1627,10 @@
 14400077= {
 	name="Bartolomé"
 	religion=cristo_rey
-	culture=chilango
+	culture=abajeno
 	dynasty=5001128
 	trait=seducer
 	trait=gregarious
-	trait=distractible
 	trait=proud
 	trait=groomed
 	father=14400076
@@ -2784,4 +2789,138 @@
 	trait=zealous
     2641.9.23={birth=yes}
 }
+
+#Juan Carlos Grandfather of Mexico 
+72377911 = {
+	name="Juan Carlos"
+	dynasty=5001119
+	religion=cristo_rey
+	culture=chilango
+	trait=dull
+	trait=honest
+	trait=content
+	trait=diligent
+	trait=proud
+	trait=legendary
+	trait=underhanded_rogue
+	occluded=yes
+	2158.4.17={
+		birth=yes
+	}
+	2217.8.15={
+		death=yes
+	}
+}
 	
+#Miguel hijo de Juan Carlos  
+72377912 = {
+	name="Miguel"
+	dynasty=5001119
+	religion=cristo_rey
+	culture=chilango
+	trait=gardener
+	trait=robust
+	trait=content
+	trait=diligent
+	trait=kind
+	trait=legendary
+	trait=thrifty_clerk	
+	occluded=yes
+	father=72377911
+	2176.1.21={birth=yes}
+	2235.9.12={death=yes}
+}
+
+#Príncipe de la Unión Landolfo hijo de Juan Carlos  
+72377913 = {
+	name="Landolfo"
+	dynasty=5001119
+	religion=cristo_rey
+	culture=chilango
+	trait=just
+	trait=uncouth
+	trait=shrewd
+	trait=honest
+	trait=underhanded_rogue
+	occluded=yes
+	trait=legendary
+	father=72377911
+	2179.6.10={	birth=yes}
+	2244.11.18={death=yes}
+}
+
+#Príncipe de la Unión Aristóbulo Jacaranda
+72377914 = {
+	name="Aristóbulo"
+	religion=cristo_rey
+	culture=chilango
+	dynasty=5001119
+	trait=chaste
+	trait=wroth
+	trait=diligent
+	trait=arbitrary
+	trait=humble
+	trait=fortune_builder
+	father=72377913
+	trait=legendary
+	occluded=yes
+	2226.2.20={birth=yes}
+	2288.10.17={death=yes}
+}
+
+#Lucio hijo de Landolfo Jacaranda
+72377915 = {
+	name="Lucio"
+	religion=cristo_rey
+	culture=chilango
+	dynasty=5001119
+	trait=lisp
+	trait=temperate	
+	trait=dull
+	trait=kind	
+	trait=brave
+	trait=skilled_tactician
+	trait=legendary
+	father=72377913
+	occluded=yes
+	2231.11.13={birth=yes}
+	2291.8.10={death=yes}
+}
+
+#Fortino hijo de Miguel Jacaranda 
+72377916 = {
+	name="Fortino"
+	dynasty=5001119
+	religion=cristo_rey
+	culture=chilango
+	trait=socializer
+	trait=drunkard
+	trait=patient
+	trait=slothful
+	trait=gregarious
+	trait=legendary
+	trait=charismatic_negotiator	
+	occluded=yes
+	father=72377912
+	2182.11.1={birth=yes}
+	2246.12.19 ={death=yes}
+}
+
+#Príncipe de la Unión Jeremías el hijo de Fortino Jacaranda 
+72377917 = {
+	name="Jeremías"
+	dynasty=5001119
+	religion=cristo_rey
+	culture=chilango
+	trait=pious
+	trait=just
+	trait=shy
+	trait=diligent
+	trait=honest
+	trait=legendary
+	trait=scholarly_theologian	
+	occluded=yes
+	father=72377916
+	2218.8.12={birth=yes}
+	2279.1.19 ={death=yes}
+}
