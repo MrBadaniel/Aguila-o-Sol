@@ -520,7 +520,7 @@
 }	
 	
 	
-#Benemérito Cuauhtémoc Macehual
+#Benemérito Cuauhtémoc II Macehual
 14450428 = {
 	name="Cuauhtémoc"
 	religion=cristo_rey
@@ -649,6 +649,7 @@
 	trait=gregarious	
 	trait=tough_soldier
 	father=14450443
+	mother=14450489
 	2452.5.25={
 		birth=yes
 	}
@@ -1214,8 +1215,66 @@
 	2619.5.12={birth=yes}
 }
 
-#14450488 la esposa de Tristán
-#14450489 la esposa de Jacaranda 
+
+#Inés la hija de  Agustín III Aguilar
+14450488={
+	name=Inés
+	religion=cristo_rey
+	culture=chilango
+	female=yes
+	dynasty=5001145
+	trait=indulgent_wastrel
+	trait=fair
+	trait=stubborn
+	trait=ambitious
+	trait=envious
+	trait=diligent
+	father=14450422
+	2390.11.2={birth=yes}
+	2409.5.26={add_spouse = 14450491}
+	2470.2.23={death=yes}
+}
+
+#Clodoveo the husband to Inés
+14450491={
+	name=Clodoveo
+	religion=cristo_rey
+	culture=altiplanense
+	dynasty=5001120
+	trait=skilled_tactician
+	trait=dorado
+	trait=ambitious
+	trait=brave
+	trait=cruel
+	father=14450422
+	2388.1.2={birth=yes}
+	2409.5.26={add_matrilineal_spouse = 14450488}
+	2448.5.18={death={
+			death_reason=death_battle
+			killer=14450428
+		}
+	}
+}
+
+
+#Paola la hija de Clodoveo Severo
+14450489={
+	name=Paola
+	religion=cristo_rey
+	culture=chilango
+	female=yes
+	dynasty=5001145
+	trait=scholarly_theologian
+	trait=erudite
+	trait=content
+	trait=chaste
+	trait=humble
+	father=14450491
+	mother=14450488
+	2390.11.2={birth=yes}
+	2450.4.16={add_spouse = 14450443}
+	2408.2.23={death=yes}
+}
 
 
 #Daúd
