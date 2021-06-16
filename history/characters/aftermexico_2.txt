@@ -66,49 +66,8 @@
 		death=yes
 		}
 }
-	 
-#Benemérito Salim Clarencio
-14450409 = {
-	name="Salim"
-	religion=cristo_rey
-	culture=filastino
-	dynasty=5001138
-	trait=cynical
-	trait=greedy
-	trait=diligent
-	trait=ambitious
-	trait=fortune_builder	
-	2272.2.20={
-		birth=yes
-	}
-	2341.5.8={death={
-			death_reason=death_battle
-			killer=14450410
-		}
-	}
-}
 
-#Benemérito Otón Sotomayor
-14450410 = {
-	name="Otón"
-	religion=cristo_rey
-	culture=chilango
-	dynasty=5001139
-	trait=dull
-	trait=strong
-	trait=cruel
-	trait=ambitious
-	trait=skilled_tactician
-	2605.4.28={
-		birth=yes
-	}
-	2641.8.16={death={
-			death_reason=death_suicide
-		}
-	}
-}
-
-#Benemérito Vicente Lapuente
+#Vicente Lapuente
 14450411 = {
 	name="Vicente"
 	religion=cristo_rey
@@ -129,7 +88,7 @@
 	}
 }
 
-#Benemérito Nicolás Severo
+#Benemérito Nicolás Palafox
 14450412 = {
 	name="Nicolás"
 	religion=cristo_rey
@@ -147,16 +106,38 @@
 	2350.2.20={death=yes}
 }
 
-#Benemérito Flavio Severo
+#Antonio Palafox
+14450490 = {
+	name="Antonio"
+	religion=cristo_rey
+	culture=tapatio
+	dynasty=5001141
+	trait=gregarious
+	trait=honest
+	trait=brave
+	trait=trusting	
+	trait=grey_eminence 
+	father=14450412
+	2310.4.16={
+		birth=yes
+	}
+	2345.11.14={death = {
+			death_reason = death_murder_unknown_poison 
+			killer = 14450414
+		}
+	}
+}
+
+#Benemérito Domiciano Palafox
 14450413 = {
-	name="Flavio"
+	name="Domiciano"
 	religion=cristo_rey
 	culture=tapatio
 	dynasty=5001141
 	trait=shrewd
-	trait=chaste
-	trait=slothful
-	trait=uncouth	
+	trait=honest
+	trait=diligent
+	trait=kind	
 	trait=scholarly_theologian 
 	father=14450412
 	2312.12.30={
@@ -169,7 +150,7 @@
 	}
 }
 
-#Benemérito Epifanio Severo
+#Benemérito Epifanio Palafox
 14450414 = {
 	name="Epifanio"
 	religion=cristo_rey
@@ -308,14 +289,34 @@
 	2351.10.14={add_spouse=14450432}
 	2382.3.2={death=yes}
 }
+
+#Benemérito Salim Clarencio
+14450409 = {
+	name="Salim"
+	religion=cristo_rey
+	culture=filastino
+	dynasty=5001138
+	trait=cynical
+	trait=greedy
+	trait=diligent
+	trait=ambitious
+	trait=fortune_builder	
+	2272.2.20={
+		birth=yes
+	}
+	2341.5.8={death={
+			death_reason=death_battle
+			killer=14450421
+		}
+	}
+}
 	
-#Benemérito Eliyahu Carvajal	
+#Domingo Carvajal	
 14450420 = {
-	name="Eliyahu"
+	name="Domingo"
 	religion=cristo_rey
 	culture=chilango
 	dynasty=5001144
-	trait=sympathy_judaism
 	trait=gregarious
 	trait=groomed
 	trait=charitable
@@ -325,7 +326,7 @@
 		birth=yes
 	}
 	2388.5.14={death={
-			death_reason=death_murder_strangle
+			death_reason=death_firing_squad
 			killer=14450421 #Epifanio was cray-cray
 		}
 	}
@@ -1246,7 +1247,6 @@
 	trait=ambitious
 	trait=brave
 	trait=cruel
-	father=14450422
 	2388.1.2={birth=yes}
 	2409.5.26={add_matrilineal_spouse = 14450488}
 	2448.5.18={death={
@@ -1271,11 +1271,13 @@
 	trait=humble
 	father=14450491
 	mother=14450488
-	2390.11.2={birth=yes}
+	2428.11.2={birth=yes}
 	2450.4.16={add_spouse = 14450443}
-	2408.2.23={death=yes}
+	2488.12.22={death=yes}
 }
 
+#
+#Otón Sotomayor marries last 14450492 daughter of Aureliano III rules from Puebla eventually usurped by Tlxancanas
 
 #Daúd
 #Anselmo llorente, the first bishop of Costa Rica attended the sick people, people with cholera putting his life in risk. 
