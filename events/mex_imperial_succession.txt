@@ -147,3 +147,244 @@ character_event = {
 		name = DEBUG
 	}
 }
+
+### Destape Ceremony Decision
+character_event = {
+	id = destape.7
+	title = "TITLE_DESTAPE"
+	desc = EVTDESC_destape_7
+	picture = GFX_evt_feast
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "EVTOPTA_destape_7"  # ready the ceremony
+		hidden_tooltip = {
+			character_event = {
+				id = destape.8
+				days = 15
+				random = 2
+			}
+		}
+	}
+	option = {
+		name = "EVTOPTB_destape_7"  # I'm not ready
+		hidden_tooltip = {
+			character_event = {
+				id = destape.10
+				days = 15
+				random = 2
+			}
+		}
+	}
+}
+
+### Voters invited
+character_event = {
+	id = destape.8
+	title = "TITLE_DESTAPE"
+	desc = "EVTDESC_destape_8"
+	picture = "GFX_evt_courier"
+
+	is_triggered_only = yes
+
+	trigger = { NOT = { is_inaccessible_trigger = yes } }
+
+	option = {
+		name = "EVTOPTA_destape_8"  # of course
+		ai_chance = {
+			factor = 100
+			modifier  = {
+				factor = 0.001
+				ai = yes
+				is_inaccessible_trigger = yes
+			}
+		}
+		set_character_flag = attending_destape
+		set_character_flag = do_not_disturb
+		hidden_tooltip = { character_event = { id = destape.14 days = 300 } } # Safety catch flag clearing
+	}
+	option = {
+		name = "EVTOPTB_destape_8"  # what's the point
+		ai_chance = {
+			factor = 0.1
+		}
+	}
+}
+
+### Destape Begins
+letter_event = {
+	id = destape.9
+	title = "TITLE_DESTAPE"
+	desc = "EVTDESC_destape_9"
+	picture = "GFX_evt_feast"
+
+	is_triggered_only = yes
+	
+	war = no
+
+	option = {
+		name = "EVTOPTA_destape_9"  # time for the dedazo
+		
+		trigger = {
+		}
+		
+		hidden_tooltip = {
+			set_character_flag = destape_begins
+			set_character_flag = attending_destape
+			any_realm_character = {
+				limit = {
+					trait = tapado
+				}
+				character_event = { id = destape.11 }
+			}
+		}
+	}
+	option = {
+		name = "EVTOPTB_destape_9"
+		trigger = {
+			war = yes
+		}
+		scaled_wealth = 0.5
+		prestige = -100
+		hidden_tooltip = {
+			any_realm_character = {
+				limit = {
+					has_character_flag = attending_destape
+				}
+				character_event = { id = destape.10 }
+			}
+		}
+		clr_character_flag = do_not_disturb
+		clr_character_flag = attending_tournament
+	}
+}
+
+### Destape has been cancelled
+character_event = {
+	id = destape.10
+	title = "TITLE_DESTAPE"
+	desc = "EVTDESC_destape_10"
+	picture = "GFX_evt_joust"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "EVTOPTA_destape_10"
+		clr_character_flag = attending_tournament
+		clr_character_flag = do_not_disturb
+	}
+}
+
+### Tapado is unveiled
+character_event = {
+	id = destape.11
+	title = "TITLE_DESTAPE"
+	desc = "EVTDESC_destape_11"
+	picture = "GFX_evt_joust"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "EVTOPTA_destape_11"
+		add_trait = destapado
+		character_event = { id = destape.12 }
+	}
+}
+
+### Voter decisions
+character_event = {
+	id = destape.12
+	title = "TITLE_DESTAPE"
+	desc = "EVTDESC_destape_12"
+	picture = GFX_evt_feast
+
+	capable_only = yes
+	prisoner = no
+	war = no
+
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTA_destape_12"  # fall in line
+		trigger = {
+		}
+		ai_chance = {
+			factor = 100
+			modifier  = {
+				factor = 0.2
+				ai = yes
+				is_rival = ROOT
+			}
+		}
+
+		hidden_tooltip = {
+			any_realm_character = {
+				limit = {
+					has_character_flag = attending_destape
+				}
+				set_character_flag = approves_destapado
+			}
+		}
+	}
+
+	option = {
+		name = "EVTOPTB_destape_12"  # Oppose the destapado
+		trigger = {
+		}
+		ai_chance = {
+			factor = 0.1
+		}
+
+		hidden_tooltip = {
+			any_realm_character = {
+				limit = {
+					has_character_flag = attending_destape
+				}
+				set_character_flag = opposes_destapado
+			}
+		}
+	}
+}
+
+### Destape outcome
+character_event = {
+	id = destape.13
+	title = "TITLE_DESTAPE"
+	desc = "EVTDESC_destape_13"
+	picture = GFX_evt_feast
+
+	is_triggered_only = yes
+
+	option = {
+		name = "EVTOPTA_destape_13"
+		set_character_flag = approves_destapado
+	}
+}
+
+###########################################
+# Flag management                         #
+###########################################
+
+# Safety catch - clears character flags and modifiers
+character_event = {
+	id = destape.14
+
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		clr_character_flag = do_not_disturb
+		clr_character_flag = attending_destape
+		clr_character_flag = destape_has_ended
+		any_realm_character = {
+			limit = {
+				has_character_flag = attending_destape
+			}
+			clr_character_flag = attending_destape
+			clr_character_flag = approves_destapado
+			clr_character_flag = opposes_destapado
+		}		
+	}
+}

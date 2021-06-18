@@ -1054,7 +1054,7 @@ character_event = {
 	}
 }
 
-# THE START OF THE RECONQUISTA - 1090 AND MEXICO NOT CHRISTIAN
+# THE START OF THE RECONQUISTA - 2700 AND MEXICO NOT CHRISTIAN
 narrative_event = {
 	id = sacredheart.200
 	title = sacredheart.200.title
@@ -1076,7 +1076,7 @@ narrative_event = {
 		NOT = { #immersion-breaking
 			has_alternate_start_parameter = { key = religion_names value = random }
 		}
-		has_landed_title = k_hijo_del_sol #fires for the Hijo del Sol, he's always there
+		has_landed_title = d_cristo_rey #fires for the Prelate, he's always there
 		year = 2700 #avoid event spam
 		
 		OR = {
@@ -1107,14 +1107,20 @@ narrative_event = {
 	option = {
 		name = sacredheart.200.optA
 		trigger = {
-			religion_group = cult_of_saints
+			OR = {
+				religion = cristo_rey
+				religion = reformista
+			}
 		}
 	}
 	
 	option = {
 		name = sacredheart.200.optB
 		trigger = {
-			religion_group = mesoamerican_gods
+			OR
+				religion_group = mesoamerican_gods
+				religion_group = cult_of_saints
+			}
 		}
 	}
 	
@@ -1124,10 +1130,8 @@ narrative_event = {
 			NOR = {
 				religion_group = cult_of_saints
 				religion_group = mesoamerican_gods
-				religion = mictlantec
-				religion = mictlantec_reformed
-				religion = uahomche
-				religion = neomayan
+				religion = cristo_rey
+				religion = reformista
 			}
 		}
 	}
@@ -1155,11 +1159,19 @@ narrative_event = {
 		NOT = { #immersion-breaking
 			has_alternate_start_parameter = { key = religion_names value = random }
 		}
-		has_landed_title = k_hijo_del_sol #fires for the hijo del sol, he's always there
+		has_landed_title = d_cristo_rey #fires for the Prelate, he's always there
 		NOT = { has_global_flag = mexican_reconquistas_unlocked }
 		
 		1779 = { # Veracruz
-			NOT = { owner = { religion_group = cult_of_saints } }
+			NOT = { 
+				owner = { 
+					OR = {
+						religion_group = cult_of_saints 
+						religion = cristo_rey
+						religion = reformista
+					} 
+				}
+			}
 		}
 	}
 	
@@ -1174,19 +1186,19 @@ narrative_event = {
 	option = {
 		name = sacredheart.200.optA
 		trigger = {
-			religion_group = cult_of_saints
+			OR = {
+				religion = cristo_rey
+				religion = reformista
+			}
 		}
 	}
 	
 	option = {
 		name = sacredheart.200.optB
 		trigger = {
-			OR = { 
+			OR
 				religion_group = mesoamerican_gods
-				religion = mictlantec
-				religion = mictlantec_reformed
-				religion = uahomche
-				religion = neomayan
+				religion_group = cult_of_saints
 			}
 		}
 	}
@@ -1197,10 +1209,8 @@ narrative_event = {
 			NOR = {
 				religion_group = cult_of_saints
 				religion_group = mesoamerican_gods
-				religion = mictlantec
-				religion = mictlantec_reformed
-				religion = uahomche
-				religion = neomayan
+				religion = cristo_rey
+				religion = reformista
 			}
 		}
 	}
@@ -1228,12 +1238,18 @@ narrative_event = {
 		NOT = { #immersion-breaking
 			has_alternate_start_parameter = { key = religion_names value = random }
 		}
-		has_landed_title = k_hijo_del_sol #fires for the Pope, he's always there
+		has_landed_title = d_cristo_rey #fires for the Prelate, he's always there
 		NOT = { has_global_flag = mexican_reconquistas_unlocked }
 		
 		1767 = { # Mexico City
-			owner = {
-				NOT = { religion_group = cult_of_saints }
+			NOT = { 
+				owner = { 
+					OR = {
+						religion_group = cult_of_saints 
+						religion = cristo_rey
+						religion = reformista
+					} 
+				}
 			}
 		}
 	}
@@ -1249,19 +1265,19 @@ narrative_event = {
 	option = {
 		name = sacredheart.200.optA
 		trigger = {
-			religion_group = cult_of_saints
+			OR = {
+				religion = cristo_rey
+				religion = reformista
+			}
 		}
 	}
 	
 	option = {
 		name = sacredheart.200.optB
 		trigger = {
-			OR = { 
+			OR
 				religion_group = mesoamerican_gods
-				religion = mictlantec
-				religion = mictlantec_reformed
-				religion = uahomche
-				religion = neomayan
+				religion_group = cult_of_saints
 			}
 		}
 	}
@@ -1272,16 +1288,14 @@ narrative_event = {
 			NOR = {
 				religion_group = cult_of_saints
 				religion_group = mesoamerican_gods
-				religion = mictlantec
-				religion = mictlantec_reformed
-				religion = uahomche
-				religion = neomayan
+				religion = cristo_rey
+				religion = reformista
 			}
 		}
 	}
 }
 
-# THE START OF THE URSULINE CRUSADES - MISC CULT OF SAINTS
+# THE START OF THE RECONQUISTA - MISC CULT OF SAINTS
 narrative_event = {
 	id = sacredheart.203
 	title = sacredheart.200.title
@@ -1302,18 +1316,36 @@ narrative_event = {
 		NOT = { #immersion-breaking
 			has_alternate_start_parameter = { key = religion_names value = random }
 		}
-		has_landed_title = k_hijo_del_sol #fires for the Pope, he's always there
+		has_landed_title = d_cristo_rey#fires for the Prelate, he's always there
 		NOT = { has_global_flag = mexican_reconquistas_unlocked }
 		
 		OR = {
 			1788 = { # Guanajuato
-				NOT = { owner = { religion_group = cult_of_saints } }
+				NOT = { 
+					owner = { 
+						religion_group = cult_of_saints 
+						religion = cristo_rey
+						religion = reformista
+					} 
+				}
 			}
-			1749 = { # Colima
-				NOT = { owner = { religion_group = cult_of_saints } }
+			1740 = { # Guadalajara
+				NOT = { 
+					owner = { 
+						religion_group = cult_of_saints 
+						religion = cristo_rey
+						religion = reformista
+					} 
+				}
 			}
-			231 = { # Laredo
-				NOT = { owner = { religion_group = cult_of_saints } }
+			1771 = { # Puebla
+				NOT = { 
+					owner = { 
+						religion_group = cult_of_saints 
+						religion = cristo_rey
+						religion = reformista
+					} 
+				}
 			}
 		}
 	}
@@ -1329,19 +1361,19 @@ narrative_event = {
 	option = {
 		name = sacredheart.200.optA
 		trigger = {
-			religion_group = cult_of_saints
+			OR = {
+				religion = cristo_rey
+				religion = reformista
+			}
 		}
 	}
 	
 	option = {
 		name = sacredheart.200.optB
 		trigger = {
-			OR = { 
+			OR
 				religion_group = mesoamerican_gods
-				religion = mictlantec
-				religion = mictlantec_reformed
-				religion = uahomche
-				religion = neomayan
+				religion_group = cult_of_saints
 			}
 		}
 	}
@@ -1352,10 +1384,8 @@ narrative_event = {
 			NOR = {
 				religion_group = cult_of_saints
 				religion_group = mesoamerican_gods
-				religion = mictlantec
-				religion = mictlantec_reformed
-				religion = uahomche
-				religion = neomayan
+				religion = cristo_rey
+				religion = reformista
 			}
 		}
 	}

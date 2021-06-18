@@ -1,0 +1,80 @@
+# Opposition to destapado
+faction_change_heir = {
+
+	type = liege_titles
+	
+	warning_level = 0.7 # At this level of faction power we give player an alert. Set to 0 for no alerts.
+	
+	cancel_on_leader_death = yes # The faction will not automatically continue under a new leader
+	
+	# Plotter scope
+	potential = {
+		prisoner = no
+		is_ruler = yes
+		independent = no
+		is_landed = yes
+		is_adult = yes
+		primary_title = { holy_order = no }
+
+		NOT = { trait = incapable }
+		has_character_flag = opposes_destapado
+		liege = { 
+			OR = {
+				has_landed_title = e_mexico
+				has_landed_title = k_mexico 
+			}			
+		}
+		primary_title = { higher_tier_than = BARON }
+	}
+	
+	# Target scope
+	allow = {
+		prisoner = no
+	}
+	
+	# Faction member scope (ROOT = joiner, FROM = target)
+	allow_join = {
+		ROOT = {
+			is_ruler = yes
+			independent = no
+			is_landed = yes
+			is_adult = yes
+			NOT = { trait = incapable }
+			prisoner = no
+		}
+	}	
+	
+	# AI creation weight
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 1000
+			FROM = { has_character_flag = opposes_destapado }
+		}
+		
+		modifier = {
+			factor = 0
+			FROM = { NOT = { has_character_flag = opposes_destapado } }
+		}
+	}
+	
+	# AI membership weight: ROOT is the prospective member. FROM is the faction leader. FROMFROM is the target title or character.
+	membership = {
+		factor = 1
+
+	}
+	
+	success = {
+		always = no
+	}
+	
+	abort = {
+		always = no
+	}
+	
+	abort_effect = {
+	}
+	
+	effect = {
+	}
+}

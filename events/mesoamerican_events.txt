@@ -1,5 +1,11 @@
 #1-35	pilgrimage events
+#100-	bloodletting events
 #200-	ballgame events
+#300-	patron deity event
+#400-	bloodline creation
+#500-	stele events
+#600-	religious head for mictlantecs
+#700-	story events for uprising
 
 namespace = mesoamerica
 
@@ -32,7 +38,7 @@ character_event = {
 			}
 			if = {
 				limit = {
-					religion = uahomche
+					religion = qabantajik
 				}
 				character_event = { id = mesoamerica.18 }
 			}
@@ -460,6 +466,7 @@ character_event = {
 				remove_trait = imbecile
 				remove_trait = ugly
 				remove_trait = slow
+				remove_trait = distractible
 				remove_trait = shy
 				add_trait = gregarious
 			}
@@ -570,7 +577,7 @@ character_event = {
 		}
 		set_character_flag = pilgrimage_to_san_salvador
 		hidden_tooltip = {
-			character_event = { id = mesoamerica.13 days = 2 }
+			character_event = { id = mesoamerica.14 days = 2 }
 		}
 	}
 }
@@ -721,7 +728,7 @@ narrative_event = {
 
 character_event = {
 	id = mesoamerica.18
-	desc = EVTDESC_mayan_pilgrimage_destination_uahomche
+	desc = EVTDESC_mayan_pilgrimage_destination_qabantajik
 	picture = GFX_evt_kukulkan
 	border = GFX_event_normal_frame_religion
 	
@@ -1458,7 +1465,7 @@ character_event = {
 	option = {
 		name = EVTOPTA_esquipulas_start
 		hidden_tooltip = {
-			add_trait = on_pilgrimage
+			add_trait = on_pilgrimage #???
 			set_character_flag = good_pilgrimage
 			narrative_event = { id = mesoamerica.37 days = 45 } #Arrival in Esquipulas
 		}
@@ -1491,6 +1498,477 @@ narrative_event = {
 	option = {
 		name = EVTOPTA_esquipulas_arrival
 		hidden_tooltip = { character_event = { id = mesoamerica.23 days = 5 } }
+	}
+}
+
+##Bloodletting Events##
+character_event = {
+	id = mesoamerica.100
+	desc = EVTDESC_bloodletting_1
+	picture = GFX_evt_xipe #placeholder
+	border = GFX_event_normal_frame_religion
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		has_character_flag = bloodletting_ritual
+	}
+	
+	option = { #Bloodletting from hand 
+		name = EVTOPTA_bloodletting_1
+		trigger = { is_female = no }
+		custom_tooltip = { text = TXT_EVTOPTA_bloodletting_1 }
+		hidden_tooltip = {
+			character_event = { id = mesoamerica.103 days = 2 }
+		}
+	}
+	
+	option = { #Bloodletting from arm
+		name = EVTOPTB_bloodletting_1
+		custom_tooltip = { text = TXT_EVTOPTB_bloodletting_1 }
+		hidden_tooltip = {
+			character_event = { id = mesoamerica.102 days = 2 }
+		}
+	}
+	
+	option = { #Bloodletting from tongue
+		name = EVTOPTC_bloodletting_1
+		custom_tooltip = { text = TXT_EVTOPTC_bloodletting_1 }
+		hidden_tooltip = { #event used to decide outcome
+			character_event = { id = mesoamerica.101 days = 2 }
+		}
+	}
+}
+
+character_event = { #Tongue event decider
+	id = mesoamerica.101
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		has_character_flag = bloodletting_ritual
+	}
+	
+	immediate = {
+		random_list = {
+			70 = { #Goes well - immense piety and prestige
+				modifier = {
+					factor = 1.5
+					OR = {
+						trait = quick
+						trait = genius
+						trait = shrewd
+						trait = physician
+					}
+				}
+				modifier = {
+					factor = 0.75
+					OR = {
+						trait = dull
+						trait = slow
+						trait = distractible
+						trait = imbecile
+						trait = inbred
+					}
+				}
+				character_event = { id = mesoamerica.104 days = 1}
+			}
+			25 = { #Goes poorly - infection
+				modifier = {
+					factor = 0.75
+					OR = {
+						trait = quick
+						trait = genius
+						trait = shrewd
+						trait = physician
+					}
+				}
+				modifier = {
+					factor = 1.5
+					OR = {
+						trait = dull
+						trait = slow
+						trait = distractible
+						trait = imbecile
+						trait = inbred
+					}
+				}
+				character_event = { id = mesoamerica.105 days = 1}
+			}
+			5 = { #Goes very poorly - permanent lisp
+				modifier = {
+					factor = 0.5
+					OR = {
+						trait = quick
+						trait = genius
+						trait = shrewd
+						trait = physician
+					}
+				}
+				modifier = {
+					factor = 1.75
+					OR = {
+						trait = dull
+						trait = slow
+						trait = distractible
+						trait = imbecile
+						trait = inbred
+					}
+				}
+				character_event = { id = mesoamerica.106 days = 1}
+			}
+		}
+	}
+}
+
+character_event = { #Arm event decider
+	id = mesoamerica.102
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		has_character_flag = bloodletting_ritual
+	}
+	
+	immediate = {
+		random_list = {
+			75 = { #Goes well - pretty good piety and prestige
+				modifier = {
+					factor = 1.5
+					OR = {
+						trait = quick
+						trait = genius
+						trait = shrewd
+						trait = physician
+					}
+				}
+				modifier = {
+					factor = 0.75
+					OR = {
+						trait = dull
+						trait = slow
+						trait = distractible
+						trait = imbecile
+						trait = inbred
+					}
+				}
+				character_event = { id = mesoamerica.107 days = 1}
+			}
+			25 = { #Goes poorly - infection
+				modifier = {
+					factor = 0.75
+					OR = {
+						trait = quick
+						trait = genius
+						trait = shrewd
+						trait = physician
+					}
+				}
+				modifier = {
+					factor = 1.5
+					OR = {
+						trait = dull
+						trait = slow
+						trait = distractible
+						trait = imbecile
+						trait = inbred
+					}
+				}
+				character_event = { id = mesoamerica.108 days = 1}
+			}
+		}
+	}
+}
+
+character_event = { #Hand event decider
+	id = mesoamerica.103
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		has_character_flag = bloodletting_ritual
+	}
+	
+	immediate = {
+		random_list = {
+			80 = { #Goes well - alright piety and prestige
+				modifier = {
+					factor = 1.5
+					OR = {
+						trait = quick
+						trait = genius
+						trait = shrewd
+						trait = physician
+					}
+				}
+				modifier = {
+					factor = 0.75
+					OR = {
+						trait = dull
+						trait = slow
+						trait = distractible
+						trait = imbecile
+						trait = inbred
+					}
+				}
+				character_event = { id = mesoamerica.109 days = 1}
+			}
+			20 = { #Goes poorly - infection
+				modifier = {
+					factor = 0.75
+					OR = {
+						trait = quick
+						trait = genius
+						trait = shrewd
+						trait = physician
+					}
+				}
+				modifier = {
+					factor = 1.5
+					OR = {
+						trait = dull
+						trait = slow
+						trait = distractible
+						trait = imbecile
+						trait = inbred
+					}
+				}
+				character_event = { id = mesoamerica.110 days = 1}
+			}
+		}
+	}
+}
+
+#Tongue event (good)
+character_event = {
+	id = mesoamerica.104
+	desc = EVTDESC_bloodletting_2
+	picture = GFX_evt_xipe
+	border = GFX_event_normal_frame_religion
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		has_character_flag = bloodletting_ritual
+	}
+	
+	option = {
+		name = EVTOPTA_bloodletting_2
+		prestige = 350
+		piety = 350
+		add_trait = bloodlet #this will help solidify it in the minds of players
+	}
+	
+	after = {
+		clr_character_flag = bloodletting_ritual
+	}
+}
+
+#Tongue event (bad)
+character_event = {
+	id = mesoamerica.105
+	desc = EVTDESC_bloodletting_3
+	picture = GFX_evt_bad_news
+	border = GFX_event_normal_frame_religion
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		has_character_flag = bloodletting_ritual
+	}
+	
+	option = {
+		name = EVTOPTA_bloodletting_3
+		prestige = -50
+		piety = 200
+		if = {
+			limit = {
+				NOT = {
+					has_dlc = "Reapers"
+				}
+			}
+			add_trait = wounded
+		}
+		if = {
+			limit = {
+				has_dlc = "Reapers"
+			}
+			add_trait = infection
+			hidden_tooltip = {
+				character_event = { id = RIP.11001 days = 365 random = 1095 }
+			}
+		}
+		add_trait = bloodlet #this will help solidify it in the minds of players
+		
+	}
+	
+	after = {
+		clr_character_flag = bloodletting_ritual
+	}
+}
+
+#Tongue event (very bad)
+character_event = {
+	id = mesoamerica.106
+	desc = EVTDESC_bloodletting_4
+	picture = GFX_evt_bad_news
+	border = GFX_event_normal_frame_religion
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		has_character_flag = bloodletting_ritual
+	}
+	
+	option = {
+		name = EVTOPTA_bloodletting_4
+		prestige = -150
+		piety = 50
+		add_trait = lisp
+		add_trait = bloodlet #this will help solidify it in the minds of players
+		
+	}
+	
+	after = {
+		clr_character_flag = bloodletting_ritual
+	}
+}
+
+#Arm event (good)
+character_event = {
+	id = mesoamerica.107
+	desc = EVTDESC_bloodletting_5
+	picture = GFX_evt_xipe
+	border = GFX_event_normal_frame_religion
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		has_character_flag = bloodletting_ritual
+	}
+	
+	option = {
+		name = EVTOPTA_bloodletting_5
+		prestige = 250
+		piety = 250
+		add_trait = bloodlet #this will help solidify it in the minds of players
+		
+	}
+	
+	after = {
+		clr_character_flag = bloodletting_ritual
+	}
+}
+
+#Arm event (bad)
+character_event = {
+	id = mesoamerica.108
+	desc = EVTDESC_bloodletting_6
+	picture = GFX_evt_bad_news
+	border = GFX_event_normal_frame_religion
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		has_character_flag = bloodletting_ritual
+	}
+	
+	option = {
+		name = EVTOPTA_bloodletting_6
+		prestige = -75
+		piety = 100
+		if = {
+			limit = {
+				NOT = {
+					has_dlc = "Reapers"
+				}
+			}
+			add_trait = wounded
+		}
+		if = {
+			limit = {
+				has_dlc = "Reapers"
+			}
+			add_trait = infection
+			hidden_tooltip = {
+				character_event = { id = RIP.11001 days = 365 random = 1095 }
+			}
+		}
+		add_trait = bloodlet #this will help solidify it in the minds of players
+		
+	}
+	
+	after = {
+		clr_character_flag = bloodletting_ritual
+	}
+}
+
+#Hand event (good)
+character_event = {
+	id = mesoamerica.109
+	desc = EVTDESC_bloodletting_7
+	picture = GFX_evt_xipe
+	border = GFX_event_normal_frame_religion
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		has_character_flag = bloodletting_ritual
+	}
+	
+	option = {
+		name = EVTOPTA_bloodletting_7
+		prestige = 200
+		piety = 200
+		add_trait = bloodlet #this will help solidify it in the minds of players
+		
+	}
+	
+	after = {
+		clr_character_flag = bloodletting_ritual
+	}
+}
+
+#Hand event (bad)
+character_event = {
+	id = mesoamerica.110
+	desc = EVTDESC_bloodletting_8
+	picture = GFX_evt_bad_news
+	border = GFX_event_normal_frame_religion
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		has_character_flag = bloodletting_ritual
+	}
+	
+	option = {
+		name = EVTOPTA_bloodletting_8
+		prestige = -100
+		piety = 50
+		if = {
+			limit = {
+				NOT = {
+					has_dlc = "Reapers"
+				}
+			}
+			add_trait = wounded
+		}
+		if = {
+			limit = {
+				has_dlc = "Reapers"
+			}
+			add_trait = infection
+			hidden_tooltip = {
+				character_event = { id = RIP.11001 days = 365 random = 1095 }
+			}
+		}
+		add_trait = bloodlet #this will help solidify it in the minds of players
+		
+	}
+	
+	after = {
+		clr_character_flag = bloodletting_ritual
 	}
 }
 
@@ -1581,7 +2059,7 @@ character_event = {
 							trait = imbecile
 						}
 					}	
-					character_event = { id = mesoamerica.103 days = 1 }
+					character_event = { id = mesoamerica.203 days = 1 }
 				}
 				50 = { # you lose
 					modifier = { # more likely if you're physically weak or disabled
@@ -1627,7 +2105,7 @@ character_event = {
 			}
 		}
 	}
-}
+}	
 
 character_event = {
 	id = mesoamerica.201
@@ -1650,27 +2128,13 @@ character_event = {
 		prestige = 50
 		if = {
 			limit = {
-				NOR = { 
-					religion_group = cult_of_saints
-					religion = sol_invicta
-					religion = neomayan
-					religion = uahomche
-					religion = mictlantec
-					religion = mictlantec_reformed
-				}
+				NOT = { religion = neomayan }
 			}
 			character_event = { id = mesoamerica.205 days = 1 } # other captain executed
 		}
 		if = {
 			limit = {
-				OR = {
-					religion_group = cult_of_saints
-					religion = sol_invicta
-					religion = neomayan
-					religion = uahomche
-					religion = mictlantec
-					religion = mictlantec_reformed
-				}
+				religion = neomayan
 			}
 			character_event = { id = mesoamerica.206 days = 1 } # end of game
 		}
@@ -1698,27 +2162,13 @@ character_event = {
 		prestige = -50
 		if = {
 			limit = {
-				NOR = { 
-						religion_group = cult_of_saints
-						religion = sol_invicta
-						religion = neomayan
-						religion = uahomche
-						religion = mictlantec
-						religion = mictlantec_reformed
-				}
+				NOT = { religion = neomayan }
 			}
 			character_event = { id = mesoamerica.205 days = 1 } # your captain executed
 		}
 		if = {
 			limit = {
-				OR = {
-					religion_group = cult_of_saints
-					religion = sol_invicta
-					religion = neomayan
-					religion = uahomche
-					religion = mictlantec
-					religion = mictlantec_reformed
-				}
+				religion = neomayan
 			}
 			character_event = { id = mesoamerica.206 days = 1 } # end of game
 		}
@@ -1746,27 +2196,13 @@ character_event = {
 		prestige = 250
 		if = {
 			limit = {
-				NOR = {
-						religion_group = cult_of_saints
-						religion = sol_invicta
-						religion = neomayan
-						religion = uahomche
-						religion = mictlantec
-						religion = mictlantec_reformed
-				}
+				NOT = { religion = neomayan }
 			}
 			character_event = { id = mesoamerica.205 days = 1 } # other captain executed
 		}
 		if = {
 			limit = {
-				OR = {
-					religion_group = cult_of_saints
-					religion = sol_invicta
-					religion = neomayan
-					religion = uahomche
-					religion = mictlantec
-					religion = mictlantec_reformed
-				}
+				religion = neomayan
 			}
 			character_event = { id = mesoamerica.206 days = 1 } # end of game
 		}
@@ -1795,34 +2231,20 @@ character_event = {
 		add_trait = wounded
 		if = {
 			limit = {
-				NOR = { 
-						religion_group = cult_of_saints
-						religion = sol_invicta
-						religion = neomayan
-						religion = uahomche
-						religion = mictlantec
-						religion = mictlantec_reformed
-				}
+				NOT = { religion = neomayan }
 			}
 			character_event = { id = mesoamerica.205 days = 1 } # other captain executed
 		}
 		if = {
 			limit = {
-				OR = { 
-					religion_group = cult_of_saints
-					religion = sol_invicta
-					religion = neomayan
-					religion = uahomche
-					religion = mictlantec
-					religion = mictlantec_reformed
-				}
+				religion = neomayan
 			}
 			character_event = { id = mesoamerica.206 days = 1 } # end of game
 		}
 	}
 }
 
-character_event = { # Execution of losing team's captain. Everyone but Tonaltec excluded.
+character_event = { # Execution of losing team's captain. Neomayans excluded.
 	id = mesoamerica.205
 	desc = {
 		trigger = { has_character_flag = ulama_winning_team }
@@ -1883,14 +2305,7 @@ character_event = {
 		name = EVTOPTA_ulama_game_conclusion
 		if = {
 			limit = {
-				OR = { 
-					religion_group = cult_of_saints
-					religion = sol_invicta
-					religion = neomayan
-					religion = uahomche
-					religion = mictlantec
-					religion = mictlantec_reformed
-				}
+				religion = neomayan
 			}
 			piety = 100
 		}
@@ -1911,5 +2326,2679 @@ character_event = {
 		clr_character_flag = ulama_in_progress
 		clr_character_flag = ulama_winning_team
 		clr_character_flag = ulama_losing_team
+	}
+}
+
+character_event = {
+	id = mesoamerica.300
+	desc = EVTDESC_neomayan_patron
+	picture = GFX_evt_maya_codex
+	border = GFX_event_normal_frame_religion
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_neomayan_patron
+		custom_tooltip = { text = TXT_hunab_ku }
+		hidden_tooltip = {
+			add_character_modifier = {
+				name = patron_hunab_ku
+				duration = -1
+			}
+		}
+	}
+	
+	option = {
+		name = EVTOPTB_neomayan_patron
+		custom_tooltip = { text = TXT_acquarius }
+		hidden_tooltip = {
+			add_character_modifier = {
+				name = patron_acquarius
+				duration = -1
+			}
+		}
+	}
+	
+	option = {
+		name = EVTOPTC_neomayan_patron
+		custom_tooltip = { text = TXT_pacal_votan }
+		hidden_tooltip = {
+			add_character_modifier = {
+				name = patron_pacal_votan
+				duration = -1
+			}
+		}
+	}
+	
+	option = {
+		name = EVTOPTD_neomayan_patron
+		custom_tooltip = { text = TXT_valum_votan }
+		hidden_tooltip = {
+			add_character_modifier = {
+				name = patron_valum_votan
+				duration = -1
+			}
+		}
+	}
+}
+
+narrative_event = {
+	id = mesoamerica.400
+	title = EVTTITLE_kalomte_votan
+	desc = EVTDESC_kalomte_votan
+	picture = GFX_evt_kukulkan
+	border = GFX_event_narrative_frame_religion
+	
+	is_triggered_only = yes
+	
+	religion_group = mesoamerican_gods
+	
+	trigger = {
+		has_landed_title = e_yucatan
+		OR = {
+			religion = neomayan
+			religion = qabantajik
+		}
+		NOT = { has_global_flag = kalomte_votan_created }
+	}
+	
+	immediate = {
+		set_global_flag = kalomte_votan_created
+	}
+	
+	option = {
+		name = EVTOPTA_kalomte_votan
+		prestige = 3000
+		give_nickname = nick_the_reborn
+		if = {
+			limit = { 
+				has_dlc = "Holy Fury" 
+				is_female = no
+			}
+			create_bloodline = {
+				type = kalomte_votan_male
+			}
+			new_bloodline = {
+				set_description = "bloodline_desc_kalomte_votan"
+			}	
+			sound_effect = bloodline_added			
+		}
+		else_if = {
+			limit = { 
+				has_dlc = "Holy Fury" 
+				is_female = yes
+			}
+			create_bloodline = {
+				type = kalomte_votan_female
+			}
+			new_bloodline = {
+				set_description = "bloodline_desc_kalomte_votan"
+			}	
+			sound_effect = bloodline_added			
+		}
+	}
+}
+
+###################################
+#
+# - Stele Events
+#
+###################################
+
+# Written by Henrik Eklund, adapted for Stelea by 9Kbits
+
+# You commission a stele
+character_event = {
+	id = mesoamerica.500
+	desc = EVTDESC_mesoamerica_500
+	picture = GFX_evt_runestone_raising_oldgods
+	border = GFX_event_normal_frame_diplomacy
+	
+	is_triggered_only = yes
+	
+	hide_from = yes
+	
+	option = { # Based on one of your traits
+		name = EVTOPTA_mesoamerica_500
+		
+		custom_tooltip = {
+			text = stele_traits
+			hidden_tooltip = { 
+				character_event = { id = mesoamerica.501 }
+			}
+		}
+	}
+	option = { # In memory of father
+		name = EVTOPTB_mesoamerica_500
+		trigger = {
+			father_even_if_dead = {
+				is_alive = no
+			}
+		}
+		if = {
+			limit = { father_even_if_dead = { death_reason = death_natural } }
+			hidden_tooltip = { narrative_event = { id = mesoamerica.510 days = 60 random = 10 } }
+		}
+		if = {
+			limit = { father_even_if_dead = { death_reason = death_battle } }
+			hidden_tooltip = { narrative_event = { id = mesoamerica.511 days = 60 random = 10 } }
+		}
+		if = {
+			limit = { 
+				father_even_if_dead = {
+					death_execution_trigger = yes
+					NOT = { killer = { character = ROOT } }
+				} 
+			}
+			hidden_tooltip = { narrative_event = { id = mesoamerica.512 days = 60 random = 10 } }
+		}
+		if = {
+			limit = { 
+				father_even_if_dead = { 
+					death_murder_known_trigger = yes
+					NOT = { killer = { character = ROOT } }
+				}
+			}
+			hidden_tooltip = { narrative_event = { id = mesoamerica.513 days = 60 random = 10 } }
+		}
+		if = {
+			limit = { 
+				father_even_if_dead = { 
+					OR = {
+						death_accident_trigger = yes
+						death_murder_unknown_trigger = yes
+					} 
+				}
+			}
+			hidden_tooltip = { narrative_event = { id = mesoamerica.515 days = 60 random = 10 } }
+		}
+		if = {
+			limit = { 
+				father_even_if_dead = {
+					death_reason = death_dungeon
+					NOT = { killer = { character = ROOT } }
+				} 
+			}
+			hidden_tooltip = { narrative_event = { id = mesoamerica.516 days = 60 random = 10 } }
+		}
+		if = {
+			limit = { 
+				father_even_if_dead = {
+					death_sacrificed_trigger = yes
+					NOT = { killer = { character = ROOT } }
+				} 
+			}
+			hidden_tooltip = { narrative_event = { id = mesoamerica.517 days = 60 random = 10 } }
+		}
+		if = {
+			limit = { father_even_if_dead = { death_reason = death_duel } }
+			hidden_tooltip = { narrative_event = { id = mesoamerica.518 days = 60 random = 10 } }
+		}
+		if = {
+			limit = { father_even_if_dead = { death_suicide_trigger = yes } }
+			hidden_tooltip = { narrative_event = { id = mesoamerica.519 days = 60 random = 10 } }
+		}
+		if = {
+			limit = { 
+				father_even_if_dead = { 
+					OR = {
+						and = {
+							death_murder_known_trigger = yes
+							killer = { character = ROOT }
+						}
+						and = {
+							death_execution_trigger = yes
+							killer = { character = ROOT }
+						}
+						and = {
+							death_reason = death_dungeon 
+							killer = { character = ROOT }
+						}
+						and = {
+							death_sacrificed_trigger = yes
+							killer = { character = ROOT }
+						}
+					}
+				} 
+			}
+			hidden_tooltip = { narrative_event = { id = mesoamerica.520 days = 60 random = 10 } }
+		}
+		if = {
+			limit = {
+				NOT = {
+					father_even_if_dead = {
+						OR = {
+							death_reason = death_natural
+							death_reason = death_battle
+							death_execution_trigger = yes
+							death_murder_known_trigger = yes
+							death_murder_unknown_trigger = yes
+							death_accident_trigger = yes
+							death_reason = death_dungeon
+							death_sacrificed_trigger = yes
+							death_reason = death_duel
+							death_suicide_trigger = yes
+						}
+					}
+				}
+			}
+			hidden_tooltip = { narrative_event = { id = mesoamerica.521 days = 60 random = 10 } }
+		}
+		custom_tooltip = { text = stele_carved }
+	}
+	option = { # In memory of mother
+		name = EVTOPTC_mesoamerica_500
+		trigger = {
+			mother_even_if_dead = {
+				is_alive = no
+			}
+		}
+		if = {
+			limit = { mother_even_if_dead = { death_reason = death_natural } }
+			hidden_tooltip = { narrative_event = { id = mesoamerica.530 days = 60 random = 10 } }
+		}
+		if = {
+			limit = { 
+				mother_even_if_dead = {
+					death_execution_trigger = yes
+					NOT = { killer = { character = ROOT } }
+				} 
+			}
+			hidden_tooltip = { narrative_event = { id = mesoamerica.531 days = 60 random = 10 } }
+		}
+		if = {
+			limit = { 
+				mother_even_if_dead = { 
+					death_murder_known_trigger = yes
+					NOT = { killer = { character = ROOT } }
+				}
+			}
+			hidden_tooltip = { narrative_event = { id = mesoamerica.532 days = 60 random = 10 } }
+		}
+		if = {
+			limit = { 
+				mother_even_if_dead = { 
+					OR = {
+						death_accident_trigger = yes
+						death_murder_unknown_trigger = yes
+					}
+				}
+			}
+			hidden_tooltip = { narrative_event = { id = mesoamerica.534 days = 60 random = 10 } }
+		}
+		if = {
+			limit = { 
+				mother_even_if_dead = { 
+					death_reason = death_dungeon
+					NOT = { killer = { character = ROOT } }
+				} 
+			}
+			hidden_tooltip = { narrative_event = { id = mesoamerica.535 days = 60 random = 10 } }
+		}
+		if = {
+			limit = { 
+				mother_even_if_dead = {
+					death_sacrificed_trigger = yes
+					NOT = { killer = { character = ROOT } }
+				} 
+			}
+			hidden_tooltip = { narrative_event = { id = mesoamerica.536 days = 60 random = 10 } }
+		}
+		if = {
+			limit = { mother_even_if_dead = { death_suicide_trigger = yes } }
+			hidden_tooltip = { narrative_event = { id = mesoamerica.537 days = 60 random = 10 } }
+		}
+		if = {
+			limit = { 
+				mother_even_if_dead = { 
+					OR = {
+						and = {
+							death_murder_known_trigger = yes
+							killer = { character = ROOT }
+						}
+						and = {
+							death_execution_trigger = yes
+							killer = { character = ROOT }
+						}
+						and = {
+							death_reason = death_dungeon 
+							killer = { character = ROOT }
+						}
+						and = {
+							death_sacrificed_trigger = yes
+							killer = { character = ROOT }
+						}
+					}
+				} 
+			}
+			hidden_tooltip = { narrative_event = { id = mesoamerica.538 days = 60 random = 10 } }
+		}
+		if = {
+			limit = {
+				NOT = {
+					mother_even_if_dead = { 
+						OR = {
+							death_reason = death_natural
+							death_execution_trigger = yes
+							death_murder_known_trigger = yes
+							death_murder_unknown_trigger = yes
+							death_accident_trigger = yes
+							death_reason = death_dungeon
+							death_sacrificed_trigger = yes
+							death_suicide_trigger = yes
+						}
+					}
+				}
+			}
+			hidden_tooltip = { narrative_event = { id = mesoamerica.539 days = 60 random = 10 } }
+		}
+		custom_tooltip = { text = stele_carved }
+	}
+}
+
+# Based on one of your traits
+character_event = {
+	id = mesoamerica.501
+	desc = EVTDESC_mesoamerica_501
+	picture = GFX_evt_runestone_raising_oldgods
+	border = GFX_event_normal_frame_diplomacy
+	
+	is_triggered_only = yes
+	
+	hide_from = yes
+	
+	option = { # Generic
+		name = EVTOPTA_mesoamerica_501
+		trigger = {
+			is_smart_trigger = no
+			is_dumb_trigger = no
+			is_strong_trigger = no
+			NOT = {
+				trait = lunatic
+				trait = drunkard
+				trait = fair
+				trait = dwarf
+				trait = scholar
+				trait = impaler
+				trait = poet
+				trait = lustful
+				trait = gluttonous
+				trait = charitable
+				trait = kind
+				trait = proud
+				trait = humble
+				trait = brave
+				trait = just
+				trait = zealous
+				trait = cruel
+				trait = possessed
+			}
+		}
+		
+		custom_tooltip = {
+			text = stele_carved
+			hidden_tooltip = { narrative_event = { id = mesoamerica.550 days = 60 random = 10 } }
+		}
+	}
+	option = {
+		name = EVTOPTB_mesoamerica_501
+		tooltip_info = lunatic
+		trigger = {
+			trait = lunatic
+		}
+		
+		custom_tooltip = {
+			text = stele_carved
+			hidden_tooltip = { narrative_event = { id = mesoamerica.551 days = 60 random = 10 } }
+		}
+	}
+	option = {
+		name = EVTOPTC_mesoamerica_501
+		tooltip_info = drunkard
+		trigger = {
+			trait = drunkard
+			NOT = {
+				trait = lunatic
+				trait = possessed
+				is_dumb_trigger = yes
+			}
+		}
+		
+		custom_tooltip = { 
+			text = stele_carved
+			hidden_tooltip = { narrative_event = { id = mesoamerica.552 days = 60 random = 10 } }
+		}
+	}
+	option = {
+		name = EVTOPTD_mesoamerica_501
+		tooltip_info = fair
+		trigger = {
+			trait = fair
+			NOT = {
+				trait = lunatic
+				trait = possessed
+				is_dumb_trigger = yes
+			}
+		}
+		
+		custom_tooltip = {
+			text = stele_carved
+			hidden_tooltip = { narrative_event = { id = mesoamerica.553 days = 60 random = 10 } }
+		}
+	}
+	option = {
+		name = EVTOPTE_mesoamerica_501
+		tooltip_info = dwarf
+		trigger = {
+			trait = dwarf
+			NOT = {
+				trait = lunatic
+				trait = possessed
+				is_dumb_trigger = yes
+			}
+		}
+		
+		custom_tooltip = {
+			text = stele_carved
+			hidden_tooltip = { narrative_event = { id = mesoamerica.554 days = 60 random = 10 } }
+		}
+	}
+	option = {
+		name = EVTOPTF_mesoamerica_501
+		tooltip_info_custom = available_due_to_smart
+		trigger = {
+			is_smart_trigger = yes
+			NOT = {
+				trait = lunatic
+				trait = possessed
+				is_dumb_trigger = yes
+			}
+		}
+		
+		custom_tooltip = {
+			text = stele_carved
+			hidden_tooltip = { narrative_event = { id = mesoamerica.555 days = 60 random = 10 } }
+		}
+	}
+	option = {
+		name = EVTOPTI_mesoamerica_501
+		tooltip_info = imbecile
+		trigger = {
+			is_dumb_trigger = yes
+		}
+		
+		custom_tooltip = { 
+			text = stele_carved
+			hidden_tooltip = { narrative_event = { id = mesoamerica.556 days = 60 random = 10 } }
+		}
+	}
+	option = {
+		name = EVTOPTJ_mesoamerica_501
+		tooltip_info = strong
+		trigger = {
+			is_strong_trigger = yes
+			NOT = {
+				trait = lunatic
+				trait = possessed
+				is_dumb_trigger = yes
+			}
+		}
+		
+		custom_tooltip = {
+			text = stele_carved
+			hidden_tooltip = { narrative_event = { id = mesoamerica.557 days = 60 random = 10 } }
+		}
+	}
+	option = {
+		name = EVTOPTK_mesoamerica_501
+		tooltip_info = scholar
+		trigger = {
+			trait = scholar
+			NOT = {
+				trait = lunatic
+				trait = possessed
+				is_dumb_trigger = yes
+			}
+		}
+		
+		custom_tooltip = {
+			text = stele_carved
+			hidden_tooltip = { narrative_event = { id = mesoamerica.558 days = 60 random = 10 } }
+		}
+	}
+	option = {
+		name = EVTOPTL_mesoamerica_501
+		tooltip_info = impaler
+		trigger = {
+			trait = impaler
+			NOT = {
+				trait = lunatic
+				trait = possessed
+				is_dumb_trigger = yes
+			}
+		}
+		
+		custom_tooltip = {
+			text = stele_carved
+			hidden_tooltip = { narrative_event = { id = mesoamerica.559 days = 60 random = 10 } }
+		}
+	}
+	option = {
+		name = EVTOPTM_mesoamerica_501
+		tooltip_info = poet
+		trigger = {
+			trait = poet
+			NOT = {
+				trait = lunatic
+				trait = possessed
+				is_dumb_trigger = yes
+			}
+		}
+		
+		custom_tooltip = {
+			text = stele_carved
+			hidden_tooltip = { narrative_event = { id = mesoamerica.560 days = 60 random = 10 } }
+		}
+	}
+	option = {
+		name = EVTOPTN_mesoamerica_501
+		tooltip_info = lustful
+		trigger = {
+			trait = lustful
+			NOT = {
+				trait = lunatic
+				trait = possessed
+				is_dumb_trigger = yes
+			}
+		}
+		
+		custom_tooltip = {
+			text = stele_carved
+			hidden_tooltip = { narrative_event = { id = mesoamerica.561 days = 60 random = 10 } }
+		}
+	}
+	option = {
+		name = EVTOPTO_mesoamerica_501
+		tooltip_info = gluttonous
+		trigger = {
+			trait = gluttonous
+			NOT = {
+				trait = lunatic
+				trait = possessed
+				is_dumb_trigger = yes
+			}
+		}
+		
+		custom_tooltip = {
+			text = stele_carved
+			hidden_tooltip = { narrative_event = { id = mesoamerica.562 days = 60 random = 10 } }
+		}
+	}
+	option = {
+		name = EVTOPTP_mesoamerica_501
+		tooltip_info = charitable
+		trigger = {
+			trait = charitable
+			NOT = {
+				trait = lunatic
+				trait = possessed
+				is_dumb_trigger = yes
+			}
+		}
+		
+		custom_tooltip = {
+			text = stele_carved
+			hidden_tooltip = { narrative_event = { id = mesoamerica.563 days = 60 random = 10 } }
+		}
+	}
+	option = {
+		name = EVTOPTQ_mesoamerica_501
+		tooltip_info = kind
+		trigger = {
+			trait = kind
+			NOT = {
+				trait = lunatic
+				trait = possessed
+				is_dumb_trigger = yes
+			}
+		}
+		
+		custom_tooltip = {
+			text = stele_carved
+			hidden_tooltip = { narrative_event = { id = mesoamerica.564 days = 60 random = 10 } }
+		}
+	}
+	option = {
+		name = EVTOPTR_mesoamerica_501
+		tooltip_info = proud
+		trigger = {
+			trait = proud
+			NOT = {
+				trait = lunatic
+				trait = possessed
+				is_dumb_trigger = yes
+			}
+		}
+		
+		custom_tooltip = {
+			text = stele_carved
+			hidden_tooltip = { narrative_event = { id = mesoamerica.565 days = 60 random = 10 } }
+		}
+	}
+	option = {
+		name = EVTOPTS_mesoamerica_501
+		tooltip_info = humble
+		trigger = {
+			trait = humble
+			NOT = {
+				trait = lunatic
+				trait = possessed
+				is_dumb_trigger = yes
+			}
+		}
+		
+		custom_tooltip = { 
+			text = stele_carved
+			hidden_tooltip = { narrative_event = { id = mesoamerica.566 days = 60 random = 10 } }
+		}
+	}
+	option = {
+		name = EVTOPTT_mesoamerica_501
+		tooltip_info = brave
+		trigger = {
+			trait = brave
+			NOT = {
+				trait = lunatic
+				trait = possessed
+				is_dumb_trigger = yes
+			}
+		}
+		
+		custom_tooltip = {
+			text = stele_carved
+			hidden_tooltip = { narrative_event = { id = mesoamerica.567 days = 60 random = 10 } }
+		}
+	}
+	option = {
+		name = EVTOPTU_mesoamerica_501
+		tooltip_info = just
+		trigger = {
+			trait = just
+			NOT = {
+				trait = lunatic
+				trait = possessed
+				is_dumb_trigger = yes
+			}
+		}
+		
+		custom_tooltip = { 
+			text = stele_carved
+			hidden_tooltip = { narrative_event = { id = mesoamerica.568 days = 60 random = 10 } }
+		}
+	}
+	option = {
+		name = EVTOPTV_mesoamerica_501
+		tooltip_info = zealous
+		trigger = {
+			trait = zealous
+			religion = qabantajik
+			NOT = {
+				trait = lunatic
+				trait = possessed
+				is_dumb_trigger = yes
+			}
+		}
+
+		custom_tooltip = {
+			text = stele_carved
+			hidden_tooltip = { narrative_event = { id = mesoamerica.569 days = 60 random = 10 } }
+		}
+	}
+	option = {
+		name = EVTOPTX_mesoamerica_501
+		tooltip_info = cruel
+		trigger = {
+			trait = cruel
+			NOT = {
+				trait = lunatic
+				trait = possessed
+				is_dumb_trigger = yes
+			}
+		}
+		custom_tooltip = { 
+			text = stele_carved
+			hidden_tooltip = { narrative_event = { id = mesoamerica.571 days = 60 random = 10 } }
+		}
+	}
+	option = {
+		name = EVTOPTY_mesoamerica_501
+		tooltip_info = possessed
+		trigger = {
+			trait = possessed
+		}
+
+		custom_tooltip = { 
+			text = stele_carved
+			hidden_tooltip = { narrative_event = { id = mesoamerica.572 days = 60 random = 10 } }
+		}
+	}
+	option = {
+		name = EVTOPTZ_mesoamerica_501
+		tooltip_info = zealous
+		trigger = {
+			trait = zealous
+			religion = neomayan
+			NOT = {
+				trait = lunatic
+				trait = possessed
+				is_dumb_trigger = yes
+			}
+		}
+		
+		custom_tooltip = {
+			text = stele_carved
+			hidden_tooltip = { narrative_event = { id = mesoamerica.570 days = 60 random = 10 } }
+		}
+			
+	}
+}
+
+# Father (Death by Natural Causes)
+narrative_event = {
+	id = mesoamerica.510
+	title = EVTNAME_mesoamerica_510
+	desc = EVTDESC_mesoamerica_510
+	picture = GFX_evt_runestone_raising_oldgods
+	border = GFX_event_narrative_frame_diplomacy
+	
+	is_triggered_only = yes
+	
+	hide_from = yes
+	
+	option = {
+		name = EVTOPTA_mesoamerica_550
+		prestige = 200
+		piety = 100
+		add_character_modifier = {
+			name = raised_stele
+			duration = 730
+		}
+		if = {
+			limit = { ai = no }
+			chronicle = {
+				entry = CHRONICLE_RUNESTONE_FATHER
+				picture = GFX_evt_runestone_raising_oldgods
+			}
+		}
+	}
+}
+
+# Father (Death by Battle)
+narrative_event = {
+	id = mesoamerica.511
+	title = EVTNAME_mesoamerica_510
+	desc = EVTDESC_mesoamerica_511
+	picture = GFX_evt_runestone_raising_oldgods
+	border = GFX_event_narrative_frame_diplomacy
+	
+	is_triggered_only = yes
+	
+	hide_from = yes
+	
+	option = {
+		name = EVTOPTA_mesoamerica_550
+		prestige = 300
+		add_character_modifier = {
+			name = raised_stele
+			duration = 730
+		}
+		if = {
+			limit = { ai = no }
+			chronicle = {
+				entry = CHRONICLE_RUNESTONE_FATHER
+				picture = GFX_evt_runestone_raising_oldgods
+			}
+		}
+	}
+}
+
+# Father (Death by Execution)
+narrative_event = {
+	id = mesoamerica.512
+	title = EVTNAME_mesoamerica_510
+	desc = EVTDESC_mesoamerica_512
+	picture = GFX_evt_runestone_raising_oldgods
+	border = GFX_event_narrative_frame_diplomacy
+	
+	is_triggered_only = yes
+	
+	hide_from = yes
+	
+	option = {
+		name = EVTOPTA_mesoamerica_550
+		prestige = 200
+		piety = 100
+		add_character_modifier = {
+			name = raised_stele
+			duration = 730
+		}
+		if = {
+			limit = { ai = no }
+			chronicle = {
+				entry = CHRONICLE_RUNESTONE_FATHER
+				picture = GFX_evt_runestone_raising_oldgods
+			}
+		}
+	}
+}
+
+# Father (Death by Murder)
+narrative_event = {
+	id = mesoamerica.513
+	title = EVTNAME_mesoamerica_510
+	desc = EVTDESC_mesoamerica_513
+	picture = GFX_evt_runestone_raising_oldgods
+	border = GFX_event_narrative_frame_diplomacy
+	
+	is_triggered_only = yes
+	
+	hide_from = yes
+	
+	option = {
+		name = EVTOPTA_mesoamerica_550
+		prestige = 200
+		piety = 100
+		add_character_modifier = {
+			name = raised_stele
+			duration = 730
+		}
+		if = {
+			limit = { ai = no }
+			chronicle = {
+				entry = CHRONICLE_RUNESTONE_FATHER
+				picture = GFX_evt_runestone_raising_oldgods
+			}
+		}
+	}
+}
+
+# Father (Death by Accident)
+narrative_event = {
+	id = mesoamerica.515
+	title = EVTNAME_mesoamerica_510
+	desc = EVTDESC_mesoamerica_515
+	picture = GFX_evt_runestone_raising_oldgods
+	border = GFX_event_narrative_frame_diplomacy
+	
+	is_triggered_only = yes
+	
+	hide_from = yes
+	
+	option = {
+		name = EVTOPTA_mesoamerica_550
+		prestige = 200
+		piety = 100
+		add_character_modifier = {
+			name = raised_stele
+			duration = 730
+		}
+		if = {
+			limit = { ai = no }
+			chronicle = {
+				entry = CHRONICLE_RUNESTONE_FATHER
+				picture = GFX_evt_runestone_raising_oldgods
+			}
+		}
+	}
+}
+
+# Father (Death by Dungeon)
+narrative_event = {
+	id = mesoamerica.516
+	title = EVTNAME_mesoamerica_510
+	desc = EVTDESC_mesoamerica_516
+	picture = GFX_evt_runestone_raising_oldgods
+	border = GFX_event_narrative_frame_diplomacy
+	
+	is_triggered_only = yes
+	
+	hide_from = yes
+	
+	option = {
+		name = EVTOPTA_mesoamerica_550
+		prestige = 200
+		piety = 100
+		add_character_modifier = {
+			name = raised_stele
+			duration = 730
+		}
+		if = {
+			limit = { ai = no }
+			chronicle = {
+				entry = CHRONICLE_RUNESTONE_FATHER
+				picture = GFX_evt_runestone_raising_oldgods
+			}
+		}
+	}
+}
+
+# Father (Death by Sacrifice)
+narrative_event = {
+	id = mesoamerica.517
+	title = EVTNAME_mesoamerica_510
+	desc = EVTDESC_mesoamerica_517
+	picture = GFX_evt_runestone_raising_oldgods
+	border = GFX_event_narrative_frame_diplomacy
+	
+	is_triggered_only = yes
+	
+	hide_from = yes
+	
+	option = {
+		name = EVTOPTA_mesoamerica_550
+		prestige = 200
+		piety = 100
+		add_character_modifier = {
+			name = raised_stele
+			duration = 730
+		}
+		if = {
+			limit = { ai = no }
+			chronicle = {
+				entry = CHRONICLE_RUNESTONE_FATHER
+				picture = GFX_evt_runestone_raising_oldgods
+			}
+		}
+	}
+}
+
+# Father (Death by Duel)
+narrative_event = {
+	id = mesoamerica.518
+	title = EVTNAME_mesoamerica_510
+	desc = EVTDESC_mesoamerica_518
+	picture = GFX_evt_runestone_raising_oldgods
+	border = GFX_event_narrative_frame_diplomacy
+	
+	is_triggered_only = yes
+	
+	hide_from = yes
+	
+	option = {
+		name = EVTOPTA_mesoamerica_550
+		prestige = 250
+		add_character_modifier = {
+			name = raised_stele
+			duration = 730
+		}
+		if = {
+			limit = { ai = no }
+			chronicle = {
+				entry = CHRONICLE_RUNESTONE_FATHER
+				picture = GFX_evt_runestone_raising_oldgods
+			}
+		}
+	}
+}
+
+# Father (Death by Suicide)
+narrative_event = {
+	id = mesoamerica.519
+	title = EVTNAME_mesoamerica_510
+	desc = EVTDESC_mesoamerica_519
+	picture = GFX_evt_runestone_raising_oldgods
+	border = GFX_event_narrative_frame_diplomacy
+	
+	is_triggered_only = yes
+	
+	hide_from = yes
+	
+	option = {
+		name = EVTOPTA_mesoamerica_550
+		prestige = 100
+		add_character_modifier = {
+			name = raised_stele
+			duration = 730
+		}
+		if = {
+			limit = { ai = no }
+			chronicle = {
+				entry = CHRONICLE_RUNESTONE_FATHER
+				picture = GFX_evt_runestone_raising_oldgods
+			}
+		}
+	}
+}
+
+# Father (Death by Murder - YOU are the killer)
+narrative_event = {
+	id = mesoamerica.520
+	title = EVTNAME_mesoamerica_510
+	desc = EVTDESC_mesoamerica_520
+	picture = GFX_evt_runestone_raising_oldgods
+	border = GFX_event_narrative_frame_diplomacy
+	
+	is_triggered_only = yes
+	
+	hide_from = yes
+	
+	option = {
+		name = EVTOPTA_mesoamerica_550
+		prestige = 100
+		add_character_modifier = {
+			name = raised_stele
+			duration = 730
+		}
+		if = {
+			limit = { ai = no }
+			chronicle = {
+				entry = CHRONICLE_RUNESTONE_FATHER
+				picture = GFX_evt_runestone_raising_oldgods
+			}
+		}
+	}
+}
+
+# Father (Death by Other Reasons)
+narrative_event = {
+	id = mesoamerica.521
+	title = EVTNAME_mesoamerica_510
+	desc = EVTDESC_mesoamerica_521
+	picture = GFX_evt_runestone_raising_oldgods
+	border = GFX_event_narrative_frame_diplomacy
+	
+	is_triggered_only = yes
+	
+	hide_from = yes
+	
+	option = {
+		name = EVTOPTA_mesoamerica_550
+		prestige = 200
+		piety = 100
+		add_character_modifier = {
+			name = raised_stele
+			duration = 730
+		}
+		if = {
+			limit = { ai = no }
+			chronicle = {
+				entry = CHRONICLE_RUNESTONE_FATHER
+				picture = GFX_evt_runestone_raising_oldgods
+			}
+		}
+	}
+}
+
+# Mother (Death by Natural Causes)
+narrative_event = {
+	id = mesoamerica.530
+	title = EVTNAME_mesoamerica_530
+	desc = EVTDESC_mesoamerica_530
+	picture = GFX_evt_runestone_raising_oldgods
+	border = GFX_event_narrative_frame_diplomacy
+	
+	is_triggered_only = yes
+	
+	hide_from = yes
+	
+	option = {
+		name = EVTOPTA_mesoamerica_550
+		prestige = 200
+		piety = 100
+		add_character_modifier = {
+			name = raised_stele
+			duration = 730
+		}
+		if = {
+			limit = { ai = no }
+			chronicle = {
+				entry = CHRONICLE_RUNESTONE_MOTHER
+				picture = GFX_evt_runestone_raising_oldgods
+			}
+		}
+	}
+}
+
+# Mother (Death by Execution)
+narrative_event = {
+	id = mesoamerica.531
+	title = EVTNAME_mesoamerica_530
+	desc = EVTDESC_mesoamerica_531
+	picture = GFX_evt_runestone_raising_oldgods
+	border = GFX_event_narrative_frame_diplomacy
+	
+	is_triggered_only = yes
+	
+	hide_from = yes
+	
+	option = {
+		name = EVTOPTA_mesoamerica_550
+		prestige = 200
+		piety = 100
+		add_character_modifier = {
+			name = raised_stele
+			duration = 730
+		}
+		if = {
+			limit = { ai = no }
+			chronicle = {
+				entry = CHRONICLE_RUNESTONE_MOTHER
+				picture = GFX_evt_runestone_raising_oldgods
+			}
+		}
+	}
+}
+
+# Mother (Death by Murder)
+narrative_event = {
+	id = mesoamerica.532
+	title = EVTNAME_mesoamerica_530
+	desc = EVTDESC_mesoamerica_532
+	picture = GFX_evt_runestone_raising_oldgods
+	border = GFX_event_narrative_frame_diplomacy
+	
+	is_triggered_only = yes
+	
+	hide_from = yes
+	
+	option = {
+		name = EVTOPTA_mesoamerica_550
+		prestige = 200
+		piety = 100
+		add_character_modifier = {
+			name = raised_stele
+			duration = 730
+		}
+		if = {
+			limit = { ai = no }
+			chronicle = {
+				entry = CHRONICLE_RUNESTONE_MOTHER
+				picture = GFX_evt_runestone_raising_oldgods
+			}
+		}
+	}
+}
+
+# Mother (Death by Accident)
+narrative_event = {
+	id = mesoamerica.534
+	title = EVTNAME_mesoamerica_530
+	desc = EVTDESC_mesoamerica_534
+	picture = GFX_evt_runestone_raising_oldgods
+	border = GFX_event_narrative_frame_diplomacy
+	
+	is_triggered_only = yes
+	
+	hide_from = yes
+	
+	option = {
+		name = EVTOPTA_mesoamerica_550
+		prestige = 200
+		piety = 100
+		add_character_modifier = {
+			name = raised_stele
+			duration = 730
+		}
+		if = {
+			limit = { ai = no }
+			chronicle = {
+				entry = CHRONICLE_RUNESTONE_MOTHER
+				picture = GFX_evt_runestone_raising_oldgods
+			}
+		}
+	}
+}
+
+# Mother (Death by Dungeon)
+narrative_event = {
+	id = mesoamerica.535
+	title = EVTNAME_mesoamerica_530
+	desc = EVTDESC_mesoamerica_535
+	picture = GFX_evt_runestone_raising_oldgods
+	border = GFX_event_narrative_frame_diplomacy
+	
+	is_triggered_only = yes
+	
+	hide_from = yes
+	
+	option = {
+		name = EVTOPTA_mesoamerica_550
+		prestige = 200
+		piety = 100
+		add_character_modifier = {
+			name = raised_stele
+			duration = 730
+		}
+		if = {
+			limit = { ai = no }
+			chronicle = {
+				entry = CHRONICLE_RUNESTONE_MOTHER
+				picture = GFX_evt_runestone_raising_oldgods
+			}
+		}
+	}
+}
+
+# Mother (Death by Sacrifice)
+narrative_event = {
+	id = mesoamerica.536
+	title = EVTNAME_mesoamerica_530
+	desc = EVTDESC_mesoamerica_536
+	picture = GFX_evt_runestone_raising_oldgods
+	border = GFX_event_narrative_frame_diplomacy
+	
+	is_triggered_only = yes
+	
+	hide_from = yes
+	
+	option = {
+		name = EVTOPTA_mesoamerica_550
+		prestige = 200
+		piety = 100
+		add_character_modifier = {
+			name = raised_stele
+			duration = 730
+		}
+		if = {
+			limit = { ai = no }
+			chronicle = {
+				entry = CHRONICLE_RUNESTONE_MOTHER
+				picture = GFX_evt_runestone_raising_oldgods
+			}
+		}
+	}
+}
+
+# Mother (Death by Suicide)
+narrative_event = {
+	id = mesoamerica.537
+	title = EVTNAME_mesoamerica_530
+	desc = EVTDESC_mesoamerica_537
+	picture = GFX_evt_runestone_raising_oldgods
+	border = GFX_event_narrative_frame_diplomacy
+	
+	is_triggered_only = yes
+	
+	hide_from = yes
+	
+	option = {
+		name = EVTOPTA_mesoamerica_550
+		prestige = 100
+		add_character_modifier = {
+			name = raised_stele
+			duration = 730
+		}
+		if = {
+			limit = { ai = no }
+			chronicle = {
+				entry = CHRONICLE_RUNESTONE_MOTHER
+				picture = GFX_evt_runestone_raising_oldgods
+			}
+		}
+	}
+}
+
+# Mother (Death by Murder - YOU are the killer)
+narrative_event = {
+	id = mesoamerica.538
+	title = EVTNAME_mesoamerica_530
+	desc = EVTDESC_mesoamerica_538
+	picture = GFX_evt_runestone_raising_oldgods
+	border = GFX_event_narrative_frame_diplomacy
+	
+	is_triggered_only = yes
+	
+	hide_from = yes
+	
+	option = {
+		name = EVTOPTA_mesoamerica_550
+		prestige = 100
+		add_character_modifier = {
+			name = raised_stele
+			duration = 730
+		}
+		if = {
+			limit = { ai = no }
+			chronicle = {
+				entry = CHRONICLE_RUNESTONE_MOTHER
+				picture = GFX_evt_runestone_raising_oldgods
+			}
+		}
+	}
+}
+
+# Mother (Death by Other Reasons)
+narrative_event = {
+	id = mesoamerica.539
+	title = EVTNAME_mesoamerica_530
+	desc = EVTDESC_mesoamerica_539
+	picture = GFX_evt_runestone_raising_oldgods
+	border = GFX_event_narrative_frame_diplomacy
+	
+	is_triggered_only = yes
+	
+	hide_from = yes
+	
+	option = {
+		name = EVTOPTA_mesoamerica_550
+		prestige = 200
+		piety = 100
+		add_character_modifier = {
+			name = raised_stele
+			duration = 730
+		}
+		if = {
+			limit = { ai = no }
+			chronicle = {
+				entry = CHRONICLE_RUNESTONE_MOTHER
+				picture = GFX_evt_runestone_raising_oldgods
+			}
+		}
+	}
+}
+
+# Generic
+narrative_event = {
+	id = mesoamerica.550
+	title = EVTNAME_mesoamerica_550
+	desc = {
+		text = EVTDESC_mesoamerica_550
+		trigger = {
+			mother_even_if_dead = { always = yes }
+			father_even_if_dead = { always = yes }
+		}
+	}
+	desc = {
+		text = EVTDESC_mesoamerica_550B
+		trigger = {
+			NOT = {
+				AND = {
+					mother_even_if_dead = { always = yes }
+					father_even_if_dead = { always = yes }
+				}
+			}
+		}
+	}
+	picture = GFX_evt_runestone_raising_oldgods
+	border = GFX_event_narrative_frame_diplomacy
+	
+	is_triggered_only = yes
+	
+	hide_from = yes
+	
+	option = {
+		name = EVTOPTA_mesoamerica_550
+		prestige = 200
+		piety = 100
+		add_character_modifier = {
+			name = raised_stele
+			duration = 730
+		}
+		if = {
+			limit = { ai = no }
+			chronicle = {
+				entry = CHRONICLE_RUNESTONE_GENERIC
+				picture = GFX_evt_runestone_raising_oldgods
+			}
+		}
+	}
+}
+
+# Lunatic
+narrative_event = {
+	id = mesoamerica.551
+	title = EVTNAME_mesoamerica_550
+	desc = EVTDESC_mesoamerica_551
+	picture = GFX_evt_runestone_raising_oldgods
+	border = GFX_event_narrative_frame_diplomacy
+	
+	is_triggered_only = yes
+	
+	hide_from = yes
+	
+	option = {
+		name = EVTOPTA_mesoamerica_550
+		prestige = 100
+		add_character_modifier = {
+			name = raised_stele
+			duration = 730
+		}
+		if = {
+			limit = { ai = no }
+			chronicle = {
+				entry = CHRONICLE_RUNESTONE_LUNATIC
+				picture = GFX_evt_runestone_raising_oldgods
+			}
+		}
+	}
+}
+
+# Drunkard
+narrative_event = {
+	id = mesoamerica.552
+	title = EVTNAME_mesoamerica_550
+	desc = {
+		trigger = {
+			mother_even_if_dead = { always = yes }
+			father_even_if_dead = { always = yes }
+		}
+		text = EVTDESC_mesoamerica_552
+	}
+	desc = {
+		trigger = {
+			NOT = {
+				AND = {
+					mother_even_if_dead = { always = yes }
+					father_even_if_dead = { always = yes }
+				}
+			}
+		}
+		text = EVTDESC_mesoamerica_552B
+	}
+	picture = GFX_evt_runestone_raising_oldgods
+	border = GFX_event_narrative_frame_diplomacy
+	
+	is_triggered_only = yes
+	
+	hide_from = yes
+	
+	option = {
+		name = EVTOPTA_mesoamerica_550
+		prestige = 200
+		piety = 100
+		add_character_modifier = {
+			name = raised_stele
+			duration = 730
+		}
+		if = {
+			limit = { ai = no }
+			chronicle = {
+				entry = CHRONICLE_RUNESTONE_DRUNKARD
+				picture = GFX_evt_runestone_raising_oldgods
+			}
+		}
+	}
+}
+
+# Fair
+narrative_event = {
+	id = mesoamerica.553
+	title = EVTNAME_mesoamerica_550
+	desc = {
+		trigger = {
+			mother_even_if_dead = { always = yes }
+			father_even_if_dead = { always = yes }
+		}
+		text = EVTDESC_mesoamerica_553
+	}
+	desc = {
+		trigger = {
+			NOT = {
+				AND = {
+					mother_even_if_dead = { always = yes }
+					father_even_if_dead = { always = yes }
+				}
+			}
+		}
+		text = EVTDESC_mesoamerica_553B
+	}
+	picture = GFX_evt_runestone_raising_oldgods
+	border = GFX_event_narrative_frame_diplomacy
+	
+	is_triggered_only = yes
+	
+	hide_from = yes
+	
+	option = {
+		name = EVTOPTA_mesoamerica_550
+		prestige = 300
+		add_character_modifier = {
+			name = raised_stele
+			duration = 730
+		}
+		if = {
+			limit = { ai = no }
+			chronicle = {
+				entry = CHRONICLE_RUNESTONE_FAIR
+				picture = GFX_evt_runestone_raising_oldgods
+			}
+		}
+	}
+}
+
+# Dwarf
+narrative_event = {
+	id = mesoamerica.554
+	title = EVTNAME_mesoamerica_550
+	desc = {
+		trigger = {
+			mother_even_if_dead = { always = yes }
+			father_even_if_dead = { always = yes }
+		}
+		text = EVTDESC_mesoamerica_554
+	}
+	desc = {
+		trigger = {
+			NOT = {
+				AND = {
+					mother_even_if_dead = { always = yes }
+					father_even_if_dead = { always = yes }
+				}
+			}
+		}
+		text = EVTDESC_mesoamerica_554B
+	}
+	picture = GFX_evt_runestone_raising_oldgods
+	border = GFX_event_narrative_frame_diplomacy
+	
+	is_triggered_only = yes
+	
+	hide_from = yes
+	
+	option = {
+		name = EVTOPTA_mesoamerica_550
+		prestige = 200
+		piety = 100
+		add_character_modifier = {
+			name = raised_stele
+			duration = 730
+		}
+		if = {
+			limit = { ai = no }
+			chronicle = {
+				entry = CHRONICLE_RUNESTONE_DWARF
+				picture = GFX_evt_runestone_raising_oldgods
+			}
+		}
+	}
+}
+
+# Genius
+narrative_event = {
+	id = mesoamerica.555
+	title = EVTNAME_mesoamerica_550
+	desc = {
+		trigger = {
+			mother_even_if_dead = { always = yes }
+			father_even_if_dead = { always = yes }
+		}
+		text = EVTDESC_mesoamerica_555
+	}
+	desc = {
+		trigger = {
+			NOT = {
+				AND = {
+					mother_even_if_dead = { always = yes }
+					father_even_if_dead = { always = yes }
+				}
+			}
+		}
+		text = EVTDESC_mesoamerica_555B
+	}
+	picture = GFX_evt_runestone_raising_oldgods
+	border = GFX_event_narrative_frame_diplomacy
+	
+	is_triggered_only = yes
+	
+	hide_from = yes
+	
+	option = {
+		name = EVTOPTA_mesoamerica_550
+		prestige = 300
+		add_character_modifier = {
+			name = raised_stele
+			duration = 730
+		}
+		if = {
+			limit = { ai = no }
+			chronicle = {
+				entry = CHRONICLE_RUNESTONE_GENIUS
+				picture = GFX_evt_runestone_raising_oldgods
+			}
+		}
+	}
+}
+
+# Imbecile
+narrative_event = {
+	id = mesoamerica.556
+	title = EVTNAME_mesoamerica_550
+	desc = {
+		trigger = {
+			mother_even_if_dead = { always = yes }
+			father_even_if_dead = { always = yes }
+		}
+		text = EVTDESC_mesoamerica_556
+	}
+	desc = {
+		trigger = {
+			NOT = {
+				AND = {
+					mother_even_if_dead = { always = yes }
+					father_even_if_dead = { always = yes }
+				}
+			}
+		}
+		text = EVTDESC_mesoamerica_556B
+	}
+	picture = GFX_evt_runestone_raising_oldgods
+	border = GFX_event_narrative_frame_diplomacy
+	
+	is_triggered_only = yes
+	
+	hide_from = yes
+	
+	option = {
+		name = EVTOPTA_mesoamerica_550
+		prestige = 100
+		add_character_modifier = {
+			name = raised_stele
+			duration = 730
+		}
+		if = {
+			limit = { ai = no }
+			chronicle = {
+				entry = CHRONICLE_RUNESTONE_IMBECILE
+				picture = GFX_evt_runestone_raising_oldgods
+			}
+		}
+	}
+}
+
+# Strong
+narrative_event = {
+	id = mesoamerica.557
+	title = EVTNAME_mesoamerica_550
+	desc = {
+		trigger = {
+			mother_even_if_dead = { always = yes }
+			father_even_if_dead = { always = yes }
+		}
+		text = EVTDESC_mesoamerica_557
+	}
+	desc = {
+		trigger = {
+			NOT = {
+				AND = {
+					mother_even_if_dead = { always = yes }
+					father_even_if_dead = { always = yes }
+				}
+			}
+		}
+		text = EVTDESC_mesoamerica_557B
+	}
+	picture = GFX_evt_runestone_raising_oldgods
+	border = GFX_event_narrative_frame_diplomacy
+	
+	is_triggered_only = yes
+	
+	hide_from = yes
+	
+	option = {
+		name = EVTOPTA_mesoamerica_550
+		prestige = 300
+		add_character_modifier = {
+			name = raised_stele
+			duration = 730
+		}
+		if = {
+			limit = { ai = no }
+			chronicle = {
+				entry = CHRONICLE_RUNESTONE_STRONG
+				picture = GFX_evt_runestone_raising_oldgods
+			}
+		}
+	}
+}
+
+# Scholar
+narrative_event = {
+	id = mesoamerica.558
+	title = EVTNAME_mesoamerica_550
+	desc = {
+		trigger = {
+			mother_even_if_dead = { always = yes }
+			father_even_if_dead = { always = yes }
+		}
+		text = EVTDESC_mesoamerica_558
+	}
+	desc = {
+		trigger = {
+			NOT = {
+				AND = {
+					mother_even_if_dead = { always = yes }
+					father_even_if_dead = { always = yes }
+				}
+			}
+		}
+		text = EVTDESC_mesoamerica_558B
+	}
+	picture = GFX_evt_runestone_raising_oldgods
+	border = GFX_event_narrative_frame_diplomacy
+	
+	is_triggered_only = yes
+	
+	hide_from = yes
+	
+	option = {
+		name = EVTOPTA_mesoamerica_550
+		prestige = 200
+		piety = 100
+		add_character_modifier = {
+			name = raised_stele
+			duration = 730
+		}
+		if = {
+			limit = { ai = no }
+			chronicle = {
+				entry = CHRONICLE_RUNESTONE_SCHOLAR
+				picture = GFX_evt_runestone_raising_oldgods
+			}
+		}
+	}
+}
+
+# Impaler
+narrative_event = {
+	id = mesoamerica.559
+	title = EVTNAME_mesoamerica_550
+	desc = {
+		trigger = {
+			mother_even_if_dead = { always = yes }
+			father_even_if_dead = { always = yes }
+		}
+		text = EVTDESC_mesoamerica_559
+	}
+	desc = {
+		trigger = {
+			NOT = {
+				AND = {
+					mother_even_if_dead = { always = yes }
+					father_even_if_dead = { always = yes }
+				}
+			}
+		}
+		text = EVTDESC_mesoamerica_559B
+	}
+	picture = GFX_evt_runestone_raising_oldgods
+	border = GFX_event_narrative_frame_diplomacy
+	
+	is_triggered_only = yes
+	
+	hide_from = yes
+	
+	option = {
+		name = EVTOPTA_mesoamerica_550
+		prestige = 200
+		piety = 100
+		add_character_modifier = {
+			name = raised_stele
+			duration = 730
+		}
+		if = {
+			limit = { ai = no }
+			chronicle = {
+				entry = CHRONICLE_RUNESTONE_IMPALER
+				picture = GFX_evt_runestone_raising_oldgods
+			}
+		}
+	}
+}
+
+# Poet
+narrative_event = {
+	id = mesoamerica.560
+	title = EVTNAME_mesoamerica_550
+	desc = {
+		trigger = {
+			mother_even_if_dead = { always = yes }
+			father_even_if_dead = { always = yes }
+		}
+		text = EVTDESC_mesoamerica_560
+	}
+	desc = {
+		trigger = {
+			NOT = {
+				AND = {
+					mother_even_if_dead = { always = yes }
+					father_even_if_dead = { always = yes }
+				}
+			}
+		}
+		text = EVTDESC_mesoamerica_560B
+	}
+	picture = GFX_evt_runestone_raising_oldgods
+	border = GFX_event_narrative_frame_diplomacy
+	
+	is_triggered_only = yes
+	
+	hide_from = yes
+	
+	option = {
+		name = EVTOPTA_mesoamerica_550
+		prestige = 200
+		piety = 100
+		add_character_modifier = {
+			name = raised_stele
+			duration = 730
+		}
+		if = {
+			limit = { ai = no }
+			chronicle = {
+				entry = CHRONICLE_RUNESTONE_POET
+				picture = GFX_evt_runestone_raising_oldgods
+			}
+		}
+	}
+}
+
+# Lustful
+narrative_event = {
+	id = mesoamerica.561
+	title = EVTNAME_mesoamerica_550
+	desc = {
+		trigger = {
+			mother_even_if_dead = { always = yes }
+			father_even_if_dead = { always = yes }
+		}
+		text = EVTDESC_mesoamerica_561
+	}
+	desc = {
+		trigger = {
+			NOT = {
+				AND = {
+					mother_even_if_dead = { always = yes }
+					father_even_if_dead = { always = yes }
+				}
+			}
+		}
+		text = EVTDESC_mesoamerica_561B
+	}
+	picture = GFX_evt_runestone_raising_oldgods
+	border = GFX_event_narrative_frame_diplomacy
+	
+	is_triggered_only = yes
+	
+	hide_from = yes
+	
+	option = {
+		name = EVTOPTA_mesoamerica_550
+		prestige = 200
+		piety = 100
+		add_character_modifier = {
+			name = raised_stele
+			duration = 730
+		}
+		if = {
+			limit = { ai = no }
+			chronicle = {
+				entry = CHRONICLE_RUNESTONE_LUSTFUL
+				picture = GFX_evt_runestone_raising_oldgods
+			}
+		}
+	}
+}
+
+# Gluttonous
+narrative_event = {
+	id = mesoamerica.562
+	title = EVTNAME_mesoamerica_550
+	desc = {
+		trigger = {
+			mother_even_if_dead = { always = yes }
+			father_even_if_dead = { always = yes }
+		}
+		text = EVTDESC_mesoamerica_562
+	}
+	desc = {
+		trigger = {
+			NOT = {
+				AND = {
+					mother_even_if_dead = { always = yes }
+					father_even_if_dead = { always = yes }
+				}
+			}
+		}
+		text = EVTDESC_mesoamerica_562B
+	}
+	picture = GFX_evt_runestone_raising_oldgods
+	border = GFX_event_narrative_frame_diplomacy
+	
+	is_triggered_only = yes
+	
+	hide_from = yes
+	
+	option = {
+		name = EVTOPTA_mesoamerica_550
+		prestige = 200
+		piety = 100
+		add_character_modifier = {
+			name = raised_stele
+			duration = 730
+		}
+		if = {
+			limit = { ai = no }
+			chronicle = {
+				entry = CHRONICLE_RUNESTONE_GLUTTONOUS
+				picture = GFX_evt_runestone_raising_oldgods
+			}
+		}
+	}
+}
+
+# Charitable
+narrative_event = {
+	id = mesoamerica.563
+	title = EVTNAME_mesoamerica_550
+	desc = {
+		trigger = {
+			mother_even_if_dead = { always = yes }
+			father_even_if_dead = { always = yes }
+		}
+		text = EVTDESC_mesoamerica_563
+	}
+	desc = {
+		trigger = {
+			NOT = {
+				AND = {
+					mother_even_if_dead = { always = yes }
+					father_even_if_dead = { always = yes }
+				}
+			}
+		}
+		text = EVTDESC_mesoamerica_563B
+	}
+	picture = GFX_evt_runestone_raising_oldgods
+	border = GFX_event_narrative_frame_diplomacy
+	
+	is_triggered_only = yes
+	
+	hide_from = yes
+	
+	option = {
+		name = EVTOPTA_mesoamerica_550
+		prestige = 200
+		piety = 100
+		add_character_modifier = {
+			name = raised_stele
+			duration = 730
+		}
+		if = {
+			limit = { ai = no }
+			chronicle = {
+				entry = CHRONICLE_RUNESTONE_CHARITABLE
+				picture = GFX_evt_runestone_raising_oldgods
+			}
+		}
+	}
+}
+
+# Kind
+narrative_event = {
+	id = mesoamerica.564
+	title = EVTNAME_mesoamerica_550
+	desc = {
+		trigger = {
+			mother_even_if_dead = { always = yes }
+			father_even_if_dead = { always = yes }
+		}
+		text = EVTDESC_mesoamerica_564
+	}
+	desc = {
+		trigger = {
+			NOT = {
+				AND = {
+					mother_even_if_dead = { always = yes }
+					father_even_if_dead = { always = yes }
+				}
+			}
+		}
+		text = EVTDESC_mesoamerica_564B
+	}
+	picture = GFX_evt_runestone_raising_oldgods
+	border = GFX_event_narrative_frame_diplomacy
+	
+	is_triggered_only = yes
+	
+	hide_from = yes
+	
+	option = {
+		name = EVTOPTA_mesoamerica_550
+		prestige = 200
+		piety = 100
+		add_character_modifier = {
+			name = raised_stele
+			duration = 730
+		}
+		if = {
+			limit = { ai = no }
+			chronicle = {
+				entry = CHRONICLE_RUNESTONE_KIND
+				picture = GFX_evt_runestone_raising_oldgods
+			}
+		}
+	}
+}
+
+# Proud
+narrative_event = {
+	id = mesoamerica.565
+	title = EVTNAME_mesoamerica_550
+	desc = {
+		trigger = {
+			mother_even_if_dead = { always = yes }
+			father_even_if_dead = { always = yes }
+		}
+		text = EVTDESC_mesoamerica_565
+	}
+	desc = {
+		trigger = {
+			NOT = {
+				AND = {
+					mother_even_if_dead = { always = yes }
+					father_even_if_dead = { always = yes }
+				}
+			}
+		}
+		text = EVTDESC_mesoamerica_565B
+	}
+	picture = GFX_evt_runestone_raising_oldgods
+	border = GFX_event_narrative_frame_diplomacy
+	
+	is_triggered_only = yes
+	
+	hide_from = yes
+	
+	option = {
+		name = EVTOPTA_mesoamerica_550
+		prestige = 300
+		add_character_modifier = {
+			name = raised_stele
+			duration = 730
+		}
+		if = {
+			limit = { ai = no }
+			chronicle = {
+				entry = CHRONICLE_RUNESTONE_PROUD
+				picture = GFX_evt_runestone_raising_oldgods
+			}
+		}
+	}
+}
+
+# Humble
+narrative_event = {
+	id = mesoamerica.566
+	title = EVTNAME_mesoamerica_550
+	desc = {
+		trigger = {
+			mother_even_if_dead = { always = yes }
+			father_even_if_dead = { always = yes }
+		}
+		text = EVTDESC_mesoamerica_566
+	}
+	desc = {
+		trigger = {
+			NOT = {
+				AND = {
+					mother_even_if_dead = { always = yes }
+					father_even_if_dead = { always = yes }
+				}
+			}
+		}
+		text = EVTDESC_mesoamerica_566B
+	}
+	picture = GFX_evt_runestone_raising_oldgods
+	border = GFX_event_narrative_frame_diplomacy
+	
+	is_triggered_only = yes
+	
+	hide_from = yes
+	
+	option = {
+		name = EVTOPTA_mesoamerica_550
+		prestige = 200
+		piety = 100
+		add_character_modifier = {
+			name = raised_stele
+			duration = 730
+		}
+		if = {
+			limit = { ai = no }
+			chronicle = {
+				entry = CHRONICLE_RUNESTONE_HUMBLE
+				picture = GFX_evt_runestone_raising_oldgods
+			}
+		}
+	}
+}
+
+# Brave
+narrative_event = {
+	id = mesoamerica.567
+	title = EVTNAME_mesoamerica_550
+	desc = {
+		trigger = {
+			mother_even_if_dead = { always = yes }
+			father_even_if_dead = { always = yes }
+		}
+		text = EVTDESC_mesoamerica_567
+	}
+	desc = {
+		trigger = {
+			NOT = {
+				AND = {
+					mother_even_if_dead = { always = yes }
+					father_even_if_dead = { always = yes }
+				}
+			}
+		}
+		text = EVTDESC_mesoamerica_567B
+	}
+	picture = GFX_evt_runestone_raising_oldgods
+	border = GFX_event_narrative_frame_diplomacy
+	
+	is_triggered_only = yes
+	
+	hide_from = yes
+	
+	option = {
+		name = EVTOPTA_mesoamerica_550
+		prestige = 300
+		add_character_modifier = {
+			name = raised_stele
+			duration = 730
+		}
+		if = {
+			limit = { ai = no }
+			chronicle = {
+				entry = CHRONICLE_RUNESTONE_BRAVE
+				picture = GFX_evt_runestone_raising_oldgods
+			}
+		}
+	}
+}
+
+# Just
+narrative_event = {
+	id = mesoamerica.568
+	title = EVTNAME_mesoamerica_550
+	desc = {
+		trigger = {
+			mother_even_if_dead = { always = yes }
+			father_even_if_dead = { always = yes }
+		}
+		text = EVTDESC_mesoamerica_568
+	}
+	desc = {
+		trigger = {
+			NOT = {
+				AND = {
+					mother_even_if_dead = { always = yes }
+					father_even_if_dead = { always = yes }
+				}
+			}
+		}
+		text = EVTDESC_mesoamerica_568B
+	}
+	picture = GFX_evt_runestone_raising_oldgods
+	border = GFX_event_narrative_frame_diplomacy
+	
+	is_triggered_only = yes
+	
+	hide_from = yes
+	
+	option = {
+		name = EVTOPTA_mesoamerica_550
+		prestige = 200
+		piety = 100
+		add_character_modifier = {
+			name = raised_stele
+			duration = 730
+		}
+		if = {
+			limit = { ai = no }
+			chronicle = {
+				entry = CHRONICLE_RUNESTONE_JUST
+				picture = GFX_evt_runestone_raising_oldgods
+			}
+		}
+	}
+}
+
+# Zealous (Norse Pagan)
+narrative_event = {
+	id = mesoamerica.569
+	title = EVTNAME_mesoamerica_550
+	desc = {
+		trigger = {
+			mother_even_if_dead = { always = yes }
+			father_even_if_dead = { always = yes }
+		}
+		text = EVTDESC_mesoamerica_569
+	}
+	desc = {
+		trigger = {
+			NOT = {
+				AND = {
+					mother_even_if_dead = { always = yes }
+					father_even_if_dead = { always = yes }
+				}
+			}
+		}
+		text = EVTDESC_mesoamerica_569B
+	}
+	picture = GFX_evt_runestone_raising_oldgods
+	border = GFX_event_narrative_frame_diplomacy
+	
+	is_triggered_only = yes
+	
+	hide_from = yes
+	
+	option = {
+		name = EVTOPTA_mesoamerica_550
+		prestige = 200
+		piety = 100
+		add_character_modifier = {
+			name = raised_stele
+			duration = 730
+		}
+		if = {
+			limit = { ai = no }
+			chronicle = {
+				entry = CHRONICLE_RUNESTONE_ZEALOUS_NORSE
+				picture = GFX_evt_runestone_raising_oldgods
+			}
+		}
+	}
+}
+
+# Zealous (Christian)
+narrative_event = {
+	id = mesoamerica.570
+	title = EVTNAME_mesoamerica_550
+	desc = {
+		trigger = {
+			mother_even_if_dead = { always = yes }
+			father_even_if_dead = { always = yes }
+		}
+		text = EVTDESC_mesoamerica_570
+	}
+	desc = {
+		trigger = {
+			NOT = {
+				AND = {
+					mother_even_if_dead = { always = yes }
+					father_even_if_dead = { always = yes }
+				}
+			}
+		}
+		text = EVTDESC_mesoamerica_570B
+	}
+	picture = GFX_evt_runestone_raising_oldgods
+	border = GFX_event_narrative_frame_diplomacy
+	
+	is_triggered_only = yes
+	
+	hide_from = yes
+	
+	option = {
+		name = EVTOPTA_mesoamerica_550
+		prestige = 200
+		piety = 100
+		add_character_modifier = {
+			name = raised_stele
+			duration = 730
+		}
+		if = {
+			limit = { ai = no }
+			chronicle = {
+				entry = CHRONICLE_RUNESTONE_ZEALOUS_CHRISTIAN
+				picture = GFX_evt_runestone_raising_oldgods
+			}
+		}
+	}
+}
+
+# Cruel
+narrative_event = {
+	id = mesoamerica.571
+	title = EVTNAME_mesoamerica_550
+	desc = {
+		trigger = {
+			mother_even_if_dead = { always = yes }
+			father_even_if_dead = { always = yes }
+		}
+		text = EVTDESC_mesoamerica_571
+	}
+	desc = {
+		trigger = {
+			NOT = {
+				AND = {
+					mother_even_if_dead = { always = yes }
+					father_even_if_dead = { always = yes }
+				}
+			}
+		}
+		text = EVTDESC_mesoamerica_571B
+	}
+	picture = GFX_evt_runestone_raising_oldgods
+	border = GFX_event_narrative_frame_diplomacy
+	
+	is_triggered_only = yes
+	
+	hide_from = yes
+	
+	option = {
+		name = EVTOPTA_mesoamerica_550
+		prestige = 200
+		piety = 100
+		add_character_modifier = {
+			name = raised_stele
+			duration = 730
+		}
+		if = {
+			limit = { ai = no }
+			chronicle = {
+				entry = CHRONICLE_RUNESTONE_CRUEL
+				picture = GFX_evt_runestone_raising_oldgods
+			}
+		}
+	}
+}
+
+# Possessed
+narrative_event = {
+	id = mesoamerica.572
+	title = EVTNAME_mesoamerica_550
+	desc = EVTDESC_mesoamerica_572
+	picture = GFX_evt_runestone_raising_oldgods
+	border = GFX_event_narrative_frame_diplomacy
+	
+	is_triggered_only = yes
+	
+	hide_from = yes
+	
+	option = {
+		name = EVTOPTA_mesoamerica_550
+		prestige = 100
+		add_character_modifier = {
+			name = raised_stele
+			duration = 730
+		}
+		if = {
+			limit = { ai = no }
+			chronicle = {
+				entry = CHRONICLE_RUNESTONE_POSSESSED
+				picture = GFX_evt_runestone_raising_oldgods
+			}
+		}
+	}
+}
+
+# Runestones can no longer be commissioned
+character_event = {
+	id = mesoamerica.580
+	desc = EVTDESC_mesoamerica_580
+	picture = GFX_evt_runestone_raising_oldgods
+	border = GFX_event_normal_frame_diplomacy
+	
+	only_playable = yes
+	ai = no
+	culture_group = north_germanic
+	
+	trigger = {
+		year = 1150
+		NOT = { has_character_flag = runestones_halted }
+		NOT = {
+			has_alternate_start_parameter = { key = religion_names value = random }
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = EVTOPTA_mesoamerica_580
+		custom_tooltip = { text = no_more_runestones }
+		set_character_flag = runestones_halted
+	}
+}
+
+narrative_event = {
+	id = mesoamerica.600
+	title = EVTNAME_mesoamerica_600
+	desc = EVTDESC_mesoamerica_600
+	picture = GFX_evt_bishop_aztec
+	border = GFX_event_narrative_frame_religion
+	
+	major = yes
+
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_mesoamerica_600
+		trigger = {
+			religion = mictlantec
+		}
+	}
+	option = {
+		name = EVTOPTB_mesoamerica_600
+		trigger = {
+			religion_group = mesoamerican_gods
+			NOT = { religion = mictlantec }
+		}
+	}
+	option = {
+		name = EVTOPTC_mesoamerica_600
+		trigger = {
+			NOT = {
+				religion_group = mesoamerican_gods
+			}
+		}
+	}
+}
+
+character_event = {
+	id = mesoamerica.700
+	hide_window = yes
+	is_triggered_only = yes
+	religion = qabantajik
+	
+	trigger = {
+		has_character_flag = qab_tata
+		is_save_game = no
+	}
+	
+	immediate = {
+		c_1650072={
+			character_event = { id = mesoamerica.701 months = 1 }
+		}
+	}
+}
+
+character_event = {
+	id = mesoamerica.701
+	desc = EVTDESC_mesoamerica_701
+	picture = GFX_evt_bishop_aztec
+	border = GFX_event_normal_frame_religion
+	
+	religion = neomayan
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_mesoamerica_701
+		custom_tooltip = { text = TXT_EVTOPTA_mesoamerica_701 }
+		ROOT = { religion = qabantajik }
+		any_vassal = {
+			limit = {
+				religion = qabantajik
+			}
+			character_event = { id = mesoamerica.702 days = 3 }
+		}
+		ai_chance = {
+			factor = 0
+		}
+	}
+	
+	option = {
+		name = EVTOPTB_mesoamerica_701
+		custom_tooltip = { text = TXT_EVTOPTB_mesoamerica_701 }
+		FROM = { character_event = { id = mesoamerica.703 days = 7 } }
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+character_event = {
+	id = mesoamerica.702
+	desc = EVTDESC_mesoamerica_702
+	picture = GFX_evt_bishop_aztec
+	border = GFX_event_normal_frame_religion
+	
+	religion = neomayan
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_mesoamerica_702
+		ROOT = { religion = qabantajik }
+		any_vassal = {
+			limit = {
+				religion = qabantajik
+			}
+			character_event = { id = mesoamerica.702 days = 3 } #round and round it goes
+		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				trait = zealous
+			}
+			modifier = {
+				factor = 0
+				trait = proud
+			}
+		}
+	}
+	
+	option = {
+		name = EVTOPTB_mesoamerica_702
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				trait = cynical
+			}
+			modifier = {
+				factor = 0
+				trait = humble
+			}
+		}
+	}
+}
+
+character_event = {
+	id = mesoamerica.703
+	hide_window = yes
+	is_triggered_only = yes
+	
+	option = {	
+		name = "EVTOPTA_mesoamerica_703"
+		spawn_unit = {
+			character = THIS
+			province = c_sian_kaan
+			home = c_sian_kaan
+			troops = {
+				light_infantry = { 1000 1000 }
+				heavy_infantry = { 300 300 }
+			}
+			earmark = qabantajik_event_troops
+			attrition = 0.5
+			maintenance_multiplier = 0.25
+		}
+		add_claim = k_yucatan
+		k_yucatan = {
+			holder_scope = {	
+				reverse_war = {
+					target = ROOT
+					thirdparty_title = k_yucatan
+					casus_belli = claim
+				}
+			}
+		}
+		FROM = { character_event = { id = mesoamerica.704 } }
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+character_event = {
+	id = mesoamerica.704
+	desc = EVTDESC_mesoamerica_704
+	picture = GFX_evt_bishop_aztec
+	border = GFX_event_normal_frame_religion
+	
+	religion = neomayan
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_mesoamerica_704
+	}
+}
+
+character_event = {
+	id = mesoamerica.710
+	desc = EVTDESC_mesoamerica_710
+	picture = GFX_evt_bishop_aztec
+	border = GFX_event_normal_frame_religion
+	religion = qabantajik
+	is_triggered_only = yes
+	
+	trigger = {
+		NOT = {
+			has_alternate_start_parameter = { key = religion_names value = random }
+		}
+	}
+	
+	option = {
+		name = EVTOPTA_mesoamerica_710
+		hidden_tooltip = {
+			remove_trait = qab_qijlanik
+			remove_trait = qab_votanzapatismo
+
+		}
+		add_trait = qab_suuk_chilam
+		ai_chance = {
+			factor = 10
+		}
+	}
+
+	option = {
+		name = EVTOPTB_mesoamerica_710
+		hidden_tooltip = {
+			remove_trait = qab_qijlanik
+			remove_trait = qab_suuk_chilam
+
+		}
+		add_trait = qab_votanzapatismo
+		ai_chance = {
+			factor = 10
+		}
+	}
+	
+	option = {
+		name = EVTOPTC_mesoamerica_710
+		hidden_tooltip = {
+			remove_trait = qab_suuk_chilam
+			remove_trait = qab_votanzapatismo
+
+		}
+		add_trait = qab_qijlanik
+		ai_chance = {
+			factor = 10
+		}
 	}
 }
