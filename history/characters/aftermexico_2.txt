@@ -125,9 +125,11 @@
 	2310.4.16={
 		birth=yes
 	}
-	2345.6.4=death={
+	2345.6.4={
+		death={
 		death_reason=death_trait
 		}
+	}
 }
 
 #Benemérito Domiciano Palafox
@@ -674,6 +676,7 @@
 	dynasty=5001153
 	trait=impaler
 	trait=giant
+	trait=peasant_leader
 	trait=brave
 	trait=ambitious
 	trait=wroth
@@ -732,30 +735,6 @@
 	}
 	}
 
-#Benemérito Victorio Huarte
-14450440 = {
-	name="Victorio"
-	religion=cristo_rey
-	culture=chilango
-	dynasty=5001154
-	trait=dull
-	trait=lovers_pox	
-	trait=honest
-	trait=lustful
-	trait=content
-	trait=stubborn	
-	trait=indulgent_wastrel	
-	2435.11.23={
-		birth=yes
-	}
-	2482.7.7={death={
-			death_reason=death_murder_arrow
-			killer=14450441
-		}
-	}
-}
-
-
 #Benemérito Pío Ramírez
 14450441 = {
 	name="Pío"
@@ -765,9 +744,9 @@
 	trait=cynical
 	trait=ambitious
 	trait=arbitrary
-	trait=humble
+	trait=lovers_pox
 	trait=patient	
-	trait=detached_priest
+	trait=intricate_webweaver
 	2440.2.25={
 		birth=yes
 	}
