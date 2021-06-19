@@ -51,7 +51,6 @@
 	culture=chilango
 	dynasty=5001119
 	trait=hedonist
-	trait=monk
 	trait=proud
 	trait=uncouth
 	trait=wroth	
@@ -62,6 +61,9 @@
 	2299.2.14={
 		birth=yes
 	}
+	2346.2.25={
+		add_trait=monk
+		}
 	2347.2.25={
 		death=yes
 		}
@@ -116,15 +118,16 @@
 	trait=honest
 	trait=brave
 	trait=trusting	
-	trait=grey_eminence 
+	trait=grey_eminence
+	trait=dysentery
+	trait=is_malnourished
 	father=14450412
 	2310.4.16={
 		birth=yes
 	}
-	2345.6.4={death = {
-			death_reason = death_poor_health  
+	2345.6.4=death={
+		death_reason=death_trait
 		}
-	}
 }
 
 #Benemérito Domiciano Palafox
@@ -516,6 +519,9 @@
 	2385.3.15={
 		birth=yes
 	}
+	2452.2.25={
+		add_trait=monk
+		}
 	2453.6.1={death=yes}
 }	
 	
