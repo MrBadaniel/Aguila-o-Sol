@@ -1303,6 +1303,9 @@
 	father=14400062
 	mother=14400063
 	2631.6.30={birth=yes}
+	2660.12.25={
+		effect={add_artifact=golden_lance}
+	}
 	2699.11.9={death=yes}
 }
 
@@ -2246,7 +2249,11 @@
 	trait=monk
 	father=14400089
 	2574.11.28={birth=yes}
-	2638.2.8={death=yes}
+	2616.5.28={death= {
+			death_reason = death_murder_strangle 
+			killer = 14400130
+		}
+	}
 }
 
 #Benemérito Aureliano Gabsol
@@ -2269,11 +2276,7 @@
 	trait=ambitious
 	trait=inspiring_leader
 	2550.9.2={birth=yes}
-	2616.5.28={death= {
-			death_reason = death_murder_strangle 
-			killer = 14400130
-		}
-	}	
+	2624.3.11={death=yes}	
 }
 
 
