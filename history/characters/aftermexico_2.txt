@@ -1260,12 +1260,182 @@
 	2488.12.22={death=yes}
 }
 
+#Otón Sotomayor
+14450492={
+	name=Otón
+	religion=cristo_rey
+	culture=bravo
+	dynasty=5001139
+	trait=brilliant_strategist
+	trait=strong
+	trait=adventurer
+	trait=dorado
+	trait=ambitious
+	trait=patient
+	trait=brave
+	trait=scarred
+	2405.3.14={birth=yes}
+	2436.8.10={add_spouse = 14450493}
+	2474.3.20={death=yes}
+}
+
+#Pulqueria la hija de Aureliano III Aguilar	
+14450493 = {
+	name="Pulqueria"
+	religion=cristo_rey
+	culture=chilango
+	dynasty=5001145
+	female=yes
+	trait=fair
+	trait=greedy
+	trait=diligent
+	trait=erudite
+	trait=just
+	trait=fortune_builder
+	father=14450426
+	2416.8.10={
+		birth=yes
+	}
+	2488.1.19={death=yes}
+}
 
 
+#Otón II Sotomayor
+14450494={
+	name=Otón
+	religion=cristo_rey
+	culture=bravo
+	dynasty=5001139
+	trait=scholarly_theologian
+	trait=scholar
+	trait=content
+	trait=shy
+	father=14450492
+	mother=14450493
+	2438.7.11={birth=yes}
+	2518.8.1={death=yes}
+}
 
+#Ignacio Sotomayor
+14450495={
+	name=Ignacio
+	religion=cristo_rey
+	culture=chilango
+	dynasty=5001139
+	trait=underhanded_rogue
+	trait=slow
+	trait=strong
+	trait=honest
+	trait=slothful
+	father=14450494
+	2466.1.11={birth=yes}
+	2531.5.27={death=yes}
+}
 
-#
-#Otón Sotomayor marries last 14450492 daughter of Aureliano III rules from Puebla eventually usurped by Tlxancanas
+#José II Otón Sotomayor
+14450496={
+	name=José
+	religion=cristo_rey
+	culture=chilango
+	dynasty=5001139
+	trait=skilled_tactician
+	trait=theologian
+	trait=zealous
+	trait=humble
+	trait=wroth
+	father=14450495
+	2491.6.11={birth=yes}
+	2555.12.4={death=yes}
+}
+
+#Marcos I Sotomayor
+14450497={
+	name=Marcos
+	religion=cristo_rey
+	culture=chilango
+	dynasty=5001139
+	trait=charismatic_negotiator
+	trait=musician
+	trait=diligent
+	trait=greedy
+	father=14450496
+	2519.7.6={birth=yes}
+	2544.12.2={
+		religion=sacred_heart
+		add_trait=sympathy_christendom
+	}
+	2576.8.1={death=yes}
+}
+
+#José III Joaquín Sotomayor
+14450498={
+	name="José Joaquín"
+	religion=sacred_heart
+	culture=chilango
+	dynasty=5001139
+	trait=fortune_builder
+	trait=marian_guadalupe
+	trait=strong
+	trait=diligent
+	trait=honest
+	father=14450497
+	2547.2.20={birth=yes}
+	2607.9.9={death=yes}
+} 
+
+#Otón III Sotomayor
+14450499={
+	name="Otón"
+	religion=sacred_heart
+	culture=chilango
+	dynasty=5001139
+	trait=naive_appeaser
+	trait=marian_santa_muerte
+	trait=homosexual
+	trait=trusting
+	trait=honest
+	trait=kind
+	trait=lazy
+	father=14450498
+	2577.7.7={birth=yes}
+	2613.10.1={death = {
+			death_reason = death_murder_unknown_poison 
+			killer = 14450501
+		}
+	}
+} 
+
+#Alejandra Sotomayor
+14450500={
+	name=Alejandra
+	female=yes
+	religion=sacred_heart
+	culture=chilango
+	dynasty=5001139
+	trait=marian_guadalupe
+	trait=content
+	trait=trusting
+	trait=flamboyant_schemer
+	father=14450497
+	2559.4.15={birth=yes}
+	2579.9.10={add_spouse = 14450501}
+	2631.3.30={death=yes}
+}
+
+#Adelmo 
+14450501={
+	name=Adelmo 
+	religion=sacred_heart
+	culture=chilango
+	dynasty=1519001
+	trait=marian_santa_muerte
+	trait=cruel
+	trait=deceitful
+	trait=patient
+	trait=lustful
+	2551.9.11={birth=yes}
+	2615.11.14={death=yes}
+}
 
 #Daúd
 #Anselmo llorente, the first bishop of Costa Rica attended the sick people, people with cholera putting his life in risk. 
