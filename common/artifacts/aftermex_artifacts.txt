@@ -43,20 +43,21 @@ image_of_virgin = {
 }
 
 golden_lance = {
-	monthly_character_prestige = 0.5
+	monthly_character_prestige = 0.2
 	combat_rating = 15
-	martial = 2
+	martial = 1
+	stewardship = 1
 	quality = 4
 	command_modifier = {
-		heavy_infantry = 0.2
-		actual_light_infantry = 0.15
+		morale_defence = 0.2
+		religious_enemy = 0.2
 	}
 	active = {
 		age = 14
 	}
 	flags = { combat_weapon sword }
 	stacking = no
-	picture = "GFX_sword_of_zorro" #Temporary
+	picture = "GFX_golden_lance"
 	slot = weapon
 }
 
