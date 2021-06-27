@@ -2,8 +2,8 @@
 namespace=MHR
 # Possible Sponsor receives mass baptism request
 letter_event = {
-	id = MHR.20000
-	desc = EVTDESCMHR20000
+	id = MHR.1
+	desc = EVTDESCMHR1
 	border = GFX_event_letter_frame_religion
 	show_from_from = yes
 	
@@ -59,87 +59,9 @@ narrative_event = {
 	title = EVTTITLE20003
 	desc = {
 		trigger = {
-			event_target:sponsoring_king = { religion_group = christian }
+			event_target:sponsoring_king = { religion = christian }
 		}
 		text = EVTDESCMHRA20003
-	}
-	desc = {
-		trigger = {
-			event_target:sponsoring_king = { religion_group = muslim }
-		}
-		text = EVTDESCMHRB20003
-	}
-	desc = {
-		trigger = {
-			event_target:sponsoring_king = { religion = norse_pagan_reformed }
-		}
-		text = EVTDESCMHRC20003
-	}
-	desc = {
-		trigger = {
-			event_target:sponsoring_king = { religion = tengri_pagan_reformed }
-		}
-		text = EVTDESCMHRD20003
-	}
-	desc = {
-		trigger = {
-			event_target:sponsoring_king = { religion = baltic_pagan_reformed }
-		}
-		text = EVTDESCMHRE20003
-	}
-	desc = {
-		trigger = {
-			event_target:sponsoring_king = { religion = finnish_pagan_reformed }
-		}
-		text = EVTDESCMHRF20003
-	}
-	desc = {
-		trigger = {
-			event_target:sponsoring_king = { religion = slavic_pagan_reformed }
-		}
-		text = EVTDESCMHRG20003
-	}
-	desc = {
-		trigger = {
-			event_target:sponsoring_king = { religion = aztec_reformed }
-		}
-		text = EVTDESCMHRH20003
-	}
-	desc = {
-		trigger = {
-			event_target:sponsoring_king = { religion = west_african_pagan_reformed }
-		}
-		text = EVTDESCMHRI20003
-	}
-	desc = {
-		trigger = {
-			event_target:sponsoring_king = { religion = zun_pagan_reformed }
-		}
-		text = EVTDESCMHRL20003
-	}
-	desc = {
-		trigger = {
-			event_target:sponsoring_king = { religion = hellenic_pagan_reformed }
-		}
-		text = EVTDESCMHRM20003
-	}
-	desc = {
-		trigger = {
-			event_target:sponsoring_king = { religion_group = zoroastrian_group }
-		}
-		text = EVTDESCMHRN20003
-	}
-	desc = {
-		trigger = {
-			event_target:sponsoring_king = { religion_group = jewish_group }
-		}
-		text = EVTDESCMHRO20003
-	}
-	desc = {
-		trigger = {
-			event_target:sponsoring_king = { OR = { religion_group = indian_group religion = bon_reformed } }
-		}
-		text = EVTDESCMHRP20003
 	}
 
 
