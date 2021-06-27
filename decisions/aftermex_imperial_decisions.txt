@@ -203,4 +203,37 @@ decisions = {
 			}
 		}
 	}
+	
+	reform_lamanita = {
+		only_independent = yes
+		is_high_prio = yes
+		ai_check_interval = 24
+		
+		potential = {
+			is_playable = yes
+			has_landed_title = e_centroamerica
+			is_adult = yes
+			religion = lamanita
+			prisoner = no
+			NOT = { trait = incapable }
+			NOT = { has_global_flag = lamanita_reformed }
+			NOR = {
+				has_alternate_start_parameter = { key = religion_names value = random }
+			}
+		}
+		allow = {
+			primary_title = { title = e_centroamerica }
+			prestige = 2000
+			completely_controls = k_honduras
+			completely_controls = d_el_salvador
+			completely_controls = d_guatemala
+		}
+		effect = {
+			set_global_flag = lamanita_reformed
+			narrative_event = { id = MHR.20 tooltip = EVTTOOLTIPMHR.20 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}	
 }
