@@ -216,3 +216,33 @@ d_moravian = {
 	dynasty_title_names = no 	# Will not be named "Seljuk", etc.
 
 }
+
+d_quorum_of_the_lamanites = {
+	color = { 44 70 336 }
+	color2= { 225 255 255 }
+
+	capital = 1847 # Guatemala City
+	creation_requires_capital = no
+	
+	title = "MORAVIAN_PRESIDENT"
+	foa = "ECUMENICAL_PATRIARCH_FOA"
+	short_name = yes
+
+	short_name = yes
+	location_ruler_title = yes
+	
+	religion = lamanita
+	
+	# Cannot be held as a secondary title
+	primary = yes
+	
+	# Controls a religion
+	controls_religion = lamanita
+
+	landless = no
+	
+	allow = { always = no }
+
+	#caliphate = yes
+	dynasty_title_names = no
+}
