@@ -1,67 +1,24 @@
 namespace = destape
 
-### Designating the Tapado (sent to potential Tapado)
+### Designating the Tapado (sent to Benemérito)
 character_event = {
 	id = destape.1
 	desc = EVTDESC_destape_1
-	picture = GFX_evt_viking_throneroom_oldgods
+	picture = GFX_evt_powerful_ruler
 	border = GFX_event_normal_frame_war
 
 	is_triggered_only = yes
 	
-	option = { #heck yeah
+	option = {
 		name = EVTOPTA_destape_1
-		add_trait = tapado
-		
-		hidden_tooltip = {
-			FROMFROM = {
-				character_event = { id = destape.2 }
-			}
-		}
-		ai_chance = {
-			factor = 100
-		}
-	}
-	option = { #well, I don't wanna
-		name = EVTOPTB_destape_1
-		custom_tooltip = { text = EVTOPTB_destape_1_TOOLTIP }
-		hidden_tooltip = {
-			#FROM = {
-				add_character_modifier = {
- 					modifier = relieved_tapado_cooldown
- 					days = 365
- 					hidden = yes
-				}
-			#}
-		}
-		hidden_tooltip = {
-			FROMFROM = {
-				character_event = { id = destape.3 }
-			}
-		}
-		ai_chance = {
-			factor = 1
-			modifier = {
-				factor = 70
-				OR = {
-					trait = severely_injured
-					trait = one_eyed
-					trait = blinded
-					trait = mangled
-					trait = maimed
-					trait = wounded
-					trait = content
-				}
-			}
-		}
 	}
 }
 
-### Tapado accepts (sent to liege)
+### Tapado revoked (sent to Benemérito)
 character_event = {
 	id = destape.2
 	desc = EVTDESC_destape_2
-	picture = GFX_evt_viking_throneroom_oldgods
+	picture = GFX_evt_suspicious_noble
 	border = GFX_event_normal_frame_war
 
 	is_triggered_only = yes
@@ -71,60 +28,9 @@ character_event = {
 	}
 }
 
-### Tapado refuses (sent to liege)
-character_event = {
-	id = destape.3
-	desc = EVTDESC_destape_3
-	picture = GFX_evt_viking_throneroom_oldgods
-	border = GFX_event_normal_frame_war
-
-	is_triggered_only = yes
-	
-	option = {
-		name = EVTOPTA_destape_3
-	}
-}
-
-### Relieving Tapado (sent to target Tapado)
-character_event = {
-	id = destape.4
-	picture = GFX_evt_viking_throneroom_oldgods
-	border = GFX_event_normal_frame_war
-
-	is_triggered_only = yes
-
-	option = { #I accept
-		name = EVTOPTA_destape_4		
-		remove_trait = tapado
-		
-		hidden_tooltip = {
-			FROMFROM = {
-				character_event = { id = destape.5 }  # ok event
-			}
-		}
-		ai_chance = {
-			factor = 100
-		}
-	}
-}
-
-### Tapado accepts resignation(sent to liege)
-character_event = {
-	id = destape.5
-	desc = EVTDESC_destape_5
-	picture = GFX_evt_viking_throneroom_oldgods
-	border = GFX_event_normal_frame_war
-
-	is_triggered_only = yes
-	
-	option = {
-		name = EVTOPTA_destape_5
-	}
-}
-
 ### Lose Tapado trait by being exiled from realm
 character_event = {
-	id = destape.6
+	id = destape.3
 	desc = DEBUG
 	is_triggered_only = yes # Triggered by on_death, on_yearly_pulse
 	hide_window = yes
@@ -150,28 +56,44 @@ character_event = {
 
 ### Destape Ceremony Decision
 character_event = {
-	id = destape.7
+	id = destape.4
 	title = "TITLE_DESTAPE"
-	desc = EVTDESC_destape_7
+	desc = EVTDESC_destape_4
 	picture = GFX_evt_feast
 	
 	is_triggered_only = yes
 
 	option = {
-		name = "EVTOPTA_destape_7"  # ready the ceremony
+		name = "EVTOPTA_destape_4"  # ready the ceremony
 		hidden_tooltip = {
-			character_event = {
-				id = destape.8
-				days = 15
-				random = 2
+			character_event = { id = destape.6 days = 60 } # Tournament start
+			any_realm_character = {
+				limit = {
+					OR = { 
+						has_job_title = job_chancellor
+						has_job_title = job_marshal
+						has_job_title = job_treasurer
+						has_job_title = job_spymaster
+						has_job_title = job_spiritual
+						has_minor_title = title_councilmember_king #Generic advisors
+						has_minor_title = title_councilmember_emperor
+						has_minor_title = title_regent
+						has_minor_title = title_commander
+					}
+					age = 16
+					NOT = { trait = incapable }
+					prisoner = no	
+				}
+				clr_character_flag = destape_has_ended
+				character_event = { id = destape.5 }
 			}
 		}
 	}
 	option = {
-		name = "EVTOPTB_destape_7"  # I'm not ready
+		name = "EVTOPTB_destape_4"  # I'm not ready
 		hidden_tooltip = {
 			character_event = {
-				id = destape.10
+				id = destape.7
 				days = 15
 				random = 2
 			}
@@ -181,9 +103,9 @@ character_event = {
 
 ### Voters invited
 character_event = {
-	id = destape.8
+	id = destape.5
 	title = "TITLE_DESTAPE"
-	desc = "EVTDESC_destape_8"
+	desc = "EVTDESC_destape_5"
 	picture = "GFX_evt_courier"
 
 	is_triggered_only = yes
@@ -191,7 +113,7 @@ character_event = {
 	trigger = { NOT = { is_inaccessible_trigger = yes } }
 
 	option = {
-		name = "EVTOPTA_destape_8"  # of course
+		name = "EVTOPTA_destape_5"  # of course
 		ai_chance = {
 			factor = 100
 			modifier  = {
@@ -202,10 +124,10 @@ character_event = {
 		}
 		set_character_flag = attending_destape
 		set_character_flag = do_not_disturb
-		hidden_tooltip = { character_event = { id = destape.14 days = 300 } } # Safety catch flag clearing
+		hidden_tooltip = { character_event = { id = destape.11 days = 300 } } # Safety catch flag clearing
 	}
 	option = {
-		name = "EVTOPTB_destape_8"  # what's the point
+		name = "EVTOPTB_destape_5"  # what's the point
 		ai_chance = {
 			factor = 0.1
 		}
@@ -214,9 +136,9 @@ character_event = {
 
 ### Destape Begins
 letter_event = {
-	id = destape.9
+	id = destape.6
 	title = "TITLE_DESTAPE"
-	desc = "EVTDESC_destape_9"
+	desc = "EVTDESC_destape_6"
 	picture = "GFX_evt_feast"
 
 	is_triggered_only = yes
@@ -224,7 +146,7 @@ letter_event = {
 	war = no
 
 	option = {
-		name = "EVTOPTA_destape_9"  # time for the dedazo
+		name = "EVTOPTA_destape_6"  # time for the dedazo
 		
 		trigger = {
 		}
@@ -236,23 +158,22 @@ letter_event = {
 				limit = {
 					trait = tapado
 				}
-				character_event = { id = destape.11 }
+				character_event = { id = destape.8 }
 			}
 		}
 	}
 	option = {
-		name = "EVTOPTB_destape_9"
+		name = "EVTOPTB_destape_6"
 		trigger = {
 			war = yes
 		}
 		scaled_wealth = 0.5
-		prestige = -100
 		hidden_tooltip = {
 			any_realm_character = {
 				limit = {
 					has_character_flag = attending_destape
 				}
-				character_event = { id = destape.10 }
+				character_event = { id = destape.7 }
 			}
 		}
 		clr_character_flag = do_not_disturb
@@ -262,15 +183,15 @@ letter_event = {
 
 ### Destape has been cancelled
 character_event = {
-	id = destape.10
+	id = destape.7
 	title = "TITLE_DESTAPE"
-	desc = "EVTDESC_destape_10"
+	desc = "EVTDESC_destape_7"
 	picture = "GFX_evt_joust"
 
 	is_triggered_only = yes
 
 	option = {
-		name = "EVTOPTA_destape_10"
+		name = "EVTOPTA_destape_7"
 		clr_character_flag = attending_tournament
 		clr_character_flag = do_not_disturb
 	}
@@ -278,25 +199,25 @@ character_event = {
 
 ### Tapado is unveiled
 character_event = {
-	id = destape.11
+	id = destape.8
 	title = "TITLE_DESTAPE"
-	desc = "EVTDESC_destape_11"
+	desc = "EVTDESC_destape_8"
 	picture = "GFX_evt_joust"
 
 	is_triggered_only = yes
 
 	option = {
-		name = "EVTOPTA_destape_11"
+		name = "EVTOPTA_destape_8"
 		add_trait = destapado
-		character_event = { id = destape.12 }
+		character_event = { id = destape.9 }
 	}
 }
 
 ### Voter decisions
 character_event = {
-	id = destape.12
+	id = destape.9
 	title = "TITLE_DESTAPE"
-	desc = "EVTDESC_destape_12"
+	desc = "EVTDESC_destape_9"
 	picture = GFX_evt_feast
 
 	capable_only = yes
@@ -306,7 +227,7 @@ character_event = {
 	is_triggered_only = yes
 	
 	option = {
-		name = "EVTOPTA_destape_12"  # fall in line
+		name = "EVTOPTA_destape_9"  # fall in line
 		trigger = {
 		}
 		ai_chance = {
@@ -329,7 +250,7 @@ character_event = {
 	}
 
 	option = {
-		name = "EVTOPTB_destape_12"  # Oppose the destapado
+		name = "EVTOPTB_destape_9"  # Oppose the destapado
 		trigger = {
 		}
 		ai_chance = {
@@ -349,15 +270,15 @@ character_event = {
 
 ### Destape outcome
 character_event = {
-	id = destape.13
+	id = destape.10
 	title = "TITLE_DESTAPE"
-	desc = "EVTDESC_destape_13"
+	desc = "EVTDESC_destape_10"
 	picture = GFX_evt_feast
 
 	is_triggered_only = yes
 
 	option = {
-		name = "EVTOPTA_destape_13"
+		name = "EVTOPTA_destape_10"
 		set_character_flag = approves_destapado
 	}
 }
@@ -368,7 +289,7 @@ character_event = {
 
 # Safety catch - clears character flags and modifiers
 character_event = {
-	id = destape.14
+	id = destape.11
 
 	hide_window = yes
 	
