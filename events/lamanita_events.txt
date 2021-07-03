@@ -21,7 +21,7 @@ narrative_event = {
 				type = lamanita_emperor_male
 			}
 			new_bloodline = {
-				set_description = "bloodline_desc_usa"
+				set_description = "bloodline_desc_lamanita"
 			}	
 			sound_effect = bloodline_added			
 		}
@@ -34,7 +34,7 @@ narrative_event = {
 				type = lamanita_emperor_female
 			}
 			new_bloodline = {
-				set_description = "bloodline_desc_usa"
+				set_description = "bloodline_desc_lamanita"
 			}	
 			sound_effect = bloodline_added			
 		}
@@ -96,7 +96,7 @@ character_event = {
 			age = 40
 			health = 8
 			trait = quick
-			trait = pius
+			trait = pious
 			trait = honest
 			trait = scholar
 			trait = mastermind_theologian
@@ -119,7 +119,7 @@ character_event = {
 			set_defacto_liege = ROOT
 			save_event_target_as = primer_elder_established
 		}
-		narrative_event = { id = MHR.3 }		
+		narrative_event = { id = MHR.3 days = 4 }		
 	}
 }
 
