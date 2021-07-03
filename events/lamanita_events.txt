@@ -1,15 +1,43 @@
 
 namespace=MHR
-letter_event = {
+narrative_event = {
 	id = MHR.1
 	desc = EVTDESCMHR1
-	border = GFX_event_letter_frame_religion
+	picture = GFX_evt_icon
+	border = GFX_event_narrative_frame_religion
 	show_from_from = yes
 	
 	is_triggered_only = yes
 
 	option = {
 		name = EVTOPTAMHR1
+		character_event = { id = MHR.2 }
+		if = { #Bloodline Male
+			limit = { 
+				has_dlc = "Holy Fury" 
+				is_female = no
+			}
+			create_bloodline = {
+				type = lamanita_emperor_male
+			}
+			new_bloodline = {
+				set_description = "bloodline_desc_usa"
+			}	
+			sound_effect = bloodline_added			
+		}
+		else_if = { #Bloodline Female
+			limit = { 
+				has_dlc = "Holy Fury" 
+				is_female = yes
+			}
+			create_bloodline = {
+				type = lamanita_emperor_female
+			}
+			new_bloodline = {
+				set_description = "bloodline_desc_usa"
+			}	
+			sound_effect = bloodline_added			
+		}
 	}
 }
 
@@ -36,9 +64,8 @@ character_event = {
 				}
 			}
 			set_defacto_liege = ROOT
-			emf_liege_change = yes
 			save_event_target_as = primer_elder_established
-			ROOT = { narrative_event = { id = emf_heresy.2134 } }
+			ROOT = { narrative_event = { id = MHR.3 } }
 			break = yes
 		}
 		random_realm_character = {
@@ -49,7 +76,7 @@ character_event = {
 				learning = 10
 				is_incapable = no
 			}
-			d_bogomilist = { grant_title = PREV }
+			d_quorum_of_the_lamanites = { grant_title = PREV }
 			ROOT = {
 				random_realm_title = {
 					limit = { is_holy_site = ROOT }
@@ -57,34 +84,32 @@ character_event = {
 				}
 			}
 			set_defacto_liege = ROOT
-			emf_liege_change = yes
 			save_event_target_as = primer_elder_established
-			ROOT = { narrative_event = { id = emf_heresy.2134 } }
+			ROOT = { narrative_event = { id = MHR.3 } }
 			break = yes
 		}
 		create_random_priest = {
 			random_traits = yes
 			dynasty = random
-			religion = bogomilist
+			religion = lamanita
 			culture = ROOT
 			age = 40
-			health = 7
+			health = 8
 			trait = quick
-			trait = zealous
-			trait = perfecti
+			trait = pius
+			trait = honest
 			trait = scholar
 			trait = mastermind_theologian
 			attributes = {
-				learning = 5
-				diplomacy = 5
-				martial = 2
-				stewardship = 5
-				intrigue = 5
+				learning = 6
+				diplomacy = 6
+				martial = 6
+				stewardship = 6
+				intrigue = 6
 			}
 		}
 		new_character = {
-			emf_dna_set_flags_for_high_health = yes
-			d_bogomilist = { grant_title = PREV }
+			d_quorum_of_the_lamanites = { grant_title = PREV }
 			ROOT = {
 				random_realm_title = {
 					limit = { is_holy_site = ROOT }
@@ -92,18 +117,16 @@ character_event = {
 				}
 			}
 			set_defacto_liege = ROOT
-			emf_liege_change = yes
-			emf_new_character_priest = yes
 			save_event_target_as = primer_elder_established
 		}
-		narrative_event = { id = emf_heresy.2134 }
+		narrative_event = { id = MHR.3 }		
 	}
 }
-# The rest of the world is told about the new Bogomilist Patriarch
+
 narrative_event = {
-	id = emf_heresy.2134
-	title = EVTTITLE_emf_heresy_2134
-	desc = EVTDESC_emf_heresy_2134
+	id = MHR.3
+	title = EVTTITLE_MHR.3
+	desc = EVTDESC_MHR.3
 	picture = GFX_evt_icon
 	border = GFX_event_narrative_frame_religion
 
@@ -112,7 +135,12 @@ narrative_event = {
 	is_triggered_only = yes
 
 	option = {
-		name = EVTOPTA_emf_heresy_2134
+		name = EVTOPTA_MHR.3
+		trigger = { religion = lamanita }
+	}
+
+	option = {
+		name = EVTOPTB_MHR.3
 		trigger = {
 			NOT = { religion = lamanita }
 			OR = {
@@ -122,11 +150,12 @@ narrative_event = {
 		}
 	}
 	option = {
-		name = EVTOPTB_emf_heresy_2134
-		trigger = { NOT = { religion_group = christian } }
-	}
-	option = {
-		name = EVTOPTA_emf_heresy_2130
-		trigger = { religion = lamanita }
+		name = EVTOPTC_MHR.3
+		trigger = {
+			NOR = {
+				religion_group = christian
+				religion_group = latter_day_saints
+			}
+		}
 	}
 }
