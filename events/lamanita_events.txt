@@ -3,7 +3,7 @@ namespace=MHR
 narrative_event = {
 	id = MHR.1
 	desc = EVTDESCMHR1
-	picture = GFX_evt_icon
+	picture = GFX_evt_mass_baptism
 	border = GFX_event_narrative_frame_religion
 	show_from_from = yes
 	
@@ -127,7 +127,7 @@ narrative_event = {
 	id = MHR.3
 	title = EVTTITLE_MHR.3
 	desc = EVTDESC_MHR.3
-	picture = GFX_evt_icon
+	picture = GFX_evt_mass_baptism
 	border = GFX_event_narrative_frame_religion
 
 	major = yes
@@ -137,7 +137,7 @@ narrative_event = {
 	option = {
 		name = EVTOPTA_MHR.3
 		trigger = { religion = lamanita }
-		NOT = { primary_title = { title = e_centroamerica } }
+		NOT = { title = e_centroamerica } 
 	}
 
 	option = {
