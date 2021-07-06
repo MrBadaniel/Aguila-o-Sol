@@ -25,11 +25,22 @@ e_centroamerica = {
 			c_chiquimula = { # 1845
 				color={ 21 155 150 }
 				color2={ 255 255 255 }
+				
 				holy_site = qabantajik # make sure to redo the pilgrimage stuff for this
 				holy_site = moravian
 				holy_site = penitente
 				
+				yucateco = "Chiquimuljá"
+				lacandon = "Chiquimuljá"
+                quichean = "Chiquimuljá"
+                cholano = "Chiquimuljá"
+				
 				b_chiquimula_GT = {}
+					yucateco = "Chiquimuljá"
+					lacandon = "Chiquimuljá"
+                    quichean = "Chiquimuljá"
+                    cholano = "Chiquimuljá"
+				}
 				b_jalapa_GT = {}
 				b_zacapa_GT = {}
 				b_camotan_GT = {}
@@ -49,13 +60,18 @@ e_centroamerica = {
 				holy_site = neomayan
 				
 				
-				centrano = "Guate"
+				centrano = "Guatemala"
+				trifinio = "Guatemala"
+				nicoyano = "Guatemala"
 				garinagu = "Wadimalu"
 				nahua = "Cuauhtemallan"
 				
 				b_guatemala_GT = {
-					centrano = "La Guayaba"
-					nahua = "Cuauhtemallan"
+					centrano = "Guatemala"
+				    trifinio = "Guatemala"
+				    nicoyano = "Guatemala"
+				    garinagu = "Wadimalu"
+				    nahua = "Cuauhtemallan"
 				}
 				b_antigua_guatemala_GT = {}
 				b_kaminaljuyu_GT = {}
@@ -79,7 +95,11 @@ e_centroamerica = {
 				color={ 78 181 208 }
 				color2={ 255 255 255 }
 				
+				nahua = "Itzcuintlán"
+				
 				b_escuintla_GT = {}
+					nahua = "Itzcuintlán"
+			    }
 				b_cuilapa_GT = {}
 				b_cotzumalguapa_GT = {}
 				b_puero_san_jose_GT = {}
@@ -150,6 +170,11 @@ e_centroamerica = {
 				cholano = "chnab’jul"
 
 				b_huehuetenango_GT = {}
+					yucateco = "chnab’jul"
+				    lacandon = "chnab’jul"
+				    quichean = "chnab’jul"
+				    cholano = "chnab’jul"
+				}
 				b_san_mateo_ixtatan_GT = {}
 				b_chiantla_GT = {}
 				b_barillas_GT = {}
