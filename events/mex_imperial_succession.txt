@@ -64,9 +64,9 @@ character_event = {
 	is_triggered_only = yes
 
 	option = {
-		name = "EVTOPTA_destape_4"  # ready the ceremony
+		name = EVTOPTA_destape_4  # ready the ceremony
 		hidden_tooltip = {
-			character_event = { id = destape.6 days = 60 } # Tournament start
+			character_event = { id = destape.6 days = 60 } # ceremony start
 			any_realm_character = {
 				limit = {
 					OR = { 
@@ -75,7 +75,7 @@ character_event = {
 						has_job_title = job_treasurer
 						has_job_title = job_spymaster
 						has_job_title = job_spiritual
-						has_minor_title = title_councilmember_king #Generic advisors
+						has_minor_title = title_councilmember_king # Generic advisors
 						has_minor_title = title_councilmember_emperor
 						has_minor_title = title_regent
 						has_minor_title = title_commander
@@ -90,7 +90,7 @@ character_event = {
 		}
 	}
 	option = {
-		name = "EVTOPTB_destape_4"  # I'm not ready
+		name = EVTOPTB_destape_4  # I'm not ready
 		hidden_tooltip = {
 			character_event = {
 				id = destape.7
@@ -105,32 +105,18 @@ character_event = {
 character_event = {
 	id = destape.5
 	title = "TITLE_DESTAPE"
-	desc = "EVTDESC_destape_5"
-	picture = "GFX_evt_courier"
+	desc = EVTDESC_destape_5
+	picture = GFX_evt_courier
 
 	is_triggered_only = yes
 
 	trigger = { NOT = { is_inaccessible_trigger = yes } }
 
 	option = {
-		name = "EVTOPTA_destape_5"  # of course
-		ai_chance = {
-			factor = 100
-			modifier  = {
-				factor = 0.001
-				ai = yes
-				is_inaccessible_trigger = yes
-			}
-		}
+		name = EVTOPTA_destape_5  # of course
 		set_character_flag = attending_destape
 		set_character_flag = do_not_disturb
 		hidden_tooltip = { character_event = { id = destape.11 days = 300 } } # Safety catch flag clearing
-	}
-	option = {
-		name = "EVTOPTB_destape_5"  # what's the point
-		ai_chance = {
-			factor = 0.1
-		}
 	}
 }
 
@@ -138,15 +124,15 @@ character_event = {
 letter_event = {
 	id = destape.6
 	title = "TITLE_DESTAPE"
-	desc = "EVTDESC_destape_6"
-	picture = "GFX_evt_feast"
+	desc = EVTDESC_destape_6
+	picture = GFX_evt_feast
 
 	is_triggered_only = yes
 	
 	war = no
 
 	option = {
-		name = "EVTOPTA_destape_6"  # time for the dedazo
+		name = EVTOPTA_destape_6  # time for the dedazo
 		
 		trigger = {
 		}
@@ -163,7 +149,7 @@ letter_event = {
 		}
 	}
 	option = {
-		name = "EVTOPTB_destape_6"
+		name = EVTOPTB_destape_6
 		trigger = {
 			war = yes
 		}
@@ -185,8 +171,8 @@ letter_event = {
 character_event = {
 	id = destape.7
 	title = "TITLE_DESTAPE"
-	desc = "EVTDESC_destape_7"
-	picture = "GFX_evt_joust"
+	desc = EVTDESC_destape_7
+	picture = GFX_evt_joust
 
 	is_triggered_only = yes
 
@@ -201,13 +187,13 @@ character_event = {
 character_event = {
 	id = destape.8
 	title = "TITLE_DESTAPE"
-	desc = "EVTDESC_destape_8"
-	picture = "GFX_evt_joust"
+	desc = EVTDESC_destape_8
+	picture = GFX_evt_joust
 
 	is_triggered_only = yes
 
 	option = {
-		name = "EVTOPTA_destape_8"
+		name = EVTOPTA_destape_8
 		add_trait = destapado
 		character_event = { id = destape.9 }
 	}
@@ -217,7 +203,7 @@ character_event = {
 character_event = {
 	id = destape.9
 	title = "TITLE_DESTAPE"
-	desc = "EVTDESC_destape_9"
+	desc = EVTDESC_destape_9
 	picture = GFX_evt_feast
 
 	capable_only = yes
@@ -227,7 +213,7 @@ character_event = {
 	is_triggered_only = yes
 	
 	option = {
-		name = "EVTOPTA_destape_9"  # fall in line
+		name = EVTOPTA_destape_9  # fall in line
 		trigger = {
 		}
 		ai_chance = {
@@ -250,7 +236,7 @@ character_event = {
 	}
 
 	option = {
-		name = "EVTOPTB_destape_9"  # Oppose the destapado
+		name = EVTOPTB_destape_9  # Oppose the destapado
 		trigger = {
 		}
 		ai_chance = {
@@ -272,13 +258,13 @@ character_event = {
 character_event = {
 	id = destape.10
 	title = "TITLE_DESTAPE"
-	desc = "EVTDESC_destape_10"
+	desc = EVTDESC_destape_10
 	picture = GFX_evt_feast
 
 	is_triggered_only = yes
 
 	option = {
-		name = "EVTOPTA_destape_10"
+		name = EVTOPTA_destape_10
 		set_character_flag = approves_destapado
 	}
 }

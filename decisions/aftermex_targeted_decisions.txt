@@ -1,6 +1,5 @@
 targetted_decisions = {
 
-################## ADELITA #####################
 	make_adelita = {
 		only_playable = yes
 		filter = court
@@ -192,8 +191,6 @@ targetted_decisions = {
 		}
 	}
 
-#################### MEX SUCCESSION #################
-
 	designate_tapado = {
 		only_playable = yes
 		filter = sub_realm
@@ -309,11 +306,10 @@ targetted_decisions = {
 				character_event = { id = destape.2 }
 			}
 
-				add_character_modifier = {
- 					modifier = relieved_tapado_cooldown
- 					days = 365
- 					hidden = yes
-				}
+			add_character_modifier = {
+				modifier = relieved_tapado_cooldown
+				days = 365
+				hidden = yes
 			}
 		}
 
