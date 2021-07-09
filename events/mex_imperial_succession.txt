@@ -1,7 +1,7 @@
 namespace = destape
 
 ### Designating the Tapado (sent to Benemérito)
-character_event = {
+long_character_event = {
 	id = destape.1
 	desc = EVTDESC_destape_1
 	picture = GFX_evt_powerful_ruler
@@ -66,19 +66,11 @@ character_event = {
 	option = {
 		name = EVTOPTA_destape_4  # ready the ceremony
 		hidden_tooltip = {
-			character_event = { id = destape.6 days = 60 } # ceremony start
+			narrative_event = { id = destape.6 days = 30 } # ceremony start
 			any_realm_character = {
 				limit = {
 					OR = { 
-						has_job_title = job_chancellor
-						has_job_title = job_marshal
-						has_job_title = job_treasurer
-						has_job_title = job_spymaster
-						has_job_title = job_spiritual
-						has_minor_title = title_councilmember_king # Generic advisors
-						has_minor_title = title_councilmember_emperor
-						has_minor_title = title_regent
-						has_minor_title = title_commander
+						is_vassal_of = FROM
 					}
 					age = 16
 					NOT = { trait = incapable }
@@ -92,10 +84,8 @@ character_event = {
 	option = {
 		name = EVTOPTB_destape_4  # I'm not ready
 		hidden_tooltip = {
-			character_event = {
+			letter_event = {
 				id = destape.7
-				days = 15
-				random = 2
 			}
 		}
 	}
@@ -121,7 +111,7 @@ character_event = {
 }
 
 ### Destape Begins
-letter_event = {
+narrative_event = {
 	id = destape.6
 	title = "TITLE_DESTAPE"
 	desc = EVTDESC_destape_6
@@ -136,22 +126,31 @@ letter_event = {
 		
 		trigger = {
 		}
-		
 		hidden_tooltip = {
 			set_character_flag = destape_begins
-			set_character_flag = attending_destape
 			any_realm_character = {
 				limit = {
-					trait = tapado
+					character_flag = attending_destape
 				}
 				character_event = { id = destape.8 }
+			}
+		}
+		hidden_tooltip = {
+			set_character_flag = destape_begins
+			any_realm_character = {
+				limit = {
+					character_flag = attending_destape
+					NOT = { trait = tapado }
+					NOT = FROM  # Benemérito awaits verdict
+				}
+				narrative_event = { id = destape.9 }
 			}
 		}
 	}
 	option = {
 		name = EVTOPTB_destape_6
 		trigger = {
-			war = yes
+			war = yes   # cancel the ceremony in time of war
 		}
 		scaled_wealth = 0.5
 		hidden_tooltip = {
@@ -159,16 +158,16 @@ letter_event = {
 				limit = {
 					has_character_flag = attending_destape
 				}
-				character_event = { id = destape.7 }
+				letter_event = { id = destape.7 }
 			}
 		}
 		clr_character_flag = do_not_disturb
-		clr_character_flag = attending_tournament
+		clr_character_flag = attending_destape
 	}
 }
 
 ### Destape has been cancelled
-character_event = {
+letter_event = {
 	id = destape.7
 	title = "TITLE_DESTAPE"
 	desc = EVTDESC_destape_7
@@ -178,12 +177,12 @@ character_event = {
 
 	option = {
 		name = "EVTOPTA_destape_7"
-		clr_character_flag = attending_tournament
+		clr_character_flag = attending_destape
 		clr_character_flag = do_not_disturb
 	}
 }
 
-### Tapado is unveiled
+### Tapado is unveiled - sent to Tapado
 character_event = {
 	id = destape.8
 	title = "TITLE_DESTAPE"
@@ -191,16 +190,21 @@ character_event = {
 	picture = GFX_evt_joust
 
 	is_triggered_only = yes
+	
+	ROOT = { 
+		# Save current scope
+		save_event_target_as = target_tapado 
+	}
 
 	option = {
 		name = EVTOPTA_destape_8
 		add_trait = destapado
-		character_event = { id = destape.9 }
+		character_event = { id = destape.7 }
 	}
 }
 
-### Voter decisions
-character_event = {
+### Tapado is unveiled - sent to vassals for decision
+narrative_event = {
 	id = destape.9
 	title = "TITLE_DESTAPE"
 	desc = EVTDESC_destape_9
@@ -231,6 +235,7 @@ character_event = {
 					has_character_flag = attending_destape
 				}
 				set_character_flag = approves_destapado
+				character_event = { id = destape.10 }
 			}
 		}
 	}
@@ -249,12 +254,13 @@ character_event = {
 					has_character_flag = attending_destape
 				}
 				set_character_flag = opposes_destapado
+				character_event = { id = destape.10 }
 			}
 		}
 	}
 }
 
-### Destape outcome
+### Destape outcome - Let player know the ceremony is over
 character_event = {
 	id = destape.10
 	title = "TITLE_DESTAPE"
@@ -265,7 +271,11 @@ character_event = {
 
 	option = {
 		name = EVTOPTA_destape_10
-		set_character_flag = approves_destapado
+		hidden_tooltip = {
+			clr_character_flag = do_not_disturb
+			clr_character_flag = attending_destape
+			clr_character_flag = destape_has_ended
+		}
 	}
 }
 
