@@ -1,0 +1,3275 @@
+### Vanilla overrides ###
+slots = {
+	weapon = 1
+	ceremonial_weapon = 1
+	scepter = 1
+	crown = 1
+	wrist = 1
+	neck = 1
+	torso = 1
+	ceremonial_torso = 1
+	mask = 1
+	library = 4
+}
+
+ate_weeping_statue = {
+	monthly_character_prestige = 0.1
+	global_tax_modifier = 0.05
+	active = {
+		OR = {
+			religion_group = christian
+			religion_group = cult_of_saints
+			religion_group = latter_day_saints
+		}
+	}
+	allowed_gift = {
+		OR = {
+			religion_group = christian
+			religion_group = cult_of_saints
+			religion_group = latter_day_saints
+		}
+	}
+	quality = 2
+	flags = { religious christian mary statue }
+	stacking = no
+	picture = "GFX_weeping_statue"
+}
+
+ate_fingerbone_of_saint = {
+	monthly_character_prestige = 0.25
+	monthly_character_piety = 0.25
+	active = { 
+		OR = {
+			religion_group = christian
+			religion_group = cult_of_saints
+			religion_group = latter_day_saints
+		}
+	}
+	allowed_gift = {
+		OR = {
+			religion_group = christian
+			religion_group = cult_of_saints
+			religion_group = latter_day_saints
+		}
+	}
+	quality = 1
+	flags = { religious christian bone saint bodypart }
+	picture = "GFX_saints_bone_finger"
+}
+
+ate_ark_of_the_covenant = {
+	monthly_character_prestige = 0.1
+	monthly_character_piety = 1
+	command_modifier = {
+		morale_offence = 0.1
+		morale_defence = 0.1
+	}
+	same_religion_opinion = 10
+	stewardship = 2
+	active = { 
+		OR= {
+			religion_group = christian
+			religion_group = cult_of_saints
+			religion_group = latter_day_saints
+			religion_group = jewish_group
+		}
+	}
+	allowed_gift = {
+		OR= {
+			religion_group = christian
+			religion_group = cult_of_saints
+			religion_group = latter_day_saints
+			religion_group = jewish_group
+		}
+	}
+	quality = 5
+	indestructible = yes
+	flags = { religious christian mormon jewish_group unique troops_morale }
+	stacking = no
+	picture = "GFX_ark_of_the_covenant"
+}
+
+
+### Salvage Artifacts ###
+
+ate_firearm = {
+	monthly_character_prestige = 1
+	martial = 3
+	combat_rating = 30
+	command_modifier = {
+		morale_offence = 0.1
+	}
+	quality = 4
+	active = {
+		is_adult = yes
+	}
+	flags = { oldworld salvage combat_weapon gun }
+	stacking = no
+	picture = "GFX_ate_firearm"
+	slot = weapon
+}
+
+ate_calculator = {
+	monthly_character_prestige = 0.5
+	stewardship = 2
+	learning = 1
+	quality = 3
+	active = {
+		is_adult = yes
+	}
+	flags = { oldworld salvage }
+	stacking = no
+	picture = "GFX_relicbox_iron"
+}
+
+ate_watch = {
+	monthly_character_prestige = 0.5
+	intrigue = 2
+	learning = 1
+	quality = 3
+	active = {
+		is_adult = yes
+	}
+	flags = { oldworld salvage }
+	stacking = no
+	picture = "GFX_relic_box"
+}
+
+ate_typewriter = {
+	monthly_character_prestige = 0.5
+	diplomacy = 2
+	learning = 1
+	quality = 3
+	active = {
+		is_adult = yes
+	}
+	flags = { oldworld salvage }
+	stacking = no
+	picture = "GFX_relicbox_iron"
+}
+
+ate_telescope = {
+	monthly_character_prestige = 0.5
+	learning = 2
+	martial = 1
+	quality = 3
+	active = {
+		is_adult = yes
+	}
+	flags = { oldworld salvage }
+	stacking = no
+	picture = "GFX_relic_box"
+}
+
+ate_textbooks = {
+	monthly_character_prestige = 0.5
+	learning = 3
+	quality = 3
+	active = {
+		is_adult = yes
+	}
+	flags = { oldworld salvage book }
+	stacking = no
+	picture = "GFX_book"
+}
+
+ate_compass = {
+	monthly_character_prestige = 0.1
+	intrigue = 1
+	stewardship = 2
+	active = {
+		is_adult = yes
+	}
+	quality = 3
+	flags = { oldworld salvage }
+	stacking = no
+	picture = "GFX_compass"
+}
+
+### Generic Artifacts ###
+
+hope_diamond = {
+	monthly_character_prestige = 1
+	global_tax_modifier = 0.1
+	diplomacy = 2
+	health = -0.5
+	quality = 4
+	flags = { oldworld diamond curse very_rare unique }
+	stacking = no
+	picture = "GFX_gem_diamond"
+}
+
+gachala_skull = {
+	monthly_character_prestige = 1
+	same_religion_opinion = 5
+	health = 0.5
+	quality = 3
+	active = {
+		OR = {
+			religion_group = cult_of_saints
+			religion_group = mesoamerican_gods
+			religion = falling_star
+		}
+	}
+	flags = { oldworld religious unique }
+	stacking = no
+	picture = "GFX_gem_emerald"
+}
+
+midnight_star = {
+	monthly_character_prestige = 1
+	global_tax_modifier = 0.1
+	quality = 3
+	flags = { oldworld rare unique }
+	stacking = no
+	picture = "GFX_gem_sapphire"
+}
+
+golden_disk = {
+	monthly_character_prestige = 1
+	learning = 3
+	quality = 3
+	flags = { oldworld rare }
+	stacking = no
+	picture = "GFX_golden_disk"
+}
+
+old_world_glass = {
+	monthly_character_prestige = 0.1
+	active = { }
+	quality = 1
+	flags = { oldworld glass }
+	stacking = no
+	picture = "GFX_cup_fancy"
+}
+
+old_world_jewelry = {
+	monthly_character_prestige = 0.2
+	active = { }
+	quality = 1
+	flags = { oldworld jewelry }
+	stacking = no
+	picture = "GFX_bracelet_gold"
+}
+
+old_world_musicbox = {
+	monthly_character_prestige = 0.1
+	diplomacy = 1
+	active = { }
+	quality = 1
+	flags = { oldworld music }
+	stacking = no
+	picture = "GFX_relicbox_iron"
+}
+
+old_world_shades = {
+	monthly_character_prestige = 0.1
+	diplomacy = 1
+	active = { }
+	quality = 1
+	flags = { oldworld glass jewelry }
+	stacking = no
+	picture = "GFX_old_world_shades"
+}
+
+beast_trophy = {
+	monthly_character_prestige = 0.05
+	active = { }
+	quality = 1
+	flags = { trophy }
+	picture = "GFX_pouch"
+}
+
+monkey_paw = {
+	monthly_character_piety = -0.5
+	global_tax_modifier = 0.1
+	intrigue = 2
+	quality = 2
+	active = {
+		OR = {
+			trait = cynical
+			trait = greedy
+			trait = envious
+		}
+	}
+	flags = { unholy curse rare }
+	stacking = no
+	picture = "GFX_pouch"
+}
+
+### Old World Artifacts ###
+
+the_declaration = {
+	monthly_character_prestige = 0.5
+	monthly_character_piety = 0.5
+	same_religion_opinion = 5
+	learning = 1
+	active = {
+		learning = 8
+		OR = {
+			religion = americanist
+			religion = hamiltonian
+			religion = jeffersonian
+			religion = libertarian
+		}
+	}
+	allowed_gift = {
+		OR = {
+			religion = americanist
+			religion = hamiltonian
+			religion = jeffersonian
+			religion = libertarian
+		}
+	}
+	quality = 4
+	flags = { oldworld religious book americanist unique }
+	picture = "GFX_book"
+	slot = library
+}
+
+divine_egg = {
+	monthly_character_prestige = 0.5
+	monthly_character_piety = 0.5
+	same_religion_opinion = 10
+	active = { religion = atomicist }
+	allowed_gift = { religion = atomicist }
+	quality = 4
+	flags = { oldworld religious atomicist metal egg very_rare }
+	picture = "GFX_relicbox_iron"
+}
+
+old_world_engine = {
+	monthly_character_piety = 0.2
+	monthly_character_prestige = 0.2
+	learning = 1
+	active = { 
+		OR = {
+			religion = atomicist
+			religion = rust_cultist 
+			religion = chrome_cultist
+		}
+	}
+	allowed_gift = {
+		OR = {
+			religion = atomicist
+			religion = rust_cultist 
+			religion = chrome_cultist
+		}
+	}
+	quality = 2
+	flags = { oldworld religious rust_cult atomicist metal statue }
+	stacking = no
+	picture = "GFX_ate_engine"
+}
+
+founder_bust = {
+	monthly_character_prestige = 0.2
+	active = { 
+		OR = {
+			religion = americanist
+			religion = hamiltonian
+			religion = jeffersonian
+			religion = libertarian
+		}
+	}
+	allowed_gift = {
+		OR = {
+			religion = americanist
+			religion = hamiltonian
+			religion = jeffersonian
+			religion = libertarian
+		}
+	}
+	quality = 1
+	flags = { oldworld religious americanist statue }
+	stacking = no
+	picture = "GFX_ate_bust"
+}
+
+old_world_money = {
+	monthly_character_piety = 0.1
+	stewardship = 1
+	active = { 
+		OR = {
+			religion = consumerist
+			religion = monetarist
+			religion = americanist
+			religion = hamiltonian
+			religion = jeffersonian
+			religion = libertarian
+		}
+	}
+	allowed_gift = { 
+		OR = {
+			religion = consumerist
+			religion = monetarist
+			religion = americanist
+			religion = hamiltonian
+			religion = jeffersonian
+			religion = libertarian
+		}
+	}
+	quality = 1
+	flags = { oldworld religious americanist statue }
+	stacking = no
+	picture = "GFX_old_world_money"
+}
+
+king_james_bible = {
+	monthly_character_piety = 0.1
+	learning = 2
+	active = {
+		learning = 9
+		OR = {
+			religion = evangelical
+			religion = charismatic
+			religion = antinomian
+			religion = postadventist
+			religion = high_church
+			religion = nonconformist
+			religion_group = latter_day_saints
+		}
+	}
+	allowed_gift = {
+		OR = {
+			religion = evangelical
+			religion = charismatic
+			religion = antinomian
+			religion = postadventist
+			religion = high_church
+			religion = nonconformist
+			religion_group = latter_day_saints
+		}
+	}
+	quality = 3
+	flags = { oldworld religious christian book }
+	stacking = no
+	picture = "GFX_book_red"
+	slot = library
+}
+
+### Pacific Artifacts ###
+
+living_thyrsus = {
+	monthly_character_piety = 0.5
+	fertility = 0.1
+	stewardship = 1
+	active = { religion = gaian }
+	allowed_gift = { religion = gaian }
+	quality = 2
+	flags = { religious staff gaian plant rare }
+	picture = "GFX_haoma_sapling"
+	slot = ceremonial_weapon
+}
+
+jonathans_conquests = {
+	monthly_character_piety = 0.5
+	martial = 1
+	active = {
+		OR = {
+			culture_group = north_pacific
+			culture_group = northwest_coast
+			culture_group = californian
+		}
+	}
+	allowed_gift = {
+		OR = {
+			culture_group = north_pacific
+			culture_group = northwest_coast
+			culture_group = californian
+		}
+	}
+	quality = 3
+	flags = { religious pacific book very_rare unique }
+	picture = "GFX_emerald_tablet"
+}
+
+ancient_bonsai = {
+	monthly_character_piety = 0.1
+	learning = 1
+	active = { 
+		stewardship = 8
+		OR = { #Shouldn't work for Russians
+			religion = cetic
+			religion = gaian
+			religion = shinto
+		}
+	}
+	allowed_gift = {
+		OR = { #Shouldn't work for Russians
+			religion = cetic
+			religion = gaian
+			religion = shinto
+		}
+	}
+	quality = 1
+	flags = { religious pacific gaian shinto plant }
+	picture = "GFX_haoma_sapling"
+}
+
+imperial_writings = {
+	monthly_character_piety = 0.1
+	learning = 1
+	active = { religion = cetic }
+	allowed_gift = { religion = cetic }
+	quality = 1
+	flags = { religious cetic book }
+	picture = "GFX_book_blue"
+}
+
+imperial_moloch = {
+	monthly_character_piety = 0.5
+	monthly_character_prestige = 0.5
+	learning = 1
+	stewardship = 1
+	active = { religion = cetic }
+	allowed_gift = { religion = cetic }
+	quality = 3
+	flags = { religious cetic book unique }
+	picture = "GFX_book_blue_glow"
+	slot = library
+}
+
+golden_oscar = {
+	monthly_character_prestige = 0.5
+	diplomacy = 1
+	active = { religion = cetic }
+	allowed_gift = { religion = cetic }
+	quality = 2
+	flags = { religious cetic california idol statuette }
+	picture = "GFX_ate_oscar"
+}
+
+### Christian Artifacts ###
+
+sword_michael = {
+	monthly_character_prestige = 1
+	same_religion_opinion = 10
+	martial = 2
+	command_modifier = {
+		morale_defence = 0.2
+	}
+	active = { religion_group = christian }
+	allowed_gift = { religion_group = christian }
+	quality = 5
+	flags = { religious christian angel very_rare unique troops_morale }
+	stacking = no
+	picture = "GFX_sword_of_heroes"
+	slot = ceremonial_weapon
+}
+
+horn_gabriel = {
+	monthly_character_prestige = 0.5
+	monthly_character_piety = 0.5
+	command_modifier = {
+		morale_offence = 0.2
+		morale_defence = 0.2
+	}
+	active = { religion_group = christian }
+	allowed_gift = { religion_group = christian }
+	quality = 4
+	flags = { religious christian angel rare unique horn troops_morale }
+	stacking = no
+	picture = "GFX_gjallarhorn"
+}
+
+right_hand_petrus = { #This specifically references Pope Petrus Romanus, it shouldn't work for Protestants
+	monthly_character_prestige = 0.5
+	monthly_character_piety = 0.5
+	global_revolt_risk = -0.01
+	active = {
+		religion_group = christian
+	}
+	allowed_gift = {
+		OR = {
+			religion_group = christian
+		}
+	}
+	quality = 3
+	flags = { religious christian hand saint bodypart unique }
+	stacking = no
+	picture = "GFX_saints_bone_finger"
+}
+
+fallen_star = {
+	monthly_character_prestige = 0.2
+	learning = 1
+	active = {
+		religion = falling_star
+	}
+	allowed_gift = {
+		religion = falling_star
+	}
+	quality = 1
+	flags = { religious space metal }
+	picture = "GFX_relicbox_iron"
+}
+
+st_stanleys_chalice = {
+	monthly_character_prestige = 1
+	martial = 2
+	active = {
+		NOT = { trait = craven }
+		OR = {
+			religion = ursuline
+			religion = angeline
+			religion = high_church
+			religion = nonconformist
+			religion = norse_pagan
+			religion = norse_pagan_reformed
+		}
+	}
+	allowed_gift = {
+		OR = {
+			religion = ursuline
+			religion = angeline
+			religion = high_church
+			religion = nonconformist
+			religion = norse_pagan
+			religion = norse_pagan_reformed
+		}
+	}
+	quality = 3
+	flags = { religious christian unique }
+	picture = "GFX_st_stanleys_chalice"
+}
+
+papal_tiara = {
+	monthly_character_prestige = 1
+	diplomacy = 2
+	same_religion_opinion = 10
+	active = {
+		OR = {
+			religion = catholic
+			religion = sedevacantist
+		}
+	}
+	quality = 5
+	flags = { religious christian unique }
+	picture = "GFX_papal_tiara"
+}
+
+ancient_rosary = {
+	monthly_character_piety = 0.1
+	learning = 1
+	same_religion_opinion = 5
+	active = {
+		OR = {
+			religion = catholic
+			religion = sedevacantist
+			religion = neognostic
+			religion = nestorian
+			religion_group = cult_of_saints
+		}
+	}
+	quality = 1
+	stacking = no
+	flags = { religious christian cult_of_saints jewelry necklace }
+	picture = "GFX_pearl_necklace"
+}
+
+### Pagan Artifacts ###
+
+silver_key = {
+	monthly_character_piety = 0.5
+	learning = 1
+	intrigue = 1
+	active = {
+		OR = {
+			religion = occultist
+			religion = occultist_reformed
+		}
+	}
+	allowed_gift = {
+		OR = {
+			religion = occultist
+			religion = occultist_reformed
+		}
+	}
+	quality = 2
+	flags = { religious occult silver key }
+	picture = "GFX_relicbox_iron"
+}
+
+black_slab = {
+	monthly_character_piety = 0.5
+	learning = 2
+	stewardship = 2
+	active = { 
+		OR = {
+			religion = occultist
+			religion = occultist_reformed
+		}
+	}
+	allowed_gift = {
+		OR = {
+			religion = occultist
+			religion = occultist_reformed
+		}
+	}
+	quality = 3
+	flags = { religious occult unique }
+	picture = "GFX_stone_tablet"
+}
+
+martyrs_ashes = {
+	monthly_character_piety = 0.2
+	active = { 
+		religion_openly_revelationist_or_reformed_trigger = yes
+	}
+	allowed_gift = {
+		religion_openly_revelationist_or_reformed_trigger = yes
+	}
+	quality = 1
+	flags = { religious revelationist ashes urn bodypart }
+	picture = "GFX_relicbox_iron"
+}
+
+black_cat_banner = {
+	martial = 1
+	command_modifier = {
+		morale_offence = 0.1
+		morale_defence = 0.1
+	}
+	active = { religion_group = pagan_group }
+	allowed_gift = { religion_group = pagan_group }
+	quality = 2
+	flags = { religious revelationist occultist norse banner troops_morale }
+	picture = "GFX_ate_bcb"
+}
+
+### Mesoamerican Artifacts ###
+
+obsidian_crown = {
+	short_reign_length = -5
+	monthly_character_piety = 1.0
+	monthly_character_prestige = 0.5
+	diplomacy = 2
+	active = { religion_group = mesoamerican_gods }
+	allowed_gift = { religion_group = mesoamerican_gods }
+	quality = 4
+	indestructible = yes
+	flags = { religious mesoamerican jewelry unique crown }
+	stacking = no
+	picture = "GFX_ate_obsidian_crown"
+	slot = crown
+}
+
+chacmool_of_mirrors = {
+	monthly_character_piety = 0.5
+	same_religion_opinion = 5
+	global_tax_modifier = 0.1
+	active = { religion_group = mesoamerican_gods }
+	allowed_gift = { religion_group = mesoamerican_gods }
+	quality = 3
+	flags = { religious mesoamerican altar sacrifice rare }
+	stacking = no
+	picture = "GFX_relicbox_iron"
+}
+
+golden_chacmool = {
+	monthly_character_piety = 0.2
+	active = { religion_group = mesoamerican_gods }
+	allowed_gift = { religion_group = mesoamerican_gods }
+	quality = 1
+	flags = { religious mesoamerican altar sacrifice }
+	stacking = no
+	picture = "GFX_relic_box"
+}
+
+death_whistle = {
+	monthly_character_prestige = 0.1
+	command_modifier = {
+		morale_offence = 0.2
+	}
+	active = { religion_group = mesoamerican_gods }
+	allowed_gift = { religion_group = mesoamerican_gods }
+	quality = 1
+	flags = { religious mesoamerican command_modifier }
+	stacking = no
+	picture = "GFX_death_whistle"
+}
+
+old_dominion_old_crown = {
+	monthly_character_prestige = 0.1
+	stewardship = 2
+	active = {
+	}
+	flags = { old_dogwood unique crown jewelry crown_jewel }
+	picture = "GFX_old_dominion_old_crown"
+	quality = 1
+	stacking = no
+	indestructible = yes
+	allowed_gift = {
+		always = no
+	}
+}
+
+dogwood_crown = {
+	monthly_character_prestige = 1.0
+	stewardship = 2
+	diplomacy = 2
+	vassal_opinion = 10
+	active = {
+	}
+	flags = { dogwood_crown unique crown jewelry crown_jewel }
+	picture = "GFX_dogwood_crown"
+	quality = 5
+	stacking = no
+	slot = crown
+	indestructible = yes
+	allowed_gift = {
+		always = no
+	}
+}
+
+restored_dogwood_crown = {
+	monthly_character_prestige = 1.0
+	stewardship = 2
+	diplomacy = 2
+	vassal_opinion = 10
+	active = {
+	}
+	flags = { restored_dogwood_crown unique crown jewelry crown_jewel }
+	picture = "GFX_dogwood_crown"
+	quality = 5
+	stacking = no
+	slot = crown
+	indestructible = yes
+	allowed_gift = {
+		always = no
+	}
+}
+
+lance_of_patton = {
+	combat_rating = 10
+	active = {
+		culture_group = south_anglo
+	}
+	quality = 3
+	flags = { weapon evangelical spear }
+	picture = "GFX_lance"
+	stacking = no
+	slot = weapon
+}
+
+### American Native Artifacts ###
+
+thunderbird_whistle = {
+	monthly_character_prestige = 0.5
+	command_modifier = {
+		morale_offence = 0.2
+		morale_defence = 0.2
+	}
+	active = {
+		OR = {
+			religion_group = american_native
+			religion_group = amero_syncretic
+		}	
+	}
+	allowed_gift = {
+		OR = {
+			religion_group = american_native
+			religion_group = amero_syncretic
+		}	
+	}
+	quality = 3
+	flags = { religious american_native amero_syncretic horn troops_morale }
+	stacking = no
+	picture = "GFX_relic_box"
+}
+
+sacred_bundle = {
+	monthly_character_piety = 0.2
+	active = {
+		OR = {
+			religion_group = american_native
+			religion_group = amero_syncretic
+		}	
+	}
+	allowed_gift = {
+		OR = {
+			religion_group = american_native
+			religion_group = amero_syncretic
+		}	
+	}
+	quality = 1
+	flags = { religious american_native amero_syncretic }
+	stacking = no
+	picture = "GFX_pouch"
+}
+
+### Latter-Day Saints Artifacts ###
+
+urim_and_thummim = {
+	monthly_character_piety = 1
+	monthly_character_prestige = 1
+	same_religion_opinion = 5
+	learning = 2
+	active = { religion_group = latter_day_saints }
+	allowed_gift = { religion_group = latter_day_saints }
+	quality = 4
+	flags = { religious mormon very_rare unique }
+	stacking = no
+	picture = "GFX_relic_box"
+}
+
+seer_stone = {
+	monthly_character_piety = 0.2
+	learning = 1
+	active = { religion_group = latter_day_saints }
+	allowed_gift = { religion_group = latter_day_saints }
+	quality = 2
+	flags = { religious mormon }
+	stacking = no
+	picture = "GFX_pouch"
+}
+
+nauvoo_fragment = {
+	monthly_character_piety = 0.2
+	active = { religion_group = latter_day_saints }
+	allowed_gift = { religion_group = latter_day_saints }
+	quality = 1
+	flags = { religious mormon }
+	stacking = no
+	picture = "GFX_relicbox_iron"
+}
+
+### Afro-Syncretic Artifacts ###
+
+gris_gris = {
+	monthly_character_piety = 0.1
+	learning = 1
+	active = { religion_group = afro_syncretic }
+	allowed_gift = { religion_group = afro_syncretic }
+	quality = 1
+	flags = { religious voodoo amulet }
+	stacking = no
+	picture = "GFX_pouch"
+}
+
+crown_lion_judah = { #now uses the unique Byzantine crown sprite
+	monthly_character_prestige = 0.5
+	same_religion_opinion = 10
+	martial = 2
+	active = {
+		OR = {
+			AND = {
+				is_feudal = yes
+				has_landed_title = e_caribbean
+			}
+			AND = {
+				is_feudal = yes
+				religion_group = jewish_group
+				higher_tier_than = KING
+			}
+		}
+	}
+	#not allowed gift anymore
+	quality = 4
+	flags = { religious crown jewelry unique }
+	stacking = no
+	picture = "GFX_crown_byzantine"
+	slot = crown
+}
+
+maxwell_iron_shirt = {
+	combat_rating = 10
+	monthly_character_prestige = 0.25
+	command_modifier = {
+		morale_offence = 0.10
+	}
+	active = { religion_group = afro_syncretic }
+	allowed_gift = { religion_group = afro_syncretic }
+	quality = 1
+	flags = { religious armor }
+	stacking = no
+	slot = torso
+	picture = "GFX_suit_of_armor_black"
+}
+
+ate_mardi_gras_beads = {
+	monthly_character_prestige = 0.15
+	active = {
+		culture_group = louisianais
+	}
+	allowed_gift = {
+		culture_group = louisianais
+	}
+	quality = 1
+	stacking = no
+	flags = { religious voodoo jewelry necklace }
+	picture = "GFX_pearl_necklace"
+}
+
+ate_ileke = {
+	monthly_character_piety = 0.1
+	monthly_character_prestige = 0.1
+	active = {
+		OR = {
+			religion = santeria
+			religion = candomble
+		}
+	}
+	allowed_gift = {
+		OR = {
+			religion = santeria
+			religion = candomble
+		}
+	}
+	quality = 1
+	stacking = no
+	flags = { religious santeria candomble necklace }
+	picture = "GFX_pearl_necklace"
+}
+
+## Jewish Artifacts ##
+golden_menorah = {
+	monthly_character_prestige = 0.5
+	monthly_character_piety = 0.5
+	same_religion_opinion = 10
+	learning = 3
+	active = { religion_group = jewish_group }
+	allowed_gift = { religion_group = jewish_group }
+	quality = 5
+	flags = { oldworld religious jewish_group unique }
+	stacking = no
+	picture = "GFX_jsm_golden_menorah"
+}
+
+jewish_banner = {
+	monthly_character_prestige = 0.1
+	command_modifier = {
+		morale_offence = 0.1
+		morale_defence = 0.1
+	}
+	active = { religion_group = jewish_group }
+	allowed_gift = { religion_group = jewish_group }
+	quality = 1
+	flags = { religious jewish_group banner troops_morale }
+	stacking = no
+	picture = "GFX_jsm_jewish_banner"
+}
+
+ancient_torah = {
+	monthly_character_piety = 0.5
+	learning = 3
+	active = { religion_group = jewish_group }
+	allowed_gift = { religion_group = jewish_group }
+	quality = 2
+	flags = { oldworld religious jewish_group book rare }
+	stacking = no
+	picture = "GFX_book_red_glow"
+	slot = library
+}
+
+ate_yad_of_rabbi = {
+	monthly_character_prestige = 0.25
+	monthly_character_piety = 0.25
+	active = { 
+		religion_group = jewish_group
+	}
+	allowed_gift = {
+		religion_group = jewish_group
+	}
+	quality = 1
+	flags = { religious jewish_group rabbi }
+	picture = "GFX_relicbox_iron"
+}
+
+ate_shofar_lubavitcher_rebbe = {
+	monthly_character_piety = 0.3
+	learning = 2
+	active = { religion_group = jewish_group }
+	allowed_gift = {
+		religion_group = jewish_group
+	}
+	quality = 4
+	flags = { religious jewish_group rabbi unique }
+	stacking = no
+	picture = "GFX_ate_shofar"
+}
+
+old_tefillah = {
+	monthly_character_piety = 0.2
+	monthly_character_prestige = 0.2
+	active = {
+		religion_group = jewish_group
+	}
+	allowed_gift = {
+		religion_group = jewish_group
+	}
+	quality = 1
+	flags = { oldworld religious jewish_group rare }
+	stacking = no
+	picture = "GFX_relic_box_simple"
+}
+
+## More Vanilla Overrides ##
+ate_fetish_of_souls = {
+	monthly_character_prestige = 0.1
+	monthly_character_piety = 0.5
+	intrigue = 3
+	same_religion_opinion = 10
+	quality = 5
+	active = {
+		religion_group = afro_syncretic
+	}
+	allowed_gift = {
+		religion_group = afro_syncretic
+	}
+	flags = { religious afro_syncretic very_rare fetish wood face }
+	stacking = no
+	picture = "GFX_branch_of_the_cypress_of_keshmar"
+}
+
+ate_sampo = {
+	monthly_character_prestige = 0.5
+	monthly_character_piety = 0.5
+	stewardship = 2
+	global_tax_modifier = 0.2
+	same_religion_opinion = 5
+	quality = 5
+	active = {
+		culture = yooper
+		religion_group = pagan_group
+	}
+	allowed_gift = {
+		culture = yooper
+		religion_group = pagan_group
+	}
+	flags = { religious pagan very_rare mill_of_fortune produce_gold }
+	stacking = no
+	picture = "GFX_sampo"
+}
+
+##Faustian Artifacts##
+golden_fencing_saber = {
+	monthly_character_prestige = 2
+	martial = 3
+	combat_rating = 30
+	command_modifier = {
+		morale_offence = 0.2
+	}
+	quality = 5
+	active = {
+		is_adult = yes
+		OR = {
+			trait = duelist
+			trait = strong
+			trait = robust
+		}
+	}
+	flags = { religious combat_weapon trophy very_rare }
+	stacking = no
+	picture = "GFX_sword_of_heroes"
+	slot = weapon
+}
+
+golden_falconry_glove = {
+	monthly_character_prestige = 2
+	intrigue = 3
+	plot_power_modifier = 0.2
+	quality = 5
+	active = {
+		is_adult = yes
+		OR = {
+			trait = falconer
+			trait = hunter
+		}
+	}
+	flags = { religious jewelry trophy very_rare }
+	stacking = no
+	picture = "GFX_golden_falconry_glove"
+	slot = wrist
+}
+
+golden_archery_bow = {
+	monthly_character_prestige = 2
+	martial = 3
+	combat_rating = 20
+	command_modifier = {
+		morale_offence = 0.2
+	}
+	quality = 5
+	active = {
+		is_adult = yes
+		OR = {
+			trait = strong
+			trait = robust
+			trait = hunter
+		}
+	}
+	flags = { religious combat_weapon trophy very_rare }
+	stacking = no
+	picture = "GFX_eagle"
+	slot = weapon
+}
+
+golden_drinking_chalice = {
+	monthly_character_prestige = 2
+	diplomacy = 3
+	health = 0.25
+	fertility = 0.5
+	quality = 5
+	active = {
+		is_adult = yes
+		OR = {
+			trait = hedonist
+			trait = drunkard
+			trait = socializer
+		}
+	}
+	flags = { religious trophy very_rare }
+	stacking = no
+	picture = "GFX_cup_holy_grail"
+}
+
+##New Artifacts (from new artifacts.txt)##
+#Liberator relic
+liberator_relic = {
+	monthly_character_prestige = 0.15
+	monthly_character_piety = 0.15
+	active = { 
+		OR = {
+			religion = patria_grande
+			religion = espiritista
+		}
+	}
+	allowed_gift = {
+		OR = {
+			religion = patria_grande
+			religion = espiritista
+		}
+	}
+	quality = 1
+	flags = { religious bone saint bodypart }
+	picture = "GFX_saints_bone_femur"
+}
+
+##Councilor search artifacts##
+##Americanist##
+stamp_collection = {
+	quality = 2
+	monthly_character_prestige = 0.1
+	learning = 1
+	active = {
+		OR = {
+			religion = americanist
+			religion = hamiltonian
+			religion = jeffersonian
+			religion = libertarian
+		}
+	}
+	allowed_gift = {
+		OR = {
+			religion = americanist
+			religion = hamiltonian
+			religion = jeffersonian
+			religion = libertarian
+		}
+	}
+	stacking = no
+	flags = { religious americanist rare }
+	picture = "GFX_relic_box"
+}
+
+presidential_portrait = {
+	quality = 3
+	monthly_character_prestige = 0.15
+	monthly_character_piety = 0.15
+	same_religion_opinion = 3
+	learning = 2
+	active = {
+		OR = {
+			religion = americanist
+			religion = hamiltonian
+			religion = jeffersonian
+			religion = libertarian
+		}
+	}
+	allowed_gift = {
+		OR = {
+			religion = americanist
+			religion = hamiltonian
+			religion = jeffersonian
+			religion = libertarian
+		}
+	}
+	stacking = no
+	flags = { religious americanist art decor rare }
+	picture = "GFX_magnificent_painting" #placeholder
+}
+
+washingtons_teeth = {
+	quality = 4
+	monthly_character_prestige = 0.25
+	same_religion_opinion = 3
+	diplomacy = 2
+	active = {
+		OR = {
+			religion = americanist
+			religion = hamiltonian
+			religion = jeffersonian
+			religion = libertarian
+		}
+	}
+	allowed_gift = {
+		OR = {
+			religion = americanist
+			religion = hamiltonian
+			religion = jeffersonian
+			religion = libertarian
+		}
+	}
+	stacking = no
+	flags = { religious americanist bodypart very_rare }
+	picture = "GFX_relic_box" #placeholder
+}
+
+betsy_ross_flag = {
+	quality = 5
+	monthly_character_piety = 0.15
+	monthly_character_prestige = 0.25
+	same_religion_opinion = 5
+	martial = 2
+	command_modifier = {
+		morale_offence = 0.1
+		morale_defence = 0.1
+	}
+	active = {
+		OR = {
+			religion = americanist
+			religion = hamiltonian
+			religion = jeffersonian
+			religion = libertarian
+		}
+	}
+	allowed_gift = {
+		OR = {
+			religion = americanist
+			religion = hamiltonian
+			religion = jeffersonian
+			religion = libertarian
+		}
+	}
+	flags = { religious americanist banner unique troops_morale }
+	picture = "GFX_relicbox_iron" #placeholder
+}
+
+the_constitution = {
+	quality = 5
+	monthly_character_piety = 5
+	monthly_character_prestige = 5
+	same_religion_opinion = 10
+	stewardship = 3
+	active = {
+		OR = {
+			religion = americanist
+			religion = hamiltonian
+			religion = jeffersonian
+			religion = libertarian
+		}
+	}
+	allowed_gift = {
+		OR = {
+			religion = americanist
+			religion = hamiltonian
+			religion = jeffersonian
+			religion = libertarian
+		}
+	}
+	flags = { oldworld religious book americanist unique }
+	picture = "GFX_relicbox_iron" #placeholder
+	slot = library
+}
+
+##Atomicist##
+radium_watch = {
+	quality = 3
+	monthly_character_piety = 0.2
+	same_religion_opinion = 3
+	health = -0.05
+	intrigue = 2
+	learning = 1
+	active = {
+		religion = atomicist
+	}
+	allowed_gift = {
+		religion = atomicist
+	}
+	stacking = no
+	flags = { religious atomicist oldworld salvage }
+	picture = "GFX_relic_box"
+	slot = wrist
+}
+
+geiger_counter = {
+	quality = 3
+	monthly_character_piety = 0.25
+	monthly_character_prestige = 0.25
+	health = 0.15
+	intrigue = 2
+	active = {
+		religion = atomicist
+	}
+	allowed_gift = {
+		religion = atomicist
+	}
+	stacking = no
+	flags = { religious atomicist oldworld salvage }
+	picture = "GFX_relic_box"
+}
+
+holy_isotope = {
+	quality = 4
+	monthly_character_piety = 0.3
+	health = -0.15
+	same_religion_opinion = 5
+	learning = 2
+	active = {
+		religion = atomicist
+	}
+	allowed_gift = {
+		religion = atomicist
+	}
+	stacking = no
+	flags = { religious atomicist very_rare }
+	picture = "GFX_relicbox_iron"
+}
+
+demon_core = {
+	quality = 5
+	monthly_character_piety = 0.5
+	monthly_character_prestige = 0.5
+	same_religion_opinion = -5 #slightly concerned
+	health = -0.25
+	learning = 3
+	active = {
+		religion = atomicist
+	}
+	allowed_gift = {
+		religion = atomicist
+	}
+	flags = { religious atomicist curse unique }
+	picture = "GFX_relicbox_iron"
+}
+
+##Consumerist##
+coin_collection = {
+	quality = 2
+	monthly_character_prestige = 0.1
+	stewardship = 1
+	active = {
+		OR = {
+			religion = consumerist
+			religion = monetarist
+		}
+	}
+	allowed_gift = {
+		OR = {
+			religion = consumerist
+			religion = monetarist
+		}
+	}
+	stacking = no
+	flags = { religious consumerist rare }
+	picture = "GFX_relic_box"
+}
+
+treasury_bond = {
+	quality = 3
+	monthly_character_piety = 0.15
+	monthly_character_prestige = 0.2
+	stewardship = 2
+	learning = 1
+	active = {
+		OR = {
+			religion = consumerist
+			religion = monetarist
+		}
+	}
+	allowed_gift = {
+		OR = {
+			religion = consumerist
+			religion = monetarist
+		}
+	}
+	stacking = no
+	flags = { religious consumerist book very_rare }
+	picture = "GFX_relic_box"
+}
+
+platinum_chip = {
+	quality = 4
+	monthly_character_prestige = 0.3
+	monthly_character_piety = 0.2
+	same_religion_opinion = 5
+	intrigue = 2
+	stewardship = 2
+	active = {
+		OR = {
+			religion = consumerist
+			religion = monetarist
+		}
+	}
+	allowed_gift = {
+		OR = {
+			religion = consumerist
+			religion = monetarist
+		}
+	}
+	stacking = no
+	flags = { religious consumerist jewelry very_rare }
+	picture = "GFX_relicbox_iron" #placeholder
+}
+
+##Christian##
+ate_fragment_of_true_cross = {
+	monthly_character_prestige = 0.1
+	monthly_character_piety = 0.5
+	same_religion_opinion = 5
+	diplomacy = 2
+	active = {
+		OR = {
+			religion_group = christian 
+			religion_group = cult_of_saints
+			religion_group = latter_day_saints
+		}
+	}
+	allowed_gift = {
+		OR = {
+			religion_group = christian 
+			religion_group = cult_of_saints
+			religion_group = latter_day_saints
+		}
+	}
+	quality = 4
+	flags = { religious christian cult_of_saints latter_day_saints rare crucifixion }
+	stacking = no
+	picture = "GFX_nail_of_the_true_cross"
+}
+
+ate_finger_of_st_john = { #now a councilor artifact
+	monthly_character_prestige = 0.2
+	monthly_character_piety = 0.5
+	learning = 1
+	active = {
+		OR = {
+			religion_group = christian 
+			religion_group = cult_of_saints
+			religion_group = latter_day_saints
+		}
+	}
+	allowed_gift = {
+		OR = {
+			religion_group = christian
+			religion_group = cult_of_saints
+			religion_group = latter_day_saints
+		}
+	}
+	quality = 3
+	flags = { religious christian cult_of_saints latter_day_saints bodypart }
+	stacking = no
+	picture = "GFX_saints_bone_finger"
+}
+
+stone_of_golgotha = {
+	monthly_character_piety = 0.6
+	monthly_character_prestige = 0.3
+	same_religion_opinion = 10
+	learning = 3
+	active = {
+		OR = {
+			religion_group = christian
+			religion_group = cult_of_saints
+			religion_group = latter_day_saints
+		}
+	}
+	allowed_gift = {
+		OR = {
+			religion_group = christian
+			religion_group = cult_of_saints
+			religion_group = latter_day_saints
+		}
+	}
+	quality = 5
+	flags = { religious christian stone unique }
+	picture = "GFX_yada_tashy"
+}
+
+##Brethren##
+blackbeards_beard = {
+	monthly_character_piety = 0.25
+	monthly_character_prestige = 0.25
+	diplomacy = 1
+	active = { religion_group = nautical }
+	allowed_gift = {
+		religion_group = nautical
+	}
+	quality = 2
+	flags = { religious bodypart nautical }
+	stacking = no
+	picture = "GFX_pouch"
+}
+
+treasure_map = {
+	monthly_character_prestige = 0.2
+	intrigue = 1
+	active = { religion_group = nautical }
+	allowed_gift = {
+		religion_group = nautical
+	}
+	quality = 3
+	flags = { religious nautical map rare }
+	stacking = no
+	picture = "GFX_book_red"
+}
+
+chest_of_booty = {
+	monthly_character_prestige = 0.5
+	monthly_character_piety = 0.2
+	same_religion_opinion = 10
+	active = {
+		OR = {
+			religion_group = nautical
+			religion = consumerist
+			religion = monetarist
+		}
+	}
+	allowed_gift = {
+		OR = {
+			religion_group = nautical
+			religion = consumerist
+			religion = monetarist
+		}
+	}
+	stacking = no
+	quality = 5
+	flags = { religious nautical consumerist jewelry very_rare }
+	picture = "GFX_relicbox_iron" #placeholder
+}
+
+fragment_of_queen_annes_revenge = {
+	monthly_character_prestige = 0.1
+	monthly_character_piety = 0.5
+	same_religion_opinion = 5
+	diplomacy = 2
+	active = {
+		religion_group = nautical
+	}
+	allowed_gift = {
+		religion_group = nautical
+	}
+	quality = 4
+	flags = { religious nautical rare }
+	stacking = no
+	picture = "GFX_nail_of_the_true_cross"
+}
+
+##Mesoamerican artifacts##
+crystal_skull = {
+	quality = 4
+	monthly_character_prestige = 0.25
+	monthly_character_piety = 0.25
+	intrigue = 2
+	learning = 1
+	active = {
+		religion_group = mesoamerican_gods
+	}
+	allowed_gift = {
+		religion_group = mesoamerican_gods
+	}
+	flags = { religious mesoamerican_gods jewelry rare }
+	stacking = no
+	picture = "GFX_gem_sapphire" #placeholder
+}
+
+aztec_codex = {
+	quality = 3
+	monthly_character_prestige = 0.3
+	monthly_character_piety = 0.3
+	learning = 2
+	active = {
+		religion_group = mesoamerican_gods
+	}
+	allowed_gift = {
+		religion_group = mesoamerican_gods
+	}
+	flags = { religious mesoamerican_gods book very_rare }
+	stacking = no
+	picture = "GFX_book_blue_glow"
+	slot = library
+}
+
+montezuma_headdress = {
+	quality = 5
+	monthly_character_prestige = 0.5
+	monthly_character_piety = 0.25
+	martial = 3
+	command_modifier = {
+		morale_offence = 0.2
+	}
+	same_religion_opinion = 10
+	active = {
+		religion_group = mesoamerican_gods
+	}
+	allowed_gift = {
+		religion_group = mesoamerican_gods
+	}
+	flags = { religious mesoamerican unique headdress troops_morale }
+	picture = "GFX_saintly_skull" #placeholder to the max
+	slot = crown
+}
+
+##Pacific##
+idol_of_america_kami = {
+	quality = 3
+	monthly_character_piety = 0.15
+	monthly_character_prestige = 0.15
+	martial = 1
+	stewardship = 1
+	active = {
+		OR = {
+			religion = cetic
+			religion = shinto
+		}
+	}
+	allowed_gift = {
+		OR = {
+			religion = cetic
+			religion = shinto
+		}
+	}
+	flags = { religious cetic shinto idol rare }
+	picture = "GFX_small_chinese_figurine"
+}
+
+ruby_slipper = {
+	quality = 3
+	monthly_character_piety = 0.15
+	monthly_character_prestige = 0.15
+	diplomacy = 2
+	active = {
+		religion = cetic
+	}
+	allowed_gift = {
+		religion = cetic
+	}
+	flags = { religious cetic jewelry shoe rare }
+	stacking = no
+	picture = "GFX_ruby_slipper"
+}
+
+maltese_falcon = {
+	quality = 4
+	monthly_character_prestige = 0.25
+	monthly_character_piety = 0.15
+	intrigue = 2
+	plot_power_modifier = 0.15
+	active = {
+		OR = {
+			religion = cetic
+			religion = consumerist
+			religion = monetarist
+			religion_group = nautical
+		}
+	}
+	allowed_gift = {
+		OR = {
+			religion = cetic
+			religion = consumerist
+			religion = monetarist
+			religion_group = nautical
+		}
+	}
+	flags = { religious cetic consumerist nautical statue very_rare }
+	stacking = no
+	picture = "GFX_maltese_falcon"
+}
+
+emperors_sword = {
+	quality = 5
+	monthly_character_prestige = 0.5
+	monthly_character_piety = 0.5
+	martial = 3
+	command_modifier = {
+		morale_offence = 0.1
+		morale_defence = 0.1
+	}
+	same_religion_opinion = 10
+	active = {
+		religion = cetic
+	}
+	allowed_gift = {
+		religion = cetic
+	}
+	flags = { religious cetic sword unique troops_morale }
+	picture = "GFX_jian_sword"
+	slot = weapon
+}
+
+##Gaian##
+redwood_core = {
+	quality = 3
+	monthly_character_piety = 0.25
+	learning = 1
+	active = {
+		religion = gaian
+	}
+	allowed_gift = {
+		religion = gaian
+	}
+	flags = { religious gaian tree rare }
+	stacking = no
+	picture = "GFX_haoma_sapling"
+}
+
+healing_crystal = {
+	quality = 3
+	monthly_character_piety = 0.15
+	monthly_character_prestige = 0.15
+	health = 0.15
+	same_religion_opinion = 5
+	active = {
+		OR = {
+			religion = gaian
+			religion = cetic
+			religion = nousthreskeia
+			trait = mystic
+		}
+	}
+	allowed_gift = {
+		OR = {
+			religion = gaian
+			trait = mystic
+		}
+	}
+	flags = { religious gaian mystic crystal }
+	stacking = no
+	picture = "GFX_gem_sapphire"
+}
+
+everlasting_flower_wreath = {
+	quality = 4
+	monthly_character_piety = 0.25
+	monthly_character_prestige = 0.3
+	learning = 1
+	active = {
+		religion = gaian
+	}
+	allowed_gift = {
+		religion = gaian
+	}
+	flags = { religious gaian very_rare }
+	stacking = no
+	picture = "GFX_crown_of_thorns" #placeholder
+	slot = crown
+}
+
+core_of_methuselah = {
+	quality = 5
+	monthly_character_piety = 0.5
+	monthly_character_prestige = 0.5
+	stewardship = 2
+	same_religion_opinion = 10
+	active = {
+		religion = gaian
+	}
+	allowed_gift = {
+		religion = gaian
+	}
+	flags = { religious gaian tree unique }
+	picture = "GFX_haoma_sapling"
+}
+
+heart_of_the_oasis = { #get out of here STALKER
+	quality = 5
+	monthly_character_prestige = 0.5
+	monthly_character_piety = 0.5
+	health = 0.25
+	same_religion_opinion = 10
+	learning = 2
+	active = {
+		OR = {
+			religion = gaian
+			religion = nousthreskeia
+		}
+	}
+	allowed_gift = {
+		OR = {
+			religion = gaian
+			religion = nousthreskeia
+		}
+	}
+	flags = { religious gaian oldworld artifact unique }
+	picture = "GFX_branch_of_the_cypress_of_keshmar"
+}
+
+##American Native##
+ancient_war_bonnet = {
+	quality = 4
+	monthly_character_prestige = 0.25
+	monthly_character_piety = 0.15
+	same_religion_opinion = 10
+	martial = 2
+	command_modifier = {
+		morale_offence = 0.1
+	}
+	active = {
+		religion_group = american_native
+	}
+	allowed_gift = {
+		religion_group = american_native
+	}
+	stacking = no
+	flags = { religious american_native headdress rare troops_morale }
+	picture = "GFX_ancient_war_bonnet"
+	slot = crown
+}
+
+ancient_izze_kloth = {
+	quality = 3
+	monthly_character_piety = 0.25
+	monthly_character_prestige = 0.15
+	same_religion_opinion = 10
+	learning = 2
+	health = 0.15
+	active = {
+		religion_group = american_native
+	}
+	allowed_gift = {
+		religion_group = american_native
+	}
+	stacking = no
+	flags = { religious american_native sacred rare }
+	picture = "GFX_necklace_of_radiance" #placeholder
+}
+
+sitting_bull_rifle = {
+	quality = 5
+	monthly_character_prestige = 1
+	monthly_character_piety = 0.5
+	same_religion_opinion = 10
+	martial = 3
+	combat_rating = 35
+	command_modifier = {
+		morale_offence = 0.2
+		morale_defence = 0.2
+	}
+	active = {
+		is_adult = yes
+		religion_group = american_native
+	}
+	allowed_gift = {
+		is_adult = yes
+		religion_group = american_native
+	}
+	flags = { religious american_native combat_weapon gun unique }
+	picture = "GFX_sitting_bull_rifle"
+	slot = weapon
+}
+
+skull_of_geronimo = {
+	quality = 5
+	monthly_character_prestige = 0.5
+	monthly_character_piety = 0.5
+	same_religion_opinion = 10
+	intrigue = 3
+	plot_power_modifier = 0.25
+	active = {
+		OR = {
+			religion_group = american_native
+			religion = americanist
+			religion = hamiltonian
+			religion = jeffersonian
+			religion = libertarian
+		}
+	}
+	allowed_gift = {
+		OR = {
+			religion_group = american_native
+			religion = americanist
+			religion = hamiltonian
+			religion = jeffersonian
+			religion = libertarian
+		}
+	}
+	flags = { religious americanist american_native bodypart unique }
+	picture = "GFX_saints_skull"
+}
+
+terminus_est = {
+	quality = 5
+	monthly_character_prestige = 1.5
+	martial = 4
+	learning = 1
+	health = -0.5
+	combat_rating = 20
+	active = {
+		always = yes
+	}
+	allowed_gift = {
+		always = yes
+	}
+	flags = { weapon unique combat_weapon sword }
+	picture = "GFX_sword_of_heroes"
+	slot = weapon
+}
+
+famous_ancient_gun = { #rusty old firearm
+	monthly_character_prestige = 0.5
+	quality = 1
+	flags = { weapon }
+	picture = "GFX_ate_firearm_old"
+	slot = ceremonial_weapon
+}
+
+##Special Crowns and such##
+crown_hcc = { 
+	monthly_character_prestige = 1.0
+	monthly_character_piety = 1.0
+	diplomacy = 4
+	quality = 5
+	church_opinion = 10
+	active = { 
+		is_feudal = yes
+		has_landed_title = e_dixie
+	}
+	flags = { religious christian unique crown jewelry crown_jewel }
+	picture = "GFX_crown_hre"
+	slot = crown
+	indestructible = yes
+	allowed_gift = {
+		always = no
+	}
+}
+
+crown_california = {
+	monthly_character_prestige = 1.0
+	monthly_character_piety = 1.0
+	stewardship = 2
+	diplomacy = 2
+	vassal_opinion = 10
+	quality = 5
+	active = { 
+		OR = {
+			has_landed_title = e_california
+			has_landed_title = e_new_california
+			has_landed_title = d_imamite
+		}
+		is_feudal = yes
+	}
+	flags = { unique crown jewelry crown_jewel }
+	picture = "GFX_crown_pahlavi"
+	slot = crown
+	indestructible = yes
+	allowed_gift = {
+		always = no
+	}
+}
+
+crown_fylkir = { 
+	monthly_character_prestige = 0.4
+	monthly_character_piety = 0.7
+	stewardship = 2
+	martial = 2
+	tribal_opinion = 10
+	quality = 4
+	active = { 
+		has_landed_title = d_norse_pagan_reformed
+	}
+	flags = { religious unique crown jewelry crown_jewel }
+	picture = "GFX_crown_fylkir"
+	slot = crown
+	indestructible = yes
+	allowed_gift = {
+		always = no
+	}
+}
+crown_celtic_fylkir = { 
+	monthly_character_prestige = 0.4
+	monthly_character_piety = 0.7
+	stewardship = 2
+	intrigue = 2
+	tribal_opinion = 10
+	quality = 4
+	active = { 
+		has_landed_title = d_celtic_pagan_reformed
+	}
+	flags = { religious unique crown jewelry crown_jewel }
+	picture = "GFX_crown_finnish_fylkir"
+	slot = crown
+	indestructible = yes
+	allowed_gift = {
+		always = no
+	}
+}
+crown_aria_de_machete_fylkir = { 
+	monthly_character_prestige = 0.4
+	monthly_character_piety = 0.7
+	stewardship = 2
+	intrigue = 2
+	tribal_opinion = 10
+	quality = 4
+	active = { 
+		has_landed_title = d_aria_de_machete_reformed
+	}
+	flags = { religious unique crown jewelry crown_jewel }
+	picture = "GFX_crown_finnish_fylkir"
+	slot = crown
+	indestructible = yes
+	allowed_gift = {
+		always = no
+	}
+}
+
+crown_revelationist_fylkir = { 
+	monthly_character_prestige = 0.4
+	monthly_character_piety = 0.7
+	stewardship = 2
+	learning = 2
+	tribal_opinion = 10
+	quality = 4
+	active = { 
+		has_landed_title = d_revelationist_reformed
+	}
+	flags = { religious unique crown jewelry crown_jewel }
+	picture = "GFX_crown_slavic_fylkir"
+	slot = crown
+	indestructible = yes
+	allowed_gift = {
+		always = no
+	}
+}
+crown_occultist_fylkir = { 
+	monthly_character_prestige = 0.4
+	monthly_character_piety = 0.7
+	stewardship = 2
+	intrigue = 2
+	tribal_opinion = 10
+	quality = 4
+	active = { 
+		has_landed_title = d_occultist_reformed
+	}
+	flags = { religious unique crown jewelry crown_jewel }
+	picture = "GFX_crown_slavic_fylkir"
+	slot = crown
+	indestructible = yes
+	allowed_gift = {
+		always = no
+	}
+}
+crown_raven_tales_fylkir = { 
+	monthly_character_prestige = 0.4
+	monthly_character_piety = 0.7
+	stewardship = 2
+	intrigue = 2
+	tribal_opinion = 10
+	quality = 4
+	active = { 
+		has_landed_title = d_raven_tales_reformed
+	}
+	flags = { religious unique crown jewelry crown_jewel }
+	picture = "GFX_crown_slavic_fylkir"
+	slot = crown
+	indestructible = yes
+	allowed_gift = {
+		always = no
+	}
+}
+scepter_midewiwin_fylkir = { 
+	monthly_character_prestige = 0.4
+	monthly_character_piety = 0.7
+	diplomacy = 2
+	learning = 2
+	tribal_opinion = 10
+	quality = 4
+	active = { 
+		has_landed_title = d_midewiwin_reformed
+	}
+	flags = { religious scepter unique jewelry crown_jewel }
+	picture = "GFX_scepter_hellenic_fylkir" #placeholder
+	slot = scepter
+	indestructible = yes
+	allowed_gift = {
+		always = no
+	}
+}
+crown_trailwalker_fylkir = { 
+	monthly_character_prestige = 0.4
+	monthly_character_piety = 0.7
+	stewardship = 2
+	learning = 2
+	tribal_opinion = 10
+	quality = 4
+	active = { 
+		has_landed_title = d_trailwalker_reformed
+	}
+	flags = { religious unique crown jewelry crown_jewel }
+	picture = "GFX_crown_slavic_fylkir"
+	slot = crown
+	indestructible = yes
+	allowed_gift = {
+		always = no
+	}
+}
+
+#Raven Tales totems#
+carved_totem_raven_tales_1 = { #Mid tier Totem - Trickster
+	monthly_character_prestige = 0.15
+	intrigue = 3
+	combat_rating = 5
+	quality = 2
+	command_modifier = {
+		speed = 0.1
+		random = 0.1
+	}
+	active = {
+		is_adult = yes
+		OR = {
+			religion = raven_tales
+			religion = raven_tales_reformed
+		}
+	}
+	flags = { scepter totem african_fetish }
+	stacking = yes
+	picture = "GFX_scepter_african_1"
+	slot = scepter
+}
+carved_totem_raven_tales_2 = { #Mid tier Totem - Howler
+	monthly_character_prestige = 0.1
+	martial = 3
+	combat_rating = 5
+	quality = 2
+	command_modifier = {
+		narrow_flank = 0.1
+		religious_enemy = 0.1
+	}
+	active = {
+		is_adult = yes
+		OR = {
+			religion = raven_tales
+			religion = raven_tales_reformed
+		}
+	}
+	flags = { scepter totem african_fetish }
+	stacking = yes
+	picture = "GFX_scepter_african_2"
+	slot = scepter
+}
+carved_totem_raven_tales_3 = { #Low tier Totem - Rainstick
+	monthly_character_prestige = 0.05
+	stewardship = 1
+	combat_rating = 5
+	quality = 1
+	days_of_supply = 20
+	active = {
+		is_adult = yes
+		OR = {
+			religion = raven_tales
+			religion = raven_tales_reformed
+		}
+	}
+	flags = { scepter totem african_fetish }
+	stacking = no
+	picture = "GFX_scepter_african_3"
+	slot = scepter
+}
+
+excalibur = {
+	quality = 5
+	monthly_character_prestige = 0.5
+	monthly_character_piety = 0.5
+	martial = 3
+	command_modifier = {
+		morale_offence = 0.2
+		morale_defence = 0.2
+	}
+	same_religion_opinion = 10
+	combat_rating = 15
+	active = {
+		OR = {
+			religion = celtic_pagan
+			religion = celtic_pagan_reformed
+		}
+	}
+	allowed_gift = {
+		OR = {
+			religion = celtic_pagan
+			religion = celtic_pagan_reformed
+		}
+	}
+	flags = { religious celtic_pagan sword unique troops_morale }
+	picture = "GFX_sword_of_heroes"
+	slot = weapon
+}
+ancient_quran = {
+	monthly_character_piety = 0.5
+	learning = 3
+	muslim_opinion = 5
+	active = {
+		OR = {
+			religion_group = muslim
+		}
+	}
+	allowed_gift = {
+		OR = {
+			religion_group = muslim
+		}
+	}
+	quality = 2
+	flags = { religious muslim }
+	stacking = no
+	slot = library
+	picture = "GFX_quran"
+}
+
+fine_calligraphy = {
+	monthly_character_prestige = 0.3
+	monthly_character_piety = 0.3
+	muslim_opinion = 5
+
+	active = {
+		OR = {
+			religion_group = muslim
+		}
+	}
+	allowed_gift = {
+		OR = {
+			religion_group = muslim
+		}
+	}
+	quality = 2
+	flags = { religious muslim }
+	stacking = no
+	picture = "GFX_arabic_scroll"
+}
+ceremonial_scimitar = {
+	monthly_character_prestige = 0.5
+	martial = 2
+	active = {
+		OR = {
+			religion_group = muslim
+		}
+	}
+	allowed_gift = {
+		OR = {
+			religion_group = muslim
+		}
+	}
+	quality = 4
+	flags = { religious muslim }
+	stacking = no
+	picture = "GFX_the_golden_scimitar"
+	slot = ceremonial_weapon
+}
+old_world_prayer_mat = {
+	monthly_character_piety = 1
+	learning = 3
+
+	active = {
+		OR = {
+			religion_group = muslim
+		}
+	}
+	allowed_gift = {
+		OR = {
+			religion_group = muslim
+		}
+	}
+	quality = 2
+	flags = { religious muslim }
+	stacking = no
+	picture = "GFX_prayermat"
+}
+oriental_lamp = {
+	monthly_character_prestige = 5
+	learning = 2
+	orientalist_opinion = 5
+
+	active = {
+		OR = {
+			religion = orientalist
+			trait = mystic
+		}
+	}
+	allowed_gift = {
+		OR = {
+			religion_group = muslim
+		}
+	}
+	quality = 2
+	flags = { religious orientalist }
+	stacking = no
+	picture = "GFX_oriental_lamp"
+}
+californian_sword = {
+	monthly_character_prestige = 0.5
+	combat_rating = 7
+	martial = 2
+
+	quality = 2
+	active = {
+		age = 14
+	}
+	flags = { combat_weapon sword }
+	stacking = no
+	picture = "GFX_jian_sword"
+	slot = weapon
+}
+al_intisar = {
+	monthly_character_prestige = 0.5
+	combat_rating = 15
+	martial = 2
+	quality = 4
+	command_modifier = {
+		heavy_infantry = 0.2
+		actual_light_infantry = 0.15
+	}
+	active = {
+		age = 14
+	}
+	flags = { combat_weapon sword }
+	stacking = no
+	picture = "GFX_scimitar_T3"
+	slot = weapon
+}
+
+ancestral_injunctions = {
+	monthly_character_piety = 0.2
+	quality = 3
+	learning = 3
+	brave_opinion = 5
+	dynasty_opinion = 15
+	monthly_character_prestige = 0.2
+	flags = { muslim }
+	stacking = no
+	picture = "GFX_book_roots_tree_04"
+	slot = library
+}
+plutonium_mace = {
+	monthly_character_prestige = 0.6
+	monthly_character_piety = 1
+	health = -0.5
+	martial = 2
+	combat_rating = 20
+	command_modifier = {
+		heavy_infantry = 0.15
+		light_cavalry = 0.2
+	}
+	quality = 4
+	active = {
+		is_adult = yes
+		religion = atomicist
+	}
+	flags = { combat_weapon mace religious atomicist }
+	stacking = no
+	picture = "GFX_the_shatterer"
+	slot = weapon
+}
+
+#Exovedate / Metis artifacts
+bell_of_batoche = {
+	monthly_character_prestige = 0.5
+	monthly_character_piety = 0.2
+	same_religion_opinion = 10
+	metis_opinion = 10
+	intrigue = 3
+	active = {
+		OR = {
+			religion = high_church
+			religion = nonconformist
+			religion = peyotist
+			religion = exovedate
+		}
+	}
+	allowed_gift = {
+		OR = {
+			religion = high_church
+			religion = nonconformist
+			religion = peyotist
+			religion = exovedate
+		}
+	}
+	quality = 4
+	flags = { religious exovedate amero_syncretic bell unique }
+	
+	picture = "GFX_bell_of_batoche"
+}
+louis_riel_sash = {
+	gallomerican_opinion = 15
+	levy_size = 0.10
+	monthly_character_piety = 1
+	monthly_character_prestige = 1
+	active = {
+		religion = exovedate
+	}
+	quality = 5
+	flags = { religious metis amero_syncretic exovedate sash unique louis_riel }
+	indestructible = yes
+	stacking = no
+	picture = "GFX_veil_of_veronica"
+}
+riel_crucifix = {
+	monthly_character_prestige = 0.2
+	monthly_character_piety = 0.5
+	same_religion_opinion = 10
+	active = {
+		religion = exovedate
+	}
+	quality = 3
+	stacking = no
+	flags = { religious exovedate amero_syncretic unique louis_riel }
+	picture = "GFX_bell_of_batoche"
+}
+bison_hunting_lance = {
+	combat_rating = 10
+	command_modifier = {
+		damage = 0.1
+		cavalry = 0.15
+	}
+	active = {
+		culture = metis
+	}
+	quality = 2
+	flags = { weapon metis amero_syncretic exovedate spear }
+	picture = "GFX_lance"
+	stacking = no
+	slot = weapon
+}
+metis_fiddle = {
+	diplomacy = 1
+	metis_opinion = 5
+	active = {
+		culture = metis
+	}
+	quality = 2
+	flags = { music metis amero_syncretic exovedate }
+	picture = "GFX_bell_of_batoche"
+	stacking = no
+}
+poetry_riel = {
+	diplomacy = 2
+	general_opinion = 10
+	monthly_character_prestige = 0.1
+	monthly_character_piety = 0.5
+	active = {
+		religion = exovedate
+	}
+	quality = 4
+	flags = { book metis amero_syncretic exovedate louis_riel }
+	picture = "GFX_book_blue"
+	stacking = no
+	slot = library
+}
+flag_of_confederacy = {
+	global_revolt_risk = -0.02
+	vassal_opinion = 10
+	monthly_character_prestige = 1
+	metis_opinion = 5
+	short_reign_length = -5
+	north_atlantic_opinion = -10
+	laurentian_opinion = -10
+	active = {
+		culture = metis
+	}
+	quality = 4
+	flags = { flag metis amero_syncretic exovedate }
+	picture = "GFX_bell_of_batoche"
+	stacking = no
+	indestructible = yes
+}
+gabriel_dumont_gun = {
+	command_modifier = {
+		religious_enemy = 0.15
+	}
+	martial = 2
+	combat_rating = 10
+	active = {
+		OR = {
+			culture = metis
+			religion = exovedate
+		}
+	}
+	quality = 3
+	flags = { gun metis amero_syncretic exovedate gabriel_dumont oldworld }
+	picture = "GFX_sitting_bull_rifle"
+	stacking = no
+}
+red_river_cart = {
+	command_modifier = {
+		speed = 0.1
+		cavalry = 0.15
+	}
+	global_tax_modifier = 0.05
+	active = {
+		culture = metis
+	}
+	quality = 2
+	flags = { cart metis amero_syncretic exovedate }
+	picture = "GFX_bell_of_batoche"
+	stacking = no
+}
+snow_shoes = {
+	command_modifier = {
+		speed = 0.1
+	}
+	tribal_opinion = 5
+	active = {
+		OR = {
+			culture = metis
+			culture_group = subarctic
+			culture_group = anishinaabe
+			culture_group = plains
+		}
+	}
+	quality = 1
+	flags = { native american_native metis amero_syncretic shoe }
+	picture = "GFX_bell_of_batoche"
+	stacking = no
+}
+ceremonial_tomahawk_pipe = {
+	combat_rating = 15
+	metis_opinion = 10
+	subarctic_opinion = 10
+	plains_opinion = 10
+	anishinaabe_opinion = 10
+	diplomacy = 1
+	active = {
+		OR = {
+			culture = metis
+			culture_group = subarctic
+			culture_group = anishinaabe
+			culture_group = plains
+			trait = sympathy_american_native
+			trait = sympathy_amero_syncretic
+			trait = voyageur
+		}
+	}
+	quality = 3
+	flags = { native american_native metis amero_syncretic religious }
+	picture = "GFX_viking_axe"
+	stacking = no
+}
+
+#Pelagic artifacts
+bone_knife = {
+	quality = 2
+	monthly_character_prestige = 0.5
+	pelagic_opinion = 5
+	martial = 2
+	flags = { dagger religious jewelry crown_jewel created }
+	stacking = no
+	picture = "GFX_simple_dagger"
+	
+	slot = ceremonial_weapon
+}
+bone_necklace = {
+	quality = 2
+	monthly_character_prestige = 1
+	pelagic_opinion = 5	
+	flags = { necklace religious jewelry crown_jewel created }
+	stacking = no
+	picture = "GFX_pearl_necklace"
+	
+	slot = neck
+}
+bone_charm = {
+	quality = 2
+	monthly_character_piety = 1
+	pelagic_opinion = 5	
+	occultist_opinion = -5
+	health = 0.5
+	flags = { religious }
+	stacking = no
+	picture = "GFX_yada_tashy"
+	
+	slot = neck
+}
+
+ate_traditional_icon = {
+	monthly_character_prestige = 0.25
+	monthly_character_piety = 0.5
+	active = { 
+		OR = {
+			religion_group = christian
+			religion = orthodox
+		}
+	}
+	allowed_gift = {
+		OR = {
+			religion_group = christian
+			religion = orthodox
+		}
+	}
+	quality = 3
+	flags = { religious amero_syncretic }
+	picture = "GFX_relic_box_simple"
+}
+
+ate_syncretic_icon = {
+	monthly_character_prestige = 0.5
+	monthly_character_piety = 0.75
+	active = { 
+		OR = {
+			religion_group = amero_syncretic
+			religion = neognostic
+		}
+	}
+	allowed_gift = {
+		OR = {
+			religion_group = amero_syncretic
+			religion = neognostic
+		}
+	}
+	quality = 3
+	flags = { religious amero_syncretic }
+	picture = "GFX_relic_box_simple"
+}
+
+sword_of_the_states = {
+	quality = 4
+	monthly_character_prestige = 0.5
+	south_anglo_opinion = 7
+	castle_opinion = 4
+	town_opinion = 3
+	flags = { sword jewelry crown_jewel created }
+	stacking = no
+	picture = "GFX_sword_of_the_states"
+	
+	slot = ceremonial_weapon
+}
+
+ate_mjolnir = {
+	martial = 3
+	monthly_character_prestige = 2
+	command_modifier = {
+		heavy_infantry = 0.2
+	}
+	same_religion_opinion = 5
+	quality = 5
+	active = {
+		religion_openly_norse_or_reformed_trigger = yes
+		is_adult = yes
+	}
+	allowed_gift = {
+		religion_openly_norse_or_reformed_trigger = yes
+	}
+	flags = { religious norse_pagan very_rare ceremonial_weapon hammer }
+	stacking = no
+	picture = "GFX_mjolnir"
+	
+	slot = ceremonial_weapon
+}
+
+ate_juans_machete = {
+	command_modifier = {
+		light_cavalry = 0.2
+	}
+	monthly_character_prestige = 0.5
+	same_religion_opinion = 5
+	combat_rating = 20
+	quality = 5
+	active = {
+		religion_openly_aria_de_machete_or_reformed_trigger = yes
+		is_adult = yes
+	}
+	allowed_gift = {
+		religion_openly_aria_de_machete_or_reformed_trigger = yes
+	}
+	flags = { religious aria_de_machete very_rare combat_weapon sword }
+	slot = weapon
+	picture = "GFX_scimitar_T3"
+	stacking = no
+}
+
+ate_harp_of_florentino = {
+	monthly_character_prestige = 0.1
+	monthly_character_piety = 0.5
+	same_religion_opinion = 5
+	quality = 5
+	active = {
+		religion_openly_aria_de_machete_or_reformed_trigger = yes
+		is_adult = yes
+	}
+	allowed_gift = {
+		religion_openly_aria_de_machete_or_reformed_trigger = yes
+	}
+	flags = { religious aria_de_machete very_rare }
+	picture = "GFX_king_davids_harp"
+	stacking = no
+}
+
+ate_mantle_of_la_sayona = {
+	monthly_character_prestige = 0.1
+	monthly_character_piety = 0.5
+	quality = 3
+	active = {
+		religion_openly_aria_de_machete_or_reformed_trigger = yes
+		is_adult = yes
+	}
+	allowed_gift = {
+		religion_openly_aria_de_machete_or_reformed_trigger = yes
+	}
+	flags = { religious aria_de_machete face cloth }
+	picture = "GFX_veil_of_veronica"
+	stacking = no
+}
+
+ate_nasar_dagger = {
+	monthly_character_prestige = 0.3
+	quality = 2
+	active = {
+		is_adult = yes
+	}
+	allowed_gift = {
+		is_adult = yes
+	}
+	flags = { weapon dagger }
+	picture = "GFX_indian_dagger"
+	slot = weapon
+	stacking = no
+}
+
+ate_nasar_crown = {
+	monthly_character_piety = 0.3
+	quality = 2
+	active = {
+		is_adult = yes
+	}
+	allowed_gift = {
+		is_adult = yes
+	}
+	flags = { jewelry crown }
+	picture = "GFX_crown_gold_fancy"
+	slot = crown
+	stacking = no
+}
+
+ate_skull_falso_libertador = {
+	monthly_character_prestige = 0.1
+	same_religion_opinion = 3
+	quality = 2
+	active = {
+		OR = {
+			religion = patria_grande
+			religion = espiritista
+		}
+		is_adult = yes
+	}
+	allowed_gift = {
+		OR = {
+			religion = patria_grande
+			religion = espiritista
+		}
+	}
+	flags = { religious patria_grande espiritista skull saint }
+	picture = "GFX_saints_skull"
+	stacking = no
+}
+
+ate_seal_of_issacs = {
+	monthly_character_piety = 0.1
+	jewish_group_opinion = 5
+	quality = 3
+	active = {
+		is_adult = yes
+	}
+	allowed_gift = {
+		is_adult = yes
+	}
+	flags = { religious patria_grande jewish_group jewelry very_rare }
+	picture = "GFX_seal_of_solomon"
+	stacking = no
+}
+
+ate_sword_of_st_peter = {
+	monthly_character_prestige = 0.5
+	short_reign_length = -5
+	combat_rating = 16
+	quality = 5
+	active = {
+		religion = patria_grande
+		is_adult = yes
+	}
+	allowed_gift = {
+		religion = patria_grande
+	}
+	flags = { religious patria_grande unique weapon sword }
+	picture = "GFX_the_golden_scimitar"
+	slot = weapon
+	stacking = no
+}
+
+ate_stone_of_st_francis = {
+	monthly_character_prestige = 1
+	monthly_character_piety = 0.5
+	health = 1
+	quality = 4
+	active = {
+		religion = patria_grande
+		is_adult = yes
+	}
+	allowed_gift = {
+		religion = patria_grande
+	}
+	flags = { religious patria_grande unique bodypart saint }
+	picture = "GFX_pouch"
+	stacking = no
+}
+
+ate_pearls_of_magdalene = {
+	monthly_character_prestige = 0.1
+	monthly_character_piety = 0.5
+	global_revolt_risk = -0.02
+	quality = 3
+	active = {
+		religion = patria_grande
+		is_adult = yes
+	}
+	allowed_gift = {
+		religion = patria_grande
+	}
+	flags = { religious patria_grande very_rare jewelry saint }
+	picture = "GFX_pearl_necklace"
+	stacking = no
+	slot = neck
+}
+
+ate_llorente_flower_vase = {
+	monthly_character_prestige = 0.1
+	monthly_character_piety = 0.5
+	same_religion_opinion = 5
+	quality = 2
+	active = {
+		religion = patria_grande
+		is_adult = yes
+	}
+	allowed_gift = {
+		religion = patria_grande
+	}
+	flags = { religious patria_grande very_rare saint }
+	picture = "GFX_strange_chest"
+	stacking = no
+}
+
+ate_garcia_pig_tail = {
+	monthly_character_prestige = 0.1
+	monthly_character_piety = 0.25
+	quality = 2
+	active = {
+		religion = patria_grande
+		is_adult = yes
+	}
+	allowed_gift = {
+		religion = patria_grande
+	}
+	flags = { religious patria_grande unique bodypart saint }
+	picture = "GFX_saintly_tongue"
+	stacking = no
+}
+heartwood_spear= {
+	monthly_character_prestige = 0.5
+	combat_rating = 15
+	martial = 2
+	quality = 4
+	command_modifier = {
+		damage = 0.1
+		cavalry = 0.15
+	}
+	active = {
+		age = 14
+	}
+	flags = { combat_weapon weapon spear }
+	stacking = no
+	picture = "GFX_lance"
+	slot = weapon
+}
+
+vandals_axe= {
+	monthly_character_prestige = 0.2
+	combat_rating = 10
+	martial = 1
+	quality = 3
+	command_modifier = {
+		damage = 0.1
+		light_infantry = 0.1
+	}
+	active = {
+			age=14
+		OR = {
+			culture = inlander
+			religion = gaian
+			religion = trailwalker
+			religion = trailwalker_reformed
+		}
+	}
+	flags = { combat_weapon weapon axe }
+	indestructible = yes
+	stacking = no
+	picture = "GFX_viking_axe"
+	slot = weapon
+}
+
+fastest_gun = {
+	monthly_character_prestige = 1.25
+	martial = 5
+	combat_rating = 40
+	command_modifier = {
+		morale_offence = 0.15
+		morale_defence = 0.15
+	}
+	quality = 5
+	active = {
+		is_adult = yes
+		religion_openly_trailwalker_or_reformed_trigger = yes
+	}
+	allowed_gift = {
+		religion_openly_trailwalker_or_reformed_trigger = yes
+	}
+	flags = { religious trailwalker combat_weapon gun unique }
+	stacking = no
+	picture = "GFX_fastest_gun"
+	slot = weapon
+}
+
+pen_black_bart = {
+	monthly_character_piety = 0.75
+	diplomacy = 3
+	same_religion_opinion = 10
+	quality = 4
+	active = {
+		is_adult = yes
+		religion_openly_trailwalker_or_reformed_trigger = yes
+	}
+	allowed_gift = {
+		religion_openly_trailwalker_or_reformed_trigger = yes
+	}
+	flags = { religious trailwalker unique }
+	stacking = no
+	picture = "GFX_pen_black_bart"
+}
+
+roadrunner_feathers = {
+	monthly_character_piety = 0.5
+	intrigue = 2
+	defensive_plot_power_modifier = 0.15
+	quality = 3
+	active = {
+		is_adult = yes
+		religion_openly_trailwalker_or_reformed_trigger = yes
+	}
+	allowed_gift = {
+		religion_openly_trailwalker_or_reformed_trigger = yes
+	}
+	flags = { religious trailwalker very_rare }
+	stacking = no
+	picture = "GFX_roadrunner_feather"
+}
+
+golden_stake = {
+	monthly_character_prestige = 0.5
+	stewardship = 2
+	vassal_opinion = 5
+	quality = 3
+	active = {
+		is_adult = yes
+		religion_openly_trailwalker_or_reformed_trigger = yes
+	}
+	allowed_gift = {
+		religion_openly_trailwalker_or_reformed_trigger = yes
+	}
+	flags = { religious trailwalker very_rare }
+	stacking = no
+	picture = "GFX_golden_stake"
+}
+
+lucky_horseshoe = {
+	monthly_character_prestige = 0.2
+	defensive_plot_power_modifier = 0.10
+	quality = 2
+	active = {
+		is_adult = yes
+		religion_openly_trailwalker_or_reformed_trigger = yes
+	}
+	allowed_gift = {
+		religion_openly_trailwalker_or_reformed_trigger = yes
+	}
+	flags = { religious trailwalker rare }
+	stacking = no
+	picture = "GFX_lucky_horseshoe"
+}
+
+dinosaur = {
+	monthly_character_prestige = 0.15
+	monthly_character_piety = 0.1
+	command_modifier = {
+		morale_offence = 0.05
+	}
+	quality = 2
+	active = {
+		is_adult = yes
+		OR = {
+			religion_openly_trailwalker_or_reformed_trigger = yes
+			religion_openly_revelationist_or_reformed_trigger = yes
+		}
+	}
+	allowed_gift = {
+		OR = {
+		religion_openly_trailwalker_or_reformed_trigger = yes
+		religion_openly_revelationist_or_reformed_trigger = yes
+		}
+	}
+	flags = { religious trailwalker revelationist rare }
+	stacking = no
+	picture = "GFX_dinosaur"
+}
+
+pulaskis_axe = {
+	combat_rating = 5
+	inlander_opinion = 5
+	same_religion_opinion = 5
+	stewardship = 2
+	monthly_character_prestige = 0.1
+	monthly_character_piety = 0.1
+	active = {
+			age=14
+		OR = {
+			culture = inlander
+			religion = trailwalker
+			religion = trailwalker_reformed
+			religion = gaian
+		}
+	}
+	quality = 3
+	flags = { religious axe ceremonial_weapon }
+	picture = "GFX_pulaskis_axe"
+	stacking = no
+
+		slot = ceremonial_weapon
+}
+
+sureshot_bow = {
+	monthly_character_prestige = 1.5
+	martial = 5
+	combat_rating = 50
+	command_modifier = {
+		morale_offence = 0.3
+	}
+	quality = 5
+	active = {
+		is_adult = yes
+		religion_openly_trailwalker_or_reformed_trigger = yes
+	}
+	flags = { religious combat_weapon trophy very_rare }
+	stacking = no
+	picture = "GFX_eagle"
+	slot = weapon
+}
+
+#wheeler warbikes
+high_quality_bike = {
+	sex_appeal_opinion = 10
+	monthly_character_prestige = 0.15
+	health = 0.5
+	command_modifier = {
+		flank = 0.1
+		speed = 0.1
+		morale_offence = 0.1
+	}
+	active = {
+		OR = {
+			culture_group = californian
+			culture = hawaiian
+			culture = californiano
+			culture = chino
+		}
+	}
+	allowed_gift = {
+		OR = {
+			culture_group = californian
+			culture = hawaiian
+			culture = californiano
+			culture = chino
+		}
+	}
+	quality = 3
+	stacking = no
+	flags = { created }
+	picture = "GFX_brazilian_book_action" #placeholder. Probably.
+}
+
+normal_quality_bike = {
+	sex_appeal_opinion = 5
+	monthly_character_prestige = 0.1
+	health = 0.3
+	command_modifier = {
+		flank = 0.05
+		speed = 0.05
+	}
+	active = {
+		OR = {
+			culture_group = californian
+			culture = hawaiian
+			culture = californiano
+			culture = chino
+		}
+	}
+	allowed_gift = {
+		OR = {
+			culture_group = californian
+			culture = hawaiian
+			culture = californiano
+			culture = chino
+		}
+	}
+	quality = 2
+	stacking = no
+	flags = { created }
+	picture = "GFX_brazilian_book_action" #placeholder. Probably.
+}
+
+low_quality_bike = {
+	sex_appeal_opinion = -5
+	monthly_character_prestige = 0.1
+	health = 0.1
+	command_modifier = {
+		flank = 0.05
+		speed = -0.1
+	}
+	active = {
+		OR = {
+			culture_group = californian
+			culture = hawaiian
+			culture = californiano
+			culture = chino
+		}
+	}
+	allowed_gift = {
+		OR = {
+			culture_group = californian
+			culture = hawaiian
+			culture = californiano
+			culture = chino
+		}
+	}
+	quality = 1
+	stacking = no
+	flags = { created }
+	picture = "GFX_brazilian_book_action" #placeholder. Probably.
+}
+
+crown_texas = {
+	monthly_character_prestige = 0.1
+	active = {
+	}
+	flags = { texas_crown unique crown jewelry crown_jewel }
+	picture = "GFX_crown_texas"
+	quality = 5
+	stacking = no
+	indestructible = yes
+	allowed_gift = {
+		always = no
+	}
+}
