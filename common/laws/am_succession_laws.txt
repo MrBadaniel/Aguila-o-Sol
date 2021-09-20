@@ -1,0 +1,216 @@
+succession_laws = {
+	succ_mormon_elective = {
+		oldest_child_opinion = -5
+		child_opinion = -5
+		dynasty_opinion = -5
+		feudal_opinion = -5
+		potential = {
+			holder_scope = {
+				religion_group = latter_day_saints
+				is_nomadic = no
+				is_merchant_republic = no
+				is_patrician = no
+			}
+			NOT = { holder_scope = { government = military_governorate } }
+		}
+		allow = {
+			custom_tooltip = {
+				text = not_forced_tt
+				hidden_tooltip = {
+					holder_scope = { NOT = { has_character_flag = liege_forced_succ_law } }
+				}
+			}
+		}
+		effect = {
+			succession = {
+				base_type = feudal_elective
+				voting_rules = mormon_elective
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+	}
+	succ_ghazi_elective = {
+		oldest_child_opinion = -5
+		child_opinion = -5
+		dynasty_opinion = -5
+		feudal_opinion = -5
+		potential = {
+			holder_scope = {
+				government = ghazi_government
+			}
+			NOT = { holder_scope = { government = military_governorate } }
+
+		}
+		allow = {
+			custom_tooltip = {
+				text = not_forced_tt
+				hidden_tooltip = {
+					holder_scope = { NOT = { has_character_flag = liege_forced_succ_law } }
+				}
+			}
+		}
+		effect = {
+			succession = {
+				base_type = feudal_elective
+				voting_rules = ghazi_elective
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+	}
+	succ_bureaucratic_elective = {
+		oldest_child_opinion = -5
+		child_opinion = -5
+		dynasty_opinion = -5
+		feudal_opinion = 5
+		potential = {
+			holder_scope = {
+				government = bureaucratic_government
+				NOR = {
+					has_landed_title = e_california
+					has_landed_title = e_new_california
+				}
+			}
+			NOT = { holder_scope = { government = military_governorate } }
+		}
+		allow = {
+			custom_tooltip = {
+				text = not_forced_tt
+				hidden_tooltip = {
+					holder_scope = { NOT = { has_character_flag = liege_forced_succ_law } }
+				}
+			}
+		}
+		effect = {
+			succession = {
+				base_type = feudal_elective
+				voting_rules = bureaucratic_elective
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+	}
+
+	succ_cenobitic_elective = {
+		oldest_child_opinion = -5
+		child_opinion = -5
+		dynasty_opinion = -5
+		feudal_opinion = 5
+		potential = {
+			temporary = no
+			holder_scope = {
+				government = cenobitic_government
+				OR = {
+					religion = edenite
+					religion = angeline
+				}
+			}
+		}
+		effect = {
+			succession = {
+				base_type = feudal_elective
+				voting_rules = cenobitic_elective
+			}
+			elective_voting_rules = cenobitic_elective
+		}
+		revoke_allowed = {
+			always = no
+		}
+	}
+
+	succ_mil_gaian_elective = {
+		oldest_child_opinion = -5
+		child_opinion = -5
+		dynasty_opinion = -5
+		feudal_opinion = -5
+		potential = {
+			holder_scope = {
+				government = theocratic_feudal_government
+			}
+			NOT = { holder_scope = { government = military_governorate } }
+
+		}
+		allow = {
+			custom_tooltip = {
+				text = not_forced_tt
+				hidden_tooltip = {
+					holder_scope = { NOT = { has_character_flag = liege_forced_succ_law } }
+				}
+			}
+		}
+		effect = {
+			succession = {
+				base_type = feudal_elective
+				voting_rules = mil_gaian_elective
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+	}
+	
+	succ_rel_gaian_elective = {
+		oldest_child_opinion = -5
+		child_opinion = -5
+		dynasty_opinion = -5
+		feudal_opinion = -5
+		potential = {
+			holder_scope = {
+				government = theocratic_feudal_government
+			}
+			NOT = { holder_scope = { government = military_governorate } }
+
+		}
+		allow = {
+			custom_tooltip = {
+				text = not_forced_tt
+				hidden_tooltip = {
+					holder_scope = { NOT = { has_character_flag = liege_forced_succ_law } }
+				}
+			}
+		}
+		effect = {
+			succession = {
+				base_type = feudal_elective
+				voting_rules = rel_gaian_elective
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+	}
+	
+	succ_agrarian_elective = {
+		oldest_child_opinion = -5
+		child_opinion = -5
+		dynasty_opinion = 5
+		feudal_opinion = 5
+		potential = {
+			holder_scope = {
+				government = agrarian_government
+			}
+			NOT = { holder_scope = { government = military_governorate } }
+		}
+		allow = {
+			custom_tooltip = {
+				text = not_forced_tt
+				hidden_tooltip = {
+					holder_scope = { NOT = { has_character_flag = liege_forced_succ_law } }
+				}
+			}
+		}
+		effect = {
+			succession = {
+				base_type = feudal_elective
+				voting_rules = agrarian_elective
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}			
+	}	
+}
