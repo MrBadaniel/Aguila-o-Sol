@@ -1,0 +1,2175 @@
+2500000={
+	name="Dalton"
+	dynasty=1849096# Areus
+	culture=bayfolk
+	religion=pagan
+	trait=proud
+	trait=shrewd
+	trait=ambitious
+	trait=deceitful
+	trait=legendary
+	trait=wroth
+	trait=cruel 
+	trait=midas_touched
+	occluded=yes
+	disallow_random_traits=yes
+	2050.1.1={birth=yes}
+	2078.1.1={death={
+			death_reason=death_murder_unknown #Murdered.
+		}
+	}
+}
+2500001={
+	name="Brutus"
+	dynasty=1849096# Areus
+	culture=bayfolk
+	religion=pagan
+	father=2500000
+	trait=humble
+	trait=patient
+	trait=ambitious
+	trait=shy
+	trait=legendary
+	trait=deceitful
+	trait=cruel 
+	trait=grey_eminence
+	occluded=yes
+	disallow_random_traits=yes
+	2072.1.5={birth=yes}
+	2130.1.5={death={
+			death_reason=death_murder_unknown #Murdered.
+		}
+	}
+}
+2500002={
+	name="Cassius"
+	dynasty=1849096# Areus
+	culture=bayfolk
+	religion=pagan
+	father=2500001
+	trait=infirm
+	trait=wroth
+	trait=shrewd
+	trait=kind
+	trait=charitable
+	trait=deceitful
+	trait=ambitious 
+	trait=skilled_tactician
+	trait=legendary
+	occluded=yes
+	disallow_random_traits=yes
+	2099.1.1={birth=yes}
+	2160.1.10={death={
+			death_reason=death_execution_beheading
+			killer= 2500070
+		}
+	}
+}
+2500003={
+	name="James"
+	dynasty=1849096# Areus
+	culture=bayfolk
+	religion=sedevacantist
+	father=2500002
+	trait=legendary
+	trait=shrewd
+	trait=ambitious
+	trait=strong
+	trait=brave
+	trait=wroth
+	trait=skilled_tactician
+	occluded=yes
+	disallow_random_traits=yes
+	2130.1.15={birth=yes}
+	2200.1.15={death={
+			death_reason=death_murder_unknown #Murdered.
+		}
+	}
+}
+2500004={
+	name="Jason"
+	dynasty=1849096# Areus
+	culture=bayfolk
+	religion=sedevacantist
+	father=2500003
+	trait=wroth
+	trait=slothful
+	trait=quick
+	trait=lustful
+	trait=bisexual
+	trait=detached_priest
+	disallow_random_traits=yes
+	2170.1.20={birth=yes}
+	2240.1.20={death=yes}
+}
+2500005={
+	name="Kevin"
+	dynasty=1849096# Areus
+	culture=bayfolk
+	religion=sedevacantist
+	father=2500004
+	trait=slow
+	trait=proud
+	trait=content
+	trait=tough_soldier
+	2200.1.25={birth=yes}
+	2280.1.25={death=yes}
+}
+2500006={
+	name="Albert"
+	dynasty=1849096# Areus
+	culture=bayfolk
+	religion=sedevacantist
+	father=2500005
+	trait=shrewd
+	trait=slothful
+	trait=content
+	trait=indulgent_wastrel
+	2240.1.30={birth=yes}
+	2320.1.30={death=yes}
+}
+2500007={
+	name="Bruce"
+	dynasty=1849096# Areus
+	culture=bayfolk
+	religion=sedevacantist
+	father=2500006
+	trait=shrewd
+	trait=zealous
+	trait=cruel
+	trait=wroth
+	trait=martial_cleric
+	2300.2.5={birth=yes}
+	2380.2.5={death={
+			death_reason=death_battle_duel #Murdered in combat.
+			killer=2500133
+		}
+	}
+}
+2500008={
+	name="Harvey"
+	dynasty=1849096# Areus
+	culture=bayfolk
+	religion=pagan
+	father=2500007
+	trait=impaler
+	trait=cruel
+	trait=wroth
+	trait=envious
+	trait=proud
+	trait=drunkard
+	disallow_random_traits=yes
+	trait=elusive_shadow
+	2370.2.10={birth=yes}
+	2410.2.10={death={
+			death_reason=death_execution_wine #Murdered.
+			killer=1910100
+		}
+	}
+}
+2500009={
+	name="Joseph"
+	dynasty=1851045#Dominguez
+	dna="beadg0ic000"
+	culture=tejano
+	religion=sacred_heart
+	trait=heresiarch
+	trait=brave
+	trait=strong
+	trait=proud
+	trait=shrewd
+	trait=zealous
+	trait=wroth
+	trait=holy_warrior
+	trait=brilliant_strategist
+	disallow_random_traits=yes
+	give_nickname=nick_the_prophet
+	2220.1.1={birth=yes
+	culture=valleyan
+	}
+	2230.1.1={name=Joseph}
+	2258.1.1={death={
+			death_reason=death_battle_duel #Murdered in combat.
+			killer=2200006
+		}
+	}
+}
+2500010={
+	name="Carlos"
+	dynasty=1851045#Dominguez
+	culture=tejano
+	father=2500009
+	religion=sacred_heart
+	trait=slothful
+	trait=shrewd
+	trait=zealous
+	trait=wroth
+	trait=indulgent_wastrel
+	disallow_random_traits=yes
+	2243.1.1={birth=yes
+	culture=valleyan
+	}
+	2278.1.1={death={
+			death_reason=death_murder_unknown #Murdered.
+		}
+	}
+}
+2500011={
+	name="Hardin"
+	dynasty=1851061#Strutter
+	culture=valleyan
+	religion=cetic
+	trait=humble
+	trait=way_fist
+	trait=just
+	trait=kind
+	trait=brave
+	trait=diligent
+	trait=governator
+	trait=mastermind_theologian
+	disallow_random_traits=yes
+
+	2380.1.1={birth=yes}
+	2400.1.1={add_spouse=2500077}
+	2421.5.5={effect={add_friend=1910100}}
+	2450.1.1={death=yes}
+}
+2500012={
+	name="Joaquin"
+	dynasty=1941020#Baskett
+	culture=siskiyouan
+	religion=gaian
+	trait=ambitious
+	trait=strong
+	trait=depressed
+	trait=diligent
+	trait=skilled_tactician
+	trait=holy_warrior
+	disallow_random_traits=yes
+
+	2350.1.1={birth=yes}
+	2375.1.1={add_spouse=1886095}
+	2420.1.1={death={
+			death_reason=death_hashish_overdose #dies on LSD.
+		}
+	}
+}
+
+2500013={
+	name="Bill"
+	dynasty=1941020#Baskett
+	culture=siskiyouan
+	religion=gaian
+	father=2500012
+	mother=1886095
+	trait=ambitious
+	trait=slothful
+	trait=tough_soldier
+	trait=kind
+	trait=temperate
+	2380.1.1={birth=yes}
+	2430.1.1={death={
+			death_reason=death_battle_duel #Murdered in combat.
+			killer=2200009
+		}
+	}
+}
+
+2500014={
+	name="Jose"
+	dynasty=1912005
+	culture=choyero
+	religion=navegante
+	trait=ambitious
+	trait=strong
+	trait=diligent
+	trait=brilliant_strategist
+	trait=holy_warrior
+	disallow_random_traits=yes
+	2380.1.1={birth=yes}
+	2432.2.2={death={
+			death_reason=death_battle_duel #Murdered in combat.
+			killer=1910100
+		}
+	}
+}
+
+2500015={
+	name="Kirk"
+	dynasty=1941001#Gable
+	culture=battleborn
+	religion=cetic
+	martial=8
+	stewardship=5
+	learning=7
+	intrigue=3
+	diplomacy=4
+	trait=content
+	trait=just
+	trait=kind
+	trait=skilled_tactician
+	trait=strategist
+	trait=way_branch
+	trait=charitable
+	trait=brave
+	trait=imp_ex2
+	disallow_random_traits=yes
+	give_nickname=nick_redwood
+	2577.3.24={birth=yes}
+	2615.2.12={
+		create_bloodline={
+			type=gable
+			has_dlc="Holy Fury"
+		}
+	}
+	2622.5.5={death={
+			death_reason=death_poor_health
+		}
+	}
+}
+
+2500016={
+	name=""
+	culture=siskiyouan
+	religion=gaian
+	martial=6
+	stewardship=3
+	learning=6
+	intrigue=3
+	diplomacy=6
+	trait=zealous
+	trait=brave
+	trait=ambitious
+	trait=brilliant_strategist
+	trait=gregarious
+	trait=patient
+	trait=mystic
+	trait=general_of_gaia
+	disallow_random_traits=yes
+	give_nickname=nick_the_general_of_gaia
+	2570.1.1={birth=yes}
+	2615.2.12={death={
+			death_reason=death_battle_duel #Murdered in combat.
+			killer=2500015
+		}
+	}
+}
+
+2500017={
+	name="James"
+	dynasty=1941002 #Gearhart
+	father=2500047
+	culture=siskiyouan
+	religion=cetic
+	martial=3
+	stewardship=3
+	learning=3
+	intrigue=3
+	diplomacy=3
+	trait=greedy
+	trait=fortune_builder
+	trait=way_fist
+	trait=wroth
+	trait=ambitious
+	trait=zealous
+	trait=imp_ex2
+	disallow_random_traits=yes
+	2572.1.1={birth=yes}
+	2611.2.12={death={
+			death_reason=death_rabble #Green Sash Revolt
+		}
+	}
+}
+
+2500018={
+	name="Elias"
+	dynasty=1941002 #Gearhart
+	father=2500017
+	culture=siskiyouan
+	religion=cetic
+	martial=3
+	stewardship=3
+	learning=3
+	intrigue=3
+	diplomacy=3
+	trait=ambitious
+	trait=tough_soldier
+	trait=way_fist
+	trait=imp_ex1
+	trait=envious
+	trait=diligent
+	trait=gregarious
+	disallow_random_traits=yes
+	2602.1.1={birth=yes}
+	2660.3.1={death=yes}
+}
+
+2500019={
+	name="Daoming"
+	dynasty=1851163 #Chen
+	culture=towner
+	religion=cetic
+	father=2500061
+	health=7
+	martial=2
+	stewardship=8
+	learning=9
+	intrigue=3
+	diplomacy=4
+	trait=diligent
+	trait=feeble
+	trait=scholar
+	trait=way_book
+	trait=imp_ex4
+	trait=craven
+	trait=kind
+	trait=shrewd
+	trait=midas_touched
+	trait=trusting
+	disallow_random_traits=yes
+	2598.6.2={birth=yes}
+	2632.1.4={add_claim=d_goldengate}
+	2632.1.4={effect={add_weak_claim=k_francisco}}
+	2642.1.5={employer=1910107}
+	2670.1.1={death=yes}
+}
+
+2500020={
+	name="Xuan"
+	dynasty=1851163 #Chen
+	father=2500019
+	culture=towner
+	religion=cetic
+	martial=7
+	stewardship=6
+	learning=5
+	intrigue=7
+	diplomacy=5
+	trait=ambitious
+	trait=way_fist
+	trait=patient
+	trait=brave
+	trait=cynical
+	trait=diligent
+	trait=shrewd
+	trait=skilled_tactician
+	disallow_random_traits=yes
+	2629.5.4={birth=yes}
+	2642.1.4={employer=1910107}
+	2670.1.1={death=yes}
+}
+
+2500021={
+	name="Yutong"
+	female=yes
+	dynasty=1851163 #Chen
+	father=2500019
+	culture=towner
+	religion=cetic
+	martial=3
+	stewardship=6
+	learning=5
+	intrigue=3
+	diplomacy=5
+	trait=kind
+	trait=stubborn
+	trait=just
+	trait=lustful
+	trait=charitable
+	trait=gregarious
+	trait=charismatic_negotiator
+	disallow_random_traits=yes
+	2637.1.12={birth=yes}
+	2640.1.13={employer=1910107}
+	2670.1.1={death=yes}
+}
+
+2500022={
+	name="Jeff"
+	dynasty=1851065 #Madonna
+	culture=valleyan
+	religion=cetic
+	martial=4
+	stewardship=5
+	learning=6
+	intrigue=8
+	diplomacy=7
+	trait=way_cowl
+	trait=imp_ex3
+	trait=flamboyant_schemer
+	trait=arbitrary
+	trait=greedy
+	trait=ambitious
+	trait=temperate
+	trait=governator #Governator to Hetch
+	disallow_random_traits=yes
+	2570.6.12={birth=yes}
+	2597.5.16={death={
+			death_reason=death_battle_duel #killed by Will Steely
+			killer=2500023
+		}
+	}
+}
+2500023={
+	name="Will"
+	dynasty=1851016 #Steely
+	father=1911208
+	culture=valleyan
+	religion=cetic
+	martial=5
+	stewardship=6
+	learning=4
+	intrigue=6
+	diplomacy=5
+	trait=governator #Governator to Chad
+	trait=way_fist
+	trait=imp_ex2
+	trait=ambitious
+	trait=brave
+	trait=skilled_tactician
+	trait=shrewd
+	trait=chaste
+	disallow_random_traits=yes
+	2569.4.20={birth=yes} #nice
+	2622.5.5={death={
+			death_reason=death_battle_duel #killed by Amber Colbart
+			killer=2500024
+		}
+	}
+}
+
+2500024={
+	name="Amber"
+	female=yes
+	dynasty=1851064 #Colbart
+	culture=valleyan
+	religion=cetic
+	martial=7
+	stewardship=4
+	learning=5
+	intrigue=3
+	diplomacy=5
+	trait=brave
+	trait=tough_soldier
+	trait=imp_ex1
+	trait=way_fist
+	trait=just
+	trait=stubborn
+	trait=wroth
+	disallow_random_traits=yes
+	2590.1.12={birth=yes}
+	2622.8.9={death={
+			death_reason=death_execution_beheading #Executed by Susan Ann.
+			killer=1911060
+		}
+	}
+}
+2500025={
+	name="Malthus"
+	dynasty=1851062 #Hartfeld
+	culture=valleyan
+	religion=cetic
+	martial=3
+	stewardship=5
+	learning=6
+	intrigue=4
+	diplomacy=5
+	trait=charismatic_negotiator
+	trait=imp_ex2
+	trait=way_dove
+	trait=just
+	trait=brave
+	trait=charitable
+	trait=content
+	trait=stubborn
+	disallow_random_traits=yes
+	2582.1.12={birth=yes}
+	2617.4.20={death={
+			death_reason=death_execution_hanging #Executed by Will.
+			killer=2500023
+		}
+	}
+}
+
+2500026={
+	name="Alan"
+	dynasty=1851062 #Hartfeld
+	father=2500025
+	culture=valleyan
+	religion=cetic
+	martial=3
+	stewardship=6
+	learning=8
+	intrigue=3
+	diplomacy=5
+	trait=scholarly_theologian
+	trait=scholar
+	trait=imp_ex3
+	trait=way_book
+	trait=diligent
+	trait=just
+	trait=cynical
+	disallow_random_traits=yes
+	2600.5.3={birth=yes}
+	2617.4.20={add_claim=d_north_valley}
+	2640.4.20={employer=1910107}
+	2676.1.1={death=yes}
+}
+
+2500027={
+	name="Bradly"
+	dynasty=1851062 #Hartfeld
+	father=2500026
+	culture=valleyan
+	religion=cetic
+	martial=5
+	stewardship=6
+	learning=7
+	intrigue=3
+	diplomacy=4
+	trait=tough_soldier
+	trait=way_fist
+	trait=imp_ex1
+	trait=diligent
+	trait=zealous
+	trait=hedonist
+	trait=lustful
+	disallow_random_traits=yes
+	2634.7.3={birth=yes}
+	2676.1.1={death=yes}
+}
+
+2500028={
+	name="Frederick"
+	dynasty=1850080 #Reisman
+	culture=bayfolk
+	religion=cetic
+	martial=3
+	stewardship=6
+	learning=8
+	intrigue=5
+	diplomacy=5
+	trait=mastermind_theologian
+	trait=imp_ex4
+	trait=way_book
+	trait=shrewd
+	trait=brave
+	trait=just
+	trait=scholar
+	disallow_random_traits=yes
+	2570.1.12={birth=yes}
+	2623.7.9={death={
+			death_reason=death_execution_beheading #Executed by Susan Ann.
+			killer=1911060
+		}
+	}
+}
+
+2500029={
+	name="Jacob"
+	dynasty=1851063 #Ryder
+	culture=valleyan
+	religion=cetic
+	martial=8
+	stewardship=5
+	learning=6
+	intrigue=2
+	diplomacy=6
+	trait=skilled_tactician
+	trait=trusting
+	trait=way_fist
+	trait=imp_ex2
+	trait=brave
+	trait=just
+	trait=wroth
+	disallow_random_traits=yes
+	2593.2.7={birth=yes}
+	2616.5.9={death={
+			death_reason=death_execution_beheading #Assassinated by Will.
+			killer=2500023
+		}
+	}
+}
+
+2500030={
+	name="Ricardo"
+	dynasty=1912049 #Ortega
+	culture=californiano
+	religion=cetic
+	martial=5
+	stewardship=6
+	learning=8
+	intrigue=6
+	diplomacy=6
+	trait=brave
+	trait=ambitious
+	trait=scholar
+	trait=martial_cleric 
+	trait=imp_ex2
+	trait=way_cowl
+	trait=lustful
+	disallow_random_traits=yes
+	2621.7.3={birth=yes}
+	2663.12.20={employer=1911062}
+	2676.8.9={death=yes}
+}
+
+2500031={
+	name="Thaddeus"
+	disallow_random_traits=yes
+	dynasty=1851041
+	culture=valleyan
+	religion=cetic
+	diplomacy=6
+	learning=6
+	trait=mastermind_theologian
+	trait=shrewd
+	trait=way_book
+	trait=scholar
+	trait=patient
+	trait=humble
+	trait=diligent
+	father=1910105
+	2556.8.5={birth=yes}
+	2596.12.1={death={
+			death_reason=death_execution_beheading #Assassinated by Will.
+			killer=2500023
+		}
+	}
+}
+
+
+2500032={#Adds a single, unplayable practitioner of the way of branch to the map. Lets see if players get creative...
+	name="Mendoza"
+	female=no
+	culture=siskiyouan
+	religion=cetic
+	martial=2
+	diplomacy=4
+	stewardship=8
+	intrigue=4
+	learning=10
+	trait=mastermind_theologian
+
+	trait=chaste
+	trait=humble
+	trait=temperate
+	trait=cynical
+	trait=bisexual
+	trait=way_branch
+	2610.1.19={birth=yes}
+}
+
+2500033={
+	name="Michael"
+	disallow_random_traits=yes
+	dynasty=1913012 #Chemist
+	martial=6
+	diplomacy=6
+	stewardship=4
+	intrigue=5
+	learning=5
+	culture=tagalog
+	religion=cetic
+	trait=scholarly_theologian
+	trait=way_dove
+	trait=strategist
+	trait=shrewd
+	trait=lustful
+	trait=patient
+	trait=erudite
+	2644.7.30={
+		birth=yes
+		culture=chino
+		effect={
+			set_character_flag=diversity
+			set_character_flag=physique
+
+		}
+	}
+	2660.1.1={
+		employer=2200026
+	}
+}
+
+2500034={
+	name="Bradley"
+	disallow_random_traits=yes
+	dynasty=1851041
+	culture=valleyan
+	religion=cetic
+	diplomacy=6
+	learning=6
+	trait=grey_eminence
+	trait=way_dove
+	trait=humble
+	trait=just
+	trait=kind
+	trait=diligent
+	father=1910105
+	2560.6.7={birth=yes}
+	2596.12.1={death={
+			death_reason=death_execution_beheading #Assassinated by Will.
+			killer=2500023
+		}
+	}
+}
+
+2500035={#Edokko Playercol
+	name="Tomomi"
+	female=no
+	dynasty=1543268 #Nashi
+	culture=edokko
+	religion=shinto
+	martial=8
+	diplomacy=5
+	stewardship=5
+	intrigue=3
+	learning=5
+	trait=skilled_tactician
+	trait=koshitsu_shinto
+	trait=shrewd
+	trait=ambitious
+	trait=deceitful
+	trait=wroth
+	trait=drunkard
+	disallow_random_traits=yes
+	2630.1.19={birth=yes}
+	2700.1.19={death=yes}
+}
+
+2500036={
+	name="Vladimir"
+	dynasty=1851041
+	culture=valleyan
+	religion=cetic
+	martial=6
+	diplomacy=6
+	trait=skilled_tactician
+	trait=shrewd
+	trait=way_fist
+	trait=brave
+	trait=just
+	trait=diligent
+	trait=ambitious
+	father=1910105
+	2553.12.1={birth=yes}
+	2596.12.1={death={
+			death_reason=death_execution_beheading #Assassinated by Will.
+			killer=2500023
+		}
+	}
+}
+
+2500037={
+	name="Galahad"
+	dynasty=1851041
+	culture=valleyan
+	religion=cetic
+	martial=6
+	diplomacy=6
+	trait=mastermind_theologian
+	trait=way_dove
+	trait=sympathy_christendom
+	trait=humble
+	trait=content
+	trait=diligent
+	trait=shy
+	father=1910105
+	2558.7.2={birth=yes}
+	2642.1.1={
+		death=yes
+	}
+}
+
+2500040={#Secret Gaian in the Redwoods
+	name="Ivy"
+	dynasty=1941012
+	female=yes
+	culture=siskiyouan
+	religion=cetic
+	secret_religion=gaian
+	martial=2
+	diplomacy=4
+	stewardship=10
+	intrigue=4
+	learning=7
+	trait=fortune_builder
+	trait=fair
+	trait=shy
+	trait=temperate
+	trait=quick
+	trait=bisexual
+	trait=way_book
+	2640.1.19={birth=yes}
+	2710.1.30={death=yes}
+
+}
+
+2500041={
+	name="Grilsey"
+	dynasty=1941020#Baskett
+	father=2500013
+	culture=siskiyouan
+	religion=gaian
+	trait=elusive_shadow
+	trait=adventurer
+	trait=bastard
+	trait=deceitful
+	trait=gregarious
+	trait=ambitious
+	trait=quick
+	trait=diligent
+	trait=cruel
+	2415.3.24={birth=yes}
+	2460.1.30={death={
+			death_reason= death_execution_beheading #was executed after trying to reclaim Jefferon
+			killer=1910100
+		}
+	}
+}
+
+2500042={
+	name="Shepard"
+	dynasty=1941002 #Gearhart
+	father=2500041
+	culture=siskiyouan
+	religion=cetic
+	trait=tough_soldier
+	trait=kinslayer
+	trait=way_cowl
+	trait=deceitful
+	trait=patient
+	trait=cynical
+	trait=shrewd
+	trait=greedy
+	trait=chaste
+	trait=imp_ex3
+	give_nickname=nick_the_betrayer #sold out his dad to the empire
+	2431.2.1={birth=yes}
+	2480.1.1={death=yes}
+
+}
+
+2500043={
+	name="Manzanita"
+	dynasty=1941002 #Gearhart
+	father=2500042
+	female=yes
+	culture=siskiyouan
+	religion=cetic
+	trait=naive_appeaser
+	trait=way_dove
+	trait=honest
+	trait=kind
+	trait=zealous
+	trait=just
+	trait=stubborn
+	trait=brave
+	trait=imp_ex2
+	2456.1.1={birth=yes}
+	2477.1.1={death={
+			death_reason=death_murder_unknown #Murdered.
+		}
+	}
+}
+
+2500044={
+	name="Grilsey"
+	dynasty=1941002 #Gearhart
+	father=2500042
+	culture=siskiyouan
+	religion=cetic
+	trait=flamboyant_schemer
+	trait=way_cowl
+	trait=envious
+	trait=groomed
+	trait=zealous
+	trait=ambitious
+	trait=diligent
+	trait=proud
+	trait=imp_ex3
+	2459.1.1={birth=yes}
+	2519.1.1={death=yes}
+
+}
+
+2500045={
+	name="Leland"
+	dynasty=1941002 #Gearhart
+	father=2500044
+	culture=siskiyouan
+	religion=cetic
+	trait=fortune_builder
+	trait=way_cowl
+	trait=arbitrary
+	trait=administrator
+	trait=temperate
+	trait=ambitious
+	trait=diligent
+	trait=greedy
+	trait=imp_ex4
+	2484.1.1={birth=yes}
+	2533.1.1={death=yes}
+
+}
+
+2500046={
+	name="Alistair"
+	dynasty=1941002 #Gearhart
+	father=2500045
+	culture=siskiyouan
+	religion=cetic
+	trait=underhanded_rogue
+	trait=way_book
+	trait=diligent
+	trait=gregarious
+	trait=honest
+	trait=humble
+	trait=zealous
+	trait=imp_ex2
+	2512.1.1={birth=yes}
+	2545.1.1={death=yes}
+
+}
+
+2500047={
+	name="Uriah"
+	dynasty=1941002 #Gearhart
+	father=2500046
+	culture=siskiyouan
+	religion=cetic
+	trait=tough_soldier
+	trait=way_fist
+	trait=robust
+	trait=brave
+	trait=stubborn
+	trait=content
+	trait=diligent
+	trait=zealous
+	trait=imp_ex1
+	2542.1.1={birth=yes}
+	2585.1.1={death=yes}
+
+}
+
+2500048={
+	name="Magdalynn"
+	dynasty=1849096# Areus
+	culture=bayfolk
+	religion=nazarene
+	female=yes
+	father=2500008
+	trait=charismatic_negotiator
+	trait=fair
+	trait=kind
+	trait=shy
+	trait=humble
+	trait=content
+	trait=slothful
+	trait=cynical
+	2402.1.1={birth=yes}
+	2446.1.1={death=yes}
+
+}
+
+2500049={
+	name="Peter"
+	culture=bayfolk
+	religion=cetic
+	dynasty=1849073
+	trait=skilled_tactician
+	trait=way_fist
+	trait=just
+	trait=stubborn
+	trait=kind
+	trait=humble
+	trait=brave
+	trait=chaste
+	trait=zealous
+	trait=imp_ex2
+	2398.1.1={birth=yes}
+	2420.1.1={add_spouse=2500048}
+	2466.1.1={death=yes}
+
+}
+
+2500050={
+	name="Genevieve"
+	culture=bayfolk
+	religion=cetic
+	dynasty=1849073
+	father=2500049
+	mother=2500048
+	female=yes
+	trait=thrifty_clerk
+	trait=way_dove
+	trait=fair
+	trait=gregarious
+	trait=gluttonous
+	trait=kind
+	trait=proud
+	trait=hedonist
+	trait=lustful
+	trait=groomed
+	2422.1.1={birth=yes}
+	2496.1.1={death=yes}
+
+}
+
+2500051={
+	name="Clay"
+	culture=tuskegean
+	religion=cetic
+	dynasty=1849057#Woz
+	trait=skilled_tactician
+	trait=way_book
+	trait=strong
+	trait=erudite
+	trait=scholar
+	trait=brave
+	trait=diligent
+	trait=shrewd
+	trait=ambitious
+	trait=imp_ex3
+	give_nickname=nick_the_wise
+	2422.1.1={
+		birth=yes
+		culture=bayfolk
+	}
+	2440.1.1={add_spouse=2500050}
+	2476.1.1={death=yes}
+
+}
+
+2500052={
+	name="Maxwell"
+	culture=tuskegean
+	religion=cetic
+	dynasty=1849057#Woz
+	mother=2500050
+	father=2500051
+	trait=martial_cleric
+	trait=way_book
+	trait=theologian
+	trait=temperate
+	trait=diligent
+	trait=erudite
+	trait=chaste
+	trait=zealous
+	trait=just
+	trait=imp_ex4
+	2446.1.1={
+		birth=yes
+		culture=bayfolk
+	}
+	2509.1.1={death=yes}
+
+}
+
+2500053={
+	name="Hank"
+	culture=tuskegean
+	religion=cetic
+	dynasty=1849057#Woz
+	father=2500052
+	trait=underhanded_rogue
+	trait=way_book
+	trait=gregarious
+	trait=deceitful
+	trait=diligent
+	trait=groomed
+	trait=lustful
+	trait=cynical
+	trait=imp_ex2
+	2467.1.1={
+		birth=yes
+		culture=bayfolk
+	}
+	2519.1.1={death=yes}
+
+}
+
+2500054={
+	name="Courtney"
+	culture=tuskegean
+	religion=cetic
+	female=yes
+	dynasty=1849057#Woz
+	father=2500053
+	trait=indulgent_wastrel
+	trait=way_book
+	trait=groomed
+	trait=is_fat
+	trait=gluttonous
+	trait=craven
+	trait=chaste
+	trait=shy
+	trait=content
+	2492.1.1={
+		birth=yes
+		culture=bayfolk
+	}
+	2530.1.1={death=yes}
+
+}
+
+2500055={
+	name="Jay"
+	culture=tuskegean
+	religion=cetic
+	dynasty=1849057#Woz
+	father=2500053
+	trait=way_book
+	trait=imp_ex1
+	2499.1.1={
+		birth=yes
+		culture=bayfolk
+	}
+	2550.1.1={death=yes}
+
+}
+
+2500056={
+	name="Mathis"
+	culture=tuskegean
+	religion=cetic
+	dynasty=1849057#Woz
+	father=2500055
+	trait=way_book
+	trait=imp_ex2
+	2533.1.1={
+		birth=yes
+		culture=bayfolk
+	}
+	2592.1.1={death=yes}
+
+}
+
+2500057={
+	name="Eugene"
+	culture=black
+	religion=cetic
+	dynasty=1849057#Woz
+	father=2500056
+	trait=way_book
+	trait=imp_ex2
+	2556.1.1={
+		birth=yes
+		culture=bayfolk
+	}
+	2642.1.1={death=yes}
+
+}
+
+
+
+2500058={
+	name="Wei"
+	culture=towner
+	religion=cetic
+	dynasty=1851163 #Chen
+	trait=skilled_tactician
+	trait=homosexual
+	trait=paranoid
+	trait=patient
+	trait=just
+	trait=brave
+	trait=strategist
+	trait=adventurer
+	trait=scarred
+	trait=one_handed
+	trait=way_book
+	trait=imp_ex3
+	give_nickname=nick_the_ranger
+	2460.1.1={birth=yes}
+	2510.1.1={death={
+		death_reason=death_battle
+	}
+	}
+}
+
+2500059={
+	name="Yang"
+	culture=towner
+	religion=cetic
+	dynasty=1851163 #Chen
+	father=2500058
+	trait=adopted_child
+	trait=way_book
+	trait=imp_ex2
+	2496.1.1={birth=yes}
+	2515.1.1={add_spouse=2500054}
+	2555.1.1={death=yes}
+
+}
+
+2500060={
+	name="Wei"
+	culture=towner
+	religion=cetic
+	dynasty=1851163 #Chen
+	father=2500059
+	mother=2500054
+	trait=way_book
+	trait=imp_ex3
+	2527.1.1={birth=yes}
+	2569.1.1={death=yes}
+
+}
+
+2500061={
+	name="Zhao"
+	culture=towner
+	religion=cetic
+	dynasty=1851163 #Chen
+	father=2500060
+	trait=way_book
+	trait=imp_ex2
+	2567.1.1={birth=yes}
+	2601.1.1={death=yes}
+
+}
+
+2500062={
+	name="Ying"
+	culture=towner
+	religion=cetic
+	female=yes
+	dynasty=1851163 #Chen
+	father=2500061
+	trait=way_book
+	2587.1.1={birth=yes}
+	2656.1.1={death=yes}
+
+}
+
+2500063={
+	name="Alfred"
+	culture=bayfolk
+	religion=cetic
+	dynasty=1849001#Caymus
+	trait=skilled_tactician
+	trait=content
+	trait=brave
+	trait=diligent
+	trait=way_fist
+	trait=imp_ex2
+	2590.1.1={birth=yes}
+	2610.1.1={add_spouse=2500062}
+	2642.1.3={death=yes}
+
+}
+
+2500064={
+	name="Gabriella"
+	culture=californiano
+	religion=nazarene
+	female=yes
+	dynasty=1850068 #Hayek
+	trait=fortune_builder
+	trait=way_book
+	trait=administrator
+	trait=diligent
+	trait=just
+	trait=lustful
+	trait=fair
+	trait=sympathy_oldworld
+	trait=imp_ex3
+	2555.1.1={birth=yes}
+	2612.1.1={death={
+			death_reason=death_rabble #Green Sash Revolt
+		}
+	}
+}
+
+2500065={
+	name="Hernando"
+	culture=californiano
+	religion=nazarene
+	dynasty=1850068 #Hayek
+	mother=2500064
+	trait=tough_soldier
+	trait=way_fist
+	trait=robust
+	trait=brave
+	trait=deceitful
+	trait=gregarious
+	trait=patient
+	trait=trickster
+	trait=scarred
+	trait=imp_ex2
+	2583.1.1={
+		birth=yes
+		culture=angeleno
+	}
+	2653.1.1={death=yes}
+}
+
+2500066={
+	name="Jose"
+	culture=angeleno
+	religion=nazarene
+	dynasty=1850068 #Hayek
+	father=2500065
+	trait=martial_cleric
+	trait=way_book
+	trait=feeble
+	trait=kind
+	trait=distractible
+	trait=shy
+	trait=patient
+	trait=imp_ex1
+	trait=gardener
+	trait=stressed
+	2602.1.1={birth=yes}
+	2655.1.1={death={
+			death_reason=death_trait
+		}	
+	}
+}
+
+2500067={
+	name="Alric"
+	culture=valleyan
+	religion=true_cross
+	dynasty=1850082 #Balthes
+	trait=skilled_tactician
+	trait=ambitious
+	trait=peasant_leader
+	trait=zealous
+	trait=brave
+	trait=wroth
+	trait=just
+	2570.1.1={birth=yes}
+	2615.5.2={death={
+			death_reason=death_battle
+			killer=2500023
+		}	
+	}
+}
+2502078={
+	name="Helena"
+	culture=valleyan
+	religion=nazarene
+	female=yes
+	dynasty=1850082 #Balthes
+	trait=martial_cleric
+	trait=nz_presbyter
+	trait=fair
+	trait=patient
+	trait=kind
+	trait=devout
+	trait=gamer
+	trait=shy
+	father=2500067
+	2600.1.1={birth=yes}
+	2633.12.16={death={death_reason=death_childbirth}}
+}
+		#The following are from Dryhad and I didn't wanna edit the ids and risk screwing things up. Continue any new character using the 25000xxx format 
+1911200={
+	name="Lance"
+	dynasty=1851016
+	culture=valleyan
+	religion=rust_cultist
+	father=2500123
+	2382.2.11={birth=yes}
+	2421.3.21={
+		death={
+			death_reason=death_battle
+			killer=1910100
+		}
+	}
+}
+1911201={ 
+	name="Patrick"
+	dynasty=1851016
+	culture=valleyan
+	religion=rust_cultist
+	father=1911200
+	2402.2.11={birth=yes}
+	2421.3.21={ 
+		religion=cetic 
+		trait=way_book
+		trait=imp_ex2
+		}
+	2474.5.1={death=yes}
+}
+1911202={
+	name="Travis"
+	dynasty=1851016
+	culture=valleyan
+	religion=rust_cultist
+	father=1911200
+	trait=brilliant_strategist
+	trait=zealous
+	trait=ambitious
+	trait=cruel
+	2405.7.18={birth=yes}
+	2469.7.11={death=yes}
+}
+1911203={
+	name="Patrick"
+	dynasty=1851016
+	culture=valleyan
+	religion=cetic
+	father=1911201
+	trait=way_book
+	trait=imp_ex1
+	2424.9.20={birth=yes}
+	2481.2.13={death=yes}
+}
+1911204={
+	name="Kevin"
+	dynasty=1851016
+	culture=valleyan
+	religion=cetic
+	father=1911203
+	trait=way_fist
+	trait=imp_ex2
+	2452.3.18={birth=yes}
+	2514.12.3={death=yes}
+}
+1911205={
+	name="Oleander"
+	dynasty=1851016
+	culture=valleyan
+	religion=cetic
+	father=1911204
+	trait=way_fist
+	trait=imp_ex3
+	2478.7.8={birth=yes}
+	2534.3.12={death=yes}
+}
+1911206={
+	name="Patrick"
+	dynasty=1851016
+	culture=valleyan
+	religion=cetic
+	father=1911205
+	trait=way_fist
+	trait=imp_ex1
+	2501.3.19={birth=yes}
+	2540.2.12={death=yes}
+}
+1911207={
+	name="Kevin"
+	dynasty=1851016
+	culture=valleyan
+	religion=cetic
+	father=1911206
+	trait=way_fist
+	trait=imp_ex2
+	2519.11.8={birth=yes}
+	2551.5.17={death=yes}
+}
+1911208={
+	name="Wallace"
+	dynasty=1851016
+	culture=valleyan
+	religion=cetic
+	father=1911207
+	trait=way_fist
+	trait=imp_ex1
+	2537.2.3={birth=yes}
+	2584.5.5={death=yes}
+}
+1911209={
+	name="Jeffrey"
+	dynasty=1851016
+	culture=valleyan
+	religion=cetic
+	father=1911208
+	trait=way_cowl
+	trait=imp_ex2
+	2568.9.9={birth=yes}
+	2588.2.11={ add_trait=has_typhus }
+	2590.9.12={
+		death={ 
+			death_reason=death_trait
+		}
+	}
+}
+		##The above are from Dryhad and I didn't wanna edit the ids and risk screwing things up. Continue any new character using the 25000xxx format 
+		
+2500068={
+	name="Charlie"
+	culture=bayfolk
+	religion=sedevacantist
+	dynasty=2030032 #Chester
+	occluded=yes
+	trait=midas_touched
+	trait=legendary
+	trait=gluttonous
+	trait=seducer
+	trait=gregarious
+	trait=ambitious
+	trait=musician 
+	give_nickname=nick_the_rat
+	2150.1.1={birth=yes}
+	2200.1.1={death=yes}	
+}
+
+
+2500069={
+	name="Lloyd"
+	culture=bayfolk
+	religion=cetic
+	dynasty=1849063#Parc
+	trait=skilled_tactician
+	trait=paranoid
+	trait=strategist
+	trait=diligent
+	trait=patient
+	trait=zealous
+	trait=content 
+	2598.1.1={birth=yes}
+	2662.1.3={death=yes}	
+}
+
+2500070={
+	name="Sebas"
+	culture=valleyan
+	religion=pagan
+	dynasty=1850049 #Sofocante
+	occluded=yes
+	trait=brilliant_strategist
+	trait=legendary
+	trait=brave
+	trait=strategist
+	trait=greedy
+	trait=ambitious
+	trait=zealous
+	trait=paranoid
+	trait=depressed
+	trait=blinded
+	give_nickname=nick_the_grizzly
+	mother=2500109
+	2140.1.1={birth=yes}
+	2160.6.21={add_spouse=2500109}
+	2190.2.15={death= {
+		death_reason=death_suicide
+		}	
+	}
+}
+
+2500071={
+	name="Ethan"
+	culture=valleyan
+	religion=pagan
+	dynasty=1850049 #Sofocante
+	father=2500070
+	mother=2500109
+	occluded=yes
+	trait=thrifty_clerk
+	trait=legendary
+	trait=charitable
+	trait=content
+	trait=hedonist
+	trait=gluttonous
+	trait=lustful
+	trait=craven
+	2170.1.1={birth=yes}
+	2200.1.1={death=yes}
+}
+
+2500072={
+	name="Paul"
+	culture=valleyan
+	religion=pagan
+	dynasty=1850049 #Sofocante
+	father=2500070
+	mother=2500109
+	trait=tough_soldier
+	trait=brave
+	trait=just
+	trait=diligent
+	trait=honest
+	trait=kind
+	give_nickname=nick_the_nice
+	2180.1.1={birth=yes}
+	2245.3.24={death={
+			death_reason=death_execution_hanging
+			killer=2500009
+		}
+	}
+}
+2500073={
+	name="Jerry"
+	culture=valleyan
+	religion=evangelical
+	dynasty=1850049 #Sofocante
+	father=2500072
+	trait=charismatic_negotiator
+	trait=paranoid
+	trait=shrewd
+	trait=feeble
+	trait=content
+	2245.2.1={birth=yes}
+	2310.11.24={death=yes}
+}
+2500074={
+	name="Jason"
+	culture=valleyan
+	religion=evangelical
+	dynasty=1850049 #Sofocante
+	father=2500073
+	trait=thrifty_clerk
+	trait=greedy
+	trait=shrewd
+	trait=administrator
+	2295.9.11={birth=yes}
+	2345.6.12={death=yes}
+}
+2500075={
+	name="Jordan"
+	culture=valleyan
+	religion=evangelical
+	dynasty=1850049 #Sofocante
+	father=2500074
+	trait=charismatic_negotiator
+	trait=paranoid
+	trait=shrewd
+	trait=feeble
+	trait=content
+	2318.2.24={birth=yes}
+	2360.3.23={death=yes}
+}
+2500076={
+	name="Jules"
+	culture=valleyan
+	religion=evangelical
+	dynasty=1850049 #Sofocante
+	father=2500075
+	trait=intricate_webweaver
+	trait=paranoid
+	trait=ambitious
+	trait=wroth
+	trait=maimed
+	trait=cruel
+	2335.7.24={birth=yes}
+	2381.2.28={death=yes}
+}
+2500077={
+	name="Julia"
+	culture=valleyan
+	female=yes
+	religion=cetic
+	dynasty=1850049 #Sofocante
+	father=2500076
+	trait=naive_appeaser
+	trait=paranoid
+	trait=shy
+	trait=feeble
+	trait=content
+	2376.7.24={birth=yes}
+	2440.3.12={death=yes}
+}
+2500078={
+	name="Hassan"
+	dynasty= "2030034"
+	culture=anjalusi
+	religion=imamite
+	trait=diligent
+	trait=just
+	trait=kind
+	trait=content
+	father=1384081
+	2345.1.10={birth=yes}
+	2390.1.1={death=yes}
+}
+
+2500079={
+	name="Ali"
+	dynasty= "2030034"
+	culture=anjalusi
+	religion=imamite
+	trait=diligent
+	trait=just
+	trait=kind
+	trait=content
+	father=2500078
+	2370.1.10={birth=yes}
+	2420.1.1={death=yes}
+}
+
+2500080={
+	name="Imad"
+	dynasty= "2030034"
+	culture=anjalusi
+	religion=imamite
+	trait=diligent
+	trait=just
+	trait=kind
+	trait=content
+	father=2500079
+	2400.1.10={birth=yes}
+	2460.1.1={death=yes}
+}
+
+2500081={
+	name="Amir"
+	dynasty= "2030034"
+	culture=anjalusi
+	religion=imamite
+	trait=diligent
+	trait=just
+	trait=kind
+	trait=content
+	father=2500080
+	2435.1.10={birth=yes}
+	2510.1.1={death=yes}
+}
+2500082={
+	name="Issam"
+	dynasty= "2030034"
+	culture=anjalusi
+	religion=imamite
+	trait=diligent
+	trait=just
+	trait=kind
+	trait=content
+	father=2500081
+	2475.1.10={birth=yes}
+	2550.1.1={death=yes}
+}
+2500083={
+	name="Hafez"
+	dynasty= "2030034"
+	culture=anjalusi
+	religion=imamite
+	trait=diligent
+	trait=just
+	trait=kind
+	father=2500082
+	2510.1.10={birth=yes}
+	2585.1.1={death=yes}
+}
+2500084={
+	name="Maher"
+	dynasty= "2030034"
+	culture=anjalusi
+	religion=imamite
+	trait=diligent
+	trait=just
+	trait=kind
+	father=2500083
+	2545.1.10={birth=yes}
+	2610.1.1={death=yes}
+}
+2500085={
+	name="Bashir"
+	dynasty= "2030034"
+	culture=anjalusi
+	religion=imamite
+	trait=diligent
+	trait=just
+	trait=kind
+	father=2500084
+	2580.1.10={birth=yes}
+	2620.5.10={death={ #Killed by Carmines
+		death_reason=death_murder_unknown
+		killer=1910150
+		}
+	} 
+}
+
+2500086={
+	name="Khalid"
+	dynasty= "2030034"
+	culture=anjalusi
+	religion=imamite
+	trait=stubborn
+	trait=just
+	trait=kind
+	father=2500085
+	2610.1.10={birth=yes}
+	2660.1.1={death=yes}
+}
+2500087={
+	name="Khalil"
+	dynasty= "2030034"
+	culture=anjalusi
+	religion=imamite
+	trait=ambitious
+	trait=just
+	trait=duelist 
+	trait=brave
+	father=2500086
+	2640.1.10={birth=yes}
+	2665.12.25={
+		employer=2200016
+	}
+	2710.1.1={death=yes}
+}
+
+2500088={
+	name="Oneca"
+	dynasty=1912076 #Mendoza
+	female=yes
+	culture=californiano
+	religion=nazarene
+	trait=fortune_builder
+		trait=sympathy_cult_of_saints
+		trait=administrator
+		trait=imp_ex1
+		trait=nz_acolyte
+		trait=weak
+		trait=wroth
+		trait=kind
+	father=2500093
+	2626.7.2={birth=yes}
+	2645.6.21={add_spouse=2500094}
+}
+
+2500089={
+	name="John"
+	dynasty=1864102 #McQueen
+	culture=battleborn
+	religion=mormon
+	trait=proud
+	trait=ambitious
+	2646.6.9={birth=yes}
+	2710.1.1={death=yes}
+}
+
+2500090={
+	name="Jimmy"
+	dynasty=1864095 #Sevilla
+	culture=battleborn
+	religion=nazarene
+	trait=trusting
+	trait=greedy
+	2629.12.2={birth=yes}
+	2710.1.1={death=yes}
+}
+
+2500091={
+	name="Tubboge"
+	dynasty=1491917
+	culture=paiute
+	religion=nazarene
+	trait=gregarious
+	trait=erudite
+	2641.4.26={birth=yes}
+	2710.1.1={death=yes}
+}
+
+2500092={
+	name="Wewawewa"
+	dynasty=1491924
+	culture=paiute
+	religion=mormon
+	trait=just
+	trait=chaste
+	trait=shy
+	2641.4.26={birth=yes}
+	2710.1.1={death=yes}
+}
+
+2502077={
+	name="Johnny"
+	dynasty=1850083
+	culture=chino
+	religion=cetic
+	martial=10
+	diplomacy=8
+	stewardship=6
+	intrigue=7
+	learning=4
+	trait=skilled_tactician
+	trait=way_fist
+	trait=fair
+	trait=strong
+	trait=musician
+	trait=one_handed
+	trait=proud
+	trait=ambitious
+	trait=wroth
+	trait=lustful
+	give_nickname=nick_iron_hand
+	2634.11.16={birth=yes
+		culture=angeleno
+		effect={
+			set_character_flag=diversity
+			set_character_flag=physique
+		}
+	}
+	2665.11.28={effect={add_artifact=ate_firearm}}
+	2665.11.29={effect={add_artifact=prosthetic_hand_metal}}
+	2665.11.29={effect={add_artifact=old_world_shades}}
+	2677.8.20={death=yes}
+}
+
+1911152={
+	name="Edna"
+	female=yes
+	dynasty=1864104
+	martial=6
+	diplomacy=12
+	stewardship=10
+	intrigue=4
+	learning=12
+	culture=battleborn
+	religion=atomicist
+	trait=flamboyant_schemer
+	trait=sympathy_pacific
+	trait=sympathy_christendom
+	trait=sympathy_islam
+	trait=patient
+	trait=ambitious
+	trait=musician
+	trait=fair
+	2646.10.21={birth=yes}
+	2660.1.1={
+	effect={
+			set_character_flag=no_historical_family
+			set_character_flag=diversity
+			set_character_flag=physique
+		}
+	}
+	2740.12.1={death=yes}
+}
+2500093={
+	name="Juan"
+	dynasty=1912076 #Mendoza
+	culture=californiano
+	religion=nazarene
+martial=6
+	diplomacy=4
+	stewardship=6
+	intrigue=2
+	learning=5
+	disallow_random_traits=yes
+	trait=brilliant_strategist
+	trait=genius
+	trait=shrewd
+	trait=content
+	trait=nz_acolyte
+	trait=imp_ex4
+	trait=strategist
+	trait=kind
+	trait=diligent
+	trait=wroth
+	trait=proud
+	give_nickname=nick_the_lionheart
+	2578.4.26={birth=yes}
+	2655.11.3={death=yes}
+}
+2500094={
+	name="Dario"
+	culture=californiano
+	religion=sacred_heart
+	trait=tough_soldier
+	trait=marian_guadalupe
+	trait=honest
+	trait=brave
+	trait=devout
+	trait=envious
+	trait=greedy
+	2628.9.7={birth=yes}
+	2645.6.21={add_spouse=2500088}
+}
+2500095={
+	name="Dionisio"
+	culture=californiano
+	dynasty=1912076 #Mendoza
+	religion=nazarene
+	trait=skilled_tactician
+	trait=nz_acolyte
+	trait=stubborn
+	trait=ambitious
+	trait=wroth
+	trait=diligent
+	trait=charitable
+	father=2500094
+	mother=2500088
+	2646.5.17={birth=yes}
+}
+2500096={
+	name="Arcadio"
+	culture=californiano
+	dynasty=1912076 #Mendoza
+	religion=nazarene
+	trait=scholarly_theologian
+	trait=nz_acolyte
+	trait=scholar
+	trait=is_malnourished
+	trait=kind
+	trait=devout
+	trait=humble
+	father=2500094
+	mother=2500088
+	2648.3.11={birth=yes}
+}
+2500097={
+	name="Veronica"
+	culture=californiano
+	female=yes
+	dynasty=1912076 #Mendoza
+	religion=nazarene
+	trait=midas_touched
+	trait=nz_acolyte
+	trait=just
+	trait=slothful
+	trait=shrewd
+	trait=greedy
+	trait=gluttonous
+	father=2500094
+	mother=2500088
+	2650.7.2={birth=yes}
+}
+2500109={
+	name="Joyce"
+	culture=valleyan
+	female=yes
+	dynasty=1850049 #Sofocante
+	religion=pagan
+	trait=midas_touched
+	trait=fair
+	trait=just
+	trait=depressed
+	trait=shrewd
+	trait=mystic
+	trait=legendary
+	occluded=yes
+	2122.7.2={birth=yes}
+	2160.6.21={add_spouse=2500070}
+	2190.2.14={death=yes}
+}
+2500110={
+	name="Jody"
+	culture=angeleno
+	dynasty=1851166 #Bute
+	religion=hamiltonian
+	trait=lustful
+	trait=seducer
+	trait=slow
+	trait=strong
+	trait=proud
+	trait=mystic
+	trait=legendary
+	occluded=yes
+	2025.7.2={birth=yes}
+	2090.2.14={death=yes}
+}
+2500111={
+	name="Alan Smithee"
+	culture=angeleno
+	dynasty=1851167 #hays
+	religion=pagan
+	trait=lustful
+	trait=wroth
+	trait=greedy
+	trait=ambitious
+	trait=proud
+	trait=gluttonous
+	trait=legendary
+	occluded=yes
+	2025.7.2={birth=yes}
+	2055.10.31={death={
+			death_reason=death_execution
+			killer=2200000
+		}
+	}
+}

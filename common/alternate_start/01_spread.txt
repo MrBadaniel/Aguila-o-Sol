@@ -1,0 +1,939 @@
+adjacencies = { #turns out I just need to add adjacencies for islands and such
+	590 = 593	#Mingan-Anticosti
+	2085 = 2083 #Thule-St. Anthony
+	1256 = 2082 #Pitupok-Anguille
+	1213 = 589 #Pitupok-Anguille
+	1097 = 1875 #Miami-Andros
+	1099 = 1100 #Florida Keys-Havana
+	1102 = 1104 #Pinar del Rio-Isla de Pinos
+	1113 = 1174 #Sierra Maestra-Surrey
+	2017 = 1114 #Out Islands-Baracoa
+	1174 = 1191 #Surrey-Les Cayes
+	1172 = 1873 #Cornwall-Cayman
+	1187 = 2106 #Port-Au-Prince-La Gonave
+	1189 = 2086 #Le Cap-Tortuga
+	1194 = 1186 #La Romana-Mayaguez
+	1182 = 688 #Virgin Islands-Anguilla
+	1181 = 1180 #Antigua and Barbuda-Guadeloupe
+	1178 = 1177 #Maritinique-St. Lucia
+	1176 = 1175 #Maritinique-Barbados
+	1178 = 1175 #St. Vincent-Barbados
+	2088 = 1877 #Grenada-Tobago
+	1942 = 1877 #Tucupita-Tobago
+	1939 = 1877 #Carupano-Tobago
+	1940 = 1876 #Cumana-Isla Margarita
+	1876 = 1880 #Isla Margarita-Bonaire
+	1926 = 1881 #Paraguana-Aruba
+	1889 = 1993 #Panama-Las Perlas
+	1893 = 1994 #Veraguas-Coiba
+	1869 = 1872 #Bluefields-San Andres
+	1859 = 1860 #Colon-Islas de la Bahia
+	1812 = 1811 #Cancun-Cozumel
+	1812 = 1102 #Cancun-Pinar del Rio
+	1746 = 1748 #Tepic-Islas Marias
+	2001 = 608 #Los Cabos-Isla Socorro
+	2005 = 609 #El Rosario-Isla Guadalupe
+	2019 = 2023 #Los Angeles-Channel Islands
+	330 = 1141 #Lakehead-Isle Royale
+	1202 = 593 #Gaspe-Anticosti
+	1096 = 1196 #Palm Beach-Grand Bahama
+	1104 = 1873 #Isla de Pinos-Cayman
+	131 = 601	#Carteret-Bermuda
+	998 = 661	#Akimiski Island-Kashechewan
+	846 = 830	#Kiis Gwayy-Prince of Wales Island
+	847 = 553	#Gwaii Hanaas-Prince Rupert
+	850 = 862	#Great Whale River-Sanikiluaq
+	862 = 860 	#Great Whale River-Sanikiluaq
+	858 = 864 	#New Moravia-Koksoak
+}
+
+culture_group_spread = {
+	factor = 100
+	
+	modifier = {
+		factor = 10
+		num_culture_provinces < 20
+	}
+	modifier = {
+		factor = 0.8
+		num_culture_provinces > 30
+	}
+	modifier = {
+		factor = 0.8
+		num_culture_provinces > 40
+	}
+	modifier = {
+		factor = 0.8
+		num_culture_provinces > 50
+	}
+	modifier = {
+		factor = 0.8
+		num_culture_provinces > 60
+	}
+	modifier = {
+		factor = 0.8
+		num_culture_provinces > 70
+	}
+	modifier = {
+		factor = 0.8
+		num_culture_provinces > 80
+	}
+	modifier = {
+		factor = 0.8
+		num_culture_provinces > 90
+	}
+	modifier = {
+		factor = 0.8
+		num_culture_provinces > 100
+	}
+	modifier = {
+		factor = 0.8
+		num_culture_provinces > 110
+	}
+	modifier = {
+		factor = 0
+		culture_group = reference_culture
+	}
+	modifier = {
+		factor = 0.2
+		has_overseas_culture_trigger = yes
+		NOT = {
+			has_alternate_start_setting = {
+				setting = culture
+				option = full_random
+			}
+		}
+	}
+	modifier = {
+		factor = 0.5
+		culture_group = portuguese
+		NOT = {
+			has_alternate_start_setting = {
+				setting = culture
+				option = full_random
+			}
+		}
+	}
+	modifier = {
+		factor = 1.5
+		OR = {
+			culture_group = gallomerican
+			culture_group = south_anglo
+			culture_group = mexicano
+			culture_group = californian
+			culture_group = caribeno
+			culture_group = amerodeutsch
+			culture_group = rockland
+			culture_group = laurentian
+			culture_group = mesoamerican
+			culture_group = costero
+			culture_group = north_pacific
+			culture_group = plains
+		}
+		NOT = {
+			has_alternate_start_setting = {
+				setting = culture
+				option = full_random
+			}
+		}
+	}
+	modifier = {
+		factor = 3
+		OR = {
+			culture_group = gallomerican
+			culture_group = mexicano
+			culture_group = californian
+			culture_group = caribeno
+			culture_group = south_anglo
+			culture_group = laurentian
+		}
+		NOT = {
+			has_alternate_start_setting = {
+				setting = culture
+				option = full_random
+			}
+		}
+	}
+	modifier = {
+		factor = 0.5 # Don't cross the Caribbean too often
+		OR = {
+			province = 1100 #Havana
+			province = 1875 #Andros
+			province = 1196 #Grand Bahama
+			province = 1102 #Pinar Del Rio
+			province = 1878 #Trinidad
+			province = 1876 #Isla Margarita
+			province = 1881 #Aruba
+			province = 601 #Bermuda
+		}
+		FROM = {
+			OR = {
+				province = 1100 #Havana
+				province = 1875 #Andros
+				province = 1196 #Grand Bahama
+				province = 1102 #Pinar Del Rio
+				province = 1878 #Trinidad
+				province = 1876 #Isla Margarita
+				province = 1881 #Aruba
+				province = 601 #Bermuda
+			}
+		}
+	}
+	modifier = {
+		factor = 14
+		OR = {
+			culture_group = horse_group
+			culture_group = cat_group
+			culture_group = bear_group
+			culture_group = hedgehog_group
+			culture_group = duck_group
+			culture_group = dog_group
+			culture_group = dragon_group
+			culture_group = elephant_group
+			culture_group = panda_group
+		}
+		has_alternate_start_parameter = { key = special_culture value = animal_kingdoms }
+	}
+	modifier = {
+		factor = 0.5
+		NOR = {
+			culture_group = horse_group
+			culture_group = cat_group
+			culture_group = bear_group
+			culture_group = hedgehog_group
+			culture_group = duck_group
+			culture_group = dog_group
+			culture_group = dragon_group
+			culture_group = elephant_group
+			culture_group = panda_group
+		}
+		has_alternate_start_parameter = { key = special_culture value = animal_kingdoms }
+	}
+	modifier = {
+		factor = 100
+		OR = {
+			culture_group = horse_group
+			culture_group = cat_group
+			culture_group = bear_group
+			culture_group = hedgehog_group
+			culture_group = duck_group
+			culture_group = dog_group
+			culture_group = dragon_group
+			culture_group = elephant_group
+			culture_group = panda_group
+		}
+		has_alternate_start_parameter = { key = special_culture value = animal_world }
+	}
+	modifier = {
+		factor = 0.1
+		NOR = {
+			culture_group = horse_group
+			culture_group = cat_group
+			culture_group = bear_group
+			culture_group = hedgehog_group
+			culture_group = duck_group
+			culture_group = dog_group
+			culture_group = dragon_group
+			culture_group = elephant_group
+			culture_group = panda_group
+		}
+		has_alternate_start_parameter = { key = special_culture value = animal_world }
+	}
+}
+
+culture_spread = {
+	factor = 100
+	
+	modifier = {
+		factor = 10
+		num_culture_provinces < 3
+	}
+	modifier = {
+		factor = 0.8
+		num_culture_provinces > 5
+	}
+	modifier = {
+		factor = 0.8
+		num_culture_provinces > 10
+	}
+	modifier = {
+		factor = 0.8
+		num_culture_provinces > 15
+	}
+	modifier = {
+		factor = 0.8
+		num_culture_provinces > 20
+	}
+	modifier = {
+		factor = 0.8
+		num_culture_provinces > 25
+	}
+	modifier = {
+		factor = 0.8
+		num_culture_provinces > 30
+	}
+	modifier = {
+		factor = 0.1
+		culture = yiddish
+		NOT = {
+			has_alternate_start_setting = {
+				setting = culture
+				option = full_random
+			}
+		}
+	}
+	modifier = {
+		factor = 0.3
+		culture = towner
+		NOT = {
+			has_alternate_start_setting = {
+				setting = culture
+				option = full_random
+			}
+		}
+	}
+	modifier = {
+		factor = 0.3
+		culture = prodnanici
+		NOT = {
+			has_alternate_start_setting = {
+				setting = culture
+				option = full_random
+			}
+		}
+	}
+	modifier = {
+		factor = 0.3
+		culture = tehrangeleno
+		NOT = {
+			has_alternate_start_setting = {
+				setting = culture
+				option = full_random
+			}
+		}
+	}
+	modifier = {
+		factor = 0.6
+		culture = gulfard
+		NOT = {
+			has_alternate_start_setting = {
+				setting = culture
+				option = full_random
+			}
+		}
+	}
+	modifier = {
+		factor = 0.05 # Don't cross the Caribbean too often
+		OR = {
+			province = 1100 #Havana
+			province = 1875 #Andros
+			province = 1196 #Grand Bahama
+			province = 1102 #Pinar Del Rio
+			province = 1878 #Trinidad
+			province = 1876 #Isla Margarita
+			province = 1881 #Aruba
+			province = 601 #Bermuda
+		}
+		FROM = {
+			OR = {
+				province = 1100 #Havana
+				province = 1875 #Andros
+				province = 1196 #Grand Bahama
+				province = 1102 #Pinar Del Rio
+				province = 1878 #Trinidad
+				province = 1876 #Isla Margarita
+				province = 1881 #Aruba
+				province = 601 #Bermuda
+			}
+		}
+	}
+}
+
+religion_group_spawn = {
+	factor = 100
+	modifier = {
+		factor = 0.001
+		any_religion_distance < 200
+	}
+	modifier = {
+		factor = 0.1
+		any_religion_distance < 350
+	}
+	modifier = { # No starting on islands, except the British Isles
+		factor = 0
+		is_island = yes
+		NOT = { region = world_caribbean }
+	}
+	modifier = {
+		factor = 0
+		religion = pagan
+	}
+}
+
+religion_group_spread = {
+	factor = 100
+	
+	modifier = {
+		factor = 10
+		num_religion_provinces < 5
+	}
+	modifier = {
+		factor = 0.8
+		num_religion_provinces > 20
+	}
+	modifier = {
+		factor = 0.8
+		num_religion_provinces > 40
+	}
+	modifier = {
+		factor = 0.8
+		num_religion_provinces > 60
+	}
+	modifier = {
+		factor = 0.8
+		num_religion_provinces > 80
+	}
+	modifier = {
+		factor = 0.8
+		num_religion_provinces > 100
+	}
+	modifier = {
+		factor = 0.8
+		num_religion_provinces > 120
+	}
+	modifier = {
+		factor = 0.8
+		num_religion_provinces > 140
+	}
+	modifier = {
+		factor = 0.8
+		num_religion_provinces > 160
+	}
+	modifier = {
+		factor = 0.8
+		num_religion_provinces > 180
+	}
+	modifier = {
+		factor = 0.035
+		religion_group = jewish_group
+		NOT = {
+			has_alternate_start_setting = {
+				setting = religion
+				option = full_random
+			}
+		}
+	}
+	modifier = {
+		factor = 0.25
+		religion_group = muslim
+		year = 1000
+		NOT = {
+			has_alternate_start_setting = {
+				setting = religion
+				option = full_random
+			}
+		}
+	}
+	modifier = {
+		factor = 5
+		religion_group = pagan_group
+		NOT = { year = 1000 }
+		NOT = {
+			has_alternate_start_setting = {
+				setting = religion
+				option = full_random
+			}
+		}
+		NOT = {
+			has_alternate_start_setting = {
+				setting = random_scenario_more_pagans
+				option = checked
+			}
+		}
+	}
+	modifier = {
+		factor = 2.25
+		religion_group = oldworld
+		NOT = {
+			has_alternate_start_setting = {
+				setting = religion
+				option = full_random
+			}
+		}
+	}
+	modifier = {
+		factor = 2.75
+		religion_group = christian
+		NOT = {
+			has_alternate_start_setting = {
+				setting = religion
+				option = full_random
+			}
+		}
+	}
+	modifier = {
+		factor = 1.75
+		religion_group = pacific
+		NOT = {
+			has_alternate_start_setting = {
+				setting = religion
+				option = full_random
+			}
+		}
+	}
+	modifier = {
+		factor = 0.5 # Don't cross the Caribbean too often
+		OR = {
+			province = 1100 #Havana
+			province = 1875 #Andros
+			province = 1196 #Grand Bahama
+			province = 1102 #Pinar Del Rio
+			province = 1878 #Trinidad
+			province = 1876 #Isla Margarita
+			province = 1881 #Aruba
+			province = 601 #Bermuda
+		}
+		FROM = {
+			OR = {
+				province = 1100 #Havana
+				province = 1875 #Andros
+				province = 1196 #Grand Bahama
+				province = 1102 #Pinar Del Rio
+				province = 1878 #Trinidad
+				province = 1876 #Isla Margarita
+				province = 1881 #Aruba
+				province = 601 #Bermuda
+			}
+		}
+	}
+}
+
+religion_spread = {
+	factor = 100
+	
+	modifier = {
+		factor = 10
+		num_religion_provinces < 2
+	}
+	modifier = {
+		factor = 0.8
+		num_religion_provinces > 10
+	}
+	modifier = {
+		factor = 0.8
+		num_religion_provinces > 20
+	}
+	modifier = {
+		factor = 0.8
+		num_religion_provinces > 30
+	}
+	modifier = {
+		factor = 0.8
+		num_religion_provinces > 40
+	}
+	modifier = {
+		factor = 0.8
+		num_religion_provinces > 50
+	}
+	modifier = {
+		factor = 0.8
+		num_religion_provinces > 60
+	}
+	modifier = {
+		factor = 0.6
+		religion = anabaptist
+		year = 1000
+		NOT = {
+			has_alternate_start_setting = {
+				setting = religion
+				option = full_random
+			}
+		}
+	}
+	modifier = {
+		factor = 0.3
+		religion = imamite
+		NOT = {
+			has_alternate_start_setting = {
+				setting = religion
+				option = full_random
+			}
+		}
+	}
+	modifier = {
+		factor = 0.2
+		religion = orientalist
+		NOT = {
+			has_alternate_start_setting = {
+				setting = religion
+				option = full_random
+			}
+		}
+	}
+	modifier = {
+		factor = 0.65
+		religion = evangelical
+		NOT = {
+			has_alternate_start_setting = {
+				setting = religion
+				option = full_random
+			}
+		}
+	}
+	modifier = {
+		factor = 0.2
+		religion = ursuline
+		NOT = {
+			has_alternate_start_setting = {
+				setting = religion
+				option = full_random
+			}
+		}
+	}
+	modifier = {
+		factor = 0.15
+		religion = high_church
+		NOT = {
+			has_alternate_start_setting = {
+				setting = religion
+				option = full_random
+			}
+		}
+	}
+	modifier = {
+		factor = 0.05
+		religion = apostolic
+		NOT = {
+			has_alternate_start_setting = {
+				setting = religion
+				option = full_random
+			}
+		}
+	}
+	modifier = {
+		factor = 0.05
+		religion = celeste
+		NOT = {
+			has_alternate_start_setting = {
+				setting = religion
+				option = full_random
+			}
+		}
+	}
+	modifier = {
+		factor = 0.2
+		religion = neognostic
+		NOT = {
+			has_alternate_start_setting = {
+				setting = religion
+				option = full_random
+			}
+		}
+	}
+	modifier = {
+		factor = 0.2
+		religion = glorian
+		NOT = {
+			has_alternate_start_setting = {
+				setting = religion
+				option = full_random
+			}
+		}
+		NOT = {
+			has_alternate_start_setting = {
+				setting = random_scenario_more_pagans
+				option = checked
+			}
+		}
+	}
+	modifier = {
+		factor = 0.5
+		religion = celtic_pagan
+		NOT = {
+			has_alternate_start_setting = {
+				setting = religion
+				option = full_random
+			}
+		}
+		NOT = {
+			has_alternate_start_setting = {
+				setting = random_scenario_more_pagans
+				option = checked
+			}
+		}
+	}
+	modifier = {
+		factor = 0.05 # Don't cross the Caribbean too often
+		OR = {
+			province = 1100 #Havana
+			province = 1875 #Andros
+			province = 1196 #Grand Bahama
+			province = 1102 #Pinar Del Rio
+			province = 1878 #Trinidad
+			province = 1876 #Isla Margarita
+			province = 1881 #Aruba
+			province = 601 #Bermuda
+		}
+		FROM = {
+			OR = {
+				province = 1100 #Havana
+				province = 1875 #Andros
+				province = 1196 #Grand Bahama
+				province = 1102 #Pinar Del Rio
+				province = 1878 #Trinidad
+				province = 1876 #Isla Margarita
+				province = 1881 #Aruba
+				province = 601 #Bermuda
+			}
+		}
+	}
+}
+
+dejure_kingdom_spread = {
+	factor = 100
+	modifier = {
+		factor = 5
+		distance = { where = FROM value < 100 }
+	}
+	modifier = {
+		factor = 0.6
+		distance = { where = FROM value > 200 }
+	}
+	modifier = {
+		factor = 0.6
+		distance = { where = FROM value > 300 }
+	}
+	modifier = {
+		factor = 0.6
+		distance = { where = FROM value > 400 }
+	}
+	modifier = {
+		factor = 0.6
+		distance = { where = FROM value > 500 }
+	}
+	modifier = {
+		factor = 0.6
+		distance = { where = FROM value > 600 }
+	}
+	modifier = {
+		factor = 0.6
+		distance = { where = FROM value > 700 }
+	}
+	modifier = {
+		factor = 0.6
+		distance = { where = FROM value > 800 }
+	}
+	modifier = {
+		factor = 0.6
+		distance = { where = FROM value > 900 }
+	}
+	modifier = {
+		factor = 0.6
+		distance = { where = FROM value > 1000 }
+	}
+	modifier = {
+		factor = 0.01 # Don't cross the Caribbean too often
+		OR = {
+			province = 1100 #Havana
+			province = 1875 #Andros
+			province = 1196 #Grand Bahama
+			province = 1102 #Pinar Del Rio
+			province = 1878 #Trinidad
+			province = 1876 #Isla Margarita
+			province = 1881 #Aruba
+			province = 601 #Bermuda
+		}
+		FROM = {
+			OR = {
+				province = 1100 #Havana
+				province = 1875 #Andros
+				province = 1196 #Grand Bahama
+				province = 1102 #Pinar Del Rio
+				province = 1878 #Trinidad
+				province = 1876 #Isla Margarita
+				province = 1881 #Aruba
+				province = 601 #Bermuda
+			}
+		}
+	}
+}
+
+dejure_empire_spread = {
+	factor = 100
+	modifier = {
+		factor = 5
+		distance = { where = FROM value < 100 }
+	}
+	modifier = {
+		factor = 0.6
+		distance = { where = FROM value > 200 }
+	}
+	modifier = {
+		factor = 0.6
+		distance = { where = FROM value > 300 }
+	}
+	modifier = {
+		factor = 0.6
+		distance = { where = FROM value > 400 }
+	}
+	modifier = {
+		factor = 0.6
+		distance = { where = FROM value > 500 }
+	}
+	modifier = {
+		factor = 0.6
+		distance = { where = FROM value > 600 }
+	}
+	modifier = {
+		factor = 0.6
+		distance = { where = FROM value > 700 }
+	}
+	modifier = {
+		factor = 0.6
+		distance = { where = FROM value > 800 }
+	}
+	modifier = {
+		factor = 0.6
+		distance = { where = FROM value > 900 }
+	}
+	modifier = {
+		factor = 0.6
+		distance = { where = FROM value > 1000 }
+	}
+	modifier = {
+		factor = 0.1 # Don't cross the Caribbean too often
+		OR = {
+			province = 1100 #Havana
+			province = 1875 #Andros
+			province = 1196 #Grand Bahama
+			province = 1102 #Pinar Del Rio
+			province = 1878 #Trinidad
+			province = 1876 #Isla Margarita
+			province = 1881 #Aruba
+			province = 601 #Bermuda
+		}
+		FROM = {
+			OR = {
+				province = 1100 #Havana
+				province = 1875 #Andros
+				province = 1196 #Grand Bahama
+				province = 1102 #Pinar Del Rio
+				province = 1878 #Trinidad
+				province = 1876 #Isla Margarita
+				province = 1881 #Aruba
+				province = 601 #Bermuda
+			}
+		}
+	}
+}
+
+holy_site_spread = {
+	factor = 100
+	# We want three holy sites within the religion's borders, and two outside
+	modifier = {
+		factor = 0
+		NOT = { religion = FROM }
+		FROM = { num_holy_sites_generated < 1 }
+	}
+	modifier = {
+		factor = 0.01
+		NOT = { religion = FROM }
+		NOT = { parent_religion = { religion = FROM } }
+		FROM = { num_holy_sites_generated < 3 }
+	}
+	modifier = {
+		factor = 0.001
+		NOT = { religion_group = FROM }
+		FROM = { num_holy_sites_generated < 3 }
+	}
+	modifier = {
+		factor = 0.001
+		FROM = { num_holy_sites_generated >= 3 }
+		religion = FROM
+	}
+	# Stay near our borders
+	modifier = {
+		factor = 2
+		religion_group = FROM
+	}
+	# Avoid clustering
+	modifier = {
+		factor = 0 # We simply never want to be adjacent to a holy site
+		any_neighbor_province = {
+			is_holy_site = FROM
+		}
+	}
+	modifier = {
+		factor = 0
+		holy_site_distance = { target = FROM value < 100 }
+	}
+	modifier = {
+		factor = 0.01
+		holy_site_distance = { target = FROM value < 200 }
+	}
+	modifier = {
+		factor = 0.1
+		holy_site_distance = { target = FROM value < 300 }
+		FROM = { NOT = { religion_group = pagan_group } }
+	}
+	modifier = {
+		factor = 20
+		holy_site_distance = { target = FROM value > 500 }
+		FROM = { num_holy_sites_generated > 0 }
+	}
+	modifier = { # Pagan sites tend to be closer
+		factor = 30
+		holy_site_distance = { target = FROM value < 350 }
+		FROM = { religion_group = pagan_group }
+	}
+	modifier = {
+		factor = 0 # We use this as a proxy for religion distance, because religion distance is expensive to calculate
+		NOT = { religion = FROM }
+		NAND = { 
+			parent_religion = { religion = FROM }
+			FROM = { num_holy_sites_generated >= 3 } # Heresies can put their 3rd holy site in their parent religion
+		}
+		FROM = { num_holy_sites_generated > 0 }
+		holy_site_distance = { target = FROM value > 400 }
+	}
+	# Sharing some holy sites with parent religion is neat
+	modifier = {
+		factor = 100
+		FROM = {
+			parent_religion = {
+				ROOT = {
+					is_holy_site = PREV
+				}
+			}
+		}
+	}
+}
+
+holding_spread = {
+	factor = 100
+	modifier = {
+		factor = 0.1 # Don't cross the Caribbean too often
+		OR = {
+			province = 1100 #Havana
+			province = 1875 #Andros
+			province = 1196 #Grand Bahama
+			province = 1102 #Pinar Del Rio
+			province = 1878 #Trinidad
+			province = 1876 #Isla Margarita
+			province = 1881 #Aruba
+			province = 601 #Bermuda
+		}
+		FROM = {
+			OR = {
+				province = 1100 #Havana
+				province = 1875 #Andros
+				province = 1196 #Grand Bahama
+				province = 1102 #Pinar Del Rio
+				province = 1878 #Trinidad
+				province = 1876 #Isla Margarita
+				province = 1881 #Aruba
+				province = 601 #Bermuda
+			}
+		}
+	}
+}
