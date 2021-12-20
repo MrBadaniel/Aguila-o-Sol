@@ -71,6 +71,9 @@ feudal_governments = {
 			NOT = { is_government_potential = ghazi_government }
 			NOT = { is_government_potential = roman_imperial_government }
 			NOT = { is_government_potential = mex_imperial_government }
+			NOT = { is_government_potential = reserve_government }
+			NOT = { is_government_potential = misional_government }
+			NOT = { is_government_potential = agrarian_government }
 			NOT = { is_government_potential = mormon_government }
 			NOT = { is_government_potential = order_government }
 			#NOT = { is_government_potential = colonial_government }
@@ -690,6 +693,8 @@ feudal_governments = {
 			is_patrician = no
 			NOT = { is_government_potential = mormon_government }
 			NOT = { is_government_potential = mex_imperial_government }
+			NOT = { is_government_potential = agrarian_government }
+			NOT = { is_government_potential = misional_government }
 			NOT = { is_government_potential = bureaucratic_government }
 			NOT = { is_government_potential = theocratic_feudal_government }
 		}
@@ -893,5 +898,272 @@ feudal_governments = {
 		## Modifiers
 		court_size_modifier = 10
 	}
+	
+	agrarian_government = {
+		preferred_holdings = { CASTLE CITY }
+		allowed_holdings = { 
+			CASTLE
+			CITY
+			FORT
+			HOSPITAL
+		}
+		allowed_holdings_culture = { # Will not get the wrong government type penalty for tribes of the same culture
+			TRIBAL
+			FEUDAL
+			
+		}
+		accepts_liege_governments = { # Gets the wrong religion modifier instead
+			feudal_government
+			bureaucratic_government
+			ghazi_government
+			mormon_government
+			theocratic_feudal_government
+			tribal_government
+			reserve_government
+		}
+		
+		frame_suffix = "_agrarian"
+		title_prefix = "agrarian_"
+		potential = {
+			OR = {
+				controls_religion = no
+				religion = americanist
+				religion = consumerist
+				religion = monetarist
+				religion = rust_cultist
+				religion = imamite
+				religion = revivalist
+				religion = alawiyya
+				religion = qingzhen
+				religion = exovedate
+				religion = nousthreskeia
+				religion = tonaltec
+				religion = patria_grande
+				religion = atomicist
+				religion = celeste
+				#religion_group = pagan_group
+				has_religion_feature = religion_temporal_head
+				AND = {
+					OR = {
+						religion = norse_pagan_reformed
+						religion = rust_cultist
+						religion = americanist
+						religion = consumerist
+						religion = monetarist
+						religion = imamite
+						religion = revivalist
+						religion = alawiyya
+						religion = qingzhen
+						religion = exovedate
+						religion = nousthreskeia
+						religion = tonaltec
+						religion = patria_grande
+						religion = atomicist
+						religion = celeste
+					}
+					has_religion_features = no # Old saves, and campaigns without HF, need the Fylkirate to continue working
+				}
+			}
+			NOT = {	religion = cetic }
+			OR = {
+				religion = la_hermandad
+				religion = josephite
+				religion = alurista
+			}
+			NOT = { is_government_potential = roman_imperial_government }
+			NOT = { is_government_potential = mex_imperial_government }
+			NOT = { is_government_potential = order_government }
+			NOT = { is_government_potential = colonial_government }
+			NOT = { is_government_potential = military_governorate }
+			NOT = { is_government_potential = reserve_government }
+			is_patrician = no
+		}
+		
+		color = { 255 182 193 }
+		
+		uses_piety_for_law_change = yes
+		
+		have_gender_laws = yes
+		allows_matrilineal_marriage = yes
+		free_retract_vassalage = no
+		can_revoke_without_reason = no
+		can_demand_religious_conversion = no
+		gets_religion_opinion_penalties = no
+		gives_religion_opinion_penalties = no
+		uses_bride_price = yes
 
+		free_levies_in_offensive_war = yes # Took away the hardcoded stuff for muslims where they could raise levies without pissing off vassals if in an offensive war.
+
+		can_build_tribal = no
+		
+		ignore_in_vassal_limit_calculation = {
+			tribal_government
+			feudal_government
+			agrarian_government
+			reserve_government
+		} 
+		capital_move_delay = 120
+
+		## Modifiers
+		court_size_modifier = 10
+	}	
+	
+	reserve_government = {
+		preferred_holdings = { CASTLE TRIBAL }
+		allowed_holdings = { 
+			CASTLE 
+			TRIBAL
+			FORT
+			HOSPITAL
+		}
+		allowed_holdings_culture = { # Will not get the wrong government type penalty for tribes of the same culture
+			TRIBAL
+		}
+		accepts_liege_governments = { # Gets the wrong religion modifier instead
+			bureaucratic_government
+			diwan_government
+			theocracy_government
+			feudal_government
+			ghazi_government
+		}
+		free_revoke_on_governments_religion = { # Tribal vassals of other religions can have their titles revoked for free
+			tribal_government
+		}
+		frame_suffix = "_reserve"
+		title_prefix = "reserve_"
+		potential = {
+		OR= {
+		religion = forester
+		religion = edenite
+		}
+			is_patrician = no		
+		}
+		
+		vassal_call_to_arms  = {
+			bureaucratic_government
+			theocracy_government
+			feudal_government
+			ghazi_government
+			reserve_government
+			agrarian_government
+		}
+		
+		color = { 30 152 59 }
+		
+		uses_piety_for_law_change = yes
+		dukes_called_kings = yes
+		barons_need_dynasty = yes
+		ignores_de_jure_laws = yes
+		can_imprison_without_reason = yes 
+
+		can_build_tribal = yes
+	
+		character_modifier = {
+			short_reign_length = 2
+		}	
+	
+		ignore_in_vassal_limit_calculation = {
+			tribal_government
+		}
+		capital_move_delay = 200
+		## Modifiers
+		court_size_modifier = 10
+		min_vassal_tax = 0.1
+	}
+	
+	misional_government = {
+		preferred_holdings = { CASTLE }
+		allowed_holdings = { 
+			CASTLE 
+			FORT
+			HOSPITAL
+		}
+		allowed_holdings_culture = { # Will not get the wrong government type penalty for tribes of the same culture
+			TRIBAL
+		}
+		accepts_liege_governments = { # Gets the wrong religion modifier instead
+			bureaucratic_government
+			ghazi_government
+			mormon_government
+			theocratic_feudal_government
+			#military_governorate
+		}
+		free_revoke_on_governments_religion = { # Tribal vassals of other religions can have their titles revoked for free
+			tribal_government
+		}
+		
+		frame_suffix = "_misional"
+		title_prefix = "misional_"
+		potential = {
+			OR = {
+				controls_religion = no
+				religion = americanist
+				religion = consumerist
+				religion = monetarist
+				religion = rust_cultist
+				religion = imamite
+				religion = revivalist
+				religion = alawiyya
+				religion = qingzhen
+				religion = exovedate
+				religion = nousthreskeia
+				religion = tonaltec
+				religion = patria_grande
+				religion = atomicist
+				religion = celeste
+				#religion_group = pagan_group
+				has_religion_feature = religion_temporal_head
+				AND = {
+					OR = {
+						religion = norse_pagan_reformed
+						religion = rust_cultist
+						religion = americanist
+						religion = consumerist
+						religion = monetarist
+						religion = imamite
+						religion = revivalist
+						religion = alawiyya
+						religion = qingzhen
+						religion = exovedate
+						religion = nousthreskeia
+						religion = tonaltec
+						religion = patria_grande
+						religion = atomicist
+						religion = celeste
+					}
+					has_religion_features = no # Old saves, and campaigns without HF, need the Fylkirate to continue working
+				}
+			}
+			NOT = {	religion = cetic }
+			OR = {
+				religion = gran_comision
+				religion = misional
+			}
+			NOT = { is_government_potential = roman_imperial_government }
+			NOT = { is_government_potential = mex_imperial_government }
+			NOT = { is_government_potential = order_government }
+			NOT = { is_government_potential = colonial_government }
+			NOT = { is_government_potential = military_governorate }
+			NOT = { is_government_potential = reserve_government }
+			is_patrician = no
+		}
+		
+		color = { 225 183 69 }
+		
+		uses_piety_for_law_change = yes
+		
+		dukes_called_kings = yes
+		barons_need_dynasty = yes
+
+		can_build_tribal = no
+		
+		ignore_in_vassal_limit_calculation = {
+			tribal_government
+		}
+		capital_move_delay = 600
+		
+		## Modifiers
+		court_size_modifier = 10
+	}	
+	
 }
