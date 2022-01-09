@@ -837,6 +837,10 @@ feudal_governments = {
 			tribal_government
 		}
 		frame_suffix = "_uyc"
+		
+		frame_suffix = "_uyc"
+		title_prefix = "uyc_"
+		
 		potential = {
 			NAND = {
 				controls_religion = yes
@@ -926,6 +930,8 @@ feudal_governments = {
 		}
 		
 		frame_suffix = "_agrarian"
+		title_prefix = "agrarian_"
+
 		potential = {
 			OR = {
 				controls_religion = no
@@ -1031,7 +1037,10 @@ feudal_governments = {
 		free_revoke_on_governments_religion = { # Tribal vassals of other religions can have their titles revoked for free
 			tribal_government
 		}
+
 		frame_suffix = "_reserve"
+		title_prefix = "reserve_"
+
 		potential = {
 		OR= {
 		religion = forester
@@ -1092,8 +1101,10 @@ feudal_governments = {
 		free_revoke_on_governments_religion = { # Tribal vassals of other religions can have their titles revoked for free
 			tribal_government
 		}
-		
+
 		frame_suffix = "_gc"
+		title_prefix = "gc_"
+
 		potential = {
 			OR = {
 				controls_religion = no
