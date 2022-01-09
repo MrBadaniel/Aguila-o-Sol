@@ -1,12 +1,12 @@
- #Religion-specific opinion can be added to modifiers (E.G., norse_pagan_opinion = 5), but the modifier *has* to be defined in 00_modifier_definitions.txt as well. It also needs localisation. Works for groups as well
+# Religion-specific opinion can be added to modifiers (E.G., norse_pagan_opinion = 5), but the modifier *has* to be defined in 00_modifier_definitions.txt as well. It also needs localisation. Works for groups as well
 
 # join_crusade_if_bordering_hostile = yes # The AI won't refrain from joining a crusade simply because it borders a heathen/heretic realm
 
 # This trigger defines who can see a character's secret religion. The character with the secret religion is FROM, while the viewer is ROOT
 # Characters can always see their own secret religion. The observer can see all secret religions
-#secret_religion_visibility_trigger = {
-#	secret_religion = FROM
-#}
+secret_religion_visibility_trigger = {
+	secret_religion = FROM
+}
 
 afro_syncretic = {
 	has_coa_on_barony_only = yes
@@ -95,7 +95,11 @@ afro_syncretic = {
 		intermarry = candomble
 		intermarry = espiritista		
 		intermarry = brethren
+		intermarry = furiegi
+		
 		intermarry = insular
+		intermarry = revelationist
+		intermarry = revelationist_reformed
 	}
 	santeria = {
 		graphical_culture = africangfx
@@ -134,7 +138,11 @@ afro_syncretic = {
 		intermarry = voodoo
 		intermarry = candomble
 		intermarry = espiritista
+		intermarry = furiegi
+
 		intermarry = insular
+		intermarry = revelationist
+		intermarry = revelationist_reformed
 	}
 	candomble = { # Bahian religion
 		graphical_culture = africangfx
@@ -176,8 +184,7 @@ afro_syncretic = {
 		intermarry = espiritista
 		intermarry = hindu
 		intermarry = apostolic
-		intermarry = insular
-
+		intermarry = furiegi
 	}
 	espiritista = {
 		graphical_culture = africangfx
@@ -214,8 +221,9 @@ afro_syncretic = {
 		intermarry = santeria
 		intermarry = candomble
 		intermarry = hindu
+		intermarry = furiegi
+		
 		intermarry = insular
-
 	}
 }
 
@@ -304,7 +312,7 @@ american_native = {
 		unit_modifier = {		
 			garrison_size = 0.3
 			levy_size = 0.1
-			
+
 			key = "DEF_RELIGION"
 		}
 		unit_home_modifier = {
@@ -324,9 +332,9 @@ american_native = {
 			cowboys_defensive = 0.8
 			pike_cavalry_defensive = 0.8
 			samurai_defensive = 0.8
-			
+
 			garrison_size = 0.4
-			
+
 			key = "DEF_RELIGION_HOME_TERRITORY"
 		}
 
@@ -352,6 +360,7 @@ american_native = {
 	
 	raven_tales_reformed = {
 		graphical_culture = mesoamericangfx #norsegfx
+		interface_skin = { haida_interface american_native_interface pagan_interface }
 
 		icon = 55
 		heresy_icon = 56
@@ -391,6 +400,7 @@ american_native = {
 	
 	raven_tales = {
 		graphical_culture = mesoamericangfx #norsegfx
+		interface_skin = { haida_interface american_native_interface pagan_interface }
 
 		icon = 46
 		heresy_icon = 56
@@ -480,7 +490,6 @@ amero_syncretic = {
 		intermarry = exovedate
 		intermarry = orthodox
 		intermarry = insular
-
 	}
 	orthodox = {
 		graphical_culture = westerngfx
@@ -661,23 +670,15 @@ christian = {
 		intermarry = reformista
 		intermarry = cristo_rey
 		intermarry = moravian
-		intermarry = penitente
-		intermarry = fidencista
+		intermarry = wormwoodist
 		intermarry = celeste
 		intermarry = nazarene
 		intermarry = true_cross
 		intermarry = exovedate
+		intermarry = fidencista
 		intermarry = sacred_heart
 		intermarry = patria_grande
-		
-		
 		intermarry = insular
-		intermarry = wormwoodist
-		intermarry = alurista
-		intermarry = josephite
-		intermarry = misional
-		intermarry = gran_comision
-		intermarry = la_hermandad
 	}
 	neognostic = {
 		graphical_culture = westerngfx
@@ -697,7 +698,7 @@ christian = {
 
 		can_retire_to_monastery = yes
 		female_temple_holders = yes
-		feminist = yes	 # Nullifies the negative opinion modifier that vassals normally get if ruler is female or has female heir
+		feminist = yes	# Nullifies the negative opinion modifier that vassals normally get if ruler is female or has female heir
 		allow_rivermovement = yes
 		
 		religious_clothing_head = 0
@@ -708,7 +709,7 @@ christian = {
 		intermarry = ursuline
 		intermarry = high_church
 		intermarry = anabaptist
-		intermarry = penitente
+		intermarry = wormwoodist
 		intermarry = apostolic
 		
 		#intermarry = neognostic
@@ -721,19 +722,22 @@ christian = {
 		intermarry = nonconformist
 		intermarry = batenburger
 		intermarry = moravian
-		intermarry = purificador
+		intermarry = falling_star
 		intermarry = celeste
 		intermarry = exovedate
 		intermarry = orthodox
 		intermarry = nazarene
 		intermarry = true_cross
+		intermarry = reformista
+		intermarry = cristo_rey
+		intermarry = insular
+		
+		intermarry = sacred_heart
+		intermarry = fidencista
 		
 		intermarry = cetic
 		intermarry = gaian
 		intermarry = shinto
-		intermarry = forester
-		
-		intermarry = insular
 	}
 	sedevacantist = {
 		graphical_culture = westerngfx
@@ -758,7 +762,7 @@ christian = {
 		intermarry = ursuline
 		intermarry = high_church
 		intermarry = anabaptist
-		intermarry = penitente
+		intermarry = wormwoodist
 		intermarry = apostolic
 		
 		intermarry = neognostic
@@ -771,19 +775,16 @@ christian = {
 		intermarry = nonconformist
 		intermarry = batenburger
 		intermarry = cristo_rey
+		intermarry = reformista
 		intermarry = moravian
-		intermarry = penitente
+		intermarry = wormwoodist
 		intermarry = celeste
 		intermarry = exovedate
-		intermarry = true_cross
 		
+		intermarry = fidencista
+		intermarry = sacred_heart
+		intermarry = true_cross
 		intermarry = insular
-		intermarry = wormwoodist
-		intermarry = alurista
-		intermarry = josephite
-		intermarry = misional
-		intermarry = gran_comision
-		intermarry = la_hermandad
 	}
 	nestorian = {
 		graphical_culture = westerngfx
@@ -813,7 +814,7 @@ christian = {
 		intermarry = ursuline
 		intermarry = high_church
 		intermarry = anabaptist
-		intermarry = penitente
+		intermarry = wormwoodist
 		intermarry = apostolic
 		
 		intermarry = neognostic
@@ -826,7 +827,7 @@ christian = {
 		intermarry = nonconformist
 		intermarry = batenburger
 		intermarry = moravian
-		intermarry = purificador
+		intermarry = falling_star
 		intermarry = celeste
 		intermarry = exovedate
 		intermarry = nazarene
@@ -834,13 +835,9 @@ christian = {
 		intermarry = cristo_rey
 		intermarry = reformista
 		
+		intermarry = sacred_heart
+		intermarry = fidencista
 		intermarry = insular
-		intermarry = wormwoodist
-		intermarry = alurista
-		intermarry = josephite
-		intermarry = misional
-		intermarry = gran_comision
-		intermarry = la_hermandad
 	}
 	ursuline = {
 		graphical_culture = westerngfx
@@ -877,7 +874,7 @@ christian = {
 		female_temple_holders = yes
 		male_temple_holders = no
 		priests_can_inherit = no
-		feminist = yes	 # Nullifies the negative opinion modifier that vassals normally get if ruler is female or has female heir
+		feminist = yes	# Nullifies the negative opinion modifier that vassals normally get if ruler is female or has female heir
 		allow_rivermovement = yes
 
 		religious_clothing_head = 12
@@ -888,7 +885,7 @@ christian = {
 		#intermarry = ursuline
 		intermarry = high_church
 		intermarry = anabaptist
-		intermarry = penitente
+		intermarry = wormwoodist
 		intermarry = apostolic
 		
 		intermarry = neognostic
@@ -901,16 +898,14 @@ christian = {
 		intermarry = nonconformist
 		intermarry = batenburger
 		intermarry = moravian
-		intermarry = purificador
+		intermarry = falling_star
 		intermarry = celeste
 		intermarry = exovedate
 		intermarry = nazarene
 		intermarry = true_cross
 		intermarry = cristo_rey
 		intermarry = reformista
-		
 		intermarry = insular
-		intermarry = wormwoodist
 	}
 	
 	angeline = {
@@ -928,7 +923,7 @@ christian = {
 		priests_can_inherit = no
 		female_temple_holders = yes
 		male_temple_holders = no
-		feminist = yes	 # Nullifies the negative opinion modifier that vassals normally get if ruler is female or has female heir
+		feminist = yes	# Nullifies the negative opinion modifier that vassals normally get if ruler is female or has female heir
 		allow_rivermovement = yes
 
 
@@ -940,7 +935,7 @@ christian = {
 		intermarry = ursuline
 		intermarry = high_church
 		intermarry = anabaptist
-		intermarry = penitente
+		intermarry = wormwoodist
 		intermarry = apostolic
 		
 		intermarry = neognostic
@@ -953,16 +948,14 @@ christian = {
 		intermarry = nonconformist
 		intermarry = batenburger
 		intermarry = moravian
-		intermarry = purificador
+		intermarry = falling_star
 		intermarry = celeste
 		intermarry = exovedate
 		intermarry = nazarene
 		intermarry = true_cross
 		intermarry = cristo_rey
 		intermarry = reformista
-		
 		intermarry = insular
-		intermarry = wormwoodist
 	}
 
 	anabaptist = {
@@ -1010,7 +1003,7 @@ christian = {
 		intermarry = ursuline
 		intermarry = high_church
 		#intermarry = anabaptist
-		intermarry = penitente
+		intermarry = wormwoodist
 		intermarry = apostolic
 		
 		intermarry = neognostic
@@ -1023,16 +1016,14 @@ christian = {
 		intermarry = nonconformist
 		intermarry = batenburger
 		intermarry = moravian
-		intermarry = purificador
+		intermarry = falling_star
 		intermarry = celeste
 		intermarry = orthodox
 		intermarry = nazarene
 		intermarry = true_cross
 		intermarry = cristo_rey
 		intermarry = reformista
-		
 		intermarry = insular
-		intermarry = wormwoodist
 	}
 	
 	batenburger = {
@@ -1063,7 +1054,7 @@ christian = {
 		intermarry = ursuline
 		intermarry = high_church
 		intermarry = anabaptist
-		intermarry = penitente
+		intermarry = wormwoodist
 		intermarry = apostolic
 		
 		intermarry = neognostic
@@ -1076,13 +1067,11 @@ christian = {
 		intermarry = nonconformist
 		#intermarry = batenburger
 		intermarry = moravian
-		intermarry = purificador
+		intermarry = falling_star
 		intermarry = celeste
 		intermarry = orthodox
 		intermarry = true_cross
-		
 		intermarry = insular
-		intermarry = wormwoodist
 	}
 
 	evangelical = {
@@ -1127,7 +1116,7 @@ christian = {
 		intermarry = ursuline
 		intermarry = high_church
 		intermarry = anabaptist
-		intermarry = penitente
+		intermarry = wormwoodist
 		intermarry = apostolic
 		
 		intermarry = neognostic
@@ -1140,15 +1129,13 @@ christian = {
 		intermarry = nonconformist
 		intermarry = batenburger
 		intermarry = moravian
-		intermarry = purificador
+		intermarry = falling_star
 		intermarry = celeste
 		intermarry = nazarene
 		intermarry = true_cross
 		intermarry = cristo_rey
 		intermarry = reformista
-		
 		intermarry = insular
-		intermarry = wormwoodist
 	}
 
 	antinomian = {
@@ -1163,7 +1150,7 @@ christian = {
 		crusade_name = CRUSADE
 		can_retire_to_monastery = no
 		female_temple_holders = no
-		feminist = no	 # Nullifies the negative opinion modifier that vassals normally get if ruler is female or has female heir
+		feminist = no	# Nullifies the negative opinion modifier that vassals normally get if ruler is female or has female heir
 		allow_rivermovement = yes
 		hard_to_convert = yes
 		aggression = 2.0
@@ -1178,7 +1165,7 @@ christian = {
 		intermarry = ursuline
 		intermarry = high_church
 		intermarry = anabaptist
-		intermarry = penitente
+		intermarry = wormwoodist
 		intermarry = apostolic
 		
 		intermarry = neognostic
@@ -1191,13 +1178,11 @@ christian = {
 		intermarry = nonconformist
 		intermarry = batenburger
 		intermarry = moravian
-		intermarry = purificador
+		intermarry = falling_star
 		intermarry = celeste
 		intermarry = nazarene
-		intermarry = true_cross
-		
+		intermarry = true_cross		
 		intermarry = insular
-		intermarry = wormwoodist
 	}
 
 	charismatic = {
@@ -1232,7 +1217,7 @@ christian = {
 		intermarry = ursuline
 		intermarry = high_church
 		intermarry = anabaptist
-		intermarry = penitente
+		intermarry = wormwoodist
 		intermarry = apostolic
 		
 		intermarry = neognostic
@@ -1245,12 +1230,11 @@ christian = {
 		intermarry = nonconformist
 		intermarry = batenburger
 		intermarry = moravian
-		intermarry = purificador
+		intermarry = falling_star
 		intermarry = celeste
 		intermarry = nazarene
 		intermarry = true_cross
 		intermarry = insular
-		intermarry = wormwoodist
 		
 		intermarry = revelationist
 		intermarry = revelationist_reformed
@@ -1283,7 +1267,7 @@ christian = {
 		intermarry = ursuline
 		intermarry = high_church
 		intermarry = anabaptist
-		intermarry = penitente
+		intermarry = wormwoodist
 		intermarry = apostolic
 		
 		intermarry = neognostic
@@ -1296,48 +1280,45 @@ christian = {
 		intermarry = nonconformist
 		intermarry = batenburger
 		intermarry = moravian
-		intermarry = purificador
+		intermarry = falling_star
 		intermarry = celeste
 		intermarry = true_cross
-		
 		intermarry = insular
-		intermarry = wormwoodist
 	}
 	
-	moravian = { #traditional moravianism
+	falling_star = {
 		graphical_culture = westerngfx
 
-        icon = 95
-        heresy_icon = 96
+		icon = 39
+		heresy_icon = 75
 		
-		color = { 0.5 0.6 0.9 }
+		color = { 0.9 0.8 0.3 }
 		
 		high_god_name = GOD_GOD
 		
 		god_names = {
-			GOD_GOD GOD_THE_LORD GOD_JESUS GOD_THE_BLESSED_VIRGIN
+			GOD_GOD GOD_THE_LORD GOD_JESUS GOD_THE_BLESSED_VIRGIN GOD_THE_SAINTS GOD_THE_FALLEN_STAR
 		}
 		
 		evil_god_names = {
 			THE_DEVIL SATAN LUCIFER
 		}
 		
-		can_excommunicate = yes
 		can_grant_divorce = yes
-		can_grant_claim = yes
-		can_call_crusade = no #yes
-		priests_can_marry = yes
+		can_grant_invasion_cb = invasion
+		can_call_crusade = no
+		priests_can_inherit = no
+		priests_can_marry = no
 		allow_rivermovement = yes
 		
 		religious_clothing_head = 0
 		religious_clothing_priest = 1
 		
 		autocephaly = yes
-		pentarchy = yes
 
 		crusade_name = CRUSADE
 		scripture_name = THE_BIBLE
-		priest_title = PRIEST
+		priest_title = PASTOR
 		
 		intermarry = catholic
 		intermarry = evangelical
@@ -1355,32 +1336,31 @@ christian = {
 		intermarry = angeline
 		intermarry = nonconformist
 		intermarry = batenburger
-		intermarry = reformista
-		intermarry = purificador
-		intermarry = penitente
+		intermarry = moravian
+		intermarry = wormwoodist
 		intermarry = celeste
+		intermarry = cristo_rey
+		intermarry = reformista
+		
 		intermarry = lamanita
-        intermarry = furiegi
+		intermarry = furiegi
+		
 		intermarry = navegante
 		intermarry = fidencista
-		intermarry = cristo_rey
 		intermarry = sacred_heart
 		intermarry = patria_grande
 		
 		intermarry = qabantajik
-		
-		intermarry = insular
-		intermarry = wormwoodist
 	}
 	
-	purificador = {
+	moravian = { #traditional moravianism
 		graphical_culture = westerngfx
 
-        icon = 95
-        heresy_icon = 96
+		icon = 95
+		heresy_icon = 96
 		
-		color = { 0.8 0.6 0.2 }
-		parent = moravian
+		color = { 0.7 0.7 0.4 }
+		parent = falling_star
 		
 		high_god_name = GOD_GOD
 		
@@ -1389,14 +1369,17 @@ christian = {
 		}
 		
 		evil_god_names = {
-			THE_DEVIL SATAN GOD_THE_FALLEN_STAR
+			THE_DEVIL SATAN LUCIFER
 		}
-
+		
+		can_grant_claim = yes
+		can_excommunicate = yes
+		can_grant_divorce = yes
 		priests_can_marry = yes
-		priests_can_inherit = yes
 		allow_rivermovement = yes
-		female_temple_holders = yes
-		allow_looting = yes
+		
+		autocephaly = yes
+		pentarchy = yes
 		
 		religious_clothing_head = 0
 		religious_clothing_priest = 1
@@ -1407,83 +1390,19 @@ christian = {
 		
 		intermarry = evangelical
 		intermarry = anabaptist
-		#intermarry = penitente
+		intermarry = wormwoodist
 		
 		intermarry = high_church
 		intermarry = charismatic
 		intermarry = antinomian
 		intermarry = postadventist
 		intermarry = batenburger
-		intermarry = moravian
+		intermarry = falling_star
 		intermarry = reformista
-		intermarry = navegante
-		intermarry = fidencista
 		intermarry = celeste
-		
 		intermarry = insular
-		intermarry = wormwoodist
 	}
-	
-	penitente = {
-		graphical_culture = westerngfx
-
-        icon = 95
-        heresy_icon = 96
 		
-		color = { 0.3 0.1 0.5 }
-		parent = moravian
-		
-		high_god_name = GOD_GOD
-		
-		god_names = {
-			GOD_GOD GOD_THE_LORD GOD_JESUS GOD_THE_BLESSED_VIRGIN GOD_THE_SAINTS
-		}
-		
-		evil_god_names = {
-			THE_DEVIL SATAN GOD_THE_FALLEN_STAR
-		}
-		
-		can_retire_to_monastery = yes
-		allow_rivermovement = yes
-		
-		religious_clothing_head = 0
-		religious_clothing_priest = 1
-
-		crusade_name = CRUSADE
-		scripture_name = THE_BIBLE
-		priest_title = PADRE
-		
-		intermarry = catholic
-		intermarry = evangelical
-		intermarry = ursuline
-		intermarry = high_church
-		intermarry = anabaptist
-		#intermarry = penitente
-		intermarry = apostolic
-		
-		intermarry = neognostic
-		intermarry = sedevacantist
-		intermarry = nestorian
-		intermarry = charismatic
-		intermarry = antinomian
-		intermarry = postadventist
-		intermarry = angeline
-		intermarry = nonconformist
-		intermarry = batenburger
-		intermarry = moravian
-		intermarry = celeste
-		
-		intermarry = cristo_rey
-		intermarry = reformista
-		intermarry = sacred_heart
-		intermarry = patria_grande
-		
-		intermarry = qabantajik
-		
-		intermarry = insular
-		intermarry = wormwoodist
-	}
-	
 	high_church = {
 		graphical_culture = westerngfx
 
@@ -1526,7 +1445,7 @@ christian = {
 		intermarry = ursuline
 		#intermarry = high_church
 		intermarry = anabaptist
-		intermarry = penitente
+		intermarry = wormwoodist
 		intermarry = apostolic
 		
 		intermarry = neognostic
@@ -1539,15 +1458,13 @@ christian = {
 		intermarry = nonconformist
 		intermarry = batenburger
 		intermarry = moravian
-		intermarry = purificador
+		intermarry = falling_star
 		intermarry = celeste
 		intermarry = nazarene
 		intermarry = true_cross
 		intermarry = cristo_rey
 		intermarry = reformista
-		
 		intermarry = insular
-		intermarry = wormwoodist
 	}
 	
 	#someone pointed out that Anglo-Catholicsm doesn't make much sense as a heresy, because this would logically be the defining characteristic that separates Anglicanism from normal Protestantism.
@@ -1579,7 +1496,7 @@ christian = {
 		intermarry = ursuline
 		intermarry = high_church
 		intermarry = anabaptist
-		intermarry = penitente
+		intermarry = wormwoodist
 		intermarry = apostolic
 
 		intermarry = neognostic
@@ -1592,13 +1509,11 @@ christian = {
 		#intermarry = nonconformist
 		intermarry = batenburger
 		intermarry = moravian
-		intermarry = purificador
+		intermarry = falling_star
 		intermarry = celeste
 		intermarry = nazarene
 		intermarry = true_cross
-		
 		intermarry = insular
-		intermarry = wormwoodist
 	}
 	
 	apostolic = { #Brazilian Christianity
@@ -1641,8 +1556,9 @@ christian = {
 		intermarry = ursuline
 		intermarry = high_church
 		intermarry = anabaptist
-		intermarry = penitente
+		intermarry = wormwoodist
 		#intermarry = apostolic
+		intermarry = insular
 
 		intermarry = neognostic
 		intermarry = sedevacantist
@@ -1654,23 +1570,18 @@ christian = {
 		intermarry = nonconformist
 		intermarry = batenburger
 		intermarry = moravian
-		intermarry = purificador
+		intermarry = falling_star
 		intermarry = celeste
 		intermarry = nazarene
 		intermarry = true_cross
-		
-		intermarry = sacred_heart
-		intermarry = patria_grande
-		intermarry = espiritista
-		intermarry = candomble
-		
 		intermarry = cristo_rey
 		intermarry = reformista
 		intermarry = fidencista
 		intermarry = navegante
-		
-		intermarry = insular
-		intermarry = wormwoodist
+		intermarry = sacred_heart
+		intermarry = patria_grande
+		intermarry = espiritista
+		intermarry = candomble
 	}
 	
 	celeste = { #Gaucho Christianity
@@ -1713,7 +1624,7 @@ christian = {
 		intermarry = ursuline
 		intermarry = high_church
 		intermarry = anabaptist
-		intermarry = penitente
+		intermarry = wormwoodist
 		intermarry = apostolic
 
 
@@ -1732,14 +1643,12 @@ christian = {
 		# intermarry = celeste
 		intermarry = nazarene
 		intermarry = true_cross
+		intermarry = insular
 		
 		intermarry = sacred_heart
 		intermarry = patria_grande
 		intermarry = espiritista
 		intermarry = candomble
-		
-		intermarry = insular
-		intermarry = wormwoodist
 	}
 	
 	nazarene = { #someone please double check the intermarriages i am tired af of this nonsense
@@ -1781,7 +1690,7 @@ christian = {
 		intermarry = ursuline
 		intermarry = high_church
 		intermarry = anabaptist
-		intermarry = penitente
+		intermarry = wormwoodist
 		intermarry = apostolic
 		
 		intermarry = neognostic
@@ -1791,21 +1700,21 @@ christian = {
 		intermarry = angeline
 		intermarry = nonconformist
 		intermarry = moravian
-		intermarry = purificador
+		intermarry = falling_star
 		intermarry = celeste
 		intermarry = exovedate
-		intermarry = sacred_heart
-		intermarry = patria_grande
 		intermarry = reformista
 		intermarry = cristo_rey
+		
+		intermarry = fidencista
+		intermarry = sacred_heart
+		intermarry = patria_grande
 		intermarry = navegante
 
 		intermarry = cetic
 		intermarry = orthodox
 		intermarry = true_cross
-		
 		intermarry = insular
-		intermarry = wormwoodist
 	}
 	
 	true_cross = {
@@ -1848,7 +1757,7 @@ christian = {
 		intermarry = ursuline
 		intermarry = high_church
 		intermarry = anabaptist
-		intermarry = penitente
+		intermarry = wormwoodist
 		intermarry = apostolic
 		
 		intermarry = neognostic
@@ -1861,7 +1770,7 @@ christian = {
 		intermarry = nonconformist
 		intermarry = batenburger
 		intermarry = moravian
-		intermarry = purificador
+		intermarry = falling_star
 		intermarry = celeste
 		intermarry = exovedate
 		intermarry = sacred_heart
@@ -1869,135 +1778,46 @@ christian = {
 		intermarry = orthodox
 		intermarry = nazarene
 		intermarry = insular
-		intermarry = wormwoodist
 	}
 	
-	montane = {
-        graphical_culture = westerngfx
-
-        icon = 93
-        heresy_icon = 94
-		
-        color = { 0.85 0.25 0.65 }
-        
-        crusade_name = CRUSADE
-        scripture_name = THE_MEDITATIONS_OF_THE_FATHERS
-        priest_title = PRIEST
-        
-        high_god_name = GOD_THE_HEAVENLY_FATHER
-        
-        god_names = {
-            GOD_THE_HEAVENLY_FATHER GOD_THE_LORD GOD_JESUS
-        }
-        
-        evil_god_names = {
-            SATAN THE_DEPTHS BLUCIFER
-        }
-        
-        unit_modifier = {        
-            garrison_size = 0.3
-            levy_size = 0.1
-            
-            key = "DEF_RELIGION"
-        }
-		
-        unit_home_modifier = {
-            land_morale = 0.8
-            light_infantry_defensive = 0.8
-            heavy_infantry_defensive = 0.8
-            pikemen_defensive = 0.8
-            light_cavalry_defensive = 0.8
-            knights_defensive = 0.8
-            archers_defensive = 0.8
-            horse_archers_defensive = 0.8
-            camel_cavalry_defensive = 0.8
-            war_elephants_defensive = 0.8
-            mushers_defensive = 0.8
-            ballestero_defensive = 0.8
-            cossacks_defensive = 0.8
-            cowboys_defensive = 0.8
-            pike_cavalry_defensive = 0.8
-            samurai_defensive = 0.8
-            
-            garrison_size = 0.4
-            
-            key = "DEF_RELIGION_HOME_TERRITORY"
-        }
-        
-        can_grant_invasion_cb = invasion
-        can_call_crusade = no
-        priests_can_inherit = yes
-        
-        can_call_crusade = no
-        peace_piety_gain = 2.0        
-        allow_rivermovement = yes
-        attacking_same_religion_piety_loss = yes        
-        
-        can_retire_to_monastery = no
-        hard_to_convert = yes
-        
-        intermarry = neognostic
-		intermarry = nestorian
-		intermarry = charismatic
-		intermarry = antinomian
-		intermarry = angeline
-		intermarry = nonconformist
-		intermarry = cristo_rey
-		intermarry = reformista
-		intermarry = navegante
-		intermarry = fidencista
-		intermarry = celeste
-		intermarry = exovedate
-		intermarry = sacred_heart
-		intermarry = patria_grande
-		intermarry = edenite
-
-		intermarry = cetic
-		intermarry = orthodox
-		intermarry = true_cross    
-        
-        religious_clothing_head = 10
-        religious_clothing_priest = 10
-    }
-
 	edenite = {
-        graphical_culture = westerngfx
-        icon = 93
-        heresy_icon = 94
-        
-        color = { 0.7 0 0.5 }
-        parent = montane
-        
-        crusade_name = CRUSADE
-        scripture_name = THE_BIBLE
-        priest_title = PRIEST
-        
-        high_god_name = GOD_THE_HEAVENLY_FATHER
-        
-        god_names = {
-            GOD_MOTHER_EARTH GOD_THE_HEAVENLY_FATHER GOD_JESUS GOD_THE_FOURTEENERS GOD_THE_HEAVENS
-        }
-        
-        evil_god_names = {
-            SATAN BLUCIFER THE_DEPTHS THE_TREMORS
-        }
-        
-        can_excommunicate = yes
-        can_grant_divorce = yes
-        can_grant_invasion_cb = invasion
-        can_call_crusade = no
-        can_retire_to_monastery = no
-        priests_can_inherit = yes
-        priests_can_marry = yes
-        female_temple_holders = yes
-        allow_rivermovement = yes
-        
-        religious_clothing_head = 16
-        religious_clothing_priest = 12 # needed that space for gaians
-        
-        hard_to_convert = yes
-        
-        intermarry = catholic
+		graphical_culture = westerngfx
+		icon = 87
+		heresy_icon = 88
+		
+		color = { 0.7 0 0.5 }
+		parent = nazarene
+		
+		crusade_name = CRUSADE
+		scripture_name = THE_BIBLE
+		priest_title = PRIEST
+		
+		high_god_name = GOD_THE_HEAVENLY_FATHER
+		
+		god_names = {
+			GOD_MOTHER_EARTH GOD_THE_HEAVENLY_FATHER GOD_JESUS GOD_THE_HEAVENS
+		}
+		
+		evil_god_names = {
+			SATAN THE_DEPTHS THE_TREMORS
+		}
+		
+		can_excommunicate = yes
+		can_grant_divorce = yes
+		can_grant_invasion_cb = invasion
+		can_call_crusade = no
+		can_retire_to_monastery = no
+		priests_can_inherit = yes
+		priests_can_marry = yes
+		female_temple_holders = yes
+		allow_rivermovement = yes
+		
+		religious_clothing_head = 16
+		religious_clothing_priest = 12 # needed that space for gaians
+		
+		hard_to_convert = yes
+		
+		intermarry = catholic
 		intermarry = evangelical
 		intermarry = ursuline
 		intermarry = high_church
@@ -2021,13 +1841,8 @@ christian = {
 		intermarry = patria_grande
 		intermarry = orthodox
 		intermarry = nazarene
-		intermarry = montane
 		intermarry = insular
-		
-		intermarry = forester
-		intermarry = qingzhen
-		intermarry = aphite
-    }
+	}
 	
 	cristo_rey = {
 		graphical_culture = westerngfx
@@ -2053,22 +1868,23 @@ christian = {
 		allow_rivermovement = yes
 		can_excommunicate = yes
 		can_retire_to_monastery = yes
+		investiture = yes
 
 		
 		religious_clothing_head = 2
 		religious_clothing_priest = 2
 
-		crusade_name = CRISTIADA
+		crusade_name = CRUSADE
 		scripture_name = THE_BIBLE
 		priest_title = PADRE
 
 		
 		intermarry = patria_grande
 		intermarry = sacred_heart
+		intermarry = fidencista
 		
 		intermarry = catholic
 		intermarry = sedevacantist
-		intermarry = montane
 		intermarry = nazarene
 		intermarry = nestorian
 		intermarry = apostolic
@@ -2078,55 +1894,53 @@ christian = {
 		intermarry = high_church
 		intermarry = anabaptist
 		intermarry = moravian
-		intermarry = penitente
-		
-		intermarry = insular
 		intermarry = wormwoodist
+		intermarry = insular
 	}
 	
-    reformista = {
-        graphical_culture = westerngfx
+	reformista = {
+		graphical_culture = westerngfx
 
 		icon = 89
 		heresy_icon = 90
-        
-        color = { 0.9 0.9 0.9 }
-        parent = cristo_rey
+		
+		color = { 0.9 0.9 0.9 }
+		parent = cristo_rey
 
-        high_god_name = GOD_DIOS
-        
-        god_names = {
-            GOD_JESUCRISTO GOD_CRISTOREY GOD_VIRGENCITA GOD_THE_SAINTS
-        }
-        
-        evil_god_names = {
-            EL_DIABLO LUCIFER
-        }
-        
-        can_grant_divorce = no
-        priests_can_inherit = no
-        priests_can_marry = yes
-        allow_rivermovement = yes
-        can_excommunicate = yes
-        can_retire_to_monastery = no
-        investiture = no
-        pacifist = yes # I think this is what disables holy wars
+		high_god_name = GOD_DIOS
+		
+		god_names = {
+			GOD_JESUCRISTO GOD_CRISTOREY GOD_VIRGENCITA GOD_THE_SAINTS
+		}
+		
+		evil_god_names = {
+			EL_DIABLO LUCIFER
+		}
+		
+		can_grant_divorce = no
+		priests_can_inherit = no
+		priests_can_marry = yes
+		allow_rivermovement = yes
+		can_excommunicate = yes
+		can_retire_to_monastery = no
+		investiture = no
+		pacifist = yes # I think this is what disables holy wars
 
-        
-        religious_clothing_head = 2
-        religious_clothing_priest = 2
+		
+		religious_clothing_head = 2
+		religious_clothing_priest = 2
 
-        crusade_name = CRISTIADA
-        scripture_name = THE_BIBLE
-        priest_title = PADRE
+		crusade_name = CRUSADE
+		scripture_name = THE_BIBLE
+		priest_title = PADRE
 
-        
+		
 		intermarry = patria_grande
 		intermarry = sacred_heart
+		intermarry = fidencista
 		
 		intermarry = catholic
 		intermarry = sedevacantist
-		intermarry = montane
 		intermarry = nazarene
 		intermarry = nestorian
 		intermarry = apostolic
@@ -2136,12 +1950,12 @@ christian = {
 		intermarry = high_church
 		intermarry = anabaptist
 		intermarry = moravian
-		intermarry = penitente
-		intermarry = purificador
+		intermarry = wormwoodist
+		intermarry = falling_star
 		intermarry = navegante
 		intermarry = insular
-		intermarry = wormwoodist
-    }		
+	}
+	
     insular = {
 		graphical_culture = westerngfx
 
@@ -2204,15 +2018,14 @@ christian = {
 		intermarry = nazarene
 		intermarry = true_cross
 		intermarry = edenite
-		intermarry = moravian
-		intermarry = purificador
-		intermarry = penitente
-		intermarry = la_hermandad
 		
 		intermarry = voodoo
 		intermarry = santeria
 		intermarry = candomble
 		intermarry = espiritista
+		
+		intermarry = revelationist
+		intermarry = revelationist_reformed
 		
 		intermarry = sacred_heart
 		intermarry = patria_grande
@@ -2274,6 +2087,7 @@ christian = {
 		intermarry = nonconformist
 		intermarry = batenburger
 		intermarry = moravian
+		#intermarry = wormwoodist
 		intermarry = celeste
 		intermarry = nazarene
 		intermarry = true_cross
@@ -2281,369 +2095,6 @@ christian = {
 		intermarry = reformista
 		
 	}
-	
-	la_hermandad = {
-		graphical_culture = westerngfx
-
-		icon = 1
-		heresy_icon = 10
-		
-		color = { 255 182 193 }
-		
-		#character_modifier = {
-		#	stewardship = 2
-		#}
-
-		crusade_name = HUELGA
-		scripture_name = THE_BYLAWS
-		can_retire_to_monastery = yes
-		allow_rivermovement = yes
-		female_temple_holders = yes
-		feminist = yes	 # Nullifies the negative opinion modifier that vassals normally get if ruler is female or has female heir
-		aggression = 0.5 # not as likely to expand
-		priests_can_inherit = no
-		priests_can_marry = no	
-		defensive_attrition = yes
-		peace_piety_gain = 1.5
-		attacking_same_religion_piety_loss = yes
-		priest_title = PADRE
-		high_god_name = GOD_DIOS
-		
-		god_names = {
-			GOD_DIOS GOD_JESUCRISTO GOD_VIRGENCITA GOD_CESARCHAVEZ GOD_EL_PUEBLO_UNIDO
-		}
-		
-		evil_god_names = {
-			GOD_EL_DIABLO GOD_LA_MIGRA GOD_LOS_COYOTES
-		}
-	
-		religious_clothing_head = 0
-		religious_clothing_priest = 2
-		
-		intermarry = catholic
-		intermarry = evangelical
-		intermarry = ursuline
-		intermarry = high_church
-		intermarry = anabaptist
-		intermarry = apostolic
-		intermarry = neognostic
-		intermarry = sedevacantist
-		intermarry = nestorian
-		intermarry = charismatic
-		intermarry = antinomian
-		intermarry = postadventist
-		intermarry = angeline
-		intermarry = nonconformist
-		intermarry = batenburger
-		intermarry = wormwoodist
-		intermarry = celeste
-		intermarry = cristo_rey
-		intermarry = reformista
-		intermarry = nazarene
-		intermarry = true_cross
-		intermarry = edenite
-		
-		intermarry = moravian
-		intermarry = purificador
-		intermarry = penitente
-		intermarry = insular
-		intermarry = misional
-		intermarry = gran_comision
-		
-		intermarry = sacred_heart
-		intermarry = patria_grande
-		intermarry = fidencista
-		intermarry = navegante
-		
-		intermarry = peyotist
-		intermarry = qabantajik
-		intermarry = alurista
-		intermarry = josephite
-		intermarry = rust_cultist
-	}
-
-	josephite = {
-		graphical_culture = westerngfx
-
-		icon = 1
-		heresy_icon = 10
-		
-		color = { 115 157 255 }
-		
-		parent = la_hermandad
-		
-		#character_modifier = {
-		#	stewardship = 2
-		#}
-
-		crusade_name = HUELGA
-		scripture_name = THE_BYLAWS
-		can_retire_to_monastery = yes
-		allow_rivermovement = yes
-		female_temple_holders = yes
-		feminist = yes	 # Nullifies the negative opinion modifier that vassals normally get if ruler is female or has female heir
-		aggression = 2.0 # AI aggression factor
-		priests_can_inherit = no
-		priests_can_marry = no	
-		defensive_attrition = yes
-		peace_prestige_loss = yes # Lose Prestige while at peace
-		raised_vassal_opinion_loss = no
-		attacking_same_religion_piety_loss = yes
-		priest_title = PADRE
-		high_god_name = GOD_DIOS
-		
-		god_names = {
-			GOD_DIOS GOD_JESUCRISTO GOD_VIRGENCITA GOD_CESARCHAVEZ GOD_EL_PUEBLO_UNIDO
-		}
-		
-		evil_god_names = {
-			GOD_EL_DIABLO GOD_LA_MIGRA GOD_LOS_COYOTES
-		}
-	
-		religious_clothing_head = 0
-		religious_clothing_priest = 2
-		
-		intermarry = catholic
-		intermarry = sedevacantist
-		intermarry = montane
-		intermarry = nazarene
-		intermarry = nestorian
-		intermarry = apostolic
-		intermarry = evangelical
-		intermarry = ursuline
-		intermarry = angeline
-		intermarry = high_church
-		intermarry = anabaptist
-		intermarry = moravian
-		intermarry = penitente
-		
-		intermarry = insular
-		intermarry = wormwoodist
-		intermarry = reformista
-		intermarry = la_hermandad
-		intermarry = gran_comision
-		intermarry = misional
-	}
-	
-	alurista = {
-		graphical_culture = mesoamericangfx
-		secondary_event_pictures = mesoamerican
-
-		icon = 1
-		heresy_icon = 10
-		
-		color = { 102 0 102 }
-		
-		parent = la_hermandad
-		
-		#character_modifier = {
-		#	stewardship = 2
-		#}
-
-		crusade_name = HUELGA
-		scripture_name = THE_BYLAWS
-		can_retire_to_monastery = yes
-		allow_rivermovement = yes
-		female_temple_holders = yes
-		feminist = yes	 # Nullifies the negative opinion modifier that vassals normally get if ruler is female or has female heir
-		aggression = 0.5 # not as likely to expand
-		priests_can_inherit = no
-		priests_can_marry = yes	
-		defensive_attrition = yes
-		peace_piety_gain = 1.5
-		attacking_same_religion_piety_loss = yes
-		priest_title = PADRE
-		high_god_name = GOD_DIOS
-		
-		god_names = {
-			GOD_DIOS GOD_JESUCRISTO GOD_VIRGENCITA GOD_CESARCHAVEZ GOD_EL_PUEBLO_UNIDO
-		}
-		
-		evil_god_names = {
-			GOD_EL_DIABLO GOD_LA_MIGRA GOD_LOS_COYOTES
-		}
-	
-		religious_clothing_head = 0
-		religious_clothing_priest = 2
-		
-		intermarry = cetic
-		intermarry = shinto
-		intermarry = gaian
-		intermarry = nousthreskeia
-		
-		intermarry = catholic
-		intermarry = evangelical
-		intermarry = ursuline
-		intermarry = high_church
-		intermarry = anabaptist
-		intermarry = apostolic
-		intermarry = neognostic
-		intermarry = sedevacantist
-		intermarry = nestorian
-		intermarry = charismatic
-		intermarry = antinomian
-		intermarry = postadventist
-		intermarry = angeline
-		intermarry = nonconformist
-		intermarry = batenburger
-		intermarry = moravian
-		intermarry = wormwoodist
-		intermarry = celeste
-		intermarry = cristo_rey
-		intermarry = reformista
-		intermarry = nazarene
-		intermarry = true_cross
-		intermarry = purificador
-		intermarry = penitente
-		intermarry = insular
-		
-		intermarry = sacred_heart
-		intermarry = patria_grande
-		intermarry = fidencista
-		intermarry = navegante
-		intermarry = misional
-		intermarry = la_hermandad
-		intermarry = alurista
-		intermarry = gran_comision
-		
-		intermarry = qingzhen
-		intermarry = forester
-		intermarry = edenite
-		
-		intermarry = mictlantec
-		intermarry = sol_invicta
-		intermarry = qabantajik
-		intermarry = furiegi
-		intermarry = lamanita	
-		intermarry = neomayan
-
-	}
-	
-	gran_comision = {
-		graphical_culture = westerngfx
-
-		icon = 1
-		heresy_icon = 10
-		
-		color = { 225 183 69 }
-
-		high_god_name = GOD_DIOS
-		
-		god_names = {
-			GOD_THE_LORD GOD_JESUS GOD_VIRGENCITA
-		}
-		
-		evil_god_names = {
-			EL_DIABLO GOD_PERSHING GOD_LOS_FEDERALES
-		}
-		
-		can_grant_divorce = yes
-		priests_can_inherit = yes
-		priests_can_marry = yes
-		allow_rivermovement = yes
-		
-		religious_clothing_head = 0
-		religious_clothing_priest = 1
-
-		scripture_name = THE_BIBLE
-		priest_title = PRIEST
-
-		intermarry = catholic
-		intermarry = evangelical
-		intermarry = ursuline
-		intermarry = high_church
-		intermarry = anabaptist
-		intermarry = apostolic
-		
-		intermarry = sedevacantist
-		intermarry = nestorian
-		intermarry = charismatic
-		intermarry = antinomian
-		intermarry = postadventist
-		intermarry = angeline
-		intermarry = nonconformist
-		intermarry = batenburger
-		intermarry = moravian
-		intermarry = celeste
-		intermarry = nazarene
-		intermarry = true_cross
-		intermarry = cristo_rey
-		intermarry = reformista
-		
-	}
-
-	misional = {
-		graphical_culture = westerngfx
-
-		icon = 1
-		heresy_icon = 10
-		
-		parent = gran_comision
-		
-		color = { 208 31 31 }
-
-		high_god_name = GOD_DIOS
-		
-		god_names = {
-			GOD_THE_LORD GOD_JESUS GOD_VIRGENCITA
-		}
-		
-		evil_god_names = {
-			EL_DIABLO GOD_PERSHING GOD_LOS_FEDERALES
-		}
-		
-		can_grant_divorce = yes
-		priests_can_inherit = yes
-		priests_can_marry = yes
-		allow_rivermovement = yes
-		
-		religious_clothing_head = 0
-		religious_clothing_priest = 1
-
-		scripture_name = THE_BIBLE
-		priest_title = PRIEST
-
-		intermarry = catholic
-		intermarry = evangelical
-		intermarry = ursuline
-		intermarry = high_church
-		intermarry = anabaptist
-		intermarry = apostolic
-		intermarry = neognostic
-		intermarry = sedevacantist
-		intermarry = nestorian
-		intermarry = charismatic
-		intermarry = antinomian
-		intermarry = postadventist
-		intermarry = angeline
-		intermarry = nonconformist
-		intermarry = batenburger
-		intermarry = moravian
-		intermarry = wormwoodist
-		intermarry = celeste
-		intermarry = cristo_rey
-		intermarry = reformista
-		intermarry = nazarene
-		intermarry = true_cross
-		intermarry = edenite
-		intermarry = purificador
-		intermarry = penitente
-		intermarry = insular
-		
-		intermarry = sacred_heart
-		intermarry = patria_grande
-		intermarry = fidencista
-		intermarry = navegante
-		intermarry = gran_comision
-		intermarry = josephite
-		intermarry = alurista
-		
-		intermarry = peyotist
-		intermarry = qabantajik
-		intermarry = rust_cultist
-		
-	}	
-	
 }
 
 cult_of_saints= {
@@ -2660,10 +2111,10 @@ cult_of_saints= {
 	color = { 0.8 0.2 0.1 }
 	
 	male_names = {
-		Jesús Pedro Pablo Cristóbal Cristián José Juan Diego
+		Jesús Cristóbal Cristián "Juan Diego" Guadalupe
 	}
 	female_names = {
-		Maria Benedicta Magdalena Fátima Sarita
+		María Guadalupe Magdalena Fátima Lourdes
 	}
 	
 	#default interface
@@ -2679,7 +2130,7 @@ cult_of_saints= {
 		high_god_name = GOD_DIOS
 		
 		god_names = {
-			GOD_JESUS GOD_DIOS GOD_THE_LORD GOD_THE_BLESSED_VIRGIN GOD_THE_SAINTS
+			GOD_JESUCRISTO GOD_DIOSITO GOD_THE_LORD GOD_VIRGENCITA GOD_THE_SAINTS
 		}
 		
 		evil_god_names = {
@@ -2706,7 +2157,7 @@ cult_of_saints= {
 		intermarry = lamanita
 		intermarry = furiegi
 		intermarry = moravian
-		intermarry = penitente
+		intermarry = wormwoodist
 		intermarry = navegante
 		intermarry = fidencista		
 		intermarry = apostolic
@@ -2714,7 +2165,6 @@ cult_of_saints= {
 		intermarry = catholic
 		intermarry = nazarene
 		intermarry = true_cross
-		intermarry = insular
 		
 		intermarry = qabantajik
 	}
@@ -2765,10 +2215,9 @@ cult_of_saints= {
 		intermarry = lamanita
 		intermarry = furiegi
 		intermarry = moravian
-		intermarry = penitente
+		intermarry = wormwoodist
 		intermarry = navegante
 		intermarry = fidencista
-		intermarry = insular
 		
 		intermarry = qabantajik
 	}
@@ -2776,15 +2225,14 @@ cult_of_saints= {
 	fidencista = {
 		graphical_culture = westerngfx
 
-		icon = 91
-		heresy_icon = 91
+		icon = 98
 		
 		color = { 0.1 0.4 0.7 }
 
-		high_god_name =  GOD_SANTO_NINO
+		high_god_name = GOD_DIOSITO 
 		
 		god_names = {
-			GOD_PANCHO_VILLA GOD_MADERO GOD_JUAREZ GOD_DIOSITO GOD_CHUYITO GOD_VIRGENCITA GOD_THE_SAINTS
+			GOD_SANTO_NINO GOD_CHUYITO GOD_JESUCRISTO GOD_VIRGENCITA GOD_THE_SAINTS
 		}
 		
 		evil_god_names = {
@@ -2809,23 +2257,28 @@ cult_of_saints= {
 		
 		intermarry = sacred_heart
 		intermarry = patria_grande
+		intermarry = navegante
+		
 		intermarry = apostolic
 		intermarry = celeste
 		intermarry = moravian
-		intermarry = purificador
 		intermarry = catholic
-		intermarry = navegante
-		intermarry = qabantajik
-		intermarry = montane
 		intermarry = edenite
-		intermarry = insular
+		intermarry = reformista
+		intermarry = cristo_rey
+		intermarry = sedevacantist
+		intermarry = nestorian
+		intermarry = neognostic
+		intermarry = nazarene
+		
+		intermarry = qabantajik
 	}
 
 	navegante = { 
 		graphical_culture = norsegfx
 
-        icon = 97
-        heresy_icon = 97
+		icon = 97
+		heresy_icon = 97
 		
 		color = { 176 173 203 }
 
@@ -2840,6 +2293,7 @@ cult_of_saints= {
 		
 		scripture_name = THE_GOSPEL
 		priest_title = PADRE
+		priests_can_marry = yes
 		priests_can_marry = yes
 		allow_rivermovement = yes
 		allow_viking_invasion = no
@@ -2872,14 +2326,12 @@ cult_of_saints= {
 		intermarry = lamanita
 		intermarry = nazerene
 		intermarry = reformista
-		intermarry = montane
 		intermarry = edenite
 		intermarry = furiegi
 		intermarry = mictlantec
 		intermarry = sol_invicta
-		intermarry = purificador
+		intermarry = falling_star
 		intermarry = qabantajik
-		intermarry = insular
 	}	
 	
 }
@@ -2939,9 +2391,9 @@ pacific = {
 		intermarry = neognostic
 		intermarry = aphite
 		intermarry = qingzhen
+		intermarry = imamite
 		intermarry = nazarene
 		intermarry = navegante
-		intermarry = forester
 	}
 	
 	gaian = {
@@ -2984,7 +2436,6 @@ pacific = {
 		intermarry = shinto
 		intermarry = nousthreskeia
 		intermarry = neognostic
-		intermarry = forester
 	}
 	
 	shinto = {
@@ -3025,7 +2476,6 @@ pacific = {
 		intermarry = gaian
 		intermarry = cetic
 		intermarry = nousthreskeia
-		intermarry = forester
 	}
 	
 	nousthreskeia = {
@@ -3069,58 +2519,7 @@ pacific = {
 		intermarry = gaian
 		intermarry = cetic
 		intermarry = shinto
-		intermarry = forester
 	}
-	
-	forester = {
-		graphical_culture = chinesegfx
-
-		icon = 15
-		
-		color = { 30 152 59 }
-		
-		interface_skin = { gaian_interface indian_interface muslim_interface }
-		
-		high_god_name = GOD_THE_WILD
-		
-		god_names = {
-			 GOD_JOHN_MOUNTAIN GOD_OLD_FAITHFUL GOD_MOTHER_EARTH GOD_WOHELO GOD_SMOKEY
-		}
-		evil_god_names = {
-			GOD_FELLERS GOD_THE_GREAT_FIRE GOD_TERMITES GOD_THE_DARK_CICADA
-		}
-		
-		men_can_take_consorts = yes
-		women_can_take_consorts = yes
-		max_consorts = 3
-		crusade_name = GREAT_HOLY_WAR
-		scripture_name = SCOUTS_GUIDE
-		priest_title = RANGER
-			
-		priests_can_marry = yes
-		allow_rivermovement = yes
-		female_temple_holders = yes
-		raised_vassal_opinion_loss = no
-		has_heir_designation = yes 
-		defensive_attrition = yes
-		hard_to_convert = yes
-
-		dislike_tribal_organization = yes
-
-		religious_clothing_head = 16
-		religious_clothing_priest = 16
-		
-		intermarry = cetic
-		intermarry = gaian
-		intermarry = shinto
-		intermarry = nousthreskeia
-		
-		intermarry = neognostic
-		intermarry = edenite
-		intermarry = aphite
-		intermarry = qingzhen
-	}	
-	
 }
 
 latter_day_saints = {
@@ -3186,7 +2585,7 @@ latter_day_saints = {
 		intermarry = strangite
 		intermarry = woolleyite
 		intermarry = lamanita
-        intermarry = furiegi
+		intermarry = furiegi
 	}
 
 	neogodbeite = {
@@ -3219,7 +2618,7 @@ latter_day_saints = {
 		intermarry = strangite
 		intermarry = woolleyite
 		intermarry = lamanita
-        intermarry = furiegi
+		intermarry = furiegi
 	}
 
 	woolleyite = {
@@ -3251,7 +2650,7 @@ latter_day_saints = {
 		intermarry = strangite
 		intermarry = neogodbeite
 		intermarry = lamanita
-        intermarry = furiegi
+		intermarry = furiegi
 	}
 
 	strangite = {
@@ -3272,7 +2671,7 @@ latter_day_saints = {
 		investiture = yes
 		priests_can_marry = yes
 		female_temple_holders = yes
-		feminist = yes	 # Nullifies the negative opinion modifier that vassals normally get if ruler is female or has female heir
+		feminist = yes	# Nullifies the negative opinion modifier that vassals normally get if ruler is female or has female heir
 		allow_rivermovement = yes
 		max_wives = 4
 		can_demand_religious_conversion = no
@@ -3286,101 +2685,105 @@ latter_day_saints = {
 		intermarry = mormon
 		intermarry = woolleyite
 		intermarry = lamanita
-        intermarry = furiegi
+		intermarry = furiegi
 	}
 	
 	lamanita = {
-        graphical_culture = westerngfx
+		graphical_culture = westerngfx
 		secondary_event_pictures = mesoamerican
 
 		icon = 91
 		heresy_icon = 92
-        
-        color = { 0.90 0.40 0.55 }
-        
-        crusade_name = EXPEDITION
-        scripture_name = THE_BOOK_OF_MORMON
-        priest_title = PRIEST
+		
+		color = { 0.90 0.40 0.55 }
+		
+		crusade_name = EXPEDITION
+		scripture_name = THE_BOOK_OF_MORMON
+		priest_title = PRIEST
 
-        high_god_name = GOD_PADRE_CELESTIAL
-        
-        god_names = {
-           GOD_PADRE_CELESTIAL GOD_DIOS GOD_HUNAB_KU GOD_JESUS GOD_THE_PROPHET GOD_PADRE_CELESTIAL GOD_TWINS
-        }
-        
-        evil_god_names = {
-            LUCIFER EL_DIABLO
-        }
-        
-        investiture = yes
-        can_excommunicate = yes
-        can_grant_divorce = yes
-        can_grant_invasion_cb = invasion
-        can_grant_claim = yes
-        can_call_crusade = yes
-        priests_can_inherit = no
-        priests_can_marry = yes
-        allow_rivermovement = yes
-        max_wives = 1
-        
-        religious_clothing_head = 13
-        religious_clothing_priest = 13
-        
-        intermarry = neogodbeite
-        intermarry = strangite
-        intermarry = woolleyite
-        intermarry = qabantajik
-        intermarry = furiegi
-        intermarry = mormon
+		high_god_name = GOD_PADRE_CELESTIAL
+		
+		god_names = {
+		GOD_PADRE_CELESTIAL GOD_DIOS GOD_HUNAB_KU GOD_JESUS GOD_THE_PROPHET GOD_TWINS
+		}
+		
+		evil_god_names = {
+			LUCIFER EL_DIABLO
+		}
+		
+		investiture = yes
+		can_excommunicate = yes
+		can_grant_divorce = yes
+		can_grant_invasion_cb = invasion
+		can_grant_claim = yes
+		can_call_crusade = yes
+		priests_can_inherit = no
+		priests_can_marry = yes
+		allow_rivermovement = yes
+		max_wives = 1
+		
+		religious_clothing_head = 13
+		religious_clothing_priest = 13
+		
+		intermarry = neogodbeite
+		intermarry = strangite
+		intermarry = woolleyite
+		intermarry = qabantajik
+		intermarry = furiegi
+		intermarry = mormon
 		intermarry = moravian
 		intermarry = neomayan
 		intermarry = sacred_heart
 		intermarry = patria_grande
 		intermarry = navegante
-    }
+	}
 	
-    furiegi = {
-        graphical_culture = westerngfx
+	furiegi = {
+		graphical_culture = westerngfx
 
 		icon = 91
 		heresy_icon = 92
-        
-        color = { 0.40 0.4 0.55 }
-        parent = lamanita
-        
-        high_god_name = GOD_SUNTI_GABAFU
-        
-        god_names = {
-            GOD_DIOS GOD_HUNAB_KU GOD_PADRE_CELESTIAL GOD_JESUS GOD_THE_HEAVENLY_FATHER GOD_BUNGIU 
-        }
+		
+		color = { 0.40 0.4 0.55 }
+		parent = lamanita
+		
+		high_god_name = GOD_SUNTI_GABAFU
+		
+		god_names = {
+			GOD_DIOS GOD_HUNAB_KU GOD_PADRE_CELESTIAL GOD_JESUS GOD_THE_HEAVENLY_FATHER GOD_BUNGIU 
+		}
 		
 		evil_god_names = {
-           LUCIFER EL_DIABLO
-        }
-        
-        crusade_name = EXPEDITION
+		LUCIFER EL_DIABLO
+		}
+		
+		crusade_name = EXPEDITION
 
-        feminist = yes
-        female_temple_holders = yes
-        priests_can_marry = yes
-        allow_rivermovement = yes
-        max_wives = 1
-        
-        religious_clothing_head = 0
-        religious_clothing_priest = 2
-        
-        intermarry = neogodbeite
-        intermarry = strangite
-        intermarry = woolleyite
-        intermarry = qabantajik
-        intermarry = lamanita
-        intermarry = moravian
+		feminist = yes
+		female_temple_holders = yes
+		priests_can_marry = yes
+		allow_rivermovement = yes
+		max_wives = 1
+		
+		religious_clothing_head = 0
+		religious_clothing_priest = 2
+		
+		intermarry = neogodbeite
+		intermarry = strangite
+		intermarry = woolleyite
+		intermarry = qabantajik
+		intermarry = lamanita
+		intermarry = moravian
 		intermarry = moravian
 		intermarry = neomayan
 		intermarry = sacred_heart
 		intermarry = patria_grande
-        
-    }	
+		
+		intermarry = santeria
+		intermarry = voodoo
+		intermarry = candomble
+		intermarry = espiritista
+	}	
 	
 }
 
@@ -3418,30 +2821,32 @@ mesoamerican_gods = {
 		Sachi Saco Sacuaa Sacuane Sacuau Sacuii Sacusi Sahua Sahuaco Sahuidzu Sahuiyo Samahu Samau Sanuu Saqhi Saque Saquevui Sasa Sasayu Satuta Sayo Sichi Sico Sicuaa Sicuane Sicuau Sicuii Sicusi Sihua Sihuaco Sihuidzu Sihuiyo Siichi Siico Siicuaa Siicuane Siicuau Siicuii Siicusi Siihua Siihuaco Siihuidzu Siihuiyo Siimahu Siimau Siinuu Siiqhi Siique Siiquevui Siisa Siisayu Siituta Siiyo Simahu Simau Sinuu Siqhi Sique Siquevui Sisa Sisayu Situta Siyo
 	}
 
-	sol_invicta = { # Now called Jurihiata Ikikunari
+	mictlantec = {
 		graphical_culture = mesoamericangfx
-	
+		
 		secondary_event_pictures = mesoamerican
-		#saint/god traits: Lucifer, Ignia, Sol, Phosphorus
-		icon = 35
+		#saint/god traits: Dueños, Santos, Entidades
+		icon = 36
 		heresy_icon = 35
 		
-		color = { 0.9 0.6 0.0 }
+		color = { 0.9 0.5 0.0 }
 		
-		high_god_name = GOD_ERENDIRA
+		interface_skin = { mesoamerican_gods_interface pagan_interface }
+		
+		high_god_name = GOD_LA_SANTISIMA
 		
 		god_names = {
-			GOD_ERENDIRA GOD_THE_LIGHTBRINGER GOD_THE_GODDESS
+			GOD_DUENOS GOD_NAGUALES
 		}
 		
 		evil_god_names = {
-			GOD_THE_DARKNESS RIABLO
+			GOD_AGUILA GOD_CATRINES
 		}
 		
-		unit_modifier = {		 		#Special features are added via reformation. If HF is not installed, default features are applied on reformed religion by event.
+		unit_modifier = {				#Special features are added via reformation. If HF is not installed, default features are applied on reformed religion by event.
 			garrison_size = 0.2
 			levy_size = 0.2
-			
+
 			key = "DEF_RELIGION"
 		}
 		unit_home_modifier = {
@@ -3461,70 +2866,29 @@ mesoamerican_gods = {
 			cowboys_defensive = 0.8
 			pike_cavalry_defensive = 0.8
 			samurai_defensive = 0.8
-			
+
 			garrison_size = 0.4
-			
+
 			key = "DEF_RELIGION_HOME_TERRITORY"
 		}
 		
 		can_grant_divorce = yes
 		female_temple_holders = yes
 		priests_can_inherit = no
-		priests_can_marry = no
-		allow_rivermovement = yes
-		
-		crusade_name = CRUSADE
-		scripture_name = THE_LEGENDS
-		priest_title = PRIEST
-		
-		religious_clothing_head = 13
-		religious_clothing_priest = 13
-		
-		intermarry = mictlantec
-		intermarry = neomayan
-		intermarry = qabantajik	
-		intermarry = navegante
-	}
-	
-	mictlantec = {
-		graphical_culture = mesoamericangfx
-		
-		secondary_event_pictures = mesoamerican
-		#saint/god traits: Quetzalcoatl, Tezcatlipoca, Mictlantecuhtli, Chalchiuhtlicue, Itzpapalotl
-		icon = 36
-		heresy_icon = 36
-		
-		color = { 0.9 0.5 0.0 }
-		
-		high_god_name = GOD_MICTLANTECUHTLI
-		
-		god_names = {
-			GOD_XIPE_TOTEC GOD_TEZCATLIPOCA GOD_QUETZALCOATL GOD_TLALOC GOD_MICTLANTECUHTLI GOD_ITZPAPALOTL GOD_TONANTZIN
-		}
-		
-		evil_god_names = {
-			GOD_HUANANICOATEZ GOD_HUAZUAZCHIUZ GOD_MALINTZIN GOD_XOLOTL
-		}
-		
-		unit_modifier = {
-			levy_size = 0.3
-			
-			key = "OFF_RELIGION"
-		}
-		
-		can_grant_divorce = yes
-		priests_can_inherit = no
-		priests_can_marry = no
+		priests_can_marry = yes
 		allow_rivermovement = yes
 		allow_looting = yes
-		peace_prestige_loss = yes # Lose Prestige while at peace
 		can_demand_religious_conversion = no
 		
-		crusade_name = CRUSADE
-		scripture_name = THE_LEGENDS
-		priest_title = PRIEST
+		defensive_attrition = yes
+		aggression = 0.5
+		hard_to_convert = yes
 		
-		female_temple_holders = yes
+		crusade_name = CRUSADE
+		scripture_name = HUEHUETLATOLLI ###LIBANA-Zapoteco
+		priest_title = SHAMAN
+		piety_name = REVERENCE
+		
 		religious_clothing_head = 13
 		religious_clothing_priest = 13
 		
@@ -3532,6 +2896,87 @@ mesoamerican_gods = {
 		intermarry = neomayan
 		intermarry = qabantajik
 		intermarry = navegante
+		
+		
+		intermarry = sacred_heart
+		
+		#intermarry = falling_star
+	}
+
+	sol_invicta = { # Now called Sol Invicto
+		graphical_culture = mesoamericangfx
+	
+		secondary_event_pictures = mesoamerican
+		icon = 35
+		heresy_icon = 84
+		
+		color = { 1.0 0.9 0.2 }
+		
+		high_god_name = GOD_SOL_INVICTA 
+		
+		god_names = {
+			GOD_EL_ALTISIMO GOD_CURICAUERI GOD_ONORUAME GOD_THE_TRINITY GOD_THE_BLESSED_VIRGIN GOD_TATAROQUITO
+		}
+		
+		evil_god_names = {
+			GOD_THE_DARKNESS GOD_THE_SERPENT GOD_THE_PHARISEES
+		}
+		
+		unit_modifier = {				#Special features are added via reformation. If HF is not installed, default features are applied on reformed religion by event.
+			garrison_size = 0.2
+			levy_size = 0.2
+
+			key = "DEF_RELIGION"
+		}
+		unit_home_modifier = {
+			land_morale = 0.8
+			light_infantry_defensive = 0.8
+			heavy_infantry_defensive = 0.8
+			pikemen_defensive = 0.8
+			light_cavalry_defensive = 0.8
+			knights_defensive = 0.8
+			archers_defensive = 0.8
+			horse_archers_defensive = 0.8
+			camel_cavalry_defensive = 0.8
+			war_elephants_defensive = 0.8
+			mushers_defensive = 0.8
+			ballestero_defensive = 0.8
+			cossacks_defensive = 0.8
+			cowboys_defensive = 0.8
+			pike_cavalry_defensive = 0.8
+			samurai_defensive = 0.8
+
+			garrison_size = 0.4
+
+			key = "DEF_RELIGION_HOME_TERRITORY"
+		}
+		
+		can_grant_divorce = yes
+		female_temple_holders = yes
+		priests_can_inherit = yes
+		priests_can_marry = yes
+		allow_rivermovement = yes
+		can_excommunicate = yes
+		can_grant_claim = yes
+		attacking_same_religion_piety_loss = yes
+		
+		crusade_name = ILUSTRACION
+		scripture_name = EL_ULTIMO_TESTAMENTO
+		priest_title = BAJADIOS
+		
+		religious_clothing_head = 3
+		religious_clothing_priest = 2
+		
+		intermarry = mictlantec
+		intermarry = neomayan
+		intermarry = qabantajik
+		intermarry = navegante
+		
+		intermarry = sacred_heart
+		
+		#intermarry = falling_star
+		intermarry = falling_star
+		intermarry = moravian
 	}
 	
 	qabantajik = {
@@ -3576,7 +3021,7 @@ mesoamerican_gods = {
 		intermarry = lamanita
 		intermarry = furiegi
 		intermarry = moravian
-		intermarry = penitente
+		intermarry = wormwoodist
 		intermarry = navegante
 		intermarry = fidencista
 		intermarry = sacred_heart
@@ -4016,7 +3461,7 @@ oldworld = {
 		
 		unit_modifier = {
 			levy_size = 0.3
-			
+
 			key = "OFF_RELIGION"
 		}
 		
@@ -4050,9 +3495,6 @@ oldworld = {
 		intermarry = cetic
 		intermarry = rust_cultist
 		intermarry = chrome_cultist
-		
-		intermarry = forester
-		intermarry = edenite
 	}
 	
 	rust_cultist = { # now in the OWC group!!
@@ -4223,135 +3665,6 @@ oldworld = {
 		intermarry = misrist
 		
 	}
-	
-	falling_star = {
-		graphical_culture = westerngfx
-
-		icon = 39
-		heresy_icon = 75
-		
-		color = { 0.9 0.8 0.3 }
-		
-		high_god_name = GOD_GOD
-		
-		god_names = {
-			GOD_GOD GOD_THE_LORD GOD_JESUS GOD_THE_BLESSED_VIRGIN GOD_THE_SAINTS GOD_THE_FALLEN_STAR
-		}
-		
-		evil_god_names = {
-			THE_DEVIL SATAN LUCIFER
-		}
-		
-		can_grant_divorce = yes
-		can_grant_invasion_cb = invasion
-		can_call_crusade = no
-		priests_can_inherit = no
-		priests_can_marry = no
-		allow_rivermovement = yes
-		
-		religious_clothing_head = 0
-		religious_clothing_priest = 1
-		
-		autocephaly = yes
-
-		crusade_name = CRUSADE
-		scripture_name = THE_BIBLE
-		priest_title = PASTOR
-		
-		intermarry = catholic
-		intermarry = evangelical
-		intermarry = ursuline
-		intermarry = high_church
-		intermarry = anabaptist
-		intermarry = apostolic
-		
-		intermarry = neognostic
-		intermarry = sedevacantist
-		intermarry = nestorian
-		intermarry = charismatic
-		intermarry = antinomian
-		intermarry = postadventist
-		intermarry = angeline
-		intermarry = nonconformist
-		intermarry = batenburger
-		intermarry = moravian
-		intermarry = wormwoodist
-		intermarry = celeste
-		intermarry = cristo_rey
-		intermarry = reformista
-		
-		intermarry = lamanita
-		intermarry = furiegi
-		
-		intermarry = navegante
-		intermarry = fidencista
-		intermarry = sacred_heart
-		intermarry = patria_grande
-		
-		intermarry = qabantajik
-	}
-
-	wormwoodist = { #offshoot of falling star
-		graphical_culture = westerngfx
-
-		icon = 39
-		heresy_icon = 75
-		
-		color = { 0.8 0.6 0.2 }
-		parent = falling_star
-		
-		high_god_name = GOD_GOD
-		
-		god_names = {
-			GOD_GOD GOD_THE_LORD GOD_JESUS GOD_THE_BLESSED_VIRGIN GOD_THE_SAINTS
-		}
-		
-		evil_god_names = {
-			THE_DEVIL SATAN GOD_THE_FALLEN_STAR
-		}
-		
-		priests_can_marry = yes
-		priests_can_inherit = yes
-		allow_rivermovement = yes
-		female_temple_holders = yes
-		
-		religious_clothing_head = 0
-		religious_clothing_priest = 1
-
-		crusade_name = CRUSADE
-		scripture_name = THE_BIBLE
-		priest_title = PRIEST
-		
-		intermarry = catholic
-		intermarry = evangelical
-		intermarry = ursuline
-		intermarry = high_church
-		intermarry = anabaptist
-		intermarry = wormwoodist
-		intermarry = apostolic
-		
-		intermarry = neognostic
-		intermarry = sedevacantist
-		intermarry = nestorian
-		intermarry = charismatic
-		intermarry = antinomian
-		intermarry = postadventist
-		intermarry = angeline
-		intermarry = nonconformist
-		intermarry = batenburger
-		intermarry = moravian
-		intermarry = celeste
-		intermarry = cristo_rey
-		intermarry = reformista
-		
-		intermarry = fidencista
-		intermarry = sacred_heart
-		intermarry = patria_grande
-		
-		intermarry = qabantajik
-	}	
-	
-	
 }
 
 pagan_group = {
@@ -4405,6 +3718,7 @@ pagan_group = {
 	revelationist_reformed = { 
 		graphical_culture = westerngfx
 		alternate_start = { always = no }
+		interface_skin = { revelationist_interface pagan_interface }
 		
 		icon = 53
 		heresy_icon = 54
@@ -4437,10 +3751,15 @@ pagan_group = {
 		intermarry = revelationist
 		intermarry = trailwalker
 		intermarry = trailwalker_reformed
+		
+		intermarry = insular
+		intermarry = voodoo
+		intermarry = santeria
 	}
 
 	revelationist = { 
 		graphical_culture = norsegfx
+		interface_skin = { revelationist_interface pagan_interface }
 
 		icon = 30
 		heresy_icon = 31
@@ -4477,11 +3796,16 @@ pagan_group = {
 		intermarry = revelationist_reformed
 		intermarry = trailwalker
 		intermarry = trailwalker_reformed
+		
+		intermarry = insular
+		intermarry = voodoo
+		intermarry = santeria
 	}
 	
 	trailwalker_reformed = { 
 		graphical_culture = norsegfx
 		alternate_start = { always = no }
+		interface_skin = { trailwalker_interface pagan_interface }
 		
 		icon = 23
 		heresy_icon = 24
@@ -4502,10 +3826,10 @@ pagan_group = {
 		
 		unit_modifier = {
 			levy_size = 0.3
-			
+
 			light_cavalry_offensive = 0.3
 			light_cavalry_defensive = 0.3
-			
+
 			key = "trailwalker"
 		}
 		
@@ -4536,6 +3860,7 @@ pagan_group = {
 
 	trailwalker = { 
 		graphical_culture = norsegfx
+		interface_skin = { trailwalker_interface pagan_interface }
 
 		icon = 22
 		heresy_icon = 24
@@ -4553,10 +3878,10 @@ pagan_group = {
 		
 		unit_modifier = {
 			levy_size = 0.3
-			
+
 			light_cavalry_offensive = 0.3
 			light_cavalry_defensive = 0.3
-			
+
 			key = "trailwalker"
 		}
 		
@@ -4595,6 +3920,7 @@ pagan_group = {
 
 	occultist_reformed = {
 		graphical_culture = norsegfx
+		interface_skin = { occultist_interface pagan_interface }
 
 		alternate_start = { always = no }
 		
@@ -4630,7 +3956,7 @@ pagan_group = {
 		unit_modifier = {		
 			garrison_size = 0.3
 			levy_size = 0.2
-					
+
 			key = "DEF_RELIGION"
 		}
 		unit_home_modifier = {
@@ -4644,9 +3970,9 @@ pagan_group = {
 			horse_archers_defensive = 0.8
 			camel_cavalry_defensive = 0.8
 			war_elephants_defensive = 0.8
-					
+
 			garrison_size = 0.4
-					
+
 			key = "DEF_RELIGION_HOME_TERRITORY"
 		}
 		
@@ -4661,6 +3987,7 @@ pagan_group = {
 	
 	occultist = { # 2spooky4u
 		graphical_culture = norsegfx
+		interface_skin = { occultist_interface pagan_interface }
 
 		icon = 8
 		heresy_icon = 9
@@ -4687,7 +4014,7 @@ pagan_group = {
 		unit_modifier = {		
 			garrison_size = 0.3
 			levy_size = 0.1
-			
+
 			key = "DEF_RELIGION"
 		}
 		unit_home_modifier = {
@@ -4701,9 +4028,9 @@ pagan_group = {
 			horse_archers_defensive = 0.8
 			camel_cavalry_defensive = 0.8
 			war_elephants_defensive = 0.8
-			
+
 			garrison_size = 0.4
-			
+
 			key = "DEF_RELIGION_HOME_TERRITORY"
 		}
 		
@@ -4743,7 +4070,7 @@ pagan_group = {
 		
 		unit_modifier = {
 			levy_size = 0.3
-			
+
 			key = "OFF_RELIGION"
 		}
 		
@@ -4790,9 +4117,9 @@ pagan_group = {
 		
 		unit_modifier = {
 			levy_size = 0.3
-			
+
 			retinuesize_perc = 0.5
-			
+
 			key = "OFF_RELIGION"
 		}
 		
@@ -4890,10 +4217,10 @@ pagan_group = {
 		
 		unit_modifier = {	
 			levy_size = 0.15
-			
+
 			retinuesize_perc = 0.3	
 			garrison_size = 0.2
-			
+
 			key = "HERO_RELIGION"
 		}
 		unit_home_modifier = {
@@ -4913,9 +4240,9 @@ pagan_group = {
 			cowboys_defensive = 0.6
 			pike_cavalry_defensive = 0.6
 			samurai_defensive = 0.6
-			
+
 			garrison_size = 0.2
-			
+
 			key = "HERO_RELIGION_HOME_TERRITORY"
 		}
 		
@@ -4964,10 +4291,10 @@ pagan_group = {
 		
 		unit_modifier = {
 			levy_size = 0.3
-			
+
 			light_cavalry_offensive = 0.3
 			light_cavalry_defensive = 0.3
-			
+
 			key = "aria_de_machete"
 		}
 		
@@ -5015,10 +4342,10 @@ pagan_group = {
 		
 		unit_modifier = {
 			levy_size = 0.3
-			
+
 			light_cavalry_offensive = 0.3
 			light_cavalry_defensive = 0.3
-			
+
 			key = "aria_de_machete"
 		}
 	
@@ -5617,9 +4944,6 @@ muslim = {
 		intermarry = imamite
 		intermarry = cetic
 		intermarry = navegante
-		
-		intermarry = forester
-		intermarry = edenite
 
 		religious_clothing_head = 5
 		religious_clothing_priest = 5
