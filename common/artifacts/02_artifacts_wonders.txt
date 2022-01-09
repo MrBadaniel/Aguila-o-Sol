@@ -1,0 +1,66 @@
+slots = {
+	weapon = 1
+	torso = 1
+}
+
+terrible_armor = {
+	combat_rating = 2
+	quality = 1
+	active = {
+		is_adult = yes
+	}
+	stacking = no
+	picture = "GFX_rusty_chain_mail"
+	slot = torso
+}
+
+zweihander_sword = {
+	combat_rating = 15
+	vassal_opinion = 5
+	tribal_opinion = 10
+	command_modifier = {
+		morale_offence = 0.2
+		heavy_infantry = 0.15
+		actual_light_infantry = 0.2
+	}
+	quality = 2
+	active = {
+		is_adult = yes
+		OR = {
+			likes_amerodeutsch = yes
+			likes_viking = yes
+			likes_mexicano = yes
+			OR = {
+				culture_group = south_anglo
+				culture_group = upland
+			}
+		}
+		OR = {
+			combat_rating = 20
+			trait = strong
+			trait = giant
+			trait = robust
+		}
+	}
+	flags = { combat_weapon sword created }
+	stacking = no
+	picture = "GFX_zweihander_sword"
+	slot = weapon
+}
+
+#The default name and desccription refer to Cathedral, but this can be overwrritten at spawn
+wonder_artifact_bells = {
+	quality = 3
+	active = {
+		NOR = { 
+			religion_group = christian
+			religion_group = cult_of_saints
+			religion_group = latter_day_saints
+		}
+	}
+	monthly_character_prestige = 0.5
+	flags = { religious bells cathedral_part }
+	picture = "GFX_relic_box_iron" 
+	stacking = no
+}
+
