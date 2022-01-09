@@ -15,6 +15,9 @@ feudal_governments = {
 			ghazi_government
 			mormon_government
 			theocratic_feudal_government
+			reserve_government
+			agrarian_government
+			gc_government
 			#military_governorate
 		}
 		free_revoke_on_governments_religion = { # Tribal vassals of other religions can have their titles revoked for free
@@ -72,7 +75,7 @@ feudal_governments = {
 			NOT = { is_government_potential = roman_imperial_government }
 			NOT = { is_government_potential = mex_imperial_government }
 			NOT = { is_government_potential = reserve_government }
-			NOT = { is_government_potential = misional_government }
+			NOT = { is_government_potential = gc_government }
 			NOT = { is_government_potential = agrarian_government }
 			NOT = { is_government_potential = mormon_government }
 			NOT = { is_government_potential = order_government }
@@ -694,7 +697,7 @@ feudal_governments = {
 			NOT = { is_government_potential = mormon_government }
 			NOT = { is_government_potential = mex_imperial_government }
 			NOT = { is_government_potential = agrarian_government }
-			NOT = { is_government_potential = misional_government }
+			NOT = { is_government_potential = gc_government }
 			NOT = { is_government_potential = bureaucratic_government }
 			NOT = { is_government_potential = theocratic_feudal_government }
 		}
@@ -812,7 +815,7 @@ feudal_governments = {
 		commander_limit = 11
 	}
 	
-	uyc_government = {
+	uso_y_costumbre_government = {
 		preferred_holdings = { CASTLE TEMPLE }
 		allowed_holdings = { 
 			CASTLE 
@@ -833,7 +836,6 @@ feudal_governments = {
 			tribal_government
 		}
 		frame_suffix = "_uyc"
-		title_prefix = "uyc_"
 		potential = {
 			NAND = {
 				controls_religion = yes
@@ -923,7 +925,6 @@ feudal_governments = {
 		}
 		
 		frame_suffix = "_agrarian"
-		title_prefix = "agrarian_"
 		potential = {
 			OR = {
 				controls_religion = no
@@ -1030,7 +1031,6 @@ feudal_governments = {
 			tribal_government
 		}
 		frame_suffix = "_reserve"
-		title_prefix = "reserve_"
 		potential = {
 		OR= {
 		religion = forester
@@ -1071,7 +1071,7 @@ feudal_governments = {
 		min_vassal_tax = 0.1
 	}
 	
-	misional_government = {
+	gc_government = {
 		preferred_holdings = { CASTLE }
 		allowed_holdings = { 
 			CASTLE 
@@ -1092,8 +1092,7 @@ feudal_governments = {
 			tribal_government
 		}
 		
-		frame_suffix = "_misional"
-		title_prefix = "misional_"
+		frame_suffix = "_gc"
 		potential = {
 			OR = {
 				controls_religion = no

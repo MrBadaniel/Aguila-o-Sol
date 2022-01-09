@@ -738,6 +738,7 @@ christian = {
 		intermarry = cetic
 		intermarry = gaian
 		intermarry = shinto
+		intermarry = forester
 	}
 	sedevacantist = {
 		graphical_culture = westerngfx
@@ -1842,6 +1843,7 @@ christian = {
 		intermarry = orthodox
 		intermarry = nazarene
 		intermarry = insular
+		intermarry = forester
 	}
 	
 	cristo_rey = {
@@ -2394,6 +2396,7 @@ pacific = {
 		intermarry = imamite
 		intermarry = nazarene
 		intermarry = navegante
+		intermarry = forester
 	}
 	
 	gaian = {
@@ -2436,6 +2439,7 @@ pacific = {
 		intermarry = shinto
 		intermarry = nousthreskeia
 		intermarry = neognostic
+		intermarry = forester
 	}
 	
 	shinto = {
@@ -2476,6 +2480,7 @@ pacific = {
 		intermarry = gaian
 		intermarry = cetic
 		intermarry = nousthreskeia
+		intermarry = forester
 	}
 	
 	nousthreskeia = {
@@ -2519,7 +2524,58 @@ pacific = {
 		intermarry = gaian
 		intermarry = cetic
 		intermarry = shinto
+		intermarry = forester
 	}
+	
+	forester = {
+		graphical_culture = chinesegfx
+
+		icon = 15
+		
+		color = { 30 152 59 }
+		
+		interface_skin = { gaian_interface indian_interface muslim_interface }
+		
+		high_god_name = GOD_THE_WILD
+		
+		god_names = {
+			 GOD_JOHN_MOUNTAIN GOD_OLD_FAITHFUL GOD_MOTHER_EARTH GOD_WOHELO GOD_SMOKEY
+		}
+		evil_god_names = {
+			GOD_FELLERS GOD_THE_GREAT_FIRE GOD_TERMITES GOD_THE_DARK_CICADA
+		}
+		
+		men_can_take_consorts = yes
+		women_can_take_consorts = yes
+		max_consorts = 3
+		crusade_name = GREAT_HOLY_WAR
+		scripture_name = SCOUTS_GUIDE
+		priest_title = RANGER
+			
+		priests_can_marry = yes
+		allow_rivermovement = yes
+		female_temple_holders = yes
+		raised_vassal_opinion_loss = no
+		has_heir_designation = yes 
+		defensive_attrition = yes
+		hard_to_convert = yes
+
+		dislike_tribal_organization = yes
+
+		religious_clothing_head = 16
+		religious_clothing_priest = 16
+		
+		intermarry = cetic
+		intermarry = gaian
+		intermarry = shinto
+		intermarry = nousthreskeia
+		
+		intermarry = neognostic
+		intermarry = edenite
+		intermarry = aphite
+		intermarry = qingzhen
+	}	
+	
 }
 
 latter_day_saints = {
@@ -3495,6 +3551,7 @@ oldworld = {
 		intermarry = cetic
 		intermarry = rust_cultist
 		intermarry = chrome_cultist
+		intermarry = forester
 	}
 	
 	rust_cultist = { # now in the OWC group!!
@@ -4944,6 +5001,7 @@ muslim = {
 		intermarry = imamite
 		intermarry = cetic
 		intermarry = navegante
+		intermarry = forester
 
 		religious_clothing_head = 5
 		religious_clothing_priest = 5
