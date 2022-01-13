@@ -14,7 +14,7 @@ EVTOPT_mexico_emperor_nonculture;They have unleashed a tiger, let's see if they 
 EVTOPT_mexico_emperor_mesoamerican;Better to die on your feet, than live on your knees!;;;;;;;;;;;;;x
 
 make_cdmx_capital;Make Mexico City the Capital;;;;;;;;;;;;;x
-make_cdmx_capital_desc;Mexico City is the crown jewel of the Empire and its ancient namesake. If you so wish, you may restore it as the capital of the Mexican Empire.;;;;;;;;;x
+make_cdmx_capital_desc;Mexico City, the "Place in the Navel of the Moon", is the crown jewel of the Empire and its ancient namesake. If you so wish, you may restore it as the capital of the Mexican Empire.;;;;;;;;;x
 cdmx_capital;Mexico City once more becomes the seat of imperial power.;Rome est une fois de plus la capitale du pouvoir impérial.;Rom wird einmal mehr der Sitz der kaiserlichen Macht.;;Roma vuelve a ser la sede del poder imperial.;;;;;;;;;x
 
 ######RECONQUISTA######
@@ -60,14 +60,14 @@ EVTTITLE_HF_49451;Rise of Mexico;;;;;;;;;;;;;x
 EVTDESC_HF_49451;With the rise of the [e_mexico.GetFullName], the Empire of Mexico has once again come under total control of the [From.Religion.GetGroupName]. There was a long struggle between the different faiths occupying the region, but the [From.Religion.GetGroupName] believers have finally conquered their adversaries.\n\nWith the struggle of the two sides finally put to rest, Mexico can finally start looking forward to a peaceful future, free of the religious wars that have raged through on now for centuries.;;;;;;;;;;;;;x
 EVTOPTA_HF_49451;Mexico will be the center of our faith.;;;;;;;;;;;;;x
 EVTTITLE_HF_49452;End of the Cristiada;;;;;;;;;;;;;x
-EVTDESC_HF_49452;Not even the isthmus of Tehuantepec has been safe from the Cristero conquest of Mexico. The final bastions of the other faiths in the region has fallen, now only the followers of the Saints are left.\n\nWith Mexico finally restored to the faithful, the disunity of the empire has ended, and peace has been restored. Once more the center of the faith, Mexico will surely play an important role in the region.;;;;;;;;;;;;;x
+EVTDESC_HF_49452;Not even the isthmus of Tehuantepec has been safe from the Cristero conquest of Mexico. The final bastions of the other faiths in the region has fallen, now only the followers of the Virgin are left.\n\nWith Mexico finally restored to the faithful, the disunity of the empire has ended, and peace has been restored. Once more the center of the faith, Mexico will surely play an important role in the region.;;;;;;;;;;;;;x
 EVTDESC_HF_49462;A minor noble has launched a campaign to start gathering troops to conquer parts of Mexico for the Blessed Virgin. [From.GetTitledFirstName] asks for my help in supporting [From.GetHerHim], and taking part in [From.GetHerHim] conquests. This is a great opportunity to drive the heathenry from Mexico.;;;;;;;;;;;;;x
 
 ######SACRED_HEART######
 
 sacredheart.1;The Patrons of El Sagrado Corazón;;;;;;;;;;;;;x
-EVTDESC_Sacredheart_1;Followers of the faith of the Sacred Heart- Sagrado Corazón- all adhere to one general creed, but tend to favor a devotion to one specific saint within the Sacred Heart's pantheon. Although such patrons are often chosen early on in a follower's life, it's not unheard of for a person to change their patron or patroness later on.;;;;;;;;;;;;;x
-EVTOPTA_sacredheart_1;I shall follow El Santo, the patron of warriors;;;;;;;;;;;;;x
+EVTDESC_Sacredheart_1;Followers of the faith of the Sacred Heart- Sagrado Corazón- all adhere to one general creed, but tend to favor a devotion to one specific saint within the Sacred Heart's pantheon. Although such devotions are often chosen early in life, it's not unheard of for a person to change their devotion later on.;;;;;;;;;;;;;x
+EVTOPTA_sacredheart_1;I shall follow El Santo, the masked patron of justice and strength;;;;;;;;;;;;;x
 EVTOPTC_sacredheart_1;Nuestra Señora, the Virgin of Guadalupe and mother of Mexico, is my patroness;;;;;;;;;;;;;x
 EVTOPTB_sacredheart_1;I pray to Santa Muerte for a safe delivery to the Afterlife.;;;;;;;;;;;;;x
 
@@ -86,99 +86,57 @@ EVTDESC_SOA_2654;The Orden de la Máscara have constructed a castle in [Root.GetN
 
 ######ARTIFACTS######
 
-EVTDESC_MNM_9649;[relic_hunter.GetTitledFirstName] has returned, carrying with [relic_hunter.GetHerHim] an ancient codex. My [relic_hunter.GetJobTitle] ensures me that this was created by the ancestors of the Nahua people long before the even the foundation of the empire. This will surely improve my standing in Mesoamerica.;;;;;;;;;;;;;x
+EVTDESC_MNM_9649;[relic_hunter.GetTitledFirstName] has returned, carrying with [relic_hunter.GetHerHim] an ancient codex. My [relic_hunter.GetJobTitle] ensures me that this was created by the ancestors of the Nahua people long before the even the foundation of the empire. Truly a great reminder of how our legacies extend throughout the ages.;;;;;;;;;;;;;x
 EVTNAME_MNM_9647;Moctezuma's Headdress;;;;;;;;;;;;;x
 EVTDESC_MNM_9647;[relic_hunter.GetTitledFirstName] has returned and brought with [relic_hunter.GetHerHim] an incredibly ancient and ornate headdress.\n[relic_hunter.GetSheHeCap] has proof that it once belonged to the legendary Moctezuma himself. The old stories speak the great vengeance and retribution he brought upon his enemies, hopefully with this headdress I can hope to embody that spirit and make my foes taste Moctezuma's revenge!\nSmiling as [relic_hunter.GetSheHe] sees the realization of the Headdress's great symbolic power creep onto your face, [relic_hunter.GetFirstName] waits patiently for you to speak.;;;;;;;;;;;;;x
 
 
 ######Fidencista######
 
-mortal;Unworthy;;;;;;;;;;;;x
-mortal_desc;This character refused or was denied the honor of being a Cajita of the divine. It will be much more difficult to rule over those who expect a their leader to be acknowledged as a divine avatar.;;;;;;;;;;;;x
-incarnate;Cajita;;;;;;;;;;;;x
-incarnate_desc;This character is widely recognized by people of the Fidencista faith as a Cajita, or as the human vessel through which the greatest spirits speak.;;;;;;;;;;;;x
-EVTNAME_mictlan_god;Divine Cajita;;;;;;;;;;;;x
-EVTDESC_mictlan_god;Fidencista nobles and peasants alike chafe beneath the yoke of an unworthy king. Why should they bend the knee to a common tyrant, when the materias tell them only el Niño's inheritors can truly rule in God's will? To rule effectively, you must be declared a Cajita: the vessel through which a divine spirit or saint acts with a mandate to bring the necessary salvation to humanity.\n\nDisplays of skill and piety and gifts to the materias and the people should convince your subjects of your divine mandate. How will you establish your connection to the divine and avoid throwing the realm into turmoil?;;;;;;;;;;;;x
-EVTOPT_mictlan_martial;My famed conquests and martial prowess.;;;;;;;;;;;;x
-EVTOPT_mictlan_learning;My spiritual knowledge and renowned piety.;;;;;;;;;;;;x
-EVTOPT_mictlan_blood;My father's divine blood.;;;;;;;;;;;;x
-TXT_mictlan_blood;This option is available because your father was a Cajita and you possess a positive congenital trait.\n;;;;;;;;;;;;x
-#EVTOPT_mictlan_sac;I will make the necessary sacrifices.;;;;;;;;;;;;x
-EVTOPT_mictlan_god;I am a vessel of the divine.;;;;;;;;;;;;x
-EVTOPT_mictlan_wait;I am not ready for the ceremony.;;;;;;;;;;;;x
-EVTOPT_mictlan_mortal;I am merely human.;;;;;;;;;;;;x
-TXT_mictlan_mortal;I am not a skilled and prestigious warrior. I am not a pious and learned theologian. I was not born with obviously divine blood.\n;;;;;;;;;;;;x
-postponed_incarnation;Postponed Revelation;;;;;;;;;;;;x
-postponed_incarnation_desc;This character has postponed the ceremony to be acknowledged as a Cajita.;;;;;;;;;;;;x
-#TXT_choose_sac;Prepare the prisoners for sacrifice.;;;;;;;;;;;;x
-EVTNAME_mictlan_ceremony;Revelation Ceremony;;;;;;;;;;;;x
-EVTDESC_mictlan_ceremony;You arrive on your knees, crawling in the dirt as a final act of penance. Around you, thousands of your subjects have gathered to witness the ceremony.\n\nThe preparations and penances you have performed have left your body and heart empty to recieve a great spirit, one of the most powerful and beloved of the Fidencistas. May it give you the strength that you need to lead your people as a worthy servant of el Niño Santo;;;;;;;;;;;;x
-EVTOPT_mictlan_ceremony;Let the ceremony begin!;;;;;;;;;;;;x
-#EVTNAME_mictlan_picksac;The Sacrifice;;;;;;;;;;;;x
-#EVTDESC_mictlan_picksac;The altar at the top of the pyramid is prepared for human sacrifice, sharp obsidian knives and other tools glinting in the sunlight. Now is the time to empty your dungeons and sustain the Seven Celestial Seals with the blood of noble prisoners. Anointing your body with their blood will secure your position as the divine reincarnation of one of the ancestral gods and assure your divine mandate.\n\nYour loyal priests look to you with anticipation in their eyes, ready to retrieve the next sacrifice at your command.;;;;;;;;;;;;x
-#EVTOPT_mictlan_picksac;Empty the dungeons!;;;;;;;;;;;;x
-#EVTOPT_mictlan_enough;The Seals are sustained for now.;;;;;;;;;;;;x
-#EVTNAME_mictlan_victim;Day of Reckoning;;;;;;;;;;;;x
-#EVTDESC_mictlan_victim;You are dragged from the dungeons by men wearing extravagant cloaks of iridescent feathers and expressions of terrifying zeal. They escort you to a towering stone pyramid, as you shield your eyes against the blinding sunlight.\n\n[From.GetTitledFirstName] is standing before a bloody stone altar at the top of the pyramid, flanked by many men in feathered cloaks with bloody black knives in their hands. You may be meeting [Root.Religion.GetRandomGodName] sooner than anticipated.;;;;;;;;;;;;x
-#EVTOPT_mictlan_victim;Wicked servants of [Root.Religion.GetRandomEvilGodName].;;;;;;;;;;;;x
-#EVTNAME_mictlan_sac;The Sacrifice;;;;;;;;;;;;x
-#EVTDESC_mictlan_sac;Your guards bring [From.GetTitledFirstName] up the stairs of the pyramid. As [From.GetSubjectPronoun] is placed on the altar, you hear the mumblings of a [From.Religion.GetName] prayer to [From.Religion.GetRandomGodName].\n\nYour high priest looks to you, his skilled hands already stained with blood and gripping a ceremonial obsidian knife. With a nod from you, he will cut the heart from your offering.;;;;;;;;;;;;x
-#EVTOPT_mictlan_sac_emperor;The mighty blood of an emperor!;;;;;;;;;;;;x
-#EVTOPT_mictlan_sac_king;The potent blood of a king!;;;;;;;;;;;;x
-#EVTOPT_mictlan_sac_duke;The strong blood of a duke!;;;;;;;;;;;;x
-#EVTOPT_mictlan_sac_minor;The robust blood of a noble!;;;;;;;;;;;;x
-#EVTOPT_mictlan_sac_courtier;The blood of a human offering!;;;;;;;;;;;;x
-#EVTOPT_mictlan_sac_mictlantec;[From.Religion.GetRandomGodName] has heard your prayers.;;;;;;;;;;;;x
-#EVTOPT_mictlan_sac_mercy;I need not the heart in this case.;;;;;;;;;;;;x
-#TXT_sacrifice;[From.GetTitledFirstName] is sacrificed to the gods!;;;;;;;;;;;;x
-#TXT_sac_mercy;Only a portion of [From.GetTitledFirstName]'s blood will be taken.\n;;;;;;;;;;;;x
-#EVTNAME_mictlan_victim_killed;The Ritual;;;;;;;;;;;;x
-#EVTDESC_mictlan_victim_killed;The high priest plunges his wicked blade into your chest. You scream in agony, and you see nothing more.;;;;;;;;;;;;x
-#EVTNAME_mictlan_victim_mercy;The Ritual;;;;;;;;;;;;x
-#EVTDESC_mictlan_victim_mercy;The high priest cuts your skin with his razor-sharp blade of black glass. Blood pools below you as you scream in agony, but for some reason your life has been spared. Whether your physical wounds will heal remains to be seen, but you will surely carry this day with you until the end of your life.;;;;;;;;;;;;x
-#EVTNAME_mictlan_empty;Empty Dungeons;;;;;;;;;;;;x
-#EVTDESC_mictlan_empty;Your dungeons contain no notable prisoners for you to sacrifice. Hopefully your sacrifices have been sufficient to sustain the Seals, please the priests, and sate the bloodlust of the crowd of onlookers.;;;;;;;;;;;;x
-a_god_made_flesh;A Vessel of the Divine;;;;;;;;;;;;x
-royal_apotheosis;Royal Apotheosis;;;;;;;;;;;;x
-EVTNAME_mictlan_incarnate;The Divine Walk the Earth;;;;;;;;;;;;x
-EVTDESC_mictlan_incarnate;Your divine connection is clear to all. The head Materia cloaks you with the raiment of the Virgin. You raise your hands to the sky from atop a tree and the thousands of onlookers bearing witness to the ceremony kneel and cross themselves.\n\nYou can feel the divine will of...;;;;;;;;;;;;x
-EVTOPT_mictlan_incarnate_huitz;...Arango, the Centaur.;;;;;;;;;;;;x
-EVTOPT_mictlan_incarnate_quetz;...Madero, the Apostle.;;;;;;;;;;;;x
-EVTOPT_mictlan_incarnate_tezca;......B.J., the Meritorious.;;;;;;;;;;;;x
-EVTOPT_mictlan_incarnate_tlaloc;...The Christ child of Atocha;;;;;;;;;;;;x
-nick_the_dart_hurler;the Dart Hurler;;;;;;;;;;;;x
-nick_the_hummingbird;the Hummingbird;;;;;;;;;;;;x
-nick_the_wind_jewel;the Wind Jewel;;;;;;;;;;;;x
-nick_of_the_dawn_star;of the Dawn Star;;;;;;;;;;;;x
-nick_the_smoking_mirror;the Smoking Mirror;;;;;;;;;;;;x
-nick_of_the_near_and_nigh;of the Near and Nigh;;;;;;;;;;;;x
-nick_the_giver;the Giver;;;;;;;;;;;;x
-nick_the_green_one;the Green One;;;;;;;;;;;;x
-nick_the_mortal;the Unworthy;;;;;;;;;;;;x
-EVTNAME_mictlan_almost_incarnate;Doubting the New Mesías;;;;;;;;;;;;x
-EVTDESC_mictlan_almost_incarnate;There are some who yet doubt the truth. Perhaps your sacrifices were insufficient, and your words and deeds not pious enough to prove your divinity. There is still much that can be done to ensure your place among the Sun's chosen.;;;;;;;;;;;;x
-EVTDESC_mictlan_almost_gifts;Sizeable gifts to influential priests.;;;;;;;;;;;;x
-EVTDESC_mictlan_almost_terror;A bloody reign of terror against the doubters.;;;;;;;;;;;;x
-EVTNAME_mictlan_mortal;An Unworthy King;;;;;;;;;;;;x
-EVTDESC_mictlan_mortal;Your sacrifices were paltry and your piety seems lacking. Nobles, priests, and gods alike are in agreement that you do not have the divine spark. Divinations show the future of the realm will be full of turmoil, as many of your subjects will consider you a false king.;;;;;;;;;;;;x
-EVTNAME_mictlan_huitz;Huitzilopochtli's Chosen;;;;;;;;;;;;x
-EVTDESC_mictlan_huitz;As the conduit of the Sun, Huitzilopochtli, you must be skilled in all aspects of war. The Sun, Huitzilopochtli seeks a constant stream of human sacrifices to nourish the Celestial Seals to hold the forces of darkness at bay. There are only a few who give their lives willingly to the great Sun, so you must seize captives with blade and dart.\n\nIn battle you wear a shimmering cloak of hummingbird feathers laid over golden cloth, and your face is painted pitch black.;;;;;;;;;;;;x
-EVTNAME_mictlan_quetz;Quetzalcoatl's Chosen;;;;;;;;;;;;x
-EVTDESC_mictlan_quetz;As the conduit of the Sun, Quetzalcoatl, you must embody the great feathered serpent's vast knowledge and just rule. Quetzalcoatl, the merciful Sun, does not demand the human lives he sacrificed himself to save, but instead uses the energy gained by the sacrifice of blood and treasure to sustain the Seals he placed in the heavens.\n\nYour ceremonial garments are crafted from the resplendent feathers of the quetzal bird, which shimmer with iridescent beauty in the sunlight.;;;;;;;;;;;;x
-EVTNAME_mictlan_tezca;Tezcatlipoca's Chosen;;;;;;;;;;;;x
-EVTDESC_mictlan_tezca;As the conduit of the Sun, Tezcatlipoca, you must be ready to seek all the knowledge that is available, including some that others may consider forbidden. The Smoking Mirror is the embodiment of memory and knowledge and the fickleness of the night. It is Tezcatlipoca that is the closest to the darkness sealed away and it is your duty to use the knowledge of the enemy through sorcery, divination, or intrigue. However, as master of the starry night, you must remember that straying too far off the path, may lead to eternal darkness.\n\nYour regalia includes a headdress adorned with heron feathers, a cloak crafted from a jaguar skin, and horizontal stripes of black and yellow across your face.;;;;;;;;;;;;x
+fidencista_become_cajita;Become a Cajita;;;;;;;;;;;;x
+fidencista_become_cajita_desc;Attempt to become a §YCajita§! - a worthy vessel for the divine spirits and saints so that they may interact directly with the mortal realm. To become a Cajita, one must be pure of soul and free from grave sins and then undergo a series of cleansing rituals to prepare their body for the spirit.;;;;;;;;;x
+fidencista_become_cajita_custom_tooltip_1;Must not have any sinful trait.;;;;;;;;;x
+
+cajita;Cajita;;;;;;;;;;;;x
+cajita_desc;This character is widely recognized by people of the Fidencista faith as a Cajita, or as the human vessel through which the greatest spirits and saints speak and act upon the world.;;;;;;;;;;;;x
+EVTNAME_fide_cajita;Divine Cajita;;;;;;;;;;;;x
+EVTDESC_FIDE_123;Fidencista nobles and peasants alike chafe beneath the yoke of an unworthy king. Why should they bend the knee to a common tyrant, when the materias tell them El Niño's inheritors can truly rule in God's will through mantling his most holy saints? To rule effectively, you must be declared a Cajita: the vessel through which a divine spirit or saint acts with a mandate to bring the necessary salvation to humanity.\n\n In order to become an inheritor to El Niño's legacy, you must cleanse yourself in a fast in the desert and bathe in blessed muds so that your heart is pure enough that the divine may enter.;;;;;;;;;;;;x
+EVTOPTA_FIDE_123;I am ready to follow in the footsteps of El Niño.;;;;;;;;;;;;x
+EVTOPTB_FIDE_123;Perhaps this is not a good idea.;;;;;;;;;;;;x
+EVTNAME_fide_fasting;Fasting in the Desert;;;;;;;;;;;;x
+EVTDESC_FIDE_124;You set out to the most barren lands of your realm, intent on living in complete austerity and fasting so that your soul may be purified and worthy enough such that it may serve as the most holy vessel of the saints.;;;;;;;;;;;;x
+EVTOPTA_FIDE_124;I will resist temptation as Jesucristo did in the desert.;;;;;;;;;;;;x
+EVTDESC_FIDE_125;The days pass and your stomach grumbles, begging you to abandon your holy quest and with it, your chance of becoming a worthy vessel of the divine. As you traverse the landscape you realize you recognize the area and a town lays not that far from your current location. Surely they could spare a meal for their liege should they be called upon.;;;;;;;;;;;;x
+EVTOPTA_FIDE_125;No, I must not abandon my holy mission.;;;;;;;;;;;;x
+EVTOPTB_FIDE_125;I am merely human.;;;;;;;;;;;;x
+TXT_fide_give_up;The Cajita cleansing rituals will be abandoned.;;;;;;;;;;;;x
+EVT_DESC_fide.127;Weeks have now passed and the time fasting has taken a toll on your body. Still you meditate and maintain the discipline needed to complete your cleansing. However, you have the distinct feeling that your body may be failing. Already, you've noticed animals sensing your weakness - birds of prey and coyotes ready to feast on your carcass should it come to that.;;;;;;;;;;;;x 
+EVTOPTA_FIDE_127;It is too late for second guesses. Though I feel I may be getting too weak to carry on...;;;;;;;;;;;;x
+EVT_DESC_fide.128;Your time of fasting is finished. You make your way back to the nearest town, prepared for your arrival with a large crowd of eager onlookers and your holiest Materias solemnly flanking a pool of mud. You enter the pool and allow yourself to be blessed and submerged by the Materias who then help you out of the pool so that you can continue crawling in humility to the holy shrine of the saints. At the shrine, you rise to light the votive candle of the spirit who will fill your soul with their grace.\n\nYou light the candle of...;;;;;;;;;;;;x 
+EVTNAME_fide_divine_vessel;A Vessel of the Divine;;;;;;;;;;;;x
+EVTOPT_fide_cajita_centaur;...Francisco Villa, the Centaur.;;;;;;;;;;;;x
+EVTOPT_fide_cajita_nino;...El Niño Fidencio himself.;;;;;;;;;;;;x
+EVTOPT_fide_cajita_bejota;...Bejota, the Meritorious.;;;;;;;;;;;;x
+EVTOPT_fide_cajita_toribio;...Padre Toribio, the Martyr.;;;;;;;;;;;;x
+EVTNAME_fide_failed_fast;Unceremonious Return;;;;;;;;;;;;x
+EVT_DESC_fide;The ordeal proved to be too much for you to handle. As you stumble to the nearest town, you are recieved by Materias awaiting your arrival and are quickly given the food and shelter your body severely lacked. Though your Materias reassure you that your failure does not mean that you are unworthy of rule, you can't help but notice the disappointment in their eyes as they watch you recover.;;;;;;;;;;;;x 
+EVTOPTA_fide.129;Perhaps I'll be given another opportunity... For now, I am thankful that I no longer have to suffer.;;;;;;;;;;;;x
+EVTNAME_fide_centaur;El Centauro del Norte;;;;;;;;;;;;x
+EVTDESC_fide_centaur;As the Cajita of the spirit of the Centaur, you feel drawn to be skilled in all aspects of war. You must be ready and willing to take the fight to the enemy and take chances on the battlefield. You must become like an angel of vengeance upon those who would abuse the downtrodden, showing no mercy more than they would show their lessers.\n\nIn battle you wear a bell-shaped hat and have sashes fitted with metal strips draped over your clothes as your only armor, trusting only Diosito and the spirit of the Centaur to save you.;;;;;;;;;;;;x
+nick_the_general;the General;;;;;;;;;;;;x
+nick_the_centaur;the Centaur;;;;;;;;;;;;x
+EVTNAME_fide_bejota;The Letters of Bejota;;;;;;;;;;;;x
+EVTDESC_fide_bejota;As the Cajita of the spirit of Bejota, you feel drawn to embody his vast administrative knowledge and just rule. Remembered in history as the "Benemérito de las Américas" - a title now laid claim to by the successors of the Empire of Mexico, Bejota truly was unyeilding in his upholding of the law even in the face of invasion. So too must you embody the diligence and sense of justice to uphold the peace and prosperity of your realm\n\nYour ceremonial garments are that of a fine black coat draped over your shoulders with a black ribbon tied around your neck.;;;;;;;;;;;;x
+nick_the_meritorious;the Meritorious;;;;;;;;;;;;x
+EVTNAME_fide_nino;El Santo Niño Fidencio;;;;;;;;;;;;x
+EVTDESC_fide_nino;As the Cajita of the spirit of El Niño himself, you feel you must be ready to provide for the people with great generosity and mystic energy. It is known that El Niño performed miracles of healing and even those who ruled came to visit for cures. While your duties may call you elsewhere, your people rely on you for their wellbeing and it is your most holy duty to see them taken care of.\n\nYour regalia a modest robe imprinted with the Sacred Heart of Jesus and a resplendent green cloak, covered in stars like that of the image of the Virgin of Guadalupe.;;;;;;;;;;;;x
+nick_el_nino;el Niño;;;;;;;;;;;;x
 EVTNAME_mictlan_tlaloc;Tlaloc's Chosen;;;;;;;;;;;;x
-EVTDESC_mictlan_tlaloc;As the conduit of the Sun, Tlaloc, you must become a great provider for your people. The people now look to you as the one who will provide the necessary sacrifices to keep the world from becoming barren and stagnant in darkness. To embody Tlaloc, you must assure that your people can take part in the great harvests and reap the rewards granted by the Sun. However, your judgement must be fierce and swift upon those who would try to take advantage of the Sun's generosity without just recompense for only through the combined effort of the many can the Seals be sustained and the darkness kept at bay.\n\nYour ceremonial regalia requires that you wear great mask and a heron-feather headdress. You carry with you a representation of lightning as a symbol of your power and the swiftness of your righteous anger.;;;;;;;;;;;;x
-mictlantec_sacrifice;Sacrificial Ceremony;;;;;;;;;;;;x
-mictlantec_sacrifice_desc;The Seven Celestial Seals placed by the great Sun, Quetzalcoatl when he ascended into heaven require offerings of blood to be sustained. Should they receive insufficient sustenance, this darkness will overcome them and once again be released into the world. Human blood is more potent than animal blood, and the blood of a king is more potent still.;;;;;;;;;;;;x
-EVTDESC_mictlan_mortal_liege;Your weak mortal liege [Root.Liege.GetTitledName] brings shame to true followers of the [Root.Religion.GetName] faith. Your liege does not bear the divine blood expected of the position. This gives you the sacred right to cast [Root.GetObjectPronoun] down and take [Root.GetPossPronoun] place, in the name of [Root.Religion.GetRandomGodName].;;;;;;;;;;;;x
-EVTOPT_mictlan_mortal_liege_accept;I will exercise my divine right.;;;;;;;;;;;;x
-EVTOPT_mictlan_mortal_liege_reject;War is not the answer.;;;;;;;;;;;;x
-EVTDESC_mictlan_mortal_liege_notify;[From.GetTitledFirstName] has fabricated a claim upon your primary title. Citing the lack of divine blood in your weak mortal body, [From.GetSubjectPronoun] conspired with traitorous priests to create the claim. [From.GetSubjectPronounCap] has not yet taken any overt action against you, but that may change in time.;;;;;;;;;;;;x
-EVTOPT_mictlan_mortal_liege_notify;This treachery will not stand!;;;;;;;;;;;;x
-EVTOPT_mictlan_incarnate_lifestyle;My lifestyle must change.;;;;;;;;;;;;x
-EVTOPT_mictlan_incarnate_traits;My habits must change.;;;;;;;;;;;;x
-EVTOPT_mictlan_incarnate_aligned;I truly embody the Sun.;;;;;;;;;;;;x
+EVTDESC_mictlan_tlaloc;As the Cajita of the spirit of Padre Toribio, you feel your faith strengthened as the people look to your for guidance and protection. As the vessel for the patron martyr of the displaced and migrant, it is expected that you maintain the unshakable faith of one who would die rather than renounce their beliefs and provide a beacon of hope to the people of your charge. \n\nThough there is no ceremonial regalia related to this saint, it is customary that you worship in the outskirts of your holdings, often in temporary places with those who rely on itinerant Materias.;;;;;;;;;;;;x
+nick_the_protector;The Protector;;;;;;;;;;;;x
+EVTOPT_fide_incarnate_lifestyle;I feel my lifestyle changing.;;;;;;;;;;;;x
+EVTOPT_fide_incarnate_traits;I feel my habits changing.;;;;;;;;;;;;x
+EVTOPT_fide_incarnate_aligned;I truly embody the Saint.;;;;;;;;;;;;x
 
 ######INDIGENOUS######
 
@@ -227,14 +185,14 @@ relieve_tapado_TOOLTIP_1;Relieve the Tapado so that a new one may be selected.;;
 
 EVTDESC_destape_1;With the Tapado selected, the utmost discretion must be taken to maintain the secrecy of their identity. Should one learn of who he or she may be, the devious minds of the court of Mexico may seek to extort or plan their downfall. Instead, each must believe themselves to be the true Tapado up until the moment that the true heir is unveiled. Now you may begin to plan your succession, but be aware, if you call the "Destape" ceremony too early before your reign is ended, the powerful and the connected may try to place a selection of their own in the great Silla Presidencial as the next [From.GetTitle].;;;;;;;;;x
 EVTOPTA_destape_1;He who rushes ahead won't get his portrait in the mural...;;;;;;;;;x  
-EVTDESC_destape_2;Perhaps I have chosen unwisely. The future of Mexico is at stake and the succession must pass as smoothly as possible for the good of the Empire.;;;;;;;;;;;;;x
+EVTDESC_destape_2;La República and its stability are at stake and if I have doubts about the one who shall succeed me that means I hadn't chosen wisely before.;;;;;;;;;;;;;x
 EVTOPTA_destape_2;I must reconsider my successor...;;;;;;;;;;;;;x
 
 TITLE_DESTAPE;Destape Ceremony;;;;;;;;;;;;;x
-EVTDESC_destape_4;The time has come for the great unveiling of the [From.GetTitle]'s successor. The most powerful figures of the realm must now be gathered to witness the selection and must either stand with the [From.GetTitle]'s choice as tradition dictates, or try to place one of their own as the true successor to the Silla Presidencial.;;;;;;;;;;;;;x
-EVTOPTA_destape_4;I am ready to reveal my selection;;;;;;;;;;;;;x
+EVTDESC_destape_4;The time has come for the great unveiling of El Tapado. The most powerful and influential figures of La República must now be gathered in the main hall of Chapultepec Castle to witness the ceremony, they must stand with [From.GetTitle]'s choice or plot and scheme to place one of their own as the true successor to La Silla Presidencial.;;;;;;;;;;;;;x
+EVTOPTA_destape_4;I should warm up my choosing finger.;;;;;;;;;;;;;x
 EVTOPTB_destape_4;No, this is premature...;;;;;;;;;;;;;x
-EVTDESC_destape_5;The [From.GetTitle] is planning to reveal [From.GetHerHis] successor in a grand unveiling. The most powerful figures of the realm will now be gathered to witness the selection and must either stand with the [From.GetTitle]'s choice as tradition dictates, or try to place one of their own as the true successor to the Silla Presidencial.;;;;;;;;;;;;;x
+EVTDESC_destape_5;The [From.GetTitle] is planning to reveal [From.GetHerHis] successor in a grand unveiling. The most powerful figures of the realm will now be gathered in the main hall of Chapultepec Castle to witness the ceremony. Everyone must now either stand with the [From.GetTitle]'s choice as tradition dictates or plot and scheme to try placing one of their own on that ancient and powerful Silla Presidencial.;;;;;;;;;;;;;x
 EVTOPTA_destape_5;Let us see who the [From.GetTitle] has named as [From.GetHerHis] successor;;;;;;;;;;;;;x
 EVTDESC_destape_6;The most powerful of the political class gather into the chamber awaiting the great unveiling of the next heir to the Silla Presidencial. The crowd falls silent as the [From.GetTitle] enters the room, with bated breath all await the "Dedazo" - when the [From.GetTitle] will point to the one [From.GetSheHe] deems worthy to wear the Imperial Band. The [From.GetTitle] gives a brief rehearsed speech and then points to [From.GetHerHis] chosen candidate, shaping the future of Mexico...;;;;;;;;;;;;;x
 EVTOPTA_destape_6;I wonder who it will be!;;;;;;;;;;;;;x

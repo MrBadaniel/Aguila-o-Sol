@@ -257,7 +257,7 @@ american_native = {
 			THE_DARK_SPIRITS
 		}
 		
-		can_call_crusade = yes				
+		can_call_crusade = yes
 		join_crusade_if_bordering_hostile = yes
 		allow_rivermovement = yes
 		max_consorts = 3
@@ -1269,7 +1269,6 @@ christian = {
 		intermarry = ursuline
 		intermarry = high_church
 		intermarry = anabaptist
-		#intermarry = falling_star
 		intermarry = apostolic
 		
 		intermarry = neognostic
@@ -1662,7 +1661,7 @@ christian = {
 		religious_clothing_head = 2
 		religious_clothing_priest = 2
 
-		crusade_name = CRISTIADA
+		crusade_name = CRUSADE
 		scripture_name = THE_BIBLE
 		priest_title = PADRE
 
@@ -1793,11 +1792,12 @@ cult_of_saints= {
 		intermarry = nestorian
 		intermarry = apostolic
 		intermarry = celeste
-		#intermarry = falling_star
 		intermarry = moravian
 		intermarry = purificador
 		intermarry = navegante
 		intermarry = qabantajik
+		intermarry = mictlantec
+		intermarry = sol_invicta
 	}
 	
 	patria_grande = {
@@ -1945,12 +1945,13 @@ cult_of_saints= {
 		intermarry = patria_grande
 		
 		intermarry = apostolic
-		#intermarry = falling_star
 		intermarry = moravian
 		intermarry = purificador
 		intermarry = catholic
 		intermarry = navegante
 		intermarry = qabantajik
+		intermarry = mictlantec
+		intermarry = sol_invicta
 	}
 
 	navegante = { 
@@ -2400,7 +2401,8 @@ latter_day_saints = {
         intermarry = woolleyite
         intermarry = qabantajik
         intermarry = furiegi
-        #intermarry = falling_star
+		intermarry = sol_invicta
+
         intermarry = moravian
 		intermarry = neomayan
     }
@@ -2440,7 +2442,9 @@ latter_day_saints = {
         intermarry = woolleyite
         intermarry = qabantajik
         intermarry = lamanita
-        #intermarry = falling_star
+		intermarry = sol_invicta
+		intermarry = mictlantec
+
         intermarry = moravian
 		intermarry = neomayan
         
@@ -2473,14 +2477,14 @@ mesoamerican_gods = {
 		
 		interface_skin = { mesoamerican_gods_interface pagan_interface }
 		
-		high_god_name = GOD_LA_SANTISIMA
+		high_god_name = GOD_LORD_UNDERWORLD
 		
 		god_names = {
-			GOD_DUENOS GOD_NAGUALES
+			GOD_DUENOS
 		}
 		
 		evil_god_names = {
-			GOD_AGUILA GOD_CATRINES
+			GOD_MALOS_AIRES GOD_OWL_MAN GOD_CATRINES
 		}
 		
 		unit_modifier = {		 		#Special features are added via reformation. If HF is not installed, default features are applied on reformed religion by event.
@@ -2525,17 +2529,26 @@ mesoamerican_gods = {
 		hard_to_convert = yes
 		
 		crusade_name = CRUSADE
-		scripture_name = HUEHUETLATOLLI ###LIBANA-Zapoteco
+		scripture_name = LIBANA
 		priest_title = SHAMAN
 		piety_name = REVERENCE
 		
 		religious_clothing_head = 13
 		religious_clothing_priest = 13
 		
-		intermarry = sol_invicta
+		#intermarry = mictlantec
 		intermarry = neomayan
 		intermarry = qabantajik
+		intermarry = mictlantec
+		
+		intermarry = sacred_heart
+		intermarry = fidencista
 		intermarry = navegante
+		
+		intermarry = furiegi
+        intermarry = lamanita
+
+		intermarry = moravian
 		 
 		
 		intermarry = sacred_heart
@@ -2555,7 +2568,7 @@ mesoamerican_gods = {
 		high_god_name = GOD_SOL_INVICTA 
 		
 		god_names = {
-			GOD_EL_ALTISIMO GOD_CURICAUERI GOD_ONORUAME GOD_THE_TRINITY GOD_THE_BLESSED_VIRGIN GOD_TATAROQUITO
+			GOD_EL_ALTISIMO GOD_THE_LIGHT GOD_THE_MOON
 		}
 		
 		evil_god_names = {
@@ -2600,7 +2613,7 @@ mesoamerican_gods = {
 		can_grant_claim = yes
 		attacking_same_religion_piety_loss = yes
 		
-		crusade_name = ILUSTRACION
+		crusade_name = CRUSADE
 		scripture_name = EL_ULTIMO_TESTAMENTO
 		priest_title = BAJADIOS
 		
@@ -2610,12 +2623,14 @@ mesoamerican_gods = {
 		intermarry = mictlantec
 		intermarry = neomayan
 		intermarry = qabantajik
-		intermarry = navegante
 		
 		intermarry = sacred_heart
+		intermarry = fidencista
+		intermarry = navegante
 		
-		#intermarry = falling_star
-		intermarry = purificador
+		intermarry = furiegi
+        intermarry = lamanita
+
 		intermarry = moravian
 	}
 	

@@ -18,61 +18,61 @@
 # 51	liege notified about vassal gaining claim on title
 # 100	mictlantec siege event to capture more prisoners
 
-namespace = mictlan
+namespace = fide
 
 narrative_event = {
-	id = mictlan.1
-	title = EVTNAME_mictlan_god
-	desc = EVTDESC_mictlan_god
-	picture = GFX_evt_mictlantec_sacrifice
+	id = fide.1
+	title = EVTNAME_fide_cajita
+	desc = EVTDESC_fide_cajita
+	picture = GFX_evt_lady_guadalupe
 	
 	only_rulers = yes
 	prisoner = no
 	
 	trigger = {
-		NOT = { trait = incarnate }
-		NOT = { has_character_flag = attempt_incarnation }
+		NOT = { trait = cajita }
+		NOT = { has_character_flag = attempt_cajita }
 		independent = yes
-		religion = tonaltec
+		religion = fidencista
 		war = no
 		primary_title = { higher_tier_than = DUKE } 
 	}
 	
 	mean_time_to_happen = {
 		months = 6
-		modifier = { factor = 10 trait = mortal }
+		modifier = { factor = 10 trait = unworthy }
 	}
 	
 	immediate = {
-		set_character_flag = attempt_incarnation
+		set_character_flag = attempt_cajita
 	}
 	
 	option = {
-		name = EVTOPT_mictlan_martial
+		name = EVTOPT_fide_martial
 		trigger = {
 			martial = 10
 			prestige = 300
 		}
 		prestige = 25
-		narrative_event = { id = mictlan.9 days = 10 }
+		narrative_event = { id = fide.9 days = 10 }
 		tooltip_info = martial
 		ai_chance = { factor = 100 }
 	}
 	
 	option = {
-		name = EVTOPT_mictlan_learning
+		name = EVTOPT_fide_learning
 		trigger = {
 			learning = 10
 			piety = 200
 		}
 		piety = 20
-		narrative_event = { id = mictlan.9 days = 10 }
+		narrative_event = { id = fide.9 days = 10 }
 		tooltip_info = learning
 		ai_chance = { factor = 100 }
 	}
 	
 	option = {
-		name = EVTOPT_mictlan_blood
+		name = EVTOPT_fide_blood
 		trigger = {
 			OR = {
 				trait = genius
@@ -80,16 +80,16 @@ narrative_event = {
 				trait = strong
 				trait = fair
 			}
-			father_even_if_dead = { trait = incarnate }
+			father_even_if_dead = { trait = cajita }
 		}
 		prestige = 25
-		narrative_event = { id = mictlan.9 days = 10 }
-		custom_tooltip = { text = TXT_mictlan_blood }
+		narrative_event = { id = fide.9 days = 10 }
+		custom_tooltip = { text = TXT_fide_blood }
 		ai_chance = { factor = 100 }
 	}
 	
 	option = {
-		name = EVTOPT_mictlan_sac
+		name = EVTOPT_fide_sac
 		trigger = {
 			NOT = { AND = {
 				martial = 10
@@ -106,291 +106,51 @@ narrative_event = {
 					trait = strong
 					trait = fair
 				}
-				father_even_if_dead = { trait = incarnate }
+				father_even_if_dead = { trait = cajita }
 			} }
 		}
 		piety = 10
 		wealth = -10
-		narrative_event = { id = mictlan.9 days = 10 }
+		narrative_event = { id = fide.9 days = 10 }
 		ai_chance = { factor = 10 }
 	}
 	
 	option = {
-		name = EVTOPT_mictlan_mortal
-		add_trait = mortal
+		name = EVTOPT_fide_unworthy
+		add_trait = unworthy
 		random_list = {
 			10 = { add_trait = humble }
 			10 = { add_trait = honest }
 		}
 		prestige = -25
-		custom_tooltip = { text = TXT_mictlan_mortal }
+		custom_tooltip = { text = TXT_fide_unworthy }
 		ai_chance = { factor = 1 }
 	}
 }
 
 narrative_event = {
-	id = mictlan.9
-	title = EVTNAME_mictlan_ceremony
-	desc = EVTDESC_mictlan_ceremony
-	picture = GFX_evt_mictlantec_sacrifice
+	id = fide.9
+	title = EVTNAME_fide_ceremony
+	desc = EVTDESC_fide_ceremony
+	picture = GFX_evt_lady_guadalupe
 	
 	is_triggered_only = yes
-	trigger = { religion = tonaltec }
+	trigger = { religion = fidencista }
 	
 	option = {
-		name = EVTOPT_mictlan_ceremony
-		narrative_event = { id = mictlan.10 }
-	}
-}
-
-narrative_event = {
-	id = mictlan.10
-	title = EVTNAME_mictlan_picksac
-	desc = EVTDESC_mictlan_picksac
-	picture = GFX_evt_mictlantec_sacrifice
-	
-	hide_from = yes
-	is_triggered_only = yes
-	trigger = { religion = tonaltec }
-	
-	option = {
-		name = EVTOPT_mictlan_picksac
-		hidden_tooltip = {
-			if = {
-				limit = { 
-					any_courtier = {
-						prisoner = yes
-						host = { character = ROOT }
-					}
-				}
-				any_courtier = {
-					limit = { 
-						prisoner = yes 
-						host = { character = ROOT }
-					}
-					character_event = { id = mictlan.11 }
-				}
-				character_event = { id = mictlan.20 days = 2 }
-			}
-			if = {
-				limit = { 
-					NOT = {
-						any_courtier = {
-							prisoner = yes
-							host = { character = ROOT }
-						}
-					}
-				}
-				character_event = { id = mictlan.15 }
-			}
-		}
-		custom_tooltip = { text = TXT_choose_sac }
-		ai_chance = { factor = 10 }
-	}
-	
-	option = {
-		name = EVTOPT_mictlan_enough
-		hidden_tooltip = {
-			character_event = { id = mictlan.20 }
-		}
-		ai_chance = {
-			factor = 5
-			modifier = { factor = 0 num_of_prisoners = 4 }
-		}
-	}
-}
-
-narrative_event = {
-	id = mictlan.11
-	title = EVTNAME_mictlan_victim
-	desc = EVTDESC_mictlan_victim
-	picture = GFX_evt_mictlantec_sacrifice
-	
-	is_triggered_only = yes
-	
-	option = {
-		name = EVTOPT_mictlan_victim
-		FROM = { character_event = { id = mictlan.12 } }
-	}
-}
-
-narrative_event = {
-	id = mictlan.12
-	title = EVTNAME_mictlan_sac
-	desc = EVTDESC_mictlan_sac
-	picture = GFX_evt_mictlantec_sacrifice
-	
-	is_triggered_only = yes
-	trigger = { religion = tonaltec }
-	
-	option = {
-		name = EVTOPT_mictlan_sac_emperor
-		trigger = {
-			FROM = { primary_title = { higher_tier_than = KING } }
-		}
-		set_character_flag = sac_emperor
-		piety = 400
-		custom_tooltip = { text = TXT_sacrifice }
-		hidden_tooltip = {
-			#character_event = { id = mictlan.10 }
-			FROM = { character_event = { id = mictlan.13 } }
-		}
-		ai_chance = { factor = 1000 }
-	}
-	
-	option = {
-		name = EVTOPT_mictlan_sac_king
-		trigger = {
-			FROM = { primary_title = { higher_tier_than = DUKE } }
-			FROM = { primary_title = { NOT = { higher_tier_than = KING } } }
-		}
-		set_character_flag = sac_king
-		piety = 200
-		custom_tooltip = { text = TXT_sacrifice }
-		hidden_tooltip = {
-			#character_event = { id = mictlan.10 }
-			FROM = { character_event = { id = mictlan.13 } }
-		}
-		ai_chance = { factor = 500 }
-	}
-	
-	option = {
-		name = EVTOPT_mictlan_sac_duke
-		trigger = {
-			FROM = { primary_title = { higher_tier_than = COUNT } }
-			FROM = { primary_title = { NOT = { higher_tier_than = DUKE } } }
-		}
-		set_character_flag = sac_duke
-		piety = 100
-		custom_tooltip = { text = TXT_sacrifice }
-		hidden_tooltip = {
-			#character_event = { id = mictlan.10 }
-			FROM = { character_event = { id = mictlan.13 } }
-		}
-		ai_chance = { factor = 200 }
-	}
-	
-	option = {
-		name = EVTOPT_mictlan_sac_minor
-		trigger = {
-			is_ruler = yes
-			FROM = { primary_title = { NOT = { higher_tier_than = COUNT } } }
-		}
-		set_character_flag = sac_minor
-		piety = 50
-		custom_tooltip = { text = TXT_sacrifice }
-		hidden_tooltip = {
-			#character_event = { id = mictlan.10 }
-			FROM = { character_event = { id = mictlan.13 } }
-		}
-		ai_chance = { factor = 50 }
-	}
-	
-	option = {
-		name = EVTOPT_mictlan_sac_courtier
-		trigger = {
-			FROM = { is_ruler = no }
-		}
-		piety = 20
-		custom_tooltip = { text = TXT_sacrifice }
-		hidden_tooltip = {
-			#character_event = { id = mictlan.10 }
-			FROM = { character_event = { id = mictlan.13 } }
-		}
-		ai_chance = { factor = 10 }
-	}
-	
-	option = {
-		name = EVTOPT_mictlan_sac_mictlantec
-		trigger = {
-			FROM = { religion = tonaltec }
-		}
-		piety = 5
-		custom_tooltip = { text = TXT_sac_mercy }
-		hidden_tooltip = {
-			#character_event = { id = mictlan.10 }
-			FROM = { character_event = { id = mictlan.14 } }
-		}
-		ai_chance = { factor = 5 }
-	}
-	
-	option = {
-		name = EVTOPT_mictlan_sac_mercy
-		custom_tooltip = { text = TXT_sac_mercy }
-		hidden_tooltip = {
-			#character_event = { id = mictlan.10 }
-			FROM = { character_event = { id = mictlan.14 } }
-		}
-		prestige = -5
-		ai_chance = {
-			factor = 50
-			modifier = { factor = 0 NOT = { is_close_relative = FROM } }
-		}
-	}
-}
-
-narrative_event = {
-	id = mictlan.13
-	title = EVTNAME_mictlan_victim_killed
-	desc = EVTDESC_mictlan_victim_killed
-	picture = GFX_evt_mictlantec_sacrifice
-	
-	is_triggered_only = yes
-	
-	option = {
-		name = OK
-		if = {
-			limit = { is_close_relative = FROM }
-			FROM = { add_trait = kinslayer }
-		}
-		death = { death_reason = death_sacrificed killer = FROM }
-	}
-}
-
-narrative_event = {
-	id = mictlan.14
-	title = EVTNAME_mictlan_victim_mercy
-	desc = EVTDESC_mictlan_victim_mercy
-	picture = GFX_evt_mictlantec_sacrifice
-	
-	is_triggered_only = yes
-	
-	option = {
-		name = OK
-		random_list = {
-			75 = { add_trait = wounded }
-			25 = { add_maimed_trait_effect = yes }
-		}
-		add_trait = stressed
-		prisoner = no
-	}
-}
-
-narrative_event = {
-	id = mictlan.15
-	title = EVTNAME_mictlan_empty
-	desc = EVTDESC_mictlan_empty
-	picture = GFX_evt_mictlantec_sacrifice
-	
-	is_triggered_only = yes
-	trigger = { religion = tonaltec }
-	
-	option = {
-		name = OK
-		hidden_tooltip = {
-			character_event = { id = mictlan.20 }
-		}
+		name = EVTOPT_fide_ceremony
+		narrative_event = { id = fide.10 }
 	}
 }
 
 character_event = {
-	id = mictlan.20
+	id = fide.20
 	hide_window = yes
 	desc = EVTDESC_bounce
 	is_triggered_only = yes
 	
 	trigger = {
-		has_character_flag = attempt_incarnation
+		has_character_flag = attempt_cajita
 	}
 	
 	immediate = {
@@ -424,10 +184,6 @@ character_event = {
 				NOT = { has_character_flag = sac_king }
 				NOT = { has_character_flag = sac_emperor }
 			}
-			change_variable = { which = "incarnate_ceremony" value = 1 }
-		}
-		if = {
-			limit = { has_artifact = obsidian_crown }
 			change_variable = { which = "incarnate_ceremony" value = 1 }
 		}
 		if = {
