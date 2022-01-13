@@ -232,33 +232,6 @@ decisions = {
 		ai_will_do = {
 			factor = 1
 		}
-	}
-
-    pretend_to_mexico = {
-		only_independent = yes
-		is_high_prio = yes
-		ai_check_interval = 24
-		
-		potential = {
-			is_playable = yes
-			is_adult = yes
-			prisoner = no
-			NOT = { trait = incapable }
-			government = federal_feudal_government
-		}
-		allow = {
-			higher_tier_than = DUKE
-			prestige = 100
-		    wealth = 500
-		}
-		effect = {
-            set_government = mex_imperial_government
-			wealth = -500
-			prestige = - 100
-		}
-		ai_will_do = {
-			factor = 1
-		}
-	}
+	}	
 	
 }
