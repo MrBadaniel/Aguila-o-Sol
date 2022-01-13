@@ -11,20 +11,23 @@ decisions = {
 			prisoner = no
 			NOT = { trait = incapable }
 			NOT = { has_global_flag = mexico_restored }
-			NOR = {
+			NOT = {
 				has_alternate_start_parameter = { key = religion_names value = random }
 			}
 		}
 		allow = {
 			primary_title = { title = k_mexico }
-			prestige = 30000
+			prestige = 8000
 			completely_controls = k_mexico
 			completely_controls = d_veracruz
 			completely_controls = d_jalisco
+			completely_controls = d_michoacan
+			completely_controls = d_oaxaca
+			completely_controls = d_guerrero
 		}
 		effect = {
 			set_global_flag = mexico_restored
-			narrative_event = { id = LoR.20 tooltip = EVTTOOLTIPLoR.20 }
+			narrative_event = { id = MXR.20 tooltip = EVTTOOLTIPLoR.20 }
 		}
 		ai_will_do = {
 			factor = 1
@@ -44,11 +47,11 @@ decisions = {
 				has_landed_title = k_mexico
 			}
 			NOT = {
-				any_realm_character  = {
+				any_realm_character = {
 					trait = destapado
 				}
 			}
-			any_realm_character  = {
+			any_realm_character = {
 				trait = tapado
 			}
 		}

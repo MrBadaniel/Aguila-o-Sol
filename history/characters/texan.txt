@@ -131,6 +131,8 @@
 		raise_levies={
 			location=1235 # Travis
 			force_mult=1.0
+			set_character_flag=is_mack
+			set_character_flag=is_special_character
 		}
 	}
 	2668.1.1={
@@ -229,6 +231,8 @@
 		raise_levies={
 			location=1238 # houston
 			force_mult=1.0
+			set_character_flag=is_floyd
+			set_character_flag=is_special_character
 		}
 	}
 	2668.1.1={
@@ -280,6 +284,7 @@
 	father=1836016
 	mother=1836017
 	2623.10.13={birth=yes}
+	2659.12.5={add_spouse=1803001}
 	2671.2.8={death=yes}
 }
 
@@ -472,7 +477,7 @@
 	trait=charismatic_negotiator
 	2635.1.1={birth=yes}
 	2657.1.1={
-		add_spouse=1836028			
+		add_spouse=1836028
 		effect={
 			set_character_flag=recieved_royal_marriage_aid_duty
 			spouse={
@@ -532,6 +537,7 @@
 	trait=brave
 	trait=misguided_warrior
 	2626.2.6={birth=yes}
+	
 	2666.1.1={
 		raise_levies={
 			location=1242 # Travis
@@ -539,11 +545,13 @@
 		}
 	}
 	2700.1.1={death=yes}
+	
 }
 
 1836031={
 	name="Hollis"
 	dynasty=1814003 # Hannegan
+
 	culture=texan
 	religion=catholic
 	2587.1.1={birth=yes}
@@ -574,6 +582,7 @@
 
 1836034={
 	name="Buffalo"
+	father=1836083
 	dynasty=1814039
 	martial=6
 	diplomacy=6
@@ -586,7 +595,7 @@
 	trait=ambitious
 	trait=patient
 	trait=charismatic_negotiator
-	2636.1.1={birth=yes}
+	2626.1.1={birth=yes}
 	2700.1.1={death=yes}
 }
 
@@ -645,17 +654,18 @@
 1836040={
 	name="Dwight"
 	dynasty=1814042
+	father=1836089
 	culture=texan
 	religion=catholic
-	2626.2.1={birth=yes}
-	2700.1.1={death=yes}
+	2599.10.15={birth=yes}
+	2692.1.1={death=yes}
 }
 
 1836041={
-	name="Ildefonso"
+	name="Adrian"
 	dynasty=1815005
 	culture=tejano
-	religion=sacred_heart
+	religion=fidencista
 	2650.7.6={birth=yes}
 	2700.1.1={death=yes}
 }
@@ -684,13 +694,12 @@
 	intrigue=4
 	learning=8
 	trait=elusive_shadow
-	
 	trait=gluttonous
 	trait=arbitrary
 	trait=shy
 	trait=cynical
 	2596.5.1={
-		birth=yes   
+		birth=yes
 		culture=tejano
 	}
 	2612.11.11={add_spouse=1836044}
@@ -714,7 +723,7 @@
 	trait=ambitious
 	trait=gregarious
 	2594.3.9={
-		birth=yes   
+		birth=yes
 		culture=tejano
 	}
 	2612.11.11={add_spouse=1836043}
@@ -740,7 +749,7 @@
 	father=1836044
 	mother=1836043
 	2621.7.9={
-		birth=yes   
+		birth=yes
 		culture=tejano
 	}
 	2642.12.31={add_spouse=1836046}
@@ -763,7 +772,7 @@
 	trait=gluttonous
 	trait=charitable
 	2625.9.4={
-		birth=yes   
+		birth=yes
 		culture=tejano
 	}
 	2642.12.31={add_spouse=1836045}
@@ -789,7 +798,7 @@
 	father=1836045
 	mother=1836046
 	2644.12.20={
-		birth=yes   
+		birth=yes
 		culture=tejano
 	}
 	2687.6.29={death=yes}
@@ -814,7 +823,7 @@
 	father=1836045
 	mother=1836046
 	2649.6.4={
-		birth=yes   
+		birth=yes
 		culture=tejano
 	}
 	2694.9.7={death=yes}
@@ -824,21 +833,22 @@
 	name="Noé"
 	dynasty=1815002
 	dna="niheacibgmp"
-	culture=tejano
+	culture=bravo
 	religion=sacred_heart
-	martial=6
+	martial=2
 	diplomacy=2
 	stewardship=4
 	intrigue=2
-	learning=3
+	learning=5
 	trait=thrifty_clerk
-	trait=sympathy_christendom
+	trait=hunter
 	trait=gregarious
 	trait=kind
 	trait=gardener
 	trait=diligent
 	trait=is_malnourished
-	2617.6.6={birth=yes
+	2617.6.6={
+		birth=yes
 		give_nickname=nick_el_flaco
 	}
 	2637.4.11={add_spouse=1836050}
@@ -876,7 +886,7 @@
 	intrigue=4
 	learning=4
 	trait=thrifty_clerk
-	trait=sympathy_cult_of_saints
+	trait=sympathy_cult_of_saints						  
 	trait=gregarious
 	trait=proud
 	trait=just
@@ -889,7 +899,7 @@
 }
 
 1836052={
-	name="Francisco"
+	name="Juan"
 	dynasty=1815002
 	dna="dphegnggghn"
 	culture=tejano
@@ -900,7 +910,7 @@
 	intrigue=1
 	learning=2
 	trait=charismatic_negotiator
-	trait=sympathy_cult_of_saints
+	trait=sympathy_cult_of_saints						  
 	trait=gardener
 	trait=content
 	trait=envious
@@ -918,7 +928,7 @@
 	dynasty=1815002
 	dna="nihoacgbgmn"
 	culture=tejano
-	religion=fidencista
+	religion=sacred_heart
 	martial=5
 	diplomacy=3
 	stewardship=2
@@ -939,7 +949,7 @@
 	dynasty=1815002
 	dna="dehohngbnmp"
 	culture=tejano
-	religion=fidencista
+	religion=sacred_heart
 	martial=6
 	diplomacy=1
 	stewardship=1
@@ -956,31 +966,38 @@
 }
 
 1836055={
-	name="Durán"
+	name="Alberto"
 	dynasty=1612019
 	culture=neomexicano
 	religion=atomicist
 	trait=atom_bless
-	2612.1.6={birth=yes}
+	trait=charitable
+	trait=gregarious
+	trait=musician
+	trait=lunatic
+	2605.1.6={birth=yes}
+	2612.2.6={give_nickname=nick_the_weird}
 	2629.1.1={add_spouse=1836056}
 	2666.1.1={add_claim=c_raton}
 	2677.7.1={death=yes}
 }
 
 1836056={
-	name="Fé"
+	name="Zelda"
 	female=yes
 	culture=neomexicano
 	religion=atomicist
 	trait=atom_bless
 	trait=quick
-	2602.3.4={birth=yes}
+	2608.1.1={birth=yes}
 	2677.7.1={death=yes}
 }
 
 1836060={
-	name="Eulogio"
+	name="Oscar"
 	dynasty=1612001
+	father=1836075
+	mother=1836076
 	dna="dijkjbpjmjf"
 	culture=neomexicano
 	religion=atomicist
@@ -990,20 +1007,19 @@
 	intrigue=2
 	learning=3
 	trait=skilled_tactician
+	trait=quick
 	trait=atom_deny
 	trait=greedy
 	trait=cruel
 	trait=arbitrary
 	trait=cynical
-	mother=1836056
-	father=14450462
-	2625.2.3={birth=yes}
+	2613.4.7={birth=yes}
 	2643.10.26={add_spouse=1810203}
-	2691.9.7={death=yes}
+	
 }
 
 #1836061={
-#	name="Estefanita"
+#	name="Britney"
 #	female=yes
 #	dna="omfjkbiafap"
 #	culture=neomexicano
@@ -1020,8 +1036,8 @@
 #	trait=arbitrary
 #	2637.7.12={birth=yes}
 #	2653.10.26={add_spouse=1836060}
-#	2677.5.3={death=yes}
-#}		  
+#}
+
 1836062={
 	name="Iris"
 	female=yes
@@ -1043,11 +1059,10 @@
 	father=1836060
 	mother=1810203
 	2647.8.2={birth=yes}
-	2701.3.7={death=yes}
 }
 
 1836063={
-	name="Javier"
+	name="Luis"
 	dynasty=1612001
 	dna="omfjkbiafmf"
 	culture=neomexicano
@@ -1058,14 +1073,14 @@
 	intrigue=4
 	learning=4
 	trait=thrifty_clerk
-	trait=atom_deny
+	trait=atom_bless
 	trait=lustful
 	trait=diligent
 	trait=shy
+	trait=quick
 	father=1836060
 	mother=1810203
 	2652.6.2={birth=yes}
-	2711.6.9={death=yes}
 }
 
 1836064={
@@ -1176,7 +1191,7 @@
 1836070={#Playable Renovator
 	name="George"
 	dynasty=1814073
-	culture=texan
+	culture=czexan
 	religion=falling_star
 	martial=10
 	diplomacy=5
@@ -1246,6 +1261,7 @@
 	2638.9.19={birth=yes}
 	2700.1.1={death=yes}
 }
+
 2302210={
 	name="Emily"
 	female=yes
@@ -1277,12 +1293,12 @@
 
 2302208={
 	name="Allison" # AKA: Allison Maverick
-	religion = americanist
-	culture = texan
+	religion=americanist
+	culture=texan
 	dna="deeeazhdaba" #dna="dcegfefdjdo"
-	properties="qj0cln00000000000000000000000000000000"  #properties="qj0cln00000000000000000000000000000000"
-	female = yes
-	dynasty = 1814074
+	properties="qj0cln00000000000000000000000000000000" #properties="qj0cln00000000000000000000000000000000"
+	female=yes
+	dynasty=1814074
 	martial=7
 	diplomacy=5
 	intrigue=3
@@ -1295,9 +1311,9 @@
 	trait=zealous
 	trait=stubborn
 	trait=tough_soldier
-	trait = bisexual
+	trait=bisexual
 	father=2302216 
-	mother = 2302226
+	mother=2302226
 	2644.4.2={
 		birth=yes
 		effect={ 
@@ -1306,10 +1322,10 @@
 	}
 	
 	2666.4.2={
-		add_lover = 2302209
-		add_spouse = 2302209
+		add_spouse=2302209
 		effect={
 			set_character_flag=recieved_royal_marriage_aid_duty
+			set_character_flag=ORF_embrace
 			spouse={
 				set_character_flag=recieved_royal_marriage_aid_duty
 				remove_spouse=spouse
@@ -1317,6 +1333,7 @@
 				clr_character_flag=recieved_royal_marriage_aid_duty
 			}
 			clr_character_flag=recieved_royal_marriage_aid_duty
+			add_lover=2302209
 		}
 	}
 }
@@ -1331,11 +1348,11 @@
 	religion=americanist
 	culture=rostmann
 	disallow_random_traits=yes
-	trait=giant
 	trait=strong
 	trait=robust
 	trait=brave
 	trait=gregarious
+	trait=giant
 	trait=wroth
 	trait=stubborn
 	trait=tough_soldier
@@ -1358,7 +1375,6 @@
 	learning=3
 	religion=americanist
 	culture=czexan
-	trait=giant
 	trait=strong
 	trait=robust
 	trait=brave
@@ -1381,7 +1397,7 @@
 	trait=bad_priest_christian
 	trait=fortune_builder
 	father=2302218
-	2628.2.1={birth=yes}
+	2635.2.1={birth=yes}
 }
 2302213={
 	name="Jakeb"
@@ -1393,7 +1409,7 @@
 	trait=kind
 	trait=underhanded_rogue
 	father=2302218
-	2647.5.6={birth=yes}
+	2638.5.6={birth=yes}
 }
 2302214={
 	name="Izak"
@@ -1401,7 +1417,7 @@
 	religion=catholic
 	culture=czexan
 	father=2302218
-	2652.2.26={birth=yes}
+	2652.4.2={birth=yes}
 }
 2302215={
 	name="Bohdan"
@@ -1456,7 +1472,7 @@
 	dynasty=2055161
 	religion=catholic
 	culture=czexan
-	2611.4.2={birth=yes}
+	2612.4.2={birth=yes}
 	2651.12.26={
 		death={
 			death_reason=death_battle
@@ -1469,20 +1485,23 @@
 	dynasty=1814078
 	religion=americanist
 	culture=texan
-	female = yes
-	martial = 16
-	trait = brave
-	trait = slothful
-	trait = robust
-	trait = fair
-	trait = uncouth
-	father = 2302222
+	female=yes
+	martial=16
+	trait=brave
+	trait=slothful
+	trait=robust
+	trait=fair
+	trait=uncouth
+	
+	father=2302222
 	2648.2.2={
 		give_nickname=nick_the_charger
 		birth=yes
 	}
-	2550.6.4={
-		effect={add_friend = 2302220}
+	2650.6.4={
+		effect={
+			add_friend=2302220
+		}
 	}
 }
 
@@ -1491,19 +1510,25 @@
 	dynasty=1814079
 	religion=americanist
 	culture=texan
-	female = yes
-	stewardship = 16
-	trait = brave
-	trait = diligent
-	trait = just
-	trait = honest
-	trait = strong
-	trait = robust
-	father = 2302221
-	mother = 2302225
+	female=yes
+	stewardship=16
+	trait=brave
+	trait=diligent
+	trait=just
+	trait=honest
+	trait=strong
+	trait=robust
+	trait=legit_bastard
+	father=2302221
+	mother=2302225
 	2639.9.2={
 		give_nickname=nick_appletree
 		birth=yes
+	}
+	2650.6.4={
+		effect={
+			add_friend=2302219
+		}
 	}
 }
 
@@ -1513,7 +1538,7 @@
 	martial=15
 	religion=americanist
 	culture=texan
-	trait = strong
+	trait=strong
 	2621.4.2={
 		give_nickname=nick_bright
 		birth=yes
@@ -1532,9 +1557,7 @@
 	martial=15
 	religion=americanist
 	culture=texan
-	2623.4.2={
-		birth=yes
-	}
+	2623.4.2={birth=yes}
 	2651.12.26={
 		death={
 			death_reason=death_battle
@@ -1548,10 +1571,10 @@
 	dynasty=1814079
 	religion=americanist
 	culture=texan
-	female = yes
-	trait = robust
-	father = 2302221
-	mother = 2302225
+	female=yes
+	trait=robust
+	father=2302221
+	mother=2302225
 	2651.12.25={birth=yes}
 }
 
@@ -1560,10 +1583,10 @@
 	dynasty=1814079
 	religion=americanist
 	culture=texan
-	trait = strong
-	trait = robust
-	father = 2302221
-	mother = 2302225
+	trait=strong
+	trait=robust
+	father=2302221
+	mother=2302225
 	2645.12.25={birth=yes}
 }
 
@@ -1573,16 +1596,16 @@
 	name="Penny"
 	martial=15
 	religion=evangelical
-	female = yes
-	trait = brave
-	trait = robust
+	female=yes
+	trait=brave
+	trait=robust
 	culture=dixie
-	2620.4.2={
+	2623.4.2={
 		give_nickname=nick_bright
 		birth=yes
 	}
-	2638.1.14={
-		add_spouse = 2302221
+	2644.1.14={
+		add_spouse=2302221
 	}
 	2651.12.26={
 		death={
@@ -1598,16 +1621,14 @@
 	name="Kristina"
 	martial=15
 	religion=norse_pagan
-	female = yes
-	trait = brave
-	trait = robust
-	trait = shieldmaiden
+	female=yes
+	trait=brave
+	trait=robust
+	trait=shieldmaiden
 	culture=dellsman
-	2613.8.2={
-		birth=yes
-	}
+	2613.8.2={birth=yes}
 	2644.1.14={
-		add_spouse = 2302216
+		add_spouse=2302216
 	}
 	2651.12.26={
 		death={
@@ -1615,164 +1636,533 @@
 			killer=1836030
 		}
 	}
-
 }
 
-2302227={
-	name="Don"
-	martial=12
-	dynasty=5001159
-	dna="beadg0ic000"
-	father=2302231
-	mother=2302232
-	religion=cristo_rey
-    trait=skilled_tactician	 
-	trait=reclusive
-	trait=quick
-	trait=ambitious
-	trait=wroth
-	trait=gamer
-	trait=zealous
-	trait=unyielding_leader
-	trait=holy_warrior
+1836075={
+	name="César"
+	dynasty=1612001 
+	religion=atomicist
 	culture=neomexicano
-	2641.3.19={
-		birth=yes
-	}
-	2661.4.26={
-		add_spouse = 2302228
-	}
- }
-2302228={
-	name="Selena"
-	female=yes
-	dna="00ffb00bbc0"
-	dynasty=5001153
-	religion=catholic
-    trait=fair
-	trait=musician
-	trait=quick
-	trait=kind
-	trait=chaste
-	trait=gregarious
-	culture=texan
-	2643.5.27={
-		birth=yes
-	}
-	2661.4.26={
-		add_spouse = 2302227
+	trait=brilliant_strategist
+	trait=inspiring_leader
+	trait=aggressive_leader
+	trait=trickster
+	trait=fair
+	trait=genius
+	trait=ambitious
+	trait=cruel
+	trait=atom_bless
+	trait=deceitful
+	trait=schemer
+	trait=brave
+	trait=proud
+	trait=cynical
+	2565.6.16={birth=yes}
+	2614.7.16={give_nickname=nick_silverplate}
+	2619.10.28={
+		death={
+			death_reason=death_miracle_arrow
+			killer=1875014
+		}
 	}
 }
-2302229={
-	name="Anne-Marie"
+
+1836076={
+	name="Marina"
 	female=yes
-	dna="bhcd00bba00"
-	dynasty=5001159
-	father=2302227
-	mother=2302228
-	religion=cristo_rey
-    trait=fair
-	trait=adopted_child
-	trait=just
+	culture=angeleno
+	religion=atomicist
+	trait=flamboyant_schemer
+	trait=craven
+	trait=sympathy_pacific
+	trait=erudite
+	trait=lisp
+	trait=imp_ex3
+	trait=administrator
+	trait=envious
+	2588.5.29={birth=yes}
+	2611.1.1={add_spouse=1836077}
+	2614.7.16={give_nickname=nick_malinche}
+}
+
+1836077={
+	name="Kiran"
+	culture=bayfolk
+	religion=nazarene
+	trait=mastermind_theologian
+	trait=aggressive_leader
+	trait=unyielding_leader
+	trait=scholar
+	trait=shrewd
+	trait=diligent
 	trait=kind
 	trait=brave
-	trait=timid
-	culture=creole
-	2662.11.19={
-		birth=yes
+	trait=depressed
+	trait=imp_ex3
+	2552.7.12={birth=yes}
+	2572.1.1={add_spouse=1836078}
+	2619.10.28={
+		death={
+			death_reason=death_duel
+			killer=1836075
+		}
 	}
 }
-2302230={
-	name="John"
-	dna="bfcbg0dbgc0"
-	dynasty=5001160
-	religion=americanist
-    trait=tough_soldier
-	trait=robust
-	trait=temperate
-	trait=cynical
-	trait=strong
-	trait=wroth
-	culture=texan
-	2631.7.4={
-		birth=yes
-	}
- }		 
-2302231={
-	name="Daniel"
-	martial=12
-	dynasty=5001159
-	dna="00ffb00bbc0"
-	religion=cristo_rey
-    trait=tough_soldier	 
-	trait=kind
-	trait=quick
-	trait=strong
+
+1836078={
+	name="Kyou"
+	female=yes
+	culture=bayfolk
+	religion=nazarene
+	trait=charismatic_negotiator
 	trait=content
-	trait=gregarious
-	trait=unyielding_leader
-	culture=neomexicano
-	2623.5.24={
-		birth=yes
-	}
-	2640.1.6={
-		add_spouse = 2302232
-	}
- }
-2302232={
-	name="Diana"
-	female=yes
-	dna="00ffb00bbc0"
-	religion=catholic
-    trait=fair
-	trait=musician
-	trait=quick
 	trait=kind
-	trait=zealous
-	culture=texan
-	2623.11.19={
-		birth=yes
+	trait=charitable
+	trait=honest
+	2551.4.6={birth=yes}
+	2572.1.1={add_spouse=1836077}
+	2614.7.16={
+		death={
+			death_reason=death_murder
+			killer=1836075
+		}
 	}
-	2640.1.6={
-		add_spouse = 2302231
+}
+
+1836079={
+	name="Ajay"
+	culture=bayfolk
+	religion=nazarene
+	father=1836077
+	mother=1836078
+	trait=robust
+	trait=fortune_builder
+	trait=diligent
+	trait=gregarious
+	2575.3.23={birth=yes}
+	2594.1.13={add_spouse=1836098}
+	2614.7.16={
+		death={
+			death_reason=death_murder
+			killer=1836075
+		}
 	}
- }
- 2302233={
-	name="Dorian"
-	dynasty=5001159
-	dna="chbai0ebbc0"
-	father=2302231
-	mother=2302232
-	religion=cristo_rey
-    trait=tough_soldier	 
+}
+
+1836080={
+	name="Adán"
+	dynasty=1612001
+	father=1836075
+	culture=neomexicano
+	religion=atomicist
 	trait=strong
 	trait=robust
+	trait=atom_bless
 	trait=giant
-	trait=shy
-	trait=kind
-	trait=berserker
-	trait=aggressive_leader
-	culture=neomexicano
-	2646.3.5={
-		birth=yes
+	trait=duelist
+	trait=cruel
+	trait=impaler
+	trait=tough_soldier
+	trait=scarred
+	trait=wroth
+	trait=ambitious
+	trait=paranoid
+	trait=cynical
+	trait=legit_bastard
+	disallow_random_traits=yes
+	2598.8.2={birth=yes}
+	2613.4.21={give_nickname=nick_the_demon_core}
+	2619.10.28={
+		death={
+			death_reason=death_duel
+			killer=1836077
+		}
 	}
- }
- 2302234={
-	name="Diana"
-	female=yes
-	dna="00ffb00bbc0"
-	dynasty=5001159
-	father=2302231
-	mother=2302232
-	religion=cristo_rey
-	trait=intricate_webweaver
-    trait=fair
-	trait=proud
+}
+
+1836081={
+	name="William"
+	dynasty=1814080
+	father=1836082
+	culture=texan
+	religion=americanist
+	trait=robust
+	trait=inspiring_leader
 	trait=quick
-	trait=arbitrary
-	trait=deceitful
-	culture=neomexicano
-	2650.5.20={
-		birth=yes
+	trait=americanist_leader
+	trait=kind
+	2590.2.7={birth=yes}
+	2619.10.28={
+		death={
+			death_reason=death_duel
+			killer=1836077
+		}
 	}
- }
+}
+
+1836082={
+	name="Eric"
+	dynasty=1814080
+	religion=americanist
+	culture=texan
+	father=1836097
+	trait=naive_appeaser
+	trait=shrewd
+	trait=lustful
+	trait=greedy
+	trait=ambitious
+	trait=devout
+	trait=adventurer
+	2567.5.28={birth=yes}
+	2621.7.3={
+		death={
+			death_reason=death_suicide_fall
+		}
+	}
+}
+
+1836083={
+	name="Bully"
+	dynasty=1814039
+	religion=catholic
+	culture=texan
+	trait=is_fat
+	trait=kind
+	trait=craven
+	2559.1.7={birth=yes}
+	2645.6.1={death=yes}
+}
+
+1836084={
+	name="Brandon"
+	father=1836083
+	dynasty=1814039
+	culture=texan
+	religion=catholic
+	trait=shrewd
+	trait=ambitious
+	2591.8.3={birth=yes}
+	2659.1.1={death=yes}
+}
+
+1836085={
+	name="Marcos"
+	dynasty=1815063
+	culture=tejano
+	religion=catholic
+	trait=fair
+	trait=brave
+	trait=robust
+	trait=dull
+	2573.6.1={birth=yes}
+	2615.7.19={
+		death={
+			death_reason=death_battle
+			killer=1836075
+		}
+	}
+}
+
+1836086={
+	name="Nathaniel"
+	dynasty=1612019
+	father=1836055
+	mother=1836056
+	culture=neomexicano
+	religion=atomicist
+	trait=atom_bless
+	trait=quick
+	trait=legit_bastard
+	2624.4.12={birth=yes}
+	2677.7.1={death=yes}
+}
+
+1836087={
+	name="Volar"
+	dynasty=1612019
+	father=1836055
+	mother=1836056
+	culture=neomexicano
+	religion=atomicist
+	trait=atom_bless
+	trait=fair
+	trait=gregarious
+	2632.1.6={birth=yes}
+	2655.2.6={give_nickname=nick_the_superb}
+	2708.5.17={death=yes}
+}
+
+1836088={
+	name="Gerard"
+	dynasty=1814042
+	father=1836089
+	culture=texan
+	religion=catholic
+	2582.5.26={birth=yes}
+	2649.1.1={death=yes}
+}
+1836089={
+	name="Gerald"
+	dynasty=1814042
+	father=1836090
+	culture=texan
+	religion=catholic
+	trait=strong
+	trait=robust
+	trait=hunter
+	trait=ambitious
+	2549.1.1={birth=yes}
+	2616.9.2={
+		death={
+			death_reason=death_battle
+			killer=1836080
+		}
+	}
+}
+
+1836090={
+	name="Jimmy"
+	dynasty=1814042
+	father=1836091
+	culture=texan
+	religion=catholic
+	trait=ambitious
+	trait=cruel
+	trait=strategist
+	trait=zealous
+	2521.1.1={birth=yes}
+	2571.1.1={death=yes}
+}
+
+1836091={
+	name="Garrett"
+	dynasty=1814042
+	culture=texan
+	religion=trailwalker
+	trait=adventurer
+	trait=strong
+	trait=giant
+	trait=ambitious
+	trait=cruel
+	trait=charitable
+	trait=humble
+	trait=wroth
+	trait=legendary
+	disallow_random_traits=yes
+	2467.1.1={birth=yes}
+	2493.1.1={give_nickname=nick_good_day}
+	2546.1.1={
+		death={
+			death_reason=death_duel
+			killer=1836090
+		}
+	}
+}
+
+1836092={
+	name="Sean"
+	dynasty=1814081
+	father=1836093
+	culture=texan
+	religion=evangelical
+	trait=craven
+	trait=diligent
+	trait=indulgent_wastrel
+	2462.5.1={birth=yes}
+	2493.1.1={
+		death={
+			death_reason=death_claim_duel_defender
+			killer=1836091
+		}
+	}
+}
+
+1836093={
+	name="Ford"
+	dynasty=1814081
+	mother=1836094
+	culture=texan
+	religion=evangelical
+	trait=ugly
+	trait=charitable
+	trait=humble
+	trait=devout
+	trait=brave
+	2431.1.1={birth=yes}
+	2481.1.1={death=yes}
+}
+
+1836094={
+	name="Edith"
+	dynasty=1814081
+	mother=1836095
+	female=yes
+	culture=texan
+	religion=evangelical
+	trait=strong
+	trait=robust
+	trait=patient
+	trait=gamer
+	trait=strategist
+	2396.1.1={birth=yes}
+	2453.1.1={death=yes}
+}
+
+1836095={
+	name="Mavis"
+	dynasty=1814081
+	female=yes
+	religion=americanist
+	culture=texan
+	trait=administrator
+	trait=trusting
+	trait=devout
+	trait=ambitious
+	trait=sympathy_cult_of_saints
+	2361.1.1={birth=yes}
+	2410.1.1={death=yes}
+}
+
+1836096={
+	name="Elizabeth"
+	dynasty=1814082
+	female=yes
+	religion=americanist
+	culture=texan
+	trait=grey_eminence
+	trait=ambitious
+	trait=devout
+	trait=shrewd
+	trait=duelist
+	trait=adventurer
+	2400.1.1={birth=yes}
+	2437.1.1={death=yes}
+}
+	
+
+1836097={
+	name="Stanley"
+	dynasty=1814080
+	religion=americanist
+	culture=texan
+	trait=craven
+	trait=depressed
+	trait=cruel
+	trait=drunkard
+	2523.10.31={birth=yes}
+	2611.5.1={death=yes}
+}
+
+
+1836098={
+	name="Janet"
+	female=yes
+	culture=tejano
+	religion=catholic
+	trait=fair
+	trait=kind
+	2575.6.2={birth=yes}
+	2594.1.13={add_spouse=1836079}
+	2614.7.16={
+		death={
+			death_reason=death_murder
+			killer=1836075
+		}
+	}
+}
+
+1836099={
+    name="Mikulas"
+	dynasty=5001186
+	religion=moravian
+	culture=czexan
+	trait=mastermind_theologian
+	trait=party_theocratic
+	trait=zealous
+	trait=one_legged
+	trait=kind	
+	trait=erudite
+	trait=temperate
+	2398.1.1={birth=yes}
+	2461.1.1={death=yes}
+}
+
+1836100={
+    name="Fritz"
+	dynasty=5001187
+	religion=catholic
+	culture=texaner
+	trait=intricate_webweaver
+	trait=trickster
+	trait=party_opposition
+	trait=stubborn
+	trait=patient	
+	trait=chaste
+	2391.1.1={birth=yes}
+	2459.1.1={death=yes}
+}
+
+1836101={
+    name="George"
+	dynasty=5001188
+	religion=americanist
+	culture=texan
+	trait=brilliant_strategist
+	trait=cruel
+	trait=party_royalist
+	trait=humble
+	trait=wroth	
+	trait=temperate
+	2402.1.1={birth=yes}
+	2460.1.1={death=yes}
+}
+
+1836102={
+    name="Sean"
+	dynasty=5001189
+	religion=americanist
+	culture=texan
+	trait=skilled_tactician
+	trait=gamer
+	trait=sympathy_christendom
+	trait=party_royalist
+	trait=arbitrary
+	trait=ambitious		
+	trait=diligent
+	2401.1.1={birth=yes}
+	2469.1.1={death=yes}
+}
+
+1836103={
+    name="Marcario"
+	dynasty=5001190
+	religion=americanist
+	culture=tejano
+	trait=grey_eminence
+	trait=socializer
+	trait=party_magnate
+	trait=drunkard
+	trait=gregarious		
+	trait=charitable
+	trait=erudite
+	2499.1.1={birth=yes}
+	2548.1.1={death=yes}
+}
+
+1836104={
+    name="Selena Ofelia"
+	dynasty=5001191
+	female=yes
+	religion=americanist
+	culture=tejano
+	trait=midas_touched
+	trait=fair
+	trait=musician
+	trait=party_populist
+	trait=charitable
+	trait=gregarious		
+	trait=kind
+	trait=trusting
+	2506.1.1={birth=yes}
+	2573.1.1={death=yes}
+}

@@ -9,9 +9,9 @@ BM_SOUTH_OF_THE_BORDER_ERA_INFO;The once-glorious Mexican Empire has been shatte
 ERA_CHAR_INFO_1325022;Once allies in the Plan de Ixcateopan that shattered the Mexican Empire, the Zapotecas and Mixtecas quickly found themselves at odds with each other over territorial disputes. After a brief conflict between the two peoples, the Zapoteca princess Pinopiaa and her sister, Nadxieelii, were offered offered up by their father as hostages to the Mixtecas as a pledge of peace. However, with the death of the Zapoteca king and no male heir, Pinopiaa now must return to Oaxaca to be queen of her people. But will her love and marriage to a Mixteca prince allow her to free her sister from captivity, or will it doom her bloodline and her people to subjugation by the Mixtecas?;;;;;;;;;;;;;x
 ERA_CHAR_INFO_1810083;The house of Iturbide descends from Julián "el Grande", the legendary Jefe Máximo of Mexico that was able to reclaim most of the lost lands of the empire, but the family has fallen on hard times by the year 2666. The current head of the Iturbides, Wenceslao I, rules over a vestigial state barely worthy of the name Mexico. Surrounded by heathens, rival caudillos, and squabbling principalities, it seems unlikely that the rulers of Mexico will ever be able to regain their former glory. Will Wenceslao defy the odds and reverse his dynasty's recent fortune, or is the empire doomed to be swallowed by the tides of history like its contemperaries from days long forgotten?;;;;;;;;;;;;;x 
 ERA_CHAR_INFO_1810200;When he was a young man, King Luis was a member of the Dorados, the legendary company of vaqueros and cowboys that served as the empires most effective - and unruly - task force. While in the service, he found salvation in the holy Atom and convinced many of his compatriots and fellow disciples to embark on a holy conquest of Mexico. At the battle of El Paso, Luis destroyed the Imperial Army and carved out a realm for himself south of the Rio Grande. However, King Louis is no longer a young man - he is now 80 years old, and it seems that he will soon become one with the Atom. Although his son Jesús seems like a worthy successor, some still fear that without Luis to guide it, this new kingdom is doomed to fall as quickly as it emerged.;;;;;;;;;;;;;x 
-ERA_CHAR_NAME_WENECESLAO;Wenceslao Paleolagos;;;;;;;;;;;;;x  
+ERA_CHAR_NAME_WENECESLAO;Wenceslao Paleo y Lagos;;;;;;;;;;;;;x  
 ERA_CHAR_NAME_PINOPIAA;Pinopiaa Quecuya;;;;;;;;;;;;;x  
-ERA_CHAR_NAME_LUIS;Luis "La Cucaracha" de Armas;;;;;;;;;;;;;x 
+ERA_CHAR_NAME_LUIS;Luis de Armas;;;;;;;;;;;;;x 
 OAXACA;Oaxaca;;;;;;;;;;;;;x  
 SIERRA_MADRE;Reino Eterno del Norte;;;;;;;;;;;;;x  
 BAJA_CALIFORNIA;Las Bajas;;;;;;;;;;;;;x  
@@ -38,9 +38,6 @@ chinantec_opinion;[chinantec.GetName] Opinion;;;;;;;;;;;;;x
  
 altiplanense;Altiplanense;;;;;;;;;;;;;x 
 altiplanense_opinion;[altiplanense.GetName] Opinion;;;;;;;;;;;;;x   
-   
-choyero;Choyero;;;;;;;;;;;;;x  
-choyero_opinion;[choyero.GetName] Opinion;;;;;;;;;;;;;x  
   
 occidental;Occidental;;;;;;;;;;;;;x  
 occidental_opinion;[occidental.GetName] Opinion;;;;;;;;;;;;;x  
@@ -97,7 +94,7 @@ mesoamerican_gods;Indigenous Mexican;;;;;;;;;;;;;x
  
 mictlantec;Mictlanteca;;;;;;;;;;;;;x 
 mictlantec_DESC;Mictlanteca is a continuation of ancient indigenous traditions and maintains that the keeper of the underworld had mercy after the complete destruction of Humanity in the previous cycle and guided them back to the land of the living. According to the Mictlantecos, the destruction of the last cycle was the result of the neglect and abandonment of sacrifice to spiritual entities known as dueños" - the true "owners" of the land who dwell in the hills", springs, caves, and other natural features that dot the landscape. The Mictlantecos believe that the equilibrium of life requires death and that a regular practice of the ancient sacrifices and rituals is necessary to maintain the balance of the world.;;;;;;;;;;;;;x  
-mictlantec_FEATURES;§Y*§!La Santísima demands respect for the dead and can be called on to help exact revenge. \n§Y*§! May go on vision quests with the aid of sacramental herbs.\n§Y*§! Mictlantecos may sacrifice animals to the dueños.;;;;;;;;;;;;;x ;§Y*§! Mictlanteca counties are hard to convert.;;;;;;;;;;;;;x  
+mictlantec_FEATURES;§Y*§! May go on vision quests with the aid of sacramental herbs.;;;;;;;;;;;;;x
   
 sol_invicta;Sol Invicto;;;;;;;;;;;;;x  
 sol_invicta_DESC;Sol Invictistas believe that at the end of the second era, the Serpent covered the world in darkness and chaos. To combat this evil, the Sun clothed his wife, the Moon, in his fiery raiment as she gave birth to a son who would be sent to vanquish the evil. Like the instruction and final great sacrifice of the second Messiah, the Messiah of the third era, the Son of the Sun, devoted his life to creating the Seven Seals and rituals that trap the Serpent in the underworld and keep the darkness at bay. As successor of this final Messiah, the Gran Hijo del Sol and his Guardians must keep ever viligant and maintain the seals through proper worship of God the Sun, the Sol Invicto, lest the Serpent return.;;;;;;;;;;;;;x,,
@@ -144,10 +141,15 @@ salazar_desc;This former Captain General of Yucatán shocked Mexico by suddenly c
   
 jacaranda;Jacaranda Blood;;;;;;;;;;;;;x  
 jacaranda_desc;The venerable blood of the Jacaranda family whose tireless devotion to The Republic, Senate and People of México revitilised through multiple generations the ancient Empire of México City.;;;;;;;;;;;;;x 
-
+cucaracha;Blood of la Cucaracha;;;;;;;;;;;;;x
+cucaracha_desc;The Scourge of Mexico, Luis "la Cucaracha" de Armas was a former Dorado who turned on the Mexican Benemérito and carved a realm of his own, naming it the "Eternal Kingdom of the North.";;;;;;;;;;;;;x
 lamanita_emperor_male;Pious Blood of [This.GetFirstNameWithNick];;;;;;;;;;;;;x
 lamanita_emperor_female;Pious Blood of [This.GetFirstNameWithNick];;;;;;;;;;;;;x
 bloodline_desc_lamanita;Like the prophets and great teachers of the faith before [Root.GetFirstName] has fulfilled the ancient prophecies and legends and restored the Lamanites into righteousness with God founding a new holy bloodline.;;;;;;;;;;;;;x
+
+restaurador_male;Blood of [This.GetFirstNameWithNick];;;;;;;;;;;;;x
+restaurador_female;Blood of [This.GetFirstNameWithNick];;;;;;;;;;;;;x
+bloodline_desc_mexican;Like the prophets and great teachers of the faith before [Root.GetHerHim], [Root.GetFirstName] has fulfilled righteousness with God founding a new bloodline.;;;;;;;;;;;;;x
   
 ###########Nicknames###########  
   
@@ -224,10 +226,14 @@ EL_DIABLO;el Diablo;;;;;;;;;;;;;x
 EL_CHAMUCO;el Chamuco;;;;;;;;;;;;;x  
 GOD_HUEHUETEOTL;Huehueteotl;;;;;;;;;;;;;x  
 GOD_THE_TRINITY;the Holy Trinity;;;;;;;;;;;;;x  
-GOD_DUENOS;the Dueños;;;;;;;;;;;;;x  
 CODICE_XILITLA;Códice Xilitla;;;;;;;;;;;;;x  
 GOD_TATAROQUITO;Tata Roquito;;;;;;;;;;;;;x  
-GOD_CATRINES;the Catrines;;;;;;;;;;;;;x  
+GOD_DUENOS;the Dueños;;;;;;;;;;;;;x
+GOD_LORD_RAIN;Dueño del Rayo;;;;;;;;;;;;;x
+GOD_CATRINES;the Catrines;;;;;;;;;;;;;x
+GOD_JONAS;Jonás;;;;;;;;;;;;;x
+GOD_DAG_GADOL;Dag Gadol;;;;;;;;;;;;;x
+GOD_APOSTLE_PETER;Apóstol Pedro;;;;;;;;;;;;;x
 MINISTER;Minister;;;;;;;;;;;;;x  
 title_lamanita_cardinal;Apóstol;;;;;;;;;;;;;x  
 LAMANITA_PRESIDENT;Primer Elder;;;;;;;;;;;;;x  
@@ -239,18 +245,25 @@ best_candidate_title_lamanita_cardinal_tooltip;Of all the bishops in my realm, t
 FISHER_OF_MEN;Fisher of Men;;;;;;;;;;;;;x  
 MORAVIAN_PRESIDENT;Presidente;;;;;;;;;;;;;x  
 EL_ULTIMO_TESTAMENTO;the Last Testament;;;;;;;;;;;;;x  
+BAJADIOS;Bajadios;;;;;;;;;;;;;x
+GOD_MALOS_AIRES;Malos Aires;;;;;;;;;;;;;x
+GOD_OWL_MAN;the Owl Man;;;;;;;;;;;;;x									   
 GOD_AGUILA;el Águila;;;;;;;;;;;;;x  
 GOD_SANTO_NINO;el Santo Niño;;;;;;;;;;;;;x  
 GOD_CHUYITO;Chuyito;;;;;;;;;;;;;x  
 GOD_PANCHO_VILLA;el Centauro;;;;;;;;;;;;;x  
 MATERIA;Materia;;;;;;;;;;;;;x  
-THE_SCRIPTURES;The Sagradas Escrituras;;;;;;;;;;;;;x  
+THE_SCRIPTURES;The Sacred Scriptures;;;;;;;;;;;;;x
 ILUSTRACION;Ilustración;;;;;;;;;;;;;x  
 GOD_EL_ALTISIMO;el Altísimo;;;;;;;;;;;;;x  
-GOD_MADERO;el Apóstol;;;;;;;;;;;;;x  
+GOD_THE_TRINITY;the Trinity;;;;;;;;;;;;;x
+GOD_TATAROQUITO;Tataroquito;;;;;;;;;;;;;x
+GOD_PADRE_CELESTIAL;Padre Celestial;;;;;;;;;;;;;x
+GOD_THE_MOON;Mother Moon;;;;;;;;;;;;;xGOD_MADERO;el Apóstol;;;;;;;;;;;;;x  
 GOD_JUAREZ;Bejota;;;;;;;;;;;;;x  
 GOD_PADRE_CELESTIAL;Padre Celestial;;;;;;;;;;;;;x  
 GOD_CURICAUERI;Curicaueri;;;;;;;;;;;;;x  
+GOD_LORD_UNDERWORLD;Dueño del Mictlán;;;;;;;;;;;;;x												 
 GOD_ONORUAME;Onoruame;;;;;;;;;;;;;x  
   
 Holy_Order_cristo_rey;Cristeros;;;;;;;;;;;;;x  
@@ -267,43 +280,54 @@ DYN10_DESC;With a score of $SCORE$ you$FAILED$ beat House Nájera , Jefes Máximos
 ###########Events###########  
   
 MHR.1;I will stand for election;;;;;;;;;;;;;x
-EVTTOOLTIPMHR.1;Reorganize the Lamanita Faith.;;;;;;;;;x  
-EVTDESCMHR1;Formalization of the Lamanita Faithful;;;;;;;;;x  
-EVTOPTAMHR1;Praise God or whatever.;;;;;;;;;x    
-EVTTITLE_MHR.3;Formalization of the Lamanita Faithful;;;;;;;;;x    
-EVTDESC_MHR.3;HEYYYYYY;;;;;;;;;x  
-EVTOPTA_MHR.3;HEYYYYYY I am a Lamanite.;;;;;;;;;x 
-EVTOPTB_MHR.3;HEYYYYYY I am not Lamanite.;;;;;;;;;x 
-EVTOPTC_MHR.3;HEYYYYYY I am not christian.;;;;;;;;;x
+EVTTOOLTIPMHR.1;Reorganize the Lamanita Faith.;;;;;;;;;;;;;x
+EVTITLEMHR1;A new ministry!;;;;;;;;;;;;;x
+EVTDESCMHR1;It is finally done our goal prophesied so long ago by the founder of the Latter Day Saints has come to pass and we have carved out a mighty nation for the Lamanite people and restored our selves in the sight of the Godhead formalizing our faith from a gathering of the dissipated to a great church filled with might temples and diligent missionaries to continue to spread the faith to all of the peoples of America.;;;;;;;;;;;;;x
+EVTTITLE1;Formalization of the Lamanita Faithful;;;;;;;;;;;;;x
+EVTOPTAMHR1;We have bloomed like a rose!;;;;;;;;;;;;;x
+EVTTITLE_MHR.3;Formalization of the Lamanita Faithful;;;;;;;;;;;;;x
+EVTDESC_MHR.3;Interesting news has come out of the lands of Central America. With a people claiming to be an ancient people called the lamanites supposedly to have restored themselves in the eyes of God and have been rewarded with a mighty empire of their own. Even now tales of their great temple cities spread like wildfire throughout the lands of the south and their missionaries travel far and wide wishing to bring under their banner. Only time will tell if this empire will truly bloom like a rose or walk into obscurity like so many others.;;;;;;;;;;;;;x
+EVTOPTA_MHR.3;Finally our destiny has been fulfilled.;;;;;;;;;;;;;x
+EVTOPTB_MHR.3;Finally our Lamanite brothers have fulfilled their destiny.;;;;;;;;;;;;;x
+EVTOPTC_MHR.3;On the final day many will cry 'Lord Lord have we not prophesied in your name' we shall see if these heretics shall also be cast into the fire.;;;;;;;;;;;;;x
+EVTOPTD_MHR.3;More strange men with strange robes we shall prove our gods are stronger, as we always have.;;;;;;;;;;;;;x
+EVTOPTD_sacredheart_1;To San Charbel the patron of the sick and needy I focus my attention.;;;;;;;;;;;;;x
+EVTOPTE_sacredheart_1;I look to San Juditas the patron saint of lost causes.;;;;;;;;;;;;;x
+EVTTITLE_navegante_100;The Fisher of Men Proclaimed!;;;;;;;;;;;;;x
+EVTDESC_navegante_100;The Navegante faith has long been a decentralized faith clinging to the coastline of The Gulf of California, but with the proclaiming of The Fisher of Men a new age has come to the Navegante faithful!;;;;;;;;;;;;;x
+EVTOPTA_navegante_100;Set sail lads!;;;;;;;;;;;;;x
+EVTOPTB_navegante_100;Set sail lads!;;;;;;;;;;;;;x
+EVTOPTC_navegante_100;So they fish for... men?;;;;;;;;;;;;;x
 EVTOPTD_sacredheart_1;To San Charbel the patron of the sick and needy I focus my attention.;;;;;;;;;x 
 EVTOPTE_sacredheart_1;I look to San Juditas the patron saint of lost causes.;;;;;;;;;x 
   
 ###########Traits###########  
   
-born_in_the_purple;Porfirogénito;;;;;;;;;x  
-born_in_the_purple_desc;[Root.GetBornInPurpleDesc];;;;;;;;;x  
-  
-marian_el_santo;El Santo;;;;;;;;;;;;;x  
-marian_el_santo_desc;This Sagrado Corazón adherent has a devotion to El Santo, a heroic figure from the late days of the antediluvian world. Founder of the ancient tradition of Lucha Libre, he is known as one of the greatest warriors of all time - and one who never shed the blood of his enemies.;;;;;;;;;;;;;x 
-marian_santa_muerte;Santa Muerte;;;;;;;;;;;;;x  
-"marian_santa_muerte_desc;This follower of the Sagrado Corazón is a "Muerteño" - one of those devoted to la Santa Muerte, the Holy Death.;;;;;;;;;;;;;x
-marian_guadalupe;Our Lady of Guadalupe;;;;Nuestra Señora de Guadalupe;;;;;;;;;x  
-marian_guadalupe_desc;This disciple of the Sagrado Corazón has a devotion to the patroness and mother of all Mexico, Our Lady of Guadalupe, who has been the most popular figure in the pantheon of el Sagrado Corazón since ancient times.;;;;;;;;;;;;;x 
-marian_san_charbel;San Charbel;;;;;;;;;x  
-marian_san_charbel_desc;Among the most popular saints among the sagrado faithful San Charbel was a monk and a hermit of the faith from a land far across the sea whose countrymen brought the veneration of the saint to the land of mexico. Charbel was known even after death to have remained incorruptible and he is called upon by devotees to intercede on behalf of the sick and chapels dedicated to him are seeen throughput the land.;;;;;;;;;;;;;x 
-marian_san_juditas;San Juditas;;;;San Juditas;;;;;;;;;x  
-marian_san_juditas_desc;St. Jude the patron saint of lost causes, also known as San Judas Tadeo or San Juditas to his devotees, is one of the most popular saints to the sagrado faithful and is one of the original 12 apostles of Christ. Though beloved by all social classes San Juditas has a huge following among the poor to whom he is seen as a powerful protector and benefactor as well as a direct intercessor to Jesus Christ himself in his prayers .;;;;;;;;;;;;;x 
-  
-iluminador;Illuminator;;;;;;;;;;;;;x  
-iluminador_desc;Sometimes the dark ignorance of the world can be illuminated through instruction - other times it must come at the point of the sword;;;;;;;;;;;;;x  
-  
-pastoral;Pastoral;;;;;;;;;;;;;x  
-pastoral_desc;This character believes in a more personal, decentralized faith based on scripture alone, with roots in missionary work.;;;;;;;;;;;;;x 
-parroquial;Parroquial;;;;;;;;;;;;;x  
+marian_el_santo;El Santo;;;;;;;;;;;;;x
+marian_el_santo_desc;This Sagrado Corazón adherent has a devotion to El Santo, a heroic figure from the late days of the antediluvian world. Founder of the ancient tradition of Lucha Libre, he is known as one of the greatest warriors of all time — and one who never shed the blood of his enemies.;;;;;;;;;;;;;x
+marian_santa_muerte;Santa Muerte;;;;;;;;;;;;;x
+"marian_santa_muerte_desc;This follower of the Sagrado Corazón is a "Muerteño" — one of those devoted to la Santa Muerte, the Holy Death.;;;;;;;;;;;;;x
+marian_guadalupe;Our Lady of Guadalupe;;;;Nuestra Señora de Guadalupe;;;;;;;;;x
+marian_guadalupe_desc;This disciple of the Sagrado Corazón has a devotion to the patroness and mother of all Mexico, Our Lady of Guadalupe, who has been the most popular figure in the pantheon of el Sagrado Corazón since ancient times.;;;;;;;;;;;;;x
+marian_san_charbel;San Charbel;;;;San Charbel;;;;;;;;;x
+marian_san_charbel_desc;Among the most popular saints among the sagrado faithful San Charbel was a monk and a hermit of the faith from a land far across the sea whose countrymen brought the veneration of the saint to the land of mexico. Charbel was known even after death to have remained incorruptible and he is called upon by devotees to intercede on behalf of the sick and chapels dedicated to him are seeen throughput the land.;;;;;;;;;;;;;x
+marian_san_juditas;San Juditas;;;;San Juditas;;;;;;;;;x
+marian_san_juditas_desc;St. Jude the patron saint of lost causes, also known as San Judas Tadeo or San Juditas to his devotees, is one of the most popular saints to the sagrado faithful and is one of the original 12 apostles of Christ. Though beloved by all social classes San Juditas has a huge following among the poor to whom he is seen as a powerful protector and benefactor as well as a direct intercessor to Jesus Christ himself in his prayers.;;;;;;;;;;;;;x
+ 
+iluminador;Illuminator;;;;;;;;;;;;;x
+iluminador_desc;Sometimes the dark ignorance of the world can be illuminated through instruction — other times it must come at the point of the sword;;;;;;;;;;;;;x
+ 
+pastoral;Pastoral;;;;;;;;;;;;;x
+pastoral_desc;This character believes in a more personal, decentralized faith based on scripture alone, with roots in missionary work.;;;;;;;;;;;;;x
+parroquial;Parroquial;;;;;;;;;;;;;x
 parroquial_desc;This character believes in the authority of the church hierarchy and in ancient traditions from Catholic heritage, like the veneration of Saints.;;;;;;;;;;;;;x
  
-born_in_the_caul;Born in the Caul;;;;;;;;;;;;;x  
-born_in_the_caul_desc;This character has been in the waters since birth, an auspicious sign for those who have reverence for the sea.;;;;;;;;;;;;;x 
+born_in_the_caul;Born in the Caul;;;;;;;;;;;;;x
+born_in_the_caul_desc;This character has been in the waters since birth, an auspicious sign for those who have reverence for the sea.;;;;;;;;;;;;;x
+
+adelita;Adelita;;;;;;;;;;;;;x
+adelita_desc;No one knows or even remembers why before the Event a bunch of women, all named Adela, began serving as warriors in the armies of great Caudillos. Nowadays a class of respected female warriors, called Adelitas, have become a revered part of Mexican martial tradition.;;;;;;;;;;;;;x
+
 
 ###########Government###########  
   
@@ -341,8 +365,8 @@ campana_de_dolores_desc;Although details have been lost to the passage of time a
 santa_ana_leg;Santianna's Leg;;;;;;;;;;;;;x  
 santa_ana_leg_desc;Meticulously preserved for countless generations, legends say this prosthetic leg once belonged to a tyrant king who had made war in the Lone Star. Now it adorns a wall as a conversation piece and ocasionally serves as the club of choice when recieving the ceremonial first pitch of a strike-ball game.;;;;;;;;;;;;;x
 golden_lance;Matarinches;;;;;;;;;;;;;x  
-golden_lance_desc;The Band is a symbol of Mexican Imperial authority and continuity. Expertly Crafted out of Quetzal, Macaw, and Heron feathers, the resplendent band serves as the Mexican Regalia and illustrates the majesty of the Empire.;;;;;;;;;;;;;x
-  
+golden_lance_desc;This ancient Golden lance adorned with scenes of long lost myths and legends, was inherited by Paleo's ancestral house. Said to have been a weapon of great hero's blessed by Saint George to slay both man and beasts, with its greatest foe being a Texan Goliath from elder days before the event. However, The previous holders of the artifact have been lost to history.;;;;;;;;;;;;;x
+   
 ###########Landmarks###########  
   
 landmark_zocalo;§YBasílica de Guadalupe§!\nThe Basilica of Our Lady of Guadalupe fell into disrepair after centuries of neglect, but was restored by Julián the Restorer exactly twelve years into his rule. Now the faithful from all of Old Mexico and exotic places beyond gather on their knees in the great courtyard to give their devotion in a place truly fit for the Mother of All Mexico!;;;;;;;;;;;;;x
@@ -399,15 +423,15 @@ upgrade_grand_mural_desc;A beautiful mural portraying the ancient history and an
  
 ###########DECISIONS########### 
  
-sol_de_justicia;Sol de Justicia;;;;;;;;;x 
+sol_de_justicia;Sol de Justicia;;;;;;;;;;;;;x 
 sol_de_justicia_desc;By having [This.GetBestName] thrown into a pit in the middle of the desert, [This.GetSubjectPronoun] shall be exposed to the sun for weeks and will most likely be given the 'justice' that [This.GetSubjectPronoun] deserves.;;;;;;;;;x  ,
-organize_ulama_game;Organize the ball game;;;;;;;;;x 
+organize_ulama_game;Organize the ball game;;;;;;;;;;;;;x 
  
  
-designate_tapado;Designate Tapado;;;;;;;;;x 
-relieve_tapado;Relieve Tapado;;;;;;;;;x  
-reform_lamanita;Formalize the Lamanita Faith;;;;;;;;;x 
-reform_lamanita_desc;Reorganize the Lamanita Faith for all ages.;;;;;;;;;x  
+designate_tapado;Designate Tapado;;;;;;;;;;;;;x 
+relieve_tapado;Relieve Tapado;;;;;;;;;;;;;x  
+reform_lamanita;Formalize the Lamanita Faith;;;;;;;;;;;;;x 
+reform_lamanita_desc;Reorganize the Lamanita Faith for all ages;;;;;;;;;;;;;x  
 
 ###########RETINUES########### 
  
@@ -438,4 +462,40 @@ sagrado_mystic;Delve into Mysticism;;;;;;;;;;;;;x
 sagrado_mystic_desc;With your hefty knowledge of all things, you can choose to delve into the more esoteric aspects of faith.;;;;;;;;;;;;;x 
 TXT_sagrado_mystic;Become a mystic.;;;;;;;;;;;;;x  
 EVTDESC_sacredheart_210;After the lighting of incense and a night of intense, monotonous prayer, you have begun your journey into the esoteric, into the realm of the greatest saints and preachers. As the sweat pours down your face, you feel a warm, gracious presence.;;;;;;;;;;;;;x 
-EVTOPTA_sacredheart_210;Señor Jesucristo, Hijo de Dios, ten piedad de mí...;;;;;;;;;;;;;x 
+EVTOPTA_sacredheart_210;Señor Jesucristo, hijo de Dios, ten piedad de mí...;;;;;;;;;;;;;x 
+
+###########Mexican Restoration########### 
+
+restore_mexican_empire;Restore the Mexican Empire;;;;;;;;;;;;;x
+restore_mexican_empire_desc;Ever since the revolt of the governors, Mexican imperial authority has made the idea of empire little more than titular, but with sufficient power we could be recognized once again...;;;;;;;;;;;;;x
+
+EVTTOOLTIPLoR.20;The Mexican Empire is restored!;;;;;;;;;;;;;x
+EVTTOOLTIPMXR.210;Enforce Cristero Orthodoxy;;;;;;;;;;;;;x
+
+EVTNAMEMXR.210;The Mexican Schism has Ended;;;;;;;;;;;;;x
+EVTDESCMXR.210;At last the Great Schism between the Cristeros and the Sacred Heart faithful has been mended. After his victory near Toluca in 2541, Benemérito Wenceslao el Tizón elevated the Missionaries of the Sacred Heart to the state church after being visited by the Virgin of Guadalupe. The power of the Prelature was broken and the faith schismed, the followers of the Sacred Heart taking it upon themselves to venerate folk saints and idols. With the Benemérito of the Empire now being a Cristero the reunification of the two sister churches can now begin.;;;;;;;;;;;;;x
+EVTOPTAMXR.200;¡Viva Cristo Rey!;;;;;;;;;;;;;x
+
+EVTNAMEMXR.210;The Cristeros pressure the Heterodox;;;;;;;;;;;;;x
+EVTDESCMXR.210;Enforce desc Orthodoxy;;;;;;;;;;;;;x
+EVTOPTAMXR.211;I will remain faithful.;;;;;;;;;;;;;x
+EVTOPTBMXR.211;New church same God.;;;;;;;;;;;;;x
+
+EVTNAMEMXR.20;Mexico Restored!;;;;;;;;;;;;;x
+EVTDESCMXR.20;In the centuries since the Event there have always been realms, petty kings and upstart warlords that claimed to be the successors to some ancient now dead empire, but none could claim to be an ancient empire that had survived the Event, no one but the empire of México City. La República is the continuation of that ancient state and although it grew to powerful heights in the past, centuries of mismanagement, rebellions and religious strife led to its fracturing and almost annihilation. \n[Root.GetTitledFirstName] has finally quashed the beliefs that La República may collapse, [Root.GetSubjectPronounCap] has absorbed the realms of the caudillos back into the fold and has ushered in a new era of Peace, Order and Progress not seen since the times of Benemérito Julián de Jesús Jacaranda. \nAlthough Old México is still not whole again and the struggle for unity will continue, one thing is certain - The Mexican Eagle is back.;;;;;;;;;;;;;x
+EVTDESCMXR20_HF;In the centuries since the Event there have always been realms, petty kings and upstart warlords that claimed to be the successors to some ancient now dead empire, but none could claim to be an ancient empire that had survived the Event, no one but the empire of México City. La República is the continuation of that ancient state and although it grew to powerful heights in the past, centuries of mismanagement, rebellions and religious strife led to its fracturing and almost annihilation. \n[Root.GetTitledFirstName] has finally quashed the beliefs that La República may collapse, [Root.GetSubjectPronounCap] has absorbed the realms of the caudillos back into the fold and has ushered in a new era of Peace, Order and Progress not seen since the times of Benemérito Julián de Jesús Jacaranda. \nAlthough Old México is still not whole again and the struggle for unity will continue, one thing is certain - The Mexican Eagle is back.;;;;;;;;;;;;;x
+EVTOPTAMXR.20;¡Viva México!;;;;;;;;;;;;;x
+
+EVTNAMEMXR.21;Mexico Restored!;;;;;;;;;;;;;x
+EVTDESCMXR.21;In the centuries since the Event there have always been realms, petty kings and upstart warlords that claimed to be the successors to some ancient now dead empire, but none could claim to be an ancient empire that had survived the Event, no one but the empire of México City. La República is the continuation of that ancient state and although it grew to powerful heights in the past, centuries of mismanagement, rebellions and religious strife led to its fracturing and almost annihilation. \n[Root.GetTitledFirstName] has finally quashed the beliefs that La República may collapse, [Root.GetSubjectPronounCap] has absorbed the realms of the caudillos back into the fold and has ushered in a new era of Peace, Order and Progress not seen since the times of Benemérito Julián de Jesús Jacaranda. \nAlthough Old México is still not whole again and the struggle for unity will continue, one thing is certain - The Mexican Eagle is back.;;;;;;;;;;;;;x
+EVTDESCMXR21_HF;In the centuries since the Event there have always been realms, petty kings and upstart warlords that claimed to be the successors to some ancient now dead empire, but none could claim to be an ancient empire that had survived the Event, no one but the empire of México City. La República is the continuation of that ancient state and although it grew to powerful heights in the past, centuries of mismanagement, rebellions and religious strife led to its fracturing and almost annihilation. \n[Root.GetTitledFirstName] has finally quashed the beliefs that La República may collapse, [Root.GetSubjectPronounCap] has absorbed the realms of the caudillos back into the fold and has ushered in a new era of Peace, Order and Progress not seen since the times of Benemérito Julián de Jesús Jacaranda. \nAlthough Old México is still not whole again and the struggle for unity will continue, one thing is certain - The Mexican Eagle is back.;;;;;;;;;;;;;x
+EVTOPTAMXR.21;A broken empire no more.;;;;;;;;;;;;;x
+CRISTIADA;Cristiada;;;;;;;;;;;;;x
+
+
+EVTNAMEMXR.40;Mexican Borders Restored;;;;;;;;;;;;;x
+EVTDESCMXR.40;Even after the restoration of the Empire many years ago, many still failed to believe that the Ancient Empire of México City had enough power to fully restore the borders they used to have before the Event, those who had doubted have been silenced for good. \n[Root.GetTitledFirstName] has succeeded where even Benemérito Julián de Jesús Jacaranda and all the other Beneméritos of the Jacaranda Dynasty had failed, [Root.GetSubjectPronounCap] has absorbed all realms within Old México back into the fold and brought to the land a new era of Union, Religion and Independence. \nLa República’s old borders have finally been restored, but the stories tell that Old México used to be Greater México - the Great Mexican Eagle is not done yet.;;;;;;;;;;;;;x
+EVTDESCLoR40_HELLENIC;Even after the restoration of the Empire many years ago, many still failed to believe that the Ancient Empire of México City had enough power to fully restore the borders they used to have before the Event, those who had doubted have been silenced for good. \n[Root.GetTitledFirstName] has succeeded where the not even the Emperors of the Triple Alliance could not prosper, [Root.GetSubjectPronounCap] has absorbed all realms within Old México back into the fold and brought to the land a new era of Union, Religion and Independence. \nOnce more a tyrannical empire extends its tentacles out of México City and into the land. We have resisted for over a thousand years, and we shall continue to do so!;;;;;;;;;;;;;x
+EVTDESCMXR40_GENERIC;EVTDESCMXR.40;Even after the restoration of the Empire many years ago, many still failed to believe that the Ancient Empire of México City had enough power to fully restore the borders they used to have before the Event, those who had doubted have been silenced for good. \n[Root.GetTitledFirstName] has succeeded where even Benemérito Julián de Jesús Jacaranda and all the other Beneméritos of the Jacaranda Dynasty had failed, [Root.GetSubjectPronounCap] has absorbed all realms within Old México back into the fold and brought to the land a new era of Union, Religion and Independence. \nLet us hope the eagle doesn’t not venture into our vicinity.;;;;;;;;;;;;;x
+EVTOPTAMXR.40;A new epoch is beginning;;;;;;;;;;;;;x
+

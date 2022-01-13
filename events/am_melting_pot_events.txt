@@ -8,7 +8,7 @@ character_event = {
 	picture = GFX_evt_stone_church
 	
 	only_playable = yes
-	culture = british
+	culture_group = britannic
 	
 	trigger = {
 		year = 2900
@@ -103,7 +103,7 @@ character_event = {
 			region = custom_new_england
 			OR = {
 				culture = yankee
-				culture = british
+				culture_group = britannic
 			}
 			any_province_holding = {
 				NOT = { holding_type = nomad }
@@ -135,7 +135,7 @@ character_event = {
 				region = custom_new_england
 				OR = {	
 					culture = yankee
-					culture = british
+					culture_group = britannic
 				}
 				any_province_holding = {
 					NOT = { holding_type = nomad }
@@ -168,7 +168,7 @@ character_event = {
 		any_courtier = {
 			OR = {
 				culture = yankee
-				culture = british
+				culture_group = britannic
 			}
 		}
 	}
@@ -196,7 +196,7 @@ character_event = {
 			limit = {
 				OR = {	
 					culture = yankee
-					culture = british
+					culture_group = britannic
 				}
 			}
 			score_value = { #Prioritizes selecting an interesting courtier...
@@ -234,7 +234,7 @@ character_event = {
 		any_vassal = {
 			OR = {
 				culture = yankee
-				culture = british
+				culture_group = britannic
 			}
 		}
 	}
@@ -262,7 +262,7 @@ character_event = {
 			limit = {
 				OR = {	
 					culture = yankee
-					culture = british
+					culture_group = britannic
 				}
 			}
 			score_value = { #Prioritizes selecting an interesting courtier...
@@ -1044,5 +1044,349 @@ character_event = {
 	option = {
 		name = "EVTOPTA_melting_pot_18"
 		culture = omedulac
+	}
+}
+# Province adopts Neomoor culture
+province_event = {
+	id = meltingpot.19
+	desc = EVTDESC_melting_pot_19
+	picture = GFX_evt_cathedral_muslim
+	border = GFX_event_normal_frame_diplomacy
+	
+	trigger = {
+		culture_group = south_anglo
+		NOT = { culture = neomoor }
+		OR = {
+			religion = orientalist
+			religion = misrist
+		}
+		owner = {
+			OR = {
+				religion = orientalist
+				religion = misrist
+			}
+		}
+		year = 2680 #doesn't happen unless Orientalism survives long enough
+		NOT = { year = 2770 }
+	}
+	
+	mean_time_to_happen = {
+		months = 600
+		modifier = {
+			factor = 0.3
+			OR = {
+				has_game_rule = {
+					name = culture_conversion
+					value = faster_melting_pots
+				}
+				has_game_rule = {
+					name = culture_conversion
+					value = faster_melting_pots_and_slower_normal
+				}
+			}
+		}
+	}
+
+	option = {
+		name = EVTOPTA_melting_pot_19
+		trigger = {
+			NOT = {
+				owner = { culture = neomoor }
+			}
+		}
+		culture = neomoor
+	}
+	option = {
+		name = EVTOPTB_melting_pot_19
+		trigger = {
+			owner = { culture = neomoor }
+		}
+		culture = neomoor
+	}
+}
+
+# The Menomex Melting Pot
+character_event = {
+	id = meltingpot.20
+	desc = "EVTDESC_melting_pot_1"
+	picture = GFX_evt_stone_church
+	
+	only_playable = yes
+	culture = plautdietsch 
+	
+	trigger = {
+		year = 2900
+		any_demesne_province = {
+			OR = {
+				culture_group = norteno
+				culture_group = mexicano
+			}	
+			any_province_holding = {
+				NOT = { holding_type = nomad }
+			}
+		}
+		#NOT = { government = chinese_imperial_government }
+	}
+	
+	mean_time_to_happen = {
+		months = 1200
+		modifier = {
+			factor = 0.75
+			learning = 7
+		}
+		modifier = {
+			factor = 0.75
+			learning = 9
+		}
+		modifier = {
+			factor = 0.75
+			learning = 11
+		}
+		modifier = {
+			factor = 0.75
+			learning = 13
+		}
+		modifier = {
+			factor = 1.5
+			NOT = { learning = 5 }
+		}
+		modifier = {
+			factor = 1.5
+			NOT = { learning = 3 }
+		}
+		modifier = {
+			factor = 2.0
+			NOT = { learning = 1 }
+		}
+		modifier = {
+			factor = 0.3
+			OR = {
+				has_game_rule = {
+					name = culture_conversion
+					value = faster_melting_pots
+				}
+				has_game_rule = {
+					name = culture_conversion
+					value = faster_melting_pots_and_slower_normal
+				}
+			}
+		}
+	}
+
+	option = {
+		name = "EVTOPTA_melting_pot_20"
+		culture = menomex
+		random_demesne_province = {
+			limit = {
+				OR = {
+					culture_group = norteno
+					culture_group = mexicano
+				}
+				any_province_holding = {
+					NOT = { holding_type = nomad }
+				}
+			}
+			culture = menomex
+		}
+	}
+}
+
+# It's spreading
+character_event = {
+	id = meltingpot.21
+	desc = "EVTDESC_melting_pot_21"
+	picture = GFX_evt_stone_church
+	
+	only_playable = yes
+	culture = menomex
+	
+	trigger = {
+		year = 2900
+		any_demesne_province = {
+			OR = {
+				culture_group = norteno
+				culture_group = mexicano
+			}
+			any_province_holding = {
+				NOT = { holding_type = nomad }
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 720
+		modifier = {
+			factor = 0.3
+			OR = {
+				has_game_rule = {
+					name = culture_conversion
+					value = faster_melting_pots
+				}
+				has_game_rule = {
+					name = culture_conversion
+					value = faster_melting_pots_and_slower_normal
+				}
+			}
+		}
+	}
+
+	option = {
+		name = "EVTOPTA_melting_pot_21"
+		random_demesne_province = {
+			limit = {
+				OR = {	
+					culture_group = norteno
+					culture_group = mexicano
+				}
+				any_province_holding = {
+					NOT = { holding_type = nomad }
+				}
+			}
+			culture = menomex
+		}
+	}
+}
+
+#Make my court speak Menomex
+character_event = {
+	id = meltingpot.22
+	desc = "EVTDESC_melting_pot_22"
+	picture = GFX_evt_throne_room
+	
+	only_rulers = yes
+	culture = menomex
+
+	trigger = {
+		year = 2900
+		top_liege = {
+			primary_title = {
+				OR = {
+					title = k_mexico
+					title = e_mexico
+				}
+			}
+		}
+		any_courtier = {
+			OR = {
+				culture_group = norteno
+				culture_group = mexicano
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 120
+		modifier = {
+			factor = 0.3
+			OR = {
+				has_game_rule = {
+					name = culture_conversion
+					value = faster_melting_pots
+				}
+				has_game_rule = {
+					name = culture_conversion
+					value = faster_melting_pots_and_slower_normal
+				}
+			}
+		}
+	}
+
+	option = {
+		name = "EVTOPTA_melting_pot_22"
+		any_courtier = {
+			limit = {
+				OR = {	
+					culture_group = norteno
+					culture_group = mexicano
+				}
+			}
+			score_value = { #Prioritizes selecting an interesting courtier...
+				value = 10
+				interesting_courtier_selection_score = yes
+			}
+			culture = menomex
+			hidden_tooltip = {
+				character_event = { id = meltingpot.24 days = 3 }
+			}
+		}
+	}
+}
+
+#Make my vassal speak Menomex
+character_event = {
+	id = meltingpot.23
+	desc = "EVTDESC_melting_pot_23"
+	picture = GFX_evt_throne_room
+	
+	only_playable = yes
+	culture = menomex
+
+	trigger = {
+		year = 2900
+		independent = no
+		top_liege = {
+			primary_title = {
+				OR = {
+					title = k_mexico
+					title = e_mexico
+				}
+			}
+		}
+		any_vassal = {
+			OR = {
+				culture_group = norteno
+				culture_group = mexicano
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 720
+		modifier = {
+			factor = 0.3
+			OR = {
+				has_game_rule = {
+					name = culture_conversion
+					value = faster_melting_pots
+				}
+				has_game_rule = {
+					name = culture_conversion
+					value = faster_melting_pots_and_slower_normal
+				}
+			}
+		}
+	}
+
+	option = {
+		name = "EVTOPTA_melting_pot_23"
+		any_vassal = {
+			limit = {
+				OR = {	
+					culture_group = norteno
+					culture_group = mexicano
+				}
+			}
+			score_value = { #Prioritizes selecting an interesting courtier...
+				value = 10
+				interesting_courtier_selection_score = yes
+			}
+			culture = menomex
+			hidden_tooltip = {
+				character_event = { id = meltingpot.24 days = 3 }
+			}
+		}
+	}
+}
+
+character_event = {
+	id = meltingpot.24
+	desc = "EVTDESC_melting_pot_24"
+	picture = GFX_evt_throne_room
+
+	is_triggered_only = yes
+
+	option = {
+		name = "EVTOPTA_melting_pot_24"
+		culture = menomex
 	}
 }

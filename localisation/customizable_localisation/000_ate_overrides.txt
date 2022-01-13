@@ -451,12 +451,9 @@ defined_text = {
 	}
 	
 	text = {
-		localisation_key = String_Thelemite
+		localisation_key = String_Glorian
 		trigger = {
-			OR = {
-				religion = thelemic
-				religion = thelemic_reformed
-			}
+			religion = glorian
 		}
 	}
 	
@@ -692,12 +689,9 @@ defined_text = {
 	}
 	
 	text = {
-		localisation_key = String_Thelemite
+		localisation_key = String_Glorian
 		trigger = {
-			OR = {
-				religion = thelemic
-				religion = thelemic_reformed
-			}
+			religion = glorian
 		}
 	}
 	
@@ -971,12 +965,9 @@ defined_text = {
 	}
 	
 	text = {
-		localisation_key = String_Thelemites
+		localisation_key = String_Glorians
 		trigger = {
-			OR = {
-				true_religion_thelemic_trigger = yes
-				true_religion_thelemic_reformed_trigger = yes
-			}
+			true_religion_glorian_trigger = yes
 		}
 	}
 	
@@ -1160,12 +1151,9 @@ defined_text = {
 	}
 	
 	text = {
-		localisation_key = String_Thelemic
+		localisation_key = String_Glorians
 		trigger = {
-			OR = {
-				true_religion_thelemic_trigger = yes
-				true_religion_thelemic_reformed_trigger = yes
-			}
+			true_religion_glorian_trigger = yes
 		}
 	}
 	
@@ -1376,12 +1364,9 @@ defined_text = {
 	}
 	
 	text = {
-		localisation_key = String_Thelemite
+		localisation_key = String_Glorian
 		trigger = {
-			OR = {
-				true_religion_thelemic_trigger = yes
-				true_religion_thelemic_reformed_trigger = yes
-			}
+			true_religion_glorian_trigger = yes
 		}
 	}
 	
@@ -1552,11 +1537,7 @@ defined_text = {
 		trigger = { true_religion_sol_invicta_trigger = yes }
 	}
 	text = { 
-		localisation_key = GOD_QUETZALCOATL
-		trigger = { true_religion_tonaltec_trigger = yes }
-	}
-	text = { 
-		localisation_key = GOD_LA_SANTISIMA
+		localisation_key = GOD_MICTLANTECUHTLI
 		trigger = { true_religion_mictlantec_trigger = yes }
 	}
 	text = { 
@@ -1619,7 +1600,7 @@ defined_text = {
 			}
 		}
 	}
-	 text = { 
+	text = { 
 		localisation_key = GOD_FATHER_FORD
 		trigger = { 
 			OR = {
@@ -1640,10 +1621,7 @@ defined_text = {
 	text = { 
 		localisation_key = GOD_THE_QUEEN
 		trigger = { 
-			OR = {
-				true_religion_thelemic_reformed_trigger = yes 
-				true_religion_thelemic_trigger = yes
-			}
+			true_religion_glorian_trigger = yes 
 		}
 	}
 	text = {
@@ -1734,12 +1712,9 @@ defined_text = {
 		}
 	}
 	text = { 
-		localisation_key = String_Book_of_the_Law
+		localisation_key = String_Book_of_the_Law #No?
 		trigger = { 
-			OR = {
-				true_religion_thelemic_trigger = yes
-				true_religion_thelemic_reformed_trigger = yes
-			}
+			true_religion_glorian_trigger = yes
 		}
 	}
 	text = { 
@@ -1751,8 +1726,6 @@ defined_text = {
 				true_religion_norse_pagan_reformed_trigger = yes
 				true_religion_occultist_trigger = yes
 				true_religion_occultist_reformed_trigger = yes
-				true_religion_thelemic_trigger = yes
-				true_religion_thelemic_reformed_trigger = yes
 				true_religion_trailwalker_trigger = yes
 				true_religion_trailwalker_reformed_trigger = yes
 			}
@@ -1869,7 +1842,7 @@ defined_text = {
 	text = { 
 		localisation_key = String_Catalog
 		trigger = { 
-		   OR = {
+			OR = {
 				true_religion_consumerist_trigger = yes
 				true_religion_monetarist_trigger = yes
 			}
@@ -2046,12 +2019,9 @@ defined_text = {
 	}
 	
 	text = {
-		localisation_key = String_Thelemite
+		localisation_key = String_Glorian
 		trigger = {
-			OR = {
-				true_religion_thelemic_trigger = yes
-				true_religion_thelemic_reformed_trigger = yes
-			}
+			true_religion_glorian_trigger = yes
 		}
 	}
 	
@@ -2193,7 +2163,7 @@ defined_text = {
 
 	text = {
 		localisation_key = String_the_Queens_blessings
-		trigger = { is_thelemic_secret_religious_society_member_trigger = yes }
+		trigger = { is_glorian_secret_religious_society_member_trigger = yes }
 	}
 
 	text = {
@@ -2208,17 +2178,17 @@ defined_text = {
 
 	text = {
 		localisation_key = String_Huitzilopochtlis_strength_to_you
-		trigger = { society_member_of = secret_religious_society_mictlantec  }
+		trigger = { society_member_of = secret_religious_society_mictlantec }
 	}
 	
 	text = {
 		localisation_key = String_Hunab_Kus_blessings
-		trigger = { society_member_of = secret_religious_society_qabantajik  }
+		trigger = { society_member_of = secret_religious_society_qabantajik }
 	}
 	
 	text = {
 		localisation_key = String_Hunab_Kus_blessings
-		trigger = { society_member_of = secret_religious_society_neomayan  }
+		trigger = { society_member_of = secret_religious_society_neomayan }
 	}
 	
 	text = {
@@ -2386,7 +2356,7 @@ defined_text = {
 
 	text = {
 		localisation_key = String_May_the_Gods_protect_you
-		trigger = { is_thelemic_secret_religious_society_member_trigger = yes }
+		trigger = { is_glorian_secret_religious_society_member_trigger = yes }
 	}
 
 	text = {
@@ -2822,6 +2792,79 @@ defined_text = { #WIP
 	}
 }
 
+defined_text = { 
+	name = GetFertilityGoddess
+	
+	text = {
+		trigger = {
+			OR = { 
+				religion = norse_pagan
+				religion = norse_pagan_reformed
+			}
+		}
+		localisation_key = string_goddess_freyja
+	}
+	text = {
+		trigger = {
+			OR = { 
+				religion = rust_cultist
+				religion = chrome_cultist
+			}
+		}
+		localisation_key = string_goddess_riveter
+	}
+	text = {
+		trigger = {
+			OR = { 
+				religion = americanist
+				religion = jeffersonian
+				religion = hamiltonian
+				religion = libertarian
+			}
+		}
+		localisation_key = string_goddess_virginia
+	}
+	text = {
+		trigger = {
+			OR = {
+				religion = occultist
+				religion = occultist_reformed
+			}
+		}
+		localisation_key = string_goddess_shub_niggurath
+	}
+	text = {
+		trigger = {
+			religion = gaian
+		}
+		localisation_key = string_goddess_earth_mother
+	}
+	text = {
+		trigger = {
+			OR = {
+				religion = voodoo
+				religion = brethren
+			}
+		}
+		localisation_key = string_goddess_la_sirene
+	}
+	text = {
+		trigger = {
+			religion = candomble
+		}
+		localisation_key = string_goddess_yemanja
+	}
+	text = {
+		trigger = {
+			religion = espiritista
+		}
+		localisation_key = string_goddess_maria_lionza
+	}
+	fallback_text = {
+		localisation_key = string_fallback_old_goddess 
+	}
+}
+
 ###WEATHER, TIME###
 defined_text = {
 	name = GetWeatherAdjective # WIP
@@ -3051,7 +3094,7 @@ defined_text = {
 					region = world_western_canada
 					region = world_west_coast
 					region = world_rockies
-					region = world_great_plains						
+					region = world_great_plains
 				}
 			}
 		}
@@ -3112,7 +3155,7 @@ defined_text = {
 					region = world_western_canada
 					region = world_west_coast
 					region = world_rockies
-					region = world_great_plains						
+					region = world_great_plains
 				}
 			}
 		}
@@ -3156,6 +3199,7 @@ defined_text = {
 			OR = {
 				culture_group = plains
 				culture_group = plateau
+				culture_group = taracahita
 			}
 		}
 		localisation_key = Culture_Army_Altaic
@@ -3171,7 +3215,7 @@ defined_text = {
 		trigger = 
 		{
 			OR = {
-				culture = british
+				culture_group = britannic
 				culture = gwladfeg
 			}
 		}
@@ -3193,6 +3237,7 @@ defined_text = {
 		{
 			OR = {
 				culture_group = mexicano
+				culture_group = norteno
 				culture_group = chicano
 				culture_group = centrolatino
 				culture_group = andino
@@ -3211,7 +3256,10 @@ defined_text = {
 	text = {
 		trigger = 
 		{
-			culture_group = north_atlantic
+			OR = {
+				culture_group = north_atlantic
+				culture = irish
+			}
 		}
 		localisation_key = Culture_Army_Irish
 	}	
@@ -3267,7 +3315,7 @@ defined_text = {
 	fallback_text = {
 		localisation_key = Culture_Army_European
 		#fallback
-	}					
+	}
 }
 
 ### AtE Strings ###
@@ -3280,12 +3328,11 @@ defined_text = {
 			OR = {
 				culture = texan
 				culture = tejano
-				culture = norteno
+				culture_group = norteno
+				culture_group = mexicano
+				culture_group = taracahita
+				culture = purepecha
 				culture = boricua
-				culture = sonorense
-				culture = chilango
-				culture = tapatio
-				culture = jarocho
 				culture = neoladino
 			}
 		}
@@ -3757,20 +3804,6 @@ defined_text = {
 		localisation_key = String_The_Crawling_Chaos
 		trigger = {
 			society_member_of = starry_wisdom
-			OR = {
-				true_religion_occultist_reformed_trigger = yes
-				true_religion_occultist_trigger = yes
-			}
-		}
-	}
-	text = {
-		localisation_key = String_The_King_in_Yellow
-		trigger = {
-			society_member_of = starry_wisdom
-			OR = {
-				true_religion_thelemic_reformed_trigger = yes
-				true_religion_thelemic_trigger = yes
-			}
 		}
 	}
 	text = {
@@ -4304,16 +4337,6 @@ defined_text = {
 		}
 	}
 	text = {
-		localisation_key = String_Glory_to_The_Feaster
-		trigger = {
-			society_member_of = starry_wisdom
-			OR = {
-				true_religion_thelemic_reformed_trigger = yes
-				true_religion_thelemic_trigger = yes
-			}
-		}
-	}
-	text = {
 		localisation_key = String_Glory_to_Old_Noll
 		trigger = {
 			society_member_of = unseelie_petitioners
@@ -4397,16 +4420,6 @@ defined_text = {
 			}
 		}
 		localisation_key = String_MiGo
-	}
-	text = {
-		trigger = {
-			society_member_of = starry_wisdom
-			OR = {
-				true_religion_thelemic_reformed_trigger = yes
-				true_religion_thelemic_trigger = yes
-			}
-		}
-		localisation_key = String_Carcosan
 	}
 	text = {
 		trigger = {
@@ -4733,26 +4746,6 @@ defined_text = {
 			}
 		}
 		localisation_key = String_The_Beast
-	}
-	text = {
-		trigger = {
-			society_member_of = starry_wisdom
-			OR = {
-				true_religion_thelemic_reformed_trigger = yes
-				true_religion_thelemic_trigger = yes
-			}
-		}
-		localisation_key = String_The_King_in_Yellow
-	}
-	text = {
-		trigger = {
-			society_member_of = starry_wisdom
-			OR = {
-				true_religion_thelemic_reformed_trigger = yes
-				true_religion_thelemic_trigger = yes
-			}
-		}
-		localisation_key = String_The_Feaster
 	}
 	text = {
 		trigger = {
@@ -5553,9 +5546,9 @@ defined_text = {
 	}
 	text = {
 		trigger = {
-			religion = thelemic_reformed
+			religion = glorian
 		}
-		localisation_key = Holy_Order_Thelemic
+		localisation_key = Holy_Order_Glorian
 	}
 	text = {
 		trigger = {
@@ -5939,14 +5932,6 @@ defined_text = {
 	text = {
 		trigger = { 
 			ROOT = { 
-				religion = thelemic_reformed
-			} 
-		}
-		localisation_key = string_reformed_religion_thelemic
-	}
-	text = {
-		trigger = { 
-			ROOT = { 
 				religion = celtic_pagan_reformed
 			} 
 		}
@@ -5977,21 +5962,12 @@ defined_text = {
 		trigger = { 
 			ROOT = { 
 				NOR = {
-					religion = thelemic_reformed
 					religion = trailwalker_reformed
 					religion = revelationist_reformed
 				} 
 			} 
 		}
 		localisation_key = string_reformed_religion_default_outro
-	}
-	text = {
-		trigger = { 
-			ROOT = { 
-				religion = thelemic_reformed
-			} 
-		}
-		localisation_key = string_reformed_religion_thelemic_outro
 	}
 	text = {
 		trigger = { 
@@ -6483,6 +6459,15 @@ defined_text = {
 	}
 }
 defined_text = {
+	name = GetReligiousCommunityName_libertarian
+	text = { trigger = { has_alternate_start_parameter = { key = religion_names value = random } }
+		localisation_key = alt_start_community_name_libertarian
+	}
+	text = { trigger = { NOT = { has_alternate_start_parameter = { key = religion_names value = random } } }
+		localisation_key = secret_religious_society_REAL_libertarian
+	}
+}
+defined_text = {
 	name = GetReligiousCommunityName_atomicist
 	text = { trigger = { has_alternate_start_parameter = { key = religion_names value = random } }
 		localisation_key = alt_start_community_name_atomicist
@@ -6672,21 +6657,12 @@ defined_text = {
 	}
 }
 defined_text = {
-	name = GetReligiousCommunityName_thelemic_reformed
+	name = GetReligiousCommunityName_glorian
 	text = { trigger = { has_alternate_start_parameter = { key = religion_names value = random } }
-		localisation_key = alt_start_community_name_thelemic_reformed
+		localisation_key = alt_start_community_name_glorian
 	}
 	text = { trigger = { NOT = { has_alternate_start_parameter = { key = religion_names value = random } } }
-		localisation_key = secret_religious_society_REAL_thelemic_reformed
-	}
-}
-defined_text = {
-	name = GetReligiousCommunityName_thelemic
-	text = { trigger = { has_alternate_start_parameter = { key = religion_names value = random } }
-		localisation_key = alt_start_community_name_thelemic
-	}
-	text = { trigger = { NOT = { has_alternate_start_parameter = { key = religion_names value = random } } }
-		localisation_key = secret_religious_society_REAL_thelemic
+		localisation_key = secret_religious_society_REAL_glorian
 	}
 }
 defined_text = {
@@ -6807,15 +6783,6 @@ defined_text = {
 	}
 }
 defined_text = {
-	name = GetReligiousCommunityName_wormwoodist
-	text = { trigger = { has_alternate_start_parameter = { key = religion_names value = random } }
-		localisation_key = alt_start_community_name_wormwoodist
-	}
-	text = { trigger = { NOT = { has_alternate_start_parameter = { key = religion_names value = random } } }
-		localisation_key = secret_religious_society_REAL_wormwoodist
-	}
-}
-defined_text = {
 	name = GetReligiousCommunityName_sacred_heart
 	text = { trigger = { has_alternate_start_parameter = { key = religion_names value = random } }
 		localisation_key = alt_start_community_name_sacred_heart
@@ -6849,6 +6816,123 @@ defined_text = {
 	}
 	text = { trigger = { NOT = { has_alternate_start_parameter = { key = religion_names value = random } } }
 		localisation_key = secret_religious_society_REAL_celeste
+	}
+}
+defined_text = {
+	name = GetReligiousCommunityName_nazarene
+	text = { trigger = { has_alternate_start_parameter = { key = religion_names value = random } }
+		localisation_key = alt_start_community_name_nazarene
+	}
+	text = { trigger = { NOT = { has_alternate_start_parameter = { key = religion_names value = random } } }
+		localisation_key = secret_religious_society_REAL_snazarene
+	}
+}
+defined_text = {
+	name = GetReligiousCommunityName_true_cross
+	text = { trigger = { has_alternate_start_parameter = { key = religion_names value = random } }
+		localisation_key = alt_start_community_name_true_cross
+	}
+	text = { trigger = { NOT = { has_alternate_start_parameter = { key = religion_names value = random } } }
+		localisation_key = secret_religious_society_REAL_true_cross
+	}
+}
+defined_text = {
+	name = GetReligiousCommunityName_wormwoodist
+	text = { trigger = { has_alternate_start_parameter = { key = religion_names value = random } }
+		localisation_key = alt_start_community_name_wormwoodist
+	}
+	text = { trigger = { NOT = { has_alternate_start_parameter = { key = religion_names value = random } } }
+		localisation_key = secret_religious_society_REAL_wormwoodist
+	}
+}
+defined_text = {
+	name = GetReligiousCommunityName_penitente
+	text = { trigger = { has_alternate_start_parameter = { key = religion_names value = random } }
+		localisation_key = alt_start_community_name_penitente
+	}
+	text = { trigger = { NOT = { has_alternate_start_parameter = { key = religion_names value = random } } }
+		localisation_key = secret_religious_society_REAL_penitente
+	}
+}
+defined_text = {
+	name = GetReligiousCommunityName_purificador
+	text = { trigger = { has_alternate_start_parameter = { key = religion_names value = random } }
+		localisation_key = alt_start_community_name_purificador
+	}
+	text = { trigger = { NOT = { has_alternate_start_parameter = { key = religion_names value = random } } }
+		localisation_key = secret_religious_society_REAL_purificador
+	}
+}
+defined_text = {
+	name = GetReligiousCommunityName_edenite
+	text = { trigger = { has_alternate_start_parameter = { key = religion_names value = random } }
+		localisation_key = alt_start_community_name_edenite
+	}
+	text = { trigger = { NOT = { has_alternate_start_parameter = { key = religion_names value = random } } }
+		localisation_key = secret_religious_society_REAL_edenite
+	}
+}
+defined_text = {
+	name = GetReligiousCommunityName_cristo_rey
+	text = { trigger = { has_alternate_start_parameter = { key = religion_names value = random } }
+		localisation_key = alt_start_community_name_cristo_rey
+	}
+	text = { trigger = { NOT = { has_alternate_start_parameter = { key = religion_names value = random } } }
+		localisation_key = secret_religious_society_REAL_cristo_rey
+	}
+}
+defined_text = {
+	name = GetReligiousCommunityName_reformista
+	text = { trigger = { has_alternate_start_parameter = { key = religion_names value = random } }
+		localisation_key = alt_start_community_name_reformista
+	}
+	text = { trigger = { NOT = { has_alternate_start_parameter = { key = religion_names value = random } } }
+		localisation_key = secret_religious_society_REAL_reformista
+	}
+}
+defined_text = {
+	name = GetReligiousCommunityName_navegante
+	text = { trigger = { has_alternate_start_parameter = { key = religion_names value = random } }
+		localisation_key = alt_start_community_name_navegante
+	}
+	text = { trigger = { NOT = { has_alternate_start_parameter = { key = religion_names value = random } } }
+		localisation_key = secret_religious_society_REAL_navegante
+	}
+}
+defined_text = {
+	name = GetReligiousCommunityName_fidencista
+	text = { trigger = { has_alternate_start_parameter = { key = religion_names value = random } }
+		localisation_key = alt_start_community_name_fidencista
+	}
+	text = { trigger = { NOT = { has_alternate_start_parameter = { key = religion_names value = random } } }
+		localisation_key = secret_religious_society_REAL_fidencista
+	}
+}
+defined_text = {
+	name = GetReligiousCommunityName_lamanita
+	text = { trigger = { has_alternate_start_parameter = { key = religion_names value = random } }
+		localisation_key = alt_start_community_name_lamanita
+	}
+	text = { trigger = { NOT = { has_alternate_start_parameter = { key = religion_names value = random } } }
+		localisation_key = secret_religious_society_REAL_lamanita
+	}
+}
+defined_text = {
+	name = GetReligiousCommunityName_furiegi
+	text = { trigger = { has_alternate_start_parameter = { key = religion_names value = random } }
+		localisation_key = alt_start_community_name_furiegi
+	}
+	text = { trigger = { NOT = { has_alternate_start_parameter = { key = religion_names value = random } } }
+		localisation_key = secret_religious_society_REAL_furiegi
+	}
+}
+defined_text = {
+	name = GetReligiousCommunityName_thelema
+	text = { trigger = { has_alternate_start_parameter = { key = religion_names value = random } }
+		localisation_key = alt_start_community_name_thelema
+	}
+	text = { trigger = { NOT = { has_alternate_start_parameter = { key = religion_names value = random } } }
+		localisation_key = secret_religious_society_REAL_thelema
 	}
 }
 defined_text = {
@@ -7594,6 +7678,28 @@ defined_text = {
 	}
 }
 defined_text = {
+	name = GetReligiousSocietyDesc_penitente
+	text = {
+		trigger = { has_alternate_start_parameter = { key = religion_names value = random } }
+		localisation_key = alt_start_community_desc
+	}
+	text = {
+		trigger = { NOT = { has_alternate_start_parameter = { key = religion_names value = random } } }
+		localisation_key = secret_religious_society_penitente_desc_REAL
+	}
+}
+defined_text = {
+	name = GetReligiousSocietyDesc_purificador
+	text = {
+		trigger = { has_alternate_start_parameter = { key = religion_names value = random } }
+		localisation_key = alt_start_community_desc
+	}
+	text = {
+		trigger = { NOT = { has_alternate_start_parameter = { key = religion_names value = random } } }
+		localisation_key = secret_religious_society_purificador_desc_REAL
+	}
+}
+defined_text = {
 	name = GetReligiousSocietyDesc_falling_star
 	text = {
 		trigger = { has_alternate_start_parameter = { key = religion_names value = random } }
@@ -8111,6 +8217,42 @@ defined_text = {
 }
 
 defined_text = {
+	name = GetReligiousSocietyDesc_celeste
+	text = {
+		trigger = { has_alternate_start_parameter = { key = religion_names value = random } }
+		localisation_key = alt_start_community_desc
+	}
+	text = {
+		trigger = { NOT = { has_alternate_start_parameter = { key = religion_names value = random } } }
+		localisation_key = secret_religious_society_celeste_desc_REAL
+	}
+}
+
+defined_text = {
+	name = GetReligiousSocietyDesc_nazarene
+	text = {
+		trigger = { has_alternate_start_parameter = { key = religion_names value = random } }
+		localisation_key = alt_start_community_desc
+	}
+	text = {
+		trigger = { NOT = { has_alternate_start_parameter = { key = religion_names value = random } } }
+		localisation_key = secret_religious_society_nazarene_desc_REAL
+	}
+}
+
+defined_text = {
+	name = GetReligiousSocietyDesc_true_cross
+	text = {
+		trigger = { has_alternate_start_parameter = { key = religion_names value = random } }
+		localisation_key = alt_start_community_desc
+	}
+	text = {
+		trigger = { NOT = { has_alternate_start_parameter = { key = religion_names value = random } } }
+		localisation_key = secret_religious_society_true_cross_desc_REAL
+	}
+}
+
+defined_text = {
 	name = GetReligiousSocietyDesc_norse_pagan
 	text = {
 		trigger = { has_alternate_start_parameter = { key = religion_names value = random } }
@@ -8171,26 +8313,14 @@ defined_text = {
 }
 
 defined_text = {
-	name = GetReligiousSocietyDesc_thelemic
+	name = GetReligiousSocietyDesc_glorian
 	text = {
 		trigger = { has_alternate_start_parameter = { key = religion_names value = random } }
 		localisation_key = alt_start_community_desc
 	}
 	text = {
 		trigger = { NOT = { has_alternate_start_parameter = { key = religion_names value = random } } }
-		localisation_key = secret_religious_society_thelemic_desc_REAL
-	}
-}
-
-defined_text = {
-	name = GetReligiousSocietyDesc_thelemic_reformed
-	text = {
-		trigger = { has_alternate_start_parameter = { key = religion_names value = random } }
-		localisation_key = alt_start_community_desc
-	}
-	text = {
-		trigger = { NOT = { has_alternate_start_parameter = { key = religion_names value = random } } }
-		localisation_key = secret_religious_society_thelemic_reformed_desc_REAL
+		localisation_key = secret_religious_society_glorian_desc_REAL
 	}
 }
 
@@ -8579,7 +8709,7 @@ defined_text = {
 	text = {
 		trigger = {
 			has_character_modifier = writing_a_book
-			
+
 		}
 		localisation_key = string_rp_book
 	}
@@ -8727,7 +8857,7 @@ defined_text = {
 				OR = {
 					death_reason = death_legendary_win_duel
 					death_reason = death_duel
-					death_reason = death_mission_duel				
+					death_reason = death_mission_duel	
 					death_reason = death_battle_duel
 					death_reason = death_claim_duel_attacker
 					death_reason = death_claim_duel_defender
@@ -10111,7 +10241,7 @@ defined_text = {
 				has_wonder = wonder_statue_ruler
 			}
 			OR = {
-				has_wonder_flag = wonder_name_5			
+				has_wonder_flag = wonder_name_5
 				has_wonder_flag = wonder_name_6
 				has_wonder_flag = wonder_name_7
 			}
@@ -10156,7 +10286,7 @@ defined_text = {
 				has_wonder = wonder_statue_ruler
 			}
 			OR = {
-				has_wonder_flag = wonder_name_5			
+				has_wonder_flag = wonder_name_5
 				has_wonder_flag = wonder_name_6
 			}
 		}
@@ -10172,7 +10302,7 @@ defined_text = {
 				has_wonder_flag = wonder_name_2
 				has_wonder_flag = wonder_name_3
 				has_wonder_flag = wonder_name_4
-				has_wonder_flag = wonder_name_5			
+				has_wonder_flag = wonder_name_5
 				has_wonder_flag = wonder_name_6
 			}
 		}
@@ -10193,9 +10323,9 @@ defined_text = {
 		localisation_key = String_location_wondertype # Stockholm Cathedral/Paris University, etc
 	}
 	#In case it cannot find anything...
-    fallback_text = {
-        localisation_key = String_location_wondertype # Simplest version
-    }
+	fallback_text = {
+		localisation_key = String_location_wondertype # Simplest version
+	}
 }
 
 defined_text = { #special wonders
@@ -10447,9 +10577,9 @@ defined_text = {
 	}
 	
 	#In case it cannot find anything...
-    fallback_text = {
-        localisation_key = String_Cool #placeholder, to find errors
-    }
+	fallback_text = {
+		localisation_key = String_Cool #placeholder, to find errors
+	}
 }
 
 # General descriptor. Note that it contains some words using initial vowel (be careful with grammar errors like "a ancient temple")
@@ -10629,7 +10759,7 @@ defined_text = {
 				has_wonder = wonder_temple_hindu_in_the_sea
 				has_wonder = wonder_crimson_library
 				has_wonder = wonder_cathedral_saint_joseph
-				has_wonder = wonder_mosque_center_islam				
+				has_wonder = wonder_mosque_center_islam	
 			}
 		}
 		localisation_key = String_divine
@@ -10668,9 +10798,9 @@ defined_text = {
 	}
 
 	#In case it cannot find anything...
-    fallback_text = {
-        localisation_key = String_Cool #placeholder, to find errors
-    }
+	fallback_text = {
+		localisation_key = String_Cool #placeholder, to find errors
+	}
 }
 
 
@@ -10823,10 +10953,6 @@ defined_text = {
 		localisation_key = String_Pyramid
 	}
 	text = {
-		trigger = { has_wonder = wonder_pagan_georgia_guidestones }
-		localisation_key = String_Stonehenge
-	}
-	text = {
 		trigger = { has_wonder = wonder_crimson_library }
 		localisation_key = String_Library
 	}
@@ -10872,9 +10998,9 @@ defined_text = {
 	}
 	
 	#In case it cannot find anything...
-    fallback_text = {
-        localisation_key = String_Great_Work
-    }
+	fallback_text = {
+		localisation_key = String_Great_Work
+	}
 }
 
 # Without cap, for unceremonious speak (try to avoid a/an, or "amphitheater" will mess up):
@@ -11033,10 +11159,6 @@ defined_text = {
 		localisation_key = String_monolith
 	}
 	text = {
-		trigger = { has_wonder = wonder_pagan_georgia_guidestones }
-		localisation_key = String_stone_formation
-	}
-	text = {
 		trigger = { has_wonder = wonder_anasazi_cliff_palace }
 		localisation_key = String_underground_city
 	}
@@ -11046,9 +11168,9 @@ defined_text = {
 	}
 	
 	#In case it cannot find anything...
-    fallback_text = {
-        localisation_key = String_great_work
-    }
+	fallback_text = {
+		localisation_key = String_great_work
+	}
 }
 
 #Shadows, Light, Secrets, Death, Pain, Screams, Romance, Treasures, holy
@@ -11151,10 +11273,6 @@ defined_text = {
 			}
 		}
 		localisation_key = String_impressive_feat_of_architecture
-	}
-	text = {
-		trigger = { has_wonder = wonder_pagan_georgia_guidestones }
-		localisation_key = String_inspired_imagination
 	}
 	text = {
 		trigger = {

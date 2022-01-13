@@ -420,8 +420,8 @@ province_event = {
 	option = {
 		name = EVTOPTA_SOA_1024
 		build_holding = {
-		   type = castle
-		   holder = FROMFROM
+		type = castle
+		holder = FROMFROM
 		}
 	}
 }
@@ -474,7 +474,7 @@ character_event = {
 				holy_order = no
 			}
 		}
-				
+	
 		NOT = { has_character_modifier = expelled_d_knights_of_columbus }
 		NOT = {
 			any_liege = {
@@ -865,8 +865,8 @@ province_event = {
 	option = {
 		name = EVTOPTA_SOA_1024
 		build_holding = {
-		   type = castle
-		   holder = FROMFROM
+		type = castle
+		holder = FROMFROM
 		}
 	}
 }
@@ -1310,7 +1310,7 @@ character_event = {
 				region = world_south_america
 			}
 		}
-				
+	
 		NOT = { has_character_modifier = expelled_d_knights_of_peter_claver }
 		NOT = {
 			any_liege = {
@@ -1478,8 +1478,8 @@ province_event = {
 	option = {
 		name = EVTOPTA_SOA_1024
 		build_holding = {
-		   type = castle
-		   holder = FROMFROM
+		type = castle
+		holder = FROMFROM
 		}
 	}
 }
@@ -1617,7 +1617,7 @@ letter_event = {
 		
 		piety = 100
 		
-		d_bektashi = {
+		d_oppenheimer = {
 			holder_scope = {
 				FROMFROM = {
 					move_character = PREV
@@ -1841,8 +1841,8 @@ province_event = {
 	option = {
 		name = EVTOPTA_SOA_1024
 		build_holding = {
-		   type = castle
-		   holder = FROMFROM
+		type = castle
+		holder = FROMFROM
 		}
 	}
 }
@@ -2248,8 +2248,8 @@ province_event = {
 	option = {
 		name = EVTOPTA_SOA_1024
 		build_holding = {
-		   type = castle
-		   holder = FROMFROM
+		type = castle
+		holder = FROMFROM
 		}
 	}
 }
@@ -2674,8 +2674,8 @@ province_event = {
 	option = {
 		name = EVTOPTA_SOA_1024
 		build_holding = {
-		   type = castle
-		   holder = FROMFROM
+		type = castle
+		holder = FROMFROM
 		}
 	}
 }
@@ -3142,8 +3142,8 @@ province_event = {
 	option = {
 		name = EVTOPTA_SOA_1024
 		build_holding = {
-		   type = castle
-		   holder = FROMFROM
+		type = castle
+		holder = FROMFROM
 		}
 	}
 }
@@ -3547,8 +3547,8 @@ province_event = {
 	option = {
 		name = EVTOPTA_SOA_1024
 		build_holding = {
-		   type = castle
-		   holder = FROMFROM
+		type = castle
+		holder = FROMFROM
 		}
 	}
 }
@@ -4102,8 +4102,8 @@ province_event = {
 	option = {
 		name = EVTOPTA_SOA_1024
 		build_holding = {
-		   type = castle
-		   holder = FROMFROM
+		type = castle
+		holder = FROMFROM
 		}
 	}
 }
@@ -4239,7 +4239,7 @@ character_event = {
 				holy_order = no
 			}
 		}
-				
+	
 		NOT = { has_character_modifier = expelled_d_national_cathedral }
 		NOT = {
 			any_liege = {
@@ -4664,8 +4664,8 @@ province_event = {
 	option = {
 		name = EVTOPTA_SOA_1024
 		build_holding = {
-		   type = castle
-		   holder = FROMFROM
+		type = castle
+		holder = FROMFROM
 		}
 	}
 }
@@ -5209,8 +5209,8 @@ province_event = {
 	option = {
 		name = EVTOPTA_SOA_1024
 		build_holding = {
-		   type = castle
-		   holder = FROMFROM
+		type = castle
+		holder = FROMFROM
 		}
 	}
 }
@@ -5740,8 +5740,8 @@ province_event = {
 	option = {
 		name = EVTOPTA_SOA_1024
 		build_holding = {
-		   type = castle
-		   holder = FROMFROM
+		type = castle
+		holder = FROMFROM
 		}
 	}
 }
@@ -6123,7 +6123,7 @@ character_event = {
 		months = 240
 		modifier = {
 			factor = 0.5
-			d_zealots = {
+			d_shomrim = {
 				holder_scope = {
 					NOT = { demesne_size = 1 }
 				}
@@ -6274,8 +6274,8 @@ province_event = {
 	option = {
 		name = EVTOPTA_SOA_1024
 		build_holding = {
-		   type = castle
-		   holder = FROMFROM
+		type = castle
+		holder = FROMFROM
 		}
 	}
 }
@@ -6808,8 +6808,8 @@ province_event = {
 	option = {
 		name = EVTOPTA_SOA_1024
 		build_holding = {
-		   type = castle
-		   holder = FROMFROM
+		type = castle
+		holder = FROMFROM
 		}
 	}
 }
@@ -6891,7 +6891,7 @@ letter_event = {
 #	id = SoAtE.2109
 #	title = EVTTITLE_SOA_2109
 #	desc = {
-#	   text = EVTDESC_SOA_2109
+#	text = EVTDESC_SOA_2109
 #		trigger = {
 #			NOT = {
 #				has_alternate_start_parameter = {
@@ -6899,17 +6899,17 @@ letter_event = {
 #					value = random
 #				}
 #			}
- #	   }
-#  #  }
+ #	}
+# # }
 #	desc = {
- #	   text = PAGAN_HOLY_ORDER_FORMED_ALT
-  #	  trigger = {
+ #	text = PAGAN_HOLY_ORDER_FORMED_ALT
+ #	trigger = {
 #			has_alternate_start_parameter = {
 #				key = religion_names
 #				value = random
 #			}
- #	   }
-  #  }
+ #	}
+ # }
 #	major = yes
 #	
 #	picture = GFX_evt_melee
@@ -7329,7 +7329,7 @@ character_event = {
 		any_demesne_province = {
 			has_empty_holding = yes
 		}
-				
+	
 		NOT = { has_character_modifier = expelled_d_flaming_sword }
 		NOT = {
 			any_liege = {
@@ -7393,7 +7393,7 @@ province_event = {
 	is_triggered_only = yes
 	
 	immediate = {
-		d_spirit_guardians = {
+		d_flaming_sword = {
 			holder_scope = {
 				character_event = {
 					id = SoAtE.2152
@@ -7493,8 +7493,8 @@ province_event = {
 	option = {
 		name = EVTOPTA_SOA_1024
 		build_holding = {
-		   type = castle
-		   holder = FROMFROM
+		type = castle
+		holder = FROMFROM
 		}
 	}
 }
@@ -7616,7 +7616,7 @@ character_event = {
 				holy_order = no
 			}
 		}
-				
+	
 		NOT = { has_character_modifier = expelled_d_uaw }
 		NOT = {
 			any_liege = {
@@ -8048,8 +8048,8 @@ province_event = {
 	option = {
 		name = EVTOPTA_SOA_1024
 		build_holding = {
-		   type = castle
-		   holder = FROMFROM
+		type = castle
+		holder = FROMFROM
 		}
 	}
 }
@@ -8131,25 +8131,25 @@ letter_event = {
 #	id = SoAtE.2309
 #	title = EVTTITLE_SOA_2309
 #	desc = {
- #	   text = EVTDESC_SOA_2309
-  #	  trigger = {
+ #	text = EVTDESC_SOA_2309
+ #	trigger = {
 #			NOT = {
 #				has_alternate_start_parameter = {
 #					key = religion_names
 #					value = random
 #				}
 #			}
- #	   }
-  #  }
+ #	}
+ # }
 #	desc = {
- #	   text = PAGAN_HOLY_ORDER_FORMED_ALT
-  #	  trigger = {
+ #	text = PAGAN_HOLY_ORDER_FORMED_ALT
+ #	trigger = {
 #			has_alternate_start_parameter = {
 #				key = religion_names
 #				value = random
 #			}
- #	   }
-  #  }
+ #	}
+ # }
 #	major = yes
 #	
 #	picture = GFX_evt_throne_room_norse_pagan
@@ -8319,10 +8319,10 @@ character_event = {
 			}
 		}
 		
-		NOT = { has_character_modifier = expelled_d_greenpeace }
+		NOT = { has_character_modifier = expelled_d_keepers_of_the_green_peace }
 		NOT = {
 			any_liege = {
-				has_character_modifier = expelled_d_greenpeace
+				has_character_modifier = expelled_d_keepers_of_the_green_peace
 			}
 		}
 
@@ -8572,10 +8572,10 @@ character_event = {
 			has_empty_holding = yes
 		}
 		
-		NOT = { has_character_modifier = expelled_d_greenpeace }
+		NOT = { has_character_modifier = expelled_d_keepers_of_the_green_peace }
 		NOT = {
 			any_liege = {
-				has_character_modifier = expelled_d_greenpeace
+				has_character_modifier = expelled_d_keepers_of_the_green_peace
 			}
 		}
 	}
@@ -8692,7 +8692,7 @@ letter_event = {
 			factor = 80
 			modifier = {
 				factor = 0
-				has_character_modifier = expelled_d_greenpeace
+				has_character_modifier = expelled_d_keepers_of_the_green_peace
 			}
 		}
 		
@@ -8700,7 +8700,7 @@ letter_event = {
 			FROMFROM = {
 				province_event = { id = SoAtE.2354 }
 			}
-			remove_character_modifier = expelled_d_greenpeace
+			remove_character_modifier = expelled_d_keepers_of_the_green_peace
 		}
 		
 		piety = 200
@@ -8735,8 +8735,8 @@ province_event = {
 	option = {
 		name = EVTOPTA_SOA_1024
 		build_holding = {
-		   type = castle
-		   holder = FROMFROM
+		type = castle
+		holder = FROMFROM
 		}
 	}
 }
@@ -8818,25 +8818,25 @@ letter_event = {
 #	id = SoAtE.2409
 #	title = EVTTITLE_SOA_2409
 #	desc = {
- #	   text = EVTDESC_SOA_2409
-  #	  trigger = {
+ #	text = EVTDESC_SOA_2409
+ #	trigger = {
 #			NOT = {
 #				has_alternate_start_parameter = {
 #					key = religion_names
 #					value = random
 #				}
 #			}
- #	   }
-  #  }
+ #	}
+ # }
 #	desc = {
- #	   text = PAGAN_HOLY_ORDER_FORMED_ALT
-  #	  trigger = {
+ #	text = PAGAN_HOLY_ORDER_FORMED_ALT
+ #	trigger = {
 #			has_alternate_start_parameter = {
 #				key = religion_names
 #				value = random
 #			}
- #	   }
-  #  }
+ #	}
+ # }
 #	major = yes
 #	
 #	picture = GFX_evt_throne_room_norse_pagan
@@ -9427,8 +9427,8 @@ province_event = {
 	option = {
 		name = EVTOPTA_SOA_1024
 		build_holding = {
-		   type = castle
-		   holder = FROMFROM
+		type = castle
+		holder = FROMFROM
 		}
 	}
 }
@@ -9519,7 +9519,7 @@ character_event = {
 	max_age = 45
 	only_capable = yes
 	prisoner = no
-	religion = thelemic_reformed
+	religion = glorian
 	
 	trigger = {
 		is_ruler = no
@@ -9539,7 +9539,7 @@ character_event = {
 		
 		liege = {
 			holy_order = no
-			religion = thelemic_reformed
+			religion = glorian
 			liege = {
 				holy_order = no
 			}
@@ -9782,7 +9782,7 @@ character_event = {
 	has_dlc = "Sons of Abraham"
 	min_age = 16
 	only_playable = yes
-	religion = thelemic_reformed
+	religion = glorian
 	
 	trigger = {
 		d_oto = {
@@ -9961,8 +9961,8 @@ province_event = {
 	option = {
 		name = EVTOPTA_SOA_1024
 		build_holding = {
-		   type = castle
-		   holder = FROMFROM
+		type = castle
+		holder = FROMFROM
 		}
 	}
 }
@@ -10671,8 +10671,8 @@ province_event = {
 	option = {
 		name = EVTOPTA_SOA_1024
 		build_holding = {
-		   type = castle
-		   holder = FROMFROM
+		type = castle
+		holder = FROMFROM
 		}
 	}
 }
@@ -11396,8 +11396,8 @@ province_event = {
 	option = {
 		name = EVTOPTA_SOA_1024
 		build_holding = {
-		   type = castle
-		   holder = FROMFROM
+		type = castle
+		holder = FROMFROM
 		}
 	}
 }
@@ -12121,8 +12121,8 @@ province_event = {
 	option = {
 		name = EVTOPTA_SOA_1024
 		build_holding = {
-		   type = castle
-		   holder = FROMFROM
+		type = castle
+		holder = FROMFROM
 		}
 	}
 }
@@ -12293,7 +12293,7 @@ character_event = {
 	
 	desc = {
 		trigger = {
-			OR =  {
+			OR = {
 				religion_group = christian
 				religion_group = cult_of_saints
 				religion_group = latter_day_saints
@@ -12624,7 +12624,24 @@ character_event = {
 		}
 		text = expel_afl
 	}
-
+	title = { # d_chrismon_tree
+		trigger = {
+			has_character_flag = expel_chrismon_tree_check
+		}
+		text = expel_chrismon_tree
+	}
+	title = { # d_order_of_baptists
+		trigger = {
+			has_character_flag = expel_order_of_baptists_check
+		}
+		text = expel_order_of_baptists
+	}
+	title = { # d_pentecostal_oathsworn
+		trigger = {
+			has_character_flag = expel_pentecostal_oathsworn_check
+		}
+		text = expel_pentecostal_oathsworn
+	}
 	
 	only_rulers = yes
 	
@@ -12772,7 +12789,7 @@ character_event = {
 					}
 				}
 			}
-			
+
 			add_character_modifier = {
 				name = expelled_d_men_in_black
 				duration = -1
@@ -12803,7 +12820,7 @@ character_event = {
 					}
 				}
 			}
-			
+
 			add_character_modifier = {
 				name = expelled_d_oppenheimer
 				duration = -1
@@ -13046,7 +13063,7 @@ character_event = {
 				}
 			}
 			add_character_modifier = {
-				name = expelled_d_greenpeace
+				name = expelled_d_keepers_of_the_green_peace
 				duration = -1
 				inherit = yes
 			}
@@ -13347,7 +13364,7 @@ character_event = {
 					}
 				}
 			}
-			
+
 			add_character_modifier = {
 				name = expelled_d_batallon_colombia
 				duration = -1
@@ -13378,7 +13395,7 @@ character_event = {
 					}
 				}
 			}
-			
+
 			add_character_modifier = {
 				name = expelled_d_saint_expedit
 				duration = -1
@@ -14078,6 +14095,96 @@ character_event = {
 			clr_character_flag = expel_afl_check
 		}
 	}
+	option = { # d_chrismon_tree
+		trigger = {
+			has_character_flag = expel_chrismon_tree_check
+		}
+		name = "EVTOPTA_SOA_2990"
+		piety = -1000
+		
+		religion_authority = {
+			modifier = holy_order_expelled
+			years = 20
+		}
+		custom_tooltip = {
+			text = expelling_holy_order_event_tooltip_a
+		}
+		hidden_tooltip = {
+			d_chrismon_tree = {
+				holder_scope = {
+					character_event = {
+						id = SoAtE.3060
+					}
+				}
+			}
+			add_character_modifier = {
+				name = expelled_d_chrismon_tree
+				duration = -1
+				inherit = yes
+			}
+			clr_character_flag = expel_chrismon_tree_check
+		}
+	}
+	option = { # d_order_of_baptists
+		trigger = {
+			has_character_flag = expel_order_of_baptists_check
+		}
+		name = "EVTOPTA_SOA_2990"
+		piety = -1000
+		
+		religion_authority = {
+			modifier = holy_order_expelled
+			years = 20
+		}
+		custom_tooltip = {
+			text = expelling_holy_order_event_tooltip_a
+		}
+		hidden_tooltip = {
+			d_order_of_baptists = {
+				holder_scope = {
+					character_event = {
+						id = SoAtE.3060
+					}
+				}
+			}
+			add_character_modifier = {
+				name = expelled_d_order_of_baptists
+				duration = -1
+				inherit = yes
+			}
+			clr_character_flag = expel_order_of_baptists_check
+		}
+	}
+	option = { # d_pentecostal_oathsworn
+		trigger = {
+			has_character_flag = expel_pentecostal_oathsworn_check
+		}
+		name = "EVTOPTA_SOA_2990"
+		piety = -1000
+		
+		religion_authority = {
+			modifier = holy_order_expelled
+			years = 20
+		}
+		custom_tooltip = {
+			text = expelling_holy_order_event_tooltip_a
+		}
+		hidden_tooltip = {
+			d_pentecostal_oathsworn = {
+				holder_scope = {
+					character_event = {
+						id = SoAtE.3060
+					}
+				}
+			}
+			add_character_modifier = {
+				name = expelled_d_pentecostal_oathsworn
+				duration = -1
+				inherit = yes
+			}
+			clr_character_flag = expel_pentecostal_oathsworn_check
+		}
+	}
 
 	option = { # Allow them to stay
 		name = "EVTOPTB_SOA_2990"
@@ -14103,7 +14210,7 @@ character_event = {
 			clr_character_flag = expel_masked_knights_check
 			clr_character_flag = expel_order_of_brotherhood_check
 			clr_character_flag = expel_st_pats_check
-			
+
 			clr_character_flag = expel_lightbringers_check
 			clr_character_flag = expel_dead_sun_check
 			clr_character_flag = expel_golden_bears_check
@@ -14132,6 +14239,9 @@ character_event = {
 			clr_character_flag = expel_iron_workers_check
 			clr_character_flag = expel_teamsters_check
 			clr_character_flag = expel_afl_check
+			clr_character_flag = expel_chrismon_tree_check
+			clr_character_flag = expel_order_of_baptists_check
+			clr_character_flag = expel_pentecostal_oathsworn_check
 		}
 	}
 	after = {
@@ -14631,8 +14741,8 @@ province_event = {
 	option = {
 		name = EVTOPTA_SOA_1024
 		build_holding = {
-		   type = castle
-		   holder = FROMFROM
+		type = castle
+		holder = FROMFROM
 		}
 	}
 }
@@ -15195,8 +15305,8 @@ province_event = {
 	option = {
 		name = EVTOPTA_SOA_1024
 		build_holding = {
-		   type = castle
-		   holder = FROMFROM
+		type = castle
+		holder = FROMFROM
 		}
 	}
 }
@@ -15691,8 +15801,8 @@ province_event = {
 	option = {
 		name = EVTOPTA_SOA_1024
 		build_holding = {
-		   type = castle
-		   holder = FROMFROM
+		type = castle
+		holder = FROMFROM
 		}
 	}
 }
@@ -16187,8 +16297,8 @@ province_event = {
 	option = {
 		name = EVTOPTA_SOA_1024
 		build_holding = {
-		   type = castle
-		   holder = FROMFROM
+		type = castle
+		holder = FROMFROM
 		}
 	}
 }
@@ -16683,8 +16793,8 @@ province_event = {
 	option = {
 		name = EVTOPTA_SOA_1024
 		build_holding = {
-		   type = castle
-		   holder = FROMFROM
+		type = castle
+		holder = FROMFROM
 		}
 	}
 }
@@ -17185,8 +17295,8 @@ province_event = {
 	option = {
 		name = EVTOPTA_SOA_1024
 		build_holding = {
-		   type = castle
-		   holder = FROMFROM
+		type = castle
+		holder = FROMFROM
 		}
 	}
 }
@@ -17687,8 +17797,8 @@ province_event = {
 	option = {
 		name = EVTOPTA_SOA_1024
 		build_holding = {
-		   type = castle
-		   holder = FROMFROM
+		type = castle
+		holder = FROMFROM
 		}
 	}
 }
@@ -18183,8 +18293,8 @@ province_event = {
 	option = {
 		name = EVTOPTA_SOA_1024
 		build_holding = {
-		   type = castle
-		   holder = FROMFROM
+		type = castle
+		holder = FROMFROM
 		}
 	}
 }
@@ -18679,8 +18789,8 @@ province_event = {
 	option = {
 		name = EVTOPTA_SOA_1024
 		build_holding = {
-		   type = castle
-		   holder = FROMFROM
+		type = castle
+		holder = FROMFROM
 		}
 	}
 }
@@ -19175,8 +19285,8 @@ province_event = {
 	option = {
 		name = EVTOPTA_SOA_1024
 		build_holding = {
-		   type = castle
-		   holder = FROMFROM
+		type = castle
+		holder = FROMFROM
 		}
 	}
 }
@@ -19677,8 +19787,8 @@ province_event = {
 	option = {
 		name = EVTOPTA_SOA_1024
 		build_holding = {
-		   type = castle
-		   holder = FROMFROM
+		type = castle
+		holder = FROMFROM
 		}
 	}
 }
@@ -20192,8 +20302,8 @@ province_event = {
 	option = {
 		name = EVTOPTA_SOA_1024
 		build_holding = {
-		   type = castle
-		   holder = FROMFROM
+		type = castle
+		holder = FROMFROM
 		}
 	}
 }
@@ -20713,8 +20823,8 @@ province_event = {
 	option = {
 		name = EVTOPTA_SOA_1024
 		build_holding = {
-		   type = castle
-		   holder = FROMFROM
+		type = castle
+		holder = FROMFROM
 		}
 	}
 }
@@ -21234,8 +21344,8 @@ province_event = {
 	option = {
 		name = EVTOPTA_SOA_1024
 		build_holding = {
-		   type = castle
-		   holder = FROMFROM
+		type = castle
+		holder = FROMFROM
 		}
 	}
 }
@@ -21749,8 +21859,8 @@ province_event = {
 	option = {
 		name = EVTOPTA_SOA_1024
 		build_holding = {
-		   type = castle
-		   holder = FROMFROM
+		type = castle
+		holder = FROMFROM
 		}
 	}
 }
@@ -22264,8 +22374,8 @@ province_event = {
 	option = {
 		name = EVTOPTA_SOA_1024
 		build_holding = {
-		   type = castle
-		   holder = FROMFROM
+		type = castle
+		holder = FROMFROM
 		}
 	}
 }
@@ -22787,8 +22897,8 @@ province_event = {
 	option = {
 		name = EVTOPTA_SOA_1024
 		build_holding = {
-		   type = castle
-		   holder = FROMFROM
+		type = castle
+		holder = FROMFROM
 		}
 	}
 }
@@ -23313,8 +23423,8 @@ province_event = {
 	option = {
 		name = EVTOPTA_SOA_1024
 		build_holding = {
-		   type = castle
-		   holder = FROMFROM
+		type = castle
+		holder = FROMFROM
 		}
 	}
 }
@@ -23809,8 +23919,8 @@ province_event = {
 	option = {
 		name = EVTOPTA_SOA_1024
 		build_holding = {
-		   type = castle
-		   holder = FROMFROM
+		type = castle
+		holder = FROMFROM
 		}
 	}
 }
@@ -24332,8 +24442,8 @@ province_event = {
 	option = {
 		name = EVTOPTA_SOA_1024
 		build_holding = {
-		   type = castle
-		   holder = FROMFROM
+		type = castle
+		holder = FROMFROM
 		}
 	}
 }
@@ -24841,8 +24951,8 @@ province_event = {
 	option = {
 		name = EVTOPTA_SOA_1024
 		build_holding = {
-		   type = castle
-		   holder = FROMFROM
+		type = castle
+		holder = FROMFROM
 		}
 	}
 }
@@ -25356,8 +25466,8 @@ province_event = {
 	option = {
 		name = EVTOPTA_SOA_1024
 		build_holding = {
-		   type = castle
-		   holder = FROMFROM
+		type = castle
+		holder = FROMFROM
 		}
 	}
 }
@@ -25871,8 +25981,8 @@ province_event = {
 	option = {
 		name = EVTOPTA_SOA_1024
 		build_holding = {
-		   type = castle
-		   holder = FROMFROM
+		type = castle
+		holder = FROMFROM
 		}
 	}
 }
@@ -26374,8 +26484,8 @@ province_event = {
 	option = {
 		name = EVTOPTA_SOA_1024
 		build_holding = {
-		   type = castle
-		   holder = FROMFROM
+		type = castle
+		holder = FROMFROM
 		}
 	}
 }
@@ -26889,8 +26999,8 @@ province_event = {
 	option = {
 		name = EVTOPTA_SOA_1024
 		build_holding = {
-		   type = castle
-		   holder = FROMFROM
+		type = castle
+		holder = FROMFROM
 		}
 	}
 }
@@ -27410,8 +27520,8 @@ province_event = {
 	option = {
 		name = EVTOPTA_SOA_1024
 		build_holding = {
-		   type = castle
-		   holder = FROMFROM
+		type = castle
+		holder = FROMFROM
 		}
 	}
 }
@@ -27931,8 +28041,8 @@ province_event = {
 	option = {
 		name = EVTOPTA_SOA_1024
 		build_holding = {
-		   type = castle
-		   holder = FROMFROM
+		type = castle
+		holder = FROMFROM
 		}
 	}
 }
@@ -28485,8 +28595,8 @@ province_event = {
 	option = {
 		name = EVTOPTA_SOA_1024
 		build_holding = {
-		   type = castle
-		   holder = FROMFROM
+		type = castle
+		holder = FROMFROM
 		}
 	}
 }
@@ -29006,8 +29116,8 @@ province_event = {
 	option = {
 		name = EVTOPTA_SOA_1024
 		build_holding = {
-		   type = castle
-		   holder = FROMFROM
+		type = castle
+		holder = FROMFROM
 		}
 	}
 }

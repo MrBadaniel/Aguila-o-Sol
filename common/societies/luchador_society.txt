@@ -9,7 +9,7 @@ warrior_lodge_mexican = {
 	non_interference = {
 		always = yes
 	}
-    
+	
 	active = {
 		has_dlc = "Holy Fury"
 	}
@@ -56,7 +56,7 @@ warrior_lodge_mexican = {
 			AND = {
 				#You are of a religion that doesn't match *any* warrior lodge
 				has_religion_matching_available_warrior_lodge_trigger = no
-				
+	
 				OR = {
 					#You have neighbors, etc, of the correct religion...
 					any_vassal = { religion_openly_sacred_heart_trigger = yes }
@@ -64,15 +64,15 @@ warrior_lodge_mexican = {
 					any_neighbor_independent_ruler = { religion_openly_sacred_heart_trigger = yes }
 				}
 			}
-			NOR = { #Hide if: you don't have a religion that corresponds to this lodge, but there is another society available to you already
-				AND = {
-					religion_openly_sacred_heart_trigger = no
-					has_religion_matching_available_warrior_lodge_trigger = yes
-				}
-				AND = {
-					religion_openly_cristo_rey_trigger = no
-					has_religion_matching_available_warrior_lodge_trigger = yes
-				}
+			NOT = { #Hide if: you don't have a religion that corresponds to this lodge, but there is another society available to you already
+		   
+				religion_openly_sacred_heart_trigger = no
+																
+	 
+		   
+											
+				has_religion_matching_available_warrior_lodge_trigger = yes
+	 
 			}
 			capital_scope = { region = custom_oldworld_mexico }
 			OR = {
@@ -150,7 +150,7 @@ warrior_lodge_mexican = {
 			martial = 3
 		}
 		powers = {
-			
+
 		}
 	}
 
@@ -160,12 +160,12 @@ warrior_lodge_mexican = {
 
 	monthly_currency_gain = {
 		name = currency_name_warrior_lodge_mexican
-    	
+		
 		per_attribute = {
-    		name = martial
-    		value = 0.25
-    	}
-    	has_trait = {
+			name = martial
+			value = 0.25
+		}
+		has_trait = {
 			trait = hunter
 			value = 1
 		}
@@ -294,6 +294,10 @@ warrior_lodge_mexican = {
 			value = 1
 		}
 		has_trait = {
+				  
+			
+   
+			   
 			trait = berserker
 			value = 1
 		}
@@ -310,14 +314,22 @@ warrior_lodge_mexican = {
 			value = 1
 		}
 		has_trait = {
+				 
+			
+   
+			   
+					
+			
+   
+			   
 			trait = valhalla_bound
 			value = 1
 		}
 		has_trait = {
-			trait = eagle_warrior
-			value = 1
-		}
-		has_trait = {
+						
+			
+   
+			   
 			trait = fords_striker
 			value = 1
 		}
@@ -349,6 +361,10 @@ warrior_lodge_mexican = {
 			trait = cristero
 			value = 1
 		}
+			   
+				   
+			
+   
 		#NEGATIVE modifiers
 		has_trait = {
 			trait = craven
@@ -415,15 +431,15 @@ warrior_lodge_mexican = {
 			trait = tough_soldier
 			factor = 1.2
 		}
-    	modifier = {
+		modifier = {
 			trait = skilled_tactician
 			factor = 1.4
 		}
-    	modifier = {
+		modifier = {
 			trait = brilliant_strategist
 			factor = 1.6
 		}
-    	modifier = {
+		modifier = {
 			trait = scarred
 			factor = 1.1
 		}
@@ -532,6 +548,10 @@ warrior_lodge_mexican = {
 			factor = 1.1
 		}
 		modifier = {
+				  
+			   
+   
+			  
 			trait = berserker
 			factor = 1.1
 		}
@@ -548,6 +568,14 @@ warrior_lodge_mexican = {
 			factor = 1.1
 		}
 		modifier = {
+				 
+			   
+   
+			  
+					
+			   
+   
+			  
 			trait = valhalla_bound
 			factor = 1.1
 		}
@@ -555,6 +583,10 @@ warrior_lodge_mexican = {
 			trait = cristero
 			factor = 1.1
 		}
+			  
+				   
+			   
+   
 		#NEGATIVE modifiers
 		modifier = {
 			trait = craven
@@ -591,12 +623,13 @@ warrior_lodge_mexican = {
 	}	
 
 	startup_populate = {
-	    trigger = {
+		trigger = {
 			ai = yes
-	    	controls_religion = no
+			controls_religion = no
 			is_adult = yes
 			is_in_society = no
 			OR = {
+				culture_group = norteno
 				culture_group = mexicano
 				culture_group = mesoamerican
 				religion_openly_sacred_heart_trigger = yes

@@ -200,8 +200,14 @@ targetted_decisions = {
 		from_potential = {
 			is_playable = yes
 			OR = {
-				has_landed_title = k_mexico
-				has_landed_title = e_mexico
+				AND = {
+					has_law = succ_mex_elective 
+					title = e_mexico
+				}
+				AND = {
+					has_law = succ_mex_elective 
+					title = k_mexico
+				}
 			}
 			has_regent = no
 			prisoner = no

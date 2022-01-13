@@ -36,10 +36,12 @@ republic_governments = {
 				religion = qingzhen
 				religion = exovedate
 				religion = nousthreskeia
+				religion = reformista
 				religion = patria_grande
 				religion = atomicist
 				religion = celeste
-				religion = reformista
+				religion = true_cross
+				religion = glorian
 				has_religion_feature = religion_temporal_head
 				AND = {
 					OR = {
@@ -47,7 +49,7 @@ republic_governments = {
 						religion = monetarist
 						religion = americanist
 						religion = rust_cultist
-						#religion = thelemic_reformed
+								   
 						religion = norse_pagan_reformed
 						religion = imamite
 						religion = revivalist
@@ -55,10 +57,12 @@ republic_governments = {
 						religion = qingzhen
 						religion = exovedate
 						religion = nousthreskeia
+						religion = sol_invicta
 						religion = patria_grande
 						religion = atomicist
 						religion = celeste
-						religion = reformista
+						religion = true_cross
+						religion = glorian
 					}
 					has_religion_features = no # Old saves, and campaigns without HF, need the Fylkirate to continue working
 				}
@@ -110,6 +114,7 @@ republic_governments = {
 					}
 				}
 			}
+			NOT = { is_government_potential = mex_imperial_government }
 		}
 		
 		color = { 250 0 0 }
@@ -174,7 +179,9 @@ republic_governments = {
 				religion = patria_grande
 				religion = atomicist
 				religion = celeste
+				religion = true_cross
 				religion = reformista
+				religion = glorian
 				has_religion_feature = religion_temporal_head
 				AND = {
 					OR = {
@@ -182,7 +189,7 @@ republic_governments = {
 						religion = monetarist
 						religion = americanist
 						religion = rust_cultist
-						#religion = thelemic_reformed
+								   
 						religion = norse_pagan_reformed
 						religion = imamite
 						religion = revivalist
@@ -193,7 +200,9 @@ republic_governments = {
 						religion = patria_grande
 						religion = atomicist
 						religion = celeste
+						religion = true_cross
 						religion = reformista
+						religion = glorian
 					}
 					has_religion_features = no # Old saves, and campaigns without HF, need the Fylkirate to continue working
 				}
@@ -201,6 +210,7 @@ republic_governments = {
 			NOT = { is_government_potential = merchant_republic_government }
 			NOT = { is_government_potential = colonial_government }
 			NOT = { is_government_potential = military_governorate }
+			NOT = { is_government_potential = mex_imperial_government }
 		}
 		
 		color = { 209 125 130 }
@@ -294,8 +304,9 @@ republic_governments = {
 			mormon_government
 			ghazi_government
 			theocratic_feudal_government
-			mex_imperial_government
 			uyc_government
+						  
+				 
 		}
 		frame_suffix = "_colonial"
 		title_prefix = "city_"
@@ -387,8 +398,9 @@ republic_governments = {
 			tribal_government
 			merchant_republic_government
 			republic_government
-			mex_imperial_government
 			uyc_government
+						  
+				 
 		}
 		gets_religion_opinion_penalties = no
 		vassal_government_opinion_penalties = no
@@ -400,7 +412,63 @@ republic_governments = {
 			is_offmap_tag = offmap_china
 		}
 		
-		color = { 255 215 0 }
+		color = { 160 180 88 }
+		
+		can_imprison_without_reason = no
+		can_revoke_without_reason = no
+		
+		can_build_tribal = no
+		
+		capital_move_delay = 600
+		
+		commander_limit = 20
+		
+		aggression = 0 # AI only attacks by script
+		can_create_kingdoms = no
+		can_create_empires = no
+		can_demand_religious_conversion = no
+		can_inherit = no
+		
+		## Modifiers
+		court_size_modifier = 10
+	}
+	
+	brazilian_empire = {
+		offmap_power = offmap_china
+		preferred_holdings = { CASTLE CITY }
+		allowed_holdings = {
+			CASTLE
+			CITY
+			FORT
+			HOSPITAL
+		}
+		allowed_holdings_culture = { # Will not get the wrong government type penalty for tribes of the same culture
+			TRIBAL
+		}
+		forced_contract = {
+			feudal_government
+			ghazi_government
+			theocratic_feudal_government
+			#military_governorate
+			theocracy_government
+			tribal_government
+			merchant_republic_government
+			republic_government
+		}
+		gets_religion_opinion_penalties = no
+		vassal_government_opinion_penalties = no
+		free_revoke_on_governments_religion = { # Tribal vassals of other religions can have their titles revoked for free
+			tribal_government
+		}
+		frame_suffix = "_brazilbureaucracy"
+		potential = {
+			is_offmap_tag = offmap_china
+			primary_title = { 
+				title = e_china_west_governor
+			}
+		}
+		
+		color = { 10 155 60 }
 		
 		can_imprison_without_reason = no
 		can_revoke_without_reason = no

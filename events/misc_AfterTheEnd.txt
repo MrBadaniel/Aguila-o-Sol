@@ -3,8 +3,9 @@ namespace = misc
 character_event = {
 	id = misc.1
 	desc = "Replace Sister-Militant"
+	picture = GFX_evt_mass_crusade
 	is_triggered_only = yes
-	#hide_window = yes
+	religion = ursuline
 
 	trigger = {
 		has_landed_title = d_st_ursulas_chosen
@@ -70,8 +71,9 @@ character_event = {
 character_event = {
 	id = misc.2
 	desc = "Replace Nanacy Harts leader"
+	picture = GFX_evt_mass_crusade
 	is_triggered_only = yes
-	#hide_window = yes
+	religion = evangelical
 
 	trigger = {
 		has_landed_title = d_nancy_harts
@@ -260,7 +262,7 @@ character_event = {
 			}
 			modifier = {
 				factor = 0
-				culture = dominicano
+				culture = quisqueyano
 			}
 			modifier = {
 				factor = 0
@@ -277,6 +279,10 @@ character_event = {
 			modifier = {
 				factor = 0
 				culture = raizal
+			}
+			modifier = {
+				factor = 0
+				culture = mekatelyu
 			}
 			modifier = {
 				factor = 0
@@ -304,7 +310,15 @@ character_event = {
 			}
 			modifier = {
 				factor = 0
-				culture = british
+				culture = anglish
+			}
+			modifier = {
+				factor = 0
+				culture = northumbrian
+			}
+			modifier = {
+				factor = 0
+				culture = scottish
 			}
 			modifier = {
 				factor = 10
@@ -312,7 +326,19 @@ character_event = {
 			}
 			modifier = {
 				factor = 0
-				culture = regio
+				culture = bravo
+			}
+			modifier = {
+				factor = 0
+				culture = altiplanense
+			}
+			modifier = {
+				factor = 0
+				culture = choyero
+			}
+			modifier = {
+				factor = 0
+				culture = menomex
 			}
 			modifier = {
 				factor = 10
@@ -328,11 +354,11 @@ character_event = {
 			}
 			modifier = {
 				factor = 0
-				culture = culichi
+				culture = occidental
 			}
 			modifier = {
 				factor = 0
-				culture = californio
+				culture = californiano
 			}
 			modifier = {
 				factor = 0
@@ -340,11 +366,19 @@ character_event = {
 			}
 			modifier = {
 				factor = 0
+				culture = abajeno
+			}
+			modifier = {
+				factor = 0
 				culture = chino
 			}
 			modifier = {
 				factor = 5
-				culture = chapin
+				culture = trifinio
+			}
+			modifier = {
+				factor = 5
+				culture = nicoyano
 			}
 			modifier = {
 				factor = 3
@@ -444,7 +478,7 @@ character_event = {
 			}
 			modifier = {
 				factor = 85
-				culture = cascadian
+				culture = siskiyouan
 			}
 			modifier = {
 				factor = 1
@@ -452,7 +486,7 @@ character_event = {
 			}
 			modifier = {
 				factor = 40
-				culture = portlander
+				culture = cascadian
 			}
 			modifier = {
 				factor = 0
@@ -543,7 +577,7 @@ character_event = {
 				culture = sranan
 			}
 			modifier = {
-				factor = 5
+				factor = 20
 				culture = papiamen
 			}
 			modifier = {
@@ -600,7 +634,7 @@ character_event = {
 			}
 			modifier = {
 				factor = 85
-				culture = wastelander
+				culture = strine
 			}
 			modifier = {
 				factor = 0
@@ -723,6 +757,10 @@ character_event = {
 				culture = crow
 			}
 			modifier = {
+				factor = 3
+				culture = cheyenne
+			}
+			modifier = {
 				factor = 5
 				culture = sheban
 			}
@@ -748,7 +786,7 @@ character_event = {
 			}
 			modifier = {
 				factor = 0
-				culture = khalifi
+				culture = anjalusi
 			}
 			modifier = {
 				factor = 5
@@ -821,6 +859,42 @@ character_event = {
 			modifier = {
 				factor = 0
 				culture = valluno
+			}
+			modifier = {
+				factor = 0
+				culture = ribeirinho
+			}
+			modifier = {
+				factor = 0
+				culture = verdiano
+			}
+			modifier = {
+				factor = 80
+				culture = inlander
+			}
+			modifier = {
+				factor = 80
+				culture = snakelander
+			}
+			modifier = {
+				factor = 60
+				culture = texaner
+			}
+			modifier = {
+				factor = 0
+				culture = chileno
+			}
+			modifier = {
+				factor = 20
+				culture = czexan
+			}
+			modifier = {
+				factor = 60
+				culture = oklahoman
+			}
+			modifier = {
+				factor = 0
+				culture = shami
 			}
 		}
 		set_graphical_culture = white
@@ -950,8 +1024,8 @@ character_event = {
 				culture = cubano
 			}
 			modifier = {
-				factor = 70
-				culture = dominicano
+				factor = 30
+				culture = quisqueyano
 			}
 			modifier = {
 				factor = 15
@@ -966,8 +1040,12 @@ character_event = {
 				culture = garinagu
 			}
 			modifier = {
-				factor = 80
+				factor = 85
 				culture = raizal
+			}
+			modifier = {
+				factor = 85
+				culture = mekatelyu
 			}
 			modifier = {
 				factor = 70
@@ -995,7 +1073,15 @@ character_event = {
 			}
 			modifier = {
 				factor = 10
-				culture = british
+				culture = anglish
+			}
+			modifier = {
+				factor = 10
+				culture = northumbrian
+			}
+			modifier = {
+				factor = 10
+				culture = scottish
 			}
 			modifier = {
 				factor = 10
@@ -1003,7 +1089,15 @@ character_event = {
 			}
 			modifier = {
 				factor = 5
-				culture = regio
+				culture = bravo
+			}
+			modifier = {
+				factor = 5
+				culture = altiplanense
+			}
+			modifier = {
+				factor = 5
+				culture = menomex
 			}
 			modifier = {
 				factor = 5
@@ -1019,15 +1113,19 @@ character_event = {
 			}
 			modifier = {
 				factor = 5
-				culture = culichi
+				culture = occidental
 			}
 			modifier = {
 				factor = 5
-				culture = californio
+				culture = californiano
 			}
 			modifier = {
 				factor = 5
 				culture = chilango
+			}
+			modifier = {
+				factor = 5
+				culture = abajeno
 			}
 			modifier = {
 				factor = 1
@@ -1035,7 +1133,11 @@ character_event = {
 			}
 			modifier = {
 				factor = 5
-				culture = chapin
+				culture = trifinio
+			}
+			modifier = {
+				factor = 5
+				culture = nicoyano
 			}
 			modifier = {
 				factor = 3
@@ -1135,7 +1237,7 @@ character_event = {
 			}
 			modifier = {
 				factor = 5
-				culture = cascadian
+				culture = siskiyouan
 			}
 			modifier = {
 				factor = 1
@@ -1143,7 +1245,7 @@ character_event = {
 			}
 			modifier = {
 				factor = 5
-				culture = portlander
+				culture = cascadian
 			}
 			modifier = {
 				factor = 10
@@ -1170,7 +1272,7 @@ character_event = {
 				culture = istmeno
 			}
 			modifier = {
-				factor = 0
+				factor = 20
 				culture = caraqueno
 			}
 			modifier = {
@@ -1234,7 +1336,7 @@ character_event = {
 				culture = sranan
 			}
 			modifier = {
-				factor = 40
+				factor = 30
 				culture = papiamen
 			}
 			modifier = {
@@ -1291,7 +1393,7 @@ character_event = {
 			}
 			modifier = {
 				factor = 0
-				culture = wastelander
+				culture = strine
 			}
 			modifier = {
 				factor = 3
@@ -1414,6 +1516,10 @@ character_event = {
 				culture = crow
 			}
 			modifier = {
+				factor = 3
+				culture = cheyenne
+			}
+			modifier = {
 				factor = 90
 				culture = sheban
 			}
@@ -1439,7 +1545,7 @@ character_event = {
 			}
 			modifier = {
 				factor = 5
-				culture = khalifi
+				culture = anjalusi
 			}
 			modifier = {
 				factor = 0
@@ -1512,6 +1618,42 @@ character_event = {
 			modifier = {
 				factor = 30
 				culture = valluno
+			}
+			modifier = {
+				factor = 15
+				culture = ribeirinho
+			}
+			modifier = {
+				factor = 60
+				culture = verdiano
+			}
+			modifier = {
+				factor = 5
+				culture = inlander
+			}
+			modifier = {
+				factor = 5
+				culture = snakelander
+			}
+			modifier = {
+				factor = 10
+				culture = texaner
+			}
+			modifier = {
+				factor = 5
+				culture = chileno
+			}
+			modifier = {
+				factor = 5
+				culture = czexan
+			}
+			modifier = {
+				factor = 10
+				culture = oklahoman
+			}
+			modifier = {
+				factor = 5
+				culture = shami
 			}
 		}
 		set_graphical_culture = black
@@ -1641,8 +1783,8 @@ character_event = {
 				culture = cubano
 			}
 			modifier = {
-				factor = 25
-				culture = dominicano
+				factor = 65
+				culture = quisqueyano
 			}
 			modifier = {
 				factor = 55
@@ -1657,8 +1799,12 @@ character_event = {
 				culture = garinagu
 			}
 			modifier = {
-				factor = 10
+				factor = 15
 				culture = raizal
+			}
+			modifier = {
+				factor = 15
+				culture = mekatelyu
 			}
 			modifier = {
 				factor = 10
@@ -1686,7 +1832,15 @@ character_event = {
 			}
 			modifier = {
 				factor = 5
-				culture = british
+				culture = anglish
+			}
+			modifier = {
+				factor = 5
+				culture = northumbrian
+			}
+			modifier = {
+				factor = 5
+				culture = scottish
 			}
 			modifier = {
 				factor = 55
@@ -1694,7 +1848,19 @@ character_event = {
 			}
 			modifier = {
 				factor = 60
-				culture = regio
+				culture = bravo
+			}
+			modifier = {
+				factor = 60
+				culture = altiplanense
+			}
+			modifier = {
+				factor = 60
+				culture = choyero
+			}
+			modifier = {
+				factor = 60
+				culture = menomex
 			}
 			modifier = {
 				factor = 60
@@ -1710,15 +1876,19 @@ character_event = {
 			}
 			modifier = {
 				factor = 60
-				culture = culichi
+				culture = occidental
 			}
 			modifier = {
 				factor = 50
-				culture = californio
+				culture = californiano
 			}
 			modifier = {
 				factor = 40
 				culture = chilango
+			}
+			modifier = {
+				factor = 40
+				culture = abajeno
 			}
 			modifier = {
 				factor = 5
@@ -1726,7 +1896,11 @@ character_event = {
 			}
 			modifier = {
 				factor = 20
-				culture = chapin
+				culture = trifinio
+			}
+			modifier = {
+				factor = 20
+				culture = nicoyano
 			}
 			modifier = {
 				factor = 3
@@ -1826,7 +2000,7 @@ character_event = {
 			}
 			modifier = {
 				factor = 5
-				culture = cascadian
+				culture = siskiyouan
 			}
 			modifier = {
 				factor = 10
@@ -1834,7 +2008,7 @@ character_event = {
 			}
 			modifier = {
 				factor = 10
-				culture = portlander
+				culture = cascadian
 			}
 			modifier = {
 				factor = 10
@@ -1861,7 +2035,7 @@ character_event = {
 				culture = istmeno
 			}
 			modifier = {
-				factor = 0
+				factor = 40
 				culture = caraqueno
 			}
 			modifier = {
@@ -1925,7 +2099,7 @@ character_event = {
 				culture = sranan
 			}
 			modifier = {
-				factor = 20
+				factor = 40
 				culture = papiamen
 			}
 			modifier = {
@@ -1982,7 +2156,7 @@ character_event = {
 			}
 			modifier = {
 				factor = 1
-				culture = wastelander
+				culture = strine
 			}
 			modifier = {
 				factor = 95
@@ -2105,6 +2279,10 @@ character_event = {
 				culture = crow
 			}
 			modifier = {
+				factor = 3
+				culture = cheyenne
+			}
+			modifier = {
 				factor = 5
 				culture = sheban
 			}
@@ -2130,7 +2308,7 @@ character_event = {
 			}
 			modifier = {
 				factor = 90
-				culture = khalifi
+				culture = anjalusi
 			}
 			modifier = {
 				factor = 0
@@ -2203,6 +2381,42 @@ character_event = {
 			modifier = {
 				factor = 50
 				culture = valluno
+			}
+			modifier = {
+				factor = 40
+				culture = ribeirinho
+			}
+			modifier = {
+				factor = 39
+				culture = verdiano
+			}
+			modifier = {
+				factor = 5
+				culture = inlander
+			}
+			modifier = {
+				factor = 5
+				culture = snakelander
+			}
+			modifier = {
+				factor = 20
+				culture = texaner
+			}
+			modifier = {
+				factor = 45
+				culture = chileno
+			}
+			modifier = {
+				factor = 20
+				culture = czexan
+			}
+			modifier = {
+				factor = 5
+				culture = oklahoman
+			}
+			modifier = {
+				factor = 60
+				culture = shami
 			}
 		}
 		set_graphical_culture = brown
@@ -2333,7 +2547,7 @@ character_event = {
 			}
 			modifier = {
 				factor = 0
-				culture = dominicano
+				culture = quisqueyano
 			}
 			modifier = {
 				factor = 0
@@ -2350,6 +2564,10 @@ character_event = {
 			modifier = {
 				factor = 0
 				culture = raizal
+			}
+			modifier = {
+				factor = 0
+				culture = mekatelyu
 			}
 			modifier = {
 				factor = 0
@@ -2377,7 +2595,15 @@ character_event = {
 			}
 			modifier = {
 				factor = 0
-				culture = british
+				culture = anglish
+			}
+			modifier = {
+				factor = 0
+				culture = northumbrian
+			}
+			modifier = {
+				factor = 0
+				culture = scottish
 			}
 			modifier = {
 				factor = 4
@@ -2385,7 +2611,19 @@ character_event = {
 			}
 			modifier = {
 				factor = 5
-				culture = regio
+				culture = bravo
+			}
+			modifier = {
+				factor = 5
+				culture = altiplanense
+			}
+			modifier = {
+				factor = 5
+				culture = choyero
+			}
+			modifier = {
+				factor = 5
+				culture = menomex
 			}
 			modifier = {
 				factor = 5
@@ -2401,15 +2639,19 @@ character_event = {
 			}
 			modifier = {
 				factor = 7
-				culture = culichi
+				culture = occidental
 			}
 			modifier = {
 				factor = 0
-				culture = californio
+				culture = californiano
 			}
 			modifier = {
 				factor = 5
 				culture = chilango
+			}
+			modifier = {
+				factor = 5
+				culture = abajeno
 			}
 			modifier = {
 				factor = 1
@@ -2417,7 +2659,11 @@ character_event = {
 			}
 			modifier = {
 				factor = 30
-				culture = chapin
+				culture = trifinio
+			}
+			modifier = {
+				factor = 30
+				culture = nicoyano
 			}
 			modifier = {
 				factor = 91
@@ -2452,7 +2698,7 @@ character_event = {
 				culture = cree
 			}
 			modifier = {
-				factor = 92
+				factor = 0
 				culture = haida
 			}
 			modifier = {
@@ -2517,7 +2763,7 @@ character_event = {
 			}
 			modifier = {
 				factor = 3
-				culture = cascadian
+				culture = siskiyouan
 			}
 			modifier = {
 				factor = 90
@@ -2525,14 +2771,14 @@ character_event = {
 			}
 			modifier = {
 				factor = 5
-				culture = portlander
+				culture = cascadian
 			}
 			modifier = {
 				factor = 5
 				culture = canuck
 			}
 			modifier = {
-				factor = 70
+				factor = 10
 				culture = metis
 			}
 			modifier = {
@@ -2584,7 +2830,7 @@ character_event = {
 				culture = mikmaq
 			}
 			modifier = {
-				factor = 91
+				factor = 0
 				culture = inuit
 			}
 			modifier = {
@@ -2616,7 +2862,7 @@ character_event = {
 				culture = sranan
 			}
 			modifier = {
-				factor = 35
+				factor = 10
 				culture = papiamen
 			}
 			modifier = {
@@ -2673,7 +2919,7 @@ character_event = {
 			}
 			modifier = {
 				factor = 0
-				culture = wastelander
+				culture = strine
 			}
 			modifier = {
 				factor = 0
@@ -2796,6 +3042,10 @@ character_event = {
 				culture = crow
 			}
 			modifier = {
+				factor = 91
+				culture = cheyenne
+			}
+			modifier = {
 				factor = 0
 				culture = sheban
 			}
@@ -2808,7 +3058,7 @@ character_event = {
 				culture = plautdietsch
 			}
 			modifier = {
-				factor = 92
+				factor = 0
 				culture = wakashan
 			}
 			modifier = {
@@ -2821,7 +3071,7 @@ character_event = {
 			}
 			modifier = {
 				factor = 0
-				culture = khalifi
+				culture = anjalusi
 			}
 			modifier = {
 				factor = 0
@@ -2856,11 +3106,11 @@ character_event = {
 				culture = alaskan
 			}
 			modifier = {
-				factor = 92
+				factor = 0
 				culture = tlingit
 			}
 			modifier = {
-				factor = 92
+				factor = 0
 				culture = tsimshianic
 			}
 			modifier = {
@@ -2890,6 +3140,38 @@ character_event = {
 			modifier = {
 				factor = 0
 				culture = valluno
+			}
+			modifier = {
+				factor = 40
+				culture = ribeirinho
+			}
+			modifier = {
+				factor = 0
+				culture = verdiano
+			}
+			modifier = {
+				factor = 5
+				culture = inlander
+			}
+			modifier = {
+				factor = 5
+				culture = snakelander
+			}
+			modifier = {
+				factor = 0
+				culture = texaner
+			}
+			modifier = {
+				factor = 5
+				culture = chileno
+			}
+			modifier = {
+				factor = 5
+				culture = oklahoman
+			}
+			modifier = {
+				factor = 0
+				culture = shami
 			}
 		}
 		set_graphical_culture = native
@@ -3020,7 +3302,7 @@ character_event = {
 			}
 			modifier = {
 				factor = 0
-				culture = dominicano
+				culture = quisqueyano
 			}
 			modifier = {
 				factor = 0
@@ -3037,6 +3319,10 @@ character_event = {
 			modifier = {
 				factor = 0
 				culture = raizal
+			}
+			modifier = {
+				factor = 0
+				culture = mekatelyu
 			}
 			modifier = {
 				factor = 0
@@ -3064,7 +3350,15 @@ character_event = {
 			}
 			modifier = {
 				factor = 5
-				culture = british
+				culture = anglish
+			}
+			modifier = {
+				factor = 5
+				culture = northumbrian
+			}
+			modifier = {
+				factor = 5
+				culture = scottish
 			}
 			modifier = {
 				factor = 1
@@ -3072,7 +3366,19 @@ character_event = {
 			}
 			modifier = {
 				factor = 0
-				culture = regio
+				culture = bravo
+			}
+			modifier = {
+				factor = 0
+				culture = altiplanense
+			}
+			modifier = {
+				factor = 0
+				culture = choyero
+			}
+			modifier = {
+				factor = 0
+				culture = menomex
 			}
 			modifier = {
 				factor = 0
@@ -3088,15 +3394,19 @@ character_event = {
 			}
 			modifier = {
 				factor = 3
-				culture = culichi
+				culture = occidental
 			}
 			modifier = {
 				factor = 5
-				culture = californio
+				culture = californiano
 			}
 			modifier = {
 				factor = 5
 				culture = chilango
+			}
+			modifier = {
+				factor = 5
+				culture = abajeno
 			}
 			modifier = {
 				factor = 75
@@ -3104,7 +3414,11 @@ character_event = {
 			}
 			modifier = {
 				factor = 0
-				culture = chapin
+				culture = trifinio
+			}
+			modifier = {
+				factor = 0
+				culture = nicoyano
 			}
 			modifier = {
 				factor = 0
@@ -3204,7 +3518,7 @@ character_event = {
 			}
 			modifier = {
 				factor = 2
-				culture = cascadian
+				culture = siskiyouan
 			}
 			modifier = {
 				factor = 2
@@ -3212,7 +3526,7 @@ character_event = {
 			}
 			modifier = {
 				factor = 5
-				culture = portlander
+				culture = cascadian
 			}
 			modifier = {
 				factor = 35
@@ -3360,7 +3674,7 @@ character_event = {
 			}
 			modifier = {
 				factor = 9
-				culture = wastelander
+				culture = strine
 			}
 			modifier = {
 				factor = 0
@@ -3484,6 +3798,10 @@ character_event = {
 			}
 			modifier = {
 				factor = 0
+				culture = cheyenne
+			}
+			modifier = {
+				factor = 0
 				culture = sheban
 			}
 			modifier = {
@@ -3508,7 +3826,7 @@ character_event = {
 			}
 			modifier = {
 				factor = 2
-				culture = khalifi
+				culture = anjalusi
 			}
 			modifier = {
 				factor = 0
@@ -3581,6 +3899,42 @@ character_event = {
 			modifier = {
 				factor = 0
 				culture = valluno
+			}
+			modifier = {
+				factor = 0
+				culture = ribeirinho
+			}
+			modifier = {
+				factor = 0
+				culture = verdiano
+			}
+			modifier = {
+				factor = 5
+				culture = inlander
+			}
+			modifier = {
+				factor = 5
+				culture = snakelander
+			}
+			modifier = {
+				factor = 0
+				culture = texaner
+			}
+			modifier = {
+				factor = 0
+				culture = chileno
+			}
+			modifier = {
+				factor = 0
+				culture = czexan
+			}
+			modifier = {
+				factor = 0
+				culture = oklahoman
+			}
+			modifier = {
+				factor = 0
+				culture = shami
 			}
 		}
 		set_graphical_culture = chinese
@@ -3711,7 +4065,7 @@ character_event = {
 			}
 			modifier = {
 				factor = 0
-				culture = dominicano
+				culture = quisqueyano
 			}
 			modifier = {
 				factor = 0
@@ -3728,6 +4082,10 @@ character_event = {
 			modifier = {
 				factor = 0
 				culture = raizal
+			}
+			modifier = {
+				factor = 0
+				culture = mekatelyu
 			}
 			modifier = {
 				factor = 0
@@ -3755,7 +4113,15 @@ character_event = {
 			}
 			modifier = {
 				factor = 0
-				culture = british
+				culture = anglish
+			}
+			modifier = {
+				factor = 0
+				culture = northumbrian
+			}
+			modifier = {
+				factor = 0
+				culture = scottish
 			}
 			modifier = {
 				factor = 0
@@ -3763,7 +4129,19 @@ character_event = {
 			}
 			modifier = {
 				factor = 0
-				culture = regio
+				culture = bravo
+			}
+			modifier = {
+				factor = 0
+				culture = altiplanense
+			}
+			modifier = {
+				factor = 0
+				culture = choyero
+			}
+			modifier = {
+				factor = 0
+				culture = menomex
 			}
 			modifier = {
 				factor = 0
@@ -3779,11 +4157,11 @@ character_event = {
 			}
 			modifier = {
 				factor = 0
-				culture = culichi
+				culture = occidental
 			}
 			modifier = {
 				factor = 0
-				culture = californio
+				culture = californiano
 			}
 			modifier = {
 				factor = 0
@@ -3791,11 +4169,19 @@ character_event = {
 			}
 			modifier = {
 				factor = 0
+				culture = abajeno
+			}
+			modifier = {
+				factor = 0
 				culture = chino
 			}
 			modifier = {
 				factor = 0
-				culture = chapin
+				culture = trifinio
+			}
+			modifier = {
+				factor = 0
+				culture = nicoyano
 			}
 			modifier = {
 				factor = 0
@@ -3895,7 +4281,7 @@ character_event = {
 			}
 			modifier = {
 				factor = 0
-				culture = cascadian
+				culture = siskiyouan
 			}
 			modifier = {
 				factor = 0
@@ -3903,7 +4289,7 @@ character_event = {
 			}
 			modifier = {
 				factor = 0
-				culture = portlander
+				culture = cascadian
 			}
 			modifier = {
 				factor = 0
@@ -4051,7 +4437,7 @@ character_event = {
 			}
 			modifier = {
 				factor = 0
-				culture = wastelander
+				culture = strine
 			}
 			modifier = {
 				factor = 0
@@ -4171,6 +4557,10 @@ character_event = {
 			}
 			modifier = {
 				factor = 0
+				culture = cheyenne
+			}
+			modifier = {
+				factor = 0
 				culture = sheban
 			}
 			modifier = {
@@ -4195,7 +4585,7 @@ character_event = {
 			}
 			modifier = {
 				factor = 0
-				culture = khalifi
+				culture = anjalusi
 			}
 			modifier = {
 				factor = 0
@@ -4268,6 +4658,42 @@ character_event = {
 			modifier = {
 				factor = 0
 				culture = valluno
+			}
+			modifier = {
+				factor = 0
+				culture = ribeirinho
+			}
+			modifier = {
+				factor = 0
+				culture = verdiano
+			}
+			modifier = {
+				factor = 0
+				culture = inlander
+			}
+			modifier = {
+				factor = 0
+				culture = snakelander
+			}
+			modifier = {
+				factor = 0
+				culture = texaner
+			}
+			modifier = {
+				factor = 0
+				culture = chileno
+			}
+			modifier = {
+				factor = 0
+				culture = czexan
+			}
+			modifier = {
+				factor = 0
+				culture = oklahoman
+			}
+			modifier = {
+				factor = 0
+				culture = shami
 			}
 		}
 		set_graphical_culture = norse
@@ -4398,7 +4824,7 @@ character_event = {
 			}
 			modifier = {
 				factor = 0
-				culture = dominicano
+				culture = quisqueyano
 			}
 			modifier = {
 				factor = 0
@@ -4415,6 +4841,10 @@ character_event = {
 			modifier = {
 				factor = 0
 				culture = raizal
+			}
+			modifier = {
+				factor = 0
+				culture = mekatelyu
 			}
 			modifier = {
 				factor = 0
@@ -4441,8 +4871,16 @@ character_event = {
 				culture = brazilian
 			}
 			modifier = {
-				factor = 40
-				culture = british
+				factor = 20
+				culture = anglish
+			}
+			modifier = {
+				factor = 20
+				culture = northumbrian
+			}
+			modifier = {
+				factor = 60
+				culture = scottish
 			}
 			modifier = {
 				factor = 0
@@ -4450,7 +4888,19 @@ character_event = {
 			}
 			modifier = {
 				factor = 0
-				culture = regio
+				culture = bravo
+			}
+			modifier = {
+				factor = 0
+				culture = altiplanense
+			}
+			modifier = {
+				factor = 0
+				culture = choyero
+			}
+			modifier = {
+				factor = 0
+				culture = menomex
 			}
 			modifier = {
 				factor = 0
@@ -4466,11 +4916,11 @@ character_event = {
 			}
 			modifier = {
 				factor = 0
-				culture = culichi
+				culture = occidental
 			}
 			modifier = {
 				factor = 0
-				culture = californio
+				culture = californiano
 			}
 			modifier = {
 				factor = 0
@@ -4478,11 +4928,19 @@ character_event = {
 			}
 			modifier = {
 				factor = 0
+				culture = abajeno
+			}
+			modifier = {
+				factor = 0
 				culture = chino
 			}
 			modifier = {
 				factor = 0
-				culture = chapin
+				culture = trifinio
+			}
+			modifier = {
+				factor = 0
+				culture = nicoyano
 			}
 			modifier = {
 				factor = 0
@@ -4582,7 +5040,7 @@ character_event = {
 			}
 			modifier = {
 				factor = 0
-				culture = cascadian
+				culture = siskiyouan
 			}
 			modifier = {
 				factor = 0
@@ -4590,7 +5048,7 @@ character_event = {
 			}
 			modifier = {
 				factor = 10
-				culture = portlander
+				culture = cascadian
 			}
 			modifier = {
 				factor = 15
@@ -4738,7 +5196,7 @@ character_event = {
 			}
 			modifier = {
 				factor = 0
-				culture = wastelander
+				culture = strine
 			}
 			modifier = {
 				factor = 0
@@ -4862,6 +5320,10 @@ character_event = {
 			}
 			modifier = {
 				factor = 0
+				culture = cheyenne
+			}
+			modifier = {
+				factor = 0
 				culture = sheban
 			}
 			modifier = {
@@ -4886,7 +5348,7 @@ character_event = {
 			}
 			modifier = {
 				factor = 0
-				culture = khalifi
+				culture = anjalusi
 			}
 			modifier = {
 				factor = 0
@@ -4959,6 +5421,42 @@ character_event = {
 			modifier = {
 				factor = 0
 				culture = valluno
+			}
+			modifier = {
+				factor = 0
+				culture = ribeirinho
+			}
+			modifier = {
+				factor = 0
+				culture = verdiano
+			}
+			modifier = {
+				factor = 0
+				culture = inlander
+			}
+			modifier = {
+				factor = 0
+				culture = snakelander
+			}
+			modifier = {
+				factor = 0
+				culture = texaner
+			}
+			modifier = {
+				factor = 0
+				culture = chileno
+			}
+			modifier = {
+				factor = 0
+				culture = czexan
+			}
+			modifier = {
+				factor = 0
+				culture = oklahoman
+			}
+			modifier = {
+				factor = 0
+				culture = shami
 			}
 		}
 		set_graphical_culture = celtic
@@ -5089,7 +5587,7 @@ character_event = {
 			}
 			modifier = {
 				factor = 0
-				culture = dominicano
+				culture = quisqueyano
 			}
 			modifier = {
 				factor = 0
@@ -5106,6 +5604,10 @@ character_event = {
 			modifier = {
 				factor = 0
 				culture = raizal
+			}
+			modifier = {
+				factor = 0
+				culture = mekatelyu
 			}
 			modifier = {
 				factor = 0
@@ -5133,7 +5635,15 @@ character_event = {
 			}
 			modifier = {
 				factor = 0
-				culture = british
+				culture = anglish
+			}
+			modifier = {
+				factor = 0
+				culture = northumbrian
+			}
+			modifier = {
+				factor = 0
+				culture = scottish
 			}
 			modifier = {
 				factor = 0
@@ -5141,7 +5651,19 @@ character_event = {
 			}
 			modifier = {
 				factor = 0
-				culture = regio
+				culture = bravo
+			}
+			modifier = {
+				factor = 0
+				culture = altiplanense
+			}
+			modifier = {
+				factor = 0
+				culture = choyero
+			}
+			modifier = {
+				factor = 0
+				culture = menomex
 			}
 			modifier = {
 				factor = 0
@@ -5157,11 +5679,11 @@ character_event = {
 			}
 			modifier = {
 				factor = 0
-				culture = culichi
+				culture = occidental
 			}
 			modifier = {
 				factor = 0
-				culture = californio
+				culture = californiano
 			}
 			modifier = {
 				factor = 0
@@ -5169,11 +5691,19 @@ character_event = {
 			}
 			modifier = {
 				factor = 0
+				culture = abajeno
+			}
+			modifier = {
+				factor = 0
 				culture = chino
 			}
 			modifier = {
 				factor = 0
-				culture = chapin
+				culture = trifinio
+			}
+			modifier = {
+				factor = 0
+				culture = nicoyano
 			}
 			modifier = {
 				factor = 0
@@ -5273,7 +5803,7 @@ character_event = {
 			}
 			modifier = {
 				factor = 0
-				culture = cascadian
+				culture = siskiyouan
 			}
 			modifier = {
 				factor = 0
@@ -5281,7 +5811,7 @@ character_event = {
 			}
 			modifier = {
 				factor = 0
-				culture = portlander
+				culture = cascadian
 			}
 			modifier = {
 				factor = 0
@@ -5429,7 +5959,7 @@ character_event = {
 			}
 			modifier = {
 				factor = 0
-				culture = wastelander
+				culture = strine
 			}
 			modifier = {
 				factor = 0
@@ -5549,6 +6079,10 @@ character_event = {
 			}
 			modifier = {
 				factor = 0
+				culture = cheyenne
+			}
+			modifier = {
+				factor = 0
 				culture = sheban
 			}
 			modifier = {
@@ -5573,7 +6107,7 @@ character_event = {
 			}
 			modifier = {
 				factor = 0
-				culture = khalifi
+				culture = anjalusi
 			}
 			modifier = {
 				factor = 0
@@ -5646,6 +6180,42 @@ character_event = {
 			modifier = {
 				factor = 0
 				culture = valluno
+			}
+			modifier = {
+				factor = 0
+				culture = ribeirinho
+			}
+			modifier = {
+				factor = 0
+				culture = verdiano
+			}
+			modifier = {
+				factor = 0
+				culture = inlander
+			}
+			modifier = {
+				factor = 0
+				culture = snakelander
+			}
+			modifier = {
+				factor = 0
+				culture = texaner
+			}
+			modifier = {
+				factor = 0
+				culture = chileno
+			}
+			modifier = {
+				factor = 0
+				culture = czexan
+			}
+			modifier = {
+				factor = 0
+				culture = oklahoman
+			}
+			modifier = {
+				factor = 0
+				culture = shami
 			}
 		}
 		set_graphical_culture = ugric
@@ -5776,7 +6346,7 @@ character_event = {
 			}
 			modifier = {
 				factor = 5
-				culture = dominicano
+				culture = quisqueyano
 			}
 			modifier = {
 				factor = 30
@@ -5793,6 +6363,10 @@ character_event = {
 			modifier = {
 				factor = 0
 				culture = raizal
+			}
+			modifier = {
+				factor = 0
+				culture = mekatelyu
 			}
 			modifier = {
 				factor = 0
@@ -5820,7 +6394,15 @@ character_event = {
 			}
 			modifier = {
 				factor = 0
-				culture = british
+				culture = anglish
+			}
+			modifier = {
+				factor = 0
+				culture = northumbrian
+			}
+			modifier = {
+				factor = 0
+				culture = scottish
 			}
 			modifier = {
 				factor = 20
@@ -5828,7 +6410,19 @@ character_event = {
 			}
 			modifier = {
 				factor = 30
-				culture = regio
+				culture = bravo
+			}
+			modifier = {
+				factor = 30
+				culture = altiplanense
+			}
+			modifier = {
+				factor = 30
+				culture = choyero
+			}
+			modifier = {
+				factor = 30
+				culture = menomex
 			}
 			modifier = {
 				factor = 20
@@ -5844,15 +6438,19 @@ character_event = {
 			}
 			modifier = {
 				factor = 25
-				culture = culichi
+				culture = occidental
 			}
 			modifier = {
 				factor = 45
-				culture = californio
+				culture = californiano
 			}
 			modifier = {
 				factor = 45
 				culture = chilango
+			}
+			modifier = {
+				factor = 45
+				culture = abajeno
 			}
 			modifier = {
 				factor = 8
@@ -5860,7 +6458,11 @@ character_event = {
 			}
 			modifier = {
 				factor = 40
-				culture = chapin
+				culture = trifinio
+			}
+			modifier = {
+				factor = 40
+				culture = nicoyano
 			}
 			modifier = {
 				factor = 0
@@ -5960,7 +6562,7 @@ character_event = {
 			}
 			modifier = {
 				factor = 0
-				culture = cascadian
+				culture = siskiyouan
 			}
 			modifier = {
 				factor = 0
@@ -5968,7 +6570,7 @@ character_event = {
 			}
 			modifier = {
 				factor = 0
-				culture = portlander
+				culture = cascadian
 			}
 			modifier = {
 				factor = 0
@@ -5995,7 +6597,7 @@ character_event = {
 				culture = istmeno
 			}
 			modifier = {
-				factor = 0
+				factor = 40
 				culture = caraqueno
 			}
 			modifier = {
@@ -6116,7 +6718,7 @@ character_event = {
 			}
 			modifier = {
 				factor = 0
-				culture = wastelander
+				culture = strine
 			}
 			modifier = {
 				factor = 2
@@ -6240,6 +6842,10 @@ character_event = {
 			}
 			modifier = {
 				factor = 0
+				culture = cheyenne
+			}
+			modifier = {
+				factor = 0
 				culture = sheban
 			}
 			modifier = {
@@ -6264,7 +6870,7 @@ character_event = {
 			}
 			modifier = {
 				factor = 0
-				culture = khalifi
+				culture = anjalusi
 			}
 			modifier = {
 				factor = 0
@@ -6337,6 +6943,42 @@ character_event = {
 			modifier = {
 				factor = 20
 				culture = valluno
+			}
+			modifier = {
+				factor = 5
+				culture = ribeirinho
+			}
+			modifier = {
+				factor = 1
+				culture = verdiano
+			}
+			modifier = {
+				factor = 0
+				culture = inlander
+			}
+			modifier = {
+				factor = 0
+				culture = snakelander
+			}
+			modifier = {
+				factor = 0
+				culture = texaner
+			}
+			modifier = {
+				factor = 40
+				culture = chileno
+			}
+			modifier = {
+				factor = 0
+				culture = czexan
+			}
+			modifier = {
+				factor = 5
+				culture = oklahoman
+			}
+			modifier = {
+				factor = 10
+				culture = shami
 			}
 		}
 		set_graphical_culture = mediterranean
@@ -6467,7 +7109,7 @@ character_event = {
 			}
 			modifier = {
 				factor = 0
-				culture = dominicano
+				culture = quisqueyano
 			}
 			modifier = {
 				factor = 0
@@ -6484,6 +7126,10 @@ character_event = {
 			modifier = {
 				factor = 0
 				culture = raizal
+			}
+			modifier = {
+				factor = 0
+				culture = mekatelyu
 			}
 			modifier = {
 				factor = 0
@@ -6511,7 +7157,15 @@ character_event = {
 			}
 			modifier = {
 				factor = 5
-				culture = british
+				culture = anglish
+			}
+			modifier = {
+				factor = 5
+				culture = northumbrian
+			}
+			modifier = {
+				factor = 5
+				culture = scottish
 			}
 			modifier = {
 				factor = 0
@@ -6519,7 +7173,19 @@ character_event = {
 			}
 			modifier = {
 				factor = 0
-				culture = regio
+				culture = bravo
+			}
+			modifier = {
+				factor = 0
+				culture = altiplanense
+			}
+			modifier = {
+				factor = 0
+				culture = choyero
+			}
+			modifier = {
+				factor = 0
+				culture = menomex
 			}
 			modifier = {
 				factor = 0
@@ -6535,11 +7201,11 @@ character_event = {
 			}
 			modifier = {
 				factor = 0
-				culture = culichi
+				culture = occidental
 			}
 			modifier = {
 				factor = 0
-				culture = californio
+				culture = californiano
 			}
 			modifier = {
 				factor = 0
@@ -6547,11 +7213,19 @@ character_event = {
 			}
 			modifier = {
 				factor = 0
+				culture = abajeno
+			}
+			modifier = {
+				factor = 0
 				culture = chino
 			}
 			modifier = {
 				factor = 0
-				culture = chapin
+				culture = trifinio
+			}
+			modifier = {
+				factor = 0
+				culture = nicoyano
 			}
 			modifier = {
 				factor = 0
@@ -6651,7 +7325,7 @@ character_event = {
 			}
 			modifier = {
 				factor = 0
-				culture = cascadian
+				culture = siskiyouan
 			}
 			modifier = {
 				factor = 0
@@ -6659,7 +7333,7 @@ character_event = {
 			}
 			modifier = {
 				factor = 0
-				culture = portlander
+				culture = cascadian
 			}
 			modifier = {
 				factor = 10
@@ -6807,7 +7481,7 @@ character_event = {
 			}
 			modifier = {
 				factor = 0
-				culture = wastelander
+				culture = strine
 			}
 			modifier = {
 				factor = 0
@@ -6931,6 +7605,10 @@ character_event = {
 			}
 			modifier = {
 				factor = 0
+				culture = cheyenne
+			}
+			modifier = {
+				factor = 0
 				culture = sheban
 			}
 			modifier = {
@@ -6955,7 +7633,7 @@ character_event = {
 			}
 			modifier = {
 				factor = 0
-				culture = khalifi
+				culture = anjalusi
 			}
 			modifier = {
 				factor = 5
@@ -7024,6 +7702,42 @@ character_event = {
 			modifier = {
 				factor = 0
 				culture = rolo
+			}
+			modifier = {
+				factor = 0
+				culture = ribeirinho
+			}
+			modifier = {
+				factor = 0
+				culture = verdiano
+			}
+			modifier = {
+				factor = 0
+				culture = inlander
+			}
+			modifier = {
+				factor = 0
+				culture = snakelander
+			}
+			modifier = {
+				factor = 0
+				culture = texaner
+			}
+			modifier = {
+				factor = 0
+				culture = chileno
+			}
+			modifier = {
+				factor = 0
+				culture = czexan
+			}
+			modifier = {
+				factor = 0
+				culture = oklahoman
+			}
+			modifier = {
+				factor = 5
+				culture = shami
 			}
 		}
 		set_graphical_culture = indian
@@ -7154,7 +7868,7 @@ character_event = {
 			}
 			modifier = {
 				factor = 0
-				culture = dominicano
+				culture = quisqueyano
 			}
 			modifier = {
 				factor = 0
@@ -7171,6 +7885,10 @@ character_event = {
 			modifier = {
 				factor = 0
 				culture = raizal
+			}
+			modifier = {
+				factor = 0
+				culture = mekatelyu
 			}
 			modifier = {
 				factor = 0
@@ -7198,7 +7916,15 @@ character_event = {
 			}
 			modifier = {
 				factor = 0
-				culture = british
+				culture = anglish
+			}
+			modifier = {
+				factor = 0
+				culture = northumbrian
+			}
+			modifier = {
+				factor = 0
+				culture = scottish
 			}
 			modifier = {
 				factor = 0
@@ -7206,7 +7932,19 @@ character_event = {
 			}
 			modifier = {
 				factor = 0
-				culture = regio
+				culture = bravo
+			}
+			modifier = {
+				factor = 0
+				culture = altiplanense
+			}
+			modifier = {
+				factor = 0
+				culture = choyero
+			}
+			modifier = {
+				factor = 0
+				culture = menomex
 			}
 			modifier = {
 				factor = 0
@@ -7222,11 +7960,11 @@ character_event = {
 			}
 			modifier = {
 				factor = 0
-				culture = culichi
+				culture = occidental
 			}
 			modifier = {
 				factor = 0
-				culture = californio
+				culture = californiano
 			}
 			modifier = {
 				factor = 0
@@ -7234,11 +7972,19 @@ character_event = {
 			}
 			modifier = {
 				factor = 0
+				culture = abajeno
+			}
+			modifier = {
+				factor = 0
 				culture = chino
 			}
 			modifier = {
 				factor = 0
-				culture = chapin
+				culture = trifinio
+			}
+			modifier = {
+				factor = 0
+				culture = nicoyano
 			}
 			modifier = {
 				factor = 0
@@ -7338,7 +8084,7 @@ character_event = {
 			}
 			modifier = {
 				factor = 5
-				culture = cascadian
+				culture = siskiyouan
 			}
 			modifier = {
 				factor = 0
@@ -7346,7 +8092,7 @@ character_event = {
 			}
 			modifier = {
 				factor = 10
-				culture = portlander
+				culture = cascadian
 			}
 			modifier = {
 				factor = 0
@@ -7494,7 +8240,7 @@ character_event = {
 			}
 			modifier = {
 				factor = 0
-				culture = wastelander
+				culture = strine
 			}
 			modifier = {
 				factor = 0
@@ -7618,6 +8364,10 @@ character_event = {
 			}
 			modifier = {
 				factor = 0
+				culture = cheyenne
+			}
+			modifier = {
+				factor = 0
 				culture = sheban
 			}
 			modifier = {
@@ -7642,7 +8392,7 @@ character_event = {
 			}
 			modifier = {
 				factor = 0
-				culture = khalifi
+				culture = anjalusi
 			}
 			modifier = {
 				factor = 0
@@ -7715,6 +8465,42 @@ character_event = {
 			modifier = {
 				factor = 0
 				culture = valluno
+			}
+			modifier = {
+				factor = 0
+				culture = ribeirinho
+			}
+			modifier = {
+				factor = 0
+				culture = verdiano
+			}
+			modifier = {
+				factor = 0
+				culture = inlander
+			}
+			modifier = {
+				factor = 0
+				culture = snakelander
+			}
+			modifier = {
+				factor = 0
+				culture = texaner
+			}
+			modifier = {
+				factor = 0
+				culture = chileno
+			}
+			modifier = {
+				factor = 0
+				culture = czexan
+			}
+			modifier = {
+				factor = 0
+				culture = oklahoman
+			}
+			modifier = {
+				factor = 5
+				culture = shami
 			}
 		}
 		set_graphical_culture = slavic
@@ -7845,7 +8631,7 @@ character_event = {
 			}
 			modifier = {
 				factor = 0
-				culture = dominicano
+				culture = quisqueyano
 			}
 			modifier = {
 				factor = 0
@@ -7862,6 +8648,10 @@ character_event = {
 			modifier = {
 				factor = 0
 				culture = raizal
+			}
+			modifier = {
+				factor = 0
+				culture = mekatelyu
 			}
 			modifier = {
 				factor = 0
@@ -7889,7 +8679,15 @@ character_event = {
 			}
 			modifier = {
 				factor = 0
-				culture = british
+				culture = anglish
+			}
+			modifier = {
+				factor = 0
+				culture = northumbrian
+			}
+			modifier = {
+				factor = 0
+				culture = scottish
 			}
 			modifier = {
 				factor = 0
@@ -7897,7 +8695,19 @@ character_event = {
 			}
 			modifier = {
 				factor = 0
-				culture = regio
+				culture = bravo
+			}
+			modifier = {
+				factor = 0
+				culture = altiplanense
+			}
+			modifier = {
+				factor = 0
+				culture = choyero
+			}
+			modifier = {
+				factor = 0
+				culture = menomex
 			}
 			modifier = {
 				factor = 0
@@ -7913,11 +8723,11 @@ character_event = {
 			}
 			modifier = {
 				factor = 0
-				culture = culichi
+				culture = occidental
 			}
 			modifier = {
 				factor = 0
-				culture = californio
+				culture = californiano
 			}
 			modifier = {
 				factor = 0
@@ -7925,11 +8735,19 @@ character_event = {
 			}
 			modifier = {
 				factor = 0
+				culture = abajeno
+			}
+			modifier = {
+				factor = 0
 				culture = chino
 			}
 			modifier = {
 				factor = 0
-				culture = chapin
+				culture = trifinio
+			}
+			modifier = {
+				factor = 0
+				culture = nicoyano
 			}
 			modifier = {
 				factor = 0
@@ -8029,7 +8847,7 @@ character_event = {
 			}
 			modifier = {
 				factor = 0
-				culture = cascadian
+				culture = siskiyouan
 			}
 			modifier = {
 				factor = 0
@@ -8037,7 +8855,7 @@ character_event = {
 			}
 			modifier = {
 				factor = 0
-				culture = portlander
+				culture = cascadian
 			}
 			modifier = {
 				factor = 0
@@ -8185,7 +9003,7 @@ character_event = {
 			}
 			modifier = {
 				factor = 0
-				culture = wastelander
+				culture = strine
 			}
 			modifier = {
 				factor = 0
@@ -8309,6 +9127,10 @@ character_event = {
 			}
 			modifier = {
 				factor = 0
+				culture = cheyenne
+			}
+			modifier = {
+				factor = 0
 				culture = sheban
 			}
 			modifier = {
@@ -8333,7 +9155,7 @@ character_event = {
 			}
 			modifier = {
 				factor = 0
-				culture = khalifi
+				culture = anjalusi
 			}
 			modifier = {
 				factor = 0
@@ -8406,6 +9228,42 @@ character_event = {
 			modifier = {
 				factor = 0
 				culture = valluno
+			}
+			modifier = {
+				factor = 0
+				culture = ribeirinho
+			}
+			modifier = {
+				factor = 0
+				culture = verdiano
+			}
+			modifier = {
+				factor = 0
+				culture = inlander
+			}
+			modifier = {
+				factor = 0
+				culture = snakelander
+			}
+			modifier = {
+				factor = 10
+				culture = texaner
+			}
+			modifier = {
+				factor = 5
+				culture = chileno
+			}
+			modifier = {
+				factor = 50
+				culture = czexan
+			}
+			modifier = {
+				factor = 0
+				culture = oklahoman
+			}
+			modifier = {
+				factor = 5
+				culture = shami
 			}
 		}
 		set_graphical_culture = west_slavic
@@ -8536,7 +9394,7 @@ character_event = {
 			}
 			modifier = {
 				factor = 0
-				culture = dominicano
+				culture = quisqueyano
 			}
 			modifier = {
 				factor = 0
@@ -8553,6 +9411,10 @@ character_event = {
 			modifier = {
 				factor = 0
 				culture = raizal
+			}
+			modifier = {
+				factor = 0
+				culture = mekatelyu
 			}
 			modifier = {
 				factor = 0
@@ -8580,7 +9442,15 @@ character_event = {
 			}
 			modifier = {
 				factor = 0
-				culture = british
+				culture = anglish
+			}
+			modifier = {
+				factor = 0
+				culture = northumbrian
+			}
+			modifier = {
+				factor = 0
+				culture = scottish
 			}
 			modifier = {
 				factor = 0
@@ -8588,7 +9458,19 @@ character_event = {
 			}
 			modifier = {
 				factor = 0
-				culture = regio
+				culture = bravo
+			}
+			modifier = {
+				factor = 0
+				culture = altiplanense
+			}
+			modifier = {
+				factor = 0
+				culture = choyero
+			}
+			modifier = {
+				factor = 0
+				culture = menomex
 			}
 			modifier = {
 				factor = 0
@@ -8604,11 +9486,11 @@ character_event = {
 			}
 			modifier = {
 				factor = 0
-				culture = culichi
+				culture = occidental
 			}
 			modifier = {
 				factor = 0
-				culture = californio
+				culture = californiano
 			}
 			modifier = {
 				factor = 0
@@ -8616,11 +9498,19 @@ character_event = {
 			}
 			modifier = {
 				factor = 0
+				culture = abajeno
+			}
+			modifier = {
+				factor = 0
 				culture = chino
 			}
 			modifier = {
 				factor = 0
-				culture = chapin
+				culture = trifinio
+			}
+			modifier = {
+				factor = 0
+				culture = nicoyano
 			}
 			modifier = {
 				factor = 0
@@ -8720,7 +9610,7 @@ character_event = {
 			}
 			modifier = {
 				factor = 0
-				culture = cascadian
+				culture = siskiyouan
 			}
 			modifier = {
 				factor = 0
@@ -8728,7 +9618,7 @@ character_event = {
 			}
 			modifier = {
 				factor = 0
-				culture = portlander
+				culture = cascadian
 			}
 			modifier = {
 				factor = 0
@@ -8876,7 +9766,7 @@ character_event = {
 			}
 			modifier = {
 				factor = 0
-				culture = wastelander
+				culture = strine
 			}
 			modifier = {
 				factor = 0
@@ -9008,7 +9898,7 @@ character_event = {
 			}
 			modifier = {
 				factor = 0
-				culture = khalifi
+				culture = anjalusi
 			}
 			modifier = {
 				factor = 0
@@ -9081,6 +9971,38 @@ character_event = {
 			modifier = {
 				factor = 0
 				culture = valluno
+			}
+			modifier = {
+				factor = 0
+				culture = verdiano
+			}
+			modifier = {
+				factor = 0
+				culture = inlander
+			}
+			modifier = {
+				factor = 0
+				culture = snakelander
+			}
+			modifier = {
+				factor = 0
+				culture = texaner
+			}
+			modifier = {
+				factor = 0
+				culture = chileno
+			}
+			modifier = {
+				factor = 0
+				culture = czexan
+			}
+			modifier = {
+				factor = 0
+				culture = oklahoman
+			}
+			modifier = {
+				factor = 0
+				culture = shami
 			}
 		}
 		set_graphical_culture = german
@@ -9211,7 +10133,7 @@ character_event = {
 			}
 			modifier = {
 				factor = 0
-				culture = dominicano
+				culture = quisqueyano
 			}
 			modifier = {
 				factor = 0
@@ -9228,6 +10150,10 @@ character_event = {
 			modifier = {
 				factor = 10
 				culture = raizal
+			}
+			modifier = {
+				factor = 0
+				culture = mekatelyu
 			}
 			modifier = {
 				factor = 20
@@ -9254,8 +10180,16 @@ character_event = {
 				culture = brazilian
 			}
 			modifier = {
-				factor = 35
-				culture = british
+				factor = 55
+				culture = anglish
+			}
+			modifier = {
+				factor = 55
+				culture = northumbrian
+			}
+			modifier = {
+				factor = 15
+				culture = scottish
 			}
 			modifier = {
 				factor = 0
@@ -9263,7 +10197,19 @@ character_event = {
 			}
 			modifier = {
 				factor = 0
-				culture = regio
+				culture = bravo
+			}
+			modifier = {
+				factor = 0
+				culture = altiplanense
+			}
+			modifier = {
+				factor = 0
+				culture = choyero
+			}
+			modifier = {
+				factor = 0
+				culture = menomex
 			}
 			modifier = {
 				factor = 0
@@ -9279,11 +10225,11 @@ character_event = {
 			}
 			modifier = {
 				factor = 0
-				culture = culichi
+				culture = occidental
 			}
 			modifier = {
 				factor = 0
-				culture = californio
+				culture = californiano
 			}
 			modifier = {
 				factor = 0
@@ -9291,11 +10237,19 @@ character_event = {
 			}
 			modifier = {
 				factor = 0
+				culture = abajeno
+			}
+			modifier = {
+				factor = 0
 				culture = chino
 			}
 			modifier = {
 				factor = 0
-				culture = chapin
+				culture = trifinio
+			}
+			modifier = {
+				factor = 0
+				culture = nicoyano
 			}
 			modifier = {
 				factor = 0
@@ -9395,7 +10349,7 @@ character_event = {
 			}
 			modifier = {
 				factor = 0
-				culture = cascadian
+				culture = siskiyouan
 			}
 			modifier = {
 				factor = 0
@@ -9403,7 +10357,7 @@ character_event = {
 			}
 			modifier = {
 				factor = 15
-				culture = portlander
+				culture = cascadian
 			}
 			modifier = {
 				factor = 15
@@ -9551,7 +10505,7 @@ character_event = {
 			}
 			modifier = {
 				factor = 0
-				culture = wastelander
+				culture = strine
 			}
 			modifier = {
 				factor = 0
@@ -9671,6 +10625,10 @@ character_event = {
 			}
 			modifier = {
 				factor = 0
+				culture = cheyenne
+			}
+			modifier = {
+				factor = 0
 				culture = sheban
 			}
 			modifier = {
@@ -9695,7 +10653,7 @@ character_event = {
 			}
 			modifier = {
 				factor = 0
-				culture = khalifi
+				culture = anjalusi
 			}
 			modifier = {
 				factor = 0
@@ -9768,6 +10726,42 @@ character_event = {
 			modifier = {
 				factor = 0
 				culture = valluno
+			}
+			modifier = {
+				factor = 0
+				culture = ribeirinho
+			}
+			modifier = {
+				factor = 0
+				culture = verdiano
+			}
+			modifier = {
+				factor = 0
+				culture = inlander
+			}
+			modifier = {
+				factor = 0
+				culture = snakelander
+			}
+			modifier = {
+				factor = 0
+				culture = texaner
+			}
+			modifier = {
+				factor = 0
+				culture = chileno
+			}
+			modifier = {
+				factor = 0
+				culture = czexan
+			}
+			modifier = {
+				factor = 10
+				culture = oklahoman
+			}
+			modifier = {
+				factor = 0
+				culture = shami
 			}
 		}
 		set_graphical_culture = english
@@ -9898,7 +10892,7 @@ character_event = {
 			}
 			modifier = {
 				factor = 0
-				culture = dominicano
+				culture = quisqueyano
 			}
 			modifier = {
 				factor = 0
@@ -9915,6 +10909,10 @@ character_event = {
 			modifier = {
 				factor = 0
 				culture = raizal
+			}
+			modifier = {
+				factor = 0
+				culture = mekatelyu
 			}
 			modifier = {
 				factor = 0
@@ -9942,7 +10940,15 @@ character_event = {
 			}
 			modifier = {
 				factor = 0
-				culture = british
+				culture = anglish
+			}
+			modifier = {
+				factor = 0
+				culture = northumbrian
+			}
+			modifier = {
+				factor = 0
+				culture = scottish
 			}
 			modifier = {
 				factor = 0
@@ -9950,7 +10956,19 @@ character_event = {
 			}
 			modifier = {
 				factor = 0
-				culture = regio
+				culture = bravo
+			}
+			modifier = {
+				factor = 0
+				culture = altiplanense
+			}
+			modifier = {
+				factor = 0
+				culture = choyero
+			}
+			modifier = {
+				factor = 0
+				culture = menomex
 			}
 			modifier = {
 				factor = 0
@@ -9966,11 +10984,11 @@ character_event = {
 			}
 			modifier = {
 				factor = 0
-				culture = culichi
+				culture = occidental
 			}
 			modifier = {
 				factor = 0
-				culture = californio
+				culture = californiano
 			}
 			modifier = {
 				factor = 0
@@ -9978,11 +10996,19 @@ character_event = {
 			}
 			modifier = {
 				factor = 0
+				culture = abajeno
+			}
+			modifier = {
+				factor = 0
 				culture = chino
 			}
 			modifier = {
 				factor = 0
-				culture = chapin
+				culture = trifinio
+			}
+			modifier = {
+				factor = 0
+				culture = nicoyano
 			}
 			modifier = {
 				factor = 0
@@ -10082,7 +11108,7 @@ character_event = {
 			}
 			modifier = {
 				factor = 0
-				culture = cascadian
+				culture = siskiyouan
 			}
 			modifier = {
 				factor = 0
@@ -10090,7 +11116,7 @@ character_event = {
 			}
 			modifier = {
 				factor = 0
-				culture = portlander
+				culture = cascadian
 			}
 			modifier = {
 				factor = 0
@@ -10238,7 +11264,7 @@ character_event = {
 			}
 			modifier = {
 				factor = 0
-				culture = wastelander
+				culture = strine
 			}
 			modifier = {
 				factor = 0
@@ -10362,6 +11388,10 @@ character_event = {
 			}
 			modifier = {
 				factor = 0
+				culture = cheyenne
+			}
+			modifier = {
+				factor = 0
 				culture = sheban
 			}
 			modifier = {
@@ -10386,7 +11416,7 @@ character_event = {
 			}
 			modifier = {
 				factor = 0
-				culture = khalifi
+				culture = anjalusi
 			}
 			modifier = {
 				factor = 90
@@ -10455,6 +11485,42 @@ character_event = {
 			modifier = {
 				factor = 0
 				culture = valluno
+			}
+			modifier = {
+				factor = 0
+				culture = ribeirinho
+			}
+			modifier = {
+				factor = 0
+				culture = verdiano
+			}
+			modifier = {
+				factor = 0
+				culture = inlander
+			}
+			modifier = {
+				factor = 0
+				culture = snakelander
+			}
+			modifier = {
+				factor = 0
+				culture = texaner
+			}
+			modifier = {
+				factor = 0
+				culture = chileno
+			}
+			modifier = {
+				factor = 0
+				culture = czexan
+			}
+			modifier = {
+				factor = 0
+				culture = oklahoman
+			}
+			modifier = {
+				factor = 5
+				culture = shami
 			}
 		}
 		set_graphical_culture = persian
@@ -10585,7 +11651,7 @@ character_event = {
 			}
 			modifier = {
 				factor = 0
-				culture = dominicano
+				culture = quisqueyano
 			}
 			modifier = {
 				factor = 0
@@ -10602,6 +11668,10 @@ character_event = {
 			modifier = {
 				factor = 0
 				culture = raizal
+			}
+			modifier = {
+				factor = 0
+				culture = mekatelyu
 			}
 			modifier = {
 				factor = 0
@@ -10629,7 +11699,15 @@ character_event = {
 			}
 			modifier = {
 				factor = 0
-				culture = british
+				culture = anglish
+			}
+			modifier = {
+				factor = 0
+				culture = northumbrian
+			}
+			modifier = {
+				factor = 0
+				culture = scottish
 			}
 			modifier = {
 				factor = 0
@@ -10637,7 +11715,19 @@ character_event = {
 			}
 			modifier = {
 				factor = 0
-				culture = regio
+				culture = bravo
+			}
+			modifier = {
+				factor = 0
+				culture = altiplanense
+			}
+			modifier = {
+				factor = 0
+				culture = choyero
+			}
+			modifier = {
+				factor = 0
+				culture = menomex
 			}
 			modifier = {
 				factor = 0
@@ -10653,11 +11743,11 @@ character_event = {
 			}
 			modifier = {
 				factor = 0
-				culture = culichi
+				culture = occidental
 			}
 			modifier = {
 				factor = 0
-				culture = californio
+				culture = californiano
 			}
 			modifier = {
 				factor = 0
@@ -10665,11 +11755,19 @@ character_event = {
 			}
 			modifier = {
 				factor = 0
+				culture = abajeno
+			}
+			modifier = {
+				factor = 0
 				culture = chino
 			}
 			modifier = {
 				factor = 0
-				culture = chapin
+				culture = trifinio
+			}
+			modifier = {
+				factor = 0
+				culture = nicoyano
 			}
 			modifier = {
 				factor = 0
@@ -10769,7 +11867,7 @@ character_event = {
 			}
 			modifier = {
 				factor = 0
-				culture = cascadian
+				culture = siskiyouan
 			}
 			modifier = {
 				factor = 0
@@ -10777,7 +11875,7 @@ character_event = {
 			}
 			modifier = {
 				factor = 0
-				culture = portlander
+				culture = cascadian
 			}
 			modifier = {
 				factor = 0
@@ -10925,7 +12023,7 @@ character_event = {
 			}
 			modifier = {
 				factor = 5
-				culture = wastelander
+				culture = strine
 			}
 			modifier = {
 				factor = 0
@@ -11049,6 +12147,10 @@ character_event = {
 			}
 			modifier = {
 				factor = 0
+				culture = cheyenne
+			}
+			modifier = {
+				factor = 0
 				culture = sheban
 			}
 			modifier = {
@@ -11073,7 +12175,7 @@ character_event = {
 			}
 			modifier = {
 				factor = 0
-				culture = khalifi
+				culture = anjalusi
 			}
 			modifier = {
 				factor = 0
@@ -11146,6 +12248,42 @@ character_event = {
 			modifier = {
 				factor = 0
 				culture = valluno
+			}
+			modifier = {
+				factor = 0
+				culture = ribeirinho
+			}
+			modifier = {
+				factor = 0
+				culture = verdiano
+			}
+			modifier = {
+				factor = 0
+				culture = inlander
+			}
+			modifier = {
+				factor = 0
+				culture = snakelander
+			}
+			modifier = {
+				factor = 0
+				culture = texaner
+			}
+			modifier = {
+				factor = 0
+				culture = chileno
+			}
+			modifier = {
+				factor = 0
+				culture = czexan
+			}
+			modifier = {
+				factor = 0
+				culture = oklahoman
+			}
+			modifier = {
+				factor = 0
+				culture = shami
 			}
 		}
 		set_graphical_culture = italian
@@ -11276,7 +12414,7 @@ character_event = {
 			}
 			modifier = {
 				factor = 0
-				culture = dominicano
+				culture = quisqueyano
 			}
 			modifier = {
 				factor = 0
@@ -11293,6 +12431,10 @@ character_event = {
 			modifier = {
 				factor = 0
 				culture = raizal
+			}
+			modifier = {
+				factor = 0
+				culture = mekatelyu
 			}
 			modifier = {
 				factor = 0
@@ -11320,7 +12462,15 @@ character_event = {
 			}
 			modifier = {
 				factor = 0
-				culture = british
+				culture = anglish
+			}
+			modifier = {
+				factor = 0
+				culture = northumbrian
+			}
+			modifier = {
+				factor = 0
+				culture = scottish
 			}
 			modifier = {
 				factor = 0
@@ -11328,7 +12478,19 @@ character_event = {
 			}
 			modifier = {
 				factor = 0
-				culture = regio
+				culture = bravo
+			}
+			modifier = {
+				factor = 0
+				culture = altiplanense
+			}
+			modifier = {
+				factor = 0
+				culture = choyero
+			}
+			modifier = {
+				factor = 0
+				culture = menomex
 			}
 			modifier = {
 				factor = 0
@@ -11344,11 +12506,11 @@ character_event = {
 			}
 			modifier = {
 				factor = 0
-				culture = culichi
+				culture = occidental
 			}
 			modifier = {
 				factor = 0
-				culture = californio
+				culture = californiano
 			}
 			modifier = {
 				factor = 0
@@ -11356,11 +12518,19 @@ character_event = {
 			}
 			modifier = {
 				factor = 0
+				culture = abajeno
+			}
+			modifier = {
+				factor = 0
 				culture = chino
 			}
 			modifier = {
 				factor = 0
-				culture = chapin
+				culture = trifinio
+			}
+			modifier = {
+				factor = 0
+				culture = nicoyano
 			}
 			modifier = {
 				factor = 0
@@ -11460,7 +12630,7 @@ character_event = {
 			}
 			modifier = {
 				factor = 0
-				culture = cascadian
+				culture = siskiyouan
 			}
 			modifier = {
 				factor = 0
@@ -11468,7 +12638,7 @@ character_event = {
 			}
 			modifier = {
 				factor = 0
-				culture = portlander
+				culture = cascadian
 			}
 			modifier = {
 				factor = 0
@@ -11616,7 +12786,7 @@ character_event = {
 			}
 			modifier = {
 				factor = 0
-				culture = wastelander
+				culture = strine
 			}
 			modifier = {
 				factor = 0
@@ -11740,6 +12910,10 @@ character_event = {
 			}
 			modifier = {
 				factor = 0
+				culture = cheyenne
+			}
+			modifier = {
+				factor = 0
 				culture = sheban
 			}
 			modifier = {
@@ -11764,7 +12938,7 @@ character_event = {
 			}
 			modifier = {
 				factor = 0
-				culture = khalifi
+				culture = anjalusi
 			}
 			modifier = {
 				factor = 0
@@ -11837,6 +13011,42 @@ character_event = {
 			modifier = {
 				factor = 0
 				culture = valluno
+			}
+			modifier = {
+				factor = 0
+				culture = ribeirinho
+			}
+			modifier = {
+				factor = 0
+				culture = verdiano
+			}
+			modifier = {
+				factor = 0
+				culture = inlander
+			}
+			modifier = {
+				factor = 0
+				culture = snakelander
+			}
+			modifier = {
+				factor = 0
+				culture = texaner
+			}
+			modifier = {
+				factor = 0
+				culture = chileno
+			}
+			modifier = {
+				factor = 0
+				culture = czexan
+			}
+			modifier = {
+				factor = 0
+				culture = oklahoman
+			}
+			modifier = {
+				factor = 0
+				culture = shami
 			}
 		}
 		set_graphical_culture = french
@@ -11967,7 +13177,7 @@ character_event = {
 			}
 			modifier = {
 				factor = 0
-				culture = dominicano
+				culture = quisqueyano
 			}
 			modifier = {
 				factor = 0
@@ -11984,6 +13194,10 @@ character_event = {
 			modifier = {
 				factor = 0
 				culture = raizal
+			}
+			modifier = {
+				factor = 0
+				culture = mekatelyu
 			}
 			modifier = {
 				factor = 0
@@ -12011,7 +13225,15 @@ character_event = {
 			}
 			modifier = {
 				factor = 0
-				culture = british
+				culture = anglish
+			}
+			modifier = {
+				factor = 0
+				culture = northumbrian
+			}
+			modifier = {
+				factor = 0
+				culture = scottish
 			}
 			modifier = {
 				factor = 0
@@ -12019,7 +13241,19 @@ character_event = {
 			}
 			modifier = {
 				factor = 0
-				culture = regio
+				culture = bravo
+			}
+			modifier = {
+				factor = 0
+				culture = altiplanense
+			}
+			modifier = {
+				factor = 0
+				culture = choyero
+			}
+			modifier = {
+				factor = 0
+				culture = menomex
 			}
 			modifier = {
 				factor = 0
@@ -12035,11 +13269,11 @@ character_event = {
 			}
 			modifier = {
 				factor = 0
-				culture = culichi
+				culture = occidental
 			}
 			modifier = {
 				factor = 0
-				culture = californio
+				culture = californiano
 			}
 			modifier = {
 				factor = 0
@@ -12047,11 +13281,19 @@ character_event = {
 			}
 			modifier = {
 				factor = 0
+				culture = abajeno
+			}
+			modifier = {
+				factor = 0
 				culture = chino
 			}
 			modifier = {
 				factor = 0
-				culture = chapin
+				culture = trifinio
+			}
+			modifier = {
+				factor = 0
+				culture = nicoyano
 			}
 			modifier = {
 				factor = 0
@@ -12151,7 +13393,7 @@ character_event = {
 			}
 			modifier = {
 				factor = 0
-				culture = cascadian
+				culture = siskiyouan
 			}
 			modifier = {
 				factor = 0
@@ -12159,7 +13401,7 @@ character_event = {
 			}
 			modifier = {
 				factor = 0
-				culture = portlander
+				culture = cascadian
 			}
 			modifier = {
 				factor = 0
@@ -12307,7 +13549,7 @@ character_event = {
 			}
 			modifier = {
 				factor = 0
-				culture = wastelander
+				culture = strine
 			}
 			modifier = {
 				factor = 0
@@ -12431,6 +13673,10 @@ character_event = {
 			}
 			modifier = {
 				factor = 0
+				culture = cheyenne
+			}
+			modifier = {
+				factor = 0
 				culture = sheban
 			}
 			modifier = {
@@ -12455,7 +13701,7 @@ character_event = {
 			}
 			modifier = {
 				factor = 3
-				culture = khalifi
+				culture = anjalusi
 			}
 			modifier = {
 				factor = 0
@@ -12529,8 +13775,807 @@ character_event = {
 				factor = 0
 				culture = valluno
 			}
+			modifier = {
+				factor = 0
+				culture = ribeirinho
+			}
+			modifier = {
+				factor = 0
+				culture = verdiano
+			}
+			modifier = {
+				factor = 0
+				culture = inlander
+			}
+			modifier = {
+				factor = 0
+				culture = snakelander
+			}
+			modifier = {
+				factor = 0
+				culture = texaner
+			}
+			modifier = {
+				factor = 0
+				culture = chileno
+			}
+			modifier = {
+				factor = 0
+				culture = czexan
+			}
+			modifier = {
+				factor = 0
+				culture = oklahoman
+			}
+			modifier = {
+				factor = 5
+				culture = shami
+			}
 		}
 		set_graphical_culture = greek
+	}
+	
+	option = {
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				culture = lacustrine
+			}
+			modifier = {
+				factor = 0
+				culture = ontarian
+			}
+			modifier = {
+				factor = 0
+				culture = chicagoan
+			}
+			modifier = {
+				factor = 0
+				culture = gothamite
+			}
+			modifier = {
+				factor = 0
+				culture = hudsonian
+			}
+			modifier = {
+				factor = 0
+				culture = delawarean
+			}
+			modifier = {
+				factor = 0
+				culture = yankee
+			}
+			modifier = {
+				factor = 0
+				culture = maritimer
+			}
+			modifier = {
+				factor = 0
+				culture = deitsch
+			}
+			modifier = {
+				factor = 0
+				culture = rostmann
+			}
+			modifier = {
+				factor = 0
+				culture = dellsman
+			}
+			modifier = {
+				factor = 0
+				culture = yooper
+			}
+			modifier = {
+				factor = 0
+				culture = northlander
+			}
+			modifier = {
+				factor = 0
+				culture = beltway
+			}
+			modifier = {
+				factor = 0
+				culture = southron
+			}
+			modifier = {
+				factor = 0
+				culture = dixie
+			}
+			modifier = {
+				factor = 0
+				culture = appalachian
+			}
+			modifier = {
+				factor = 0
+				culture = gulfard
+			}
+			modifier = {
+				factor = 0
+				culture = melungeon
+			}
+			modifier = {
+				factor = 0
+				culture = riverlander
+			}
+			modifier = {
+				factor = 0
+				culture = grangelander
+			}
+			modifier = {
+				factor = 0
+				culture = texan
+			}
+			modifier = {
+				factor = 0
+				culture = arixan
+			}
+			modifier = {
+				factor = 0
+				culture = ozark
+			}
+			modifier = {
+				factor = 0
+				culture = quebecois
+			}
+			modifier = {
+				factor = 0
+				culture = acadien
+			}
+			modifier = {
+				factor = 0
+				culture = creole
+			}
+			modifier = {
+				factor = 0
+				culture = cajun
+			}
+			modifier = {
+				factor = 0
+				culture = haitian
+			}
+			modifier = {
+				factor = 0
+				culture = cubano
+			}
+			modifier = {
+				factor = 0
+				culture = quisqueyano
+			}
+			modifier = {
+				factor = 0
+				culture = boricua
+			}
+			modifier = {
+				factor = 0
+				culture = miskito
+			}
+			modifier = {
+				factor = 0
+				culture = garinagu
+			}
+			modifier = {
+				factor = 0
+				culture = raizal
+			}
+			modifier = {
+				factor = 0
+				culture = mekatelyu
+			}
+			modifier = {
+				factor = 0
+				culture = tuskegean
+			}
+			modifier = {
+				factor = 0
+				culture = motowner
+			}
+			modifier = {
+				factor = 0
+				culture = gullah
+			}
+			modifier = {
+				factor = 0
+				culture = nigerian
+			}
+			modifier = {
+				factor = 0
+				culture = west_indian
+			}
+			modifier = {
+				factor = 0
+				culture = brazilian
+			}
+			modifier = {
+				factor = 0
+				culture = anglish
+			}
+			modifier = {
+				factor = 0
+				culture = northumbrian
+			}
+			modifier = {
+				factor = 0
+				culture = scottish
+			}
+			modifier = {
+				factor = 0
+				culture = tejano
+			}
+			modifier = {
+				factor = 0
+				culture = bravo
+			}
+			modifier = {
+				factor = 0
+				culture = altiplanense
+			}
+			modifier = {
+				factor = 0
+				culture = choyero
+			}
+			modifier = {
+				factor = 0
+				culture = menomex
+			}
+			modifier = {
+				factor = 0
+				culture = neomexicano
+			}
+			modifier = {
+				factor = 0
+				culture = tapatio
+			}
+			modifier = {
+				factor = 0
+				culture = jarocho
+			}
+			modifier = {
+				factor = 0
+				culture = occidental
+			}
+			modifier = {
+				factor = 0
+				culture = californiano
+			}
+			modifier = {
+				factor = 0
+				culture = chilango
+			}
+			modifier = {
+				factor = 0
+				culture = abajeno
+			}
+			modifier = {
+				factor = 0
+				culture = chino
+			}
+			modifier = {
+				factor = 0
+				culture = trifinio
+			}
+			modifier = {
+				factor = 0
+				culture = nicoyano
+			}
+			modifier = {
+				factor = 0
+				culture = comanche
+			}
+			modifier = {
+				factor = 0
+				culture = sioux
+			}
+			modifier = {
+				factor = 0
+				culture = cherokee
+			}
+			modifier = {
+				factor = 0
+				culture = navajo
+			}
+			modifier = {
+				factor = 0
+				culture = hopi
+			}
+			modifier = {
+				factor = 0
+				culture = algonquin
+			}
+			modifier = {
+				factor = 0
+				culture = ojibwe
+			}
+			modifier = {
+				factor = 0
+				culture = cree
+			}
+			modifier = {
+				factor = 92
+				culture = haida
+			}
+			modifier = {
+				factor = 0
+				culture = shuswap
+			}
+			modifier = {
+				factor = 0
+				culture = nahua
+			}
+			modifier = {
+				factor = 0
+				culture = lacandon
+			}
+			modifier = {
+				factor = 0
+				culture = quichean
+			}
+			modifier = {
+				factor = 0
+				culture = cholano
+			}
+			modifier = {
+				factor = 0
+				culture = yucateco
+			}
+			modifier = {
+				factor = 0
+				culture = mixtec
+			}
+			modifier = {
+				factor = 0
+				culture = zapotec
+			}
+			modifier = {
+				factor = 0
+				culture = mountainer
+			}
+			modifier = {
+				factor = 0
+				culture = utahn
+			}
+			modifier = {
+				factor = 0
+				culture = hawaiian
+			}
+			modifier = {
+				factor = 0
+				culture = coloradan
+			}
+			modifier = {
+				factor = 3
+				culture = angeleno
+			}
+			modifier = {
+				factor = 0
+				culture = bayfolk
+			}
+			modifier = {
+				factor = 0
+				culture = valleyan
+			}
+			modifier = {
+				factor = 0
+				culture = siskiyouan
+			}
+			modifier = {
+				factor = 0
+				culture = paiute
+			}
+			modifier = {
+				factor = 0
+				culture = cascadian
+			}
+			modifier = {
+				factor = 0
+				culture = canuck
+			}
+			modifier = {
+				factor = 60
+				culture = metis
+			}
+			modifier = {
+				factor = 0
+				culture = edokko
+			}
+			modifier = {
+				factor = 0
+				culture = paisa
+			}
+			modifier = {
+				factor = 0
+				culture = costeno
+			}
+			modifier = {
+				factor = 0
+				culture = istmeno
+			}
+			modifier = {
+				factor = 0
+				culture = caraqueno
+			}
+			modifier = {
+				factor = 0
+				culture = llanero
+			}
+			modifier = {
+				factor = 0
+				culture = bolivarense
+			}
+			modifier = {
+				factor = 0
+				culture = calaotian
+			}
+			modifier = {
+				factor = 0
+				culture = purepecha
+			}
+			modifier = {
+				factor = 0
+				culture = raramuri
+			}
+			modifier = {
+				factor = 0
+				culture = innu
+			}
+			modifier = {
+				factor = 0
+				culture = mikmaq
+			}
+			modifier = {
+				factor = 91
+				culture = inuit
+			}
+			modifier = {
+				factor = 0
+				culture = chocoano
+			}
+			modifier = {
+				factor = 0
+				culture = truenonato
+			}
+			modifier = {
+				factor = 0
+				culture = calypsonian
+			}
+			modifier = {
+				factor = 0
+				culture = venteux
+			}
+			modifier = {
+				factor = 0
+				culture = guyanese
+			}
+			modifier = {
+				factor = 0
+				culture = cayennais
+			}
+			modifier = {
+				factor = 0
+				culture = sranan
+			}
+			modifier = {
+				factor = 0
+				culture = papiamen
+			}
+			modifier = {
+				factor = 0
+				culture = kriol
+			}
+			modifier = {
+				factor = 0
+				culture = muisca
+			}
+			modifier = {
+				factor = 0
+				culture = quechua
+			}
+			modifier = {
+				factor = 0
+				culture = wayuu
+			}
+			modifier = {
+				factor = 0
+				culture = singaporean
+			}
+			modifier = {
+				factor = 0
+				culture = hong_konger
+			}
+			modifier = {
+				factor = 0
+				culture = novorusskiy
+			}
+			modifier = {
+				factor = 0
+				culture = ozlander
+			}
+			modifier = {
+				factor = 0
+				culture = kinh
+			}
+			modifier = {
+				factor = 0
+				culture = tagalog
+			}
+			modifier = {
+				factor = 0
+				culture = gocho
+			}
+			modifier = {
+				factor = 0
+				culture = newfie
+			}
+			modifier = {
+				factor = 0
+				culture = muscogee
+			}
+			modifier = {
+				factor = 0
+				culture = strine
+			}
+			modifier = {
+				factor = 0
+				culture = moroccan
+			}
+			modifier = {
+				factor = 0
+				culture = amazonense
+			}
+			modifier = {
+				factor = 0
+				culture = yiddish
+			}
+			modifier = {
+				factor = 0
+				culture = neoladino
+			}
+			modifier = {
+				factor = 0
+				culture = horse
+			}
+			modifier = {
+				factor = 0
+				culture = cat
+			}
+			modifier = {
+				factor = 0
+				culture = bear
+			}
+			modifier = {
+				factor = 0
+				culture = hedgehog_culture
+			}
+			modifier = {
+				factor = 0
+				culture = duck_culture
+			}
+			modifier = {
+				factor = 0
+				culture = dog_culture
+			}
+			modifier = {
+				factor = 0
+				culture = elephant_culture
+			}
+			modifier = {
+				factor = 0
+				culture = dragon_culture
+			}
+			modifier = {
+				factor = 0
+				culture = red_panda
+			}
+			modifier = {
+				factor = 0
+				culture = iroquois
+			}
+			modifier = {
+				factor = 0
+				culture = carpetbagger
+			}
+			modifier = {
+				factor = 0
+				culture = new_english
+			}
+			modifier = {
+				factor = 0
+				culture = yanquito
+			}
+			modifier = {
+				factor = 0
+				culture = baiano
+			}
+			modifier = {
+				factor = 0
+				culture = gaucho
+			}
+			modifier = {
+				factor = 0
+				culture = ontarois
+			}
+			modifier = {
+				factor = 0
+				culture = gwladfeg
+			}
+			modifier = {
+				factor = 0
+				culture = nuyorican
+			}
+			modifier = {
+				factor = 0
+				culture = afrocubano
+			}
+			modifier = {
+				factor = 0
+				culture = prairielander
+			}
+			modifier = {
+				factor = 0
+				culture = liberian
+			}
+			modifier = {
+				factor = 0
+				culture = maori
+			}
+			modifier = {
+				factor = 0
+				culture = saulteaux
+			}
+			modifier = {
+				factor = 0
+				culture = blackfoot
+			}
+			modifier = {
+				factor = 0
+				culture = apache
+			}
+			modifier = {
+				factor = 0
+				culture = crow
+			}
+			modifier = {
+				factor = 0
+				culture = cheyenne
+			}
+			modifier = {
+				factor = 0
+				culture = sheban
+			}
+			modifier = {
+				factor = 0
+				culture = nez_perce
+			}
+			modifier = {
+				factor = 0
+				culture = plautdietsch
+			}
+			modifier = {
+				factor = 92
+				culture = wakashan
+			}
+			modifier = {
+				factor = 0
+				culture = ktunaxa
+			}
+			modifier = {
+				factor = 0
+				culture = dakelh
+			}
+			modifier = {
+				factor = 0
+				culture = anjalusi
+			}
+			modifier = {
+				factor = 0
+				culture = tehrangeleno
+			}
+			modifier = {
+				factor = 0
+				culture = chiraqi
+			}
+			modifier = {
+				factor = 0
+				culture = prodnanici
+			}
+			modifier = {
+				factor = 0
+				culture = neomoor
+			}
+			modifier = {
+				factor = 0
+				culture = filastino
+			}
+			modifier = {
+				factor = 0
+				culture = omedulac
+			}
+			modifier = {
+				factor = 0
+				culture = rouillard
+			}
+			modifier = {
+				factor = 0
+				culture = alaskan
+			}
+			modifier = {
+				factor = 92
+				culture = tlingit
+			}
+			modifier = {
+				factor = 92
+				culture = tsimshianic
+			}
+			modifier = {
+				factor = 0
+				culture = dene
+			}
+			modifier = {
+				factor = 0
+				culture = yukoner
+			}
+			modifier = {
+				factor = 0
+				culture = iyyu
+			}
+			modifier = {
+				factor = 0
+				culture = bermudian
+			}
+			modifier = {
+				factor = 0
+				culture = battleborn
+			}
+			modifier = {
+				factor = 0
+				culture = lokono
+			}
+			modifier = {
+				factor = 0
+				culture = rolo
+			}
+			modifier = {
+				factor = 0
+				culture = valluno
+			}
+			modifier = {
+				factor = 0
+				culture = ribeirinho
+			}
+			modifier = {
+				factor = 0
+				culture = verdiano
+			}
+			modifier = {
+				factor = 0
+				culture = inlander
+			}
+			modifier = {
+				factor = 0
+				culture = snakelander
+			}
+			modifier = {
+				factor = 0
+				culture = texaner
+			}
+			modifier = {
+				factor = 0
+				culture = chileno
+			}
+			modifier = {
+				factor = 0
+				culture = czexan
+			}
+			modifier = {
+				factor = 0
+				culture = oklahoman
+			}
+			modifier = {
+				factor = 0
+				culture = shami
+			}
+		}
+		set_graphical_culture = tibetan
 	}
 	
 	option = {
@@ -12883,7 +14928,7 @@ character_event = {
 			modifier = { #religious factor
 				factor = 0.5
 				OR = {
-					religion_group = pirate
+					religion_group = nautical
 					religion = consumerist
 				}
 			}
@@ -13030,13 +15075,32 @@ character_event = {
 			}
 		}
 		
+		# Gaian priests
+		any_independent_ruler = {
+			any_realm_character = {
+				limit = {
+					NOT = { has_alternate_start_parameter = { key = religion_names value = random } }
+					OR = {
+						is_female = no
+						NOT = { has_law = enatic_succession }
+					}
+					religion = gaian
+					OR = {
+						is_theocracy = yes
+					}
+					is_ruler = yes
+				}
+				character_event = { id = misc.16 }
+			}
+		}
+		
 		# Libertarian religious head
 		any_independent_ruler = {
 			any_realm_character = {
 				limit = {
 					NOT = { has_alternate_start_parameter = { key = religion_names value = random } }
 					has_landed_title = d_libertarian
-					NOT = { current_heir = { is_female = yes } }
+					is_female = no
 				}
 				character_event = { id = misc.8 }
 			}
@@ -13050,7 +15114,6 @@ character_event = {
 					NOT = { has_law = enatic_succession }
 					OR = {
 						religion = high_church
-						religion = confederated
 						religion = strangite
 						religion = reform
 						religion = neomayan
@@ -13133,6 +15196,7 @@ character_event = {
 				remove_trait = hedonist
 				remove_trait = drunkard
 				remove_trait = imbecile
+				remove_trait = distractible
 				remove_trait = slow
 				character_event = { id = misc.4 } # Physique
 				ROOT = {
@@ -13152,7 +15216,6 @@ character_event = {
 				female = yes
 				religion = ursuline
 				random_traits = yes
-				dynasty = culture
 			}
 			new_character = {
 				character_event = { id = misc.3 } # Diversity
@@ -13204,6 +15267,7 @@ character_event = {
 	desc = "Replace First Lady"
 	is_triggered_only = yes
 	hide_window = yes
+	religion = libertarian
 	
 	trigger = {
 		NOT = { has_alternate_start_parameter = { key = religion_names value = random } }
@@ -13237,7 +15301,6 @@ character_event = {
 		is_theocracy = yes
 		OR = {
 			religion = high_church
-			religion = confederated
 			religion = strangite
 			religion = reform
 			religion = neomayan
@@ -13269,5 +15332,214 @@ narrative_event = {
 	
 	option = {
 		name = OK
+	}
+}
+
+character_event = {
+	id = misc.11
+	desc = "Replace Leader of the Labrys Band"
+	picture = GFX_evt_mass_crusade
+	is_triggered_only = yes
+	religion = gaian
+
+	trigger = {
+		has_landed_title = d_labrys_band
+	}
+	
+	option = {
+		# Make sure they're a good age
+		random_list = {
+			10 = { create_random_soldier = {
+				random_traits = yes
+				female = yes
+				trait=homosexual
+				age = 30
+			} }
+			10 = { create_random_soldier = {
+				random_traits = yes
+				female = yes
+				trait=homosexual
+				age = 35
+			} }
+			10 = { create_random_soldier = {
+				random_traits = yes
+				female = yes
+				trait=homosexual
+				age = 40
+			} }
+			20 = { create_random_soldier = {
+				random_traits = yes
+				female = yes
+				trait=homosexual
+				age = 45
+			} }
+			20 = { create_random_soldier = {
+				random_traits = yes
+				female = yes
+				trait=homosexual
+				age = 50
+			} }
+			20 = { create_random_soldier = {
+				random_traits = yes
+				female = yes
+				trait=homosexual
+				age = 55
+			} }
+			10 = { create_random_soldier = {
+				random_traits = yes
+				female = yes
+				trait=homosexual
+				age = 60
+			} }
+		}
+		new_character = { ROOT = { any_demesne_title = { gain_title = PREVPREV } } }
+	}
+}
+
+character_event = {
+	id = misc.12
+	desc = "Reformation trigger"
+	is_triggered_only = yes
+	hide_window = yes
+	
+	trigger = {
+		has_religion_feature = religion_matriarchal
+		is_theocracy = yes
+		is_ruler = yes
+		controls_religion = no # prevents weirdness
+	}
+	
+	option = {
+		create_random_priest = {
+			random_traits = yes
+			female = yes
+			religion = ursuline
+		}
+		new_character = {
+			ROOT = {
+				any_demesne_title = { gain_title = PREVPREV }
+			}
+			primary_title = { add_law = enatic_succession }
+		}
+	}
+}
+
+#On_death: sunglasses
+character_event = {
+	id = misc.13
+	hide_window = yes
+
+	is_triggered_only = yes
+	
+	trigger = { 
+		any_artifact = { artifact_type = old_world_shades } 
+	}
+	
+	immediate = {
+		if = { 
+			limit = { 
+				any_artifact = { artifact_type = old_world_shades }
+			}
+			add_trait = dead_shades
+		}
+	}
+}
+
+character_event = {
+	id = misc.14
+	desc = EVTDESC_cast_jailer
+	picture = GFX_evt_torture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = OK
+	}
+}
+
+character_event = {
+	id = misc.15
+	desc = EVTDESC_cast_prisoner
+	picture = GFX_evt_torture
+	
+	hide_from = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTALoR.833
+	}
+}
+
+character_event = {
+	id = misc.16
+	desc = "Make Gaian priests female"
+	is_triggered_only = yes
+	hide_window = yes
+	religion = gaian
+	
+	trigger = {
+		NOT = { has_alternate_start_parameter = { key = religion_names value = random } }
+		is_theocracy = yes
+		OR = {
+			is_female = no
+			NOT = { has_law = enatic_succession }
+		}
+		is_ruler = yes
+	}
+	
+	immediate = {
+		primary_title = { add_law = enatic_succession }
+		if = {
+			limit = { is_female = no }
+			create_random_priest = {
+				female = yes
+				religion = gaian
+				random_traits = yes
+			}
+			new_character = {
+				character_event = { id = misc.3 } # Diversity
+				remove_trait = lustful
+				remove_trait = hedonist
+				remove_trait = drunkard
+				remove_trait = imbecile
+				remove_trait = distractible
+				remove_trait = slow
+				character_event = { id = misc.4 } # Physique
+				ROOT = {
+					abdicate_to = PREV
+				}
+			}
+		}
+		set_government_type = theocracy_government
+	}
+}
+
+character_event = {
+	id = misc.17
+	desc = "Gaian death trigger"
+	is_triggered_only = yes
+	hide_window = yes
+	religion = gaian
+	
+	trigger = {
+		NOT = { has_alternate_start_parameter = { key = religion_names value = random } }
+		is_theocracy = yes
+		is_ruler = yes
+		NOT = { current_heir = { is_female = yes } } # Preserve investiture if valid
+	}
+	
+	immediate = {
+		create_random_priest = {
+			random_traits = yes
+			female = yes
+			religion = gaian
+		}
+		new_character = {
+			ROOT = {
+				any_demesne_title = { gain_title = PREVPREV }
+			}
+			primary_title = { add_law = enatic_succession }
+		}
 	}
 }

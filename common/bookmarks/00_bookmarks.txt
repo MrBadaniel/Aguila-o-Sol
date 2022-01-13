@@ -16,7 +16,7 @@ bm_the_seven_seas = {
 			#dna="agfab0i00e0"
 			#properties="0e0a0000000000"
 			culture="petropavlovskiy"
-			dynasty=1721136			
+			dynasty=1721136
 		}
 	}
 	selectable_character = {
@@ -36,8 +36,8 @@ bm_the_seven_seas = {
 		title = k_redcoat_outpost 
 		title_name = REDCOAT_OUTPOST 
 		character = {
-			religion="thelemic"
-			culture="british"
+			religion="glorian"
+			culture="anglish"
 			#government = feudal_government
 			dynasty=1812076		
 		}
@@ -73,7 +73,7 @@ bm_the_cowboy_conquerors = {
 			#dna="agfab0i00e0"
 			#properties="0e0a0000000000"
 			culture="arixan"
-			dynasty= 2031020			
+			dynasty= 2031020
 		}
 	}
 	selectable_character = {
@@ -85,10 +85,21 @@ bm_the_cowboy_conquerors = {
 			religion="falling_star"
 			#dna="agfab0i00e0"
 			#properties="0e0a0000000000"
-			culture="texan"
+			culture="czexan"
 		}
 	}
-
+	selectable_character = {
+		id = 1846079 
+		age = 20
+		title = d_wayne_host 
+		title_name = d_wayne_host 
+		character = {
+			religion="trailwalker"
+			#dna="agfab0i00e0"
+			#properties="0e0a0000000000"
+			culture="grangelander"
+		}
+	}
 }
 
 
@@ -114,7 +125,7 @@ bm_indian_country = {
 			properties="a000ha000000"
 			religion="catholic"
 			culture="comanche"
-			government = feudal_government
+			government = open_range_feudalism_government
 			dynasty=1491003
 		}
 	}
@@ -150,7 +161,7 @@ bm_indian_country = {
 			properties="ai0bbb000000"
 			religion="peyotist"
 			culture="sioux"
-			government = feudal_government
+			government = open_range_feudalism_government
 			dynasty=1491103
 		}
 	}
@@ -369,7 +380,7 @@ bm_ghosts_of_the_north = {
 			properties="0b0eid000000"
 			religion="anabaptist"
 			culture="gothamite"
-			government = feudal_government
+			government = merchant_republic_government
 			dynasty=1777009
 		}
 	}
@@ -405,7 +416,7 @@ bm_ghosts_of_the_north = {
 			properties="ti0c0t000000"
 			religion="rust_cultist"
 			culture="motowner"
-			government = feudal_government
+			government = merchant_republic_government
 			dynasty=1967002
 		}
 	}
@@ -487,7 +498,7 @@ bm_gods_and_kings = {
 			properties="cdbdid000000"
 			religion="gaian"
 			culture="cascadian"
-			government = feudal_government
+			government = theocratic_feudal_government
 			dynasty=1845000
 		}
 	}
@@ -593,7 +604,7 @@ bm_south_of_the_border = {
 	}
 	
 	selectable_character = {
-		id = 1810083 # King Wenceslao Iturbide of Mexico
+		id = 6900061 # Weneceslao Paleo y Lagos
 		age = 55
 		name = ERA_CHAR_NAME_WENECESLAO
 		title = k_mexico
@@ -605,8 +616,8 @@ bm_south_of_the_border = {
 			properties="am0bea000000"
 			religion="sacred_heart"
 			culture="chilango"
-			government = feudal_government
-			dynasty=1519000
+			government=mex_imperial_government
+			dynasty=5001126
 		}
 	}
 	
@@ -641,7 +652,7 @@ bm_south_of_the_border = {
 			properties="aobbba000000"
 			religion="atomicist"
 			culture="tejano"
-			government = feudal_government
+			government = open_range_feudalism_government
 			dynasty=1815018
 		}
 	}

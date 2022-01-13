@@ -140,13 +140,17 @@
 	trait=wroth
 	trait=martial_cleric
 	2300.2.5={birth=yes}
-	2380.2.5={death=yes}
+	2380.2.5={death={
+			death_reason=death_battle_duel #Murdered in combat.
+			killer=2500133
+		}
+	}
 }
 2500008={
-	name="Mervyn"
+	name="Harvey"
 	dynasty=1849096# Areus
 	culture=bayfolk
-	religion=sedevacantist
+	religion=pagan
 	father=2500007
 	trait=impaler
 	trait=cruel
@@ -166,9 +170,9 @@
 2500009={
 	name="Joseph"
 	dynasty=1851045#Dominguez
-	culture=valleyan
-	religion=penitente
-	trait=lunatic
+	dna="beadg0ic000"
+	culture=tejano
+	religion=sacred_heart
 	trait=heresiarch
 	trait=brave
 	trait=strong
@@ -179,8 +183,11 @@
 	trait=holy_warrior
 	trait=brilliant_strategist
 	disallow_random_traits=yes
-	#give_nickname=nick_the_prophet
-	2220.1.1={birth=yes}
+	give_nickname=nick_the_prophet
+	2220.1.1={birth=yes
+	culture=valleyan
+	}
+	2230.1.1={name=Joseph}
 	2258.1.1={death={
 			death_reason=death_battle_duel #Murdered in combat.
 			killer=2200006
@@ -190,16 +197,18 @@
 2500010={
 	name="Carlos"
 	dynasty=1851045#Dominguez
-	culture=valleyan
+	culture=tejano
 	father=2500009
-	religion=penitente
+	religion=sacred_heart
 	trait=slothful
 	trait=shrewd
 	trait=zealous
 	trait=wroth
 	trait=indulgent_wastrel
 	disallow_random_traits=yes
-	2243.1.1={birth=yes}
+	2243.1.1={birth=yes
+	culture=valleyan
+	}
 	2278.1.1={death={
 			death_reason=death_murder_unknown #Murdered.
 		}
@@ -216,6 +225,7 @@
 	trait=kind
 	trait=brave
 	trait=diligent
+	trait=governator
 	trait=mastermind_theologian
 	disallow_random_traits=yes
 
@@ -238,6 +248,7 @@
 	disallow_random_traits=yes
 
 	2350.1.1={birth=yes}
+	2375.1.1={add_spouse=1886095}
 	2420.1.1={death={
 			death_reason=death_hashish_overdose #dies on LSD.
 		}
@@ -250,10 +261,12 @@
 	culture=siskiyouan
 	religion=gaian
 	father=2500012
+	mother=1886095
 	trait=ambitious
 	trait=slothful
 	trait=tough_soldier
 	trait=kind
+	trait=temperate
 	2380.1.1={birth=yes}
 	2430.1.1={death={
 			death_reason=death_battle_duel #Murdered in combat.
@@ -262,25 +275,24 @@
 	}
 }
 
-# 2500014={
-	# name="José"
-	# dynasty=1912005
-	# culture=californio
-	# religion=sacred_heart
-	# trait=ambitious
-	# trait=strong
-	# trait=diligent
-	# trait=brilliant_strategist
-	# trait=holy_warrior
-	# disallow_random_traits=yes
-	# father=2500098
-	# 2380.1.1={birth=yes}
-	# 2432.2.2={death={
-			# death_reason=death_battle_duel #Murdered in combat.
-			# killer=1910100
-		# }
-	# }
-# }
+2500014={
+	name="Jose"
+	dynasty=1912005
+	culture=californiano
+	religion=navegante
+	trait=ambitious
+	trait=strong
+	trait=diligent
+	trait=brilliant_strategist
+	trait=holy_warrior
+	disallow_random_traits=yes
+	2380.1.1={birth=yes}
+	2432.2.2={death={
+			death_reason=death_battle_duel #Murdered in combat.
+			killer=1910100
+		}
+	}
+}
 
 2500015={
 	name="Kirk"
@@ -501,7 +513,7 @@
 2500023={
 	name="Will"
 	dynasty=1851016 #Steely
-	father = 1911208
+	father=1911208
 	culture=valleyan
 	religion=cetic
 	martial=5
@@ -682,7 +694,7 @@
 2500030={
 	name="Ricardo"
 	dynasty=1912049 #Ortega
-	culture=californio
+	culture=californiano
 	religion=cetic
 	martial=5
 	stewardship=6
@@ -934,7 +946,7 @@
 	trait=chaste
 	trait=imp_ex3
 	give_nickname=nick_the_betrayer #sold out his dad to the empire
-	2438.2.1={birth=yes}
+	2431.2.1={birth=yes}
 	2480.1.1={death=yes}
 
 }
@@ -1045,7 +1057,7 @@
 	name="Magdalynn"
 	dynasty=1849096# Areus
 	culture=bayfolk
-	religion=sedevacantist
+	religion=nazarene
 	female=yes
 	father=2500008
 	trait=charismatic_negotiator
@@ -1351,8 +1363,8 @@
 
 2500064={
 	name="Gabriella"
-	culture=californio
-	religion=cetic
+	culture=californiano
+	religion=nazarene
 	female=yes
 	dynasty=1850068 #Hayek
 	trait=fortune_builder
@@ -1365,7 +1377,7 @@
 	trait=sympathy_oldworld
 	trait=imp_ex3
 	2555.1.1={birth=yes}
-	2612.5.16={death={
+	2612.1.1={death={
 			death_reason=death_rabble #Green Sash Revolt
 		}
 	}
@@ -1373,8 +1385,8 @@
 
 2500065={
 	name="Hernando"
-	culture=californio
-	religion=cetic
+	culture=californiano
+	religion=nazarene
 	dynasty=1850068 #Hayek
 	mother=2500064
 	trait=tough_soldier
@@ -1391,13 +1403,13 @@
 		birth=yes
 		culture=angeleno
 	}
-	2653.1.1=={death=yes}
+	2653.1.1={death=yes}
 }
 
 2500066={
 	name="Jose"
 	culture=angeleno
-	religion=cetic
+	religion=nazarene
 	dynasty=1850068 #Hayek
 	father=2500065
 	trait=martial_cleric
@@ -1420,10 +1432,10 @@
 2500067={
 	name="Alric"
 	culture=valleyan
-	religion=sacred_heart
+	religion=true_cross
 	dynasty=1850082 #Balthes
 	trait=skilled_tactician
-	trait=marian_santa_muerte
+	trait=ambitious
 	trait=peasant_leader
 	trait=zealous
 	trait=brave
@@ -1436,126 +1448,145 @@
 		}	
 	}
 }
+2502078={
+	name="Helena"
+	culture=valleyan
+	religion=nazarene
+	female=yes
+	dynasty=1850082 #Balthes
+	trait=martial_cleric
+	trait=nz_presbyter
+	trait=fair
+	trait=patient
+	trait=kind
+	trait=devout
+	trait=gamer
+	trait=shy
+	father=2500067
+	2600.1.1={birth=yes}
+	2633.12.16={death={death_reason=death_childbirth}}
+}
 		#The following are from Dryhad and I didn't wanna edit the ids and risk screwing things up. Continue any new character using the 25000xxx format 
-1911200 = {
-	name = "Lance"
-	dynasty = 1851016
-	culture = valleyan
-	religion = rust_cultist
-	2380.2.11 = { birth = yes }
-	2421.3.21 = {
-		death = {
-			death_reason = death_battle
-			killer = 1910100
+1911200={
+	name="Lance"
+	dynasty=1851016
+	culture=valleyan
+	religion=rust_cultist
+	father=2500123
+	2382.2.11={birth=yes}
+	2421.3.21={
+		death={
+			death_reason=death_battle
+			killer=1910100
 		}
 	}
 }
-1911201 = {  
-	name = "Patrick"
-	dynasty = 1851016
-	culture = valleyan
-	religion = rust_cultist
-	father = 1911200
-	2402.2.11 = { birth = yes }
-	2421.3.21 = { 
-		religion = cetic 
-		trait = way_book
-		trait = imp_ex2
+1911201={ 
+	name="Patrick"
+	dynasty=1851016
+	culture=valleyan
+	religion=rust_cultist
+	father=1911200
+	2402.2.11={birth=yes}
+	2421.3.21={ 
+		religion=cetic 
+		trait=way_book
+		trait=imp_ex2
 		}
-	2474.5.1 = { death = yes }
+	2474.5.1={death=yes}
 }
-1911202 = {
-	name = "Travis"
-	dynasty = 1851016
-	culture = valleyan
-	religion = rust_cultist
-	father = 1911200
-	trait = brilliant_strategist
-	trait = zealous
-	trait = ambitious
-	trait = cruel
-	2405.7.18 = { birth = yes }
-	2469.7.11 = { death = yes }
+1911202={
+	name="Travis"
+	dynasty=1851016
+	culture=valleyan
+	religion=rust_cultist
+	father=1911200
+	trait=brilliant_strategist
+	trait=zealous
+	trait=ambitious
+	trait=cruel
+	2405.7.18={birth=yes}
+	2469.7.11={death=yes}
 }
-1911203 = {
-	name = "Patrick"
-	dynasty = 1851016
-	culture = valleyan
-	religion = cetic
-	father = 1911201
-	trait = way_book
-	trait = imp_ex1
-	2424.9.20 = { birth = yes }
-	2481.2.13 = { death = yes }
+1911203={
+	name="Patrick"
+	dynasty=1851016
+	culture=valleyan
+	religion=cetic
+	father=1911201
+	trait=way_book
+	trait=imp_ex1
+	2424.9.20={birth=yes}
+	2481.2.13={death=yes}
 }
-1911204 = {
-	name = "Kevin"
-	dynasty = 1851016
-	culture = valleyan
-	religion = cetic
-	father = 1911203
-	trait = way_fist
-	trait = imp_ex2
-	2452.3.18 = { birth = yes }
-	2514.12.3 = { death = yes }
+1911204={
+	name="Kevin"
+	dynasty=1851016
+	culture=valleyan
+	religion=cetic
+	father=1911203
+	trait=way_fist
+	trait=imp_ex2
+	2452.3.18={birth=yes}
+	2514.12.3={death=yes}
 }
-1911205 = {
-	name = "Oleander"
-	dynasty = 1851016
-	culture = valleyan
-	religion = cetic
-	father = 1911204
-	trait = way_fist
-	trait = imp_ex3
-	2478.7.8 = { birth = yes }
-	2534.3.12 = { death = yes }
+1911205={
+	name="Oleander"
+	dynasty=1851016
+	culture=valleyan
+	religion=cetic
+	father=1911204
+	trait=way_fist
+	trait=imp_ex3
+	2478.7.8={birth=yes}
+	2534.3.12={death=yes}
 }
-1911206 = {
-	name = "Patrick"
-	dynasty = 1851016
-	culture = valleyan
-	religion = cetic
-	father = 1911205
-	trait = way_fist
-	trait = imp_ex1
-	2501.3.19 = { birth = yes }
-	2540.2.12 = { death = yes }
+1911206={
+	name="Patrick"
+	dynasty=1851016
+	culture=valleyan
+	religion=cetic
+	father=1911205
+	trait=way_fist
+	trait=imp_ex1
+	2501.3.19={birth=yes}
+	2540.2.12={death=yes}
 }
-1911207 = {
-	name = "Kevin"
-	dynasty = 1851016
-	culture = valleyan
-	religion = cetic
-	father = 1911206
-	trait = way_fist
-	trait = imp_ex2
-	2519.11.8 = { birth = yes }
-	2551.5.17 = { death = yes }
+1911207={
+	name="Kevin"
+	dynasty=1851016
+	culture=valleyan
+	religion=cetic
+	father=1911206
+	trait=way_fist
+	trait=imp_ex2
+	2519.11.8={birth=yes}
+	2551.5.17={death=yes}
 }
-1911208 = {
-	name = "Wallace"
-	dynasty = 1851016
-	culture = valleyan
-	religion = cetic
-	father = 1911207
-	trait = way_fist
-	trait = imp_ex1
-	2537.2.3 = { birth = yes }
-	2584.5.5 = { death = yes }
+1911208={
+	name="Wallace"
+	dynasty=1851016
+	culture=valleyan
+	religion=cetic
+	father=1911207
+	trait=way_fist
+	trait=imp_ex1
+	2537.2.3={birth=yes}
+	2584.5.5={death=yes}
 }
-1911209 = {
-	name = "Jeffrey"
-	dynasty = 1851016
-	culture = valleyan
-	religion = cetic
-	father = 1911208
-	trait = way_cowl
-	trait = imp_ex2
-	2568.9.9 = { birth = yes }
-	2588.2.11 = { add_trait = has_typhus }
-	2590.9.12 = {
-		death = { 
-			death_reason = death_trait
+1911209={
+	name="Jeffrey"
+	dynasty=1851016
+	culture=valleyan
+	religion=cetic
+	father=1911208
+	trait=way_cowl
+	trait=imp_ex2
+	2568.9.9={birth=yes}
+	2588.2.11={ add_trait=has_typhus }
+	2590.9.12={
+		death={ 
+			death_reason=death_trait
 		}
 	}
 }
@@ -1597,10 +1628,10 @@
 }
 
 2500070={
-	name="Joshua"
+	name="Sebas"
 	culture=valleyan
-	religion=evangelical
-	dynasty=1850049 #Garcia
+	religion=pagan
+	dynasty=1850049 #Sofocante
 	occluded=yes
 	trait=brilliant_strategist
 	trait=legendary
@@ -1609,21 +1640,26 @@
 	trait=greedy
 	trait=ambitious
 	trait=zealous
-	trait=paranoid 
+	trait=paranoid
+	trait=depressed
+	trait=blinded
 	give_nickname=nick_the_grizzly
+	mother=2500109
 	2140.1.1={birth=yes}
+	2160.6.21={add_spouse=2500109}
 	2190.2.15={death= {
-		death_reason=death_battle
+		death_reason=death_suicide
 		}	
 	}
 }
 
 2500071={
-	name="Jacob"
+	name="Ethan"
 	culture=valleyan
-	religion=evangelical
-	dynasty=1850049 #Garcia
+	religion=pagan
+	dynasty=1850049 #Sofocante
 	father=2500070
+	mother=2500109
 	occluded=yes
 	trait=thrifty_clerk
 	trait=legendary
@@ -1634,22 +1670,24 @@
 	trait=lustful
 	trait=craven
 	2170.1.1={birth=yes}
-	2230.1.1={death=yes}
+	2200.1.1={death=yes}
 }
 
 2500072={
-	name="Jonathan"
+	name="Paul"
 	culture=valleyan
-	religion=evangelical
-	dynasty=1850049 #Garcia
-	father=2500071
+	religion=pagan
+	dynasty=1850049 #Sofocante
+	father=2500070
+	mother=2500109
 	trait=tough_soldier
 	trait=brave
 	trait=just
 	trait=diligent
 	trait=honest
 	trait=kind
-	2220.1.1={birth=yes}
+	give_nickname=nick_the_nice
+	2180.1.1={birth=yes}
 	2245.3.24={death={
 			death_reason=death_execution_hanging
 			killer=2500009
@@ -1660,7 +1698,7 @@
 	name="Jerry"
 	culture=valleyan
 	religion=evangelical
-	dynasty=1850049 #Garcia
+	dynasty=1850049 #Sofocante
 	father=2500072
 	trait=charismatic_negotiator
 	trait=paranoid
@@ -1674,7 +1712,7 @@
 	name="Jason"
 	culture=valleyan
 	religion=evangelical
-	dynasty=1850049 #Garcia
+	dynasty=1850049 #Sofocante
 	father=2500073
 	trait=thrifty_clerk
 	trait=greedy
@@ -1687,7 +1725,7 @@
 	name="Jordan"
 	culture=valleyan
 	religion=evangelical
-	dynasty=1850049 #Garcia
+	dynasty=1850049 #Sofocante
 	father=2500074
 	trait=charismatic_negotiator
 	trait=paranoid
@@ -1701,7 +1739,7 @@
 	name="Jules"
 	culture=valleyan
 	religion=evangelical
-	dynasty=1850049 #Garcia
+	dynasty=1850049 #Sofocante
 	father=2500075
 	trait=intricate_webweaver
 	trait=paranoid
@@ -1717,7 +1755,7 @@
 	culture=valleyan
 	female=yes
 	religion=cetic
-	dynasty=1850049 #Garcia
+	dynasty=1850049 #Sofocante
 	father=2500076
 	trait=naive_appeaser
 	trait=paranoid
@@ -1728,162 +1766,410 @@
 	2440.3.12={death=yes}
 }
 2500078={
-    name="Hassan"
-    dynasty= "2030034"
-    culture=anjalusi
-    religion=imamite
-    trait=diligent
-    trait=just
-    trait=kind
-    trait=content
-    father=1384081
-    2345.1.10={birth=yes}
-    2390.1.1={death=yes}
+	name="Hassan"
+	dynasty= "2030034"
+	culture=anjalusi
+	religion=imamite
+	trait=diligent
+	trait=just
+	trait=kind
+	trait=content
+	father=1384081
+	2345.1.10={birth=yes}
+	2390.1.1={death=yes}
 }
 
 2500079={
-    name="Ali"
-    dynasty= "2030034"
-    culture=anjalusi
-    religion=imamite
-    trait=diligent
-    trait=just
-    trait=kind
-    trait=content
-    father=2500078
-    2370.1.10={birth=yes}
-    2420.1.1={death=yes}
+	name="Ali"
+	dynasty= "2030034"
+	culture=anjalusi
+	religion=imamite
+	trait=diligent
+	trait=just
+	trait=kind
+	trait=content
+	father=2500078
+	2370.1.10={birth=yes}
+	2420.1.1={death=yes}
 }
 
 2500080={
-    name="Imad"
-    dynasty= "2030034"
-    culture=anjalusi
-    religion=imamite
-    trait=diligent
-    trait=just
-    trait=kind
-    trait=content
-    father=2500079
-    2400.1.10={birth=yes}
-    2460.1.1={death=yes}
+	name="Imad"
+	dynasty= "2030034"
+	culture=anjalusi
+	religion=imamite
+	trait=diligent
+	trait=just
+	trait=kind
+	trait=content
+	father=2500079
+	2400.1.10={birth=yes}
+	2460.1.1={death=yes}
 }
 
 2500081={
-    name="Amir"
-    dynasty= "2030034"
-    culture=anjalusi
-    religion=imamite
-    trait=diligent
-    trait=just
-    trait=kind
-    trait=content
-    father=2500080
-    2435.1.10={birth=yes}
-    2510.1.1={death=yes}
+	name="Amir"
+	dynasty= "2030034"
+	culture=anjalusi
+	religion=imamite
+	trait=diligent
+	trait=just
+	trait=kind
+	trait=content
+	father=2500080
+	2435.1.10={birth=yes}
+	2510.1.1={death=yes}
 }
 2500082={
-    name="Issam"
-    dynasty= "2030034"
-    culture=anjalusi
-    religion=imamite
-    trait=diligent
-    trait=just
-    trait=kind
-    trait=content
-    father=2500081
-    2475.1.10={birth=yes}
-    2550.1.1={death=yes}
+	name="Issam"
+	dynasty= "2030034"
+	culture=anjalusi
+	religion=imamite
+	trait=diligent
+	trait=just
+	trait=kind
+	trait=content
+	father=2500081
+	2475.1.10={birth=yes}
+	2550.1.1={death=yes}
 }
 2500083={
-    name="Hafez"
-    dynasty= "2030034"
-    culture=anjalusi
-    religion=imamite
-    trait=diligent
-    trait=just
-    trait=kind
-    father=2500082
-    2510.1.10={birth=yes}
-    2585.1.1={death=yes}
+	name="Hafez"
+	dynasty= "2030034"
+	culture=anjalusi
+	religion=imamite
+	trait=diligent
+	trait=just
+	trait=kind
+	father=2500082
+	2510.1.10={birth=yes}
+	2585.1.1={death=yes}
 }
 2500084={
-    name="Maher"
-    dynasty= "2030034"
-    culture=anjalusi
-    religion=imamite
-    trait=diligent
-    trait=just
-    trait=kind
-    father=2500083
-    2545.1.10={birth=yes}
-    2610.1.1={death=yes}
+	name="Maher"
+	dynasty= "2030034"
+	culture=anjalusi
+	religion=imamite
+	trait=diligent
+	trait=just
+	trait=kind
+	father=2500083
+	2545.1.10={birth=yes}
+	2610.1.1={death=yes}
 }
 2500085={
-    name="Bashir"
-    dynasty= "2030034"
-    culture=anjalusi
-    religion=imamite
-    trait=diligent
-    trait=just
-    trait=kind
-    father=2500084
-    2580.1.10={birth=yes}
-    2620.5.10={death={ #Killed by Carmines
-		death_reason = death_murder_unknown
-		killer = 2500009
+	name="Bashir"
+	dynasty= "2030034"
+	culture=anjalusi
+	religion=imamite
+	trait=diligent
+	trait=just
+	trait=kind
+	father=2500084
+	2580.1.10={birth=yes}
+	2620.5.10={death={ #Killed by Carmines
+		death_reason=death_murder_unknown
+		killer=1910150
 		}
 	} 
 }
 
 2500086={
-    name="Khalid"
-    dynasty= "2030034"
-    culture=anjalusi
-    religion=imamite
-    trait=stubborn
-    trait=just
-    trait=kind
-    father=2500085
-    2610.1.10={birth=yes}
-    2660.1.1={death=yes}
+	name="Khalid"
+	dynasty= "2030034"
+	culture=anjalusi
+	religion=imamite
+	trait=stubborn
+	trait=just
+	trait=kind
+	father=2500085
+	2610.1.10={birth=yes}
+	2660.1.1={death=yes}
 }
 2500087={
-    name="Khalil"
-    dynasty= "2030034"
-    culture=anjalusi
-    religion=imamite
-    trait=ambitious
-    trait=just
-    trait=duelist 
-    trait=brave
-    father=2500086
-    2640.1.10={birth=yes}
-	2660.1.1={
+	name="Khalil"
+	dynasty= "2030034"
+	culture=anjalusi
+	religion=imamite
+	trait=ambitious
+	trait=just
+	trait=duelist 
+	trait=brave
+	father=2500086
+	2640.1.10={birth=yes}
+	2665.12.25={
 		employer=2200016
 	}
-    2710.1.1={death=yes}
+	2710.1.1={death=yes}
 }
 
-#Aguila o Sol Aditions
+2500088={
+	name="Oneca"
+	dynasty=1912076 #Mendoza
+	female=yes
+	culture=californiano
+	religion=nazarene
+	trait=fortune_builder
+		trait=sympathy_cult_of_saints
+		trait=administrator
+		trait=imp_ex1
+		trait=nz_acolyte
+		trait=weak
+		trait=wroth
+		trait=kind
+	father=2500093
+	2626.7.2={birth=yes}
+	2645.6.21={add_spouse=2500094}
+}
 
-2500014={
-	name="José"
-	dynasty=1912005
-	culture=californio
-	religion=sacred_heart
+2500089={
+	name="John"
+	dynasty=1864102 #McQueen
+	culture=battleborn
+	religion=mormon
+	trait=proud
 	trait=ambitious
+	2646.6.9={birth=yes}
+	2710.1.1={death=yes}
+}
+
+2500090={
+	name="Jimmy"
+	dynasty=1864095 #Sevilla
+	culture=battleborn
+	religion=nazarene
+	trait=trusting
+	trait=greedy
+	2629.12.2={birth=yes}
+	2710.1.1={death=yes}
+}
+
+2500091={
+	name="Tubboge"
+	dynasty=1491917
+	culture=paiute
+	religion=nazarene
+	trait=gregarious
+	trait=erudite
+	2641.4.26={birth=yes}
+	2710.1.1={death=yes}
+}
+
+2500092={
+	name="Wewawewa"
+	dynasty=1491924
+	culture=paiute
+	religion=mormon
+	trait=just
+	trait=chaste
+	trait=shy
+	2641.4.26={birth=yes}
+	2710.1.1={death=yes}
+}
+
+2502077={
+	name="Johnny"
+	dynasty=1850083
+	culture=chino
+	religion=cetic
+	martial=10
+	diplomacy=8
+	stewardship=6
+	intrigue=7
+	learning=4
+	trait=skilled_tactician
+	trait=way_fist
+	trait=fair
 	trait=strong
-	trait=diligent
-	trait=cruel
-	trait=brilliant_strategist
-	trait=holy_warrior
+	trait=musician
+	trait=one_handed
+	trait=proud
+	trait=ambitious
+	trait=wroth
+	trait=lustful
+	give_nickname=nick_iron_hand
+	2634.11.16={birth=yes
+		culture=angeleno
+		effect={
+			set_character_flag=diversity
+			set_character_flag=physique
+		}
+	}
+	2665.11.28={effect={add_artifact=ate_firearm}}
+	2665.11.29={effect={add_artifact=prosthetic_hand_metal}}
+	2665.11.29={effect={add_artifact=old_world_shades}}
+	2677.8.20={death=yes}
+}
+
+1911152={
+	name="Edna"
+	female=yes
+	dynasty=1864104
+	martial=6
+	diplomacy=12
+	stewardship=10
+	intrigue=4
+	learning=12
+	culture=battleborn
+	religion=atomicist
+	trait=flamboyant_schemer
+	trait=sympathy_pacific
+	trait=sympathy_christendom
+	trait=sympathy_islam
+	trait=patient
+	trait=ambitious
+	trait=musician
+	trait=fair
+	2646.10.21={birth=yes}
+	2660.1.1={
+	effect={
+			set_character_flag=no_historical_family
+			set_character_flag=diversity
+			set_character_flag=physique
+		}
+	}
+	2740.12.1={death=yes}
+}
+2500093={
+	name="Juan"
+	dynasty=1912076 #Mendoza
+	culture=californiano
+	religion=nazarene
+martial=6
+	diplomacy=4
+	stewardship=6
+	intrigue=2
+	learning=5
 	disallow_random_traits=yes
-	father=2500098
-	2380.1.1={birth=yes}
-	2432.2.2={death={
-			death_reason=death_battle_duel #Murdered in combat.
-			killer=1910100
+	trait=brilliant_strategist
+	trait=genius
+	trait=shrewd
+	trait=content
+	trait=nz_acolyte
+	trait=imp_ex4
+	trait=strategist
+	trait=kind
+	trait=diligent
+	trait=wroth
+	trait=proud
+	give_nickname=nick_the_lionheart
+	2578.4.26={birth=yes}
+	2655.11.3={death=yes}
+}
+2500094={
+	name="Dario"
+	culture=californiano
+	religion=sacred_heart
+	trait=tough_soldier
+	trait=marian_guadalupe
+	trait=honest
+	trait=brave
+	trait=devout
+	trait=envious
+	trait=greedy
+	2628.9.7={birth=yes}
+	2645.6.21={add_spouse=2500088}
+}
+2500095={
+	name="Dionisio"
+	culture=californiano
+	dynasty=1912076 #Mendoza
+	religion=nazarene
+	trait=skilled_tactician
+	trait=nz_acolyte
+	trait=stubborn
+	trait=ambitious
+	trait=wroth
+	trait=diligent
+	trait=charitable
+	father=2500094
+	mother=2500088
+	2646.5.17={birth=yes}
+}
+2500096={
+	name="Arcadio"
+	culture=californiano
+	dynasty=1912076 #Mendoza
+	religion=nazarene
+	trait=scholarly_theologian
+	trait=nz_acolyte
+	trait=scholar
+	trait=is_malnourished
+	trait=kind
+	trait=devout
+	trait=humble
+	father=2500094
+	mother=2500088
+	2648.3.11={birth=yes}
+}
+2500097={
+	name="Veronica"
+	culture=californiano
+	female=yes
+	dynasty=1912076 #Mendoza
+	religion=nazarene
+	trait=midas_touched
+	trait=nz_acolyte
+	trait=just
+	trait=slothful
+	trait=shrewd
+	trait=greedy
+	trait=gluttonous
+	father=2500094
+	mother=2500088
+	2650.7.2={birth=yes}
+}
+2500109={
+	name="Joyce"
+	culture=valleyan
+	female=yes
+	dynasty=1850049 #Sofocante
+	religion=pagan
+	trait=midas_touched
+	trait=fair
+	trait=just
+	trait=depressed
+	trait=shrewd
+	trait=mystic
+	trait=legendary
+	occluded=yes
+	2122.7.2={birth=yes}
+	2160.6.21={add_spouse=2500070}
+	2190.2.14={death=yes}
+}
+2500110={
+	name="Jody"
+	culture=angeleno
+	dynasty=1851166 #Bute
+	religion=hamiltonian
+	trait=lustful
+	trait=seducer
+	trait=slow
+	trait=strong
+	trait=proud
+	trait=mystic
+	trait=legendary
+	occluded=yes
+	2025.7.2={birth=yes}
+	2090.2.14={death=yes}
+}
+2500111={
+	name="Alan Smithee"
+	culture=angeleno
+	dynasty=1851167 #hays
+	religion=pagan
+	trait=lustful
+	trait=wroth
+	trait=greedy
+	trait=ambitious
+	trait=proud
+	trait=gluttonous
+	trait=legendary
+	occluded=yes
+	2025.7.2={birth=yes}
+	2055.10.31={death={
+			death_reason=death_execution
+			killer=2200000
 		}
 	}
 }

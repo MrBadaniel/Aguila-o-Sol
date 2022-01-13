@@ -93,7 +93,7 @@ character_event = {
 			10 = { character_event = { id = vision.101 } }
 			10 = { character_event = { id = vision.102 } }
 			10 = { character_event = { id = vision.103 } }
-			
+
 			# visions of wonder
 			10 = { character_event = { id = vision.110 } }
 			10 = { character_event = { id = vision.111 } }
@@ -101,7 +101,7 @@ character_event = {
 			10 = { character_event = { id = vision.113 } }
 			10 = { character_event = { id = vision.114 } }
 			10 = { character_event = { id = vision.115 } }
-			
+
 			# visions of the wild
 			10 = { character_event = { id = vision.120 } }
 			10 = { character_event = { id = vision.121 } }
@@ -111,14 +111,14 @@ character_event = {
 			10 = { character_event = { id = vision.125 } }
 			10 = { character_event = { id = vision.126 } }
 			10 = { character_event = { id = vision.127 } }
-			
+
 			# visions of disaster
 			10 = { character_event = { id = vision.130 } }
 			10 = { character_event = { id = vision.131 } }
 			10 = { character_event = { id = vision.132 } }
 			10 = { character_event = { id = vision.133 } }
 			10 = { character_event = { id = vision.134 } }
-			
+
 			# visions of self
 			10 = { character_event = { id = vision.140 } }
 			10 = { character_event = { id = vision.141 } }
@@ -126,18 +126,18 @@ character_event = {
 			10 = { character_event = { id = vision.143 } }
 			10 = { character_event = { id = vision.144 } }
 			10 = { character_event = { id = vision.145 } }
-			
+
 			# visions of ancestors
 			10 = { character_event = { id = vision.150 } }
 			10 = { character_event = { id = vision.151 } }
 			10 = { character_event = { id = vision.152 } }
 			10 = { character_event = { id = vision.153 } }
 			10 = { character_event = { id = vision.154 } }
-			
+
 			# visions of truth, including for specific religions
 			10 = { character_event = { id = vision.160 } }
 			10 = { character_event = { id = vision.161 } }
-			
+
 			120 = { }
 		}
 		
@@ -164,13 +164,9 @@ narrative_event = {
 		trigger = {
 			OR = {
 				culture_group = plains
-				culture_group = southwestern
+				culture_group = plateau
 				religion_group = american_native
 				religion_group = amero_syncretic
-			}
-			NOR = { 
-				religion = mictlantec
-				religion = mictlantec_reformed
 			}
 			has_character_flag = vis_wild_tbird
 		}
@@ -181,11 +177,7 @@ narrative_event = {
 	option = {
 		name = EVTOPT_vision_jaguar
 		trigger = {
-			OR = {
-				religion_group = mesoamerican_gods
-				religion = mictlantec
-				religion = mictlantec_reformed
-			}
+			religion_group = mesoamerican_gods
 			OR = {
 				has_character_flag = vis_war_carn
 				has_character_flag = vis_wild_sign
@@ -235,11 +227,7 @@ narrative_event = {
 		name = EVTOPT_vision_raven
 		trigger = {
 			NOT = { religion_group = afro_syncretic }
-			NOR = { 
-				religion_group = mesoamerican_gods 
-				religion = mictlantec
-				religion = mictlantec_reformed
-			}
+			NOT = { religion_group = mesoamerican_gods }
 			OR = {
 				has_character_flag = vis_wild_fly
 				has_character_flag = vis_war_carn
@@ -254,11 +242,7 @@ narrative_event = {
 		name = EVTOPT_vision_bear
 		trigger = {
 			NOT = { religion_group = afro_syncretic }
-			NOR = { 
-				religion_group = mesoamerican_gods 
-				religion = mictlantec
-				religion = mictlantec_reformed
-			}
+			NOT = { religion_group = mesoamerican_gods }
 			OR = {
 				has_character_flag = vis_wild_beast
 				has_character_flag = vis_wild_track
@@ -273,11 +257,7 @@ narrative_event = {
 		name = EVTOPT_vision_wolf
 		trigger = {
 			NOT = { religion_group = afro_syncretic }
-			NOR = { 
-				religion_group = mesoamerican_gods 
-				religion = mictlantec
-				religion = mictlantec_reformed
-			}
+			NOT = { religion_group = mesoamerican_gods }
 			OR = {
 				has_character_flag = vis_war
 				has_character_flag = vis_wild_beast
@@ -292,7 +272,7 @@ narrative_event = {
 		name = EVTOPT_vision_coyote
 		trigger = {
 			NOT = { religion_group = afro_syncretic }
-			NOT = { religion = uahomche }
+			NOT = { religion = qabantajik }
 			OR = {
 				has_character_flag = vis_wild_fox
 				has_character_flag = vis_self_evil
@@ -307,7 +287,7 @@ narrative_event = {
 		name = EVTOPT_vision_nature
 		trigger = {
 			NOT = { culture_group = plains }
-			NOT = { culture_group = southwestern }
+			NOT = { culture_group = plateau }
 			NOT = { religion_group = american_native }
 			NOT = { religion_group = amero_syncretic }
 			has_character_flag = vis_wild
@@ -1544,8 +1524,10 @@ character_event = {
 	desc = EVTDESC_vision_truth_atom
 	picture = GFX_evt_vision_quest
 	is_triggered_only = yes
+	
+	religion = atomicist
+	
 	trigger = {
-		religion = atomicist
 		NOT = { has_character_flag = vis_truth_atom }
 	}
 	immediate = {

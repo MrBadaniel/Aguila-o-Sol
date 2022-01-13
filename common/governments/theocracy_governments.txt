@@ -21,8 +21,9 @@ theocracy_governments = {
 			merchant_republic_government
 			theocratic_feudal_government
 			colonial_government
-			mex_imperial_government
 			uyc_government
+						  
+				 
 			#military_governorate
 		}
 		frame_suffix = "_theocracy"
@@ -39,6 +40,8 @@ theocracy_governments = {
 					religion = strangite
 					religion = lamanita
 					religion = furiegi
+						
+					   
 				}
 				controls_religion = no
 				OR = {
@@ -76,6 +79,10 @@ theocracy_governments = {
 				controls_religion = yes
 			}
 			NAND = {
+				religion = reformista
+				controls_religion = yes
+			}
+			NAND = {
 				religion = patria_grande
 				controls_religion = yes
 			}
@@ -88,10 +95,17 @@ theocracy_governments = {
 				controls_religion = yes
 			}
 			NAND = {
-				religion = reformista
+				religion = true_cross
 				controls_religion = yes
 			}
-			#???? why don't ursulines work
+			NAND = {
+				religion = glorian
+				controls_religion = yes
+			}
+			NAND = {
+				religion = navegante
+				controls_religion = yes
+			}
 			holy_order = no
 			is_patrician = no
 			OR = {

@@ -88,6 +88,9 @@ e_mexico = {
 		color={ 246 249 176 }
 		color2={ 255 255 255 }
 		
+		#Crusade target weight
+		lamanita = 100
+		
 		capital = 1788 # c_guanajuato
 		
 		d_bajio_occidente = {
@@ -269,6 +272,8 @@ e_mexico = {
 		color={ 201 41 24 }
 		color2={ 255 255 255 }
 		
+		#Crusade target weight
+		lamanita = 100
 		capital = 1736 # c_zacatecas
 		
 		d_salado = {
@@ -448,6 +453,9 @@ e_mexico = {
 		color={ 67 145 161 }
 		color2={ 255 255 255 }
 		
+		#Crusade target weight
+		lamanita = 100
+		
 		capital = 1740 # c_guadalajara
 		
 		nahua = "Xalixco"
@@ -613,6 +621,9 @@ e_mexico = {
 		color = { 0 104 71 }
 		color2= { 220 220 0 }
 		
+		#Crusade target weight
+		lamanita = 500
+		
 		capital = 1767 # c_mexico
 	
 		name_tier = emperor
@@ -635,6 +646,15 @@ e_mexico = {
 		
 		short_name = yes
 		foa = "ALTEZA_FOA"
+		
+		allow = {
+				trigger = {
+					NOT = {
+						has_global_flag = mexican_empire_restored
+					}
+				}
+			}
+		
 		
 		d_hidalgo = {
 			color={ 184 126 49 }
@@ -928,6 +948,9 @@ e_mexico = {
 		color={ 0.65 0.5 0.05 }
 		color2={ 255 255 255 }
 		
+		#Crusade target weight
+		lamanita = 500
+		
 		capital = 1778 # c_xalapa
 		
 		d_veracruz = {
@@ -1005,6 +1028,7 @@ e_mexico = {
 			c_coatzacoalcos = { # 1781
 				color={ 134 131 14 }
 				color2={ 255 255 255 }
+				
 				holy_site = neomayan
 				
 				
@@ -1122,7 +1146,7 @@ e_mexico = {
 	}
 		
 	k_michoacan = {
-		color={ 90 50 90 }
+		color={ 84 50 90 }
 		color2={ 255 255 255 }
 		
 		capital = 1754 # c_patzcuaro
@@ -1346,6 +1370,9 @@ e_mexico = {
 	k_oaxaca = {
 		color={ 91 61 155 } 
 		color2={ 255 255 255 }
+		
+		#Crusade target weight
+		lamanita = 500
 		
 		capital = 1793 # c_oaxaca
 		
@@ -1698,6 +1725,9 @@ e_mexico = {
 	k_mixtec = {  # actually Guerrero
 		color={ 150 0 0 }
 		color2={ 255 255 255 }
+		
+		#Crusade target weight
+		lamanita = 500
 		
 		capital = 1801 # c_chilpancingo
 		

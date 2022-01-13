@@ -30,13 +30,13 @@ character_event = {
 	id = sacredheart.1
 	desc = EVTDESC_Sacredheart_1
 	picture = GFX_evt_bishop
+	religion = sacred_heart
 	is_triggered_only = yes
 
 	trigger = {
 		NOT = {
 			has_alternate_start_parameter = { key = religion_names value = random }
 		}
-		religion = sacred_heart
 	}
 	
 	option = {
@@ -44,6 +44,8 @@ character_event = {
 		hidden_tooltip = {
 			remove_trait = marian_santa_muerte
 			remove_trait = marian_guadalupe
+			remove_trait = marian_san_charbel
+			remove_trait = marian_san_juditas
 		}
 		add_trait = marian_el_santo
 		ai_chance = {
@@ -66,6 +68,8 @@ character_event = {
 		hidden_tooltip = {
 			remove_trait = marian_el_santo
 			remove_trait = marian_guadalupe
+			remove_trait = marian_san_charbel
+			remove_trait = marian_san_juditas
 		}
 		add_trait = marian_santa_muerte
 		ai_chance = {
@@ -86,20 +90,71 @@ character_event = {
 		hidden_tooltip = {
 			remove_trait = marian_el_santo
 			remove_trait = marian_santa_muerte
+			remove_trait = marian_san_charbel
+			remove_trait = marian_san_juditas
 		}
 		add_trait = marian_guadalupe
 		ai_chance = {
 			factor = 10
 			modifier = { factor = 2 trait = marian_guadalupe }
-			modifier = { factor = 5	trait = mastermind_theologian }
-			modifier = { factor = 4	trait = scholarly_theologian }
-			modifier = { factor = 3	trait = martial_cleric }
-			modifier = { factor = 1.5 trait = zealous }
+			modifier = { factor = 5	trait = grey_eminence }
+			modifier = { factor = 4	trait = charismatic_negotiator }
+			modifier = { factor = 3	trait = underhanded_rogue }
+			modifier = { factor = 1.5 trait = gregarious }
+			modifier = { factor = 1.5 trait = devout }
 			modifier = { factor = 1.5 trait = sympathy_christendom }
 			modifier = { factor = 1.5 learning = 10 }
 			modifier = { factor = 1.5 diplomacy = 10 }
 			modifier = { factor = 0.3 trait = cynical }
 			modifier = { factor = 0.3 trait = sympathy_mesoamerican_gods }
+			modifier = { factor = 0.3 trait = sympathy_oldworld }
+		}
+	}
+	option = {
+		name = EVTOPTD_sacredheart_1
+		hidden_tooltip = {
+			remove_trait = marian_el_santo
+			remove_trait = marian_santa_muerte
+			remove_trait = marian_guadalupe
+			remove_trait = marian_san_juditas
+		}
+		add_trait = marian_san_charbel
+		ai_chance = {
+			factor = 10
+			modifier = { factor = 2 trait = marian_san_charbel }
+			modifier = { factor = 5	trait = mastermind_theologian }
+			modifier = { factor = 4	trait = scholarly_theologian }
+			modifier = { factor = 3	trait = martial_cleric }
+			modifier = { factor = 1.5 trait = devout }
+			modifier = { factor = 1.5 trait = sympathy_christendom }
+			modifier = { factor = 1.5 learning = 10 }
+			modifier = { factor = 1.5 diplomacy = 10 }
+			modifier = { factor = 0.3 trait = cynical }
+			modifier = { factor = 0.3 trait = sympathy_mesoamerican_gods }
+			modifier = { factor = 0.3 trait = sympathy_oldworld }
+		}
+	}
+	option = {
+		name = EVTOPTE_sacredheart_1
+		hidden_tooltip = {
+			remove_trait = marian_el_santo
+			remove_trait = marian_santa_muerte
+			remove_trait = marian_guadalupe
+			remove_trait = marian_san_charbel
+		}
+		add_trait = marian_san_juditas
+		ai_chance = {
+			factor = 10
+			modifier = { factor = 2 trait = marian_san_juditas }
+			modifier = { factor = 5	trait = midas_touched }
+			modifier = { factor = 4	trait = fortune_builder }
+			modifier = { factor = 3	trait = thrifty_clerk }
+			modifier = { factor = 1.5 trait = devout }
+			modifier = { factor = 1.5 trait = sympathy_christendom }
+			modifier = { factor = 1.5 learning = 10 }
+			modifier = { factor = 1.5 diplomacy = 10 }
+			modifier = { factor = 0.3 trait = cynical }
+			modifier = { factor = 0.2 trait = sympathy_mesoamerican_gods }
 			modifier = { factor = 0.3 trait = sympathy_oldworld }
 		}
 	}
@@ -169,6 +224,7 @@ character_event = {
 	picture = GFX_evt_luchador
 	
 	only_rulers = yes
+	min_age = 16
 	only_men = yes
 	prisoner = no
 	capable_only = yes
@@ -177,7 +233,6 @@ character_event = {
 		NOT = {
 			has_alternate_start_parameter = { key = religion_names value = random }
 		}
-		age = 16
 		trait = marian_el_santo
 		NOT = { lifestyle_traits = 1 }
 		NOT = { has_character_flag = reject_luchadore }
@@ -515,14 +570,14 @@ character_event = {
 						NOT = { check_variable = { which = "challenger_skill" value = 6 } }
 						NOT = { check_variable = { which = "opponent_skill" value = 6 } }
 					}
-					
+
 					AND = {		# both fight okay
 						check_variable = { which = "challenger_skill" value = 6 }
 						check_variable = { which = "opponent_skill" value = 6 }
 						NOT = { check_variable = { which = "challenger_skill" value = 10 } }
 						NOT = { check_variable = { which = "opponent_skill" value = 10 } }
 					}
-					
+
 					AND = {		# both fight well
 						check_variable = { which = "challenger_skill" value = 10 }
 						check_variable = { which = "opponent_skill" value = 10 }
@@ -569,7 +624,7 @@ character_event = {
 					}
 				}
 			}
-			
+
 			# bounce off opponent so loser is FROM
 			FROM = { character_event = { id = sacredheart.63 days = 2 } }
 		}
@@ -795,11 +850,12 @@ character_event = {
 	picture = GFX_evt_death
 	is_triggered_only = yes
 	hide_window = yes
+	religion = sacred_heart
+	
 	trigger = {
 		NOT = {
 			has_alternate_start_parameter = { key = religion_names value = random }
 		}
-		religion = sacred_heart
 	}
 	immediate = {
 		father = {
@@ -823,12 +879,12 @@ character_event = {
 	desc = EVTDESC_muerte_inform
 	picture = GFX_evt_death
 	is_triggered_only = yes
+	religion = sacred_heart
 	
 	trigger = {
 		NOT = {
 			has_alternate_start_parameter = { key = religion_names value = random }
 		}
-		religion = sacred_heart
 		trait = marian_santa_muerte
 	}
 	
@@ -974,6 +1030,8 @@ character_event = {
 			remove_trait = marian_guadalupe
 			remove_trait = marian_el_santo
 			remove_trait = marian_santa_muerte
+			remove_trait = marian_san_charbel
+			remove_trait = marian_san_juditas
 		}
 		add_trait = marian_guadalupe
 		ai_chance = {
@@ -1001,6 +1059,8 @@ character_event = {
 			remove_trait = marian_guadalupe
 			remove_trait = marian_el_santo
 			remove_trait = marian_santa_muerte
+			remove_trait = marian_san_charbel
+			remove_trait = marian_san_juditas
 		}
 		add_trait = marian_el_santo
 		ai_chance = {
@@ -1021,6 +1081,50 @@ character_event = {
 	
 	option = {
 		name = EVTOPTD_sacredheart_150
+		character_event = { id = sacredheart.151 }
+		ai_chance = {
+			factor = 50
+		}
+	}
+}
+# Choose patron deity
+character_event = {
+	id = sacredheart.151
+	desc = EVTDESC_sacredheart_150
+	picture = GFX_evt_bishop
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_sacredheart_151
+		trigger = {
+			NOT = { trait = marian_san_charbel }
+		}
+		hidden_tooltip = {
+			remove_trait = marian_guadalupe
+			remove_trait = marian_el_santo
+			remove_trait = marian_santa_muerte
+			remove_trait = marian_san_charbel
+			remove_trait = marian_san_juditas
+		}
+		add_trait = marian_san_charbel
+		ai_chance = {
+			factor = 10
+			modifier = { factor = 5	trait = mastermind_theologian }
+			modifier = { factor = 4	trait = scholarly_theologian }
+			modifier = { factor = 3	trait = martial_cleric }
+			modifier = { factor = 2	trait = detached_priest }
+			modifier = { factor = 4	trait = theologian }
+			modifier = { factor = 3	trait = scholar }
+			modifier = { factor = 2	trait = mystic }
+			modifier = { factor = 2	trait = zealous }
+			modifier = { factor = 1.5 trait = diligent }
+			modifier = { factor = 1.5 trait = humble }
+			modifier = { factor = 0.2 trait = cynical }
+		}
+	}
+	
+	option = {
+		name = EVTOPTB_sacredheart_151
 		trigger = {
 			NOT = { trait = marian_santa_muerte }
 		}
@@ -1028,6 +1132,8 @@ character_event = {
 			remove_trait = marian_guadalupe
 			remove_trait = marian_el_santo
 			remove_trait = marian_santa_muerte
+			remove_trait = marian_san_charbel
+			remove_trait = marian_san_juditas
 		}
 		add_trait = marian_santa_muerte
 		ai_chance = {
@@ -1041,7 +1147,7 @@ character_event = {
 			modifier = { factor = 3	trait = homosexual }
 			modifier = { factor = 3	trait = bisexual }
 			modifier = { factor = 2	trait = seducer }
-			modifier = { factor = 2	trait = seductress  }
+			modifier = { factor = 2	trait = seductress }
 			modifier = { factor = 2	trait = cruel }
 			modifier = { factor = 1.5 trait = deceitful }
 			modifier = { factor = 1.5 trait = envious }
@@ -1052,9 +1158,46 @@ character_event = {
 			modifier = { factor = 0.3 trait = content }
 		}
 	}
+	
+	option = {
+		name = EVTOPTC_sacredheart_151
+		trigger = {
+			NOT = { trait = marian_san_juditas }
+		}
+		hidden_tooltip = {
+			remove_trait = marian_guadalupe
+			remove_trait = marian_el_santo
+			remove_trait = marian_santa_muerte
+			remove_trait = marian_san_charbel
+			remove_trait = marian_san_juditas
+		}
+		add_trait = marian_san_juditas
+		ai_chance = {
+			factor = 10
+			modifier = { factor = 5	trait = mastermind_theologian }
+			modifier = { factor = 4	trait = scholarly_theologian }
+			modifier = { factor = 3	trait = martial_cleric }
+			modifier = { factor = 2	trait = detached_priest }
+			modifier = { factor = 4	trait = theologian }
+			modifier = { factor = 3	trait = scholar }
+			modifier = { factor = 2	trait = mystic }
+			modifier = { factor = 2	trait = zealous }
+			modifier = { factor = 1.5 trait = diligent }
+			modifier = { factor = 1.5 trait = humble }
+			modifier = { factor = 0.2 trait = cynical }
+		}
+	}
+	
+	option = {
+		name = EVTOPTD_sacredheart_151
+		character_event = { id = sacredheart.150 }
+		ai_chance = {
+			factor = 50
+		}
+	}
 }
 
-# THE START OF THE RECONQUISTA - 2700 AND MEXICO NOT CHRISTIAN
+# THE START OF THE RECONQUISTA - 1090 AND MEXICO NOT CHRISTIAN
 narrative_event = {
 	id = sacredheart.200
 	title = sacredheart.200.title
@@ -1076,7 +1219,7 @@ narrative_event = {
 		NOT = { #immersion-breaking
 			has_alternate_start_parameter = { key = religion_names value = random }
 		}
-		has_landed_title = d_cristo_rey #fires for the Prelate, he's always there
+		has_landed_title = d_cristo_rey
 		year = 2700 #avoid event spam
 		
 		OR = {
@@ -1084,12 +1227,10 @@ narrative_event = {
 				has_holder = no
 			}
 			e_mexico = {
-				holder_scope = {
-					NOR = { 
-						religion = sacred_heart
-						religion = cristo_rey
-					}
-				}
+				NOR = { 
+					religion_group = cult_of_saints
+					religion = cristo_rey
+				} 
 			}
 		}
 		
@@ -1107,19 +1248,18 @@ narrative_event = {
 	option = {
 		name = sacredheart.200.optA
 		trigger = {
-			OR = {
-				religion = cristo_rey
-				religion = reformista
-			}
+			religion = cristo_rey
 		}
 	}
 	
 	option = {
 		name = sacredheart.200.optB
 		trigger = {
-			OR
+			OR = {
 				religion_group = mesoamerican_gods
-				religion_group = cult_of_saints
+				religion = sacred_heart
+				religion = fidencista
+				religion = reformista
 			}
 		}
 	}
@@ -1128,9 +1268,10 @@ narrative_event = {
 		name = sacredheart.200.optC
 		trigger = {
 			NOR = {
-				religion_group = cult_of_saints
-				religion_group = mesoamerican_gods
 				religion = cristo_rey
+				religion_group = mesoamerican_gods
+				religion = sacred_heart
+				religion = fidencista
 				religion = reformista
 			}
 		}
@@ -1159,18 +1300,15 @@ narrative_event = {
 		NOT = { #immersion-breaking
 			has_alternate_start_parameter = { key = religion_names value = random }
 		}
-		has_landed_title = d_cristo_rey #fires for the Prelate, he's always there
+		has_landed_title = d_cristo_rey
 		NOT = { has_global_flag = mexican_reconquistas_unlocked }
 		
-		1779 = { # Veracruz
-			NOT = { 
-				owner = { 
-					OR = {
-						religion_group = cult_of_saints 
-						religion = cristo_rey
-						religion = reformista
-					} 
-				}
+		c_fresnillo = { # fresnillo
+			holder_scope = { 
+				NOR = { 
+					religion_group = cult_of_saints
+					religion = cristo_rey
+				} 
 			}
 		}
 	}
@@ -1186,19 +1324,18 @@ narrative_event = {
 	option = {
 		name = sacredheart.200.optA
 		trigger = {
-			OR = {
-				religion = cristo_rey
-				religion = reformista
-			}
+			religion = cristo_rey
 		}
 	}
 	
 	option = {
 		name = sacredheart.200.optB
 		trigger = {
-			OR
+			OR = {
 				religion_group = mesoamerican_gods
-				religion_group = cult_of_saints
+				religion = sacred_heart
+				religion = fidencista
+				religion = reformista
 			}
 		}
 	}
@@ -1207,9 +1344,10 @@ narrative_event = {
 		name = sacredheart.200.optC
 		trigger = {
 			NOR = {
-				religion_group = cult_of_saints
-				religion_group = mesoamerican_gods
 				religion = cristo_rey
+				religion_group = mesoamerican_gods
+				religion = sacred_heart
+				religion = fidencista
 				religion = reformista
 			}
 		}
@@ -1238,18 +1376,15 @@ narrative_event = {
 		NOT = { #immersion-breaking
 			has_alternate_start_parameter = { key = religion_names value = random }
 		}
-		has_landed_title = d_cristo_rey #fires for the Prelate, he's always there
+		has_landed_title = d_cristo_rey
 		NOT = { has_global_flag = mexican_reconquistas_unlocked }
 		
-		1767 = { # Mexico City
-			NOT = { 
-				owner = { 
-					OR = {
-						religion_group = cult_of_saints 
-						religion = cristo_rey
-						religion = reformista
-					} 
-				}
+		c_mexico = { # Mexico City
+			holder_scope = { 
+				NOR = { 
+					religion_group = cult_of_saints
+					religion = cristo_rey
+				} 
 			}
 		}
 	}
@@ -1265,19 +1400,18 @@ narrative_event = {
 	option = {
 		name = sacredheart.200.optA
 		trigger = {
-			OR = {
-				religion = cristo_rey
-				religion = reformista
-			}
+			religion = cristo_rey
 		}
 	}
 	
 	option = {
 		name = sacredheart.200.optB
 		trigger = {
-			OR
+			OR = {
 				religion_group = mesoamerican_gods
-				religion_group = cult_of_saints
+				religion = sacred_heart
+				religion = fidencista
+				religion = reformista
 			}
 		}
 	}
@@ -1286,16 +1420,17 @@ narrative_event = {
 		name = sacredheart.200.optC
 		trigger = {
 			NOR = {
-				religion_group = cult_of_saints
+				religion = sacred_heart
+				religion = fidencista
+				religion = reformista
 				religion_group = mesoamerican_gods
 				religion = cristo_rey
-				religion = reformista
 			}
 		}
 	}
 }
 
-# THE START OF THE RECONQUISTA - MISC CULT OF SAINTS
+# THE START OF THE URSULINE CRUSADES - MISC CULT OF SAINTS
 narrative_event = {
 	id = sacredheart.203
 	title = sacredheart.200.title
@@ -1316,34 +1451,23 @@ narrative_event = {
 		NOT = { #immersion-breaking
 			has_alternate_start_parameter = { key = religion_names value = random }
 		}
-		has_landed_title = d_cristo_rey#fires for the Prelate, he's always there
+		has_landed_title = k_papal_state #fires for the Pope, he's always there
 		NOT = { has_global_flag = mexican_reconquistas_unlocked }
 		
 		OR = {
-			1788 = { # Guanajuato
-				NOT = { 
-					owner = { 
-						religion_group = cult_of_saints 
+			c_monterrey = { # Monterrey
+				holder_scope = { 
+					NOR = { 
+						religion_group = cult_of_saints
 						religion = cristo_rey
-						religion = reformista
 					} 
 				}
 			}
-			1740 = { # Guadalajara
-				NOT = { 
-					owner = { 
-						religion_group = cult_of_saints 
+			c_heroica_veracruz = { # Veracruz
+				holder_scope = { 
+					NOR = { 
+						religion_group = cult_of_saints
 						religion = cristo_rey
-						religion = reformista
-					} 
-				}
-			}
-			1771 = { # Puebla
-				NOT = { 
-					owner = { 
-						religion_group = cult_of_saints 
-						religion = cristo_rey
-						religion = reformista
 					} 
 				}
 			}
@@ -1361,19 +1485,18 @@ narrative_event = {
 	option = {
 		name = sacredheart.200.optA
 		trigger = {
-			OR = {
-				religion = cristo_rey
-				religion = reformista
-			}
+			religion = cristo_rey
 		}
 	}
 	
 	option = {
 		name = sacredheart.200.optB
 		trigger = {
-			OR
+			OR = {
 				religion_group = mesoamerican_gods
-				religion_group = cult_of_saints
+				religion = sacred_heart
+				religion = fidencista
+				religion = reformista
 			}
 		}
 	}
@@ -1382,28 +1505,12 @@ narrative_event = {
 		name = sacredheart.200.optC
 		trigger = {
 			NOR = {
-				religion_group = cult_of_saints
-				religion_group = mesoamerican_gods
 				religion = cristo_rey
+				religion_group = mesoamerican_gods
+				religion = sacred_heart
+				religion = fidencista
 				religion = reformista
 			}
-		}
-	}
-}
-
-character_event = {
-	id = sacredheart.210
-	desc = EVTDESC_sacredheart_210
-	picture = GFX_evt_mysticcath
-	is_triggered_only = yes
-    border = GFX_event_normal_frame_religion
-	religion = sacred_heart
-	
-	option = {
-		name = EVTOPTA_sacredheart_210
-		add_trait = mystic
-		ai_chance = {
-			factor = 10
 		}
 	}
 }

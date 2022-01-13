@@ -554,6 +554,44 @@ king_james_bible = {
 	}
 }
 
+pulaskis_axe = {
+	max_amount = 1
+	spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 100
+		modifier = {
+			factor = 0
+			NOT = { has_dlc = "Mystics" }
+		}
+		modifier = {
+			factor = 0
+			is_alternate_start = yes
+		}
+	}
+
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 100
+			is_landed = yes
+			culture = inlander
+			lower_tier_than = KING
+			NOT = {primary_title = { title = k_lincoln }}
+			OR = {
+				religion = gaian
+				religion = trailwalker
+			}
+		}
+	}
+
+	artifacts = {
+		pulaskis_axe = {
+			value = 1
+		}
+	}
+}
+
 ###################
 #### QUALITY 2 ####
 ###################
@@ -1452,7 +1490,7 @@ ate_garcia_pig_tail = {
 	weight = {
 		value = 0
 		modifier = {
-			factor = 1
+			factor = 100
 			religion = patria_grande
 			is_landed = yes
 			primary_title = {
@@ -1487,7 +1525,7 @@ dinosaur = {
 	weight = {
 		value = 0
 		modifier = {
-			factor = 1
+			factor = 100
 			OR = {
 				religion = trailwalker
 				religion = revelationist
@@ -1522,7 +1560,7 @@ lucky_horseshoe = {
 	weight = {
 		value = 0
 		modifier = {
-			factor = 1
+			factor = 100
 			religion = trailwalker
 			is_landed = yes
 		}

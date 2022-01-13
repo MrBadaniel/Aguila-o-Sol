@@ -7,7 +7,7 @@ namespace = HF
 # Clean up event post-Reconquista
 character_event = {
 	id = HF.49200
-   	hide_window = yes
+ 	hide_window = yes
 	is_triggered_only = yes
 	has_dlc = "Holy Fury"
 	trigger = {
@@ -106,7 +106,7 @@ character_event = {
 	trigger = {
 		has_character_flag = reconquista_beneficiary_flag
 		NOT = {
-			religion_group = cult_of_saints
+			religion = cristo_rey
 		}
 	}
 
@@ -139,7 +139,7 @@ character_event = {
 	trigger = {
 		has_character_flag = promised_reconquista_ally
 		NOT = {
-			religion_group = cult_of_saints
+			religion = cristo_rey
 		}
 	}
 
@@ -216,10 +216,10 @@ character_event = {
 			limit = {
 				OR = {
 					using_cb = reconquista_jalisco
-					using_cb = reconquista_colima
+								  
 					using_cb = reconquista_michoacan
 					using_cb = reconquista_mixteca
-					using_cb = reconquista_zapoteca
+					using_cb = reconquista_oaxaca
 					using_cb = reconquista_mexicoast
 					using_cb = reconquista_mexico
 					using_cb = reconquista_bajio
@@ -270,7 +270,7 @@ letter_event = {
 
 	}
 
-	option = {	  
+	option = {	
 		name = EVTOPTA_HF_49212
 
 		opinion = {
@@ -324,7 +324,7 @@ narrative_event = {
 
 	}
 
-	option = {	  
+	option = {	
 		name = EVTOPTA_HF_49220
 
 		if = {
@@ -368,9 +368,9 @@ narrative_event = {
 
 	}
 
-	option = {	  
+	option = {	
 		name = EVTOPTA_HF_49221
-		add_artifact = crown_wrapped_helmet
+		#add_artifact = crown_wrapped_helmet
 		if = {
 			limit = {
 				is_female = no
@@ -444,10 +444,10 @@ letter_event = {
 				limit = {
 					OR = {
 						using_cb = reconquista_jalisco
-						using_cb = reconquista_colima
+								   
 						using_cb = reconquista_michoacan
 						using_cb = reconquista_mixteca
-						using_cb = reconquista_zapoteca
+						using_cb = reconquista_oaxaca
 						using_cb = reconquista_mexicoast
 						using_cb = reconquista_mexico
 						using_cb = reconquista_bajio
@@ -563,10 +563,10 @@ letter_event = {
 					limit = {
 						OR = {
 							using_cb = reconquista_jalisco
-							using_cb = reconquista_colima
+									
 							using_cb = reconquista_michoacan
 							using_cb = reconquista_mixteca
-							using_cb = reconquista_zapoteca
+							using_cb = reconquista_oaxaca
 							using_cb = reconquista_mexicoast
 							using_cb = reconquista_mexico
 							using_cb = reconquista_bajio
@@ -699,7 +699,7 @@ character_event = {
 	has_dlc = "Holy Fury"
 
 	# Invest some gold 
-	option = {	  
+	option = {	
 		name = EVTOPTA_HF_49241
 		trigger = {
 			NOT = {
@@ -848,7 +848,7 @@ character_event = {
 		}
 	}
 	# Invest quite a lot of gold
-	option = {	  
+	option = {	
 		name = EVTOPTB_HF_49241
 		if = {
 			limit = {
@@ -1360,7 +1360,19 @@ character_event = {
 						culture = jarocho
 					}
 					3 = {	
-						culture = regio
+						culture = bravo
+					}
+					3 = {	
+						culture = altiplanense
+					}
+					3 = {	
+						culture = choyero
+					}
+					3 = {	
+						culture = menomex
+					}
+					3 = {	
+						culture = occidental
 					}
 					3 = {
 						culture = tapatio
@@ -1368,21 +1380,21 @@ character_event = {
 					3 = {
 						culture = tejano
 					}
-					3 = {
-						culture = gambusino
-					}
+		  
+						 
+	  
 					# Other close by cultures
 					3 = {
 						culture = chino
 					}
 					2 = {
-						culture = culichi
+						culture = occidental
 					}
 					2 = {
 						culture = neomexicano
 					}
 					2 = {
-						culture = californio
+						culture = californiano
 					}
 					1 = {
 						culture = cubano
@@ -1394,7 +1406,7 @@ character_event = {
 						culture = texan
 					}
 					1 = {
-						culture = plautdietsch
+						culture = plautplautdietsch
 					}
 				}
 				# Some sort of huge
@@ -1455,15 +1467,15 @@ character_event = {
 		}
 	}
 
-	option = {	  
+	option = {	
 		name = EVTOPTA_HF_49243
 	}
-	option = {	  
+	option = {	
 		name = EVTOPTB_HF_49243
 
 		trigger = {
 			OR = { 
-				NOT = { ROOT = { has_law = succ_byzantine_elective } }  #Either not Imperial...
+				NOT = { ROOT = { has_law = succ_byzantine_elective } } #Either not Imperial...
 				NOT = { #...Or there are no valid vassal candidates that can be commanders.
 					any_vassal = { 
 						higher_real_tier_than = BARON
@@ -1480,7 +1492,7 @@ character_event = {
 							}
 							has_character_flag = special_marshal
 						}
-				
+	
 						prisoner = no
 						NOT = { is_incapable = yes }
 						NOT = { is_inaccessible_trigger = yes }
@@ -1616,7 +1628,7 @@ character_event = {
 	is_triggered_only = yes
 	has_dlc = "Holy Fury"
 
-	option = {	  
+	option = {	
 		name = EVTOPTA_HF_49244
 		if = {
 			limit = {
@@ -1727,7 +1739,7 @@ character_event = {
 			}
 		}
 	}
-	option = {	  
+	option = {	
 		name = EVTOPTB_HF_49244
 		if = {
 			limit = {
@@ -1883,7 +1895,7 @@ character_event = {
 		has_global_flag = active_reconquista
 	}
 
-	option = {	  
+	option = {	
 		name = EVTOPTA_HF_49249
 	}
 
@@ -1912,15 +1924,15 @@ character_event = {
 									AND = {
 										independent = yes
 										NOT = {
-											religion_group = cult_of_saints
+											religion = cristo_rey
 										}
 									}
 									top_liege = {
 										NOT = {
-											religion_group = cult_of_saints
+											religion = cristo_rey
 										}
 									}
-								}							
+								}	
 							}
 						}
 					}
@@ -1937,12 +1949,12 @@ character_event = {
 											AND = {
 												independent = yes
 												NOT = {
-													religion_group = cult_of_saints
+													religion = cristo_rey
 												}
 											}
 											top_liege = {
 												NOT = {
-													religion_group = cult_of_saints
+													religion = cristo_rey
 												}
 											}
 										}
@@ -1959,12 +1971,12 @@ character_event = {
 											AND = {
 												independent = yes
 												NOT = {
-													religion_group = cult_of_saints
+													religion = cristo_rey
 												}
 											}
 											top_liege = {
 												NOT = {
-													religion_group = cult_of_saints
+													religion = cristo_rey
 												}
 											}
 										}
@@ -2004,13 +2016,13 @@ character_event = {
 									}
 									owner = {
 										NOT = {
-											religion_group = cult_of_saints
+											religion = cristo_rey
 										}
 										OR = {
 											independent = yes
 											NOT = {
 												top_liege = {
-													religion_group = cult_of_saints
+													religion = cristo_rey
 												}
 											}
 										}
@@ -2027,12 +2039,12 @@ character_event = {
 											AND = {
 												independent = yes
 												NOT = {
-													religion_group = cult_of_saints
+													religion = cristo_rey
 												}
 											}
 											top_liege = {
 												NOT = {
-													religion_group = cult_of_saints
+													religion = cristo_rey
 												}
 											}
 										}
@@ -2081,12 +2093,12 @@ character_event = {
 									AND = {
 										independent = yes
 										NOT = {
-											religion_group = cult_of_saints
+											religion = cristo_rey
 										}
 									}
 									top_liege = {
 										NOT = {
-											religion_group = cult_of_saints
+											religion = cristo_rey
 										}
 									}
 								}
@@ -2106,12 +2118,12 @@ character_event = {
 											AND = {
 												independent = yes
 												NOT = {
-													religion_group = cult_of_saints
+													religion = cristo_rey
 												}
 											}
 											top_liege = {
 												NOT = {
-													religion_group = cult_of_saints
+													religion = cristo_rey
 												}
 											}
 										}
@@ -2128,12 +2140,12 @@ character_event = {
 											AND = {
 												independent = yes
 												NOT = {
-													religion_group = cult_of_saints
+													religion = cristo_rey
 												}
 											}
 											top_liege = {
 												NOT = {
-													religion_group = cult_of_saints
+													religion = cristo_rey
 												}
 											}
 										}
@@ -2176,12 +2188,12 @@ character_event = {
 											AND = {
 												independent = yes
 												NOT = {
-													religion_group = cult_of_saints
+													religion = cristo_rey
 												}
 											}
 											top_liege = {
 												NOT = {
-													religion_group = cult_of_saints
+													religion = cristo_rey
 												}
 											}
 										}
@@ -2198,12 +2210,12 @@ character_event = {
 											AND = {
 												independent = yes
 												NOT = {
-													religion_group = cult_of_saints
+													religion = cristo_rey
 												}
 											}
 											top_liege = {
 												NOT = {
-													religion_group = cult_of_saints
+													religion = cristo_rey
 												}
 											}
 										}
@@ -2246,12 +2258,12 @@ character_event = {
 											AND = {
 												independent = yes
 												NOT = {
-													religion_group = cult_of_saints
+													religion = cristo_rey
 												}
 											}
 											top_liege = {
 												NOT = {
-													religion_group = cult_of_saints
+													religion = cristo_rey
 												}
 											}
 										}
@@ -2268,12 +2280,12 @@ character_event = {
 											AND = {
 												independent = yes
 												NOT = {
-													religion_group = cult_of_saints
+													religion = cristo_rey
 												}
 											}
 											top_liege = {
 												NOT = {
-													religion_group = cult_of_saints
+													religion = cristo_rey
 												}
 											}
 										}
@@ -2311,22 +2323,22 @@ character_event = {
 					limit = {
 						any_province = {
 							county = {
-								OR = {
-									region = custom_jalisco
-									region = custom_colima
-								}
+			  
+								region = custom_jalisco
+							   
+		 
 							}
 							owner = {
 								OR = {
 									AND = {
 										independent = yes
 										NOT = {
-											religion_group = cult_of_saints
+											religion = cristo_rey
 										}
 									}
 									top_liege = {
 										NOT = {
-											religion_group = cult_of_saints
+											religion = cristo_rey
 										}
 									}
 								}
@@ -2346,12 +2358,12 @@ character_event = {
 											AND = {
 												independent = yes
 												NOT = {
-													religion_group = cult_of_saints
+													religion = cristo_rey
 												}
 											}
 											top_liege = {
 												NOT = {
-													religion_group = cult_of_saints
+													religion = cristo_rey
 												}
 											}
 										}
@@ -2368,12 +2380,12 @@ character_event = {
 											AND = {
 												independent = yes
 												NOT = {
-													religion_group = cult_of_saints
+													religion = cristo_rey
 												}
 											}
 											top_liege = {
 												NOT = {
-													religion_group = cult_of_saints
+													religion = cristo_rey
 												}
 											}
 										}
@@ -2404,76 +2416,76 @@ character_event = {
 								}
 							}
 						}
-						# Valencia
-						1 = {
-							trigger = {
-								any_province = {
-									county = {
-										region = custom_colima
-									}
-									owner = {
-										OR = {
-											AND = {
-												independent = yes
-												NOT = {
-													religion_group = cult_of_saints
-												}
-											}
-											top_liege = {
-												NOT = {
-													religion_group = cult_of_saints
-												}
-											}
-										}
-									}
-								}
-							}
-							random_province = {
-								limit = {
-									county = {
-										region = custom_colima
-									}
-									owner = {
-										OR = {
-											AND = {
-												independent = yes
-												NOT = {
-													religion_group = cult_of_saints
-												}
-											}
-											top_liege = {
-												NOT = {
-													religion_group = cult_of_saints
-												}
-											}
-										}
-									}
-								}
-								owner = {
-									if = {
-										limit = {
-											independent = yes
-										}
-										ROOT = {
-											unsafe_war = {
-												target = PREV
-												casus_belli = reconquista_colima
-											}
-										}
-									}
-									else = {
-										top_liege = {
-											ROOT = {
-												unsafe_war = {
-													target = PREV
-													casus_belli = reconquista_colima
-												}
-											}
-										}
-									}
-								}
-							}
-						}
+				
+		   
+				  
+						
+				   
+								
+		  
+				  
+				
+				  
+							 
+				   
+											
+			 
+			
+						
+				   
+											
+			 
+			
+		   
+		  
+		 
+		
+						  
+				 
+				   
+								
+		  
+				  
+				
+				  
+							 
+				   
+											
+			 
+			
+						
+				   
+											
+			 
+			
+		   
+		  
+		 
+				 
+			   
+				   
+							
+		   
+				  
+						 
+						 
+											
+			
+		   
+		  
+				 
+					   
+				   
+						  
+						  
+											 
+			 
+			
+		   
+		  
+		 
+		
+	   
 					}
 				}
 				# Michoacan is held by a Mesoamerican
@@ -2488,12 +2500,12 @@ character_event = {
 									AND = {
 										independent = yes
 										NOT = {
-											religion_group = cult_of_saints
+											religion = cristo_rey
 										}
 									}
 									top_liege = {
 										NOT = {
-											religion_group = cult_of_saints
+											religion = cristo_rey
 										}
 									}
 								}
@@ -2510,12 +2522,12 @@ character_event = {
 									AND = {
 										independent = yes
 										NOT = {
-											religion_group = cult_of_saints
+											religion = cristo_rey
 										}
 									}
 									top_liege = {
 										NOT = {
-											religion_group = cult_of_saints
+											religion = cristo_rey
 										}
 									}
 								}
@@ -2558,12 +2570,12 @@ character_event = {
 									AND = {
 										independent = yes
 										NOT = {
-											religion_group = cult_of_saints
+											religion = cristo_rey
 										}
 									}
 									top_liege = {
 										NOT = {
-											religion_group = cult_of_saints
+											religion = cristo_rey
 										}
 									}
 								}
@@ -2580,12 +2592,12 @@ character_event = {
 									AND = {
 										independent = yes
 										NOT = {
-											religion_group = cult_of_saints
+											religion = cristo_rey
 										}
 									}
 									top_liege = {
 										NOT = {
-											religion_group = cult_of_saints
+											religion = cristo_rey
 										}
 									}
 								}
@@ -2616,24 +2628,24 @@ character_event = {
 						}
 					}
 				}
-				# Zapoteca is held by a Mesoamerican
+				# Oaxaca is held by a Mesoamerican
 				else_if = {
 					limit = {
 						any_province = {
 							county = {
-								region = custom_zapoteca
+								region = custom_oaxaca
 							}
 							owner = {
 								OR = {
 									AND = {
 										independent = yes
 										NOT = {
-											religion_group = cult_of_saints
+											religion = cristo_rey
 										}
 									}
 									top_liege = {
 										NOT = {
-											religion_group = cult_of_saints
+											religion = cristo_rey
 										}
 									}
 								}
@@ -2643,19 +2655,19 @@ character_event = {
 					random_province = {
 						limit = {
 							county = {
-								region = custom_zapoteca
+								region = custom_oaxaca
 							}
 							owner = {
 								OR = {
 									AND = {
 										independent = yes
 										NOT = {
-											religion_group = cult_of_saints
+											religion = cristo_rey
 										}
 									}
 									top_liege = {
 										NOT = {
-											religion_group = cult_of_saints
+											religion = cristo_rey
 										}
 									}
 								}
@@ -2669,7 +2681,7 @@ character_event = {
 								ROOT = {
 									unsafe_war = {
 										target = PREV
-										casus_belli = reconquista_zapoteca
+										casus_belli = reconquista_oaxaca
 									}
 								}
 							}
@@ -2678,7 +2690,7 @@ character_event = {
 									ROOT = {
 										unsafe_war = {
 											target = PREV
-											casus_belli = reconquista_zapoteca
+											casus_belli = reconquista_oaxaca
 										}
 									}
 								}
@@ -2764,7 +2776,7 @@ narrative_event = {
 		}
 	}
 
-	option = {	  
+	option = {	
 		name = EVTOPTA_HF_49451
 		trigger = {
 			religion_group = FROM
@@ -2808,10 +2820,10 @@ narrative_event = {
 		}
 	}
 
-	option = {	  
+	option = {	
 		name = EVTOPTA_HF_49452
 		trigger = {
-			religion_group = cult_of_saints
+			religion = cristo_rey
 		}
 	}
 
@@ -2819,7 +2831,7 @@ narrative_event = {
 		name = EVTOPTB_HF_49451
 		trigger = {
 			NOT = {
-				religion_group = cult_of_saints
+				religion = cristo_rey
 			}
 		}
 	}
@@ -2845,8 +2857,12 @@ character_event = {
 			higher_tier_than = DUKE
 			region = custom_empire_mexico
 		}
-		religion_group = cult_of_saints
-		culture_group = mexicano
+		religion_group = religion = cristo_rey
+		OR = {
+			culture_group = mexicano
+			culture_group = norteno
+			culture_group = mesoamerican
+		}
 		NOT = {
 			has_global_flag = reconquista_finished
 		}
@@ -2868,12 +2884,12 @@ character_event = {
 							AND = {
 								independent = yes
 								NOT = {
-									religion_group = cult_of_saints
+									religion = cristo_rey
 								}
 							}
 							top_liege = {
 								NOT = {
-									religion_group = cult_of_saints
+									religion = cristo_rey
 								}
 							}
 						}
@@ -2898,12 +2914,12 @@ character_event = {
 							AND = {
 								independent = yes
 								NOT = {
-									religion_group = cult_of_saints
+									religion = cristo_rey
 								}
 							}
 							top_liege = {
 								NOT = {
-									religion_group = cult_of_saints
+									religion = cristo_rey
 								}
 							}
 						}
@@ -2962,10 +2978,10 @@ character_event = {
 				100 = {
 					add_trait = robust
 				}
-				1 = {
-					trigger = { religion = sacred_heart }
-   					add_artifact = crown_wrapped_helmet
-				}
+				#1 = {
+				#	trigger = { religion = sacred_heart }
+ 				#	add_artifact = crown_wrapped_helmet
+				#}
 			}
 			add_random_commander_trait_effect = yes
 			character_event = { id = HF.49461 }
@@ -3104,7 +3120,7 @@ character_event = {
 		clr_character_flag = reconquista_sponsor
 	}
 
-	option = {	  
+	option = {	
 		name = EVTOPTA_HF_49463
 		trigger_switch = {
 			on_trigger = tier
@@ -3126,7 +3142,7 @@ character_event = {
 			}
 		}
 	}
-	option = {	  
+	option = {	
 		name = EVTOPTB_HF_49463
 		trigger_switch = {
 			on_trigger = tier
@@ -3176,21 +3192,20 @@ character_event = {
 	is_triggered_only = yes
 	has_dlc = "Holy Fury"
 	trigger = {
-		religion_group = cult_of_saints
+		religion = cristo_rey
 		location = {
 			owner = {
 				OR = {
 					AND = {
 						NOT = {
-							religion_group = cult_of_saints
+							religion = cristo_rey
 						}
 						any_war = {
 							OR = {
 								using_cb = reconquista_jalisco
-								using_cb = reconquista_colima
 								using_cb = reconquista_michoacan
 								using_cb = reconquista_mixteca
-								using_cb = reconquista_zapoteca
+								using_cb = reconquista_oaxaca
 								using_cb = reconquista_mexicoast
 								using_cb = reconquista_mexico
 								using_cb = reconquista_bajio
@@ -3205,15 +3220,14 @@ character_event = {
 					}
 					top_liege = {
 						NOT = {
-							religion_group = cult_of_saints
+							religion = cristo_rey
 						}
 						any_war = {
 							OR = {
 								using_cb = reconquista_jalisco
-								using_cb = reconquista_colima
 								using_cb = reconquista_michoacan
 								using_cb = reconquista_mixteca
-								using_cb = reconquista_zapoteca
+								using_cb = reconquista_oaxaca
 								using_cb = reconquista_mexicoast
 								using_cb = reconquista_mexico
 								using_cb = reconquista_bajio
@@ -3226,16 +3240,15 @@ character_event = {
 						}
 					}
 				}
-				
+	
 			}
 		}
 		any_war = {
 			OR = {
 				using_cb = reconquista_jalisco
-				using_cb = reconquista_colima
 				using_cb = reconquista_michoacan
 				using_cb = reconquista_mixteca
-				using_cb = reconquista_zapoteca
+				using_cb = reconquista_oaxaca
 				using_cb = reconquista_mexicoast
 				using_cb = reconquista_mexico
 				using_cb = reconquista_bajio
@@ -3280,10 +3293,9 @@ character_event = {
 		any_war = {
 			OR = {
 				using_cb = reconquista_jalisco
-				using_cb = reconquista_colima
 				using_cb = reconquista_michoacan
 				using_cb = reconquista_mixteca
-				using_cb = reconquista_zapoteca
+				using_cb = reconquista_oaxaca
 				using_cb = reconquista_mexicoast
 				using_cb = reconquista_mexico
 				using_cb = reconquista_bajio
@@ -3294,7 +3306,7 @@ character_event = {
 				character = ROOT
 			}
 		}
-		religion_group = cult_of_saints
+		religion = cristo_rey
 	}
 
 	immediate = {

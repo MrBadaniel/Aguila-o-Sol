@@ -24,6 +24,7 @@ feudal_governments = {
 			OR = {
 				controls_religion = no
 				religion = americanist
+				religion = cetic
 				religion = consumerist
 				religion = monetarist
 				religion = rust_cultist
@@ -31,12 +32,16 @@ feudal_governments = {
 				religion = revivalist
 				religion = alawiyya
 				religion = qingzhen
+				religion = nazarene
 				religion = exovedate
 				religion = nousthreskeia
 				religion = reformista
 				religion = patria_grande
 				religion = atomicist
 				religion = celeste
+				religion = true_cross
+				religion = glorian
+				religion = navegante
 				#religion_group = pagan_group
 				has_religion_feature = religion_temporal_head
 				AND = {
@@ -50,38 +55,44 @@ feudal_governments = {
 						religion = revivalist
 						religion = alawiyya
 						religion = qingzhen
+						religion = nazarene
 						religion = exovedate
 						religion = nousthreskeia
 						religion = reformista
 						religion = patria_grande
 						religion = atomicist
 						religion = celeste
+						religion = true_cross
+						religion = glorian
+						religion = navegante
 					}
 					has_religion_features = no # Old saves, and campaigns without HF, need the Fylkirate to continue working
 				}
 			}
-			NOT = {	religion = cetic }
-			NOT = {	religion = imamite }
-			NOT = {	religion = qingzhen }
-			NOR = {
-				religion = traditionalist
-				religion = revivalist
-				religion = misrist
-				religion = orientalist
-				religion = alawiyya
-			}
-
+							 
+							   
+								
+		  
+							 
+						 
+					  
+						  
+					   
+	
+			NOT = { is_government_potential = bureaucratic_government }
+			NOT = { is_government_potential = ghazi_government }
 			NOT = { is_government_potential = roman_imperial_government }
 			NOT = { is_government_potential = mex_imperial_government }
 			NOT = { is_government_potential = mormon_government }
 			NOT = { is_government_potential = order_government }
 			#NOT = { is_government_potential = colonial_government }
 			NOT = { is_government_potential = military_governorate }
+			NOT = { is_government_potential = open_range_feudalism_government }
 			NOT = { is_government_potential = uyc_government }
-			NAND = {
-				religion = gaian
-				higher_tier_than = BARON
-			}
+			NOT = { has_character_flag = ORF_embrace }
+			NOT = { is_government_potential = theocratic_feudal_government }
+							
+	
 			#Removed Chinese Imperial stuff
 			is_patrician = no
 		}
@@ -101,6 +112,7 @@ feudal_governments = {
 		## Modifiers
 		court_size_modifier = 10
 	}
+	
 	ghazi_government = {
 		preferred_holdings = { CASTLE }
 		allowed_holdings = { 
@@ -145,9 +157,12 @@ feudal_governments = {
 			}
 			NOT = { is_government_potential = colonial_government }
 			NOT = { is_government_potential = roman_imperial_government }
-			NOT = { is_government_potential = mex_imperial_government }
+															  
 			NOT = { is_government_potential = order_government }
 			NOT = { is_government_potential = military_governorate }
+			NOT = { is_government_potential = open_range_feudalism_government }
+			NOT = { is_government_potential = uyc_government }
+			NOT = { is_government_potential = mex_imperial_government }
 			NOT = { is_government_potential = uyc_government }
 			is_patrician = no
 		}
@@ -173,7 +188,7 @@ feudal_governments = {
 		court_size_modifier = 10
 	}
 
-	
+ 
 	mormon_government = {
 		preferred_holdings = { CASTLE }
 		allowed_holdings = { 
@@ -210,12 +225,15 @@ feudal_governments = {
 				religion = revivalist
 				religion = alawiyya
 				religion = qingzhen
+				religion = nazarene
 				religion = exovedate
 				religion = nousthreskeia
 				religion = reformista
 				religion = patria_grande
 				religion = atomicist
 				religion = celeste
+				religion = true_cross
+				religion = glorian
 				religion_group = latter_day_saints
 				has_religion_feature = religion_temporal_head
 				AND = {
@@ -229,24 +247,29 @@ feudal_governments = {
 						religion = revivalist
 						religion = alawiyya
 						religion = qingzhen
+						religion = nazarene
 						religion = exovedate
 						religion = nousthreskeia
 						religion = reformista
 						religion = patria_grande
 						religion = atomicist
 						religion = celeste
+						religion = true_cross
+						religion = glorian
 					}
 					has_religion_features = no # Old saves, and campaigns without HF, need the Fylkirate to continue working
 				}
 			}
 			religion_group = latter_day_saints
 			NOT = { religion = neogodbeite }
+			NOT = { is_government_potential = mex_imperial_government }
 			NOT = { is_government_potential = colonial_government }
 			NOT = { is_government_potential = roman_imperial_government }
-			NOT = { is_government_potential = mex_imperial_government }
+															  
 			NOT = { is_government_potential = order_government }
 			NOT = { is_government_potential = military_governorate }
 			NOT = { is_government_potential = uyc_government }
+													 
 			is_patrician = no
 		}
 		
@@ -294,7 +317,7 @@ feudal_governments = {
 		free_revoke_on_governments_religion = { # Tribal vassals of other religions can have their titles revoked for free
 			tribal_government
 		}
-		frame_suffix = "_chineseimperial"
+		frame_suffix = "_bureaucratic"
 		title_prefix = "bureaucracy_"
 		potential = {
 			OR = {
@@ -308,12 +331,15 @@ feudal_governments = {
 				religion = revivalist
 				religion = alawiyya
 				religion = qingzhen
+				religion = nazarene
 				religion = exovedate
 				religion = nousthreskeia
 				religion = reformista
 				religion = patria_grande
 				religion = atomicist
 				religion = celeste
+				religion = true_cross
+				religion = glorian
 				has_religion_feature = religion_temporal_head
 				AND = {
 					OR = {
@@ -326,12 +352,15 @@ feudal_governments = {
 						religion = revivalist
 						religion = alawiyya
 						religion = qingzhen
+						religion = nazarene
 						religion = exovedate
 						religion = nousthreskeia
 						religion = reformista
 						religion = patria_grande
 						religion = atomicist
 						religion = celeste
+						religion = true_cross
+						religion = glorian
 					}
 					has_religion_features = no # Old saves, and campaigns without HF, need the Fylkirate to continue working
 				}
@@ -340,17 +369,34 @@ feudal_governments = {
 				religion = cetic
 				religion = qingzhen
 				religion = imamite
+				AND = {
+					culture_group = californian
+					NOT = {
+						religion = nazarene
+					}
+				}
+				AND = {
+					religion = nazarene
+					controls_religion = no
+				}
+			}
+			NOT = {
+				primary_title = {
+					has_title_flag = devolved_bureaucracy
+				}
 			}
 			is_patrician = no
 			NOT = { is_government_potential = colonial_government }
-			NOT = { is_government_potential = roman_imperial_government }
+																
 			NOT = { is_government_potential = mex_imperial_government }
+			NOT = { is_government_potential = roman_imperial_government }
 			NOT = { is_government_potential = order_government }
 			NOT = { is_government_potential = military_governorate }
 			NOT = { is_government_potential = uyc_government }
+													 
 		}
 		
-		color = { 118 255 163 }
+		color = { 145 10 15 }
 		
 		uses_piety_for_law_change = yes
 		
@@ -375,10 +421,10 @@ feudal_governments = {
 	}
 	
 	theocratic_feudal_government = { #Given to Gaian feudal rulers
-		preferred_holdings = { CASTLE TEMPLE }
+		preferred_holdings = { CASTLE }
 		allowed_holdings = { 
 			CASTLE 
-			TEMPLE
+			CITY
 			FORT
 			HOSPITAL
 		}
@@ -406,12 +452,15 @@ feudal_governments = {
 				religion = revivalist
 				religion = alawiyya
 				religion = qingzhen
+				religion = nazarene
 				religion = exovedate
 				religion = nousthreskeia
 				religion = reformista
 				religion = patria_grande
 				religion = atomicist
 				religion = celeste
+				religion = true_cross
+				religion = glorian
 				#religion_group = pagan_group
 				has_religion_feature = religion_temporal_head
 				AND = {
@@ -425,40 +474,51 @@ feudal_governments = {
 						religion = revivalist
 						religion = alawiyya
 						religion = qingzhen
+						religion = nazarene
 						religion = exovedate
 						religion = nousthreskeia
 						religion = reformista
 						religion = patria_grande
 						religion = atomicist
 						religion = celeste
+						religion = true_cross
+						religion = glorian
 					}
 					has_religion_features = no # Old saves, and campaigns without HF, need the Fylkirate to continue working
 				}
 			}
 			NOT = {	religion = cetic }
-			AND = {
-				religion = gaian
-				higher_tier_than = BARON
+			OR = {
+				AND = {
+					religion = gaian
+					higher_tier_than = BARON
+				}
 			}
 			NOT = { is_government_potential = roman_imperial_government }
-			NOT = { is_government_potential = mex_imperial_government }
+															  
 			NOT = { is_government_potential = order_government }
 			NOT = { is_government_potential = colonial_government }
 			NOT = { is_government_potential = military_governorate }
+			NOT = { is_government_potential = mex_imperial_government }
 			NOT = { is_government_potential = uyc_government }
 			is_patrician = no
 		}
 		
-		color = { 207 145 90 }
+		color = { 0 88 38 }
 		
 		uses_piety_for_law_change = yes
 		dukes_called_kings = yes
 		barons_need_dynasty = yes
+		can_usurp_kingdoms_and_empires = no
+		can_grant_kingdoms_and_empires_to_other_government = no
+		can_be_granted_kingdoms_and_empires_by_other_government = no
+		free_retract_vassalage = yes
 
 		can_build_tribal = no
 		
 		ignore_in_vassal_limit_calculation = {
 			tribal_government
+			theocracy_government
 		}
 		capital_move_delay = 600
 		## Modifiers
@@ -478,6 +538,7 @@ feudal_governments = {
 		}
 		accepts_liege_governments = {
 			mex_imperial_government
+						  
 			feudal_government
 			bureaucratic_government
 			theocracy_government
@@ -501,7 +562,7 @@ feudal_governments = {
 		potential = {
 			OR = {
 				holy_order = yes
-				title = d_cristo_rey
+						
 				AND = {
 					any_liege = {
 						holy_order = yes
@@ -572,7 +633,7 @@ feudal_governments = {
 		free_revoke_on_governments_religion = { # Tribal vassals of other religions can have their titles revoked for free
 			tribal_government
 		}
-		frame_suffix = "_romanimperial"
+		frame_suffix = "_usaimperial"
 		potential = {
 			OR = { 
 				AND = { 
@@ -618,6 +679,88 @@ feudal_governments = {
 		court_size_modifier = 15
 	}
 	
+	open_range_feudalism_government = {
+		preferred_holdings = { CASTLE }
+		allowed_holdings = { 
+			CASTLE 
+			FORT
+			HOSPITAL
+			TRIBAL
+		}
+		accepts_liege_governments = { # Gets the wrong religion modifier instead
+			bureaucratic_government
+			theocratic_feudal_government
+
+		}
+		free_revoke_on_governments_religion = { # Tribal vassals of other religions can have their titles revoked for free
+			tribal_government
+		}
+		frame_suffix = "_orf"
+		potential = {
+			OR = {
+				has_character_flag = ORF_embrace
+				OR = {
+					capital_scope = {
+						region = custom_range_range
+					}
+					culture = altiplanense
+					culture = bravo
+					culture = neomexicano
+					culture_group = starfolk
+					culture = arixan
+					culture = comanche
+					culture = sioux
+					culture = crow
+				}
+				AND = {
+					has_game_started = no
+					is_save_game = no
+					OR = {
+						has_landed_title = d_oklahoma
+						has_landed_title = d_chisholm
+						has_landed_title = c_panhandle
+						has_landed_title = d_verdigris
+						has_landed_title = k_platte
+						has_landed_title = d_kansas
+						has_landed_title = c_rushmore
+						has_landed_title = c_bismarck
+					}
+				}
+			}
+			NOT = { has_character_flag = ORF_reject }
+			is_patrician = no
+			NOT = { is_government_potential = mormon_government }
+			NOT = { is_government_potential = mex_imperial_government }
+			NOT = { is_government_potential = bureaucratic_government }
+			NOT = { is_government_potential = theocratic_feudal_government }
+			NOT = { is_government_potential = uyc_government }			
+		}
+		
+		character_modifier = {
+			short_reign_length = -1
+		}	
+		
+		color = { 204 79 45 }
+		
+		barons_need_dynasty = yes
+		can_imprison_without_reason = no
+		can_revoke_without_reason = no
+		can_build_tribal = no
+		
+		
+		ignore_in_vassal_limit_calculation = {
+			tribal_government
+		}
+		capital_move_delay = 600
+		
+		## Modifiers
+		court_size_modifier = 10
+		#min_vassal_tax = -0.5
+		#max_vassal_tax = -0.1
+		#max_vassal_levy = -0.7
+		#min_vassal_levy = -0.2
+	}
+	
 	mex_imperial_government = {
 		preferred_holdings = { CITY CASTLE }
 		allowed_holdings = {
@@ -651,14 +794,16 @@ feudal_governments = {
 				religion = strangite
 				religion = lamanita
 				religion = furiegi
+					   
+					  
 				is_government_potential = military_governorate
 			}
 			OR = {
-				primary_title = { 
+				primary_title = {
 					OR = {
 					title = e_mexico
 					title = k_mexico
-						}				
+					}	
 				}
 				top_liege = {
 					primary_title = { 
@@ -721,17 +866,10 @@ feudal_governments = {
 		frame_suffix = "_uyc"
 		title_prefix = "uyc_"
 		potential = {
-			NAND = {
-				controls_religion = yes
-				religion = mictlantec
-			}
-			NAND = {
-				controls_religion = yes
-				religion = qabantajik
-			}
 			NOR = {
 				religion = sol_invicta
 				religion = neomayan
+				controls_religion = yes
 			}
 			OR = { 
 				religion = mictlantec
@@ -744,6 +882,7 @@ feudal_governments = {
 			NOT = { is_government_potential = mex_imperial_government }
 			NOT = { is_government_potential = order_government }
 			NOT = { is_government_potential = military_governorate }
+			NOT = { is_government_potential = theocratic_feudal_government }
 			is_patrician = no
 		}
 		

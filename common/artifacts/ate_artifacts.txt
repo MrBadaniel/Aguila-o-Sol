@@ -339,7 +339,7 @@ divine_egg = {
 	allowed_gift = { religion = atomicist }
 	quality = 4
 	flags = { oldworld religious atomicist metal egg very_rare }
-	picture = "GFX_relicbox_iron"
+	picture = "GFX_divine_egg"
 }
 
 old_world_engine = {
@@ -464,6 +464,28 @@ living_thyrsus = {
 	flags = { religious staff gaian plant rare }
 	picture = "GFX_haoma_sapling"
 	slot = ceremonial_weapon
+}
+
+jonathans_conquests = {
+	monthly_character_piety = 0.5
+	martial = 1
+	active = {
+		OR = {
+			culture_group = north_pacific
+			culture_group = northwest_coast
+			culture_group = californian
+		}
+	}
+	allowed_gift = {
+		OR = {
+			culture_group = north_pacific
+			culture_group = northwest_coast
+			culture_group = californian
+		}
+	}
+	quality = 3
+	flags = { religious pacific book very_rare unique }
+	picture = "GFX_emerald_tablet"
 }
 
 ancient_bonsai = {
@@ -810,6 +832,69 @@ death_whistle = {
 	picture = "GFX_death_whistle"
 }
 
+old_dominion_old_crown = {
+	monthly_character_prestige = 0.1
+	stewardship = 2
+	active = {
+	}
+	flags = { old_dogwood unique crown jewelry crown_jewel }
+	picture = "GFX_old_dominion_old_crown"
+	quality = 1
+	stacking = no
+	indestructible = yes
+	allowed_gift = {
+		always = no
+	}
+}
+
+dogwood_crown = {
+	monthly_character_prestige = 1.0
+	stewardship = 2
+	diplomacy = 2
+	vassal_opinion = 10
+	active = {
+	}
+	flags = { dogwood_crown unique crown jewelry crown_jewel }
+	picture = "GFX_dogwood_crown"
+	quality = 5
+	stacking = no
+	slot = crown
+	indestructible = yes
+	allowed_gift = {
+		always = no
+	}
+}
+
+restored_dogwood_crown = {
+	monthly_character_prestige = 1.0
+	stewardship = 2
+	diplomacy = 2
+	vassal_opinion = 10
+	active = {
+	}
+	flags = { restored_dogwood_crown unique crown jewelry crown_jewel }
+	picture = "GFX_dogwood_crown"
+	quality = 5
+	stacking = no
+	slot = crown
+	indestructible = yes
+	allowed_gift = {
+		always = no
+	}
+}
+
+lance_of_patton = {
+	combat_rating = 10
+	active = {
+		culture_group = south_anglo
+	}
+	quality = 3
+	flags = { weapon evangelical spear }
+	picture = "GFX_lance"
+	stacking = no
+	slot = weapon
+}
+
 ### American Native Artifacts ###
 
 thunderbird_whistle = {
@@ -842,12 +927,14 @@ sacred_bundle = {
 		OR = {
 			religion_group = american_native
 			religion_group = amero_syncretic
+			religion_group = mesoamerican_gods
 		}	
 	}
 	allowed_gift = {
 		OR = {
 			religion_group = american_native
 			religion_group = amero_syncretic
+			religion_group = mesoamerican_gods
 		}	
 	}
 	quality = 1
@@ -1255,7 +1342,7 @@ presidential_portrait = {
 	}
 	stacking = no
 	flags = { religious americanist art decor rare }
-	picture	= "GFX_magnificent_painting" #placeholder
+	picture = "GFX_magnificent_painting" #placeholder
 }
 
 washingtons_teeth = {
@@ -1641,7 +1728,7 @@ crystal_skull = {
 	}
 	flags = { religious mesoamerican_gods jewelry rare }
 	stacking = no
-	picture = "GFX_saints_skull" #placeholder
+	picture = "GFX_gem_sapphire" #placeholder
 }
 
 aztec_codex = {
@@ -1697,7 +1784,7 @@ montezuma_headdress = {
 		}
 	}
 	flags = { religious mesoamerican unique headdress troops_morale }
-	picture = "GFX_crown_aztec_fylkir" #placeholder to the max
+	picture = "GFX_crown_aztec_fylkir"
 	slot = crown
 }
 
@@ -2177,24 +2264,7 @@ scepter_midewiwin_fylkir = {
 		always = no
 	}
 }
-crown_thelemic_fylkir = { 
-	monthly_character_prestige = 0.4
-	monthly_character_piety = 0.7
-	diplomacy = 2
-	martial = 2
-	tribal_opinion = 10
-	quality = 4
-	active = { 
-		has_landed_title = d_thelemic_reformed
-	}
-	flags = { religious unique crown jewelry crown_jewel }
-	picture = "GFX_crown_tengri_fylkir"
-	slot = crown
-	indestructible = yes
-	allowed_gift = {
-		always = no
-	}
-}
+
 crown_trailwalker_fylkir = { 
 	monthly_character_prestige = 0.4
 	monthly_character_piety = 0.7
@@ -2652,23 +2722,6 @@ ceremonial_tomahawk_pipe = {
 	stacking = no
 }
 
-sureshot_bow = { #why was this put in the exovedate/metis section is beyond me
-	monthly_character_prestige = 1.5
-	martial = 5
-	combat_rating = 50
-	command_modifier = {
-		morale_offence = 0.3
-	}
-	quality = 5
-	active = {
-		is_adult = yes
-		religion_openly_trailwalker_or_reformed_trigger = yes
-	}
-	flags = { religious combat_weapon trophy very_rare }
-	stacking = no
-	picture = "GFX_eagle"
-	slot = weapon
-}
 #Pelagic artifacts
 bone_knife = {
 	quality = 2
@@ -3003,6 +3056,31 @@ heartwood_spear= {
 	slot = weapon
 }
 
+vandals_axe= {
+	monthly_character_prestige = 0.2
+	combat_rating = 10
+	martial = 1
+	quality = 3
+	command_modifier = {
+		damage = 0.1
+		light_infantry = 0.1
+	}
+	active = {
+			age=14
+		OR = {
+			culture = inlander
+			religion = gaian
+			religion = trailwalker
+			religion = trailwalker_reformed
+		}
+	}
+	flags = { combat_weapon weapon axe }
+	indestructible = yes
+	stacking = no
+	picture = "GFX_viking_axe"
+	slot = weapon
+}
+
 fastest_gun = {
 	monthly_character_prestige = 1.25
 	martial = 5
@@ -3101,14 +3179,96 @@ dinosaur = {
 	quality = 2
 	active = {
 		is_adult = yes
-		religion_openly_trailwalker_or_reformed_trigger = yes
-		religion_openly_revelationist_or_reformed_trigger = yes
+		OR = {
+			religion_openly_trailwalker_or_reformed_trigger = yes
+			religion_openly_revelationist_or_reformed_trigger = yes
+		}
 	}
 	allowed_gift = {
+		OR = {
 		religion_openly_trailwalker_or_reformed_trigger = yes
 		religion_openly_revelationist_or_reformed_trigger = yes
+		}
 	}
 	flags = { religious trailwalker revelationist rare }
 	stacking = no
 	picture = "GFX_dinosaur"
+}
+
+pulaskis_axe = {
+	combat_rating = 5
+	inlander_opinion = 5
+	same_religion_opinion = 5
+	stewardship = 2
+	monthly_character_prestige = 0.1
+	monthly_character_piety = 0.1
+	active = {
+			age=14
+		OR = {
+			culture = inlander
+			religion = trailwalker
+			religion = trailwalker_reformed
+			religion = gaian
+		}
+	}
+	quality = 3
+	flags = { religious axe ceremonial_weapon }
+	picture = "GFX_pulaskis_axe"
+	stacking = no
+
+		slot = ceremonial_weapon
+}
+
+sureshot_bow = {
+	monthly_character_prestige = 1.5
+	martial = 5
+	combat_rating = 50
+	command_modifier = {
+		morale_offence = 0.3
+	}
+	quality = 5
+	active = {
+		is_adult = yes
+		religion_openly_trailwalker_or_reformed_trigger = yes
+	}
+	flags = { religious combat_weapon trophy very_rare }
+	stacking = no
+	picture = "GFX_eagle"
+	slot = weapon
+}
+
+crown_texas = {
+#	HCC crown stats for comparison
+#	monthly_character_prestige = 1.0
+#	monthly_character_piety = 1.0
+#	diplomacy = 4
+#	quality = 5
+#	church_opinion = 10
+
+	monthly_character_prestige = 1.0
+	stewardship = 2
+	diplomacy = 1
+	martial = 1
+	command_modifier = {
+		light_cavalry = 0.15
+	}
+	starfolk_opinion = 5
+	comanche_opinion = 5
+	quality = 4
+
+	active = {	
+		OR = {
+			has_landed_title = e_texas
+			culture = comanche
+			culture_group = starfolk
+		}
+	}
+	flags = { texas_crown unique crown jewelry crown_jewel }
+	picture = "GFX_crown_texas"
+	quality = 5
+	stacking = no
+	indestructible = yes
+	allowed_gift = {
+		always = no
+	}
 }

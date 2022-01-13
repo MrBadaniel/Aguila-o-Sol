@@ -1073,14 +1073,12 @@ upgrade_sacrificial_altar = {
 	potential = {
 		OR = {
 			has_religion_feature = religion_ritual_sacrifice
-			has_religion_feature = religion_feature_thelemic
 		}
 	}
 	allow = { }
 	active = {
 		OR = {
 			has_religion_feature = religion_ritual_sacrifice
-			has_religion_feature = religion_feature_thelemic
 		}
 	}
 
@@ -3808,7 +3806,7 @@ upgrade_automata_throne = { # Automata Throne
 	picture = GFX_upgrade_icon_stones
 	potential = {
 		OR = {
-			government = mex_imperial_government
+			government = roman_imperial_government
 			TECH_CONSTRUCTION = 5
 		}	
 	}
@@ -4795,6 +4793,139 @@ upgrade_tabernacle = {
 	}
 	owner_modifier = {
 		learning = 1
+	}
+}
+
+upgrade_alamo_mission = {
+	picture = GFX_upgrade_icon_book_red
+
+	potential = {
+	}
+	allow = { }
+	active = {
+		culture_group = starfolk
+	}
+
+	flags = {
+		is_singular
+	}
+	build_time = 24
+	gold_cost_flat = 300
+	gold_cost_ticking = 1
+	flags = {
+		is_singular
+		religion_conversion_faster
+	}
+	owner_modifier = {
+		diplomacy = 1
+		starfolk_opinion = 5
+	}
+}
+
+upgrade_riverwalk = {
+	picture = GFX_upgrade_icon_anchor
+
+	potential = {
+	}
+	allow = { }
+	active = {
+		culture_group = starfolk
+	}
+
+	flags = {
+		is_singular
+	}
+	build_time = 24
+	gold_cost_flat = 300
+	gold_cost_ticking = 1
+	local_modifier = {
+		culture_techpoints = 0.05
+	}
+	owner_modifier = {
+		diplomacy = 1
+		monthly_character_prestige = 0.1
+		fertility = 0.05
+	}
+}
+
+upgrade_cannon_armory = {	
+	picture = GFX_upgrade_icon_equipment	
+	potential = { }
+	allow = { }
+	active = { }
+
+	flags = {
+		is_singular
+		artifact
+	}
+	build_time = 24
+	gold_cost_flat = 500
+	gold_cost_ticking = 1
+	owner_modifier = {		
+		monthly_character_prestige = 0.5
+	}
+	local_modifier = {
+		military_techpoints = 0.05
+	}
+}
+
+upgrade_statue_of_dale = {
+	picture = GFX_upgrade_icon_statue
+
+	potential = {
+	}
+	allow = {
+	}
+	active = {
+	}
+
+	flags = {
+		decorative
+		is_singular
+	}
+	build_time = 24
+	gold_cost_flat = 250
+	gold_cost_ticking = 1
+	owner_modifier = {
+		monthly_character_prestige = 0.05
+	}
+}
+
+upgrade_saltworks = {
+	picture = GFX_upgrade_icon_logistics
+
+	potential = {
+	}
+	allow = { }
+	active = { }
+
+	flags = {
+		is_singular
+	}
+	build_time = 24
+	gold_cost_flat = 450
+	gold_cost_ticking = 1
+	local_modifier = {
+		local_tax_modifier = 0.10
+		tradevalue = 30
+	}
+}
+upgrade_hall_of_monsters = {
+	picture = GFX_upgrade_icon_skulls
+
+	potential = {
+	}
+	allow = { }
+	active = { }
+
+	flags = {
+		is_singular
+	}
+	build_time = 24
+	gold_cost_flat = 300
+	gold_cost_ticking = 1
+	owner_modifier = {
+		monthly_character_prestige = 0.05
 	}
 }
 

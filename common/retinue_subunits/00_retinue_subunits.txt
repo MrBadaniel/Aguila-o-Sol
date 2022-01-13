@@ -180,10 +180,10 @@ TRIBAL_RET_5 = {
 			culture_group = plains
 			culture_group = plateau
 			culture_group = west_anglo
-			culture_group = norteno
-			culture_group = texan_group
-			culture = neomexicano
+			culture_group = starfolk
 			culture = llanero
+			culture_group = norteno
+			culture = neomexicano
 			culture = gaucho
 		}
 	}
@@ -306,7 +306,7 @@ RETTYPE_CUL_MEXICAN =
 	potential = {
 		is_nomadic = no
 		culture_group = mexicano
-		NOT = {	culture = jarocho }
+		NOT = {	culture_group = norteno }
 		NOT = { culture = neoladino }
 	}
 	
@@ -509,12 +509,13 @@ RETTYPE_CUL_TEXAS =
 	potential = {
 		is_nomadic = no
 		OR = {
-			culture_group = texan_group
+			culture_group = plains
+			culture_group = plateau
 			culture_group = west_anglo
+			culture_group = starfolk
 			culture = llanero
+			culture_group = norteno
 			culture = neomexicano
-			culture = bravo
-			culture = menomex
 			culture = gaucho
 		}
 	}
@@ -557,7 +558,13 @@ RETTYPE_CUL_IRISH =
 	
 	potential = {
 		is_nomadic = no
-		culture_group = north_atlantic
+		OR = {
+			culture_group = north_atlantic
+			culture = irish
+		}
+		NOT = {
+			culture = new_english
+		}
 	}
 	
 	modifier = {
@@ -580,7 +587,7 @@ RETTYPE_CUL_CARIBBEAN =
 			culture = cayennais
 			culture = boricua
 			culture = sranan
-			culture = bolivarense			
+			culture = bolivarense
 			culture = papiamen
 			culture = quisqueyano #separated cubano culture, nuyorican culture, and yanquito culture
 			AND = {
@@ -655,7 +662,7 @@ RETTYPE_CUL_PRAIRIE =
 		is_nomadic = no
 		OR = {
 			culture = metis
-			culture = prairielander			 
+			culture = prairielander
 		}
 	}
 	
@@ -738,8 +745,10 @@ RETTYPE_CUL_MESOAMERICAN =
 
 RETTYPE_CUL_PUREPECHA = 
 {
-	first_type = 5
-	first_amount = 250
+	first_type = 2
+	first_amount = 150
+	second_type = 4
+	second_amount = 50
 	
 	potential = {
 		is_nomadic = no
@@ -748,7 +757,10 @@ RETTYPE_CUL_PUREPECHA =
 	
 	modifier = {
 		archers_offensive = 0.2
-		archers_defensive = 0.1
+		archers_defensive = 0.2
+		pikemen_offensive = 0.2
+		pikemen_defensive = 0.3
+		pikemen_morale = 0.1
 	}
 }
 
@@ -788,7 +800,7 @@ RETTYPE_CUL_CALI =
 		OR = {
 			culture_group = californian
 			culture = hawaiian
-			culture = californio
+			culture = californiano
 			culture = chino
 		}
 	}
@@ -798,6 +810,26 @@ RETTYPE_CUL_CALI =
 		heavy_infantry_morale = 0.1
 		pikemen_defensive = 0.4
 		pikemen_morale = 0.1
+	}
+}
+
+RETTYPE_CUL_YAQUI =
+{
+	first_type = 0
+	first_amount = 100
+	second_type = 3
+	second_amount = 200
+	
+	potential = {
+		is_nomadic = no
+		culture = yaqui
+	}
+	
+	modifier = {
+		light_infantry_offensive = 0.2
+		light_cavalry_offensive = 0.3
+		light_cavalry_morale = 0.2
+		horse_archers_offensive = 0.2
 	}
 }
 
@@ -814,6 +846,7 @@ RETTYPE_CUL_PORTLAND =
 			culture = cascadian
 			culture = siskiyouan
 			culture = inlander
+			culture = snakelander
 		}
 	}
 	
@@ -1066,7 +1099,7 @@ RETTYPE_CUL_JSM =
 	}
 }
 
-#British and Patagonian Welsh retinues
+#English, Northumbrian and Patagonian Welsh retinues
 RETTYPE_CUL_ENG = 
 {
 	first_type = 5
@@ -1075,8 +1108,10 @@ RETTYPE_CUL_ENG =
 	potential = {
 		is_nomadic = no
 		OR = {
-			culture_group = britannic #made it into cultural group for consistency
 			culture_group = patagonian
+			culture = anglish #invader rework
+			culture = new_english
+			culture = northumbrian
 		}
 	}
 	
@@ -1571,7 +1606,83 @@ RETTYPE_CUL_ANDINO =
 	}
 }
 
+# Invader Rework Retinues
 
+#English and Northumbrian Billmen Cultural Retinue
+RETTYPE_CUL_BILLMEN = 
+{
+	first_type = 2
+	first_amount = 400
+	
+	potential = {
+		is_nomadic = no
+		OR = {
+			culture = anglish
+			culture = new_english
+			culture = northumbrian
+		}
+	}
+	
+	modifier = {
+		pikemen_defensive = 0.2
+		pikemen_offensive = 0.3
+		pikemen_morale = 0.2
+	}
+}
+
+RETTYPE_CUL_SCHILTRON = 
+{
+	first_type = 2
+	first_amount = 400
+	
+	potential = {
+		is_nomadic = no
+		culture = scottish
+	}
+	
+	modifier = {
+		pikemen_defensive = 0.5
+		pikemen_offensive = 0.3
+		pikemen_morale = 0.2
+	}
+}
+
+RETTYPE_CUL_HIGHLANDER = 
+{
+	first_type = 1
+	first_amount = 200
+	second_type = 5
+	second_amount = 50
+	
+	potential = {
+		is_nomadic = no
+		culture = scottish
+	}
+	
+	modifier = {
+		heavy_infantry_offensive = 0.4
+		heavy_infantry_morale = 0.4
+		archers_offensive = 0.2
+	}
+}
+
+#shami Cultural Retinue
+RETTYPE_CUL_SHAMI = 
+{
+	first_type = 3
+	first_amount = 400
+
+	potential = {
+		is_nomadic = no
+		culture = shami
+	}
+
+	modifier = {
+		light_cavalry_defensive = 0.4
+		light_cavalry_offensive = 0.2
+		light_cavalry_morale = 0.2
+	}
+}
 	
 HORDE_RETTYPE_CAV1 = 
 {
@@ -1707,7 +1818,7 @@ HORDE_RETTYPE_CAV7 =
 	# potential = {
 		# is_nomadic = yes
 		# capital_scope = {
-			# bravon = world_india
+			# region = world_india
 		# }
 	# }
 # }

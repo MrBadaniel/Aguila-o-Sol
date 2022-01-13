@@ -148,7 +148,7 @@ succession_laws = {
 								religion = norse_pagan
 								religion = revelationist
 								religion = occultist
-								religion = thelemic
+								religion = glorian
 								religion = celtic_pagan
 								religion = aria_de_machete
 								religion = midewiwin
@@ -398,14 +398,12 @@ succession_laws = {
 					religion_group = american_native
 					culture_group = taracahita
 					culture_group = mesoamerican
+					religion = gaian
+					religion = nazarene
 					religion = mictlantec
 					religion = qabantajik
+					religion = edenite
 					culture = metis
-					AND = {
-						religion = moravian
-						trait = pastoral
-					}
-				OR = {
 					AND = {
 						is_tribal = yes
 						OR = {
@@ -414,10 +412,9 @@ succession_laws = {
 						}
 					}
 					AND = {
-					religion = moravian
-					trait=pastoral
+						religion = moravian
+						trait=pastoral
 					}
-				}
 					has_religion_feature = religion_beatification
 					has_religion_feature = religion_feature_trailwalker
 					has_religion_feature = religion_feature_revelationist
@@ -492,21 +489,19 @@ succession_laws = {
 						culture_group = mesoamerican
 						religion = mictlantec
 						religion = qabantajik
+						religion = gaian
 						culture = metis
 						AND = {
 							religion = moravian
 							trait = pastoral
 						}
-				OR = {
-					AND = {
-						is_tribal = yes
-						OR = {
-							religion = occultist
-							religion = celtic_pagan
+						AND = {
+							is_tribal = yes
+							OR = {
+								religion = occultist
+								religion = celtic_pagan
+							}
 						}
-					}
-					religion = moravian
-				}
 						has_religion_feature = religion_beatification
 						has_religion_feature = religion_feature_trailwalker
 						has_religion_feature = religion_feature_revelationist
@@ -631,7 +626,11 @@ succession_laws = {
 				NOT = { tier = baron }
 				holder_scope = { is_patrician = yes }
 			}
-			NOT = { holder_scope = { government = military_governorate } }
+			NOT = { holder_scope = { 
+				OR = {
+				government = military_governorate 
+				government = theocratic_feudal_government
+			} } }
 			holder_scope = {
 				NAND = {
 					OR = {
@@ -792,7 +791,7 @@ succession_laws = {
 						OR = {
 							AND = {
 								religion_group = pagan_group
-								NOT = { religion = thelemic }
+								NOT = { religion = glorian }
 							}
 							NOT = { religion = midewiwin }
 							NOT = { religion = raven_tales }
@@ -822,7 +821,11 @@ succession_laws = {
 				}
 				has_title_flag = alternate_byz
 			}
-			NOT = { holder_scope = { government = military_governorate } }
+			NOT = { holder_scope = { 
+				OR = {
+				government = military_governorate 
+				government = theocratic_feudal_government
+			} } }
 			
 			holder_scope = {
 				NAND = {
@@ -853,10 +856,16 @@ succession_laws = {
 						holder_scope = {
 							show_scope_change = no
 							primary_title = {
-								show_scope_change = no
+								show_scope_change = no							
 								OR = {
-									has_law = ze_administration_laws_1
-									has_law = ze_administration_laws_2
+									OR = {
+										has_law = ze_administration_laws_1
+										has_law = ze_administration_laws_2
+									}
+									OR = {
+										has_law = orf_senate_type_law_1
+										has_law = orf_senate_type_law_2
+									}	
 								}
 							}
 						}
@@ -1046,7 +1055,11 @@ succession_laws = {
 					}
 				}
 			}
-			NOT = { holder_scope = { government = military_governorate } }
+			NOT = { holder_scope = { 
+				OR = {
+				government = military_governorate 
+				government = theocratic_feudal_government
+			} } }
 			NOR = { #Special Elective.
 				title = e_dixie
 				has_title_flag = alternate_hre
@@ -1112,6 +1125,7 @@ succession_laws = {
 			}
 
 			OR = {
+				title = e_texas #Title-bound.
 				title = e_dixie #Title-bound.
 				ROOT = {
 					has_title_flag = alternate_hre
@@ -1233,7 +1247,11 @@ succession_laws = {
 			#	temporary = yes
 			#}
 			#is_primary_type_title = no
-			NOT = { holder_scope = { government = military_governorate } }
+			NOT = { holder_scope = { 
+				OR = {
+				government = military_governorate 
+				government = theocratic_feudal_government
+			} } }
 
 		}
 		allow = {
@@ -1491,7 +1509,7 @@ succession_laws = {
 						NOT = { religion = norse_pagan }
 						NOT = { religion = revelationist }
 						NOT = { religion = occultist }
-						NOT = { religion = thelemic }
+						NOT = { religion = glorian }
 						NOT = { religion = pagan }
 						NOT = { religion = celtic_pagan }
 						NOT = { religion = aria_de_machete }
@@ -1532,7 +1550,11 @@ succession_laws = {
 				holder_scope = { is_feudal = yes }
 				is_nomadic = no
 			}
-			NOT = { holder_scope = { government = military_governorate } }
+			NOT = { holder_scope = { 
+				OR = {
+				government = military_governorate 
+				government = theocratic_feudal_government
+			} } }
 			
 			holder_scope = {
 				NAND = {
@@ -1555,10 +1577,17 @@ succession_laws = {
 				holder_scope = {
 					show_scope_change = no
 					primary_title = {
-						show_scope_change = no
+						show_scope_change = no				
 						OR = {
-							has_law = ze_administration_laws_1
-							has_law = ze_administration_laws_2
+							OR = {
+								has_law = ze_administration_laws_1
+								has_law = ze_administration_laws_2
+							}
+
+							OR = {
+								has_law = orf_senate_type_law_1
+								has_law = orf_senate_type_law_2
+							}	
 						}
 					}
 				}
@@ -1730,6 +1759,7 @@ succession_laws = {
 				title = k_hijo_del_sol
 				title = k_ursuline
 				title = d_quorum_of_the_twelve
+				title = d_quorum_of_the_lamanites
 				AND = {
 					title = d_celtic_pagan_reformed
 					has_religion_feature = religion_theocratic_head
@@ -1772,6 +1802,14 @@ succession_laws = {
 				has_law = succ_byzantine_elective 
 				title = e_usa
 			}
+			NAND = { 
+				has_law = succ_mex_elective 
+				title = e_mexico
+			}
+			NAND = { 
+				has_law = succ_mex_elective 
+				title = k_mexico
+			}
 			NOT = {
 				religion_group = latter_day_saints
 			}
@@ -1782,6 +1820,7 @@ succession_laws = {
 				title = k_ursuline
 				title = d_quorum_of_the_twelve
 				title = d_celtic_pagan_reformed
+				title = d_quorum_of_the_lamanites
 			}
 			temporary = no
 			OR = {

@@ -1,8 +1,10 @@
 decisions = {
 	americanist_pilgrimage = {
 		is_high_prio = yes
+		only_playable = yes
+		ai_check_interval = 120
+		
 		potential = {
-			is_ruler = yes
 			religion = americanist
 			age = 16
 			prisoner = no
@@ -62,8 +64,10 @@ decisions = {
 	
 	rustcult_salvage = {
 		is_high_prio = yes
+		only_playable = yes
+		ai_check_interval = 24
+		
 		potential = {
-			is_ruler = yes
 			age = 16
 			prisoner = no
 			NOT = { is_incapable = yes }
@@ -88,9 +92,9 @@ decisions = {
 				}
 			}
 			hidden_tooltip = {
-				character_event = {
+				character_event = { #failsafe
 					id = salvage.95
-					months = 18 #failsafe
+					months = 12
 				}
 			}
 			if = {
@@ -125,6 +129,9 @@ decisions = {
 	
 	consumerist_invest = {
 		is_high_prio = yes
+		only_playable = yes
+		ai_check_interval = 12
+		
 		potential = {
 			NOT = {
 				has_alternate_start_parameter = { key = religion_names value = random }
@@ -181,7 +188,6 @@ decisions = {
 					20 = { add_trait = impaler }
 					30 = { }
 				}
-				character_event = { id = merchant.1 days = 5 random = 10 }
 			}
 		}
 		revoke_allowed = {
@@ -196,6 +202,9 @@ decisions = {
 	
 	sacred_heart_luchadore = {
 		is_high_prio = no
+		only_playable = yes
+		ai_check_interval = 24
+		
 		potential = {
 			NOT = {
 				has_alternate_start_parameter = { key = religion_names value = random }
@@ -228,39 +237,10 @@ decisions = {
 		}
 	}
 	
-	mictlantec_sacrifice = {
-		is_high_prio = no
-		potential = {
-			NOT = { #immersion-breaking
-				has_alternate_start_parameter = { key = religion_names value = random }
-			}
-			religion = tonaltec
-			NOT = { has_character_flag = attempt_incarnation }
-		}
-		allow = {
-			num_of_prisoners = 1
-			wealth = 25
-		}
-		effect = {
-			wealth = -25
-			narrative_event = { id = mictlan.10 }
-		}
-		revoke_allowed = {
-			always = no
-		}
-		ai_will_do = {
-			factor = 1
-			modifier = { factor = 0.04 }
-			modifier = { factor = 3 trait = impaler }
-			modifier = { factor = 2 trait = zealous }
-			modifier = { factor = 2 trait = lunatic }
-			modifier = { factor = 2 trait = cruel }
-			modifier = { factor = 0.1 trait = kind }
-		}
-	}
-	
 	vision_quest = {
 		is_high_prio = yes
+		only_playable = yes
+		
 		potential = {
 			NOT = {
 				has_alternate_start_parameter = { key = religion_names value = random }
@@ -275,12 +255,15 @@ decisions = {
 			OR = {
 				religion_group = american_native
 				religion_group = mesoamerican_gods
-				religion_group = afro_syncretic #potentially redundant, needs testing
+				religion = rastafarian
+				religion = voodoo
+				religion = santeria
 				religion_openly_revelationist_or_reformed_trigger = yes
 				religion_openly_occultist_or_reformed_trigger = yes
 				religion = gaian
 				religion = nousthreskeia
-				religion = uahomche
+				religion = thelema
+				religion = peyotist
 			}
 		}
 		allow = {
@@ -294,42 +277,38 @@ decisions = {
 					limit = {
 						OR = {
 							culture_group = plains
-							culture_group = southwestern
+							culture_group = plateau
 							religion_group = american_native
 						}
 					}
 					narrative_event = { id = vision.1 }
 				}
-				
+	
 				# mesoamerican religions
 				if = {
 					limit = {
 						NOT = { culture_group = plains }
-						NOT = { culture_group = southwestern }
-						OR = {
-							religion_group = mesoamerican_gods
-							religion = mictlantec
-							religion = mictlantec_reformed
-						}
+						NOT = { culture_group = plateau }
+						religion_group = mesoamerican_gods
 					}
 					narrative_event = { id = vision.2 }
 				}
-				
+	
 				# afro_syncretic religions
 				if = {
 					limit = {
 						NOT = { culture_group = plains }
-						NOT = { culture_group = southwestern }
+						NOT = { culture_group = plateau }
 						religion_group = afro_syncretic
 					}
 					narrative_event = { id = vision.3 }
 				}
-				
+	
 				# atomicist / revelationist / occultist
 				if = {
 					limit = {
 						NOT = { culture_group = plains }
-						NOT = { culture_group = southwestern }
+						NOT = { culture_group = plateau }
 						OR = {
 							religion = atomicist
 							religion = revelationist_reformed
@@ -342,7 +321,7 @@ decisions = {
 					}
 					narrative_event = { id = vision.4 }
 				}
-				
+	
 				character_event = { id = vision.10 days = 2 }
 				character_event = { id = vision.11 days = 9 random = 6 }
 			}
@@ -373,19 +352,33 @@ decisions = {
 		}
 	}
 	
-	cetic_pilgrimage = {
+	visit_imperial_court = { #actually a visit to the court
 		is_high_prio = yes
+		only_playable = yes
+		ai_check_interval = 12
+		
 		potential = {
 			is_ruler = yes
-			religion = cetic
+			OR = { #this is basically it
+				AND = {
+					religion = cetic
+					NOT = { controls_religion = yes }
+				}
+				AND = {
+					OR = {
+						religion = imamite
+						religion = qingzhen
+						religion = nazarene
+					}
+					NOT = { has_global_flag = imamite_jihad_unlocked }
+				}
+			}
 			num_of_count_titles = 1
 			age = 16
 			prisoner = no
 			in_seclusion = no
 			NOT = { is_incapable = yes }
-			NOT = { trait = pilgrim }
 			NOT = { trait = travelling }
-			controls_religion = no
 			e_california = { has_holder = yes } #you know, we'll have to figure out the cetic religious head situation if we want random world to work right
 			NOT = { #immersion-breaking
 				has_alternate_start_parameter = { key = religion_names value = random }
@@ -398,6 +391,7 @@ decisions = {
 		}
 		effect = {
 			add_trait = travelling
+			set_character_flag = visiting_imperial_court
 			wealth = -25
 		}
 		revoke_allowed = {
@@ -421,17 +415,33 @@ decisions = {
 		}
 	}
 	
-	cetic_pilgrimage_end = {
+	visit_imperial_court_end = {
 		is_high_prio = no
+		only_playable = yes
+		ai_check_interval = 3
+		
 		potential = {
 			is_ruler = yes
-			religion = cetic
+			OR = { #this is basically it
+				AND = {
+					religion = cetic
+					NOT = { controls_religion = yes }
+				}
+				AND = {
+					OR = {
+						religion = imamite
+						religion = qingzhen
+					}
+					NOT = { has_global_flag = imamite_jihad_unlocked }
+				}
+			}
 			NOT = { has_character_modifier = imperial_favor }
 			controls_religion = no
 			trait = travelling
 		}
 		effect = {
 			remove_trait = travelling
+			clr_character_flag = visiting_imperial_court
 		}
 		revoke_allowed = {
 			always = no
@@ -446,6 +456,9 @@ decisions = {
 	
 	cetic_writings = {
 		is_high_prio = yes
+		
+		ai_check_interval = 24
+		
 		potential = {
 			NOT = { #immersion-breaking
 				has_alternate_start_parameter = { key = religion_names value = random }
@@ -492,168 +505,11 @@ decisions = {
 		}
 	}
 	
-	aphite_quarantine = {
-		is_high_prio = yes
-		potential = {
-			religion = aphite
-			is_ruler = yes
-			age = 16
-			prisoner = no
-			NOT = { is_incapable = yes }
-		}
-		allow = {
-			war = no
-			OR = {
-				AND = {
-					completely_controls = c_knox
-					151 = {
-						NOT = { has_province_modifier = atomic_quarantine }
-					}
-				}
-				AND = {
-					completely_controls = c_three_mile_island
-					190 = {
-						NOT = { has_province_modifier = atomic_quarantine }
-					}
-				}
-				AND = {
-					completely_controls = c_chicago
-					170 = {
-						NOT = { has_province_modifier = atomic_quarantine }
-					}
-				}
-				AND = {
-					completely_controls = c_white_sands
-					755 = {
-						NOT = { has_province_modifier = atomic_quarantine }
-					}
-				}
-				AND = {
-					completely_controls = c_los_alamos
-					423 = {
-						NOT = { has_province_modifier = atomic_quarantine }
-					}
-				}
-			}
-		}
-		effect = {
-			hidden_tooltip = {
-				character_event = {
-					id = event_atomicist.300
-				}
-			}
-		}
-		revoke_allowed = {
-			always = no
-		}
-		ai_will_do = {
-			factor = 1
-			modifier = { factor = 0.3 }
-			modifier = { factor = 2	trait = zealous }
-			modifier = { factor = 2	trait = diligent }
-			modifier = { factor = 0.3 trait = slothful }
-			modifier = { factor = 0.3 trait = cynical }
-		}
-	}
-	
-	destroy_quarantine = {
-		is_high_prio = yes
-		potential = {
-			religion = atomicist
-			is_ruler = yes
-			age = 16
-			prisoner = no
-			NOT = { is_incapable = yes }
-			OR = {
-				AND = {
-					completely_controls = c_knox
-					151 = {
-						has_province_modifier = atomic_quarantine
-					}
-				}
-				AND = {
-					completely_controls = c_three_mile_island
-					190 = {
-						has_province_modifier = atomic_quarantine
-					}
-				}
-				AND = {
-					completely_controls = c_chicago
-					170 = {
-						has_province_modifier = atomic_quarantine
-					}
-				}
-				AND = {
-					completely_controls = c_white_sands
-					755 = {
-						has_province_modifier = atomic_quarantine
-					}
-				}
-				AND = {
-					completely_controls = c_los_alamos
-					423 = {
-						has_province_modifier = atomic_quarantine
-					}
-				}
-			}
-		}
-		allow = {
-			war = no
-			OR = {
-				AND = {
-					completely_controls = c_knox
-					151 = {
-						has_province_modifier = atomic_quarantine
-					}
-				}
-				AND = {
-					completely_controls = c_three_mile_island
-					190 = {
-						has_province_modifier = atomic_quarantine
-					}
-				}
-				AND = {
-					completely_controls = c_chicago
-					170 = {
-						has_province_modifier = atomic_quarantine
-					}
-				}
-				AND = {
-					completely_controls = c_white_sands
-					755 = {
-						has_province_modifier = atomic_quarantine
-					}
-				}
-				AND = {
-					completely_controls = c_los_alamos
-					423 = {
-						has_province_modifier = atomic_quarantine
-					}
-				}
-			}
-		}
-		effect = {
-			hidden_tooltip = {
-				character_event = {
-					id = event_atomicist.306
-				}
-			}
-		}
-		revoke_allowed = {
-			always = no
-		}
-		ai_will_do = {
-			factor = 1
-			modifier = { factor = 0.3 }
-			modifier = { factor = 2	trait = zealous }
-			modifier = { factor = 2	trait = diligent }
-			modifier = { factor = 0.3 trait = slothful }
-			modifier = { factor = 0.3 trait = cynical }
-		}
-	}
-	
 	cetic_writings_end = {
 		is_high_prio = no
+		only_playable = yes
+		ai_check_interval = 24
+		
 		potential = {
 			NOT = { #immersion-breaking
 				has_alternate_start_parameter = { key = religion_names value = random }
@@ -727,6 +583,9 @@ decisions = {
 	
 	emperor_request_allies = {
 		is_high_prio = yes
+		only_playable = yes
+		ai_check_interval = 3
+		
 		potential = {
 			is_alternate_start = no #immersion-breaking
 			OR = {
@@ -745,14 +604,7 @@ decisions = {
 		effect = {
 			piety = -25
 			add_character_modifier = { name = requested_military_aid duration = 365 }
-			any_independent_ruler = {
-				limit = {
-					religion = cetic
-					NOT = { war = yes }
-					mercenary = no
-				}
-				letter_event = { id = cetic.60 days = 5 random = 5 }
-			}
+			character_event = { id = cetic.60 }
 		}
 		revoke_allowed = {
 			always = no
@@ -764,14 +616,21 @@ decisions = {
 	
 	oregon_pilgrimage = {
 		is_high_prio = yes
+		only_playable = yes
+		ai_check_interval = 120
+		
 		potential = {
 			is_alternate_start = no #immersion-breaking
 			is_ruler = yes
-			#NOT = { religion = cetic }
-			OR = {				
-				religion_group = latter_day_saints
+			NOT = { religion = cetic }
+			OR = {	
+				religion = mormon
+				religion = neogodbeite
+				religion = woolleyite
+				religion = strangite
+				culture = siskiyouan
 				culture = cascadian
-				culture = portlander
+				culture = inlander
 			}
 			age = 16
 			prisoner = no
@@ -790,8 +649,8 @@ decisions = {
 					NOT = {	trait = has_aztec_disease }
 				}
 			}
-			NOT = { trait = pilgrim }
-			NOT = { trait = on_pilgrimage }
+			NOT = { trait = travelling }
+			NOT = { has_character_flag = went_on_oregon_pilgrimage }
 			NOT = { has_character_flag = failed_pilgrim }
 		}
 		allow = {
@@ -804,7 +663,7 @@ decisions = {
 			}
 		}
 		effect = {
-			add_trait = on_pilgrimage
+			add_trait = travelling
 			wealth = -50
 			hidden_tooltip = {
 				character_event = {
@@ -842,8 +701,53 @@ decisions = {
 		}
 	}
 	
+	gaian_devoutness = {
+		is_high_prio = yes
+		only_playable = yes
+		ai_check_interval = 10
+		
+		potential = {
+			age = 16
+			NOT = { is_incapable = yes }
+			is_ruler = yes
+			prisoner = no
+			religion = gaian
+			NOR = {
+				trait = devout
+				trait = zealous
+				trait = mystic
+			}
+			NOT = { #immersion-breaking
+				has_alternate_start_parameter = { key = religion_names value = random }
+			}
+		}
+		allow = {
+			NOT = {
+				has_character_modifier = failed_to_choose_gaian
+			}
+			piety = 50
+		}
+		effect = {
+			piety = -50
+			hidden_tooltip = {
+				narrative_event = {
+					id = gaian.5
+				}
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
 	restore_presidency = {
 		is_high_prio = yes
+		only_playable = yes
+		ai_check_interval = 24
+		
 		potential = {
 			NOT = {
 				has_alternate_start_parameter = { key = religion_names value = random }
@@ -877,94 +781,8 @@ decisions = {
 		}
 	}
 	
-	create_aec = {
-		only_playable = yes
-		is_high_prio = yes
-		ai_check_interval = 24
-		
-		potential = {
-			religion = atomicist
-			NOT = { is_title_active = d_atomicist }
-			NOT = {
-				has_alternate_start_parameter = { key = religion_names value = random }
-			}
-		}
-		allow = {
-			independent = yes
-			primary_title = { higher_tier_than = DUKE }
-			OR = {
-				completely_controls = c_los_alamos
-				completely_controls = c_chicago
-				completely_controls = c_knox
-				completely_controls = c_alameda
-				completely_controls = c_three_mile_island
-			}
-			prestige = 500
-			piety = 1000
-		}
-		effect = { 
-			activate_title = { title = d_atomicist status = yes }
-			hidden_tooltip = {
-				create_random_priest = {
-					random_traits = yes
-					trait = atom_bless
-					religion = ROOT
-					culture = ROOT
-					dynasty = random
-					age = 41
-				}
-				new_character = {
-					character_event = { id = misc.3 } # Diversity
-					character_event = { id = misc.4 } # Physique
-					if = {
-						limit = {
-							ROOT = {
-								completely_controls = c_los_alamos
-							}
-						}
-						b_los_alamos_NM = { gain_title = PREV }
-					}
-					if = {
-						limit = {
-							ROOT = {
-								completely_controls = c_chicago
-							}
-						}
-						b_chicago_IL = { gain_title = PREV }
-					}
-					if = {
-						limit = {
-							ROOT = {
-								completely_controls = c_knox
-							}
-						}
-						b_oak_ridge_TN = { gain_title = PREV }
-					}
-					if = {
-						limit = {
-							ROOT = {
-								completely_controls = c_three_mile_island
-							}
-						}
-						b_goldsboro_PA = { gain_title = PREV }
-					}
-					d_atomicist = { grant_title = PREV }
-					narrative_event = { id = event_atomicist.17 }
-				}
-			}
-			d_atomicist = {
-				holder_scope = {
-					set_defacto_liege = ROOT
-				}
-			}
-		}
-		ai_will_do = {
-			factor = 1
-		}
-	}
-	
 	create_california = { #FOR ALTERNATE STARTS ONLY
-		only_playable = yes
+		only_independent = yes
 		is_high_prio = yes
 		ai_check_interval = 24
 		
@@ -999,39 +817,87 @@ decisions = {
 		}
 	}
 	
-	become_high_fabricator = { #New decision to claim the Rust Cultist religious head title
+	claim_forge_saint = { #New decision to claim the Rust Cultist religious head title
 		only_playable = yes
 		is_high_prio = yes
 		ai_check_interval = 24
 		
 		potential = {
 			religion = rust_cultist
-			d_rust_cultist = { has_holder = no }
 			NOT = {
 				has_alternate_start_parameter = { key = religion_names value = random }
 			}
-			primary_title = { higher_tier_than = COUNT } #only dukes and above can see this one
+			OR = {
+				tier = KING
+				tier = EMPEROR
+			}
+			k_rust_cultist = { has_holder = yes }
+			NOT = { has_landed_title = k_rust_cultist }
+			k_rust_cultist = {
+				holder_scope = {
+					NOT = { vassal_of = ROOT }
+				}
+			}
 		}
 		
 		allow = {
-			primary_title = { higher_tier_than = DUKE }
-			num_of_holy_sites = 3 #personally controls 3 holy sites
-			prestige = 250
+			tier = EMPEROR
+			prestige = 1500
 			OR = {
 				AND = {
-					piety = 500
+					piety = 2000
 					NOT = { trait = zealous }
 				}
 				AND = {
-					piety = 250
+					piety = 1500
 					trait = zealous
 				}
 			}
 		}
 		
 		effect = {
-			piety = -250
-			narrative_event = { id = rustcultist.1 }
+			piety = -1500
+			custom_tooltip = { text = TXT_seize_means_production }
+			hidden_tooltip = {
+				narrative_event = { id = rustcultist.30 }
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	form_the_contested_title = {
+		only_playable = yes
+		is_high_prio = yes
+		ai_check_interval = 24
+		
+		potential = {
+			religion = celeste
+			k_celeste = { has_holder = no }
+			NOT = {
+				has_alternate_start_parameter = { key = religion_names value = random }
+				has_global_flag = celeste_formed
+			}
+			primary_title = { higher_tier_than = COUNT } #only dukes and above can see this one
+		}
+		
+		allow = {
+			primary_title = { higher_tier_than = DUKE }
+			num_of_holy_sites = 2
+			piety = 1000
+		}
+		
+		effect = {
+			piety = -1000
+			narrative_event = { id = 39841 }
+			activate_title = { title = k_celeste status = yes }
+			k_celeste = { grant_title = ROOT }
+			primary_title = {
+				k_celeste = {
+					copy_title_laws = PREV
+				}
+			}
 		}
 		ai_will_do = {
 			factor = 1
@@ -1041,6 +907,8 @@ decisions = {
 	claim_imperial_throne = { # this decision immediately starts a war with the emperor, so be careful
 		only_independent = yes
 		is_high_prio = yes
+		
+		ai_check_interval = 24 #once every 2 years
 		
 		potential = {
 			religion = cetic
@@ -1099,7 +967,7 @@ decisions = {
 		}
 	}
 	
-	mayan_pilgrimage = { #Available to both Neomayans and Uahomche
+	mayan_pilgrimage = { #Available to both Neomayans and Costumbre Maya
 		only_playable = yes
 		ai_check_interval = 120
 		
@@ -1110,7 +978,7 @@ decisions = {
 			}
 			OR = {
 				religion = neomayan
-				religion = uahomche
+				religion = qabantajik
 			}
 			is_playable = yes
 			NOT = {
@@ -1119,6 +987,7 @@ decisions = {
 			NOT = { has_character_modifier = recent_mayan_pilgrimage }
 			NOT = { trait = travelling }
 			NOT = { trait = on_pilgrimage }
+			NOT = { trait = pilgrim }
 		}
 		
 		allow = {
@@ -1176,7 +1045,7 @@ decisions = {
 		ai_will_do = {
 			factor = 1
 			modifier = {
-				factor = 0.2			 # Only a minority ever go on a pilgrimage
+				factor = 0.2			# Only a minority ever go on a pilgrimage
 			}
 			modifier = {
 				factor = 3
@@ -1185,22 +1054,22 @@ decisions = {
 			modifier = {
 				factor = 0
 				NOT = { wealth = 100 }
-			}			
+			}
 		}
 	}
 	
-	organize_ulama_game = { #Changed to Futbol(ballgame). ruler selects a side to support, outcome is random
+	organize_ulama_game = { #ritual ballgame. ruler selects a side to support, outcome is random
 		only_playable = yes
 		ai_check_interval = 120
 		
 		potential = {
 			OR = {
-				religion_group = mesoamerican_gods
-				religion_group = cult_of_saints
-				religion = mictlantec
-				religion = mictlantec_reformed
-				religion = uahomche
-				religion = neomayan
+				culture_group = mexicano
+				culture_group = mesoamerican
+				culture_group = norteno
+				culture_group = taracahita
+				culture_group = centrolatino
+				culture_group = mayan
 			}
 			is_playable = yes
 			NOT = {
@@ -1247,7 +1116,7 @@ decisions = {
 					text = capital_prospers_custom_tooltip
 					hidden_tooltip = {
 						capital_scope = {
-							change_variable = { which = prosperity_value value = 8 }
+							change_variable = { which = prosperity_value value = 4 }
 						}
 					}
 				}
@@ -1273,7 +1142,7 @@ decisions = {
 	
 	hold_buffalo_hunt = {
 		only_playable = yes
-		ai_check_interval = 12
+		ai_check_interval = 24
 
 		potential = {
 			is_playable = yes
@@ -1343,7 +1212,7 @@ decisions = {
 					text = capital_prospers_custom_tooltip
 					hidden_tooltip = {
 						capital_scope = {
-							change_variable = { which = prosperity_value value = 8 }
+							change_variable = { which = prosperity_value value = 4 }
 						}
 					}
 				}
@@ -1354,7 +1223,7 @@ decisions = {
 		}
 		ai_will_do = {
 			factor = 1
-			
+
 			modifier = {
 				factor = 0
 				NOT = { scaled_wealth = 0.4 }
@@ -1378,7 +1247,7 @@ decisions = {
 						days = 730
 					}
 				}
-			}				
+			}	
 		}
 	}
 	
@@ -1443,7 +1312,7 @@ decisions = {
 					text = capital_prospers_custom_tooltip
 					hidden_tooltip = {
 						capital_scope = {
-							change_variable = { which = prosperity_value value = 8 }
+							change_variable = { which = prosperity_value value = 4 }
 						}
 					}
 				}
@@ -1454,7 +1323,7 @@ decisions = {
 		}
 		ai_will_do = {
 			factor = 1
-			
+
 			modifier = {
 				factor = 0
 				NOT = {
@@ -1485,7 +1354,7 @@ decisions = {
 	neognostic_become_perfectus = {
 		only_playable = yes
 		is_high_prio = yes
-		ai_check_interval = 3
+		ai_check_interval = 12
 		
 		potential = {
 			is_ruler = yes
@@ -1591,7 +1460,7 @@ decisions = {
 			prisoner = no
 			OR = {
 				religion = imamite
-				religion = qingzheng
+				religion = qingzhen
 			}
 			NOT = { trait = sympathy_pacific }
 			NOT = { trait = zealous }
@@ -1613,9 +1482,40 @@ decisions = {
 			factor = 1
 		}
 	}
-	reestablish_archdiocese = {
+	
+	sympathy_with_cetic = {
 		only_playable = yes
 		ai_check_interval = 12
+		potential = {
+			is_playable = yes
+			prisoner = no
+			OR = {
+				religion = nazarene
+			}
+			NOT = { trait = sympathy_pacific }
+			NOT = { trait = zealous }
+			NOT = {
+				has_alternate_start_parameter = { key = religion_names value = random }
+			}
+		}
+		allow = {
+			piety = 25
+		}
+		effect = {
+			piety = -25
+			add_trait = sympathy_pacific
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	reestablish_archdiocese = {
+		only_independent = yes
+		ai_check_interval = 24
 		potential = {
 			is_playable = yes
 			prisoner = no
@@ -1671,13 +1571,14 @@ decisions = {
 			factor = 1
 		}
 	}
+	
 	send_home_goods = {
 		only_playable = yes
 		ai_check_interval = 12
 		potential = {
 			is_playable = yes
 			OR = {
-				culture = vladivostockiy
+				culture = primorskiy
 				culture = petropavlovskiy 
 				culture = edokko
 			}
@@ -1697,12 +1598,13 @@ decisions = {
 			always = no
 		}
 		ai_will_do = {
-			factor = .5
+			factor = 0.5
 		}
 	}
+	
 	proclaim_general_of_gaia = {
-		only_playable = yes
-		ai_check_interval = 12
+		only_independent = yes
+		ai_check_interval = 24
 		potential = {
 			is_playable = yes
 			prisoner = no
@@ -1710,49 +1612,190 @@ decisions = {
 			NOT = { has_global_flag = general_of_gaia_appears }
 		}
 		allow = {
+			OR = {
 			completely_controls = k_jefferson
+			completely_controls = k_vancouver
+			}
 			prestige = 2000
 			piety = 500
 		}
 		effect = {
 			piety = 500 
 			set_global_flag = general_of_gaia_appears
-			k_jefferson = {
-				de_jure_liege = e_cascadia 
-			}
-
 		if = {
-			limit = { 
+			limit = {
+				completely_controls = k_vancouver
+				completely_controls = k_jefferson
 				has_dlc = "Holy Fury" 
 				is_female = no
 			}
+			k_jefferson = {
+				de_jure_liege = e_cascadia 
+			}
+			d_highdesert = {
+				de_jure_liege = k_sagebrush
+			}
+			narrative_event = { id = gaian.19 }
+				any_child = {
+					character_event = { id = gaian.20 }
+			}
 			create_bloodline = {
-				type = general_gaia_male
+				type = general_gaia_male_both
 			}
 			new_bloodline = {
-				set_description = "bloodline_desc_general_gaia"
-			}	
-			sound_effect = bloodline_added	
+				set_description = "bloodline_desc_general_gaia_both"
+			}
+			sound_effect = bloodline_added
 		}
 		else_if = {
-			limit = { 
+			limit = {
+				completely_controls = k_vancouver
+				completely_controls = k_jefferson
 				has_dlc = "Holy Fury" 
 				is_female = yes
 			}
+			k_jefferson = {
+				de_jure_liege = e_cascadia 
+			}
+			d_highdesert = {
+				de_jure_liege = k_sagebrush
+			}
+			narrative_event = { id = gaian.19 }
+				any_child = {
+					character_event = { id = gaian.20 }
+			}
 			create_bloodline = {
-				type = general_gaia_female
+				type = general_gaia_female_both
 			}
 			new_bloodline = {
-				set_description = "bloodline_desc_general_gaia"
-			}	
-			sound_effect = bloodline_added		
+				set_description = "bloodline_desc_general_gaia_both"
+			}
+			sound_effect = bloodline_added
 		}
-			hidden_tooltip = {
-				narrative_event = { id = gaian.15 }
+		else_if = {
+			limit = {
+				completely_controls = k_vancouver
+				completely_controls = k_jefferson
+			}
+			k_jefferson = {
+				de_jure_liege = e_cascadia 
+			}
+			d_highdesert = {
+				de_jure_liege = k_sagebrush
+			}
+			narrative_event = { id = gaian.19 }
+				any_child = {
+					character_event = { id = gaian.20 }
+			}
+		}
+		else_if = {
+			limit = {
+				completely_controls = k_jefferson
+				has_dlc = "Holy Fury" 
+				is_female = no
+			}
+			k_jefferson = {
+				de_jure_liege = e_cascadia 
+			}
+			d_highdesert = {
+				de_jure_liege = k_sagebrush
+			}
+			narrative_event = { id = gaian.15 }
 				any_child = {
 					character_event = { id = gaian.16 }
-				}
 			}
+			create_bloodline = {
+				type = general_gaia_male_cali
+			}
+			new_bloodline = {
+				set_description = "bloodline_desc_general_gaia_cali"
+			}
+			sound_effect = bloodline_added
+		}
+		else_if = {
+			limit = {
+				completely_controls = k_jefferson
+				has_dlc = "Holy Fury" 
+				is_female = yes
+			}
+			k_jefferson = {
+				de_jure_liege = e_cascadia 
+			}
+			d_highdesert = {
+				de_jure_liege = k_sagebrush
+			}
+			narrative_event = { id = gaian.15 }
+				any_child = {
+					character_event = { id = gaian.16 }
+			}
+			create_bloodline = {
+				type = general_gaia_female_cali
+			}
+			new_bloodline = {
+				set_description = "bloodline_desc_general_gaia_cali"
+			}
+			sound_effect = bloodline_added
+		}
+		else_if = {
+			limit = { 
+				completely_controls = k_jefferson
+			}
+			k_jefferson = {
+				de_jure_liege = e_cascadia 
+			}
+			d_highdesert = {
+				de_jure_liege = k_sagebrush
+			}
+			narrative_event = { id = gaian.15 }
+				any_child = {
+					character_event = { id = gaian.16 }
+			}
+		}
+		else_if = {
+			limit = { 
+				completely_controls = k_vancouver
+				has_dlc = "Holy Fury" 
+				is_female = no
+			}
+			narrative_event = { id = gaian.17 }
+				any_child = {
+					character_event = { id = gaian.18 }
+			}
+			create_bloodline = {
+				type = general_gaia_male_haida
+			}
+			new_bloodline = {
+				set_description = "bloodline_desc_general_gaia_haida"
+			}
+			sound_effect = bloodline_added
+		}
+		else_if = {
+			limit = { 
+				completely_controls = k_vancouver
+				has_dlc = "Holy Fury" 
+				is_female = yes
+			}
+			narrative_event = { id = gaian.17 }
+				any_child = {
+					character_event = { id = gaian.18 }
+			}
+			create_bloodline = {
+				type = general_gaia_female_haida
+			}
+			new_bloodline = {
+				set_description = "bloodline_desc_general_gaia_haida"
+			}
+			sound_effect = bloodline_added
+		}
+		else_if = {
+			limit = { 
+				completely_controls = k_vancouver
+			}
+			narrative_event = { id = gaian.17 }
+				any_child = {
+					character_event = { id = gaian.18 }
+			}
+		}
 		}
 		revoke_allowed = {
 			always = no
@@ -1762,20 +1805,21 @@ decisions = {
 		}
 	}
 
-	
 	pilgrimage_to_sf = {
 		only_playable = yes
 		is_high_prio = yes
-		ai_check_interval = 12
+		ai_check_interval = 60
 		potential = {
 			is_playable = yes
 			OR = {
 				religion = imamite
-				religion = qingzheng
+				religion = qingzhen
 				religion = alawiyya
 			}
 			NOT = { trait = zair }
 			NOT = { trait = on_ziyara }
+			NOT = { trait = on_hajj }
+			NOT = { trait = hajjaj }
 			NOT = {	has_character_flag = preparing_hajj_sf }
 			NOT = {	has_character_flag = ramadan }
 			NOT = {	has_character_flag = activated_hajj_sf }	
@@ -1798,7 +1842,7 @@ decisions = {
 					}
 				}
 			}
-			
+
 			NOT = { is_inaccessible_trigger = yes }
 			custom_tooltip = {
 				text = health_travel_condition
@@ -1820,14 +1864,14 @@ decisions = {
 			set_character_flag = activated_hajj_sf
 			set_character_flag = recent_minor_decision
 			set_character_flag = do_not_disturb
-			
+
 		}
 		revoke_allowed = {
 			always = no
 		}
 		ai_will_do = {
 			factor = 1
-			
+
 			modifier = {
 				factor = 0
 				trait = cynical
@@ -1850,19 +1894,20 @@ decisions = {
 	pilgrimage_to_tp = {
 		only_playable = yes
 		is_high_prio = yes
-		ai_check_interval = 12
+		ai_check_interval = 60
 		potential = {
 			is_playable = yes
 			religion = orientalist
 			NOT = { trait = zair }
 			NOT = { trait = on_ziyara }
+			NOT = { trait = on_hajj }
+			NOT = { trait = hajjaj }
 			NOT = {	has_character_flag = preparing_hajj_tp }
 			NOT = {	has_character_flag = ramadan }
 			NOT = {	has_character_flag = activated_hajj_tp }	
 			NOT = {
 				has_alternate_start_parameter = { key = religion_names value = random }
 			}
-			capital_scope = { NOT = { province_id = 1093 } } #Tampa
 		}
 		allow = {
 			age = 16
@@ -1879,7 +1924,7 @@ decisions = {
 					}
 				}
 			}
-			
+
 			NOT = { is_inaccessible_trigger = yes }
 			custom_tooltip = {
 				text = health_travel_condition
@@ -1902,14 +1947,14 @@ decisions = {
 			set_character_flag = activated_hajj_tp
 			set_character_flag = recent_minor_decision
 			set_character_flag = do_not_disturb
-			
+
 		}
 		revoke_allowed = {
 			always = no
 		}
 		ai_will_do = {
 			factor = 1
-			
+
 			modifier = {
 				factor = 0
 				trait = cynical
@@ -1932,15 +1977,18 @@ decisions = {
 	pilgrimage_to_ny = {
 		only_playable = yes
 		is_high_prio = yes
-		ai_check_interval = 12
+		ai_check_interval = 60
 		potential = {
 			is_playable = yes
 			religion = traditionalist
 			NOT = { trait = zair }
 			NOT = { trait = on_ziyara }
+			NOT = { trait = on_hajj }
+			NOT = { trait = hajjaj }
 			NOT = {	has_character_flag = preparing_hajj_ny }
 			NOT = {	has_character_flag = ramadan }
 			NOT = {	has_character_flag = activated_hajj_ny }	
+			NOT = {	has_global_flag = no_ny_pilgrimage }	
 			NOT = {
 				has_alternate_start_parameter = { key = religion_names value = random }
 			}
@@ -1960,7 +2008,7 @@ decisions = {
 					}
 				}
 			}
-			
+
 			NOT = { is_inaccessible_trigger = yes }
 			custom_tooltip = {
 				text = health_travel_condition
@@ -1982,14 +2030,88 @@ decisions = {
 			set_character_flag = activated_hajj_ny
 			set_character_flag = recent_minor_decision
 			set_character_flag = do_not_disturb
-			
+
 		}
 		revoke_allowed = {
 			always = no
 		}
 		ai_will_do = {
 			factor = 1
-			
+
+			modifier = {
+				factor = 0
+				trait = cynical
+			}
+			modifier = {
+				factor = 0
+				NOT = { wealth = 300 }
+			}
+			modifier = { # Monthly randomizer for when AI takes decision (1% chance)
+				factor = 0
+				random = 1
+			}
+			modifier = {
+				factor = 0
+				NOT = { age = 30 }
+			}
+		}
+	}
+	
+	pray_for_spiritual_experience = {
+		only_playable = yes
+		is_high_prio = yes
+		ai_check_interval = 60
+		potential = {
+			is_playable = yes
+			religion = transcendentalist
+			NOT = { trait = hajjaj2 }
+			NOT = { trait = on_hajj2 }
+			OR = {
+				trait = trans_uwaysi
+				trait = trans_hurufiyya
+			}
+			NOT = { has_character_flag = on_mind_hajj }
+			NOT = {
+				has_alternate_start_parameter = { key = religion_names value = random }
+			}
+		}
+		allow = {
+			age = 16
+			prisoner = no
+			piety = 1500
+			war = no
+			in_command = no
+			custom_tooltip = {
+				text = UNOCCUPIED_DEMESNE_TITLE
+				hidden_tooltip = {
+					any_demesne_title = {
+						NOT = { higher_tier_than = count }
+						is_occupied = no
+					}
+				}
+			}
+
+			NOT = { is_inaccessible_trigger = yes }
+
+			custom_tooltip = {
+				text = is_not_busy_trigger_tooltip
+				hidden_tooltip = { NOT = { has_character_flag = do_not_disturb } }
+			}
+		}
+		effect = {
+			piety = -1500
+			custom_tooltip = { text = TXT_pray_for_spiritual_experience }
+			set_character_flag = on_mind_hajj
+			narrative_event = { id = hajj.200 }
+			set_character_flag = recent_minor_decision
+			set_character_flag = do_not_disturb
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+
 			modifier = {
 				factor = 0
 				trait = cynical
@@ -2085,7 +2207,7 @@ decisions = {
 		}
 		ai_will_do = {
 			factor = 1
-			
+
 			modifier = {
 				factor = 0
 				NOT = {
@@ -2119,7 +2241,7 @@ decisions = {
 			prisoner = no
 			OR = {
 				religion = imamite
-				religion = qingzheng
+				religion = qingzhen
 				religion = alawiyya
 				AND = {
 					religion = traditionalist
@@ -2187,7 +2309,7 @@ decisions = {
 		}
 		ai_will_do = {
 			factor = 1
-			
+
 			modifier = {
 				factor = 0
 				NOT = {
@@ -2274,7 +2396,7 @@ decisions = {
 					text = capital_prospers_custom_tooltip
 					hidden_tooltip = {
 						capital_scope = {
-							change_variable = { which = prosperity_value value = 8 }
+							change_variable = { which = prosperity_value value = 4 }
 						}
 					}
 				}
@@ -2285,7 +2407,7 @@ decisions = {
 		}
 		ai_will_do = {
 			factor = 1
-			
+
 			modifier = {
 				factor = 0
 				NOT = {
@@ -2370,7 +2492,7 @@ decisions = {
 					text = capital_prospers_custom_tooltip
 					hidden_tooltip = {
 						capital_scope = {
-							change_variable = { which = prosperity_value value = 8 }
+							change_variable = { which = prosperity_value value = 4 }
 						}
 					}
 				}
@@ -2382,7 +2504,105 @@ decisions = {
 		}
 		ai_will_do = {
 			factor = 1
-			
+
+			modifier = {
+				factor = 0
+				NOT = {
+					wealth = 200
+				}
+			}
+			modifier = {
+				factor = 0
+				trait = cynical
+			}	
+			modifier = {
+				factor = 0
+				has_character_flag = recent_minor_decision
+				NOT = {
+					had_character_flag = {
+						flag = recent_minor_decision
+						days = 730
+					}
+				}
+			}
+		}
+	}
+	
+	celebrate_dia_de_muertos = {
+		only_playable = yes
+		is_high_prio = yes
+		ai_check_interval = 3
+		potential = {
+			is_playable = yes
+			is_adult = yes
+			prisoner = no
+			OR = {
+				religion_openly_cristo_rey_trigger = yes
+				religion_openly_sacred_heart_trigger = yes
+				religion_openly_mictlantec_trigger = yes
+				religion_openly_qabantajik_trigger = yes
+				religion_openly_fidencista_trigger = yes
+			}
+			NOT = { has_character_modifier = dia_de_muertos_timer }
+			NOT = {	has_character_flag = celebrating_dia_de_muertos }
+			NOT = {
+				has_alternate_start_parameter = { key = religion_names value = random }
+			}
+		}
+		allow = {
+			war = no
+			custom_tooltip = {
+				text = UNOCCUPIED_DEMESNE_TITLE
+				hidden_tooltip = {
+					any_demesne_title = {
+						NOT = { higher_tier_than = count }
+						is_occupied = no
+					}
+				}
+			}
+			month = 10
+			NOT = { month = 11 }
+			wealth = 15
+			prisoner = no
+			NOT = { is_inaccessible_trigger = yes }
+			custom_tooltip = {
+				text = is_not_busy_trigger_tooltip
+				hidden_tooltip = { NOT = { has_character_flag = do_not_disturb } }
+			}
+		}
+		effect = {
+			wealth = -15
+			set_character_flag = celebrating_dia_de_muertos
+			set_character_flag = recent_minor_decision
+			set_character_flag = do_not_disturb
+			hidden_tooltip = { character_event = { id = dia_de_muertos.31 days = 30 } } # Safety catch flag clearing
+			custom_tooltip = {
+				text = TXT_dia_de_muertos_decision
+				hidden_tooltip = { 
+					character_event = { id = dia_de_muertos.1 } 
+				}
+			}
+			if = {
+				limit = {
+					has_dlc = "Reapers"
+				}
+				custom_tooltip = {
+					text = capital_prospers_custom_tooltip
+					hidden_tooltip = {
+						capital_scope = {
+							change_variable = { which = prosperity_value value = 4 }
+						}
+					}
+				}
+			}
+			add_character_modifier = { name = dia_de_muertos_timer years = 3 }
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+
 			modifier = {
 				factor = 0
 				NOT = {
@@ -2466,7 +2686,7 @@ decisions = {
 					text = capital_prospers_custom_tooltip
 					hidden_tooltip = {
 						capital_scope = {
-							change_variable = { which = prosperity_value value = 8 }
+							change_variable = { which = prosperity_value value = 4 }
 						}
 					}
 				}
@@ -2477,7 +2697,7 @@ decisions = {
 		}
 		ai_will_do = {
 			factor = 1
-			
+
 			modifier = {
 				factor = 0
 				NOT = {
@@ -2506,8 +2726,9 @@ decisions = {
 	}
 
 	grain_to_masses = {
-		ai_check_interval = 1
 		is_high_prio = yes
+		only_playable = yes
+		
 		potential = {
 			OR = {
 				trait = governator
@@ -2685,8 +2906,10 @@ decisions = {
 	}
 	
 	grain_to_masses_humble = {
-		ai_check_interval = 24
 		is_high_prio = yes
+		only_playable = yes
+		ai_check_interval = 24
+		
 		potential = {
 			trait = governator
 			prisoner = no
@@ -2868,8 +3091,10 @@ decisions = {
 	}
 	
 	defer_powers = {
-		ai_check_interval = 24
 		is_high_prio = yes
+		only_playable = yes
+		ai_check_interval = 24
+		
 		potential = {
 			trait = governator
 			prisoner = no
@@ -3051,6 +3276,9 @@ decisions = {
 	
 	take_imp_exam = {
 		is_high_prio = yes
+		only_rulers = yes
+		ai_check_interval = 12
+		
 		potential = {
 			OR = {
 				government = bureaucratic_government
@@ -3160,6 +3388,7 @@ decisions = {
 	
 	failed_exam_abdicate = {
 		is_high_prio = yes
+		only_rulers = yes
 		ai_check_interval = 24
 		
 		potential = {
@@ -3200,7 +3429,9 @@ decisions = {
 	
 	reschedule_exam = {
 		is_high_prio = yes
-		ai_check_interval = 1
+		only_rulers = yes
+		ai_check_interval = 2
+		
 		potential = {
 			custom_tooltip = {
 				text = application_tm_TT
@@ -3234,11 +3465,13 @@ decisions = {
 	
 	claim_realm_exam = {
 		is_high_prio = yes
+		only_rulers = yes
 		ai_check_interval = 12
+		
 		potential = {
-			NOT = {
-				has_strong_claim = dejure_liege_title
-			}
+			#NOT = {
+			#	has_strong_claim = dejure_liege_title #?????? THIS ISN'T CODE
+			#}
 			NOT = {
 				has_character_flag = claim_realm_ex
 			}
@@ -3330,15 +3563,15 @@ decisions = {
 			}
 			modifier = {
 				factor = 1.6
-				 ROOT = { reverse_opinion = { who = liege value <= -60 } } 
+				ROOT = { reverse_opinion = { who = liege value <= -60 } } 
 			}
 			modifier = {
 				factor = 1.4
-				 ROOT = { reverse_opinion = { who = liege value <= -40 } }
+				ROOT = { reverse_opinion = { who = liege value <= -40 } }
 			}
 			modifier = {
 				factor = 1.2
-				 ROOT = { reverse_opinion = { who = liege value <= -20 } }
+				ROOT = { reverse_opinion = { who = liege value <= -20 } }
 			}
 			modifier = {
 				factor = 0.8
@@ -3362,6 +3595,8 @@ decisions = {
 	bureaucratic_reform = {
 		ai_check_interval = 12
 		is_high_prio = yes
+		only_playable = yes
+		
 		potential = {
 			government = bureaucratic_government
 			higher_real_tier_than = COUNT
@@ -3408,6 +3643,8 @@ decisions = {
 	sell_positions = {
 		ai_check_interval = 12
 		is_high_prio = yes
+		only_playable = yes
+		
 		potential = {
 			government = bureaucratic_government
 			higher_real_tier_than = COUNT
@@ -3495,6 +3732,8 @@ decisions = {
 	bureaucratic_building = {
 		ai_check_interval = 60
 		is_high_prio = yes
+		only_playable = yes
+		
 		potential = {
 			government = bureaucratic_government
 			higher_real_tier_than = COUNT
@@ -3563,11 +3802,13 @@ decisions = {
 	syncretize_amero_syncretic = {
 		only_playable = yes
 		ai_check_interval = 12
+		
 		potential = {
 			is_playable = yes
 			prisoner = no
 			religion_group = amero_syncretic
 			NOT = { trait = sympathy_christendom }
+			NOT = { trait = sympathy_latter_day_saints }
 			NOT = { trait = sympathy_american_native }
 			NOT = { trait = zealous }
 			NOT = {
@@ -3580,6 +3821,37 @@ decisions = {
 		effect = {
 			piety = -25
 			character_event = { id = native.40 }
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	syncretize_edenite = {
+		only_playable = yes
+		ai_check_interval = 12
+		
+		potential = {
+			is_playable = yes
+			prisoner = no
+			religion = edenite
+			NOT = { trait = sympathy_pacific }
+			NOT = { trait = sympathy_latter_day_saints }
+			NOT = { trait = sympathy_pagans }
+			NOT = { trait = zealous }
+			NOT = {
+				has_alternate_start_parameter = { key = religion_names value = random }
+			}
+		}
+		allow = {
+			piety = 25
+		}
+		effect = {
+			piety = -25
+			character_event = { id = edenite.1 }
 		}
 		revoke_allowed = {
 			always = no
@@ -3709,7 +3981,7 @@ decisions = {
 					text = capital_prospers_custom_tooltip
 					hidden_tooltip = {
 						capital_scope = {
-							change_variable = { which = prosperity_value value = 8 }
+							change_variable = { which = prosperity_value value = 4 }
 						}
 					}
 				}
@@ -3720,7 +3992,7 @@ decisions = {
 		}
 		ai_will_do = {
 			factor = 1
-			
+
 			modifier = {
 				factor = 0
 				NOT = {
@@ -3743,12 +4015,857 @@ decisions = {
 			}
 		}
 	}
-}	
 	
+	request_implied_powers = {
+		only_playable = yes
+		is_high_prio = yes
+		ai_check_interval = 60
+		
+		potential = {
+			is_adult = yes
+			prisoner = no
+			religion = hamiltonian
+			NOT = {
+				has_character_flag = requested_implied_powers
+			}
+			any_courtier_or_vassal = {
+				liege = { character = ROOT }
+				has_job_title = job_spiritual
+				religion = hamiltonian
+			}
+		}
+		
+		allow = {
+			custom_tooltip = {
+				text = has_not_requested_implied_powers_TT
+				hidden_tooltip = {
+					OR = {
+						NOT = {
+							has_character_flag = denied_implied_powers
+						}
+						had_character_flag = {
+							flag = denied_implied_powers
+							days = 1825
+						}
+					}
+				}
+			}
+		}
+		
+		effect = {
+			any_courtier_or_vassal = {
+				limit = {
+					liege = { character = ROOT }
+					has_job_title = job_spiritual
+				}
+				character_event = { id = americanist.1 }
+			}
+			set_character_flag = requested_implied_powers
+		}
+		
+		ai_will_do = {
+			factor = 0.5
+			modifier = {
+				factor = 1.5
+				trait = ambitious
+			}
+			modifier = {
+				factor = 0.5
+				OR = {
+					trait = content
+					trait = cynical
+				}
+			}
+		}
+	}
+	
+	bloodletting_ritual = { #what it says
+		only_independent = yes
+		ai_check_interval = 120
+		is_high_prio = yes
+		
+		potential = {
+			OR = {
+				religion = neomayan
+				religion = qabantajik
+			}
+			is_playable = yes
+			independent = yes
+			NOT = {
+				has_alternate_start_parameter = { key = religion_names value = random }
+			}
+			NOT = { trait = bloodlet }
+		}
+		allow = {
+			war = no
+			in_command = no
+			scaled_wealth = 0.5
+			prestige = 25
+			custom_tooltip = {
+				text = UNOCCUPIED_DEMESNE_TITLE
+				hidden_tooltip = {
+					any_demesne_title = {
+						NOT = { higher_tier_than = count }
+						is_occupied = no
+					}
+				}
+			}
+			prisoner = no
+			NOT = { has_character_flag = bloodletting_ritual }
+			NOT = { is_inaccessible_trigger = yes }
+			NOT = {	is_incapable = yes }
+			is_adult = yes
+		}
+		effect = {
+			set_character_flag = bloodletting_ritual
+			hidden_tooltip = { 
+				character_event = { id = mesoamerica.100 } 
+			}
+			if = {
+				limit = {
+					has_dlc = "Reapers"
+				}
+				custom_tooltip = {
+					text = capital_prospers_custom_tooltip
+					hidden_tooltip = {
+						capital_scope = {
+							change_variable = { which = prosperity_value value = 8 }
+						}
+					}
+				}
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				factor = 2
+				OR = {
+					tier = KING
+					tier = EMPEROR
+				}
+			}
+			modifier = {
+				factor = 0.5
+				trait = cynical
+			}
+		}
+	}
+	
+	jeffersonian_choose_devotion = {
+		is_high_prio = yes
+		only_playable = yes
+		
+		potential = {
+			is_adult = yes
+			religion = jeffersonian
+		}
+		allow = {
+			custom_tooltip = {
+				text = jeffersonian_has_not_chosen_devotion_TT
+				hidden_tooltip = {
+					OR = {
+						NOT = {
+							has_character_flag = jeffersonian_chosen_devotion
+						}
+						had_character_flag = {
+							flag = jeffersonian_chosen_devotion
+							days = 1825
+						}
+					}
+				}
+			}
+		}
+		effect = {
+			character_event = { id = americanist.5 }
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	animal_sacrifice = {
+		only_playable = yes
+		ai_check_interval = 120
+		
+		potential = {
+			OR = {
+				religion = neomayan
+				religion = qabantajik
+				religion = mictlantec
+				religion = strangite
+				religion = santeria
+				religion = candomble
+				religion = voodoo
+				religion = espiritista
+				religion = navegante
+				has_religion_feature = religion_ritual_sacrifice
+			}
+			is_playable = yes
+			NOT = { is_incapable = yes }
+			NOT = {
+				has_alternate_start_parameter = { key = religion_names value = random }
+			}
+			NOT = { has_character_modifier = sacrificed_animal_timer }
+		}
+		
+		allow = {
+			war = no
+			in_command = no
+			scaled_wealth = 0.25
+			piety = 30
+			prisoner = no
+			NOT = { has_character_flag = sacrificing_animal }
+			NOT = { is_inaccessible_trigger = yes }
+			NOT = {	is_incapable = yes }
+			is_adult = yes
+		}
+		
+		effect = {
+			set_character_flag = sacrificing_animal
+			set_character_flag = do_not_disturb
+			hidden_tooltip = { 
+				character_event = { id = animalsac.1 } 
+			}
+			if = {
+				limit = {
+					has_dlc = "Reapers"
+				}
+				custom_tooltip = {
+					text = capital_prospers_custom_tooltip
+					hidden_tooltip = {
+						capital_scope = {
+							change_variable = { which = prosperity_value value = 8 }
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	pick_patron_neomayan = {
+		is_high_prio = yes
+		only_playable = yes
+		ai_check_interval = 120
+		
+		potential = {
+			religion = neomayan
+			is_playable = yes
+			independent = yes
+			NOT = {
+				has_alternate_start_parameter = { key = religion_names value = random }
+			}
+			NOT = { has_neomayan_patron_trigger = yes }
+		}
+		
+		allow = {
+			war = no
+			in_command = no
+			piety = 25
+			prisoner = no
+			NOT = { is_inaccessible_trigger = yes }
+			NOT = {	is_incapable = yes }
+			is_adult = yes
+
+		}
+		
+		effect = {
+			custom_tooltip = { text = TXT_pick_patron_neomayan }
+			hidden_tooltip = { 
+				character_event = { id = mesoamerica.300 } 
+			}
+		}
+	}
+	
+	commission_stele = {
+		only_playable = yes
+		ai_check_interval = 36
+		
+		potential = {
+			has_dlc = "The Old Gods"
+			is_playable = yes
+			age = 16
+			prisoner = no
+			OR = {
+				religion = qabantajik
+				religion = neomayan
+			}
+			NOT = {	has_character_flag = commissioned_stele }
+			NOT = {
+				has_alternate_start_parameter = { key = religion_names value = random }
+			}
+		}
+		allow = {
+			wealth = 100
+			prisoner = no
+		}
+		effect = {
+			wealth = -100
+			set_character_flag = commissioned_stele
+			hidden_tooltip = { 
+				character_event = { id = mesoamerica.500 }
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = { wealth = 300 }
+			}
+			modifier = {
+				factor = 0
+				NOT = { age = 30 }
+			}
+		}
+	}
+	
+	# create_el_templo_mayor = {
+		# ai_check_interval = 360
+		# is_high_prio = yes
+		# only_playable = yes
+		
+		# potential = {
+			# religion = mictlantec
+			# OR = {
+				# tier = KING
+				# tier = EMPEROR
+			# }
+			# NOT = { has_global_flag = el_templo_mayor_formed }
+			# NOT = {
+				# has_alternate_start_parameter = { key = religion_names value = random }
+			# }
+		# }
+		# allow = {
+			# independent = yes
+			# primary_title = { higher_tier_than = DUKE }
+			# completely_controls = c_mexico
+			# piety = 1000
+		# }
+		# effect = {
+			# set_global_flag = el_templo_mayor_formed
+			# activate_title = { title = d_mictlantec status = yes }
+			# hidden_tooltip = {
+				# create_random_priest = {
+					# random_traits = yes
+					# religion = ROOT
+					# culture = ROOT
+					# dynasty = random
+					# female = no
+					# age = 41
+				# }
+				# new_character = {
+					# character_event = { id = misc.3 } # Diversity
+					# character_event = { id = misc.4 } # Physique
+					# b_tacuba_MX = { gain_title = PREV }
+					# d_mictlantec = { grant_title = PREV }
+					# narrative_event = { id = mesoamerica.600 }
+				# }
+			# }
+			# d_mictlantec = {
+				# holder_scope = {
+					# c_mexico = {
+						# holder_scope = {
+							# set_defacto_vassal = PREVPREV
+						# }
+					# }
+				# }
+			# }
+		# }
+		# ai_will_do = {
+			# factor = 1
+		# }
+	# }
+	
+	celebrate_labor_day = {
+		only_playable = yes
+		is_high_prio = yes
+		ai_check_interval = 3
+		potential = {
+			is_playable = yes
+			is_adult = yes
+			prisoner = no
+			OR = {
+				religion = rust_cultist
+				religion = chrome_cultist
+			}
+			NOT = { has_character_modifier = labor_day_timer }
+			NOT = {	has_character_flag = celebrating_labor_day }
+			NOT = {
+				has_alternate_start_parameter = { key = religion_names value = random }
+			}
+		}
+		allow = {
+			war = no
+			custom_tooltip = {
+				text = UNOCCUPIED_DEMESNE_TITLE
+				hidden_tooltip = {
+					any_demesne_title = {
+						NOT = { higher_tier_than = count }
+						is_occupied = no
+					}
+				}
+			}
+			month = 8
+			NOT = { month = 9 }
+			wealth = 25
+			prisoner = no
+			NOT = { is_inaccessible_trigger = yes }
+			custom_tooltip = {
+				text = is_not_busy_trigger_tooltip
+				hidden_tooltip = { NOT = { has_character_flag = do_not_disturb } }
+			}
+		}
+		effect = {
+			wealth = -25
+			set_character_flag = celebrating_labor_day
+			set_character_flag = recent_minor_decision
+			set_character_flag = do_not_disturb
+			hidden_tooltip = { narrative_event = { id = rustcultist.20 days = 150 } } # Safety catch flag clearing
+			custom_tooltip = {
+				text = labor_day_celebration
+				hidden_tooltip = { 
+					character_event = { id = rustcultist.15 } 
+				}
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+
+			modifier = {
+				factor = 0
+				NOT = {
+					wealth = 300
+				}
+			}
+			modifier = {
+				factor = 0
+				trait = shy
+			}
+			modifier = {
+				factor = 0
+				NOT = { diplomacy = 10 }
+			}	
+			modifier = {
+				factor = 0
+				has_character_flag = recent_minor_decision
+				NOT = {
+					had_character_flag = {
+						flag = recent_minor_decision
+						days = 730
+					}
+				}
+			}
+		}
+	}
+	
+	study_ancient_thought = {
+		only_playable = yes
+		is_high_prio = yes
+		ai_check_interval = 3
+		potential = {
+			is_playable = yes
+			is_adult = yes
+			prisoner = no
+			religion = qingzhen
+			OR = {
+				trait = confucianism_qingzhen
+				trait = taoism_qingzhen
+				trait = buddhism_qingzhen
+			}
+			NOT = { has_character_flag = studied_qingzhen_thought }
+			NOT = {
+				has_alternate_start_parameter = { key = religion_names value = random }
+			}
+		}
+		allow = {
+			war = no
+			custom_tooltip = {
+				text = UNOCCUPIED_DEMESNE_TITLE
+				hidden_tooltip = {
+					any_demesne_title = {
+						NOT = { higher_tier_than = count }
+						is_occupied = no
+					}
+				}
+			}
+			wealth = 25
+			prisoner = no
+			NOT = { is_inaccessible_trigger = yes }
+			custom_tooltip = {
+				text = is_not_busy_trigger_tooltip
+				hidden_tooltip = { NOT = { has_character_flag = do_not_disturb } }
+			}
+		}
+		effect = {
+			custom_tooltip = { text = TXT_study_ancient_thought }
+			hidden_tooltip = {
+				character_event = { id = islamate.90 }
+				set_character_flag = studied_qingzhen_thought
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	move_tradition_to_detroit = {
+		only_playable = yes
+		is_high_prio = yes
+		ai_check_interval = 24
+		
+		potential = {
+			NOT = {
+				has_alternate_start_parameter = { key = religion_names value = random }
+			}
+			has_dlc = "The Sword of Islam"
+			is_playable = yes
+			religion = traditionalist
+			NOT = { has_global_flag = mufti_moved }
+		}
+		allow = {
+			independent = yes
+			primary_title = { higher_tier_than = DUKE }
+			completely_controls = c_detroit
+			piety = 500
+		}
+		effect = {
+			set_global_flag = mufti_moved
+			custom_tooltip = { text = TXT_move_tradition_to_detroit }
+			hidden_tooltip = {
+				k_house_of_tradition = {
+					holder_scope = {
+						b_dearborn_MI = { gain_title = PREV }
+						narrative_event = { id = islamate.106 }
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	vassalize_qabantajik_pope = {
+		only_playable = yes
+		is_high_prio = yes
+		ai_check_interval = 120
+		
+		potential = {
+			NOT = {
+				has_alternate_start_parameter = { key = religion_names value = random }
+			}
+			religion = qabantajik
+			NOT = { tier = COUNT }
+			independent = yes
+			d_qabantajik = {
+				holder_scope = {
+					NOT = { is_landed = yes }
+					NOT = { vassal_of = ROOT }
+				}
+			}
+
+		}
+		
+		allow = {
+			piety = 1000
+			is_heretic = no
+			OR = {
+				tier = KING
+				tier = EMPEROR
+			}
+			conditional_tooltip = {
+				trigger = {
+					NOT = {
+						d_qabantajik = {
+							owner = {
+								opinion = {
+									who = ROOT
+									value = 50
+								}
+							}
+						}
+					}
+				}
+
+				custom_tooltip = {
+					text = vassalize_qababtajik_opinion_TT
+
+					d_qabantajik = {
+						owner = {
+							opinion = {
+								who = ROOT
+								value = 50
+							}
+						}
+					}
+				}
+			}
+		}
+		
+		effect = {
+			piety = -1000
+			custom_tooltip = { text = TXT_qabantajik_archbishop }
+			hidden_tooltip = {
+				d_qabantajik = {
+					holder_scope = {
+						set_defacto_liege = ROOT
+					}
+				}
+			}
+		}
+		
+		revoke_allowed = {
+			always = no
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	break_the_cycle_that_binds = {
+		is_high_prio = yes
+		only_playable = yes
+		ai_check_interval = 24
+		
+		potential = {
+			age = 16
+			prisoner = no
+			is_ruler = yes
+			has_global_flag = global_cycle_that_binds
+			capital_scope = {
+				region = custom_gaian_core_region
+			}
+			NOT = { has_global_flag = the_great_unbind }
+			NOT = { is_incapable = yes }
+			NOT = { religion = gaian }
+			NOT = { #immersion-breaking
+				has_alternate_start_parameter = { key = religion_names value = random }
+			}
+		}
+		allow = {
+			war = no
+			wealth = 500
+			prestige = 1000
+			custom_tooltip = {
+			text = CONTROLS_3_GAIAN_HS
+			any_realm_title = {
+				count = 3
+				is_holy_site = gaian
+			}
+			}
+		}
+		effect = {
+			wealth = -500
+			prestige = -1000
+			narrative_event = { 
+				id = gaian.5007
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = { factor = 0.005 }
+			modifier = { factor = 3	trait = zealous }
+			modifier = { factor = 2	trait = brave }
+			modifier = { factor = 2	trait = ambitious }
+			modifier = { factor = 0 NOT = { wealth = 100 } }
+		}
+	}
+	
+	become_knight = {
+		is_high_prio = yes
+		only_playable = yes
+		ai_check_interval = 24
+		
+		potential = {
+			age = 16
+			prisoner = no
+			is_ruler = yes
+			OR = {
+				religion = evangelical
+				religion = antinomian
+				religion = charismatic
+			}
+			NOT = {
+				trait = knight
+			}
+			NOT = { #immersion-breaking
+				has_alternate_start_parameter = { key = religion_names value = random }
+			}
+		}
+		allow = {
+			war = no
+			wealth = 500
+			prestige = 100
+			martial = 10
+			combat_rating = 15
+				OR = {
+					trait = chaste
+					trait = temperate
+					trait = charitable
+					trait = diligent
+					trait = patient
+					trait = kind
+					trait = humble
+				}	
+		}
+
+		effect = {
+			wealth = -500
+			prestige = -100
+			character_event = { 
+				id = eva.800
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = { factor = 0.005 }
+			modifier = { factor = 3	trait = zealous }
+			modifier = { factor = 2	trait = brave }
+			modifier = { factor = 2	trait = ambitious }
+			modifier = { factor = 0 NOT = { wealth = 100 } }
+		}
+	}
+		
+	solve_hcc_ram = {
+		is_high_prio = yes
+		only_playable = yes
+		ai_check_interval = 24
+		
+		potential = {
+			age = 16
+			prisoner = no
+			is_ruler = yes
+			religion = evangelical
+			trait = ram_hcc
+			NOT = { #immersion-breaking
+				has_alternate_start_parameter = { key = religion_names value = random }
+			}
+			has_global_flag = westphalian_treatise
+		}
+		allow = {
+			war = no
+			wealth = 1000
+			prestige = 1000
+			has_landed_title = e_dixie
+			NOT = {
+				has_law = succ_hre_elective
+			}
+			realm_size >= 300
+		}
+		effect = {
+			narrative_event = { 
+				id = eva.1001
+			}
+			wealth = -1000
+			prestige = -1000
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = { factor = 0.005 }
+			modifier = { factor = 2	trait = brave }
+		}
+	}
+	
+	solve_hcc_bulldog = {
+		is_high_prio = yes
+		only_playable = yes
+		ai_check_interval = 24
+		
+		potential = {
+			age = 16
+			prisoner = no
+			is_ruler = yes
+			religion = evangelical
+			trait = bulldog_hcc
+			NOT = { #immersion-breaking
+				has_alternate_start_parameter = { key = religion_names value = random }
+			}
+			has_global_flag = westphalian_treatise
+		}
+		allow = {
+			war = no
+			wealth = 1000
+			piety = 1000
+			custom_tooltip = {
+				text = solution_bulldog_tooltip
+				hidden_tooltip = {
+					OR = {
+						has_global_flag = pat_chicago
+						has_global_flag = pat_washington
+						has_global_flag = pat_new_orleans
+					}
+				}
+			}
+		}
+
+		effect = {
+			narrative_event = { 
+				id = eva.1002
+			}
+			wealth = -1000
+			piety = -1000
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = { factor = 0.005 }
+			modifier = { factor = 2	trait = brave }
+		}
+	}
+	cristero_peasant_army = {
+		is_high_prio = yes
+		ai_check_interval = 12
+		potential = {
+			religion = cristo_rey
+			is_adult = yes
+			NOT = { 
+				trait = incapable 
+			}
+			prisoner = no
+		}
+		allow = {
+			piety = 150
+			NOT = {
+				has_character_modifier = cristero_raised_peasants
+			}
+			war = yes 
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 5 
+				OR = {
+					trait = zealous
+				}
+			}
+		}
+		effect = {
+			piety = -150
+			add_character_modifier = { modifier = cristero_raised_peasants duration = 1825 }
+			hidden_tooltip = { character_event = { id = unitasfratrum.711 }}
+		}
+	}
+	
+}
+
 targetted_decisions = {
 	
 	appoint_governator = {
 		is_high_prio = yes
+		only_playable = yes
+		
 		from_potential = {
 			OR = {
 				has_landed_title = e_california
@@ -3898,6 +5015,8 @@ targetted_decisions = {
 	
 	sanction_governator = {
 		is_high_prio = yes
+		only_playable = yes
+		
 		from_potential = {
 			OR = {
 				has_landed_title = e_california
@@ -3980,27 +5099,21 @@ targetted_decisions = {
 			modifier = {
 				factor = 0
 				any_character = {
-					limit = {
-						trait = governator
-					}
+					trait = governator
 					is_friend = FROM
 				}
 			}
 			modifier = {
 				factor = 100
 				any_character = {
-					limit = {
-						trait = governator
-					}
+					trait = governator
 					is_friend = FROM
 				}
 			}
 			modifier = {
 				factor = 1.8
 				any_character = {
-					limit = {
-						trait = governator
-					}
+					trait = governator
 					reverse_opinion = {
 						who = FROM
 						value <= -80
@@ -4010,9 +5123,7 @@ targetted_decisions = {
 			modifier = {
 				factor = 1.6
 				any_character = {
-					limit = {
-						trait = governator
-					}
+					trait = governator
 					reverse_opinion = {
 						who = FROM
 						value <= -60
@@ -4022,9 +5133,7 @@ targetted_decisions = {
 			modifier = {
 				factor = 1.4
 				any_character = {
-					limit = {
-						trait = governator
-					}
+					trait = governator
 					reverse_opinion = {
 						who = FROM
 						value <= -40
@@ -4034,9 +5143,7 @@ targetted_decisions = {
 			modifier = {
 				factor = 1.2
 				any_character = {
-					limit = {
-						trait = governator
-					}
+					trait = governator
 					reverse_opinion = {
 						who = FROM
 						value <= -20
@@ -4046,9 +5153,7 @@ targetted_decisions = {
 			modifier = {
 				factor = 0.9
 				any_character = {
-					limit = {
-						trait = governator
-					}
+					trait = governator
 					reverse_opinion = {
 						who = FROM
 						value = 40
@@ -4058,9 +5163,7 @@ targetted_decisions = {
 			modifier = {
 				factor = 0.8
 				any_character = {
-					limit = {
-						trait = governator
-					}
+					trait = governator
 					reverse_opinion = {
 						who = FROM
 						value = 60
@@ -4070,9 +5173,7 @@ targetted_decisions = {
 			modifier = {
 				factor = 0.6
 				any_character = {
-					limit = {
-						trait = governator
-					}
+					trait = governator
 					reverse_opinion = {
 						who = FROM
 						value = 80
@@ -4125,6 +5226,8 @@ targetted_decisions = {
 	remove_governator = {
 		is_high_prio = yes
 		ai_check_interval = 12
+		only_playable = yes
+		
 		from_potential = {
 			OR = {
 				has_landed_title = e_california
@@ -4165,7 +5268,9 @@ targetted_decisions = {
 			custom_tooltip = {
 				text = impauth_decrease_5_TT
 				hidden_tooltip = {
+					remove_imperial_authority_modifier = yes
 					change_variable = { which = global_imp_auth value = -5 }
+					add_imperial_authority_modifier = yes
 				}
 			}
 		}
@@ -4263,6 +5368,8 @@ targetted_decisions = {
 	remove_sanctioned_governator = {
 		is_high_prio = yes
 		ai_check_interval = 12
+		only_playable = yes
+		
 		from_potential = {
 			OR = {
 				has_landed_title = e_california
@@ -4380,6 +5487,7 @@ targetted_decisions = {
 	
 	governator_heir_decision = {
 		is_high_prio = yes
+		
 		from_potential = {
 			trait = governator
 			OR = {
@@ -4665,7 +5773,9 @@ targetted_decisions = {
 	
 	slander_character = {
 		is_high_prio = yes
-		ai_check_interval = 1
+		ai_check_interval = 2
+		only_playable = yes
+		
 		from_potential = {
 			OR = {
 				trait = governator
@@ -4673,7 +5783,7 @@ targetted_decisions = {
 				has_landed_title = e_new_california
 			}
 			age = 16
-			
+
 		}
 		potential = {
 			OR = {
@@ -4693,7 +5803,7 @@ targetted_decisions = {
 					has_character_modifier = influenced_authority
 				}
 			}
-			
+
 		}
 		effect = {
 			FROM = {
@@ -4762,7 +5872,8 @@ targetted_decisions = {
 	
 	gain_favor_cetic = {
 		is_high_prio = yes
-		ai_check_interval = 1
+		ai_check_interval = 2
+		
 		from_potential = {
 			OR = {
 				trait = governator
@@ -4981,11 +6092,14 @@ targetted_decisions = {
 		}
 	}	
 	educate_child_cetic = {
+		ai_check_interval = 60
+		
 		from_potential = {
 			is_playable = yes
 			religion = cetic
 		}
 		potential = {
+			religion = cetic
 			OR = {
 				is_child_of = FROM
 				is_liege_or_above = FROM
@@ -5062,4 +6176,237 @@ targetted_decisions = {
 
 		}
 	}
+	cetic_syncretize = {
+		only_playable = yes
+		ai_check_interval = 20
+		
+		from_potential = {
+			is_adult = yes
+			NOR = {
+				is_incapable = yes
+				trait = sympathy_christendom
+				trait = sympathy_cult_of_saints
+				trait = sympathy_latter_day_saints
+				trait = sympathy_pacific
+				trait = sympathy_judaism
+				trait = sympathy_islam
+			}
+			religion = cetic
+		}
+		potential = {
+			is_adult = yes
+			OR = {
+				at_location = FROM
+				is_vassal_or_below_of = FROM
+				is_close_relative = FROM
+			}
+			OR = {
+				religion_group = christian
+				religion_group = cult_of_saints
+				religion_group = latter_day_saints
+				religion_group = jewish_group
+				religion_group = muslim
+			}
+		}
+		allow = {
+			FROM = {
+				prisoner = no
+				NOR = {
+					is_incapable = yes
+					trait = zealous
+				}
+			}
+			ROOT = {
+				prisoner = no
+				NOR = {
+					is_incapable = yes
+					trait = zealous
+				}
+			}
+		}
+		effect = {
+			ROOT = {
+				trigger_switch = {
+					on_trigger = religion_group
+					christian = { FROM = { add_trait = sympathy_christendom } }
+					cult_of_saints = { FROM = { add_trait = sympathy_cult_of_saints } }
+					latter_day_saints = { FROM = { add_trait = sympathy_latter_day_saints } }
+					jewish_group = { FROM = { add_trait = sympathy_judaism } }
+					muslim = { FROM = { add_trait = sympathy_islam } }
+					pacific = { FROM = { add_trait = sympathy_pacific } }
+				}
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+
+			modifier = { # These are the most important reasons to gain a sympathy trait, if the AI has neither they are less likely to gain a trait
+				factor = 0.25
+				NOR = {
+					any_demesne_province = {
+						NOT = { religion_group = ROOT }
+					}
+					any_vassal = {
+						NOT = { religion_group = ROOT }
+					}
+					any_liege = {
+						religion = ROOT
+						has_any_sympathy_trait_trigger = yes
+					}
+				}
+			}
+
+			modifier = { # The AI needs a reason to do the decision at all
+				factor = 0
+				NOR = {
+					any_liege = {
+						OR = {
+							AND = {
+								has_any_sympathy_trait_trigger = yes
+								religion = ROOT
+							}
+							NOT = { religion_group = ROOT }
+						}
+					}
+					spouse = {
+						NOT = { religion_group = ROOT }
+					}
+					any_courtier_or_vassal = {
+						NOT = { religion_group = ROOT }
+					}
+					any_neighbor_independent_ruler = {
+						NOT = { religion_group = ROOT }
+					}
+					any_demesne_province = {
+						NOT = { religion_group = ROOT }
+					}
+				}
+			}
+
+			modifier = {
+				factor = 2
+				FROM = { is_friend = ROOT }
+			}
+			modifier = {
+				factor = 0
+				FROM = { is_rival = ROOT }
+			}
+			modifier = {
+				factor = 0.2
+				FROM = { opinion = { who = ROOT value <= -80 } }
+			}
+			modifier = {
+				factor = 0.4
+				FROM = { opinion = { who = ROOT value <= -60 } }
+			}
+			modifier = {
+				factor = 0.6
+				FROM = { opinion = { who = ROOT value <= -40 } }
+			}
+			modifier = {
+				factor = 0.8
+				FROM = { opinion = { who = ROOT value <= -20 } }
+			}
+			modifier = {
+				factor = 1.2
+				FROM = { opinion = { who = ROOT value = 20 } }
+			}
+			modifier = {
+				factor = 1.4
+				FROM = { opinion = { who = ROOT value = 40 } }
+			}
+			modifier = {
+				factor = 1.6
+				FROM = { opinion = { who = ROOT value = 60 } }
+			}
+			modifier = {
+				factor = 1.8
+				FROM = { opinion = { who = ROOT value = 80 } }
+			}
+		}
+	}
+		
+	rustcult_salvage = {
+		is_high_prio = yes
+		only_playable = yes
+		ai_check_interval = 24
+		filter = sub_realm
+		ai_target_filter = sub_realm
+		
+		from_potential = {
+			age = 16
+			prisoner = no
+			NOT = { is_incapable = yes }
+			religion = rust_cultist
+			NOT = { trait = on_pilgrimage }
+			NOT = { has_character_modifier = recent_salvage }
+			NOT = { has_character_modifier = preparing_expedition }
+			NOT = { #immersion-breaking
+				has_alternate_start_parameter = { key = religion_names value = random }
+			}
+		}
+		
+		potential = {
+			age = 16
+			prisoner = no
+			NOT = { is_incapable = yes }
+			religion = rust_cultist
+			NOT = { trait = on_pilgrimage }
+			NOT = { has_character_modifier = recent_salvage }
+			NOT = { has_character_modifier = preparing_expedition }
+			NOT = { #immersion-breaking
+				has_alternate_start_parameter = { key = religion_names value = random }
+			}
+		}
+		allow = {
+			war = no
+			wealth = 25
+		}
+		effect = {
+			wealth = -25
+			add_character_modifier = { name = preparing_expedition duration = 365 }
+			hidden_tooltip = {
+				character_event = {
+					id = salvage.1
+				}
+			}
+			hidden_tooltip = {
+				character_event = { #failsafe
+					id = salvage.95
+					months = 12
+				}
+			}
+			if = {
+				limit = {
+					has_dlc = "Reapers"
+				}
+				custom_tooltip = {
+					text = capital_prospers_custom_tooltip
+					hidden_tooltip = {
+						capital_scope = {
+							change_variable = { which = prosperity_value value = 8 }
+						}
+					}
+				}
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = { factor = 0.005 }
+			modifier = { factor = 6 num_of_count_titles = 1 }
+			modifier = { factor = 3	trait = zealous }
+			modifier = { factor = 2	trait = brave }
+			modifier = { factor = 2	trait = ambitious }
+			modifier = { factor = 0 trait = craven }
+			modifier = { factor = 0 trait = content }
+			modifier = { factor = 0 NOT = { wealth = 100 } }
+		}
+	}
+	
 }
