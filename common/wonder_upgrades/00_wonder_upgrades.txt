@@ -5036,30 +5036,20 @@ upgrade_cincalco = { #Cueva de Cincalco
 	picture = GFX_upgrade_icon_skulls
 
 	potential = {
-		OR = {
-			religion_group = mesoamerican_gods
-			religion = tonaltec
-		}
+		religion_group = mesoamerican_gods
 	}
 	allow = {
 		trigger_if = {
 			limit = {
-				NOR = {
+				NOT = {
 					religion_group = mesoamerican_gods
-					religion = tonaltec
 				}
 			}
-			OR = {
-				religion_group = mesoamerican_gods
-				religion = tonaltec
-			}
+			religion_group = mesoamerican_gods
 		}
 	}
 	active = {
-		OR = {
-			religion_group = mesoamerican_gods
-			religion = tonaltec
-		}
+		religion_group = mesoamerican_gods
 	}
 
 	flags = {

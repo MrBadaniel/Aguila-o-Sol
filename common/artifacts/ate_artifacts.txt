@@ -760,22 +760,26 @@ black_cat_banner = {
 
 ### Mesoamerican Artifacts ###
 
-obsidian_crown = { # Actually a scepter now
+baston_del_pueblo = { # Actually a scepter now
 	short_reign_length = -5
 	monthly_character_piety = 1.0
 	monthly_character_prestige = 0.5
 	diplomacy = 4
-	active = { 
-		religion_group = mesoamerican_gods
-		culture_group = mesoamerican
-		culture_group = taracahita
-		culture_group = mayan
+	active = {
+		OR = {
+			religion_group = mesoamerican_gods
+			culture_group = mesoamerican
+			culture_group = taracahita
+			culture_group = mayan
+		}
 	}
 	allowed_gift = { 
-		religion_group = mesoamerican_gods
-		culture_group = mesoamerican
-		culture_group = taracahita
-		culture_group = mayan
+		OR = {
+			religion_group = mesoamerican_gods
+			culture_group = mesoamerican
+			culture_group = taracahita
+			culture_group = mayan
+		}
 	}
 	quality = 4
 	indestructible = yes

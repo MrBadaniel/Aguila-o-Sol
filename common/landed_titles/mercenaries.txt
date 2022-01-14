@@ -959,7 +959,7 @@ d_masked_men_of_capistrano = {
 	capital = 2002 # Tijuana
 		
 	religion = cristo_rey
-	culture = californio
+	culture = californiano
 
 	title = "CAPTAIN"
 	foa = "CAPTAIN_FOA"
@@ -3022,3 +3022,95 @@ d_alta_snowbirds = {
 
 	mercenary_type = d_alta_snowbirds_composition
 }
+
+
+d_timbers_army = {
+	color = { 240 230 10 }
+	color2 = { 0 100 40 }
+	
+	capital = 534 #portland
+	
+	religion = gaian
+	culture = cascadian
+	
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+
+	mercenary = yes
+	landless = yes
+	primary = yes
+	independent = yes
+	strength_growth_per_century = 1.0
+
+	mercenary_type = d_timbers_army_composition
+}
+d_lord_of_the_ringlings = {
+	color = { 255 221 0 }
+	color2 = { 0 20 205 } 
+	
+	capital = 1093 # Tampa #actual hq of the circus + its museum
+	
+	mercenary = yes
+	
+	religion = evangelical
+	
+	culture = gulfard
+	
+	title = "GRANDMASTER"
+	foa = "GRANDMASTER_FOA"
+	
+	landless = yes
+	
+	primary = yes
+	
+	strength_growth_per_century = 1.0
+	
+	mercenary_type = d_lord_of_the_ringlings_composition
+}
+
+
+d_texas_royal_guard = {
+	color = { 0 90 255 }
+	
+	capital = 973 # Centrex
+	
+	mercenary = yes
+	culture = texaner
+	landless = yes	
+	primary = yes
+
+	allow = { always = no }
+	
+	title = "GENERAL"
+	title_female = "GENERAL"
+	foa = "CAPTAIN_FOA"
+	title_prefix = "TRIBE_OF"
+	
+	strength_growth_per_century = 1.00
+
+	mercenary_type = texas_royal_guard_composition
+}	
+
+
+d_red_raider_royal_guard = {
+	color = { 0 90 255 }
+	
+	capital = 973 # Centrex
+	
+	mercenary = yes
+	landless = yes		
+	primary = yes
+	
+	allow = { always = no }
+	culture = texan
+	religion = americanist
+	
+	title = "GENERAL"
+	title_female = "GENERAL"
+	foa = "CAPTAIN_FOA"
+	title_prefix = "TRIBE_OF"
+	
+	strength_growth_per_century = 1.00
+
+	mercenary_type = red_raider_royal_guard_composition
+}	

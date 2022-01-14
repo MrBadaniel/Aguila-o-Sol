@@ -2857,11 +2857,12 @@ character_event = {
 			higher_tier_than = DUKE
 			region = custom_empire_mexico
 		}
-		religion_group = religion = cristo_rey
+		religion = cristo_rey
 		OR = {
 			culture_group = mexicano
 			culture_group = norteno
 			culture_group = mesoamerican
+			culture_group = taracahita
 		}
 		NOT = {
 			has_global_flag = reconquista_finished
