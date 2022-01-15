@@ -780,15 +780,27 @@ feudal_governments = {
 			OR = {
 				primary_title = {
 					OR = {
-					title = e_mexico
-					title = k_mexico
+						AND = {
+							#has_law = succ_mex_elective
+							title = e_mexico
+						}
+						AND = {
+							#has_law = succ_mex_elective
+							title = k_mexico
+						}
 					}	
 				}
 				top_liege = {
-					primary_title = { 
-					OR = {
-						title = e_mexico
-						title = k_mexico
+					primary_title = {
+						OR = {
+							AND = {
+								#has_law = succ_mex_elective
+								title = e_mexico
+							}
+							AND = {
+								#has_law = succ_mex_elective
+								title = k_mexico
+							}
 						}
 					}
 				}

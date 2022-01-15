@@ -1289,12 +1289,11 @@ succession_laws = {
 				is_merchant_republic = no
 				is_patrician = no
 			#	OR = {
-			#		culture_group = mexicano
-			#		culture_group = norteno
-			#		culture_group = mesoamerican
-			#		religion = sacred_heart
-			#		religion = cristo_rey
-			#		religion = fidencista
+			#		culture_group = byzantine
+			#		culture = roman
+			#		religion = orthodox
+			#		religion = hellenic_pagan
+			#		religion = hellenic_pagan_reformed
 			#	}
 			#	OR = {
 			#		independent = yes
@@ -1311,7 +1310,11 @@ succession_laws = {
 			#	temporary = yes
 			#}
 			#is_primary_type_title = no
-			NOT = { holder_scope = { government = military_governorate } }
+			NOT = { holder_scope = { 
+				OR = {
+				government = military_governorate 
+				government = theocratic_feudal_government
+			} } }
 
 		}
 		allow = {
@@ -1798,19 +1801,19 @@ succession_laws = {
 	
 	succ_open_elective = {
 		potential = {
-			NAND = { 
-				has_law = succ_byzantine_elective 
-				title = e_usa
-			}
-			NAND = { 
-				has_law = succ_mex_elective 
-				title = e_mexico
-			}
-			NAND = { 
-				has_law = succ_mex_elective 
-				title = k_mexico
-			}
-			NOT = {
+			NOR = {
+				AND = { 
+					has_law = succ_byzantine_elective 
+					title = e_usa
+				}
+				AND = { 
+					has_law = succ_mex_elective 
+					title = e_mexico
+				}
+				AND = { 
+					has_law = succ_mex_elective 
+					title = k_mexico
+				}
 				religion_group = latter_day_saints
 			}
 
