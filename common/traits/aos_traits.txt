@@ -21,8 +21,8 @@ school_giver = { #School of Day
 }
 
 school_organizer = { #School of Huerta 
-	monthly_character_piety = 0.35 #balancing
-	global_revolt_risk = -0.01
+	levy_reinforce_rate = 0.15
+	intrigue = 1
 	religious = yes
 	
 	potential = { #this ensures that only braceros get it
@@ -44,7 +44,7 @@ school_organizer = { #School of Huerta
 
 school_teacher = { #School of Belloc and Chesterton 
 	monthly_character_piety = 0.35 #balancing
-	global_revolt_risk = -0.01
+	learning = 2
 	religious = yes
 	
 	potential = { #this ensures that only braceros get it
@@ -65,7 +65,11 @@ school_teacher = { #School of Belloc and Chesterton
 }
 
 school_leader = { #School of Chavez 
-	monthly_character_prestige = 0.1
+	command_modifier = {
+		morale_offence = 0.15
+		morale_defence = 0.15
+	}
+	martial = 1
 	religious = yes
 	
 	potential = { #this ensures that only braceros get it
