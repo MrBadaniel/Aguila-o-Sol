@@ -1,0 +1,86 @@
+school_giver = { #School of Day
+	monthly_character_piety = 0.35 #balancing
+	global_revolt_risk = -0.01
+	religious = yes
+	
+	potential = { #this ensures that only braceros get it
+		religion = la_hermandad
+	}
+	
+	opposites = {
+		school_organizer
+		school_teacher
+		school_leader
+	}
+	
+	opposite_opinion = -5
+	same_opinion = 5
+	
+	customizer = no
+	random = no
+}
+
+school_organizer = { #School of Huerta 
+	monthly_character_piety = 0.35 #balancing
+	global_revolt_risk = -0.01
+	religious = yes
+	
+	potential = { #this ensures that only braceros get it
+		religion = la_hermandad
+	}
+	
+	opposites = {
+		school_giver
+		school_teacher
+		school_leader
+	}
+	
+	opposite_opinion = -5
+	same_opinion = 5
+	
+	customizer = no
+	random = no
+}
+
+school_teacher = { #School of Belloc and Chesterton 
+	monthly_character_piety = 0.35 #balancing
+	global_revolt_risk = -0.01
+	religious = yes
+	
+	potential = { #this ensures that only braceros get it
+		religion = la_hermandad
+	}
+	
+	opposites = {
+		school_giver
+		school_organizer
+		school_leader
+	}
+	
+	opposite_opinion = -5
+	same_opinion = 5
+	
+	customizer = no
+	random = no
+}
+
+school_leader = { #School of Chavez 
+	monthly_character_prestige = 0.1
+	religious = yes
+	
+	potential = { #this ensures that only braceros get it
+		religion = la_hermandad
+	}
+	
+	opposites = {
+		school_giver
+		school_teacher
+		school_organizer
+	}
+	
+	opposite_opinion = -5
+	same_opinion = 5
+	
+	customizer = no
+	random = no
+}

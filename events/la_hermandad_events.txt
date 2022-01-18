@@ -1,0 +1,154 @@
+###################################
+#
+# LA HERMANDAD
+# - La Hermandad Events
+#
+###################################
+namespace = LHE
+
+# Adopts a La Hermandad School
+character_event = {
+	id = LHE.1
+	desc = EVTDESC_LHE_1
+	picture = GFX_evt_la_hermandad_cookout
+	border = GFX_event_narrative_frame_religion
+	
+	is_triggered_only = yes
+	
+	hide_from = yes
+	
+	option = {
+		name = EVTOPTA_LHE_1
+		add_trait = school_giver
+		ai_chance = {
+			factor = 1
+			
+			modifier = {
+				factor = 0
+				trait = greedy
+			}
+			modifier = {
+				factor = 1.2
+				trait = charitable
+			}
+			modifier = {
+				factor = 1.2
+				liege = { trait = school_giver }
+			}
+			modifier = {
+				factor = 0.5
+			}
+		}
+
+	}
+	option = {
+		name = EVTOPTB_LHE_1
+		add_trait = school_leader
+		ai_chance = {
+			factor = 1
+			
+			modifier = {
+				factor = 0
+				trait = content
+			}
+			modifier = {
+				factor = 1.2
+				trait = ambitious
+			}
+			modifier = {
+				factor = 1.2
+				liege = { trait = school_leader }
+			}
+			modifier = {
+				factor = 1.2
+				trait = inspiring_leader
+			}
+			modifier = {
+				factor = 0.5
+			}
+		}
+	}
+	option = {
+		name = EVTOPTC_LHE_1
+		add_trait = school_organizer	
+		ai_chance = {
+			factor = 1
+			
+			modifier = {
+				factor = 0
+				trait = shy	
+			}
+			modifier = {
+				factor = 1.2
+				trait = gregarious
+			}
+			modifier = {
+				factor = 1.2
+				liege = { trait = school_organizer }
+			}
+			modifier = {
+				factor = 1.2
+				trait = organizer
+			}
+			modifier = {
+				factor = 0.5
+			}
+		}
+	}
+	option = {
+		name = EVTOPTD_LHE_1
+		add_trait = school_teacher
+		ai_chance = {
+			factor = 1
+			
+			modifier = {
+				factor = 0
+				trait = wroth
+			}
+			modifier = {
+				factor = 1.2
+				trait = kind
+			}
+			modifier = {
+				factor = 1.2
+				liege = { trait = school_teacher }
+			}
+			modifier = {
+				factor = 1.2
+				trait = scholar
+			}
+			modifier = {
+				factor = 1.2
+				trait = theologian
+			}
+			modifier = {
+				factor = 0.5
+			}
+		}
+	}
+}
+
+character_event = {
+    id = LHE.2
+    hide_window = yes
+  
+	is_triggered_only = yes
+	  
+    trigger = {
+        trigger_if = {
+            limit = { lower_real_tier_than = KING }
+            independent = yes
+            higher_real_tier_than = BARON
+        }
+            
+        government = agrarian_government
+        NOT = { has_law = succ_agrarian_elective }
+    }
+    
+    immediate = {
+        if = {
+            limit = { government = agrarian_government }
+            primary_title = { add_law = { law = succ_agrarian_elective opinion_effect = no } }
+        }
+    }
+}
