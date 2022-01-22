@@ -1408,7 +1408,77 @@ christian = {
 		intermarry = reformista
 		intermarry = celeste
 		intermarry = insular
+		
+		intermarry = purificador
+		intermarry = penitente
 	}
+	
+	purificador = {
+		graphical_culture = westerngfx
+
+		icon = 95
+		heresy_icon = 96
+		
+		color = { 0.8 0.6 0.2 }
+		parent = falling_star
+		
+		high_god_name = GOD_GOD
+		
+		god_names = {
+			GOD_GOD GOD_THE_LORD GOD_JESUS GOD_THE_BLESSED_VIRGIN GOD_THE_SAINTS
+		}
+		
+		evil_god_names = {
+			THE_DEVIL SATAN LUCIFER THE_IDOLS
+		}
+
+		priests_can_marry = yes
+		priests_can_inherit = yes
+		allow_rivermovement = yes
+		female_temple_holders = yes
+		
+		religious_clothing_head = 0
+		religious_clothing_priest = 1
+
+		crusade_name = CRUSADE
+		scripture_name = THE_BIBLE
+		priest_title = PASTOR
+		
+		intermarry = moravian
+
+	}
+	
+	penitente = {
+		graphical_culture = westerngfx
+
+		icon = 95
+		heresy_icon = 96
+		
+		color = { 0.3 0.1 0.5 }
+		parent = falling_star
+		
+		high_god_name = GOD_GOD
+		
+		god_names = {
+			GOD_GOD GOD_THE_LORD GOD_JESUS GOD_THE_BLESSED_VIRGIN GOD_THE_SAINTS
+		}
+		
+		evil_god_names = {
+			THE_DEVIL SATAN LUCIFER
+		}
+		
+		can_retire_to_monastery = yes
+		allow_rivermovement = yes
+		
+		religious_clothing_head = 0
+		religious_clothing_priest = 1
+
+		crusade_name = CRUSADE
+		scripture_name = THE_BIBLE
+		priest_title = PADRE
+		
+		intermarry = moravian
+	}	
 		
 	high_church = {
 		graphical_culture = westerngfx
