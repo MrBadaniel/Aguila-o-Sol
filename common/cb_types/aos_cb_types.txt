@@ -220,40 +220,5 @@ cb_liberate_wilds = {
 			modifier = { factor = 2	trait = ambitious }
 			modifier = { factor = 0 trait = craven }
 			modifier = { factor = 0 trait = content }
-		modifier = {
-			factor = 0
-			ROOT = {
-				NOT = {
-					is_tribal = yes
-				}
-			}
-			NOT = {
-				any_direct_de_jure_vassal_title = {
-					any_direct_de_jure_vassal_title = {
-						OR = {
-							holding_type = castle
-							holding_type = city
-						}
-					}
-				}
-			}
-		}
-		modifier = {
-			factor = 0
-			ROOT = {
-				is_tribal = yes
-			}
-			NOT = {
-				any_direct_de_jure_vassal_title = {
-					any_direct_de_jure_vassal_title = {
-						OR = {
-							holding_type = castle
-							holding_type = city
-							holding_type = tribal
-						}
-					}
-				}
-			}
-		}
 	}
 }
