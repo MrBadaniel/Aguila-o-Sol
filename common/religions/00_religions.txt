@@ -1892,11 +1892,11 @@ christian = {
 		high_god_name = GOD_THE_HEAVENLY_FATHER
 		
 		god_names = {
-			GOD_THE_LORD GOD_JEHOVAH GOD_JESUS GOD_THE_HEAVENLY_FATHER GOD_THE_FOURTEENERS GOD_THE_HEAVENS
+			GOD_THE_LORD GOD_THE_HEAVENLY_FATHER GOD_JESUS GOD_THE_FOURTEENERS GOD_THE_HEAVENS
 		}
 		
 		evil_god_names = {
-			SATAN GOD_BLUCIFER GOD_THE_DEPTHS GOD_THE_TREMORS
+			SATAN GOD_BLUCIFER THE_DEPTHS
 		}
 		
 		
@@ -1955,7 +1955,7 @@ christian = {
 		icon = 93
 		heresy_icon = 94
 		
-		color = { 0.7 0 0.5 }
+		color = { 0.85 0.25 0.65 }
 		parent = montanist
 		
 		crusade_name = CRUSADE
@@ -1969,7 +1969,7 @@ christian = {
 		}
 		
 		evil_god_names = {
-			SATAN THE_DEPTHS THE_TREMORS
+			SATAN GOD_BLUCIFER THE_DEPTHS THE_TREMORS
 		}
 		
 		can_excommunicate = yes
@@ -2783,7 +2783,7 @@ pacific = {
 
 		icon = 15
 		
-		color = { 30 152 59 }
+		color = { 0 88 38 }
 		
 		interface_skin = { gaian_interface indian_interface muslim_interface }
 		
@@ -2806,7 +2806,6 @@ pacific = {
 		priests_can_marry = yes
 		allow_rivermovement = yes
 		female_temple_holders = yes
-		has_heir_designation = yes 
 		defensive_attrition = yes
 		hard_to_convert = yes
 
