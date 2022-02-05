@@ -798,8 +798,32 @@
 5001181 = { name="Hernandez" culture=abajeno }
 5001182 = { name="Gomez" culture=abajeno }
 5001183 = { name="Medina" culture=abajeno }
-5001184 = { name="Silbern" culture=coloradan }
-5001185 = { name="Nilsen" culture=coloradan }
+5001184 = { name="Silbern" culture=coloradan 
+	coat_of_arms = {
+		template = 0
+		layer = {
+			texture = 9
+			texture_internal = 0
+			emblem = 0
+			color = 0
+			color = 0
+			color = 0
+		}
+	}
+}
+5001185 = { name="Nilsen" culture=coloradan 
+	coat_of_arms = {
+		template = 0
+		layer = {
+			texture = 9
+			texture_internal = 1
+			emblem = 0
+			color = 0
+			color = 0
+			color = 0
+		}
+	}
+}
 5001186 = { name="Nemechek" culture=czexan }
 5001187 = { name="Holekamp" culture=texaner }
 5001188 = { name="Eberly" culture=texan }
@@ -807,6 +831,18 @@
 5001190 = { name="Cadena" culture=tejano }
 5001191 = { name="Béhar" culture=tejano }
 
-5001192 = { name="Krakauer" culture=mountainer }
+5001192 = { name="Krakauer" culture=mountainer 
+		coat_of_arms = {
+		religion = gaian
+		template = 0
+		layer = {
+			texture = 3
+			texture_internal = 0
+			emblem = 0
+			color = 0
+			color = 0
+			color = 0
+		}
+	}}
 
 6000000 = { name="Micanopy" culture=muscogee } #at some point the culture= line should have Seminole in it
