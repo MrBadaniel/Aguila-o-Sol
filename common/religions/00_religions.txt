@@ -2343,6 +2343,67 @@ christian = {
 		intermarry = qabantajik
 		intermarry = sacred_heart
 	}
+
+	gran_comision = {
+		graphical_culture = westerngfx
+
+		icon = 100
+		
+		color = { 225 183 69 }
+
+		high_god_name = GOD_DIOS
+		
+		god_names = {
+			GOD_THE_LORD GOD_JESUS GOD_THE_BLESSED_VIRGIN
+		}
+		
+		evil_god_names = {
+			THE_DEVIL GOD_PERSHING GOD_LOS_FEDERALES
+		}
+		
+		can_grant_divorce = yes
+		priests_can_inherit = yes
+		priests_can_marry = yes
+		allow_rivermovement = yes
+		
+		religious_clothing_head = 0
+		religious_clothing_priest = 1
+
+		scripture_name = THE_BIBLE
+		priest_title = PRIEST
+	}
+	
+	misional = {
+		graphical_culture = westerngfx
+
+		icon = 100
+		
+		color = { 208 31 31 }
+		
+		parent = gran_comision
+
+		high_god_name = GOD_DIOS
+		
+		god_names = {
+			GOD_THE_LORD GOD_JESUS GOD_THE_BLESSED_VIRGIN
+		}
+		
+		evil_god_names = {
+			THE_DEVIL GOD_PERSHING GOD_LOS_FEDERALES
+		}
+		
+		can_grant_divorce = yes
+		priests_can_inherit = yes
+		priests_can_marry = yes
+		allow_rivermovement = yes
+		
+		religious_clothing_head = 0
+		religious_clothing_priest = 1
+
+		scripture_name = THE_BIBLE
+		priest_title = PRIEST
+		
+	}	
 	
 }
 
