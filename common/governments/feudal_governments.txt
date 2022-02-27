@@ -382,6 +382,7 @@ feudal_governments = {
 			NOT = { is_government_potential = uyc_government }
 			NOT = { is_government_potential = agrarian_government }
 			NOT = { is_government_potential = gc_government }
+			NOT = { is_government_potential = reserve_government }
 		}
 		
 		color = { 145 10 15 }
@@ -706,6 +707,8 @@ feudal_governments = {
 			NOT = { is_government_potential = gc_government }
 			NOT = { is_government_potential = bureaucratic_government }
 			NOT = { is_government_potential = theocratic_feudal_government }
+			NOT = { is_government_potential = reserve_government }
+			NOT = { is_government_potential = uyc_government }
 		}
 		
 		character_modifier = {

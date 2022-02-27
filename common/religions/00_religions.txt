@@ -2860,7 +2860,7 @@ pacific = {
 
 		icon = 99
 		
-		color = { 30 152 59 }
+		color = { 0 88 38 }
 		
 		interface_skin = { gaian_interface indian_interface muslim_interface }
 		
@@ -4063,8 +4063,7 @@ oldworld = {
         icon = 104
         heresy_icon = 105
         
-        color = { 0.48 0.15 0.21 }
-        #color = { 167 183 236 } #Second Choice
+        color = { 167 183 236 }
         
         interface_skin = { americanist_interface oldworld_interface }
         
@@ -4087,6 +4086,7 @@ oldworld = {
         priests_can_inherit = yes
         priests_can_marry = yes
         allow_rivermovement = yes
+		hard_to_convert = yes
 		
 		intermarry = gaian
 		intermarry = imamite
@@ -4137,8 +4137,9 @@ oldworld = {
         priests_can_inherit = yes
         uses_jizya_tax = yes
         max_wives = 4
-        #caste_opinions = yes
-        #castes = yes
+        caste_opinions = yes
+        castes = yes
+		hard_to_convert = yes
 		
 		intermarry = gaian
 		intermarry = imamite
