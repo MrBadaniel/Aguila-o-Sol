@@ -608,6 +608,8 @@ culture =
 	religion = {
 		"rust_cultist"
 		"chrome_cultist"
+		"kinemite"
+		"siliconist"
 	}
 
 	templates = { 
@@ -1179,6 +1181,7 @@ culture =
 {
 	religion = {
 		"cetic"
+		"forester"
 	}
 
 	templates = { 
@@ -1241,6 +1244,13 @@ culture =
 			file = "gfx\\coats_of_arms\\ate_dynasties_cetic.tga"
 			size = { x = 10 y = 5 }
 			noOfFrames = 50
+			color = 0
+			random = no # Do not use for random CoAs
+		}
+		texture = {
+			file = "gfx\\aos_dynasties_forester.tga"
+			size = { x = 10 y = 1 }
+			noOfFrames = 10
 			color = 0
 			random = no # Do not use for random CoAs
 		}
@@ -1666,7 +1676,6 @@ culture =
 culture = {
 	religion = {
 		"gaian"
-		"forester"
 	}
 	
 	templates = { 
@@ -1735,13 +1744,6 @@ culture = {
 			file = "gfx\\coats_of_arms\\ate_dynasties_gaian.tga"
 			size = { x = 10 y = 2 }
 			noOfFrames = 20
-			color = 0
-			random = no # Do not use for random CoAs
-		}
-		texture = {
-			file = "gfx\\aos_dynasties_forester.tga"
-			size = { x = 10 y = 1 }
-			noOfFrames = 10
 			color = 0
 			random = no # Do not use for random CoAs
 		}

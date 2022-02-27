@@ -748,6 +748,8 @@ christian = {
 		intermarry = gaian
 		intermarry = shinto
 		intermarry = forester
+		intermarry = kinemite
+		intermarry = siliconist
 	}
 	sedevacantist = {
 		graphical_culture = westerngfx
@@ -1811,6 +1813,8 @@ christian = {
 		intermarry = true_cross
 		intermarry = insular
 		intermarry = la_hermandad
+		intermarry = kinemite
+		intermarry = siliconist
 	}
 	
 	true_cross = {
@@ -2638,6 +2642,8 @@ cult_of_saints= {
 		intermarry = celeste
 		intermarry = brethren
 		intermarry = qingzhen
+		intermarry = kinemite
+		intermarry = siliconist
 		intermarry = lamanita
 		intermarry = nazerene
 		intermarry = reformista
@@ -2648,6 +2654,7 @@ cult_of_saints= {
 		intermarry = falling_star
 		intermarry = qabantajik
 		intermarry = la_hermandad
+		intermarry = cetic
 	}	
 	
 }
@@ -2707,10 +2714,11 @@ pacific = {
 		intermarry = neognostic
 		intermarry = aphite
 		intermarry = qingzhen
-		intermarry = imamite
 		intermarry = nazarene
 		intermarry = navegante
 		intermarry = forester
+		intermarry = kinemite
+		intermarry = siliconist
 	}
 	
 	gaian = {
@@ -2754,6 +2762,8 @@ pacific = {
 		intermarry = nousthreskeia
 		intermarry = neognostic
 		intermarry = forester
+		intermarry = kinemite
+		intermarry = siliconist
 	}
 	
 	shinto = {
@@ -2795,6 +2805,8 @@ pacific = {
 		intermarry = cetic
 		intermarry = nousthreskeia
 		intermarry = forester
+		intermarry = kinemite
+		intermarry = siliconist
 	}
 	
 	nousthreskeia = {
@@ -2839,6 +2851,8 @@ pacific = {
 		intermarry = cetic
 		intermarry = shinto
 		intermarry = forester
+		intermarry = kinemite
+		intermarry = siliconist
 	}
 	
 	forester = {
@@ -2880,6 +2894,8 @@ pacific = {
 		intermarry = gaian
 		intermarry = shinto
 		intermarry = nousthreskeia
+		intermarry = kinemite
+		intermarry = siliconist
 		
 		intermarry = neognostic
 		intermarry = edenite
@@ -3868,6 +3884,8 @@ oldworld = {
 		intermarry = rust_cultist
 		intermarry = chrome_cultist
 		intermarry = forester
+		intermarry = kinemite
+		intermarry = siliconist
 	}
 	
 	rust_cultist = { # now in the OWC group!!
@@ -4038,6 +4056,107 @@ oldworld = {
 		intermarry = misrist
 		
 	}
+
+	kinemite = {
+        graphical_culture = hellenicgfx
+
+        icon = 104
+        heresy_icon = 105
+        
+        color = { 0.48 0.15 0.21 }
+        #color = { 167 183 236 } #Second Choice
+        
+        interface_skin = { americanist_interface oldworld_interface }
+        
+        high_god_name = GOD_THE_ASSOCIATION
+
+        god_names = {
+            GOD_HERO GOD_BEAUTY GOD_VILLAIN GOD_FAME GOD_IDOL
+        }
+
+        evil_god_names = {
+            GOD_VILLAIN GOD_BLACKLIST
+        }
+
+        crusade_name = PREMIERE
+        scripture_name = THE_CODE
+        priest_title = PRIEST
+        crusade_name = GREAT_HOLY_WAR
+        
+        can_grant_divorce = yes
+        priests_can_inherit = yes
+        priests_can_marry = yes
+        allow_rivermovement = yes
+		
+		intermarry = gaian
+		intermarry = imamite
+		intermarry = shinto
+		intermarry = nousthreskeia
+		intermarry = neognostic
+		intermarry = aphite
+		intermarry = qingzhen
+		intermarry = siliconist
+		intermarry = nazarene
+		intermarry = navegante
+		intermarry = forester
+		intermarry = cetic
+        
+        religious_clothing_head = 0
+        religious_clothing_priest = 1
+        
+    }
+    
+    siliconist = {
+        graphical_culture = hellenicgfx
+        
+        icon = 104
+        heresy_icon = 105
+        
+        color = { 83 238 160 }
+        
+        interface_skin = { consumerist_interface oldworld_interface }
+
+        high_god_name = GOD_ALL-GO-RYTHM
+
+        god_names = {
+            GOD_TEK GOD_CHIPTUNE GOD_TECHNI GOD_DAYTA
+        }
+
+        evil_god_names = {
+            GOD_DISCORDANCE GOD_TROJAN GOD_WRINGING_BUGS
+        }
+
+        crusade_name = ASSIMILATION
+        scripture_name = THE_ACCORDANCE
+        priest_title = TECH_PRIEST
+
+        can_grant_divorce = yes
+        allow_rivermovement = yes
+        can_grant_claim = yes
+        priests_can_marry = yes
+        priests_can_inherit = yes
+        uses_jizya_tax = yes
+        max_wives = 4
+        #caste_opinions = yes
+        #castes = yes
+		
+		intermarry = gaian
+		intermarry = imamite
+		intermarry = shinto
+		intermarry = nousthreskeia
+		intermarry = neognostic
+		intermarry = aphite
+		intermarry = qingzhen
+		intermarry = kinemite
+		intermarry = nazarene
+		intermarry = navegante
+		intermarry = forester
+		intermarry = cetic
+        
+        religious_clothing_head = 18
+        religious_clothing_priest = 18
+    }	
+	
 }
 
 pagan_group = {
@@ -5267,6 +5386,8 @@ muslim = {
 		intermarry = orientalist
 		intermarry = misrist
 		intermarry = cetic
+		intermarry = kinemite
+		intermarry = siliconist
 
 		religious_clothing_head = 5
 		religious_clothing_priest = 5
@@ -5318,6 +5439,8 @@ muslim = {
 		intermarry = cetic
 		intermarry = navegante
 		intermarry = forester
+		intermarry = kinemite
+		intermarry = siliconist
 
 		religious_clothing_head = 5
 		religious_clothing_priest = 5
