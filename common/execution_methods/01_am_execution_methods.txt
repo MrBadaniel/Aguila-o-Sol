@@ -1,0 +1,294 @@
+####################
+#DEATH BY EXECUTION:
+####################
+#Executions are randomized from this list
+#An additive modifier is also available, as seen in the example below
+#
+#execution_method = {
+#	death = death_platypus
+#	weight_multiplier = {
+#		factor = 1
+#		modifier = {
+#			factor = 0.5
+#			FROM = {
+#				trait = proud
+#			}
+#		}
+#		additive_modifier = {
+#			value = 50
+#			ROOT = {
+#				has_character_modifier = the_dungeon
+#			}
+#		}
+#	}
+#	trigger = {
+#		always = yes
+#	}
+#}
+####################
+
+execution_method = {
+	death = death_execution_keelhauling
+	weight_multiplier = {
+		factor = 200
+		modifier = {
+			factor = 4
+			FROM = {
+				trait = cruel
+			}
+		}
+	}
+	
+	trigger = {
+		FROM = {
+			religion = brethren
+		}		
+	}
+}
+
+execution_method = {
+	death = death_execution_marooning
+	weight_multiplier = {
+		factor = 200
+		modifier = {
+			factor = 4
+			FROM = {
+				trait = just
+			}
+		}
+	}
+	
+	trigger = {
+		FROM = {
+			religion = brethren
+		}		
+	}
+}
+
+execution_method = {
+	death = death_execution_sharks
+	weight_multiplier = {
+		factor = 250
+		modifier = {
+			factor = 2
+			FROM = {
+				trait = cruel
+			}
+		}
+		modifier = {
+			factor = 2
+			FROM = {
+				trait = wroth
+			}
+		}
+		
+		modifier = {
+			factor = 4
+			is_rival = FROM
+		}
+	}
+	trigger = {
+		FROM = {
+			religion = brethren
+		}
+	}
+}
+
+
+
+execution_method = {
+	death = death_execution_polar_bear
+	weight_multiplier = {
+		factor = 50
+		modifier = {
+			factor = 8
+			FROM = {
+				trait = hunter
+			}
+		}
+		modifier = {
+			factor = 3
+			FROM = {
+				trait = cruel
+			}
+		}
+	}
+	trigger = {
+		FROM = {
+			AND = {
+				capital_scope = {
+					OR = {
+						region = world_eastern_canada
+						region = world_central_canada
+					}
+					OR = {
+						culture_group = subarctic
+					}
+				}
+			}
+		}
+	}
+}
+	
+execution_method = {
+	death = death_radiation_poisoning
+	weight_multiplier = {
+		factor = 200
+		modifier = {
+			factor = 2
+			FROM = {
+				trait = zealous
+			}
+		}
+		modifier = {
+			factor = 4
+			FROM = {
+				trait = cruel
+			}
+		}
+	}
+	trigger = {
+		FROM = {
+			religion = atomicist
+		}
+		
+	}
+}
+
+execution_method = {
+	death = death_firing_squad #Note: this is seen as an "honorable death" by the cultures and religions that practice it. This method uses arrows rather than bullets.
+	weight_multiplier = {
+		factor = 50
+		modifier = {
+			factor = 8
+			FROM = {
+				OR = {
+					trait = misguided_warrior
+					trait = tough_soldier
+					trait = skilled_tactician
+					trait = brilliant_strategist
+					religion_group = latter_day_saints
+				}
+			}
+		}
+		modifier = {
+			factor = 4
+			FROM = {
+				OR = {
+					trait = just
+					trait = charitable
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			FROM = {
+				trait = arbitrary
+			}
+		}
+	}
+	trigger = {
+		FROM = {
+			OR = {
+				religion = americanist
+				religion = hamiltonian
+				religion = jeffersonian
+				religion = libertarian
+				religion_group = latter_day_saints
+				culture = utahn
+			}
+		}
+		
+	}
+}
+
+execution_method = {
+	death = death_execution_gear #Rust Cultist equivalent of a breaking wheel
+	weight_multiplier = {
+		factor = 250
+	}
+	trigger = {
+		FROM = {
+			trait = cruel
+			OR = {
+				religion = rust_cultist
+				religion = chrome_cultist
+			}
+		}
+	}
+}
+
+execution_method = {
+	death = death_execution_guillotine #Common among descendants of French-speakers
+	weight_multiplier = {
+		factor = 300
+		modifier = {
+			factor = 3
+			FROM = {
+				trait = kind
+			}
+		}
+		modifier = {
+			factor = 2
+			FROM = {
+				trait = temperate
+			}
+		}
+		modifier = {
+			factor = 2
+			FROM = {
+				trait = charitable
+			}
+		}
+	}
+	trigger = {
+		#lowborns allowed to do this, long live the revolution
+		FROM = {
+			NOT = { is_nomadic = yes }
+			OR = {
+				culture_group = gallomerican
+				culture_group = louisianais
+				culture_group = antillais
+			}
+		}
+	}
+}
+
+execution_method = {
+	death = death_execution_tarpit
+	weight_multiplier = {
+		factor = 250
+		modifier = {
+			factor = 2
+			FROM = {
+				trait = cruel
+			}
+		}
+		modifier = {
+			factor = 2
+			FROM = {
+				trait = wroth
+			}
+		}
+		
+		modifier = {
+			factor = 4
+			is_rival = FROM
+		}
+	}
+	trigger = {
+		FROM = {
+			AND = {
+				capital_scope = {
+					OR = {
+						kindgom = k_socal
+						duchy = d_los_angeles
+					}
+					OR = {
+						religion = kinemite
+					}
+				}
+			}
+		}
+	}
+}
