@@ -88,3 +88,63 @@ school_leader = { #School of Chavez
 	customizer = no
 	random = no
 }
+
+java = {
+	potential = {
+		OR = {
+			religion = siliconist
+			religion = silic_heresy
+		}
+	}
+	opposites = {
+		python
+		ceeplusplus
+	}
+	
+	caste_tier = 3
+
+	monthly_character_piety = 0.1
+
+	customizer = no
+	random = no
+}
+
+python = {
+	potential = {
+		OR = {
+			religion = siliconist
+			religion = silic_heresy
+		}
+	}
+	opposites = {
+		java
+		ceeplusplus
+	}
+
+	caste_tier = 2
+
+	monthly_character_prestige = 0.1
+
+	customizer = no
+	random = no
+}
+
+ceeplusplus = {
+	potential = {
+		OR = {
+			religion = siliconist
+			religion = silic_heresy
+		}
+	}
+	opposites = {
+		java
+		python
+	}
+
+	caste_tier = 1
+
+	monthly_character_wealth = 0.03
+	
+	customizer = no
+	random = no
+}
