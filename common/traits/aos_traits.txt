@@ -136,3 +136,79 @@ ceeplusplus = {
 	customizer = no
 	random = no
 }
+
+san_charbel = {
+	opposites = {
+		pancho_villa
+		cristero_branch
+		franciscan_branch
+	}
+
+	opposite_opinion = -5
+	
+	health = 2
+	learning = 1
+
+	potential = { religion = misional }
+	religious_branch = misional
+	random = no
+	religious = yes
+	ruler_designer_cost = 0
+}
+
+pancho_villa = {
+	opposites = {
+		san_charbel
+		cristero_branch
+		franciscan_branch
+	}
+
+	opposite_opinion = -5
+	fidencista_opinion = 10
+	levy_size = 0.15
+
+	potential = { religion = misional }
+	religious_branch = misional
+	random = no
+	religious = yes
+	ruler_designer_cost = 0
+}	
+
+franciscan_branch = {
+	opposites = {
+		san_charbel
+		pancho_villa
+		cristero_branch
+	}
+
+	opposite_opinion = -5
+	
+	tax_income = 2
+	church_opinion = 10
+
+	potential = { religion = misional }
+	religious_branch = misional
+	random = no
+	religious = yes
+	ruler_designer_cost = 0
+}	
+
+cristero_branch = {
+	opposites = {
+		san_charbel
+		pancho_villa
+		franciscan_branch
+	}
+
+	cristo_rey_opinion = 10
+	opposite_opinion = -5
+	same_opinion_if_same_religion = 5
+	monthly_character_piety = 0.25
+	demesne_size = 2
+
+	potential = { religion = misional }
+	religious_branch = misional
+	random = no
+	religious = yes
+	ruler_designer_cost = 0
+}

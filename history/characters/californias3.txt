@@ -2311,6 +2311,7 @@
 	religion=hamiltonian
 	trait=giant
 	trait=strong
+	trait=scarred
 	trait=bastard
 	trait=humble
 	trait=slothful
@@ -2333,6 +2334,7 @@
 	religion=kinemite
 	trait=elusive_shadow
 	trait=quick
+	trai=peasant_leader
 	trait=shrewd
 	trait=uncouth
 	trait=charitable
@@ -2347,22 +2349,219 @@
 	}
 }
 
-#Sam O'Brian
-  #Appears ten years after Vic's death
-  #Student of Vic
-  #Platon Douglas a second student, sympathy_judaism
-  #Conan the Crusher
-  #2110 to 2111, Sam, Platon, and Conan all die to the Phillip the Kine-Slayer, the son of Jody Bute, dies 30 years later shortly before the Capistrano revolt under suspsicious 
+2500152={
+	name="Sam"
+	culture=angeleno
+	dynasty=5001198 #O'Brian
+	religion=kinemite
+	trait=tough_soldier
+	trait=peasant_leader
+	trait=honest
+	trait=cruel
+	trait=uncouth
+	trait=just
+	occluded=yes
+	trait=legendary
+	2074.4.1={birth=yes}
+	2111.7.21={death={
+			death_reason=death_battle
+			killer=2500151
+		}
+	}
+}
+
+2500153={
+	name="Platon"
+	culture=angeleno
+	dynasty=5001197 #Douglas
+	religion=kinemite
+	trait=fortune_builder
+	trait=sympathy_judaism
+	trait=gregarious
+	trait=devout
+	trait=groomed
+	trait=kind
+	occluded=yes
+	trait=legendary
+	2070.12.11={birth=yes}
+	2111.7.21={death={
+			death_reason=death_battle
+			killer=2500151
+		}
+	}
+}
+
+2500154={
+	name="Conan"
+	culture=angeleno
+	religion=kinemite
+	trait=brilliant_strategist
+	trait=hunter
+	trait=robust
+	trait=brave
+	trait=zealous
+	trait=uncouth
+	trait=temperate
+	occluded=yes
+	trait=legendary
+	give_nickname=nick_the_crusher
+	2078.3.29={birth=yes}
+	2111.7.25={death={
+			death_reason=death_battle_duel
+			killer=2500151
+		}
+	}
+}
+
+2500155={
+	name="Maurice"
+	culture=angeleno
+	dynasty=5001210 #Khan
+	religion=kinemite
+	trait=mastermind_theologian
+	trait=theologian
+	trait=kind
+	trait=devout
+	trait=humble
+	trait=shy
+	occluded=yes
+	trait=legendary
+	2069.7.6={birth=yes}
+	2111.7.29={death={
+			death_reason=death_battle
+			killer=2500151
+		}
+	}
+}
   
-  #Another thirty years later and Diego Capistrano appears, unable to be quelled
-  #Loses his land but disapears after being unable to form anything concrete
-  #2130 to 2130 and then 2136 to 2140 and is caught and hung on the orders of 2200003
+2500156={
+    name="Herschel"
+    culture=angeleno
+    religion=kinemite
+    martial=8
+    diplomacy=5
+    stewardship=5
+    intrigue=7
+    learning=7
+    trait=martial_cleric
+    trait=painter
+    trait=pious
+	trait=diligent
+	trait=patient
+	occluded=yes
+	trait=legendary
+	2072.8.6={birth=yes}
+	2111.7.21={death={
+			death_reason=death_battle
+			killer=2500151
+		}
+	}
+}  
+
+2500157={
+	name="Rainer"
+	culture=angeleno
+	dynasty=5001211 #Phoenix
+	religion=kinemite
+    trait=intricate_webweaver	
+    trait=chaste
+    trait=paranoid
+    trait=groomed
+	occluded=yes
+	trait=legendary
+	2065.9.12={birth=yes}
+	2111.7.21={death={
+			death_reason=death_battle
+			killer=2500151
+		}
+	}
+}
+
+2500158={
+	name="Jackie"
+	culture=towner
+	dynasty=5001212 #Li
+	religion=kinemite
+    martial=11
+    diplomacy=3
+    stewardship=5
+    intrigue=4
+    learning=4
+    trait=brilliant_strategist
+	trait=duelist
+    trait=zealous
+    trait=just
+    trait=cruel
+	trait=brave
+	occluded=yes
+	trait=legendary
+	2077.5.9={birth=yes}
+	2111.7.29={death={
+			death_reason=death_battle
+			killer=2500151
+		}
+	}
+}
+
+1802059={
+    name="Oswald"
+    culture=angeleno
+    religion=kinemite
+    martial=8
+    diplomacy=5
+    stewardship=5
+    intrigue=7
+    learning=7
+    trait=mastermind_theologian
+    trait=mystic	
+    trait=devout
+	trait=honest
+	trait=patient
+	trait-kind
+	occluded=yes
+	trait=legendary
+	give_nickname=nick_the_wise
+	2039.9.5={birth=yes}
+	2111.7.29={death={
+			death_reason=death_battle
+			killer=2500151
+		}
+	}
+}
+
+
+1802060={
+    name="Marilyn"
+	female=yes
+    culture=angeleno
+    religion=kinemite
+	martial=5
+	diplomacy=5
+	stewardship=5
+	intrigue=5
+	learning=5
+	trait=charismatic_negotiator
+	trait=fair
+	trait=temperate
+	trait=humble
+	trait=stubborn
+	trait=diligent
+	occluded=yes
+	trait=legendary	
+	give_nickname=nick_the_martyr
+    2083.6.13={birth=yes}
+	2111.8.2={death={
+			death_reason=death_murder_strangle
+			killer=2500151
+		}
+	}
+}
   
   #Gene Capistrano
   #Claims to be the bastard of Diego Capistrano
-  #2166 to 2166 vanishes after heavy losses
+  #2166 to 2166 vanishes after heavy losses death_left_life_entered_history
   
-  #Lucas Stevens, the 2190 to 2192, rebels and is killed in a rabble 
+  #Lucas Stevens, the 2190 to 2192, rebels and is killed in a rabble death_rabble
   
   #Kane Rogers
   #Appears after the defeat of Jamal the Matyr
@@ -2373,10 +2572,10 @@
   #Kirk Rogers 2308 to 2309 attempts to invade Socal and dies in the proccess
   #Shirley Rogers and Clint Connery 2309 to 2315 and 2315 to 2324
   #Clint II Connery 2324 to 2360
-  #Kane III Connery 2360 to 2364 killed by assasins
+  #Kane III Connery 2360 to 2364 killed by assasins death_murder_poison
   #Conan Connery (married to Marilyn DiMaggio) 2364 to 2379
   #Miriam Connery and Linus Fonzarelli 2379 to 2390
-  #Bud Fonzarelli 2390 to 2391 attempts to take LA but is repelled and dies of a rock to the head 
+  #Bud Fonzarelli 2390 to 2391 attempts to take LA but is repelled and dies of a rock to the head death_accident_fall 
   #Bud's brother, Lou Fonzarelli 2391 to 2395
   #Curly Fonzarelli (marries Audrey Capistrano the daughter of Diego II Capistrano) 2395 to 2410 
   #Lizabeth Fonzarelli and Caden Calgary 2410 to 2415 die of pneumonia   
