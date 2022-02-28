@@ -90,18 +90,14 @@ school_leader = { #School of Chavez
 }
 
 java = {
-	potential = {
-		OR = {
-			religion = siliconist
-			religion = silic_heresy
-		}
-	}
+	religious = yes
+	potential = {religion = siliconist}
+	religious_branch = siliconist
+	
 	opposites = {
 		python
 		ceeplusplus
 	}
-	
-	caste_tier = 3
 
 	monthly_character_piety = 0.1
 
@@ -110,18 +106,14 @@ java = {
 }
 
 python = {
-	potential = {
-		OR = {
-			religion = siliconist
-			religion = silic_heresy
-		}
-	}
+	religious = yes
+	potential = {religion = siliconist}
+	religious_branch = siliconist
+	
 	opposites = {
 		java
 		ceeplusplus
 	}
-
-	caste_tier = 2
 
 	monthly_character_prestige = 0.1
 
@@ -130,18 +122,14 @@ python = {
 }
 
 ceeplusplus = {
-	potential = {
-		OR = {
-			religion = siliconist
-			religion = silic_heresy
-		}
-	}
+	religious = yes
+	potential = {religion = siliconist}
+	religious_branch = siliconist
+	
 	opposites = {
 		java
 		python
 	}
-
-	caste_tier = 1
 
 	monthly_character_wealth = 0.03
 	
