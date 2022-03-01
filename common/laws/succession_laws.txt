@@ -135,6 +135,7 @@ succession_laws = {
 			}
 
 			NOT = { holder_scope = { government = cenobitic_government } }
+			NOT = { holder_scope = { government = agrarian_government } }
 
 			is_primary_type_title = no
 
@@ -158,6 +159,7 @@ succession_laws = {
 								religion = raven_tales
 								religion = pagan
 								religion = trailwalker
+								religion = kinemite
 							}
 						}
 					}
@@ -312,6 +314,7 @@ succession_laws = {
 				}
 			}
 			NOT = { holder_scope = { government = cenobitic_government } }
+			NOT = { holder_scope = { government = agrarian_government } }
 		}
 		allow = {
 			conditional_tooltip = {
@@ -579,6 +582,7 @@ succession_laws = {
 				OR = {
 					NOT = { religion_group = pagan_group }
 					NOT = { religion = midewiwin }
+					NOT = { religion = kinemite }
 					NOT = { religion = raven_tales }
 					is_reformed_religion = yes
 					is_patrician = yes
@@ -789,6 +793,7 @@ succession_laws = {
 								NOT = { religion = glorian }
 							}
 							NOT = { religion = midewiwin }
+							NOT = { religion = kinemite }
 							NOT = { religion = raven_tales }
 							AND = {
 								religion = patria_grande
@@ -998,6 +1003,7 @@ succession_laws = {
 				OR = {
 					NOT = { religion_group = pagan_group }
 					NOT = { religion = midewiwin }
+					NOT = { religion = kinemite }
 					NOT = { religion = raven_tales }
 					is_reformed_religion = yes
 					has_law = succession_voting_power_1
@@ -1049,6 +1055,8 @@ succession_laws = {
 				OR = {
 				government = military_governorate 
 				government = theocratic_feudal_government
+				government = agrarian_government
+				religion = kinemite
 			} } }
 			NOR = { #Special Elective.
 				title = e_dixie
@@ -1147,6 +1155,7 @@ succession_laws = {
 				OR = {
 					NOT = { religion_group = pagan_group }
 					NOT = { religion = midewiwin }
+					NOT = { religion = kinemite }
 					NOT = { religion = raven_tales }
 					is_reformed_religion = yes
 					has_law = succession_voting_power_1
@@ -1603,6 +1612,7 @@ succession_laws = {
 			}
 			holder_scope = {
 				OR = {
+					religion = kinemite
 					AND = {
 						has_religion_feature = religion_patriarchal
 						is_theocracy = no

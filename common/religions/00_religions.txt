@@ -4063,7 +4063,8 @@ oldworld = {
         icon = 104
         heresy_icon = 105
         
-        color = { 167 183 236 }
+		color = { 151 35 159 }
+        #color = { 167 183 236 }
         
         interface_skin = { americanist_interface oldworld_interface }
         
@@ -4087,6 +4088,9 @@ oldworld = {
         priests_can_marry = yes
         allow_rivermovement = yes
 		hard_to_convert = yes
+		men_can_take_consorts = yes
+		women_can_take_consorts = yes
+		max_consorts = 3
 		
 		intermarry = gaian
 		intermarry = imamite
@@ -4109,8 +4113,8 @@ oldworld = {
     siliconist = {
         graphical_culture = hellenicgfx
         
-        icon = 104
-        heresy_icon = 105
+        icon = 106
+        heresy_icon = 107
         
         color = { 83 238 160 }
         
@@ -4136,7 +4140,6 @@ oldworld = {
         priests_can_marry = yes
         priests_can_inherit = yes
         uses_jizya_tax = yes
-        max_wives = 4
 		hard_to_convert = yes
 		
 		intermarry = gaian
