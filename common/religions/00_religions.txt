@@ -2348,6 +2348,89 @@ christian = {
 		intermarry = sacred_heart
 	}
 
+	josephite = {
+		graphical_culture = westerngfx
+
+		icon = 100
+		heresy_icon = 101
+		parent = la_hermandad
+		
+		color = { 114 222 221 }
+		
+		#character_modifier = {
+		#	stewardship = 2
+		#}
+
+		crusade_name = HUELGA	
+		scripture_name = THE_BYLAWS
+		can_retire_to_monastery = yes
+		allow_rivermovement = yes
+		feminist = no	 # Nullifies the negative opinion modifier that vassals normally get if ruler is female or has female heir
+		aggression = 1.5 # not as likely to expand
+		female_temple_holders = yes
+		priests_can_inherit = no
+		priests_can_marry = yes	
+		defensive_attrition = yes
+		peace_piety_gain = 0
+		allow_looting = yes
+		attacking_same_religion_piety_loss = yes
+		priest_title = PADRE
+		high_god_name = GOD_DIOS
+		
+		god_names = {
+			GOD_DIOS GOD_JESUCRISTO GOD_VIRGENCITA GOD_CESARCHAVEZ GOD_EL_PUEBLO_UNIDO
+		}
+		
+		evil_god_names = {
+			GOD_EL_DIABLO GOD_LA_MIGRA GOD_LOS_COYOTES
+		}
+	
+		religious_clothing_head = 0
+		religious_clothing_priest = 2
+
+	}
+	
+	alurista = {
+		graphical_culture = westerngfx
+
+		icon = 100
+		heresy_icon = 101
+		parent = la_hermandad
+		
+		color = { 0.2 1.0 0.9 }
+		
+		#character_modifier = {
+		#	stewardship = 2
+		#}
+
+		crusade_name = HUELGA	
+		scripture_name = THE_BYLAWS
+		can_retire_to_monastery = yes
+		allow_rivermovement = yes
+		feminist = yes	 # Nullifies the negative opinion modifier that vassals normally get if ruler is female or has female heir
+		aggression = 0.5 # not as likely to expand
+		female_temple_holders = yes
+		priests_can_inherit = no
+		priests_can_marry = yes	
+		defensive_attrition = yes
+		peace_piety_gain = 1.5
+		attacking_same_religion_piety_loss = yes
+		priest_title = PADRE
+		high_god_name = GOD_DIOS
+		
+		god_names = {
+			GOD_DIOS GOD_JESUCRISTO GOD_VIRGENCITA GOD_CESARCHAVEZ GOD_LA_RAZA_COSMICA
+		}
+		
+		evil_god_names = {
+			GOD_EL_DIABLO GOD_LA_MIGRA GOD_LOS_COYOTES
+		}
+	
+		religious_clothing_head = 0
+		religious_clothing_priest = 2
+
+	}
+
 	gran_comision = {
 		graphical_culture = westerngfx
 

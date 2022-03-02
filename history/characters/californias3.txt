@@ -1123,6 +1123,7 @@
 	religion=siliconist
 	dynasty=1849057#Woz
 	trait=skilled_tactician
+	trait=python
 	trait=strong
 	trait=erudite
 	trait=scholar
@@ -1149,6 +1150,7 @@
 	mother=2500050
 	father=2500051
 	trait=martial_cleric
+	trait=python
 	trait=theologian
 	trait=temperate
 	trait=diligent
@@ -1172,6 +1174,7 @@
 	dynasty=1849057#Woz
 	father=2500052
 	trait=underhanded_rogue
+	trait=python
 	trait=gregarious
 	trait=deceitful
 	trait=diligent
@@ -1195,6 +1198,7 @@
 	dynasty=1849057#Woz
 	father=2500053
 	trait=indulgent_wastrel
+	trait=python
 	trait=groomed
 	trait=is_fat
 	trait=gluttonous
@@ -1216,6 +1220,7 @@
 	religion=siliconist
 	dynasty=1849057#Woz
 	father=2500053
+	trait=python
 	trait=imp_ex1
 	2499.1.1={
 		birth=yes
@@ -1231,6 +1236,7 @@
 	religion=siliconist
 	dynasty=1849057#Woz
 	father=2500055
+	trait=python
 	trait=imp_ex2
 	2533.1.1={
 		birth=yes
@@ -1246,6 +1252,7 @@
 	religion=siliconist
 	dynasty=1849057#Woz
 	father=2500056
+	trait=python
 	trait=imp_ex2
 	2556.1.1={
 		birth=yes
@@ -2603,3 +2610,42 @@
 				#Marry a Hasegawa daughter to Tim Woz
 				#Courtney Woz Goldengate Gay, Clay the Wise Count of SJ all succeeding Woz have Golden Gate and East Bay.
 				
+
+
+1802063={
+	name="Joanna"
+	female=yes
+	dynasty=1851144
+	culture=guyanese
+	religion=cetic
+	stewardship=6
+	learning=6
+	trait=intricate_webweaver
+	trait=sympathy_oldworld
+	trait=way_cowl
+	trait=fair
+	trait=shy
+	trait=ambitious
+	father=2500057	
+	2612.4.16={birth=yes
+	culture=bayfolk
+	}
+	2634.5.10={add_spouse=1802064}
+	2660.12.1={death=yes}
+}
+
+1802064={
+	name="Ryuto"
+	female=no
+	dynasty=1851144
+	culture=towner
+	religion=cetic
+	trait=scholarly_theologian
+	trait=way_book
+	trait=content
+	trait=erudite
+	trait=greedy
+	2606.4.1={birth=yes}
+	2634.5.10={add_spouse=1802063}
+	2656.9.19={death=yes}
+}
