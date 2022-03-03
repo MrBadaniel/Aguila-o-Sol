@@ -1308,73 +1308,6 @@ christian = {
 		intermarry = la_hermandad
 	}
 	
-	falling_star = {
-		graphical_culture = westerngfx
-
-		icon = 39
-		heresy_icon = 75
-		
-		color = { 0.9 0.8 0.3 }
-		
-		high_god_name = GOD_GOD
-		
-		god_names = {
-			GOD_GOD GOD_THE_LORD GOD_JESUS GOD_THE_BLESSED_VIRGIN GOD_THE_SAINTS GOD_THE_FALLEN_STAR
-		}
-		
-		evil_god_names = {
-			THE_DEVIL SATAN LUCIFER
-		}
-		
-		can_grant_divorce = yes
-		can_grant_invasion_cb = invasion
-		can_call_crusade = no
-		priests_can_inherit = no
-		priests_can_marry = no
-		allow_rivermovement = yes
-		
-		religious_clothing_head = 0
-		religious_clothing_priest = 1
-		
-		autocephaly = yes
-
-		crusade_name = CRUSADE
-		scripture_name = THE_BIBLE
-		priest_title = PASTOR
-		
-		intermarry = catholic
-		intermarry = evangelical
-		intermarry = ursuline
-		intermarry = high_church
-		intermarry = anabaptist
-		intermarry = apostolic
-		
-		intermarry = neognostic
-		intermarry = sedevacantist
-		intermarry = nestorian
-		intermarry = charismatic
-		intermarry = antinomian
-		intermarry = postadventist
-		intermarry = angeline
-		intermarry = nonconformist
-		intermarry = batenburger
-		intermarry = moravian
-		intermarry = wormwoodist
-		intermarry = celeste
-		intermarry = cristo_rey
-		intermarry = reformista
-		
-		intermarry = lamanita
-		intermarry = furiegi
-		
-		intermarry = navegante
-		intermarry = fidencista
-		intermarry = sacred_heart
-		intermarry = patria_grande
-		
-		intermarry = qabantajik
-	}
-	
 	moravian = { #traditional moravianism
 		graphical_culture = westerngfx
 
@@ -1382,7 +1315,6 @@ christian = {
 		heresy_icon = 96
 		
 		color = { 0.7 0.7 0.4 }
-		parent = falling_star
 		
 		high_god_name = GOD_GOD
 		
@@ -1436,7 +1368,8 @@ christian = {
 		heresy_icon = 96
 		
 		color = { 0.8 0.6 0.2 }
-		parent = falling_star
+		parent = moravian
+		
 		
 		high_god_name = GOD_GOD
 		
@@ -1471,7 +1404,7 @@ christian = {
 		heresy_icon = 96
 		
 		color = { 0.3 0.1 0.5 }
-		parent = falling_star
+		parent = moravian
 		
 		high_god_name = GOD_GOD
 		
@@ -2413,7 +2346,7 @@ christian = {
 		priests_can_inherit = no
 		priests_can_marry = yes	
 		defensive_attrition = yes
-		peace_piety_gain = 0
+		peace_piety_gain = 1.5
 		attacking_same_religion_piety_loss = yes
 		priest_title = PADRE
 		high_god_name = GOD_DIOS
@@ -4240,7 +4173,81 @@ oldworld = {
         
         religious_clothing_head = 18
         religious_clothing_priest = 18
-    }	
+    }
+
+	falling_star = {
+		graphical_culture = westerngfx
+
+		icon = 39
+		heresy_icon = 75
+		parent = siliconist
+		
+		color = { 0.9 0.8 0.3 }
+		
+        
+        interface_skin = { consumerist_interface oldworld_interface }
+
+        high_god_name = GOD_ALL-GO-RYTHM
+
+        god_names = {
+            GOD_TEK GOD_CHIPTUNE GOD_TECHNI GOD_DAYTA
+        }
+
+        evil_god_names = {
+            GOD_DISCORDANCE GOD_TROJAN GOD_WRINGING_BUGS
+        }
+
+        crusade_name = ASSIMILATION
+        scripture_name = THE_ACCORDANCE
+        priest_title = TECH_PRIEST
+		can_grant_divorce = yes
+		can_grant_invasion_cb = invasion
+		can_call_crusade = no
+		priests_can_inherit = no
+		priests_can_marry = no
+		allow_rivermovement = yes
+		
+		religious_clothing_head = 0
+		religious_clothing_priest = 1
+		
+		autocephaly = yes
+
+		crusade_name = CRUSADE
+		scripture_name = THE_BIBLE
+		priest_title = PASTOR
+		
+		intermarry = catholic
+		intermarry = evangelical
+		intermarry = ursuline
+		intermarry = high_church
+		intermarry = anabaptist
+		intermarry = apostolic
+		
+		intermarry = neognostic
+		intermarry = sedevacantist
+		intermarry = nestorian
+		intermarry = charismatic
+		intermarry = antinomian
+		intermarry = postadventist
+		intermarry = angeline
+		intermarry = nonconformist
+		intermarry = batenburger
+		intermarry = moravian
+		intermarry = wormwoodist
+		intermarry = celeste
+		intermarry = cristo_rey
+		intermarry = reformista
+		
+		intermarry = lamanita
+		intermarry = furiegi
+		
+		intermarry = navegante
+		intermarry = fidencista
+		intermarry = sacred_heart
+		intermarry = patria_grande
+		
+		intermarry = qabantajik
+	}	
 	
 }
 
