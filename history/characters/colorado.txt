@@ -230,6 +230,12 @@
 	dynasty=1876018
 	culture=coloradan
 	religion=trailwalker
+	trait=tough_soldier
+    trait=robust
+    trait=pious
+	trait=stubborn
+	trait=patient
+	father=1875069
 	2635.1.1={birth=yes}
 	2700.1.1={death=yes}
 }
@@ -362,7 +368,7 @@
 	learning=5
 	trait=legendary
 	occluded=yes
-	trait=underhanded_rogue
+	trait=charismatic_negotiator
 	trait=content
 	trait=groomed
 	trait=honest
@@ -384,7 +390,7 @@
 	learning=4
 	trait=legendary
 	occluded=yes
-	trait=indulgent_wastrel
+	trait=tough_soldier
 	trait=proud
 	trait=trusting
 	trait=greedy
@@ -393,7 +399,9 @@
 	trait=arbitrary
 	father=1875065
 	2158.8.9= {birth=yes}
-	2199.1.1= {death=yes}
+	2199.1.1={death={
+		death_reason=death_battle
+	}
 }
 
 1875067= { name="Matt"
@@ -401,13 +409,16 @@
 	culture=coloradan
 	religion=montanist
 	diplomacy=6
-	martial=7
+	martial=15
 	stewardship=5
 	intrigue=5
-	learning=8
+	learning=18
 	trait=legendary
 	occluded=yes
-	trait=mastermind_theologian
+	trait=brilliant_strategist
+	trait=theologian
+	trait=aggressive_leader
+	trait=inspiring_leader
 	trait=ambitious
 	trait=quick
 	trait=deacon
@@ -437,7 +448,7 @@
 	trait=humble
 	trait=diligent
 	father=1875067
-	2202.10.14= {birth=yes}
+	2195.10.14= {birth=yes}
 	2246.1.1= {death=yes}
 }
 
@@ -449,31 +460,37 @@
 	trait=strategist
 	trait=bad_priest_christian
 	trait=quick
-	trait=homosexual
+	trait=bisexual
 	trait=erudite
 	trait=poet
 	trait=ambitious
 	trait=brave
-	trait=cynical
+	trait=proud
 	father=1875031
 	2229.3.16= {birth=yes
 	give_nickname=nick_the_conqueror}
-	2269.1.1= {death=yes}
+	2257.9.4={death={
+			death_reason=death_soldier_rabble
+		}
+	}
 }
 
 1875033= { name="Golden"
 	dynasty=5001184
 	culture=coloradan
 	religion=montanist
-	trait=hunter
+	trait=duelist
 	trait=skilled_tactician
 	trait=strong
 	trait=is_fat
 	trait=gluttonous
 	trait=stubborn
 	trait=uncouth
+	trait=content
 	father=1875031
-	2232.6.6= {birth=yes}
+	2230.6.6= {birth=yes
+	give_nickname=nick_the_heavyweight
+	}
 	2282.1.1={death=yes}
 }
 
@@ -483,6 +500,7 @@
 	religion=montanist
 	trait=midas_touched
 	trait=administrator
+	trait=pneumonic
 	trait=shrewd
 	trait=kind
 	trait=just
@@ -492,7 +510,7 @@
 	trait=devout
 	father=1875033
 	2260.8.1= {birth=yes}
-	2305.1.1= {death=yes}
+	2305.1.1={death={death_reason=death_trait}
 }
 
 1875035= { name="Owen"
@@ -507,8 +525,11 @@
 	trait=erudite
 	trait=humble
 	father=1875034
-	2284.5.21= {birth=yes
-	set_special_character_title = MOUNTAIN_FATHER_TITLE
+	2284.5.21= {birth=yes}
+	2201.1.1 = {
+		effect_even_if_dead = {
+			set_special_character_title = MOUNTAIN_FATHER_TITLE
+		}
 	}
 	2307.1.1= {death=yes}
 }
@@ -526,9 +547,9 @@
 	trait=cynical
 	trait=leper
 	father=1875034
-	2288.7.30= {birth=yes
-	give_nickname=nick_the_proud}
-	2321.1.1= {death=yes}
+	2286.7.30= {birth=yes
+	give_nickname=nick_the_proud_lion}
+	2321.1.1={death={death_reason=death_trait}
 }
 
 1875037= { name="Golden"
@@ -542,8 +563,8 @@
 	trait=kind
 	trait=devout
 	father=1875036
-	2304.4.24= {birth=yes}
-	2352.1.1= {death=yes}
+	2301.4.24= {birth=yes}
+	2358.1.1= {death=yes}
 }
 
 1875038= { name="Matt"
@@ -552,7 +573,7 @@
 	religion=montanist
 	trait=skilled_tactician
 	trait=fair
-	trait=duelist
+	trait=hunter
 	trait=brave
 	trait=diligent
 	trait=proud
@@ -578,7 +599,10 @@
 	father=1875038
 	2353.5.10= {birth=yes
 	give_nickname=nick_the_wicked}
-	2384.1.1= {death=yes}
+	2384.1.1={death={
+			death_reason=death_murder_unknown #Murdered.
+		}
+	}
 }
 
 1875040= { name="Kyle"
@@ -589,7 +613,7 @@
 	trait=timid
 	trait=conscientious
 	father=1875039
-	2370.9.2= {birth=yes}
+	2371.4.2= {birth=yes}
 	2385.1.1={death={
 			death_reason=death_execution_eaten
 			killer=1875041
@@ -635,7 +659,7 @@
 	trait=cynical
 	trait=paranoid
 	father=1875039
-	2372.10.31= {birth=yes
+	2370.10.31= {birth=yes
 	give_nickname=nick_son_of_blucifer}
 	2436.1.1= {death=yes}
 }
@@ -652,7 +676,7 @@
 	trait=honest
 	father=1875042
 	2398.9.13= {birth=yes}
-	2435.10.12= {death = {
+	2437.10.10= {death = {
 			death_reason = death_murder_unknown_strangle
 		}
 	}
@@ -740,14 +764,13 @@
 	culture=coloradan
 	religion=montanist
 	trait=skilled_tactician
-	trait=homosexual
+	trait=lustful
 	trait=robust
 	trait=brave
 	trait=proud
-	trait=chaste
 	trait=depressed
 	mother=1875047
-	2504.2.2= {birth=yes}
+	2495.2.2= {birth=yes}
 	2557.1.1= {death=yes}
 }
 
@@ -780,7 +803,6 @@
 	trait=cynical
 	trait=honest
 	trait=poet
-	trait=homosexualmarried_mm
 	father=1875049
 	2552.6.23= {birth=yes
 	give_nickname=nick_the_apostate}
@@ -828,7 +850,11 @@
 	mother=1875053
 	2590.3.18= {birth=yes
 	give_nickname=nick_the_betrayer}
-	2650.10.6= {death=yes}
+	2622.12.17={death={
+			death_reason=death_battle_duel #Murdered in combat.
+			killer=1875069
+		}
+	}
 }
 
 1875053= { name="Winry"
@@ -988,7 +1014,6 @@
 	trait = patient
 	trait = diligent
 	trait = stubborn
-	trait=homosexualmarried_mm
 	2552.3.25={birth=yes
 	give_nickname=nick_the_fair}
 	2624.4.2={death=yes}
@@ -1032,4 +1057,24 @@
 	trait = brave
 	trait = lustful
 	2645.4.4={birth=yes}
+}
+
+1875069={
+	name="Micah"
+	dynasty=1876018
+	culture=grangelander
+	religion=trailwalker
+	diplomacy = 7
+	martial = 7
+	stewardship = 7 
+	intrigue = 6
+	learning = 6
+	trait = skilled_tactician
+	trait = adventurer
+	trait = adventurer
+	trait = wroth
+	trait = brave
+	trait = chaste
+	2591.1.1={birth=yes}
+	2658.1.1={death=yes}
 }
