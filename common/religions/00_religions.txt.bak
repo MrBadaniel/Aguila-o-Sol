@@ -4125,6 +4125,56 @@ oldworld = {
         religious_clothing_priest = 1
         
     }
+	
+	olympian = {
+		graphical_culture = norsegfx
+
+        icon = 104
+        heresy_icon = 105
+		
+		parent = kinemite
+		
+		color = { 179 179 179 }
+
+		high_god_name = GOD_NIKE
+
+		god_names = {
+			GOD_NIKE GOD_HERCULES GOD_THERUN GOD_BAMBINO GOD_ALLSTAR GOD_SHREDDER GOD_MARATHON
+		}
+		evil_god_names = {
+			GOD_SLOTH GOD_CHEAT GOD_AECHGIAECH
+		}
+		
+		unit_modifier = {
+			levy_size = 0.3
+			
+			retinuesize_perc = 0.5
+			
+			key = "OFF_RELIGION"
+		}
+		
+		scripture_name = THE_OLYMPIC_SCROLLS
+		priest_title = COACH
+		
+		priests_can_marry = yes
+		#allow_viking_invasion = yes # Allows the "Prepare Invasion" diplo action
+		allow_looting = yes
+		seafarer = yes
+		allow_rivermovement = yes
+		female_temple_holders = no
+		defensive_attrition = yes
+		peace_prestige_loss = yes # Lose Prestige while at peace
+		raised_vassal_opinion_loss = no
+		max_consorts = 3
+		independence_war_score_bonus = 30 # Overrides define CONTESTED_TITLE_OCCUPIED_WARSCORE_BONUS_INDEP
+		
+		aggression = 1.5 # AI aggression factor
+		
+		short_reign_opinion_year_mult = 5 # The default is 2
+
+		religious_clothing_head = 3
+		religious_clothing_priest = 3
+	}	
     
     siliconist = {
         graphical_culture = hellenicgfx
@@ -4211,10 +4261,6 @@ oldworld = {
 		religious_clothing_priest = 1
 		
 		autocephaly = yes
-
-		crusade_name = CRUSADE
-		scripture_name = THE_BIBLE
-		priest_title = PASTOR
 		
 		intermarry = catholic
 		intermarry = evangelical

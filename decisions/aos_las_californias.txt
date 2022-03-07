@@ -1,0 +1,107 @@
+decisions = {
+	create_princedom_mojave = {
+		only_independent = yes
+		is_high_prio = yes
+		ai_check_interval = 60
+		potential = {
+			NOT = {
+				higher_tier_than = DUKE
+			}
+			OR = {
+				religion = nazarene
+				religion = true_cross
+				religion = sedevacantist
+				religion = catholic
+				religion = sacred_heart
+				religion = la_hermandad
+				religion = misional
+				religion = josephite 
+				religion = gran_comision
+				religion = alurista
+				religion = navegante
+				religion = fidencista
+			}
+			k_princedom_mojave = {
+				has_holder = no
+			}
+			k_princedom_mojave = {
+				is_titular = yes
+			}
+			NOR = {
+				has_alternate_start_setting = {
+					setting = dejure
+					value = random
+				}
+				has_alternate_start_setting = {
+					setting = title_names
+					value = random
+				}
+				has_alternate_start_setting = {
+					setting = title_names
+					value = random_including_duchies
+				}
+			}
+		}
+		
+		allow = {
+			is_adult = yes
+			independent = yes
+			war = no
+			OR = {
+				religion = nazarene
+				religion = true_cross
+				religion = sedevacantist
+				religion = catholic
+				religion = sacred_heart
+				religion = la_hermandad
+				religion = misional
+				religion = josephite 
+				religion = gran_comision
+				religion = alurista
+				religion = navegante
+				religion = fidencista
+			}
+			has_landed_title = d_mojave
+			NOT = {
+				is_incapable = yes
+			}
+			completely_controls = d_mojave
+			completely_controls = d_death_valley
+			completely_controls = c_antelope
+			completely_controls = c_palm_springs
+			conditional_tooltip = {
+				trigger = {
+					ai = no
+				}
+
+				prestige = 1000
+			}
+			wealth = 100
+		}
+		
+		effect = {
+			wealth = -100
+			primary_title = {
+				save_event_target_as = current_primary_title
+			}
+			k_princedom_mojave = {
+				show_scope_change = no
+				grant_title = ROOT
+				copy_title_laws = event_target:current_primary_title
+			}
+			d_mojave = {
+				show_scope_change = no
+				de_jure_liege = k_princedom_mojave
+			}
+			d_death_valley = {
+				show_scope_change = no
+				de_jure_liege = k_princedom_mojave
+			}
+			d_berdoo = {
+				show_scope_change = no
+				de_jure_liege = k_princedom_mojave
+			}
+		}
+	}
+	
+}

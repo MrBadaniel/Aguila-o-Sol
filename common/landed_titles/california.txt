@@ -22,6 +22,25 @@ e_california = {
 	
 	paiute = "Kadapone"
 	
+	k_princedom_mojave = {
+		color={ 241 215 104 }
+		color2={ 255 255 255 }
+		capital = 2075 # Barstow
+	
+		allow = {
+			conditional_tooltip = {
+				trigger = {
+					k_princedom_mojave = {
+						is_titular = yes
+					}
+				}
+				k_princedom_mojave = {
+					is_titular = no
+				}
+			}
+		}
+	}	
+	
 	k_baja_california = {
 		color={ 215 91 210 }		
 		color2={ 255 255 255 }		

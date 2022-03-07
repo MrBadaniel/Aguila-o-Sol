@@ -9,7 +9,11 @@ targetted_decisions = {
 		potential = {
 			has_dlc = "Sons of Abraham"
 			is_playable = yes
+			OR = {
 			religion = la_hermandad
+			religion = josephite 
+			religion = alurista
+			}
 			NOR = { 
 		trait = school_leader
 		trait = school_giver

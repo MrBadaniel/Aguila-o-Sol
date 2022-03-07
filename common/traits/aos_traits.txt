@@ -4,7 +4,11 @@ school_giver = { #School of Day
 	religious = yes
 	
 	potential = { #this ensures that only braceros get it
-		religion = la_hermandad
+			OR = {
+			religion = la_hermandad
+			religion = josephite 
+			religion = alurista
+			}
 	}
 	
 	opposites = {
@@ -26,7 +30,11 @@ school_organizer = { #School of Huerta
 	religious = yes
 	
 	potential = { #this ensures that only braceros get it
-		religion = la_hermandad
+			OR = {
+			religion = la_hermandad
+			religion = josephite 
+			religion = alurista
+			}
 	}
 	
 	opposites = {
@@ -48,7 +56,11 @@ school_teacher = { #School of Belloc and Chesterton
 	religious = yes
 	
 	potential = { #this ensures that only braceros get it
-		religion = la_hermandad
+			OR = {
+			religion = la_hermandad
+			religion = josephite 
+			religion = alurista
+			}
 	}
 	
 	opposites = {
@@ -73,7 +85,11 @@ school_leader = { #School of Chavez
 	religious = yes
 	
 	potential = { #this ensures that only braceros get it
-		religion = la_hermandad
+			OR = {
+			religion = la_hermandad
+			religion = josephite 
+			religion = alurista
+			}
 	}
 	
 	opposites = {
