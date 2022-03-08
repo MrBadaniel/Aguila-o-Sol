@@ -160,6 +160,7 @@ succession_laws = {
 								religion = pagan
 								religion = trailwalker
 								religion = kinemite
+								religion = olympian
 							}
 						}
 					}
@@ -583,6 +584,7 @@ succession_laws = {
 					NOT = { religion_group = pagan_group }
 					NOT = { religion = midewiwin }
 					NOT = { religion = kinemite }
+					NOT = { religion = olympian }
 					NOT = { religion = raven_tales }
 					is_reformed_religion = yes
 					is_patrician = yes
@@ -794,6 +796,7 @@ succession_laws = {
 							}
 							NOT = { religion = midewiwin }
 							NOT = { religion = kinemite }
+							NOT = { religion = olympian }
 							NOT = { religion = raven_tales }
 							AND = {
 								religion = patria_grande
@@ -1004,6 +1007,7 @@ succession_laws = {
 					NOT = { religion_group = pagan_group }
 					NOT = { religion = midewiwin }
 					NOT = { religion = kinemite }
+					NOT = { religion = olympian }
 					NOT = { religion = raven_tales }
 					is_reformed_religion = yes
 					has_law = succession_voting_power_1
@@ -1057,6 +1061,7 @@ succession_laws = {
 				government = theocratic_feudal_government
 				government = agrarian_government
 				religion = kinemite
+				religion = olympian
 			} } }
 			NOR = { #Special Elective.
 				title = e_dixie
@@ -1156,6 +1161,7 @@ succession_laws = {
 					NOT = { religion_group = pagan_group }
 					NOT = { religion = midewiwin }
 					NOT = { religion = kinemite }
+					NOT = { religion = olympian }
 					NOT = { religion = raven_tales }
 					is_reformed_religion = yes
 					has_law = succession_voting_power_1
@@ -1613,6 +1619,7 @@ succession_laws = {
 			holder_scope = {
 				OR = {
 					religion = kinemite
+					religion = olympian
 					AND = {
 						has_religion_feature = religion_patriarchal
 						is_theocracy = no
