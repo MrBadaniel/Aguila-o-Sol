@@ -11,7 +11,6 @@ culture =
 		"antinomian"
 		"charismatic"
 		"postadventist"
-		"falling_star"
 		"moravian"
 		"wormwoodist"
 		"nestorian"
@@ -20,7 +19,14 @@ culture =
 		"celeste"
 		"nazarene"
 		"true_cross"
+		"montanist"
 		"edenite"
+		"la_hermandad"
+		"insular"
+		"josephite"
+		"gran_comision"
+		"alurista"
+		"misional"
 		"glorian" #placeholder
 	}
 	
@@ -309,6 +315,7 @@ culture =
 		"hamiltonian"
 		"jeffersonian"
 		"libertarian"
+		"kinemite"
 	}
 
 	templates = { 
@@ -466,6 +473,7 @@ culture =
 	religion = {
 		"norse_pagan_reformed"
 		"norse_pagan"
+		"olympian"
 	}
 
 	templates = { 
@@ -608,7 +616,7 @@ culture =
 	religion = {
 		"rust_cultist"
 		"chrome_cultist"
-		"kinemite"
+		"falling_star"
 		"siliconist"
 	}
 
@@ -670,6 +678,13 @@ culture =
 		}
 		texture = {
 			file = "gfx\\coats_of_arms\\ate_dynasties_rust.tga"
+			size = { x = 10 y = 1 }
+			noOfFrames = 10
+			color = 0
+			random = no # Do not use for random CoAs
+		}
+		texture = {
+			file = "gfx\\coats_of_arms\\aos_dynasties_rust.tga"
 			size = { x = 10 y = 1 }
 			noOfFrames = 10
 			color = 0

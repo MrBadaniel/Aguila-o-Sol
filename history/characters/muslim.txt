@@ -638,11 +638,13 @@
 	trait=deceitful
 	trait=ambitious
 	trait=arbitrary
-	culture=angeleno
+	culture=italian
 	religion=cetic
 	give_nickname=nick_the_soldier
 	father=2200204
-	2576.4.5={birth=yes}
+	2576.4.5={birth=yes
+	culture=angeleno
+	}
 	2616.11.7={death=yes}
 }
 2200031={
@@ -655,9 +657,11 @@
 	intrigue=4 
 	learning=2
 	trait=way_cowl
-	culture=angeleno
+	culture=italian
 	religion=cetic
-	2597.4.5={birth=yes}
+	2597.4.5={birth=yes
+	culture=angeleno
+	}
 	2621.6.3={death={
 			death_reason=death_murder_unknown #Murdered.
 			killer=1910150
@@ -4548,7 +4552,7 @@ name="Elfie"
 	female=yes
 	dna="bhbdjmhabbs"
 	properties="wf0cjd000000"
-	dynasty=1850066
+	dynasty=2030024
 	martial=4
 	diplomacy=10
 	stewardship=4
@@ -4572,6 +4576,7 @@ name="Elfie"
 			set_character_flag=overridemarriage
 		}
 	}
+	2326.1.14={add_spouse=1802067}
 	2380.11.7={death=yes}
 }
 2200200={
@@ -4591,8 +4596,9 @@ name="Elfie"
 	trait=schemer
 	disallow_random_traits=yes
 	mother=2200199
-	culture=german
-	religion=sedevacantist
+	father=1802067
+	culture=italian
+	religion=olympian
 	2350.12.20={
 		birth=yes
 		culture=angeleno
@@ -4623,11 +4629,10 @@ name="Elfie"
 	trait=ambitious
 	trait=diligent
 	trait=schemer
-	trait=way_book
 	disallow_random_traits=yes
 	father=2200200
-	culture=german
-	religion=cetic
+	culture=italian
+	religion=olympian
 	2390.12.20={
 		birth=yes
 		culture=angeleno
@@ -4652,14 +4657,13 @@ name="Elfie"
 	trait=flamboyant_schemer
 	trait=patient
 	trait=ambitious
-	trait=way_cowl
 	trait=diligent
 	trait=schemer
 	trait=lustful
 	disallow_random_traits=yes
 	father=2200201
-	culture=german
-	religion=cetic
+	culture=italian
+	religion=kinemite
 	2430.12.20={
 		birth=yes
 		culture=angeleno
@@ -4688,11 +4692,10 @@ name="Elfie"
 	trait=shrewd
 	trait=schemer
 	trait=imp_ex4
-	trait=way_fist
 	disallow_random_traits=yes
 	father=2200202
-	culture=german
-	religion=cetic
+	culture=italian
+	religion=kinemite
 	2480.12.20={
 		birth=yes
 		culture=angeleno
@@ -4724,7 +4727,7 @@ name="Elfie"
 	trait=imp_ex4
 	disallow_random_traits=yes
 	father=2200203
-	culture=german
+	culture=italian
 	religion=cetic
 	2520.12.20={
 		birth=yes
