@@ -1,0 +1,125 @@
+theocracy_governments = {
+
+	theocracy_government = {
+		preferred_holdings = { TEMPLE }
+		allowed_holdings = {
+			TEMPLE
+			CASTLE
+			FORT
+			HOSPITAL
+		}
+		allowed_holdings_culture = { # Will not get the wrong government type penalty for tribes of the same culture
+			TRIBAL
+		}
+		free_revoke_on_governments_religion = { # Tribal vassals of other religions can have their titles revoked for free
+			tribal_government
+		}
+		accepts_liege_governments = {
+			feudal_government
+			bureaucratic_government
+			republic_government
+			merchant_republic_government
+			theocratic_feudal_government
+			colonial_government
+			#military_governorate
+		}
+		frame_suffix = "_theocracy"
+		title_prefix = "temple_"
+		potential = {
+			NAND = { #prevents Emperor of Cali from going Theocratic
+				religion = cetic
+				controls_religion = yes
+			}
+			NAND = { #prevents theodem frickery
+				OR = { 
+					religion = woolleyite
+					religion = mormon
+					religion = strangite
+				}
+				controls_religion = no
+				OR = {
+					tier = duke
+					tier = king
+					tier = emperor
+				}
+			}
+			NAND = { #prevents Imam Zakariyya from going Theocratic
+				religion = imamite
+				controls_religion = yes
+			}
+			NAND = {
+				religion = revivalist
+				controls_religion = yes
+			}
+			NAND = {
+				religion = alawiyya
+				controls_religion = yes
+			}
+			NAND = {
+				religion = misrist
+				controls_religion = yes
+			}
+			NAND = {
+				religion = qingzhen
+				controls_religion = yes
+			}
+			NAND = {
+				religion = exovedate
+				controls_religion = yes
+			}
+			NAND = {
+				religion = nousthreskeia
+				controls_religion = yes
+			}
+			NAND = {
+				religion = sol_invicta
+				controls_religion = yes
+			}
+			NAND = {
+				religion = patria_grande
+				controls_religion = yes
+			}
+			NAND = {
+				religion = atomicist
+				controls_religion = yes
+			}
+			NAND = {
+				religion = celeste
+				controls_religion = yes
+			}
+			NAND = {
+				religion = true_cross
+				controls_religion = yes
+			}
+			NAND = {
+				religion = glorian
+				controls_religion = yes
+			}
+			NAND = {
+				religion = navegante
+				controls_religion = yes
+			}
+			holy_order = no
+			is_patrician = no
+			OR = {
+				is_female = no
+				religion_allows_female_temple_holders = yes
+			}
+			OR = {
+				is_female = yes
+				religion_allows_male_temple_holders = yes
+			}
+		}
+		
+		color = { 220 220 220 }
+		
+		can_create_kingdoms = no
+		have_gender_laws = no
+		can_be_granted_kingdoms_and_empires_by_other_government = no
+
+		can_build_tribal = no
+		
+		capital_move_delay = 600
+	}
+	
+}

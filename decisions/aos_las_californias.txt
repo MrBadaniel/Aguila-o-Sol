@@ -4,6 +4,13 @@ decisions = {
 		is_high_prio = yes
 		ai_check_interval = 60
 		potential = {
+			capital_scope = {
+				OR = {
+				d_berdoo
+				d_death_valley
+				d_mojave
+				}
+			}
 			NOT = {
 				higher_tier_than = DUKE
 			}
