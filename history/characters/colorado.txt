@@ -1,4 +1,4 @@
-###Ã„NSI
+###ÄNSI
 1876001={
 	name="Rockhart"
 	dynasty=5001185
@@ -236,7 +236,11 @@
 	trait=stubborn
 	trait=patient
 	father=1875069
-	2635.1.1={birth=yes}
+	2635.1.1={birth=yes
+			effect={
+			add_strong_claim=k_colorado
+		}
+	}
 	2700.1.1={death=yes}
 }
 
@@ -266,7 +270,7 @@
 1876021={
 	name="Jade"
 	female=yes
-	dynasty=1876016
+	dynasty=1876024
 	culture=coloradan
 	religion=mormon
 	trait=brilliant_strategist
@@ -275,7 +279,8 @@
 	trait=devout
 	trait=diligent
 	trait=patient
-	2641.1.1={birth=yes}
+	father=1875075
+	2642.1.1={birth=yes}
 	2700.1.1={death=yes}
 }
 
@@ -288,7 +293,8 @@
 	trait=greedy
 	trait=envious
 	trait=shy
-	2638.1.1={birth=yes}
+	father=1875075
+	2641.1.1={birth=yes}
 	2700.1.1={death=yes}
 }
 
@@ -1080,6 +1086,7 @@
 	trait = wroth
 	trait = brave
 	trait = chaste
+	give_nickname=nick_the_pale_rider
 	2591.1.1={birth=yes}
 	2658.1.1={death=yes}
 }
@@ -1135,4 +1142,48 @@
 	trait = honest
 	trait = shy
 	2622.9.14={birth=yes}
+}
+
+1875073= { name="Hernán"
+	dynasty=5001228 #Montoya
+	culture=neomexicano
+	religion=montanist
+	trait=scholarly_theologian
+	trait=bastard
+	trait=deacon
+	trait=devout
+	trait=lustful
+	trait=honest
+	trait=content
+	father=1875039
+	mother=1875074
+	2375.8.18= {birth=yes}
+	2445.10.25={death=yes}
+}
+
+1875074= { name="Trinidad"
+	female=yes
+	culture=neomexicano
+	religion=misional
+	trait=indulgent_wastrel
+	trait=franciscan_branch
+	trait=fair
+	trait=feeble
+	trait=shy
+	trait=honest
+	2358.1.1= {birth=yes}
+	2423.11.12={death=yes}
+}
+
+1875075= { name="Gilead"
+	dynasty=1876024
+	culture=utahn
+	religion=mormon
+	trait=skilled_tactician
+	trait=holy_warrior
+	trait=adventurer
+	trait=zealous
+	trait=uncouth
+	2591.5.24= {birth=yes}
+	2662.4.2={death=yes}
 }

@@ -2559,12 +2559,6 @@
 	}
 }
   
-  #Gene Capistrano
-  #Claims to be the bastard of Diego Capistrano
-  #2166 to 2166 vanishes after heavy losses death_left_life_entered_history
-  
-  #Lucas Stevens, the 2190 to 2192, rebels and is killed in a rabble death_rabble
-  
   #Kane Rogers
   #Appears after the defeat of Jamal the Matyr
   #rules from 2247 to 2256, forms the Kinemite Guild and dies in 2277
@@ -2705,5 +2699,49 @@
 	2326.1.14={add_spouse=2200199}
 	2377.6.13={death=yes}
 }
+
+1802068={
+	name="Gene"
+	culture=angeleno
+	dynasty=5001199 #Capistrano #2
+	religion=kinemite
+	trait=tough_soldier
+	trait=trickster
+	trait=light_foot_leader
+	trait=bastard
+	trai=peasant_leader
+	trait=envious
+	trait=ambitious
+	trait=charitable
+	trait=deceitful
+	occluded=yes
+	trait=legendary
+	2137.5.2={birth=yes}
+	2166.9.9={death={
+			death_reason=death_left_life_entered_history
+		}
+	}
+}
+
+1802069={
+	name="Lucas"
+	culture=angeleno
+	dynasty=5001201 #Stevens
+	religion=kinemite
+	trait=scholarly_theologian
+	trai=peasant_leader
+	trait=reclusive
+	trait=ambitious
+	trait=zealous
+	trait=erudite
+	occluded=yes
+	trait=legendary
+	2151.2.12={birth=yes}
+	2192.12.4={death={
+			death_reason=death_rabble
+		}
+	}
+}
+  
 
 #slavic Carranza

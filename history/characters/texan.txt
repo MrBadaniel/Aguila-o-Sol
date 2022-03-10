@@ -620,7 +620,12 @@
 	trait=diligent
 	trait=elusive_shadow
 	2630.1.1={birth=yes
-		give_nickname=nick_the_speedy}
+		give_nickname=nick_the_speedy
+		effect={
+			set_character_flag=diversity
+			set_character_flag=physique
+		}
+		}
 	2700.1.1={death=yes}
 }
 
@@ -857,7 +862,7 @@
 	female=yes
 	dna="debogngpnhn"
 	culture=tejano
-	religion=sacred_heart
+	religion=la_hermandad
 	martial=4
 	diplomacy=4
 	stewardship=3

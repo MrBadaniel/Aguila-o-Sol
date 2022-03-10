@@ -691,6 +691,10 @@ feudal_governments = {
 		}
 		frame_suffix = "_orf"
 		potential = {
+			NAND = {
+				controls_religion = yes
+				religion = la_hermandad
+			}
 			OR = {
 				capital_scope = {
 					region = custom_range_range
@@ -1049,10 +1053,14 @@ feudal_governments = {
 		title_prefix = "reserve_"
 
 		potential = {
+		NAND = {
+				controls_religion = yes
+				religion = edenite
+			}
 		OR= {
 		religion = forester
 		religion = edenite
-		}
+			}
 			is_patrician = no		
 		}
 		
