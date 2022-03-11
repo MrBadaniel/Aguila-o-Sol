@@ -238,3 +238,71 @@ cristero_branch = {
 	religious = yes
 	ruler_designer_cost = 0
 }
+
+la_hermandad_viejo = {
+	potential = { #this ensures that only braceros get it
+			OR = {
+			religion = la_hermandad
+			religion = josephite 
+			religion = alurista
+			}
+		is_female = no
+	}
+	opposites = {
+		la_hermandad_vieja
+		la_hermandad_padre
+	}
+	monthly_character_piety = 0.5
+	same_religion_opinion = 10
+	
+	religious = yes
+	customizer = no
+	random = no
+}
+
+la_hermandad_vieja = {
+	potential = { #this ensures that only braceros get it
+			OR = {
+			religion = la_hermandad
+			religion = josephite 
+			religion = alurista
+			}
+		is_female = yes
+	}
+	
+	opposites = {
+		la_hermandad_viejo
+		la_hermandad_padre
+	}	
+	monthly_character_piety = 0.5
+	same_religion_opinion = 10
+	
+	religious = yes
+	customizer = no
+	random = no
+}
+
+la_hermandad_padre = {
+	potential = { #this ensures that only braceros get it
+			OR = {
+			religion = la_hermandad
+			religion = josephite 
+			religion = alurista
+			}
+		is_female = no
+	}
+	opposites = {
+		la_hermandad_viejo
+		la_hermandad_vieja
+	}
+	monthly_character_piety = 0.15
+	same_religion_opinion = 15
+	
+	religious = yes
+	cannot_marry = yes
+	cannot_inherit = no
+	customizer = no
+	random = no
+	
+	male_compliment = COMPL_MONK
+}

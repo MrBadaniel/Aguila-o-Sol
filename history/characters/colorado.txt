@@ -359,7 +359,10 @@
 	trait=patient
 	trait=diligent
 	2108.3.3= {birth=yes
-		give_nickname=nick_the_unifier}
+		effect_even_if_dead = {
+			set_special_character_title = OLD_KING_TITLE
+			}		
+		}
 	2185.1.1= {death=yes}
 }
 
