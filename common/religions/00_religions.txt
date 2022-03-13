@@ -4259,6 +4259,7 @@ oldworld = {
 		peace_prestige_loss = yes # Lose Prestige while at peace
 		raised_vassal_opinion_loss = no
 		max_wives = 4
+		bs_marriage = yes #Greeklings are suspicious
 		independence_war_score_bonus = 30 # Overrides define CONTESTED_TITLE_OCCUPIED_WARSCORE_BONUS_INDEP
 		
 		aggression = 1.5 # AI aggression factor
@@ -4395,7 +4396,93 @@ oldworld = {
 		intermarry = olympian
 		#intermarry = falling_star
 		intermarry = alurista
+	}
+
+	phantasmic = {
+		graphical_culture = hellenicgfx
+			
+        icon = 110
+        heresy_icon = 111
+		
+		color = { 0.4 0.4 0.4 }
+		
+		interface_skin = { americanist_interface oldworld_interface }
+		
+		crusade_name = BUYOUT
+		scripture_name = THE_TOILET_PAPERS
+		priest_title = IMAGINEER
+		piety_name = PATRIOTISM
+		
+		high_god_name = JOE_BONEY
+		
+		god_names = {
+			JOE_BONEY GOD_BARRACK GOD_BIDEN GOD_SOPA_DE_MACACO
+		}
+		
+		evil_god_names = {
+			THE_POOR THE_DARK_SKINNED GOD_SASH
+		}
+		
+		#investiture = yes
+		can_excommunicate = yes
+		can_grant_claim = yes
+		can_grant_divorce = yes
+		can_grant_invasion_cb = invasion
+		allow_rivermovement = yes
+		female_temple_holders = yes
+		
+		priests_can_marry = no
+		priests_can_inherit = no
+		psc_marriage = no # Disallow uncle-nice and aunt-nephew marriages
+		
+		religious_clothing_head = 11
+		religious_clothing_priest = 11
+		
+		intermarry = eisnerist
 	}	
+	
+	eisnerist = {
+		graphical_culture = hellenicgfx
+			
+        icon = 110
+        heresy_icon = 111
+		
+		color = { 0.4 0.4 0.4 }
+		
+		interface_skin = { americanist_interface oldworld_interface }
+		
+		crusade_name = BUYOUT
+		scripture_name = THE_TOILET_PAPERS
+		priest_title = IMAGINEER
+		piety_name = PATRIOTISM
+		
+		high_god_name = GOD_EISNEY
+		
+		god_names = {
+			JOE_BONEY GOD_BARRACK GOD_BIDEN GOD_SOPA_DE_MACACO
+		}
+		
+		evil_god_names = {
+			THE_POOR THE_DARK_SKINNED GOD_SASH
+		}
+		
+		#investiture = yes
+		can_excommunicate = yes
+		can_grant_claim = yes
+		can_grant_divorce = yes
+		can_grant_invasion_cb = invasion
+		allow_rivermovement = yes
+		female_temple_holders = yes
+		
+		priests_can_marry = no
+		priests_can_inherit = no
+		psc_marriage = no # Disallow uncle-nice and aunt-nephew marriages
+		
+		religious_clothing_head = 11
+		religious_clothing_priest = 11
+		
+		intermarry = phantasmic
+	}
 	
 }
 

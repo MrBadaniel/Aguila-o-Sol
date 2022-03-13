@@ -242,10 +242,11 @@ cristero_branch = {
 
 la_hermandad_vejete = {
 	potential = { #this ensures that only braceros get it
-			OR = 
+			OR = { 
 			religion = la_hermandad
 			religion = josephite 
 			religion = alurista
+		}
 	}
 	
 	opposites = {
