@@ -36,6 +36,24 @@ e_cascadia = {
 
 		capital = 541 # Capitol
 	}
+	
+	k_yakima = {
+		allow = {
+				AND = {
+						has_landed_title = c_yakama
+						has_landed_title = c_benton
+						OR = {
+						religion = la_hermandad
+						religion = josephite
+						religion = alurista
+					}
+				}
+		}
+		color = {0 132 61}
+		color2 = {5 195 222}
+
+		capital = 512 #Yakama
+	}	
 
 	
 	k_vancouver = {
