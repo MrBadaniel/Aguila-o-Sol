@@ -21,13 +21,8 @@ culture =
 		"true_cross"
 		"montanist"
 		"edenite"
-		"la_hermandad"
+		"purificador"
 		"insular"
-		"josephite"
-		"gran_comision"
-		"alurista"
-		"misional"
-		"glorian" #placeholder
 	}
 	
 	templates = { 
@@ -302,6 +297,13 @@ culture =
 			color = 0
 			emblem = no
 			random = no # Do not use for random CoAs
+		}
+		texture = {
+			file = "gfx\\pattern_misional.tga"
+			size = { x = 10 y = 4 }
+			noOfFrames = 40
+			color = 3
+			emblem = no
 		}		
 		
 		# WHEN ADDING NEW, ALWAYS ADD AT THE END !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!11111
@@ -315,7 +317,6 @@ culture =
 		"hamiltonian"
 		"jeffersonian"
 		"libertarian"
-		"kinemite"
 		"phantasmic"
 		"eisnerist"
 	}
@@ -475,7 +476,6 @@ culture =
 	religion = {
 		"norse_pagan_reformed"
 		"norse_pagan"
-		"olympian"
 	}
 
 	templates = { 
@@ -618,8 +618,6 @@ culture =
 	religion = {
 		"rust_cultist"
 		"chrome_cultist"
-		"falling_star"
-		"siliconist"
 	}
 
 	templates = { 
@@ -2287,6 +2285,359 @@ culture =
 			noOfFrames = 10
 			color = 0
 			random = no # Do not use for random CoAs
+		}
+		# WHEN ADDING NEW, ALWAYS ADD AT THE END !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!11111
+	}
+}
+
+culture =
+{
+	religion = {
+		"olympian"
+	}
+	
+	templates = { 
+		"coa_plain_pagan:1"
+	}
+
+
+	color = {
+		{ 242 188 81 }	#0		Or (Gold)
+		{ 246 246 246 } #1		Argent (White)
+		{ 13 103 147 } 	#2		Azure (Blue)
+		{ 188 46 46 } 	#3		Gules (Red)
+		{ 62 147 62 } 	#4		Vert (Green)
+		{ 51 51 51 }	#5		Sable (Black)
+		{ 145 58 106 }	#6		Purpure (Purple)
+		{ 165 47 45 }	#7		Sanguine (Blood Red)
+		{ 191 117 50 }	#8		Tenné (Tawny)
+		{ 53 156 183 }	#9		Bleu-Celeste (Sky Blue)
+		{ 164 44 69 }	#10		Murrey (Mulberry) Burgundy
+		{ 31 74 31 }	#11		Dark green
+		{ 114 89 66 }	#12		Brunatre (Brown)
+		{ 50 173 192 }	#13		Turqouise
+		{ 25 166 118 }	#14		Teal
+	}
+	
+	rebel_colors = { 3 5 7 }
+
+	banned_colors = 
+	{ 
+		{ 0 1 }						#0		
+		{ 0 1 9}					#1		
+		{ 2 3 4 6 7 8 9 12 14 }		#2		
+		{ 2 3 4 7 9 10	}			#3		
+		{ 2 4 6 7 9 10 13 14}		#4		
+		{ 5 10 14 15}				#5		
+		{ 2 4 6 10 11 12 }			#6		
+		{ 2 3 4 7 8 10 13 }			#7		
+		{ 2 4 6 7 8 9 }				#8		
+		{ 2 3 4 8 9 10 11 13 }		#9		
+		{ 3 4 5 6 7 9 10 }			#10		
+		{ 6 9 11 }					#11
+		{ 6 12 }					#12
+		{ 4 7 9 13 14 }				#13
+		{ 2 4 13 14 }				#14
+	}
+	
+	emblem = {
+		file = "gfx\\coats_of_arms\\emblem_muslim.dds"
+		noOfFrames = 1
+	}
+
+	# WHEN ADDING NEW, ALWAYS ADD AT THE END !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!11111
+	textures = {
+		texture = {
+			file = "gfx\\pattern_olympian.tga"
+			size = { x = 10 y = 2 }
+			noOfFrames = 20
+			color = 3
+			emblem = no
+		}
+		# WHEN ADDING NEW, ALWAYS ADD AT THE END !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!11111
+	}
+}
+
+culture =
+{
+	religion = {
+		"kinemite"
+	}
+	
+	templates = { 
+		"coa_plain_old:1"
+		#"coa_party_per_fess:2"
+		#"coa_party_per_pale:2"
+		#"coa_party_per_cross:4"
+		#"coa_party_triangle:3"
+	}
+
+	color = {
+		{ 242 188 81 }	#0		Or (Gold)
+		{ 246 246 246 } #1		Argent (White)
+		{ 13 103 147 } 	#2		Azure (Blue)
+		{ 188 46 46 } 	#3		Gules (Red)
+		{ 62 147 62 } 	#4		Vert (Green)
+		{ 51 51 51 }	#5		Sable (Black)
+		{ 145 58 106 }	#6		Purpure (Purple)
+		{ 165 47 45 }	#7		Sanguine (Blood Red)
+		{ 191 117 50 }	#8		Tenné (Tawny)
+		{ 53 156 183 }	#9		Bleu-Celeste (Sky Blue)
+		{ 164 44 69 }	#10		Murrey (Mulberry) Burgundy
+		{ 31 74 31 }	#11		Dark green
+		{ 114 89 66 }	#12		Brunatre (Brown)
+		{ 50 173 192 }	#13		Turqouise
+		{ 25 166 118 }	#14		Teal
+	}
+	
+	rebel_colors = { 3 5 7 }
+
+	banned_colors = 
+	{ 
+		{ 0 1 }						#0		
+		{ 0 1 9}					#1		
+		{ 2 3 4 6 7 8 9 12 14 }		#2		
+		{ 2 3 4 7 9 10	}			#3		
+		{ 2 4 6 7 9 10 13 14}		#4		
+		{ 5 10 14 15}				#5		
+		{ 2 4 6 10 11 12 }			#6		
+		{ 2 3 4 7 8 10 13 }			#7		
+		{ 2 4 6 7 8 9 }				#8		
+		{ 2 3 4 8 9 10 11 13 }		#9		
+		{ 3 4 5 6 7 9 10 }			#10		
+		{ 6 9 11 }					#11
+		{ 6 12 }					#12
+		{ 4 7 9 13 14 }				#13
+		{ 2 4 13 14 }				#14
+	}
+	
+	emblem = {
+		file = "gfx\\coats_of_arms\\emblem_muslim.dds"
+		noOfFrames = 1
+	}
+
+	# WHEN ADDING NEW, ALWAYS ADD AT THE END !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!11111
+	textures = {
+		texture = {
+			file = "gfx\\pattern_bohemian.tga"
+			size = { x = 10 y = 3 }
+			noOfFrames = 30
+			color = 3
+			emblem = no
+		}
+		# WHEN ADDING NEW, ALWAYS ADD AT THE END !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!11111
+	}
+}
+
+culture =
+{
+	religion = {
+		"siliconist"
+		"falling_star"
+	}
+
+	templates = { 
+		"coa_plain_rust:1"
+	}
+
+	color = {
+		{ 66 133 244 }	#0		Google Blue #these are all placeholders
+		{ 234 67 53 } 	#1		Google Red
+		{ 251 188 5 }	#2		Google Yellow
+		{ 52 168 83 }	#3		Google Green
+		{ 119 119 119 }	#4		Google Grey
+		{ 233 233 233 }	#5		Google White
+		{ 0 0 255 }		#6		BSOD Blue
+		{ 53 156 183 }	#7		Bleu-Celeste (Sky Blue)
+		{ 164 44 69 }	#8		Murrey (Mulberry) Burgundy
+		{ 31 74 31 }	#9	 	Dark green
+		{ 114 89 66 }	#10		Brunatre (Brown)
+		{ 50 173 192 }	#11		Turqouise
+		{ 25 166 118 }	#12		Teal
+	}
+	
+	rebel_colors = { 5 6 6 }
+
+	banned_colors = 
+	{ 
+		{ 0 3 }						#0		
+		{ 0 3 4}					#1		
+		{ 2 3 4 6 7 8 9 12 14 }		#2		
+		{ 2 3 4 7 9 10	}			#3		
+		{ 2 4 6 7 9 10 13 14}		#4		
+		{ 5 10 14 15}				#5		
+		{ 2 4 6 10 11 12 }			#6		
+		{ 2 3 4 7 8 10 13 }			#7		
+		{ 2 4 6 7 8 9 }				#8		
+		{ 2 3 4 8 9 10 11 13 }		#9		
+		{ 3 4 5 6 7 9 10 }			#10		
+		{ 6 9 11 }					#11
+		{ 6 12 }					#12
+		{ 4 7 9 13 14 }				#13
+		{ 2 4 13 14 }				#14
+	}
+
+	emblem = {
+		file = "gfx\\coats_of_arms\\emblem_muslim.dds"
+		noOfFrames = 1
+	}
+
+	# WHEN ADDING NEW, ALWAYS ADD AT THE END
+	textures = {
+		texture = {
+			file = "gfx\\pattern_siliconist.tga"
+			size = { x = 10 y = 4 }
+			noOfFrames = 40
+			color = 3
+			emblem = no
+			#random = no
+		}
+	}
+}
+
+culture =
+{
+	religion = {
+		"misional"
+		"penitente"
+		"gran_comision"
+		"cristo_rey"
+		"reformista"
+	}
+	
+	templates = { 
+		"coa_plain:1"
+		"coa_party_per_fess:2"
+		"coa_party_per_pale:2"
+		"coa_party_per_cross:4"
+		"coa_party_triangle:3"
+	}
+
+	color = {
+		{ 242 188 81 }	#0		Or (Gold)
+		{ 246 246 246 } #1		Argent (White)
+		{ 13 103 147 } 	#2		Azure (Blue)
+		{ 188 46 46 } 	#3		Gules (Red)
+		{ 62 147 62 } 	#4		Vert (Green)
+		{ 51 51 51 }	#5		Sable (Black)
+		{ 145 58 106 }	#6		Purpure (Purple)
+		{ 165 47 45 }	#7		Sanguine (Blood Red)
+		{ 191 117 50 }	#8		Tenné (Tawny)
+		{ 53 156 183 }	#9		Bleu-Celeste (Sky Blue)
+		{ 164 44 69 }	#10		Murrey (Mulberry) Burgundy
+		{ 31 74 31 }	#11		Dark green
+		{ 114 89 66 }	#12		Brunatre (Brown)
+		{ 50 173 192 }	#13		Turqouise
+		{ 25 166 118 }	#14		Teal
+	}
+	
+	rebel_colors = { 3 5 7 }
+
+	banned_colors = 
+	{ 
+		{ 0 1 }						#0		
+		{ 0 1 9}					#1		
+		{ 2 3 4 6 7 8 9 12 14 }		#2		
+		{ 2 3 4 7 9 10	}			#3		
+		{ 2 4 6 7 9 10 13 14}		#4		
+		{ 5 10 14 15}				#5		
+		{ 2 4 6 10 11 12 }			#6		
+		{ 2 3 4 7 8 10 13 }			#7		
+		{ 2 4 6 7 8 9 }				#8		
+		{ 2 3 4 8 9 10 11 13 }		#9		
+		{ 3 4 5 6 7 9 10 }			#10		
+		{ 6 9 11 }					#11
+		{ 6 12 }					#12
+		{ 4 7 9 13 14 }				#13
+		{ 2 4 13 14 }				#14
+	}
+	
+	emblem = {
+		file = "gfx\\coats_of_arms\\emblem.tga"
+		noOfFrames = 25
+	}
+
+	# WHEN ADDING NEW, ALWAYS ADD AT THE END !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!11111
+	textures = {
+		texture = {
+			file = "gfx\\pattern_misional.tga"
+			size = { x = 10 y = 4 }
+			noOfFrames = 40
+			color = 3
+			emblem = no
+		}
+		# WHEN ADDING NEW, ALWAYS ADD AT THE END !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!11111
+	}
+}
+
+culture =
+{
+	religion = {
+		"la_hermandad"
+		"josephite"
+		"alurista"
+	}
+	
+	templates = { 
+		"coa_plain:1"
+		"coa_party_per_fess:2"
+		"coa_party_per_pale:2"
+		"coa_party_per_cross:4"
+		"coa_party_triangle:3"
+	}
+
+	color = {
+		{ 242 188 81 }	#0		Or (Gold)
+		{ 246 246 246 } #1		Argent (White)
+		{ 13 103 147 } 	#2		Azure (Blue)
+		{ 188 46 46 } 	#3		Gules (Red)
+		{ 62 147 62 } 	#4		Vert (Green)
+		{ 51 51 51 }	#5		Sable (Black)
+		{ 145 58 106 }	#6		Purpure (Purple)
+		{ 165 47 45 }	#7		Sanguine (Blood Red)
+		{ 191 117 50 }	#8		Tenné (Tawny)
+		{ 53 156 183 }	#9		Bleu-Celeste (Sky Blue)
+		{ 164 44 69 }	#10		Murrey (Mulberry) Burgundy
+		{ 31 74 31 }	#11		Dark green
+		{ 114 89 66 }	#12		Brunatre (Brown)
+		{ 50 173 192 }	#13		Turqouise
+		{ 25 166 118 }	#14		Teal
+	}
+	
+	rebel_colors = { 3 5 7 }
+
+	banned_colors = 
+	{ 
+		{ 0 1 }						#0		
+		{ 0 1 9}					#1		
+		{ 2 3 4 6 7 8 9 12 14 }		#2		
+		{ 2 3 4 7 9 10	}			#3		
+		{ 2 4 6 7 9 10 13 14}		#4		
+		{ 5 10 14 15}				#5		
+		{ 2 4 6 10 11 12 }			#6		
+		{ 2 3 4 7 8 10 13 }			#7		
+		{ 2 4 6 7 8 9 }				#8		
+		{ 2 3 4 8 9 10 11 13 }		#9		
+		{ 3 4 5 6 7 9 10 }			#10		
+		{ 6 9 11 }					#11
+		{ 6 12 }					#12
+		{ 4 7 9 13 14 }				#13
+		{ 2 4 13 14 }				#14
+	}
+	
+	emblem = {
+		file = "gfx\\coats_of_arms\\emblem.tga"
+		noOfFrames = 25
+	}
+
+	# WHEN ADDING NEW, ALWAYS ADD AT THE END !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!11111
+	textures = {
+		texture = {
+			file = "gfx\\pattern_la_hermandad.tga"
+			size = { x = 10 y = 6 }
+			noOfFrames = 60
+			color = 3
+			emblem = no
 		}
 		# WHEN ADDING NEW, ALWAYS ADD AT THE END !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!11111
 	}
