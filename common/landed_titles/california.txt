@@ -539,6 +539,30 @@ e_california = {
 		
 		americanist = 10
 		
+		d_siliconist = {
+			
+			color = { 83 238 160 }
+			color2= { 225 255 255 }
+		
+			capital = 2029 # San Jose
+			creation_requires_capital = no
+	
+			title = "VISIONARY"
+			title_female = "VISIONARY_FEMALE"
+			foa = "VISIONARY_FOA"
+	
+			allow = { #only via special decision
+				religion = siliconist
+				num_of_holy_sites = 2
+				piety = 500
+				wealth = 250
+			}
+	
+			short_name = yes
+	
+			dignity = 100 # Counted as having this many more counties than it does
+		}
+		
 		d_goldengate = {
 			color={ 227 210 150 }
 			color2={ 255 255 255 }
