@@ -103,7 +103,11 @@ narrative_event = {
 		name = EVTOPTA_destape_5 # of course
 		set_character_flag = attending_destape
 		set_character_flag = do_not_disturb
-		hidden_tooltip = { character_event = { id = destape.11 days = 300 } } # Safety catch flag clearing
+		hidden_tooltip = { character_event = { id = destape.12 days = 300 } } # Safety catch flag clearing
+	}
+	option = {
+		name = EVTOPTB_destape_5 # I don't think I will
+		hidden_tooltip = { character_event = { id = destape.12 days = 300 } } # Safety catch flag clearing
 	}
 }
 
@@ -116,7 +120,7 @@ narrative_event = {
 
 	is_triggered_only = yes
 	
-	war = no
+	#war = no
 
 	option = {
 		name = EVTOPTA_destape_6 # time for the dedazo
@@ -128,28 +132,16 @@ narrative_event = {
 			any_realm_character = {
 				limit = {
 					has_character_flag = attending_destape
-					NOT = { trait = tapado }
-					NOT = { character = ROOT } # Benemérito awaits verdict
-				}
-				narrative_event = { id = destape.9 }
-			}
-		}
-		hidden_tooltip = {
-			set_character_flag = destape_begins
-			any_realm_character = {
-				limit = {
-					has_character_flag = attending_destape
 					trait = tapado
 				}
 				character_event = { id = destape.8 }
 			}
-			narrative_event = { id = destape.10 days = 5 }
 		}
 	}
 	option = {
 		name = EVTOPTB_destape_6
 		trigger = {
-			war = yes # cancel the ceremony in time of war
+			#war = yes # cancel the ceremony in time of war
 		}
 		scaled_wealth = 0.5
 		hidden_tooltip = {
@@ -199,6 +191,20 @@ character_event = {
 		name = EVTOPTA_destape_8
 		remove_trait = tapado
 		add_trait = destapado
+		hidden_tooltip = {
+			set_character_flag = destape_begins
+			any_realm_character = {
+				limit = {
+					has_character_flag = attending_destape
+					NOR = { 
+						trait = tapado
+						trait = destapado						
+					}
+					NOT = { character = FROM } # Benemérito awaits verdict
+				}
+				narrative_event = { id = destape.9 }
+			}
+		}
 		character_event = { id = destape.10 }
 	}
 }
@@ -212,7 +218,7 @@ narrative_event = {
 
 	capable_only = yes
 	prisoner = no
-	war = no
+	#war = no
 
 	is_triggered_only = yes
 	
@@ -230,7 +236,10 @@ narrative_event = {
 		}
 
 		hidden_tooltip = {
-			set_character_flag = approves_destapado
+			add_character_modifier {
+				name = approves_destapado
+				duration = 1826
+			}
 		}
 	}
 
@@ -243,7 +252,10 @@ narrative_event = {
 		}
 
 		hidden_tooltip = {
-			set_character_flag = opposes_destapado
+			add_character_modifier {
+				name = opposes_destapado
+				duration = 1826
+			}
 		}
 	}
 }
@@ -287,8 +299,6 @@ character_event = {
 				has_character_flag = attending_destape
 			}
 			clr_character_flag = attending_destape
-			clr_character_flag = approves_destapado
-			clr_character_flag = opposes_destapado
 		}		
 	}
 }

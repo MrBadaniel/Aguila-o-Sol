@@ -109,14 +109,17 @@ decisions = {
 			OR = { 
 				culture_group = mexicano
 				culture_group = norteno
-				}
-			religion_group = cult_of_saints
+				culture_group = mesoamerican
+				culture_group = taracahita
+				culture_group = mayan
+			}
+			religion = cristo_rey
 			any_neighbor_independent_ruler = {
 				any_realm_province = {
 					region = custom_empire_mexico
 				}
 				NOT = {
-					religion_group = cult_of_saints
+					religion = cristo_rey
 				}
 			}
 			NOT = {
@@ -812,9 +815,11 @@ targetted_decisions = {
 			OR = { 
 				culture_group = mexicano
 				culture_group = norteno
-				}
-			religion = ROOT
-			religion_group = cult_of_saints
+				culture_group = mesoamerican
+				culture_group = taracahita
+				culture_group = mayan
+			}
+			religion = cristo_rey
 			mercenary = no
 			holy_order = no
 			OR = {
@@ -862,8 +867,15 @@ targetted_decisions = {
 			OR = { 
 				culture_group = mexicano
 				culture_group = norteno
-				}
-			religion_group = cult_of_saints
+				culture_group = mesoamerican
+				culture_group = taracahita
+				culture_group = mayan
+			}
+			OR = {
+				religion_group = christian
+				religion_group = cult_of_saints
+			}
+			NOT = { religion = cristo_rey }
 			war = no
 			NOT = {
 				any_war = {
@@ -910,7 +922,10 @@ targetted_decisions = {
 
 		potential = {
 			NOT = {
-				religion_group = cult_of_saints
+				OR = {
+					religion_group = christian
+					religion_group = cult_of_saints
+				}
 			}
 			any_war = {
 				OR = {
@@ -1047,7 +1062,10 @@ targetted_decisions = {
 
 		from_potential = {
 			NOT = {
-				religion_group = cult_of_saints
+				OR = {
+					religion_group = christian
+					religion_group = cult_of_saints
+				}
 			}
 			any_war = {
 				OR = {
@@ -1071,8 +1089,15 @@ targetted_decisions = {
 			OR = { 
 				culture_group = mexicano
 				culture_group = norteno
-				}
-			religion_group = cult_of_saints
+				culture_group = mesoamerican
+				culture_group = taracahita
+				culture_group = mayan
+			}
+			OR = {
+				religion_group = christian
+				religion_group = cult_of_saints
+			}
+			NOT = { religion = cristo_rey }
 			war = no
 			NOT = {
 				any_war = {
@@ -1215,9 +1240,7 @@ targetted_decisions = {
 		ai_check_interval = 48
 
 		from_potential = {
-			NOT = {
-				religion_group = cult_of_saints
-			}
+			NOT = { religion_group = mesoamerican_gods }
 			war = no
 			NOT = {
 				any_war = {
@@ -1262,7 +1285,7 @@ targetted_decisions = {
 		}
 
 		potential = {
-			religion_group = cult_of_saints
+			religion_group = mesoamerican_gods
 
 			any_war = {
 				OR = {
@@ -1399,7 +1422,8 @@ targetted_decisions = {
 		ai_check_interval = 48
 
 		from_potential = {
-			religion_group = cult_of_saints
+			religion_group = mesoamerican_gods
+
 			any_war = {
 				OR = {
 					using_cb = reconquista_jalisco
@@ -1419,9 +1443,7 @@ targetted_decisions = {
 		}
 
 		potential = {
-			NOT = {
-				religion_group = cult_of_saints
-			}
+			NOT = {	religion_group = mesoamerican_gods }
 			war = no
 			NOT = {
 				any_war = {

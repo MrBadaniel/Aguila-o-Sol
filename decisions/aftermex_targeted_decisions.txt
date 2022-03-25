@@ -193,7 +193,7 @@ targetted_decisions = {
 
 	designate_tapado = {
 		only_playable = yes
-		filter = any_realm_character
+		filter = sub_realm
 		ai_target_filter = dynasty
 		ai_check_interval = 24
 
@@ -261,7 +261,7 @@ targetted_decisions = {
 			custom_tooltip = { text = designate_tapado_TOOLTIP_1 }
 			add_trait = tapado
 			FROM = {
-				character_event = { id = destape.1 }
+				long_character_event = { id = destape.1 }
 			}
 		}
 		revoke_allowed = {
