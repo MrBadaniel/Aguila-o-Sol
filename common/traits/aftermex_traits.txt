@@ -300,11 +300,11 @@ tapado = {
 	
 	opposites = { 
 		destapado
-		se_movio
+		mal_tapado
 	}
 }
 
-se_movio = {
+mal_tapado = {
 	hidden = no
 	random = no
 	customizer = no
@@ -317,12 +317,15 @@ se_movio = {
 
 destapado = {
 	hidden = no
+	is_visible = {
+		character = ROOT
+	}
 	random = no
 	customizer = no
 	
 	opposites = { 
 		tapado
-		se_movio
+		mal_tapado
 	}
 }
 

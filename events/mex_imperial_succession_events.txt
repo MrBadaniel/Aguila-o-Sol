@@ -55,7 +55,7 @@ character_event = {
 }
 
 ### Destape Ceremony Decision
-character_event = {
+narrative_event = {
 	id = destape.4
 	title = "TITLE_DESTAPE"
 	desc = EVTDESC_destape_4
@@ -74,7 +74,7 @@ character_event = {
 					prisoner = no	
 				}
 				clr_character_flag = destape_has_ended
-				character_event = { id = destape.5 }
+				narrative_event = { id = destape.5 }
 			}
 		}
 	}
@@ -89,7 +89,7 @@ character_event = {
 }
 
 ### Voters invited
-character_event = {
+narrative_event = {
 	id = destape.5
 	title = "TITLE_DESTAPE"
 	desc = EVTDESC_destape_5
@@ -128,8 +128,10 @@ narrative_event = {
 			any_realm_character = {
 				limit = {
 					has_character_flag = attending_destape
+					NOT = { trait = tapado }
+					NOT = { character = ROOT } # Benemérito awaits verdict
 				}
-				character_event = { id = destape.8 }
+				narrative_event = { id = destape.9 }
 			}
 		}
 		hidden_tooltip = {
@@ -137,12 +139,9 @@ narrative_event = {
 			any_realm_character = {
 				limit = {
 					has_character_flag = attending_destape
-					NOT = { trait = tapado }
-					NOT = { # Benemérito awaits verdict
-						character = ROOT
-					}
+					trait = tapado
 				}
-				narrative_event = { id = destape.9 }
+				character_event = { id = destape.8 }
 			}
 			narrative_event = { id = destape.10 days = 5 }
 		}
@@ -198,8 +197,9 @@ character_event = {
 
 	option = {
 		name = EVTOPTA_destape_8
+		remove_trait = tapado
 		add_trait = destapado
-		character_event = { id = destape.7 }
+		character_event = { id = destape.10 }
 	}
 }
 
@@ -273,8 +273,7 @@ character_event = {
 
 # Safety catch - clears character flags and modifiers
 character_event = {
-	id = destape.11
-
+	id = destape.12
 	hide_window = yes
 	
 	is_triggered_only = yes

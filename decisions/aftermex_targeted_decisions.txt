@@ -193,27 +193,19 @@ targetted_decisions = {
 
 	designate_tapado = {
 		only_playable = yes
-		filter = sub_realm
+		filter = any_realm_character
 		ai_target_filter = dynasty
 		ai_check_interval = 24
 
 		from_potential = {
 			is_playable = yes
-			OR = {
-				AND = {
-					has_law = succ_mex_elective 
-					title = e_mexico
-				}
-				AND = {
-					has_law = succ_mex_elective 
-					title = k_mexico
-				}
-			}
+			has_law = succ_mex_elective 
 			has_regent = no
 			prisoner = no
 			is_adult = yes
 			NOT = { trait = incapable }
 			NOT = {any_realm_character = {trait = tapado}}
+			NOT = {any_realm_character = {trait = destapado}}
 		}
 
 		potential = {
