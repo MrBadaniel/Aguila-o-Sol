@@ -4,7 +4,7 @@
 	dynasty=1638010
 	dna="ocgkcfbccid"
 	culture=kriol
-	religion=rastafarian
+	religion=qabantajik
 	martial=5
 	diplomacy=5
 	stewardship=1
@@ -25,7 +25,7 @@
 	female=yes
 	dna="fcapmojbnkn"
 	culture=kriol
-	religion=rastafarian
+	religion=qabantajik
 	martial=5
 	diplomacy=1
 	stewardship=3
@@ -3306,7 +3306,7 @@
 		birth=yes
 		culture=trifinio
 	}
-	2663.1.1={effect={add_lover=1670033}}
+	#2663.1.1={effect={add_lover=1670033}}
 	2739.10.3={death=yes}
 }
 
@@ -3332,9 +3332,9 @@
 		birth=yes
 		culture=trifinio
 	}
-	2666.1.1={
-		add_spouse=6900449
-	}
+	# 2666.1.1={
+		# add_spouse=6900449
+	# }
 	2739.10.3={death=yes}
 }
 
@@ -3364,9 +3364,25 @@
 	trait=pastoral
 	trait=socializer
 	trait=charitable
-	trait=devout
+	trait=pious
 	trait=just
 	trait=erudite
 	trait=mastermind_theologian
 	2618.6.19={birth=yes}
+}
+
+1670046 = {
+    name="Simeón"  # Hermano Mayor of the Penitentes
+    culture=trifinio 
+	religion=penitente
+    trait=theologian
+    trait=shy
+    trait=patient
+    trait=chaste
+    trait=ambitious
+	trait=paranoid
+    trait=mastermind_theologian	
+    2609.2.19={
+        birth=yes
+	}
 }
