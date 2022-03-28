@@ -1,0 +1,2329 @@
+# Province Modifiers
+
+hurricane_damage = {
+	supply_limit = -1
+	castle_levy_size = -0.10
+	city_levy_size = -0.10
+	temple_levy_size = -0.10
+	local_tax_modifier = -0.10
+	icon = 30
+}
+
+hurricane_flooded_farmland = {
+	disease_defence = -0.1
+	local_tax_modifier = -0.40
+	icon = 24
+}
+
+hurricane_ruined_roads = {
+	supply_limit = -4
+	levy_reinforce_rate = -0.75
+	icon = 31
+}
+
+hurricane_damaged_trade_post = {
+	city_tax_modifier = -0.20
+	icon = 24
+}
+
+quake_damage = {
+	supply_limit = -1
+	castle_levy_size = -0.10
+	city_levy_size = -0.10
+	temple_levy_size = -0.10
+	local_tax_modifier = -0.10
+	icon = 30
+}
+
+quake_castle_damage = {
+	castle_levy_size = -0.50
+	local_tax_modifier = -0.10
+	icon = 31
+}
+
+fire_damage = {
+	supply_limit = -1
+	local_tax_modifier = -0.30
+	icon = 24
+}
+
+quake_building_codes = {
+	local_build_time_modifier = 0.05
+	local_build_cost_modifier = 0.05
+	icon = 4
+}
+
+consumer_revival = {
+	tech_growth_modifier_economy = 0.25
+	tech_growth_modifier_military = 0.25
+	icon = 12
+}
+
+terror_beast = {
+	local_tax_modifier = -0.1
+	local_build_time_modifier = 0.5
+	icon = 29
+}
+
+foreign_trade = {
+	local_tax_modifier = 0.05
+	icon = 6
+}
+
+idle_sport = {
+	local_revolt_risk = -0.02
+	icon = 4
+}
+
+temple_scholars = {
+	tech_growth_modifier_culture = 0.1
+	tech_growth_modifier_economy = 0.1
+	tech_growth_modifier_military = 0.1
+	temple_levy_size = -0.1
+	icon = 12
+}
+
+marian_shrine = {
+	local_revolt_risk = -0.01
+	temple_tax_modifier = 0.2
+	city_tax_modifier = 0.05
+	castle_tax_modifier = 0.05
+	icon = 17
+}
+
+unenlightened_emperor = {
+	local_revolt_risk = 0.01
+	icon = 35
+}
+
+scooby_haunting = {
+	temple_tax_modifier = -0.1
+	castle_tax_modifier = -0.1
+	city_tax_modifier = -0.1
+	icon = 25
+}
+
+antinomian_revival = {
+	icon = 26
+}
+
+charismatic_revival = {
+	icon = 26
+}
+
+postadventist_revival = {
+	icon = 26
+}
+
+anabaptist_revival = {
+	icon = 26
+}
+
+mormon_revival = {
+	icon = 26
+}
+
+high_church_revival = {
+	icon = 26
+}
+
+#atomic_quarantine = {
+#	icon = 12
+#}
+
+bureau_offices = {
+	icon = 12
+	global_tax_modifier = -0.05
+}
+
+bureau_roads = {
+	icon = 97
+	global_tax_modifier = -0.03
+}
+
+true_cross_unrest = {
+	icon = 106
+	local_tax_modifier = -0.05
+	local_revolt_risk = 0.05
+	levy_size = -0.05
+}
+
+true_cross_revolt = {
+	icon = 106
+	local_tax_modifier = -0.1
+	local_revolt_risk = 0.1
+	levy_size = -0.1
+}
+
+greatwall_taxation = {
+	icon = 106
+	levy_reinforce_rate = -0.05
+	local_revolt_risk = 0.025
+	temple_tax_modifier = -0.05
+	castle_tax_modifier = -0.025
+	city_tax_modifier = -0.1
+}
+
+demesne_greatwall_taxation = {
+	icon = 106
+	levy_reinforce_rate = -0.1
+	local_revolt_risk = 0.05
+	temple_tax_modifier = -0.1
+	castle_tax_modifier = -0.05
+	city_tax_modifier = -0.2
+}
+
+greatwall_reparations = {
+	icon = 106
+	local_revolt_risk = 0.05
+	local_tax_modifier = -0.2
+	levy_size = -0.1
+}
+
+peasant_homes_savaged = {
+	icon = 106
+	local_revolt_risk = 0.05
+	local_tax_modifier = -0.1
+}
+
+quarries_drained = {
+	icon = 22
+	local_tax_modifier = -0.05
+	local_build_cost_modifier = 0.1
+	local_build_time_modifier = 0.1
+}
+
+masons_outraged = {
+	icon = 22
+	local_revolt_risk = 0.05
+	local_tax_modifier = -0.1
+	local_build_cost_modifier = 0.2
+	local_build_time_modifier = 0.2
+}
+
+black_mt_quarry = {
+	icon = 101
+	local_tax_modifier = 0.05
+	local_build_time_modifier = -0.2
+	local_build_cost_modifier = -0.25
+}
+
+wall_museum = {
+	icon = 81
+	local_tax_modifier = 0.01
+	local_revolt_risk = -0.025
+	tech_growth_modifier_culture = 0.1
+	tech_growth_modifier_military = 0.1
+}
+
+greatwall_construction = {
+	icon = 102
+	local_tax_modifier = -0.05
+	local_revolt_risk = 0.02
+	local_build_time_modifier = 0.2
+	local_build_cost_modifier = 0.2
+}
+
+greatwall_navalbarriers = {
+	icon = 101
+	fort_level = 2
+	siege_defence = 0.025
+	garrison_size = 0.05
+	local_tax_modifier = 0.02
+}
+
+greatwall_watchtowers = {
+	icon = 101
+	fort_level = 2
+	siege_defence = 0.025
+	local_tax_modifier = 0.02
+}
+
+greatwall_ramparts = {
+	icon = 101
+	fort_level = 2
+	siege_defence = 0.05
+	garrison_size = 0.05
+	local_tax_modifier = 0.01
+}
+
+californian_great_wall = {
+	icon = 81
+	fort_level = 6
+	siege_defence = 0.1
+	garrison_size = 0.1
+	local_tax_modifier = 0.05
+	local_movement_speed = 0.25
+	tradevalue = 10
+}
+
+greatwall_progresscheck = {
+	icon = 21
+	local_tax_modifier = -0.15
+	local_build_time_modifier = 0.1
+	local_build_cost_modifier = 0.1
+}
+	
+	
+
+# Character Modifiers
+
+held_thanksgiving_timer = {
+	icon = 3 
+}
+
+protector_in_the_storm = {
+	general_opinion = 5
+	icon = 3
+}
+
+discovered_opportunist = {
+	general_opinion = -5
+	icon = 23
+}
+
+survived_the_big_one = {
+	monthly_character_prestige = 0.2
+	icon = 7
+}
+
+preparing_expedition = {
+	monthly_character_piety = 0.10
+	icon = 8
+}
+
+recent_salvage = {
+	monthly_character_piety = 0.10
+	icon = 8
+}
+
+recent_invest = {
+	monthly_character_piety = 0.1
+	icon = 6
+}
+
+merchant_recent_arrive = {
+	monthly_character_piety = 0.1
+	icon = 6
+}
+
+merchant_retired = {
+	monthly_character_piety = 0.5
+	icon = 6
+}
+
+consumerist_privileges = {
+	general_opinion = -5
+	monthly_character_prestige = 2
+	icon = 6
+}
+
+consumerist_loan = {
+	monthly_character_piety = -0.05
+	icon = 24
+}
+
+precious_heirloom = {
+	general_opinion = 5
+	icon = 7
+}
+
+poor_credit = {
+	general_opinion = -5
+	icon = 24
+}
+
+weak_banker = {
+	monthly_character_prestige = -0.2
+	icon = 24
+}
+
+strong_banker = {
+	monthly_character_prestige = 0.2
+	icon = 4
+}
+
+shares_sold = {
+	icon = 4
+}
+
+building_subsidies = {
+	local_build_cost_modifier = -0.1
+	icon = 4
+}
+
+invested_research = {
+	icon = 4
+}
+
+increased_prosperity = {
+	icon = 4
+}
+
+banking_results = {
+	icon = 4
+}
+
+well_protected = {
+	martial = 1
+	icon = 1
+}
+
+harboring_witch = {
+	church_opinion = -20
+	icon = 26
+}
+
+bokor_consort = {
+	church_opinion = -10
+	general_opinion = -5
+	icon = 26
+}
+
+heavenly_heresy = {
+	church_opinion = -15
+	icon = 26
+}
+
+faustian_contest = {
+	monthly_character_piety = -0.05
+	icon = 35
+}
+
+loa_martial = {
+	martial = 5
+	icon = 1
+}
+
+loa_learning = {
+	learning = 5
+	icon = 2
+}
+
+loa_diplomacy = {
+	diplomacy = 5
+	icon = 3
+}
+
+loa_stewardship = {
+	stewardship = 5
+	icon = 4
+}
+
+loa_intrigue = {
+	intrigue = 5
+	icon = 5
+}
+
+luchadore = {
+	monthly_character_piety = 0.5
+	icon = 1
+}
+
+unmasked = {
+	monthly_character_prestige = -0.5
+	icon = 25
+}
+
+greatwall_noblestaxed = {
+	vassal_opinion = -30
+	icon = 106
+}
+
+greatwall_selflessliege = {
+	vassal_opinion = 10
+	monthly_character_prestige = 0.2
+	icon = 7
+}
+
+selffunded_greatwall = {
+	vassal_opinion = 5
+	monthly_character_prestige = 0.1
+	icon = 7
+}
+
+greatwall_architect = {
+	icon = 4
+	general_opinion = 5
+	monthly_character_prestige = 0.2
+	local_build_cost_modifier = -0.1
+	local_build_time_modifier = -0.1
+	monthly_character_wealth = 2.0
+}
+
+overworked_quarries = {
+	general_opinion = -5
+	local_build_cost_modifier = 0.1
+	local_build_time_modifier = 0.1
+	global_tax_modifier = -0.05
+	icon = 22
+}
+
+emperor_ofthe_wall = {
+	icon = 7
+	general_opinion = 15
+	monthly_character_prestige = 1
+}
+
+
+# Bank loan system
+recent_loan_request = {
+	#hidden = yes
+	icon = 24
+}
+loan_timer = {
+	icon = 24
+	monthly_character_piety = -0.25
+	#inherit = yes
+}
+defaulted_on_loan = {
+	monthly_character_piety = -0.5
+	#inherit = yes 
+	icon = 24
+}
+
+postponed_incarnation = {
+	monthly_character_piety = -0.5
+	monthly_character_prestige = -0.5
+	general_opinion = -5
+	icon = 26
+}
+
+on_vision_quest = {
+	general_opinion = 5
+	icon = 2
+}
+
+marian_emissaries = {
+	monthly_character_prestige = 0.1
+	icon = 17
+}
+
+marian_studies = {
+	monthly_character_piety = 0.1
+	icon = 17
+}
+
+marian_skullduggery = {
+	monthly_character_piety = -0.1
+	icon = 35
+}
+
+constructing_cathedral = {
+	monthly_character_piety = 0.5
+	monthly_character_prestige = 0.5
+	global_tax_modifier = -0.1
+	icon = 17
+}
+
+marian_invite = {
+	monthly_character_piety = 0.1
+	icon = 17
+}
+
+# Presidential elections
+sympathy_vote = {
+	general_opinion = 25
+	icon = 14
+}
+
+murdered_candidate = {
+	general_opinion = -25
+	icon = 32
+}
+
+seeking_revenge = {
+	monthly_character_piety = -0.1
+	learning = -1
+	diplomacy = -1
+	stewardship = -1
+	intrigue = 6
+	icon = 5
+}
+
+imperial_favor = {
+	monthly_character_piety = 0.5
+	monthly_character_prestige = 0.5
+	general_opinion = 10
+	church_opinion = 10
+	icon = 16
+}
+
+imperial_censure = {
+	monthly_character_piety = -0.5
+	monthly_character_prestige = -0.5
+	general_opinion = -20
+	church_opinion = -20
+	icon = 34
+}
+
+intense_writing = {
+	learning = 1
+	diplomacy = -1
+	stewardship = -1
+	intrigue = -1
+	martial = -1
+	monthly_character_piety = 0.5
+	church_opinion = 10
+	fertility = -0.1
+	icon = 16
+}
+
+recent_writings = {
+	monthly_character_piety = 0.5
+	icon = 8
+}
+
+writing_inspiration = {
+	learning = 1
+	icon = 8
+}
+
+dysentery = {
+	martial = -1
+	health = -2
+	fertility = -0.1
+	combat_rating = -1
+	icon = 40
+}
+
+atom_judgement = {
+	health = -2
+	diplomacy = -20
+	icon = 38
+}
+
+requested_military_aid = {
+	monthly_character_prestige = -0.5
+	icon = 31
+}
+
+inspirational_martyr = {
+	global_revolt_risk = 0.08
+	icon = 31
+}
+
+antinomian_revival = {
+	icon = 31
+}
+	
+resist_revival = {
+	icon = 17
+}
+
+burned_over = {
+	icon = 31
+}
+
+recent_whaling = {
+	monthly_character_prestige = 0.5
+	icon = 8
+}
+
+redwood_bike = {
+	gaian_opinion = -20
+	monthly_character_piety = -0.1
+	icon = 88
+}
+
+examination_nightmares = {
+	health = -0.2
+	fertility = -0.1
+	icon = 20
+}
+
+failed_to_choose_gaian = {
+	gaian_opinion = -10
+	monthly_character_piety = -0.1
+	icon = 20
+}
+
+# Secret communities
+
+secret_rastafarian_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_rastafarian
+	}
+}
+secret_voodoo_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_voodoo
+	}
+}
+secret_santeria_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_santeria
+	}
+}
+secret_candomble_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_candomble
+	}
+}
+secret_espiritista_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_espiritista
+	}
+}
+secret_peyotist_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_peyotist
+	}
+}
+secret_midewiwin_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_midewiwin
+	}
+}
+secret_midewiwin_reformed_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_midewiwin
+	}
+}
+secret_raven_tales_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_raven_tales
+	}
+}
+secret_raven_tales_reformed_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_raven_tales
+	}
+}
+secret_catholic_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_catholic
+	}
+}
+secret_neognostic_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_neognostic
+	}
+}
+secret_sedevacantist_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_sedevacantist
+	}
+}
+secret_nestorian_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_nestorian
+	}
+}
+secret_ursuline_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_ursuline
+	}
+}
+secret_angeline_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_angeline
+	}
+}
+secret_anabaptist_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_anabaptist
+	}
+}
+secret_batenburger_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_batenburger
+	}
+}
+secret_evangelical_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_evangelical
+	}
+}
+secret_antinomian_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_antinomian
+	}
+}
+secret_charismatic_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_charismatic
+	}
+}
+secret_postadventist_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_postadventist
+	}
+}
+secret_moravian_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_moravian
+	}
+}
+secret_high_church_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_high_church
+	}
+}
+secret_nonconformist_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_nonconformist
+	}
+}
+secret_apostolic_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_apostolic
+	}
+}
+secret_celeste_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_celeste
+	}
+}
+secret_edenite_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_edenite
+	}
+}
+secret_cristo_rey_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_cristo_rey
+	}
+}
+secret_reformista_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_reformista
+	}
+}
+secret_sacred_heart_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_sacred_heart
+	}
+}
+secret_patria_grande_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_patria_grande
+	}
+}
+secret_navegante_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_navegante
+	}
+}
+secret_fidencista_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_fidencista
+	}
+}
+secret_cetic_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_cetic
+	}
+}
+secret_gaian_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_gaian
+	}
+}
+secret_shinto_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_shinto
+	}
+}
+secret_nousthreskeia_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_nousthreskeia
+	}
+}
+secret_mormon_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_mormon
+	}
+}
+secret_neogodbeite_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_neogodbeite
+	}
+}
+secret_woolleyite_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_woolleyite
+	}
+}
+secret_strangite_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_strangite
+	}
+}
+secret_lamanita_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_lamanita
+	}
+}
+secret_furiegi_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_furiegi
+	}
+}
+secret_sol_invicta_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_sol_invicta
+	}
+}
+secret_mictlantec_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_mictlantec
+	}
+}
+secret_qabantajik_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_qabantajik
+	}
+}
+secret_neomayan_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_neomayan
+	}
+}
+secret_americanist_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_americanist
+	}
+}
+secret_hamiltonian_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_hamiltonian
+	}
+}
+secret_jeffersonian_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_jeffersonian
+	}
+}
+secret_libertarian_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_libertarian
+	}
+}
+secret_consumerist_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_consumerist
+	}
+}
+secret_monetarist_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_monetarist
+	}
+}
+secret_atomicist_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_atomicist
+	}
+}
+secret_aphite_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_aphite
+	}
+}
+secret_pagan_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_pagan
+	}
+}
+secret_revelationist_reformed_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_revelationist_reformed
+	}
+}
+secret_revelationist_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_revelationist
+	}
+}
+secret_chrome_cultist_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_chrome_cultist
+	}
+}
+secret_rust_cultist_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_rust_cultist
+	}
+}
+secret_occultist_reformed_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_occultist_reformed
+	}
+}
+secret_occultist_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_occultist
+	}
+}
+secret_glorian_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_glorian
+	}
+}
+secret_thelema_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_thelema
+	}
+}
+secret_norse_pagan_reformed_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_norse_pagan_reformed
+	}
+}
+secret_norse_pagan_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_norse_pagan
+	}
+}
+secret_celtic_pagan_reformed_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_celtic_pagan_reformed
+	}
+}
+secret_celtic_pagan_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_celtic_pagan
+	}
+}
+secret_aria_de_machete_reformed_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_celtic_pagan_reformed
+	}
+}
+secret_aria_de_machete_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_celtic_pagan
+	}
+}
+
+secret_brethren_community = { #arrghhh!
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_brethren
+	}
+}
+secret_jewish_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_jewish
+	}
+}
+secret_reform_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_reform
+	}
+}
+secret_meshichist_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_meshichist
+	}
+}
+secret_hindu_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_hindu
+	}
+}
+
+secret_traditionalist_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_traditionalist
+	}
+}
+secret_imamite_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_imamite
+	}
+}
+secret_revivalist_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_revivalist
+	}
+}
+secret_transcendentalist_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_transcendentalist
+	}
+}
+secret_orientalist_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_orientalist
+	}
+}
+secret_qingzhen_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_qingzhen
+	}
+}
+secret_alawiyya_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_alawiyya
+	}
+}
+secret_misrist_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_misrist
+	}
+}
+
+secret_trailwalker_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_trailwalker
+	}
+}
+secret_trailwalker_reformed_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_trailwalker_reformed
+	}
+}
+secret_orthodox_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_orthodox
+	}
+}
+secret_exovedate_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_exovedate
+	}
+}
+secret_pelagic_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_pelagic
+	}
+}
+secret_nazarene_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_nazarene
+	}
+}
+secret_true_cross_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_true_cross
+	}
+}
+#####Begining of the Trials of Montegomery FitzPoopinshield
+secret_penitente_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_penitente
+	}
+}
+secret_purificador_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_purificador
+	}
+}
+
+cultural_tension = {
+	local_revolt_risk = 0.1
+	icon = 35
+}
+
+rampant_sinner_jewish = {
+	icon = 64
+	monthly_character_piety = -0.25
+	same_religion_opinion = -10
+}
+
+doing_teshuva = {
+	icon = 63
+	diplomacy = -1
+	monthly_character_piety = 0.1
+} 
+
+candomble_ogum = {
+	icon = 48
+	martial = 1
+	stewardship = 1
+}
+
+candomble_oxossi = {
+	icon = 48
+	martial = 1
+	diplomacy = 1
+}
+
+candomble_pomba_gira = {
+	icon = 48
+	diplomacy = 1
+	intrigue = 1
+	fertility = 0.10
+}
+
+candomble_orunmila = {
+	icon = 48
+	learning = 2
+}
+
+candomble_xango = {
+	icon = 48
+	martial = 2
+}
+
+candomble_yemanja = {
+	icon = 48
+	intrigue = 2
+	fertility = 0.15
+}
+
+candomble_oxum = {
+	icon = 48
+	learning = 2
+	fertility = 0.15
+}
+
+candomble_iansa = {
+	icon = 48
+	martial = 1
+	learning = 1
+}
+
+candomble_obaluaie = {
+	icon = 48
+	intrigue = 2
+	health = 0.15
+}
+
+aspiring_musician = {
+	diplomacy = 1
+	icon = 3
+}
+
+#Vanilla overrides
+told_story_nr_1 = {
+	icon = 79 
+	combat_rating = 10
+	monthly_character_prestige = -0.05
+}
+told_story_nr_2 = {
+	icon = 80
+	combat_rating = 10
+	stewardship = -1
+}
+told_story_nr_3 = {
+	icon = 79
+	dynasty_opinion = 10
+}
+told_story_nr_4 = {
+	icon = 79
+	brave_opinion = 5
+	sex_appeal_opinion = 5
+}
+told_story_nr_5 = {
+	icon = 79
+	zealous_opinion = 5
+	patient_opinion = 5
+}
+told_story_nr_6 = {
+	icon = 127
+	humble_opinion = 5
+	proud_opinion = 5
+}
+monkey_pet = {
+	icon = 125 
+	health = 1
+	monthly_character_prestige = 0.5
+}
+recent_mayan_pilgrimage = {
+	icon = 16 
+}
+recent_ritual_ballgame = {
+	icon = 16 
+}
+hosay_opinion = {
+	icon = 3 
+	general_opinion = 10
+}
+hosay_timer = {
+	icon = 3
+}
+ashura_timer = {
+	icon = 3
+	muslim_opinion = 10
+}
+st_patricks_timer = {
+	icon = 3
+	christian_opinion = 10
+	revelationist_opinion = -10 #driving away snakes
+}
+halloween_timer = {
+	icon = 48
+	pagan_group_opinion = 5
+}
+muslim_settlement = {
+	icon = 9
+	city_tax_modifier = 0.25
+	culture_techpoints = 0.03
+}
+thriving_muslim_settlement = {
+	icon = 9
+	city_tax_modifier = 0.4
+	culture_techpoints = 0.2
+}
+expelled_muslim_settlement = {
+	icon = 27
+	city_tax_modifier = -0.25
+	culture_techpoints = -0.03
+}
+held_agape_feast_timer = {
+	icon = 3
+}
+imperial_authority = {
+	icon = 10
+}
+bureaucracy = {
+	icon = 11
+	is_visible = { 
+		character = FROM
+	}
+}
+influenced_authority = {
+	icon = 9
+}
+low_bureaucracy = {
+	icon = 29
+	global_tax_modifier = -0.25
+	global_levy_size = -0.1
+	global_revolt_risk = 0.02
+	build_time_modifier = 0.2
+	build_cost_modifier = 0.2
+	demesne_size = -2
+}
+high_bureaucracy = {
+	icon = 3
+	global_tax_modifier = 0.2
+	global_levy_size = 0.2
+	global_revolt_risk = -0.05
+	build_time_modifier = -0.2
+	build_cost_modifier = -0.10
+	demesne_size = 2
+}
+poor_reforms = {
+	icon = 33
+	global_tax_modifier = -0.05
+	global_levy_size = -0.05
+	global_revolt_risk = 0.01
+	build_time_modifier = 0.10
+	build_cost_modifier = 0.10
+}
+good_reforms = {
+	icon = 15
+	global_tax_modifier = 0.05
+	global_levy_size = 0.05
+	global_revolt_risk = -0.02
+	build_time_modifier = -0.10
+	build_cost_modifier = -0.05
+}
+sold_bureaucratic_positions = {
+	icon = 33
+	global_tax_modifier = -0.05
+	global_levy_size = -0.05
+	build_time_modifier = 0.10
+	build_cost_modifier = 0.10
+	general_opinion = -20
+	just_opinion = -25
+}
+follower_of_serpent = {
+	icon = 48
+	intrigue = 2
+	diplomacy = -1
+}
+follower_of_burning_bush = {
+	icon = 48
+	martial = 2
+	stewardship = -1
+}
+follower_of_the_light = {
+	icon = 48
+	learning = 2
+	intrigue = -1
+}
+follower_of_white_lamb = {
+	icon = 48
+	diplomacy = 2
+	martial = -1
+}
+follower_of_lionza = {
+	icon = 48
+	stewardship = 2
+	intrigue = -1
+}
+follower_of_guaicaipuro = {
+	icon = 48
+	martial = 1
+	intrigue = 1
+	learning = -1
+}
+follower_of_felipe = {
+	icon = 48
+	martial = 1
+	diplomacy = 1
+	intrigue = -1
+}
+follower_of_gregorio = {
+	icon = 48
+	learning = 2
+	martial = -1
+}
+follower_of_bello = {
+	icon = 48
+	diplomacy = 2
+	martial = -1
+}
+follower_of_bolivar = {
+	icon = 48
+	martial = 2
+	diplomacy = -1
+}
+follower_of_almighty_spirit = {
+	icon = 48
+	learning = 2
+	diplomacy = -1
+}
+follower_of_sacagewea = {
+	icon = 48
+	stewardship = 2
+	martial = -1
+}
+follower_of_missus_sureshot = {
+	icon = 48
+	martial = 2
+	intrigue = -1
+}
+follower_of_the_nameless = {
+	icon = 48
+	intrigue = 1
+	martial = 1
+	diplomacy = -1
+}
+follower_of_the_tuatha = {
+	icon = 48
+	diplomacy = 2
+	intrigue = -1
+}
+follower_of_nokomis = {
+	icon = 48
+	learning = 2
+	intrigue = -1
+}
+voice_of_white_lamb = {
+	icon = 3
+	general_opinion = 10
+}
+voice_of_bello = {
+	icon = 3
+	general_opinion = 10
+}
+voice_of_the_tuatha = {
+	icon = 3
+	general_opinion = 10
+}
+nokomis_blessing = {
+	icon = 39
+	fertility = 0.2
+}
+sacagewea_blessing = {
+	icon = 39
+	fertility = 0.2
+}
+epic_rodeo = {
+	icon = 39
+}
+diet_ewo = {
+	icon = 48
+	health = -0.2
+	monthly_character_piety = 0.35
+}
+alcohol_ewo = {
+	icon = 48
+	diplomacy = -1
+	monthly_character_piety = 0.35
+}
+dress_ewo = {
+	icon = 48
+	diplomacy = -1
+	monthly_character_piety = 0.35
+}
+sex_ewo = {
+	icon = 48
+	fertility = -0.5
+	monthly_character_piety = 0.35
+}
+leisure_ewo = {
+	icon = 48
+	diplomacy = -1
+	monthly_character_piety = 0.35
+}
+holding_potlatch = {
+	icon = 39
+}
+potlatch_timer = {
+	icon = 39
+}
+fabulous_potlatch = {
+	icon = 39
+	general_opinion = 10
+}
+held_obon_festival_timer = {
+	icon = 39
+}
+happiness_potion_cooldown = {
+	icon = 39
+}
+
+sacrificed_animal_timer = {
+	icon = 48
+	general_opinion = 5
+}
+
+patron_hunab_ku = {
+	icon = 79
+	diplomacy = 1
+	learning = 1
+}
+
+patron_acquarius = {
+	icon = 79
+	diplomacy = 2
+	stewardship = -1
+}
+
+patron_pacal_votan = {
+	icon = 79
+	stewardship = 2
+	intrigue = -1
+}
+
+patron_valum_votan = {
+	icon = 79
+	learning = 2
+	martial = -1
+}
+
+raised_stele = {
+	diplomacy = 2
+	general_opinion = 10
+	monthly_character_piety = 0.5
+	icon = 48
+}
+
+machete_blessing_nomad = {
+	population_growth = 0.08
+	icon = 48
+}
+
+machete_blessing_notnomad = {
+	global_tax_modifier = 0.08
+	icon = 48
+}
+
+machete_curse_nomad = {
+	population_growth = -0.03
+	icon = 49
+}
+
+machete_curse_notnomad = {
+	global_tax_modifier = -0.03
+	icon = 49
+}
+
+machete_child_blessing={
+	health = 3
+	icon = 48
+}
+
+machete_child_curse={
+	health = -3
+	icon = 49
+}
+
+machete_cazadiablos={
+	martial = 1
+	diplomacy = 1
+	stewardship = 1
+	intrigue = 1
+	learning = 1
+	combat_rating = 10
+	icon = 48
+}
+
+machete_high_libido={
+	fertility = 0.4
+	icon = 48
+}
+
+machete_low_libido={
+	fertility = -0.3
+	icon = 49
+}
+
+patria_vision_beauty={
+	diplomacy = 2
+	icon = 48
+}
+
+patria_vision_loss={
+	intrigue = 2
+	icon = 48
+}
+
+patria_vision_power={
+	combat_rating = 15
+	icon = 48
+}
+
+patria_vision_defeat={
+	martial = 2
+	icon = 48
+}
+
+patria_vision_madness={
+	intrigue = 5
+	icon = 48
+}
+
+patria_vision_love={
+	sex_appeal_opinion = 5
+	icon = 48
+}
+
+machete_strength_prayer_cooldown = {
+	icon = 49
+}
+
+patria_vision_cooldown = {
+	icon = 49
+}
+
+held_patria_fest_timer = {
+	icon = 49
+}
+
+#Tres Potencias courts
+
+espiritista_indigenous_court={
+	stewardship = 3
+	icon = 127
+}
+
+espiritista_black_court={
+	martial = 3
+	icon = 127
+}
+
+espiritista_medical_court={
+	health = 0.5
+	icon = 127
+}
+
+espiritista_teacher_court={
+	learning = 3
+	icon = 127
+}
+
+espiritista_juans_court={
+	fertility = 0.15
+	general_opinion = 5
+	icon = 127
+}
+
+espiritista_celestial_court={
+	learning = 2
+	diplomacy = 1
+	icon = 127
+}
+
+espiritista_political_court={
+	diplomacy = 3
+	icon = 127
+}
+
+espiritista_viking_court={
+	combat_rating = 20
+	icon = 127
+}
+
+espiritista_malandros_court={
+	intrigue = 2
+	plot_power_modifier = 0.1
+	icon = 127
+}
+
+espiritista_pilgrimage_cooldown={
+	icon = 127
+}
+
+decided_on_uni_contribution = {
+	icon = 1
+}
+
+patria_sold_sovereignty = {
+	global_revolt_risk = 0.2
+	icon = 21
+}
+
+atomicist_quark = {
+	threat_decay_speed = 0.2
+	monthly_character_piety = 1
+	icon = 83
+}
+
+atomicist_lepton = {
+	siege_speed = 0.1
+	attrition = 0.75
+	icon = 83
+}
+
+atomicist_boson = {
+	global_tax_modifier = 0.2
+	icon = 83
+}
+
+atomicist_didnt_choose_particle = {
+	icon = 84
+}
+
+# The format for these must be "expelled_[title tag]" or you will be able to employ expelled orders
+
+expelled_d_knights_of_columbus = {
+	icon = 35
+}
+expelled_d_knights_of_peter_claver = {
+	icon = 35
+}
+expelled_d_st_ursulas_chosen = {
+	icon = 35
+}
+expelled_d_fh = {
+	icon = 35
+}
+expelled_d_men_in_black = {
+	icon = 35
+}
+expelled_d_oppenheimer = {
+	icon = 35
+}
+expelled_d_national_cathedral = {
+	icon = 35
+}
+expelled_d_lebanon_brethren = {
+	icon = 35
+}
+expelled_d_judah_lions = {
+	icon = 35
+}
+expelled_d_shomrim = {
+	icon = 35
+}
+expelled_d_fm = {
+	icon = 35
+}
+expelled_d_flaming_sword = {
+	icon = 35
+}
+expelled_d_uaw = {
+	icon = 35
+}
+expelled_d_keepers_of_the_green_peace = {
+	icon = 35
+}
+expelled_d_nauvoo_legion = {
+	icon = 35
+}
+expelled_d_oto = {
+	icon = 35
+}
+expelled_d_masked_knights = {
+	icon = 35
+}
+expelled_d_order_of_brotherhood = {
+	icon = 35
+}
+expelled_d_st_pats = {
+	icon = 35
+}
+expelled_d_lightbringers = {
+	icon = 35
+}
+expelled_d_dead_sun = {
+	icon = 35
+}
+expelled_d_golden_bears = {
+	icon = 35
+}
+expelled_d_followers_ram = {
+	icon = 35
+}
+expelled_d_batallon_colombia = {
+	icon = 35
+}
+expelled_d_saint_expedit = {
+	icon = 35
+}
+expelled_d_followers_ogun = {
+	icon = 35
+}
+expelled_d_warriors_guaicaipuro = {
+	icon = 35
+}
+expelled_d_all_tribes = {
+	icon = 35
+}
+expelled_d_capoeiristas = {
+	icon = 35
+}
+expelled_d_code_keepers = {
+	icon = 35
+}
+expelled_d_golden_archers = {
+	icon = 35
+}
+expelled_d_round_table = {
+	icon = 35
+}
+expelled_d_salvation_army = {
+	icon = 35
+}
+expelled_d_three_fires = {
+	icon = 35
+}
+expelled_d_taxet_warriors = {
+	icon = 35
+}
+expelled_d_fruit_of_islam = {
+	icon = 35
+}
+expelled_d_guardians_of_tradition = {
+	icon = 35
+}
+expelled_d_coureurs_des_bois = {
+	icon = 35
+}
+expelled_d_knights_st_flanelle = {
+	icon = 35
+}
+expelled_d_cedesi = {
+	icon = 35
+}
+expelled_d_pony_express = {
+	icon = 35
+}
+expelled_d_order_of_the_golden_bunny = {
+	icon = 35
+}
+expelled_d_twelve_pairs_of_france = {
+	icon = 35
+}
+expelled_d_legion_infernal = {
+	icon = 35
+}
+expelled_d_iatse = {
+	icon = 35
+}
+expelled_d_iron_workers = {
+	icon = 35
+}
+expelled_d_teamsters = {
+	icon = 35
+}
+expelled_d_afl = {
+	icon = 35
+}
+expelled_d_chrismon_tree = {
+	icon = 35
+}
+expelled_d_order_of_baptists = {
+	icon = 35
+}
+expelled_d_pentecostal_oathsworn = {
+	icon = 35
+}
+labor_day_commoners = {
+	global_revolt_risk = -0.1
+	icon = 3
+}
+
+labor_day_noble = {
+	global_revolt_risk = 0.1
+	icon = 21
+}
+
+labor_day_timer = {
+	icon = 3
+}
+
+draft_dodger = {
+	monthly_character_piety = -0.2
+	same_religion_opinion = -15
+	icon = 21
+}
+
+disability_exemption = {
+	#ai_zeal = -20 (error?)
+	icon = 3
+}
+
+###SAYYID STUFF##
+
+confucian_learning = {
+	learning = 2
+	icon = 2
+}
+
+confucian_stewardship = {
+	stewardship = 2
+	icon = 4
+}
+
+confucian_martial = {
+	martial = 2
+	combat_rating = 10
+	icon = 1
+}
+
+confucian_diplomacy = {
+	diplomacy = 2
+	general_opinion = 5
+	icon = 3
+}
+
+confucian_intrigue = {
+	intrigue = 2
+	icon = 5
+}
+
+taoism_learning = {
+	learning = 2
+	icon = 2
+}
+
+taoism_stewardship = {
+	stewardship = 2
+	icon = 4
+}
+
+taoism_martial = {
+	martial = 2
+	icon = 1
+}
+
+taoism_diplomacy = {
+	diplomacy = 2
+	general_opinion = 5
+	icon = 3
+}
+
+taoism_intrigue = {
+	intrigue = 2
+	icon = 5
+}
+
+buddhism_learning = {
+	learning = 2
+	icon = 2
+}
+
+buddhism_stewardship = {
+	stewardship = 2
+	icon = 4
+}
+
+buddhism_martial = {
+	martial = 2
+	combat_rating = 10
+	icon = 1
+}
+
+buddhism_diplomacy = {
+	diplomacy = 2
+	icon = 3
+}
+
+buddhism_intrigue = {
+	intrigue = 2
+	icon = 5
+}
+
+dedicated_to_washington = {
+	icon = 79
+	learning = 1
+	combat_rating = 5
+	monthly_character_prestige = 0.03
+}
+
+dedicated_to_roosevelt = {
+	icon = 79
+	martial = 2
+}
+
+dedicated_to_jefferson = {
+	icon = 79
+	intrigue = 2
+	build_cost_modifier = -0.05
+	build_time_modifier = -0.05
+}
+
+dedicated_to_lincoln = {
+	icon = 79
+	global_revolt_risk = -0.1
+}
+
+aphite_true_vision = {
+	icon = 79
+	martial = 2
+	global_levy_size = 0.2
+}
+
+faction_pro_imperial_ultimatum_timer = {
+	icon = 3
+}
+
+radiant_path_cooldown = {
+	icon = 3
+}
+
+held_yudtes_timer = {
+	icon = 3
+}
+
+ignores_the_radiant_light = {
+	icon = 3
+}
+
+enriched_path_cooldown = {
+	icon = 3
+}
+
+hire_ursuline_honor_guard_cooldown = {
+	icon = 3
+}
+
+greatest_of_chiefs = {
+	icon = 1
+	monthly_character_prestige = 0.1
+}
+
+jd_brazilian_regiment_timer = {
+	icon = 3
+}
+
+recently_invited_rabbi = {
+	icon = 63
+}
+
+studied_seraphim_rose = {
+	icon = 8
+	learning = 2
+	monthly_character_piety = 0.15
+}
+
+studied_seraphim_rose = {
+	icon = 8
+	learning = 2
+	general_opinion = 10
+}
+
+studied_gregory_palmas = {
+	icon = 8
+	learning = 2
+	monthly_character_piety = 0.15
+}
+
+studied_thomas_aquinas = {
+	icon = 8
+	learning = 2
+	monthly_character_piety = 0.15
+}
+
+studied_gk_chesterson = {
+	icon = 8
+	learning = 2
+	diplomacy = 1
+}
+
+studied_mlk = {
+	icon = 8
+	learning = 1
+	diplomacy = 1
+	general_opinion = 10
+}
+
+studied_john_wesley = {
+	icon = 8
+	learning = 2
+	monthly_character_piety = 0.15
+}
+
+bar_mitzvah_good = {
+	icon = 2
+	learning = 1
+	jewish_group_opinion = 5
+	monthly_character_prestige = 0.1
+	monthly_character_piety = 0.50
+}
+
+bar_mitzvah_bad = {
+	icon = 20
+	jewish_group_opinion = -5
+	monthly_character_prestige = -0.1
+	monthly_character_piety = -0.1
+}
+yeshiva_learning_success = {
+	icon = 2
+	learning = 1
+	monthly_character_piety = 0.25
+}
+yeshiva_learning_failure = {
+	icon = 20
+	learning = -1
+	monthly_character_piety = -0.25
+}
+yeshiva_dropped_out = {
+	icon = 20
+	learning = -1
+	monthly_character_piety = -0.25
+}
+yeshiva_halakha = {
+	icon = 63
+	intrigue = 1
+}
+yeshiva_kabbalah = {
+	icon = 63
+	stewardship = 1
+}
+recently_dialogued = {
+	icon = 2
+	reform_opinion = 5
+}
+pacifist_province = {
+	icon = 11
+	religion_flex = -0.75
+}
+tolerant_province = {
+	icon = 11
+	religion_flex = -0.5
+}
+dogmatic_province = {
+	icon = 29
+	religion_flex = 1.0
+}
+inquisitional_province = {
+	icon = 29
+	religion_flex = 2.0
+}
+autonomous_province = {
+	icon = 11
+	culture_flex = -0.5
+}
+assimilationist_province = {
+	icon = 29
+	culture_flex = 1.0
+}
+haredi_learning = {
+	jewish_opinion = 10
+	learning = 1
+	icon = 63
+}
+jewish_outrage = {
+	jewish_opinion = -10
+	icon = 64
+}
+
+nestorian_mar_zaya = {
+	icon = 17
+	health = 0.5
+}
+
+nestorian_mar_maroun = {
+	icon = 17
+	church_opinion = 10
+	catholic_opinion = 5
+}
+
+nestorian_mar_nestor = {
+	icon = 17
+	learning = 1
+}
+
+nestorian_mar_abba = {
+	icon = 17
+	diplomacy = 1
+}
+
+aspiring_biblical_scholar = {
+	icon = 17
+	learning = 1
+}
+dont_change_laws = {
+	icon = 1
+	is_visible = { 
+		always = no
+	}
+}
+
+charismatic_conquest_prophecy = {
+	icon = 17
+}
+charismatic_duchy_prophecy = {
+	icon = 17
+}
+charismatic_kingdom_prophecy = {
+	icon = 17
+}
+charismatic_peace_prophecy_1 = {
+	icon = 17
+	global_revolt_risk = -0.01
+	build_time_modifier = -0.025
+}
+charismatic_peace_prophecy_2 = {
+	icon = 17
+	global_revolt_risk = -0.02
+	build_time_modifier = -0.03
+}
+charismatic_peace_prophecy_3 = {
+	icon = 17
+	global_revolt_risk = -0.03
+	build_time_modifier = -0.035
+}
+charismatic_family_prophecy = {
+	icon = 17
+	fertility = 0.25
+	sex_appeal_opinion = 10
+}
+charismatic_death_prophecy_1 = {
+	icon = 17
+	assassinate_chance_modifier = 0.1
+	murder_plot_power_modifier = 0.2
+}
+charismatic_death_prophecy_2 = {
+	icon = 17
+	assassinate_chance_modifier = 0.2
+	murder_plot_power_modifier = 0.2
+}
+charismatic_death_prophecy_3 = {
+	icon = 17
+	assassinate_chance_modifier = 0.3
+	murder_plot_power_modifier = 0.3
+}
+charismatic_friend_prophecy = {
+	icon = 17
+	general_opinion = 10
+}
+charismatic_old_children_prophecy = {
+	icon = 17
+	fertility = 0.5
+	sex_appeal_opinion = 10
+}
+charismatic_wealth_prophecy = {
+	icon = 17
+	global_tax_modifier = 0.25
+}
+charismatic_failed_reading = {
+	icon = 35
+}
+anastasia_general={
+	plot_power_modifier = 0.1
+	icon = 127
+}
+delightfully_devilish_anastasia={
+	plot_power_modifier = 0.1
+	murder_plot_power_modifier = 0.2
+	icon = 127
+}
+cristero_raised_peasants={
+	monthly_character_prestige = -0.1
+	icon = 13
+}
+expelled_rangers = {
+	global_revolt_risk = 0.02
+	icon = 31
+}
