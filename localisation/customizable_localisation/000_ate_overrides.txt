@@ -5420,9 +5420,9 @@ defined_text = {
 	}
 	text = {
 		trigger = {
-			religion = falling_star
+			religion = moravian
 		}
-		localisation_key = Holy_Order_Falling_Star
+		localisation_key = Holy_Order_Moravian 
 	}
 	text = {
 		trigger = {
@@ -5651,12 +5651,6 @@ defined_text = { #for coronation events
 	}
 	text = {
 		trigger = {
-			religion = falling_star
-		}
-		localisation_key = PRESIDENT
-	}
-	text = {
-		trigger = {
 			NOR = {
 				religion = catholic
 				religion = ursuline
@@ -5692,12 +5686,6 @@ defined_text = { #for coronation events
 	text = {
 		trigger = {
 			religion = high_church
-		}
-		localisation_key = String_Bishop
-	}
-	text = {
-		trigger = {
-			religion = falling_star
 		}
 		localisation_key = String_Bishop
 	}
@@ -5848,14 +5836,6 @@ defined_text = {
 		}
 
 		localisation_key = string_crusade_high_church_group
-	}
-	
-	text = {
-		trigger = {
-			has_character_flag = falling_star_group
-		}
-
-		localisation_key = string_crusade_falling_star_group
 	}
 
 	text = {
@@ -6765,15 +6745,6 @@ defined_text = {
 	}
 }
 defined_text = {
-	name = GetReligiousCommunityName_falling_star
-	text = { trigger = { has_alternate_start_parameter = { key = religion_names value = random } }
-		localisation_key = alt_start_community_name_falling_star
-	}
-	text = { trigger = { NOT = { has_alternate_start_parameter = { key = religion_names value = random } } }
-		localisation_key = secret_religious_society_REAL_falling_star
-	}
-}
-defined_text = {
 	name = GetReligiousCommunityName_moravian
 	text = { trigger = { has_alternate_start_parameter = { key = religion_names value = random } }
 		localisation_key = alt_start_community_name_moravian
@@ -6834,15 +6805,6 @@ defined_text = {
 	}
 	text = { trigger = { NOT = { has_alternate_start_parameter = { key = religion_names value = random } } }
 		localisation_key = secret_religious_society_REAL_true_cross
-	}
-}
-defined_text = {
-	name = GetReligiousCommunityName_wormwoodist
-	text = { trigger = { has_alternate_start_parameter = { key = religion_names value = random } }
-		localisation_key = alt_start_community_name_wormwoodist
-	}
-	text = { trigger = { NOT = { has_alternate_start_parameter = { key = religion_names value = random } } }
-		localisation_key = secret_religious_society_REAL_wormwoodist
 	}
 }
 defined_text = {
@@ -7133,6 +7095,7 @@ defined_text = {
 		localisation_key = secret_religious_society_REAL_pelagic
 	}
 }
+############FitzPoopinshield-1
 
 # China loc
 defined_text = {
@@ -7667,17 +7630,6 @@ defined_text = {
 	}
 }
 defined_text = {
-	name = GetReligiousSocietyDesc_wormwoodist
-	text = {
-		trigger = { has_alternate_start_parameter = { key = religion_names value = random } }
-		localisation_key = alt_start_community_desc
-	}
-	text = {
-		trigger = { NOT = { has_alternate_start_parameter = { key = religion_names value = random } } }
-		localisation_key = secret_religious_society_wormwoodist_desc_REAL
-	}
-}
-defined_text = {
 	name = GetReligiousSocietyDesc_penitente
 	text = {
 		trigger = { has_alternate_start_parameter = { key = religion_names value = random } }
@@ -7697,17 +7649,6 @@ defined_text = {
 	text = {
 		trigger = { NOT = { has_alternate_start_parameter = { key = religion_names value = random } } }
 		localisation_key = secret_religious_society_purificador_desc_REAL
-	}
-}
-defined_text = {
-	name = GetReligiousSocietyDesc_falling_star
-	text = {
-		trigger = { has_alternate_start_parameter = { key = religion_names value = random } }
-		localisation_key = alt_start_community_desc
-	}
-	text = {
-		trigger = { NOT = { has_alternate_start_parameter = { key = religion_names value = random } } }
-		localisation_key = secret_religious_society_falling_star_desc_REAL
 	}
 }
 
@@ -8539,7 +8480,7 @@ defined_text = {
 		localisation_key = secret_religious_society_pelagic_desc_REAL
 	}
 }
-
+	############FitzPoopinshield-2
 defined_text = {
 	name = GetStActivity
 	use_first_valid = yes
@@ -11354,7 +11295,7 @@ defined_text = {
 		trigger = {
 			OR = {
 				religion = evangelical
-				religion = falling_star
+				religion = moravian
 			}
 		}
 		localisation_key = String_Presiding_Bishop
@@ -11369,7 +11310,7 @@ defined_text = {
 		trigger = {
 			NOR = {
 				religion = evangelical
-				religion = falling_star
+				religion = moravian
 				religion_group = muslim
 			}
 		}
@@ -11384,7 +11325,7 @@ defined_text = {
 		trigger = {
 			OR = {
 				religion = evangelical
-				religion = falling_star
+				religion = moravian
 			}
 		}
 		localisation_key = String_Convention
@@ -11399,7 +11340,7 @@ defined_text = {
 		trigger = {
 			NOR = {
 				religion = evangelical
-				religion = falling_star
+				religion = moravian
 				religion_group = muslim
 			}
 		}
@@ -11414,7 +11355,7 @@ defined_text = {
 		trigger = {
 			OR = {
 				religion = evangelical
-				religion = falling_star
+				religion = moravian
 			}
 		}
 		localisation_key = String_Presiding_Bishops
@@ -11429,7 +11370,7 @@ defined_text = {
 		trigger = {
 			NOR = {
 				religion = evangelical
-				religion = falling_star
+				religion = moravian
 				religion_group = muslim
 			}
 		}

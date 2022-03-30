@@ -248,21 +248,9 @@ religion_same_as_bloodline_founder_trigger = { #WHY PARADOX
 	}
 	trigger_if = {
 		limit = {
-			FROM = { has_bloodline_flag = requires_falling_star_religion }
-		}
-		ROOT = { show_scope_change = no religion = falling_star }
-	}
-	trigger_if = {
-		limit = {
 			FROM = { has_bloodline_flag = requires_moravian_religion }
 		}
 		ROOT = { show_scope_change = no religion = moravian }
-	}
-	trigger_if = {
-		limit = {
-			FROM = { has_bloodline_flag = requires_wormwoodist_religion }
-		}
-		ROOT = { show_scope_change = no religion = wormwoodist }
 	}
 	trigger_if = {
 		limit = {
@@ -581,5 +569,18 @@ religion_same_as_bloodline_founder_trigger = { #WHY PARADOX
 			FROM = { has_bloodline_flag = requires_pelagic_religion }
 		}
 		ROOT = { show_scope_change = no religion = pelagic }
+	}
+	#########FitzPoopinshield
+	trigger_if = {
+		limit = {
+			FROM = { has_bloodline_flag = requires_penitente_religion }
+		}
+		ROOT = { show_scope_change = no religion = penitente }
+	}
+	trigger_if = {
+		limit = {
+			FROM = { has_bloodline_flag = requires_purificador_religion }
+		}
+		ROOT = { show_scope_change = no religion = purificador }
 	}
 }

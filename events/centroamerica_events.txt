@@ -1,4 +1,4 @@
-# Lollard/Paulician/Iconoclast wins siege over a Christian temple
+# Purificador/Reconstructionist wins siege over a Christian temple
 character_event = {
     id = emf_heresy.2016
     desc = EVTDESC_emf_heresy_2016
@@ -11,21 +11,24 @@ character_event = {
 
     trigger = {
         OR = {
-            religion = lollard
-            religion = paulician
-            religion = iconoclast
-            religion = bogomilist
+            religion = purificador
+            religion = reconstructionist
         }
         FROM = {
             holding_type = temple
             owner = {
                 wealth = 50
-                religion_group = christian
+				OR = {
+				religion_group = christian
+				religion_group = cult_of_saints
+				religion_group = latter_day_saints
+				religion_group = amero_syncretic
+				religion = qabantajik
+				religion = rastafarian
+				}
                 NOR = {
-                    religion = lollard
-                    religion = paulician
-                    religion = iconoclast
-                    religion = bogomilist
+                    religion = purificador
+                    religion = reconstructionist
                 }
             }
         }
@@ -36,7 +39,7 @@ option = {
             factor = 50
             modifier = {
                 factor = 2
-                religion = iconoclast
+                religion = purificador
             }
             modifier = {
                 factor = 5
@@ -55,10 +58,8 @@ option = {
             limit = {
                 NOT = { trait = iconoclast_trait }
                 OR = {
-                    religion = iconoclast
-                    religion = lollard
-                    religion = paulician
-                    religion = bogomilist
+                    religion = purificador
+                    religion = reconstructionist
                 }
             }
             add_trait = iconoclast_trait

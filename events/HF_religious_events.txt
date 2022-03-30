@@ -4054,23 +4054,9 @@ character_event = {
 			}
 		}
 		if = {
-			limit = { falling_star = { has_religion_feature = religion_cosmopolitan } }
-			random_playable_ruler = {
-				limit = { religion = falling_star }
-				apply_cosmopolian_on_start_effect = yes
-			}
-		}
-		if = {
 			limit = { moravian = { has_religion_feature = religion_cosmopolitan } }
 			random_playable_ruler = {
 				limit = { religion = moravian }
-				apply_cosmopolian_on_start_effect = yes
-			}
-		}
-		if = {
-			limit = { wormwoodist = { has_religion_feature = religion_cosmopolitan } }
-			random_playable_ruler = {
-				limit = { religion = wormwoodist }
 				apply_cosmopolian_on_start_effect = yes
 			}
 		}
@@ -4508,6 +4494,21 @@ character_event = {
 				apply_cosmopolian_on_start_effect = yes
 			}
 		}
+		############FitzPoopinshield-1
+		if = {
+			limit = { penitente = { has_religion_feature = religion_cosmopolitan } }
+			random_playable_ruler = {
+				limit = { religion = penitente }
+				apply_cosmopolian_on_start_effect = yes
+			}
+		}
+		if = {
+			limit = { purificador = { has_religion_feature = religion_cosmopolitan } }
+			random_playable_ruler = {
+				limit = { religion = purificador }
+				apply_cosmopolian_on_start_effect = yes
+			}
+		}
 		if = {
 			limit = { rastafarian = { has_religion_feature = religion_dogmatic } }
 			random_playable_ruler = {
@@ -4663,23 +4664,9 @@ character_event = {
 			}
 		}
 		if = {
-			limit = { falling_star = { has_religion_feature = religion_dogmatic } }
-			random_playable_ruler = {
-				limit = { religion = falling_star }
-				apply_dogmatic_on_start_effect = yes
-			}
-		}
-		if = {
 			limit = { moravian = { has_religion_feature = religion_dogmatic } }
 			random_playable_ruler = {
 				limit = { religion = moravian }
-				apply_dogmatic_on_start_effect = yes
-			}
-		}
-		if = {
-			limit = { wormwoodist = { has_religion_feature = religion_dogmatic } }
-			random_playable_ruler = {
-				limit = { religion = wormwoodist }
 				apply_dogmatic_on_start_effect = yes
 			}
 		}
@@ -5100,6 +5087,21 @@ character_event = {
 			limit = { pelagic = { has_religion_feature = religion_dogmatic } }
 			random_playable_ruler = {
 				limit = { religion = pelagic }
+				apply_dogmatic_on_start_effect = yes
+			}
+		}
+		############FitzPoopinshield-2
+		if = {
+			limit = { penitente = { has_religion_feature = religion_dogmatic } }
+			random_playable_ruler = {
+				limit = { religion = penitente }
+				apply_dogmatic_on_start_effect = yes
+			}
+		}
+		if = {
+			limit = { purificador = { has_religion_feature = religion_dogmatic } }
+			random_playable_ruler = {
+				limit = { religion = purificador }
 				apply_dogmatic_on_start_effect = yes
 			}
 		}

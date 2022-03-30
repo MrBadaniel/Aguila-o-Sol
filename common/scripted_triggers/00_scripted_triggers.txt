@@ -2303,9 +2303,6 @@ true_religion_charismatic_trigger = {
 true_religion_postadventist_trigger = {
 	true_religion = postadventist
 }
-true_religion_falling_star_trigger = {
-	true_religion = falling_star
-}
 true_religion_moravian_trigger = {
 	true_religion = moravian
 }
@@ -2314,9 +2311,6 @@ true_religion_penitente_trigger = {
 }
 true_religion_purificador_trigger = {
 	true_religion = purificador
-}
-true_religion_wormwoodist_trigger = {
-	true_religion = wormwoodist
 }
 true_religion_high_church_trigger = {
 	true_religion = high_church
@@ -2522,7 +2516,6 @@ true_religion_exovedate_trigger = {
 true_religion_pelagic_trigger = {
 	true_religion = pelagic
 }
-
 true_religion_group_afro_syncretic_trigger = {
 	true_religion_group = afro_syncretic
 }
@@ -3596,16 +3589,8 @@ is_in_prevs_interesting_society_trigger = {
 			PREV = { interested_in_society = secret_religious_society_postadventist }
 		}
 		AND = {
-			society_member_of = secret_religious_society_falling_star
-			PREV = { interested_in_society = secret_religious_society_falling_star }
-		}
-		AND = {
 			society_member_of = secret_religious_society_moravian
 			PREV = { interested_in_society = secret_religious_society_moravian }
-		}
-		AND = {
-			society_member_of = secret_religious_society_wormwoodist
-			PREV = { interested_in_society = secret_religious_society_wormwoodist }
 		}
 		AND = {
 			society_member_of = secret_religious_society_high_church
@@ -4036,22 +4021,10 @@ has_any_char_old_religion = {
 				religion = postadventist
 			}
 		}
-		AND = { 
-			has_character_flag = character_was_falling_star
-			any_character = {
-				religion = falling_star
-			}
-		}
 		AND = {
 			has_character_flag = character_was_moravian
 			any_character = {
 				religion = moravian
-			}
-		}
-		AND = {
-			has_character_flag = character_was_wormwoodist
-			any_character = {
-				religion = wormwoodist
 			}
 		}
 		AND = {
@@ -4840,13 +4813,6 @@ looting_artifact_event_religious_artifacts_trigger = {
 		NAND = {
 			any_artifact = {
 				has_artifact_flag = looted_artifact_tooltip_1
-				has_artifact_flag = falling_star
-				ROOT = { religion = falling_star }
-			}
-		}
-		NAND = {
-			any_artifact = {
-				has_artifact_flag = looted_artifact_tooltip_1
 				has_artifact_flag = moravian
 				ROOT = { religion = moravian }
 			}
@@ -4863,13 +4829,6 @@ looting_artifact_event_religious_artifacts_trigger = {
 				has_artifact_flag = looted_artifact_tooltip_1
 				has_artifact_flag = purificador
 				ROOT = { religion = purificador }
-			}
-		}
-		NAND = {
-			any_artifact = {
-				has_artifact_flag = looted_artifact_tooltip_1
-				has_artifact_flag = wormwoodist
-				ROOT = { religion = wormwoodist }
 			}
 		}
 		NAND = {
@@ -9546,11 +9505,9 @@ has_character_was_religion_flag_trigger = {
 		has_character_flag = character_was_antinomian
 		has_character_flag = character_was_charismatic
 		has_character_flag = character_was_postadventist
-		has_character_flag = character_was_falling_star
 		has_character_flag = character_was_moravian
 		has_character_flag = character_was_penitente
 		has_character_flag = character_was_purificador
-		has_character_flag = character_was_wormwoodist
 		has_character_flag = character_was_high_church
 		has_character_flag = character_was_nonconformist
 		has_character_flag = character_was_apostolic
@@ -9992,6 +9949,7 @@ is_accepting_of_homosexuality_trigger = {
 			religion = edenite
 			trait = marian_santa_muerte
 			trait = way_branch
+			trait = jewish_assiah
 			has_character_flag = overridemarriage
 			has_religion_feature = religion_equal
 			has_religion_feature = religion_feature_midewiwin
