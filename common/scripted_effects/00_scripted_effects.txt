@@ -31447,3 +31447,64 @@ abdicate_holy_order_if_religion_changes_effect = { #why. why did you add this ef
 		}
 	}	
 }
+
+rapid_baptizer_effect = { #bloodthirsty_tiered_traits_effect
+	hidden_effect = {
+		change_variable = { which = burned_hearts_points value = 1 }
+		if = { #Tier 1
+			limit = {
+				check_variable = { which = burned_hearts_points value = 10 }
+				NOR = { 
+					trait = levita
+					trait = aaronita
+					trait = melquisedequita
+					has_character_modifier = bloodthirsty_gods_exp_cooldown
+				}
+			}
+			character_event = { id = HF.23431 days = 6 } #Notify and assign trait.
+			add_character_modifier = { name = bloodthirsty_gods_exp_cooldown days = 12 hidden = yes } #Prevent event cascade.
+		}
+		if = { #Tier 2
+			limit = {
+				check_variable = { which = burned_hearts_points value = 50 }
+				trait = levita
+				NOR = { 
+					trait = aaronita
+					trait = melquisedequita
+					has_character_modifier = bloodthirsty_gods_exp_cooldown
+				}
+			}
+			character_event = { id = HF.23432 days = 6 } #Notify and assign trait.
+			add_character_modifier = { name = bloodthirsty_gods_exp_cooldown days = 12 hidden = yes } #Prevent event cascade.
+		}
+		if = { #Tier 3
+			limit = {
+				check_variable = { which = burned_hearts_points value = 100 }
+				trait = aaronita
+				NOR = { 
+					trait = melquisedequita
+					has_character_modifier = bloodthirsty_gods_exp_cooldown
+				}
+			}
+			character_event = { id = HF.23433 days = 6 } #Notify and assign trait.
+			add_character_modifier = { name = bloodthirsty_gods_exp_cooldown days = 12 hidden = yes } #Prevent event cascade.
+		}
+		if = { #Bloodline.
+			limit = {
+				check_variable = { which = burned_hearts_points value = 200 }
+				trait = melquisedequita
+				is_ruler = yes
+				is_playable = yes
+				NOR = { 
+					trait = kind 
+					has_character_modifier = bloodthirsty_gods_exp_cooldown
+					any_owned_bloodline = { # Not already has a Bloodthirsty bloodline.
+						has_bloodline_flag = bloodline_created_bloodthirsty
+					}
+				}
+			}
+			character_event = { id = HF.23434 days = 6 } #Notify and assign trait.
+			add_character_modifier = { name = bloodthirsty_gods_exp_cooldown days = 12 hidden = yes } #Prevent event cascade.
+		}
+	}
+}
