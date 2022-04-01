@@ -93,3 +93,100 @@ arch_iconoclast = {
 	male_compliment_adj = COMPL_RIGHTEOUS
 	female_compliment_adj = COMPL_RIGHTEOUS
 }
+
+levita = { #10 burned_hearts_points
+	potential = {
+	religion = navegante
+	}
+	opposites =  {
+		aaronita
+		melquisedequita
+	}
+	monthly_character_piety = 0.1
+	castle_opinion = -5
+	town_opinion = -5
+	tribal_opinion = 5
+	church_opinion = 5
+	same_opinion = 5
+	opposite_opinion = 5
+	#religious = yes
+
+	male_insult = INSULT_FANATIC
+	female_insult = INSULT_FANATIC
+	male_insult_adj = INSULT_NARROWMINDED
+	female_insult_adj = INSULT_NARROWMINDED
+	child_insult_adj = INSULT_NASTY
+	male_compliment_adj = COMPL_RIGHTEOUS
+	female_compliment_adj = COMPL_RIGHTEOUS
+	child_compliment_adj = COMPL_GOOD
+
+	ai_rationality = -15
+	ai_zeal = 30
+	customizer = yes
+	random = no
+	ruler_designer_cost = 10
+}
+aaronita = { #50 burned_hearts_points
+	potential = {
+	religion = navegante
+	}
+	opposites =  {
+		levita
+		melquisedequita
+	}
+	monthly_character_piety = 0.2
+	castle_opinion = -10
+	town_opinion = -10
+	tribal_opinion = 10
+	church_opinion = 10
+	same_opinion = 5
+	opposite_opinion = 10
+	#religious = yes
+
+	male_insult = INSULT_FANATIC
+	female_insult = INSULT_FANATIC
+	male_insult_adj = INSULT_NARROWMINDED
+	female_insult_adj = INSULT_NARROWMINDED
+	child_insult_adj = INSULT_NASTY
+	male_compliment_adj = COMPL_RIGHTEOUS
+	female_compliment_adj = COMPL_RIGHTEOUS
+	child_compliment_adj = COMPL_GOOD
+
+	ai_rationality = -30
+	ai_zeal = 70
+	customizer = yes
+	random = no
+	ruler_designer_cost = 20
+}
+melquisedequita = { #100 burned_hearts_points
+	potential = {
+	religion = navegante
+	}
+	opposites =  {
+		aaronita
+		levita
+	}
+	monthly_character_piety = 0.3
+	castle_opinion = -15
+	town_opinion = -15
+	tribal_opinion = 15
+	church_opinion = 15
+	same_opinion = 5
+	opposite_opinion = 15
+	#religious = yes
+
+	male_insult = INSULT_FANATIC
+	female_insult = INSULT_FANATIC
+	male_insult_adj = INSULT_NARROWMINDED
+	female_insult_adj = INSULT_NARROWMINDED
+	child_insult_adj = INSULT_NASTY
+	male_compliment_adj = COMPL_RIGHTEOUS
+	female_compliment_adj = COMPL_RIGHTEOUS
+	child_compliment_adj = COMPL_GOOD
+
+	ai_rationality = -75
+	ai_zeal = 100
+	customizer = yes
+	random = no
+	ruler_designer_cost = 40
+}
