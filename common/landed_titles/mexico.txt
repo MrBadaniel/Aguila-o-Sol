@@ -652,12 +652,14 @@ e_mexico = {
 		foa = "ALTEZA_FOA"
 		
 		allow = {
+			conditional_tooltip = {
 				trigger = {
 					NOT = {
 						has_global_flag = mexican_empire_restored
 					}
 				}
 			}
+		}
 		
 		
 		d_hidalgo = {
