@@ -264,7 +264,7 @@ narrative_event = {
 }
 
 ### Destape outcome - Let emperor know the ceremony is over
-character_event = {
+long_character_event = {
 	id = destape.10
 	title = "TITLE_DESTAPE"
 	desc = EVTDESC_destape_10
@@ -291,8 +291,6 @@ character_event = {
 				character_event = {
 					id = destape.11
 				}
-				clr_character_flag = attending_destape
-				clr_character_flag = destape_begins
 			}
 		}
 	}
@@ -313,6 +311,10 @@ character_event = {
 
 	option = {
 		name = EVTOPTA_destape_11
+		hidden_tooltip = {
+			clr_character_flag = attending_destape
+			clr_character_flag = destape_begins
+		}
 	}
 }
 
