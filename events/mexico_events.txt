@@ -1,0 +1,225 @@
+#######################################
+#
+# Mexico Events
+#
+# Event ID MXR.1 - MXR.199 reserved
+#
+#######################################
+
+# Written by Henrik Eklund
+
+namespace = MXR
+
+### Mexican Empire Restored
+
+# The Restoration of Mexico
+narrative_event = {
+	id = MXR.20
+	title = EVTNAMEMXR.20
+	desc = {
+		text = EVTDESCMXR.20
+		trigger = { 
+			is_alternate_start = no
+		}
+	}
+	desc = {
+		text = EVTDESCMXR20_HF
+		trigger = { 
+			is_alternate_start = yes
+		}
+	}
+	
+	picture = GFX_evt_rome_restored_byzantine
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		if = {
+			limit = {
+				ai = no
+			}
+			set_character_flag = achievement_legacy_of_rome
+			set_global_flag = mexican_empire_restored
+		}
+	}
+	
+	option = {
+		name = EVTOPTAMXR.20
+		hidden_tooltip = {
+			primary_title = {
+				any_direct_de_jure_vassal_title = {
+					de_jure_liege = e_mexico
+				}
+			}
+		}
+		e_mexico = {
+			show_scope_change = no
+			grant_title = ROOT
+			hidden_tooltip = { make_primary_title = yes }
+			copy_title_laws = k_mexico
+			copy_title_history = k_mexico
+		}
+		k_mexico = {
+			show_scope_change = no
+			destroy_landed_title = THIS
+		}
+		hidden_tooltip = {
+			activate_title = { title = k_mexico status = no }
+			any_playable_ruler = {
+				limit = {
+					NOT = { has_landed_title = k_mexico }
+					ai = no
+				}
+				narrative_event = { id = MXR.21 }
+			}
+		give_nickname = nick_the_glorious
+		if = { #New Imperial Bloodline. (male)
+				limit = { 
+					has_dlc = "Holy Fury" 
+					is_female = no
+					is_alternate_start = no
+					OR = { 
+						religion_group = christian
+						religion_group = mesoamerican_gods
+						religion_group = cult_of_saints
+					}
+					NOT = {
+						any_owned_bloodline = {
+							has_bloodline_flag = mexico_bloodline #Not if already member of a famous historical Roman Bloodline.
+						}
+					}
+				}
+				create_bloodline = {
+					type = restaurador_male
+				}
+				new_bloodline = {
+					set_description = "bloodline_desc_mexican"
+				}	
+				sound_effect = bloodline_added
+			}
+		}
+		if = { #New Imperial Bloodline. (female)
+			limit = { 
+				has_dlc = "Holy Fury" 
+				is_female = yes
+				is_alternate_start = no
+				OR = { 
+					religion_group = christian
+					religion_group = mesoamerican_gods
+					religion_group = cult_of_saints
+				}
+				NOT = {
+					any_owned_bloodline = {
+						has_bloodline_flag = mexican_bloodline #Not if already member of a famous historical Roman Bloodline.
+					}
+				}
+			}
+			create_bloodline = {
+				type = restaurador_female
+			}
+			new_bloodline = {
+				set_description = "bloodline_desc_mexican"
+			}	
+			sound_effect = bloodline_added
+		}
+	}
+}
+
+# Informed about Restoration of Rome
+narrative_event = {
+	id = MXR.21
+	title = EVTNAMEMXR.21
+	desc = {
+		text = EVTDESCMXR.21
+		trigger = { 
+			is_alternate_start = no
+		}
+	}
+	desc = {
+		text = EVTDESCMXR21_HF
+		trigger = { 
+			is_alternate_start = yes
+		}
+	}
+	
+	picture = GFX_evt_rome_restored_byzantine
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTAMXR.21
+		trigger = {
+			NOT = { has_landed_title = e_dixie }
+		}
+	}
+}
+
+### Mexican Borders Restored
+
+# Mexican Borders
+narrative_event = {
+	id = MXR.40
+	title = EVTNAMEMXR.40
+	desc = {
+		trigger = {
+			OR = {
+				religion_group = christian
+				religion_group = cult_of_saints
+			}
+		}
+		text = EVTDESCMXR.40
+	}
+	desc = {
+		trigger = {
+			OR = { 
+				religion_group = mesoamerican_gods
+			}
+		}
+		text = EVTDESCLoR40_HELLENIC
+	}
+	desc = {
+		trigger = {
+			NOR = { 
+				religion_group = christian
+				religion_group = mesoamerican_gods
+				religion_group = cult_of_saints
+			}
+		}
+		text = EVTDESCMXR40_GENERIC
+	}
+	
+	picture = GFX_evt_rome_restored_byzantine
+	
+	ai = no
+	
+	trigger = {
+		is_alternate_start = no
+		has_dlc = "Legacy of Rome"
+		OR = {
+			has_landed_title = e_mexico
+		}
+		NOT = { has_global_flag = roman_borders }
+		
+		completely_controls_region = custom_oldworld_mexico
+
+	}
+	
+	immediate = {
+		if = {
+			limit = {
+				ai = no
+			}
+			set_character_flag = achievement_cdmx
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = EVTOPTAMXR.40
+		set_global_flag = mexican_borders
+		prestige = 1000
+	}
+}
