@@ -28,6 +28,13 @@ decisions = {
 		effect = {
 			set_global_flag = mexico_restored
 			narrative_event = { id = MXR.20 tooltip = EVTTOOLTIPLoR.20 }
+			primary_title = {
+				e_mexico = {
+					grant_title = ROOT
+					copy_title_history = k_mexico
+					copy_title_laws = k_mexico
+				}
+			}
 		}
 		ai_will_do = {
 			factor = 1
