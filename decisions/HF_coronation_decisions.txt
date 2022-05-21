@@ -150,6 +150,13 @@ decisions = {
 							has_landed_title = k_ursuline
 							has_landed_title = d_quorum_of_the_twelve
 							has_landed_title = k_high_church
+							has_landed_title = d_cristo_rey
+							has_landed_title = k_hijo_del_sol
+							has_landed_title = d_montanist
+								AND = {
+									has_landed_title = d_quorum_of_the_lamanites
+									has_global_flag = lamanita_reformed
+									}
 						}
 						NOT = { block_general_event_trigger = yes }
 					}
