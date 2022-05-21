@@ -47,7 +47,13 @@ decisions = {
 					NOT = { trait = excommunicated }
 					has_law = investiture_law_1
 					hidden_tooltip = { lower_real_tier_than = EMPEROR }
-				} 
+				}
+				OR = { 
+					religion = lamanita
+					religion = sol_invicta
+					religion = montanist
+					religion = cristo_rey
+				}
 			} 
 			custom_tooltip = {
 				text = inaccessible_tooltip
@@ -162,7 +168,15 @@ decisions = {
 				}
 				AND = { 
 					tier = EMPEROR
+					OR = {
 					primary_title = { has_law = investiture_law_1 }
+							OR = { 
+								religion = lamanita
+								religion = sol_invicta
+								religion = montanist
+								religion = cristo_rey
+							}
+						}
 					custom_tooltip = { 
 						text = TT_CORONATION_VASSAL_PRIEST 
 						any_realm_character = { 
