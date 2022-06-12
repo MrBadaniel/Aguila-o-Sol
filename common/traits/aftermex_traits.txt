@@ -170,6 +170,8 @@ marian_el_santo = {
 
 	opposite_opinion = -5
 	
+	tolerates_oldworld = yes		# Tolerates and is tolerated by Old World
+	
 	martial = 1
 
 	potential = { religion = sacred_heart }
@@ -200,6 +202,7 @@ marian_guadalupe = {
 	}
 
 	#opposite_opinion = -5
+	tolerates_christian = yes		# Tolerates and is tolerated by Christians
 	
 	monthly_character_piety = 0.5
 	monthly_character_prestige = 0.25
@@ -226,6 +229,8 @@ marian_santa_muerte = {
 		marian_santo_nino_fidencio
 		marian_santa_inocencia
 	}
+
+	tolerates_afro_syncretic = yes		# Tolerates and is tolerated by Afro-Syncretics
 
 	opposite_opinion = -5
 	
@@ -256,6 +261,7 @@ marian_san_charbel = {
 	}
 
 	#opposite_opinion = -5
+	tolerates_christian = yes		# Tolerates and is tolerated by Christians
 	
 	health = 1
 	learning = 1
@@ -288,6 +294,7 @@ marian_san_juditas = {
 	}
 
 	#opposite_opinion = -5
+	tolerates_christian = yes		# Tolerates and is tolerated by Christians
 	stewardship = 1
 	
 	monthly_character_piety = 0.1
@@ -368,6 +375,7 @@ marian_san_pascual = {
 	}
 
 	#opposite_opinion = -5
+	tolerates_christian = yes		# Tolerates and is tolerated by Christians
 	stewardship = 1
 	
 	monthly_character_piety = 0.1
@@ -397,6 +405,8 @@ marian_stella_maris = {
 	}
 
 	opposite_opinion = -5
+	tolerates_nautical = yes		# Tolerates and is tolerated by Pirates
+	tolerates_pagan_group = yes		# Tolerates and is tolerated by Pagans
 	stewardship = 1
 	
 	monthly_character_piety = 0.1
@@ -430,6 +440,8 @@ marian_santo_nino_fidencio = {
 	}
 
 	opposite_opinion = -5
+	tolerates_pagan_group = yes		# Tolerates and is tolerated by Pagans
+	tolerates_oldworld = yes		# Tolerates and is tolerated by Old World
 	stewardship = 1
 	
 	monthly_character_piety = 0.1
@@ -463,6 +475,7 @@ marian_santa_inocencia = {
 	}
 
 	#opposite_opinion = -5
+	tolerates_christian = yes		# Tolerates and is tolerated by Christians
 	stewardship = 1
 	
 	monthly_character_piety = 0.1
