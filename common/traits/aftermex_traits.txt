@@ -412,7 +412,12 @@ marian_stella_maris = {
 	monthly_character_piety = 0.1
 	monthly_character_prestige = 0.25
 
-	potential = { religion = sacred_heart }
+		potential = {
+			AND = {
+				religion = sacred_heart
+				has_global_flag = navegantes_absorbed_into_fold
+			}
+		}
 	religious_branch = sacred_heart
 	random = no
 	religious = yes
@@ -441,13 +446,17 @@ marian_santo_nino_fidencio = {
 
 	opposite_opinion = -5
 	tolerates_pagan_group = yes		# Tolerates and is tolerated by Pagans
-	tolerates_oldworld = yes		# Tolerates and is tolerated by Old World
+	tolerates_oldworld = yes		# Tolerates and is tolerated by Old World 
 	stewardship = 1
 	
 	monthly_character_piety = 0.1
 	monthly_character_prestige = 0.25
-
-	potential = { religion = sacred_heart }
+		potential = {
+			AND = {
+				religion = sacred_heart
+				has_global_flag = fidencistas_absorbed_into_fold
+			}
+		}
 	religious_branch = sacred_heart
 	random = no
 	religious = yes

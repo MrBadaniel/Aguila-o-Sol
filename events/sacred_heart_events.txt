@@ -241,7 +241,10 @@ character_event = {
 	option = {
 		name = EVTOPTH_sacredheart_1
 		trigger = {
-			has_global_flag = fidencistas_absorbed_into_fold
+			AND = {
+				NOT = { trait = marian_santo_nino_fidencio }
+				has_global_flag = fidencistas_absorbed_into_fold
+			}
 		}	
 		hidden_tooltip = {
 			remove_trait = marian_santa_muerte
@@ -275,8 +278,11 @@ character_event = {
 	option = {
 		name = EVTOPTI_sacredheart_1
 		trigger = {
-			has_global_flag = navegantes_absorbed_into_fold
-		}		
+			AND = {
+				NOT = { trait = marian_stella_maris }
+				has_global_flag = navegantes_absorbed_into_fold
+			}
+		}	
 		hidden_tooltip = {
 			remove_trait = marian_santa_muerte
 			remove_trait = marian_guadalupe
@@ -1246,9 +1252,11 @@ character_event = {
 	option = {
 		name = EVTOPTE_sacredheart_150
 		trigger = {
-			has_global_flag = fidencistas_absorbed_into_fold
-			NOT = { trait = marian_santo_nino_fidencio }
-		}	
+			AND = {
+				NOT = { trait = marian_santo_nino_fidencio }
+				has_global_flag = fidencistas_absorbed_into_fold
+			}
+		}
 		hidden_tooltip = {
 			remove_trait = marian_santa_muerte
 			remove_trait = marian_guadalupe
@@ -1473,8 +1481,10 @@ character_event = {
 	option = {
 		name = EVTOPTC_sacredheart_152
 		trigger = {
-			NOT = { trait = marian_stella_maris }
-			has_global_flag = navegantes_absorbed_into_fold
+			AND = {
+				NOT = { trait = marian_stella_maris }
+				has_global_flag = navegantes_absorbed_into_fold
+			}
 		}
 		hidden_tooltip = {
 			remove_trait = marian_santa_muerte
