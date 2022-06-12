@@ -25,12 +25,6 @@ character_event = {
 					has_landed_title = d_quorum_of_the_twelve
 					has_landed_title = k_high_church
 					has_landed_title = d_cristo_rey
-					has_landed_title = k_hijo_del_sol
-					has_landed_title = d_montanist
-					AND = {
-					has_landed_title = d_quorum_of_the_lamanites
-					has_global_flag = lamanita_reformed
-					}
 				} 
 			} 
 		}
@@ -52,12 +46,7 @@ character_event = {
 						has_landed_title = d_quorum_of_the_twelve
 						has_landed_title = k_high_church
 						has_landed_title = d_cristo_rey
-						has_landed_title = k_hijo_del_sol
-						has_landed_title = d_montanist
-						AND = {
-						has_landed_title = d_quorum_of_the_lamanites
-						has_global_flag = lamanita_reformed
-						}
+						
 					}
 					NOT = { 
 						opinion = { 
@@ -76,12 +65,7 @@ character_event = {
 						has_landed_title = d_quorum_of_the_twelve
 						has_landed_title = k_high_church
 						has_landed_title = d_cristo_rey
-						has_landed_title = k_hijo_del_sol
-						has_landed_title = d_montanist
-						AND = {
-						has_landed_title = d_quorum_of_the_lamanites
-						has_global_flag = lamanita_reformed
-						}
+						
 					}
 					NOT = { 
 						opinion = { 
@@ -100,12 +84,7 @@ character_event = {
 						has_landed_title = d_quorum_of_the_twelve
 						has_landed_title = k_high_church
 						has_landed_title = d_cristo_rey
-						has_landed_title = k_hijo_del_sol
-						has_landed_title = d_montanist
-						AND = {
-						has_landed_title = d_quorum_of_the_lamanites
-						has_global_flag = lamanita_reformed
-						}
+						
 					}
 					NOT = { 
 						opinion = { 
@@ -124,12 +103,7 @@ character_event = {
 						has_landed_title = d_quorum_of_the_twelve
 						has_landed_title = k_high_church
 						has_landed_title = d_cristo_rey
-						has_landed_title = k_hijo_del_sol
-						has_landed_title = d_montanist
-						AND = {
-						has_landed_title = d_quorum_of_the_lamanites
-						has_global_flag = lamanita_reformed
-						}
+						
 					}
 					NOT = { 
 						opinion = { 
@@ -148,12 +122,7 @@ character_event = {
 						has_landed_title = d_quorum_of_the_twelve
 						has_landed_title = k_high_church
 						has_landed_title = d_cristo_rey
-						has_landed_title = k_hijo_del_sol
-						has_landed_title = d_montanist
-						AND = {
-						has_landed_title = d_quorum_of_the_lamanites
-						has_global_flag = lamanita_reformed
-						}
+						
 					}
 					NOT = { 
 						opinion = { 
@@ -172,12 +141,7 @@ character_event = {
 						has_landed_title = d_quorum_of_the_twelve
 						has_landed_title = k_high_church
 						has_landed_title = d_cristo_rey
-						has_landed_title = k_hijo_del_sol
-						has_landed_title = d_montanist
-						AND = {
-						has_landed_title = d_quorum_of_the_lamanites
-						has_global_flag = lamanita_reformed
-						}
+						
 					}
 					NOT = { 
 						opinion = { 
@@ -196,12 +160,7 @@ character_event = {
 						has_landed_title = d_quorum_of_the_twelve
 						has_landed_title = k_high_church
 						has_landed_title = d_cristo_rey
-						has_landed_title = k_hijo_del_sol
-						has_landed_title = d_montanist
-						AND = {
-						has_landed_title = d_quorum_of_the_lamanites
-						has_global_flag = lamanita_reformed
-						}
+						
 					}
 					NOT = { 
 						opinion = { 
@@ -220,12 +179,7 @@ character_event = {
 						has_landed_title = d_quorum_of_the_twelve
 						has_landed_title = k_high_church
 						has_landed_title = d_cristo_rey
-						has_landed_title = k_hijo_del_sol
-						has_landed_title = d_montanist
-						AND = {
-						has_landed_title = d_quorum_of_the_lamanites
-						has_global_flag = lamanita_reformed
-						}
+						
 					}
 					NOT = { 
 						opinion = { 
@@ -244,12 +198,7 @@ character_event = {
 						has_landed_title = d_quorum_of_the_twelve
 						has_landed_title = k_high_church
 						has_landed_title = d_cristo_rey
-						has_landed_title = k_hijo_del_sol
-						has_landed_title = d_montanist
-						AND = {
-						has_landed_title = d_quorum_of_the_lamanites
-						has_global_flag = lamanita_reformed
-						}
+						
 					}
 					NOT = { 
 						opinion = { 
@@ -268,12 +217,7 @@ character_event = {
 						has_landed_title = d_quorum_of_the_twelve
 						has_landed_title = k_high_church
 						has_landed_title = d_cristo_rey
-						has_landed_title = k_hijo_del_sol
-						has_landed_title = d_montanist
-						AND = {
-						has_landed_title = d_quorum_of_the_lamanites
-						has_global_flag = lamanita_reformed
-						}
+						
 					}
 					NOT = { 
 						opinion = { 
@@ -292,10 +236,6 @@ character_event = {
 			OR = { 
 				lower_tier_than = EMPEROR
 				primary_title = { has_law = investiture_law_1 }
-				OR = {
-				religion = montanist
-				religion = cristo_rey
-				}
 			} 
 			any_realm_character = { 
 				is_theocracy = yes 
@@ -305,24 +245,18 @@ character_event = {
 				OR = { 
 					higher_tier_than = BARON 
 					has_minor_title = title_cardinal
-					has_minor_title = title_sol_cardinal
 					has_minor_title = title_ursuline_cardinal
 					has_minor_title = title_mormon_cardinal
-					has_minor_title = title_lamanita_cardinal
 					any_claim = { title = k_papal_state } #Antipope
 					any_claim = { title = k_ursuline } #Antipope
 					any_claim = { title = d_quorum_of_the_twelve } #Antipope
 					any_claim = { title = k_high_church } #Antipope
-					any_claim = { title = k_hijo_del_sol } #Antipope
-					any_claim = { title = d_quorum_of_the_lamanites } #Antipope
 				}
 				NOT = { has_landed_title = k_papal_state }
 				NOT = { has_landed_title = k_ursuline }
 				NOT = { has_landed_title = d_quorum_of_the_twelve }
 				NOT = {	has_landed_title = k_high_church }
 				NOT = { has_landed_title = d_cristo_rey }
-				NOT = {	has_landed_title = d_montanist }
-				NOT = { has_landed_title = d_quorum_of_the_lamanites }
 			}
 		}
 		custom_tooltip = { text = EVTTOOLTIPBHF20200 }
@@ -337,12 +271,6 @@ character_event = {
 						has_landed_title = d_quorum_of_the_twelve
 						has_landed_title = k_high_church
 						has_landed_title = d_cristo_rey
-						has_landed_title = k_hijo_del_sol
-						has_landed_title = d_montanist
-						AND = {
-						has_landed_title = d_quorum_of_the_lamanites
-						has_global_flag = lamanita_reformed
-						}
 					} 
 				}
 			}
@@ -368,25 +296,18 @@ character_event = {
 				OR = { 
 					higher_tier_than = BARON 
 					has_minor_title = title_cardinal
-					has_minor_title = title_sol_cardinal
 					has_minor_title = title_ursuline_cardinal
 					has_minor_title = title_mormon_cardinal
-					has_minor_title = title_lamanita_cardinal				
 					any_claim = { title = k_papal_state } #Antipope
 					any_claim = { title = k_ursuline } #Antipope
 					any_claim = { title = d_quorum_of_the_twelve } #Antipope
 					any_claim = { title = k_high_church } #Antipope
-					any_claim = { title = k_hijo_del_sol } #Antipope
-					any_claim = { title = d_quorum_of_the_lamanites } #Antipope
 				}
 				NOT = { has_landed_title = k_papal_state }
 				NOT = { has_landed_title = k_ursuline }
 				NOT = { has_landed_title = d_quorum_of_the_twelve }
-				NOT = {	has_landed_title = k_high_church }
+				NOT = { has_landed_title = k_high_church }
 				NOT = { has_landed_title = d_cristo_rey }
-				NOT = { has_landed_title = k_hijo_del_sol }
-				NOT = {	has_landed_title = d_montanist }
-				NOT = { has_landed_title = d_quorum_of_the_lamanites }
 			}
 			preferred_limit = { #First search for a possible antipopes.
 				any_claim = { title = k_papal_state } 
@@ -401,25 +322,13 @@ character_event = {
 				any_claim = { title = k_high_church } 
 			}
 			preferred_limit = { 
-				any_claim = { title = k_hijo_del_sol } 
-			}
-			preferred_limit = { 
-				any_claim = { title = d_quorum_of_the_lamanites } 
-			}			
-			preferred_limit = { 
 				has_minor_title = title_cardinal
-			}
-			preferred_limit = { 
-				has_minor_title = title_sol_cardinal
 			}
 			preferred_limit = { 
 				has_minor_title = title_ursuline_cardinal
 			}
 			preferred_limit = { 
 				has_minor_title = title_mormon_cardinal
-			}
-			preferred_limit = { 
-				has_minor_title = title_lamanita_cardinal
 			}
 			hidden_tooltip = { letter_event = { id = HF.20201 days = 30 random = 5 } } 
 			break = yes
@@ -437,10 +346,6 @@ character_event = {
 			OR = { 
 				lower_tier_than = EMPEROR
 				primary_title = { has_law = investiture_law_1 }
-				OR = {
-				religion = montanist
-				religion = cristo_rey
-				}
 			} 
 			any_realm_character = { 
 				is_theocracy = yes 
@@ -452,26 +357,15 @@ character_event = {
 					has_landed_title = k_ursuline
 					has_landed_title = d_quorum_of_the_twelve
 					has_landed_title = k_high_church
-					has_landed_title = cristo_rey
-					has_landed_title = k_hijo_del_sol
 					has_landed_title = d_cristo_rey
-					has_landed_title = d_montanist
-					AND = {
-					has_landed_title = d_quorum_of_the_lamanites
-					has_global_flag = lamanita_reformed
-					}
 					higher_real_tier_than = BARON 
 					has_minor_title = title_cardinal
-					has_minor_title = title_sol_cardinal
 					has_minor_title = title_ursuline_cardinal
 					has_minor_title = title_mormon_cardinal
-					has_minor_title = title_lamanita_cardinal
 					any_claim = { title = k_papal_state } #Antipope
 					any_claim = { title = k_ursuline } #Antipope
 					any_claim = { title = d_quorum_of_the_twelve } #Antipope
 					any_claim = { title = k_high_church } #Antipope
-					any_claim = { title = k_hijo_del_sol } #Antipope
-					any_claim = { title = d_quorum_of_the_lamanites } #Antipope
 				}
 			}
 		}
@@ -491,14 +385,8 @@ character_event = {
 						has_landed_title = k_ursuline
 						has_landed_title = d_quorum_of_the_twelve
 						has_landed_title = k_high_church
-						has_landed_title = cristo_rey
-						has_landed_title = k_hijo_del_sol
 						has_landed_title = d_cristo_rey
-						has_landed_title = d_montanist
-						AND = {
-						has_landed_title = d_quorum_of_the_lamanites
-							has_global_flag = lamanita_reformed
-							}
+						
 					} 
 				}
 			}
@@ -529,25 +417,18 @@ character_event = {
 					OR = { 
 						higher_real_tier_than = BARON 
 						has_minor_title = title_cardinal
-						has_minor_title = title_sol_cardinal
 						has_minor_title = title_ursuline_cardinal
 						has_minor_title = title_mormon_cardinal
-						has_minor_title = title_lamanita_cardinal
 						any_claim = { title = k_papal_state } #Antipope
 						any_claim = { title = k_ursuline } 
 						any_claim = { title = d_quorum_of_the_twelve } 
 						any_claim = { title = k_high_church } 
-						any_claim = { title = k_hijo_del_sol } 
-						any_claim = { title = d_quorum_of_the_lamanites } #Antipope
 					}
 					NOT = { has_landed_title = k_papal_state }
 					NOT = { has_landed_title = k_ursuline }
 					NOT = { has_landed_title = d_quorum_of_the_twelve }
 					NOT = { has_landed_title = k_high_church }
 					NOT = { has_landed_title = d_cristo_rey }
-					NOT = { has_landed_title = k_hijo_del_sol }
-					NOT = {	has_landed_title = d_montanist }
-					NOT = { has_landed_title = d_quorum_of_the_lamanites }
 				}
 			}
 			custom_tooltip = { text = scorned_powerful_theocrats }
@@ -561,24 +442,18 @@ character_event = {
 						OR = { 
 							higher_real_tier_than = BARON 
 							has_minor_title = title_cardinal
-							has_minor_title = title_sol_cardinal
 							has_minor_title = title_ursuline_cardinal
 							has_minor_title = title_mormon_cardinal
 							any_claim = { title = k_papal_state } #Antipope
 							any_claim = { title = k_ursuline } 
 							any_claim = { title = d_quorum_of_the_twelve } 
-							any_claim = { title = k_high_church }
-							any_claim = { title = k_hijo_del_sol }
-							any_claim = { title = d_quorum_of_the_lamanites } #Antipope 							
+							any_claim = { title = k_high_church } 
 						}
 						NOT = { has_landed_title = k_papal_state }
 						NOT = { has_landed_title = k_ursuline }
 						NOT = { has_landed_title = d_quorum_of_the_twelve }
 						NOT = { has_landed_title = k_high_church }
 						NOT = { has_landed_title = d_cristo_rey }
-						NOT = { has_landed_title = k_hijo_del_sol }
-						NOT = {	has_landed_title = d_montanist }
-						NOT = { has_landed_title = d_quorum_of_the_lamanites }
 					}
 					opinion = {
 						modifier = opinion_offended
@@ -600,25 +475,15 @@ character_event = {
 					has_landed_title = k_ursuline
 					has_landed_title = d_quorum_of_the_twelve
 					has_landed_title = k_high_church
-					has_landed_title = k_hijo_del_sol
 					has_landed_title = d_cristo_rey
-					has_landed_title = d_montanist
-					AND = {
-					has_landed_title = d_quorum_of_the_lamanites
-					has_global_flag = lamanita_reformed
-					}
 					higher_real_tier_than = BARON 
 					has_minor_title = title_cardinal
-					has_minor_title = title_sol_cardinal
 					has_minor_title = title_ursuline_cardinal
 					has_minor_title = title_mormon_cardinal
-					has_minor_title = title_lamanita_cardinal
 					any_claim = { title = k_papal_state } #Antipope
 					any_claim = { title = k_ursuline } 
 					any_claim = { title = d_quorum_of_the_twelve } 
-					any_claim = { title = k_high_church }
-					any_claim = { title = k_hijo_del_sol } 	
-					any_claim = { title = d_quorum_of_the_lamanites } #Antipope
+					any_claim = { title = k_high_church } 
 				}
 			}
 			preferred_limit = { 
@@ -693,10 +558,7 @@ letter_event = {
 				religion = mormon
 				religion = high_church
 				religion = cristo_rey
-				religion = sol_invicta
-				religion = lamanita
-				religion = montanist
-				#religion = sacred_heart
+				
 			}
 		}
 	}
@@ -709,25 +571,15 @@ letter_event = {
 				has_landed_title = k_ursuline
 				has_landed_title = d_quorum_of_the_twelve
 				has_landed_title = k_high_church
-					has_landed_title = k_hijo_del_sol
-					has_landed_title = d_cristo_rey
-					has_landed_title = d_montanist
-					AND = {
-					has_landed_title = d_quorum_of_the_lamanites
-					has_global_flag = lamanita_reformed
-					}
+				has_landed_title = d_cristo_rey
 				higher_real_tier_than = BARON 
-					has_minor_title = title_cardinal
-					has_minor_title = title_sol_cardinal
-					has_minor_title = title_ursuline_cardinal
-					has_minor_title = title_mormon_cardinal
-					has_minor_title = title_lamanita_cardinal
-					any_claim = { title = k_papal_state } #Antipope
-					any_claim = { title = k_ursuline } 
-					any_claim = { title = d_quorum_of_the_twelve } 
-					any_claim = { title = k_high_church }
-					any_claim = { title = k_hijo_del_sol } 	
-					any_claim = { title = d_quorum_of_the_lamanites } #Antipope
+				has_minor_title = title_cardinal
+				has_minor_title = title_ursuline_cardinal
+				has_minor_title = title_mormon_cardinal
+				any_claim = { title = k_papal_state } #Antipope
+				any_claim = { title = k_ursuline } 
+				any_claim = { title = d_quorum_of_the_twelve } 
+				any_claim = { title = k_high_church } 
 			}
 		}
 		random_list = { 
@@ -844,36 +696,22 @@ letter_event = {
 				has_landed_title = k_ursuline
 				has_landed_title = d_quorum_of_the_twelve
 				has_landed_title = k_high_church
-					has_landed_title = k_hijo_del_sol
-					has_landed_title = d_cristo_rey
-					has_landed_title = d_montanist
-					AND = {
-					has_landed_title = d_quorum_of_the_lamanites
-					has_global_flag = lamanita_reformed
-					}
+				has_landed_title = d_cristo_rey
 			}
 			OR = { 
 				has_landed_title = k_papal_state
 				has_landed_title = k_ursuline
 				has_landed_title = d_quorum_of_the_twelve
 				has_landed_title = k_high_church
-					has_landed_title = k_hijo_del_sol
-					has_landed_title = d_cristo_rey
-					has_landed_title = d_montanist
-					AND = {
-					has_landed_title = d_quorum_of_the_lamanites
-					has_global_flag = lamanita_reformed
-					}
+				has_landed_title = d_cristo_rey
 				higher_real_tier_than = BARON 
 				has_minor_title = title_cardinal
-				has_minor_title = title_sol_cardinal
 				has_minor_title = title_ursuline_cardinal
 				has_minor_title = title_mormon_cardinal
 				any_claim = { title = k_papal_state } #Antipope
 				any_claim = { title = k_ursuline } 
 				any_claim = { title = d_quorum_of_the_twelve } 
-				any_claim = { title = k_high_church }
-				any_claim = { title = k_hijo_del_sol } 
+				any_claim = { title = k_high_church } 
 			}
 		}
 		random_list = { 
@@ -1156,8 +994,7 @@ letter_event = {
 						is_title_active = d_st_ursulas_chosen 
 						is_title_active = d_nauvoo_legion
 						is_title_active = d_cristo_rey
-						is_title_active = d_san_patricios
-						is_title_active = d_lightbringers
+						is_title_active = d_san_patricios 
 					}
 					FROM = { 
 						any_child = { 
@@ -1441,13 +1278,8 @@ letter_event = {
 				has_landed_title = k_ursuline
 				has_landed_title = d_quorum_of_the_twelve
 				has_landed_title = k_high_church
-					has_landed_title = k_hijo_del_sol
-					has_landed_title = d_cristo_rey
-					has_landed_title = d_montanist
-					AND = {
-					has_landed_title = d_quorum_of_the_lamanites
-					has_global_flag = lamanita_reformed
-					}
+				has_landed_title = d_cristo_rey
+				
 			}
 		}
 		random_list = { 
@@ -1474,13 +1306,8 @@ letter_event = {
 						has_landed_title = k_ursuline
 						has_landed_title = d_quorum_of_the_twelve
 						has_landed_title = k_high_church
-					has_landed_title = k_hijo_del_sol
-					has_landed_title = d_cristo_rey
-					has_landed_title = d_montanist
-					AND = {
-					has_landed_title = d_quorum_of_the_lamanites
-					has_global_flag = lamanita_reformed
-					}
+						has_landed_title = d_cristo_rey
+						
 					}
 				}
 				modifier = {
@@ -1764,15 +1591,12 @@ letter_event = {
 							is_within_diplo_range = FROM
 							NOT = { is_allied_with = ROOT }
 							OR = {
-							religion = catholic
-							religion = ursuline
-							religion = mormon
-							religion = high_church
-							religion = cristo_rey
-							religion = sol_invicta
-							religion = lamanita
-							religion = montanist
-							#religion = sacred_heart
+								religion = catholic
+								religion = ursuline
+								religion = mormon
+								religion = high_church
+								religion = cristo_rey
+								
 							}
 							rightful_religious_head_scope = {
 								is_liege_or_above = PREV
@@ -1781,13 +1605,7 @@ letter_event = {
 									has_claim = k_ursuline
 									has_claim = d_quorum_of_the_twelve
 									has_claim = k_high_church
-									has_claim = k_hijo_del_sol
-					has_landed_title = d_cristo_rey
-					has_landed_title = d_montanist
-					AND = {
-					has_landed_title = d_quorum_of_the_lamanites
-					has_global_flag = lamanita_reformed
-					}
+									has_claim = d_cristo_rey
 								}
 							}
 						}
@@ -1868,8 +1686,7 @@ letter_event = {
 						is_title_active = d_st_ursulas_chosen 
 						is_title_active = d_nauvoo_legion 
 						is_title_active = d_cristo_rey
-						is_title_active = d_san_patricios
-						is_title_active = d_lightbringers
+						is_title_active = d_san_patricios 
 					}
 					FROM = { 
 						higher_real_tier_than = KING 
@@ -2018,11 +1835,7 @@ letter_event = {
 			religion = ursuline
 			religion = mormon
 			religion = high_church
-			religion = sol_invicta
-				religion = cristo_rey
-				religion = lamanita
-				religion = montanist
-				#religion = sacred_heart
+			religion = cristo_rey
 		}
 	}
 
@@ -2064,15 +1877,11 @@ letter_event = {
 
 	trigger = {
 		OR = {
-				religion = catholic
-				religion = ursuline
-				religion = mormon
-				religion = high_church
-				religion = cristo_rey
-				religion = sol_invicta
-				religion = lamanita
-				religion = montanist
-				#religion = sacred_heart
+			religion = catholic
+			religion = ursuline
+			religion = mormon
+			religion = high_church
+			religion = cristo_rey
 		}
 	}
 	is_triggered_only = yes
@@ -2115,15 +1924,11 @@ letter_event = {
 
 	trigger = {
 		OR = {
-				religion = catholic
-				religion = ursuline
-				religion = mormon
-				religion = high_church
-				religion = cristo_rey
-				religion = sol_invicta
-				religion = lamanita
-				religion = montanist
-				#religion = sacred_heart
+			religion = catholic
+			religion = ursuline
+			religion = mormon
+			religion = high_church
+			religion = cristo_rey
 		}
 	}
 
@@ -2167,15 +1972,11 @@ letter_event = {
 
 	trigger = {
 		OR = {
-				religion = catholic
-				religion = ursuline
-				religion = mormon
-				religion = high_church
-				religion = cristo_rey
-				religion = sol_invicta
-				religion = lamanita
-				religion = montanist
-				#religion = sacred_heart
+			religion = catholic
+			religion = ursuline
+			religion = mormon
+			religion = high_church
+			religion = cristo_rey
 		}
 	}
 	is_triggered_only = yes
@@ -2218,15 +2019,11 @@ letter_event = {
 
 	trigger = {
 		OR = {
-				religion = catholic
-				religion = ursuline
-				religion = mormon
-				religion = high_church
-				religion = cristo_rey
-				religion = sol_invicta
-				religion = lamanita
-				#religion = montanist
-				#religion = sacred_heart
+			religion = catholic
+			religion = ursuline
+			religion = mormon
+			religion = high_church
+			religion = cristo_rey
 		}
 	}
 	is_triggered_only = yes
@@ -2300,15 +2097,11 @@ letter_event = {
 
 	trigger = {
 		OR = {
-				religion = catholic
-				religion = ursuline
-				religion = mormon
-				religion = high_church
-				religion = cristo_rey
-				religion = sol_invicta
-				#religion = lamanita
-				#religion = montanist
-				##religion = sacred_heart
+			religion = catholic
+			religion = ursuline
+			religion = mormon
+			religion = high_church
+			religion = cristo_rey
 		}
 	}
 	is_triggered_only = yes
@@ -2376,7 +2169,6 @@ letter_event = {
 					has_landed_title = d_nauvoo_legion
 					has_landed_title = d_cristo_rey
 					has_landed_title = d_san_patricios 
-					has_landed_title = d_lightbringers
 				} 
 			}
 			save_event_target_as = son_holyorder_host
@@ -2428,15 +2220,12 @@ letter_event = {
 
 	trigger = {
 		OR = {
-				religion = catholic
-				religion = ursuline
-				religion = mormon
-				religion = high_church
-				religion = cristo_rey
-				religion = sol_invicta
-				religion = lamanita
-				religion = montanist
-				#religion = sacred_heart
+			religion = catholic
+			religion = ursuline
+			religion = mormon
+			religion = high_church
+			religion = cristo_rey
+			
 		}
 	}
 	is_triggered_only = yes
@@ -2516,15 +2305,12 @@ letter_event = {
 	
 	trigger = {
 		OR = {
-				religion = catholic
-				religion = ursuline
-				religion = mormon
-				religion = high_church
-				religion = cristo_rey
-				religion = sol_invicta
-				religion = lamanita
-				religion = montanist
-				#religion = sacred_heart
+			religion = catholic
+			religion = ursuline
+			religion = mormon
+			religion = high_church
+			religion = cristo_rey
+			
 		}
 	}
 	option = {
@@ -2572,15 +2358,12 @@ letter_event = {
 
 	trigger = {
 		OR = {
-				religion = catholic
-				religion = ursuline
-				religion = mormon
-				religion = high_church
-				religion = cristo_rey
-				religion = sol_invicta
-				religion = lamanita
-				religion = montanist
-				#religion = sacred_heart
+			religion = catholic
+			religion = ursuline
+			religion = mormon
+			religion = high_church
+			religion = cristo_rey
+			
 		}
 	}
 	is_triggered_only = yes
@@ -2677,15 +2460,12 @@ letter_event = {
 
 	trigger = {
 		OR = {
-				religion = catholic
-				religion = ursuline
-				religion = mormon
-				religion = high_church
-				religion = cristo_rey
-				religion = sol_invicta
-				religion = lamanita
-				religion = montanist
-				#religion = sacred_heart
+			religion = catholic
+			religion = ursuline
+			religion = mormon
+			religion = high_church
+			religion = cristo_rey
+			
 		}
 	}
 	is_triggered_only = yes
@@ -3082,15 +2862,12 @@ letter_event = {
 
 	trigger = {
 		OR = {
-				religion = catholic
-				religion = ursuline
-				religion = mormon
-				religion = high_church
-				#religion = cristo_rey
-				religion = sol_invicta
-				religion = lamanita
-				#religion = montanist
-				#religion = sacred_heart
+			religion = catholic
+			religion = ursuline
+			religion = mormon
+			religion = high_church
+			religion = cristo_rey
+			
 		}
 	}
 	is_triggered_only = yes
@@ -3153,15 +2930,12 @@ letter_event = {
 
 	trigger = {
 		OR = {
-				religion = catholic
-				religion = ursuline
-				religion = mormon
-				religion = high_church
-				religion = cristo_rey
-				religion = sol_invicta
-				religion = lamanita
-				religion = montanist
-				#religion = sacred_heart
+			religion = catholic
+			religion = ursuline
+			religion = mormon
+			religion = high_church
+			religion = cristo_rey
+			
 		}
 	}
 	is_triggered_only = yes
@@ -3646,15 +3420,11 @@ letter_event = {
 
 	trigger = {
 		OR = {
-				religion = catholic
-				religion = ursuline
-				religion = mormon
-				religion = high_church
-				#religion = cristo_rey
-				religion = sol_invicta
-				religion = lamanita
-				#religion = montanist
-				##religion = sacred_heart
+			religion = catholic
+			religion = ursuline
+			religion = mormon
+			religion = high_church
+			religion = cristo_rey
 		}
 	}
 	is_triggered_only = yes
@@ -3670,11 +3440,7 @@ letter_event = {
 					religion = ursuline
 					religion = mormon
 					religion = high_church
-					#religion = cristo_rey
-					religion = sol_invicta
-					religion = lamanita
-					#religion = montanist
-					##religion = sacred_heart
+					religion = cristo_rey
 				}
 				rightful_religious_head_scope = {
 					is_liege_or_above = PREV
@@ -3683,8 +3449,6 @@ letter_event = {
 						has_claim = k_ursuline
 						has_claim = d_quorum_of_the_twelve
 						has_claim = k_high_church
-						has_claim = k_hijo_del_sol
-						has_claim = d_quorum_of_the_lamanites
 					}
 				}
 			}
@@ -4155,12 +3919,12 @@ letter_event = {
 
 	trigger = {
 		OR = {
-				religion = catholic
-				religion = ursuline
-				religion = mormon
-				religion = high_church
-				religion = cristo_rey
-				religion = sol_invicta
+			religion = catholic
+			religion = ursuline
+			religion = mormon
+			religion = high_church
+			religion = cristo_rey
+			
 		}
 	}
 	is_triggered_only = yes
@@ -4237,8 +4001,7 @@ letter_event = {
 					has_landed_title = d_st_ursulas_chosen
 					has_landed_title = d_quorum_of_the_twelve
 					has_landed_title = d_cristo_rey
-					has_landed_title = d_san_patricios
-					has_landed_title = d_lightbringers
+					has_landed_title = d_san_patricios 
 				} 
 			}
 			save_event_target_as = scoped_grandmaster
@@ -4296,8 +4059,7 @@ letter_event = {
 						has_landed_title = d_st_ursulas_chosen
 						has_landed_title = d_quorum_of_the_twelve
 						has_landed_title = d_cristo_rey
-						has_landed_title = d_san_patricios
-						has_landed_title = d_lightbringers						
+						has_landed_title = d_san_patricios 
 					} 
 				}
 				ROOT = {
@@ -5223,15 +4985,12 @@ letter_event = {
 
 	trigger = {
 		OR = {
-				religion = catholic
-				religion = ursuline
-				religion = mormon
-				religion = high_church
-				religion = cristo_rey
-				religion = sol_invicta
-				religion = lamanita
-				religion = montanist
-				#religion = sacred_heart
+			religion = catholic
+			religion = ursuline
+			religion = mormon
+			religion = high_church
+			religion = cristo_rey
+			
 		}
 	}
 	is_triggered_only = yes
@@ -5312,13 +5071,8 @@ character_event = {
 					has_landed_title = k_ursuline
 					has_landed_title = d_quorum_of_the_twelve
 					has_landed_title = k_high_church
-					has_landed_title = k_hijo_del_sol
 					has_landed_title = d_cristo_rey
-					has_landed_title = d_montanist
-					AND = {
-					has_landed_title = d_quorum_of_the_lamanites
-					has_global_flag = lamanita_reformed
-					}
+					
 				}
 			}
 		}
@@ -5332,13 +5086,8 @@ character_event = {
 					has_landed_title = k_ursuline
 					has_landed_title = d_quorum_of_the_twelve
 					has_landed_title = k_high_church
-					has_landed_title = k_hijo_del_sol
 					has_landed_title = d_cristo_rey
-					has_landed_title = d_montanist
-					AND = {
-					has_landed_title = d_quorum_of_the_lamanites
-					has_global_flag = lamanita_reformed
-					}
+					
 				}
 			}
 		}
@@ -5370,13 +5119,8 @@ character_event = {
 						has_landed_title = k_ursuline
 						has_landed_title = d_quorum_of_the_twelve
 						has_landed_title = k_high_church
-					has_landed_title = k_hijo_del_sol
 					has_landed_title = d_cristo_rey
-					has_landed_title = d_montanist
-					AND = {
-					has_landed_title = d_quorum_of_the_lamanites
-					has_global_flag = lamanita_reformed
-					}
+						
 					}
 				} 	
 			} 
@@ -5408,13 +5152,8 @@ character_event = {
 						has_landed_title = k_ursuline
 						has_landed_title = d_quorum_of_the_twelve
 						has_landed_title = k_high_church
-					has_landed_title = k_hijo_del_sol
-					has_landed_title = d_cristo_rey
-					has_landed_title = d_montanist
-					AND = {
-					has_landed_title = d_quorum_of_the_lamanites
-					has_global_flag = lamanita_reformed
-					}
+						has_landed_title = d_cristo_rey
+						
 					}
 				}
 			} 
@@ -5446,13 +5185,8 @@ character_event = {
 						has_landed_title = k_ursuline
 						has_landed_title = d_quorum_of_the_twelve
 						has_landed_title = k_high_church
-					has_landed_title = k_hijo_del_sol
-					has_landed_title = d_cristo_rey
-					has_landed_title = d_montanist
-					AND = {
-					has_landed_title = d_quorum_of_the_lamanites
-					has_global_flag = lamanita_reformed
-					}
+						has_landed_title = d_cristo_rey
+						
 					}
 				}
 			} 
@@ -5467,13 +5201,8 @@ character_event = {
 						has_landed_title = k_ursuline
 						has_landed_title = d_quorum_of_the_twelve
 						has_landed_title = k_high_church
-					has_landed_title = k_hijo_del_sol
-					has_landed_title = d_cristo_rey
-					has_landed_title = d_montanist
-					AND = {
-					has_landed_title = d_quorum_of_the_lamanites
-					has_global_flag = lamanita_reformed
-					}
+						has_landed_title = d_cristo_rey
+						
 					}
 				}
 			} 
@@ -5488,13 +5217,8 @@ character_event = {
 						has_landed_title = k_ursuline
 						has_landed_title = d_quorum_of_the_twelve
 						has_landed_title = k_high_church
-					has_landed_title = k_hijo_del_sol
-					has_landed_title = d_cristo_rey
-					has_landed_title = d_montanist
-					AND = {
-					has_landed_title = d_quorum_of_the_lamanites
-					has_global_flag = lamanita_reformed
-					}
+						has_landed_title = d_cristo_rey
+						
 					}
 				}
 			} 
@@ -5603,13 +5327,8 @@ character_event = {
 						has_landed_title = k_ursuline
 						has_landed_title = d_quorum_of_the_twelve
 						has_landed_title = k_high_church
-					has_landed_title = k_hijo_del_sol
-					has_landed_title = d_cristo_rey
-					has_landed_title = d_montanist
-					AND = {
-					has_landed_title = d_quorum_of_the_lamanites
-					has_global_flag = lamanita_reformed
-					}
+						has_landed_title = d_cristo_rey
+						
 					}
 				}
 			}
@@ -5624,13 +5343,8 @@ character_event = {
 					has_landed_title = k_ursuline
 					has_landed_title = d_quorum_of_the_twelve
 					has_landed_title = k_high_church
-					has_landed_title = k_hijo_del_sol
 					has_landed_title = d_cristo_rey
-					has_landed_title = d_montanist
-					AND = {
-					has_landed_title = d_quorum_of_the_lamanites
-					has_global_flag = lamanita_reformed
-					}
+					
 				}
 			}
 		}
@@ -5707,13 +5421,8 @@ character_event = {
 										has_landed_title = k_papal_state
 										has_landed_title = d_quorum_of_the_twelve
 										has_landed_title = k_high_church
-					has_landed_title = k_hijo_del_sol
-					has_landed_title = d_cristo_rey
-					has_landed_title = d_montanist
-					AND = {
-					has_landed_title = d_quorum_of_the_lamanites
-					has_global_flag = lamanita_reformed
-					}
+										has_landed_title = d_cristo_rey
+										
 									}
 								}
 							} 
@@ -5835,13 +5544,8 @@ character_event = {
 						has_landed_title = k_ursuline
 						has_landed_title = d_quorum_of_the_twelve
 						has_landed_title = k_high_church
-					has_landed_title = k_hijo_del_sol
-					has_landed_title = d_cristo_rey
-					has_landed_title = d_montanist
-					AND = {
-					has_landed_title = d_quorum_of_the_lamanites
-					has_global_flag = lamanita_reformed
-					}
+						has_landed_title = d_cristo_rey
+						
 					}
 				}
 			}
@@ -5856,8 +5560,8 @@ character_event = {
 					has_landed_title = k_ursuline
 					has_landed_title = d_quorum_of_the_twelve
 					has_landed_title = k_high_church
-					#has_landed_title = d_cristo_rey
-					has_landed_title = k_hijo_del_sol
+					has_landed_title = d_cristo_rey
+					
 				}
 			}
 		}
@@ -5886,15 +5590,12 @@ letter_event = {
 
 	trigger = {
 		OR = {
-				religion = catholic
-				religion = ursuline
-				religion = mormon
-				religion = high_church
-				religion = cristo_rey
-				religion = sol_invicta
-				religion = lamanita
-				religion = montanist
-				#religion = sacred_heart
+			religion = catholic
+			religion = ursuline
+			religion = mormon
+			religion = high_church
+			religion = cristo_rey
+			
 		}
 	}
 	is_triggered_only = yes
@@ -5962,15 +5663,12 @@ letter_event = {
 
 	trigger = {
 		OR = {
-				religion = catholic
-				religion = ursuline
-				religion = mormon
-				religion = high_church
-				religion = cristo_rey
-				religion = sol_invicta
-				religion = lamanita
-				religion = montanist
-				#religion = sacred_heart
+			religion = catholic
+			religion = ursuline
+			religion = mormon
+			religion = high_church
+			religion = cristo_rey
+			
 		}
 	}
 	is_triggered_only = yes
@@ -6076,15 +5774,12 @@ character_event = {
 
 	trigger = {
 		OR = {
-				religion = catholic
-				religion = ursuline
-				religion = mormon
-				religion = high_church
-				religion = cristo_rey
-				religion = sol_invicta
-				religion = lamanita
-				religion = montanist
-				#religion = sacred_heart
+			religion = catholic
+			religion = ursuline
+			religion = mormon
+			religion = high_church
+			religion = cristo_rey
+			
 		}
 	}
 	is_triggered_only = yes
@@ -6491,15 +6186,12 @@ letter_event = {
 
 	trigger = {
 		OR = {
-				religion = catholic
-				religion = ursuline
-				religion = mormon
-				religion = high_church
-				religion = cristo_rey
-				religion = sol_invicta
-				religion = lamanita
-				religion = montanist
-				#religion = sacred_heart
+			religion = catholic
+			religion = ursuline
+			religion = mormon
+			religion = high_church
+			religion = cristo_rey
+			
 		}
 		OR = {
 			has_character_flag = flag_crowned_by_priest
@@ -6522,15 +6214,12 @@ letter_event = {
 
 	trigger = {
 		OR = {
-				religion = catholic
-				religion = ursuline
-				religion = mormon
-				religion = high_church
-				religion = cristo_rey
-				religion = sol_invicta
-				religion = lamanita
-				religion = montanist
-				#religion = sacred_heart
+			religion = catholic
+			religion = ursuline
+			religion = mormon
+			religion = high_church
+			religion = cristo_rey
+			
 		}
 		OR = {
 			has_character_flag = flag_crowned_by_priest
@@ -6585,15 +6274,12 @@ character_event = {
 
 	trigger = { 
 		OR = {
-				religion = catholic
-				religion = ursuline
-				religion = mormon
-				religion = high_church
-				religion = cristo_rey
-				religion = sol_invicta
-				religion = lamanita
-				religion = montanist
-				#religion = sacred_heart
+			religion = catholic
+			religion = ursuline
+			religion = mormon
+			religion = high_church
+			religion = cristo_rey
+			
 		}
 		OR = {
 			has_character_flag = flag_crowned_by_priest
@@ -9080,16 +8766,6 @@ character_event = {
 					add_trait = danite
 				}
 			}
-			if = { 
-				limit = {
-					year = 2700
-					religion = sol_invicta
-				}
-				random = { 
-					chance = 30 
-					add_trait = illuminator
-				}
-			}
 		}
 	}
 
@@ -10264,11 +9940,8 @@ character_event = {
 				religion = ursuline
 				religion = mormon
 				religion = high_church
-				religion = cristo_rey
-				religion = sol_invicta
-				religion = lamanita
-				religion = montanist
-				#religion = sacred_heart
+			religion = cristo_rey
+				
 			}
 			OR = {
 				has_character_flag = flag_crowned_by_priest
@@ -10473,11 +10146,7 @@ character_event = {
 				religion = ursuline
 				religion = mormon
 				religion = high_church
-				religion = cristo_rey
-				religion = sol_invicta
-				religion = lamanita
-				religion = montanist
-				#religion = sacred_heart
+			religion = cristo_rey
 			}
 			OR = {
 				has_character_flag = flag_crowned_by_priest
@@ -11432,22 +11101,17 @@ character_event = {
 				has_minor_title = title_cardinal
 				has_minor_title = title_ursuline_cardinal
 				has_minor_title = title_mormon_cardinal
-					has_minor_title = title_lamanita_cardinal
-					any_claim = { title = k_papal_state } #Antipope
-					any_claim = { title = k_ursuline } 
-					any_claim = { title = d_quorum_of_the_twelve } 
-					any_claim = { title = k_high_church }
-					any_claim = { title = k_hijo_del_sol } 	
-					any_claim = { title = d_quorum_of_the_lamanites } #Antipope
+				any_claim = { title = k_papal_state } #Antipope
+				any_claim = { title = k_ursuline } #Antipope
+				any_claim = { title = d_quorum_of_the_twelve } #Antipope
+				any_claim = { title = k_high_church } #Antipope
 				}
 			NOT = { has_landed_title = k_papal_state }
 			NOT = { has_landed_title = k_ursuline }
 			NOT = { has_landed_title = d_quorum_of_the_twelve }
-			NOT = { has_landed_title = k_high_church }
-			NOT = { has_landed_title = d_cristo_rey }
-			NOT = { has_landed_title = d_montanist }
-			NOT = { has_landed_title = d_quorum_of_the_lamanites }
-			NOT = { has_landed_title = k_hijo_del_sol }
+			NOT = { has_landed_title = k_high_church
+					has_landed_title = d_cristo_rey }
+			NOT = {  }
 			}
 			ROOT = { save_persistent_event_target = { name = coronation_priest_per scope = PREV } }
 		}
@@ -11467,15 +11131,12 @@ character_event = {
 	trigger = { 
 		higher_real_tier_than = DUKE
 		OR = { 
-				religion = catholic
-				religion = ursuline
-				religion = mormon
-				religion = high_church
-				religion = cristo_rey
-				religion = sol_invicta
-				religion = lamanita
-				religion = montanist
-				#religion = sacred_heart
+			religion = catholic
+			religion = ursuline
+			religion = mormon
+			religion = high_church
+			religion = cristo_rey
+			
 		}
 		NOR = { 
 			trait = crowned_by_priest
@@ -11505,15 +11166,12 @@ character_event = {
 		higher_real_tier_than = DUKE
 		ruled_years = 5
 		OR = { 
-				religion = catholic
-				religion = ursuline
-				religion = mormon
-				religion = high_church
-				religion = cristo_rey
-				religion = sol_invicta
-				religion = lamanita
-				religion = montanist
-				#religion = sacred_heart
+			religion = catholic
+			religion = ursuline
+			religion = mormon
+			religion = high_church
+			religion = cristo_rey
+			
 		}
 		NOR = { 
 			trait = crowned_by_priest
@@ -11554,15 +11212,12 @@ character_event = {
 					factor = 0
 					spouse = { 
 						NOR = { 
-				religion = catholic
-				religion = ursuline
-				religion = mormon
-				religion = high_church
-				religion = cristo_rey
-				religion = sol_invicta
-				religion = lamanita
-				religion = montanist
-				#religion = sacred_heart
+							religion = catholic
+							religion = ursuline
+							religion = mormon
+							religion = high_church
+			religion = cristo_rey
+							
 						}
 					}
 				}
@@ -11727,15 +11382,12 @@ character_event = {
 			trait = crowned_by_myself
 		}
 		OR = { 
-				religion = catholic
-				religion = ursuline
-				religion = mormon
-				religion = high_church
-				religion = cristo_rey
-				religion = sol_invicta
-				religion = lamanita
-				religion = montanist
-				#religion = sacred_heart
+			religion = catholic
+			religion = ursuline
+			religion = mormon
+			religion = high_church
+			religion = cristo_rey
+			
 		}
 		capital_scope = { religion = ROOT }
 		higher_real_tier_than = DUKE
@@ -11777,15 +11429,11 @@ character_event = {
 			trait = crowned_by_myself
 		}
 		OR = { 
-				religion = catholic
-				religion = ursuline
-				religion = mormon
-				religion = high_church
-				religion = cristo_rey
-				religion = sol_invicta
-				religion = lamanita
-				religion = montanist
-				#religion = sacred_heart
+			religion = catholic
+			religion = ursuline
+			religion = mormon
+			religion = high_church
+			religion = cristo_rey
 		}
 		higher_real_tier_than = DUKE
 	}
@@ -11865,11 +11513,8 @@ character_event = {
 				religion = ursuline
 				religion = mormon
 				religion = high_church
-				religion = cristo_rey
-				religion = sol_invicta
-				religion = lamanita
-				religion = montanist
-				#religion = sacred_heart
+			religion = cristo_rey
+				
 			}
 			higher_real_tier_than = DUKE
 		}
@@ -12184,11 +11829,8 @@ character_event = {
 				religion = ursuline
 				religion = mormon
 				religion = high_church
-				religion = cristo_rey
-				religion = sol_invicta
-				religion = lamanita
-				religion = montanist
-				#religion = sacred_heart
+			religion = cristo_rey
+				
 			}
 			higher_real_tier_than = DUKE
 		}
@@ -12274,10 +11916,7 @@ character_event = {
 				religion = mormon
 				religion = high_church
 				religion = cristo_rey
-				religion = sol_invicta
-				religion = lamanita
-				religion = montanist
-				#religion = sacred_heart
+				
 			}
 			higher_real_tier_than = DUKE
 		}
@@ -12619,10 +12258,7 @@ character_event = {
 	only_rulers = yes
 
 	trigger = {
-		OR = {
-			religion_group = christian
-			religion = sol_invicta
-		}
+		religion_group = christian
 		is_feudal = yes 
 		independent = no
 		higher_real_tier_than = COUNT #Avoid spamming.
@@ -12635,10 +12271,7 @@ character_event = {
 			NOT = { #Prevent same vassal from giving homage multiple times when inheriting new titles within the realm (from siblings and such)
 				current_heir = { vassal_of = PREV } 
 			}
-			OR = {
-				religion_group = christian
-				religion = sol_invicta
-			}
+			religion_group = christian
 			higher_real_tier_than = DUKE
 			OR = { 
 				trait = crowned_by_priest
@@ -12669,10 +12302,7 @@ character_event = {
 		independent = no
 		age = 12
 		is_feudal = yes 
-		OR = {
-			religion_group = christian
-			religion = sol_invicta
-		}
+		religion_group = christian
 		liege = { 
 			NOT = { character = ROOT }
 			higher_real_tier_than = DUKE
@@ -13362,15 +12992,11 @@ character_event = {
 		NOT = { government = order_government }
 		higher_real_tier_than = DUKE
 		OR = { 
-				religion = catholic
-				religion = ursuline
-				religion = mormon
-				religion = high_church
-				religion = cristo_rey
-				religion = sol_invicta
-				religion = lamanita
-				religion = montanist
-				#religion = sacred_heart
+			religion = catholic
+			religion = ursuline
+			religion = mormon
+			religion = high_church
+			religion = cristo_rey
 		}
 		NOT = { check_variable = { which = uncrowned_count value = 30 } } #Stop at minus thirty.
 		NOR = { 
@@ -13428,15 +13054,6 @@ character_event = {
 				has_landed_title = e_caribbean
 				any_artifact = { artifact_type = crown_lion_judah }
 				e_caribbean = { 
-					current_heir = { 
-						NOT = { dynasty = ROOT }
-					} 
-				} 
-			}
-			AND = { 
-				has_landed_title = e_mexico
-				any_artifact = { artifact_type = crown_mexico }
-				e_mexico = { 
 					current_heir = { 
 						NOT = { dynasty = ROOT }
 					} 
@@ -13568,21 +13185,6 @@ character_event = {
 			player_heir = { save_event_target_as = unworthy_judah_crown }
 			any_artifact = { 
 				limit = { artifact_type = crown_lion_judah }
-				save_event_target_as = inheriting_artifact_2
-			}
-			current_heir = { character_event = { id = HF.20407 days = 1 } }
-		}
-		if = { 
-			limit = { 
-				has_landed_title = e_mexico
-				any_artifact = { artifact_type = crown_mexico }
-			}
-			e_mexico = { 
-				current_heir = { save_event_target_as = worthy_crown_mexico }
-			}
-			player_heir = { save_event_target_as = unworthy_crown_mexico }
-			any_artifact = { 
-				limit = { artifact_type = crown_mexico }
 				save_event_target_as = inheriting_artifact_2
 			}
 			current_heir = { character_event = { id = HF.20407 days = 1 } }
@@ -13750,12 +13352,6 @@ character_event = {
 				to = event_target:worthy_judah_crown
  			} 
  		}
-		event_target:inheriting_artifact_2 = {
-			transfer_artifact = {
-				from = event_target:unworthy_crown_mexico
-				to = event_target:unworthy_crown_mexico
- 			} 
- 		}
 		event_target:inheriting_artifact_3 = {
 			transfer_artifact = {
 				from = event_target:unworthy_fylkir_crown
@@ -13826,15 +13422,12 @@ character_event = {
 		text = EVTDESCHFA20408
 		trigger = { 
 			NOR = { 
-				religion = catholic
 				religion = ursuline
 				religion = mormon
+				religion = catholic
 				religion = high_church
 				religion = cristo_rey
-				religion = sol_invicta
-				religion = lamanita
-				religion = montanist
-				#religion = sacred_heart
+				
 			}
 		}
 	}
@@ -13842,15 +13435,12 @@ character_event = {
 		text = EVTDESCHFB20408
 		trigger = { 
 			OR = { 
-				religion = catholic
 				religion = ursuline
 				religion = mormon
+				religion = catholic
 				religion = high_church
 				religion = cristo_rey
-				religion = sol_invicta
-				religion = lamanita
-				religion = montanist
-				#religion = sacred_heart
+				
 			}
 		}
 	}
@@ -13882,10 +13472,7 @@ character_event = {
 				religion = mormon
 				religion = high_church
 				religion = cristo_rey
-				religion = sol_invicta
-				religion = lamanita
-				religion = montanist
-				#religion = sacred_heart
+				
 			}
 		}
 	} 
@@ -13904,15 +13491,12 @@ character_event = {
 			text = EVTOPTAHF20408
 			trigger = {
 				NOR = { 
-				religion = catholic
-				religion = ursuline
-				religion = mormon
-				religion = high_church
+					religion = catholic
+					religion = ursuline
+					religion = mormon
+					religion = high_church
 				religion = cristo_rey
-				religion = sol_invicta
-				religion = lamanita
-				religion = montanist
-				#religion = sacred_heart
+					
 				}
 			}
 		}
@@ -13920,15 +13504,12 @@ character_event = {
 			text = EVTOPTAHF20058
 			trigger = {
 				OR = { 
-				religion = catholic
-				religion = ursuline
-				religion = mormon
-				religion = high_church
-				religion = cristo_rey
-				religion = sol_invicta
-				religion = lamanita
-				religion = montanist
-				#religion = sacred_heart
+					religion = catholic
+					religion = ursuline
+					religion = mormon
+					religion = high_church
+					religion = cristo_rey
+					
 				}
 			}
 		}
@@ -14824,10 +14405,6 @@ character_event = {
 			AND = {
 				FROM = { title = e_caribbean } 
 				FROMFROM = { any_artifact = { artifact_type = crown_lion_judah } } 
-			}
-			AND = {
-				FROM = { title = e_mexico } 
-				FROMFROM = { any_artifact = { artifact_type = crown_mexico } } 
 			} 
 			AND = {
 				FROM = { title = d_norse_pagan_reformed } 
@@ -14912,18 +14489,6 @@ character_event = {
 			FROMFROM = { 
 				any_artifact = { 
 					limit = { artifact_type = crown_lion_judah }
-					save_event_target_as = inheriting_artifact_2
-				}
-			}
-		}
-		if = {
-			limit = {
-				FROM = { title = e_mexico } 
-				FROMFROM = { any_artifact = { artifact_type = crown_mexico } } 
-			} 
-			FROMFROM = { 
-				any_artifact = { 
-					limit = { artifact_type = crown_mexico }
 					save_event_target_as = inheriting_artifact_2
 				}
 			}
@@ -15119,10 +14684,6 @@ character_event = {
 				any_artifact = { artifact_type = crown_lion_judah }
 			}
 			AND = { 
-				has_landed_title = e_mexico 
-				any_artifact = { artifact_type = crown_mexico }
-			}
-			AND = { 
 				has_landed_title = d_norse_pagan_reformed 
 				any_artifact = { artifact_type = crown_fylkir }
 			}
@@ -15182,13 +14743,6 @@ character_event = {
 				any_artifact = { artifact_type = crown_lion_judah }
 			}
 			add_trait = dead_crown_judah
-		}
-		if = { 
-			limit = { 
-				has_landed_title = e_mexico
-				any_artifact = { artifact_type = crown_mexico }
-			}
-			add_trait = dead_crown_mexico
 		}
 		if = { 
 			limit = { 
@@ -15265,14 +14819,12 @@ character_event = {
 	trigger = {
 		has_character_modifier = uncrowned_modifier
 		NOR = {
-				religion = catholic
-				religion = ursuline
-				religion = mormon
-				religion = high_church
-				religion = cristo_rey
-				religion = sol_invicta
-				religion = lamanita
-				religion = montanist
+			religion = catholic
+			religion = ursuline
+			religion = mormon
+			religion = high_church
+			religion = cristo_rey
+			
 		}
 	}
 

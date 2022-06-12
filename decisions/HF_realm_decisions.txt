@@ -69,7 +69,7 @@ decisions = {
 		}
 		ai_will_do = {
 			factor = 1
-			
+
 			modifier = {
 				factor = 0.01
 				NOT = {
@@ -106,20 +106,14 @@ decisions = {
 				higher_tier_than = COUNT
 				region = custom_empire_mexico
 			}
-			OR = { 
-				culture_group = mexicano
-				culture_group = norteno
-				culture_group = mesoamerican
-				culture_group = taracahita
-				culture_group = mayan
-			}
+			culture_group = mexicano
 			religion = cristo_rey
 			any_neighbor_independent_ruler = {
 				any_realm_province = {
 					region = custom_empire_mexico
 				}
 				NOT = {
-					religion = cristo_rey
+					religion_group = christian
 				}
 			}
 			NOT = {
@@ -251,7 +245,7 @@ decisions = {
 			}
 		}
 
-		effect  = {
+		effect = {
 			if = {
 				limit = {
 					ai = yes
@@ -709,7 +703,7 @@ targetted_decisions = {
 		}
 
 		effect = {
-			FROM  ={
+			FROM ={
 				show_scope_change = no
 				if = {
 					limit = {
@@ -812,13 +806,8 @@ targetted_decisions = {
 			NOT = {
 				has_character_flag = promised_reconquista_ally
 			}
-			OR = { 
-				culture_group = mexicano
-				culture_group = norteno
-				culture_group = mesoamerican
-				culture_group = taracahita
-				culture_group = mayan
-			}
+			culture_group = mexicano
+			religion = ROOT
 			religion = cristo_rey
 			mercenary = no
 			holy_order = no
@@ -864,24 +853,13 @@ targetted_decisions = {
 		ai_check_interval = 48
 
 		from_potential = {
-			OR = { 
-				culture_group = mexicano
-				culture_group = norteno
-				culture_group = mesoamerican
-				culture_group = taracahita
-				culture_group = mayan
-			}
-			OR = {
-				religion_group = christian
-				religion_group = cult_of_saints
-			}
-			NOT = { religion = cristo_rey }
+			culture_group = mexicano
+			religion = cristo_rey
 			war = no
 			NOT = {
 				any_war = {
 					OR = {
 						using_cb = reconquista_jalisco
-						using_cb = reconquista_colima
 						using_cb = reconquista_mixteca
 						using_cb = reconquista_oaxaca
 						using_cb = reconquista_mexicoast
@@ -922,10 +900,7 @@ targetted_decisions = {
 
 		potential = {
 			NOT = {
-				OR = {
-					religion_group = christian
-					religion_group = cult_of_saints
-				}
+				religion = cristo_rey
 			}
 			any_war = {
 				OR = {
@@ -1062,10 +1037,7 @@ targetted_decisions = {
 
 		from_potential = {
 			NOT = {
-				OR = {
-					religion_group = christian
-					religion_group = cult_of_saints
-				}
+				religion = cristo_rey
 			}
 			any_war = {
 				OR = {
@@ -1086,18 +1058,8 @@ targetted_decisions = {
 		}
 
 		potential = {
-			OR = { 
-				culture_group = mexicano
-				culture_group = norteno
-				culture_group = mesoamerican
-				culture_group = taracahita
-				culture_group = mayan
-			}
-			OR = {
-				religion_group = christian
-				religion_group = cult_of_saints
-			}
-			NOT = { religion = cristo_rey }
+			culture_group = mexicano
+			religion = cristo_rey
 			war = no
 			NOT = {
 				any_war = {
@@ -1240,7 +1202,9 @@ targetted_decisions = {
 		ai_check_interval = 48
 
 		from_potential = {
-			NOT = { religion_group = mesoamerican_gods }
+			NOT = {
+				religion = cristo_rey
+			}
 			war = no
 			NOT = {
 				any_war = {
@@ -1285,7 +1249,7 @@ targetted_decisions = {
 		}
 
 		potential = {
-			religion_group = mesoamerican_gods
+			religion = cristo_rey
 
 			any_war = {
 				OR = {
@@ -1422,8 +1386,7 @@ targetted_decisions = {
 		ai_check_interval = 48
 
 		from_potential = {
-			religion_group = mesoamerican_gods
-
+			religion = cristo_rey
 			any_war = {
 				OR = {
 					using_cb = reconquista_jalisco
@@ -1443,7 +1406,9 @@ targetted_decisions = {
 		}
 
 		potential = {
-			NOT = {	religion_group = mesoamerican_gods }
+			NOT = {
+				religion = cristo_rey
+			}
 			war = no
 			NOT = {
 				any_war = {
@@ -1577,4 +1542,3 @@ targetted_decisions = {
 			letter_event = { id = HF.49233 days = 3 }
 		}
 	}
-}

@@ -1219,7 +1219,7 @@ narrative_event = {
 		NOT = { #immersion-breaking
 			has_alternate_start_parameter = { key = religion_names value = random }
 		}
-		has_landed_title = d_cristo_rey
+		has_landed_title = k_papal_state #fires for the Pope, he's always there
 		year = 2700 #avoid event spam
 		
 		OR = {
@@ -1227,10 +1227,9 @@ narrative_event = {
 				has_holder = no
 			}
 			e_mexico = {
-				NOR = { 
-					religion_group = cult_of_saints
-					religion = cristo_rey
-				} 
+				holder_scope = {
+					NOT = { religion = cristo_rey }
+				}
 			}
 		}
 		
@@ -1257,9 +1256,7 @@ narrative_event = {
 		trigger = {
 			OR = {
 				religion_group = mesoamerican_gods
-				religion = sacred_heart
-				religion = fidencista
-				religion = reformista
+				religion_group = cult_of_saints
 			}
 		}
 	}
@@ -1268,17 +1265,15 @@ narrative_event = {
 		name = sacredheart.200.optC
 		trigger = {
 			NOR = {
-				religion = cristo_rey
+				religion_group = cult_of_saints
 				religion_group = mesoamerican_gods
-				religion = sacred_heart
-				religion = fidencista
-				religion = reformista
+				religion = cristo_rey
 			}
 		}
 	}
 }
 
-# THE START OF THE RECONQUISTA - VERACRUZ HAS FALLEN
+# THE START OF THE RECONQUISTA - JALISCO HAS FALLEN
 narrative_event = {
 	id = sacredheart.201
 	title = sacredheart.200.title
@@ -1300,16 +1295,11 @@ narrative_event = {
 		NOT = { #immersion-breaking
 			has_alternate_start_parameter = { key = religion_names value = random }
 		}
-		has_landed_title = d_cristo_rey
+		has_landed_title = k_papal_state #fires for the Pope, he's always there
 		NOT = { has_global_flag = mexican_reconquistas_unlocked }
 		
-		c_fresnillo = { # fresnillo
-			holder_scope = { 
-				NOR = { 
-					religion_group = cult_of_saints
-					religion = cristo_rey
-				} 
-			}
+		c_guadalajara = { # Guadalajara
+			holder_scope = { NOT = { religion = cristo_rey } }
 		}
 	}
 	
@@ -1333,9 +1323,7 @@ narrative_event = {
 		trigger = {
 			OR = {
 				religion_group = mesoamerican_gods
-				religion = sacred_heart
-				religion = fidencista
-				religion = reformista
+				religion_group = cult_of_saints
 			}
 		}
 	}
@@ -1344,17 +1332,15 @@ narrative_event = {
 		name = sacredheart.200.optC
 		trigger = {
 			NOR = {
-				religion = cristo_rey
+				religion_group = cult_of_saints
 				religion_group = mesoamerican_gods
-				religion = sacred_heart
-				religion = fidencista
-				religion = reformista
+				religion = cristo_rey
 			}
 		}
 	}
 }
 
-# THE START OF THE RECONQUISTA - MEXICO CITY HAS FALLEN
+# THE START OF THE RECONQUISTA - ATENAS HAS FALLEN
 narrative_event = {
 	id = sacredheart.202
 	title = sacredheart.200.title
@@ -1376,15 +1362,12 @@ narrative_event = {
 		NOT = { #immersion-breaking
 			has_alternate_start_parameter = { key = religion_names value = random }
 		}
-		has_landed_title = d_cristo_rey
+		has_landed_title = k_papal_state #fires for the Pope, he's always there
 		NOT = { has_global_flag = mexican_reconquistas_unlocked }
 		
-		c_mexico = { # Mexico City
-			holder_scope = { 
-				NOR = { 
-					religion_group = cult_of_saints
-					religion = cristo_rey
-				} 
+		c_atenas = { # atenas
+			holder_scope = {
+				NOT = { religion = cristo_rey }
 			}
 		}
 	}
@@ -1409,9 +1392,7 @@ narrative_event = {
 		trigger = {
 			OR = {
 				religion_group = mesoamerican_gods
-				religion = sacred_heart
-				religion = fidencista
-				religion = reformista
+				religion_group = cult_of_saints
 			}
 		}
 	}
@@ -1420,9 +1401,7 @@ narrative_event = {
 		name = sacredheart.200.optC
 		trigger = {
 			NOR = {
-				religion = sacred_heart
-				religion = fidencista
-				religion = reformista
+				religion_group = cult_of_saints
 				religion_group = mesoamerican_gods
 				religion = cristo_rey
 			}
@@ -1430,7 +1409,7 @@ narrative_event = {
 	}
 }
 
-# THE START OF THE URSULINE CRUSADES - MISC CULT OF SAINTS
+# THE START OF THE RECONQUISTA - BAJIO FALLING
 narrative_event = {
 	id = sacredheart.203
 	title = sacredheart.200.title
@@ -1455,21 +1434,11 @@ narrative_event = {
 		NOT = { has_global_flag = mexican_reconquistas_unlocked }
 		
 		OR = {
-			c_monterrey = { # Monterrey
-				holder_scope = { 
-					NOR = { 
-						religion_group = cult_of_saints
-						religion = cristo_rey
-					} 
-				}
+			c_guanajuato = { # Guanajuato
+				holder_scope = { NOT = { religion = cristo_rey } }
 			}
-			c_heroica_veracruz = { # Veracruz
-				holder_scope = { 
-					NOR = { 
-						religion_group = cult_of_saints
-						religion = cristo_rey
-					} 
-				}
+			c_santiago_de_queretaro = { # Santiago de Queretaro
+				holder_scope = { NOT = { religion = cristo_rey } }
 			}
 		}
 	}
@@ -1494,9 +1463,7 @@ narrative_event = {
 		trigger = {
 			OR = {
 				religion_group = mesoamerican_gods
-				religion = sacred_heart
-				religion = fidencista
-				religion = reformista
+				religion_group = cult_of_saints
 			}
 		}
 	}
@@ -1505,11 +1472,9 @@ narrative_event = {
 		name = sacredheart.200.optC
 		trigger = {
 			NOR = {
-				religion = cristo_rey
+				religion_group = cult_of_saints
 				religion_group = mesoamerican_gods
-				religion = sacred_heart
-				religion = fidencista
-				religion = reformista
+				religion = cristo_rey
 			}
 		}
 	}
