@@ -166,6 +166,8 @@ marian_el_santo = {
 		marian_stella_maris
 		marian_santo_nino_fidencio
 		marian_santa_inocencia
+		marian_san_felipe_de_jesus
+		marian_cristo_rey
 	}
 
 	opposite_opinion = -5
@@ -199,6 +201,8 @@ marian_guadalupe = {
 		marian_stella_maris
 		marian_santo_nino_fidencio
 		marian_santa_inocencia
+		marian_san_felipe_de_jesus
+		marian_cristo_rey
 	}
 
 	#opposite_opinion = -5
@@ -228,6 +232,8 @@ marian_santa_muerte = {
 		marian_stella_maris
 		marian_santo_nino_fidencio
 		marian_santa_inocencia
+		marian_san_felipe_de_jesus
+		marian_cristo_rey
 	}
 
 	tolerates_afro_syncretic = yes		# Tolerates and is tolerated by Afro-Syncretics
@@ -258,6 +264,8 @@ marian_san_charbel = {
 		marian_stella_maris
 		marian_santo_nino_fidencio
 		marian_santa_inocencia
+		marian_san_felipe_de_jesus
+		marian_cristo_rey
 	}
 
 	#opposite_opinion = -5
@@ -291,6 +299,8 @@ marian_san_juditas = {
 		marian_stella_maris
 		marian_santo_nino_fidencio
 		marian_santa_inocencia
+		marian_san_felipe_de_jesus
+		marian_cristo_rey
 	}
 
 	#opposite_opinion = -5
@@ -372,11 +382,14 @@ marian_san_pascual = {
 		marian_stella_maris
 		marian_santo_nino_fidencio
 		marian_santa_inocencia
+		marian_san_felipe_de_jesus
+		marian_cristo_rey
 	}
 
 	#opposite_opinion = -5
 	tolerates_christian = yes		# Tolerates and is tolerated by Christians
-	stewardship = 1
+	global_revolt_risk = -0.20
+	diplomacy = 1
 	
 	monthly_character_piety = 0.1
 	monthly_character_prestige = 0.25
@@ -402,15 +415,15 @@ marian_stella_maris = {
 		marian_san_pascual
 		marian_santo_nino_fidencio
 		marian_santa_inocencia
+		marian_san_felipe_de_jesus
+		marian_cristo_rey
 	}
 
 	opposite_opinion = -5
 	tolerates_nautical = yes		# Tolerates and is tolerated by Pirates
 	tolerates_pagan_group = yes		# Tolerates and is tolerated by Pagans
-	stewardship = 1
-	
-	monthly_character_piety = 0.1
-	monthly_character_prestige = 0.25
+	monthly_character_piety = 0.05
+	monthly_character_prestige = 0.10
 
 		potential = {
 			AND = {
@@ -442,15 +455,16 @@ marian_santo_nino_fidencio = {
 		marian_san_pascual
 		marian_stella_maris
 		marian_santa_inocencia
+		marian_san_felipe_de_jesus
+		marian_cristo_rey
 	}
 
 	opposite_opinion = -5
 	tolerates_pagan_group = yes		# Tolerates and is tolerated by Pagans
 	tolerates_oldworld = yes		# Tolerates and is tolerated by Old World 
-	stewardship = 1
+	monthly_character_piety = 0.05
+	monthly_character_prestige = 0.10
 	
-	monthly_character_piety = 0.1
-	monthly_character_prestige = 0.25
 		potential = {
 			AND = {
 				religion = sacred_heart
@@ -481,11 +495,14 @@ marian_santa_inocencia = {
 		marian_san_pascual
 		marian_stella_maris
 		marian_santo_nino_fidencio
+		marian_san_felipe_de_jesus
+		marian_cristo_rey
 	}
 
 	#opposite_opinion = -5
 	tolerates_christian = yes		# Tolerates and is tolerated by Christians
-	stewardship = 1
+	health = 0.5
+	vassal_opinion = 5
 	
 	monthly_character_piety = 0.1
 	monthly_character_prestige = 0.25
@@ -501,3 +518,73 @@ marian_santa_inocencia = {
 	child_compliment_adj = COMPL_NICE
 }
 	
+	
+marian_san_felipe_de_jesus = {
+	opposites = {
+		marian_guadalupe
+		marian_santa_muerte
+		marian_el_santo
+		marian_san_charbel
+		marian_san_juditas
+		marian_san_pascual
+		marian_stella_maris
+		marian_santo_nino_fidencio
+		marian_santa_inocencia
+		marian_cristo_rey
+	}
+
+	#opposite_opinion = -5
+	tolerates_christian = yes		# Tolerates and is tolerated by Christians
+	monthly_character_piety = 0.05
+	monthly_character_prestige = 0.10
+
+		potential = {
+			AND = {
+				religion = sacred_heart
+				has_global_flag = gran_comision_absorbed_into_fold
+			}
+		}
+	religious_branch = sacred_heart
+	random = no
+	religious = yes
+	ruler_designer_cost = 0
+	
+	male_compliment_adj = COMPL_KINDHEARTED
+	female_compliment_adj = COMPL_KINDHEARTED
+	child_compliment_adj = COMPL_NICE
+}
+
+marian_cristo_rey = {
+	opposites = {
+		marian_guadalupe
+		marian_santa_muerte
+		marian_el_santo
+		marian_san_charbel
+		marian_san_juditas
+		marian_san_pascual
+		marian_stella_maris
+		marian_santo_nino_fidencio
+		marian_san_felipe_de_jesus
+		marian_santa_inocencia
+	}
+
+	#opposite_opinion = -5
+	tolerates_christian = yes		# Tolerates and is tolerated by Christians
+	monthly_character_piety = 0.05
+	monthly_character_prestige = 0.10
+
+		potential = {
+			AND = {
+				religion = sacred_heart
+				has_global_flag = cristeros_absorbed_into_fold
+			}
+		}
+	religious_branch = sacred_heart
+	random = no
+	religious = yes
+	ruler_designer_cost = 0
+	
+	male_compliment_adj = COMPL_BRAVE
+	female_compliment_adj = COMPL_BRAVE
+	child_compliment_adj = COMPL_STRONG
+}

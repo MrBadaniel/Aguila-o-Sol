@@ -50,6 +50,8 @@ character_event = {
 			remove_trait = marian_stella_maris
 			remove_trait = marian_santo_nino_fidencio
 			remove_trait = marian_santa_inocencia
+			remove_trait = marian_san_felipe_de_jesus
+			remove_trait = marian_cristo_rey
 		}
 		add_trait = marian_el_santo
 		ai_chance = {
@@ -78,6 +80,8 @@ character_event = {
 			remove_trait = marian_stella_maris
 			remove_trait = marian_santo_nino_fidencio
 			remove_trait = marian_santa_inocencia
+			remove_trait = marian_san_felipe_de_jesus
+			remove_trait = marian_cristo_rey
 		}
 		add_trait = marian_santa_muerte
 		ai_chance = {
@@ -104,6 +108,8 @@ character_event = {
 			remove_trait = marian_stella_maris
 			remove_trait = marian_santo_nino_fidencio
 			remove_trait = marian_santa_inocencia
+			remove_trait = marian_san_felipe_de_jesus
+			remove_trait = marian_cristo_rey
 		}
 		add_trait = marian_guadalupe
 		ai_chance = {
@@ -134,6 +140,8 @@ character_event = {
 			remove_trait = marian_stella_maris
 			remove_trait = marian_santo_nino_fidencio
 			remove_trait = marian_santa_inocencia
+			remove_trait = marian_san_felipe_de_jesus
+			remove_trait = marian_cristo_rey
 		}
 		add_trait = marian_san_charbel
 		ai_chance = {
@@ -162,6 +170,8 @@ character_event = {
 			remove_trait = marian_stella_maris
 			remove_trait = marian_santo_nino_fidencio
 			remove_trait = marian_santa_inocencia
+			remove_trait = marian_san_felipe_de_jesus
+			remove_trait = marian_cristo_rey
 		}
 		add_trait = marian_san_juditas
 		ai_chance = {
@@ -190,6 +200,8 @@ character_event = {
 			remove_trait = marian_stella_maris
 			remove_trait = marian_santo_nino_fidencio
 			remove_trait = marian_santa_inocencia
+			remove_trait = marian_san_felipe_de_jesus
+			remove_trait = marian_cristo_rey
 		}
 		add_trait = marian_san_pascual
 		ai_chance = {
@@ -219,6 +231,8 @@ character_event = {
 			remove_trait = marian_stella_maris
 			remove_trait = marian_santo_nino_fidencio
 			remove_trait = marian_san_pascual
+			remove_trait = marian_san_felipe_de_jesus
+			remove_trait = marian_cristo_rey
 		}
 		add_trait = marian_santa_inocencia
 		ai_chance = {
@@ -241,10 +255,7 @@ character_event = {
 	option = {
 		name = EVTOPTH_sacredheart_1
 		trigger = {
-			AND = {
-				NOT = { trait = marian_santo_nino_fidencio }
 				has_global_flag = fidencistas_absorbed_into_fold
-			}
 		}	
 		hidden_tooltip = {
 			remove_trait = marian_santa_muerte
@@ -255,6 +266,8 @@ character_event = {
 			remove_trait = marian_stella_maris
 			remove_trait = marian_santa_inocencia
 			remove_trait = marian_san_pascual
+			remove_trait = marian_san_felipe_de_jesus
+			remove_trait = marian_cristo_rey
 		}
 		add_trait = marian_santo_nino_fidencio
 		ai_chance = {
@@ -278,10 +291,7 @@ character_event = {
 	option = {
 		name = EVTOPTI_sacredheart_1
 		trigger = {
-			AND = {
-				NOT = { trait = marian_stella_maris }
 				has_global_flag = navegantes_absorbed_into_fold
-			}
 		}	
 		hidden_tooltip = {
 			remove_trait = marian_santa_muerte
@@ -292,6 +302,8 @@ character_event = {
 			remove_trait = marian_santo_nino_fidencio
 			remove_trait = marian_santa_inocencia
 			remove_trait = marian_san_pascual
+			remove_trait = marian_san_felipe_de_jesus
+			remove_trait = marian_cristo_rey
 		}
 		add_trait = marian_stella_maris
 		ai_chance = {
@@ -313,6 +325,75 @@ character_event = {
 			modifier = { factor = 0.3 trait = sympathy_oldworld }
 		}
 	}
+	
+	option = {
+		name = EVTOPTH_sacredheart_1
+		trigger = {
+				has_global_flag = cristeros_absorbed_into_fold
+		}
+		hidden_tooltip = {
+			remove_trait = marian_santa_muerte
+			remove_trait = marian_guadalupe
+			remove_trait = marian_san_charbel
+			remove_trait = marian_san_juditas
+			remove_trait = marian_el_santo
+			remove_trait = marian_stella_maris
+			remove_trait = marian_santo_nino_fidencio
+			remove_trait = marian_san_pascual
+			remove_trait = marian_santa_inocencia
+			remove_trait = marian_san_felipe_de_jesus
+		}
+		add_trait = marian_cristo_rey
+		ai_chance = {
+			factor = 10
+			modifier = { factor = 2 trait = marian_cristo_rey }
+			modifier = { factor = 2 trait = strong }
+			modifier = { factor = 5 trait = brilliant_strategist }
+			modifier = { factor = 4 trait = skilled_tactician }
+			modifier = { factor = 3 trait = tough_soldier }
+			modifier = { factor = 2 trait = misguided_warrior }
+			modifier = { factor = 2 trait = brave }
+			modifier = { factor = 2 trait = trusting }
+			modifier = { factor = 2.5 trait = sympathy_christendom }
+			modifier = { factor = 1.5 learning = 10 }
+			modifier = { factor = 1.5 martial = 10 }
+			modifier = { factor = 0.3 trait = craven }
+			modifier = { factor = 0.3 trait = cruel }
+			modifier = { factor = 0.2 trait = sympathy_mesoamerican_gods }
+			modifier = { factor = 0.3 trait = sympathy_oldworld }
+		}
+	}
+	option = {
+		name = EVTOPTI_sacredheart_1
+		trigger = {
+				has_global_flag = gran_comision_absorbed_into_fold
+		}	
+		hidden_tooltip = {
+			remove_trait = marian_santa_muerte
+			remove_trait = marian_guadalupe
+			remove_trait = marian_san_charbel
+			remove_trait = marian_san_juditas
+			remove_trait = marian_el_santo
+			remove_trait = marian_stella_maris
+			remove_trait = marian_santa_inocencia
+			remove_trait = marian_san_pascual
+			remove_trait = marian_santo_nino_fidencio
+			remove_trait = marian_cristo_rey
+		}
+		add_trait = marian_san_felipe_de_jesus
+		ai_chance = {
+			factor = 10
+			modifier = { factor = 2 trait = marian_san_felipe_de_jesus }
+			modifier = { factor = 5 culture = neomexicano }
+			modifier = { factor = 5 culture = coloradan }
+			modifier = { factor = 2 trait = patient }
+			modifier = { factor = 5 trait = diligent }
+			modifier = { factor = 0.3 trait = wroth }
+			modifier = { factor = 0.3 trait = slothful }
+			modifier = { factor = 2	diplomacy = 10 }
+		}
+	}	
+	
 }
 
 province_event = {
@@ -1190,6 +1271,8 @@ character_event = {
 			remove_trait = marian_stella_maris
 			remove_trait = marian_santo_nino_fidencio
 			remove_trait = marian_santa_inocencia
+			remove_trait = marian_san_felipe_de_jesus
+			remove_trait = marian_cristo_rey
 		}
 		add_trait = marian_guadalupe
 		ai_chance = {
@@ -1224,6 +1307,8 @@ character_event = {
 			remove_trait = marian_stella_maris
 			remove_trait = marian_santo_nino_fidencio
 			remove_trait = marian_santa_inocencia
+			remove_trait = marian_san_felipe_de_jesus
+			remove_trait = marian_cristo_rey
 		}
 		add_trait = marian_el_santo
 		ai_chance = {
@@ -1266,6 +1351,8 @@ character_event = {
 			remove_trait = marian_stella_maris
 			remove_trait = marian_santa_inocencia
 			remove_trait = marian_san_pascual
+			remove_trait = marian_san_felipe_de_jesus
+			remove_trait = marian_cristo_rey
 		}
 		add_trait = marian_santo_nino_fidencio
 		ai_chance = {
@@ -1309,6 +1396,8 @@ character_event = {
 			remove_trait = marian_stella_maris
 			remove_trait = marian_santo_nino_fidencio
 			remove_trait = marian_santa_inocencia
+			remove_trait = marian_san_felipe_de_jesus
+			remove_trait = marian_cristo_rey
 		}
 		add_trait = marian_san_charbel
 		ai_chance = {
@@ -1341,6 +1430,8 @@ character_event = {
 			remove_trait = marian_stella_maris
 			remove_trait = marian_santo_nino_fidencio
 			remove_trait = marian_santa_inocencia
+			remove_trait = marian_san_felipe_de_jesus
+			remove_trait = marian_cristo_rey
 		}
 		add_trait = marian_santa_muerte
 		ai_chance = {
@@ -1377,6 +1468,8 @@ character_event = {
 			remove_trait = marian_stella_maris
 			remove_trait = marian_santo_nino_fidencio
 			remove_trait = marian_santa_inocencia
+			remove_trait = marian_san_felipe_de_jesus
+			remove_trait = marian_cristo_rey
 		}
 		add_trait = marian_san_juditas
 		ai_chance = {
@@ -1402,6 +1495,48 @@ character_event = {
 			factor = 50
 		}
 	}
+	
+	option = {
+		name = EVTOPTE_sacredheart_151
+		trigger = {
+			AND = {
+				NOT = { trait = marian_cristo_rey }
+				has_global_flag = cristeros_absorbed_into_fold
+			}
+		}
+		hidden_tooltip = {
+			remove_trait = marian_santa_muerte
+			remove_trait = marian_guadalupe
+			remove_trait = marian_san_charbel
+			remove_trait = marian_san_juditas
+			remove_trait = marian_el_santo
+			remove_trait = marian_stella_maris
+			remove_trait = marian_santo_nino_fidencio
+			remove_trait = marian_san_pascual
+			remove_trait = marian_santa_inocencia
+			remove_trait = marian_san_felipe_de_jesus
+		}
+		add_trait = marian_cristo_rey
+		ai_chance = {
+			factor = 10
+			modifier = { factor = 2 trait = marian_cristo_rey }
+			modifier = { factor = 2 trait = strong }
+			modifier = { factor = 5 trait = brilliant_strategist }
+			modifier = { factor = 4 trait = skilled_tactician }
+			modifier = { factor = 3 trait = tough_soldier }
+			modifier = { factor = 2 trait = misguided_warrior }
+			modifier = { factor = 2 trait = brave }
+			modifier = { factor = 2 trait = trusting }
+			modifier = { factor = 2.5 trait = sympathy_christendom }
+			modifier = { factor = 1.5 learning = 10 }
+			modifier = { factor = 1.5 martial = 10 }
+			modifier = { factor = 0.3 trait = craven }
+			modifier = { factor = 0.3 trait = cruel }
+			modifier = { factor = 0.2 trait = sympathy_mesoamerican_gods }
+			modifier = { factor = 0.3 trait = sympathy_oldworld }
+		}
+	}	
+	
 }
 
 # Choose patron deity
@@ -1425,6 +1560,8 @@ character_event = {
 			remove_trait = marian_stella_maris
 			remove_trait = marian_santo_nino_fidencio
 			remove_trait = marian_santa_inocencia
+			remove_trait = marian_san_felipe_de_jesus
+			remove_trait = marian_cristo_rey
 		}
 		add_trait = marian_san_pascual
 		ai_chance = {
@@ -1458,6 +1595,8 @@ character_event = {
 			remove_trait = marian_stella_maris
 			remove_trait = marian_santo_nino_fidencio
 			remove_trait = marian_san_pascual
+			remove_trait = marian_san_felipe_de_jesus
+			remove_trait = marian_cristo_rey
 		}
 		add_trait = marian_santa_inocencia
 		ai_chance = {
@@ -1495,6 +1634,8 @@ character_event = {
 			remove_trait = marian_santo_nino_fidencio
 			remove_trait = marian_santa_inocencia
 			remove_trait = marian_san_pascual
+			remove_trait = marian_san_felipe_de_jesus
+			remove_trait = marian_cristo_rey
 		}
 		add_trait = marian_stella_maris
 		ai_chance = {
@@ -1524,6 +1665,40 @@ character_event = {
 			factor = 50
 		}
 	}
+	option = {
+		name = EVTOPTE_sacredheart_152
+		trigger = {
+			AND = {
+				NOT = { trait = marian_san_felipe_de_jesus }
+				has_global_flag = gran_comision_absorbed_into_fold
+			}
+		}
+		hidden_tooltip = {
+			remove_trait = marian_santa_muerte
+			remove_trait = marian_guadalupe
+			remove_trait = marian_san_charbel
+			remove_trait = marian_san_juditas
+			remove_trait = marian_el_santo
+			remove_trait = marian_stella_maris
+			remove_trait = marian_santa_inocencia
+			remove_trait = marian_san_pascual
+			remove_trait = marian_santo_nino_fidencio
+			remove_trait = marian_cristo_rey
+		}
+		add_trait = marian_san_felipe_de_jesus
+		ai_chance = {
+			factor = 10
+			modifier = { factor = 2 trait = marian_san_felipe_de_jesus }
+			modifier = { factor = 5 culture = neomexicano }
+			modifier = { factor = 5 culture = coloradan }
+			modifier = { factor = 2 trait = patient }
+			modifier = { factor = 5 trait = diligent }
+			modifier = { factor = 0.3 trait = wroth }
+			modifier = { factor = 0.3 trait = slothful }
+			modifier = { factor = 2	diplomacy = 10 }
+		}
+	}	
+	
 }
 
 # THE START OF THE RECONQUISTA - 1090 AND MEXICO NOT CHRISTIAN
