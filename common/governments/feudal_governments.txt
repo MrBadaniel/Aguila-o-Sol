@@ -81,6 +81,7 @@ feudal_governments = {
 			NOT = { is_government_potential = uyc_government }
 			NOT = { has_character_flag = ORF_embrace }
 			NOT = { is_government_potential = theocratic_feudal_government }
+			NOT = { is_government_potential = reserve_government }
 			#Removed Chinese Imperial stuff
 			is_patrician = no
 		}
@@ -375,6 +376,7 @@ feudal_governments = {
 			NOT = { is_government_potential = order_government }
 			NOT = { is_government_potential = military_governorate }
 			NOT = { is_government_potential = uyc_government }
+			NOT = { is_government_potential = reserve_government }
 													 
 		}
 		
@@ -715,7 +717,8 @@ feudal_governments = {
 			NOT = { is_government_potential = mex_imperial_government }
 			NOT = { is_government_potential = bureaucratic_government }
 			NOT = { is_government_potential = theocratic_feudal_government }
-			NOT = { is_government_potential = uyc_government }			
+			NOT = { is_government_potential = uyc_government }
+			NOT = { is_government_potential = reserve_government }
 		}
 		
 		character_modifier = {
@@ -915,5 +918,74 @@ feudal_governments = {
 		# ## Modifiers
 		# court_size_modifier = 10
 	# }	
+	
+	reserve_government = {
+		preferred_holdings = { CASTLE TRIBAL }
+		allowed_holdings = { 
+			CASTLE 
+			TRIBAL
+			FORT
+			HOSPITAL
+		}
+		allowed_holdings_culture = { # Will not get the wrong government type penalty for tribes of the same culture
+			TRIBAL
+		}
+		accepts_liege_governments = { # Gets the wrong religion modifier instead
+			bureaucratic_government
+			diwan_government
+			theocracy_government
+			feudal_government
+			ghazi_government
+		}
+		free_revoke_on_governments_religion = { # Tribal vassals of other religions can have their titles revoked for free
+			tribal_government
+		}
+
+		frame_suffix = "_reserve"
+		title_prefix = "reserve_"
+
+		potential = {
+		NAND = {
+				controls_religion = yes
+				religion = edenite
+			}
+		OR= {
+		religion = forester
+		religion = edenite
+			}
+			is_patrician = no		
+		}
+		
+		vassal_call_to_arms  = {
+			bureaucratic_government
+			theocracy_government
+			feudal_government
+			ghazi_government
+			reserve_government
+			agrarian_government
+		}
+		
+		color = { 0 88 38 }
+		
+		uses_piety_for_law_change = yes
+		dukes_called_kings = yes
+		barons_need_dynasty = yes
+		ignores_de_jure_laws = yes
+		can_imprison_without_reason = yes 
+
+		can_build_tribal = yes
+	
+		character_modifier = {
+			short_reign_length = 2
+		}	
+	
+		ignore_in_vassal_limit_calculation = {
+			tribal_government
+		}
+		capital_move_delay = 200
+		## Modifiers
+		court_size_modifier = 10
+		min_vassal_tax = 0.1
+	}
 	
 }
