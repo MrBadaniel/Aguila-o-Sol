@@ -689,7 +689,7 @@ feudal_governments = {
 					culture = neomexicano
 					culture_group = starfolk
 					culture = arixan
-					culture = comanche
+					#culture = comanche
 					culture = sioux
 					culture = crow
 				}
@@ -709,6 +709,7 @@ feudal_governments = {
 				}
 			}
 			NOT = { has_character_flag = ORF_reject }
+			NOT = { culture = comanche }
 			is_patrician = no
 			NOT = { is_government_potential = mormon_government }
 			NOT = { is_government_potential = mex_imperial_government }
