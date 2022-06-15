@@ -284,8 +284,7 @@
 	intrigue=7
 	learning=9
 	culture=chino
-	religion=cetic
-	trait=marian_santa_muerte
+	religion=alurista
 	trait=hedonist
 	trait=greedy
 	trait=deceitful
@@ -315,7 +314,7 @@
 	intrigue=6
 	learning=6
 	culture=chino
-	religion=cetic
+	religion=alurista
 	trait=impaler
 	trait=greedy
 	trait=brave
@@ -342,7 +341,7 @@
 	intrigue=4
 	learning=6
 	culture=chino
-	religion=cetic
+	religion=alurista
 	trait=duelist
 	trait=charitable
 	trait=brave
@@ -369,7 +368,7 @@
 	name="Honesto"
 	dynasty=1913004
 	culture=chino
-	religion=cetic
+	religion=alurista
 	martial=4
 	diplomacy=8
 	stewardship=5
@@ -389,7 +388,7 @@
 	name="Crisanto"
 	dynasty=1913004
 	culture=chino
-	religion=cetic
+	religion=alurista
 	martial=1
 	diplomacy=7
 	stewardship=5
@@ -508,7 +507,7 @@
 	name="Celia"
 	female=yes
 	dynasty=1912032
-	culture=occidental
+	culture=sonorense
 	religion=navegante
 	martial=4
 	diplomacy=3
@@ -528,7 +527,7 @@
 1910020={
 	name="Girón"
 	dynasty=4401165 # el toro
-	culture=occidental
+	culture=sonorense
 	religion=navegante
 	martial=7
 	diplomacy=5
@@ -555,7 +554,7 @@
 	name="Chachita"
 	female=yes
 	dynasty=4401165 # el toro
-	culture=occidental
+	culture=sonorense
 	religion=navegante
 	martial=2
 	diplomacy=7
@@ -579,7 +578,7 @@
 1910022={
 	name="Pedro"
 	dynasty=4401165 # el toro
-	culture=occidental
+	culture=sonorense
 	religion=navegante
 	martial=4
 	diplomacy=8
@@ -599,7 +598,7 @@
 1910023={
 	name="José"
 	dynasty=4401165 # el Toro
-	culture=occidental
+	culture=sonorense
 	religion=navegante
 	martial=5
 	diplomacy=5
@@ -1750,11 +1749,10 @@
 	female=no
 	dynasty=1850045
 	culture=angeleno
-	religion=cetic
+	religion=kinemite
 	stewardship=8
 	intrigue=8
 	trait=midas_touched
-	trait=way_book
 	trait=mystic
 	trait=lunatic
 	trait=paranoid
@@ -1936,7 +1934,7 @@
 	name="Aaron"
 	female=no
 	dynasty=1850059
-	culture=yiddish
+	culture=angeleno
 	religion=reform
 	trait=fortune_builder
 	trait=way_book
@@ -1987,7 +1985,7 @@
 	female=no
 	dynasty=1850066
 	father=2200030
-	culture=angeleno
+	culture=italian
 	religion=cetic
 	diplomacy=8
 	learning=5
@@ -1997,7 +1995,9 @@
 	trait=way_dove
 	trait=socializer
 	trait=gregarious
-	2596.3.1={birth=yes}
+	2596.3.1={birth=yes
+	culture=angeleno
+	}
 	2650.12.1={death=yes}
 }
 
@@ -2005,7 +2005,7 @@
 	name="Ronald"
 	female=no
 	dynasty=1850066
-	culture=angeleno
+	culture=italian
 	religion=cetic
 	martial=5
 	diplomacy=8
@@ -2021,7 +2021,9 @@
 	trait=gregarious
 	trait=trusting
 	father=1910150
-	2636.3.1={birth=yes}
+	2636.3.1={birth=yes
+	culture=angeleno
+	}
 	2664.3.1={
 		add_spouse=1910152
 		effect={
@@ -2059,8 +2061,7 @@
 	female=no
 	dynasty=1912055
 	culture=californiano
-	trait=way_dove
-	religion=cetic
+	religion=alurista
 	2626.3.1={birth=yes}
 	2690.12.1={death=yes}
 }
@@ -2069,7 +2070,7 @@
 	name="Haji"
 	female=no
 	dynasty=1913013
-	culture=chino
+	culture=towner
 	religion=qingzhen
 	trait=imp_ex2
 	trait=confucianism_qingzhen
@@ -2460,7 +2461,9 @@
 
 1910208={
 	name="Methodius"
-	dynasty=1851177 #Alexander, I'll need to define this as valleyan eventually.
+	dynasty=1851164 #Alexander, I'll need to define this as valleyan eventually.
+	father=1910209
+	mother=1910210
 	culture=valleyan
 	religion=nazarene
 	trait=mastermind_theologian

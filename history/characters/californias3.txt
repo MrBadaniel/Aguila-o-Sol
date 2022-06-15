@@ -169,10 +169,10 @@
 }
 2500009={
 	name="Joseph"
-	dynasty=1851045#Dominguez
+	dynasty=1851045#Gonzalez
 	dna="beadg0ic000"
 	culture=tejano
-	religion=sacred_heart
+	religion=la_hermandad
 	trait=heresiarch
 	trait=brave
 	trait=strong
@@ -183,11 +183,17 @@
 	trait=holy_warrior
 	trait=brilliant_strategist
 	disallow_random_traits=yes
-	give_nickname=nick_the_prophet
+	give_nickname=nick_the_shepherd
 	2220.1.1={birth=yes
-	culture=valleyan
+	culture=joaquino
 	}
 	2230.1.1={name=Joseph}
+	2245.3.24={
+		create_bloodline={
+			type=joseph
+			has_dlc="Holy Fury"
+		}
+	}
 	2258.1.1={death={
 			death_reason=death_battle_duel #Murdered in combat.
 			killer=2200006
@@ -196,10 +202,10 @@
 }
 2500010={
 	name="Carlos"
-	dynasty=1851045#Dominguez
+	dynasty=1851045#Gonzalez
 	culture=tejano
 	father=2500009
-	religion=sacred_heart
+	religion=la_hermandad
 	trait=slothful
 	trait=shrewd
 	trait=zealous
@@ -207,7 +213,7 @@
 	trait=indulgent_wastrel
 	disallow_random_traits=yes
 	2243.1.1={birth=yes
-	culture=valleyan
+	culture=joaquino
 	}
 	2278.1.1={death={
 			death_reason=death_murder_unknown #Murdered.
@@ -379,7 +385,7 @@
 			death_reason=death_rabble #Green Sash Revolt
 		}
 	}
-}
+} 
 
 2500018={
 	name="Elias"
@@ -407,7 +413,7 @@
 2500019={
 	name="Daoming"
 	dynasty=1851163 #Chen
-	culture=calaotian
+	culture=towner
 	religion=cetic
 	father=2500061
 	health=7
@@ -438,7 +444,7 @@
 	name="Xuan"
 	dynasty=1851163 #Chen
 	father=2500019
-	culture=calaotian
+	culture=towner
 	religion=cetic
 	martial=7
 	stewardship=6
@@ -464,7 +470,7 @@
 	female=yes
 	dynasty=1851163 #Chen
 	father=2500019
-	culture=calaotian
+	culture=towner
 	religion=cetic
 	martial=3
 	stewardship=6
@@ -1119,11 +1125,11 @@
 
 2500051={
 	name="Clay"
-	culture=tuskegean
-	religion=cetic
+	culture=guyanese
+	religion=siliconist
 	dynasty=1849057#Woz
 	trait=skilled_tactician
-	trait=way_book
+	trait=python
 	trait=strong
 	trait=erudite
 	trait=scholar
@@ -1144,13 +1150,13 @@
 
 2500052={
 	name="Maxwell"
-	culture=tuskegean
-	religion=cetic
+	culture=guyanese
+	religion=siliconist
 	dynasty=1849057#Woz
 	mother=2500050
 	father=2500051
 	trait=martial_cleric
-	trait=way_book
+	trait=python
 	trait=theologian
 	trait=temperate
 	trait=diligent
@@ -1169,12 +1175,12 @@
 
 2500053={
 	name="Hank"
-	culture=tuskegean
-	religion=cetic
+	culture=guyanese
+	religion=siliconist
 	dynasty=1849057#Woz
 	father=2500052
 	trait=underhanded_rogue
-	trait=way_book
+	trait=python
 	trait=gregarious
 	trait=deceitful
 	trait=diligent
@@ -1192,13 +1198,13 @@
 
 2500054={
 	name="Courtney"
-	culture=tuskegean
-	religion=cetic
+	culture=guyanese
+	religion=siliconist
 	female=yes
 	dynasty=1849057#Woz
 	father=2500053
 	trait=indulgent_wastrel
-	trait=way_book
+	trait=python
 	trait=groomed
 	trait=is_fat
 	trait=gluttonous
@@ -1216,11 +1222,11 @@
 
 2500055={
 	name="Jay"
-	culture=tuskegean
-	religion=cetic
+	culture=guyanese
+	religion=siliconist
 	dynasty=1849057#Woz
 	father=2500053
-	trait=way_book
+	trait=python
 	trait=imp_ex1
 	2499.1.1={
 		birth=yes
@@ -1232,11 +1238,11 @@
 
 2500056={
 	name="Mathis"
-	culture=tuskegean
-	religion=cetic
+	culture=guyanese
+	religion=siliconist
 	dynasty=1849057#Woz
 	father=2500055
-	trait=way_book
+	trait=python
 	trait=imp_ex2
 	2533.1.1={
 		birth=yes
@@ -1248,11 +1254,11 @@
 
 2500057={
 	name="Eugene"
-	culture=black
-	religion=cetic
+	culture=guyanese
+	religion=siliconist
 	dynasty=1849057#Woz
 	father=2500056
-	trait=way_book
+	trait=python
 	trait=imp_ex2
 	2556.1.1={
 		birth=yes
@@ -1266,7 +1272,7 @@
 
 2500058={
 	name="Wei"
-	culture=calaotian
+	culture=towner
 	religion=cetic
 	dynasty=1851163 #Chen
 	trait=skilled_tactician
@@ -1285,13 +1291,13 @@
 	2460.1.1={birth=yes}
 	2510.1.1={death={
 		death_reason=death_battle
-	}
+		}
 	}
 }
 
 2500059={
 	name="Yang"
-	culture=calaotian
+	culture=towner
 	religion=cetic
 	dynasty=1851163 #Chen
 	father=2500058
@@ -1306,7 +1312,7 @@
 
 2500060={
 	name="Wei"
-	culture=calaotian
+	culture=towner
 	religion=cetic
 	dynasty=1851163 #Chen
 	father=2500059
@@ -1320,7 +1326,7 @@
 
 2500061={
 	name="Zhao"
-	culture=calaotian
+	culture=towner
 	religion=cetic
 	dynasty=1851163 #Chen
 	father=2500060
@@ -1333,7 +1339,7 @@
 
 2500062={
 	name="Ying"
-	culture=calaotian
+	culture=towner
 	religion=cetic
 	female=yes
 	dynasty=1851163 #Chen
@@ -1690,7 +1696,7 @@
 	2180.1.1={birth=yes}
 	2245.3.24={death={
 			death_reason=death_execution_hanging
-			killer=2500009
+			killer=6900513
 		}
 	}
 }
@@ -2033,9 +2039,9 @@
 2500093={
 	name="Juan"
 	dynasty=1912076 #Mendoza
-	culture=californiano
+	culture=angeleno
 	religion=nazarene
-martial=6
+	martial=6
 	diplomacy=4
 	stewardship=6
 	intrigue=2
@@ -2153,11 +2159,12 @@ martial=6
 	2025.7.2={birth=yes}
 	2090.2.14={death=yes}
 }
+
 2500111={
 	name="Alan Smithee"
 	culture=angeleno
 	dynasty=1851167 #hays
-	religion=pagan
+	religion=kinemite
 	trait=lustful
 	trait=wroth
 	trait=greedy
@@ -2173,3 +2180,968 @@ martial=6
 		}
 	}
 }
+
+2500146={
+	name="Enrique"
+	female=no
+	dynasty=5001193 #Roday
+	culture=french
+	religion=kinemite
+	trait=midas_touched
+	trait=way_dove
+	2603.3.1={birth=yes
+	culture=angeleno
+	}
+	2624.1.1={
+		effect={
+			set_character_flag=diversity
+			set_character_flag=physique
+		}
+	}	
+	2654.1.1={death=yes}
+}
+
+2500147={
+	name="Shawn"
+	female=no
+	dynasty=5001193 #Roday
+	culture=french
+	religion=kinemite
+	martial=5
+	stewardship=5
+	learning=5
+	intrigue=12
+	diplomacy=5
+	trait=slothful
+	trait=deceitful
+	trait=quick
+	trait=intricate_webweaver
+	trait=proud
+	trait=content
+	trait=greedy
+	trait=groomed
+	trait=gregarious
+	father=2500146
+	2637.3.4={birth=yes
+	culture=angeleno}
+	2664.1.1={
+	effect={
+			set_character_flag=diversity
+			set_character_flag=physique
+		}
+	}
+}
+
+2500148={ #Jules Lawson wife of Count James Roday
+	name="Jules"
+	female=yes
+	martial = 10
+	dynasty=5001194
+	culture=german
+	religion=kinemite
+	trait=diligent
+	trait=trusting
+	trait=skilled_tactician
+	trait=fair
+	trait=kind
+	trait=shrewd
+	trait=stubborn
+	trait=just
+	trait=gregarious
+	2640.3.17={birth=yes
+	culture=angeleno
+	}
+	2660.1.4={effect={add_lover=2500147}}
+	2660.5.25={add_spouse=2500147}
+		2664.1.1={
+			effect={
+				set_character_flag=diversity
+				set_character_flag=physique
+		}
+	}
+}
+
+2500149={
+	name="Vic"
+	culture=angeleno
+	dynasty=5001195 #Montana
+	religion=kinemite
+	trait=brilliant_strategist
+	trait=mystic
+	trait=disfigured
+	trait=wroth
+	trait=ambitious
+	trait=devout
+	trait=heresiarch
+	trait=legendary
+	occluded=yes
+	give_nickname=nick_the_phantom
+	2053.6.1={birth=yes}
+	2099.9.22={death={
+			death_reason=death_execution_tarpit
+			killer=2500150
+		}
+	}
+}
+
+2500150={
+	name="Claude" #jensen
+	dynasty=2030025
+	dna="aaaaaybchce"
+	properties="wi0c0d000000"
+	martial=2
+	diplomacy=5
+	stewardship=10
+	intrigue=3
+	learning=1
+	trait=flamboyant_schemer
+	trait=slothful
+	trait=gluttonous
+	trait=cruel
+	trait=impaler
+	trait=legendary
+	disallow_random_traits=yes
+	father=2200190
+	culture=german
+	religion=libertarian
+	occluded=yes
+	2045.10.9={
+		birth=yes
+		culture=angeleno
+		effect={
+			set_character_flag=diversity
+			set_character_flag=physique
+		}
+	}
+	2120.3.10={death=yes}
+}
+
+2500151={
+	name="Phillip"
+	culture=angeleno
+	dynasty=1851166 #Bute
+	religion=hamiltonian
+	trait=giant
+	trait=strong
+	trait=scarred
+	trait=bastard
+	trait=humble
+	trait=slothful
+	trait=legendary
+	occluded=yes
+	father=2500110
+	give_nickname=nick_the_kine_slayer
+	2071.2.5={birth=yes}
+	2129.4.1={death={
+			death_reason=death_murder_butchered
+			killer=2500152
+		}
+	}
+}
+
+2500152={
+	name="Diego"
+	culture=angeleno
+	dynasty=5001198 #Capistrano #1
+	religion=kinemite
+	trait=elusive_shadow
+	trait=quick
+	trai=peasant_leader
+	trait=shrewd
+	trait=uncouth
+	trait=charitable
+	trait=just
+	occluded=yes
+	trait=legendary
+	2097.1.18={birth=yes}
+	2140.5.15={death={
+			death_reason=death_execution_hanging
+			killer=2200003
+		}
+	}
+}
+
+1802061={
+	name="Sam"
+	culture=angeleno
+	dynasty=5001196 #O'Brian
+	religion=kinemite
+	trait=tough_soldier
+	trait=peasant_leader
+	trait=honest
+	trait=cruel
+	trait=uncouth
+	trait=just
+	occluded=yes
+	trait=legendary
+	2074.4.1={birth=yes}
+	2111.7.21={death={
+			death_reason=death_battle
+			killer=2500151
+		}
+	}
+}
+
+2500153={
+	name="Platon"
+	culture=angeleno
+	dynasty=5001197 #Douglas
+	religion=kinemite
+	trait=fortune_builder
+	trait=sympathy_judaism
+	trait=gregarious
+	trait=devout
+	trait=groomed
+	trait=kind
+	occluded=yes
+	trait=legendary
+	2070.12.11={birth=yes}
+	2111.7.21={death={
+			death_reason=death_battle
+			killer=2500151
+		}
+	}
+}
+
+2500154={
+	name="Conan"
+	culture=angeleno
+	religion=kinemite
+	trait=brilliant_strategist
+	trait=hunter
+	trait=robust
+	trait=brave
+	trait=zealous
+	trait=uncouth
+	trait=temperate
+	occluded=yes
+	trait=legendary
+	give_nickname=nick_the_crusher
+	2078.3.29={birth=yes}
+	2111.7.25={death={
+			death_reason=death_battle_duel
+			killer=2500151
+		}
+	}
+}
+
+1802062={
+	name="Maurice"
+	culture=angeleno
+	dynasty=5001210 #Khan
+	religion=kinemite
+	trait=mastermind_theologian
+	trait=theologian
+	trait=kind
+	trait=devout
+	trait=humble
+	trait=shy
+	occluded=yes
+	trait=legendary
+	2069.7.6={birth=yes}
+	2111.7.29={death={
+			death_reason=death_battle
+			killer=2500151
+		}
+	}
+}
+  
+2500156={
+    name="Herschel"
+    culture=angeleno
+    religion=kinemite
+    martial=8
+    diplomacy=5
+    stewardship=5
+    intrigue=7
+    learning=7
+    trait=martial_cleric
+    trait=painter
+    trait=pious
+	trait=diligent
+	trait=patient
+	occluded=yes
+	trait=legendary
+	2072.8.6={birth=yes}
+	2111.7.21={death={
+			death_reason=death_battle
+			killer=2500151
+		}
+	}
+}  
+
+2500157={
+	name="Rainer"
+	culture=angeleno
+	dynasty=5001211 #Phoenix
+	religion=kinemite
+    trait=intricate_webweaver	
+    trait=chaste
+    trait=paranoid
+    trait=groomed
+	occluded=yes
+	trait=legendary
+	2065.9.12={birth=yes}
+	2111.7.21={death={
+			death_reason=death_battle
+			killer=2500151
+		}
+	}
+}
+
+2500158={
+	name="Jackie"
+	culture=towner
+	dynasty=5001212 #Li
+	religion=kinemite
+    martial=11
+    diplomacy=3
+    stewardship=5
+    intrigue=4
+    learning=4
+    trait=brilliant_strategist
+	trait=duelist
+    trait=zealous
+    trait=just
+    trait=cruel
+	trait=brave
+	occluded=yes
+	trait=legendary
+	2077.5.9={birth=yes}
+	2111.7.29={death={
+			death_reason=death_battle
+			killer=2500151
+		}
+	}
+}
+
+1802059={
+    name="Oswald"
+    culture=angeleno
+    religion=kinemite
+	female=no
+    trait=mastermind_theologian
+    trait=mystic	
+    trait=devout
+	trait=honest
+	trait=patient
+	trait=kind
+	occluded=yes
+	trait=legendary
+	give_nickname=nick_the_wise
+	2039.9.5={birth=yes}
+	2111.7.29={death={
+			death_reason=death_battle
+			killer=2500151
+		}
+	}
+}
+
+
+1802060={
+    name="Marilyn"
+	female=yes
+    culture=angeleno
+    religion=kinemite
+	martial=5
+	diplomacy=5
+	stewardship=5
+	intrigue=5
+	learning=5
+	trait=charismatic_negotiator
+	trait=fair
+	trait=temperate
+	trait=humble
+	trait=stubborn
+	trait=diligent
+	occluded=yes
+	trait=legendary	
+	give_nickname=nick_the_martyr
+    2083.6.13={birth=yes}
+	2111.8.2={death={
+			death_reason=death_murder_strangle
+			killer=2500151
+		}
+	}
+}
+ 
+  
+#5001207 = { name="Ramírez" culture=Ramírez }
+#5001208 = { name="Estévez" culture=angeleno }
+#5001209 = { name="Clark" culture=valleyan }
+
+				#city b_mountain_view_CA = {}
+				#temple b_sunnyvale_CA = {} java
+				#castle b_milpitas_CA = {} ceeplusplus
+				
+
+
+1802063={
+	name="Joanna"
+	female=yes
+	dynasty=1849057#Woz
+	culture=guyanese
+	religion=cetic
+	stewardship=6
+	learning=6
+	trait=intricate_webweaver
+	trait=imp_ex4
+	trait=sympathy_oldworld
+	trait=way_cowl
+	trait=fair
+	trait=shy
+	trait=ambitious
+	father=2500057	
+	2612.4.16={birth=yes
+	culture=bayfolk
+	}
+	2634.5.10={add_spouse=1802064}
+	2660.12.1={death=yes}
+}
+
+1802064={
+	name="Ryuto"
+	female=no
+	dynasty=1851144
+	culture=towner
+	religion=cetic
+	trait=scholarly_theologian
+	trait=way_book
+	trait=content
+	trait=erudite
+	trait=greedy
+	2606.4.1={birth=yes}
+	2634.5.10={add_spouse=1802063}
+	2656.9.19={death=yes}
+}
+
+1802065={
+	name="Filomeno"
+	dynasty=1851045#Gonzalez
+	culture=tejano
+	religion=la_hermandad
+	trait=brilliant_strategist
+	trait=school_organizer
+	trait=legendary
+	occluded=yes
+	trait=sturdy
+	trait=humble
+	trait=gregarious
+	trait=devout
+	trait=just
+	disallow_random_traits=yes
+	give_nickname=nick_el_jefecito
+	2080.5.12={birth=yes
+	culture=joaquino
+	}
+	2161.10.24={death=yes}
+}
+
+1802066={
+	name="Luis"
+	dynasty=1851045#Gonzalez
+	culture=tejano
+	religion=la_hermandad
+	trait=charismatic_negotiator
+	trait=gardener
+	trait=legendary
+	occluded=yes
+	trait=honest
+	trait=wroth
+	trait=content
+	father=1802065
+	disallow_random_traits=yes
+	2106.2.19={birth=yes
+	culture=joaquino
+	}
+	2184.7.21={death=yes}
+}
+
+
+1802067={
+	name="Rex "
+	dynasty=1850066
+	culture=italian
+	religion=olympian
+	trait=skilled_tactician
+	trait=gladiator
+	trait=brawny
+	trait=kind
+	trait=ambitious
+	disallow_random_traits=yes
+	2308.5.15={birth=yes
+	culture=angeleno
+	}
+	2326.1.14={add_spouse=2200199}
+	2377.6.13={death=yes}
+}
+
+1802068={
+	name="Gene"
+	culture=angeleno
+	dynasty=5001199 #Capistrano #2
+	religion=kinemite
+	trait=tough_soldier
+	trait=trickster
+	trait=light_foot_leader
+	trait=bastard
+	trai=peasant_leader
+	trait=envious
+	trait=ambitious
+	trait=charitable
+	trait=deceitful
+	occluded=yes
+	trait=legendary
+	2137.5.2={birth=yes}
+	2166.9.9={death={
+			death_reason=death_left_life_entered_history
+		}
+	}
+}
+
+1802069={
+	name="Lucas"
+	culture=angeleno
+	dynasty=5001201 #Stevens
+	religion=kinemite
+	trait=scholarly_theologian
+	trai=peasant_leader
+	trait=reclusive
+	trait=ambitious
+	trait=zealous
+	trait=erudite
+	occluded=yes
+	trait=legendary
+	2151.2.12={birth=yes}
+	2192.12.4={death={
+			death_reason=death_execution_hanging
+			killer=2200003
+		}
+	}
+}
+  
+1802070={
+	name="Alonso"
+	dynasty=5001215#Pío
+	culture=tagalog
+	religion=la_hermandad
+	trait=scholarly_theologian
+	trait=school_teacher
+	trait=legendary
+	occluded=yes
+	trait=content
+	trait=honest
+	trait=chaste
+	disallow_random_traits=yes
+	2107.5.12={birth=yes}
+	2189.7.21={death=yes}
+}
+
+1802071={
+	name="Isko"
+	dynasty=5001215#Pío
+	culture=tagalog
+	religion=la_hermandad
+	trait=mastermind_theologian
+	trait=school_giver
+	trait=legendary
+	occluded=yes
+	trait=la_hermandad_padre
+	trait=content
+	trait=kind
+	trait=devout
+	disallow_random_traits=yes
+	father=1802070
+	2131.1.18={birth=yes}
+	2211.4.4={death=yes}
+}
+
+1802072={
+	name="Jamebei"
+	dynasty=5001215#Pío
+	culture=tagalog
+	religion=la_hermandad
+	trait=tough_soldier
+	trait=legendary
+	occluded=yes
+	trait=blinded
+	trait=scarred
+	trait=wroth
+	trait=envious
+	disallow_random_traits=yes
+	father=1802070
+	2135.1.18={birth=yes}
+	2202.4.4={death=yes}
+}
+
+1802073={
+	name="Piolo"
+	dynasty=5001215#Pío
+	culture=tagalog
+	religion=la_hermandad
+	trait=flamboyant_schemer
+	trait=greedy
+	trait=legendary
+	occluded=yes
+	trait=envious
+	trait=ambitious
+	father=1802070
+	2139.4.3={birth=yes}
+	2192.5.7={death={
+			death_reason=death_battle
+			killer=1802074
+		}
+	}
+}
+
+1802074={
+	name="Filomeno"
+	dynasty=1851045#Gonzalez
+	culture=tejano
+	religion=la_hermandad
+	trait=brilliant_strategist
+	trait=school_leader
+	trait=stutter
+	trait=adventurer
+	trait=legendary
+	occluded=yes
+	trait=gluttonous
+	trait=just
+	trait=stubborn
+	father=1802066
+	give_nickname=nick_porky
+	disallow_random_traits=yes
+	2126.9.9={birth=yes
+	culture=joaquino
+	}
+	2150.1.1={add_spouse=1802075}
+	2199.11.7={death=yes}
+}
+
+1802075={
+	name="Diosa"
+	dynasty=5001229#Guadaña
+	culture=tejano
+	female=yes
+	religion=la_hermandad
+	trait=fair
+	trait=legendary
+	occluded=yes
+	trait=groomed
+	trait=shy
+	trait=kind
+	father=1802093
+	disallow_random_traits=yes
+	2128.10.10={birth=yes
+	culture=meseteno
+	}
+	2150.1.1={add_spouse=1802074}
+	2205.12.16={death=yes}
+}
+
+1802076={
+	name="Billy"
+	culture=bayfolk
+	religion=occultist
+	trait=flamboyant_schemer
+	trait=groomed
+	trait=legendary
+	occluded=yes
+	trait=deceitful
+	trait=cruel
+	trait=envious
+	give_nickname=nick_goodwill
+	2123.9.9={birth=yes}
+	2145.5.7={death={
+			death_reason=death_duel
+			killer=1802074
+		}
+	}
+}
+
+1802077={
+	name="Marvin"
+	culture=valleyan
+	religion=olympian
+	trait=brilliant_strategist
+	trait=strong
+	trait=legendary
+	occluded=yes
+	trait=proud
+	trait=stubborn
+	give_nickname=nick_the_olympian
+	2120.2.2={birth=yes}
+	2146.6.2={death={
+			death_reason=death_duel
+			killer=1802074
+		}
+	}
+}
+
+#Winnie, Marie, and Sadie daughers of Lucy and Brian Sanders inlander 1802078 1802079
+#death_execution_hanging
+#Winnie dies in battle the others are hung 1802080 1802081 1802083
+5001231 = { name="Sanders" culture=inlander }
+
+
+1802082={
+	name="Kane"
+	culture=english
+	dynasty=5001202 #Rogers
+	religion=kinemite
+	trait=brilliant_strategist
+	trait=brave
+	trait=musician
+	trait=heresiarch
+	trait=ambitious
+	trait=gregarious
+	trait=zealous
+	2204.2.2={birth=yes
+	culture=angeleno
+	}
+	2277.10.1={death=yes}
+}
+
+1802084={
+	name="Kirk"
+	culture=english
+	dynasty=5001202 #Rogers
+	religion=kinemite
+	trait=elusive_shadow
+	trait=mystic
+	trait=erudite
+	trait=humble
+	trait=lustful
+	trait=devout
+	father=1802082
+	2228.5.12={birth=yes
+	culture=angeleno
+	}
+	2290.9.11={death=yes}
+}
+
+1802085={
+	name="Abdul"
+	culture=german
+	religion=imamite
+	trait=martial_cleric
+	trait=content
+	trait=arbitrary
+	trait=devout
+	2218.1.4={birth=yes
+	culture=angeleno
+	}
+	2247.1.5={death={
+			death_reason=death_duel
+			killer=1802082
+		}
+	}
+}
+
+1802086={
+	name="Nathan"
+	culture=english
+	religion=sedevacantist
+	trait=tough_soldier
+	trait=kind
+	trait=just
+	trait=honest
+	2221.1.4={birth=yes
+	culture=angeleno
+	}
+	2248.3.12={death={
+			death_reason=death_execution_hanging #Saint Patrick's Day Massacre
+			killer=1802082
+		}
+	}
+}
+
+1802087={
+	name="Muhammad"
+	culture=anjalusi
+	religion=imamite
+	trait=tough_soldier
+	trait=devout
+	trait=shy
+	trait=brave
+	2232.1.1={birth=yes}
+	2248.3.12={death={
+			death_reason=death_execution_hanging #Saint Patrick's Day Massacre
+			killer=1802082
+		}
+	}
+}
+
+1802088={
+	name="Tomás"
+	culture=joaquino
+	religion=la_hermandad
+	trait=tough_soldier
+	trait=school_organizer
+	trait=brave
+	trait=ambitious
+	trait=devout
+	trait=kind
+	2201.1.1={birth=yes
+	culture=angeleno
+	}
+	2248.3.12={death={
+			death_reason=death_execution_hanging #Saint Patrick's Day Massacre
+			killer=1802082
+		}
+	}
+}
+
+1802089={
+	name="Carolus"
+	culture=german
+	religion=wormwoodist
+	trait=tough_soldier
+	trait=wroth
+	trait=charitable
+	trait=erudite
+	2222.1.1={birth=yes
+	culture=angeleno
+	}
+	2248.3.12={death={
+			death_reason=death_execution_hanging #Saint Patrick's Day Massacre
+			killer=1802082
+		}
+	}
+}
+
+1802090={
+	name="Lewis"
+	culture=german
+	religion=evangelical
+	trait=tough_soldier
+	trait=kind
+	trait=gregarious
+	trait=just
+	2231.1.1={birth=yes
+	culture=angeleno
+	}
+	2248.3.12={death={
+			death_reason=death_execution_hanging #Saint Patrick's Day Massacre
+			killer=1802082
+		}
+	}
+}
+
+1802091={
+	name="Sterling"
+	culture=english
+	dynasty=5001202 #Rogers
+	religion=kinemite
+	trait=skilled_tactician
+	trait=hunter
+	trait=robust
+	trait=proud
+	trait=brave
+	trait=devout
+	father=1802084
+	2257.5.1={birth=yes
+	culture=angeleno
+	}
+	2308.9.24={death=yes}
+}
+
+1802092={
+	name="Butch"
+	culture=west_slavic
+	dynasty=5001208 #Fonda
+	religion=olympian
+	trait=skilled_tactician
+	trait=brawny
+	trait=heresiarch
+	trait=brave
+	trait=stubborn
+	trait=devout
+	2392.8.9={birth=yes
+	culture=angeleno
+	}
+	2436.2.12={death={
+			death_reason=death_battle #Murdered in combat.
+			killer=2200009
+		}
+	}
+}
+
+1802093={
+	name="Corky"
+	dynasty=5001229#Guadaña
+	culture=tejano
+	religion=la_hermandad
+	trait=legendary
+	occluded=yes
+	trait=brilliant_strategist
+	trait=school_leader
+	trait=brave
+	trait=humble
+	trait=pious
+	trait=stubborn
+	disallow_random_traits=yes
+	2095.3.17={birth=yes
+	culture=meseteno
+	}
+	2184.4.1={death=yes}
+}
+
+1802094={
+	name="Ayres"
+	dynasty=5001230#Clark
+	culture=english
+	religion=forester
+	trait=legendary
+	occluded=yes
+	trait=midas_touched
+	trait=gardener
+	trait=ambitious
+	trait=pious
+	trait=kind
+	trait=humble
+	give_nickname=nick_the_good_steward
+	disallow_random_traits=yes
+	2004.5.5={birth=yes
+	culture=valleyan
+	}
+	2105.8.22={death=yes}
+}
+
+#5001230 Clark
+
+
+
+  
+  #Kane II Rogers 2308 to 2309 attempts to invade Socal and dies in the proccess
+  #Shirley Rogers and Clint Connery 2309 to 2315 and 2315 to 2324 english
+  #Clint II Connery 2324 to 2360
+  #Kane III Connery 2360 to 2364 killed by an Abbas
+  #Conan Connery (married to Marilyn DiMaggio) 2364 to 2379
+  #Miriam Connery and Linus Fonzarelli 2379 to 2390
+  #Bud Fonzarelli 2390 to 2391 attempts to take LA but is repelled and dies of a rock to the head death_accident_fall 
+  #Bud's brother, Lou Fonzarelli 2391 to 2395 italian
+  #Curly Fonzarelli (marries Audrey Capistrano the daughter of Diego II Capistrano) 2395 to 2410 
+  #Lizabeth Fonzarelli and Chevy Calgary 2410 to 2415 die of pneumonia   
+  #Oswald I the Tramp Calgary, kills the Mayor of Los Angeles and proclaims himself rulero of Los Angeles 2415 to 2420.11.20 but rules the Directory until 24269.2.4
+  #Lawgiver negotiates a peace between Kinemites and Imamites ensuring Kinemites can practice their faith freely
+  #Charlton I Calgary 2469 to to 2490 german
+  #Shawn the Sleuth Calgary 2490 to 2514
+  #Oswald II Calgary 2514 to 2525
+  #Oswald III Calgary 2525 to 2539
+  #Conan II Calgary 2539 to 2560
+  #Madeleine Calgary (married to Ramón Ramírez) 2560 to 2586
+  #Kirk II Ramírez 2586 to 2608 neomexicano
+  #Sterling II Ramírez 2608 to 2610
+  #Diego Ramírez 2610 to 2611
+  #Diego II Ramírez 2611 to 2611, infant dies a sickly child after his death it is unsure who should suceed the child
+  #Miriam Ramírez (the Queen Grandmother) the daughter of Kirk II, dies in 2644, grandmother to the Ronald Carmine (through her daughter Ingrid Lawson) and grandmother to Jules Lawson by her son Clint Lawson.
+  #Martin Hughes father of Harold Hughes and married to Madeleine Lawson
+  
+  #Diego II Capistrano rebels against Socal dies after he is murdered by his brother Othello Capistrano but his daughter lives and marries  #Curly Fonzarelli
+  
+  
+#slavic Carranza
+
+#charitable n word  school_giver
+#school_leader WARRIOR
