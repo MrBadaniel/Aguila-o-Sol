@@ -1,0 +1,3541 @@
+namespace = ceticreform
+
+narrative_event = {
+	id = ceticreform.1
+	title = TITLE_cetic_gaian
+	desc = EVTDESC_cetic_gaian
+	
+	picture = GFX_evt_china_invades
+	border = GFX_event_narrative_frame_religion	
+
+	only_rulers = yes
+	major = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		primary_title = { holy_order = no }
+		primary_title = { is_landless_type_title = no }
+		mercenary = no
+		primary_title = { higher_tier_than = BARON }	
+	}
+	
+	option = {
+		name = "gaian_incorporation_emperor"
+		trigger = {
+			has_landed_title = e_california
+		}
+		set_global_flag = gaians_incorporated
+		any_realm_province = {
+			if = {
+				limit = { 
+					AND = {
+						religion = gaian
+						region = world_west_coast
+					}
+
+				}
+				random = { 
+					chance = 40
+					religion = ROOT
+				}
+
+			}
+		}
+
+		ai_chance = {
+			factor = 1000
+		}
+	}	
+	option = {
+		name = "gaian_incorporation_elsewhere"
+		trigger = {
+			NOT = {	
+				has_landed_title = e_california
+				primary_title = { is_landless_type_title = yes }
+				mercenary = yes
+				religion = gaian
+				capital_scope = {
+					region = world_west_coast
+				}
+			}
+		}
+		ai_chance = {
+			factor = 1000
+		}
+	}	
+	option = {
+		name = "gaian_join_california"
+		trigger = {		
+			NOT = { has_landed_title = e_california }
+			religion = gaian
+			capital_scope = {
+				region = world_west_coast
+			}
+			NOT = {
+				primary_title = { higher_tier_than = KING }
+			}
+		}
+		religion = cetic
+		add_trait = way_branch
+		capital_scope = {
+			religion = cetic
+		}
+		any_courtier = {
+			limit = { is_landed = no }
+			religion = cetic
+			add_trait = way_branch
+		}
+		ai_chance = {
+			factor = 10
+		}
+	
+	}	
+	option = {
+		name = "gaian_refuse_california"
+		trigger = {
+			NOT = { has_landed_title = e_california }
+			religion = gaian
+			capital_scope = {
+				region = world_west_coast
+			}
+
+			NOT = {
+				primary_title = { higher_tier_than = KING }
+			}
+		}
+		ai_chance = {
+			factor = 10		
+		}
+	}	
+}
+character_event = {
+	id = ceticreform.3
+	desc = EVTDESC_cetic_choose_way
+	picture = GFX_evt_chinese_bureaucrat
+	is_triggered_only = yes
+
+	option = {
+		name = EVTOPT_cetic_choose_same
+		trigger = {
+			religion_head = {
+				NOT = {
+					reverse_has_opinion_modifier = { who = ROOT modifier = opinion_unenlightened }
+				}
+			}
+		}
+		ai_chance = {
+			factor = 100
+			modifier = { factor = 2	trait = zealous }
+			modifier = { factor = 0.3 trait = arbitrary }
+			modifier = { factor = 0.5 trait = cynical }
+		}
+	}
+	
+	option = {
+		name = EVTOPT_cetic_choose_book
+		trigger = { NOT = { trait = way_book } }
+		hidden_tooltip = {
+			remove_trait = way_fist
+			remove_trait = way_cowl
+			remove_trait = way_branch
+			remove_trait = way_dove
+		}
+		add_trait = way_book
+		ai_chance = {
+			factor = 5
+			modifier = { factor = 5	trait = mastermind_theologian }
+			modifier = { factor = 4	trait = scholarly_theologian }
+			modifier = { factor = 3	trait = martial_cleric }
+			modifier = { factor = 2	trait = detached_priest }
+			modifier = { factor = 4	trait = theologian }
+			modifier = { factor = 3	trait = scholar }
+			modifier = { factor = 2	trait = mystic }
+			modifier = { factor = 2	trait = zealous }
+			modifier = { factor = 1.5 trait = diligent }
+			modifier = { factor = 1.5 trait = humble }
+			modifier = { factor = 0.2 trait = cynical }
+		}
+	}
+	
+	option = {
+		name = EVTOPT_cetic_choose_fist
+		trigger = { NOT = { trait = way_fist } }
+		hidden_tooltip = {
+			remove_trait = way_book
+			remove_trait = way_cowl
+			remove_trait = way_branch
+			remove_trait = way_dove
+		}
+		add_trait = way_fist
+		ai_chance = {
+			factor = 10
+			modifier = { factor = 5 trait = brilliant_strategist }
+			modifier = { factor = 4 trait = skilled_tactician }
+			modifier = { factor = 3 trait = tough_soldier }
+			modifier = { factor = 2 trait = misguided_warrior }
+			modifier = { factor = 4	trait = strategist }
+			modifier = { factor = 3	trait = duelist }
+			modifier = { factor = 2	trait = hunter }
+			modifier = { factor = 2	trait = brave }
+			modifier = { factor = 1.5 trait = wroth }
+			modifier = { factor = 1.5 trait = strong }
+			modifier = { factor = 0.2 trait = craven }
+		}
+	}
+	option = {
+		name = EVTOPT_cetic_choose_other
+		hidden_tooltip = {
+			character_event = { id = ceticreform.4 }
+		}
+	}
+}
+character_event = {
+	id = ceticreform.4
+	desc = EVTDESC_cetic_choose_way
+	picture = GFX_evt_chinese_bureaucrat
+	is_triggered_only = yes
+
+	option = {
+		name = EVTOPT_cetic_choose_cowl
+		trigger = { NOT = { trait = way_cowl } }
+		hidden_tooltip = {
+			remove_trait = way_fist
+			remove_trait = way_book
+			remove_trait = way_branch
+			remove_trait = way_dove
+		}
+		add_trait = way_cowl
+		ai_chance = {
+			factor = 10
+			modifier = { factor = 5	trait = elusive_shadow }
+			modifier = { factor = 4	trait = intricate_webweaver }
+			modifier = { factor = 3	trait = flamboyant_schemer }
+			modifier = { factor = 2	trait = amateurish_plotter }
+			modifier = { factor = 4	trait = impaler }
+			modifier = { factor = 3	trait = schemer }
+			modifier = { factor = 2	trait = seducer }
+			modifier = { factor = 2	trait = seductress }
+			modifier = { factor = 2	trait = cruel }
+			modifier = { factor = 1.5 trait = deceitful }
+			modifier = { factor = 1.5 trait = envious }
+			modifier = { factor = 1.5 trait = greedy }
+			modifier = { factor = 0.3 trait = kind }
+			modifier = { factor = 0.3 trait = just }
+			modifier = { factor = 0.3 trait = honest }
+			modifier = { factor = 0.3 trait = content }
+		}
+	}
+	
+	option = {
+		name = EVTOPT_cetic_choose_dove
+		trigger = { NOT = { trait = way_dove } }
+		hidden_tooltip = {
+			remove_trait = way_fist
+			remove_trait = way_cowl
+			remove_trait = way_book
+			remove_trait = way_branch
+		}
+		add_trait = way_dove
+		ai_chance = {
+			factor = 10
+			modifier = { factor = 5	trait = grey_eminence }
+			modifier = { factor = 4	trait = charismatic_negotiator }
+			modifier = { factor = 3	trait = underhanded_rogue }
+			modifier = { factor = 2	trait = naive_appeaser }
+			modifier = { factor = 4	trait = socializer }
+			modifier = { factor = 3	trait = hedonist }
+			modifier = { factor = 2	trait = kind }
+			modifier = { factor = 1.5 trait = charitable }
+			modifier = { factor = 1.5 trait = just }
+			modifier = { factor = 0.3 trait = cruel }
+			modifier = { factor = 0.3 trait = arbitrary }
+		}
+	}
+	option = {		
+		name = EVTOPT_cetic_choose_branch
+		trigger = {
+			has_global_flag = gaians_incorporated
+			NOT = { trait = way_branch }
+		}
+		hidden_tooltip = {
+			remove_trait = way_fist
+			remove_trait = way_cowl
+			remove_trait = way_book
+			remove_trait = way_dove
+		}
+		add_trait = way_branch
+		ai_chance = {
+			factor = 10
+			modifier = { factor = 5	trait = midas_touched }
+			modifier = { factor = 4	trait = fortune_builder }
+			modifier = { factor = 3	trait = thrifty_clerk }
+			modifier = { factor = 2	trait = indulgent_wastrel }
+			modifier = { factor = 4	trait = homosexual }
+			modifier = { factor = 3	trait = bisexual }
+			modifier = { factor = 2	trait = kind }
+			modifier = { factor = 1.5 trait = patient }
+			modifier = { factor = 1.5 trait = just }
+			modifier = { factor = 0.3 trait = cruel }
+			modifier = { factor = 0.3 trait = zealous }
+		}
+	}
+	option = {
+		name = EVTOPT_cetic_choose_other
+		trigger = { 
+			NOR = {
+				has_global_flag = gaians_incorporated
+				has_global_flag = haida_incorporated
+			}
+		}
+		hidden_tooltip = {
+			character_event = { id = ceticreform.3 }
+		}
+	}
+
+}
+
+character_event = {
+	id = ceticreform.5
+	hide_window = yes
+	religion = cetic
+	ai = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		NOR = {
+			trait = way_fist
+			trait = way_cowl
+			trait = way_branch
+			trait = way_dove
+			trait = way_book
+		}
+	}
+
+	option = {
+		name = EVTOPT_cetic_choose_book
+		hidden_tooltip = {
+			remove_trait = way_fist
+			remove_trait = way_cowl
+			remove_trait = way_branch
+			remove_trait = way_dove
+		}
+		add_trait = way_book
+		ai_chance = {
+			factor = 5
+			modifier = { factor = 5	trait = mastermind_theologian }
+			modifier = { factor = 4	trait = scholarly_theologian }
+			modifier = { factor = 3	trait = martial_cleric }
+			modifier = { factor = 2	trait = detached_priest }
+			modifier = { factor = 4	trait = theologian }
+			modifier = { factor = 3	trait = scholar }
+			modifier = { factor = 2	trait = mystic }
+			modifier = { factor = 2	trait = zealous }
+			modifier = { factor = 1.5 trait = diligent }
+			modifier = { factor = 1.5 trait = humble }
+			modifier = { factor = 0.2 trait = cynical }
+		}
+	}
+	
+	option = {
+		name = EVTOPT_cetic_choose_fist
+		hidden_tooltip = {
+			remove_trait = way_book
+			remove_trait = way_cowl
+			remove_trait = way_branch
+			remove_trait = way_dove
+		}
+		add_trait = way_fist
+		ai_chance = {
+			factor = 10
+			modifier = { factor = 5 trait = brilliant_strategist }
+			modifier = { factor = 4 trait = skilled_tactician }
+			modifier = { factor = 3 trait = tough_soldier }
+			modifier = { factor = 2 trait = misguided_warrior }
+			modifier = { factor = 4	trait = strategist }
+			modifier = { factor = 3	trait = duelist }
+			modifier = { factor = 2	trait = hunter }
+			modifier = { factor = 2	trait = brave }
+			modifier = { factor = 1.5 trait = wroth }
+			modifier = { factor = 1.5 trait = strong }
+			modifier = { factor = 0.2 trait = craven }
+		}
+	}
+	option = {
+		name = EVTOPT_cetic_choose_cowl
+		hidden_tooltip = {
+			remove_trait = way_fist
+			remove_trait = way_book
+			remove_trait = way_branch
+			remove_trait = way_dove
+		}
+		add_trait = way_cowl
+		ai_chance = {
+			factor = 10
+			modifier = { factor = 5	trait = elusive_shadow }
+			modifier = { factor = 4	trait = intricate_webweaver }
+			modifier = { factor = 3	trait = flamboyant_schemer }
+			modifier = { factor = 2	trait = amateurish_plotter }
+			modifier = { factor = 4	trait = impaler }
+			modifier = { factor = 3	trait = schemer }
+			modifier = { factor = 2	trait = seducer }
+			modifier = { factor = 2	trait = seductress }
+			modifier = { factor = 2	trait = cruel }
+			modifier = { factor = 1.5 trait = deceitful }
+			modifier = { factor = 1.5 trait = envious }
+			modifier = { factor = 1.5 trait = greedy }
+			modifier = { factor = 0.3 trait = kind }
+			modifier = { factor = 0.3 trait = just }
+			modifier = { factor = 0.3 trait = honest }
+			modifier = { factor = 0.3 trait = content }
+		}
+	}
+	
+	option = {
+		name = EVTOPT_cetic_choose_dove
+		hidden_tooltip = {
+			remove_trait = way_fist
+			remove_trait = way_cowl
+			remove_trait = way_book
+			remove_trait = way_branch
+		}
+		add_trait = way_dove
+		ai_chance = {
+			factor = 10
+			modifier = { factor = 5	trait = grey_eminence }
+			modifier = { factor = 4	trait = charismatic_negotiator }
+			modifier = { factor = 3	trait = underhanded_rogue }
+			modifier = { factor = 2	trait = naive_appeaser }
+			modifier = { factor = 4	trait = socializer }
+			modifier = { factor = 3	trait = hedonist }
+			modifier = { factor = 2	trait = kind }
+			modifier = { factor = 1.5 trait = charitable }
+			modifier = { factor = 1.5 trait = just }
+			modifier = { factor = 0.3 trait = cruel }
+			modifier = { factor = 0.3 trait = arbitrary }
+		}
+	}
+	option = {
+		trigger = {
+			has_global_flag = gaians_incorporated
+		}
+		name = EVTOPT_cetic_choose_branch
+		hidden_tooltip = {
+			remove_trait = way_fist
+			remove_trait = way_cowl
+			remove_trait = way_book
+			remove_trait = way_dove
+		}
+		add_trait = way_branch
+		ai_chance = {
+			factor = 10
+			modifier = { factor = 5	culture = siskiyouan }
+			modifier = { factor = 10 culture = cascadian }
+			modifier = { factor = 5 trait = gardener }
+		}
+	}
+}
+
+character_event = {
+	id = ceticreform.6
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		OR = {
+			trait = way_fist
+			trait = way_cowl
+			trait = way_branch
+			trait = way_dove
+			trait = way_book
+		}
+		NOT = { religion = cetic }
+	}
+
+	immediate = {
+		hidden_tooltip = {
+			remove_trait = way_fist
+			remove_trait = way_cowl
+			remove_trait = way_branch
+			remove_trait = way_dove
+			remove_trait = way_book
+		}
+	}
+}
+character_event = {
+	id = ceticreform.7
+	hide_window = yes
+	religion = cetic
+	only_men = yes
+	is_triggered_only = yes
+		
+	trigger = {
+		OR = {
+			father = { trait = way_book }
+			father = { trait = way_dove } 
+			father = { trait = way_fist }
+			father = { trait = way_cowl }
+			father = { trait = way_branch }
+		}
+		OR = {
+			trait = way_book
+			trait = way_dove
+			trait = way_cowl
+			trait = way_branch
+			trait = way_fist
+		}
+		NOT = { has_character_flag = inherited_cetic_way }
+	}
+	
+	immediate = {
+		if = {
+			limit = {
+				father = { trait = way_book }	
+			}
+			add_trait = way_book
+		}
+		if = {
+			limit = {
+				father = { trait = way_dove }	
+			}
+			add_trait = way_dove
+		}
+		if = {
+			limit = {
+				father = { trait = way_fist }	
+			}
+			add_trait = way_fist
+		}
+		if = {
+			limit = {
+				father = { trait = way_cowl }	
+			}
+			add_trait = way_cowl
+		}
+		if = {
+			limit = {
+				father = { trait = way_branch }	
+			}
+			add_trait = way_branch
+		}
+		set_character_flag = inherited_cetic_way
+	}
+}
+character_event = {
+	id = ceticreform.8
+	hide_window = yes
+	religion = cetic
+	only_women = yes
+	is_triggered_only = yes
+		
+	trigger = {
+		OR = {
+			father = { trait = way_book }
+			father = { trait = way_dove } 
+			father = { trait = way_fist }
+			father = { trait = way_cowl }
+			father = { trait = way_branch }
+		}
+		OR = {
+			trait = way_book
+			trait = way_dove
+			trait = way_cowl
+			trait = way_branch
+			trait = way_fist
+		}
+		NOT = { has_character_flag = inherited_cetic_way }
+	}
+	
+	immediate = {
+		if = {
+			limit = {
+				mother = { trait = way_book }	
+			}
+			add_trait = way_book
+		}
+		if = {
+			limit = {
+				mother = { trait = way_dove }	
+			}
+			add_trait = way_dove
+		}
+		if = {
+			limit = {
+				mother = { trait = way_fist }	
+			}
+			add_trait = way_fist
+		}
+		if = {
+			limit = {
+				mother = { trait = way_cowl }	
+			}
+			add_trait = way_cowl
+		}
+		if = {
+			limit = {
+				mother = { trait = way_branch }	
+			}
+			add_trait = way_branch
+		}
+		set_character_flag = inherited_cetic_way
+	}
+}
+character_event = {
+	id = ceticreform.10
+	religion = cetic
+	desc = EVTDESC_cetic_collapse
+	picture = GFX_evt_chinese_bureaucrat
+	
+	trigger = {
+		OR = { 
+			culture = angeleno
+			culture = californiano
+			culture = chino
+		}
+		NOT = { tier = BARON }
+		is_ruler = yes
+		OR = {
+			AND = {
+				e_california = {
+					holder_scope = {
+						trait = weak_emperor
+					}
+				}
+				NOT = { religion_authority = 0.2 }
+			}
+			AND = {
+				e_california = {
+					has_holder = no
+				}
+				e_new_california = {
+					has_holder = no
+				}
+				NOT = { religion_authority = 0.4 }
+			}
+		}
+	}
+	mean_time_to_happen = {
+		years = 20	
+	}
+
+	option = {
+		name = EVTOPT_ceticreformimamite
+		trigger = {
+			trait = way_fist
+		}
+		religion = imamite
+		any_courtier = {
+			limit = {
+				religion = cetic
+				employer = { character = ROOT }
+				dynasty = ROOT
+			}
+			religion = imamite
+		}
+		any_demesne_province = {
+			if = {
+				limit = {
+					religion = cetic
+				}
+				religion = imamite
+			}
+		}
+		ai_chance = {
+			factor = 5
+			modifier = { factor = 0 culture = californiano }
+		}
+	}
+	option = {
+		name = EVTOPT_ceticreformqingzhen
+		trigger = {
+			trait = way_fist
+		}
+		religion = qingzhen
+		any_courtier = {
+			limit = {
+				religion = cetic
+				employer = { character = ROOT }
+				dynasty = ROOT
+			}
+			religion = qingzhen
+		}
+		any_demesne_province = {
+			if = {
+				limit = {
+					religion = cetic
+				}
+				religion = qingzhen
+			}
+		}
+		ai_chance = {
+			factor = 5
+			modifier = { factor = 0 culture = californiano }
+			modifier = { factor = 10 culture = chino }
+		}
+	}
+	option = {
+		name = EVTOPT_ceticreformsagrado
+		trigger = {
+			trait = way_fist
+		}
+		religion = sacred_heart
+		add_trait = marian_el_santo
+		any_courtier = {
+			limit = {
+				religion = cetic
+				employer = { character = ROOT }
+				dynasty = ROOT
+			}
+			religion = sacred_heart
+			add_trait = marian_el_santo
+		}
+		any_demesne_province = {
+			if = {
+				limit = {
+					religion = cetic
+				}
+				religion = sacred_heart
+			}
+		}
+		ai_chance = {
+			factor = 5
+			modifier = { factor = 10 culture = californiano }
+			modifier = { factor = 10 culture = chino }
+		}
+	}
+	option = {
+		name = EVTOPT_ceticreformsagrado
+		trigger = {
+			trait = way_dove
+		}
+		religion = sacred_heart
+		add_trait = marian_guadalupe
+		any_courtier = {
+			limit = {
+				religion = cetic
+				employer = { character = ROOT }
+				dynasty = ROOT
+			}
+			religion = sacred_heart
+			add_trait = marian_guadalupe
+		}
+		any_demesne_province = {
+			if = {
+				limit = {
+					religion = cetic
+				}
+				religion = sacred_heart
+			}
+		}
+		ai_chance = {
+			factor = 5
+			modifier = { factor = 10 culture = californiano }
+			modifier = { factor = 10 culture = chino }
+		}
+	}
+	option = {
+		name = EVTOPT_ceticreformcatholic
+		trigger = {
+			trait = way_dove
+		}
+		religion = catholic
+		any_courtier = {
+			limit = {
+				religion = cetic
+				employer = { character = ROOT }
+				dynasty = ROOT
+			}
+			religion = catholic
+		}
+		any_demesne_province = {
+			if = {
+				limit = {
+					religion = cetic
+				}
+				religion = catholic
+			}
+		}
+
+		ai_chance = {
+			factor = 5
+			modifier = { factor = 10 culture = angeleno }
+		}
+	}
+	option = {
+		name = EVTOPT_ceticreformneogodbeite
+		trigger = {
+			trait = way_dove
+		}
+		religion = neogodbeite
+		any_courtier = {
+			limit = {
+				religion = cetic
+				employer = { character = ROOT }
+				dynasty = ROOT
+			}
+			religion = neogodbeite
+		}
+		any_demesne_province = {
+			if = {
+				limit = {
+					religion = cetic
+				}
+				religion = neogodbeite
+			}
+		}
+
+		ai_chance = {
+			factor = 5
+			modifier = { factor = 10 culture = angeleno }
+		}
+	}
+	option = {
+		name = EVTOPT_ceticreformsagrado
+		trigger = {
+			trait = way_cowl
+		}
+		religion = sacred_heart
+		add_trait = marian_santa_muerte
+		any_courtier = {
+			limit = {
+				religion = cetic
+				employer = { character = ROOT }
+				dynasty = ROOT
+			}
+			religion = sacred_heart
+			add_trait = marian_santa_muerte
+		}
+		any_demesne_province = {
+			if = {
+				limit = {
+					religion = cetic
+				}
+				religion = sacred_heart
+			}
+		}
+		ai_chance = {
+			factor = 5
+			modifier = { factor = 10 culture = californiano }
+			modifier = { factor = 10 culture = chino }
+		}
+	}
+	option = {
+		name = EVTOPT_ceticreformconsumerist
+		trigger = {
+			trait = way_cowl
+			has_global_flag = consumerist_revolt_ocurred
+		}
+		religion = consumerist
+		any_courtier = {
+			limit = {
+				religion = cetic
+				employer = { character = ROOT }
+				dynasty = ROOT
+			}
+			religion = consumerist
+		}
+		any_demesne_province = {
+			if = {
+				limit = {
+					religion = cetic
+				}
+				religion = consumerist
+			}
+		}
+
+		ai_chance = {
+			factor = 5
+			modifier = { factor = 10 culture = angeleno }
+		}
+	}
+	option = {
+		name = EVTOPT_ceticreformhamiltonian
+		trigger = {
+			trait = way_cowl
+		}
+		religion = hamiltonian
+		any_courtier = {
+			limit = {
+				religion = cetic
+				employer = { character = ROOT }
+				dynasty = ROOT
+			}
+			religion = hamiltonian
+		}
+		any_demesne_province = {
+			if = {
+				limit = {
+					religion = cetic
+				}
+				religion = hamiltonian
+			}
+		}
+
+		ai_chance = {
+			factor = 5
+			modifier = { factor = 0 culture = californiano }
+			modifier = { factor = 10 culture = chino }
+		}
+	}
+	option = {
+		name = EVTOPT_ceticreformaphite
+		trigger = {
+			trait = way_book
+		}
+		religion = aphite
+		any_courtier = {
+			limit = {
+				religion = cetic
+				employer = { character = ROOT }
+				dynasty = ROOT
+			}
+			religion = aphite
+		}
+		any_demesne_province = {
+			if = {
+				limit = {
+					religion = cetic
+				}
+				religion = aphite
+			}
+		}
+
+		ai_chance = {
+			factor = 5
+		}
+	}
+	option = {
+		name = EVTOPT_ceticreformreform
+		trigger = {
+			trait = way_book
+		}
+		religion = reform
+		any_courtier = {
+			limit = {
+				religion = cetic
+				employer = { character = ROOT }
+				dynasty = ROOT
+			}
+			religion = reform
+		}
+		any_demesne_province = {
+			if = {
+				limit = {
+					religion = cetic
+				}
+				religion = reform
+			}
+		}
+
+		ai_chance = {
+			factor = 5
+			modifier = { factor = 10 culture = angeleno }
+		}
+	}
+	option = {
+		name = EVTOPT_ceticreformgaian
+		trigger = {
+			trait = way_branch
+		}
+		religion = gaian
+		any_courtier = {
+			limit = {
+				religion = cetic
+				employer = { character = ROOT }
+				dynasty = ROOT
+			}
+			religion = gaian
+		}
+		any_demesne_province = {
+			if = {
+				limit = {
+					religion = cetic
+				}
+				religion = gaian
+			}
+		}
+
+		ai_chance = {
+			factor = 5
+		}
+	}
+	option = {
+		name = EVTOPT_ceticreformresist
+		ai_chance = {
+			factor = 5
+			modifier = { factor = 15 trait = zealous }
+
+		}
+	}
+}
+character_event = {
+	id = ceticreform.11
+	religion = cetic
+	desc = EVTDESC_cetic_collapse
+	picture = GFX_evt_chinese_bureaucrat
+
+	
+	trigger = {
+		OR = {
+			culture = battleborn
+			culture = cascadian
+			culture = siskiyouan
+		}
+		NOT = { tier = BARON }
+		OR = {
+			AND = {
+				e_california = {
+					holder_scope = {
+						trait = weak_emperor
+					}
+				}
+				NOT = { religion_authority = 0.2 }
+			}
+			AND = {
+				e_california = {
+					has_holder = no
+				}
+				e_new_california = {
+					has_holder = no
+				}
+				NOT = { religion_authority = 0.4 }
+			}
+		}
+
+	}
+	mean_time_to_happen = {
+		years= 20	
+	}
+	
+
+	option = {
+		name = EVTOPT_ceticreformtrailwalker
+		trigger = {
+			trait = way_fist
+		}
+		if = {
+			limit = {
+				has_global_flag = trailwalker_reformation
+			}
+			religion = trailwalker_reformed
+			any_courtier = {
+				limit = {
+					religion = cetic
+					employer = { character = ROOT }
+					dynasty = ROOT
+				}
+				religion = trailwalker_reformed
+			}
+		}
+		else_if = {
+			limit = {
+				NOT = { has_global_flag = trailwalker_reformation }
+			}
+			religion = trailwalker
+			any_courtier = {
+				limit = {
+					religion = cetic
+					employer = { character = ROOT }
+					dynasty = ROOT
+				}
+				religion = trailwalker
+			}
+		}
+		any_demesne_province = {
+			if = {
+				limit = {
+					religion = cetic
+					has_global_flag = trailwalker_reformation
+				}
+				religion = trailwalker_reformed
+			}
+			else_if = {
+				limit = {
+					religion = cetic
+					NOT = { has_global_flag = trailwalker_reformation }
+				}
+				religion = trailwalker
+			}
+		}
+
+		ai_chance = {
+			factor = 5
+			modifier = { factor = 10 culture = battleborn }
+		}
+	}
+	option = {
+		name = EVTOPT_ceticreformgaian
+		trigger = {
+			trait = way_fist
+		}
+		religion = gaian
+		any_courtier = {
+			limit = {
+				religion = cetic
+				employer = { character = ROOT }
+				dynasty = ROOT
+			}
+			religion = gaian
+		}
+		any_demesne_province = {
+			if = {
+				limit = {
+					religion = cetic
+				}
+				religion = gaian
+			}
+		}
+
+		ai_chance = {
+			factor = 5
+			modifier = { factor = 15 culture = cascadian }
+			modifier = { factor = 15 culture = siskiyouan }
+		}
+	}
+	
+	option = {
+		name = EVTOPT_ceticreformmormon
+		trigger = {
+			trait = way_dove
+		}
+		religion = mormon
+		any_courtier = {
+			limit = {
+				religion = cetic
+				employer = { character = ROOT }
+				dynasty = ROOT
+			}
+			religion = mormon
+		}
+		any_demesne_province = {
+			if = {
+				limit = {
+					religion = cetic
+				}
+				religion = mormon
+			}
+		}
+
+		ai_chance = {
+			factor = 5
+		}
+	}
+	option = {
+		name = EVTOPT_ceticreformcatholic
+		trigger = {
+			trait = way_dove
+		}
+		religion = catholic
+		any_courtier = {
+			limit = {
+				religion = cetic
+				employer = { character = ROOT }
+				dynasty = ROOT
+			}
+			religion = catholic
+		}
+		any_demesne_province = {
+			if = {
+				limit = {
+					religion = cetic
+				}
+				religion = catholic
+			}
+		}
+		ai_chance = {
+			factor = 5
+		}
+	}
+
+	option = {
+		name = EVTOPT_ceticreformneogodbeite
+		trigger = {
+			trait = way_dove
+		}
+		religion = neogodbeite
+		any_courtier = {
+			limit = {
+				religion = cetic
+				employer = { character = ROOT }
+				dynasty = ROOT
+			}
+			religion = neogodbeite
+		}
+		any_demesne_province = {
+			if = {
+				limit = {
+					religion = cetic
+				}
+				religion = neogodbeite
+			}
+		}
+
+		ai_chance = {
+			factor = 5
+		}
+	}
+	option = {
+		name = EVTOPT_ceticreformconsumerist
+		trigger = {
+			trait = way_cowl
+			has_global_flag = consumerist_revolt_ocurred
+		}
+		religion = consumerist
+		any_courtier = {
+			limit = {
+				religion = cetic
+				employer = { character = ROOT }
+				dynasty = ROOT
+			}
+			religion = consumerist
+		}
+		any_demesne_province = {
+			if = {
+				limit = {
+					religion = cetic
+				}
+				religion = consumerist
+			}
+		}
+
+		ai_chance = {
+			factor = 5
+			modifier = { factor = 10 culture = battleborn }
+		}
+	}
+	option = {
+		name = EVTOPT_ceticreformhamiltonian
+		trigger = {
+			trait = way_cowl
+		}
+		religion = hamiltonian
+		any_courtier = {
+			limit = {
+				religion = cetic
+				employer = { character = ROOT }
+				dynasty = ROOT
+			}
+			religion = hamiltonian
+		}
+		any_demesne_province = {
+			if = {
+				limit = {
+					religion = cetic
+				}
+				religion = hamiltonian
+			}
+		}
+
+		ai_chance = {
+			factor = 5
+		}
+	}
+	option = {
+		name = EVTOPT_ceticreformwoolleyite
+		trigger = {
+			trait = way_cowl
+		}
+		religion = woolleyite
+		any_courtier = {
+			limit = {
+				religion = cetic
+				employer = { character = ROOT }
+				dynasty = ROOT
+			}
+			religion = woolleyite
+		}
+		any_demesne_province = {
+			if = {
+				limit = {
+					religion = cetic
+				}
+				religion = woolleyite
+			}
+		}
+
+		ai_chance = {
+			factor = 2
+
+		}
+	}
+	option = {
+		name = EVTOPT_ceticreformgaian
+		trigger = {
+			trait = way_book
+		}
+		religion = gaian
+		any_courtier = {
+			limit = {
+				religion = cetic
+				employer = { character = ROOT }
+				dynasty = ROOT
+			}
+			religion = gaian
+		}
+		any_demesne_province = {
+			if = {
+				limit = {
+					religion = cetic
+				}
+				religion = gaian
+			}
+		}
+
+		ai_chance = {
+			factor = 5
+			modifier = { factor = 15 culture = cascadian }
+			modifier = { factor = 15 culture = siskiyouan }
+		}
+	}
+	option = {
+		name = EVTOPT_ceticreformgaian
+		trigger = {
+			trait = way_branch
+		}
+		religion = gaian
+		any_courtier = {
+			limit = {
+				religion = cetic
+				employer = { character = ROOT }
+				dynasty = ROOT
+			}
+			religion = gaian
+		}
+		any_demesne_province = {
+			if = {
+				limit = {
+					religion = cetic
+				}
+				religion = gaian
+			}
+		}
+
+		ai_chance = {
+			factor = 5
+			modifier = { factor = 15 culture = cascadian }
+			modifier = { factor = 15 culture = siskiyouan }
+		}
+	}
+	option = {
+		name = EVTOPT_ceticreformmonetarist
+		trigger = {
+			trait = way_book
+			has_global_flag = monetarist_heresy
+		}
+		religion = monetarist
+		any_courtier = {
+			limit = {
+				religion = cetic
+				employer = { character = ROOT }
+				dynasty = ROOT
+			}
+			religion = monetarist
+		}
+		any_demesne_province = {
+			if = {
+				limit = {
+					religion = cetic
+				}
+				religion = monetarist
+			}
+		}
+
+		ai_chance = {
+			factor = 5
+			modifier = { factor = 10 culture = battleborn }
+		}
+	}
+	#seems weird for these guys
+	option = {
+		name = EVTOPT_ceticreformresist
+		ai_chance = {
+			factor = 5
+			modifier = { factor = 15 trait = zealous }
+
+		}
+	}
+}
+character_event = {
+	id = ceticreform.12
+	religion = cetic
+	desc = EVTDESC_cetic_collapse
+	picture = GFX_evt_chinese_bureaucrat
+	
+	trigger = {
+		OR = {
+			culture = bayfolk
+			culture = towner
+		}
+		NOT = { tier = BARON }
+		is_ruler = yes
+		OR = {
+			AND = {
+				e_california = {
+					holder_scope = {
+						trait = weak_emperor
+					}
+				}
+				NOT = { religion_authority = 0.2 }
+			}
+			AND = {
+				e_california = {
+					has_holder = no
+				}
+				e_new_california = {
+					has_holder = no
+				}
+				NOT = { religion_authority = 0.4 }
+			}
+		}
+	}
+	mean_time_to_happen = {
+		years= 20	
+	}
+	
+	option = {
+		name = EVTOPT_ceticreformsede
+		trigger = {
+			trait = way_dove
+		}
+		religion = sedevacantist
+		any_courtier = {
+			limit = {
+				religion = cetic
+				employer = { character = ROOT }
+				dynasty = ROOT
+			}
+			religion = sedevacantist
+		}
+		any_demesne_province = {
+			if = {
+				limit = {
+					religion = cetic
+				}
+				religion = sedevacantist
+			}
+		}
+
+		ai_chance = {
+			factor = 5
+			modifier = { factor = 10 culture = bayfolk }
+			modifier = { factor = 10 culture = towner }
+		}
+	}
+	option = {
+		name = EVTOPT_ceticreformcatholic
+		trigger = {
+			trait = way_dove
+		}
+		religion = catholic
+		any_courtier = {
+			limit = {
+				religion = cetic
+				employer = { character = ROOT }
+				dynasty = ROOT
+			}
+			religion = catholic
+		}
+		any_demesne_province = {
+			if = {
+				limit = {
+					religion = cetic
+				}
+				religion = catholic
+			}
+		}
+
+		ai_chance = {
+			factor = 5
+			modifier = { factor = 10 culture = bayfolk }
+			modifier = { factor = 10 culture = towner }
+		}
+	}
+
+	option = {
+		name = EVTOPT_ceticreformconsumerist
+		trigger = {
+			trait = way_cowl
+			has_global_flag = consumerist_revolt_ocurred
+		}
+		religion = consumerist
+		any_courtier = {
+			limit = {
+				religion = cetic
+				employer = { character = ROOT }
+				dynasty = ROOT
+			}
+			religion = consumerist
+		}
+		any_demesne_province = {
+			if = {
+				limit = {
+					religion = cetic
+				}
+				religion = consumerist
+			}
+		}
+
+		ai_chance = {
+			factor = 5
+			modifier = { factor = 10 culture = bayfolk }
+		}
+	}
+	option = {
+		name = EVTOPT_ceticreformsagrado
+		trigger = {
+			trait = way_cowl
+		}
+		religion = sacred_heart
+		add_trait = marian_santa_muerte
+		any_courtier = {
+			limit = {
+				religion = cetic
+				employer = { character = ROOT }
+				dynasty = ROOT
+			}
+			religion = sacred_heart
+			add_trait = marian_santa_muerte
+		}
+		any_demesne_province = {
+			if = {
+				limit = {
+					religion = cetic
+				}
+				religion = sacred_heart
+			}
+		}
+		ai_chance = {
+			factor = 5
+			modifier = { factor = 10 culture = bayfolk }
+		}
+	}
+	option = {
+		name = EVTOPT_ceticreformhamiltonian
+		trigger = {
+			trait = way_cowl
+		}
+		religion = hamiltonian
+		any_courtier = {
+			limit = {
+				religion = cetic
+				employer = { character = ROOT }
+				dynasty = ROOT
+			}
+			religion = hamiltonian
+		}
+		any_demesne_province = {
+			if = {
+				limit = {
+					religion = cetic
+				}
+				religion = hamiltonian
+			}
+		}
+
+		ai_chance = {
+			factor = 5
+			modifier = { factor = 10 culture = bayfolk }
+		}
+	}
+
+	option = {
+		name = EVTOPT_ceticreformneognostic
+		trigger = {
+			trait = way_book
+		}
+		religion = neognostic
+		any_courtier = {
+			limit = {
+				religion = cetic
+				employer = { character = ROOT }
+				dynasty = ROOT
+			}
+			religion = neognostic
+		}
+		any_demesne_province = {
+			if = {
+				limit = {
+					religion = cetic
+				}
+				religion = neognostic
+			}
+		}
+
+		ai_chance = {
+			factor = 5
+			modifier = { factor = 10 culture = bayfolk }
+		}
+	}
+	option = {
+		name = EVTOPT_ceticreformaphite
+		trigger = {
+			trait = way_book
+		}
+		religion = aphite
+		any_courtier = {
+			limit = {
+				religion = cetic
+				employer = { character = ROOT }
+				dynasty = ROOT
+			}
+			religion = aphite
+		}
+		any_demesne_province = {
+			if = {
+				limit = {
+					religion = cetic
+				}
+				religion = aphite
+			}
+		}
+
+		ai_chance = {
+			factor = 5
+		}
+	}
+	option = {
+		name = EVTOPT_ceticreformatomicist
+		religion = atomicist
+		any_courtier = {
+			limit = {
+				religion = cetic
+				employer = { character = ROOT }
+				dynasty = ROOT
+			}
+			religion = atomicist
+		}
+		any_demesne_province = {
+			if = {
+				limit = {
+					religion = cetic
+				}
+				religion = atomicist
+			}
+		}
+		ai_chance = {
+			factor = 5
+		}
+	}
+	option = {
+		name = EVTOPT_ceticreformgaian
+		trigger = {
+			trait = way_fist
+		}
+		religion = gaian
+		any_courtier = {
+			limit = {
+				religion = cetic
+				employer = { character = ROOT }
+				dynasty = ROOT
+			}
+			religion = gaian
+		}
+		any_demesne_province = {
+			if = {
+				limit = {
+					religion = cetic
+				}
+				religion = gaian
+			}
+		}
+
+		ai_chance = {
+			factor = 5
+			modifier = { factor = 0 culture = towner }
+		}
+	}
+	option = {
+		name = EVTOPT_ceticreformgaian
+		trigger = {
+			trait = way_book
+		}
+		religion = gaian
+		any_courtier = {
+			limit = {
+				religion = cetic
+				employer = { character = ROOT }
+				dynasty = ROOT
+			}
+			religion = gaian
+		}
+		any_demesne_province = {
+			if = {
+				limit = {
+					religion = cetic
+				}
+				religion = gaian
+			}
+		}
+
+		ai_chance = {
+			factor = 5
+			modifier = { factor = 0 culture = towner }
+		}
+	}
+	option = {
+		name = EVTOPT_ceticreformgaian
+		trigger = {
+			trait = way_branch
+		}
+		religion = gaian
+		any_courtier = {
+			limit = {
+				religion = cetic
+				employer = { character = ROOT }
+				dynasty = ROOT
+			}
+			religion = gaian
+		}
+		any_demesne_province = {
+			if = {
+				limit = {
+					religion = cetic
+				}
+				religion = gaian
+			}
+		}
+
+		ai_chance = {
+			factor = 5
+			modifier = { factor = 0 culture = towner }
+		}
+	}
+	option = {
+		name = EVTOPT_ceticreformresist
+		ai_chance = {
+			factor = 5
+			modifier = { factor = 15 trait = zealous }
+
+		}
+	}
+}
+character_event = {
+	id = ceticreform.13
+	religion = cetic
+	desc = EVTDESC_cetic_collapse
+	picture = GFX_evt_chinese_bureaucrat
+
+	trigger = {
+		culture = valleyan
+		NOT = { tier = BARON }
+		is_ruler = yes
+		OR = {
+			AND = {
+				e_california = {
+					holder_scope = {
+						trait = weak_emperor
+					}
+				}
+				NOT = { religion_authority = 0.2 }
+			}
+			AND = {
+				e_california = {
+					has_holder = no
+				}
+				e_new_california = {
+					has_holder = no
+				}
+				NOT = { religion_authority = 0.4 }
+			}
+		}
+	}
+	mean_time_to_happen = {
+		years= 20	
+	}
+	option = {
+		name = EVTOPT_ceticreformtrailwalker
+		trigger = {
+			trait = way_fist
+		}
+		if = {
+			limit = {
+				has_global_flag = trailwalker_reformation
+			}
+			religion = trailwalker_reformed
+			any_courtier = {
+				limit = {
+					religion = cetic
+					employer = { character = ROOT }
+					dynasty = ROOT
+				}
+				religion = trailwalker_reformed
+			}
+		}
+		else_if = {
+			limit = {
+				NOT = { has_global_flag = trailwalker_reformation }
+			}
+			religion = trailwalker
+			any_courtier = {
+				limit = {
+					religion = cetic
+					employer = { character = ROOT }
+					dynasty = ROOT
+				}
+				religion = trailwalker
+			}
+		}
+		any_demesne_province = {
+			if = {
+				limit = {
+					religion = cetic
+					has_global_flag = trailwalker_reformation
+				}
+				religion = trailwalker_reformed
+			}
+			else_if = {
+				limit = {
+					religion = cetic
+					NOT = { has_global_flag = trailwalker_reformation }
+				}
+				religion = trailwalker
+			}
+		}
+
+		ai_chance = {
+			factor = 5
+		}
+	}
+	
+	option = {
+		name = EVTOPT_ceticreformimamite
+		trigger = {
+			trait = way_fist
+		}
+		religion = imamite
+		any_courtier = {
+			limit = {
+				religion = cetic
+				employer = { character = ROOT }
+				dynasty = ROOT
+			}
+			religion = imamite
+		}
+		any_demesne_province = {
+			if = {
+				limit = {
+					religion = cetic
+				}
+				religion = imamite
+			}
+		}
+
+		ai_chance = {
+			factor = 5
+		}
+	}
+	option = {
+		name = EVTOPT_ceticreformsagrado
+		trigger = {
+			trait = way_fist
+		}
+		religion = sacred_heart
+		add_trait = marian_el_santo
+		any_courtier = {
+			limit = {
+				religion = cetic
+				employer = { character = ROOT }
+				dynasty = ROOT
+			}
+			religion = sacred_heart
+			add_trait = marian_el_santo
+		}
+		any_demesne_province = {
+			if = {
+				limit = {
+					religion = cetic
+				}
+				religion = sacred_heart
+			}
+		}
+
+		ai_chance = {
+			factor = 5
+		}
+	}
+	
+	option = {
+		name = EVTOPT_ceticreformsede
+		trigger = {
+			trait = way_dove
+		}
+		religion = sedevacantist
+		any_courtier = {
+			limit = {
+				religion = cetic
+				employer = { character = ROOT }
+				dynasty = ROOT
+			}
+			religion = sedevacantist
+		}
+		any_demesne_province = {
+			if = {
+				limit = {
+					religion = cetic
+				}
+				religion = sedevacantist
+			}
+		}
+
+		ai_chance = {
+			factor = 5
+		}
+	}
+	option = {
+		name = EVTOPT_ceticreformcatholic
+		trigger = {
+			trait = way_dove
+		}
+		religion = catholic
+		any_courtier = {
+			limit = {
+				religion = cetic
+				employer = { character = ROOT }
+				dynasty = ROOT
+			}
+			religion = catholic
+		}
+		any_demesne_province = {
+			if = {
+				limit = {
+					religion = cetic
+				}
+				religion = catholic
+			}
+		}
+
+		ai_chance = {
+			factor = 5
+		}
+	}
+	option = {
+		name = EVTOPT_ceticreformsagrado
+		trigger = {
+			trait = way_dove
+		}
+		religion = sacred_heart
+		add_trait = marian_guadalupe
+		any_courtier = {
+			limit = {
+				religion = cetic
+				employer = { character = ROOT }
+				dynasty = ROOT
+			}
+			religion = sacred_heart
+			add_trait = marian_guadalupe
+		}
+		any_demesne_province = {
+			if = {
+				limit = {
+					religion = cetic
+				}
+				religion = sacred_heart
+			}
+		}
+
+		ai_chance = {
+			factor = 5
+		}
+	}
+
+	option = {
+		name = EVTOPT_ceticreformconsumerist
+		trigger = {
+			trait = way_cowl
+			has_global_flag = consumerist_revolt_ocurred
+		}
+		religion = consumerist
+		any_courtier = {
+			limit = {
+				religion = cetic
+				employer = { character = ROOT }
+				dynasty = ROOT
+			}
+			religion = consumerist
+		}
+		any_demesne_province = {
+			if = {
+				limit = {
+					religion = cetic
+				}
+				religion = consumerist
+			}
+		}
+
+		ai_chance = {
+			factor = 5
+		}
+	}
+	option = {
+		name = EVTOPT_ceticreformhamiltonian
+		trigger = {
+			trait = way_cowl
+		}
+		religion = hamiltonian
+		any_courtier = {
+			limit = {
+				religion = cetic
+				employer = { character = ROOT }
+				dynasty = ROOT
+			}
+			religion = hamiltonian
+		}
+		any_demesne_province = {
+			if = {
+				limit = {
+					religion = cetic
+				}
+				religion = hamiltonian
+			}
+		}
+
+		ai_chance = {
+			factor = 5
+		}
+	}
+
+	option = {
+		name = EVTOPT_ceticreformsagrado
+		trigger = {
+			trait = way_cowl
+		}
+		religion = sacred_heart
+		add_trait = marian_santa_muerte
+		any_courtier = {
+			limit = {
+				religion = cetic
+				employer = { character = ROOT }
+				dynasty = ROOT
+			}
+			religion = sacred_heart
+			add_trait = marian_santa_muerte
+		}
+		any_demesne_province = {
+			if = {
+				limit = {
+					religion = cetic
+				}
+				religion = sacred_heart
+			}
+		}
+
+		ai_chance = {
+			factor = 5
+		}
+	}
+	option = {
+		name = EVTOPT_ceticreformgaian
+		trigger = {
+			trait = way_book
+		}
+		religion = gaian
+		any_courtier = {
+			limit = {
+				religion = cetic
+				employer = { character = ROOT }
+				dynasty = ROOT
+			}
+			religion = gaian
+		}
+		any_demesne_province = {
+			if = {
+				limit = {
+					religion = cetic
+				}
+				religion = gaian
+			}
+		}
+
+		ai_chance = {
+			factor = 5
+		}
+	}
+	option = {
+		name = EVTOPT_ceticreformaphite
+		trigger = {
+			trait = way_book
+		}
+		religion = aphite
+		any_courtier = {
+			limit = {
+				religion = cetic
+				employer = { character = ROOT }
+				dynasty = ROOT
+			}
+			religion = aphite
+		}
+		any_demesne_province = {
+			if = {
+				limit = {
+					religion = cetic
+				}
+				religion = aphite
+			}
+		}
+		ai_chance = {
+			factor = 5
+		}
+	}
+	option = {
+		name = EVTOPT_ceticreformmonetarist
+		trigger = {
+			trait = way_book
+			has_global_flag = monetarist_heresy
+		}
+		religion = monetarist
+		any_courtier = {
+			limit = {
+				religion = cetic
+				employer = { character = ROOT }
+				dynasty = ROOT
+			}
+			religion = monetarist
+		}
+		any_demesne_province = {
+			if = {
+				limit = {
+					religion = cetic
+				}
+				religion = monetarist
+			}
+		}
+
+		ai_chance = {
+			factor = 5
+		}
+	}
+	option = {
+		name = EVTOPT_ceticreformgaian
+		trigger = {
+			trait = way_branch
+		}
+		religion = gaian
+		any_courtier = {
+			limit = {
+				religion = cetic
+				employer = { character = ROOT }
+				dynasty = ROOT
+			}
+			religion = gaian
+		}
+		any_demesne_province = {
+			if = {
+				limit = {
+					religion = cetic
+				}
+				religion = gaian
+			}
+		}
+
+		ai_chance = {
+			factor = 5
+		}
+	}
+	option = {
+		name = EVTOPT_ceticreformresist
+		ai_chance = {
+			factor = 5
+			modifier = { factor = 15 trait = zealous }
+
+		}
+	}
+}
+
+character_event = {
+	id = ceticreform.14
+	religion = cetic
+	desc = EVTDESC_cetic_collapse
+	picture = GFX_evt_chinese_bureaucrat
+	
+	trigger = {
+		OR = { 
+			culture = arixan
+			culture = neomexicano
+			culture = sonorense
+		}
+		NOT = { tier = BARON }
+		is_ruler = yes
+		OR = {
+			AND = {
+				e_california = {
+					holder_scope = {
+						trait = weak_emperor
+					}
+				}
+				NOT = { religion_authority = 0.2 }
+			}
+			AND = {
+				e_california = {
+					has_holder = no
+				}
+				e_new_california = {
+					has_holder = no
+				}
+				NOT = { religion_authority = 0.4 }
+			}
+		}
+	}
+	mean_time_to_happen = {
+		years= 20	
+	}
+	
+
+	option = {
+		name = EVTOPT_ceticreformatomicist
+		religion = atomicist
+		any_courtier = {
+			limit = {
+				religion = cetic
+				employer = { character = ROOT }
+				dynasty = ROOT
+			}
+			religion = atomicist
+		}
+		any_demesne_province = {
+			if = {
+				limit = {
+					religion = cetic
+				}
+				religion = atomicist
+			}
+		}
+		ai_chance = {
+			factor = 5
+			modifier = { factor = 10 culture = arixan }
+			modifier = { factor = 10 culture = neomexicano }
+		}
+
+	}
+	option = {
+		name = EVTOPT_ceticreformaphite
+		trigger = {
+			trait = way_book
+		}
+		religion = aphite
+		any_courtier = {
+			limit = {
+				religion = cetic
+				employer = { character = ROOT }
+				dynasty = ROOT
+			}
+			religion = aphite
+		}
+		any_demesne_province = {
+			if = {
+				limit = {
+					religion = cetic
+				}
+				religion = aphite
+			}
+		}
+		ai_chance = {
+			factor = 5
+			modifier = { factor = 10 culture = arixan }
+			modifier = { factor = 10 culture = neomexicano }
+		}
+	}
+	
+	option = {
+		name = EVTOPT_ceticreformmormon
+		trigger = {
+			trait = way_dove
+		}
+		religion = mormon
+		any_courtier = {
+			limit = {
+				religion = cetic
+				employer = { character = ROOT }
+				dynasty = ROOT
+			}
+			religion = mormon
+		}
+		any_demesne_province = {
+			if = {
+				limit = {
+					religion = cetic
+				}
+				religion = mormon
+			}
+		}
+
+		ai_chance = {
+			factor = 5
+			modifier = { factor = 10 culture = arixan }
+		}
+	}
+	option = {
+		name = EVTOPT_ceticreformsagrado
+		trigger = {
+			trait = way_cowl
+		}
+		religion = sacred_heart
+		add_trait = marian_santa_muerte
+		any_courtier = {
+			limit = {
+				religion = cetic
+				employer = { character = ROOT }
+				dynasty = ROOT
+			}
+			religion = sacred_heart
+			add_trait = marian_santa_muerte
+		}
+		any_demesne_province = {
+			if = {
+				limit = {
+					religion = cetic
+				}
+				religion = sacred_heart
+			}
+		}
+
+		ai_chance = {
+			factor = 5
+			modifier = { factor = 10 culture = neomexicano }
+			modifier = { factor = 10 culture = sonorense }
+		}
+	}
+	option = {
+		name = EVTOPT_ceticreformsagrado
+		trigger = {
+			trait = way_fist
+		}
+		religion = sacred_heart
+		add_trait = marian_el_santo
+		any_courtier = {
+			limit = {
+				religion = cetic
+				employer = { character = ROOT }
+				dynasty = ROOT
+			}
+			religion = sacred_heart
+			add_trait = marian_el_santo
+		}
+		any_demesne_province = {
+			if = {
+				limit = {
+					religion = cetic
+				}
+				religion = sacred_heart
+			}
+		}
+
+		ai_chance = {
+			factor = 5
+			modifier = { factor = 10 culture = neomexicano }
+			modifier = { factor = 10 culture = sonorense }
+		}
+	}
+	option = {
+		name = EVTOPT_ceticreformsagrado
+		trigger = {
+			trait = way_dove
+		}
+		religion = sacred_heart
+		add_trait = marian_guadalupe
+		any_courtier = {
+			limit = {
+				religion = cetic
+				employer = { character = ROOT }
+				dynasty = ROOT
+			}
+			religion = sacred_heart
+			add_trait = marian_guadalupe
+		}
+		any_demesne_province = {
+			if = {
+				limit = {
+					religion = cetic
+				}
+				religion = sacred_heart
+			}
+		}
+
+		ai_chance = {
+			factor = 5
+			modifier = { factor = 10 culture = neomexicano }
+			modifier = { factor = 10 culture = sonorense }
+		}
+	}
+	option = {
+		name = EVTOPT_ceticreformgaian
+		trigger = {
+			trait = way_branch
+		}
+		religion = gaian
+		any_courtier = {
+			limit = {
+				religion = cetic
+				employer = { character = ROOT }
+				dynasty = ROOT
+			}
+			religion = gaian
+		}
+		any_demesne_province = {
+			if = {
+				limit = {
+					religion = cetic
+				}
+				religion = gaian
+			}
+		}
+
+		ai_chance = {
+			factor = 5
+		}
+	}
+	option = {
+		name = EVTOPT_ceticreformresist
+		ai_chance = {
+			factor = 5
+			modifier = { factor = 15 trait = zealous }
+		}
+	}
+}
+character_event = {
+	id = ceticreform.15
+	religion = cetic
+	desc = EVTDESC_cetic_collapse
+	picture = GFX_evt_chinese_bureaucrat
+	
+	trigger = {
+		OR = { 
+			culture = utahn
+			culture = navajo
+			culture = hopi
+			culture = coloradan
+			culture = paiute
+			culture = mountainer
+		}
+		NOT = { tier = BARON }
+		is_ruler = yes
+		OR = {
+			AND = {
+				e_california = {
+					holder_scope = {
+						trait = weak_emperor
+					}
+				}
+				NOT = { religion_authority = 0.2 }
+			}
+			AND = {
+				e_california = {
+					has_holder = no
+				}
+				e_new_california = {
+					has_holder = no
+				}
+				NOT = { religion_authority = 0.4 }
+			}
+		}
+		NOT = { religion_authority = 0.4 }
+
+	}
+	mean_time_to_happen = {
+		years= 20	
+	}
+	
+
+	option = {
+		name = EVTOPT_ceticreformmormon
+		trigger = {
+			trait = way_dove
+		}
+		religion = mormon
+		any_courtier = {
+			limit = {
+				religion = cetic
+				employer = { character = ROOT }
+				dynasty = ROOT
+			}
+			religion = mormon
+		}
+		any_demesne_province = {
+			if = {
+				limit = {
+					religion = cetic
+				}
+				religion = mormon
+			}
+		}
+		ai_chance = {
+			factor = 5
+			modifier = { factor = 15 culture = utahn }
+			modifier = { factor = 10 culture = navajo }
+			modifier = { factor = 10 culture = hopi }
+		}
+	}
+	option = {
+		name = EVTOPT_ceticreformcatholic
+		trigger = {
+			trait = way_dove
+		}
+		religion = catholic
+		any_courtier = {
+			limit = {
+				religion = cetic
+				employer = { character = ROOT }
+				dynasty = ROOT
+			}
+			religion = catholic
+		}
+		any_demesne_province = {
+			if = {
+				limit = {
+					religion = cetic
+				}
+				religion = catholic
+			}
+		}
+		ai_chance = {
+			factor = 5
+			modifier = { factor = 10 culture = coloradan }
+		}
+	}
+	option = {
+		name = EVTOPT_ceticreformneogodbeite
+		trigger = {
+			trait = way_dove
+		}
+		religion = neogodbeite
+		any_courtier = {
+			limit = {
+				religion = cetic
+				employer = { character = ROOT }
+				dynasty = ROOT
+			}
+			religion = neogodbeite
+		}
+		any_demesne_province = {
+			if = {
+				limit = {
+					religion = cetic
+				}
+				religion = neogodbeite
+			}
+		}
+		ai_chance = {
+			factor = 5
+			modifier = { factor = 10 culture = utahn }
+			modifier = { factor = 5 culture = navajo }
+			modifier = { factor = 5 culture = hopi }
+		}
+	}
+	option = {
+		name = EVTOPT_ceticreformwoolleyite
+		trigger = {
+			trait = way_cowl
+		}
+		religion = woolleyite
+		any_courtier = {
+			limit = {
+				religion = cetic
+				employer = { character = ROOT }
+				dynasty = ROOT
+			}
+			religion = woolleyite
+		}
+		any_demesne_province = {
+			if = {
+				limit = {
+					religion = cetic
+				}
+				religion = woolleyite
+			}
+		}
+
+		ai_chance = {
+			factor = 2
+			modifier = { factor = 10 culture = utahn }
+		}
+	}
+	option = {
+		name = EVTOPT_ceticreformhamiltonian
+		trigger = {
+			trait = way_cowl
+		}
+		religion = hamiltonian
+		any_courtier = {
+			limit = {
+				religion = cetic
+				employer = { character = ROOT }
+				dynasty = ROOT
+			}
+			religion = hamiltonian
+		}
+		any_demesne_province = {
+			if = {
+				limit = {
+					religion = cetic
+				}
+				religion = hamiltonian
+			}
+		}
+
+		ai_chance = {
+			factor = 2
+			modifier = { factor = 10 culture = mountainer }
+		}
+	}
+	option = {
+		name = EVTOPT_ceticreformneognostic
+		trigger = {
+			trait = way_book
+		}
+		religion = neognostic
+		any_courtier = {
+			limit = {
+				religion = cetic
+				employer = { character = ROOT }
+				dynasty = ROOT
+			}
+			religion = neognostic
+		}
+		any_demesne_province = {
+			if = {
+				limit = {
+					religion = cetic
+				}
+				religion = neognostic
+			}
+		}
+		ai_chance = {
+			factor = 5
+			modifier = { factor = 10 culture = coloradan }
+		}
+	}
+	option = {
+		name = EVTOPT_ceticreformgaian
+		trigger = {
+			trait = way_book
+		}
+		religion = gaian
+		any_courtier = {
+			limit = {
+				religion = cetic
+				employer = { character = ROOT }
+				dynasty = ROOT
+			}
+			religion = gaian
+		}
+		any_demesne_province = {
+			if = {
+				limit = {
+					religion = cetic
+				}
+				religion = gaian
+			}
+		}
+
+		ai_chance = {
+			factor = 5
+			modifier = { factor = 10 culture = mountainer }
+		}
+	}
+	option = {
+		name = EVTOPT_ceticreformtrailwalker
+		trigger = {
+			trait = way_fist
+		}
+		if = {
+			limit = {
+				has_global_flag = trailwalker_reformation
+			}
+			religion = trailwalker_reformed
+			any_courtier = {
+				limit = {
+					religion = cetic
+					employer = { character = ROOT }
+					dynasty = ROOT
+				}
+				religion = trailwalker_reformed
+			}
+		}
+		else_if = {
+			limit = {
+				NOT = { has_global_flag = trailwalker_reformation }
+			}
+			religion = trailwalker
+			any_courtier = {
+				limit = {
+					religion = cetic
+					employer = { character = ROOT }
+					dynasty = ROOT
+				}
+				religion = trailwalker
+			}
+		}
+		any_demesne_province = {
+			if = {
+				limit = {
+					religion = cetic
+					has_global_flag = trailwalker_reformation
+				}
+				religion = trailwalker_reformed
+			}
+			else_if = {
+				limit = {
+					religion = cetic
+					NOT = { has_global_flag = trailwalker_reformation }
+				}
+				religion = trailwalker
+			}
+		}
+
+		ai_chance = {
+			factor = 5
+			modifier = { factor = 10 culture = coloradan }
+			modifier = { factor = 10 culture = mountainer }
+		}
+	}
+	option = {
+		name = EVTOPT_ceticreformgaian
+		trigger = {
+			trait = way_fist
+		}
+		religion = gaian
+		any_courtier = {
+			limit = {
+				religion = cetic
+				employer = { character = ROOT }
+				dynasty = ROOT
+			}
+			religion = gaian
+		}
+		any_demesne_province = {
+			if = {
+				limit = {
+					religion = cetic
+				}
+				religion = gaian
+			}
+		}
+
+		ai_chance = {
+			factor = 5
+		}
+	}
+	option = {
+		name = EVTOPT_ceticreformatomicist
+		religion = atomicist
+		any_courtier = {
+			limit = {
+				religion = cetic
+				employer = { character = ROOT }
+				dynasty = ROOT
+			}
+			religion = atomicist
+		}
+		any_demesne_province = {
+			if = {
+				limit = {
+					religion = cetic
+				}
+				religion = atomicist
+			}
+		}
+		ai_chance = {
+			factor = 5
+			modifier = { factor = 10 culture = mountainer }
+		}
+	}
+	option = {
+		name = EVTOPT_ceticreformgaian
+		trigger = {
+			trait = way_branch
+		}
+		religion = gaian
+		any_courtier = {
+			limit = {
+				religion = cetic
+				employer = { character = ROOT }
+				dynasty = ROOT
+			}
+			religion = gaian
+		}
+		any_demesne_province = {
+			if = {
+				limit = {
+					religion = cetic
+				}
+				religion = gaian
+			}
+		}
+
+		ai_chance = {
+			factor = 5
+		}
+	}
+	option = {
+		name = EVTOPT_ceticreformresist
+		ai_chance = {
+			factor = 5
+		}
+	}
+}
+character_event = {
+	id = ceticreform.16
+	religion = cetic
+	desc = EVTDESC_cetic_collapse
+	picture = GFX_evt_chinese_bureaucrat
+	
+	trigger = {
+		culture = edokko
+		NOT = { tier = BARON }
+		is_ruler = yes
+		OR = {
+			AND = {
+				e_california = {
+					holder_scope = {
+						trait = weak_emperor
+					}
+				}
+				NOT = { religion_authority = 0.2 }
+			}
+			AND = {
+				e_california = {
+					has_holder = no
+				}
+				e_new_california = {
+					has_holder = no
+				}
+				NOT = { religion_authority = 0.4 }
+			}
+		}
+	}
+	mean_time_to_happen = {
+		years= 20	
+	}
+	
+	option = {
+		name = EVTOPT_ceticreformshinto
+		religion = shinto
+		any_courtier = {
+			limit = {
+				religion = cetic
+				employer = { character = ROOT }
+				dynasty = ROOT
+			}
+			religion = shinto
+		}
+		any_demesne_province = {
+			if = {
+				limit = {
+					religion = cetic
+				}
+				religion = shinto
+			}
+		}
+		ai_chance = {
+			factor = 5
+		}
+
+	}
+	option = {
+		name = EVTOPT_ceticreformresist
+		ai_chance = {
+			factor = 5
+			modifier = { factor = 15 trait = zealous }
+
+		}
+	}
+}
+character_event = {
+	id = ceticreform.17
+	religion = cetic
+	desc = EVTDESC_cetic_collapse
+	picture = GFX_evt_chinese_bureaucrat
+	
+	trigger = {
+		OR = {
+			culture = anjalusi
+			culture = tehrangeleno
+		}
+		NOT = { tier = BARON }
+		is_ruler = yes
+		OR = {
+			AND = {
+				e_california = {
+					holder_scope = {
+						trait = weak_emperor
+					}
+				}
+				NOT = { religion_authority = 0.2 }
+			}
+			AND = {
+				e_california = {
+					has_holder = no
+				}
+				e_new_california = {
+					has_holder = no
+				}
+				NOT = { religion_authority = 0.4 }
+			}
+		}
+	}
+	mean_time_to_happen = {
+		years= 20	
+	}
+	
+	option = {
+		name = EVTOPT_ceticreformimamite
+		trigger = {
+			trait = way_fist
+		}
+		religion = imamite
+		any_courtier = {
+			limit = {
+				religion = cetic
+				employer = { character = ROOT }
+				dynasty = ROOT
+			}
+			religion = imamite
+		}
+		any_demesne_province = {
+			if = {
+				limit = {
+					religion = cetic
+				}
+				religion = imamite
+			}
+		}
+		ai_chance = {
+			factor = 5
+		}
+	}
+	option = {
+		name = EVTOPT_ceticreformalawiyya
+		trigger = {
+			trait = way_fist
+		}
+		religion = alawiyya
+		any_courtier = {
+			limit = {
+				religion = cetic
+				employer = { character = ROOT }
+				dynasty = ROOT
+			}
+			religion = alawiyya
+		}
+		any_demesne_province = {
+			if = {
+				limit = {
+					religion = cetic
+				}
+				religion = alawiyya
+			}
+		}
+		ai_chance = {
+			factor = 5
+		}
+	}
+	option = {
+		name = EVTOPT_ceticreformqingzhen
+		trigger = {
+			trait = way_fist
+		}
+		religion = qingzhen
+		any_courtier = {
+			limit = {
+				religion = cetic
+				employer = { character = ROOT }
+				dynasty = ROOT
+			}
+			religion = qingzhen
+		}
+		any_demesne_province = {
+			if = {
+				limit = {
+					religion = cetic
+				}
+				religion = qingzhen
+			}
+		}
+		ai_chance = {
+			factor = 5
+			modifier = { factor = 0 culture = tehrangeleno }
+		}
+	}
+	option = {
+		name = EVTOPT_ceticreformnestorian
+		trigger = {
+			trait = way_dove
+		}
+		religion = nestorian
+		any_courtier = {
+			limit = {
+				religion = cetic
+				employer = { character = ROOT }
+				dynasty = ROOT
+			}
+			religion = nestorian
+		}
+		any_demesne_province = {
+			if = {
+				limit = {
+					religion = cetic
+				}
+				religion = nestorian
+			}
+		}
+
+		ai_chance = {
+			factor = 5
+			modifier = { factor = 10 culture = anjalusi }
+		}
+	}
+	option = {
+		name = EVTOPT_ceticreformsagrado
+		trigger = {
+			trait = way_dove
+		}
+		religion = sacred_heart
+		add_trait = marian_guadalupe
+		any_courtier = {
+			limit = {
+				religion = cetic
+				employer = { character = ROOT }
+				dynasty = ROOT
+			}
+			religion = sacred_heart
+			add_trait = marian_guadalupe
+		}
+		any_demesne_province = {
+			if = {
+				limit = {
+					religion = cetic
+				}
+				religion = sacred_heart
+			}
+		}
+		ai_chance = {
+			factor = 5
+			modifier = { factor = 10 culture = anjalusi }
+		}
+	}
+	option = {
+		name = EVTOPT_ceticreformcatholic
+		trigger = {
+			trait = way_dove
+		}
+		religion = catholic
+		any_courtier = {
+			limit = {
+				religion = cetic
+				employer = { character = ROOT }
+				dynasty = ROOT
+			}
+			religion = catholic
+		}
+		any_demesne_province = {
+			if = {
+				limit = {
+					religion = cetic
+				}
+				religion = catholic
+			}
+		}
+
+		ai_chance = {
+			factor = 5
+			modifier = { factor = 10 culture = anjalusi }
+		}
+	}
+	option = {
+		name = EVTOPT_ceticreformsagrado
+		trigger = {
+			trait = way_cowl
+		}
+		religion = sacred_heart
+		add_trait = marian_santa_muerte
+		any_courtier = {
+			limit = {
+				religion = cetic
+				employer = { character = ROOT }
+				dynasty = ROOT
+			}
+			religion = sacred_heart
+			add_trait = marian_santa_muerte
+		}
+		any_demesne_province = {
+			if = {
+				limit = {
+					religion = cetic
+				}
+				religion = sacred_heart
+			}
+		}
+
+		ai_chance = {
+			factor = 5
+			modifier = { factor = 10 culture = anjalusi }
+		}
+	}
+	option = {
+		name = EVTOPT_ceticreformconsumerist
+		trigger = {
+			trait = way_cowl
+			has_global_flag = consumerist_revolt_ocurred
+		}
+		religion = consumerist
+		any_courtier = {
+			limit = {
+				religion = cetic
+				employer = { character = ROOT }
+				dynasty = ROOT
+			}
+			religion = consumerist
+		}
+		any_demesne_province = {
+			if = {
+				limit = {
+					religion = cetic
+				}
+				religion = consumerist
+			}
+		}
+
+		ai_chance = {
+			factor = 5
+			modifier = { factor = 10 culture = tehrangeleno }
+		}
+	}
+	option = {
+		name = EVTOPT_ceticreformreform
+		trigger = {
+			trait = way_book
+		}
+		religion = reform
+		any_courtier = {
+			limit = {
+				religion = cetic
+				employer = { character = ROOT }
+				dynasty = ROOT
+			}
+			religion = reform
+		}
+		any_demesne_province = {
+			if = {
+				limit = {
+					religion = cetic
+				}
+				religion = reform
+			}
+		}
+
+		ai_chance = {
+			factor = 5
+			modifier = { factor = 10 culture = tehrangeleno }
+		}
+	}
+	option = {
+		name = EVTOPT_ceticreformneognostic
+		trigger = {
+			trait = way_book
+		}
+		religion = neognostic
+		any_courtier = {
+			limit = {
+				religion = cetic
+				employer = { character = ROOT }
+				dynasty = ROOT
+			}
+			religion = neognostic
+		}
+		any_demesne_province = {
+			if = {
+				limit = {
+					religion = cetic
+				}
+				religion = neognostic
+			}
+		}
+
+		ai_chance = {
+			factor = 5
+			modifier = { factor = 10 culture = anjalusi }
+		}
+	}
+	option = {
+		name = EVTOPT_ceticreformaphite
+		trigger = {
+			trait = way_book
+		}
+		religion = aphite
+		any_courtier = {
+			limit = {
+				religion = cetic
+				employer = { character = ROOT }
+				dynasty = ROOT
+			}
+			religion = aphite
+		}
+		any_demesne_province = {
+			if = {
+				limit = {
+					religion = cetic
+				}
+				religion = aphite
+			}
+		}
+
+		ai_chance = {
+			factor = 5
+		}
+	}
+	option = {
+		name = EVTOPT_ceticreformgaian
+		trigger = {
+			trait = way_branch
+		}
+		religion = gaian
+		any_courtier = {
+			limit = {
+				religion = cetic
+				employer = { character = ROOT }
+				dynasty = ROOT
+			}
+			religion = gaian
+		}
+		any_demesne_province = {
+			if = {
+				limit = {
+					religion = cetic
+				}
+				religion = gaian
+			}
+		}
+
+		ai_chance = {
+			factor = 5
+		}
+	}
+	option = {
+		name = EVTOPT_ceticreformresist
+		ai_chance = {
+			factor = 5
+			modifier = { factor = 15 trait = zealous }
+
+		}
+	}
+}
+
+character_event = {
+	id = ceticreform.18
+	religion = cetic
+	desc = EVTDESC_cetic_collapse
+	picture = GFX_evt_chinese_bureaucrat
+
+	trigger = {
+		NOR = {
+			culture_group = californian
+			culture = californiano
+			culture = chino
+			culture = battleborn
+			culture = cascadian
+			culture = siskiyouan
+			culture = arixan
+			culture = neomexicano
+			culture = sonorense
+			culture = utahn
+			culture = navajo
+			culture = hopi
+			culture = coloradan
+			culture = paiute
+		}
+		NOT = { tier = BARON }
+		is_ruler = yes
+		OR = {
+			AND = {
+				e_california = {
+					holder_scope = {
+						trait = weak_emperor
+					}
+				}
+				NOT = { religion_authority = 0.2 }
+			}
+			AND = {
+				e_california = {
+					has_holder = no
+				}
+				e_new_california = {
+					has_holder = no
+				}
+				NOT = { religion_authority = 0.4 }
+			}
+		}
+	}
+	mean_time_to_happen = {
+		years= 20	
+	}
+	option = {
+		name = EVTOPT_ceticreformneognostic
+		trigger = {
+			trait = way_book
+		}
+		religion = neognostic
+		any_demesne_province = {
+			if = {
+				limit = {
+					religion = cetic
+				}
+				religion = neognostic
+			}
+		}
+
+		ai_chance = {
+			factor = 5
+		}
+	}
+	option = {
+		name = EVTOPT_ceticreformgaian
+		trigger = {
+			trait = way_book
+		}
+		religion = gaian
+		any_demesne_province = {
+			if = {
+				limit = {
+					religion = cetic
+				}
+				religion = gaian
+			}
+		}
+
+		ai_chance = {
+			factor = 5
+		}
+	}
+	option = {
+		name = EVTOPT_ceticreformmonetarist
+		trigger = {
+			trait = way_book
+			has_global_flag = monetarist_heresy
+		}
+		religion = monetarist
+		any_demesne_province = {
+			if = {
+				limit = {
+					religion = cetic
+				}
+				religion = monetarist
+			}
+		}
+
+		ai_chance = {
+			factor = 5
+		}
+	}
+	option = {
+		name = EVTOPT_ceticreformimamite
+		trigger = {
+			trait = way_fist
+		}
+		religion = imamite
+		any_demesne_province = {
+			if = {
+				limit = {
+					religion = cetic
+				}
+				religion = imamite
+			}
+		}
+		ai_chance = {
+			factor = 5
+			modifier = { factor = 10 culture = chiraqi }
+			modifier = { factor = 10 culture = prodnanici }
+			modifier = { factor = 10 culture = neomoor }
+		}
+	}
+	option = {
+		name = EVTOPT_ceticreformalawiyya
+		trigger = {
+			trait = way_fist
+		}
+		religion = alawiyya
+		any_demesne_province = {
+			if = {
+				limit = {
+					religion = cetic
+				}
+				religion = alawiyya
+			}
+		}
+		ai_chance = {
+			factor = 5
+			modifier = { factor = 10 culture = chiraqi }
+			modifier = { factor = 10 culture = prodnanici }
+			modifier = { factor = 10 culture = neomoor }
+		}
+	}
+	option = {
+		name = EVTOPT_ceticreformtrailwalker
+		trigger = {
+			trait = way_fist
+		}
+		religion = trailwalker
+		any_demesne_province = {
+			if = {
+				limit = {
+					religion = cetic
+				}
+				religion = trailwalker
+			}
+		}
+
+		ai_chance = {
+			factor = 5
+			modifier = { factor = 10 culture_group = west_anglo }
+		}
+	}
+	option = {
+		name = EVTOPT_ceticreformsagrado
+		trigger = {
+			trait = way_dove
+		}
+		religion = sacred_heart
+		add_trait = marian_guadalupe
+		any_demesne_province = {
+			if = {
+				limit = {
+					religion = cetic
+				}
+				religion = sacred_heart
+			}
+		}
+		ai_chance = {
+			factor = 5
+			modifier = { factor = 10 culture_group = chicano }
+			modifier = { factor = 10 culture_group = mexicano }
+		}
+	}
+	option = {
+		name = EVTOPT_ceticreformcatholic
+		trigger = {
+			trait = way_dove
+		}
+		religion = catholic
+		any_demesne_province = {
+			if = {
+				limit = {
+					religion = cetic
+				}
+				religion = catholic
+			}
+		}
+
+		ai_chance = {
+			factor = 5
+			modifier = { factor = 10 culture_group = chicano }
+			modifier = { factor = 10 culture_group = mexicano }
+		}
+	}
+	option = {
+		name = EVTOPT_ceticreformmormon
+		trigger = {
+			trait = way_dove
+		}
+		religion = mormon
+		any_demesne_province = {
+			if = {
+				limit = {
+					religion = cetic
+				}
+				religion = mormon
+			}
+		}
+
+		ai_chance = {
+			factor = 5
+		}
+	}
+	option = {
+		name = EVTOPT_ceticreformconsumerist
+		trigger = {
+			trait = way_cowl
+			has_global_flag = consumerist_revolt_ocurred
+		}
+		religion = consumerist
+		any_demesne_province = {
+			if = {
+				limit = {
+					religion = cetic
+				}
+				religion = consumerist
+			}
+		}
+
+		ai_chance = {
+			factor = 5
+			modifier = { factor = 10 culture = chicagoan }
+			modifier = { factor = 10 culture = gothamite }
+		}
+	}
+	option = {
+		name = EVTOPT_ceticreformhamiltonian
+		trigger = {
+			trait = way_cowl
+		}
+		religion = hamiltonian
+		any_demesne_province = {
+			if = {
+				limit = {
+					religion = cetic
+				}
+				religion = hamiltonian
+			}
+		}
+
+		ai_chance = {
+			factor = 5
+			modifier = { factor = 10 culture_group = mid_atlantic }
+			modifier = { factor = 10 culture_group = south_anglo }
+		}
+	}
+	option = {
+		name = EVTOPT_ceticreformsagrado
+		trigger = {
+			trait = way_cowl
+		}
+		religion = sacred_heart
+		add_trait = marian_santa_muerte
+		any_demesne_province = {
+			if = {
+				limit = {
+					religion = cetic
+				}
+				religion = sacred_heart
+			}
+		}
+		ai_chance = {
+			factor = 5
+			modifier = { factor = 10 culture_group = chicano }
+			modifier = { factor = 10 culture_group = mexicano }
+		}
+	}
+	option = {
+		name = EVTOPT_ceticreformgaian
+		trigger = {
+			trait = way_branch
+		}
+		religion = gaian
+		any_demesne_province = {
+			if = {
+				limit = {
+					religion = cetic
+				}
+				religion = gaian
+			}
+		}
+
+		ai_chance = {
+			factor = 5
+		}
+	}
+	option = {
+		name = EVTOPT_ceticreformresist
+		ai_chance = {
+			factor = 5
+			modifier = { factor = 15 trait = zealous }
+
+		}
+	}
+}

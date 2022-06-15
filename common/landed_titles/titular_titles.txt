@@ -2339,12 +2339,12 @@ e_bayfolk = {
 	creation_requires_capital = no	
 }
 
-e_calaotian = {
+e_towner = {
 	color={ 170 55 180 }
 	color2={ 210 50 20 }
 	capital = 2046 # c_sacramento
 	
-	culture = calaotian
+	culture = towner
 	allow = {
 		NOT = { religion = cetic }
 		NOT = {
@@ -2355,10 +2355,10 @@ e_calaotian = {
 		}
 		war = no
 		NOT = { tier = emperor }
-		culture = calaotian
+		culture = towner
 		OR = {
 			realm_size = 150
-			e_calaotian = { OR = { is_titular = no has_holder = yes } }
+			e_towner = { OR = { is_titular = no has_holder = yes } }
 		}
 	}
 	short_name = yes
