@@ -372,7 +372,7 @@ norteno = {
 		modifier = default_culture_modifier
 	}
 	
-	sonorense = {
+	occidental = {
 		graphical_cultures = { vaquerogfx southerngfx andalusiangfx }
 		unit_graphical_cultures = { southerngfx andalusiangfx }
 
@@ -514,4 +514,69 @@ norteno = {
 		modifier = default_culture_modifier
 	}	
 	
+	tejano = {
+		graphical_cultures = { vaquerogfx }
+		unit_graphical_cultures = { andalusiangfx southerngfx }
+
+		color = { 0.85 0.70 0.0 }
+
+		male_names = {
+			Alexandro_Alexander Antonio_Anthony Al_Albert Alberto_Albert Andrés_Andrew Abraham_Abraham Armando_Herman Agustín_Augustine Alonso_Alphons Alan
+			Brígido Bernardo_Bernard "Juan Bautista" Brayan_Brian Brian_Brian
+			Carlos_Charles Carlitos_Charles Carbajal César_Caesar Chris_Christian
+			Dom_Dominic Doroteo David_David Diego Dan_Daniel Dalas_Dallas
+			Emilio Edwardo_Edward Erasmo_Erasmus Esteven_Stephen Ezequiel
+			Fernando_Ferdinand Francisco_Francis Franky_Francis
+			Gregorio_Gregory Goyo_Gregory Gaspar_Caspar Guadalupe
+			Ignacio_Ignatius Ithan_Ethan
+			Juan_John Jorge_George José_Joseph Jesús_Jesus Julio_Julius Jaime_James Jason_Jason Jacob_Jacob John_John Javier_Xavier
+			Kyle
+			Luis_Louis Lorenzo_Lawrence León_Leo Logan Luke_Luke
+			Marco_Mark Manuel_Immanuel Manny_Immanuel Mariano_Marius Martino_Martin Marcelo Miguel_Michael
+			Natas_Nathan
+			Pancho_Francis Pablo_Paul Pedro_Peter
+			Raúl Roberto_Robert Ramón_Raymond Rodrigo_Roderick Rafael_Raphael Rubio Ridley
+			Salvador_Salvador Sebastián_Sebastian Sentencia
+			Tuco Tomás_Thomas Teodoro_Theodore
+			Vicente_Vincent Valentino_Valentine
+			Wes
+			Xavier_Xavier
+			Zachary_Zachary
+		}
+
+		female_names = {
+			Adina Alexis Audi Angelina_Angela Ale_Alexandra Ángela_Angela Adela_Adele Adelita_Adele Ana_Anna Annie_Anne
+			Bárbara_Barbara Beatríz Briana Britany_Brittany
+			Carla Carly Carmen Camila Cristal_Crystal
+			Devendra Dora Dolores Daniela_Danielle
+			Eva Elisa Emilia Elsa Ely_Elizabeth Estefanita_Stephanie Edith
+			Francisca_Francisco Flaca Fany_Stephanie
+			Irma Isabella_Elizabeth Irene_Irene
+			Jennifer Jaci Jade Justina Julian_Julius Jaquí_Jacqueline Jessica_Jessica Juana_Jane
+			Kimberly Kat_Catharine
+			Linda Lupita_Guadalupe Lydia Leonora Luz Lola Lorena
+			Marcella Margarita_Margaret Michelle María_Mary Mariana Mayra Melania 
+			Nina Nona Natalia_Natalie Norma Natividad
+			Paulina Paula Perlita_Perla Pamela 
+			Raini Rebecca Rosa_Rose Rachel Rita_Margarita
+			Selena Susana_Susan 
+			Victoria_Victoria Valentina Valencia Valenciana
+		}
+
+		from_dynasty_prefix = "de "
+
+		male_patronym = "de Don "
+		female_patronym = "de Don "
+		prefix = yes
+
+		pat_grf_name_chance = 45
+		mat_grf_name_chance = 15
+		father_name_chance = 30
+
+		pat_grm_name_chance = 40
+		mat_grm_name_chance = 10
+		mother_name_chance = 40
+
+		modifier = default_culture_modifier
+	}
 }

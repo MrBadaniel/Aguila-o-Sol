@@ -1140,7 +1140,7 @@ e_lone_star = {
 		# Crusade target weight
 		catholic = 200
 		revelationist_reformed = 5
-		atomicist = 200
+		atomicist = 170
 		americanist = 50
 		
 		
@@ -1510,6 +1510,42 @@ e_lone_star = {
 				b_gate_OK = {}
 			}
 		}
+	}
+	k_new_mexico = {
+		color={ 231 229 36 }
+		color2={ 137 253 243 }
+	
+		tejano = "Nuevo Méjico"
+		bravo = "Nuevo México"
+		altiplanense = "Nuevo México"
+		menomex = "Nuevo México"
+		chino = "Nuevo México"
+		occidental = "Nuevo México"
+		neomexicano = "Nuevo México"
+		navajo = "Yootó Hahoodzo"
+		southron = "South Virginia"
+
+		capital = 339 # Santa Fe
+	
+		#allow = {
+		#	conditional_tooltip = {
+		#		trigger = {
+		#			k_new_mexico = {
+		#				is_titular = yes
+		#			}
+		#		}
+		#		k_new_mexico = {
+		#			is_titular = no
+		#		}
+		#	}
+		#}
+		
+		# Crusade target weight
+		catholic = 150
+		revelationist_reformed = 5
+		atomicist = 200
+		americanist = 20
+	
 		d_new_mexico = {
 			color = { 45 98 223 }
 			color2= { 255 255 255 }

@@ -8,37 +8,7 @@ e_aztlan = {
 	plautdietsch = "Reiherland"
 	angeleno = "Aztlán"
 	capital = 799 # Chihuahua
-	
-	k_new_mexico = {
-		color={ 231 229 36 }
-		color2={ 137 253 243 }
-	
-		tejano = "Nuevo Méjico"
-		bravo = "Nuevo México"
-		altiplanense = "Nuevo México"
-		menomex = "Nuevo México"
-		chino = "Nuevo México"
-		occidental = "Nuevo México"
-		neomexicano = "Nuevo México"
-		navajo = "Yootó Hahoodzo"
-		southron = "South Virginia"
-
-		capital = 339 # Santa Fe
-	
-		allow = {
-			conditional_tooltip = {
-				trigger = {
-					k_new_mexico = {
-						is_titular = yes
-					}
-				}
-				k_new_mexico = {
-					is_titular = no
-				}
-			}
-		}
-	}
-	
+		
 	k_arizona = {
 		color = { 193 47 63 }
 		color2={ 137 253 243 }
