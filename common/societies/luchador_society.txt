@@ -43,8 +43,10 @@ warrior_lodge_mexican = {
 		}
 		capital_scope = { region = custom_oldworld_mexico }
 		OR = {
+			culture_group = norteno
 			culture_group = mexicano
 			culture_group = mesoamerican
+			
 			religion = sacred_heart
 		}
 	}
@@ -76,6 +78,7 @@ warrior_lodge_mexican = {
 			}
 			capital_scope = { region = custom_oldworld_mexico }
 			OR = {
+				culture_group = norteno
 				culture_group = mexicano
 				culture_group = mesoamerican
 				religion = sacred_heart
@@ -88,6 +91,7 @@ warrior_lodge_mexican = {
 	potential = { #if you change religion or become zealous while NOT pagan, you are kicked out
 		capital_scope = { region = custom_oldworld_mexico }
 		OR = {
+			culture_group = norteno
 			culture_group = mexicano
 			culture_group = mesoamerican
 			religion = sacred_heart
