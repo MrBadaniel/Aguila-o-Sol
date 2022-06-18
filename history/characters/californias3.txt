@@ -775,7 +775,7 @@
 	stewardship=4
 	intrigue=5
 	learning=5
-	culture=tagalog
+	culture=pinoy
 	religion=cetic
 	trait=scholarly_theologian
 	trait=way_dove
@@ -2164,7 +2164,7 @@
 	name="Alan Smithee"
 	culture=angeleno
 	dynasty=1851167 #hays
-	religion=kinemite
+	religion=pagan#kinemite
 	trait=lustful
 	trait=wroth
 	trait=greedy
@@ -2265,7 +2265,7 @@
 	name="Vic"
 	culture=angeleno
 	dynasty=5001195 #Montana
-	religion=kinemite
+	religion=pagan#kinemite
 	trait=brilliant_strategist
 	trait=mystic
 	trait=disfigured
@@ -2343,7 +2343,7 @@
 	name="Diego"
 	culture=angeleno
 	dynasty=5001198 #Capistrano #1
-	religion=kinemite
+	religion=pagan#kinemite
 	trait=elusive_shadow
 	trait=quick
 	trai=peasant_leader
@@ -2365,7 +2365,7 @@
 	name="Sam"
 	culture=angeleno
 	dynasty=5001196 #O'Brian
-	religion=kinemite
+	religion=pagan#kinemite
 	trait=tough_soldier
 	trait=peasant_leader
 	trait=honest
@@ -2386,7 +2386,7 @@
 	name="Platon"
 	culture=angeleno
 	dynasty=5001197 #Douglas
-	religion=kinemite
+	religion=pagan#kinemite
 	trait=fortune_builder
 	trait=sympathy_judaism
 	trait=gregarious
@@ -2406,7 +2406,7 @@
 2500154={
 	name="Conan"
 	culture=angeleno
-	religion=kinemite
+	religion=pagan#kinemite
 	trait=brilliant_strategist
 	trait=hunter
 	trait=robust
@@ -2429,7 +2429,7 @@
 	name="Maurice"
 	culture=angeleno
 	dynasty=5001210 #Khan
-	religion=kinemite
+	religion=pagan#kinemite
 	trait=mastermind_theologian
 	trait=theologian
 	trait=kind
@@ -2449,7 +2449,7 @@
 2500156={
     name="Herschel"
     culture=angeleno
-    religion=kinemite
+    religion=pagan#kinemite
     martial=8
     diplomacy=5
     stewardship=5
@@ -2474,7 +2474,7 @@
 	name="Rainer"
 	culture=angeleno
 	dynasty=5001211 #Phoenix
-	religion=kinemite
+	religion=pagan#kinemite
     trait=intricate_webweaver	
     trait=chaste
     trait=paranoid
@@ -2493,7 +2493,7 @@
 	name="Jackie"
 	culture=towner
 	dynasty=5001212 #Li
-	religion=kinemite
+	religion=pagan#kinemite
     martial=11
     diplomacy=3
     stewardship=5
@@ -2518,7 +2518,7 @@
 1802059={
     name="Oswald"
     culture=angeleno
-    religion=kinemite
+    religion=pagan#kinemite
 	female=no
     trait=mastermind_theologian
     trait=mystic	
@@ -2542,7 +2542,7 @@
     name="Marilyn"
 	female=yes
     culture=angeleno
-    religion=kinemite
+    religion=pagan#kinemite
 	martial=5
 	diplomacy=5
 	stewardship=5
@@ -2662,7 +2662,7 @@
 	name="Rex "
 	dynasty=1850066
 	culture=italian
-	religion=olympian
+	religion=sedevacantist#scientologist
 	trait=skilled_tactician
 	trait=gladiator
 	trait=brawny
@@ -2680,7 +2680,7 @@
 	name="Gene"
 	culture=angeleno
 	dynasty=5001199 #Capistrano #2
-	religion=kinemite
+	religion=pagan#kinemite
 	trait=tough_soldier
 	trait=trickster
 	trait=light_foot_leader
@@ -2723,7 +2723,7 @@
 1802070={
 	name="Alonso"
 	dynasty=5001215#Pío
-	culture=tagalog
+	culture=pinoy
 	religion=sacred_heart#la_hermandad
 	trait=scholarly_theologian
 	trait=school_teacher
@@ -2731,7 +2731,7 @@
 	occluded=yes
 	trait=content
 	trait=honest
-	trait=chaste
+	trait=kind
 	disallow_random_traits=yes
 	2107.5.12={birth=yes}
 	2189.7.21={death=yes}
@@ -2740,7 +2740,7 @@
 1802071={
 	name="Isko"
 	dynasty=5001215#Pío
-	culture=tagalog
+	culture=pinoy
 	religion=sacred_heart#la_hermandad
 	trait=mastermind_theologian
 	trait=school_giver
@@ -2759,7 +2759,7 @@
 1802072={
 	name="Jamebei"
 	dynasty=5001215#Pío
-	culture=tagalog
+	culture=pinoy
 	religion=sacred_heart#la_hermandad
 	trait=tough_soldier
 	trait=legendary
@@ -2777,7 +2777,7 @@
 1802073={
 	name="Piolo"
 	dynasty=5001215#Pío
-	culture=tagalog
+	culture=pinoy
 	religion=sacred_heart#la_hermandad
 	trait=flamboyant_schemer
 	trait=greedy
@@ -2862,7 +2862,7 @@
 1802077={
 	name="Marvin"
 	culture=valleyan
-	religion=olympian
+	religion=pagan#olympian
 	trait=brilliant_strategist
 	trait=strong
 	trait=legendary
@@ -3050,7 +3050,7 @@
 	name="Butch"
 	culture=west_slavic
 	dynasty=5001208 #Fonda
-	religion=olympian
+	religion=pagan#olympian
 	trait=skilled_tactician
 	trait=brawny
 	trait=heresiarch
@@ -3106,6 +3106,53 @@
 	culture=valleyan
 	}
 	2105.8.22={death=yes}
+}
+
+1802095={
+	name="Philip"
+	dynasty=1851178 #Soledad
+	father = 1911080
+	trait=legit_bastard
+	culture=pinoy
+	religion=cetic
+	trait=misguided_warrior
+	trait=way_cowl
+	trait=duelist
+	trait=strong
+	trait=wroth
+	trait=brave
+	trait=shy
+	2643.3.1={birth=yes}
+}
+1802096={
+	name="Steve"
+	dynasty=1851165 #Ngoy
+	culture=towner
+	religion=cetic
+	trait=midas_touched
+	trait=way_cowl
+	trait=lustful
+	trait=charitable
+	trait=adminstrator
+	trait=brave
+	trait=honest
+	2619.1.1={birth=yes}
+}
+1802097={
+	name="Tip"
+	dynasty=1851165 #Ngoy
+	father =1802096
+	culture=towner
+	religion=cetic
+	trait=tough_soldier
+	trait=way_cowl
+	trait=lustful
+	trait=wroth
+	trait=brave
+	trait=depressed
+	trait=greedy
+	trait=envious
+	2644.1.1={birth=yes}
 }
 
 #5001230 Clark
