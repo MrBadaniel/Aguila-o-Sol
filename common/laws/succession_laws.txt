@@ -155,6 +155,8 @@ succession_laws = {
 								religion = raven_tales
 								religion = pagan
 								religion = trailwalker
+								religion = fidencista
+								religion = dominionist	
 							}
 						}
 					}
@@ -244,6 +246,8 @@ succession_laws = {
 					has_law = succ_mex_elective 
 					title = k_mexico
 				}
+				religion = fidencista
+				religion = dominionist
 			}
 			holder_scope = {
 				is_nomadic = no
@@ -558,6 +562,8 @@ succession_laws = {
 					has_law = succ_mex_elective 
 					title = k_mexico
 				}
+				religion = fidencista
+				religion = dominionist
 			}
 			holder_scope = {
 				OR = {
@@ -767,6 +773,8 @@ succession_laws = {
 					has_law = succ_mex_elective 
 					title = k_mexico
 				}
+				religion = dominionist
+				religion = fidencista
 			}
 			holder_scope = {
 				is_merchant_republic = no
@@ -979,6 +987,8 @@ succession_laws = {
 					has_law = succ_mex_elective 
 					title = k_mexico
 				}
+				religion = fidencista
+				religion = dominionist
 			}
 			holder_scope = {
 				OR = {
@@ -1697,6 +1707,10 @@ succession_laws = {
 						is_theocracy = no
 					}
 				}
+				OR = {
+					religion = fidencista
+					religion = dominionist
+					}
 				is_republic = no
 				is_merchant_republic = no
 				is_nomadic = no
@@ -1876,6 +1890,10 @@ succession_laws = {
 				}
 			}
 			NOT = { holder_scope = { government = military_governorate } }
+			OR = {
+			religion = fidencista
+			religion = dominionist
+			}
 		}
 		
 		effect = {
