@@ -24,10 +24,18 @@ ERA_CHAR_INFO_1910000;King Gastón of las Bajas is one of the few truly great rul
 ###########Cultures########### 
  
 tapatio;Tapatío;;;;;;;;;;;;;x
-meseteno;Meseteño;;;;;;;;;;;;;x 
+
+meseteno;Meseteño;;;;;;;;;;;;;x
+meseteño_opinion;[meseteño.GetName] Opinion;;;;;;;;;;;;;x 
  
 mekatelyu;Mekatelyu;;;;;;;;;;;;;x
 mekatelyu_opinion;[mekatelyu.GetName] Opinion;;;;;;;;;;;;;x
+
+amuzgo;Amuzgo;;;;;;;;;;;;;x
+amuzgo_opinion;[amuzgo.GetName] Opinion;;;;;;;;;;;;;x
+
+totonac;Totonaco;;;;;;;;;;;;;x
+totonac_opinion;[totonac.GetName] Opinion;;;;;;;;;;;;;x
  
 nicoyano;Nicoyano;;;;;;;;;;;;;x
 nicoyano_opinion;[nicoyano.GetName] Opinion;;;;;;;;;;;;;x
@@ -35,8 +43,17 @@ nicoyano_opinion;[nicoyano.GetName] Opinion;;;;;;;;;;;;;x
 trifinio;Trifinio;;;;;;;;;;;;;x
 trifinio_opinion;[trifinio.GetName] Opinion;;;;;;;;;;;;;x
  
-# chinantec;Chinanteco;;;;;;;;;;;;;x
-# chinantec_opinion;[chinantec.GetName] Opinion;;;;;;;;;;;;;x
+chinantec;Chinanteco;;;;;;;;;;;;;x
+chinantec_opinion;[chinantec.GetName] Opinion;;;;;;;;;;;;;x
+
+zoque;Zoque;;;;;;;;;;;;;x
+zoque_opinion;[zoque.GetName] Opinion;;;;;;;;;;;;;x
+
+tlapanec;Tlapaneco;;;;;;;;;;;;;x
+tlapanec_opinion;[tlapanec.GetName] Opinion;;;;;;;;;;;;;x
+
+mazatec;Mazateco;;;;;;;;;;;;;x
+mazatec_opinion;[mazatec.GetName] Opinion;;;;;;;;;;;;;x
  
 altiplanense;Altiplanense;;;;;;;;;;;;;x
 altiplanense_opinion;[altiplanense.GetName] Opinion;;;;;;;;;;;;;x
@@ -52,6 +69,9 @@ occidental_opinion;[occidental.GetName] Opinion;;;;;;;;;;;;;x
  
 yaqui;Yaqui;;;;;;;;;;;;;x
 yaqui_opinion;[yaqui.GetName] Opinion;;;;;;;;;;;;;x
+
+huichol;Huichol;;;;;;;;;;;;;x
+huichol_opinion;[huichol.GetName] Opinion;;;;;;;;;;;;;x
  
 abajeno;Abajeño;;;;;;;;;;;;;x
 abajeno_opinion;[abajeno.GetName] Opinion;;;;;;;;;;;;;x
@@ -61,11 +81,8 @@ bravo_opinion;[bravo.GetName] Opinion;;;;;;;;;;;;;x
  
 menomex;Menomex;;;;;;;;;;;;;x
 menomex_opinion;[menomex.GetName] Opinion;;;;;;;;;;;;;x
-
-towner;Towner;;;;;;;;;;;;;x
-towner_opinion;[towner.GetName] Opinion;;;;;;;;;;;;;x
  
-taracahita;Taracahíta;;;;;;;;;;;;;x
+taracahita;Aridoamerican;;;;;;;;;;;;;x
 taracahita_opinion;[taracahita.GetGroupName] Opinion;;;;;;;;;;;;;x
  
 norteno;Norteño;;;;;;;;;;;;;x
@@ -79,7 +96,6 @@ ameroslav_opinion;[ameroslav_opinion.GetGroupName] Opinion;;;;;;;;;;;;;x
 ###########Religions########### 
  
 cult_of_saints;Folk Catholic;;;;;;;;;;;;;x
-catholic;Conclavist;;;;;;;;;;;;;x
  
 fidencista;Fidencista;;;;;;;;;;;;;x
 fidencista_DESC;The cult of "el Niño Fidencio" follows a pantheon of quasi-deities derived from Catholic saints and heroes of the past, who are ultimately subservient to God but powerful in their own right. These entities are called upon for guidance and can be communed with through ritualistic means, but the most faithful heirs to "el Niñito" can allow themselves to become possessed by the saints to perform miracles and act as a conduit to allow the divine to directly influence the world.;;;;;;;;;;;;;x
@@ -111,7 +127,7 @@ navegante_DESC;Navigants believe those who are brave, those who are patient, are
 mesoamerican_gods;Indigenous Mexican;;;;;;;;;;;;;x
  
 mictlantec;Mictlanteca;;;;;;;;;;;;;x
-mictlantec_DESC;Mictlanteca is a continuation of ancient indigenous traditions and maintains that the keeper of the underworld had mercy after the complete destruction of Humanity in the previous cycle and guided them back to the land of the living. According to the Mictlantecos, the destruction of the last cycle was the result of the neglect and abandonment of sacrifice to spiritual entities known as dueños" — the true "owners" of the land who dwell in the hills", springs, caves, and other natural features that dot the landscape. The Mictlantecos believe that the equilibrium of life requires death and that a regular practice of the ancient sacrifices and rituals is necessary to maintain the balance of the world.;;;;;;;;;;;;;x
+mictlantec_DESC;Mictlanteca is a continuation of ancient indigenous traditions and maintains that the keeper of the underworld had mercy after the complete destruction of Humanity in the previous cycle and guided them back to the land of the living. According to the Mictlantecos, the destruction of the last cycle was the result of the neglect and abandonment of sacrifice to spiritual entities known as dueños" — the true "owners" of the land who dwell in the hills, springs, caves, and other natural features that dot the landscape. The Mictlantecos believe that the equilibrium of life requires death and that a regular practice of the ancient sacrifices and rituals is necessary to maintain the balance of the world.;;;;;;;;;;;;;x
 mictlantec_FEATURES;§Y*§! May go on vision quests with the aid of sacramental herbs.\n§Y*§! Mictlantecos may sacrifice animals to the Dueños.;;;;;;;;;;;;;x
  
 sol_invicta;Sol Invicto;;;;;;;;;;;;;x
@@ -336,12 +352,6 @@ marian_san_charbel;San Charbel;;;;San Charbel;;;;;;;;;x
 marian_san_charbel_desc;Among the most popular saints among the sagrado faithful San Charbel was a monk and a hermit of the faith from a land far across the sea whose countrymen brought the veneration of the saint to the land of mexico. Charbel was known even after death to have remained incorruptible and he is called upon by devotees to intercede on behalf of the sick and chapels dedicated to him are seeen throughput the land.;;;;;;;;;;;;;x
 marian_san_juditas;San Juditas;;;;San Juditas;;;;;;;;;x
 marian_san_juditas_desc;St. Jude the patron saint of lost causes, also known as San Judas Tadeo or San Juditas to his devotees, is one of the most popular saints to the sagrado faithful and is one of the original 12 apostles of Christ. Though beloved by all social classes San Juditas has a huge following among the poor to whom he is seen as a powerful protector and benefactor as well as a direct intercessor to Jesus Christ himself in his prayers.;;;;;;;;;;;;;x
-marian_san_pascual;San Pascual Bailón;;;;San Pascual Bailón;;;;;;;;;x
-marian_santa_inocencia;Santa Inocencia;;;;Santa Inocencia;;;;;;;;;x
-marian_santo_nino_fidencio;Santo Niño Fidencio;;;;Santo Niño Fidencio;;;;;;;;;x
-marian_stella_maris;Stella Maris;;;;Stella Maris;;;;;;;;;x
-marian_san_felipe_de_jesus;San Felipe de Jesús;;;;San Felipe de Jesús;;;;;;;;;x
-marian_cristo_rey;Cristo Rey;;;;Cristo Rey;;;;;;;;;x
  
 iluminador;Illuminator;;;;;;;;;;;;;x
 iluminador_desc;Sometimes the dark ignorance of the world can be illuminated through instruction — other times it must come at the point of the sword;;;;;;;;;;;;;x
@@ -485,8 +495,8 @@ EVTNAMEMXR.210;The Mexican Schism has Ended;;;;;;;;;x
 EVTDESCMXR.210;At last the Great Schism between the Cristeros and the Sacred Heart faithful has been mended. After his victory near Toluca in 2541, Benemérito Wenceslao el Tizón elevated the Missionaries of the Sacred Heart to the state church after being visited by the Virgin of Guadalupe. The power of the Prelature was broken and the faith schismed, the followers of the Sacred Heart taking it upon themselves to venerate folk saints and idols. With the Benemérito of the Empire now being a Cristero the reunification of the two sister churches can now begin.;;;;;;;;;x
 EVTOPTAMXR.200;¡Viva Cristo Rey!;;;;;;;;;x
 
-EVTNAMEMXR.211;The Cristeros pressure the Heterodox;;;;;;;;;x
-EVTDESCMXR.211;Enforce desc Orthodoxy;;;;;;;;;x
+EVTNAMEMXR.210;The Cristeros pressure the Heterodox;;;;;;;;;x
+EVTDESCMXR.210;Enforce desc Orthodoxy;;;;;;;;;x
 EVTOPTAMXR.211;I will remain faithful.;;;;;;;;;x
 EVTOPTBMXR.211;New church same God.;;;;;;;;;x
 
