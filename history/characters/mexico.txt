@@ -3909,3 +3909,163 @@
 	2599.1.10={birth=yes}
 	2663.7.13={death=yes}
 }
+
+#Acapulco Characters
+1810274={
+	name="Zenón" #sr barriga
+	dynasty=14080010
+	culture=calentano
+	religion=cristo_rey
+	trait=fortune_builder
+	trait=is_fat
+	trait=charitable
+	trait=wounded
+	trait=kind
+	disallow_random_traits = yes
+	2628.12.28={birth=yes}
+}
+1810275={
+	name="Febronio" #nhonho
+	dynasty=14080010
+	culture=calentano
+	religion=cristo_rey
+	trait=is_fat
+	trait=indolent
+	trait=willfull
+	father=1810274
+	disallow_random_traits = yes
+	2658.12.28={birth=yes}
+}
+1810276={
+	name="Ramón" #Ron Damón
+	dynasty=14080002
+	culture=altiplanense
+	religion=fidencista
+	trait=flamboyant_schemer
+	trait=is_malnourished
+	trait=shrewd
+	trait=gregarious
+	trait=slothful
+	trait=humble
+	trait=lustful
+	father=1810277
+	disallow_random_traits = yes
+	2621.9.2={birth=yes}
+}
+1810277={
+	name="Rafael" #Ramóns Father
+	dynasty=14080002	
+	culture=altiplanense
+	religion=fidencista
+	trait=grey_eminence
+	trait=humble
+	mother=1810278
+	disallow_random_traits = yes
+	2591.11.20={birth=yes}
+	2662.2.11={death=yes}
+}
+1810278={
+	name="Neves" #Dona Neves
+	female=yes
+	dynasty=14080003
+	culture=altiplanense
+	religion=fidencista
+	trait=charismatic_negotiator
+	trait=freckles
+	trait=shrewd
+	trait=lunatic
+	trait=stubborn
+	trait=proud
+	trait=charitable
+	health=12
+	disallow_random_traits = yes
+	2576.12.22={birth=yes}
+}
+1810279={
+	name="Maria Francisca" #chiquinha
+	female=yes
+	dynasty=14080002
+	culture=calentano
+	religion=fidencista
+	trait=freckles
+	trait=quick
+	trait=willful
+	trait=curious
+	trait=playful
+	father=1810276
+	disallow_random_traits = yes
+	2658.12.22={birth=yes}
+}
+1810280={
+	name="Federico" #pai do quico
+	dynasty=14080004
+	culture=calentano
+	religion=navegante
+	trait=misguided_warrior
+	trait=proud
+	trait=ugly
+	spouse=1810281
+	disallow_random_traits = yes
+	2630.12.28={birth=yes}
+	2660.5.12={ death = {death_reason=death_execution_sharks}}
+}
+1810281={
+	name="Florinda"
+	female=yes
+	dynasty=14080005
+	culture=calentano
+	religion=navegante
+	trait=tough_soldier
+	trait=proud
+	trait=wroth
+	trait=stubborn
+	trait=diligent
+	disallow_random_traits = yes
+	2633.2.8={birth=yes}
+	2660.5.12={ effect = { give_minor_title = title_appointed_regent }}
+	2665.1.1={effect={add_rival=1810276}}
+	2666.1.1={add_lover=1810283}
+}
+1810282={
+	name="Federico"
+	dynasty=14080004
+	culture=calentano
+	religion=navegante
+	trait=slow
+	trait=affectionate
+	trait=playful
+	trait=haughty
+	father=1810280
+	mother=1810281
+	disallow_random_traits = yes
+	2659.1.12={birth=yes}
+}
+1810283={
+	name="Inocencio"
+	dynasty=14080006
+	culture=calentano
+	religion=sacred_heart
+	trait=scholarly_theologian
+	trait=erudite
+	trait=proud
+	trait=patient
+	trait=kind
+	trait=devout
+	trait=scholar
+	disallow_random_traits = yes
+	2630.6.15={birth=yes}
+	2665.1.1={employer=1810274 effect = { give_minor_title = title_teacher }}
+	2666.1.1={add_lover=1810281}
+}
+1810284={
+	name="Chavo"
+	culture=chilango
+	religion=cristo_rey
+	trait=curious
+	trait=rowdy
+	trait=playful
+	trait=affectionate
+	disallow_random_traits = yes
+	2658.2.12={birth=yes effect={ dynasty=none }}
+	2664.2.17={employer=1810274 effect = { add_friend=1810276 add_friend=1810279 add_friend=1810282 add_friend=1810275 }}
+}
