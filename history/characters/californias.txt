@@ -122,6 +122,7 @@
 	name="Victor"
 	dynasty=1912050 # Allende
 	father=1910003
+	mother=6900018
 	martial=6
 	diplomacy=9
 	stewardship=8
@@ -150,6 +151,7 @@
 	female=yes
 	dynasty=1912050 # Allende
 	father=1910003
+	mother=6900018
 	martial=5
 	diplomacy=9
 	stewardship=7
@@ -2290,14 +2292,18 @@
 1910191={
 	name="Natalie"
 	female=yes
-	culture=angeleno
+	dynasty=1850066
+	father=1836105
+	culture=italian
 	religion=cetic
 	trait=detached_priest
 	trait=way_dove
 	trait=kind
 	trait=gregarious
 	trait=lustful
-	2633.3.1={birth=yes}
+	2633.3.1={birth=yes
+	culture=angeleno
+	}
 	2654.3.1={add_spouse=1910190}
 	2690.12.1={death=yes}
 }
