@@ -1,0 +1,59 @@
+silbern = {
+	coloradan_opinion = 10
+	neomexicano_opinion = 10
+	#montanist_opinion = 5
+	edenite_opinion = 5
+	monthly_character_piety = 1.5
+	inheritance = patrilineal
+	allow_bastards = yes
+	picture = GFX_bloodlines_symbol_silbern
+	flags = { historical_bloodline }
+	active = {
+		OR = {
+			religion = evangelical 
+			#religion = montanist
+			religion = edenite
+			#religion = gran_comision
+			#religion = misional
+		}
+	}
+}
+
+pale_rider = {
+	trailwalker_opinion = 5
+	edenite_opinion = -5
+	#montanist_opinion = -5
+	#gran_comision_opinion = -5
+	monthly_character_piety = 0.5
+	command_modifier = {
+		morale_offence = 0.1
+	}	
+	inheritance = patrilineal
+	allow_bastards = yes
+	picture = GFX_bloodlines_symbol_blucifer
+	flags = { historical_bloodline }
+}
+
+joseph = {
+	joaquino_opinion = 5
+	#la_hermandad_opinion = 5
+	#alurista_opinion = 5
+	#josephite_opinion = 5
+	nazarene_opinion = 5
+	true_cross_opinion = 5
+	bloodline_effect_better_inquisition = 1
+	bloodline_effect_religious_liberation = 1
+	monthly_character_piety = 0.2
+	inheritance = patrilineal
+	allow_bastards = yes
+	picture = GFX_bloodlines_symbol_joseph
+	flags = { historical_bloodline }
+	active = {
+		OR = {
+			#religion = la_hermandad 
+			#religion = josephite
+			#religion = alurista
+			culture = joaquino
+		}
+	}
+}
