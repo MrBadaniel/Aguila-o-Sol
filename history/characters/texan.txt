@@ -2331,8 +2331,12 @@
 	trait=devout
 	2626.6.26={birth=yes
 	culture=angeleno
+			effect={
+			set_character_flag=diversity
+			set_character_flag=physique
+			set_character_flag=no_historical_family #prevents children from spawning in
+		}
 	}
-	2666.1.1={effect={add_lover=1836108}}
 	2705.12.1={death=yes}
 }
 
