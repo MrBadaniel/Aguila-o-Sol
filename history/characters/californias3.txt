@@ -3176,10 +3176,79 @@
 	2277.10.1={death=yes}
 }
 
-#5001230 Clark
+1802099={
+	name="Ted"
+	dynasty=5001230#Clark
+	culture=english
+	religion=pagan#forester
+	trait=legendary
+	occluded=yes
+	trait=tough_soldier
+	trait=unyielding_leader
+	trait=ambitious
+	trait=stubborn
+	trait=wroth
+	father=1802094
+	give_nickname=nick_the_failson
+	disallow_random_traits=yes
+	2044.1.9={birth=yes
+	culture=valleyan
+	}
+	2115.12.16={death={
+			death_reason=death_battle
+			killer=1802065
+		}
+	}
+}
 
+1802100={
+	name="John"
+	dynasty=5001230#Clark
+	culture=english
+	religion=pagan#forester
+	trait=legendary
+	occluded=yes
+	trait=scholarly_theologian
+	trait=kind
+	trait=honest
+	trait=mangled
+	trait=depressed
+	father=1802099
+	disallow_random_traits=yes
+	2081.1.10={birth=yes
+	culture=valleyan
+	name=John
+	}
+	2082.1.10 = {
+		effect_even_if_dead = {
+			set_special_character_title = RANGER_DEAD_TITLE
+		}
+	}
+	2116.5.4={death={
+			death_reason=death_murder_unknown_poison
+			killer=1802101
+		}
+	}
+}
 
-
+1802101={
+	name="Yogi"
+	dynasty=1851024#Muir
+	culture=english
+	religion=pagan#forester
+	trait=legendary
+	occluded=yes
+	trait=elusive_shadow
+	trait=deceitful
+	trait=ambitious
+	trait=cruel
+	trait=brave
+	disallow_random_traits=yes
+	2061.1.24={birth=yes
+	culture=valleyan
+	}
+	 2131.2.1={death=yes}
+}
   
   #Kane II Rogers 2308 to 2309 attempts to invade Socal and dies in the proccess
   #Shirley Rogers and Clint Connery 2309 to 2315 and 2315 to 2324 english

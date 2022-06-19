@@ -430,7 +430,7 @@
 		religion = gaian
 		template = 0
 		layer = {
-			texture = 2
+			texture = 3
 			texture_internal = 4
 			emblem = 0
 			color = 0
@@ -11538,7 +11538,7 @@ coat_of_arms = {
 		religion = gaian
 		template = 0
 		layer = {
-			texture = 2
+			texture = 3
 			texture_internal = 6
 			emblem = 0
 			color = 0
@@ -11580,8 +11580,8 @@ coat_of_arms = {
 		religion = gaian
 		template = 0
 		layer = {
-			texture = 2
-			texture_internal = 0
+			texture = 3
+			texture_internal = 1
 			emblem = 0
 			color = 0
 			color = 0
@@ -11766,11 +11766,11 @@ coat_of_arms = {
 1849056 = { name="Andreessen" culture=bayfolk }
 1849057 = { name="Woz" culture=bayfolk 
 	coat_of_arms = {
-		religion = cetic
+		religion = rust_cultist
 		template = 0
 		layer = {
-			texture = 1
-			texture_internal = 38
+			texture = 2
+			texture_internal = 0
 			emblem = 0
 			color = 0
 			color = 0
@@ -12024,7 +12024,19 @@ coat_of_arms = {
 1851013 = { name="Gibbs" culture=valleyan }
 1851014 = { name="Lyell" culture=valleyan }
 1851015 = { name="Moyle" culture=valleyan }
-1851016 = { name="Steely" culture=valleyan }
+1851016 = { name="Steely" culture=valleyan
+	coat_of_arms = {
+		religion = rust_cultist
+		template = 0
+		layer = {
+			texture = 2
+			texture_internal = 0
+			emblem = 0
+			color = 0
+			color = 0
+			color = 0
+		}
+	}}
 1851017 = { name="Tribble" culture=valleyan }
 1851018 = { name="Laughlin" culture=valleyan }
 1851019 = { name="Van Fossen" culture=valleyan }
@@ -12045,12 +12057,12 @@ coat_of_arms = {
 1851022 = { name="Marshall" culture=valleyan }
 1851023 = { name="Yosemite" culture=valleyan }
 1851024 = { name="Muir" culture=valleyan 
-	coat_of_arms = {
-		religion = cetic
+		coat_of_arms = {
+		religion = forester
 		template = 0
 		layer = {
-			texture = 1
-			texture_internal = 33
+			texture = 4
+			texture_internal = 2
 			emblem = 0
 			color = 0
 			color = 0
@@ -12067,7 +12079,7 @@ coat_of_arms = {
 		religion = gaian
 		template = 0
 		layer = {
-			texture = 2
+			texture = 3
 			texture_internal = 5
 			emblem = 0
 			color = 0
@@ -12261,7 +12273,20 @@ coat_of_arms = {
 1851164 = { name="Alexander" culture=valleyan }
 1851165 = { name="Ngoy" culture=towner }
 1851166 = { name="Bute" culture=angeleno }
-1851167 = { name="Hays" culture=angeleno }
+1851167 = { name="Hays" culture=angeleno 
+	coat_of_arms = {
+		religion = americanist
+		template = 0
+		layer = {
+			texture = 3
+			texture_internal = 16
+			emblem = 0
+			color = 0
+			color = 0
+			color = 0
+		}
+	}
+}
 1851168 = { name="Gus" culture=valleyan }
 1851169 = { name="Taylor" culture=angeleno }
 1851170 = { name="Sabina" culture=angeleno }
@@ -12295,7 +12320,7 @@ coat_of_arms = {
 		religion = gaian
 		template = 0
 		layer = {
-			texture = 2
+			texture = 3
 			texture_internal = 8
 			emblem = 0
 			color = 0
@@ -12304,7 +12329,19 @@ coat_of_arms = {
 		}
 	}
 }
-1863003={ name="Reed" culture=inlander }
+1863003={ name="Reed" culture=inlander 
+	coat_of_arms = {
+		religion = gaian
+		template = 0
+		layer = {
+			texture = 3
+			texture_internal = 0
+			emblem = 0
+			color = 0
+			color = 0
+			color = 0
+		}
+	}}
 1863004={ name="Oaks" culture=inlander }
 1863005={ name="Hawkins" culture=inlander }
 1863006={ name="Nesbit" culture=inlander }
@@ -12448,19 +12485,7 @@ coat_of_arms = {
 1863092={ name="Stein" culture=inlander }
 1863093={ name="Tokarev" culture=inlander }
 1863094={ name="Havel" culture=inlander }
-1863095={ name="Reed" culture=inlander 
-	coat_of_arms = {
-		religion = gaian
-		template = 0
-		layer = {
-			texture = 2
-			texture_internal = 1
-			emblem = 0
-			color = 0
-			color = 0
-			color = 0
-		}
-	}}
+1863095={ name="Reed" culture=inlander }
 1863096={ name="Hayden" culture=inlander }
 1863097={ name="Palmer" culture=inlander }
 1863098={ name="Wilms" culture=inlander }
@@ -14054,7 +14079,7 @@ coat_of_arms = {
 		religion = gaian
 		template = 0
 		layer = {
-			texture = 2
+			texture = 3
 			texture_internal = 7
 			emblem = 0
 			color = 0
