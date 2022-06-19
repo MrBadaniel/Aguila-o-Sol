@@ -1695,7 +1695,7 @@
 	give_nickname=nick_the_nice
 	2180.1.1={birth=yes}
 	2245.3.24={death={
-			death_reason=death_execution_hanging
+			death_reason=death_execution_aztec_sacrifice
 			killer=6900513
 		}
 	}
@@ -2206,7 +2206,7 @@
 	female=no
 	dynasty=5001193 #Roday
 	culture=french
-	religion=cetic#scientologist
+	religion=cetic
 	martial=5
 	stewardship=5
 	learning=5
@@ -2238,7 +2238,7 @@
 	martial = 10
 	dynasty=5001194
 	culture=german
-	religion=cetic#scientologist
+	religion=thelema#scientologist
 	trait=diligent
 	trait=trusting
 	trait=skilled_tactician
@@ -2662,7 +2662,7 @@
 	name="Rex "
 	dynasty=1850066
 	culture=italian
-	religion=sedevacantist#scientologist
+	religion=thelema#scientologist
 	trait=skilled_tactician
 	trait=gladiator
 	trait=brawny
@@ -2682,7 +2682,7 @@
 	dynasty=5001199 #Capistrano #2
 	religion=pagan#kinemite
 	trait=tough_soldier
-	trait=trickster
+	trait=reincarnation
 	trait=light_foot_leader
 	trait=bastard
 	trai=peasant_leader
@@ -2703,7 +2703,7 @@
 	name="Lucas"
 	culture=angeleno
 	dynasty=5001201 #Stevens
-	religion=cetic#scientologist
+	religion=thelema#scientologist
 	trait=scholarly_theologian
 	trai=peasant_leader
 	trait=reclusive
@@ -2885,35 +2885,39 @@
 
 
 1802082={
-	name="Kane"
+	name="Diego"
 	culture=english
-	dynasty=5001202 #Rogers
-	religion=cetic#scientologist
-	trait=brilliant_strategist
+	dynasty=5001200 #Capistrano #3
+	religion=thelema#scientologist
+	trait=skilled_tactician
 	trait=brave
 	trait=musician
 	trait=heresiarch
 	trait=ambitious
 	trait=gregarious
 	trait=zealous
-	2204.2.2={birth=yes
+	2202.8.8={birth=yes
 	culture=angeleno
 	}
-	2277.10.1={death=yes}
+	2248.3.12={death={
+			death_reason=death_execution_tarpit #GOT OWNED 
+			killer=1802098
+		}
+	}
 }
 
 1802084={
 	name="Kirk"
 	culture=english
 	dynasty=5001202 #Rogers
-	religion=cetic#scientologist
+	religion=thelema#scientologist
 	trait=elusive_shadow
 	trait=mystic
 	trait=erudite
 	trait=humble
 	trait=lustful
 	trait=devout
-	father=1802082
+	father=1802098
 	2228.5.12={birth=yes
 	culture=angeleno
 	}
@@ -3032,7 +3036,7 @@
 	name="Sterling"
 	culture=english
 	dynasty=5001202 #Rogers
-	religion=cetic#scientologist
+	religion=thelema#scientologist
 	trait=skilled_tactician
 	trait=hunter
 	trait=robust
@@ -3153,6 +3157,23 @@
 	trait=greedy
 	trait=envious
 	2644.1.1={birth=yes}
+}
+
+1802098={
+	name="Kane"
+	culture=english
+	dynasty=5001202 #Rogers
+	religion=thelema#scientologist
+	trait=brilliant_strategist
+	trait=brave
+	trait=musician
+	trait=shrewd
+	trait=gregarious
+	trait=devout
+	2204.2.2={birth=yes
+	culture=angeleno
+	}
+	2277.10.1={death=yes}
 }
 
 #5001230 Clark

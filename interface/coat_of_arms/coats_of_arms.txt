@@ -11,9 +11,7 @@ culture =
 		"antinomian"
 		"charismatic"
 		"postadventist"
-		"falling_star"
 		"moravian"
-		"wormwoodist"
 		"nestorian"
 		"nonconformist"
 		"apostolic"
@@ -21,7 +19,6 @@ culture =
 		"nazarene"
 		"true_cross"
 		"edenite"
-		"glorian" #placeholder
 	}
 	
 	templates = { 
@@ -155,6 +152,13 @@ culture =
 			noOfFrames = 32
 			color = 3
 			emblem = no
+		}
+		texture = {
+			file = "gfx\\aos_dynasties_christian.tga"
+			size = { x = 10 y = 5 }
+			noOfFrames = 50
+			color = 0
+			random = no # Do not use for random CoAs
 		}
 		# WHEN ADDING NEW, ALWAYS ADD AT THE END !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!11111
 	}
@@ -377,6 +381,13 @@ culture =
 			file = "gfx\\coats_of_arms\\ate_dynasties_americanist.tga"
 			size = { x = 10 y = 2 }
 			noOfFrames = 20
+			color = 0
+			random = no # Do not use for random CoAs
+		}
+		texture = {
+			file = "gfx\\aos_dynasties_americanist.tga"
+			size = { x = 10 y = 3 }
+			noOfFrames = 30
 			color = 0
 			random = no # Do not use for random CoAs
 		}
@@ -1163,6 +1174,13 @@ culture = {
 			color = 0
 			random = no # Do not use for random CoAs
 		}
+		texture = {
+			file = "gfx\\aos_dynasties_atomicist.tga"
+			size = { x = 10 y = 1 }
+			noOfFrames = 10
+			color = 0
+			random = no # Do not use for random CoAs
+		}
 	}
 }
 
@@ -1233,6 +1251,13 @@ culture =
 			file = "gfx\\coats_of_arms\\ate_dynasties_cetic.tga"
 			size = { x = 10 y = 5 }
 			noOfFrames = 50
+			color = 0
+			random = no # Do not use for random CoAs
+		}
+		texture = {
+			file = "gfx\\aos_dynasties_cetic.tga"
+			size = { x = 10 y = 3 }
+			noOfFrames = 30
 			color = 0
 			random = no # Do not use for random CoAs
 		}
@@ -1375,7 +1400,11 @@ culture =
 	religion_group = "latter_day_saints"
 
 	templates = { 
-		"coa_plain_pagan:1"
+		"coa_plain:1"
+		"coa_party_per_fess:2"
+		"coa_party_per_pale:2"
+		"coa_party_per_cross:4"
+		"coa_party_triangle:3"
 	}
 
 	color = {
@@ -1726,6 +1755,13 @@ culture = {
 			file = "gfx\\coats_of_arms\\ate_dynasties_gaian.tga"
 			size = { x = 10 y = 2 }
 			noOfFrames = 20
+			color = 0
+			random = no # Do not use for random CoAs
+		}
+		texture = {
+			file = "gfx\\aos_dynasties_gaian.tga"
+			size = { x = 10 y = 1 }
+			noOfFrames = 10
 			color = 0
 			random = no # Do not use for random CoAs
 		}
