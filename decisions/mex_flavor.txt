@@ -1,0 +1,115 @@
+decisions = {
+	fidencista_invite_mystic = {
+		only_playable = yes
+		
+		potential = {
+			has_dlc = "Mystics"
+			OR = {
+			religion = fidencista
+			trait = marian_santo_nino_fidencio
+			}
+			NOT = { has_character_flag = ascetic_arriving }
+			NOT = { has_character_modifier = recently_invited_ascetic }
+		}
+
+		allow = {
+
+		}
+
+		effect = {
+			set_character_flag = ascetic_arriving
+
+			custom_tooltip = {
+				text = monastic_orders_invite_ascetic_tt
+				character_event = { id = FIDE.120 days = 7 }
+			}
+			add_character_modifier = {
+				name = recently_invited_ascetic
+				duration = 365
+			}
+		}
+
+		revoke_allowed = {
+			always = no
+		}
+
+		ai_will_do = {
+			factor = 0.001
+			modifier = {
+				factor = 0.1
+			}
+			modifier = {
+				any_courtier = { has_job_title = job_spiritual learning = 16 }
+				factor = 0.01
+			}
+		}
+	}
+	
+	fidencista_become_cajita = {
+		only_playable = yes
+		
+		potential = {
+			NOT = { #immersion-breaking
+				has_alternate_start_parameter = { key = religion_names value = random }
+			}
+				OR = {
+			religion = fidencista
+			trait = marian_santo_nino_fidencio
+			}
+			NOT = { trait = cajita }
+			NOR = {
+				has_character_flag = becoming_cajita 
+				has_character_flag = fasting_for_incarnation
+				has_character_flag = fasting_for_incarnation1
+				has_character_flag = fasting_for_incarnation2
+				has_character_flag = fasting_for_incarnation3
+			}
+		}
+
+		allow = {
+						OR = {
+			religion = fidencista
+			trait = marian_santo_nino_fidencio
+			}
+			piety = 500
+			custom_tooltip = {
+				text = is_not_incapable_inbred_or_imbecile_tt
+				NOT = { trait = incapable }
+				NOT = { trait = inbred }
+				NOT = { trait = imbecile }
+			}
+			NOR = {
+				trait = slothful
+				trait = wroth
+				trait = greedy
+				trait = lustful
+				trait = gluttonous
+				trait = proud
+				trait = envious
+				trait = cruel
+				trait = drunkard
+				trait = cynical
+			}
+
+		}
+
+		effect = {
+			set_character_flag = becoming_cajita
+			FROM = {
+				character_event = { id = fide.123 }
+			}
+
+		}
+
+		revoke_allowed = {
+			always = no
+		}
+
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 0.1
+			}
+		}
+	}
+}	

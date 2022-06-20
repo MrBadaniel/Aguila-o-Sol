@@ -71,6 +71,7 @@
 	culture=bayfolk
 	religion=sedevacantist
 	father=2500002
+	mother=1802106
 	trait=legendary
 	trait=shrewd
 	trait=ambitious
@@ -3244,24 +3245,111 @@
 	trait=cruel
 	trait=brave
 	disallow_random_traits=yes
+	father=1802102
 	2061.1.24={birth=yes
 	culture=valleyan
 	}
 	 2131.2.1={death=yes}
 }
 
-#Duke Yogi Muir [Lived 2061.1.24 to 2131.2.1] [Fresno 2116.5.4 to 2131.2.1], 
-#steals the throne from the crippled Dead John Clark. Yogi is the son of Lewis Muir 
-#[2041.4.15 to 2109.9.29] who is the son of Grandfather Muir [1999.4.20 to 2099.12.26]. 
-#Brother of Edmond Muir [2064.3.2 to 2149.2.10]. Very perfidious and precocious. 
-#Lenora Muir [2032.7.10 to 2120.7.12] daughter of Grandfather Muir. 
-# Alexandra Muir [2066.5.20 to 2145.8.10] the daughter of Lenora Muir.  
-#Duke Dorian Muir [Lived 2095.8.1 to XXXX] [Fresno 2131.2.1 to 2139.1.2],
-#After Yogi’s death there is a Civil War between Ayres II Clark and Dorian Muir 
-#(nephew of Yogi Muir and married to his cousin Sierra Muir). Dorian Muir is captured and blinded by Aryres Muir in 2139. 
-#Blind Man Muir is allowed to rule over Mariposa after the fact.
-#precocious. 
-#Duke Ayres II Clark [Lived 2100.3.1 to 2155.810] [Fresno 2139.1.2 to 2155.810], son of Dead 
+1802102={
+	name="Lewis"
+	dynasty=1851024#Muir
+	culture=english
+	religion=pagan#forester
+	trait=legendary
+	occluded=yes
+	trait=wroth
+	trait=diligent
+	trait=kind
+	disallow_random_traits=yes
+	father=1802103
+	2041.4.15={birth=yes
+	culture=valleyan
+	}
+	 2109.9.29={death=yes}
+}
+
+1802103={
+	name="Reuel"
+	dynasty=1851024#Muir
+	culture=english
+	religion=pagan#forester
+	trait=legendary
+	occluded=yes
+	trait=fortune_builder
+	trait=mystic
+	trait=ambitious
+	trait=diligent
+	disallow_random_traits=yes
+	1999.4.20={birth=yes
+	culture=valleyan
+			effect_even_if_dead = {
+			set_special_character_title = RANGER_GRANDFATHER
+		}
+	}
+	 2099.12.26={death=yes}
+}
+
+1802104={
+	name="Edmond"
+	dynasty=1851024#Muir
+	culture=english
+	religion=pagan#forester
+	trait=legendary
+	occluded=yes
+	trait=lustful
+	trait=proud
+	trait=brave
+	trait=indulgent_wastrel
+	disallow_random_traits=yes
+	father=1802102
+	2064.3.2={birth=yes
+	culture=valleyan
+	}
+	2149.2.10={death=yes}
+}
+
+1802105={
+	name="Lenora"
+	dynasty=1851024#Muir
+	female=yes
+	culture=english
+	religion=celtic_pagan#keshian
+	trait=legendary
+	occluded=yes
+	trait=mastermind_theologian
+	trait=scholar
+	trait=honest
+	trait=diligent
+	disallow_random_traits=yes
+	father=1802103
+	2066.5.20={birth=yes
+	culture=bayfolk
+	}
+	 2145.8.10={death=yes}
+}
+
+1802106={
+	name="Alexandra"
+	dynasty=1851024#Muir
+	female=yes
+	culture=english
+	religion=celtic_pagan#keshian
+	trait=legendary
+	occluded=yes
+	trait=fortune_builder
+	trait=devout
+	trait=chaste
+	trait=kind
+	disallow_random_traits=yes
+	mother=1802105
+	2103.1.1={birth=yes
+	culture=bayfolk
+	}
+	 2128.1.12={add_spouse=2500002}
+	 2174.4.14={death=yes}
+} 
   
   #Kane II Rogers 2308 to 2309 attempts to invade Socal and dies in the proccess
   #Shirley Rogers and Clint Connery 2309 to 2315 and 2315 to 2324 english
