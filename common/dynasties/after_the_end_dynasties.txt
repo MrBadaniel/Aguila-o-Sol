@@ -9633,7 +9633,19 @@ coat_of_arms = {
 		}
 	} }
 1810001 = { name="Cárdenas" culture=bravo }
-1810002 = { name="Canales" culture=bravo }
+1810002 = { name="Canales" culture=bravo 	
+	coat_of_arms = {
+	    religion = sacred_heart
+		template = 0
+		layer = {
+			texture = 9
+			texture_internal = 25
+			emblem = 0
+			color = 0
+			color = 0
+			color = 0
+		}
+	}}
 1810003 = { name="Llanos" culture=bravo }
 1810004 = { name="Villaseñor" culture=bravo }
 1810005 = { name="Rosales" culture=bravo }

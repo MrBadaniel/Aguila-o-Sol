@@ -112,6 +112,138 @@ decisions = {
 			}
 		}
 	}
+	
+	decision_icon_incorporate_cristo_rey = {
+		is_high_prio = yes
+		only_playable = yes
+		
+		potential = {
+			is_alternate_start = no
+			has_landed_title = e_mexico
+			religion = sacred_heart
+			NOT = { has_global_flag = cristeros_absorbed_into_fold }
+		}
+		
+		allow = {
+			completely_controls = k_bajio
+			completely_controls = k_jalisco
+			religion_authority = 0.7	
+			piety = 1000
+
+		}
+		
+		effect = {
+			hidden_tooltip = {
+				narrative_event = { id = sacredheart.205 }	
+			}
+		}
+		
+		revoke_allowed = {
+			always = no
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}	
+	
+	decision_icon_incorporate_gran_comision = {
+		is_high_prio = yes
+		only_playable = yes
+		
+		potential = {
+			is_alternate_start = no
+			has_landed_title = e_mexico
+			religion = sacred_heart
+			NOT = { has_global_flag = gran_comision_absorbed_into_fold }
+		}
+		
+		allow = {
+			completely_controls = k_arixo
+			religion_authority = 0.7	
+			piety = 1000
+
+		}
+		
+		effect = {
+			hidden_tooltip = {
+				narrative_event = { id = sacredheart.207 }	
+			}
+		}
+		
+		revoke_allowed = {
+			always = no
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}	
+		decision_icon_incorporate_fidencisme = {
+		is_high_prio = yes
+		only_playable = yes
+		
+		potential = {
+			is_alternate_start = no
+			has_landed_title = e_mexico
+			religion = sacred_heart
+			NOT = { has_global_flag = fidencistas_absorbed_into_fold }
+		}
+		
+		allow = {
+			completely_controls = k_sierra_madre
+			religion_authority = 0.7	
+			piety = 1000
+
+		}
+		
+		effect = {
+			hidden_tooltip = {
+				narrative_event = { id = sacredheart.208 }	
+			}
+		}
+		
+		revoke_allowed = {
+			always = no
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+		decision_icon_incorporate_navegantes = {
+		is_high_prio = yes
+		only_playable = yes
+		
+		potential = {
+			is_alternate_start = no
+			has_landed_title = e_mexico
+			religion = sacred_heart
+			NOT = { has_global_flag = navegantes_absorbed_into_fold }
+		}
+		
+		allow = {
+			completely_controls = k_baja_california
+			religion_authority = 0.7	
+			piety = 1000
+
+		}
+		
+		effect = {
+			hidden_tooltip = {
+				narrative_event = { id = sacredheart.209 }	
+			}
+		}
+		
+		revoke_allowed = {
+			always = no
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}	
 }
 
 targetted_decisions {
