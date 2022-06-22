@@ -838,7 +838,7 @@
 
 5001192 = { name="Krakauer" culture=mountainer 
 		coat_of_arms = {
-		religion = cetic
+		religion = edenite
 		template = 0
 		layer = {
 			texture = 2
@@ -857,10 +857,10 @@
 		template = 0
 		layer = {
 			texture = 0
-			texture_internal = 4
+			texture_internal = 5
 			emblem = 0
-			color = 0
-			color = 0
+			color = 1
+			color = 2
 			color = 0
 		}
 	}
@@ -894,35 +894,46 @@
 	}
 }
 5001198 = { name="Capistrano" culture=angeleno 
-		coat_of_arms = {
-		religion = americanist
-		template = 0
-		layer = {
-			texture = 2
-			texture_internal = 6
-			emblem = 0
-			color = 0
-			color = 0
-			color = 0
-		}
-	}
-}
-5001199 = { name="Capistrano" culture=angeleno }
-5001200 = { name="Capistrano" culture=angeleno }
-5001201 = { name="Stevens" culture=angeleno 
 	coat_of_arms = {
 		religion = americanist
 		template = 0
 		layer = {
 			texture = 0
-			texture_internal = 5
+			texture_internal = 44
 			emblem = 0
+			color = 1
 			color = 2
-			color = 3
 			color = 0
 		}
 	}
 }
+5001199 = { name="Capistrano" culture=angeleno 
+	coat_of_arms = {
+		religion = americanist
+		template = 0
+		layer = {
+			texture = 0
+			texture_internal = 44
+			emblem = 0
+			color = 1
+			color = 2
+			color = 0
+		}
+	}}
+5001200 = { name="Capistrano" culture=angeleno 
+	coat_of_arms = {
+		religion = americanist
+		template = 0
+		layer = {
+			texture = 0
+			texture_internal = 44
+			emblem = 0
+			color = 1
+			color = 2
+			color = 0
+		}
+	}}
+5001201 = { name="Stevens" culture=angeleno }
 5001202 = { name="Rogers" culture=angeleno }
 5001203 = { name="Connery" culture=angeleno }
 5001204 = { name="Calgary" culture=angeleno }
@@ -931,7 +942,20 @@
 5001207 = { name="Estévez " culture=angeleno }
 5001208 = { name="Fonda" culture=angeleno }
 5001209 = { name="Clark" culture=valleyan }
-5001210 = { name="Khan" culture=angeleno }
+5001210 = { name="Khan" culture=angeleno 
+
+	coat_of_arms = {
+		religion = americanist
+		template = 0
+		layer = {
+			texture = 0
+			texture_internal = 11
+			emblem = 0
+			color = 2
+			color = 2
+			color = 0
+		}
+	}}
 5001211 = { name="Phoenix" culture=angeleno }
 5001212 = { name="Li" culture=towner }
 5001213 = { name="Heuer" culture=coloradan }

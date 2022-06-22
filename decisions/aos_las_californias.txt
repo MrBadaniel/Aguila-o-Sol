@@ -20,13 +20,20 @@ decisions = {
 				religion = sedevacantist
 				religion = catholic
 				religion = sacred_heart
-				religion = la_hermandad
-				religion = misional
-				religion = josephite 
-				religion = gran_comision
-				religion = alurista
-				religion = navegante
-				religion = fidencista
+				#religion = la_hermandad
+				#religion = misional
+				#religion = josephite 
+				#religion = gran_comision
+				#religion = alurista
+				#religion = navegante
+				#religion = fidencista
+				AND = {
+					religion_group = christian
+					OR = {
+					culture = angeleno
+					culture = battleborn
+						}
+					}
 			}
 			k_princedom_mojave = {
 				has_holder = no
@@ -60,22 +67,29 @@ decisions = {
 				religion = sedevacantist
 				religion = catholic
 				religion = sacred_heart
-				religion = la_hermandad
-				religion = misional
-				religion = josephite 
-				religion = gran_comision
-				religion = alurista
-				religion = navegante
-				religion = fidencista
+				#religion = la_hermandad
+				#religion = misional
+				#religion = josephite 
+				#religion = gran_comision
+				#religion = alurista
+				#religion = navegante
+				#religion = fidencista
+				AND = {
+					religion_group = christian
+					OR = {
+					culture = angeleno
+					culture = battleborn
+						}
+					}
 			}
-			has_landed_title = d_mojave
+			#has_landed_title = d_mojave
 			NOT = {
 				is_incapable = yes
 			}
 			#completely_controls = d_mojave
 			#completely_controls = d_death_valley
 			#completely_controls = c_palm_springs
-			completely_controls = c_bartsow
+			completely_controls = c_barstow
 			wealth = 100
 		}
 		
