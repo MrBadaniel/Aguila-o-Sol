@@ -1,0 +1,110 @@
+namespace = sacredheart
+
+narrative_event = {
+	id = sacredheart.205
+	title = TITLE_cetic_gaian
+	desc = EVTDESC_cetic_gaian
+	
+	picture = GFX_evt_china_invades
+	border = GFX_event_narrative_frame_religion	
+
+	only_rulers = yes
+	major = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		primary_title = { holy_order = no }
+		primary_title = { is_landless_type_title = no }
+		mercenary = no
+		primary_title = { higher_tier_than = BARON }	
+	}
+	
+	option = {
+		name = "gaian_incorporation_emperor"
+		trigger = {
+			has_landed_title = e_california
+		}
+		set_global_flag = gaians_incorporated
+		any_realm_province = {
+			if = {
+				limit = { 
+					AND = {
+						religion = gaian
+						region = world_west_coast
+					}
+
+				}
+				random = { 
+					chance = 40
+					religion = ROOT
+				}
+
+			}
+		}
+
+		ai_chance = {
+			factor = 1000
+		}
+	}	
+	option = {
+		name = "gaian_incorporation_elsewhere"
+		trigger = {
+			NOT = {	
+				has_landed_title = e_california
+				primary_title = { is_landless_type_title = yes }
+				mercenary = yes
+				religion = gaian
+				capital_scope = {
+					region = world_west_coast
+				}
+			}
+		}
+		ai_chance = {
+			factor = 1000
+		}
+	}	
+	option = {
+		name = "gaian_join_california"
+		trigger = {		
+			NOT = { has_landed_title = e_california }
+			religion = gaian
+			capital_scope = {
+				region = world_west_coast
+			}
+			NOT = {
+				primary_title = { higher_tier_than = KING }
+			}
+		}
+		religion = cetic
+		add_trait = way_branch
+		capital_scope = {
+			religion = cetic
+		}
+		any_courtier = {
+			limit = { is_landed = no }
+			religion = cetic
+			add_trait = way_branch
+		}
+		ai_chance = {
+			factor = 10
+		}
+	
+	}	
+	option = {
+		name = "gaian_refuse_california"
+		trigger = {
+			NOT = { has_landed_title = e_california }
+			religion = gaian
+			capital_scope = {
+				region = world_west_coast
+			}
+
+			NOT = {
+				primary_title = { higher_tier_than = KING }
+			}
+		}
+		ai_chance = {
+			factor = 10		
+		}
+	}	
+}
