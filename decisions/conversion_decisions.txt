@@ -1,0 +1,2637 @@
+targetted_decisions = {
+	
+	convert_to_liege_religion = {
+		only_playable = yes
+		
+		filter = self
+		ai_target_filter = self
+		ai = no
+		
+		potential = {
+			is_playable = yes
+			liege = {
+				NOT = { character = ROOT }
+				NOT = { religion = ROOT }
+				religion_group = ROOT
+			}
+			controls_religion = no
+		}
+		allow = {
+			NOT = { trait = zealous }
+			liege = { ROOTs_religion_is_playable_trigger = yes }
+			holy_order = no
+		}
+		effect = {
+			prestige = -500
+			piety = 250
+			if = {
+				limit = { higher_tier_than = BARON }
+				religion_authority = {
+					modifier = ruler_converted_from
+				}
+			}
+			liege = {
+				reverse_religion = ROOT
+			}
+			if = {
+				limit = { higher_tier_than = BARON }
+				hidden_tooltip = {
+					religion_authority = {
+						modifier = ruler_converted_to
+					}
+				}
+			}
+			if = {
+				limit = { liege = { trait = marian_el_santo } }
+				add_trait = marian_el_santo
+			}
+			if = {
+				limit = { liege = { trait = marian_guadalupe } }
+				add_trait = marian_guadalupe
+			}
+			if = {
+				limit = { liege = { trait = marian_santa_muerte } }
+				add_trait = marian_santa_muerte
+			}
+			if = {
+				limit = { liege = { trait = marian_san_charbel } }
+				add_trait = marian_san_charbel
+			}
+			if = {
+				limit = { liege = { trait = marian_stella_maris } }
+				add_trait = marian_stella_maris
+			}
+			if = {
+				limit = { liege = { trait = marian_san_juditas } }
+				add_trait = marian_san_juditas
+			}
+			if = {
+				limit = { liege = { trait = marian_santo_nino_fidencio } }
+				add_trait = marian_santo_nino_fidencio
+			}
+			if = {
+				limit = { liege = { trait = marian_santa_inocencia } }
+				add_trait = marian_santa_inocencia
+			}
+			if = {
+				limit = { liege = { trait = marian_san_felipe_de_jesus } }
+				add_trait = marian_san_felipe_de_jesus
+			}
+			if = {
+				limit = { liege = { trait = marian_cristo_rey } }
+				add_trait = marian_cristo_rey
+			}
+			if = {
+				limit = { liege = { trait = marian_san_pascual } }
+				add_trait = marian_san_pascual
+			}
+			if = {
+				limit = { liege = { trait = way_book } }
+				add_trait = way_book
+			}
+			if = {
+				limit = { liege = { trait = way_fist } }
+				add_trait = way_fist
+			}
+			if = {
+				limit = { liege = { trait = way_cowl } }
+				add_trait = way_cowl
+			}
+			if = {
+				limit = { liege = { trait = way_dove } }
+				add_trait = way_dove
+			}
+			if = {
+				limit = { liege = { trait = lore_old_ones_ref } }
+				add_trait = lore_old_ones_ref
+			}
+			if = {
+				limit = { liege = { trait = lore_masons_ref } }
+				add_trait = lore_masons_ref
+			}
+			if = {
+				limit = { liege = { trait = lore_pact_ref } }
+				add_trait = lore_pact_ref
+			}
+			if = {
+				limit = { liege = { trait = patria_santander } }
+				add_trait = patria_santander
+			}
+			if = {
+				limit = { liege = { trait = patria_bolivar } }
+				add_trait = patria_bolivar
+			}
+			if = {
+				limit = { liege = { trait = patria_manuelita } }
+				add_trait = patria_manuelita
+			}
+			if = {
+				limit = { liege = { trait = apostolic_pedro } }
+				add_trait = apostolic_pedro
+			}
+			if = {
+				limit = { liege = { trait = apostolic_aparecida } }
+				add_trait = apostolic_aparecida
+			}
+			if = {
+				limit = { liege = { trait = apostolic_bonfim } }
+				add_trait = apostolic_bonfim
+			}
+			if = {
+				limit = { liege = { trait = pagan_branch_1 } }
+				add_trait = pagan_branch_1
+			}
+			if = {
+				limit = { liege = { trait = pagan_branch_2 } }
+				add_trait = pagan_branch_2
+			}
+			if = {
+				limit = { liege = { trait = pagan_branch_3 } }
+				add_trait = pagan_branch_3
+			}
+			if = {
+				limit = { liege = { trait = pagan_branch_4 } }
+				add_trait = pagan_branch_4
+			}
+			if = {
+				limit = { liege = { trait = sanatanist_hindu } }
+				add_trait = sanatanist_hindu
+			}
+			if = {
+				limit = { liege = { trait = kali_hindu } }
+				add_trait = kali_hindu
+			}
+			if = {
+				limit = { liege = { trait = arya_samaj_hindu } }
+				add_trait = arya_samaj_hindu
+			}
+			if = {
+				limit = { liege = { trait = koshitsu_shinto } }
+				add_trait = koshitsu_shinto
+			}
+			if = {
+				limit = { liege = { trait = ryobu_shinto } }
+				add_trait = ryobu_shinto
+			}
+			if = {
+				limit = { liege = { trait = minzoku_shinto } }
+				add_trait = minzoku_shinto
+			}
+			if = {
+				limit = { liege = { trait = shugendo_shinto } }
+				add_trait = shugendo_shinto
+			}
+			if = {
+				limit = { liege = { trait = high_anglican } }
+				add_trait = high_anglican
+			}
+			if = {
+				limit = { liege = { trait = broad_anglican } }
+				add_trait = broad_anglican
+			}
+			if = {
+				limit = { liege = { trait = low_anglican } }
+				add_trait = low_anglican
+			}
+			if = {
+				limit = { liege = { trait = peyotist_peyote } }
+				add_trait = peyotist_peyote
+			}
+			if = {
+				limit = { liege = { trait = peyotist_wakan_tanka } }
+				add_trait = peyotist_wakan_tanka
+			}
+			if = {
+				limit = { liege = { trait = peyotist_jesus } }
+				add_trait = peyotist_jesus
+			}
+			if = {
+				limit = { liege = { trait = peyotist_manitous } }
+				add_trait = peyotist_manitous
+			}
+			if = {
+				limit = { liege = { trait = machete_male } }
+				add_trait = machete_male
+			}
+			if = {
+				limit = { liege = { trait = machete_female } }
+				add_trait = machete_female
+			}
+			if = {
+				limit = { liege = { trait = machete_male_ref } }
+				add_trait = machete_male_ref
+			}
+			if = {
+				limit = { liege = { trait = machete_female_ref } }
+				add_trait = machete_female_ref
+			}
+			if = {
+				limit = { liege = { trait = trshia } }
+				add_trait = trshia
+			}
+			if = {
+				limit = { liege = { trait = trsunni } }
+				add_trait = trsunni
+			}
+			if = {
+				limit = { liege = { trait = trtrad } }
+				add_trait = trtrad
+			}
+			if = {
+				limit = { liege = { trait = taoism_qingzhen } }
+				add_trait = taoism_qingzhen
+			}
+			if = {
+				limit = { liege = { trait = confucianism_qingzhen } }
+				add_trait = confucianism_qingzhen
+			}
+			if = {
+				limit = { liege = { trait = buddhism_qingzhen } }
+				add_trait = buddhism_qingzhen
+			}
+			if = {
+				limit = { liege = { trait = trans_bahai } }
+				add_trait = trans_bahai
+			}
+			if = {
+				limit = { liege = { trait = trans_uwaysi } }
+				add_trait = trans_uwaysi
+			}
+			if = {
+				limit = { liege = { trait = trans_hurufiyya } }
+				add_trait = trans_hurufiyya
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	convert_to_liege_religion_on_liege = {
+		only_playable = yes
+		
+		filter = liege
+		ai_target_filter = liege
+		ai_check_interval = 60
+		
+		from_potential = {
+			ai = no
+			is_playable = yes
+			controls_religion = no
+		}
+		potential = {
+			NOT = { character = FROM }
+			NOT = { religion = FROM }
+			religion_group = FROM
+		}
+		
+		allow = {
+			FROM = { NOT = { trait = zealous } }
+		}
+		
+		effect = {
+			FROM = {
+				prestige = -500
+				piety = 250
+				if = {
+					limit = { higher_tier_than = BARON }
+					religion_authority = {
+						modifier = ruler_converted_from
+					}
+				}
+				religion = ROOT
+				if = {
+					limit = { higher_tier_than = BARON }
+					hidden_tooltip = {
+						religion_authority = {
+							modifier = ruler_converted_to
+						}
+					}
+				}
+				if = {
+					limit = { ROOT = { trait = marian_el_santo } }
+					add_trait = marian_el_santo
+				}
+				if = {
+					limit = { ROOT = { trait = marian_guadalupe } }
+					add_trait = marian_guadalupe
+				}
+				if = {
+					limit = { ROOT = { trait = marian_santa_muerte } }
+					add_trait = marian_santa_muerte
+				}
+				if = {
+					limit = { ROOT = { trait = way_book } }
+					add_trait = way_book
+				}
+				if = {
+					limit = { ROOT = { trait = way_fist } }
+					add_trait = way_fist
+				}
+				if = {
+					limit = { ROOT = { trait = way_cowl } }
+					add_trait = way_cowl
+				}
+				if = {
+					limit = { ROOT = { trait = way_dove } }
+					add_trait = way_dove
+				}
+				if = {
+					limit = { ROOT = { trait = lore_old_ones_ref } }
+					add_trait = lore_old_ones_ref
+				}
+				if = {
+					limit = { ROOT = { trait = lore_masons_ref } }
+					add_trait = lore_masons_ref
+				}
+				if = {
+					limit = { ROOT = { trait = lore_pact_ref } }
+					add_trait = lore_pact_ref
+				}
+				if = {
+					limit = { ROOT = { trait = patria_santander } }
+					add_trait = patria_santander
+				}
+				if = {
+					limit = { ROOT = { trait = patria_bolivar } }
+					add_trait = patria_bolivar
+				}
+				if = {
+					limit = { ROOT = { trait = patria_manuelita } }
+					add_trait = patria_manuelita
+				}
+				if = {
+					limit = { ROOT = { trait = apostolic_pedro } }
+					add_trait = apostolic_pedro
+				}
+				if = {
+					limit = { ROOT = { trait = apostolic_aparecida } }
+					add_trait = apostolic_aparecida
+				}
+				if = {
+					limit = { ROOT = { trait = apostolic_bonfim } }
+					add_trait = apostolic_bonfim
+				}
+				if = {
+					limit = { ROOT = { trait = pagan_branch_1 } }
+					add_trait = pagan_branch_1
+				}
+				if = {
+					limit = { ROOT = { trait = pagan_branch_2 } }
+					add_trait = pagan_branch_2
+				}
+				if = {
+					limit = { ROOT = { trait = pagan_branch_3 } }
+					add_trait = pagan_branch_3
+				}
+				if = {
+					limit = { ROOT = { trait = pagan_branch_4 } }
+					add_trait = pagan_branch_4
+				}
+				if = {
+					limit = { ROOT = { trait = sanatanist_hindu } }
+					add_trait = sanatanist_hindu
+				}
+				if = {
+					limit = { ROOT = { trait = kali_hindu } }
+					add_trait = kali_hindu
+				}
+				if = {
+					limit = { ROOT = { trait = arya_samaj_hindu } }
+					add_trait = arya_samaj_hindu
+				}
+				if = {
+					limit = { ROOT = { trait = koshitsu_shinto } }
+					add_trait = koshitsu_shinto
+				}
+				if = {
+					limit = { ROOT = { trait = ryobu_shinto } }
+					add_trait = ryobu_shinto
+				}
+				if = {
+					limit = { ROOT = { trait = minzoku_shinto } }
+					add_trait = minzoku_shinto
+				}
+				if = {
+					limit = { ROOT = { trait = shugendo_shinto } }
+					add_trait = shugendo_shinto
+				}
+				if = {
+					limit = { ROOT = { trait = high_anglican } }
+					add_trait = high_anglican
+				}
+				if = {
+					limit = { ROOT = { trait = broad_anglican } }
+					add_trait = broad_anglican
+				}
+				if = {
+					limit = { ROOT = { trait = low_anglican } }
+					add_trait = low_anglican
+				}
+				if = {
+					limit = { ROOT = { trait = peyotist_peyote } }
+					add_trait = peyotist_peyote
+				}
+				if = {
+					limit = { ROOT = { trait = peyotist_wakan_tanka } }
+					add_trait = peyotist_wakan_tanka
+				}
+				if = {
+					limit = { ROOT = { trait = peyotist_jesus } }
+					add_trait = peyotist_jesus
+				}
+				if = {
+					limit = { ROOT = { trait = peyotist_manitous } }
+					add_trait = peyotist_manitous
+				}
+				if = {
+					limit = { ROOT = { trait = machete_male } }
+					add_trait = machete_male
+				}
+				if = {
+					limit = { ROOT = { trait = machete_female } }
+					add_trait = machete_female
+				}
+				if = {
+					limit = { ROOT = { trait = machete_male_ref } }
+					add_trait = machete_male_ref
+				}
+				if = {
+					limit = { ROOT = { trait = machete_female_ref } }
+					add_trait = machete_female_ref
+				}
+				if = {
+					limit = { ROOT = { trait = trshia } }
+					add_trait = trshia
+				}
+				if = {
+					limit = { ROOT = { trait = trsunni } }
+					add_trait = trsunni
+				}
+				if = {
+					limit = { ROOT = { trait = trtrad } }
+					add_trait = trtrad
+				}
+				if = {
+					limit = { ROOT = { trait = taoism_qingzhen } }
+					add_trait = taoism_qingzhen
+				}
+				if = {
+					limit = { ROOT = { trait = confucianism_qingzhen } }
+					add_trait = confucianism_qingzhen
+				}
+				if = {
+					limit = { ROOT = { trait = buddhism_qingzhen } }
+					add_trait = buddhism_qingzhen
+				}
+				if = {
+					limit = { ROOT = { trait = trans_bahai } }
+					add_trait = trans_bahai
+				}
+				if = {
+					limit = { ROOT = { trait = trans_uwaysi } }
+					add_trait = trans_uwaysi
+				}
+				if = {
+					limit = { ROOT = { trait = trans_hurufiyya } }
+					add_trait = trans_hurufiyya
+				}
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	convert_to_liege_culture_on_liege = {
+		only_playable = yes
+		
+		filter = liege
+		ai_target_filter = liege
+		ai_check_interval = 60
+		
+		from_potential = {
+			is_playable = yes
+		}
+		
+		potential = {
+			NOT = { character = FROM }
+			NOT = { culture = FROM }
+		}
+		allow = {
+			FROM = { prestige = 200 }
+		}
+		effect = {
+			FROM = {
+				prestige = -200
+				culture = ROOT
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	convert_to_liege_culture = {
+		only_playable = yes
+		
+		filter = self
+		ai_target_filter = self
+		ai_check_interval = 60
+		
+		potential = {
+			is_playable = yes
+			liege = {
+				NOT = { character = ROOT }
+				NOT = { culture = ROOT }
+			}
+		}
+		allow = {
+			prestige = 200
+		}
+		effect = {
+			prestige = -200
+			liege = {
+				reverse_culture = ROOT
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	convert_to_local_culture = {
+		only_playable = yes
+		ai_check_interval = 24
+		
+		filter = self
+		ai_target_filter = self
+		
+		potential = {
+			is_playable = yes
+			is_nomadic = no
+			capital_scope = {
+				NOT = { culture = ROOT }
+			}
+			OR = {
+				independent = yes
+				liege = {
+					NOT = { culture = ROOT }
+				}
+			}
+			holy_order = no
+			mercenary = no
+			has_dlc = "Rajas of India"
+			#NOT = { government = chinese_imperial_government }
+		}
+		allow = {
+			prestige = 500
+		}
+		effect = {
+			prestige = -500
+			capital_scope = {
+				reverse_culture = ROOT
+			}
+			hidden_tooltip = {
+				any_child = {
+					limit = {
+						is_ruler = no
+						liege = { character = ROOT }
+					}
+					culture = ROOT
+				}
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.25
+			}
+			modifier = {
+				factor = 0
+				primary_title = {
+					is_conquered = yes
+					conquest_culture = ROOT
+				}
+			}
+			modifier = {
+				factor = 0
+				any_vassal = {
+					culture = ROOT
+					OR = {
+						tier = duke
+						tier = king
+						AND = {
+							tier = count
+							ROOT = { tier = duke }
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				capital_scope = {
+					OR = {
+						AND = {
+							OR = {
+								culture = yankee
+								culture = gothamite
+								culture = hudsonian
+								culture = delawarean
+							}	
+							ROOT = {
+								OR = {
+									culture = yankee
+									culture = gothamite
+									culture = hudsonian
+									culture = delawarean
+								}
+							}
+						}
+						AND = {
+							OR = {
+								culture = cubano
+								culture = boricua
+							}
+							ROOT = {
+								OR = {
+									culture_group = south_anglo 
+									culture = yanquito
+								}
+							}
+						}
+						AND = {
+							OR = {
+								culture = gothamite
+								culture = hudsonian
+							}
+							ROOT = {
+								OR = {
+									culture = boricua 
+									culture = nuyorican
+								}
+							}
+						}
+						AND = {
+							OR = {
+								culture = quebecois
+								culture = acadien
+								culture = ontarois
+							}
+							ROOT = {
+								OR = {
+									culture = rostmann 
+									culture = motowner
+									culture = chicagoan
+								}
+							}
+						}
+						AND = {
+							OR = {
+								culture = quebecois
+								culture = acadien
+								culture = ontarois
+							}
+							ROOT = {
+								OR = {
+									culture = lacustrine 
+									culture_group = ameronordic
+								}
+							}
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				has_landed_title = e_china_west_governor
+			}
+			modifier = {
+				factor = 0
+				has_landed_title = e_new_south
+			}
+		}
+	}
+	
+	convert_to_local_religion = {
+		only_playable = yes
+		
+		filter = self
+		ai_target_filter = self
+		ai = no
+		
+		potential = {
+			is_playable = yes
+			is_nomadic = no
+			capital_scope = {
+				NOT = { religion = ROOT }
+			}
+			OR = {
+				independent = yes
+				liege = {
+					NOT = { religion = ROOT }
+				}
+			}
+
+			controls_religion = no
+			holy_order = no
+
+			has_dlc = "Rajas of India"
+		}
+		allow = {
+			NOT = { trait = zealous }
+			capital_scope = { ROOTs_religion_is_playable_trigger = yes }
+			OR = {
+				AND = {
+					prestige = 500
+					capital_scope = {
+						true_religion_group = ROOT
+					}
+				}
+				AND = {
+					prestige = 1000
+					capital_scope = {
+						NOT = { true_religion_group = ROOT }
+					}
+				}
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					capital_scope = {
+						NOT = { true_religion_group = ROOT }
+					}
+				}
+				prestige = -1000
+			}
+			if = {
+				limit = {
+					capital_scope = {
+						true_religion_group = ROOT
+					}
+				}
+				prestige = -500
+			}
+			piety = 250
+			religion_authority = {
+				modifier = ruler_converted_from
+			}
+			if = {
+				limit = {
+					religion_group = afro_syncretic
+					NOT = { trait = sympathy_afro_syncretic }
+					capital_scope = {
+						NOT = { religion_group = ROOT }
+					}
+				}
+				random = {
+					chance = 60
+					add_trait = sympathy_afro_syncretic
+				}
+			}
+			if = {
+				limit = {
+					religion_group = american_native
+					NOT = { trait = sympathy_american_native }
+					capital_scope = {
+						NOT = { religion_group = ROOT }
+					}
+				}
+				random = {
+					chance = 60
+					add_trait = sympathy_american_native
+				}
+			}
+			if = {
+				limit = {
+					religion_group = amero_syncretic
+					NOT = { trait = sympathy_amero_syncretic }
+					capital_scope = {
+						NOT = { religion_group = ROOT }
+					}
+				}
+				random = {
+					chance = 60
+					add_trait = sympathy_amero_syncretic
+				}
+			}
+			if = {
+				limit = {
+					religion_group = christian
+					NOT = { trait = sympathy_christendom }
+					capital_scope = {
+						NOT = { true_religion_group = ROOT }
+					}
+				}
+				random = {
+					chance = 60
+					add_trait = sympathy_christendom
+				}
+			}
+			if = {
+				limit = {
+					religion_group = muslim
+					NOT = { trait = sympathy_islam }
+					capital_scope = {
+						NOT = { true_religion_group = ROOT }
+					}
+				}
+				random = {
+					chance = 60
+					add_trait = sympathy_islam
+				}
+			}
+			if = {
+				limit = {
+					religion_group = cult_of_saints
+					NOT = { trait = sympathy_cult_of_saints }
+					capital_scope = {
+						NOT = { religion_group = ROOT }
+					}
+				}
+				random = {
+					chance = 60
+					add_trait = sympathy_cult_of_saints
+				}
+			}
+			if = {
+				limit = {
+					religion_group = pacific
+					NOT = { trait = sympathy_pacific }
+					capital_scope = {
+						NOT = { religion_group = ROOT }
+					}
+				}
+				random = {
+					chance = 60
+					add_trait = sympathy_pacific
+				}
+			}
+			if = {
+				limit = {
+					religion_group = latter_day_saints
+					NOT = { trait = sympathy_latter_day_saints }
+					capital_scope = {
+						NOT = { religion_group = ROOT }
+					}
+				}
+				random = {
+					chance = 60
+					add_trait = sympathy_latter_day_saints
+				}
+			}
+			if = {
+				limit = {
+					religion_group = mesoamerican_gods
+					NOT = { trait = sympathy_mesoamerican_gods }
+					capital_scope = {
+						NOT = { religion_group = ROOT }
+					}
+				}
+				random = {
+					chance = 60
+					add_trait = sympathy_mesoamerican_gods
+				}
+			}
+			if = {
+				limit = {
+					religion_group = oldworld
+					NOT = { trait = sympathy_oldworld }
+					capital_scope = {
+						NOT = { religion_group = ROOT }
+					}
+				}
+				random = {
+					chance = 60
+					add_trait = sympathy_oldworld
+				}
+			}
+			if = {
+				limit = {
+					religion_group = pagan_group
+					NOT = { trait = sympathy_pagans }
+					capital_scope = {
+						NOT = { true_religion_group = ROOT }
+					}
+				}
+				random = {
+					chance = 60
+					add_trait = sympathy_pagans
+				}
+			}
+			if = {
+				limit = {
+					religion_group = nautical
+					NOT = { trait = sympathy_nautical }
+					capital_scope = {
+						NOT = { true_religion_group = ROOT }
+					}
+				}
+				random = {
+					chance = 60
+					add_trait = sympathy_nautical
+				}
+			}
+			if = {
+				limit = {
+					religion_group = jewish_group
+					NOT = { trait = sympathy_judaism }
+					capital_scope = {
+						NOT = { true_religion_group = ROOT }
+					}
+				}
+				random = {
+					chance = 60
+					add_trait = sympathy_judaism
+				}
+			}
+			if = {
+				limit = {
+					religion_group = indian_group
+					NOT = { trait = sympathy_indian }
+					capital_scope = {
+						NOT = { true_religion_group = ROOT }
+					}
+				}
+				random = {
+					chance = 60
+					add_trait = sympathy_indian
+				}
+			}
+			custom_tooltip = { text = local_religion_conversion_tooltip }
+			hidden_tooltip = {
+				capital_scope = {
+					reverse_religion = ROOT
+				}
+			}
+			hidden_tooltip = {
+				religion_authority = {
+					modifier = ruler_converted_to
+				}
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	convert_to_parent_religion = {
+		only_playable = yes
+		
+		filter = self
+		ai_target_filter = self
+		ai = no
+		
+		potential = {
+			is_playable = yes
+			independent = yes
+			controls_religion = no
+			is_heretic = yes
+			#NOT = {
+				#AND = {
+					#has_dlc = "Charlemagne"
+					#has_landed_title = e_byzantium # May instead renounce iconoclasm
+					#has_landed_title = c_byzantion
+					#religion = iconoclast
+					#is_heresy_of = orthodox
+				#}
+			#}
+		}
+		allow = {
+			NOT = { trait = zealous }
+		}
+		effect = {
+			prestige = -500
+			piety = 250
+			if = {
+				limit = { higher_tier_than = BARON }
+				religion_authority = {
+					modifier = ruler_converted_from
+				}
+			}
+
+			abandon_heresy = yes
+
+			if = {
+				limit = { higher_tier_than = BARON }
+				hidden_tooltip = {
+					religion_authority = {
+						modifier = ruler_converted_to
+					}
+				}
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	convert_to_carpetbagger = {
+		only_playable = yes
+		
+		filter = self
+		ai_target_filter = self
+		ai_check_interval = 60
+		
+		potential = {
+			is_playable = yes
+			OR = {
+				culture = yankee
+				culture = gothamite
+				culture = hudsonian
+				culture = delawarean
+			}	
+			any_realm_province = {
+				culture = carpetbagger
+			}
+			#NOT = { government = chinese_imperial_government }
+			NOT = {
+				has_alternate_start_parameter = { key = culture_names value = random }
+			}
+		}
+		allow = {
+			OR = {
+				culture = yankee
+				culture = gothamite
+				culture = hudsonian
+				culture = delawarean
+			}	
+		}
+		effect = {
+			culture = carpetbagger
+			any_courtier = {
+				limit = {
+					OR = {
+						culture = yankee
+						culture = gothamite
+						culture = hudsonian
+						culture = delawarean
+					}	
+					employer = { character = ROOT }
+					dynasty = ROOT
+				}
+				culture = carpetbagger
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+
+			modifier = {
+				factor = 0.5 # Slow it down a bit
+			}
+
+			modifier = { # Do not flip if we're in a huge Northern empire
+				factor = 0
+				top_liege = {
+					OR = {
+						culture = yankee
+						culture = gothamite
+						culture = hudsonian
+						culture = delawarean
+					}	
+				}
+				69 = { # Boston
+					owner = {
+						same_realm = ROOT
+					}
+				}
+				3 = { # Manhattan
+					owner = {
+						same_realm = ROOT
+					}
+				}
+				27 = { # Philadelphia
+					owner = {
+						same_realm = ROOT
+					}
+				}
+			}
+
+			modifier = {
+				factor = 0.01
+				capital_scope = {
+					NOT = { culture = carpetbagger }
+				}
+			}
+			modifier = {
+				factor = 2.0
+				liege = { culture = carpetbagger }
+			}
+			modifier = {
+				factor = 1.1
+				num_culture_realm_provs = {
+					value = 2
+					culture = carpetbagger
+				}
+			}
+			modifier = {
+				factor = 1.1
+				num_culture_realm_provs = {
+					value = 4
+					culture = carpetbagger
+				}
+			}
+			modifier = {
+				factor = 1.1
+				num_culture_realm_provs = {
+					value = 6
+					culture = carpetbagger
+				}
+			}
+			modifier = {
+				factor = 1.1
+				num_culture_realm_provs = {
+					value = 8
+					culture = carpetbagger
+				}
+			}
+			modifier = {
+				factor = 1.1
+				num_culture_realm_provs = {
+					value = 10
+					culture = carpetbagger
+				}
+			}
+		}
+	}
+	convert_to_yanquito = {
+		only_playable = yes
+		
+		filter = self
+		ai_target_filter = self
+		ai_check_interval = 60
+		
+		potential = {
+			NOT = {
+				has_alternate_start_parameter = { key = culture_names value = random }
+			}
+			is_playable = yes
+			culture_group = south_anglo
+			capital_scope = {
+				region = world_caribbean
+			}
+			any_realm_province = {
+				culture = yanquito
+			}
+			#NOT = { government = chinese_imperial_government }
+			NOT = {
+				has_alternate_start_parameter = { key = culture_names value = random }
+			}
+		}
+		allow = {
+			culture_group = south_anglo
+		}
+		effect = {
+			culture = yanquito
+			any_courtier = {
+				limit = {
+					culture_group = south_anglo
+					employer = { character = ROOT }
+					dynasty = ROOT
+				}
+				culture = yanquito
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+
+			modifier = {
+				factor = 0.5 # Slow it down a bit
+			}
+
+			modifier = { # Do not flip if we're in a huge Southern empire
+				factor = 0
+				top_liege = { culture_group = south_anglo }
+				164 = { # Charleston
+					owner = {
+						same_realm = ROOT
+					}
+				}
+				1097 = { # Miami
+					owner = {
+						same_realm = ROOT
+					}
+				}
+				149 = { # Atlanta
+					owner = {
+						same_realm = ROOT
+					}
+				}
+			}
+
+			modifier = {
+				factor = 0.01
+				capital_scope = {
+					NOT = { culture = yanquito }
+				}
+			}
+			modifier = {
+				factor = 2.0
+				liege = { culture = yanquito }
+			}
+
+			modifier = {
+				factor = 1.1
+				num_culture_realm_provs = {
+					value = 2
+					culture = yanquito
+				}
+			}
+			modifier = {
+				factor = 1.1
+				num_culture_realm_provs = {
+					value = 4
+					culture = yanquito
+				}
+			}
+			modifier = {
+				factor = 1.1
+				num_culture_realm_provs = {
+					value = 6
+					culture = yanquito
+				}
+			}
+			modifier = {
+				factor = 1.1
+				num_culture_realm_provs = {
+					value = 8
+					culture = yanquito
+				}
+			}
+			modifier = {
+				factor = 1.1
+				num_culture_realm_provs = {
+					value = 10
+					culture = yanquito
+				}
+			}
+		}
+	}
+	convert_to_nuyorican = {
+		only_playable = yes
+		
+		filter = self
+		ai_target_filter = self
+		ai_check_interval = 60
+		
+		potential = {
+			NOT = {
+				has_alternate_start_parameter = { key = culture_names value = random }
+			}
+			is_playable = yes
+			culture = boricua
+			any_realm_province = {
+				culture = nuyorican
+			}
+			#NOT = { government = chinese_imperial_government }
+			NOT = {
+				has_alternate_start_parameter = { key = culture_names value = random }
+			}
+		}
+		allow = {
+			culture = boricua
+		}
+		effect = {
+			culture = nuyorican
+			any_courtier = {
+				limit = {
+					culture = boricua
+					employer = { character = ROOT }
+					dynasty = ROOT
+				}
+				culture = nuyorican
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+
+			modifier = {
+				factor = 0.5 # Slow it down a bit
+			}
+
+			modifier = { # Do not flip if we're in a huge Boricua empire
+				factor = 0
+				top_liege = { culture = boricua }
+				1183 = { # San Juan
+					owner = {
+						same_realm = ROOT
+					}
+				}
+				1097 = { # Miami
+					owner = {
+						same_realm = ROOT
+					}
+				}
+				1100 = { # Havana
+					owner = {
+						same_realm = ROOT
+					}
+				}
+			}
+
+			modifier = {
+				factor = 0.01
+				capital_scope = {
+					NOT = { culture = nuyorican }
+				}
+			}
+			modifier = {
+				factor = 2.0
+				liege = { culture = nuyorican }
+			}
+			modifier = {
+				factor = 1.1
+				num_culture_realm_provs = {
+					value = 2
+					culture = nuyorican
+				}
+			}
+			modifier = {
+				factor = 1.1
+				num_culture_realm_provs = {
+					value = 4
+					culture = nuyorican
+				}
+			}
+			modifier = {
+				factor = 1.1
+				num_culture_realm_provs = {
+					value = 6
+					culture = nuyorican
+				}
+			}
+			modifier = {
+				factor = 1.1
+				num_culture_realm_provs = {
+					value = 8
+					culture = nuyorican
+				}
+			}
+			modifier = {
+				factor = 1.1
+				num_culture_realm_provs = {
+					value = 10
+					culture = nuyorican
+				}
+			}
+		}
+	}
+	convert_to_neomoor = {
+		only_playable = yes
+
+		filter = self
+		ai_target_filter = self
+		ai_check_interval = 60
+
+		potential = {
+			is_playable = yes
+			OR = {
+				religion = orientalist
+				religion = misrist
+			}
+			any_realm_province = {
+				culture = neomoor
+			}
+			#NOT = { government = chinese_imperial_government }
+			NOT = {
+				has_alternate_start_parameter = { key = culture_names value = random }
+			}
+		}
+		allow = {
+			OR = {
+				religion = orientalist
+				religion = misrist
+			}
+		}
+		effect = {
+			culture = neomoor
+			any_courtier = {
+				limit = {
+					OR = {
+						religion = orientalist
+						religion = misrist
+					}
+					employer = { character = ROOT }
+					dynasty = ROOT
+				}
+				culture = neomoor
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+
+			modifier = {
+				factor = 0.5 # Slow it down a bit
+			}
+
+			modifier = { # Do not flip if we're in a huge Gulf Coast empire
+				factor = 0
+				top_liege = {
+					OR = {
+						religion = orientalist
+						religion = misrist
+					}
+				}
+				149 = { # Atlanta
+					owner = {
+						same_realm = ROOT
+					}
+				}
+				1124 = { # New Orleans
+					owner = {
+						same_realm = ROOT
+					}
+				}
+				1097 = { # Miami
+					owner = {
+						same_realm = ROOT
+					}
+				}
+			}
+
+			modifier = {
+				factor = 0.01
+				capital_scope = {
+					NOT = { culture = neomoor }
+				}
+			}
+			modifier = {
+				factor = 2.0
+				liege = { culture = neomoor }
+			}
+			modifier = {
+				factor = 1.1
+				num_culture_realm_provs = {
+					value = 2
+					culture = neomoor
+				}
+			}
+			modifier = {
+				factor = 1.1
+				num_culture_realm_provs = {
+					value = 4
+					culture = neomoor
+				}
+			}
+			modifier = {
+				factor = 1.1
+				num_culture_realm_provs = {
+					value = 6
+					culture = neomoor
+				}
+			}
+			modifier = {
+				factor = 1.1
+				num_culture_realm_provs = {
+					value = 8
+					culture = neomoor
+				}
+			}
+			modifier = {
+				factor = 1.1
+				num_culture_realm_provs = {
+					value = 10
+					culture = neomoor
+				}
+			}
+		}
+	}
+	
+	convert_to_cajun = {
+		only_playable = yes
+		
+		filter = self
+		ai_target_filter = self
+		ai_check_interval = 60
+		
+		potential = {
+			NOT = {
+				has_alternate_start_parameter = { key = culture_names value = random }
+			}
+			is_playable = yes
+			culture_group = gallomerican
+			capital_scope = {
+				culture = cajun
+			}
+			#NOT = { government = chinese_imperial_government }
+			NOT = {
+				has_alternate_start_parameter = { key = culture_names value = random }
+			}
+		}
+		allow = {
+			culture_group = gallomerican
+		}
+		effect = {
+			culture = cajun
+			any_courtier = {
+				limit = {
+					culture_group = gallomerican
+					employer = { character = ROOT }
+					dynasty = ROOT
+				}
+				culture = cajun
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+
+			modifier = {
+				factor = 0.5 # Slow it down a bit
+			}
+
+			modifier = {
+				factor = 2.0
+				liege = { culture_group = louisianais }
+			}
+			modifier = {
+				factor = 1.1
+				num_culture_realm_provs = {
+					value = 2
+					culture = cajun
+				}
+			}
+			modifier = {
+				factor = 1.1
+				num_culture_realm_provs = {
+					value = 4
+					culture = cajun
+				}
+			}
+			modifier = {
+				factor = 1.1
+				num_culture_realm_provs = {
+					value = 6
+					culture = cajun
+				}
+			}
+			modifier = {
+				factor = 1.1
+				num_culture_realm_provs = {
+					value = 8
+					culture = cajun
+				}
+			}
+			modifier = {
+				factor = 1.1
+				num_culture_realm_provs = {
+					value = 10
+					culture = cajun
+				}
+			}
+		}
+	}
+	
+	convert_to_creole = {
+		only_playable = yes
+		
+		filter = self
+		ai_target_filter = self
+		ai_check_interval = 60
+		
+		potential = {
+			NOT = {
+				has_alternate_start_parameter = { key = culture_names value = random }
+			}
+			is_playable = yes
+			culture_group = gallomerican
+			capital_scope = {
+				culture = creole
+			}
+			#NOT = { government = chinese_imperial_government }
+			NOT = {
+				has_alternate_start_parameter = { key = culture_names value = random }
+			}
+		}
+		allow = {
+			culture_group = gallomerican
+		}
+		effect = {
+			culture = creole
+			any_courtier = {
+				limit = {
+					culture_group = gallomerican
+					employer = { character = ROOT }
+					dynasty = ROOT
+				}
+				culture = creole
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+
+			modifier = {
+				factor = 0.5 # Slow it down a bit
+			}
+
+			modifier = {
+				factor = 2.0
+				liege = { culture_group = louisianais }
+			}
+			modifier = {
+				factor = 1.1
+				num_culture_realm_provs = {
+					value = 2
+					culture = creole
+				}
+			}
+			modifier = {
+				factor = 1.1
+				num_culture_realm_provs = {
+					value = 4
+					culture = creole
+				}
+			}
+			modifier = {
+				factor = 1.1
+				num_culture_realm_provs = {
+					value = 6
+					culture = creole
+				}
+			}
+			modifier = {
+				factor = 1.1
+				num_culture_realm_provs = {
+					value = 8
+					culture = creole
+				}
+			}
+			modifier = {
+				factor = 1.1
+				num_culture_realm_provs = {
+					value = 10
+					culture = creole
+				}
+			}
+		}
+	}
+
+	convert_to_reformed = {
+		only_playable = yes
+		
+		filter = self
+		ai_target_filter = self
+		ai_check_interval = 60
+		
+		potential = {
+			NOT = {
+				has_alternate_start_parameter = { key = religion_names value = random }
+			}
+			is_playable = yes
+			is_heretic = yes
+			OR = {
+				religion = revelationist
+				religion = occultist
+				religion = glorian
+				religion = norse_pagan
+				religion = celtic_pagan
+				religion = espiritista
+				religion = aria_de_machete
+			}
+		}
+		allow = {
+			NOT = { trait = zealous }
+			piety = 50
+		}
+		effect = {
+			piety = -50
+			if = {
+				limit = { religion = revelationist }
+				religion = revelationist_reformed
+			}
+			if = {
+				limit = { religion = occultist }
+				religion = occultist_reformed
+			}
+			if = {
+				limit = { religion = norse_pagan }
+				religion = norse_pagan_reformed
+			}
+			if = {
+				limit = { religion = celtic_pagan }
+				religion = celtic_pagan_reformed
+			}
+			if = {
+				limit = { religion = aria_de_machete }
+				religion = aria_de_machete_reformed
+			}
+
+			hidden_tooltip = {
+				any_courtier = {
+					limit = {
+						is_heresy_of = ROOT
+						employer = { character = ROOT }
+					}
+					religion = ROOT
+				}
+				any_vassal = {
+					limit = {
+						is_playable = no
+						is_heresy_of = ROOT
+					}
+					religion = ROOT
+				}
+				capital_scope = {
+					if = {
+						limit = { is_heresy_of = ROOT }
+						religion = ROOT
+					}
+				}
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.1 # Generally quite a slow process - ca 40 years
+			}
+			modifier = {
+				factor = 0.5
+				OR = {
+					trait = slow
+					trait = dull
+				}
+			}
+			modifier = {
+				factor = 0.1
+				trait = imbecile
+			}
+			modifier = {
+				factor = 0.5
+				trait = content
+			}
+			modifier = {
+				factor = 2.0
+				OR = {
+					trait = quick
+					trait = shrewd
+				}
+			}
+			modifier = {
+				factor = 4.0
+				trait = genius
+			}
+			modifier = {
+				factor = 5.0
+				trait = cynical # It's the future..
+			}
+			modifier = {
+				factor = 2.0
+				trait = ambitious
+			}
+			modifier = {
+				factor = 0
+				independent = no
+				any_liege = {
+					religion = ROOT
+				}
+			}
+			modifier = { #Easier for Proselytizers
+				factor = 2.0
+				OR = {
+					AND = {
+						religion = revelationist
+						revelationist_reformed = { has_religion_feature = religion_proselytizing }
+					}
+					AND = {
+						religion = occultist
+						occultist_reformed = { has_religion_feature = religion_proselytizing }
+					}
+					AND = {
+						religion = norse_pagan
+						norse_pagan_reformed = { has_religion_feature = religion_proselytizing }
+					}
+					AND = {
+						religion = celtic_pagan
+						celtic_pagan_reformed = { has_religion_feature = religion_proselytizing }
+					}
+					AND = {
+						religion = aria_de_machete
+						aria_de_machete_reformed = { has_religion_feature = religion_proselytizing }
+					}
+				}
+			}
+		}
+	}
+
+	convert_to_spouse_religion= {
+		only_playable = yes
+		filter = home_court
+		ai_target_filter = home_court
+		ai_check_interval = 60
+	
+		from_potential = {
+			ai = no
+			is_playable = yes
+			OR = { #these are all religions that are likely to end up acquiring a spouse or concubine with a different religion
+				religion_group = pagan_group
+				religion_group = american_native
+				religion_group = mesoamerican_gods
+				religion_group = nautical
+			}
+			controls_religion = no
+		}
+		
+		potential = {
+			OR = {
+				spouse = {
+					character = FROM
+				}
+				consort = {
+					character = FROM
+				}
+			}
+			OR = {
+				religion_group = christian
+				religion_group = latter_day_saints
+				religion_group = cult_of_saints
+				religion_group = oldworld
+				religion_group = pacific
+				religion_group = jewish_group
+				religion_group = indian_group
+				religion_group = muslim
+				religion_group = amero_syncretic
+				AND = {
+					religion_group = pagan_group
+					is_reformed_religion = yes
+				}
+			}
+			is_alive = yes
+		}
+		
+		allow = {
+			FROM = { NOT = { trait = zealous } }
+		}
+		
+		effect = {
+			FROM = {
+				prestige = -500
+				religion_authority = {
+					modifier = ruler_converted_from
+				}
+
+				if = {
+					limit = {
+						trait = cynical
+						religion_group = pagan_group
+					}
+					random = {
+						chance = 60
+						add_trait = sympathy_pagans
+					}
+				}
+				if = {
+					limit = {
+						NOT = { trait = cynical }
+						religion_group = pagan_group
+					}
+					random = {
+						chance = 50
+						add_trait = sympathy_pagans
+					}
+				}
+				if = {
+					limit = {
+						trait = cynical
+						religion_group = american_native
+					}
+					random = {
+						chance = 60
+						add_trait = sympathy_american_native
+					}
+				}
+				if = {
+					limit = {
+						NOT = { trait = cynical }
+						religion_group = american_native
+					}
+					random = {
+						chance = 50
+						add_trait = sympathy_american_native
+					}
+				}
+				if = { #may prove unnecessary
+					limit = {
+						trait = cynical
+						religion_group = amero_syncretic
+					}
+					random = {
+						chance = 60
+						add_trait = sympathy_amero_syncretic
+					}
+				}
+				if = { #may prove unnecessary
+					limit = {
+						NOT = { trait = cynical }
+						religion_group = amero_syncretic
+					}
+					random = {
+						chance = 50
+						add_trait = sympathy_amero_syncretic
+					}
+				}
+				if = {
+					limit = {
+						trait = cynical
+						religion_group = mesoamerican_gods
+					}
+					random = {
+						chance = 60
+						add_trait = sympathy_mesoamerican_gods
+					}
+				}
+				if = {
+					limit = {
+						NOT = { trait = cynical }
+						religion_group = mesoamerican_gods
+					}
+					random = {
+						chance = 50
+						add_trait = sympathy_mesoamerican_gods
+					}
+				}
+				if = {
+					limit = {
+						trait = cynical
+						religion_group = nautical
+					}
+					random = {
+						chance = 60
+						add_trait = sympathy_nautical
+					}
+				}
+				if = {
+					limit = {
+						NOT = { trait = cynical }
+						religion_group = nautical
+					}
+					random = {
+						chance = 50
+						add_trait = sympathy_nautical
+					}
+				}
+
+				religion = ROOT
+				abdicate_holy_order_if_religion_changes_effect = yes
+
+				#When spouse is Sagrado Corazon
+				if = {
+					limit = {
+						ROOT = {
+							trait = marian_el_santo
+						}
+					}
+					add_trait = marian_el_santo
+				}
+				if = {
+					limit = {
+						ROOT = {
+							trait = marian_guadalupe
+						}
+					}
+					add_trait = marian_guadalupe
+				}
+				if = {
+					limit = {
+						ROOT = {
+							trait = marian_santa_muerte
+						}
+					}
+					add_trait = marian_santa_muerte
+				}
+	
+				#When spouse is Cetic
+				if = {
+					limit = {
+						ROOT = {
+							trait = way_book
+						}
+					}
+					add_trait = way_book
+				}
+				if = {
+					limit = {
+						ROOT = {
+							trait = way_cowl
+						}
+					}
+					add_trait = way_cowl
+				}
+				if = {
+					limit = {
+						ROOT = {
+							trait = way_dove
+						}
+					}
+					add_trait = way_dove
+				}
+				if = {
+					limit = {
+						ROOT = {
+							trait = way_fist
+						}
+					}
+					add_trait = way_fist
+				}
+	
+				#When spouse is Patria Grande
+				if = {
+					limit = {
+						ROOT = {
+							trait = patria_santander
+						}
+					}
+					add_trait = patria_santander
+				}
+				if = {
+					limit = {
+						ROOT = {
+							trait = patria_bolivar
+						}
+					}
+					add_trait = patria_bolivar
+				}
+				if = {
+					limit = {
+						ROOT = {
+							trait = patria_manuelita
+						}
+					}
+					add_trait = patria_manuelita
+				}
+	
+				#When spouse is Apostolic
+				if = {
+					limit = {
+						ROOT = {
+							trait = apostolic_aparecida
+						}
+					}
+					add_trait = apostolic_aparecida
+				}
+				if = {
+					limit = {
+						ROOT = {
+							trait = apostolic_bonfim
+						}
+					}
+					add_trait = apostolic_bonfim
+				}
+				if = {
+					limit = {
+						ROOT = {
+							trait = apostolic_pedro
+						}
+					}
+					add_trait = apostolic_pedro
+				}
+	
+				if = {
+					limit = {
+						ROOT = {
+							trait = pagan_branch_1
+						}
+					}
+					add_trait = pagan_branch_1
+				}
+				if = {
+					limit = {
+						ROOT = {
+							trait = pagan_branch_2
+						}
+					}
+					add_trait = pagan_branch_2
+				}
+				if = {
+					limit = {
+						ROOT = {
+							trait = pagan_branch_3
+						}
+					}
+					add_trait = pagan_branch_3
+				}
+				if = {
+					limit = {
+						ROOT = {
+							trait = pagan_branch_4
+						}
+					}
+					add_trait = pagan_branch_4
+				}
+
+				#When spouse is Hindu
+				if = {
+					limit = {
+						ROOT = {
+							trait = sanatanist_hindu
+						}
+					}
+					add_trait = sanatanist_hindu
+				}
+				if = {
+					limit = {
+						ROOT = {
+							trait = kali_hindu
+						}
+					}
+					add_trait = kali_hindu
+				}
+				if = {
+					limit = {
+						ROOT = {
+							trait = arya_samaj_hindu
+						}
+					}
+					add_trait = arya_samaj_hindu
+				}
+				if = {
+					limit = {
+						ROOT = {
+							trait = koshitsu_shinto
+						}
+					}
+					add_trait = koshitsu_shinto
+				}
+				if = {
+					limit = {
+						ROOT = {
+							trait = ryobu_shinto
+						}
+					}
+					add_trait = ryobu_shinto
+				}
+				if = {
+					limit = {
+						ROOT = {
+							trait = minzoku_shinto
+						}
+					}
+					add_trait = minzoku_shinto
+				}
+				if = {
+					limit = {
+						ROOT = {
+							trait = shugendo_shinto
+						}
+					}
+					add_trait = shugendo_shinto
+				}
+	
+				if = {
+					limit = {
+						ROOT = {
+							trait = high_anglican
+						}
+					}
+					add_trait = high_anglican
+				}
+				if = {
+					limit = {
+						ROOT = {
+							trait = broad_anglican
+						}
+					}
+					add_trait = broad_anglican
+				}
+				if = {
+					limit = {
+						ROOT = {
+							trait = low_anglican
+						}
+					}
+					add_trait = low_anglican
+				}
+				if = {
+					limit = {
+						ROOT = {
+							trait = peyotist_peyote
+						}
+					}
+					add_trait = peyotist_peyote
+				}
+				if = {
+					limit = {
+						ROOT = {
+							trait = peyotist_wakan_tanka
+						}
+					}
+					add_trait = peyotist_wakan_tanka
+				}
+				if = {
+					limit = {
+						ROOT = {
+							trait = peyotist_jesus
+						}
+					}
+					add_trait = peyotist_jesus
+				}
+				if = {
+					limit = {
+						ROOT = {
+							trait = peyotist_manitous
+						}
+					}
+					add_trait = peyotist_manitous
+				}
+
+	
+				hidden_tooltip = {
+					religion_authority = {
+						modifier = ruler_converted_to
+					}
+				}
+				piety = 200
+			}
+		}
+		
+		revoke_allowed = {
+			always = no
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+}
+
+decisions = {
+	
+	# Weak or unreformed religions are allowed to convert to the attacker's religion when under Holy War
+	convert_to_attacker_religion = {
+		only_playable = yes
+		ai_check_interval = 18
+		
+		is_high_prio = yes
+		
+		potential = {
+			is_playable = yes
+			OR = {
+				AND = {
+					religion_group = pagan_group
+					is_reformed_religion = no
+					NOT = { religion_authority = 0.4 }
+				}
+				NOT = { religion_authority = 0.3 }
+				is_nomadic = yes
+			}
+			controls_religion = no
+			NOT = { has_character_modifier = baptism_request_cooldown }
+
+			war = yes
+			any_war = {
+				defender = { character = ROOT }
+				attacker = {
+					NOT = { religion = ROOT }
+					religion_authority = 0.5
+					OR = {
+						NOR = {
+							religion_group = pagan_group
+							religion_group = american_native
+							religion_group = mesoamerican_gods
+							religion_group = afro_syncretic
+							religion_group = nautical
+						}
+						is_reformed_religion = yes
+					}
+				}
+				OR = {
+					using_cb = crusade
+					using_cb = new_crusade
+					using_cb = religious
+					#using_cb = muslim_invasion
+					#using_cb = buddhist_holy_war
+					using_cb = pagan_holy_war
+				}
+			}
+		}
+		
+		allow = {
+			NOT = { trait = zealous }
+		}
+		
+		effect = {
+			prestige = -500
+			piety = 100
+
+			hidden_tooltip = {
+				any_war = {
+					limit = {
+						defender = { character = ROOT }
+						attacker = {
+							NOT = { religion = ROOT }
+							religion_authority = 0.5
+							OR = {
+								NOR = {
+									religion_group = pagan_group
+									religion_group = american_native
+									religion_group = mesoamerican_gods
+									religion_group = afro_syncretic
+									religion_group = nautical
+								}
+								is_reformed_religion = yes
+							}
+						}
+						OR = {
+							using_cb = crusade
+							using_cb = new_crusade
+							using_cb = religious
+							#using_cb = muslim_invasion
+							#using_cb = buddhist_holy_war
+							using_cb = pagan_holy_war
+						}
+					}
+					attacker = {
+						save_event_target_as = enemy_attacker
+					}
+				}
+			}
+
+			#If possible, perform mass baptism.
+			if = {
+				limit = { 
+					has_dlc = "Holy Fury"
+					is_tribal = yes
+					religion_group = pagan_group
+					higher_real_tier_than = count 		
+					NOT = { is_incapable = yes }
+					NOT = { is_reformed_religion = yes }
+					NOT = { has_character_flag = flag_converting_baptism }
+					NOT = { has_character_modifier = baptism_request_cooldown } 
+					independent = yes 
+					prisoner = no
+					has_regent = no
+					primary_title = { 
+						OR = { 
+							has_law = tribal_organization_2 
+							has_law = tribal_organization_3 
+							has_law = tribal_organization_4 
+						} 
+					}
+					any_war = {
+						using_cb = new_crusade 
+						defender = { character = ROOT }
+						attacker = { #Special case.
+							OR = {
+								religion = catholic
+								religion = ursuline
+							}
+							NOT = { has_character_flag = flag_sponsoring_baptism }
+						}
+					}
+				}
+				hidden_effect = {
+					add_character_modifier = {
+						name = baptism_request_cooldown
+						months = 1
+						hidden = yes
+					}
+					event_target:enemy_attacker = {
+						add_character_modifier = {
+							name = baptism_request_cooldown
+							months = 1
+							hidden = yes
+						}
+					}
+					opinion = {
+						modifier = opinion_baptism_sponsor_target
+						years = 20
+						who = event_target:enemy_attacker
+						origin_description = EVTTOOLTIPHFA20005
+					}
+					event_target:enemy_attacker = {
+						opinion = {
+							modifier = opinion_baptism_sponsor_target
+							years = 20
+							who = ROOT
+							origin_description = EVTTOOLTIPHFB20005
+						}
+					}
+				}
+				event_target:enemy_attacker = { show_scope_change = no letter_event = { id = HF.20000 tooltip = tooltip_mass_convert_during_crusade } }
+			}
+			else = {
+				if = {
+					limit = { event_target:enemy_attacker = { NOT = { religion_group = ROOT } } }
+					if = {
+						limit = { religion_group = pagan_group }
+						add_trait = sympathy_pagans
+					}
+
+					if = {
+						limit = { religion_group = afro_syncretic }
+						add_trait = sympathy_afro_syncretic
+					}
+
+					if = {
+						limit = { religion_group = american_native }
+						add_trait = sympathy_american_native
+					}
+
+					if = {
+						limit = { religion_group = amero_syncretic }
+						add_trait = sympathy_amero_syncretic
+					}
+
+					if = {
+						limit = { religion_group = christian }
+						add_trait = sympathy_christendom
+					}
+
+					if = {
+						limit = { religion_group = muslim }
+						add_trait = sympathy_islam
+					}
+
+					if = {
+						limit = { religion_group = cult_of_saints }
+						add_trait = sympathy_cult_of_saints
+					}
+
+					if = {
+						limit = { religion_group = pacific }
+						add_trait = sympathy_pacific
+					}
+
+					if = {
+						limit = { religion_group = latter_day_saints }
+						add_trait = sympathy_latter_day_saints
+					}
+
+					if = {
+						limit = { religion_group = mesoamerican_gods }
+						add_trait = sympathy_mesoamerican_gods
+					}
+
+					if = {
+						limit = { religion_group = oldworld }
+						add_trait = sympathy_oldworld
+					}
+
+					if = {
+						limit = { religion_group = jewish_group }
+						add_trait = sympathy_judaism
+					}
+
+					if = {
+						limit = { religion_group = indian_group }
+						add_trait = sympathy_indian
+					}
+				}
+				event_target:enemy_attacker = {
+					hidden_tooltip = {
+						letter_event = { id = 62800 }
+						ROOT = {
+							any_courtier = {
+								limit = {
+									religion = ROOT
+									employer = { character = ROOT }
+								}
+								religion = PREVPREV
+							}
+							any_vassal = {
+								limit = {
+									is_playable = no
+									religion = ROOT
+								}
+								religion = PREVPREV
+							}
+							capital_scope = {
+								if = {
+									limit = { religion = ROOT }
+									religion = PREVPREV
+								}
+							}
+						}
+					}
+					hidden_tooltip = {
+						religion_authority = {
+							modifier = ruler_converted_to
+						}
+					}
+					reverse_religion = ROOT 
+				}
+				religion_authority = {
+					modifier = ruler_converted_from
+				}
+			}
+		}
+		
+		revoke_allowed = {
+			always = no
+		}
+		
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.5
+			}
+			modifier = {
+				factor = 0.05
+				is_hard_to_convert = yes
+			}
+			modifier = {
+				factor = 0
+				NOT = {
+					any_war = {
+						defender = { character = ROOT }
+						attacker = {
+							NOT = { religion = ROOT }
+							religion_authority = 0.45
+							OR = {
+								NOT = { religion_group = pagan_group }
+								is_reformed_religion = yes
+							}
+						}
+						OR = {
+							using_cb = crusade
+							using_cb = new_crusade
+							using_cb = religious
+							#using_cb = muslim_invasion
+							#using_cb = buddhist_holy_war
+							using_cb = pagan_holy_war
+						}
+						war_score = 50
+						thirdparty_title_scope = {
+							ROOT = {
+								primary_title = {
+									title = PREVPREV
+								}
+							}
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 2
+				any_war = {
+					defender = { character = ROOT }
+					attacker = {
+						NOT = { religion = ROOT }
+						religion_authority = 0.45
+						OR = {
+							NOT = { religion_group = pagan_group }
+							is_reformed_religion = yes
+						}
+					}
+					OR = {
+						using_cb = crusade
+						using_cb = new_crusade
+						using_cb = religious
+						#using_cb = muslim_invasion
+						#using_cb = buddhist_holy_war
+						using_cb = pagan_holy_war
+					}
+					war_score = 75
+					thirdparty_title_scope = {
+						ROOT = {
+							primary_title = {
+								title = PREVPREV
+							}
+						}
+					}
+				}
+			}
+		}
+	}	
+}

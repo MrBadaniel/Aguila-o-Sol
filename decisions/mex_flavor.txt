@@ -112,4 +112,104 @@ decisions = {
 			}
 		}
 	}
-}	
+}
+
+targetted_decisions {
+
+	educate_child_cetic = {
+		ai_check_interval = 60
+		
+		from_potential = {
+			is_playable = yes
+			religion = sacred_heart
+		}
+		potential = {
+			religion = sacred_heart
+			OR = {
+				is_child_of = FROM
+				is_liege_or_above = FROM
+			}
+			NOT = {
+				age = 16
+			}
+		}
+		effect = {
+			hidden_tooltip = {
+			remove_trait = marian_el_santo
+			remove_trait = marian_guadalupe
+			remove_trait = marian_san_charbel
+			remove_trait = marian_san_juditas
+			remove_trait = marian_san_pascual
+			remove_trait = marian_stella_maris
+			remove_trait = marian_santo_nino_fidencio
+			remove_trait = marian_santa_inocencia
+			remove_trait = marian_san_felipe_de_jesus
+			remove_trait = marian_cristo_rey
+			}
+			if = {
+				limit = {
+					FROM = { trait = marian_el_santo }	
+				}
+				add_trait = marian_el_santo
+			}
+			if = {
+				limit = {
+					FROM = { trait = marian_guadalupe }	
+				}
+				add_trait = marian_guadalupe
+			}
+			if = {
+				limit = {
+					FROM = { trait = marian_san_charbel }	
+				}
+				add_trait = marian_san_charbel
+			}
+			if = {
+				limit = {
+					FROM = { trait = marian_san_juditas }	
+				}
+				add_trait = marian_san_juditas
+			}
+			if = {
+				limit = {
+					FROM = { trait = marian_san_pascual }	
+				}
+				add_trait = marian_san_pascual
+			}
+			if = {
+				limit = {
+					FROM = { trait = marian_stella_maris }	
+				}
+				add_trait = marian_stella_maris
+			}
+			if = {
+				limit = {
+					FROM = { trait = marian_santo_nino_fidencio }	
+				}
+				add_trait = marian_santo_nino_fidencio
+			}
+			if = {
+				limit = {
+					FROM = { trait = marian_santa_inocencia }	
+				}
+				add_trait = marian_santa_inocencia
+			}
+			if = {
+				limit = {
+					FROM = { trait = marian_san_felipe_de_jesus }	
+				}
+				add_trait = marian_san_felipe_de_jesus
+			}
+			if = {
+				limit = {
+					FROM = { trait = marian_cristo_rey }	
+				}
+				add_trait = marian_cristo_rey
+			}
+			
+		}
+		revoke_allowed = {
+			always = no
+		}
+	}
+}
