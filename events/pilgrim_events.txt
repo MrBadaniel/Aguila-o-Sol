@@ -81,6 +81,15 @@ character_event = {
 				}
 				character_event = { id = fallingstar.1 }
 			}
+			if = {
+				limit = {
+					OR = {
+						religion = cristo_rey
+						religion = sacred_heart
+					}
+				}
+				character_event = { id = mxpilgrimage.1 }
+			}
 		}
 	}
 }
