@@ -205,7 +205,120 @@ character_event = {
 	}
 	
 	option = {
+		name = EVTOPTD_mxpilgrimage_1
+		trigger = {
+			NOT = { religion = sacred_heart }
+		}
+		character_event = { id = mxpilgrimage.1 }
+		ai_chance = {
+			factor = 50
+		}
+	}
+	
+	option = { #pilgrimage to catemaco
 		name = EVTOPTC_mxpilgrimage_12
+		trigger = {
+			NOT = { capital_scope = { province_id = 1781 } } #Coatzacoalco?
+			religion = sacred_heart
+		}
+		set_character_flag = pilgrimage_to_provincia
+		hidden_tooltip = {
+			character_event = { id = mxpilgrimage.10 days = 15 }
+		}
+		if = {
+			limit = { ai = no }
+			chronicle = {
+				entry = CHRONICLE_PILGRIMAGE_TO_CATEMACO
+				picture = GFX_evt_pilgrims_epic_journey
+			}
+		}
+	}
+	
+	option = {
+		name = EVTOPTD_mxpilgrimage_1
+		trigger = {
+			religion = sacred_heart
+			OR = {
+				has_global_flag = fidencistas_absorbed_into_fold
+				has_global_flag = navegantes_absorbed_into_fold
+			}
+		}
+		character_event = { id = mxpilgrimage.13 }
+		ai_chance = {
+			factor = 50
+		}
+	}
+	
+	option = {
+		name = EVTOPTD_mxpilgrimage_1
+		trigger = {
+			religion = sacred_heart
+			NAND = {
+				has_global_flag = fidencistas_absorbed_into_fold
+				has_global_flag = navegantes_absorbed_into_fold
+			}
+		}
+		character_event = { id = mxpilgrimage.1 }
+		ai_chance = {
+			factor = 50
+		}
+	}
+}
+
+character_event = {
+	id = mxpilgrimage.13
+	desc = EVTDESC_SoA_5011
+	picture = GFX_evt_icon
+	border = GFX_event_normal_frame_religion
+	
+	is_triggered_only = yes
+	
+	option = { #pilgrimage to espinazo
+		name = EVTOPTA_mxpilgrimage_13
+		trigger = {
+			NOT = { capital_scope = { province_id = 817 } } #Monterrey
+			AND = {
+				religion = sacred_heart
+				has_global_flag = fidencistas_absorbed_into_fold
+			}
+		}
+		set_character_flag = pilgrimage_to_espinazo
+		hidden_tooltip = {
+			character_event = { id = mxpilgrimage.20 days = 15 }
+		}
+		if = {
+			limit = { ai = no }
+			chronicle = {
+				entry = CHRONICLE_PILGRIMAGE_TO_ESPINAZO
+				picture = GFX_evt_pilgrims_epic_journey
+			}
+		}
+	}
+	
+	option = { #pilgrimage to Cabo San Lucas
+		name = EVTOPTB_mxpilgrimage_13
+		trigger = {
+			NOT = { capital_scope = { province_id = 2001 } } #Los Cabos
+			AND = {
+				religion = sacred_heart
+				has_global_flag = navegantes_absorbed_into_fold
+			}
+		}
+		set_character_flag = pilgrimage_to_cabo
+		hidden_tooltip = {
+			character_event = { id = mxpilgrimage.30 days = 15 }
+		}
+		if = {
+			limit = { ai = no }
+			chronicle = {
+				entry = CHRONICLE_PILGRIMAGE_TO_CABO
+				picture = GFX_evt_pilgrims_epic_journey
+			}
+		}
+	}
+	
+	option = {
+		name = EVTOPTD_mxpilgrimage_1
 		trigger = {
 			NOT = { religion = sacred_heart }
 		}
@@ -900,6 +1013,264 @@ narrative_event = {
 
 	option = {
 		name = EVTOPTA_mxpilgrimage_91
+		hidden_tooltip = { character_event = { id = SoA.5055 days = 5 } }
+	}
+}
+
+# Setting out for Catemaco (also selects events for road)
+character_event = {
+	id = mxpilgrimage.10
+	desc = EVTDESC_mxpilgrimage_10
+	picture = GFX_evt_pilgrims_epic_journey
+	border = GFX_event_normal_frame_religion
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_SoA_5021
+		clr_character_flag = preparing_pilgrimage
+		hidden_tooltip = {
+			add_trait = on_pilgrimage
+			set_character_flag = good_pilgrimage
+			narrative_event = { id = mxpilgrimage.101 days = 30 }
+		}
+		hidden_tooltip = {
+			if = {
+				limit = {
+					location = {
+						distance = {
+							where = 1781 # Coatzacoalcos
+							value = 400	# Longer journey
+						}
+					}
+				}
+				random_list = {
+					10 = { character_event = { id = SoA.5026 days = 5 random = 9 } } # List for longer journeys only
+					10 = { character_event = { id = SoA.5027 days = 5 random = 9 } }
+					10 = { narrative_event = { id = SoA.5028 days = 5 random = 9 } }
+					10 = { character_event = { id = SoA.5029 days = 5 random = 9 } }
+					10 = { character_event = { id = SoA.5030 days = 5 random = 9 } }
+				}
+			}
+	
+			random_list = {
+				10 = { character_event = { id = SoA.5031 days = 15 random = 7 } } # List that is always checked
+				10 = { character_event = { id = SoA.5032 days = 15 random = 7 } }
+				10 = { narrative_event = { id = SoA.5033 days = 15 random = 7 } }
+				10 = { character_event = { id = SoA.5034 days = 15 random = 7 } }
+				10 = { character_event = { id = SoA.5035 days = 15 random = 7 } }
+				10 = { character_event = { id = SoA.5036 days = 15 random = 7 } }
+				10 = { character_event = { id = SoA.5037 days = 15 random = 7 } }
+				10 = { character_event = { id = SoA.5038 days = 15 random = 7 } }
+				10 = { character_event = { id = SoA.5039 days = 15 random = 7 } }
+			}
+			if = {
+				limit = {
+					OR = {
+						AND = {
+							religion = cristo_rey
+							is_title_active = d_cristo_rey
+						}
+						AND = {
+							religion = sacred_heart
+							is_title_active = d_masked_knights
+						}
+					}
+				}
+				random_list = {
+					10 = { narrative_event = { id = SoA.5045 days = 23 random = 4 } } # Holy orders events, close to destination
+					10 = { character_event = { id = SoA.5046 days = 23 random = 4 } }
+					10 = { character_event = { id = SoA.5047 days = 23 random = 4 } }
+				}
+			}
+		}
+	}
+}
+
+# Arrived at Catemaco
+narrative_event = {
+	id = mxpilgrimage.101
+	title = EVTNAME_mxpilgrimage_101
+	desc = EVTDESC_mxpilgrimage_101
+	picture = GFX_evt_cathedral
+	border = GFX_event_narrative_frame_religion
+	
+	is_triggered_only = yes
+
+	option = {
+		name = EVTOPTA_mxpilgrimage_101
+		hidden_tooltip = { character_event = { id = SoA.5055 days = 5 } }
+	}
+}
+
+# Setting out for Espinazo (also selects events for road)
+character_event = {
+	id = mxpilgrimage.20
+	desc = EVTDESC_mxpilgrimage_20
+	picture = GFX_evt_pilgrims_epic_journey
+	border = GFX_event_normal_frame_religion
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_SoA_5021
+		clr_character_flag = preparing_pilgrimage
+		hidden_tooltip = {
+			add_trait = on_pilgrimage
+			set_character_flag = good_pilgrimage
+			narrative_event = { id = mxpilgrimage.201 days = 30 }
+		}
+		hidden_tooltip = {
+			if = {
+				limit = {
+					location = {
+						distance = {
+							where = 817 # Monterrey
+							value = 400	# Longer journey
+						}
+					}
+				}
+				random_list = {
+					10 = { character_event = { id = SoA.5026 days = 5 random = 9 } } # List for longer journeys only
+					10 = { character_event = { id = SoA.5027 days = 5 random = 9 } }
+					10 = { narrative_event = { id = SoA.5028 days = 5 random = 9 } }
+					10 = { character_event = { id = SoA.5029 days = 5 random = 9 } }
+					10 = { character_event = { id = SoA.5030 days = 5 random = 9 } }
+				}
+			}
+	
+			random_list = {
+				10 = { character_event = { id = SoA.5031 days = 15 random = 7 } } # List that is always checked
+				10 = { character_event = { id = SoA.5032 days = 15 random = 7 } }
+				10 = { narrative_event = { id = SoA.5033 days = 15 random = 7 } }
+				10 = { character_event = { id = SoA.5034 days = 15 random = 7 } }
+				10 = { character_event = { id = SoA.5035 days = 15 random = 7 } }
+				10 = { character_event = { id = SoA.5036 days = 15 random = 7 } }
+				10 = { character_event = { id = SoA.5037 days = 15 random = 7 } }
+				10 = { character_event = { id = SoA.5038 days = 15 random = 7 } }
+				10 = { character_event = { id = SoA.5039 days = 15 random = 7 } }
+			}
+			if = {
+				limit = {
+					OR = {
+						AND = {
+							religion = cristo_rey
+							is_title_active = d_cristo_rey
+						}
+						AND = {
+							religion = sacred_heart
+							is_title_active = d_masked_knights
+						}
+					}
+				}
+				random_list = {
+					10 = { narrative_event = { id = SoA.5045 days = 23 random = 4 } } # Holy orders events, close to destination
+					10 = { character_event = { id = SoA.5046 days = 23 random = 4 } }
+					10 = { character_event = { id = SoA.5047 days = 23 random = 4 } }
+				}
+			}
+		}
+	}
+}
+
+# Arrived at Espinazo
+narrative_event = {
+	id = mxpilgrimage.201
+	title = EVTNAME_mxpilgrimage_201
+	desc = EVTDESC_mxpilgrimage_201
+	picture = GFX_evt_cathedral
+	border = GFX_event_narrative_frame_religion
+	
+	is_triggered_only = yes
+
+	option = {
+		name = EVTOPTA_mxpilgrimage_201
+		hidden_tooltip = { character_event = { id = SoA.5055 days = 5 } }
+	}
+}
+
+# Setting out for Cabo san lucas (also selects events for road)
+character_event = {
+	id = mxpilgrimage.30
+	desc = EVTDESC_mxpilgrimage_30
+	picture = GFX_evt_pilgrims_epic_journey
+	border = GFX_event_normal_frame_religion
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_SoA_5021
+		clr_character_flag = preparing_pilgrimage
+		hidden_tooltip = {
+			add_trait = on_pilgrimage
+			set_character_flag = good_pilgrimage
+			narrative_event = { id = mxpilgrimage.301 days = 30 }
+		}
+		hidden_tooltip = {
+			if = {
+				limit = {
+					location = {
+						distance = {
+							where = 2001 # los cabos
+							value = 400	# Longer journey
+						}
+					}
+				}
+				random_list = {
+					10 = { character_event = { id = SoA.5026 days = 5 random = 9 } } # List for longer journeys only
+					10 = { character_event = { id = SoA.5027 days = 5 random = 9 } }
+					10 = { narrative_event = { id = SoA.5028 days = 5 random = 9 } }
+					10 = { character_event = { id = SoA.5029 days = 5 random = 9 } }
+					10 = { character_event = { id = SoA.5030 days = 5 random = 9 } }
+				}
+			}
+	
+			random_list = {
+				10 = { character_event = { id = SoA.5031 days = 15 random = 7 } } # List that is always checked
+				10 = { character_event = { id = SoA.5032 days = 15 random = 7 } }
+				10 = { narrative_event = { id = SoA.5033 days = 15 random = 7 } }
+				10 = { character_event = { id = SoA.5034 days = 15 random = 7 } }
+				10 = { character_event = { id = SoA.5035 days = 15 random = 7 } }
+				10 = { character_event = { id = SoA.5036 days = 15 random = 7 } }
+				10 = { character_event = { id = SoA.5037 days = 15 random = 7 } }
+				10 = { character_event = { id = SoA.5038 days = 15 random = 7 } }
+				10 = { character_event = { id = SoA.5039 days = 15 random = 7 } }
+			}
+			if = {
+				limit = {
+					OR = {
+						AND = {
+							religion = cristo_rey
+							is_title_active = d_cristo_rey
+						}
+						AND = {
+							religion = sacred_heart
+							is_title_active = d_masked_knights
+						}
+					}
+				}
+				random_list = {
+					10 = { narrative_event = { id = SoA.5045 days = 23 random = 4 } } # Holy orders events, close to destination
+					10 = { character_event = { id = SoA.5046 days = 23 random = 4 } }
+					10 = { character_event = { id = SoA.5047 days = 23 random = 4 } }
+				}
+			}
+		}
+	}
+}
+
+# Arrived at Cabo San Lucas
+narrative_event = {
+	id = mxpilgrimage.301
+	title = EVTNAME_mxpilgrimage_301
+	desc = EVTDESC_mxpilgrimage_301
+	picture = GFX_evt_cathedral
+	border = GFX_event_narrative_frame_religion
+	
+	is_triggered_only = yes
+
+	option = {
+		name = EVTOPTA_mxpilgrimage_301
 		hidden_tooltip = { character_event = { id = SoA.5055 days = 5 } }
 	}
 }
