@@ -1996,24 +1996,26 @@ character_event = {
 	id = sacredheart.204
 	desc = EVTDESC_sacredheart_204
 	picture = GFX_evt_bishop
-	religion = sacred_heart
 	is_triggered_only = yes
-			NOT = { trait = marian_guadalupe }
-			NOT = { trait = marian_santa_muerte }
-			NOT = { trait = marian_san_charbel }
-			NOT = { trait = marian_san_pascual }
-			NOT = { trait = marian_stella_maris }
-			NOT = { trait = marian_santo_nino_fidencio }
-			NOT = { trait = marian_santa_inocencia }
-			NOT = { trait = marian_san_felipe_de_jesus }
-			NOT = { trait = marian_cristo_rey }
-			NOT = { trait = marian_el_santo }
-
+	min_age = 16
 
 	trigger = {
-			NOT = {
-				has_alternate_start_parameter = { key = religion_names value = random }
-			}
+		religion = sacred_heart
+		NOT = {
+			has_alternate_start_parameter = { key = religion_names value = random }
+		}
+		NOR = {
+			trait = marian_santa_muerte
+			trait = marian_guadalupe
+			trait = marian_san_charbel
+			trait = marian_san_juditas
+			trait = marian_el_santo
+			trait = marian_stella_maris
+			trait = marian_santo_nino_fidencio
+			trait = marian_san_pascual
+			trait = marian_san_felipe_de_jesus
+			trait = marian_cristo_rey
+		}
 	}
 	
 	option = {
