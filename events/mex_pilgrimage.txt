@@ -23,7 +23,7 @@ character_event = {
 		trigger = {
 			NOT = { capital_scope = { province_id = 1767 } } #Mexico
 		}
-		set_character_flag = pilgrimage_to_mexico_city
+		set_character_flag = pilgrimage_to_mexico
 		hidden_tooltip = {
 			character_event = { id = mxpilgrimage.2 days = 15 }
 		}
@@ -49,7 +49,7 @@ character_event = {
 				}
 			}
 		}
-		set_character_flag = pilgrimage_to_cerro
+		set_character_flag = pilgrimage_to_mexico
 		hidden_tooltip = {
 			character_event = { id = mxpilgrimage.3 days = 15 }
 		}
@@ -67,7 +67,7 @@ character_event = {
 		trigger = {
 			NOT = { capital_scope = { province_id = 1740 } } #Guadalajara
 		}
-		set_character_flag = pilgrimage_to_guadalajara
+		set_character_flag = pilgrimage_to_mexico
 		hidden_tooltip = {
 			character_event = { id = mxpilgrimage.4 days = 15 }
 		}
@@ -102,7 +102,7 @@ character_event = {
 		trigger = {
 			NOT = { capital_scope = { province_id = 1736 } } #Zacatecas
 		}
-		set_character_flag = pilgrimage_to_zacatecas
+		set_character_flag = pilgrimage_to_mexico
 		hidden_tooltip = {
 			character_event = { id = mxpilgrimage.5 days = 15 }
 		}
@@ -120,7 +120,7 @@ character_event = {
 		trigger = {
 			NOT = { capital_scope = { province_id = 1785 } } #Atenas
 		}
-		set_character_flag = pilgrimage_to_lagos
+		set_character_flag = pilgrimage_to_mexico
 		hidden_tooltip = {
 			character_event = { id = mxpilgrimage.6 days = 15 }
 		}
@@ -138,7 +138,7 @@ character_event = {
 		trigger = {
 			NOT = { capital_scope = { province_id = 1771 } } #Puebla
 		}
-		set_character_flag = pilgrimage_to_puebla
+		set_character_flag = pilgrimage_to_mexico
 		hidden_tooltip = {
 			character_event = { id = mxpilgrimage.7 days = 15 }
 		}
@@ -173,7 +173,7 @@ character_event = {
 		trigger = {
 			NOT = { capital_scope = { province_id = 1771 } } #Peubla
 		}
-		set_character_flag = pilgrimage_to_cholula
+		set_character_flag = pilgrimage_to_mexico
 		hidden_tooltip = {
 			character_event = { id = mxpilgrimage.8 days = 15 }
 		}
@@ -191,7 +191,7 @@ character_event = {
 		trigger = {
 			NOT = { capital_scope = { province_id = 1768 } } #Toluca
 		}
-		set_character_flag = pilgrimage_to_chalma
+		set_character_flag = pilgrimage_to_mexico
 		hidden_tooltip = {
 			character_event = { id = mxpilgrimage.9 days = 15 }
 		}
@@ -221,7 +221,7 @@ character_event = {
 			NOT = { capital_scope = { province_id = 1781 } } #Coatzacoalco?
 			religion = sacred_heart
 		}
-		set_character_flag = pilgrimage_to_provincia
+		set_character_flag = pilgrimage_to_mexico
 		hidden_tooltip = {
 			character_event = { id = mxpilgrimage.10 days = 15 }
 		}
@@ -282,7 +282,7 @@ character_event = {
 				has_global_flag = fidencistas_absorbed_into_fold
 			}
 		}
-		set_character_flag = pilgrimage_to_espinazo
+		set_character_flag = pilgrimage_to_mexico
 		hidden_tooltip = {
 			character_event = { id = mxpilgrimage.20 days = 15 }
 		}
@@ -304,7 +304,7 @@ character_event = {
 				has_global_flag = navegantes_absorbed_into_fold
 			}
 		}
-		set_character_flag = pilgrimage_to_cabo
+		set_character_flag = pilgrimage_to_mexico
 		hidden_tooltip = {
 			character_event = { id = mxpilgrimage.30 days = 15 }
 		}
@@ -1274,3 +1274,4 @@ narrative_event = {
 		hidden_tooltip = { character_event = { id = SoA.5055 days = 5 } }
 	}
 }
+

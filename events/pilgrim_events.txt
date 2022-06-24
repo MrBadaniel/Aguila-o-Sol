@@ -2117,6 +2117,26 @@ character_event = {
 				character_event = { id = SoA.5084 }
 			}
 		}
+		if = {
+			limit = {
+				has_character_flag = pilgrimage_to_mexico
+				is_title_active = d_cristo_rey
+				religion = cristo_rey
+			}
+			hidden_tooltip = {
+				character_event = { id = SoA.5101 }
+			}
+		}
+		if = {
+			limit = {
+				has_character_flag = pilgrimage_to_mexico
+				is_title_active = d_masked_knights
+				religion = sacred_heart
+			}
+			hidden_tooltip = {
+				character_event = { id = SoA.5102 }
+			}
+		}
 	}
 	option = {
 		name = EVTOPTB_SoA_5047	# no
@@ -2338,6 +2358,80 @@ character_event = {
 
 	immediate = {
 		d_national_cathedral = {
+			holder_scope = {
+				random_courtier = {
+					limit = {
+						is_female = no
+						prisoner = no
+						in_command = no
+						is_priest = no
+						age = 16
+						NOT = {
+							sibling = ROOT
+						}
+						NOT = {
+							is_friend = ROOT
+						}
+						NOT = {
+							is_rival = ROOT
+						}
+						NOT = { has_job_title = job_spiritual }
+					}
+					add_friend = ROOT
+					character_event = { id = SoA.5086 }
+				}
+			}
+		}
+	}
+}
+
+# Makes friend - Knight of the Prelate (for mexico pilgrimages)
+character_event = {
+	id = SoA.5101
+
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		d_cristo_rey = {
+			holder_scope = {
+				random_courtier = {
+					limit = {
+						is_female = no
+						prisoner = no
+						in_command = no
+						is_priest = no
+						age = 16
+						NOT = {
+							sibling = ROOT
+						}
+						NOT = {
+							is_friend = ROOT
+						}
+						NOT = {
+							is_rival = ROOT
+						}
+						NOT = { has_job_title = job_spiritual }
+					}
+					add_friend = ROOT
+					character_event = { id = SoA.5086 }
+				}
+			}
+		}
+	}
+}
+
+# Makes friend - Knight of the order of the mask (for mexico pilgrimages)
+character_event = {
+	id = SoA.5102
+
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		d_masked_knights = {
 			holder_scope = {
 				random_courtier = {
 					limit = {
@@ -3431,6 +3525,7 @@ character_event = {
 		clr_character_flag = pilgrimage_to_panama
 		clr_character_flag = pilgrimage_to_san_salvador
 		clr_character_flag = pilgrimage_to_belize
+		clr_character_flag = pilgrimage_to_mexico
 		clr_character_flag = good_pilgrimage
 		clr_character_flag = do_not_disturb
 		add_trait = pilgrim
@@ -3476,6 +3571,7 @@ character_event = {
 		clr_character_flag = pilgrimage_to_panama
 		clr_character_flag = pilgrimage_to_san_salvador
 		clr_character_flag = pilgrimage_to_belize
+		clr_character_flag = pilgrimage_to_mexico
 		clr_character_flag = bad_pilgrimage
 		clr_character_flag = do_not_disturb
 		add_trait = pilgrim
@@ -3526,6 +3622,7 @@ character_event = {
 		clr_character_flag = pilgrimage_to_axum
 		clr_character_flag = pilgrimage_to_antioch
 		clr_character_flag = abominable_pilgrimage
+		clr_character_flag = pilgrimage_to_mexico
 		clr_character_flag = do_not_disturb
 		add_trait = pilgrim
 		hidden_tooltip = { remove_trait = on_pilgrimage }
