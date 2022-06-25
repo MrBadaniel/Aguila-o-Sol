@@ -2175,3 +2175,439 @@ character_event = {
 		}
 	}
 }
+
+narrative_event = {
+	id = sacredheart.205
+	title = TITLE_sacred_heart_cristo_rey
+	desc = EVTDESC_sacred_heart_cristo_rey
+	
+	picture = GFX_evt_china_invades
+	border = GFX_event_narrative_frame_religion	
+
+	only_rulers = yes
+	major = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		primary_title = { holy_order = no }
+		primary_title = { is_landless_type_title = no }
+		mercenary = no
+		primary_title = { higher_tier_than = BARON }	
+	}
+	
+	option = {
+		name = "cristo_rey_incorporation_emperor"
+		trigger = {
+			has_landed_title = e_mexico
+		}
+		set_global_flag = cristeros_absorbed_into_fold
+		any_realm_province = {
+			if = {
+				limit = { 
+					AND = {
+						religion = cristo_rey
+						region = custom_greater_mexico
+					}
+
+				}
+				random = { 
+					chance = 40
+					religion = ROOT
+				}
+
+			}
+		}
+
+		ai_chance = {
+			factor = 1000
+		}
+	}	
+	option = {
+		name = "cristo_rey_incorporation_elsewhere"
+		trigger = {
+			NOT = {	
+				has_landed_title = e_mexico
+				primary_title = { is_landless_type_title = yes }
+				mercenary = yes
+				religion = cristo_rey
+				capital_scope = {
+					region = custom_greater_mexico
+				}
+			}
+		}
+		ai_chance = {
+			factor = 1000
+		}
+	}	
+	option = {
+		name = "cristo_rey_join_california"
+		trigger = {		
+			NOT = { has_landed_title = e_mexico }
+			religion = cristo_rey
+			capital_scope = {
+				region = custom_greater_mexico
+			}
+			NOT = {
+				primary_title = { higher_tier_than = KING }
+			}
+		}
+		religion = sacred_heart
+		add_trait = marian_cristo_rey
+		capital_scope = {
+			religion = sacred_heart
+		}
+		any_courtier = {
+			limit = { is_landed = no }
+			religion = sacred_heart
+			add_trait = marian_cristo_rey
+		}
+		ai_chance = {
+			factor = 10
+		}
+	
+	}	
+	option = {
+		name = "cristo_rey_refuse_mexico"
+		trigger = {
+			NOT = { has_landed_title = e_mexico }
+			religion = cristo_rey
+			capital_scope = {
+				region = custom_greater_mexico
+			}
+
+			NOT = {
+				primary_title = { higher_tier_than = KING }
+			}
+		}
+		ai_chance = {
+			factor = 10		
+		}
+	}	
+}
+
+narrative_event = {
+	id = sacredheart.207
+	title = TITLE_sacred_heart_gran_comision
+	desc = EVTDESC_sacred_heart_gran_comision
+	
+	picture = GFX_evt_china_invades
+	border = GFX_event_narrative_frame_religion	
+
+	only_rulers = yes
+	major = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		primary_title = { holy_order = no }
+		primary_title = { is_landless_type_title = no }
+		mercenary = no
+		primary_title = { higher_tier_than = BARON }	
+	}
+	
+	option = {
+		name = "gran_comision_incorporation_emperor"
+		trigger = {
+			has_landed_title = e_mexico
+		}
+		set_global_flag = gran_comision_absorbed_into_fold
+		any_realm_province = {
+			if = {
+				limit = { 
+					AND = {
+						religion = gran_comision
+						region = custom_greater_mexico
+					}
+
+				}
+				random = { 
+					chance = 40
+					religion = ROOT
+				}
+
+			}
+		}
+
+		ai_chance = {
+			factor = 1000
+		}
+	}	
+	option = {
+		name = "gran_comision_incorporation_elsewhere"
+		trigger = {
+			NOT = {	
+				has_landed_title = e_mexico
+				primary_title = { is_landless_type_title = yes }
+				mercenary = yes
+				religion = gran_comision
+				capital_scope = {
+					region = custom_greater_mexico
+				}
+			}
+		}
+		ai_chance = {
+			factor = 1000
+		}
+	}	
+	option = {
+		name = "gran_comision_join_california"
+		trigger = {		
+			NOT = { has_landed_title = e_mexico }
+			religion = gran_comision
+			capital_scope = {
+				region = custom_greater_mexico
+			}
+			NOT = {
+				primary_title = { higher_tier_than = KING }
+			}
+		}
+		religion = sacred_heart
+		add_trait = marian_san_felipe_de_jesus
+		capital_scope = {
+			religion = sacred_heart
+		}
+		any_courtier = {
+			limit = { is_landed = no }
+			religion = sacred_heart
+			add_trait = marian_san_felipe_de_jesus
+		}
+		ai_chance = {
+			factor = 10
+		}
+	
+	}	
+	option = {
+		name = "gran_comision_refuse_mexico"
+		trigger = {
+			NOT = { has_landed_title = e_mexico }
+			religion = gran_comision
+			capital_scope = {
+				region = custom_greater_mexico
+			}
+
+			NOT = {
+				primary_title = { higher_tier_than = KING }
+			}
+		}
+		ai_chance = {
+			factor = 10		
+		}
+	}	
+}
+
+narrative_event = {
+	id = sacredheart.208
+	title = TITLE_sacred_heart_fidencista
+	desc = EVTDESC_sacred_heart_fidencista
+	
+	picture = GFX_evt_china_invades
+	border = GFX_event_narrative_frame_religion	
+
+	only_rulers = yes
+	major = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		primary_title = { holy_order = no }
+		primary_title = { is_landless_type_title = no }
+		mercenary = no
+		primary_title = { higher_tier_than = BARON }	
+	}
+	
+	option = {
+		name = "fidencista_incorporation_emperor"
+		trigger = {
+			has_landed_title = e_mexico
+		}
+		set_global_flag = fidencistas_absorbed_into_fold
+		any_realm_province = {
+			if = {
+				limit = { 
+					AND = {
+						religion = fidencista
+						region = custom_greater_mexico
+					}
+
+				}
+				random = { 
+					chance = 40
+					religion = ROOT
+				}
+
+			}
+		}
+
+		ai_chance = {
+			factor = 1000
+		}
+	}	
+	option = {
+		name = "fidencista_incorporation_elsewhere"
+		trigger = {
+			NOT = {	
+				has_landed_title = e_mexico
+				primary_title = { is_landless_type_title = yes }
+				mercenary = yes
+				religion = fidencista
+				capital_scope = {
+					region = custom_greater_mexico
+				}
+			}
+		}
+		ai_chance = {
+			factor = 1000
+		}
+	}	
+	option = {
+		name = "fidencista_join_california"
+		trigger = {		
+			NOT = { has_landed_title = e_mexico }
+			religion = fidencista
+			capital_scope = {
+				region = custom_greater_mexico
+			}
+			NOT = {
+				primary_title = { higher_tier_than = KING }
+			}
+		}
+		religion = sacred_heart
+		add_trait = marian_santo_nino_fidencio
+		capital_scope = {
+			religion = sacred_heart
+		}
+		any_courtier = {
+			limit = { is_landed = no }
+			religion = sacred_heart
+			add_trait = marian_santo_nino_fidencio
+		}
+		ai_chance = {
+			factor = 10
+		}
+	
+	}	
+	option = {
+		name = "fidencista_refuse_mexico"
+		trigger = {
+			NOT = { has_landed_title = e_mexico }
+			religion = fidencista
+			capital_scope = {
+				region = custom_greater_mexico
+			}
+
+			NOT = {
+				primary_title = { higher_tier_than = KING }
+			}
+		}
+		ai_chance = {
+			factor = 10		
+		}
+	}	
+}
+
+narrative_event = {
+	id = sacredheart.209
+	title = TITLE_sacred_heart_navegante
+	desc = EVTDESC_sacred_heart_navegante
+	
+	picture = GFX_evt_china_invades
+	border = GFX_event_narrative_frame_religion	
+
+	only_rulers = yes
+	major = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		primary_title = { holy_order = no }
+		primary_title = { is_landless_type_title = no }
+		mercenary = no
+		primary_title = { higher_tier_than = BARON }	
+	}
+	
+	option = {
+		name = "navegante_incorporation_emperor"
+		trigger = {
+			has_landed_title = e_mexico
+		}
+		set_global_flag = navegantes_absorbed_into_fold
+		any_realm_province = {
+			if = {
+				limit = { 
+					AND = {
+						religion = navegante
+						region = custom_greater_mexico
+					}
+
+				}
+				random = { 
+					chance = 40
+					religion = ROOT
+				}
+
+			}
+		}
+
+		ai_chance = {
+			factor = 1000
+		}
+	}	
+	option = {
+		name = "navegante_incorporation_elsewhere"
+		trigger = {
+			NOT = {	
+				has_landed_title = e_mexico
+				primary_title = { is_landless_type_title = yes }
+				mercenary = yes
+				religion = navegante
+				capital_scope = {
+					region = custom_greater_mexico
+				}
+			}
+		}
+		ai_chance = {
+			factor = 1000
+		}
+	}	
+	option = {
+		name = "navegante_join_california"
+		trigger = {		
+			NOT = { has_landed_title = e_mexico }
+			religion = navegante
+			capital_scope = {
+				region = custom_greater_mexico
+			}
+			NOT = {
+				primary_title = { higher_tier_than = KING }
+			}
+		}
+		religion = sacred_heart
+		add_trait = marian_stella_maris
+		capital_scope = {
+			religion = sacred_heart
+		}
+		any_courtier = {
+			limit = { is_landed = no }
+			religion = sacred_heart
+			add_trait = marian_stella_maris
+		}
+		ai_chance = {
+			factor = 10
+		}
+	
+	}	
+	option = {
+		name = "navegante_refuse_mexico"
+		trigger = {
+			NOT = { has_landed_title = e_mexico }
+			religion = navegante
+			capital_scope = {
+				region = custom_greater_mexico
+			}
+
+			NOT = {
+				primary_title = { higher_tier_than = KING }
+			}
+		}
+		ai_chance = {
+			factor = 10		
+		}
+	}	
+}
