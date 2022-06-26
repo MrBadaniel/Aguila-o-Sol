@@ -147,7 +147,7 @@ decisions = {
 		}
 	}	
 	
-	decision_incorporate_gran_comision = {
+	decision_incorporate_la_hermandad = {
 		is_high_prio = yes
 		only_playable = yes
 		
@@ -155,11 +155,12 @@ decisions = {
 			is_alternate_start = no
 			has_landed_title = e_mexico
 			religion = sacred_heart
-			NOT = { has_global_flag = gran_comision_absorbed_into_fold }
+			has_global_flag = la_hermandad_exists
+			NOT = { has_global_flag = la_hermandad_absorbed_into_fold }
 		}
 		
 		allow = {
-			completely_controls = k_arixo
+			completely_controls = k_rio_grande
 			religion_authority = 0.7	
 			piety = 1000
 
@@ -275,7 +276,7 @@ targetted_decisions {
 			remove_trait = marian_stella_maris
 			remove_trait = marian_santo_nino_fidencio
 			remove_trait = marian_santa_inocencia
-			remove_trait = marian_san_felipe_de_jesus
+			remove_trait = marian_la_hermandad
 			remove_trait = marian_cristo_rey
 			}
 			if = {
@@ -328,9 +329,9 @@ targetted_decisions {
 			}
 			if = {
 				limit = {
-					FROM = { trait = marian_san_felipe_de_jesus }	
+					FROM = { trait = marian_la_hermandad }	
 				}
-				add_trait = marian_san_felipe_de_jesus
+				add_trait = marian_la_hermandad
 			}
 			if = {
 				limit = {
