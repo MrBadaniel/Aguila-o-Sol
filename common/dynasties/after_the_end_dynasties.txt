@@ -826,7 +826,7 @@
 1402004 = { name="Eaton" culture=arixan }
 1402005 = { name="Goodnight" culture=arixan }
 1402006 = { name="Hewins" culture=arixan }
-1402007 = { name="Driskill" culture=arixan }
+1402007 = { name="O'Driscoll" culture=arixan }
 1402008 = { name="Chisum" culture=arixan }
 1402009 = { name="Drumm" culture=arixan }
 1402010 = { name="Littlefield" culture=arixan }
@@ -12153,7 +12153,19 @@ coat_of_arms = {
 1851058 = { name="de la Guerra" culture=valleyan }
 1851059 = { name="Flores" culture=valleyan }
 1851060 = { name="Vasquez" culture=valleyan }
-1851061 = { name="Strutter" culture=valleyan }
+1851061 = { name="Strutter" culture=valleyan 
+	coat_of_arms = {
+		religion = americanist
+		template = 0
+		layer = {
+			texture = 0
+			texture_internal = 5
+			emblem = 0
+			color = 1
+			color = 1
+			color = 0
+		}
+	}}
 1851062 = { name="Hartfeld" culture=valleyan 
 	coat_of_arms = {
 		religion = cetic
@@ -12169,7 +12181,20 @@ coat_of_arms = {
 	}}
 1851063 = { name="Ryder" culture=valleyan }
 1851064 = { name="Colbart" culture=valleyan }
-1851065 = { name="Madonna" culture=valleyan }
+1851065 = { name="Madonna" culture=valleyan 
+	coat_of_arms = {
+		religion = americanist
+		template = 0
+		layer = {
+			texture = 0
+			texture_internal = 10
+			emblem = 0
+			color = 2
+			color = 1
+			color = 0
+		}
+	}
+}
 1851066 = { name="Burton" culture=valleyan }
 1851067 = { name="Molina" culture=valleyan }
 1851068 = { name="Maharidge" culture=valleyan }
@@ -12310,9 +12335,33 @@ coat_of_arms = {
 		}
 	}
 }
-1851168 = { name="Gus" culture=valleyan }
+1851168 = { name="Gus" culture=valleyan 
+	coat_of_arms = {
+		religion = americanist
+		template = 0
+		layer = {
+			texture = 0
+			texture_internal = 20
+			emblem = 0
+			color = 1
+			color = 3
+			color = 0
+		}
+	}}
 1851169 = { name="Taylor" culture=angeleno }
-1851170 = { name="Sabina" culture=angeleno }
+1851170 = { name="Sabina" culture=angeleno 
+	coat_of_arms = {
+		religion = americanist
+		template = 0
+		layer = {
+			texture = 0
+			texture_internal = 16
+			emblem = 0
+			color = 4
+			color = 2
+			color = 0
+		}
+	}}
 1851171 = { name="Invierno" culture=angeleno }
 1851172 = { name="Burgess" culture=angeleno }
 1851173 = { name="Kensington" culture=angeleno }
