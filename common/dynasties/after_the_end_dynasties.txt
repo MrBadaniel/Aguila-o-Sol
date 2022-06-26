@@ -13417,7 +13417,19 @@ coat_of_arms = {
 1876021 = { name="Howsam" culture=coloradan }
 1876022 = { name="Cheesman" culture=coloradan }
 1876023 = { name="Ricketts" culture=coloradan }
-1876024 = { name="Kunsmiller" culture=coloradan }
+1876024 = { name="Kunsmiller" culture=coloradan 
+	coat_of_arms = {
+		template = 0
+		layer = {
+			texture = 11
+			texture_internal = 16
+			emblem = 0
+			color = 0
+			color = 0
+			color = 0
+		}
+	}
+}
 1876025 = { name="Kepner" culture=coloradan }
 1876026 = { name="Wyateson" culture=coloradan }
 1876027 = { name="Swigert" culture=coloradan }
@@ -13772,7 +13784,7 @@ coat_of_arms = {
 		template = 0
 		layer = {
 			texture = 3
-			texture_internal = 1
+			texture_internal = 15
 			emblem = 0
 			color = 0
 			color = 0
