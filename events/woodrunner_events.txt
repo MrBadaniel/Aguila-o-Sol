@@ -1,0 +1,431 @@
+namespace = woodrunner
+character_event = {
+	id = woodrunner.2 #Controlled Fire
+	title = woodrunner.2.title
+	desc = woodrunner.2.desc
+	picture = GFX_evt_mysterious_forest
+
+	trigger = {
+		religion = woodrunner
+		is_ruler = yes
+	}
+	mean_time_to_happen = {
+			months = 600}
+	option = { #Theologian
+			  name = "Lightning is a part of nature, and yet it spreads fire. Destruction is natural and sometimes necessary."	
+					trigger = {trait = theologian
+								 }
+				tooltip_info = theologian
+				piety = 70
+			 }
+	option = { #High learning
+			  name = "Lightning is natural, and yet it spreads fire. Destruction is natural."	
+					trigger = {learning = 10
+							   NOT = {trait = theologian}
+								 }
+				tooltip_info = learning
+				piety = 70
+			 }			 
+	option = { #Forest Fire
+			  name = "I suppose a controlled fire could be deemed a necessary evil…"
+			  trigger = {NOT = {trait = zealous}
+						 NAND = {learning = 10
+								 ai = yes}
+								 }
+			  piety = -30
+			  if = {limit = {
+							 NOT = {trait = cynical}
+							 }
+							 random = {
+										chance = 10
+										add_trait = cynical
+							 }
+			 }			 
+			}
+	option = { #Deny
+			  name = "You suggest such despicable things!? What would Smokey Bear think!?"
+			  piety = 40
+			  trigger = {NOT = {trait = zealous}
+						 NAND = {learning = 10
+								 ai = yes}
+								 }
+		random_realm_province = {
+					     add_province_modifier = {
+						name = woodrunner_overgrowth
+						years = 2
+						}
+						  }
+		random_courtier = {
+			limit = {
+				age = 16
+				prisoner = no
+				NOR = {
+					is_inaccessible_trigger = yes
+					character = ROOT
+					is_incapable = yes
+				}
+				 NOT = {trait = zealous}
+				 learning = 10
+					}
+							opinion = {	
+								modifier = opinion_insulted
+								who = ROOT
+								years = 5
+								}
+							  }
+			  if = {limit = {
+							 NOT = {trait = zealous}
+							 NOT = {trait = cynical}
+							 }
+							 random = {
+										chance = 30
+										add_trait = zealous
+							 }
+			 }
+			  if = {limit = {
+							 trait = cynical
+							 }
+							 random = {
+										chance = 35
+										remove_trait = cynical
+							 }
+			 }			 
+			 }
+	option = { #Deny Zealous
+			  name = "You suggest such despicable things!? What would Smokey Bear think!?"
+			  piety = 40
+			  trigger = {trait = zealous
+						 NAND = {learning = 10
+								 ai = yes}
+								 }
+			  tooltip_info = zealous
+				random_province = {
+					     add_province_modifier = {
+						name = woodrunner_overgrowth
+						years = 2
+						}
+						  }
+		random_courtier = {
+			limit = {
+				age = 16
+				prisoner = no
+				NOR = {
+					is_inaccessible_trigger = yes
+					character = ROOT
+					is_incapable = yes
+				}
+				 NOT = {trait = zealous}
+				 learning = 10
+					}
+							opinion = {	
+								modifier = opinion_insulted
+								who = ROOT
+								years = 5
+								}
+							  }
+			  if = {limit = {
+							 NOT = {trait = zealous}
+							 NOT = {trait = cynical}
+							 }
+							 random = {
+										chance = 30
+										add_trait = zealous
+							 }
+			 }
+			  if = {limit = {
+							 trait = cynical
+							 }
+							 random = {
+										chance = 35
+										remove_trait = cynical
+							 }
+			 }			 
+			 }
+			 }
+			 
+character_event = {
+	id = woodrunner.3 #Berries
+	desc = woodrunner.3.desc
+	picture = GFX_evt_mysterious_forest
+
+	trigger = {
+		religion = woodrunner
+		is_ruler = yes
+	}
+	mean_time_to_happen = {
+			months = 100}
+	option = { #Preserves
+			  name = "I can make preserves with these, and be prepared for the coming winter!"	
+				add_character_modifier = {
+										  name = woodrunner_preserves_berries
+										  years = 1
+										 }
+			ai_chance = { factor = 10}
+			 }
+	option = { #Generous
+			  name = "Give the extra baskets to my court! Let all enjoy nature’s bounty!"	
+				add_character_modifier = {
+										  name = woodrunner_generous_berries
+										  years = 1
+										 }
+			ai_chance = { factor = 10
+						  modifier = {factor = 0
+									  OR = {trait = cruel
+									        trait = impaler
+											trait = greedy
+											trait = deceitful
+											 }}
+						  modifier = {factor = 2
+									  OR = {trait = generous
+											trait =kind}}
+			 }
+			 }
+	option = { #Sell
+			  name = "These berries will catch a pretty penny at the local market"
+
+			  wealth = 0.1
+			ai_chance = { factor = 10}			  
+			}
+			 }
+			 
+long_character_event = {
+	id = woodrunner.4 #Artist
+	title = woodrunner.4.title
+	desc = woodrunner.4.desc
+	picture = GFX_evt_Artist
+	
+	trigger = {
+		religion = woodrunner
+		is_ruler = yes
+		NOT = {has_dynasty_flag = woodrunner_artist}
+	}
+	immediate = {
+	set_dynasty_flag = woodrunner_artist
+		}
+	mean_time_to_happen = {
+			months = 3000}
+	option = { #Buy Art
+			  name = "Sounds like a deal!"	
+			  add_artifact = magnificent_painting
+			  scaled_wealth = -1.5
+			 }
+	option = { #Paint Wonder
+			  name = "Actually I have a better idea"
+		      trigger = {has_wonder = yes}
+			  tooltip_info_custom = WOODRUNNERWONDERARTTOOLTIP
+			  scaled_wealth = -3
+			  add_artifact = woodrunner_painting_artifact
+			 }
+	option = { #Deny
+			  name = "I don't need a painting of nature, I see it everyday!"		  
+			}
+			 }
+			 
+long_character_event = {
+	id = woodrunner.5 #Electric Boy Scout
+	title = woodrunner.5.title
+	desc = woodrunner.5.desc
+	picture = GFX_evt_child_talking
+	
+	trigger = {
+		religion = woodrunner
+		NOT = {has_dynasty_flag = woodrunner_electric_scout}
+		is_ruler = yes
+	}
+	immediate = {
+	set_dynasty_flag = woodrunner_electric_scout
+		}
+	mean_time_to_happen = {
+			months = 3000}
+	option = { #Invite to Court Scholar
+				trigger = {trait = scholar}
+				name = "Bring him to me, we have much to discuss."
+				tooltip_info = scholar
+				add_artifact = woodrunner_faraday_disk
+				create_character = {
+									random_traits = yes
+									name = "The Electric Scout"
+									dynasty = none
+									religion = ROOT
+									culture = ROOT
+									female = no
+									age = 12
+									}
+				hidden_tooltip = {
+				new_character = {
+								 remove_trait = dull
+								 remove_trait = slow
+								 remove_trait = imbred
+								 remove_trait = giant
+								 remove_trait = imbecile
+								 remove_trait = clubfooted
+								 remove_trait = dwarf
+								 remove_trait = weak
+								 remove_trait = frail
+								 
+								 remove_trait = naive_appeaser
+								 remove_trait = underhanded_rogue
+								 remove_trait = charismatic_negotiator
+								 remove_trait = grey_eminence
+								 remove_trait = misguided_warrior
+								 remove_trait = tough_soldier
+								 remove_trait = skilled_tactician
+								 remove_trait = brilliant_strategist
+								 remove_trait = indulgent_wastrel
+								 remove_trait = thrifty_clerk
+								 remove_trait = fortune_builder
+								 remove_trait = midas_touched
+								 remove_trait = amateurish_plotter
+								 remove_trait = flamboyant_schemer
+								 remove_trait = intricate_webweaver
+								 remove_trait = elusive_shadow
+								 remove_trait = detached_priest
+								 remove_trait = martial_cleric
+								 remove_trait = scholarly_theologian
+								 
+								 add_trait = mastermind_theologian
+								 add_trait = scholar
+								 add_trait = shrewd
+								 add_trait = erudite
+								}
+								}
+			 }
+	option = { #Invite to Court Scholar
+				trigger = {NOT = {trait = scholar}
+						   learning = 15}
+				tooltip_info = learning
+				name = "Bring him to me, we have much to discuss."
+				add_artifact = woodrunner_faraday_disk
+				create_character = {
+									random_traits = yes
+									name = "The Electric Scout"
+									dynasty = none
+									religion = ROOT
+									culture = ROOT
+									female = no
+									age = 12
+									}
+				hidden_tooltip = {
+				new_character = {
+								 remove_trait = dull
+								 remove_trait = slow
+								 remove_trait = imbred
+								 remove_trait = giant
+								 remove_trait = imbecile
+								 remove_trait = clubfooted
+								 remove_trait = dwarf
+								 remove_trait = weak
+								 remove_trait = frail
+								 
+								 remove_trait = naive_appeaser
+								 remove_trait = underhanded_rogue
+								 remove_trait = charismatic_negotiator
+								 remove_trait = grey_eminence
+								 remove_trait = misguided_warrior
+								 remove_trait = tough_soldier
+								 remove_trait = skilled_tactician
+								 remove_trait = brilliant_strategist
+								 remove_trait = indulgent_wastrel
+								 remove_trait = thrifty_clerk
+								 remove_trait = fortune_builder
+								 remove_trait = midas_touched
+								 remove_trait = amateurish_plotter
+								 remove_trait = flamboyant_schemer
+								 remove_trait = intricate_webweaver
+								 remove_trait = elusive_shadow
+								 remove_trait = detached_priest
+								 remove_trait = martial_cleric
+								 remove_trait = scholarly_theologian
+								 
+								 add_trait = mastermind_theologian
+								 add_trait = scholar
+								 add_trait = shrewd
+								 add_trait = erudite
+								}
+								}
+			 }
+	option = { #Get Artifact
+			  name = "Grant the scout a merit badge, and showcase the device in my treasury!"	
+			  add_artifact = woodrunner_faraday_disk
+			  prestige = 50
+			 }
+	option = { #Let him keep artifact
+			  name = "Hold a festival in his honor, and allow him to keep the artifact"
+			  prestige = 100
+			  add_character_modifier = woodrunner_great_ruler
+			 }
+			 }
+long_character_event = {
+	id = woodrunner.6
+	title = woodrunner.1.title
+	desc = woodrunner.1.desc
+	picture = gfx_evt_mysterious_forest
+	
+	trigger = {
+				religion = woodrunner
+				NOT = {has_dynasty_flag = woodrunner_wild_man}
+				is_ruler = yes
+	}
+	mean_time_to_happen = {months = 1200}
+	immediate = {set_dynasty_flag = woodrunner_wild_man}
+	option = {#Leave him be
+				name = "No need to worry, I'm just on patrol"
+				piety = -25
+				if = {limit = {NOT = {trait = cruel}
+							   NOT = {trait = kind}}
+					  random = {
+								chance = 20
+								add_trait = kind
+					  }
+					  }
+				if = {limit = {trait = cruel}
+					  random = {
+								change = 10
+								remove_trait = cruel
+					  }}
+	}
+	option = {#Remove him
+			   name = "These are protected lands, you're going to have to move"
+			   piety = 30
+			   if = {limit = {NOT = {trait = cynical}
+							  NOT = {trait = zealous}}
+					 random = {
+								chance = 10
+								add_trait = zealous
+					 }}
+			   if = {limit = {trait = cynical}
+					 random = {
+							   chance = 10
+							   remove_trait = cynical
+							   }}
+			   if = {limit = {trait = kind}
+					 random = {
+								chance = 30
+								remove_trait = kind
+								}}
+								}
+	option = {#Invite to court
+				name = "Come to our ranger station if you need a place to stay"
+				create_character = {
+									name = "The Wild Man"
+									random_traits = no
+									dynasty = none
+									religion = ROOT
+									culture = ROOT
+									female = no
+									age = 39
+									}
+				hidden_tooltip = {
+					new_character = {
+									 add_trait = scholarly_theologian
+									 add_trait = mystic
+									 add_trait = gardener
+									 add_trait = patient
+									 add_trait = humble
+									 add_trait = content
+									 add_trait = shy
+									}
+				}
+				}
+
+}
