@@ -1,0 +1,22 @@
+# 426 - Mesa Verde
+
+# County Title
+title=c_mesa_verde
+
+# Settlements
+max_settlements=4
+b_durango_CO=castle
+b_cortez_CO=city
+
+# Misc
+culture=coloradan
+religion=mormon
+terrain=highlands
+
+#History
+1.1.1={
+	build_wonder=wonder_anasazi_cliff_palace
+	set_wonder_stage=3
+	build_wonder_upgrade=upgrade_caves_natural #Tourism
+	#set_wonder_damaged=yes		#The damaged image has the pyramid much more damaged than the Giza pyramids
+}
