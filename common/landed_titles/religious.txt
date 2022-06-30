@@ -1,4 +1,4 @@
-###ÄNSI
+###Ã„NSI
 
 k_papal_state = {
 	color={ 255 249 198 }
@@ -65,24 +65,24 @@ k_ursuline = {
 	# Frenchy-French-Frenchy-honhonhon
 	male_names = {
 		Anaclet Anicet Alexandre Adrien Augustin
-		Benoït Boniface
-		Clément Charles Calixte Claude
+		BenoÃ¯t Boniface
+		ClÃ©ment Charles Calixte Claude
 		Denys
-		Étienne
-		Félix François
-		Gréoire
+		Ã‰tienne
+		FÃ©lix FranÃ§ois
+		GrÃ©oire
 		Innocent Ignatius
-		Jean Jules Jéréme
-		Lucius Léon Louis
+		Jean Jules JÃ©rÃ©me
+		Lucius LÃ©on Louis
 		Marcel Michel
 		Pierre Paul
 		Sixte
-		Télesphore Theocletus
+		TÃ©lesphore Theocletus
 		Urbain
 		Victor
 	}
 	female_names = {
-		Adrienne Angèle Anne Ada Anastasia Alexandra
+		Adrienne AngÃ¨le Anne Ada Anastasia Alexandra
 		Blandine Bella
 		Constantia Celestina
 		Dorothea Dona
@@ -1183,32 +1183,39 @@ d_qingzhen = {
 	dynasty_title_names = no 	# Will not be named "Seljuk", etc. (lol)
 }
 
-#d_falling_star = {
-#	color={ 225 200 70 }
-#	color2={ 255 255 255 }
-#	
-#	capital = 1869 #Bluefields
-#	
-#	title = "PRESIDENT"
-#	foa = "POPE_FOA"
-#
-#	short_name = yes
-#	
-#	# Always exists
-#	landless = yes
-#	
-#	# Controls a religion
-#	controls_religion = falling_star
-#	
-#	religion = falling_star
-#	
-#	# Cannot be held as a secondary title
-#	primary = yes
-#
-#	assimilate = no
-#	
-#	dynasty_title_names = no 	# Will not be named "Seljuk", etc.
-#}
+d_falling_star = {
+	color={ 225 200 70 }
+	color2={ 255 255 255 }
+	
+	capital = 1728 #Roswell
+	creation_requires_capital = no
+	
+	title = "COSMIC_ORACLE"
+	foa = "POPE_FOA"
+	
+	allow = { #only via special decision
+		religion = falling_star
+		num_of_holy_sites = 3
+		piety = 500
+		wealth = 250
+	}
+
+	caliphate = yes
+
+	short_name = yes
+	
+	# Controls a religion
+	controls_religion = falling_star
+	
+	religion = falling_star
+	
+	# Cannot be held as a secondary title
+	primary = no
+
+	assimilate = no
+	
+	dynasty_title_names = no 	# Will not be named "Seljuk", etc.
+}
 
 d_exovedate = { 
 	color={ 155 155 235 }
