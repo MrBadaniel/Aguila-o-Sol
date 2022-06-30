@@ -119,12 +119,18 @@ character_event = {
 		has_character_flag = flagellation_ritual
 	}
 	
+	immediate = {
+		hidden_tooltip = {
+			character_event = { id = centroamerica.115 days = 5 } #event that may give the character virtues
+		}
+	}
+	
 	option = { #flagellation lvl 1 
 		name = EVTOPTA_flagellation_1
-		trigger = { is_female = no }
+		#trigger = { is_female = no }
 		custom_tooltip = { text = TXT_EVTOPTA_flagellation_1 }
 		hidden_tooltip = {
-			character_event = { id = centroamerica.103 days = 2 }
+			character_event = { id = centroamerica.101 days = 2 }
 		}
 	}
 	
@@ -138,14 +144,21 @@ character_event = {
 	
 	option = { #flagellation lvl 3
 		name = EVTOPTC_flagellation_1
+		trigger = {
+			OR = {
+				trait = zealous
+				trait = devout
+				piety = 100
+			}
+		}
 		custom_tooltip = { text = TXT_EVTOPTC_flagellation_1 }
 		hidden_tooltip = { #event used to decide outcome
-			character_event = { id = centroamerica.101 days = 2 }
+			character_event = { id = centroamerica.103 days = 2 }
 		}
 	}
 }
 
-character_event = { #Tongue event decider
+character_event = { #Cilice event decider
 	id = centroamerica.101
 	hide_window = yes
 	is_triggered_only = yes
@@ -156,7 +169,7 @@ character_event = { #Tongue event decider
 	
 	immediate = {
 		random_list = {
-			70 = { #Goes well - immense piety and prestige
+			70 = { #Goes well - immense piety and #prestige
 				modifier = {
 					factor = 1.5
 					OR = {
@@ -178,7 +191,7 @@ character_event = { #Tongue event decider
 				}
 				character_event = { id = centroamerica.104 days = 1}
 			}
-			25 = { #Goes poorly - infection
+			15 = { #Goes very poorly - infection
 				modifier = {
 					factor = 0.75
 					OR = {
@@ -200,7 +213,7 @@ character_event = { #Tongue event decider
 				}
 				character_event = { id = centroamerica.105 days = 1}
 			}
-			5 = { #Goes very poorly - permanent lisp
+			15 = { #Goes poorly - swollen ankle
 				modifier = {
 					factor = 0.5
 					OR = {
@@ -220,13 +233,20 @@ character_event = { #Tongue event decider
 						trait = inbred
 					}
 				}
+				modifier = {
+					factor = 0
+					OR = {
+						trait = one_legged
+						trait = maimed
+					}
+				}
 				character_event = { id = centroamerica.106 days = 1}
 			}
 		}
 	}
 }
 
-character_event = { #Arm event decider
+character_event = { #Discipline whip event decider
 	id = centroamerica.102
 	hide_window = yes
 	is_triggered_only = yes
@@ -237,7 +257,7 @@ character_event = { #Arm event decider
 	
 	immediate = {
 		random_list = {
-			75 = { #Goes well - pretty good piety and prestige
+			60 = { #Goes well - pretty good piety and #prestige
 				modifier = {
 					factor = 1.5
 					OR = {
@@ -259,7 +279,7 @@ character_event = { #Arm event decider
 				}
 				character_event = { id = centroamerica.107 days = 1}
 			}
-			25 = { #Goes poorly - infection
+			15 = { #Goes poorly - infection
 				modifier = {
 					factor = 0.75
 					OR = {
@@ -281,11 +301,33 @@ character_event = { #Arm event decider
 				}
 				character_event = { id = centroamerica.108 days = 1}
 			}
+			25 = { #Goes poorly - badly bruised
+				modifier = {
+					factor = 0.5
+					OR = {
+						trait = quick
+						trait = genius
+						trait = shrewd
+						trait = physician
+					}
+				}
+				modifier = {
+					factor = 1.75
+					OR = {
+						trait = dull
+						trait = slow
+						trait = distractible
+						trait = imbecile
+						trait = inbred
+					}
+				}
+				character_event = { id = centroamerica.111 days = 1}
+			}
 		}
 	}
 }
 
-character_event = { #Hand event decider
+character_event = { #Crufixion event decider
 	id = centroamerica.103
 	hide_window = yes
 	is_triggered_only = yes
@@ -296,7 +338,7 @@ character_event = { #Hand event decider
 	
 	immediate = {
 		random_list = {
-			80 = { #Goes well - alright piety and prestige
+			50 = { #Goes well - alright piety and #prestige
 				modifier = {
 					factor = 1.5
 					OR = {
@@ -318,7 +360,7 @@ character_event = { #Hand event decider
 				}
 				character_event = { id = centroamerica.109 days = 1}
 			}
-			20 = { #Goes poorly - infection
+			25 = { #Goes poorly - severly injured or maimed
 				modifier = {
 					factor = 0.75
 					OR = {
@@ -340,11 +382,33 @@ character_event = { #Hand event decider
 				}
 				character_event = { id = centroamerica.110 days = 1}
 			}
+			25 = { #Goes poorly - broken ribs
+				modifier = {
+					factor = 0.5
+					OR = {
+						trait = quick
+						trait = genius
+						trait = shrewd
+						trait = physician
+					}
+				}
+				modifier = {
+					factor = 1.75
+					OR = {
+						trait = dull
+						trait = slow
+						trait = distractible
+						trait = imbecile
+						trait = inbred
+					}
+				}
+				character_event = { id = centroamerica.112 days = 1}
+			}
 		}
 	}
 }
 
-#Tongue event (good)
+#Cilice event (good)
 character_event = {
 	id = centroamerica.104
 	desc = EVTDESC_flagellation_2
@@ -359,12 +423,12 @@ character_event = {
 	
 	option = {
 		name = EVTOPTA_flagellation_2
-		prestige = 350
-		piety = 350
-		#add_trait = bloodlet #this will help solidify it in the minds of players
+		#prestige = 350
+		piety = 100
+		
 		add_character_modifier = { 
-			name = flagellant_tier_three
-			duration = 60
+			name = flagellant_tier_one
+			years = 3
 		}
 	}
 	
@@ -373,7 +437,7 @@ character_event = {
 	}
 }
 
-#Tongue event (bad)
+#Cilice event (infection)
 character_event = {
 	id = centroamerica.105
 	desc = EVTDESC_flagellation_3
@@ -388,8 +452,8 @@ character_event = {
 	
 	option = {
 		name = EVTOPTA_flagellation_3
-		prestige = -50
-		piety = 200
+		#prestige = -50
+		piety = 350
 		if = {
 			limit = {
 				NOT = {
@@ -407,20 +471,18 @@ character_event = {
 				character_event = { id = RIP.11001 days = 365 random = 1095 }
 			}
 		}
-		#add_trait = bloodlet #this will help solidify it in the minds of players
-		add_character_modifier = { 
-			name = flagellant_tier_three
-			duration = 60
-		}
 		
-	}
+		add_character_modifier = { 
+			name = flagellant_tier_one
+			years = 3
+		}
 	
 	after = {
 		clr_character_flag = flagellation_ritual
 	}
 }
 
-#Tongue event (very bad)
+#Cilice event (hurt)
 character_event = {
 	id = centroamerica.106
 	desc = EVTDESC_flagellation_4
@@ -435,13 +497,17 @@ character_event = {
 	
 	option = {
 		name = EVTOPTA_flagellation_4
-		prestige = -150
-		piety = 50
-		add_trait = lisp
-		#add_trait = bloodlet #this will help solidify it in the minds of players
+		#prestige = -150
+		piety = 200
+		#add_trait = lisp
+		
+		add_character_modifier = {
+			modifier = swollen_ankle
+			months = 10
+		}
 		add_character_modifier = { 
-			name = flagellant_tier_three
-			duration = 60
+			name = flagellant_tier_one
+			years = 3
 		}
 	}
 	
@@ -450,7 +516,7 @@ character_event = {
 	}
 }
 
-#Arm event (good)
+#Discipline event (good)
 character_event = {
 	id = centroamerica.107
 	desc = EVTDESC_flagellation_5
@@ -464,13 +530,13 @@ character_event = {
 	}
 	
 	option = {
-		name = EVTOPTA_flagellation_5
-		prestige = 250
-		piety = 250
-		#add_trait = bloodlet #this will help solidify it in the minds of players
+		name = EVTOPTA_flagellation_2
+		#prestige = 250
+		piety = 150
+		
 		add_character_modifier = { 
 			name = flagellant_tier_two
-			duration = 60
+			years = 3
 		}
 	}
 	
@@ -479,7 +545,7 @@ character_event = {
 	}
 }
 
-#Arm event (bad)
+#Discipline event (bad)
 character_event = {
 	id = centroamerica.108
 	desc = EVTDESC_flagellation_6
@@ -493,9 +559,9 @@ character_event = {
 	}
 	
 	option = {
-		name = EVTOPTA_flagellation_6
-		prestige = -75
-		piety = 100
+		name = EVTOPTA_flagellation_2
+		#prestige = -75
+		piety = 400
 		if = {
 			limit = {
 				NOT = {
@@ -513,10 +579,10 @@ character_event = {
 				character_event = { id = RIP.11001 days = 365 random = 1095 }
 			}
 		}
-		#add_trait = bloodlet #this will help solidify it in the minds of players
+		
 		add_character_modifier = { 
 			name = flagellant_tier_two
-			duration = 60
+			years = 3
 		}
 	}
 	
@@ -525,39 +591,10 @@ character_event = {
 	}
 }
 
-#Hand event (good)
+#Discipline event (badly bruised)
 character_event = {
-	id = centroamerica.109
+	id = centroamerica.115
 	desc = EVTDESC_flagellation_7
-	picture = GFX_evt_xipe
-	border = GFX_event_normal_frame_religion
-	
-	is_triggered_only = yes
-	
-	trigger = {
-		has_character_flag = flagellation_ritual
-	}
-	
-	option = {
-		name = EVTOPTA_flagellation_7
-		prestige = 200
-		piety = 200
-		#add_trait = bloodlet #this will help solidify it in the minds of players
-		add_character_modifier = { 
-			name = flagellant_tier_one
-			duration = 60
-		}
-	}
-	
-	after = {
-		clr_character_flag = flagellation_ritual
-	}
-}
-
-#Hand event (bad)
-character_event = {
-	id = centroamerica.110
-	desc = EVTDESC_flagellation_8
 	picture = GFX_evt_bad_news
 	border = GFX_event_normal_frame_religion
 	
@@ -568,34 +605,464 @@ character_event = {
 	}
 	
 	option = {
-		name = EVTOPTA_flagellation_8
-		prestige = -100
-		piety = 50
-		if = {
-			limit = {
-				NOT = {
-					has_dlc = "Reapers"
-				}
-			}
-			add_trait = wounded
+		name = EVTOPTA_flagellation_2
+		#prestige = -150
+		piety = 200
+		#add_trait = lisp
+		
+		add_character_modifier = {
+			name = badly_bruised
+			months = 7
 		}
-		if = {
-			limit = {
-				has_dlc = "Reapers"
-			}
-			add_trait = infection
-			hidden_tooltip = {
-				character_event = { id = RIP.11001 days = 365 random = 1095 }
-			}
-		}
-		#add_trait = bloodlet #this will help solidify it in the minds of players
 		add_character_modifier = { 
 			name = flagellant_tier_one
-			duration = 60
+			years = 3
 		}
 	}
 	
 	after = {
 		clr_character_flag = flagellation_ritual
 	}
+}
+
+#Crucifix event (good)
+character_event = {
+	id = centroamerica.109
+	desc = EVTDESC_flagellation_8
+	picture = GFX_evt_xipe
+	border = GFX_event_normal_frame_religion
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		has_character_flag = flagellation_ritual
+	}
+	
+	immediate = {
+		if = {
+			limit = {
+				trait = cynical
+			}
+			random = {
+				chance = 50
+				set_character_flag = flagellant_remove_cynical
+			}
+		}
+		
+		if = {
+			limit = {
+				NOR = {
+					trait = cynical
+					trait = zealous
+					trait = devout
+				}
+			}
+			random_list = {
+				25 = { set_character_flag = flagellant_add_zealous }
+				25 = { set_character_flag = flagellant_add_devout }
+				50 = { }
+			}
+		}
+	}
+	
+	option = {
+		name = EVTOPTA_flagellation_9
+		#prestige = 200
+		piety = 300
+		
+		add_character_modifier = { 
+			modifier = flagellant_tier_three
+			years = 3
+		}
+		
+		trigger_switch = {
+			on_trigger = has_character_flag
+			flagellant_remove_cynical = { remove_trait = cynical }
+			flagellant_add_zealous = { add_trait = zealous }
+			flagellant_add_trait = { add_trait = devout }
+		}
+		
+		clr_character_flag = flagellant_remove_cynical
+		clr_character_flag = flagellant_add_zealous
+		clr_character_flag = flagellant_add_devout
+	}
+	
+	after = {
+		clr_character_flag = flagellation_ritual
+	}
+}
+
+#Crucifix event (severly injured)
+character_event = {
+	id = centroamerica.110
+	desc = EVTDESC_flagellation_9
+	picture = GFX_evt_bad_news
+	border = GFX_event_normal_frame_religion
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		has_character_flag = flagellation_ritual
+	}
+	
+	immediate = {
+		if = {
+			limit = {
+				trait = cynical
+			}
+			random = {
+				chance = 50
+				set_character_flag = flagellant_remove_cynical
+			}
+		}
+		
+		if = {
+			limit = {
+				NOR = {
+					trait = cynical
+					trait = zealous
+					trait = devout
+				}
+			}
+			random_list = {
+				25 = { set_character_flag = flagellant_add_zealous }
+				25 = { set_character_flag = flagellant_add_devout }
+				50 = { }
+			}
+		}
+	}
+	
+	option = {
+		name = EVTOPTA_flagellation_9
+		#prestige = -100
+		piety = 500
+		if = {
+			limit = {
+				NOT = {
+					has_dlc = "Reapers"
+				}
+			}
+			add_trait = maimed
+		}
+		if = {
+			limit = {
+				has_dlc = "Reapers"
+			}
+			add_trait = severely_injured 
+			resolve_severely_injured_effect = yes
+		}
+		
+		add_character_modifier = { 
+			modifier = flagellant_tier_three
+			years = 3
+		}
+		
+		trigger_switch = {
+			on_trigger = has_character_flag
+			flagellant_remove_cynical = { remove_trait = cynical }
+			flagellant_add_zealous = { add_trait = zealous }
+			flagellant_add_trait = { add_trait = devout }
+		}
+		
+		clr_character_flag = flagellant_remove_cynical
+		clr_character_flag = flagellant_add_zealous
+		clr_character_flag = flagellant_add_devout
+	}
+	
+	after = {
+		clr_character_flag = flagellation_ritual
+	}
+}
+
+#Crucifix event (broken ribs)
+character_event = {
+	id = centroamerica.115
+	desc = EVTDESC_flagellation_10
+	picture = GFX_evt_bad_news
+	border = GFX_event_normal_frame_religion
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		has_character_flag = flagellation_ritual
+	}
+	
+	immediate = {
+		if = {
+			limit = {
+				trait = cynical
+			}
+			random = {
+				chance = 50
+				set_character_flag = flagellant_remove_cynical
+			}
+		}
+		
+		if = {
+			limit = {
+				NOR = {
+					trait = cynical
+					trait = zealous
+					trait = devout
+				}
+			}
+			random_list = {
+				25 = { set_character_flag = flagellant_add_zealous }
+				25 = { set_character_flag = flagellant_add_devout }
+				50 = { }
+			}
+		}
+	}
+	
+	option = {
+		name = EVTOPTA_flagellation_9
+		#prestige = -150
+		piety = 450
+		#add_trait = lisp
+		
+		add_character_modifier = {
+			modifier = cracked_ribs
+			months = 12
+		}
+		add_character_modifier = { 
+			modifier = flagellant_tier_three
+			years = 3
+		}
+		
+		trigger_switch = {
+			on_trigger = has_character_flag
+			flagellant_remove_cynical = { remove_trait = cynical }
+			flagellant_add_zealous = { add_trait = zealous }
+			flagellant_add_trait = { add_trait = devout }
+		}
+		
+		clr_character_flag = flagellant_remove_cynical
+		clr_character_flag = flagellant_add_zealous
+		clr_character_flag = flagellant_add_devout
+	}
+	
+	after = {
+		clr_character_flag = flagellation_ritual
+	}
+}
+
+#Event to give a positive trait
+character_event = {
+	id = centroamerica.115
+	desc = EVTDESC_flagellation_15
+	picture = GFX_evt_xipe
+	border = GFX_event_normal_frame_religion
+	
+	is_triggered_only = yes
+	
+	trigger = { 
+		OR = {
+			trait = cynical
+			trait = gluttonous
+			trait = greedy
+			trait = slothful
+			trait = envious
+			trait = wroth
+			trait = proud
+			trait = deceitful
+			trait = cruel
+			NOT = { trait = humble }
+			NOT = { trait = charitable }
+			NOT = { trait = kind }
+			NOT = { trait = temperate }
+			NOT = { trait = honest }
+			NOT = { trait = chaste }
+			NOT = { trait = patient }
+			NOT = { trait = diligent }
+			NOT = { trait = content }
+		}
+	}
+	
+	immediate = {
+		#FIRST STAGE
+		#Removes cynic, gluttonous, greedy, slothful, lustful, envious, wrath, pride, deceitful, 
+		#Adds humble, charitable
+		if = {
+			limit = {
+				OR = {
+					trait = cynical
+					trait = gluttonous
+					trait = greedy
+					trait = slothful
+					trait = envious
+					trait = wroth
+					trait = proud
+					trait = deceitful
+					trait = cruel
+					AND = {
+						trait = lustful
+						NOT = { religion = hindu }
+						NOT = { religion_group = jewish_group }
+					}
+					NOT = { trait = humble }
+					NOT = { trait = charitable }
+				}
+			}
+			random_list = {
+				15 = {
+					modifier = { factor = 0 NOT = { trait = cynical } }
+					set_character_flag = flagellant_remove_cynical
+				}
+				10 = {
+					modifier = { factor = 0 NOT = { trait = gluttonous } }
+					set_character_flag = flagellant_remove_gluttonous
+				}
+				10 = {
+					modifier = { factor = 0 NOT = { trait = greedy } }
+					set_character_flag = flagellant_remove_greedy
+				}
+				10 = {
+					modifier = { factor = 0 NOT = { trait = slothful } }
+					set_character_flag = flagellant_remove_slothful
+				}
+				10 = {
+					modifier = { factor = 0 NOT = { trait = envious } }
+					set_character_flag = flagellant_remove_envious
+				}
+				10 = {
+					modifier = { factor = 0 NOT = { trait = wroth } }
+					set_character_flag = flagellant_remove_wroth
+				}
+				10 = {
+					modifier = { factor = 0 NOT = { trait = proud } }
+					set_character_flag = flagellant_remove_proud
+				}
+				10 = {
+					modifier = { factor = 0 NOT = { trait = deceitful } }
+					set_character_flag = flagellant_remove_deceitful
+				}
+				10 = {
+					modifier = { factor = 0 NOT = { trait = cruel } }
+					set_character_flag = flagellant_remove_cruel
+				}
+				10 = {
+					modifier = {factor = 0	NOT = { trait = lustful }}
+					set_character_flag = flagellant_remove_lustful
+				}
+				10 = {
+					modifier = {
+						factor = 0
+						OR = {
+							trait = humble
+							trait = proud
+						}
+					}
+					set_character_flag = flagellant_add_humble
+				}
+				10 = {
+					modifier = {
+						factor = 0
+						OR = {
+							trait = charitable
+							trait = greedy
+						}
+					}
+					set_character_flag = flagellant_add_charitable
+				}
+			}
+		}
+	
+		#SECOND STAGE
+		#Add traits chaste, kind, temperate, honest
+		if = {
+			limit = {
+				NOR = {
+					trait = cynical
+					trait = gluttonous
+					trait = slothful
+					trait = envious
+					trait = wroth
+					trait = deceitful
+					trait = cruel
+					trait = lustful
+				}
+				trait = charitable
+				trait = humble
+				NAND = {
+					trait = chaste
+					trait = kind
+					trait = temperate
+					trait = honest
+				}
+			}
+			random_list = {
+				10 = {
+					modifier = {
+						factor = 0
+						trait = chaste
+					}
+					set_character_flag = flagellant_add_chaste
+				}
+				10 = {
+					modifier = { factor = 0 trait = kind }
+					set_character_flag = flagellant_add_kind
+				}
+				10 = {
+					modifier = { factor = 0 trait = temperate }
+					set_character_flag = flagellant_add_temperate
+				}
+				10 = {
+					modifier = { factor = 0 trait = honest }
+					set_character_flag = flagellant_add_honest
+				}
+			}
+		}
+		
+	}
+	
+	option = {
+		name = EVTOPTA_flagellation_15
+		
+		trigger_switch = {
+			on_trigger = has_character_flag
+			flagellant_remove_cynical	 = { remove_trait = cynical }
+			flagellant_remove_gluttonous = { remove_trait = gluttonous }
+			flagellant_remove_greedy	 = { remove_trait = greedy }
+			flagellant_remove_slothful	 = { remove_trait = slothful }
+			flagellant_remove_envious	 = { remove_trait = envious }
+			flagellant_remove_wroth		 = { remove_trait = wroth }
+			flagellant_remove_proud		 = { remove_trait = proud }
+			flagellant_remove_deceitful = { remove_trait = deceitful }
+			flagellant_remove_cruel		 = { remove_trait = cruel }
+			flagellant_remove_lustful	 = { remove_trait = lustful }
+			flagellant_add_humble		 = { add_trait = humble }
+			flagellant_add_charitable	 = { add_trait = charitable }
+			flagellant_add_chaste		 = { add_trait = chaste }
+			flagellant_add_kind			 = { add_trait = kind }
+			flagellant_add_temperate	 = { add_trait = temperate }
+			flagellant_add_honest		 = { add_trait = honest }
+			flagellant_remove_ambitious	 = { remove_trait = ambitious }
+			flagellant_add_content		 = { add_trait = content }
+			flagellant_add_patient		 = { add_trait = patient }
+			flagellant_add_diligent		 = { add_trait = diligent }
+		}
+
+		clr_character_flag = flagellant_remove_cynical
+		clr_character_flag = flagellant_remove_gluttonous
+		clr_character_flag = flagellant_remove_greedy
+		clr_character_flag = flagellant_remove_slothful
+		clr_character_flag = flagellant_remove_envious
+		clr_character_flag = flagellant_remove_wroth
+		clr_character_flag = flagellant_remove_proud
+		clr_character_flag = flagellant_remove_deceitful
+		clr_character_flag = flagellant_remove_cruel
+		clr_character_flag = flagellant_remove_lustful
+		clr_character_flag = flagellant_add_humble
+		clr_character_flag = flagellant_add_charitable
+		clr_character_flag = flagellant_add_chaste
+		clr_character_flag = flagellant_add_kind
+		clr_character_flag = flagellant_add_temperate
+		clr_character_flag = flagellant_add_honest
+		clr_character_flag = flagellant_remove_ambitious
+		clr_character_flag = flagellant_add_content
+		clr_character_flag = flagellant_add_patient
+		clr_character_flag = flagellant_add_diligent
+	}
+}
+
 }
