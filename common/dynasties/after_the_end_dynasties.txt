@@ -12459,7 +12459,19 @@ coat_of_arms = {
 1851173 = { name="Kensington" culture=angeleno }
 1851174 = { name="Pringle" culture=angeleno }
 1851175 = { name="Ballis" culture=angeleno }
-1851176 = { name="Astroida" culture=angeleno }
+1851176 = { name="Astroida" culture=angeleno 
+		coat_of_arms = {
+		religion = cetic
+		template = 0
+		layer = {
+			texture = 1
+			texture_internal = 23
+			emblem = 0
+			color = 0
+			color = 0
+			color = 0
+		}
+	}}
 1851177 = { name="Rose" culture=valleyan }
 
 1851178 = { name="Soledad" culture=pinoy 
@@ -12497,7 +12509,7 @@ coat_of_arms = {
 		template = 0
 		layer = {
 			texture = 3
-			texture_internal = 8
+			texture_internal = 9
 			emblem = 0
 			color = 0
 			color = 0
