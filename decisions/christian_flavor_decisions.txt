@@ -85,4 +85,63 @@ decisions = {
 		}		
 		
 	}
+	
+	celebrate_dominionist_thanksgiving = {
+		is_high_prio = yes
+		only_rulers = yes
+		
+		potential = {
+			NOT = {
+				has_alternate_start_parameter = { key = religion_names value = random }
+			}
+			prisoner = no
+			OR = {
+			religion = reconstructionist
+			religion = dominionist
+			}
+			is_adult = yes
+			NOT = { has_character_modifier = held_dominionist_thanksgiving }
+		}
+		allow = {
+			war = no
+			custom_tooltip = {
+				text = UNOCCUPIED_DEMESNE_TITLE
+				hidden_tooltip = {
+					any_demesne_title = {
+						NOT = { higher_tier_than = count }
+						is_occupied = no
+					}
+				}
+			}
+			piety = 250
+			month = 10
+			NOT = { month = 1 }
+			wealth = 50
+			prisoner = no
+				custom_tooltip = {
+				text = is_not_busy_trigger_tooltip
+				hidden_tooltip = { NOT = { has_character_flag = do_not_disturb } }
+			}
+			NOT = { has_character_flag = dominionist_thanksgiving }
+			NOT = { has_character_flag = celebrating_dominionist_thanksgiving }
+			NOT = { has_character_flag = holding_dominionist_thanksgiving }
+		}
+		effect = {
+			character_event = { id = dominionist.1 }
+			piety = -250
+			set_character_flag = celebrating_dominionist_thanksgiving
+			set_character_flag = do_not_disturb
+			set_character_flag = holding_dominionist_thanksgiving
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.3 # Slow it down a little
+			}
+		}
+	}		
+	
 }
