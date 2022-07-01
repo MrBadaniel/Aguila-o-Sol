@@ -1999,7 +1999,7 @@ character_event = {
 	desc = EVTDESC_sacredheart_204
 	picture = GFX_evt_bishop
 	is_triggered_only = yes
-	min_age = 16
+	min_age = 10
 
 	trigger = {
 		religion = sacred_heart
@@ -2017,164 +2017,31 @@ character_event = {
 			trait = marian_san_pascual
 			trait = marian_la_hermandad
 			trait = marian_cristo_rey
+			trait = marian_santa_inocencia
 		}
 	}
+	
+		effect = {
+			add_cenobitic_trait_effect = yes
+			}	
 	
 	option = {
 		name = EVTOPTA_sacredheart_204
-		hidden_tooltip = {
-			remove_trait = marian_santa_muerte
-			remove_trait = marian_guadalupe
-			remove_trait = marian_san_charbel
-			remove_trait = marian_san_juditas
-			remove_trait = marian_el_santo
-			remove_trait = marian_stella_maris
-			remove_trait = marian_santo_nino_fidencio
-			remove_trait = marian_san_pascual
-			remove_trait = marian_la_hermandad
-			remove_trait = marian_cristo_rey
+		trigger = {
+		ai = yes
 		}
-		add_trait = marian_santa_inocencia
-		ai_chance = {
-			factor = 10
-			modifier = { factor = 2 trait = marian_santa_inocencia }
-			modifier = { factor = 5	trait = mastermind_theologian }
-			modifier = { factor = 4	trait = scholarly_theologian }
-			modifier = { factor = 3	trait = martial_cleric }
-			modifier = { factor = 2 trait = kind }
-			modifier = { factor = 2 trait = trusting }
-			modifier = { factor = 1.5 trait = sympathy_christendom }
-			modifier = { factor = 1.5 learning = 10 }
-			modifier = { factor = 1.5 diplomacy = 10 }
-			modifier = { factor = 0.3 trait = paranoid }
-			modifier = { factor = 0.3 trait = cruel }
-			modifier = { factor = 0.2 trait = sympathy_mesoamerican_gods }
-			modifier = { factor = 0.3 trait = sympathy_oldworld }
-		}
-	}
-	
+		effect = {
+			add_sacred_heart_branch_effect = yes
+			}	
+		}	
+
 	option = {
 		name = EVTOPTB_sacredheart_204
-		hidden_tooltip = {
-			remove_trait = marian_el_santo
-			remove_trait = marian_santa_muerte
-			remove_trait = marian_san_charbel
-			remove_trait = marian_san_juditas
-			remove_trait = marian_san_pascual
-			remove_trait = marian_stella_maris
-			remove_trait = marian_santo_nino_fidencio
-			remove_trait = marian_santa_inocencia
-			remove_trait = marian_la_hermandad
-			remove_trait = marian_cristo_rey
+		trigger = {
+		ai = no
 		}
-		add_trait = marian_guadalupe
-		ai_chance = {
-			factor = 10
-			modifier = { factor = 2 trait = marian_guadalupe }
-			modifier = { factor = 5	trait = grey_eminence }
-			modifier = { factor = 4	trait = charismatic_negotiator }
-			modifier = { factor = 3	trait = underhanded_rogue }
-			modifier = { factor = 1.5 trait = gregarious }
-			modifier = { factor = 1.5 trait = devout }
-			modifier = { factor = 1.5 trait = humble }
-			modifier = { factor = 1.5 trait = sympathy_christendom }
-			modifier = { factor = 1.5 learning = 10 }
-			modifier = { factor = 1.5 diplomacy = 10 }
-			modifier = { factor = 0.3 trait = cynical }
-			modifier = { factor = 0.3 trait = sympathy_mesoamerican_gods }
-			modifier = { factor = 0.3 trait = sympathy_oldworld }
-		}
-	}
-	option = {
-		name = EVTOPTC_sacredheart_204
-		hidden_tooltip = {
-			remove_trait = marian_el_santo
-			remove_trait = marian_santa_muerte
-			remove_trait = marian_guadalupe
-			remove_trait = marian_san_juditas
-			remove_trait = marian_san_pascual
-			remove_trait = marian_stella_maris
-			remove_trait = marian_santo_nino_fidencio
-			remove_trait = marian_santa_inocencia
-			remove_trait = marian_la_hermandad
-			remove_trait = marian_cristo_rey
-		}
-		add_trait = marian_san_charbel
-		ai_chance = {
-			factor = 10
-			modifier = { factor = 2 trait = marian_san_charbel }
-			modifier = { factor = 5	trait = mastermind_theologian }
-			modifier = { factor = 4	trait = scholarly_theologian }
-			modifier = { factor = 3	trait = martial_cleric }
-			modifier = { factor = 1.5 trait = devout }
-			modifier = { factor = 1.5 trait = sympathy_christendom }
-			modifier = { factor = 1.5 learning = 10 }
-			modifier = { factor = 1.5 diplomacy = 10 }
-			modifier = { factor = 0.3 trait = cynical }
-			modifier = { factor = 0.3 trait = sympathy_mesoamerican_gods }
-			modifier = { factor = 0.3 trait = sympathy_oldworld }
-		}
-	}
-	option = {
-		name = EVTOPTD_sacredheart_204
-		hidden_tooltip = {
-			remove_trait = marian_el_santo
-			remove_trait = marian_santa_muerte
-			remove_trait = marian_guadalupe
-			remove_trait = marian_san_charbel
-			remove_trait = marian_san_pascual
-			remove_trait = marian_stella_maris
-			remove_trait = marian_santo_nino_fidencio
-			remove_trait = marian_santa_inocencia
-			remove_trait = marian_la_hermandad
-			remove_trait = marian_cristo_rey
-		}
-		add_trait = marian_san_juditas
-		ai_chance = {
-			factor = 10
-			modifier = { factor = 2 trait = marian_san_juditas }
-			modifier = { factor = 5	trait = midas_touched }
-			modifier = { factor = 4	trait = fortune_builder }
-			modifier = { factor = 3	trait = thrifty_clerk }
-			modifier = { factor = 1.5 trait = devout }
-			modifier = { factor = 1.5 trait = sympathy_christendom }
-			modifier = { factor = 1.5 learning = 10 }
-			modifier = { factor = 1.5 diplomacy = 10 }
-			modifier = { factor = 0.3 trait = cynical }
-			modifier = { factor = 0.2 trait = sympathy_mesoamerican_gods }
-			modifier = { factor = 0.3 trait = sympathy_oldworld }
-		}
-	}
-	option = {
-		name = EVTOPTE_sacredheart_204
-		hidden_tooltip = {
-			remove_trait = marian_santa_muerte
-			remove_trait = marian_guadalupe
-			remove_trait = marian_san_charbel
-			remove_trait = marian_san_juditas
-			remove_trait = marian_el_santo
-			remove_trait = marian_stella_maris
-			remove_trait = marian_santo_nino_fidencio
-			remove_trait = marian_santa_inocencia
-			remove_trait = marian_la_hermandad
-			remove_trait = marian_cristo_rey
-		}
-		add_trait = marian_san_pascual
-		ai_chance = {
-			factor = 10
-			modifier = { factor = 2 trait = marian_san_pascual }
-			modifier = { factor = 5	trait = grey_eminence }
-			modifier = { factor = 4	trait = charismatic_negotiator }
-			modifier = { factor = 3	trait = underhanded_rogue }
-			modifier = { factor = 1.5 trait = devout }
-			modifier = { factor = 1.5 trait = honest }
-			modifier = { factor = 1.5 trait = sympathy_christendom }
-			modifier = { factor = 2 diplomacy = 10 }
-			modifier = { factor = 0.5 trait = deceitful }
-			modifier = { factor = 0.3 trait = cynical }
-			modifier = { factor = 0.2 trait = sympathy_mesoamerican_gods }
-			modifier = { factor = 0.3 trait = sympathy_oldworld }
-		}
+		character_event = { id = sacredheart.150 }
+		}	
 	}
 }
 

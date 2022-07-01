@@ -1636,10 +1636,10 @@
 }
 
 2500070={
-	name="Sebas"
+	name="Sebastian"
 	culture=valleyan
-	religion=pagan
-	dynasty=1850049 #Sofocante
+	religion=evangelical
+	dynasty=1850049 #Frémont
 	occluded=yes
 	trait=brilliant_strategist
 	trait=legendary
@@ -1652,9 +1652,7 @@
 	trait=depressed
 	trait=blinded
 	give_nickname=nick_the_grizzly
-	mother=2500109
-	2140.1.1={birth=yes}
-	2160.6.21={add_spouse=2500109}
+	2124.1.1={birth=yes}
 	2190.2.15={death= {
 		death_reason=death_suicide
 		}	
@@ -1662,12 +1660,11 @@
 }
 
 2500071={
-	name="Ethan"
+	name="Ephraim"
 	culture=valleyan
-	religion=pagan
-	dynasty=1850049 #Sofocante
+	religion=evangelical
+	dynasty=1850049 #Frémont
 	father=2500070
-	mother=2500109
 	occluded=yes
 	trait=thrifty_clerk
 	trait=legendary
@@ -1684,10 +1681,9 @@
 2500072={
 	name="Paul"
 	culture=valleyan
-	religion=pagan
-	dynasty=1850049 #Sofocante
+	religion=evangelical
+	dynasty=1850049 #Frémont
 	father=2500070
-	mother=2500109
 	trait=tough_soldier
 	trait=brave
 	trait=just
@@ -1706,7 +1702,7 @@
 	name="Jerry"
 	culture=valleyan
 	religion=evangelical
-	dynasty=1850049 #Sofocante
+	dynasty=1850049 #Frémont
 	father=2500072
 	trait=charismatic_negotiator
 	trait=paranoid
@@ -1720,7 +1716,7 @@
 	name="Jason"
 	culture=valleyan
 	religion=evangelical
-	dynasty=1850049 #Sofocante
+	dynasty=1850049 #Frémont
 	father=2500073
 	trait=thrifty_clerk
 	trait=greedy
@@ -1733,7 +1729,7 @@
 	name="Jordan"
 	culture=valleyan
 	religion=evangelical
-	dynasty=1850049 #Sofocante
+	dynasty=1850049 #Frémont
 	father=2500074
 	trait=charismatic_negotiator
 	trait=paranoid
@@ -1747,7 +1743,7 @@
 	name="Jules"
 	culture=valleyan
 	religion=evangelical
-	dynasty=1850049 #Sofocante
+	dynasty=1850049 #Frémont
 	father=2500075
 	trait=intricate_webweaver
 	trait=paranoid
@@ -1763,7 +1759,7 @@
 	culture=valleyan
 	female=yes
 	religion=cetic
-	dynasty=1850049 #Sofocante
+	dynasty=1850049 #Frémont
 	father=2500076
 	trait=naive_appeaser
 	trait=paranoid
@@ -2130,20 +2126,21 @@
 2500109={
 	name="Joyce"
 	culture=valleyan
-	female=yes
-	dynasty=1850049 #Sofocante
-	religion=pagan
-	trait=midas_touched
-	trait=fair
-	trait=just
-	trait=depressed
-	trait=shrewd
-	trait=mystic
+	dynasty=1850049 #Frémont
+	religion=evangelical
+	trait=tough_soldier
+	trait=brawny
+	trait=humble
+	trait=uncouth
 	trait=legendary
 	occluded=yes
-	2122.7.2={birth=yes}
-	2160.6.21={add_spouse=2500070}
-	2190.2.14={death=yes}
+	father=2500070
+	2144.7.2={birth=yes}
+	2164.8.5={death={
+			death_reason=death_murder_unknown_poison
+			killer=2500003
+		}
+	}
 }
 2500110={
 	name="Jody"
