@@ -16,7 +16,7 @@ character_event = {
 	option = {
 		name = EVTOPTA_nazarene_1
 		hidden_tooltip = {
-			remove_trait = nz_presbyters
+			remove_trait = nz_presbyter
 			remove_trait = nz_acolyte
 			remove_trait = nz_oriental
 
@@ -30,7 +30,7 @@ character_event = {
 	option = {
 		name = EVTOPTB_nazarene_1
 		hidden_tooltip = {
-			remove_trait = nz_presbyters
+			remove_trait = nz_presbyter
 			remove_trait = nz_seraph
 			remove_trait = nz_oriental
 
@@ -1248,6 +1248,14 @@ character_event = {
 				trigger = { has_character_flag = studying_john_wesley }
 				character_event = { id = nazarene.42 days = 15 random = 3 }
 			}
+			75 = { #Success!
+				trigger = { has_character_flag = studying_anthony_the_great }
+				character_event = { id = nazarene.41 days = 15 random = 3 }
+			}
+			75 = { #Success!
+				trigger = { has_character_flag = studying_gregory_illuminator }
+				character_event = { id = nazarene.42 days = 15 random = 3 }
+			}
 		}
 	}
 }
@@ -1432,6 +1440,8 @@ character_event = {
 		clr_character_flag = studying_gk_chesterson
 		clr_character_flag = studying_mlk
 		clr_character_flag = studying_john_wesley
+		clr_character_flag = studying_anthony_the_great
+		clr_character_flag = studying_gregory_illuminator
 		set_character_flag = studied_nazerene_holy_texts
 	}
 }
@@ -1482,6 +1492,90 @@ narrative_event = {
 		trigger = {
 			religion = true_cross
 			has_landed_title = d_true_cross
+		}
+	}
+}
+
+character_event = {
+	id = nazarene.45
+	desc = EVTDESC_nazarene_32
+	picture = GFX_evt_library #maybe replace with monk reading?
+	border = GFX_event_normal_frame_religion
+	
+	is_triggered_only = yes
+	
+	option = { #Saint Anthony the Great
+		name = EVTOPTA_nazarene_45
+		set_character_flag = studying_anthony_the_great
+		custom_tooltip = { text = TXT_EVTOPTA_nazarene_45 }
+	}
+	
+	option = { #Saint Gregory the Illuminator
+		name = EVTOPTB_nazarene_45
+		set_character_flag = studying_gregory_illuminator
+		custom_tooltip = { text = TXT_EVTOPTB_nazarene_45 }
+	}
+	
+	after = {
+		character_event = { id = nazarene.35 } #Tombola Event
+	}
+}
+
+	# Setting out for Los Angeles as an Oriental
+character_event = {
+	id = nazarene.46
+	desc = EVTDESC_los_angeles_oriental_start
+	picture = GFX_evt_icon
+	border = GFX_event_normal_frame_religion
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_los_angeles_oriental_start
+		hidden_tooltip = {
+			add_trait = on_pilgrimage
+			narrative_event = { id = nazarene.47 days = 45 } #Arrival in Los Angeles
+		}
+		hidden_tooltip = {
+			random_list = {
+				20 = { character_event = { id = nazarene.8 days = 15 random = 5 } } #Meet a friend
+				20 = { character_event = { id = nazarene.9 days = 15 random = 5 } } #Get lost
+				20 = { character_event = { id = nazarene.10 days = 15 random = 5 } } #Bandits
+				20 = { character_event = { id = nazarene.11 days = 15 random = 5 } } #Play cards
+				20 = { character_event = { id = nazarene.12 days = 15 random = 5 } } #Cart breaks down
+	
+			}
+			random_list = {
+				15 = { character_event = { id = nazarene.6 days = 30 random = 5 } } #Road Work Ahead
+				10 = { character_event = { id = nazarene.7 days = 30 random = 5 } } #Become ill
+				15 = { character_event = { id = nazarene.13 days = 30 random = 5 } } #Ponder Christian theology
+				15 = { character_event = { id = nazarene.14 days = 30 random = 5 } } #Mysterious encounter
+				15 = { character_event = { id = nazarene.15 days = 30 random = 5 } } #Comet sighted (maybe change?)
+				15 = { character_event = { id = nazarene.16 days = 30 random = 5 } } #Mountain Lion part 1
+				15 = { character_event = { id = nazarene.17 days = 30 random = 5 } } #Pacific Sunset
+			}
+		}
+	}
+}
+
+narrative_event = {
+	id = nazarene.47
+	title = EVTTITLE_nazarene_pilgrim_los_angeles_oriental
+	desc = EVTDESC_nazarene_pilgrim_los_angeles_oriental
+	picture = GFX_evt_monastery_monks
+	border = GFX_event_narrative_frame_religion
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_nazarene_pilgrim_los_angeles_oriental
+		hidden_tooltip = {
+			character_event = { id = nazarene.3 days = 30 } #end
+			random_list = {
+				33 = { character_event = { id = nazarene.25 days = 3 } } #glean wisdom from guru
+				33 = { character_event = { id = nazarene.26 days = 3 } } #visit shrine
+				33 = { character_event = { id = nazarene.29 days = 3 } } #develop sympathy with christianity
+			}
 		}
 	}
 }

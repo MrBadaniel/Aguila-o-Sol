@@ -12,7 +12,11 @@ decisions = {
 			religion = furiegi
 			religion = batenburger
 			religion = antinomian
-			religion = postadventist			
+			religion = postadventist
+			AND = {
+			religion = nazarene
+			trait = nz_presbyter
+					}
 				}
 			is_playable = yes
 			prisoner = no
@@ -34,6 +38,10 @@ decisions = {
 			religion = batenburger
 			religion = antinomian
 			religion = postadventist
+			AND = {
+			religion = nazarene
+			trait = nz_presbyter
+					}
 				}
 			is_playable = yes
 			prisoner = no
