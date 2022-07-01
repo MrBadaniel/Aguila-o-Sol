@@ -122,7 +122,7 @@ character_event = {
 	}
 }
 
-# Change race for newly-generated chars
+# Change race for newly-generated chars (Diversity Event)
 character_event = {
 	id = misc.3
 	desc = "Change graphical culture"
@@ -282,10 +282,6 @@ character_event = {
 			}
 			modifier = {
 				factor = 0
-				culture = mekatelyu
-			}
-			modifier = {
-				factor = 0
 				culture = tuskegean
 			}
 			modifier = {
@@ -325,11 +321,11 @@ character_event = {
 				culture = tejano
 			}
 			modifier = {
-				factor = 0
+				factor = 10
 				culture = bravo
 			}
 			modifier = {
-				factor = 0
+				factor = 3
 				culture = altiplanense
 			}
 			modifier = {
@@ -337,11 +333,11 @@ character_event = {
 				culture = choyero
 			}
 			modifier = {
-				factor = 0
+				factor = 30
 				culture = menomex
 			}
 			modifier = {
-				factor = 10
+				factor = 30
 				culture = neomexicano
 			}
 			modifier = {
@@ -353,11 +349,11 @@ character_event = {
 				culture = jarocho
 			}
 			modifier = {
-				factor = 0
+				factor = 5
 				culture = occidental
 			}
 			modifier = {
-				factor = 0
+				factor = 10
 				culture = californiano
 			}
 			modifier = {
@@ -449,6 +445,58 @@ character_event = {
 				culture = zapotec
 			}
 			modifier = {
+				factor = 0
+				culture = chinantec
+			}
+			modifier = {
+				factor = 0
+				culture = mazatec
+			}
+			modifier = {
+				factor = 0
+				culture = tlapanec
+			}
+			modifier = {
+				factor = 0
+				culture = zoque
+			}
+			modifier = {
+				factor = 0
+				culture = huastec
+			}
+			modifier = {
+				factor = 0
+				culture = totonac
+			}
+			modifier = {
+				factor = 0
+				culture = yaqui
+			}
+			modifier = {
+				factor = 0
+				culture = huichol
+			}
+			modifier = {
+				factor = 0
+				culture = calentano
+			}
+			modifier = {
+				factor = 0
+				culture = amuzgo
+			}
+			modifier = {
+				factor = 0
+				culture = mekatelyu
+			}
+			modifier = {
+				factor = 0
+				culture = yucatanense
+			}
+			modifier = {
+				factor = 20
+				culture = joaquino
+			}
+			modifier = {
 				factor = 83
 				culture = mountainer
 			}
@@ -529,11 +577,11 @@ character_event = {
 				culture = towner
 			}
 			modifier = {
-				factor = 2
+				factor = 0
 				culture = purepecha
 			}
 			modifier = {
-				factor = 2
+				factor = 0
 				culture = raramuri
 			}
 			modifier = {
@@ -1044,10 +1092,6 @@ character_event = {
 				culture = raizal
 			}
 			modifier = {
-				factor = 85
-				culture = mekatelyu
-			}
-			modifier = {
 				factor = 70
 				culture = tuskegean
 			}
@@ -1084,19 +1128,19 @@ character_event = {
 				culture = scottish
 			}
 			modifier = {
-				factor = 10
+				factor = 3
 				culture = tejano
 			}
 			modifier = {
-				factor = 5
+				factor = 1
 				culture = bravo
 			}
 			modifier = {
-				factor = 5
+				factor = 1
 				culture = altiplanense
 			}
 			modifier = {
-				factor = 5
+				factor = 0
 				culture = menomex
 			}
 			modifier = {
@@ -1104,7 +1148,7 @@ character_event = {
 				culture = neomexicano
 			}
 			modifier = {
-				factor = 2
+				factor = 0
 				culture = tapatio
 			}
 			modifier = {
@@ -1112,23 +1156,23 @@ character_event = {
 				culture = jarocho
 			}
 			modifier = {
-				factor = 5
+				factor = 0
 				culture = occidental
 			}
 			modifier = {
-				factor = 5
+				factor = 1
 				culture = californiano
 			}
 			modifier = {
-				factor = 5
+				factor = 1
 				culture = chilango
 			}
 			modifier = {
-				factor = 5
+				factor = 0
 				culture = abajeno
 			}
 			modifier = {
-				factor = 1
+				factor = 0
 				culture = chino
 			}
 			modifier = {
@@ -1180,32 +1224,84 @@ character_event = {
 				culture = shuswap
 			}
 			modifier = {
-				factor = 2
+				factor = 0
 				culture = nahua
 			}
 			modifier = {
-				factor = 2
+				factor = 1
 				culture = lacandon
 			}
 			modifier = {
-				factor = 2
+				factor = 1
 				culture = quichean
 			}
 			modifier = {
-				factor = 7
+				factor = 1
 				culture = cholano
 			}
 			modifier = {
-				factor = 7
+				factor = 1
 				culture = yucateco
 			}
 			modifier = {
-				factor = 2
+				factor = 0
 				culture = mixtec
 			}
 			modifier = {
-				factor = 2
+				factor = 0
 				culture = zapotec
+			}
+			modifier = {
+				factor = 0
+				culture = chinantec
+			}
+			modifier = {
+				factor = 0
+				culture = mazatec
+			}
+			modifier = {
+				factor = 0
+				culture = tlapanec
+			}
+			modifier = {
+				factor = 0
+				culture = zoque
+			}
+			modifier = {
+				factor = 0
+				culture = huastec
+			}
+			modifier = {
+				factor = 3
+				culture = totonac
+			}
+			modifier = {
+				factor = 0
+				culture = yaqui
+			}
+			modifier = {
+				factor = 0
+				culture = huichol
+			}
+			modifier = {
+				factor = 0
+				culture = calentano
+			}
+			modifier = {
+				factor = 15
+				culture = amuzgo
+			}
+			modifier = {
+				factor = 85
+				culture = mekatelyu
+			}
+			modifier = {
+				factor = 0
+				culture = yucatanense
+			}
+			modifier = {
+				factor = 1
+				culture = joaquino
 			}
 			modifier = {
 				factor = 1
@@ -1288,11 +1384,11 @@ character_event = {
 				culture = towner
 			}
 			modifier = {
-				factor = 2
+				factor = 1
 				culture = purepecha
 			}
 			modifier = {
-				factor = 2
+				factor = 0
 				culture = raramuri
 			}
 			modifier = {
@@ -1803,10 +1899,6 @@ character_event = {
 				culture = raizal
 			}
 			modifier = {
-				factor = 15
-				culture = mekatelyu
-			}
-			modifier = {
 				factor = 10
 				culture = tuskegean
 			}
@@ -1843,15 +1935,15 @@ character_event = {
 				culture = scottish
 			}
 			modifier = {
-				factor = 55
+				factor = 35
 				culture = tejano
 			}
 			modifier = {
-				factor = 60
+				factor = 30
 				culture = bravo
 			}
 			modifier = {
-				factor = 60
+				factor = 30
 				culture = altiplanense
 			}
 			modifier = {
@@ -1859,11 +1951,11 @@ character_event = {
 				culture = choyero
 			}
 			modifier = {
-				factor = 60
+				factor = 20
 				culture = menomex
 			}
 			modifier = {
-				factor = 60
+				factor = 30
 				culture = neomexicano
 			}
 			modifier = {
@@ -1875,7 +1967,7 @@ character_event = {
 				culture = jarocho
 			}
 			modifier = {
-				factor = 60
+				factor = 40
 				culture = occidental
 			}
 			modifier = {
@@ -1895,11 +1987,11 @@ character_event = {
 				culture = chino
 			}
 			modifier = {
-				factor = 20
+				factor = 40
 				culture = trifinio
 			}
 			modifier = {
-				factor = 20
+				factor = 40
 				culture = nicoyano
 			}
 			modifier = {
@@ -1911,11 +2003,11 @@ character_event = {
 				culture = sioux
 			}
 			modifier = {
-				factor = 3
+				factor = 5
 				culture = cherokee
 			}
 			modifier = {
-				factor = 3
+				factor = 10
 				culture = navajo
 			}
 			modifier = {
@@ -1969,6 +2061,58 @@ character_event = {
 			modifier = {
 				factor = 10
 				culture = zapotec
+			}
+			modifier = {
+				factor = 10
+				culture = chinantec
+			}
+			modifier = {
+				factor = 10
+				culture = mazatec
+			}
+			modifier = {
+				factor = 10
+				culture = tlapanec
+			}
+			modifier = {
+				factor = 10
+				culture = zoque
+			}
+			modifier = {
+				factor = 10
+				culture = huastec
+			}
+			modifier = {
+				factor = 10
+				culture = totonac
+			}
+			modifier = {
+				factor = 10
+				culture = yaqui
+			}
+			modifier = {
+				factor = 10
+				culture = huichol
+			}
+			modifier = {
+				factor = 40
+				culture = calentano
+			}
+			modifier = {
+				factor = 10
+				culture = amuzgo
+			}
+			modifier = {
+				factor = 15
+				culture = mekatelyu
+			}
+			modifier = {
+				factor = 40
+				culture = yucatanense
+			}
+			modifier = {
+				factor = 60
+				culture = joaquino
 			}
 			modifier = {
 				factor = 4
@@ -2051,7 +2195,7 @@ character_event = {
 				culture = towner
 			}
 			modifier = {
-				factor = 10
+				factor = 25
 				culture = purepecha
 			}
 			modifier = {
@@ -2271,7 +2415,7 @@ character_event = {
 				culture = blackfoot
 			}
 			modifier = {
-				factor = 3
+				factor = 5
 				culture = apache
 			}
 			modifier = {
@@ -2567,10 +2711,6 @@ character_event = {
 			}
 			modifier = {
 				factor = 0
-				culture = mekatelyu
-			}
-			modifier = {
-				factor = 0
 				culture = tuskegean
 			}
 			modifier = {
@@ -2630,15 +2770,15 @@ character_event = {
 				culture = neomexicano
 			}
 			modifier = {
-				factor = 3
+				factor = 1
 				culture = tapatio
 			}
 			modifier = {
-				factor = 2
+				factor = 4
 				culture = jarocho
 			}
 			modifier = {
-				factor = 7
+				factor = 3
 				culture = occidental
 			}
 			modifier = {
@@ -2654,7 +2794,7 @@ character_event = {
 				culture = abajeno
 			}
 			modifier = {
-				factor = 1
+				factor = 0
 				culture = chino
 			}
 			modifier = {
@@ -2732,6 +2872,58 @@ character_event = {
 			modifier = {
 				factor = 86
 				culture = zapotec
+			}
+			modifier = {
+				factor = 86
+				culture = chinantec
+			}
+			modifier = {
+				factor = 86
+				culture = mazatec
+			}
+			modifier = {
+				factor = 86
+				culture = tlapanec
+			}
+			modifier = {
+				factor = 86
+				culture = zoque
+			}
+			modifier = {
+				factor = 86
+				culture = huastec
+			}
+			modifier = {
+				factor = 86
+				culture = totonac
+			}
+			modifier = {
+				factor = 86
+				culture = yaqui
+			}
+			modifier = {
+				factor = 86
+				culture = huichol
+			}
+			modifier = {
+				factor = 25
+				culture = calentano
+			}
+			modifier = {
+				factor = 68
+				culture = amuzgo
+			}
+			modifier = {
+				factor = 25
+				culture = mekatelyu
+			}
+			modifier = {
+				factor = 10
+				culture = yucatanense
+			}
+			modifier = {
+				factor = 10
+				culture = joaquino
 			}
 			modifier = {
 				factor = 10
@@ -3322,10 +3514,6 @@ character_event = {
 			}
 			modifier = {
 				factor = 0
-				culture = mekatelyu
-			}
-			modifier = {
-				factor = 0
 				culture = tuskegean
 			}
 			modifier = {
@@ -3361,7 +3549,7 @@ character_event = {
 				culture = scottish
 			}
 			modifier = {
-				factor = 1
+				factor = 0
 				culture = tejano
 			}
 			modifier = {
@@ -3385,11 +3573,11 @@ character_event = {
 				culture = neomexicano
 			}
 			modifier = {
-				factor = 2
+				factor = 0
 				culture = tapatio
 			}
 			modifier = {
-				factor = 3
+				factor = 0
 				culture = jarocho
 			}
 			modifier = {
@@ -3405,7 +3593,7 @@ character_event = {
 				culture = chilango
 			}
 			modifier = {
-				factor = 5
+				factor = 0
 				culture = abajeno
 			}
 			modifier = {
@@ -3487,6 +3675,58 @@ character_event = {
 			modifier = {
 				factor = 0
 				culture = zapotec
+			}
+			modifier = {
+				factor = 0
+				culture = chinantec
+			}
+			modifier = {
+				factor = 0
+				culture = mazatec
+			}
+			modifier = {
+				factor = 0
+				culture = tlapanec
+			}
+			modifier = {
+				factor = 0
+				culture = zoque
+			}
+			modifier = {
+				factor = 0
+				culture = huastec
+			}
+			modifier = {
+				factor = 0
+				culture = totonac
+			}
+			modifier = {
+				factor = 0
+				culture = yaqui
+			}
+			modifier = {
+				factor = 0
+				culture = huichol
+			}
+			modifier = {
+				factor = 0
+				culture = calentano
+			}
+			modifier = {
+				factor = 0
+				culture = amuzgo
+			}
+			modifier = {
+				factor = 10
+				culture = mekatelyu
+			}
+			modifier = {
+				factor = 0
+				culture = yucatanense
+			}
+			modifier = {
+				factor = 3
+				culture = joaquino
 			}
 			modifier = {
 				factor = 2
@@ -4253,6 +4493,54 @@ character_event = {
 			}
 			modifier = {
 				factor = 0
+				culture = chinantec
+			}
+			modifier = {
+				factor = 0
+				culture = mazatec
+			}
+			modifier = {
+				factor = 0
+				culture = tlapanec
+			}
+			modifier = {
+				factor = 0
+				culture = zoque
+			}
+			modifier = {
+				factor = 0
+				culture = huastec
+			}
+			modifier = {
+				factor = 0
+				culture = totonac
+			}
+			modifier = {
+				factor = 0
+				culture = yaqui
+			}
+			modifier = {
+				factor = 0
+				culture = huichol
+			}
+			modifier = {
+				factor = 0
+				culture = calentano
+			}
+			modifier = {
+				factor = 0
+				culture = amuzgo
+			}
+			modifier = {
+				factor = 0
+				culture = yucatanense
+			}
+			modifier = {
+				factor = 0
+				culture = joaquino
+			}
+			modifier = {
+				factor = 0
 				culture = mountainer
 			}
 			modifier = {
@@ -5009,6 +5297,54 @@ character_event = {
 			modifier = {
 				factor = 0
 				culture = zapotec
+			}
+			modifier = {
+				factor = 0
+				culture = chinantec
+			}
+			modifier = {
+				factor = 0
+				culture = mazatec
+			}
+			modifier = {
+				factor = 0
+				culture = tlapanec
+			}
+			modifier = {
+				factor = 0
+				culture = zoque
+			}
+			modifier = {
+				factor = 0
+				culture = huastec
+			}
+			modifier = {
+				factor = 0
+				culture = totonac
+			}
+			modifier = {
+				factor = 0
+				culture = yaqui
+			}
+			modifier = {
+				factor = 0
+				culture = huichol
+			}
+			modifier = {
+				factor = 0
+				culture = calentano
+			}
+			modifier = {
+				factor = 0
+				culture = amuzgo
+			}
+			modifier = {
+				factor = 0
+				culture = yucatanense
+			}
+			modifier = {
+				factor = 0
+				culture = joaquino
 			}
 			modifier = {
 				factor = 0
@@ -5775,6 +6111,54 @@ character_event = {
 			}
 			modifier = {
 				factor = 0
+				culture = chinantec
+			}
+			modifier = {
+				factor = 0
+				culture = mazatec
+			}
+			modifier = {
+				factor = 0
+				culture = tlapanec
+			}
+			modifier = {
+				factor = 0
+				culture = zoque
+			}
+			modifier = {
+				factor = 0
+				culture = huastec
+			}
+			modifier = {
+				factor = 0
+				culture = totonac
+			}
+			modifier = {
+				factor = 0
+				culture = yaqui
+			}
+			modifier = {
+				factor = 0
+				culture = huichol
+			}
+			modifier = {
+				factor = 0
+				culture = calentano
+			}
+			modifier = {
+				factor = 0
+				culture = amuzgo
+			}
+			modifier = {
+				factor = 0
+				culture = yucatanense
+			}
+			modifier = {
+				factor = 0
+				culture = joaquino
+			}
+			modifier = {
+				factor = 0
 				culture = mountainer
 			}
 			modifier = {
@@ -6409,11 +6793,11 @@ character_event = {
 				culture = tejano
 			}
 			modifier = {
-				factor = 30
+				factor = 20
 				culture = bravo
 			}
 			modifier = {
-				factor = 30
+				factor = 20
 				culture = altiplanense
 			}
 			modifier = {
@@ -6421,15 +6805,15 @@ character_event = {
 				culture = choyero
 			}
 			modifier = {
-				factor = 30
+				factor = 10
 				culture = menomex
 			}
 			modifier = {
-				factor = 20
+				factor = 40
 				culture = neomexicano
 			}
 			modifier = {
-				factor = 30
+				factor = 10
 				culture = tapatio
 			}
 			modifier = {
@@ -6437,19 +6821,19 @@ character_event = {
 				culture = jarocho
 			}
 			modifier = {
-				factor = 25
+				factor = 20
 				culture = occidental
 			}
 			modifier = {
-				factor = 45
+				factor = 20
 				culture = californiano
 			}
 			modifier = {
-				factor = 45
+				factor = 20
 				culture = chilango
 			}
 			modifier = {
-				factor = 45
+				factor = 25
 				culture = abajeno
 			}
 			modifier = {
@@ -6457,11 +6841,11 @@ character_event = {
 				culture = chino
 			}
 			modifier = {
-				factor = 40
+				factor = 20
 				culture = trifinio
 			}
 			modifier = {
-				factor = 40
+				factor = 20
 				culture = nicoyano
 			}
 			modifier = {
@@ -6521,7 +6905,7 @@ character_event = {
 				culture = cholano
 			}
 			modifier = {
-				factor = 20
+				factor = 5
 				culture = yucateco
 			}
 			modifier = {
@@ -6535,6 +6919,54 @@ character_event = {
 			modifier = {
 				factor = 0
 				culture = mountainer
+			}
+			modifier = {
+				factor = 0
+				culture = chinantec
+			}
+			modifier = {
+				factor = 0
+				culture = mazatec
+			}
+			modifier = {
+				factor = 0
+				culture = tlapanec
+			}
+			modifier = {
+				factor = 0
+				culture = zoque
+			}
+			modifier = {
+				factor = 5
+				culture = huastec
+			}
+			modifier = {
+				factor = 2
+				culture = totonac
+			}
+			modifier = {
+				factor = 5
+				culture = yaqui
+			}
+			modifier = {
+				factor = 0
+				culture = huichol
+			}
+			modifier = {
+				factor = 15
+				culture = calentano
+			}
+			modifier = {
+				factor = 1
+				culture = amuzgo
+			}
+			modifier = {
+				factor = 20
+				culture = yucatanense
+			}
+			modifier = {
+				factor = 20
+				culture = joaquino
 			}
 			modifier = {
 				factor = 0
@@ -6613,7 +7045,7 @@ character_event = {
 				culture = towner
 			}
 			modifier = {
-				factor = 0
+				factor = 5
 				culture = purepecha
 			}
 			modifier = {
@@ -7294,6 +7726,54 @@ character_event = {
 			modifier = {
 				factor = 0
 				culture = zapotec
+			}
+			modifier = {
+				factor = 0
+				culture = chinantec
+			}
+			modifier = {
+				factor = 0
+				culture = mazatec
+			}
+			modifier = {
+				factor = 0
+				culture = tlapanec
+			}
+			modifier = {
+				factor = 0
+				culture = zoque
+			}
+			modifier = {
+				factor = 0
+				culture = huastec
+			}
+			modifier = {
+				factor = 0
+				culture = totonac
+			}
+			modifier = {
+				factor = 0
+				culture = yaqui
+			}
+			modifier = {
+				factor = 0
+				culture = huichol
+			}
+			modifier = {
+				factor = 0
+				culture = calentano
+			}
+			modifier = {
+				factor = 0
+				culture = amuzgo
+			}
+			modifier = {
+				factor = 0
+				culture = yucatanense
+			}
+			modifier = {
+				factor = 0
+				culture = joaquino
 			}
 			modifier = {
 				factor = 0
@@ -8053,6 +8533,54 @@ character_event = {
 			modifier = {
 				factor = 0
 				culture = zapotec
+			}
+			modifier = {
+				factor = 0
+				culture = chinantec
+			}
+			modifier = {
+				factor = 0
+				culture = mazatec
+			}
+			modifier = {
+				factor = 0
+				culture = tlapanec
+			}
+			modifier = {
+				factor = 0
+				culture = zoque
+			}
+			modifier = {
+				factor = 0
+				culture = huastec
+			}
+			modifier = {
+				factor = 0
+				culture = totonac
+			}
+			modifier = {
+				factor = 0
+				culture = yaqui
+			}
+			modifier = {
+				factor = 0
+				culture = huichol
+			}
+			modifier = {
+				factor = 0
+				culture = calentano
+			}
+			modifier = {
+				factor = 0
+				culture = amuzgo
+			}
+			modifier = {
+				factor = 0
+				culture = yucatanense
+			}
+			modifier = {
+				factor = 0
+				culture = joaquino
 			}
 			modifier = {
 				factor = 0
@@ -8819,6 +9347,54 @@ character_event = {
 			}
 			modifier = {
 				factor = 0
+				culture = chinantec
+			}
+			modifier = {
+				factor = 0
+				culture = mazatec
+			}
+			modifier = {
+				factor = 0
+				culture = tlapanec
+			}
+			modifier = {
+				factor = 0
+				culture = zoque
+			}
+			modifier = {
+				factor = 0
+				culture = huastec
+			}
+			modifier = {
+				factor = 0
+				culture = totonac
+			}
+			modifier = {
+				factor = 0
+				culture = yaqui
+			}
+			modifier = {
+				factor = 0
+				culture = huichol
+			}
+			modifier = {
+				factor = 0
+				culture = calentano
+			}
+			modifier = {
+				factor = 0
+				culture = amuzgo
+			}
+			modifier = {
+				factor = 0
+				culture = yucatanense
+			}
+			modifier = {
+				factor = 0
+				culture = joaquino
+			}
+			modifier = {
+				factor = 0
 				culture = mountainer
 			}
 			modifier = {
@@ -9357,7 +9933,7 @@ character_event = {
 				culture = grangelander
 			}
 			modifier = {
-				factor = 0
+				factor = 10
 				culture = texan
 			}
 			modifier = {
@@ -9469,7 +10045,7 @@ character_event = {
 				culture = choyero
 			}
 			modifier = {
-				factor = 0
+				factor = 40
 				culture = menomex
 			}
 			modifier = {
@@ -9579,6 +10155,54 @@ character_event = {
 			modifier = {
 				factor = 0
 				culture = zapotec
+			}
+			modifier = {
+				factor = 0
+				culture = chinantec
+			}
+			modifier = {
+				factor = 0
+				culture = mazatec
+			}
+			modifier = {
+				factor = 0
+				culture = tlapanec
+			}
+			modifier = {
+				factor = 0
+				culture = zoque
+			}
+			modifier = {
+				factor = 0
+				culture = huastec
+			}
+			modifier = {
+				factor = 0
+				culture = totonac
+			}
+			modifier = {
+				factor = 0
+				culture = yaqui
+			}
+			modifier = {
+				factor = 0
+				culture = huichol
+			}
+			modifier = {
+				factor = 0
+				culture = calentano
+			}
+			modifier = {
+				factor = 0
+				culture = amuzgo
+			}
+			modifier = {
+				factor = 0
+				culture = yucatanense
+			}
+			modifier = {
+				factor = 0
+				culture = joaquino
 			}
 			modifier = {
 				factor = 0
@@ -10321,6 +10945,54 @@ character_event = {
 			}
 			modifier = {
 				factor = 0
+				culture = chinantec
+			}
+			modifier = {
+				factor = 0
+				culture = mazatec
+			}
+			modifier = {
+				factor = 0
+				culture = tlapanec
+			}
+			modifier = {
+				factor = 0
+				culture = zoque
+			}
+			modifier = {
+				factor = 0
+				culture = huastec
+			}
+			modifier = {
+				factor = 0
+				culture = totonac
+			}
+			modifier = {
+				factor = 0
+				culture = yaqui
+			}
+			modifier = {
+				factor = 0
+				culture = huichol
+			}
+			modifier = {
+				factor = 0
+				culture = calentano
+			}
+			modifier = {
+				factor = 0
+				culture = amuzgo
+			}
+			modifier = {
+				factor = 0
+				culture = yucatanense
+			}
+			modifier = {
+				factor = 0
+				culture = joaquino
+			}
+			modifier = {
+				factor = 0
 				culture = mountainer
 			}
 			modifier = {
@@ -10951,15 +11623,15 @@ character_event = {
 				culture = scottish
 			}
 			modifier = {
-				factor = 0
+				factor = 1
 				culture = tejano
 			}
 			modifier = {
-				factor = 0
+				factor = 1
 				culture = bravo
 			}
 			modifier = {
-				factor = 0
+				factor = 1
 				culture = altiplanense
 			}
 			modifier = {
@@ -10975,27 +11647,27 @@ character_event = {
 				culture = neomexicano
 			}
 			modifier = {
-				factor = 0
+				factor = 1
 				culture = tapatio
 			}
 			modifier = {
-				factor = 0
+				factor = 1
 				culture = jarocho
 			}
 			modifier = {
-				factor = 0
+				factor = 1
 				culture = occidental
 			}
 			modifier = {
-				factor = 0
+				factor = 1
 				culture = californiano
 			}
 			modifier = {
-				factor = 0
+				factor = 1
 				culture = chilango
 			}
 			modifier = {
-				factor = 0
+				factor = 1
 				culture = abajeno
 			}
 			modifier = {
@@ -11077,6 +11749,54 @@ character_event = {
 			modifier = {
 				factor = 0
 				culture = zapotec
+			}
+			modifier = {
+				factor = 0
+				culture = chinantec
+			}
+			modifier = {
+				factor = 0
+				culture = mazatec
+			}
+			modifier = {
+				factor = 0
+				culture = tlapanec
+			}
+			modifier = {
+				factor = 0
+				culture = zoque
+			}
+			modifier = {
+				factor = 0
+				culture = huastec
+			}
+			modifier = {
+				factor = 0
+				culture = totonac
+			}
+			modifier = {
+				factor = 0
+				culture = yaqui
+			}
+			modifier = {
+				factor = 0
+				culture = huichol
+			}
+			modifier = {
+				factor = 0
+				culture = calentano
+			}
+			modifier = {
+				factor = 0
+				culture = amuzgo
+			}
+			modifier = {
+				factor = 0
+				culture = yucatanense
+			}
+			modifier = {
+				factor = 3
+				culture = joaquino
 			}
 			modifier = {
 				factor = 0
@@ -11750,7 +12470,7 @@ character_event = {
 				culture = californiano
 			}
 			modifier = {
-				factor = 0
+				factor = 1
 				culture = chilango
 			}
 			modifier = {
@@ -11836,6 +12556,54 @@ character_event = {
 			modifier = {
 				factor = 0
 				culture = zapotec
+			}
+			modifier = {
+				factor = 0
+				culture = chinantec
+			}
+			modifier = {
+				factor = 0
+				culture = mazatec
+			}
+			modifier = {
+				factor = 0
+				culture = tlapanec
+			}
+			modifier = {
+				factor = 0
+				culture = zoque
+			}
+			modifier = {
+				factor = 0
+				culture = huastec
+			}
+			modifier = {
+				factor = 0
+				culture = totonac
+			}
+			modifier = {
+				factor = 0
+				culture = yaqui
+			}
+			modifier = {
+				factor = 0
+				culture = huichol
+			}
+			modifier = {
+				factor = 0
+				culture = calentano
+			}
+			modifier = {
+				factor = 0
+				culture = amuzgo
+			}
+			modifier = {
+				factor = 0
+				culture = yucatanense
+			}
+			modifier = {
+				factor = 0
+				culture = joaquino
 			}
 			modifier = {
 				factor = 0
@@ -12602,6 +13370,54 @@ character_event = {
 			}
 			modifier = {
 				factor = 0
+				culture = chinantec
+			}
+			modifier = {
+				factor = 0
+				culture = mazatec
+			}
+			modifier = {
+				factor = 0
+				culture = tlapanec
+			}
+			modifier = {
+				factor = 0
+				culture = zoque
+			}
+			modifier = {
+				factor = 0
+				culture = huastec
+			}
+			modifier = {
+				factor = 0
+				culture = totonac
+			}
+			modifier = {
+				factor = 0
+				culture = yaqui
+			}
+			modifier = {
+				factor = 0
+				culture = huichol
+			}
+			modifier = {
+				factor = 0
+				culture = calentano
+			}
+			modifier = {
+				factor = 0
+				culture = amuzgo
+			}
+			modifier = {
+				factor = 0
+				culture = yucatanense
+			}
+			modifier = {
+				factor = 0
+				culture = joaquino
+			}
+			modifier = {
+				factor = 0
 				culture = mountainer
 			}
 			modifier = {
@@ -13365,6 +14181,54 @@ character_event = {
 			}
 			modifier = {
 				factor = 0
+				culture = chinantec
+			}
+			modifier = {
+				factor = 0
+				culture = mazatec
+			}
+			modifier = {
+				factor = 0
+				culture = tlapanec
+			}
+			modifier = {
+				factor = 0
+				culture = zoque
+			}
+			modifier = {
+				factor = 0
+				culture = huastec
+			}
+			modifier = {
+				factor = 0
+				culture = totonac
+			}
+			modifier = {
+				factor = 0
+				culture = yaqui
+			}
+			modifier = {
+				factor = 0
+				culture = huichol
+			}
+			modifier = {
+				factor = 0
+				culture = calentano
+			}
+			modifier = {
+				factor = 0
+				culture = amuzgo
+			}
+			modifier = {
+				factor = 0
+				culture = yucatanense
+			}
+			modifier = {
+				factor = 0
+				culture = joaquino
+			}
+			modifier = {
+				factor = 0
 				culture = mountainer
 			}
 			modifier = {
@@ -14125,6 +14989,54 @@ character_event = {
 			modifier = {
 				factor = 0
 				culture = zapotec
+			}
+			modifier = {
+				factor = 0
+				culture = chinantec
+			}
+			modifier = {
+				factor = 0
+				culture = mazatec
+			}
+			modifier = {
+				factor = 0
+				culture = tlapanec
+			}
+			modifier = {
+				factor = 0
+				culture = zoque
+			}
+			modifier = {
+				factor = 0
+				culture = huastec
+			}
+			modifier = {
+				factor = 0
+				culture = totonac
+			}
+			modifier = {
+				factor = 0
+				culture = yaqui
+			}
+			modifier = {
+				factor = 0
+				culture = huichol
+			}
+			modifier = {
+				factor = 0
+				culture = calentano
+			}
+			modifier = {
+				factor = 0
+				culture = amuzgo
+			}
+			modifier = {
+				factor = 0
+				culture = yucatanense
+			}
+			modifier = {
+				factor = 0
+				culture = joaquino
 			}
 			modifier = {
 				factor = 0
