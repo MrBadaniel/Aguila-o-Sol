@@ -4,8 +4,8 @@ mexicano = {
 	graphical_cultures = { cemtralmexicangfx mexicangfx muslimgfx }
 	
 	tapatio = {
-		graphical_cultures = { mexicangfx southerngfx }
-		unit_graphical_cultures = { southerngfx andalusiangfx }
+		graphical_cultures = { charrogfx mexicangfx }
+		unit_graphical_cultures = { southerngfx occitangfx }
 
 		color = { 71 81 145 }
 
@@ -78,8 +78,8 @@ mexicano = {
 	}
 
 	jarocho = {
-		graphical_cultures = { mexicangfx southerngfx }
-		unit_graphical_cultures = { southerngfx andalusiangfx }
+		graphical_cultures = { centralmexicangfx mexicangfx }
+		unit_graphical_cultures = { southerngfx occitangfx }
 
 		color = { 0.65 0.5 0.05 }
 
@@ -152,7 +152,7 @@ mexicano = {
 	}
 
 	chilango = {
-		graphical_cultures = { centralmexicangfx mexicangfx occitangfx }
+		graphical_cultures = { centralmexicangfx mexicangfx }
 		unit_graphical_cultures = { southerngfx occitangfx }
 
 		color = { 239 215 58}
@@ -229,9 +229,8 @@ mexicano = {
 	}
 	
 	calentano = {  # place holder - needs work
-		graphical_cultures = { mexicangfx southerngfx }
-		unit_graphical_cultures = { southerngfx andalusiangfx }
-
+		graphical_cultures = { southernmexicangfx mexicangfx }
+		unit_graphical_cultures = { southerngfx occitangfx }
 		color = { 0.89 0.7 0.25 }
 
 		male_names = {
@@ -303,9 +302,8 @@ mexicano = {
 	}
 	
 	abajeno = {
-		graphical_cultures = { mexicangfx occitangfx }
+		graphical_cultures = { centralmexicangfx mexicangfx }
 		unit_graphical_cultures = { southerngfx occitangfx }
-
 		color = { 0.9 0.5 0.4 }
 
 		male_names = {
@@ -374,7 +372,7 @@ mexicano = {
 
 	neoladino = {
 		graphical_cultures = { andalusiangfx muslimgfx }
-
+		unit_graphical_cultures = { southerngfx occitangfx }
 		color = { 0.7 0.2 0.7 }
 
 		male_names = {
@@ -442,4 +440,87 @@ mexicano = {
 
 		modifier = default_culture_modifier
 	}
+	
+	yucatanense = {
+		graphical_cultures = { caribenogfx mexicangfx}
+		unit_graphical_cultures = { southerngfx occitangfx }
+		color = { 0.7 0.9 0.5 }
+		
+		male_names = {
+			"Juan José" "Juan de Dios" "Juan Carlos" "Juan Pablo" "Jorge Carlos" "Juan Pío" "Ludovico Pío" "Juan Diego"
+			"José de los Ángeles" "Luis de los Ángeles" "Pío de los Ángelese" "Domingo de los Ángeles" "Amadeo de los Ángeles" "Víctor de los Ángeles"
+			"José Enrique" "José Luis" "José Israel" "José Genaro" "José María" "José Miguel" "Miguel Arcángel" "Miguel Ángel" "Ángel Rafael"
+			"Julio César" "César Augusto" "César Octavio" "Marco Antonio" "Alejandro Macedonio" "Alejandro Magno" 
+			"Carlos Caballero" "José Caballero" "Juan Caballero" "Diego Caballero" "Daniel Caballero" "David Caballero" "Israel Caballero" "López Caballero" "Julio Caballero" "Julián Caballero" "Miguel Caballero" "Jorge Caballero" "Román Caballero" "Luis Caballero" "Víctor Caballero" "Vicente Caballero" "Ernesto Caballero" "Martín Caballero" "Pérez Caballero" "Jacinto Caballero" "Juan Diego Estrella"
+			"Gonzalo Guerrero"
+			"Carlos Estrella" "José Estrella" "Juan Estrella" "Diego Estrella" "Daniel Estrella" "David Estrella" "Israel Estrella" "López Estrella" "Julio Estrella" "Julián Estrella" "Miguel Estrella" "Jorge Estrella" "Felipe Estrella" "Luis Estrella" "Víctor Estrella" "Vicente Estrella" "Ernesto Estrella" "Martín Estrella" "Pérez Estrella" "Gonzalo Estrella" "Jacinto Estrella" "Juan Diego Estrella"
+			Aquilino Aulo Avito Adrián_Adrian Adriano_Adrian Atanagildo Alarico_Alaric Ataulfo Apolodoro Apolonio Arquímedes Árgiro Aristón Aristeo Aristóteles_Aristotle Artemio_Artemius Atanasio Anacleto Anastasio Anatolio Andrónico_Andronicus Aniceto Antígono Antipatro Apolinaro_Apollinaris Alexis_Alexius Alejo_Alexius Agapeto_Agapetus Aquiles_Achilles Antíoco Arnaldo_Arnold Arnulfo_Arnold Aznar Arcángel Amadeo Agripino Abraham Abel_Abel Alberto_Albert Alejandro_Alexander Arminio_Armin Ambrosio_Ambrose Ángel_Angel Armando_Herman Aurelio_Aurelius Álvaro Arcadio_Arcadius Agustín_Augustus Apolinar_Apollinaris Anselmo_Anselm Antonio_Anthony Alfredo_Alfred Alonzo_Alphons Alonso_Alphons Ambrosio_Ambrose Andrés_Andrew Ángel_Angel Ángelo_Angel Aníbal Antonio_Anthony Aureliano_Aurelianus
+			Bermudo Baltazar_Balthazar Blanco Bartolomé_Bartholomew Benito_Benedict Basilio_Basil Braulio Bernal
+			Crispino_Crispin Crispín_Crispin Cipriano Cornelio Claudio Celso Casiano_Cassius Camilo Celino Cecilio Casio_Cassius Casandro Carlos_Charles Cristóbal_Christopher César_Caesar Crescencio Crescenio Cristián Cuéllar Caballero Calínico Crisanto Cosmas Cirilo_Cyril Ciro_Cyrus
+			Décimo Domicio_Domitianus Domiciano_Domitianus Domingo Daniel_Daniel Diódoro Diego_Tiago Damián_Damian Damiano_Damian Demetrio_Demetrius Demóstenes Diógenes
+			Eurico_Euric Estéban_Stephen Esteban_Stephen Estebán_Stephen Eliodoro_Heliodorus Evaristo Eusebio Eufemio Euristo Eudocio Eugenio_Eugene Epifanio Erenao_Ireneus Esquilo Eleazar Emiliano Emilio_Aemilius Eligio Ernesto_Ernest Eladio Eleuterio Eliseo Emilio_Aemilius Enrique_Henry Eduardo_Edward
+			Fulvio Floriano Flavio_Flavius Flaviano_Flavius Faustino_Faust Fausto_Faust Fabricio_Fabricius Fabiano_Fabian Fabián_Fabian Fabio Félix_Felix Filemón Florentín_Florentin Florentino_Florentin Filomeno Florencio_Florence Francisco_Francis Fausto_Faust Federico_Frederick Fermín_Firmin Fernando_Ferdinand Felipe_Phillip
+			Graciano Gordiano Gundemaro_Gundemar Genadio Galieno Galeno Gonzalo_Gonzalo Guerrero Guillén_William Gabriel_Gabriel García Gaspar_Caspar Genaro_Genaro Genner_Genaro Guillermo_William Gustavo_Gustav Gilberto_Gilbert Godofredo Graciliano Gregorio_Gregory
+			Horacio Helvio Hermenegildo Hilderico Homero_Homer Heliodoro_Heliodorus Honorio Hircano Héctor_Hector Heraclio_Heraclius Herminio_Armin Hermilo Hilario_Hilarius Horacio_Horace Humberto_Humbert
+			Idelfonso Ilario_Hilarius Ireneo_Ireneus Ignacio_Ignatius Isidro_Isidore Isidoro_Isidore Israel Inocencio
+			Joviano_Jovian Jovián_Jovian Jenofón_Xenophon Jenofonte_Xenophon Jasón Javier_Xavier Jerónimo_Gerónimo Jacinto_Hyacinth Jahir Jacobo_Jacob Jaime_James Jesús_Jesus Jorge_George José_Joseph Juan_John Julio_Julius Julián_Julian Joaquín_Joachim
+			Kevin
+			Lucrecio Livio_Livius Liviano_Livius Longino Lucilio Leovigildo Lisímaco Lisandro Luciano Ludovico_Louis Lotario_Lothair Lucas_Luke Lamberto_Lambert López Luis_Louis Lorenzo_Lawrence Laureano Liborio Lino Leonardo_Leonard Leoncio_Leontius León_Leo Leónidas
+			Maximiano Maximino Máximo_Maximus Majencio Martino_Martin Marcio_Marcial Manlio Marcelo_Marcellus Marcelino_Marcellus Marciano Magno_Magnus Marino Martín_Martin Melchor Macedonio Manuel_Emmanuel Marcial Marcos_Mark Marco_Mark Mario_Marius Mariano_Marius Maximón_Maximus Miguel_Michael Montejo Mauricio_Maurice
+			Noé_Noah Nicolás_Nicholas Norberto_Norbert Nicéforo Nicanor Neófito Nicandro Nicómedes Néstor
+			Ovidio Octavio_Octavius Octaviano_Octavian Olegario Orlando_Roland Onésimo
+			Prisco Póstumo Pompeyo Paulino Porfirio Ptolomeo_Ptolemy Pericles Pío_Pius Pancracio Pantaleón Patricio_Patrick Pascual_Pascal Pérez Plácido Policarpo Primitivo Pablo_Paul Pastor Pánfilo Pelayo_Pelagius Pericles
+			Quinto_Quintus Quintiliano_Quintus
+			Rústico Rufino_Rufus Rufo_Rufus Régulo Rodrigo_Roderick Ricimero Roque Rolando_Roland Rodolfo_Rudolf Ricardo_Richard Rafael_Raphael Ramiro Ramón_Raymond Raúl_Ralph Reyes Román_Roman Roberto_Robert Roger_Roger Rogerio_Roger
+			Severo_Severus Severino Sergio_Sergius Septimio_Septimus Séptimo_Septimus Saturnino Sabino Sisberto Sunifredo Sósimo_Zosimus Simón_Simon Solón Santos Seleúco Salazar Salvador_Salvador Santiago_Tiago Sebastián_Sebastian Serafín Silvestre Soberón Sebastiano_Sebastian
+			Trajano Tiberio_Tiberius Terencio_Terence Teoderico_Theodore Timón Teótimo Teofilacto Teófanes Teódulo Telésforo Tolomeo_Ptolemy Teófilo_Theophilus Tomás_Thomas Teodosio Teodoro_Theodore Tiburcio Timoteo_Timothy Tito_Titus
+			Vito Vinicio Virgilio Valeriano_Valerius Valerio_Valerius Valente_Valens Valentín_Valens Valentino_Valens Valentiniano Víctor_Victor Vicente_Vincent Victoriano_Victorian Victorino_Victorian
+			Wilbert_Wilbert Wilberto_Wilbert Wilfredo Wálter_Walter Walterio_Walter
+			Xenofonte_Xenophon Xenofón_Xenophon
+			Zenón_Zenon Zeno_Zenon Zenobio Zósimo_Zosimus
+		}
+
+		female_names = { 
+			"Alejandra Aryanna" "Alejandra Isabella" "Alejandra Ixchel" "Alejandra Tonalnan" "Alejandra Yatzil" "Allisson Camilla" "Allisson Carmen" "Allisson Chalchiuhtlicue" "Allisson Nikaj" "Alma Eme" "Alma Naylay" "Alma Nimah" "Alma Raxka" "Amelia Coszcatl" "Amelia Gisela" "Amelia Iuitl" "Amelia Izta" "Amparo Amoxtli" "Amparo Emetaly" "Amparo Itotia" "Amparo Mbaz" "Amparo Nelli" "Ana Mahaway" "Ana Nakin" "Ángeles Belachina" "Ángeles Citlamina" "Ángeles Itzel" "Ángeles Kalucha" "Ángeles Noonsa" "Anita Citlali" "Anita Itzamatul" "Anita Pichanto" "Anita Xoco" "Anita Yoltzin" "Araceli Aryanna" "Araceli Awilix" "Araceli Ichtaca" "Araceli Ixchel" "Araceli Kalajuun" "Aracely Aurore" "Aracely Isabella" "Aracely Teresita" "Aracely Zamora" "Blanca Anel" "Blanca Patli" "Blanca Raxka" "Blanca Sacnite" "Carla Anel" "Carla Chalchiuhtlicue" "Carla Eme" "Carla Nimah" "Carla Sacnite" "Carmen Chihuaton" "Carmen Kisa" "Carmen Meztli" "Carmen Rosalina" "Carmen Sacnite" "Chayito Auilix" "Chayito Citlali" "Chayito Mse" "Chayito Xoco" 
+			"Chloe Akna" "Chloe Auilix" "Chloe Huichaana" "Chloe Nelli" "Chloe Xeni" "Constanca Ichtaca" "Constanca Iktan" "Constanca Kalajuun" "Constanca Rosalina" "Damaris Dolores" "Damaris Ixmucane" "Damaris Izta" "Damaris Xochitl" "Delfina Chachiuitl" "Delfina Gisela" "Delfina Rigoberta" "Delfina Sofía" "Elena Ichtaca" "Elena Kalajuun" "Elena Nakin" "Elena Tlalli" "Elena Xquic" "Esmeralda Huichaana" "Esmeralda Ixtel" "Esmeralda Xbaquiyalo" "Esmeralda Xeni" "Esther Ana" "Esther Citlamina" "Esther Tepin" "Esther Xbaquiyalo" "Eve Camilla" "Eve Carmen" "Eve Teresita" "Eve Tonalnan" "Eve Yatzil" "Felipa Mahaway" "Felipa Nakin" "Felipa Ramona" "Felipa Rosalina" "Felipa Xquic" "Florinda Corina" "Florinda Maria" "Florinda Nenetl" "Florinda Rigoberta" "Florinda Sofía" "Francisca Coszcatl" "Francisca Iuitl" "Francisca Rigoberta" "Francisc Sofía" "Francisca Yamanik" "Gabriela Belachina" "Gabriela Daniela" "Gabriela Emetaly" "Gabriela Imix" "Gabriela Isabel" "Gabriela Kalucha" "Gabriela Nenetl" "Gabriela Zyanya" 
+			"Gloria Amoxtli" "Gloria Auilix" "Gloria Itzamatul" "Gloria Ixtli" "Gloria Pichanto" "Irene Kaina" "Irene Mse" "Irene Nai" "Irene Zyanya" "Isabel Elena" "Isabel Eleuia" "Isabel Mecatl" "Isabel Xquic" "Josefina Eme" "Josefina Ixazaluoh" "Josefina Nikaj" "Josefina Nimah" "Josefina Xoc" "Juanita Belachina" "Juanita Kaina" "Juanita Kalucha" "Juanita Nai" "Juanita Xbaquiyalo" "Julia Daniela" "Julia Ileana" "Julia Yudelle" "Julia Zeltzin" "Julieta Citlali" "Julieta Ixtel" "Julieta Kaina" "Julieta Nai" "Julieta Xoco" "Laura Aurore" "Laura Iktan" "Laura Kisa" "Laura Meztli" "Laura Zamora" "Leonora Akhushtal" "Leonora Ana" "Leonora Chel" "Leonora Gisela" "Leonora Huichaana" "Leonora Ixtab" "Leonora Mse" "Leonora Tepin" "Leonora Xeni" "Leonora Xmucane" "Leticia Ixazaluoh" "Leticia Naylay" "Leticia Teresita" "Leticia Xoc" "Lina Avilix" "Lina Ileana" "Lina Raxka" "Lina Tecuith" "Lina Yudelle" "Lola Chimalmat" "Lola Inka" "Lola Nimla" "Lola Patli" "Magdelena Anel" "Magdelena Chimalmat" "Magdelena Nimla" 
+			"Magdelena Sacnite" "Magdelena Zeltzin" "María Chimalmat" "María Coszcatl" "María Daniela" "María Dolores" "María Elena" "María Eleuia" "María Ichika" "María Ileana" "María Imix" "María Isabel" "María Itzel" "María Iuitl" "María Ixmucane" "María Ixtab" "María Izta" "María Juliza" "María Lamat" "María Mahaway" "María Mecatl" "María Nenetl" "María Nimla" "María Noonsa" "María Patli" "María Ramona" "María Xmucane" "María Yamanik" "María Yudelle" "Maritza Inka" "Maritza Itzamatul" "Maritza Ixtli" "Maritza Juliza" "Maritza Pichanto" "Martha Ihuicatl" "Martha Nikaj" "Martha Tonalnan" "Martha Yatzil" "Martina Akhushtal" "Martina Chel" "Martina Ichika" "Martina Yamanik" "Maryam Aryanna" "Maryam Ihuicatl" "Maryam Iktan" "Maryam Ixchel" "Modesta Lamat" "Olivia Cualli" "Olivia Elena" "Olivia Mecatl" "Olivia Tlalli" "Olivia Xochitl" "Reyna Ana" "Reyna Corina" "Reyna Maria" "Reyna Tepin" "Reyna Zyanya" "Rocío Awilix" "Rocío Isabella" "Rocío Kisa" "Rocío Meztli" "Rosa Amoxtli" "Rosa Imix" "Rosa Inka" 
+			"Rosa Isabel" "Rosa Ixtli" "Ruth Eleuia" "Ruth Ichika" "Ruth Ixtab" "Ruth Xmucane" "Socorro Chachiuitl" "Socorro Citlamina" "Socorro Corina" "Socorro Maria" "Sophia Awilix" "Sophia Chihuaton" "Sophia Cualli" "Sophia Sacnite" "Sophia Tlalli" "Susana Chihuaton" "Susana Cualli" "Susana Emetaly" "Susana Itotia" "Susana Juliza" "Susana Lamat" "Susana Ramona" "Susana Sacnite" "Susana Xochitl" "Susana Yoltzin" "Teresa Itotia" "Teresa Ixtel" "Teresa Mbaz" "Teresa Nelli" "Teresa Yoltzin" "Teresita Avilix" "Teresita Camilla" "Teresita Carmen" "Teresita Naylay" "Teresita Tecuith" "Urraca Akhushtal Akna" "Urraca Chachiuitl" "Urraca Chel" "Urraca Itzel" "Urraca Noonsa" "Valeria Aurore" "Valeria Ihuicatl" "Valeria Ixazaluoh" "Valeria Xoc" "Valeria Zamora" "Vanessa Avilix" "Vanessa Chalchiuhtlicue" "Vanessa Tecuith" "Vanessa Zeltzin" 
+			Akhushtal Akna Alejandra_Alexandra Allisson_Alison Alma Amelia Amoxtli Amparo Ana_Anna Anel Ángeles Anita_Anna Araceli Aracely Aryanna Auilix Aurore Avilix Awilix 
+			Belachina Blanca Camilla 
+			Carla_Charlotte Carmen Chachiuitl Chalchiuhtlicue Chayito Chel Chihuaton Chimalmat Chloe Citlali Citlamina Constanca_Constance Corina Coszcatl Cualli 
+			Damaris Daniela_Danielle Delfina Dolores 
+			Elena Eleuia Eme Emetaly Esmeralda Esther Eve 
+			Felipa_Philippa Florinda Francisca_Frances 
+			Gabriela_Gabriele Gisela_Giselle Gloria 
+			Huichaana 
+			Ichika Ichtaca Ihuicatl Iktan Ileana Imix Inka Irene Isabella_Isabelle Itotia Itzamatul Itzel Iuitl Ixazaluoh Ixchel Ixmucane Ixtab Ixtel Ixtli Izta 
+			Josefina_Josephine Juanita Julia_Julia Julieta_Juliet Juliza 
+			Kaina Kalajuun Kalucha Kisa 
+			Lamat Laura Leonora Leticia Lina Lola 
+			Magdelena Mahaway María_Mary Maria_Mary Maritza Martha Martina_Martina Maryam Mbaz Mecatl Meztli Modesta Mse 
+			Nai Nakin Naylay Nelli Nenetl Nikaj Nimah Nimla Noonsa 
+			Olivia 
+			Patli Pichanto 
+			Ramona Raxka Reyna Rigoberta Rocío Rosa_Rose Rosalina_Rosalind Ruth 
+			Sacnite Socorro Sofía_Sophia Susana_Susan 
+			Tecuith Tepin Teresa_Theresa Teresita_Theresa Tlalli Tonalnan Urraca Valeria Vanessa 
+			Xbaquiyalo Xeni Xmucane Xoc Xochitl Xoco Xquic 
+			Yamanik Yatzil Yoltzin Yudelle 
+			Zamora Zeltzin Zyanya 
+		}
+
+		from_dynasty_prefix = "de "
+		
+		pat_grf_name_chance = 50
+		mat_grf_name_chance = 0
+		father_name_chance = 0
+
+		pat_grm_name_chance = 25
+		mat_grm_name_chance = 25
+		mother_name_chance = 0
+
+		modifier = default_culture_modifier
+	}
+}
 }
