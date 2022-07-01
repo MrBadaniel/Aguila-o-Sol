@@ -1,0 +1,166 @@
+decisions = {
+	celebrate_matagh = {
+		only_rulers = yes
+		is_high_prio = yes
+		potential = {
+			AND = {
+			culture = khoakineren
+			religion_group = christian
+				}
+			is_playable = yes
+			prisoner = no
+			NOT = {
+				has_alternate_start_parameter = { key = religion_names value = random }
+			}
+		}
+		
+		allow = {
+			AND = {
+			culture = khoakineren
+			religion_group = christian
+				}
+			wealth = 50
+			is_playable = yes
+			NOT = { has_character_modifier = celebrated_matagh}
+		}
+		
+		effect = {
+			hidden_tooltip = {
+				character_event = { id = armenian_apostolic.1 }
+			}
+			custom_tooltip = { text = TXT_armenian_apostolic }
+		}
+		
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.1
+				trait = slothful
+			}
+			modifier = {
+				factor = 0.1
+				trait = cynical
+			}
+			modifier = {
+				factor = 0.1
+				trait = craven
+			}
+			modifier = {
+				factor = 0
+				war = yes
+			}
+			modifier = { factor = 3	trait = zealous }
+			modifier = { factor = 3	trait = devout }
+		}		
+		
+	}
+	
+	select_nestorian_patron_saint = {
+		is_high_prio = yes
+		only_rulers = yes
+		
+		potential = {
+			NOT = {
+				has_alternate_start_parameter = { key = religion_names value = random }
+			}
+			OR = {
+			religion = nestorian
+			AND = {
+			religion = nazarene
+			trait = nz_oriental
+				}
+			}
+			is_adult = yes
+			has_nestorian_patron_saint_trigger = no
+			NOT = {has_character_flag = nestorian_select}
+		}
+		allow = {
+			block_general_event_trigger = no
+			piety = 250
+			OR = {
+				trait = pious
+				trait = zealous
+			}
+		}
+		effect = {
+			character_event = { id = newnestorian.1 }
+			piety = -250
+			set_character_flag = nestorian_select
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.3 # Slow it down a little
+			}
+		}
+	}	
+	
+	celebrate_naheere = {
+		is_high_prio = yes
+		only_rulers = yes
+		
+		potential = {
+			NOT = {
+				has_alternate_start_parameter = { key = religion_names value = random }
+			}
+			prisoner = no
+			OR = {
+			religion = nestorian
+			AND = {
+			religion = nazarene
+			trait = nz_oriental
+				}
+			}
+			is_adult = yes
+			NOT = { has_character_modifier = held_naheere }
+		}
+		allow = {
+			war = no
+			custom_tooltip = {
+				text = UNOCCUPIED_DEMESNE_TITLE
+				hidden_tooltip = {
+					any_demesne_title = {
+						NOT = { higher_tier_than = count }
+						is_occupied = no
+					}
+				}
+			}
+			piety = 250
+						month = 3
+			NOT = { month = 6 }
+			wealth = 50
+			prisoner = no
+				custom_tooltip = {
+				text = is_not_busy_trigger_tooltip
+				hidden_tooltip = { NOT = { has_character_flag = do_not_disturb } }
+			}
+			NOT = { has_character_flag = opinion_naheere}
+			NOT = { has_character_flag = celebrating_naheere}
+			NOT = { has_character_flag = holding_naheere}
+		}
+		effect = {
+			character_event = { id = newnestorian.7 }
+			piety = -250
+			set_character_flag = celebrating_naheere
+			set_character_flag = do_not_disturb
+			set_character_flag = holding_naheere
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.3 # Slow it down a little
+			}
+		}
+	}	
+	
+}
+

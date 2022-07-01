@@ -3,6 +3,7 @@ nz_acolyte = {
 	opposites = {
 		nz_seraph
 		nz_presbyter
+		nz_oriental
 	}
 	
 	stewardship = 2
@@ -20,6 +21,7 @@ nz_seraph = {
 	opposites = {
 		nz_acolyte
 		nz_presbyter
+		nz_oriental
 	}
 	
 	learning = 2
@@ -36,11 +38,30 @@ nz_presbyter = {
 	opposites = {
 		nz_acolyte
 		nz_seraph
+		nz_oriental
 	}
 	
 	diplomacy = 2
 	intrigue = -1
 	evangelical_opinion = 5
+
+	potential = { religion = nazarene }
+	religious_branch = nazarene
+	random = no
+	religious = yes
+	ruler_designer_cost = 0
+}
+
+nz_oriental = {
+	opposites = {
+		nz_acolyte
+		nz_seraph
+		nz_presbyter
+	}
+	
+	martial = 2
+	learning = -1
+	nestorian_opinion = 5
 
 	potential = { religion = nazarene }
 	religious_branch = nazarene

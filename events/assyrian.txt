@@ -1,0 +1,395 @@
+namespace = newnestorian
+
+#Choose patron saint
+character_event = {
+	id = newnestorian.1
+	desc = "EVTDESC_newnestorian_1"
+	picture = GFX_evt_virgin_mary_icon
+	
+	religion = nestorian
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVOTPA_newnestorian_1
+		trigger = {
+		}
+		custom_tooltip = { text = TXT_nestorian_mar_zaya }
+		hidden_effect = {
+			add_character_modifier = { name = nestorian_mar_zaya duration = -1 }
+		}
+		ai_chance = {
+			factor = 10
+		}
+	}
+	
+	option = {
+		name = EVOTPB_newnestorian_1
+		custom_tooltip = { text = TXT_nestorian_mar_maroun }
+		hidden_effect = {
+			add_character_modifier = { name = nestorian_mar_maroun duration = -1 }
+		}
+		ai_chance = {
+			factor = 10
+		}
+	}
+	
+	option = {
+		name = EVOTPC_newnestorian_1
+		custom_tooltip = { text = TXT_nestorian_mar_nestor }
+		hidden_effect = {
+			add_character_modifier = { name = nestorian_mar_nestor duration = -1 }
+		}
+		ai_chance = {
+			factor = 10
+		}
+	}
+	
+	option = {
+		name = EVOTPD_newnestorian_1
+		custom_tooltip = { text = TXT_nestorian_mar_abba }
+		hidden_effect = {
+			add_character_modifier = { name = nestorian_mar_abba duration = -1 }
+		}
+		ai_chance = {
+			factor = 10
+		}
+	}
+	
+	after = {
+		clr_character_flag = nestorian_select
+	}
+}
+
+#Become more like Mar Zaya - become mystic
+character_event = {
+	id = newnestorian.2
+	desc = "EVTDESC_newnestorian.2"
+	picture = GFX_evt_virgin_mary_icon
+	
+	religion = nestorian
+	
+	trigger = {
+		has_character_modifier = nestorian_mar_zaya
+		NOT = { trait = zealous }
+		NOT = { trait = mystic }
+	}
+	
+	mean_time_to_happen = {
+		months = 40
+	}
+	
+	option = {
+		name = EVTOPTA_newnestorian.2
+		hidden_effect = {
+			remove_trait = cynical
+			add_trait = mystic
+		}
+	}
+}
+
+#Become more like Mar Maroun - become humble
+character_event = {
+	id = newnestorian.3
+	desc = "EVTDESC_newnestorian.3"
+	picture = GFX_evt_virgin_mary_icon
+	
+	religion = nestorian
+	
+	trigger = {
+		has_character_modifier = nestorian_mar_maroun
+		NOT = { trait = humble }
+	}
+	
+	mean_time_to_happen = {
+		months = 40
+	}
+	
+	option = {
+		name = EVTOPTA_newnestorian.2
+		hidden_effect = {
+			remove_trait = proud
+			add_trait = humble
+		}
+	}
+}
+
+#Become more like Mar Nestor - become erudite
+character_event = {
+	id = newnestorian.4
+	desc = "EVTDESC_newnestorian.4"
+	picture = GFX_evt_virgin_mary_icon
+	
+	religion = nestorian
+	
+	trigger = {
+		has_character_modifier = nestorian_mar_nestor
+		NOT = { trait = erudite }
+		NOT = { has_character_flag = imbecilenestorian }
+	}
+	
+	mean_time_to_happen = {
+		months = 40
+	}
+	
+	option = {
+		name = EVTOPTA_newnestorian.2
+		trigger = {
+			NOR = {
+				trait = imbecile
+				trait = slow
+			}
+		}
+		hidden_effect = {
+			add_trait = erudite
+		}
+	}
+	
+	option = {
+		name = EVTOPTB_newnestorian.2
+		piety = 100
+		trigger = {
+			OR = {
+				trait = imbecile
+				trait = slow
+			}
+		}
+		set_character_flag = imbecilenestorian
+	}
+}
+
+#Become more like Mar Abba - become just
+character_event = {
+	id = newnestorian.5
+	desc = "EVTDESC_newnestorian.5"
+	picture = GFX_evt_virgin_mary_icon
+	
+	religion = nestorian
+	
+	trigger = {
+		has_character_modifier = nestorian_mar_abba
+		NOT = { trait = just }
+	}
+	
+	mean_time_to_happen = {
+		months = 40
+	}
+	
+	option = {
+		name = EVTOPTA_newnestorian.2
+		hidden_effect = {
+			add_trait = just
+			remove_trait = arbitrary
+		}
+	}
+}
+
+#Remove patron saint if you stop being Nestorian
+character_event = {
+	id = newnestorian.6
+	desc = "EVTDESC_newnestorian_6"
+	picture = GFX_evt_virgin_mary_icon
+	is_triggered_only = yes
+	
+	trigger = {
+		NOT = { religion = nestorian }
+		has_nestorian_patron_saint_trigger = yes
+	}
+	
+	weight_multiplier = {
+		days = 5
+	}
+	
+	option = {
+		name = EVTOPTC_newnestorian.2
+		hidden_effect = {
+			remove_nestorian_patron_saint_effect = yes
+		}
+	}
+}
+
+### Assyrian Apostolic Naheere
+
+# Invitation Sent
+character_event = {
+	id = newnestorian.7
+	desc = EVTDESC_newnestorian_7
+	picture = GFX_evt_palmsunday_christ
+	border = GFX_event_normal_frame_religion
+	
+	is_triggered_only = yes
+	
+	hide_from = yes
+	
+	option = {
+		name = EVTOPTA_newnestorian_7
+		any_vassal = {
+			limit = {
+				religion = ROOT # makes more sense this way
+				age = 16
+				prisoner = no
+				war = no
+				NOT = { is_incapable = yes }
+			}
+			character_event = { id = newnestorian.8 days = 2 tooltip = EVTTOOLTIP_newnestorian_8 }
+		}
+		custom_tooltip = { text = passover_invitations_sent }
+		hidden_tooltip = { character_event = { id = newnestorian.10 days = 10 } }
+		hidden_tooltip = { character_event = { id = newnestorian.11 days = 12 } }
+	}
+}
+
+# Invitation Received
+character_event = {
+	id = newnestorian.8
+	desc = EVTDESC_newnestorian_8
+	picture = GFX_evt_nestorian_religion_of_light
+	border = GFX_event_normal_frame_religion
+	
+	is_triggered_only = yes
+
+	trigger = { NOT = { is_inaccessible_trigger = yes } }
+	
+	option = {
+		name = EVTOPTA_newnestorian_8
+		ai_chance = {
+			factor = 80
+			modifier = {
+				factor = 0
+				NOT = {	opinion = { who = ROOT value = -20 } }
+			}
+		}
+		custom_tooltip = { text = naheere_accepted }
+		set_character_flag = celebrating_naheere 
+		set_character_flag = do_not_disturb
+		hidden_tooltip = { character_event = { id = newnestorian.10 days = 8 } }
+		hidden_tooltip = { character_event = { id = newnestorian.13 days = 20 } } # Safety catch flag clearing
+	}
+	option = {
+		name = EVTOPTB_newnestorian_8
+		ai_chance = {
+			factor = 20
+		}
+		FROM = {
+			opinion = {
+				modifier = opinion_refused_naheere
+				who = ROOT
+			}
+		}
+		custom_tooltip = { text = naheere_declined }
+		hidden_tooltip = {
+			FROM = { character_event = { id = newnestorian.9 } }
+		}
+	}
+}
+
+# Invitation Refused
+character_event = {
+	id = newnestorian.9
+	desc = EVTDESC_newnestorian_9
+	picture = GFX_evt_nestorian_religion_of_light
+	border = GFX_event_normal_frame_religion
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_newnestorian_9
+		opinion = {
+			modifier = opinion_refused_naheere
+			who = FROM
+		}
+	}
+}
+
+# Naheere Begins
+character_event = {
+	id = newnestorian.10
+	desc = EVTDESC_newnestorian_10
+	picture = GFX_evt_the_ten_virgins
+	border = GFX_event_normal_frame_religion
+	
+	hide_from = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_newnestorian_10
+	}
+}
+
+# Naheere Ends (Host)
+character_event = {
+	id = newnestorian.11
+	desc = EVTDESC_newnestorian_11
+	picture = GFX_evt_the_ten_virgins
+	border = GFX_event_normal_frame_religion
+	
+	hide_from = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = {
+			text = EVTOPTA_newnestorian_11
+		}
+		any_vassal = {
+			limit = { has_character_flag = celebrating_naheere  }
+			opinion = {
+				modifier = opinion_naheere
+				who = ROOT
+			}
+		}
+		hidden_tooltip = {
+			any_vassal = {
+				limit = { has_character_flag = celebrating_naheere  }
+				character_event = { id = newnestorian.12 }
+			}
+		}
+		add_character_modifier = {
+			name = held_naheere
+			duration = 1825
+			hidden = yes
+		}
+		prestige = 100
+		piety = 100
+		clr_character_flag = holding_naheere
+		clr_character_flag = do_not_disturb
+	}
+}
+
+# Naheere Ends (Guest)
+character_event = {
+	id = newnestorian.12
+	desc = EVTDESC_newnestorian_12
+	picture = GFX_evt_palmsunday_christ
+	border = GFX_event_normal_frame_religion
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = {
+			text = EVTOPTA_newnestorian_11
+		}
+		clr_character_flag = celebrating_naheere 
+		clr_character_flag = do_not_disturb
+	}
+}
+
+###########################################
+# Flag management						 #
+###########################################
+
+# Safety catch - clears character flags and modifiers
+character_event = {
+	id = newnestorian.13
+
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		clr_character_flag = do_not_disturb
+		clr_character_flag = holding_naheere
+		clr_character_flag = celebrating_naheere
+	}
+}
