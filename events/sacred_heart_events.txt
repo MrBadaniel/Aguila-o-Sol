@@ -2001,6 +2001,8 @@ character_event = {
 	is_triggered_only = yes
 	min_age = 10
 
+	hide_window	= yes
+
 	trigger = {
 		religion = sacred_heart
 		NOT = {
@@ -2021,28 +2023,21 @@ character_event = {
 		}
 	}
 	
-		effect = {
-			add_cenobitic_trait_effect = yes
-			}	
+	immediate = { FROM = { letter_event = { id = ADV.3 } } }
 	
-	option = {
-		name = EVTOPTA_sacredheart_204
-		trigger = {
-		ai = yes
+	
+	immediate = {
+		if = {
+			limit = { ai = yes }
+			effect = {
+				add_sacred_heart_branch_effect = yes
+				}
 		}
-		effect = {
-			add_sacred_heart_branch_effect = yes
-			}	
-		}	
-
-	option = {
-		name = EVTOPTB_sacredheart_204
-		trigger = {
-		ai = no
+		if = {
+			limit = { ai = no }
+			character_event = { id = sacredheart.150 }
 		}
-		character_event = { id = sacredheart.150 }
-		}	
-	}
+	}	
 }
 
 narrative_event = {

@@ -1,7 +1,10 @@
 add_sacred_heart_branch_effect = {
 	if = {
 			limit = {
-			culture = tapatio
+			OR = {
+				culture = tapatio
+				trait = kind
+					}
 			}
 			add_trait = marian_santa_inocencia
 	}
