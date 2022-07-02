@@ -5,10 +5,9 @@ decisions = {
 		is_high_prio = yes
 		
 		potential = {
-			religion = penitente
-						
+			religion = penitente	
 			is_playable = yes
-			independent = yes
+			#independent = yes
 			NOT = {
 				has_alternate_start_parameter = { key = religion_names value = random }
 			}
@@ -32,14 +31,12 @@ decisions = {
 			custom_tooltip = {
 				text = RECENT_FLAGELLATION
 				hidden_tooltip = {
-					NOR = {
-						has_character_modifier = { flagellant_tier_one }
-						has_character_modifier = { flagellant_tier_two }
-						has_character_modifier = { flagellant_tier_three }
-					}
+					NOT = { has_character_flag = flagellation_ritual }
+					NOT = { has_character_modifier = flagellant_tier_one }
+					NOT = {	has_character_modifier = flagellant_tier_two }
+					NOT = {	has_character_modifier = flagellant_tier_three }
 				}
 			}
-			NOT = { has_character_flag = bloodletting_ritual }
 			NOT = { is_inaccessible_trigger = yes }
 			NOT = {	is_incapable = yes }
 			is_adult = yes
@@ -48,6 +45,8 @@ decisions = {
 			set_character_flag = flagellation_ritual
 			hidden_tooltip = { 
 				character_event = { id = centroamerica.100 } 
+				clr_character_flag = flagellation_timer
+				clr_character_flag = bad_penitente
 			}
 			if = {
 				limit = {
@@ -78,6 +77,10 @@ decisions = {
 			modifier = {
 				factor = 0.5
 				trait = cynical
+			}
+			modifier = {
+				factor = 4
+				has_character_flag = bad_penitente
 			}
 		}
 	}

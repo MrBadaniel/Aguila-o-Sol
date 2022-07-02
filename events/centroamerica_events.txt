@@ -110,7 +110,7 @@ option = {
 character_event = {
 	id = centroamerica.100
 	desc = EVTDESC_flagellation_1
-	picture = GFX_evt_xipe #placeholder
+	picture = GFX_evt_mortification_flesh #placeholder
 	border = GFX_event_normal_frame_religion
 	
 	is_triggered_only = yes
@@ -121,7 +121,10 @@ character_event = {
 	
 	immediate = {
 		hidden_tooltip = {
-			character_event = { id = centroamerica.115 days = 5 } #event that may give the character virtues
+			random = {
+				chance = 50
+				character_event = { id = centroamerica.115 days = 5 } #event that may give the character virtues
+			}
 		}
 	}
 	
@@ -155,6 +158,11 @@ character_event = {
 		hidden_tooltip = { #event used to decide outcome
 			character_event = { id = centroamerica.103 days = 2 }
 		}
+	}
+	
+	after = {
+		character_event = { id = centroamerica.120 years = 5 } #event for if you haven't done penance in 5 years
+		set_character_flag = flagellation_timer
 	}
 }
 
@@ -412,7 +420,7 @@ character_event = { #Crufixion event decider
 character_event = {
 	id = centroamerica.104
 	desc = EVTDESC_flagellation_2
-	picture = GFX_evt_xipe
+	picture = GFX_evt_mortification_flesh
 	border = GFX_event_normal_frame_religion
 	
 	is_triggered_only = yes
@@ -476,7 +484,7 @@ character_event = {
 			name = flagellant_tier_one
 			years = 3
 		}
-	
+	}
 	after = {
 		clr_character_flag = flagellation_ritual
 	}
@@ -520,7 +528,7 @@ character_event = {
 character_event = {
 	id = centroamerica.107
 	desc = EVTDESC_flagellation_5
-	picture = GFX_evt_xipe
+	picture = GFX_evt_mortification_flesh
 	border = GFX_event_normal_frame_religion
 	
 	is_triggered_only = yes
@@ -629,7 +637,7 @@ character_event = {
 character_event = {
 	id = centroamerica.109
 	desc = EVTDESC_flagellation_8
-	picture = GFX_evt_xipe
+	picture = GFX_evt_mortification_flesh
 	border = GFX_event_normal_frame_religion
 	
 	is_triggered_only = yes
@@ -850,7 +858,7 @@ character_event = {
 character_event = {
 	id = centroamerica.115
 	desc = EVTDESC_flagellation_15
-	picture = GFX_evt_xipe
+	picture = GFX_evt_mortification_flesh
 	border = GFX_event_normal_frame_religion
 	
 	is_triggered_only = yes
@@ -1064,5 +1072,101 @@ character_event = {
 		clr_character_flag = flagellant_add_diligent
 	}
 }
+
+character_event = { #Event to check if character should receive the fla
+	id = centroamerica.120
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		had_character_flag = {
+			flag = flagellation_timer
+			years >= 5
+		}
+	}
+	
+	immediate = {
+		if = {
+			limit = {
+				war = no
+				prisoner = no
+				NOT = { is_inaccessible_trigger = yes }
+				NOT = {	is_incapable = yes }
+				is_adult = yes
+				religion = penitente
+			}
+			character_event = { id = centroamerica.121 }
+		}
+		else_if = {
+			limit = {
+				religion = penitente
+			}
+			character_event = { id = centroamerica.120 months = 6 }
+		}
+		else_if = {
+			limit = {
+				NOT = { religion = penitente }
+			}
+			clr_character_flag = flagellation_timer
+		}
+	}
+	
+}
+
+character_event = { #bad penitente event
+	id = centroamerica.121
+	desc = EVTDESC_flagellation_21
+	picture = GFX_evt_bad_news
+	border = GFX_event_normal_frame_religion
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		has_character_flag = flagellation_timer
+	}
+	
+	option = {
+		name = EVTOPTA_flagellation_21
+		if = { #If the Hermano Mayor exists he will get mad at you
+			limit = { 
+				religion_head = { 
+					is_alive = yes 
+					has_landed_title = d_penitente	 
+				}
+			}
+			custom_tooltip = { text = big_brother_sad }
+			hidden_tooltip = { 
+				religion_head = { 		
+					show_scope_change = no	
+					opinion = {
+						modifier = opinion_offended
+						years = 30
+						who = ROOT
+					} 
+				} 
+			}
+		}
+		piety = -150
+		set_character_flag = bad_penitente
+	}
+}
+
+character_event = { #gives penitente rulers their timer at start
+	id = centroamerica.122
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		is_playable = yes
+		is_adult = yes
+		religion = penitente
+	}
+	
+	immediate = {
+		set_character_flag = flagellation_timer
+		character_event = { id = centroamerica.120 days = 1826 } #event for if you haven't done penance in 5 years
+	}
 
 }
