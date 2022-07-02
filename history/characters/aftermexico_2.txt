@@ -823,8 +823,9 @@
 	culture=nicoyano 
 	dynasty=5001161
 	religion=moravian
+	trait=sympathy_judiasm
 	trait=pastoral
-	trait=theologian
+	trait=dorado
 	trait=greedy
 	trait=patient
 	trait=chaste
@@ -833,9 +834,9 @@
 	father=6900458
 	trait=paranoid
 	trait=mastermind_theologian	
-	2620.5.9={birth=yes}
-	2666.1.1={employer=1670018}
- 2700.7.3={death=yes}
+	2648.5.9={birth=yes}
+	2666.1.1={employer=6900061}
+	2700.7.3={death=yes}
 }
 
 
@@ -1494,9 +1495,9 @@
 	2615.11.14={death=yes}
 }
 
-#Abo Guadalupe 
+#Arturo 'El Moteado' Sauz
 6900502={
-	name=Abo 
+	name=Arturo 
 	religion=sacred_heart
 	culture=french
 	dynasty=5001164
@@ -1512,6 +1513,7 @@
 	trait=lustful
 	2644.6.29={birth=yes
 	culture=angeleno
+	give_nickname=nick_el_moteado
 	}
 	2659.1.1={
 	effect={
@@ -2054,4 +2056,91 @@
 	}
 	2660.1.1={add_spouse=1911076}
 }
-#### new character ID starts at 6900635 ####
+
+6900635={
+    name=Winardo
+    dynasty=1802101
+    trait=distractable
+    trait=one_eyed
+    trait=envious
+    trait=lustful
+    trait=attractive
+    trait=architect
+    trait=arbitrary
+    trait=trusting
+    trait=mastermind_theologian
+	trait=dorado
+    trait=fever
+    martial=2
+    diplomacy=2
+    stewardship=5
+    intrigue=2
+    learning=4
+    culture=occidental
+    religion=cristo_rey
+    2648.11.14={birth=yes
+	give_nickname=nick_el_pedante}
+	2666.1.1={employer=6900061}
+    2746.4.5={death=yes}
+}
+
+6900636={
+    name=Regio
+    dynasty=1802102
+    culture=bravo
+    religion=sacred_heart
+    martial=2
+    diplomacy=4
+    stewardship=3
+    intrigue=4
+    learning=6
+    trait=marian_santa_muerte
+	trait=dorado
+    trait=lustful 
+    trait=ambitious
+    trait=proud
+    trait=gregarious
+    trait=cynical
+    2638.5.22={birth=yes}
+	2666.1.1={employer=6900061}
+}
+
+6900637={
+    name=Gabriel
+    dynasty=1802103
+    culture=brazilian
+    religion=cristo_rey
+    martial=2
+    diplomacy=4
+    stewardship=3
+    intrigue=4
+    learning=6
+    trait=scholarly_theologian
+	trait=dorado
+	trait=zealous
+    trait=proud 
+    trait=content
+    trait=honest
+    trait=temperate
+    trait=falconer
+    2644.4.10={birth=yes}
+	2666.1.1={employer=6900061}
+}
+
+6900638={
+    name=Ketsaltemok
+    dynasty=1802104
+    religion=mictlantec
+	trait=dorado
+    trait=scarred_mid
+    trait=strong
+    trait=shrewd
+    trait=hunter
+    trait=patient
+    trait=just
+    trait=grey_eminence
+    culture=nahua
+    2645.9.11={birth=yes}
+	2666.1.1={employer=6900061}
+    2746.7.11={death=yes}
+}
