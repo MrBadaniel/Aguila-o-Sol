@@ -2023,10 +2023,28 @@ character_event = {
 		}
 	}
 	
-	immediate = { FROM = { letter_event = { id = ADV.3 } } }
-	
 	
 	immediate = {
+		if = {
+			limit = { 		
+				OR = {
+			trait = marian_santa_muerte
+			trait = marian_guadalupe
+			trait = marian_san_charbel
+			trait = marian_san_juditas
+			trait = marian_el_santo
+			trait = marian_stella_maris
+			trait = marian_santo_nino_fidencio
+			trait = marian_san_pascual
+			trait = marian_la_hermandad
+			trait = marian_cristo_rey
+			trait = marian_santa_inocencia
+				} 
+			}
+			effect = {
+				piety = 5
+				}			
+		}
 		if = {
 			limit = { ai = yes }
 			effect = {
