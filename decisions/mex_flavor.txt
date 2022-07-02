@@ -264,6 +264,7 @@ targetted_decisions = {
 			}
 			NOT = {
 				age = 16
+				has_character_flag = este_hijo_done_been_taught
 			}
 		}
 		effect = {
@@ -284,60 +285,70 @@ targetted_decisions = {
 					FROM = { trait = marian_el_santo }	
 				}
 				add_trait = marian_el_santo
+				set_character_flag = este_hijo_done_been_taught
 			}
 			if = {
 				limit = {
 					FROM = { trait = marian_guadalupe }	
 				}
 				add_trait = marian_guadalupe
+				set_character_flag = este_hijo_done_been_taught
 			}
 			if = {
 				limit = {
 					FROM = { trait = marian_san_charbel }	
 				}
 				add_trait = marian_san_charbel
+				set_character_flag = este_hijo_done_been_taught
 			}
 			if = {
 				limit = {
 					FROM = { trait = marian_san_juditas }	
 				}
 				add_trait = marian_san_juditas
+				set_character_flag = este_hijo_done_been_taught
 			}
 			if = {
 				limit = {
 					FROM = { trait = marian_san_pascual }	
 				}
 				add_trait = marian_san_pascual
+				set_character_flag = este_hijo_done_been_taught
 			}
 			if = {
 				limit = {
 					FROM = { trait = marian_stella_maris }	
 				}
 				add_trait = marian_stella_maris
+				set_character_flag = este_hijo_done_been_taught
 			}
 			if = {
 				limit = {
 					FROM = { trait = marian_santo_nino_fidencio }	
 				}
 				add_trait = marian_santo_nino_fidencio
+				set_character_flag = este_hijo_done_been_taught
 			}
 			if = {
 				limit = {
 					FROM = { trait = marian_santa_inocencia }	
 				}
 				add_trait = marian_santa_inocencia
+				set_character_flag = este_hijo_done_been_taught
 			}
 			if = {
 				limit = {
 					FROM = { trait = marian_la_hermandad }	
 				}
 				add_trait = marian_la_hermandad
+				set_character_flag = este_hijo_done_been_taught
 			}
 			if = {
 				limit = {
 					FROM = { trait = marian_cristo_rey }	
 				}
 				add_trait = marian_cristo_rey
+				set_character_flag = este_hijo_done_been_taught
 			}
 			
 		}
