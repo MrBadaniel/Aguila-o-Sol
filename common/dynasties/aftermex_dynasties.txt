@@ -997,7 +997,19 @@
 5001213 = { name="Heuer" culture=coloradan }
 
 5001214 = { name="Carranza" culture=joaquino }
-5001215 = { name="Pío" culture=tagalog }
+5001215 = { name="Pío" culture=tagalog 
+	coat_of_arms = {
+		template = 0
+		layer = {
+			texture = 11
+			texture_internal = 18
+			emblem = 0
+			color = 0
+			color = 0
+			color = 0
+		}
+	}
+}
 5001216 = { name="McBride" culture=valleyan }
 5001217 = { name="Petrov" culture=bayfolk }
 5001218 = { name="Monroe" culture=valleyan }
@@ -1035,7 +1047,7 @@
 		}
 	}
 }
-5001229 = { name="Guadaña" culture=inlander 
+5001229 = { name="Guadaña" culture=meseteno 
 	coat_of_arms = {
 		template = 0
 		layer = {
