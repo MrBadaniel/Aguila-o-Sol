@@ -660,7 +660,7 @@ character_event = {
 
 #Discipline event (badly bruised)
 character_event = {
-	id = centroamerica.115
+	id = centroamerica.111
 	desc = EVTDESC_flagellation_7
 	picture = GFX_evt_bad_news
 	border = GFX_event_normal_frame_religion
@@ -843,7 +843,7 @@ character_event = {
 
 #Crucifix event (broken ribs)
 character_event = {
-	id = centroamerica.115
+	id = centroamerica.112
 	desc = EVTDESC_flagellation_10
 	picture = GFX_evt_bad_news
 	border = GFX_event_normal_frame_religion
@@ -1207,7 +1207,10 @@ character_event = { #bad penitente event
 			}
 		}
 		piety = -150
-		set_character_flag = bad_penitente
+		add_character_modifier = { 
+			name = bad_penitente
+			duration = -1
+		}
 	}
 }
 

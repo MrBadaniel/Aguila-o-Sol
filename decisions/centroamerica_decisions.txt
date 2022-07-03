@@ -46,7 +46,7 @@ decisions = {
 			hidden_tooltip = { 
 				character_event = { id = centroamerica.100 } 
 				clr_character_flag = flagellation_timer
-				clr_character_flag = bad_penitente
+				remove_character_modifier = bad_penitente
 			}
 			if = {
 				limit = {
@@ -80,7 +80,7 @@ decisions = {
 			}
 			modifier = {
 				factor = 4
-				has_character_flag = bad_penitente
+				has_character_modifier = bad_penitente
 			}
 		}
 	}
