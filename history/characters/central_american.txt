@@ -1079,14 +1079,13 @@
 	name="Álvaro"
 	dynasty=1650007
 	culture=trifinio
-	religion=moravian
+	religion=penitente
 	martial=3
 	diplomacy=7
 	stewardship=8
 	intrigue=4
 	learning=2
 	trait=charismatic_negotiator
-	trait=pastoral
 	trait=kind
 	trait=cynical
 	trait=deceitful
@@ -1100,14 +1099,13 @@
 	name="Jaime"
 	dynasty=1650007
 	culture=trifinio
-	religion=moravian
+	religion=penitente
 	martial=1
 	diplomacy=4
 	stewardship=6
 	intrigue=1
 	learning=6
 	trait=flamboyant_schemer
-	trait=pastoral
 	trait=mystic
 	trait=just
 	father=1650055
@@ -1159,14 +1157,13 @@
 	name="Jaime"
 	dynasty=1650007
 	culture=trifinio
-	religion=moravian
+	religion=penitente
 	martial=2
 	diplomacy=2
 	stewardship=3
 	intrigue=2
 	learning=3
 	trait=flamboyant_schemer
-	trait=pastoral
 	trait=cynical
 	trait=cruel
 	2553.1.1={birth=yes}
@@ -3384,5 +3381,21 @@
     trait=mastermind_theologian	
     2609.2.19={
         birth=yes
+	}
+}
+
+1670047={ 
+	name="Matoníah"
+	culture=trifinio
+	dynasty=4600129
+	religion=lamanita
+	trait=midas_touched
+	trait=charitable
+	trait=pious
+	trait=honest
+	trait=brave
+	2645.2.12={birth=yes}
+	2666.1.1={
+		add_spouse=1670040
 	}
 }
