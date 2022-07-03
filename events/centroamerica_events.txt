@@ -1,109 +1,163 @@
 namespace = centroamerica
+##Purificador Iconoclasm Events##
+character_event = { #event to add iconoclast raid variable for when game starts, character converts to purificador or reaches adulthood etc
+	id = centroamerica.1
+	hide_window = yes
+	
+	min_age = 16
+	
+	is_triggered_only = yes
+	
+	is_playable = yes
+	
+	religion_group = christian
+	
+	trigger = {
+		OR = {
+			religion = purificador
+			religion = postadventist
+		}
+		NOT = {
+			check_variable = { which = iconoclast_raids value >= 1 }
+		}
+	}
+	
+	immediate = {
+		set_variable = { which = iconoclast_raids value = 0 }
+	}
+}
 
-# Purificador/Reconstructionist wins siege over a Christian temple
-character_event = {
-    id = emf_heresy.2016
-    desc = EVTDESC_emf_heresy_2016
-    picture = GFX_evt_siege
+character_event = { #iconoclast raid counter
+	id = centroamerica.2
+
     border = GFX_event_normal_frame_war
-
-    is_triggered_only = yes
-
-    religion_group = christian
-
-    trigger = {
-        OR = {
-            religion = purificador
-            religion = reconstructionist
-        }
-        FROM = {
-            holding_type = temple
-            owner = {
-                wealth = 50
-				OR = {
-				religion_group = christian
-				religion_group = cult_of_saints
-				religion_group = latter_day_saints
-				religion_group = amero_syncretic
-				religion = qabantajik
-				religion = rastafarian
+	
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	min_age = 16
+	capable_only = yes
+	prisoner = no
+	
+	religion_group = christian
+	
+	trigger = {
+		OR = {
+			religion = purificador
+			religion = postadventist
+		}
+		FROM = {
+			owner = {
+				NOR = { # raiding other protestants won't count
+					religion = purificador
+					religion = postadventist
+					religion = charismatic
+					religion = evangelical
+					religion = nonconformist
+					religion = batenburger
+					religion = anabaptist
 				}
-                NOR = {
-                    religion = purificador
-                    religion = reconstructionist
-                }
-            }
-        }
-    }
-option = {
-        name = EVTOPTA_emf_heresy_2016
-        ai_chance = {
-            factor = 0.5
-            modifier = {
-                factor = 2
-                religion = purificador
-            }
-            modifier = {
-                factor = 5
-                trait = zealous
-            }
-            modifier = {
-                factor = 1.5
-                trait = greedy
-            }
-            modifier = {
-                factor = 1.5
-                trait = wroth
-            }
-        }
-        if = {
-            limit = {
-                NOT = { trait = iconoclast_trait }
-                OR = {
-                    religion = purificador
-                    religion = reconstructionist
-                }
-            }
-            add_trait = iconoclast_trait
-        }
-        wealth = 50
-        piety = -25
-        hidden_tooltip = {
-            FROM = {
-                owner = {
-                    wealth = -50
-                    opinion = { who = ROOT modifier = opinion_outraged years = 20 }
-                }
-            }
-        }
-    }
-option = {
-        name = EVTOPTB_emf_heresy_2016
-        ai_chance = {
-            factor = 50
-            modifier = {
-                factor = 0
-                trait = iconoclast_trait
-            }
-            modifier = {
-                factor = 0
-                NOT = { piety = 0 }
-            }
-            modifier = {
-                factor = 2
-                trait = cynical
-            }
-            modifier = {
-                factor = 1.5
-                trait = kind
-            }
-            modifier = {
-                factor = 1.5
-                trait = humble
-            }
-        }
-        piety = 10
-    }
+			}
+		}
+	}
+	
+	immediate = {
+		change_variable = { which = iconoclast_raids value = 1 }
+	}
+}
+
+character_event = { #event that gives the traits
+	id = centroamerica.3
+	desc = { 
+		trigger = { 
+			NOR = {
+				trait = aniconist
+				trait = image_breaker
+				trait = arch_iconoclast
+			}
+		} 
+		text = EVTDESC_centroamerica_3A
+	}
+	desc = { 
+		trigger = { 
+			trait = aniconist
+		}
+		text = EVTDESC_centroamerica_3B
+	}
+	desc = { 
+		trigger = { 
+			trait = image_breaker
+		}
+		text = EVTDESC_centroamerica_3C
+	}
+	picture = GFX_evt_iconoclasts_iconoclasming
+	
+	hide_from = yes
+	
+	is_triggered_only = yes
+	
+	min_age = 16
+	religion_group = christian
+	
+	
+	trigger = {
+		OR = {
+			religion = purificador
+			religion = postadventist
+		}
+		OR = {
+			AND = {
+				NOR = {
+					trait = aniconist
+					trait = image_breaker
+					trait = arch_iconoclast
+				}
+				check_variable = { which = iconoclast_raids value = 5 }
+			}
+			AND = {
+				trait = aniconist
+				check_variable = { which = iconoclast_raids value = 10 }
+			}
+			AND = {
+				trait = image_breaker
+				check_variable = { which = iconoclast_raids value = 15 }
+			}
+		}
+	}
+	
+	option = {
+        name = EVTOPTA_centroamerica_3
+		trigger = {
+			NOR = {
+				trait = aniconist
+				trait = image_breaker
+				trait = arch_iconoclast
+			}
+			check_variable = { which = iconoclast_raids value = 10 }
+		}
+		add_trait = aniconist
+	}
+	
+	option = {
+        name = EVTOPTB_centroamerica_3
+		trigger = {
+			trait = aniconist
+			check_variable = { which = iconoclast_raids value = 25 }
+		}
+		remove_trait = aniconist
+		add_trait = image_breaker
+	}
+	
+	option = {
+        name = EVTOPTC_centroamerica_3
+		trigger = {
+			trait = image_breaker
+			check_variable = { which = iconoclast_raids value = 50 }
+		}
+		remove_trait = image_breaker
+		add_trait = arch_iconoclast
+	}
 }
 
 ##flagellation Events##
@@ -118,6 +172,8 @@ character_event = {
 	trigger = {
 		has_character_flag = flagellation_ritual
 	}
+	
+	religion_group = christian
 	
 	immediate = {
 		hidden_tooltip = {
@@ -1162,6 +1218,9 @@ character_event = { #gives penitente rulers their timer at start
 		is_playable = yes
 		is_adult = yes
 		religion = penitente
+		NOT = {
+			has_character_flag = flagellation_timer
+		}
 	}
 	
 	immediate = {
