@@ -3424,6 +3424,8 @@
 	dynasty=1851024#Muir
 	culture=english
 	religion=pagan#forester
+	trait=legendary
+	occluded=yes
 	trait=intricate_webweaver
 	trait=celibate
 	trait=deceitful
@@ -3437,284 +3439,24 @@
 	}
 	2253.8.22={death=yes}
 }
-
-1802111={
-	name="Thomas"
-	dynasty=1851024#Muir
-	culture=english
-	religion=pagan#forester
-	trait=martial_cleric
-	trait=patient
-	trait=content
-	disallow_random_traits=yes
-	father=1802109
-	2195.8.8={birth=yes
-	culture=valleyan
-	}
-	2245.1.28={death=yes}
-}
-
-1802112={
-	name="Marci"
-	dynasty=5001230#Clark
-	female=yes
-	culture=english
-	religion=pagan#forester
-	trait=amateurish_plotter
-	trait=envious
-	trait=craven
-	trait=temperate
-	trait-honest
-	disallow_random_traits=yes
-	2209.1.14={birth=yes
-	culture=valleyan
-	}
-	2228.9.3={add_spouse=1802111}
-	2241.2.18={death={death_reason=death_childbirth}}
-}
- 
-1802113={
-	name="Jacob"
-	dynasty=1851024#Muir
-	culture=english
-	religion=pagan#forester
-	trait=brilliant_strategist
-	trait=sturdy
-	trait=kind
-	trait=gregarious
-	trait=honest
-	disallow_random_traits=yes
-	father=1802111
-	mother=1802112
-	2230.10.9={birth=yes
-	culture=valleyan
-	}
-	2304.11.3={death=yes}
-} 
-
-1802114={
-	name="Edward"
-	dynasty=1851024#Muir
-	culture=english
-	religion=pagan#forester
-	trait=skilled_tactician
-	trait=duelist
-	trait=brave
-	trait=stubborn
-	trait=kind
-	disallow_random_traits=yes
-	father=1802113
-	2285.11.7={birth=yes
-	culture=valleyan
-	give_nickname=nick_the_ringer
-	}
-	2308.12.15={death={
-			death_reason=death_battle
-		}
-	}
-}
-
-1802115={
-	name="Blake"
-	dynasty=1851024#Muir
-	culture=english
-	religion=sacred_heart#la_hermandad
-	trait=mastermind_theologian
-	trait=school_giver
-	trait=brave
-	trait=pious
-	trait=charitable
-	disallow_random_traits=yes
-	father=1802113
-	2288.2.4={birth=yes
-	culture=valleyan
-	give_nickname=nick_the_blessed
-	}
-	2316.5.13={death={
-			death_reason=death_murder_unknown_fall
-			killer=1802116
-		}
-	}
-}
-
-1802116={
-	name="John"
-	dynasty=1851024#Muir
-	culture=english
-	religion=pagan#forester
-	trait=elusive_shadow
-	trait=schemer
-	trait=shrewd
-	trait=ambitious
-	trait=cynical
-	trait=diligent
-	trait=patient
-	disallow_random_traits=yes
-	father=1802111
-	mother=1802112
-	2241.2.18={birth=yes
-	culture=valleyan
-	}
-	2316.5.13= {
-		effect_even_if_dead = {
-			set_special_character_title = RANGER_BLACK_TITLE
-		}
-	}
-	2326.10.5={death=yes}
-} 
-
-1802117={
-	name="Aaron"
-	dynasty=1851024#Muir
-	culture=english
-	religion=pagan#forester
-	trait=underhanded_rogue
-	trait=quick
-	trait=shy
-	trait=stressed
-	trait=shrewd
-	trait=humble
-	trait=paranoid
-	disallow_random_traits=yes
-	father=1802116
-	2264.9.1={birth=yes
-	culture=valleyan
-	}
-	2332.3.1={death=yes}
-} 
-
-1802118={
-	name="Yogi"
-	dynasty=1851024#Muir
-	culture=english
-	religion=pagan#forester
-	trait=tough_soldier
-	trait=gardener
-	trait=content
-	trait=brawny
-	disallow_random_traits=yes
-	father=1802117
-	2299.1.4={birth=yes
-	culture=valleyan
-	}
-	2351.1.2={death=yes}
-}
-
-1802119={
-	name="Ayres"
-	dynasty=1851024#Muir
-	culture=english
-	religion=pagan#forester
-	trait=grey_eminence
-	trait=fair
-	trait=proud
-	trait=stubborn
-	trait=brave
-	trait=gregarious
-	disallow_random_traits=yes
-	father=1802118
-	2320.12.28={birth=yes
-	culture=valleyan
-	give_nickname=nick_angel_eyes
-	}
-	2392.4.12={death=yes}
-}
-
-1802120={
-	name="Abram"
-	dynasty=1851024#Muir
-	culture=english
-	religion=pagan#forester
-	trait=skilled_tactician
-	trait=content
-	trait=honest
-	trait=pious
-	trait=chaste
-	disallow_random_traits=yes
-	father=1802119
-	2340.1.8={birth=yes
-	culture=valleyan
-	}
-	2401.10.10={death=yes}
-}
-
-1802121={
-	name="Walton"
-	dynasty=1851024#Muir
-	culture=english
-	religion=pagan#forester
-	trait=tough_soldier
-	trait=falconer
-	trait=stubborn
-	trait=dull
-	trait=temperate
-	disallow_random_traits=yes
-	father=1802120
-	2365.5.11={birth=yes
-	culture=valleyan
-	}
-	2387.12.4={add_spouse=2500131}
-	2417.3.24={death=yes}
-}
-
-1802122={
-	name="Sam"
-	dynasty=1851024#Muir
-	culture=english
-	religion=pagan#forester
-	trait=skilled_tactician	
-	trait=stubborn
-	trait=wroth
-	trait=ambitious
-	trait=uncouth
-	trait=zealous
-	disallow_random_traits=yes
-	father=1802121
-	mother=2500131
-	2392.2.12={birth=yes
-	culture=valleyan
-	give_nickname=nick_the_inhospitable
-	}
-	2421.5.10={death={
-			death_reason=death_battle #Murdered in combat.
-			killer=1910100
-		}
-	}
-}
-
-1802123={
-	name="John"
-	dynasty=1851024#Muir
-	culture=english
-	religion=pagan#forester
-	trait=brilliant_strategist	
-	trait=holy_warrior
-	trait=way_branch
-	trait=imp_ex4
-	trait=brawny
-	trait=giant
-	trait=temperate
-	trait=honest
-	trait=pious
-	disallow_random_traits=yes
-	father=1802122
-	2417.9.26={birth=yes
-	culture=valleyan
-			effect_even_if_dead = {
-			set_special_character_title = RANGER_LITTLE_TITLE
-		}
-	}
-	2496.9.11={death=yes}
-}
-
-#nick_the_ghastly
-#nick_the_inhospitable
-#nick_auspicious
-#nick_the_spring_flower
-#nick_nickels
-
-#RANGER_LONG_TITLE;Ranger Long;;;;;;;;;;;;x
- 
+  #Oswald I the Tramp Connery, kills the Mayor of Los Angeles and proclaims himself rulero of Los Angeles 2415 to 2420.11.20 but rules the Directory until 24269.2.4
+  #Lawgiver negotiates a peace between Kinemites and Imamites ensuring Kinemites can practice their faith freely
+  #Charlton I Connery 2469 to to 2490 german
+  #Shawn the Sleuth Connery 2490 to 2514
+  #Oswald II Connery 2514 to 2525
+  #Oswald III Connery 2525 to 2539
+  #Conan II Connery 2539 to 2560
+  #Madeleine Connery (married to Ramón Ramírez) 2560 to 2586
+  #Kirk II Ramírez 2586 to 2608 neomexicano
+  #Sterling II Ramírez 2608 to 2610
+  #Diego Ramírez 2610 to 2611
+  #Diego II Ramírez 2611 to 2611, infant dies a sickly child after his death it is unsure who should suceed the child
+  #Miriam Ramírez (the Queen Grandmother) the daughter of Kirk II, dies in 2644, grandmother to the Ronald Carmine (through her daughter Ingrid Lawson) and grandmother to Jules Lawson by her son Clint Lawson.
+  #Martin Hughes father of Harold Hughes and married to Madeleine Lawson
+  
+  #Diego II Capistrano rebels against Socal dies after he is murdered by his brother Othello Capistrano but his daughter lives and marries  #Curly Fonzarelli
+  
+  
 #slavic Carranza
 
 #charitable n word  school_giver
