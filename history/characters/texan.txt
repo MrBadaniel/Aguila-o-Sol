@@ -2347,7 +2347,7 @@
 	name=Levi
 	religion=mormon
 	culture=valleyan
-	dynasty=5001215
+	dynasty=1802105
 	trait=underhanded_rogue
 	trait=dull
 	trait=robust
@@ -2363,7 +2363,7 @@
 	name=Freddy
 	religion=mormon
 	culture=valleyan
-	dynasty=5001215
+	dynasty=1802105
 	trait=skilled_tactician
 	trait=scholar
 	trait=zealous
@@ -2379,7 +2379,7 @@
 	name=Jason
 	religion=mormon
 	culture=valleyan
-	dynasty=5001215
+	dynasty=1802105
 	trait=fortune_builder
 	trait=painter
 	trait=diligent
@@ -2399,7 +2399,7 @@
 	name="Jason"
 	religion=postadventist
 	culture=valleyan
-	dynasty=5001215
+	dynasty=1802105
 	trait=naive_appeaser
 	trait=robust
 	trait=diligent
@@ -2419,7 +2419,7 @@
 	name="Galen"
 	religion=postadventist
 	culture=valleyan
-	dynasty=5001215
+	dynasty=1802105
 	trait=skilled_tactician
 	trait=trusting
 	trait=honest
@@ -2440,7 +2440,7 @@
 	female=yes
 	religion=postadventist
 	culture=valleyan
-	dynasty=5001215
+	dynasty=1802105
 	trait=content
 	trait=homosexual
 	trait=trusting
@@ -2460,7 +2460,7 @@
 	female=yes
 	religion=postadventist
 	culture=valleyan
-	dynasty=5001215
+	dynasty=1802105
 	trait=intricate_webweaver
 	trait=cruel
 	trait=fair
@@ -2474,4 +2474,48 @@
 		}
 	}
 }
+
+#Otis 
+1836120={
+	name=Otis 
+	female=yes
+	religion=postadventist
+	culture=valleyan
+	trait=martial_cleric
+	trait=adult_baptized
+	trait=honest
+	trait=devout
+	trait=chaste
+	2217.1.3={birth=yes}
+	2239.4.17={add_spouse_matrilineal=1836118}
+	2245.3.24={death={
+			death_reason=death_execution_aztec_sacrifice
+			killer=6900513
+		}
+	}
+}
+
+#Otis 
+1836121={
+	name=Otis 
+	female=yes
+	religion=postadventist
+	culture=valleyan
+	dynasty=1802105
+	father=1836121
+	mother=1836118
+	2241.2.14={birth=yes}
+	2245.3.24={death={
+			death_reason=death_execution_aztec_sacrifice
+			killer=6900513
+		}
+	}
+}
+
+
+#nick_the_stolen father =1384076
+	#dynasty=2030034 #Abdulfattah
+	#culture=anjalusi
+	#religion=imamite
+	#Ghania
 
