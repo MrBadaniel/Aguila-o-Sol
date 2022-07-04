@@ -2427,7 +2427,7 @@
 	trait=slothful
 	father=1836116
 	2219.3.12={birth=yes}
-	2245.3.24={death={
+	2245.1.4={death={
 			death_reason=death_execution_aztec_sacrifice
 			killer=6900513
 		}
@@ -2447,7 +2447,7 @@
 	trait=martial_cleric
 	father=1836116
 	2221.1.11={birth=yes}
-	2245.3.24={death={
+	2245.1.4={death={
 			death_reason=death_execution_aztec_sacrifice
 			killer=6900513
 		}
@@ -2468,7 +2468,7 @@
 	trait=lustful
 	father=1836116
 	2225.4.17={birth=yes}
-	2245.3.24={death={
+	2245.1.4={death={
 			death_reason=death_execution_aztec_sacrifice
 			killer=6900513
 		}
@@ -2487,7 +2487,7 @@
 	trait=chaste
 	2217.1.3={birth=yes}
 	2239.4.17={add_spouse_matrilineal=1836118}
-	2245.3.24={death={
+	2245.1.4={death={
 			death_reason=death_execution_aztec_sacrifice
 			killer=6900513
 		}
@@ -2504,11 +2504,122 @@
 	father=1836120
 	mother=1836118
 	2241.2.14={birth=yes}
-	2245.3.24={death={
+	2245.1.4={death={
 			death_reason=death_execution_aztec_sacrifice
 			killer=6900513
 		}
 	}
+}
+
+1836122={
+	name="Elizabeth"
+	culture=valleyan
+	female=yes
+	religion=evangelical
+	occluded=yes
+	trait=charismatic_negotiator
+	trait=legendary
+	trait=devout
+	trait=honest
+	trait=trusting
+	trait=kind
+	trait=flu
+	2125.1.1={birth=yes}
+	2141.1.1={add_spouse=2500070}
+	2160.4.5={death={death_reason=death_trait
+		}	
+	}
+}
+
+1836123={
+	name="Martina"
+	culture=valleyan
+	female=yes
+    dynasty=1850049 #Frémont
+	religion=evangelical
+	occluded=yes
+	trait=fortune_builder
+	trait=legendary
+	trait=fair
+	trait=shrewd
+	trait=trusting
+	trait=chaste
+    mother=1836124
+    father=1836125
+	2141.10.17={birth=yes}
+	2166.1.10={add_spouse=2500070}
+	2211.8.15={death=yes}
+}
+
+1836124={
+	name="Maria"
+	culture=valleyan
+	female=yes
+    dynasty=1850049 #Frémont
+	religion=evangelical
+	occluded=yes
+	trait=underhanded_rogue
+	trait=legendary
+	trait=kind
+	trait=proud
+	trait=gregarious
+	father=1836126
+	mother=1836127
+	2123.1.19={birth=yes}
+	2140.1.24={add_matrilineal_spouse=1836125}
+	2180.10.5={death=yes}
+}
+
+1836125={
+	name="Tigran"
+	culture=khoakineren
+	religion=evangelical
+	occluded=yes
+	trait=legendary
+	trait=brilliant_strategist
+	trait=administrator
+	trait=trusting
+	trait=honest
+	trait=proud
+	2114.1.1={birth=yes}
+	2140.1.24={add_matrilineal_spouse=1836124}
+	2177.1.1={death=yes}
+}
+
+1836126={
+	name="Joshua"
+	culture=valleyan
+    dynasty=1850049 #Frémont
+	religion=evangelical
+	occluded=yes
+	trait=fortune_builder
+	trait=legendary
+	trait=honest
+	trait=kind
+	trait=zealous
+    mother=1836124
+    father=1836125
+	2099.4.4={birth=yes}
+	2116.1.10={add_spouse=1836127}
+	2253.12.23={death=yes}
+}
+
+1836127={
+	name="Margaret"
+	culture=valleyan
+	female=yes
+	religion=evangelical
+	occluded=yes
+	trait=scholarly_theologian
+	trait=legendary
+	trait=chaste
+	trait=shy
+	trait=devout
+    mother=1836124
+    father=1836125
+	2099.4.4={birth=yes}
+	2116.1.10={add_spouse=1836126}
+	2253.12.23={death=yes}
 }
 
 
@@ -2517,4 +2628,140 @@
 	#culture=anjalusi
 	#religion=imamite
 	#Ghania
+	
+1836128={
+	name="Ephraim"
+	culture=valleyan
+	religion=postadventist
+	dynasty=1850049 #Frémont
+	father=2500070
+	mother=1836123
+	occluded=yes
+	trait=mastermind_theologian
+	trait=legendary
+	trait=adult_baptized
+	trait=holy_warrior
+	trait=zealous
+	trait=brave
+	trait=ambitious
+	trait=gregarious
+	trait=wroth
+	2174.10.1={birth=yes}
+	2230.1.1={death=yes}
+}
+	
+1836129={
+	name="Nancy"
+	culture=valleyan
+	dynasty=1850049 #Frémont
+	female=yes
+	religion=evangelical
+	occluded=yes
+	trait=legendary
+	trait=sickly
+	trait=flu
+	father=2500071
+	2201.1.1={birth=yes}
+	2203.5.25={death={death_reason=death_trait
+		}	
+	}
+}
 
+
+1836130={
+	name="Flannery"
+	religion=postadventist
+	female=yes
+	culture=valleyan
+	dynasty=1802105
+	father=1836116
+	trait=underhanded_rogue
+	trait=honest
+	trait=kind
+	trait=charitable
+	father=1836115
+	2206.5.6={birth=yes}
+	2126.1.10={add_spouse=2500072}
+	2245.1.4={death={
+			death_reason=death_execution_eaten
+			killer=6900513
+		}
+	}
+}
+
+1836131={
+	name="Vanessa"
+	religion=postadventist
+	female=yes
+	culture=valleyan
+	dynasty=1850049 #Frémont
+	trait=scholarly_theologian
+	trait=celibate
+	trait=devout
+	trait=shy
+	father=2500072
+	mother=1836130
+	2227.1.16={birth=yes}
+	2245.1.4={death={
+			death_reason=death_execution_eaten
+			killer=6900513
+		}
+	}
+}
+
+1836132={
+	name="Philip"
+	religion=postadventist
+	culture=valleyan
+	dynasty=1850049 #Frémont
+	father=2500072
+	mother=1836130
+	trait=skilled_tactician
+	trait=brave
+	trait=zealous
+	trait=robust
+	2228.1.13={birth=yes}
+	2244.2.10={add_spouse=1836134}
+	2244.12.24={death={
+			death_reason=death_battle
+			killer=6900513
+		}
+	}
+}
+
+1836133={
+	name="Ethan"
+	religion=postadventist
+	culture=valleyan
+	dynasty=1850049 #Frémont
+	father=2500072
+	mother=1836130
+	trait=slothful
+	trait=temperate
+	trait=devout
+	father=1836115
+	2230.3.16={birth=yes}
+	2245.1.4={death={
+			death_reason=death_execution_eaten
+			killer=6900513
+		}
+	}
+}
+
+1836134={
+	name="Esperancita"
+	religion=sacred_heart#la_hermandad
+	culture=joaquino
+	dynasty=#5001214 #Carranza
+	trait=charismatic_negotiator
+	trait=honest
+	trait=chaste
+	trait=kind
+	trait=slothful
+	2228.3.25={birth=yes}
+	2245.3.19={death={
+			death_reason=death_execution_eaten
+			killer=6900513
+		}
+	}
+}

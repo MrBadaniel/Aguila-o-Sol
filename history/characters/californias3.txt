@@ -1649,41 +1649,39 @@
 	trait=ambitious
 	trait=zealous
 	trait=paranoid
-	trait=depressed
-	trait=blinded
+	father=1836126
+	mother=1836127
 	give_nickname=nick_the_grizzly
 	2124.1.1={birth=yes}
-	2190.2.15={death= {
-		death_reason=death_suicide
-		}	
-	}
+	2190.2.15={death=yes}
 }
 
 2500071={
-	name="Ephraim"
+	name="Beau"
 	culture=valleyan
 	religion=evangelical
 	dynasty=1850049 #Frémont
 	father=2500070
+	mother=1836123
 	occluded=yes
 	trait=thrifty_clerk
 	trait=legendary
 	trait=charitable
 	trait=content
-	trait=hedonist
+	trait=drunkard
 	trait=gluttonous
 	trait=lustful
 	trait=craven
 	2170.1.1={birth=yes}
-	2200.1.1={death=yes}
+	2205.11.1={death=yes}
 }
 
 2500072={
 	name="Paul"
 	culture=valleyan
-	religion=evangelical
+	religion=postadventist
 	dynasty=1850049 #Frémont
-	father=2500070
+	father=1836128
 	trait=tough_soldier
 	trait=brave
 	trait=just
@@ -1691,9 +1689,9 @@
 	trait=honest
 	trait=kind
 	give_nickname=nick_the_nice
-	2180.1.1={birth=yes}
-	2245.3.24={death={
-			death_reason=death_execution_aztec_sacrifice
+	2106.1.12={birth=yes}
+	2245.1.4={death={
+			death_reason=death_execution_eaten
 			killer=6900513
 		}
 	}
@@ -1701,21 +1699,23 @@
 2500073={
 	name="Jerry"
 	culture=valleyan
-	religion=evangelical
+	religion=postadventist
 	dynasty=1850049 #Frémont
-	father=2500072
 	trait=charismatic_negotiator
 	trait=paranoid
 	trait=shrewd
 	trait=feeble
 	trait=content
-	2245.2.1={birth=yes}
+	give_nickname=nick_born_in_crimson
+	mother=1836134
+	father=1836132
+	2245.3.18={birth=yes}
 	2310.11.24={death=yes}
 }
 2500074={
 	name="Jason"
 	culture=valleyan
-	religion=evangelical
+	religion=postadventist
 	dynasty=1850049 #Frémont
 	father=2500073
 	trait=thrifty_clerk
@@ -1728,7 +1728,7 @@
 2500075={
 	name="Jordan"
 	culture=valleyan
-	religion=evangelical
+	religion=postadventist
 	dynasty=1850049 #Frémont
 	father=2500074
 	trait=charismatic_negotiator
@@ -1742,7 +1742,7 @@
 2500076={
 	name="Jules"
 	culture=valleyan
-	religion=evangelical
+	religion=postadventist
 	dynasty=1850049 #Frémont
 	father=2500075
 	trait=intricate_webweaver
@@ -1762,6 +1762,7 @@
 	dynasty=1850049 #Frémont
 	father=2500076
 	trait=naive_appeaser
+	trait=way_dove
 	trait=paranoid
 	trait=shy
 	trait=feeble
@@ -2135,6 +2136,7 @@
 	trait=legendary
 	occluded=yes
 	father=2500070
+	mother=1836122
 	2144.7.2={birth=yes}
 	2164.8.5={death={
 			death_reason=death_murder_unknown_poison
