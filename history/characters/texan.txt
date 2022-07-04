@@ -2486,7 +2486,7 @@
 	trait=devout
 	trait=chaste
 	2217.1.3={birth=yes}
-	2239.4.17={add_spouse_matrilineal=1836118}
+	2239.4.17={add_matrilineal_spouse=1836118}
 	2245.1.4={death={
 			death_reason=death_execution_aztec_sacrifice
 			killer=6900513
@@ -2621,13 +2621,6 @@
 	2116.1.10={add_spouse=1836126}
 	2253.12.23={death=yes}
 }
-
-
-#nick_the_stolen father =1384052
-	#dynasty=1850085
-	#culture=anjalusi
-	#religion=imamite
-	#Ghania
 	
 1836128={
 	name="Ephraim"
@@ -2659,14 +2652,14 @@
 	occluded=yes
 	trait=legendary
 	trait=sickly
-	trait=flu
+	trait=has_measles
 	father=2500071
+	mother=1836135
 	2201.1.1={birth=yes}
 	2203.5.25={death={death_reason=death_trait
 		}	
 	}
 }
-
 
 1836130={
 	name="Flannery"
@@ -2701,7 +2694,7 @@
 	trait=shy
 	father=2500072
 	mother=1836130
-	2227.1.16={birth=yes}
+	2228.1.16={birth=yes}
 	2245.1.4={death={
 			death_reason=death_execution_eaten
 			killer=6900513
@@ -2720,7 +2713,7 @@
 	trait=brave
 	trait=zealous
 	trait=robust
-	2228.1.13={birth=yes}
+	2227.1.13={birth=yes}
 	2244.2.10={add_spouse=1836134}
 	2244.12.24={death={
 			death_reason=death_battle
@@ -2739,7 +2732,6 @@
 	trait=slothful
 	trait=temperate
 	trait=devout
-	father=1836115
 	2230.3.16={birth=yes}
 	2245.1.4={death={
 			death_reason=death_execution_eaten
@@ -2750,10 +2742,12 @@
 
 1836134={
 	name="Esperancita"
-	religion=sacred_heart#la_hermandad
+	religion=postadventist
 	culture=joaquino
-	dynasty=#5001214 #Carranza
+	female=yes
+	dynasty=5001214 #Carranza
 	trait=charismatic_negotiator
+	trait=adult_baptized
 	trait=honest
 	trait=chaste
 	trait=kind
@@ -2761,6 +2755,296 @@
 	2228.3.25={birth=yes}
 	2245.3.19={death={
 			death_reason=death_execution_eaten
+			killer=6900513
+		}
+	}
+}
+
+1836135={
+	name="Noemí"
+	religion=sacred_heart#la_hermandad
+	culture=joaquino
+	female=yes
+	occluded=yes
+	trait=legendary
+	dynasty=5001214 #Carranza
+	trait=martial_cleric
+	trait=shrewd
+	trait=dull
+	trait=temperate
+	trait=slothful
+	2177.1.20={birth=yes}
+	2197.4.14={add_spouse=2500071}
+	2201.1.1={death={death_reason=death_childbirth}}
+}
+
+1836136={
+	name="Meghan"
+	religion=pagan#forester
+	culture=valleyan
+	female=yes
+	dynasty=5001230#Clark
+	trait=fortune_builder
+	trait=fair
+	trait=diligent
+	trait=temperate
+	trait=honest
+	trait=paranoid
+	trait=stressed
+	give_nickname=nick_the_maid
+	father=1836139
+	mother=1836140
+	2231.12.2={birth=yes}
+	2250.4.1={add_spouse=1802110}
+	2252.12.10={death={
+			death_reason=death_murder_unknown_poison
+			killer=1802110
+		}
+	}
+}
+
+1836137={
+	name="Ayres"
+	religion=pagan#forester
+	culture=valleyan
+	dynasty=5001230#Clark
+	trait=midas_touched
+	trait=gardener
+	trait=honest
+	trait=kind
+	trait=brave
+	trait=proud
+	give_nickname=nick_kindling
+	2194.10.2={birth=yes}
+	2250.4.1={add_spouse=1836138}
+	2245.1.4={death={
+			death_reason=death_execution_great_pyre
+			killer=6900513
+		}
+	}
+}
+
+1836138={
+	name="Ghania"
+	religion=imamite
+	culture=anjalusi
+	dynasty=1850085
+	trait=martial_cleric
+	female=yes
+	trait=cynical
+	trait=gregarious
+	trait=ambitious
+	trait=stubborn
+	trait=patient
+	father=1384052
+	give_nickname=nick_the_stolen
+	2190.6.1={birth=yes}
+	2245.1.4={death={
+			death_reason=death_execution_great_pyre
+			killer=6900513
+		}
+	}
+}
+
+1836139={
+	name="Thomas"
+	religion=pagan#forester
+	culture=valleyan
+	dynasty=5001230#Clark
+	trait=intricate_webweaver
+	trait=shrewd
+	trait=shy
+	trait=charitable
+	father=1836137
+	mother=1836138
+	2213.7.8={birth=yes}
+	2230.4.1={add_spouse=1836140}
+	2245.1.4={death={
+			death_reason=death_execution_great_pyre
+			killer=6900513
+		}
+	}
+}
+
+1836140={
+	name="Daphney"
+	culture=valleyan
+	religion=postadventist
+	female=yes
+	dynasty=1850049 #Frémont
+	learning=1
+	trait=flamboyant_schemer
+	trait=slothful
+	trait=gluttonous
+	trait=cruel
+	trait=humble
+	father=1836128
+	2213.10.8={birth=yes}
+	2245.1.4={death={
+			death_reason=death_execution_great_pyre
+			killer=6900513
+		}
+	}
+}
+
+#Erie Rowley
+1836141={
+	name="Erie"
+	religion=postadventist
+	culture=valleyan
+	female=yes
+	dynasty=5001230#Clark
+    trait=martial_cleric
+	trait=adult_baptized
+    trait=painter
+    trait=devout
+	trait=diligent
+	father=1836137
+	mother=1836138
+	2225.9.11={birth=yes}
+	2244.5.11={add_spouse=1836117}
+	2245.1.4={death={
+			death_reason=death_execution_aztec_sacrifice
+			killer=6900513
+		}
+	}
+}
+
+1836142={
+	name="Cathy"
+	religion=pagan#forester
+	culture=valleyan
+	dynasty=5001230#Clark
+	female=yes
+	trait=fortune_builder
+	trait=ambitious
+	trait=diligent
+	father=1836137
+	mother=1836138
+	2214.1.20={birth=yes}
+	2230.2.12={add_matrilineal_spouse=1836143}
+	2245.1.4={death={
+			death_reason=death_execution_great_pyre
+			killer=6900513
+		}
+	}
+}
+
+1836143={
+	name="Arnold"
+	religion=reform
+	culture=valleyan
+	trait=underhanded_rogue
+	trait=stubborn
+	trait=gregarious
+	trait=deceitful
+	trait=humble
+	2204.5.4={birth=yes}
+	2245.1.4={death={
+			death_reason=death_execution_great_pyre
+			killer=6900513
+		}
+	}
+}
+
+1836144={
+	name="Mitchell"
+	religion=postadventist
+	culture=valleyan
+	female=yes
+	dynasty=1802105
+	father=1836117
+	mother=1836141
+	2244.9.10={birth=yes}
+	2245.1.4={death={
+			death_reason=death_execution_aztec_sacrifice
+			killer=6900513
+		}
+	}
+}
+
+1836145={
+	name="Brandon"
+	religion=pagan#forester
+	culture=valleyan
+	dynasty=5001230#Clark
+	trait=shy
+	father=1836139
+	mother=1836140
+	2232.5.12={birth=yes}
+	2245.1.4={death={
+			death_reason=death_execution_great_pyre
+			killer=6900513
+		}
+	}
+}
+
+1836146={
+	name="Edmond"
+	religion=pagan#forester
+	culture=valleyan
+	dynasty=5001230#Clark
+	trait=conscientious
+	trait=fussy
+	father=1836139
+	mother=1836140
+	2237.3.19={birth=yes}
+	2245.1.4={death={
+			death_reason=death_execution_great_pyre
+			killer=6900513
+		}
+	}
+}
+
+1836147={
+	name="Jasmine"
+	religion=pagan#forester
+	culture=valleyan
+	dynasty=5001230#Clark
+	female=yes
+	trait=timid
+	trait=willful
+	trait=diligent
+	father=1836143
+	mother=1836142
+	2231.12.5={birth=yes}
+	2245.1.4={death={
+			death_reason=death_execution_great_pyre
+			killer=6900513
+		}
+	}
+}
+
+1836148={
+	name="Elsa"
+	religion=pagan#forester
+	culture=valleyan
+	dynasty=5001230#Clark
+	female=yes
+	trait=idolizer
+	father=1836143
+	mother=1836142
+	2238.11.15={birth=yes}
+	2245.1.4={death={
+			death_reason=death_execution_great_pyre
+			killer=6900513
+		}
+	}
+}
+
+1836149={
+	name="Johnny"
+	religion=pagan#forester
+	culture=valleyan
+	dynasty=5001230#Clark
+	trait=idolizer
+	trait=brave
+	trait=honest
+	father=1836143
+	mother=1836142
+	2235.2.5={birth=yes}
+	2245.1.4={death={
+			death_reason=death_execution_great_pyre
 			killer=6900513
 		}
 	}
