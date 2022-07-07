@@ -3691,9 +3691,9 @@
 	religion=cetic
 	trait=brilliant_strategist	
 	trait=holy_warrior
-	trait=way_branch
+	trait=way_fist
 	trait=imp_ex4
-	trait=brawny
+	trait=strong
 	trait=giant
 	trait=temperate
 	trait=honest
@@ -3709,21 +3709,242 @@
 	2496.9.11={death=yes}
 }
 
-#Duke Jacob II the Ghastly Muir [Lived 2439.12.3 to 2508.1.2] [Fresno XXXX to XXXX] Son of Little John Muir, a pale recluse. Ugly. 
+1802124={
+	name="Jacob"
+	dynasty=1851024#Muir
+	culture=english
+	religion=cetic
+	trait=charismatic_negotiator	
+	trait=way_cowl
+	trait=imp_ex2
+	trait=ugly
+	trait=shy
+	trait=wroth
+	give_nickname=nick_the_ghastly
+	disallow_random_traits=yes
+	father=1802123
+	2439.12.3={birth=yes
+	culture=valleyan
+	}
+	2508.1.2={death=yes}
+}
 
-#Duke Long John Muir [Lived 2469.5.22 to 2535.6.27] [Fresno XXXX to XXXX] Son of Jacob the Ghastly and Anika Baskett. Tall. 
+1802125={
+	name="John"
+	dynasty=1851024#Muir
+	culture=english
+	religion=cetic
+	trait=scholarly_theologian	
+	trait=way_book
+	trait=imp_ex3
+	trait=giant
+	trait=kind
+	trait=charitable
+	trait=temperate
+	disallow_random_traits=yes
+	2469.5.22={birth=yes
+	culture=valleyan
+			effect_even_if_dead = {
+			set_special_character_title = RANGER_LONG_TITLE
+		}
+	}
+	2535.6.27={death=yes}
+}
 
+1802126={
+	name="Agnes"
+	culture=english
+	religion=cetic
+	female=yes
+	trait=indulgent_wastrel	
+	trait=way_book
+	trait=fair
+	trait=dull
+	trait=slow
+	trait=kind
+	trait=trusting
+	disallow_random_traits=yes
+	2475.1.1={birth=yes
+	culture=valleyan}
+	2493.2.2={add_spouse=1802126}
+	2530.5.15={death=yes}
+}
 
-#Duchess Erie III  [Lived 2494.10.5 to 2548.10.26] [Fresno XXXX to XXXX] Daughter of Long John Muir. After the death of her husband Mickey Nickels 
-#she never remarried and claimed the marriage was annulled by his death. 
+1802127={
+	name="Erie"
+	culture=english
+	religion=cetic
+	female=yes
+	trait=intricate_webweaver
+	trait=imp_ex1
+	trait=way_fist
+	trait=chaste
+	trait=wroth
+	trait=temperate
+	trait=depressed
+	disallow_random_traits=yes
+	father=1802125
+	mother=1802126
+	dynasty=1851024#Muir
+	2494.10.5={birth=yes
+	culture=valleyan}
+	2512.2.2={add_matrilineal_spouse=1802128}
+	2548.10.26={death=yes}
+}
 
-#nick_the_ghastly
-#nick_the_inhospitable
+1802128={
+	name="Jimmy"
+	culture=german
+	religion=cetic
+	trait=flamboyant_schemer
+	trait=way_dove
+	trait=fair
+	trait=honest
+	trait=wroth
+	trait=gluttonous
+	disallow_random_traits=yes
+	give_nickname=nick_nickels
+	2490.11.1={birth=yes
+	culture=valleyan
+	name=Jimmy
+	}
+	2515.1.28={death={
+			death_reason=death_battle #Murdered in combat.
+		}
+	}
+}
+
+1802129={
+	name="April"
+	culture=english
+	religion=cetic
+	female=yes
+	trait=grey_eminence	
+	trait=gardener
+	trait=poet
+	trait=imp_ex4
+	trait=way_branch
+	trait=wroth
+	trait=celibate
+	trait=kind
+	trait=cynical
+	disallow_random_traits=yes
+	father=1802125
+	mother=1802126
+	dynasty=1851024#Muir
+	give_nickname=nick_the_spring_flower
+	2498.3.10={birth=yes
+	culture=valleyan
+	}
+	2570.4.11={death=yes}
+}
+
+1802130={
+	name="Georgia"
+	culture=english
+	religion=cetic
+	female=yes
+	trait=fortune_builder
+	trait=imp_ex2
+	trait=way_cowl
+	trait=lustful
+	trait=stubborn
+	trait=proud
+	trait=temperate
+	disallow_random_traits=yes
+	dynasty=1851024#Muir
+	father=1802125
+	mother=1802126
+	2510.11.5={birth=yes
+	culture=valleyan
+	}
+	2512.2.2={add_matrilineal_spouse=1802131}
+	2577.2.1={death=yes}
+}
+
+1802131={
+	name="Isaiah"
+	culture=english
+	religion=cetic
+	trait=skilled_tactician
+	dynasty=1851024#Muir
+	trait=way_fist
+	trait=lustful
+	trait=brave
+	trait=content
+	trait=humble
+	father=1802132
+	disallow_random_traits=yes
+	2500.1.3={birth=yes
+	culture=valleyan
+	}
+	2575.8.16={death=yes}
+}
+
+1802132={
+	name="Edward"
+	culture=english
+	religion=cetic
+	trait=tough_soldier
+	dynasty=1851024#Muir
+	trait=way_fist
+	trait=slothful
+	trait=gluttonous
+	trait=cruel
+	trait=humble
+	disallow_random_traits=yes
+	father=1802124
+	2471.9.1={birth=yes
+	culture=valleyan
+	}
+	2532.9.29={death=yes}
+}
+
+1802133={
+	name="Ayres"
+	culture=english
+	religion=cetic
+	dynasty=1851024#Muir
+	trait=mastermind_theologian
+	trait=way_book
+	trait=imp_ex4
+	trait=fair
+	trait=mystic
+	trait=shrewd
+	trait=gregarious
+	trait=humble
+	disallow_random_traits=yes
+	give_nickname=nick_auspicious
+	father=1802131
+	mother=1802130
+	2542.5.5={birth=yes
+	culture=valleyan
+	}
+	2604.9.3={death=yes}
+}
+
+1802134={
+	name="Reuel"
+	culture=english
+	religion=cetic
+	dynasty=1851024#Muir
+	trait=tough_soldier
+	trait=way_cowl
+	trait=imp_ex2
+	trait=honest
+	trait=shrewd
+	trait=gregarious
+	disallow_random_traits=yes
+	2575.9.1={birth=yes
+	culture=valleyan
+	}
+	2632.12.1={death=yes}
+}
+
 #nick_auspicious
 #nick_the_spring_flower
 #nick_nickels
 
-#RANGER_LONG_TITLE;Ranger Long;;;;;;;;;;;;x
  
 #slavic Carranza
 
