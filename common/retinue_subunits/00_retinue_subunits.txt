@@ -1992,3 +1992,23 @@ RETTYPE_CUL_DRAGON =
 		knights_offensive = 0.75
 	}
 }
+
+RETTYPE_CUL_KHOAKINEREN =
+{
+	first_type = 4
+	first_amount = 150
+
+	second_type = 6
+	second_amount = 100
+
+	special_troops = horse_archers
+
+	potential = {
+		culture = khoakineren
+	}
+
+	modifier = {
+		knights_offensive = 0.75
+		horse_archers_offensive = 0.7
+	}
+}
