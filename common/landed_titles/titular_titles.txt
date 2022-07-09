@@ -4232,6 +4232,25 @@ e_oklahoman = {
 
 ### special empires
 
+e_latino = {
+	color = { 222 107 0 }
+	color2= { 255 255 255 }
+	
+	capital = 1767 # c_mexico
+	
+	allow = {
+		conditional_tooltip = {
+			trigger = {
+				NOT = {
+					religion_group = christian
+				}
+			}
+			religion_group = christian
+		}
+		always = no
+	}
+}
+
 e_zion = {
 	color = { 136 190 255 }
 	color2= { 255 255 255 }
