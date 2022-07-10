@@ -666,6 +666,8 @@
 	dynasty=1815005
 	culture=tejano
 	religion=fidencista
+	father=1836060
+	trait=bastard
 	2650.7.6={birth=yes}
 	2700.1.1={death=yes}
 }
@@ -3568,6 +3570,240 @@
 	}
 }
 
-#John of Kern to [2173.4.12 to 2238.12.14]
-#5001231
+1836175={
+	name="Matthew"
+	dynasty=5001216 #McBride
+	occluded=yes
+	trait=legendary
+	culture=german
+	religion=sacred_heart#la_hermandad
+	trait=skilled_tactician
+	trait=school_leader
+	trait=brave
+	trait=stubborn
+	trait=just
+	disallow_random_traits=yes
+	2119.2.20={birth=yes
+	culture=valleyan
+	}
+	2190.4.2={death=yes}
+}
 
+1836176={
+	name="Ewan"
+	dynasty=5001216 #McBride
+	occluded=yes
+	trait=legendary
+	culture=german
+	religion=sacred_heart#la_hermandad
+	trait=martial_cleric
+    trait=painter
+    trait=devout
+	trait=diligent
+	trait=shy
+	father=1836175
+	disallow_random_traits=yes
+	2155.3.20={birth=yes
+	culture=valleyan
+	}
+	2212.5.16={death=yes}
+}
+
+1802077={
+	name="Chabela"
+	dynasty=5001215#Pío
+	female=yes
+	culture=pinoy
+	religion=sacred_heart#la_hermandad
+	trait=fortune_builder
+	trait=legendary
+	occluded=yes
+	trait=gregarious
+	trait=arbitrary
+	trait=envious
+	trait=content
+	disallow_random_traits=yes
+	father=1802072
+	2160.8.1={birth=yes}
+	2180.1.1={add_spouse=1836176}
+	2217.3.10={death=yes}
+}
+
+1836178={
+	name="Joshua"
+	dynasty=5001216 #McBride
+	culture=german
+	religion=sacred_heart#la_hermandad
+	trait=skilled_tactician
+    trait=zealous
+    trait=brave
+	trait=gregarious
+	trait=just
+	father=1836176
+	mother=1802077
+	disallow_random_traits=yes
+	2194.10.4={birth=yes
+	culture=valleyan
+	}
+	2238.12.14={death={
+			death_reason=death_execution_hanging #Saint Patrick's Day Massacre
+			killer=1836163
+		}
+	}
+}
+
+1836179={
+	name="Berta"
+	dynasty=1851045#Gonzalez
+	culture=tejano
+	female=yes
+	religion=sacred_heart#la_hermandad
+	trait=charismatic_negotiator
+	trait=trusting
+	trait=charitable
+	trait=kind
+	father=1802138
+	disallow_random_traits=yes
+	2195.2.2={birth=yes
+	culture=joaquino
+	}
+	2217.3.10={add_spouse=1836178}
+	2255.5.3={death=yes}
+}
+
+1836180={
+	name="David"
+	dynasty=5001216 #McBride
+	culture=german
+	religion=sacred_heart#la_hermandad
+	trait=skilled_tactician
+    trait=wroth
+    trait=brave
+	trait=honest
+	trait=temperate
+	father=1836178
+	mother=1836179
+	disallow_random_traits=yes
+	2218.5.10={birth=yes
+	culture=valleyan
+	}
+	2238.12.14={death={
+			death_reason=death_execution_hanging #Saint Patrick's Day Massacre
+			killer=1836163
+		}
+	}
+}
+
+1836181={
+	name="Jack"
+	dynasty=5001216 #McBride
+	culture=german
+	religion=sacred_heart#la_hermandad
+	trait=brilliant_strategist
+    trait=flanker
+    trait=trickster
+	trait=stubborn
+	trait=shrewd
+	trait=groomed
+	trait=gregarious
+	father=1836178
+	mother=1836179
+	disallow_random_traits=yes
+	2225.8.11={birth=yes
+	culture=valleyan
+	name=Jack
+	}
+	2296.3.14={death=yes}
+}
+
+1836182={
+	name="Lars"
+	dynasty=5001216 #McBride
+	culture=german
+	religion=sacred_heart#la_hermandad
+	trait=flamboyant_schemer
+	trait=patient
+	trait=ambitious
+	trait=gregarious
+	father=1836181
+	disallow_random_traits=yes
+	2254.9.10={birth=yes
+	culture=valleyan
+	}
+	2321.9.27={death=yes}
+}
+
+1836183={
+	name="Jacob"
+	dynasty=5001216 #McBride
+	culture=german
+	religion=sacred_heart#la_hermandad
+	trait=indulgent_wastrel
+	trait=gluttonous
+	trait=craven
+	trait=diligent
+	father=1836182
+	disallow_random_traits=yes
+	2284.1.10={birth=yes
+	culture=valleyan
+	}
+	2345.8.10={death=yes}
+}
+
+1836184={
+	name="Philip"
+	dynasty=5001216 #McBride
+	culture=german
+	religion=sacred_heart#la_hermandad
+	trait=indulgent_wastrel
+	trait=gluttonous
+	trait=craven
+	trait=diligent
+	father=1836183
+	disallow_random_traits=yes
+	2300.3.18={birth=yes
+	culture=valleyan
+	}
+	2370.9.18={death=yes}
+}
+
+1836185={
+	name="Augustine"
+	dynasty=5001216 #McBride
+	culture=german
+	religion=sacred_heart#la_hermandad
+	trait=fortune_builder
+	trait=patient
+	trait=shrewd
+	trait=is_malnourished
+	trait=poet
+	trait=erudite
+	father=1836184
+	disallow_random_traits=yes
+	2323.2.11={birth=yes
+	culture=valleyan
+	}
+	2390.9.1={death=yes}
+}
+
+1836186={
+	name="Anais"
+	dynasty=5001216 #McBride
+	culture=german
+	female=yes
+	religion=sacred_heart#la_hermandad
+	father=1836185
+	trait=charismatic_negotiator
+	trait=fair
+	trait=chaste
+	trait=zealous	
+	trait=stubborn
+	trait=honest
+	trait=erudite
+	disallow_random_traits=yes
+	2352.1.24={birth=yes
+	culture=valleyan
+	}
+	2475.2.15={add_spouse=1802146}
+	2428.4.25={death=yes}
+}
