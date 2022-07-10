@@ -209,7 +209,7 @@
 	father=2500009
 	religion=sacred_heart#la_hermandad
 	trait=architect
-	trait=shrewd
+	trait=groomed
 	trait=zealous
 	trait=wroth
 	trait=midas_touched
@@ -1759,11 +1759,11 @@
 	name="Julia"
 	culture=valleyan
 	female=yes
-	religion=cetic
+	religion=nazarene
 	dynasty=1850049 #Frémont
 	father=2500076
 	trait=naive_appeaser
-	trait=way_dove
+	trait=nz_presbyter
 	trait=paranoid
 	trait=shy
 	trait=feeble
@@ -4183,6 +4183,30 @@
 	}
 	2238.10.11={add_spouse=1802144}
 	2388.4.14={death=yes}
+}
+
+1802146={
+	name="César"
+	dynasty=1851045#Gonzalez
+	culture=tejano
+	father=1802144
+	mother=1802145
+	religion=sacred_heart#la_hermandad
+	trait=brilliant_strategist
+	trait=inspiring_leader
+	trait=experimenter	
+	trait=school_leader
+	trait=zealous
+	trait=robust
+	trait=uncouth
+	trait=wroth
+	trait=diligent
+	disallow_random_traits=yes
+	give_nickname=nick_el_soldado
+	2344.6.28={birth=yes
+	culture=joaquino
+	}
+	2420.11.16={death=yes}
 }
 
 1802146={
