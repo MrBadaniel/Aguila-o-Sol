@@ -208,11 +208,11 @@
 	culture=tejano
 	father=2500009
 	religion=sacred_heart#la_hermandad
-	trait=slothful
+	trait=architect
 	trait=shrewd
 	trait=zealous
 	trait=wroth
-	trait=indulgent_wastrel
+	trait=midas_touched
 	disallow_random_traits=yes
 	2243.7.16={birth=yes
 	culture=joaquino
@@ -3508,6 +3508,7 @@
 	trait=kind
 	disallow_random_traits=yes
 	father=1802113
+	mother=1836170
 	2285.11.7={birth=yes
 	culture=valleyan
 	give_nickname=nick_the_ringer
@@ -3530,6 +3531,7 @@
 	trait=charitable
 	disallow_random_traits=yes
 	father=1802113
+	mother=1836170
 	2288.2.4={birth=yes
 	culture=valleyan
 	give_nickname=nick_the_blessed
@@ -4065,8 +4067,105 @@
 	}
 }
 
-#slavic Carranza school_giver
+1802140={
+	name="Julián"
+	dynasty=1851045#Gonzalez
+	culture=tejano
+	father=2500010
+	mother=1836170
+	religion=sacred_heart#la_hermandad
+	trait=charismatic_negotiator
+	trait=mystic
+	trait=devout
+	trait=brave
+	trait=erudite
+	trait=lustful
+	disallow_random_traits=yes
+	2268.6.5={birth=yes
+	culture=joaquino
+	}
+	2332.10.22={death=yes}
+}
 
+1802141={
+	name="Sarah"
+	culture=english
+	religion=sacred_heart#la_hermandad
+	trait=female=yes
+	trait=freckles_2
+	trait=naive_appeaser
+	trait=trusting
+	trait=gregarious
+	trait=brave
+	female=yes
+	disallow_random_traits=yes
+	2270.4.24={birth=yes
+	culture=valleyan
+	}
+	2289.10.22={add_spouse=1802140}
+	2335.5.5={death=yes}
+}
+
+1802142={
+	name="Piño"
+	dynasty=1851045#Gonzalez
+	culture=tejano
+	father=1802140
+	mother=1802141
+	religion=sacred_heart#la_hermandad
+	trait=martial_cleric
+	trait=kind
+	trait=honest
+	trait=robust
+	disallow_random_traits=yes
+	2280.6.1={birth=yes
+	culture=joaquino
+	}
+	2330.9.22={death=yes}
+}
+
+1802143={
+	name="Bianca"
+	culture=italian
+	female=yes
+	religion=sacred_heart#la_hermandad
+	trait=charismatic_negotiator
+	trait=quick
+	trait=charitable
+	trait=kind
+	trait=gregarious
+	disallow_random_traits=yes
+	2281.5.1={birth=yes
+	culture=joaquino
+	}
+	2298.1.1={add_spouse=1802142}
+	2334.1.23={death=yes}
+}
+
+1802144={
+	name="Filomeno"
+	dynasty=1851045#Gonzalez
+	dna="daflaaddbas"
+	culture=neomexicano
+	father=1802142
+	mother=1802143
+	religion=sacred_heart#la_hermandad
+	trait=elusive_shadow
+	trait=hunter
+	trait=fair
+	trait=deceitful
+	trait=gregarious
+	trait=diligent
+	disallow_random_traits=yes
+	give_nickname=nick_el_guero
+	2299.2.4={birth=yes
+	culture=joaquino
+	}
+	2386.11.17={death=yes}
+}
+
+#dahijbjbcdb
+#bravo
 #charitable n word  school_giver
 #school_leader WARRIOR
 
