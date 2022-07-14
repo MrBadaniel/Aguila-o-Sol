@@ -708,4 +708,40 @@ reference_culture = {
 
 		modifier = default_culture_modifier
 	}
+	
+	tanner = {
+		graphical_cultures = { westerngfx }
+		
+		used_for_random = no
+		allow_in_ruler_designer = no
+		
+		alternate_start = {
+			always=no
+		}
+
+
+		color = { 0.0 0.0 0.0 }
+
+		male_names = {
+			Tanner
+		}
+		female_names = {
+			Tannette
+		}
+
+		from_dynasty_prefix = ""
+
+
+		pat_grf_name_chance = 0
+		mat_grf_name_chance = 0
+		father_name_chance = 100
+		
+
+		pat_grm_name_chance = 20
+		mat_grm_name_chance = 20
+		mother_name_chance = 10
+
+		modifier = default_culture_modifier
+	}
+	
 }

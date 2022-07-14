@@ -4546,3 +4546,188 @@ k_star_coast = {
 }
 
 ##Holy Fury stuff in other files##
+
+e_joaquino = {
+	color = { 70 70 70 }
+	color2= { 255 255 255 }
+	capital = 2027 # c_bako
+	
+	culture = joaquino
+	allow = {
+		NOT = { religion = cetic }
+		NOT = {
+			has_game_rule = {
+				name = cultural_empires
+				value = off
+			}
+		}
+		war = no
+		NOT = { tier = emperor }
+		culture = joaquino
+		OR = {
+			realm_size = 150
+			e_joaquino = { OR = { is_titular = no has_holder = yes } }
+		}
+	}
+	short_name = yes
+	
+	creation_requires_capital = no	
+}
+
+e_pinoy = {
+	color = { 0.95 0.9 0.40 }
+	color2={ 210 50 20 }
+	capital = 2076 # Solano
+	
+	culture = pinoy
+	allow = {
+		NOT = { religion = cetic }
+		NOT = {
+			has_game_rule = {
+				name = cultural_empires
+				value = off
+			}
+		}
+		war = no
+		NOT = { tier = emperor }
+		culture = pinoy
+		OR = {
+			realm_size = 150
+			e_pinoy = { OR = { is_titular = no has_holder = yes } }
+		}
+	}
+	short_name = yes
+	
+	creation_requires_capital = no	
+}
+
+e_khoakineren = {
+	color = { 0.3 0.7 0.2 }
+	color2={ 210 50 20 }
+	capital = 2039 # Madera
+	
+	culture = khoakineren
+	allow = {
+		NOT = { religion = cetic }
+		NOT = {
+			has_game_rule = {
+				name = cultural_empires
+				value = off
+			}
+		}
+		war = no
+		NOT = { tier = emperor }
+		culture = khoakineren
+		OR = {
+			realm_size = 150
+			e_khoakineren = { OR = { is_titular = no has_holder = yes } }
+		}
+	}
+	short_name = yes
+	
+	creation_requires_capital = no	
+}
+
+e_meseteno = {
+	color = {174 220 194}
+	color2={ 210 50 20 }
+	capital = 512 #Yakama
+			
+	culture = meseteno
+	allow = {
+		NOT = {
+			has_game_rule = {
+				name = cultural_empires
+				value = off
+			}
+		}
+		war = no
+		NOT = { tier = emperor }
+		culture = meseteno
+		OR = {
+			realm_size = 150
+			e_meseteno = { OR = { is_titular = no has_holder = yes } }
+		}
+	}
+	short_name = yes
+	
+	creation_requires_capital = no	
+}
+
+e_yucatanense = {
+	color = { 0.7 0.9 0.5 }
+	color2={ 210 50 20 }
+	capital = 1816 # c_merida
+	
+	culture = yucatanense
+	allow = {
+		NOT = {
+			has_game_rule = {
+				name = cultural_empires
+				value = off
+			}
+		}
+		war = no
+		NOT = { tier = emperor }
+		culture = yucatanense
+		OR = {
+			realm_size = 150
+			e_yucatanense = { OR = { is_titular = no has_holder = yes } }
+		}
+	}
+	short_name = yes
+	
+	creation_requires_capital = no	
+}
+
+e_calentano = {
+	color = { 0.7 0.9 0.5 }
+	color2={ 210 50 20 }
+	capital = 1758 # c_merida
+	
+	culture = calentano
+	allow = {
+		NOT = {
+			has_game_rule = {
+				name = cultural_empires
+				value = off
+			}
+		}
+		war = no
+		NOT = { tier = emperor }
+		culture = calentano
+		OR = {
+			realm_size = 150
+			e_calentano = { OR = { is_titular = no has_holder = yes } }
+		}
+	}
+	short_name = yes
+	
+	creation_requires_capital = no	
+}
+
+e_huichol = {
+	color = { 0.11 1.0 0.79 }
+	color2={ 210 50 20 }
+	capital = 1746 #
+	
+	culture = huichol
+	allow = {
+		NOT = {
+			has_game_rule = {
+				name = cultural_empires
+				value = off
+			}
+		}
+		war = no
+		NOT = { tier = emperor }
+		culture = huichol
+		OR = {
+			realm_size = 150
+			e_huichol = { OR = { is_titular = no has_holder = yes } }
+		}
+	}
+	short_name = yes
+	
+	creation_requires_capital = no	
+}
