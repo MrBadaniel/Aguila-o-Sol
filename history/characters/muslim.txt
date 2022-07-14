@@ -570,7 +570,7 @@
 	trait=charismatic_negotiator
 	disallow_random_traits=yes		
 	trait=way_fist
-	culture=californiano
+	culture=mediterranean
 	religion=cetic
 	2643.4.17={
 		birth=yes
@@ -3144,7 +3144,7 @@
 	female=yes
 	dynasty=1851041 #Yudkow
 	religion=gaian
-	secret_religion=imamite
+	trait=sympathy_christendom
 	trait=kind
 	trait=ambitious
 	trait=zodiac_leo
@@ -3164,7 +3164,6 @@
 	female=yes
 	dynasty=1851041 #Yudkow
 	religion=gaian
-	secret_religion=imamite
 	trait=kind
 	trait=ambitious
 	trait=zodiac_leo
@@ -3176,7 +3175,7 @@
 	mother=2500107
 	father=1802159
 	2646.8.4={birth=yes
-		culture=cascadian
+		culture=siskiyouan
 	}
 	2656.8.9={employer=1845051}
 	2699.4.6={death=yes}
@@ -3295,10 +3294,10 @@ name="Guy"
 	2352.1.1={death=yes}
 	}
 2500117={
-name="Maximiliano"
+	name="Maximiliano"
 	culture=californiano
 	dynasty=1851171 #invierno
-	religion=sacred_heart
+	religion=navegante
 	trait=fortune_builder
 	trait=patient
 	trait=paranoid
@@ -3765,6 +3764,7 @@ name="Don"
 	culture=californiano
 	dynasty=1700041 #infante
 	religion=cetic
+	father=2500158
 	give_nickname=nick_the_soldier
 	trait=tough_soldier
 	trait=strong
@@ -3775,7 +3775,7 @@ name="Don"
 	trait=duelist
 	2350.1.1={birth=yes}
 	2389.6.21={add_spouse=2500128}
-	2429.1.1={death=yes}
+	2439.1.1={death=yes}
 }
 2500144={
 	name="Carisa"
@@ -3810,8 +3810,9 @@ name="Don"
 	2459.1.1={death=yes}
 }
 2500145={
-	name="Valentín"
-	culture=californiano
+	name="Édgar"
+	culture=mediterranean
+	dynasty=1912065 # del Caballero
 	religion=cetic
 	trait=charismatic_negotiator
 	trait=quick
@@ -3821,10 +3822,181 @@ name="Don"
 	trait=shrewd
 	trait=gregarious
 	trait=just
-	2391.1.1={birth=yes}
+	2391.1.1={birth=yes
+	culture=californiano}
 	2420.6.21={add_spouse=2500144}
-	2459.1.1={death=yes} #blocking out numbers 45-55 for linking to current TJ lord
+	2459.1.1={death=yes}
 }
+
+2500146={
+	name="Fernán"
+	culture=mediterranean
+	dynasty=1912065 # del Caballero
+	religion=cetic
+	father=2500145
+	mother=2500144
+	trait=way_cowl
+	trait=charitable
+	trait=ambitious
+	trait=kind
+	trait=midas_touched
+	trait=diligent
+	2455.5.2={birth=yes
+	culture=californiano}
+	2500.8.4 ={death=yes}
+}
+
+2500147={
+	name="Édgar"
+	culture=mediterranean
+	dynasty=1912065 # del Caballero
+	religion=cetic
+	father=2500146
+	trait=charismatic_negotiator
+	trait=uncouth
+	trait=patient
+	trait=way_dove
+	trait=kind
+	trait=content
+	trait=slothful
+	trait=diligent
+	2474.9.3={birth=yes
+	culture=californiano}
+	2544.3.24={death=yes}
+}
+ 
+2500148={
+	name="Marisol" #Princess of Baja
+	dynasty=1912065 #Caballero
+	female=yes
+	father=1910001
+	trait=charismatic_negotiator
+	trait=way_fist
+	trait=hunter
+	trait=bisexual
+	trait=strong
+	trait=brave
+	trait=poet
+	disallow_random_traits=yes		
+	culture=mediterranean
+	religion=cetic
+	2649.3.10={
+		birth=yes
+		culture=californiano
+	}
+	2660.1.1={
+		effect={
+			set_character_flag=diversity
+			set_character_flag=physique
+		}
+	}
+}
+ 
+2500149={
+	name="Romano"
+	culture=mediterranean
+	dynasty=1912065 # del Caballero
+	religion=cetic
+	father=2500147
+	trait=flamboyant_schemer
+	trait=way_book
+	trait=patient
+	trait=ambitious
+	trait=diligent
+	trait=schemer
+	trait=gregarious
+	2495.5.10={birth=yes
+	culture=californiano}
+	2562.3.5={death=yes}
+}
+
+2500150={
+	name="Ludovico"
+	culture=bayfolk
+	dynasty=1851172 #burgess
+	religion=cetic
+	trait=skilled_tactician
+	trait=way_fist
+	trait=humble
+	trait=trusting
+	trait=honest
+	trait=just
+	father=2500155
+	2418.1.2={birth=yes}
+	2478.3.10={death=yes}
+}
+
+2500151={
+	name="Alyssa"
+	culture=bayfolk
+	female=yes
+	dynasty=1851172 #burgess
+	religion=cetic
+	trait=way_dove
+	trait=patient
+	trait=honest
+	trait=kind
+	trait=fortune_builder
+	father=2500150
+	2460.2.18={birth=yes}
+	2438.1.2={add_spouse=2500152}
+	2525.4.25={death=yes}
+}
+
+2500152={
+	name="Roger"
+	culture=bayfolk
+	dynasty=1849001 #Caymus
+	religion=cetic
+	trait=thrifty_clerk
+	trait=way_branch
+	trait=gardener
+	trait=content
+	trait=brave
+	trait=robust
+	father=2500150
+	2455.2.26={birth=yes}
+	2500.2.12={death=yes}
+}
+
+2500153={
+	name="Darryl"
+	culture=bayfolk
+	dynasty=1851172 #burgess
+	religion=cetic
+	trait=mastermind_theologian
+	trait=scholar
+	trait=homosexual
+	trait=celibate
+	trait=way_dove
+	trait=zealous
+	trait=brave
+	trait=envious
+	trait=gregarious
+	father=2500150
+	2440.4.9={birth=yes}
+	2516.2.5={death=yes}
+}
+
+2500154={
+	name="Gelett"
+	culture=bayfolk
+	dynasty=1849001 #Caymus
+	religion=cetic
+	trait=intricate_webweaver
+	trait=way_cowl
+	trait=deceitful
+	trait=lustful
+	trait=diligent
+	trait=devout
+	trait=erudite
+	father=2500152
+	mother=2500151
+	give_nickname=nick_the_purple_cow
+	2480.11.10={birth=yes}
+	2550.6.2={death=yes}
+}
+
 2500155={
 	name="Jonathan" #blocking out numbers 55-75 for rest of characters
 	culture=bayfolk
@@ -3832,18 +4004,110 @@ name="Don"
 	religion=cetic
 	give_nickname=nick_the_spider
 	trait=intricate_webweaver
+	trait=way_cowl
 	trait=quick
 	trait=schemer
 	trait=seducer
-	trait=hedonist
 	trait=diligent
 	trait=ambitious
 	trait=legit_bastard
+	trait=devout
 	mother=2500129
 	2389.6.6={birth=yes}
 	#2419.6.21={add_spouse=2500156}
 	2459.1.1={death=yes}
 }
+
+2500156={
+	name="Alfred"
+	culture=bayfolk
+	dynasty=1849001 #Caymus
+	religion=cetic
+	trait=tough_soldier
+	trait=way_fist
+	trait=strong
+	trait=lustful
+	trait=brave 
+	trait=ambitious
+	father=2500154
+	give_nickname=nick_the_lark
+	2510.12.5={birth=yes}
+	2590.5.1={death=yes}
+}
+
+2500157={
+	name="Tristán"
+	culture=mediterranean
+	dynasty=1912065 # del Caballero
+	religion=cetic
+	father=2500149
+	trait=grey_eminence
+	trait=way_dove
+	trait=cruel
+	trait=lustful
+	trait=devout
+	trait=ambitious
+	2522.9.1={birth=yes
+	culture=californiano}
+	2600.4.1={death=yes}
+} 
+ 
+2500158={
+	name="Darryl"
+	culture=bayfolk
+	dynasty=1849001 #Caymus
+	religion=cetic
+	trait=fortune_builder
+	trait=way_dove
+	trait=cruel
+	trait=groomed
+	trait=charitable
+	trait=just
+	trait=humble
+	father=2500156
+	2542.6.15={birth=yes}
+	2600.2.4={death=yes}
+}
+
+2500159={
+	name="Adrián"
+	culture=californiano
+	religion=navegante
+	trait=fortune_builder
+	trait=aaronita
+	trait=patient
+	trait=proud
+	trait=honest
+	trait=just
+	trait=zealous
+	2648.1.12={birth=yes}
+	2660.12.10={effect={add_lover=2500148}}
+}
+
+2500160={
+	name="Joaquín"
+	culture=californiano
+	dynasty=1912065 #Caballero
+	religion=cetic
+	trait=way_fist
+	trait=legit_bastard
+	father=2500159
+	mother=2500148
+	2665.5.15={birth=yes}
+}
+
+2500161={
+	name="Benito"
+	culture=californiano
+	dynasty=1912065 #Caballero
+	religion=navegante
+	trait=legit_bastard
+	trait=strong
+	father=2500159
+	mother=2500148
+	2666.7.2={birth=yes}
+}
+
 2200176={
 	name="Jag" #jensen
 	dynasty=2030025
