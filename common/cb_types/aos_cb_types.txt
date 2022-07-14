@@ -160,18 +160,20 @@ cb_liberate_wilds = {
 	on_success_title = {
 		check_holy_order_donation_effect = yes
 
-		custom_tooltip = {
-			text = liberate_nomad_cb_succ_tip
-			hidden_tooltip = {
-				ROOT = {
-					vassalize_or_take_under_title = {
-						title = PREV
-						enemy = FROM
-						type = invasion
+			custom_tooltip = {
+				text = liberate_nomad_cb_succ_tip
+				hidden_tooltip = {
+					ROOT = {
+						vassalize_or_take_under_title = {
+							title = PREV
+							enemy = FROM
+							same_religion = yes # Only vassalize rulers of my religion
+							is_religious = yes
+							type = holy_war
+						}
 					}
 				}
 			}
-		}
 	}
 
 	on_fail = {

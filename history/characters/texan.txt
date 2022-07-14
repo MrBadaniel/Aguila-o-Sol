@@ -3830,3 +3830,57 @@
 	2435.2.15={add_spouse=1910101}
 	2488.4.25={death=yes}
 }
+
+1836188={
+	name="Sam"
+	dynasty=1851024#Muir
+	culture=english
+	religion=pagan#forester
+	trait=skilled_tactician	
+	trait=bastard
+	trait=heresiarch
+	trait=wroth
+	trait=zealous
+	trait=uncouth
+	trait=diligent
+	disallow_random_traits=yes
+	father=1802122
+	2410.9.2={birth=yes
+	culture=valleyan
+	name=Sam
+			effect_even_if_dead = {
+			set_special_character_title = RANGER_CHILIKOOT
+		}
+	}
+	2444.2.8={death={
+			death_reason=death_battle_duel #Murdered in combat.
+			killer=1802148
+		}
+	}
+}
+
+1836189={
+	name="John" #Horrigan
+	culture=slavic
+	religion=sacred_heart#la_hermandad
+	trait=skilled_tactician
+	trait=narrow_flank_leader
+	trait=peasant_leader
+	trait=deceitful
+	trait=zealous
+	trait=ambitious
+	trait=shrewd
+	disallow_random_traits=yes
+	2414.8.22={birth=yes
+	culture=valleyan
+	name=Sam
+			effect_even_if_dead = {
+			set_special_character_title = NIMROD_TITLE
+		}
+	}
+	2448.11.18={death={
+			death_reason=death_battle_duel #Murdered in combat.
+			killer=1802148
+		}
+	}
+}

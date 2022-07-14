@@ -4148,7 +4148,7 @@
 1802144={
 	name="Filomeno"
 	dynasty=1851045#Gonzalez
-	dna="dahijbjbcdb"
+	#dna="dahijbjbcdb"
 	culture=neomexicano
 	father=1802142
 	mother=1802143
@@ -4181,7 +4181,7 @@
 	2317.3.10={birth=yes
 	culture=joaquino
 	}
-	2238.10.11={add_spouse=1802144}
+	2338.10.11={add_spouse=1802144}
 	2388.4.14={death=yes}
 }
 
@@ -4209,42 +4209,132 @@
 	2420.11.16={death=yes}
 }
 
-1802146={
+1802147={
+	name="Luis"
+	dynasty=1851045#Gonzalez
+	culture=tejano
+	father=1802146
+	mother=1836186
+	religion=nazarene
+	secret_religion=sacred_heart#la_hermandad
+	trait=underhanded_rogue
+	trait=nz_acolyte
+	trait=cynical	
+	trait=trusting
+	trait=diligent
+	trait=charitable
+	trait=wroth
+	trait=depressed
+	disallow_random_traits=yes
+	give_nickname=nick_el_doliente
+	2376.5.12={birth=yes
+	culture=joaquino
+	}
+	2440.7.10={death=yes}
+}
+
+1802148={
+	name="Pánfilo"
+	dynasty=1851045#Gonzalez
+	culture=tejano
+	religion=nazarene
+	father=1802147
+	trait=grey_eminence
+	trait=trickster
+	trait=nz_acolyte
+	trait=genius	
+	trait=shrewd
+	trait=gregarious
+	trait=deceitful
+	trait=diligent
+	trait=devout
+	disallow_random_traits=yes
+	give_nickname=nick_el_liebre
+	2395.2.20={birth=yes
+	culture=joaquino
+	}
+	2465.10.26={death=yes}
+}
+
+1802149={
 	name="César"
 	dynasty=1851045#Gonzalez
 	culture=tejano
-	father=1802144
-	mother=1802145
-	religion=sacred_heart#la_hermandad
-	trait=brilliant_strategist
-	trait=inspiring_leader
-	trait=experimenter	
-	trait=school_leader
-	trait=zealous
-	trait=robust
-	trait=uncouth
-	trait=wroth
-	trait=diligent
+	father=1802148
+	religion=nazarene
+	trait=fortune_builder
+	trait=socializer
+	trait=nz_acolyte
+	trait=honest	
+	trait=humble
+	trait=gregarious
+	trait=patient
+	trait=kind
 	disallow_random_traits=yes
-	give_nickname=nick_el_soldado
-	2344.6.28={birth=yes
+	2415.1.4={birth=yes
 	culture=joaquino
 	}
-	2420.11.16={death=yes}
+	2482.2.4={death=yes}
+}
+
+1802150={
+	name="Kayden"
+	dynasty=1851024#Muir
+	culture=english
+	religion=nazarene	
+	trait=thrifty_clerk
+	trait=nz_presbyter
+	trait=adult_baptized
+	trait=devout
+	trait=chaste
+	trait=temperate
+	female=yes
+	father=1802122
+	disallow_random_traits=yes
+	2418.11.24={birth=yes
+	culture=joaquino
+	}
+	2436.12.4={add_spouse=1802149}
+	2484.2.4={death=yes}
+}
+
+1802151={
+	name="Teodoro"
+	dynasty=1851045#Gonzalez
+	culture=tejano
+	father=1802149
+	mother=1802150
+	religion=nazarene
+	trait=midas_touched
+	trait=quick
+	trait=nz_acolyte
+	trait=shrewd	
+	trait=shy
+	trait=greedy
+	trait=dull
+	trait=diligent
+	trait=temperate
+	disallow_random_traits=yes
+	2437.12.21={birth=yes
+	culture=joaquino
+	}
+	2502.8.15={death=yes}
 }
 
 #dahijbjbcdb #daflaaddbas
-#bravo
-#charitable n word  school_giver
-#school_leader WARRIOR 
 
-#Duke Luis III el Doliente González [lived 2376.5.12 to 2440.7.10] 
-#Duke Luis III the Bowed was quick to surrender to Elton the Lawgiver after converting to the Nazarene faith (after a meeting with Elton). He abandons the traditional faith of the Joaquinos for the imperial Nazarene faith.
-#Duke Pánfilo el Liebre González [lived 2395.2.20 to 2465.10.26]
-#Son of Luis the Bowed, after his father’s death things start to fall apart. Old Guard LH rulers wish a return to the old ways. Uses trickery to defeat his enemies, such as Chilikoot Sam Muir a Woodrunner [A Bastard son of Sam the Inhospitable] and Nimrod John Horigan [A bastard descendant of Sasha Carranza the Red Baron who was Josephite]  a LH anglo. 
-#Duke César II González [lived 2415.1.4 to 2482.2.4]
-#Son of the quick-witted Bugsy, César II González also known as César the Conciliator finally brokered a peace between House Muir and House González with a marriage pact.
-#Duke Teodoro González [lived 2437.12.21 to 2502.8.15]
-#The son of César II González and a Muir woman is given a huge dowry and uses it to his advantage. The Bako region began to prosper heavily under his reign and his son’s reign.
+2420.11.16={
+	holder=1802147
+}
+2440.7.10={
+	holder=1802148
+}
+2465.10.26={
+	holder=1802149
+}
+2482.2.4={
+	holder=1802151
+}
+
 #Duke Richie "Rich" Gonzalez [lived 2457.5.14 to 2542.9.19]
 #Richie had an affluent childhood spending much of his time in the Imperial Court. Though he was always generous with his wealth and sadly a lot of the wealth his father gained is slowly spent away. Sympathy for Ceticism. 
