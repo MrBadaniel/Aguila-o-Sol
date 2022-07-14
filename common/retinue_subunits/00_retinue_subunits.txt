@@ -2000,7 +2000,7 @@ RETTYPE_CUL_KHOAKINEREN =
 	first_type = 4
 	first_amount = 150
 
-	second_type = 6
+	second_type = 3
 	second_amount = 100
 
 	special_troops = horse_archers
@@ -2010,7 +2010,25 @@ RETTYPE_CUL_KHOAKINEREN =
 	}
 
 	modifier = {
-		knights_offensive = 0.75
-		horse_archers_offensive = 0.7
+		knights_defensive = 0.15
+		knights_morale = 0.15
+		light_cavalry_defensive = 0.25
+		light_cavalry_offensive = 0.25
+	}
+}
+
+RETTYPE_CUL_PINOY = 
+{
+	first_type = 0
+	first_amount = 400
+	
+	potential = {
+		is_nomadic = no
+		culture = pinoy
+	}
+	
+	modifier = {
+		light_infantry_offensive = 0.5
+		light_infantry_defensive = 0.35
 	}
 }
