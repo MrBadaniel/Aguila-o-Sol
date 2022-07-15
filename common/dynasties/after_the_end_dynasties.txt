@@ -5357,7 +5357,20 @@ coat_of_arms = {
 1700038 = { name="Jichiumea" culture=yaqui }
 1700039 = { name="Fierro" culture=yaqui }
 1700040 = { name="Kutabocha" culture=yaqui }
-1700041 = { name="Jupamea" culture=yaqui }
+1700041 = { name="Jupamea" culture=yaqui 
+	coat_of_arms = {
+		religion = cetic
+		template = 0
+		layer = {
+			texture = 0
+			texture_internal = 8
+			emblem = 0
+			color = 2
+			color = 1
+			color = 0
+		}
+	}
+}
 1700042 = { name="Matus" culture=yaqui }
 1700043 = { name="Machijisa" culture=yaqui }
 1700044 = { name="Aguilar" culture=yaqui }
@@ -12455,8 +12468,34 @@ coat_of_arms = {
 			color = 0
 		}
 	}}
-1851171 = { name="Invierno" culture=angeleno }
-1851172 = { name="Burgess" culture=angeleno }
+1851171 = { name="Invierno" culture=angeleno 
+	coat_of_arms = {
+		religion = revelationist
+		template = 0
+		layer = {
+			texture = 0
+			texture_internal = 4
+			emblem = 0
+			color = 1
+			color = 4
+			color = 0
+		}
+	}
+}
+1851172 = { name="Burgess" culture=angeleno 
+	coat_of_arms = {
+		religion = voodoo
+		template = 0
+		layer = {
+			texture = 0
+			texture_internal = 4
+			emblem = 0
+			color = 2
+			color = 1
+			color = 0
+		}
+	}
+}
 1851173 = { name="Kensington" culture=angeleno }
 1851174 = { name="Pringle" culture=angeleno 
 	coat_of_arms = {
