@@ -1359,7 +1359,7 @@
 	religion=cetic
 	dynasty=1849001#Caymus
 	trait=skilled_tactician
-	father=2500158
+	father=2500174
 	trait=content
 	trait=brave
 	trait=diligent
@@ -4464,6 +4464,8 @@
 	name="William"
 	culture=tanner
 	dynasty=1802108
+	father=1802162
+	mother=1802163
 	religion=nazarene
 	trait=skilled_tactician
 	trait=nz_presbyter
@@ -4473,13 +4475,13 @@
 	trait=wroth
 	trait=temperate
 	disallow_random_traits=yes
-	2558.3.14={birth=yes
-	culture=battleborn
+	2538.3.14={birth=yes
+	culture=bayfolk
 	}
 	2599.1.14={add_matrilineal_spouse=2500106}
-	2619.4.6={death={
-			death_reason=death_battle
-			killer=2500015
+	2622.8.16={death={
+			death_reason=death_execution_hanging
+			killer=1911000
 		}
 	}
 }
@@ -4519,5 +4521,466 @@
 	}
 	2644.1.11={death=yes}
 }
+
+1802161={
+	name="Burton"
+	female=no
+	dynasty=5001193 #Roday
+	dna="rnscfqvvmdz"
+	culture=black
+	religion=cetic
+	martial=5
+	stewardship=13
+	learning=5
+	intrigue=5
+	diplomacy=5
+	trait=midas_touched
+	trait=adopted_child
+	trait=honest
+	trait=way_dove
+	trait=shrewd
+	trait=kind
+	trait=diligent
+	trait=erudite
+	disallow_random_traits=yes
+	father=2500146
+	2637.10.14={birth=yes
+	culture=angeleno}
+	2639.1.1={
+	effect={
+			set_character_flag=diversity
+			set_character_flag=physique
+			add_friend=2500147
+		}
+	}
+}
+
+
+1802162={
+	name="Eli"
+	female=no
+	dna="rnscfqvvmdz"
+	culture=tanner
+	dynasty=1802108 #Crossheart
+	religion=nazarene
+	martial=5
+	stewardship=13
+	learning=5
+	intrigue=5
+	diplomacy=5
+    trait=tough_soldier
+    trait=nz_presbyter
+    trait=scarred_high        
+    trait=sympathy_judaism
+    trait=robust
+    trait=diligent
+    trait=proud
+    trait=wroth
+	father=2500146
+	disallow_random_traits=yes
+	2495.1.1={birth=yes
+	culture=siskiyouan}
+	2575.1.1={death=yes}
+}
+
+1802163={
+	name="Isabella"
+	culture=tejano
+	female=yes
+    religion=nazarene
+    martial=3
+    diplomacy=3
+    stewardship=3
+    intrigue=3
+    learning=3
+    trait=charismatic_negotiator
+    trait=nz_acolyte
+    trait=quick
+    trait=charitable
+    trait=groomed
+    trait=humble
+    trait=gregarious
+	disallow_random_traits=yes
+    2500.1.1={birth=yes
+	culture=joaquino}
+	2520.1.1={add_spouse=1802162}
+    2582.1.1={death=yes}
+}
+
+1802164={
+	name="Josh"
+	father=1802162
+	mother=1802163
+	culture=tanner
+	dynasty=1802108 #Crossheart
+    religion=nazarene
+	disallow_random_traits=yes
+    martial=3
+    diplomacy=3
+    stewardship=3
+    intrigue=3
+    learning=3
+    trait=fortune_builder
+    trait=nz_presbyter
+    trait=administrator
+    trait=lunatic
+    trait=shrewd
+    trait=sympathy_judaism
+    trait=diligent
+    trait=paranoid
+    trait=charitable
+    trait=stressed
+    2522.1.1={birth=yes
+	culture=bayfolk}
+    2590.1.1={death=yes}
+}
+
+1802165={
+	name="Mary"
+	father=1802162
+	mother=1802163
+	disallow_random_traits=yes
+	culture=tanner
+	female=yes
+	dynasty=1802108 #Crossheart
+    religion=nazarene
+    martial=3
+    diplomacy=3
+    stewardship=3
+    intrigue=3
+    learning=3
+    trait=nz_presbyter
+    trait=fair        
+    trait=sympathy_judaism
+    trait=timid
+    trait=affectionate
+    2520.1.1={birth=yes
+	culture=bayfolk}
+    2535.1.1={death={death_reason=death_vanished}}
+}
+
+1802166={
+	name="Damion"
+	father=1802162
+	mother=1802163
+	culture=tanner
+	disallow_random_traits=yes
+	dynasty=1802108 #Crossheart
+    religion=nazarene
+    martial=3
+    diplomacy=3
+    stewardship=3
+    intrigue=3
+    learning=3
+    trait=skilled_tactician                
+    trait=nz_presbyter
+    trait=sympathy_judaism
+    trait=dull
+    trait=proud
+    trait=brave
+    trait=wroth
+    trait=ambitious
+    2521.1.1={birth=yes
+	culture=bayfolk}
+	2537.1.1={death={
+			death_reason=death_murder_unknown #Murdered.
+		}
+	}
+}
+
+1802167={
+	name="Holly"
+	culture=german
+	disallow_random_traits=yes
+    religion=cetic
+	female=yes
+    martial=3
+    diplomacy=3
+    stewardship=3
+    intrigue=3
+    learning=3
+    trait=indulgent_wastrel 
+	trait=way_book
+    trait=hedonist
+    trait=lustful
+    trait=kind
+    trait=humble
+    2525.1.1={birth=yes
+	culture=bayfolk}
+	2559.1.1={add_spouse=1802164}
+    2607.1.1={death=yes}
+}
+
+1802168={
+	name="Lane"
+	father=1802164
+	mother=1802167
+	disallow_random_traits=yes
+	culture=tanner
+	dynasty=1802108 #Crossheart
+    religion=nazarene
+    martial=3
+    diplomacy=3
+    stewardship=3
+    intrigue=3
+    learning=3
+    trait=thrifty_clerk
+    trait=nz_presbyter
+    trait=sympathy_judaism
+    trait=paranoid
+    trait=is_malnourished
+    trait=stubborn
+    trait=patient
+    trait=gluttonous
+    trait=slothful 
+    2561.1.1={birth=yes
+	culture=bayfolk}
+    2621.1.1={death=yes}
+}
+
+1802169={
+	name="Esther"
+	female=yes
+	disallow_random_traits=yes
+    culture=yiddish
+    religion=jewish
+    martial=3
+    diplomacy=3
+    stewardship=3
+    intrigue=3
+    learning=3
+    trait=intricate_webweaver
+    trait=sympathy_christendom
+    trait=devout
+    trait=groomed
+    trait=charitable
+    trait=kind
+    trait=deceitful
+    trait=gregarious
+    2566.1.1={birth=yes
+	culture=bayfolk}
+	2584.1.1={add_spouse=1802168}
+    2629.1.1={death=yes}
+}
+
+1802170={
+	name="Ian"
+	father=1802168
+	mother=1802169
+	disallow_random_traits=yes
+	culture=tanner
+	dynasty=1802108 #Crossheart
+    religion=nazarene
+    martial=5
+    diplomacy=5
+    stewardship=5
+    intrigue=5
+    learning=5
+    trait=skilled_tactician
+    trait=nz_presbyter
+    trait=rough_terrain_leader
+    trait=scarred
+    trait=adventurer
+    trait=sympathy_judaism
+    trait=ambitious
+    trait=wroth
+    trait=charitable
+    2585.1.1={birth=yes
+	culture=bayfolk
+	name=Ian}
+    2650.1.1={death=yes}
+}
+
+1802171={
+	name="Victoria"
+	female=yes
+    culture=tejano
+	religion=nazarene
+	disallow_random_traits=yes
+    martial=5
+    diplomacy=5
+    stewardship=5
+    intrigue=5
+    learning=5
+    trait=martial_cleric
+    trait=nz_acolyte
+    trait=devout
+    trait=kind
+    trait=trusting
+    trait=brawny
+    trait=diligent
+    2588.1.1={birth=yes
+	culture=joaquino}
+	2610.1.1={add_spouse=1802170}
+    2655.1.1={death=yes}
+}
+
+1802172={
+	name="Santiago"
+	father=1802170
+	mother=1802171
+	disallow_random_traits=yes
+	culture=tanner
+	dynasty=1802108 #Crossheart
+    religion=nazarene
+    martial=5
+    diplomacy=5
+    stewardship=5
+    intrigue=5
+    learning=5
+    trait=underhanded_rogue
+    trait=nz_presbyter
+    trait=slow
+    trait=patient
+    trait=kind
+    trait=just
+    trait=honest
+    2611.1.1={birth=yes
+	culture=battleborn
+	name=Santiago}
+    2665.1.1={death=yes}
+}
+
+1802173={
+	name="Llewellyn"
+	father=1802170
+	mother=1802171
+	disallow_random_traits=yes
+	culture=tanner
+	dynasty=1802108 #Crossheart
+    religion=nazarene
+    martial=5
+    diplomacy=5
+    stewardship=5
+    intrigue=5
+    learning=5
+    trait=tough_soldier
+    trait=nz_presbyter
+	trait=twin
+    trait=hunter
+    trait=one_handed
+    trait=brave
+    trait=wroth
+    trait=greedy
+    2620.1.1={birth=yes
+	culture=battleborn}
+}
+
+1802174={
+	name="Emma"
+	female=yes
+	father=1802170
+	mother=1802171
+	disallow_random_traits=yes
+	culture=tejano
+	dynasty=1802108 #Crossheart
+    religion=nazarene
+    martial=5
+    diplomacy=5
+    stewardship=5
+    intrigue=5
+    learning=5
+    trait=midas_touched
+    trait=nz_presbyter
+    trait=quick
+    trait=diligent
+    trait=patient
+    trait=sturdy
+    trait=content
+    2620.1.1={birth=yes
+	culture=battleborn}
+}
+
+1802175={
+	name="Victoria"
+	female=yes
+    culture=utahn
+    religion=mormon
+	disallow_random_traits=yes
+    martial=5
+    diplomacy=5
+    stewardship=5
+    intrigue=5
+    learning=5
+    trait=detached_priest
+    trait=devout
+    trait=temperate
+    trait=kind
+    trait=chaste
+    trait=depressed
+    2612.10.1={birth=yes
+	culture=utahn}
+	2632.10.12={add_spouse=1802172}
+    2655.1.1={death=yes}
+}
+
+1802176={
+	name="Christian"
+	father=1802172
+	mother=1802175
+	culture=tanner
+	disallow_random_traits=yes
+	dynasty=1802108 #Crossheart
+    religion=nazarene
+    martial=5
+    diplomacy=5
+    stewardship=5
+    intrigue=5
+    learning=5
+    trait=mastermind_theologian
+    trait=nz_presbyter
+    trait=theologian
+    trait=brawny
+    trait=diligent
+    trait=wroth
+    trait=proud
+    2635.7.15={birth=yes
+	culture=battleborn}
+}
+
+1802177={
+	name="Laura"
+	female=yes
+    culture=english
+    religion=nazarene
+	disallow_random_traits=yes
+    martial=5
+    diplomacy=5
+    stewardship=5
+    intrigue=5
+    learning=5
+    trait=charismatic_negotiator
+    trait=nz_acolyte
+    trait=gregarious
+    trait=patient
+    trait=kind
+    trait=honest
+    2637.1.1={birth=yes
+	culture=battleborn}
+	2654.10.12={add_spouse=1802176}
+}
+
+1802178={
+	name="Barron"
+	father=1802176
+	mother=1802177
+	disallow_random_traits=yes
+	culture=tanner
+	#dna="kqrlpezhbnd"
+	dynasty=1802108 #Crossheart
+    religion=nazarene
+    martial=5
+    diplomacy=5
+    stewardship=5
+    intrigue=5
+    learning=5
+    trait=nz_presbyter
+    trait=reclusive
+    trait=brooding
+    trait=timid
+    2656.1.1={birth=yes
+	culture=battleborn}
+}
+
 
 #dahijbjbcdb #daflaaddbas
