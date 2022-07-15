@@ -379,7 +379,6 @@ feudal_governments = {
 			NOT = { is_government_potential = military_governorate }
 			NOT = { is_government_potential = uyc_government }
 			NOT = { is_government_potential = reserve_government }
-													 
 		}
 		
 		color = { 145 10 15 }
@@ -396,6 +395,8 @@ feudal_governments = {
 		
 		can_imprison_without_reason = no
 		can_revoke_without_reason = no
+		
+		can_demand_religious_conversion = no
 		
 		ignore_in_vassal_limit_calculation = {
 			tribal_government
