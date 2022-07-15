@@ -12039,7 +12039,19 @@ coat_of_arms = {
 1850046 = { name="Toro" culture=angeleno }
 1850047 = { name="Norton" culture=angeleno }
 1850048 = { name="Cohen" culture=angeleno }
-1850049 = { name="Frémont" culture=angeleno }
+1850049 = { name="Frémont" culture=angeleno 
+	coat_of_arms = {
+		template = 0
+		layer = {
+			texture = 11
+			texture_internal = 21
+			emblem = 0
+			color = 0
+			color = 0
+			color = 0
+		}
+	}
+}
 1850050 = { name="Lopez" culture=angeleno }
 1850051 = { name="Gonzalez" culture=angeleno }
 1850052 = { name="Ramirez" culture=angeleno }
