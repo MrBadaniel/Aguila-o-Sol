@@ -13,12 +13,7 @@ spriteTypes = {
 		noOfFrames = 1
 		norefcount = yes
 	}
-	spriteType = {
-		name = "GFX_southmexican_female_base_midage"
-		texturefile = "gfx\\characters\\southmexican_female\\southmexican_female_base_2.dds"
-		noOfFrames = 1
-		norefcount = yes
-	}
+
 	spriteType = {
 		name = "GFX_southmexican_female_base_oldage"
 		texturefile = "gfx\\characters\\southmexican_female\\southmexican_female_base_3.dds"
@@ -324,6 +319,27 @@ spriteTypes = {
 		norefcount = yes
 	}
 
+######### HAIR ################
+	spriteType = {
+		name = "GFX_southmexican_female_hair"
+		texturefile = "gfx\\characters\\southmexican_female\\southmexican_female_hair_1.dds"
+		noOfFrames = 12
+		norefcount = yes
+	}
+	spriteType = {
+		name = "GFX_southmexican_female_hair_behind"
+		texturefile = "gfx\\characters\\southmexican_female\\southmexican_female_hair_behind_1.dds"
+		noOfFrames = 12
+		norefcount = yes
+	}
+#############CLOTHING############# 
+	spriteType = {
+		name = "GFX_southmexican_female_clothes"
+		texturefile = "gfx\\characters\\southmexican_female\\southmexican_female_clothes.dds"
+		noOfFrames = 12
+		norefcount = yes
+	}
+
 	portraitType = {
 		name = "PORTRAIT_yucatanensegfx_male"
 		effectFile = "gfx/FX/portrait.lua"
@@ -334,11 +350,11 @@ spriteTypes = {
 			"GFX_frankish_male_overlayer_behind:p31"
 			"GFX_character_special_crowns_behind:p18"
             	"GFX_byzantine_male_hair_behind:p1:h:y"
-			"GFX_serbsouthslavic_male_beard_behind:p4:h:y"
+			"GFX_southindian_male_beard_behind:p4:h:y"
 			"GFX_southmexican_male_base:p2"
 			"GFX_southmexican_male_neck:d0"
 			"GFX_southmexican_male_chin:d1"
-			"GFX_character_mesoamerican_male_physique:p21:y"
+			"GFX_character_southmexican_male_physique:p21:y"
 			"GFX_southmexican_male_cheeks:d4"
 			"GFX_southmexican_male_mouth:d2"
 			"GFX_character_harelip_muslim:p24"
@@ -365,8 +381,8 @@ spriteTypes = {
 			"GFX_byzantine_male_headgear_mid_early:p5:c3"
 			"GFX_character_special_crowns_mid:p19"
 			"GFX_frankish_male_overlayer_mid:p31"
-			"GFX_serbsouthslavic_male_beard:p4:h:y"
-			"GFX_mongol_male_beard:p4:h:y:o-1x4"
+			"GFX_southindian_male_beard:p4:h:y"
+			##"GFX_mongol_male_beard:p4:h:y:o-1x4"
 			"GFX_byzantine_male_hair:p1:h:y"
 			;"GFX_turkish_male_hair:p1:h:y:o-5x0"
 			"GFX_empty:p5:c7:h"
@@ -431,11 +447,11 @@ spriteTypes = {
 			"GFX_frankish_male_overlayer_behind:p31"
 			"GFX_character_special_crowns_behind:p19"
 	;"GFX_turkish_male_hair_behind_midage:p1:h:y:o-5x0"
-	;"GFX_mongol_male_beard_behind_midage:p4:h:y:o-1x4"
+			"GFX_southindian_male_beard_behind_midage:p4:h:y:o-1x4"
 			"GFX_southmexican_male_base_midage:p2"
 			"GFX_southmexican_male_neck_midage:d0"
 			"GFX_southmexican_male_chin_midage:d1"
-			"GFX_character_mesoamerican_male_physique:p21:y"
+			"GFX_character_southmexican_male_physique:p21:y"
 			"GFX_southmexican_male_cheeks_midage:d4"
 			"GFX_southmexican_male_mouth_midage:d2"
 			"GFX_character_harelip_muslim:p24"
@@ -462,7 +478,7 @@ spriteTypes = {
 			"GFX_byzantine_male_headgear_mid_early:p5:c3"
 			"GFX_character_special_crowns_mid:p19"
 			"GFX_frankish_male_overlayer_mid:p31"
-		"GFX_serbsouthslavic_male_beard_midage:p4:h:y"
+		"GFX_southindian_male_beard_midage:p4:h:y"
 			;"GFX_mongol_male_beard_midage:p4:h:y:o-1x4"
 			"GFX_byzantine_male_hair_midage:p1:h:y"
 			;"GFX_turkish_male_hair_midage:p1:h:y:o-5x0"
@@ -529,11 +545,11 @@ spriteTypes = {
 			;"GFX_turkish_male_hair_behind_oldage:p1:h:y:o-5x0"
 			;"GFX_mongol_male_beard_behind_oldage:p4:h:y:o-1x4"
 			"GFX_byzantine_male_hair_behind_oldage:p1:h:y"
-			"GFX_serbsouthslavic_male_beard_behind_oldage:p4:h:y:o-1x1"
+			"GFX_southindian_male_beard_behind_oldage:p4:h:y:o-1x1"
 			"GFX_southmexican_male_base_oldage:p2"
 			"GFX_southmexican_male_neck_oldage:d0"
 			"GFX_southmexican_male_chin_oldage:d1"
-			"GFX_character_mesoamerican_male_physique:p21:y"
+			"GFX_character_southmexican_male_physique:p21:y"
 			"GFX_southmexican_male_cheeks_oldage:d4"
 			"GFX_southmexican_male_mouth_oldage:d2"
 			"GFX_character_harelip_muslim:p24"
@@ -563,7 +579,7 @@ spriteTypes = {
 			"GFX_character_special_crowns_mid:p19"
 			"GFX_frankish_male_overlayer_mid:p31"
 			"GFX_byzantine_male_hair_oldage:p1:h:y"
-			"GFX_serbsouthslavic_male_beard_oldage:p4:h:y"
+			"GFX_southindian_male_beard_oldage:p4:h:y"
 			"GFX_empty:p5:c7:h"
 			"GFX_byzantine_male_headgear_early:p5:c5"
 			"GFX_frankish_male_overlayer:p31"
@@ -627,12 +643,12 @@ spriteTypes = {
 			"GFX_frankish_female_undermain_hair_behind:p33:h"
 			"GFX_frankish_female_overlayer_behind:p32"
 			"GFX_character_special_crowns_behind:p19"
-			"GFX_byzantine_female_hair_behind:p1:h:y"
+			"GFX_southmexican_female_hair_behind:p1:h:y"
 			"GFX_chinese_female_jewelry_behind:p16"
 			"GFX_southmexican_female_base:p2"
 			"GFX_southmexican_female_neck:d0"
 			"GFX_southmexican_female_chin:d1"
-		"GFX_character_mesoamerican_female_physique:p21:y"
+		"GFX_character_southmexican_female_physique:p21:y"
 			"GFX_southmexican_female_cheeks:d4"
 			"GFX_southmexican_female_mouth:d2"
 			"GFX_character_harelip_muslim:p24"
@@ -659,10 +675,10 @@ spriteTypes = {
 			"GFX_character_possessed:p30"
 			"GFX_character_eyepatch:p13:y:o32x63"
 			"GFX_character_mask:p12:y:o40x45"
-			"GFX_serbsouthslavic_female_clothes:p3:c2"
+			"GFX_southmexican_female_clothes:p3:c2"
 			"GFX_byzantine_female_headgear_mid_early:p5:c3"
 			"GFX_character_special_crowns_mid:p19"
-			"GFX_byzantine_female_hair:p1:h:y"
+			"GFX_southmexican_female_hair:p1:h:y"
 			;"GFX_turkish_female_hair:p1:h:y"
 			"GFX_empty:p5:c7:h"
 			"GFX_frankish_female_undermain_hair:p33:h"
@@ -735,7 +751,7 @@ spriteTypes = {
 			"GFX_southmexican_female_base_midage:p2"
 			"GFX_southmexican_female_neck_midage:d0"
 			"GFX_southmexican_female_chin_midage:d1"
-			"GFX_character_mesoamerican_female_physique:p21:y"
+			"GFX_character_southmexican_female_physique:p21:y"
 			"GFX_southmexican_female_cheeks_midage:d4"
 			"GFX_southmexican_female_mouth_midage:d2"
 			"GFX_character_harelip_muslim:p24"
@@ -833,7 +849,7 @@ spriteTypes = {
 			"GFX_southmexican_female_base_oldage:p2"
 			"GFX_southmexican_female_neck_oldage:d0"
 			"GFX_southmexican_female_chin_oldage:d1"
-			"GFX_character_mesoamerican_female_physique:p21:y"
+			"GFX_character_southmexican_female_physique:p21:y"
 			"GFX_southmexican_female_cheeks_oldage:d4"
 			"GFX_southmexican_female_mouth_oldage:d2"
 			"GFX_character_harelip_muslim:p24"
