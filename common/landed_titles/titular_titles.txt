@@ -4628,6 +4628,33 @@ e_khoakineren = {
 	creation_requires_capital = no	
 }
 
+e_joshuan = {
+	color = { 191 141 67 }
+	color2={ 210 50 20 }
+	capital = 2075 #Bartsow
+	
+	culture = joshuan
+	allow = {
+		NOT = { religion = cetic }
+		NOT = {
+			has_game_rule = {
+				name = cultural_empires
+				value = off
+			}
+		}
+		war = no
+		NOT = { tier = emperor }
+		culture = joshuan
+		OR = {
+			realm_size = 150
+			e_joshuan = { OR = { is_titular = no has_holder = yes } }
+		}
+	}
+	short_name = yes
+	
+	creation_requires_capital = no	
+}
+
 e_meseteno = {
 	color = {174 220 194}
 	color2={ 210 50 20 }
