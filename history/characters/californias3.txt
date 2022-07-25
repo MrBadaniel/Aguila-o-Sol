@@ -196,6 +196,9 @@
 			type=joseph
 			has_dlc="Holy Fury"
 		}
+			effect_even_if_dead = {
+			set_special_character_title = SAINT_TITLE
+		}
 	}
 	2258.5.4={death={
 			death_reason=death_battle_duel #Murdered in combat.
@@ -5020,6 +5023,7 @@
     learning=11
     trait=grey_eminence
 	trait=crusader_king
+	trait=charitable
     trait=zealous
     trait=erudite
     trait=envious
@@ -5053,16 +5057,126 @@
     2316.10.18={death=yes}
 }
 
-#2316.10.18={
-#	holder=1802181
-#}
+1802180={
+	name="Constantius"
+	disallow_random_traits=yes
+	culture=west_slavic
+	dynasty=5001227 #Philippus
+	father=1802179
+    religion=sedevacantist
+    martial=5
+    diplomacy=5
+    stewardship=5
+    intrigue=5
+    learning=5
+    trait=grey_eminence
+	trait=strategist
+    trait=just
+    trait=ambitious
+    trait=shrewd
+	trait=paranoid
+	give_nickname=nick_the_golden_mouthed
+    2251.9.20={birth=yes
+	culture=joshuan}
+    2316.10.18={death=yes}
+}
 
-#Heraclius I Philippus 2284.3.8 to 2344.12.14 took Berdoo/Joshua Tree, Palm Springs and Antelope for six days 2337.10.18
-#robust stubborn uncouth just brave  nick_the_golden_mouthed
+1802181={
+	name="Ignacio"
+	culture=bayfolk
+	religion=sedevacantist
+	trait=just
+	trait=devout
+	trait=saint
+	trait=diligent
+	trait=erudite
+	trait=gregarious
+	trait=mastermind_theologian
+	trait=honest
+	trait=humble
+	give_nickname=nick_the_dove
+	2327.10.21={birth=yes
+			effect_even_if_dead = {
+			set_special_character_title = SAINT_TITLE
+		}
+	}
+	2408.4.13={death={
+			death_reason=death_execution_wine #Executed by last Areus king.
+			killer=2500008
+		}
+	}
+}
 
-#Constantius III 2308.10.1 to 2345.2.5 dies to Howard the Worm. 
-#stubborn wroth dull brave 
+1802182={
+	name="Heraclius"
+	disallow_random_traits=yes
+	culture=west_slavic
+	dynasty=5001227 #Philippus
+	father=1802180
+    religion=sedevacantist
+    martial=10
+    diplomacy=5
+    stewardship=5
+    intrigue=5
+    learning=5
+    trait=brilliant_strategist
+	trait=robust
+    trait=stubborn
+    trait=uncouth
+    trait=just
+	trait=brave
+    2284.3.8={birth=yes
+	culture=joshuan}
+    2344.12.14={death=yes}
+}
 
+1802183={
+	name="Constantius"
+	disallow_random_traits=yes
+	culture=west_slavic
+	dynasty=5001227 #Philippus
+	father=1802182
+    religion=sedevacantist
+    diplomacy=5
+    stewardship=5
+    intrigue=5
+    learning=5
+    trait=tough_soldier
+	trait=dull
+	trait=uncouth
+    trait=wroth
+    trait=brave
+    trait=just
+	trait=stubborn
+    2308.10.1={birth=yes
+	culture=joshuan}
+    2345.2.5={death={
+			death_reason=death_battle #Murdered in combat.
+			killer=1384058
+		}
+	}
+}
 
-
+1802184={
+	name="Tiberius"
+	disallow_random_traits=yes
+	culture=west_slavic
+	dynasty=5001227 #Philippus
+	father=1802182
+    religion=sedevacantist
+    diplomacy=5
+    stewardship=8
+    intrigue=8
+    learning=5
+    trait=fortune_builder
+	trait=shrewd
+	trait=weak
+    trait=charitable
+    trait=kind
+    trait=temperate
+	give_nickname=nick_the_pale
+    2310.1.10={birth=yes
+	culture=joshuan}
+    2365.9.2={death=yes}
+}
 #dahijbjbcdb #daflaaddbas
