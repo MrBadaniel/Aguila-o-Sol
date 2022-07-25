@@ -12124,7 +12124,20 @@ coat_of_arms = {
 		}
 	}
 }
-1850085= { name="Irving" culture=angeleno used_for_random=no }
+1850085= { name="Irving" culture=angeleno used_for_random=no 
+	coat_of_arms = {
+		religion = imamite
+		template = 0
+		layer = {
+			texture = 0
+			texture_internal = 7
+			emblem = 0
+			color = 2
+			color = 1
+			color = 0
+		}
+	}
+}
 
 1851000 = { name="Murphy" culture=valleyan }
 1851001 = { name="Lassiter" culture=valleyan }

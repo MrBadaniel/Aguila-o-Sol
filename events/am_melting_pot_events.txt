@@ -1390,3 +1390,70 @@ character_event = {
 		culture = menomex
 	}
 }
+
+# Province adopts joshuan culture
+province_event = {
+	id = meltingpot.20
+	desc = EVTDESC_melting_pot_20
+	picture = GFX_evt_stone_church
+	border = GFX_event_normal_frame_diplomacy
+	
+	trigger = {
+		OR = {
+			culture_group = californian
+			culture_group = norteno
+			culture_group = west_anglo
+		}
+			k_princedom_mojave = {
+				is_titular = no
+			}
+		NOT = { culture = joshuan }
+		any_demesne_province = {
+			region = custom_former_kingdom_mojave
+			OR = {
+				culture_group = californian
+				culture_group = norteno
+				culture_group = west_anglo
+			}
+			any_province_holding = {
+				NOT = { holding_type = nomad }
+			}
+		}
+		year = 2680 #doesn't happen unless Orientalism survives long enough
+		NOT = { year = 2770 }
+	}
+	
+	mean_time_to_happen = {
+		months = 600
+		modifier = {
+			factor = 0.3
+			OR = {
+				has_game_rule = {
+					name = culture_conversion
+					value = faster_melting_pots
+				}
+				has_game_rule = {
+					name = culture_conversion
+					value = faster_melting_pots_and_slower_normal
+				}
+			}
+		}
+	}
+
+	option = {
+		name = EVTOPTA_melting_pot_20
+		trigger = {
+			NOT = {
+				owner = { culture = joshuan }
+			}
+		}
+		culture = joshuan
+	}
+	option = {
+		name = EVTOPTB_melting_pot_20
+		trigger = {
+			owner = { culture = joshuan }
+		}
+		culture = joshuan
+	}
+}
