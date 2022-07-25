@@ -4536,9 +4536,9 @@
 	intrigue=5
 	diplomacy=5
 	trait=midas_touched
+	trait=way_book
 	trait=adopted_child
 	trait=honest
-	trait=way_dove
 	trait=shrewd
 	trait=kind
 	trait=diligent
@@ -4811,7 +4811,7 @@
     trait=brawny
     trait=diligent
     2588.1.1={birth=yes
-	culture=valleyan}
+	culture=battleborn}
 	2610.1.1={add_spouse=1802170}
     2655.1.1={death=yes}
 }
@@ -5012,27 +5012,56 @@
 	culture=west_slavic
 	dna="kqrlpezhbnd"
 	dynasty=5001227 #Philippus
-    religion=nazarene
+    religion=sedevacantist
     martial=5
     diplomacy=5
     stewardship=5
     intrigue=5
     learning=11
-    trait=charismatic_negotiator
+    trait=grey_eminence
 	trait=crusader_king
     trait=zealous
     trait=erudite
     trait=envious
 	trait=ambitious
-	trait=learned
     2224.1.19={birth=yes
 	culture=joshuan}
     2296.9.1={death=yes}
 }
 
-Crusader King Sedevacantist zealous learned envious ambitious erudite 
+1802180={
+	name="Constantius"
+	disallow_random_traits=yes
+	culture=west_slavic
+	dynasty=5001227 #Philippus
+	father=1802179
+    religion=sedevacantist
+    martial=5
+    diplomacy=5
+    stewardship=5
+    intrigue=5
+    learning=5
+    trait=grey_eminence
+	trait=strategist
+    trait=just
+    trait=ambitious
+    trait=shrewd
+	trait=paranoid
+	give_nickname=nick_the_golden_mouthed
+    2251.9.20={birth=yes
+	culture=joshuan}
+    2316.10.18={death=yes}
+}
 
-Constantius the Golden Mouthed Philippus II 2251.9.20 to 2301.10.18 just ambitious shrewd paranoid 
+#2316.10.18={
+#	holder=1802181
+#}
+
+#Heraclius I Philippus 2284.3.8 to 2344.12.14 took Berdoo/Joshua Tree, Palm Springs and Antelope for six days 2337.10.18
+#robust stubborn uncouth just brave  nick_the_golden_mouthed
+
+#Constantius III 2308.10.1 to 2345.2.5 dies to Howard the Worm. 
+#stubborn wroth dull brave 
 
 
 

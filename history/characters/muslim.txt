@@ -2236,7 +2236,10 @@
 	trait=diligent
 	father=1384053
 	2197.12.3={birth=yes}
-	2255.7.21={death=yes}
+	2247.4.20={death={
+		death_reason=death_siege
+		killer=1802179
+	}}
 }
 
 1384055={ #duke of mojave and count of blythe
@@ -2289,7 +2292,7 @@
 }
 
 1384058={ #duke of mojave and count of blythe
-	name="Zackary"
+	name="Zachary"
 	dynasty=1864101 #Hall
 	culture=anjalusi
 	religion=imamite
@@ -5422,10 +5425,8 @@ name="Don"
 	trait=charitable
 	trait=sympathy_pagans
 	trait=sympathy_oldworld
-	trait=legendary
 	father=2200216
 	disallow_random_traits=yes
-	occluded=yes
 	culture=german
 	religion=evangelical
 	2184.12.5={
@@ -5436,7 +5437,10 @@ name="Don"
 			set_character_flag=physique
 		}
 	}
-	2250.11.7={death=yes}
+	2247.4.20={death={
+		death_reason=death_siege
+		killer=1802179
+	}}
 }
 2200218={
 	name="Trinity" #Briton
