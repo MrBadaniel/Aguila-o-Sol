@@ -1401,7 +1401,6 @@ province_event = {
 	trigger = {
 		OR = {
 			culture_group = californian
-			culture_group = norteno
 			culture_group = west_anglo
 		}
 			k_princedom_mojave = {
@@ -1411,9 +1410,9 @@ province_event = {
 		any_demesne_province = {
 			region = custom_former_kingdom_mojave
 			OR = {
-				culture_group = californian
-				culture_group = norteno
-				culture_group = west_anglo
+				culture = angeleno
+				culture = arixan
+				culture = battleborn
 			}
 			any_province_holding = {
 				NOT = { holding_type = nomad }
