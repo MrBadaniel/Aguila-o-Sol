@@ -1,0 +1,32 @@
+#
+# List of options showing in the Game Rules screen
+#
+# format is:
+# rule_token = {
+#	name = "TEXT_KEY_FOR_NAME"
+#	desc = "TEXT_KEY_FOR_LONG_DESC"
+#	group = "TEXT_KEY_FOR_GROUP"					# Used for filtering. A single rule can be in multiple groups 
+#	alt_start_default = option_name					# Default value in alt start. If not set, defaults 
+#	option = {										# please note that the first option is always the default option
+#		name = option_token
+#		text = "TEXT_KEY_FOR_OPTION_NAME"
+#		achievements = no							# by default achievements = yes, allows or disallows achievements
+#		alt_start_achievements = no					# by default alt_start_achievements = yes, allows or disallows achievements in alt start. Note that it defaults to yes even when achievements = no
+#	}
+# }
+aos_justo_evtchain = {
+	name = "RULE_JUSTO_EVETCHAIN"
+	group = "RULE_GROUP_RAILROADING"
+	
+	alt_start_default = off
+	option = {
+		name = off
+		text = "RULE_OPTION_OFF"
+		desc = "RULE_JUSTO_EVETCHAIN_OFF_DESC"
+	}
+	option = {
+		name = historical
+		text = "RULE_OPTION_HISTORICAL"
+		desc = "RULE_JUSTO_EVETCHAIN_HISTORICAL_DESC"
+	}
+}

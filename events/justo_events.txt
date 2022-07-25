@@ -1,0 +1,334 @@
+namespace = justo
+
+character_event = { # event to start the main event chain in a few days
+	id = justo.0
+	
+	is_triggered_only = yes
+	hide_window = yes
+	
+	trigger = {
+		has_game_rule = {
+			name = aos_justo_evtchain
+			value = historical
+		}
+		has_landed_title = d_cristo_rey #fire from the prelate cause he always there
+		any_character = {
+			has_character_flag = the_justo_armas
+			is_alive = yes
+		}
+		c_6900449 = {
+			has_landed_title = c_chalatenango
+		}
+	}
+	
+	immediate = {
+		ROOT = { save_event_target_as = the_prelate }
+		narrative_event = { id = justo.1  days = 20 random = 10 }
+	}
+}
+
+narrative_event = { #prelate had a vision event
+	id = justo.1
+	title = "justo.1.name"
+	desc = justo.1.desc
+	major = yes
+	
+	only_playable = yes
+	#
+	is_triggered_only = yes
+	
+	trigger = {
+		any_character = {
+			has_character_flag = the_justo_armas
+			is_alive = yes
+		}
+	}
+	
+	immediate = {
+		c_6900449 = { character_event = { id = justo.2 days = 20 random = 10 } }
+	}
+	
+	option = {
+		name = "EVTOPTA_justo1" #response from Cristeros
+		trigger = {
+			religion = cristo_rey
+		}
+	}
+	option = {
+		name = "EVTOPTB_justo1" #response from other Christians
+		trigger = {
+			NOT = { religion = cristo_rey }
+			religion_group = christian
+		}
+	}
+	option = {
+		name = "EVTOPTC_justo1" #response from non-christians
+		trigger = {
+			NOT = { religion_group = christian }
+		}
+	}	
+}
+
+character_event = { #creates the prelate's envoy
+	id = justo.2
+	hide_window = yes
+	is_triggered_only = yes
+	
+	only_playable = yes
+	religion_group = christian
+	is_triggered_only = yes
+	
+	trigger = {
+		has_character_flag = the_justo_armas
+	}
+	
+	immediate = {
+		create_character = {
+			name = "Nepomuceno"
+			dynasty = 4201113
+			religion = cristo_rey
+			culture = abajeno
+			historical = yes
+			trait = grey_eminence
+			trait = ambitious
+			trait = diligent
+			trait = zealous
+		}
+	
+		new_character = {
+			set_character_flag = no_court_invites
+			set_character_flag = ignore_refund
+			set_character_flag = is_prelate_envoy
+			save_event_target_as = prelate_envoy
+			character_event = { id = justo.3 days = 1 }
+		}	
+	}
+}
+
+character_event = {
+	id = justo.3
+	has_dlc = "Jade Dragon"
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		FROM = {
+			character_event = { id = justo.4 days = 1 }
+		}
+	}
+}
+
+narrative_event = { #the prelate's envoy at my court!
+	id = justo.4
+	title = "justo.4.name"
+	desc = justo.4.desc
+	
+	only_playable = yes
+	religion_group = christian
+	is_triggered_only = yes
+	
+	trigger = {
+		has_character_flag = the_justo_armas
+	}
+	
+	option = {
+		name = "EVTOPT_justo4"
+		event_target:prelate_envoy = {
+			add_friend = ROOT
+		}		
+		hidden_tooltip = {
+			d_cristo_rey = {
+				holder_scope = {
+					narrative_event = { id = justo.5 days = 15 }
+				}
+			}
+		}
+	}
+}
+
+narrative_event = { #the Prelate's Sails Away
+	id = justo.5
+	title = "justo.5.name"
+	desc = justo.5.desc
+	
+	major = yes
+	only_playable = yes
+	is_triggered_only = yes
+	
+	portrait = d_cristo_rey
+	
+	trigger = {
+		has_landed_title = d_cristo_rey #fire from the prelate cause he always there
+		any_character = {
+			has_character_flag = the_justo_armas
+			is_alive = yes
+			religion_group = christian
+		}
+	}
+	
+	immediate = {
+		d_cristo_rey = {
+			holder_scope = {
+				add_trait = travelling
+			}
+		}
+		c_6900449 = { narrative_event = { id = justo.6 days = 5} }
+	}
+	
+	option = {
+		name = "EVTOPTA_justo5" #response from Cristeros
+		trigger = {
+			religion = cristo_rey
+		}
+	}
+	option = {
+		name = "EVTOPTB_justo5" #response from other Christians
+		trigger = {
+			NOT = { religion = cristo_rey }
+			NOT = { has_character_flag = the_justo_armas }
+			religion_group = christian
+		}
+	}
+	option = {
+		name = "EVTOPTC_justo5" #response from non-christians
+		trigger = {
+			NOT = { religion_group = christian }
+		}
+	}
+	option = {
+		name = "EVTOPTD_justo5" #justo response
+		trigger = {
+			has_character_flag = the_justo_armas
+			religion_group = christian
+		}
+		custom_tooltip = {
+			text = EVTOPTD_justo5_TT
+		}
+	}
+}
+
+narrative_event = { #an offer you can refuse
+	id = justo.6
+	title = "justo.6.name"
+	desc = justo.6.desc
+	
+	only_playable = yes
+	religion_group = christian
+	is_triggered_only = yes
+	
+	trigger = {
+		has_character_flag = the_justo_armas
+		is_incapable = no
+		prisoner = no
+	}
+	
+	option = { #accept the offer
+		name = EVTOPTA_justo6
+		custom_tooltip = {
+			text = EVTOPTA_justo6_TT
+			add_claim = k_mexico
+			
+			hidden_effect = {
+				k_justo = {
+					grant_title = ROOT
+				}
+				d_salvador = { 
+					holder_scope = {
+						grant_title_no_opinion = c_chalatenango
+					}
+				}
+				narrative_event = { id = justo.30 days = 15 }
+			}
+		}
+	}
+	option = { #decline the offer
+		name = EVTOPTB_justo6
+		custom_tooltip = {
+			text = EVTOPTA_justo6_TT
+			add_claim = k_mexico
+			hidden_tooltip = {
+				narrative_event = { id = justo.7 days = 15 }
+			}
+		}
+	}
+	option = { #decline the offer and imprison the cristeros
+		name = EVTOPTC_justo6
+		event_target:prelate_envoy = {
+			remove_friend = ROOT
+			imprison = ROOT
+			opinion = {
+				modifier = opinion_traitor
+				who = ROOT
+				years = 100
+			}
+		}
+		event_target:the_prelate = {
+			remove_trait = travelling
+			imprison = ROOT
+			opinion = {
+				modifier = opinion_traitor
+				who = ROOT
+				years = 100
+			}
+		}
+		custom_tooltip = {
+			text = EVTOPTA_justo6_TT
+			hidden_effect = {
+				k_mexico = {
+					holder_scope = {
+						narrative_event = { id = justo.10 days = 1 }
+					}
+				}
+			}
+		}
+	}
+
+}
+
+narrative_event = { #The Failure of a Prelate
+	id = justo.7
+	title = "justo.7.name"
+	desc = justo.7.desc
+	
+	major = yes
+	only_playable = yes
+	is_triggered_only = yes
+	
+	immediate = { 
+		cristo_rey = {
+			religion_authority = {
+				modifier = prelate_failure
+				years = 2
+			}
+		}
+	}
+	
+	option = {
+		name = "EVTOPTA_justo7" #response from Cristeros
+		trigger = {
+			religion = cristo_rey
+		}
+	}
+	option = {
+		name = "EVTOPTB_justo7" #response from other Christians
+		trigger = {
+			NOT = { religion = cristo_rey }
+			NOT = { has_character_flag = the_justo_armas }
+			religion_group = christian
+		}
+	}
+	option = {
+		name = "EVTOPTC_justo7" #response from non-christians
+		trigger = {
+			NOT = { religion_group = christian }
+		}
+	}
+	option = {
+		name = "EVTOPTD_justo7" #justo response
+		trigger = {
+			has_character_flag = the_justo_armas
+			religion_group = christian
+		}
+	}
+}
+
