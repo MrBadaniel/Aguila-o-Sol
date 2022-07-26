@@ -5563,37 +5563,43 @@
 }
 
 1802202={
-	name="Eugene"
+	name="Próspero"
 	disallow_random_traits=yes
-	culture=dixie
-    religion=charismatic
+	dynasty=5001124
+	culture=chilango
+	father=6900066
+	mother=6900067
+    religion=sacred_heart
 	trait=skilled_tactician
+	trait=marian_san_pascual
 	trait=trickster
 	trait=dorado
 	trait=cynical
 	trait=lustful
 	trait=drunkard
-	give_nickname=nick_the_fox
-    2555.3.3={birth=yes
-	culture=texan}
+    2577.3.13={birth=yes
+	culture=chilango}
     2612.4.4={death=yes}
 }
 
 1802203={
-	name="Chloe"
+	name="Mía"
 	disallow_random_traits=yes
-	culture=dixie
+	dynasty=5001124
 	father=1802202
+	mother=1802205
 	female=yes
-    religion=charismatic
+    religion=sacred_heart
+	trait=marian_san_charbel
 	trait=patient
 	trait=honest
 	trait=kind
 	trait=fortune_builder
-    2595.9.8={birth=yes
-	culture=texan}
+	culture=chilango
+    2598.9.8={birth=yes
+	culture=chilango}
     2624.8.11={add_spouse=1802204}
-    2656.10.14={death=yes}
+    2650.10.14={death=yes}
 }
 
 1802204={
@@ -5619,6 +5625,26 @@
     2587.9.1={birth=yes
 	culture=angeleno}
     2645.2.22={death=yes}
+}
+
+1802205={
+	name="Patrocinia"
+	disallow_random_traits=yes
+	father=6900092
+	dynasty=5001134
+	culture=jarocho
+    religion=sacred_heart
+	trait=marian_guadalupe
+	female=yes
+	trait=intricate_webweaver
+	trait=bastard
+	trait=shrewd
+	trait=diligent
+	trait=ambitious
+    2578.3.3={birth=yes
+	culture=jarocho}
+    2597.2.11={add_spouse=1802202}
+    2615.4.4={death=yes}
 }
 
 #dahijbjbcdb #daflaaddbas

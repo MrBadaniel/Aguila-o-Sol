@@ -3303,7 +3303,7 @@ name="Guy"
 	}
 2500117={
 	name="Maximiliano"
-	culture=californiano
+	culture=chilango
 	dynasty=1851171 #invierno
 	religion=navegante
 	trait=fortune_builder
@@ -3311,7 +3311,9 @@ name="Guy"
 	trait=paranoid
 	trait=infirm
 	disallow_random_traits=yes
-	2305.8.1={birth=yes}
+	2305.8.1={birth=yes
+	culture=californiano
+	}
 	2353.1.1={add_spouse=2500113}
 	2353.8.1={death={
 			death_reason=death_murder_unknown
@@ -3387,7 +3389,7 @@ name="Don"
 	}
 2500122={
 	name="Elfie"
-	culture=joaquino
+	culture=tejano
 	dynasty=1851175 #Ballis
 	religion=sacred_heart#la_hermandad
 	trait=fortune_builder
@@ -3396,7 +3398,9 @@ name="Don"
 	trait=patient
 	trait=humble
 	disallow_random_traits=yes
-	2320.8.1={birth=yes}
+	2320.8.1={birth=yes
+	culture=joaquino
+	}
 	2365.3.1={add_spouse=2500113}
 	2367.10.1={death=yes}
 	}
@@ -3495,7 +3499,7 @@ name="Don"
 }
 2500128={
 	name="Rebecca"
-	culture=angeleno #culture and religion of mother, because father was already dead
+	culture=chilango #culture and religion of mother, because father was already dead
 	female=yes
 	dynasty=1851171 #invierno
 	religion=reform
@@ -3509,7 +3513,8 @@ name="Don"
 	trait=lustful
 	father=2500117
 	mother=2500113
-	2353.11.5={birth=yes} #born after her father was killed
+	2353.11.5={birth=yes
+	culture=angeleno} #born after her father was killed
 	2389.6.21={add_spouse=2500143}
 	2430.1.1={death=yes}
 }
@@ -3574,7 +3579,7 @@ name="Don"
 }
 2500132={
 	name="Julia"
-	culture=joaquino
+	culture=tejano
 	female=yes
 	dynasty=1851175 #Ballis
 	religion=sacred_heart#la_hermandad
@@ -3586,7 +3591,9 @@ name="Don"
 	trait=shrewd
 	father=2500122
 	mother=2500113
-	2367.1.1={birth=yes}
+	2367.1.1={birth=yes
+	culture=joaquino
+	}
 	2430.1.1={death=yes}
 }
 2500133={
