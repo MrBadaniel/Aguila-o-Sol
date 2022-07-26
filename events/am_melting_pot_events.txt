@@ -1409,6 +1409,8 @@ province_event = {
 		NOT = { culture = joshuan }
 		any_demesne_province = {
 			region = custom_former_kingdom_mojave
+			NOT = { province = c_riverside }
+			NOT = { province = c_palm_springs }
 			OR = {
 				culture = angeleno
 				culture = arixan
