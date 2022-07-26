@@ -332,3 +332,18 @@ narrative_event = { #The Failure of a Prelate
 	}
 }
 
+narrative_event = {
+	id = justo.10
+	title = "justo.10.name"
+	desc = justo.10.desc
+	
+	only_playable = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		has_landed_title = k_mexico
+	}
+	
+	
+
+}

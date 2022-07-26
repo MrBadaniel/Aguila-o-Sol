@@ -3912,8 +3912,10 @@
 #Acapulco Characters
 1810274={
 	name="Zenón" #sr barriga
-	dynasty=14080010
-	culture=calentano
+	dna="0gifj0kceb0"
+	properties="sk0flk000000000000000b00000000000000"
+	dynasty=14080001
+	culture=chilango
 	religion=cristo_rey
 	trait=fortune_builder
 	trait=is_fat
@@ -3921,24 +3923,27 @@
 	trait=wounded
 	trait=kind
 	disallow_random_traits = yes
-	2628.12.28={birth=yes}
+	2628.12.28={birth=yes culture=calentano}
 }
 1810275={
 	name="Febronio" #nhonho
-	dynasty=14080010
-	culture=calentano
+	dna="0gifj0kceb0"
+	dynasty=14080001
+	culture=chilango
 	religion=cristo_rey
 	trait=is_fat
 	trait=indolent
 	trait=willfull
 	father=1810274
 	disallow_random_traits = yes
-	2658.12.28={birth=yes}
+	2658.12.28={birth=yes culture=calentano}
 }
 1810276={
 	name="Ramón" #Ron Damón
 	dynasty=14080002
-	culture=altiplanense
+	dna="cjhfj0eaab0"
+	properties="sh0flk0000000000000000a0000000000000"
+	culture=trifinio
 	religion=fidencista
 	trait=flamboyant_schemer
 	trait=is_malnourished
@@ -3946,10 +3951,9 @@
 	trait=gregarious
 	trait=slothful
 	trait=humble
-	trait=lustful
 	father=1810277
 	disallow_random_traits = yes
-	2621.9.2={birth=yes}
+	2621.9.2={birth=yes culture=altiplanense}
 }
 1810277={
 	name="Rafael" #Ramóns Father
@@ -3966,8 +3970,9 @@
 1810278={
 	name="Neves" #Dona Neves
 	female=yes
+	dna="ab0e00i00c0"
 	dynasty=14080003
-	culture=altiplanense
+	culture=filastino
 	religion=fidencista
 	trait=charismatic_negotiator
 	trait=freckles
@@ -3978,13 +3983,14 @@
 	trait=charitable
 	health=12
 	disallow_random_traits = yes
-	2576.12.22={birth=yes}
+	2576.12.22={birth=yes culture=altiplanense}
 }
 1810279={
 	name="Maria Francisca" #chiquinha
 	female=yes
+	dna="ab0e00i00c0"
 	dynasty=14080002
-	culture=calentano
+	culture=filastino
 	religion=fidencista
 	trait=freckles
 	trait=quick
@@ -3993,7 +3999,7 @@
 	trait=playful
 	father=1810276
 	disallow_random_traits = yes
-	2658.12.22={birth=yes}
+	2658.12.22={birth=yes culture=calentano}
 }
 1810280={
 	name="Federico" #pai do quico
@@ -4045,6 +4051,7 @@
 	culture=calentano
 	religion=sacred_heart
 	trait=scholarly_theologian
+	trait=giant
 	trait=erudite
 	trait=proud
 	trait=patient
