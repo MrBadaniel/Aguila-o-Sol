@@ -1,0 +1,549 @@
+namespace = navegante
+
+
+############################################################################
+# Bloodthirsty Californians
+# Forcefully baptizing prisoners increases forced_baptized_points variable, unlocking tiered traits. It's like Viking traits, but for psychos.
+# Hidden on death event for the sacrifical victims.
+character_event = {
+	id = navegante.23430
+	hide_window = yes
+	trigger = { 
+		has_dlc = "Holy Fury"
+		death_sacrificed_trigger = yes
+		killer = { 
+			is_playable = yes
+			is_landed = yes
+			NOT = { trait = incapable }
+			OR = { 
+				has_religion_feature = religion_ritual_sacrifice
+				religion = aztec
+				religion = aztec_reformed
+			}
+		}
+	}
+	
+	is_triggered_only = yes
+
+	immediate = { 
+		killer = { 
+			#Bonus points first.
+			if = { #The gods appreciate your sacrifice.
+				limit = {
+					is_adult = no
+					ROOT = { is_child_of = PREV } 
+				}
+				change_variable = { which = forced_baptized_points value = 1 }
+			}
+			if = { #And a divine child is even better.
+				limit = {
+					is_adult = no
+					ROOT = { religion = PREV } 
+					OR = { 
+						has_religion_feature = religion_holy_family 
+						has_religion_feature = religion_feature_zun
+					} 
+				}
+				change_variable = { which = forced_baptized_points value = 1 }
+			}
+			if = { #A foreign religious head is also quite good.
+				limit = {
+					NOT = { religion = ROOT } 
+					controls_religion = yes
+				}
+				change_variable = { which = forced_baptized_points value = 2 }
+			}
+			if = { #A foreign emperor is also well accepted.
+				limit = {
+					NOT = { religion = ROOT } 
+					higher_tier_than = KING
+				}
+				change_variable = { which = forced_baptized_points value = 2 }
+			}
+			#Finally, a third point is added regardless in the following scripted effect, which will also trigger the events below, when the proper score is reached.
+			bloodthirsty_tiered_traits_effect = yes 
+		}
+	}
+}
+#Gained the Haemophiliac trait.
+character_event = {
+	id = navegante.23431
+	desc = EVTDESCAnavegante23431
+	picture = { 
+		trigger = { 
+			ROOT = { 
+				OR = {  
+					religion = navegante
+						AND = {
+						trait = marian_stella_maris
+						religion = sacred_heart
+					}
+				}
+			} 
+		} 
+		picture = GFX_evt_baptists_doing_baptisms
+	}
+	picture = { 
+		trigger = { 
+			ROOT = { 
+				NOR = {  
+					religion = navegante
+						AND = {
+						trait = marian_stella_maris
+						religion = sacred_heart
+					}
+				}
+			} 
+		} 
+		picture = GFX_evt_mortification_flesh
+	}
+	border = GFX_event_normal_frame_religion
+	
+	is_triggered_only = yes
+
+	trigger = {
+		NOT = { trait = levita }
+		OR = { 
+					religion = navegante
+						AND = {
+						trait = marian_stella_maris
+						religion = sacred_heart
+					}
+		}
+	}
+
+	immediate = { 
+		add_blood_splatter_effect = yes
+		add_trait = levita
+	}
+
+	option = { 
+		name = EVTOPTAnavegante23431
+		add_trait = levita
+		if = { 
+			limit = { NOR = { trait = kind trait = cruel } } 
+			random = { 
+				chance = 25 
+				add_trait = cruel 
+				hidden_tooltip = { character_event = { id = 38259 } }
+			} 
+		} 
+		if = { 
+			limit = { trait = kind } 
+			random = { 
+				chance = 25 
+				remove_trait = kind 
+				hidden_tooltip = { character_event = { id = 38307 } }
+			} 
+		} 
+		if = { 
+			limit = { trait = cynical } 
+			random = { chance = 25 remove_trait = cynical } 
+		}
+	}
+}
+#Gained the Haemophant trait.
+character_event = {
+	id = navegante.23432
+	desc = EVTDESCAnavegante23432
+	picture = { 
+		trigger = { 
+			ROOT = { 
+				OR = {  
+					religion = navegante
+						AND = {
+						trait = marian_stella_maris
+						religion = sacred_heart
+					}
+				}
+			} 
+		} 
+		picture = GFX_evt_baptists_doing_baptisms
+	}
+	picture = { 
+		trigger = { 
+			ROOT = { 
+				NOR = {  
+					religion = navegante
+						AND = {
+						trait = marian_stella_maris
+						religion = sacred_heart
+					}
+				}
+			} 
+		} 
+		picture = GFX_evt_mortification_flesh
+	}
+	border = GFX_event_normal_frame_religion
+	
+	is_triggered_only = yes
+
+	trigger = {
+		OR = { 
+					religion = navegante
+						AND = {
+						trait = marian_stella_maris
+						religion = sacred_heart
+					}
+		}
+		NOR = { 
+			trait = bloodthirsty_gods_2 
+			trait = bloodthirsty_gods_3
+		}
+	}
+	
+	immediate = { 
+		add_blood_splatter_effect = yes
+		add_trait = bloodthirsty_gods_2
+	}
+
+	option = { 
+		name = EVTOPTAnavegante23432
+		if = { 
+			limit = { trait = levita } 
+			remove_trait = levita
+		} 
+		add_trait = bloodthirsty_gods_2
+		if = { 
+			limit = { NOR = { trait = kind trait = cruel } } 
+			random = { 
+				chance = 50 
+				add_trait = cruel 
+				hidden_tooltip = { character_event = { id = 38259 } }
+			} 
+		} 
+		if = { 
+			limit = { trait = kind } 
+			random = { 
+				chance = 50 
+				remove_trait = kind 
+				hidden_tooltip = { character_event = { id = 38307 } }
+			} 
+		}
+		if = { 
+			limit = { trait = cynical } 
+			random = { 
+				chance = 50 
+				remove_trait = cynical 
+			} 
+		}
+	}
+}
+#Gained the Haemoarch trait.
+character_event = {
+	id = navegante.23433
+	desc = EVTDESCAnavegante23433
+	picture = { 
+		trigger = { 
+			ROOT = { 
+				OR = {  
+					religion = navegante
+						AND = {
+						trait = marian_stella_maris
+						religion = sacred_heart
+					}
+				}
+			} 
+		} 
+		picture = GFX_evt_baptists_doing_baptisms
+	}
+	picture = { 
+		trigger = { 
+			ROOT = { 
+				NOR = {  
+					religion = navegante
+						AND = {
+						trait = marian_stella_maris
+						religion = sacred_heart
+					}
+				}
+			} 
+		} 
+		picture = GFX_evt_mortification_flesh
+	}
+	border = GFX_event_normal_frame_religion
+	
+	is_triggered_only = yes
+
+	trigger = {
+		OR = { 
+					religion = navegante
+						AND = {
+						trait = marian_stella_maris
+						religion = sacred_heart
+					}
+		}
+		NOT = { 
+			trait = bloodthirsty_gods_3
+		}
+	}
+	immediate = { 
+		add_blood_splatter_effect = yes
+		add_trait = bloodthirsty_gods_3
+	}
+
+	option = { 
+		name = EVTOPTAnavegante23433
+		if = { 
+			limit = { trait = levita } 
+			remove_trait = levita
+		} 
+		if = { 
+			limit = { trait = bloodthirsty_gods_2 } 
+			remove_trait = bloodthirsty_gods_2
+		} 
+		add_trait = bloodthirsty_gods_3
+		if = { 
+			limit = { NOR = { trait = kind trait = cruel } } 
+			random = { 
+				chance = 75 
+				add_trait = cruel 
+				hidden_tooltip = { character_event = { id = 38259 } }
+			} 
+		}
+		if = { 
+			limit = { trait = kind } 
+			remove_trait = kind
+		}
+		if = { 
+			limit = { trait = cynical } 
+			remove_trait = cynical
+		}
+	}
+}
+#Gained the Bloodthirsty Bloodline.
+narrative_event = {
+	id = navegante.23434
+	title = EVTTITLE23434
+	desc = EVTDESCAnavegante23434
+	picture = { 
+		trigger = { 
+			ROOT = { 
+				OR = {  
+					religion = navegante
+						AND = {
+						trait = marian_stella_maris
+						religion = sacred_heart
+					}
+				}
+			} 
+		} 
+		picture = GFX_evt_baptists_doing_baptisms
+	}
+	picture = { 
+		trigger = { 
+			ROOT = { 
+				NOR = {  
+					religion = navegante
+						AND = {
+						trait = marian_stella_maris
+						religion = sacred_heart
+					}
+				}
+			} 
+		} 
+		picture = GFX_evt_mortification_flesh
+	}
+	border = GFX_event_narrative_frame_religion
+	sound = bloodline_added
+	
+	is_triggered_only = yes
+
+	trigger = {
+		OR = { 
+					religion = navegante
+						AND = {
+						trait = marian_stella_maris
+						religion = sacred_heart
+					}
+		}
+		NOT = { 
+			any_owned_bloodline = { # Not already has a Bloodthirsty bloodline.
+				has_bloodline_flag = bloodline_created_bloodthirsty
+			}
+		}
+	}
+
+	immediate = { 
+		add_blood_splatter_effect = yes
+		if = {
+			limit = {
+				ai = no
+			}
+			set_character_flag = achievement_bloody_line
+		}
+	}
+
+	option = {
+		name = EVTOPTAnavegante23434
+		hidden_tooltip = { 
+			if = { 
+				limit = { this_has_super_cool_nickname_trigger = no }
+				random_list = { 
+					20 = { 
+						give_nickname = nick_the_red_storm 
+					} 
+					20 = { 
+						give_nickname = nick_the_scarlet_hands 
+					} 
+					20 = { 
+						give_nickname = nick_the_blood_monger 
+					} 
+					20 = { 
+						give_nickname = nick_the_black_skull 
+					} 
+					20 = { 
+						give_nickname = nick_the_heart_eater 
+					} 
+					20 = { 
+						give_nickname = nick_the_slaughterer 
+					} 
+					20 = { 
+						give_nickname = nick_the_soul_flayer
+					} 
+					20 = { 
+						give_nickname = nick_the_spirit_stalker 
+					} 
+					10 = { 
+						give_nickname = nick_the_crimson_reaper 
+					} 
+					10 = { 
+						give_nickname = nick_the_dreaded
+					} 
+					5 = { 
+						give_nickname = nick_the_chest_buster 
+					} 
+				}
+			}
+		}
+		if = { 
+			limit = { is_female = no }
+			create_bloodline = {
+				type = bloodthirsty_male_bloodline
+			}
+			new_bloodline = {
+				set_description = "bloodline_desc_bloodthirsty_gods_bloodline"
+				random_list = { 
+					20 = { set_name = bloodline_bloodthirsty_name_random_a } #Randomize names to avoid too much repetition.
+					20 = { set_name = bloodline_bloodthirsty_name_random_b }
+					20 = { set_name = bloodline_bloodthirsty_name_random_c }
+					20 = { set_name = bloodline_bloodthirsty_name_random_d } 
+					20 = { set_name = bloodline_bloodthirsty_name_random_e } 
+					20 = { set_name = bloodline_bloodthirsty_name_random_f } 
+				}
+			}
+		}
+		if = { 
+			limit = { is_female = yes }
+			create_bloodline = {
+				type = bloodthirsty_female_bloodline
+			}
+			new_bloodline = {
+				set_description = "bloodline_desc_bloodthirsty_gods_bloodline"
+				random_list = { 
+					20 = { set_name = bloodline_bloodthirsty_name_random_a } #Randomize names to avoid too much repetition.
+					20 = { set_name = bloodline_bloodthirsty_name_random_b }
+					20 = { set_name = bloodline_bloodthirsty_name_random_c }
+					20 = { set_name = bloodline_bloodthirsty_name_random_d } 
+					20 = { set_name = bloodline_bloodthirsty_name_random_e } 
+					20 = { set_name = bloodline_bloodthirsty_name_random_f } 
+				}
+			}		
+		}
+		hidden_tooltip = { 
+			any_player = { 
+				limit = { 
+					NOT = { character = ROOT }
+					is_within_diplo_range = ROOT
+				}
+				narrative_event = { id = navegante.23435 }
+			}
+		}
+	}
+}
+
+#Inform players.
+narrative_event = {
+	id = navegante.23435
+	title = EVTTITLE23435
+	desc = {
+		trigger = {
+			OR = {
+					religion = navegante
+						AND = {
+						trait = marian_stella_maris
+						religion = sacred_heart
+					}
+			}
+		}
+		text = EVTDESCAnavegante23435
+	}
+	desc = {
+		trigger = {
+			NOR = {
+					religion = navegante
+						AND = {
+						trait = marian_stella_maris
+						religion = sacred_heart
+					}
+			}
+		}
+		text = EVTDESCBnavegante23435
+	}
+	picture = { 
+		trigger = { 
+			FROM = { 
+				OR = {  
+					religion = navegante
+						AND = {
+						trait = marian_stella_maris
+						religion = sacred_heart
+					}
+				}
+			} 
+		} 
+		picture = GFX_evt_baptists_doing_baptisms
+	}
+	picture = { 
+		trigger = { 
+			FROM = { 
+				NOR = {  
+					religion = navegante
+						AND = {
+						trait = marian_stella_maris
+						religion = sacred_heart
+					}
+				}
+			} 
+		} 
+		picture = GFX_evt_mortification_flesh
+	}
+	border = GFX_event_narrative_frame_religion
+	
+	is_triggered_only = yes
+
+	option = { 
+		name = EVTOPTAnavegante23435
+		trigger = { 
+			OR = {
+					religion = navegante
+						AND = {
+						trait = marian_stella_maris
+						religion = sacred_heart
+					}
+			}
+		}
+	}
+	option = { 
+		name = EVTOPTBnavegante23435
+		trigger = { 
+			NOR = {
+					religion = navegante
+						AND = {
+						trait = marian_stella_maris
+						religion = sacred_heart
+					}
+			}
+		}
+	}
+}
