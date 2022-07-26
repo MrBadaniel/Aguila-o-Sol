@@ -4135,7 +4135,7 @@
 
 1802143={
 	name="Bianca"
-	culture=italian
+	culture=west_slavic
 	female=yes
 	religion=sacred_heart#la_hermandad
 	trait=charismatic_negotiator
@@ -4154,8 +4154,8 @@
 1802144={
 	name="Filomeno"
 	dynasty=1851045#Gonzalez
-	#dna="dahijbjbcdb"
-	culture=neomexicano
+	dna="dahijbjbcdb"
+	culture=west_slavic
 	father=1802142
 	mother=1802143
 	religion=sacred_heart#la_hermandad
@@ -5179,4 +5179,216 @@
 	culture=joshuan}
     2365.9.2={death=yes}
 }
+
+1802185={
+	name="Heraclius"
+	disallow_random_traits=yes
+	culture=west_slavic
+	dynasty=5001227 #Philippus
+	father=1802184
+    religion=sedevacantist
+    diplomacy=5
+    stewardship=5
+    intrigue=8
+    learning=5
+    trait=charismatic_negotiator
+	trait=just
+	trait=gregarious
+    trait=charitable
+    trait=diligent
+    2341.8.19={birth=yes
+	culture=joshuan}
+    2388.1.4={add_spouse=2500132}	
+    2404.5.22={death=yes}
+}
+
+1802186={
+	name="Gaius"
+	disallow_random_traits=yes
+	culture=west_slavic
+	dynasty=5001227 #Philippus
+	father=1802185
+	mother=2500132
+    religion=sedevacantist
+    diplomacy=5
+    stewardship=5
+    intrigue=5
+    learning=1
+    trait=thrifty_clerk
+	trait=musician
+	trait=stubborn
+    trait=slothful
+	trait=drunkard#pothead
+	trait=trusting
+	give_nickname=nick_the_fried_fifer
+    2388.11.9={birth=yes
+	culture=joshuan}
+	2431.6.6={death={
+		death_reason=death_siege
+		killer=2500011
+	}}
+}
+
+1802187={
+	name="Claudius"
+	disallow_random_traits=yes
+	culture=west_slavic
+	dynasty=5001227 #Philippus
+	father=1802185
+	mother=2500132
+    religion=sedevacantist
+    diplomacy=5
+    stewardship=5
+    intrigue=5
+    learning=2
+    trait=fortune_builder
+	trait=musician
+	trait=stubborn
+    trait=slothful
+	trait=kind
+	give_nickname=nick_the_foolhardy_fiddler
+    2391.4.19={birth=yes
+	culture=joshuan}
+	2431.6.20={death={
+		death_reason=death_siege
+		killer=1910100
+	}}
+}
+
+1802188={
+	name="Tiberius"
+	disallow_random_traits=yes
+	culture=west_slavic
+	dynasty=5001227 #Philippus
+	father=1802185
+	mother=2500132
+    religion=nazarene
+    diplomacy=5
+    stewardship=5
+    intrigue=5
+    learning=12
+    trait=midas_touched
+	trait=nz_acolyte
+	trait=musician
+	trait=shrewd
+    trait=diligent
+	trait=erudite
+	give_nickname=nick_the_piano_man
+    2396.6.20={birth=yes
+	culture=joshuan}
+    2483.1.12={death=yes}
+}
+
+1802189={
+	name="Columbus"
+	disallow_random_traits=yes
+	culture=west_slavic
+	dynasty=5001227 #Philippus
+	father=1802188
+    religion=nazarene
+    diplomacy=5
+    stewardship=5
+    intrigue=5
+    learning=5
+    trait=skilled_tactician
+	trait=nz_acolyte
+	trait=devout
+	trait=chaste
+    trait=shy
+	trait=brave
+    2427.4.14={birth=yes
+	culture=joshuan}
+    2479.9.11={death=yes}
+}
+
+1802190={
+	name="Butch"
+	disallow_random_traits=yes
+	culture=west_slavic
+	dynasty=5001227 #Philippus
+	father=1802189
+    religion=nazarene
+    diplomacy=5
+    stewardship=5
+    intrigue=5
+    learning=5
+	trait=ambitious
+	trait=nz_acolyte
+	trait=slothful
+	trait=tough_soldier
+	trait=kind
+	trait=temperate
+    2454.9.18={birth=yes
+	culture=joshuan}
+    2512.2.4={death=yes}
+}
+
+1802191={
+	name="Harrison"
+	disallow_random_traits=yes
+	culture=west_slavic
+	dynasty=5001227 #Philippus
+	father=1802190
+    religion=nazarene
+    diplomacy=5
+    stewardship=5
+    intrigue=5
+    learning=5
+	trait=nz_acolyte
+	trait=charismatic_negotiator		
+	trait=chaste
+	trait=charitable
+	trait=humble
+	trait=patient
+    2474.4.20={birth=yes
+	culture=angeleno}
+    2531.8.4={death=yes}
+}
+
+1802192={
+	name="César"
+	disallow_random_traits=yes
+	culture=west_slavic
+	dynasty=5001227 #Philippus
+	father=1802191
+    religion=nazarene
+    diplomacy=5
+    stewardship=5
+    intrigue=5
+    learning=5
+	trait=nz_acolyte
+    trait=martial_cleric
+	trait=lustful
+	trait=zealous
+    trait=proud 
+    trait=content
+    2499.4.19={birth=yes
+	culture=angeleno}
+    2558.8.1={death=yes}
+}
+
+1802193={
+	name="Ella"
+	disallow_random_traits=yes
+	culture=greek
+	female=yes
+    religion=nazarene
+    diplomacy=5
+    stewardship=5
+    intrigue=5
+    learning=5
+	trait=nz_seraph
+    trait=underhanded_rogue
+	trait=homosexual
+	trait=honest
+	trait=cynical
+    trait=gregarious 
+    2502.7.26={birth=yes
+	culture=angeleno}
+    2562.8.1={death=yes}
+}
+
+
+
+
 #dahijbjbcdb #daflaaddbas
