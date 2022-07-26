@@ -91,17 +91,56 @@
 }
 
 1803006={
-	name="Laveau"
-	dynasty=1795071 # de Sedella
-	culture=tuskegean
-	religion=voodoo
-	trait=craven
-	trait="scholarly_theologian"
-	2630.1.1={birth=yes
-		culture=creole}
+	name="Rémy"
+	dynasty=14090000 # Lebeau
+	dna="bfehd0c0db0"
+	properties="wm0eek000000000000000000000000000000"
+	culture=cajun
+	religion=catholic
+	trait=shrewd
+	trait=deceitful
+	trait=gamer
+	trait=elusive_shadow
+	#disallow_random_traits = yes
+	2642.5.1={ 
+		birth=yes  
+		effect={
+			set_character_flag=diversity
+			set_character_flag=physique
+		}
+	}
+	2660.8.15={ give_nickname=nick_the_gambit }
+	2664.7.19={
+		effect={ 
+			add_lover=1803007
+		}
+	}
 	2700.1.1={death=yes}
 }
-
+1803007={
+	name="Anna Marie"
+	female=yes
+	dna="bfdgf0abef0"
+	properties="af000d0000000000000000000000000000000"
+	culture=deitsch
+	religion=evangelical
+	trait=ambitious
+	trait=fair
+	trait=groomed
+	trait=robust
+	trait=underhanded_rogue	
+	2644.5.1={ birth=yes culture=dixie effect={ dynasty=none }
+	effect={
+			set_character_flag=diversity
+			set_character_flag=physique
+		}
+	}
+	2664.7.19={
+		effect={ 
+			add_lover=1803006
+		}
+	}
+}
 1803010={
 	name="Jessie"
 	dynasty=1787024
