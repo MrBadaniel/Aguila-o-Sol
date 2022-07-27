@@ -13141,9 +13141,9 @@ character_event = {
 				} 
 			}
 			AND =  { 
-				has_landed_title = e_dominionist
+				has_landed_title = k_dominionist
 				any_artifact = { artifact_type = bullet_crown }
-				e_dominionist = { 
+				k_dominionist = { 
 					current_heir = { 
 						NOT = { dynasty = ROOT }
 					} 
@@ -13335,10 +13335,10 @@ character_event = {
 		}
 		if = { 
 			limit = { 
-				has_landed_title = e_dominionist
+				has_landed_title = k_dominionist
 				any_artifact = { artifact_type = bullet_crown }
 			}
-			e_dominionist = { 
+			k_dominionist = { 
 				current_heir = { save_event_target_as = worthy_bullet_crown }
 			}
 			player_heir = { save_event_target_as = unworthy_bullet_crown }
@@ -14433,7 +14433,7 @@ character_event = {
 				FROMFROM = { any_artifact = { artifact_type = crown_california } } 
 			} 
 			AND = {
-				FROM = { title = e_dominionist } 
+				FROM = { title = k_dominionist } 
 				FROMFROM = { any_artifact = { artifact_type = bullet_crown } } 
 			} 
 			AND = {
@@ -14517,7 +14517,7 @@ character_event = {
 		}
 		if = {
 			limit = {
-				FROM = { title = e_dominionist } 
+				FROM = { title = k_dominionist } 
 				FROMFROM = { any_artifact = { artifact_type = bullet_crown } } 
 			} 
 			FROMFROM = { 
@@ -14772,7 +14772,7 @@ character_event = {
 				any_artifact = { artifact_type = crown_california }
 			}
 			AND =  { 
-				has_landed_title = e_dominionist
+				has_landed_title = k_dominionist
 				any_artifact = { artifact_type = bullet_crown }
 			}
 
@@ -14859,7 +14859,7 @@ character_event = {
 		}
 		if =  { 
 			limit =  { 
-				has_landed_title = e_dominionist
+				has_landed_title = k_dominionist
 				any_artifact = { artifact_type = bullet_crown }
 			}
 			add_trait = dead_bullet_crown
