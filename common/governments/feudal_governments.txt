@@ -649,6 +649,12 @@ feudal_governments = {
 						has_law = succ_byzantine_elective
 					}
 				}
+					liege_before_war = {
+						has_landed_title = e_usa
+						}
+					liege_before_war = {
+						has_landed_title = k_dominionist
+						}
 			}
 			is_patrician = no
 			NOT = { religion = mormon }
@@ -799,32 +805,15 @@ feudal_governments = {
 			}
 			OR = {
 				primary_title = {
-					OR = {
-						AND = {
-							#has_law = succ_mex_elective
-							title = e_mexico
-						}
-						AND = {
-							#has_law = succ_mex_elective
-							title = k_mexico
-						}
-					}	
+					title = e_mexico				
 				}
 				top_liege = {
-					primary_title = {
-						OR = {
-							AND = {
-								#has_law = succ_mex_elective
-								title = e_mexico
-							}
-							AND = {
-								#has_law = succ_mex_elective
-								title = k_mexico
-							}
-						}
-					}
+					title = e_mexico
 				}
-			}
+					liege_before_war = {
+						has_landed_title = e_mexico
+						}
+				}
 			is_patrician = no
 			is_theocracy = no
 			}
