@@ -13140,6 +13140,15 @@ character_event = {
 					} 
 				} 
 			}
+			AND =  { 
+				has_landed_title = e_dominionist
+				any_artifact = { artifact_type = bullet_crown }
+				e_dominionist = { 
+					current_heir = { 
+						NOT = { dynasty = ROOT }
+					} 
+				} 
+			}
 		}
 	}
 
@@ -13324,6 +13333,21 @@ character_event = {
 			}
 			current_heir = { character_event = { id = HF.20407 days = 1 } }
 		}
+		if = { 
+			limit = { 
+				has_landed_title = e_dominionist
+				any_artifact = { artifact_type = bullet_crown }
+			}
+			e_dominionist = { 
+				current_heir = { save_event_target_as = worthy_bullet_crown }
+			}
+			player_heir = { save_event_target_as = unworthy_bullet_crown }
+			any_artifact = { 
+				limit = { artifact_type = bullet_crown }
+				save_event_target_as = inheriting_artifact_4
+			}
+			current_heir = { character_event = { id = HF.20407 days = 1 } }
+		}
 	}
 }
 #Ping to prevent crown duplication.
@@ -13410,6 +13434,12 @@ character_event = {
 			transfer_artifact = {
 				from = event_target:unworthy_california_crown
 				to = event_target:worthy_california_crown
+ 			} 
+ 		}
+		event_target:inheriting_artifact_4 = {
+			transfer_artifact = {
+				from = event_target:unworthy_bullet_crown
+				to = event_target:worthy_bullet_crown
  			} 
  		}
 	}
@@ -14403,6 +14433,10 @@ character_event = {
 				FROMFROM = { any_artifact = { artifact_type = crown_california } } 
 			} 
 			AND = {
+				FROM = { title = e_dominionist } 
+				FROMFROM = { any_artifact = { artifact_type = bullet_crown } } 
+			} 
+			AND = {
 				FROM = { title = e_caribbean } 
 				FROMFROM = { any_artifact = { artifact_type = crown_lion_judah } } 
 			} 
@@ -14477,6 +14511,18 @@ character_event = {
 			FROMFROM = { 
 				any_artifact = { 
 					limit = { artifact_type = crown_california }
+					save_event_target_as = inheriting_artifact_4
+				}
+			}
+		}
+		if = {
+			limit = {
+				FROM = { title = e_dominionist } 
+				FROMFROM = { any_artifact = { artifact_type = bullet_crown } } 
+			} 
+			FROMFROM = { 
+				any_artifact = { 
+					limit = { artifact_type = bullet_crown }
 					save_event_target_as = inheriting_artifact_4
 				}
 			}
@@ -14631,6 +14677,12 @@ character_event = {
 				to = ROOT
  			} 
  		}
+		event_target:inheriting_artifact_bullet_crown = {
+			transfer_artifact = {
+				from = FROMFROM
+				to = ROOT
+ 			} 
+ 		}
 		event_target:inheriting_artifact_espiritistacrown = {
 			transfer_artifact = {
 				from = FROMFROM
@@ -14719,6 +14771,11 @@ character_event = {
 				has_landed_title = e_california
 				any_artifact = { artifact_type = crown_california }
 			}
+			AND =  { 
+				has_landed_title = e_dominionist
+				any_artifact = { artifact_type = bullet_crown }
+			}
+
 		#	AND = { 
 		#		has_landed_title = k_italy 
 		#		any_artifact = { artifact_type = iron_crown_of_lombardy }
@@ -14799,6 +14856,13 @@ character_event = {
 				any_artifact = { artifact_type = crown_california }
 			}
 			add_trait = dead_crown_california
+		}
+		if =  { 
+			limit =  { 
+				has_landed_title = e_dominionist
+				any_artifact = { artifact_type = bullet_crown }
+			}
+			add_trait = dead_bullet_crown
 		}
 		if = { 
 			limit = { 
