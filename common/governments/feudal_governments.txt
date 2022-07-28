@@ -82,7 +82,7 @@ feudal_governments = {
 			NOT = { has_character_flag = ORF_embrace }
 			NOT = { is_government_potential = theocratic_feudal_government }
 			NOT = { is_government_potential = reserve_government }
-			#Removed Chinese Imperial stuff
+			NOT = { is_government_potential = brazilian_imperial_government }
 			is_patrician = no
 		}
 		
@@ -149,6 +149,7 @@ feudal_governments = {
 			NOT = { is_government_potential = open_range_feudalism_government }
 			NOT = { is_government_potential = uyc_government }
 			NOT = { is_government_potential = mex_imperial_government }
+			NOT = { is_government_potential = brazilian_imperial_government }
 			is_patrician = no
 		}
 		
@@ -253,7 +254,7 @@ feudal_governments = {
 			NOT = { is_government_potential = order_government }
 			NOT = { is_government_potential = military_governorate }
 			NOT = { is_government_potential = uyc_government }
-													 
+			NOT = { is_government_potential = brazilian_imperial_government }
 			is_patrician = no
 		}
 		
@@ -379,6 +380,7 @@ feudal_governments = {
 			NOT = { is_government_potential = military_governorate }
 			NOT = { is_government_potential = uyc_government }
 			NOT = { is_government_potential = reserve_government }
+			NOT = { is_government_potential = brazilian_imperial_government }
 		}
 		
 		color = { 145 10 15 }
@@ -487,6 +489,7 @@ feudal_governments = {
 			NOT = { is_government_potential = military_governorate }
 			NOT = { is_government_potential = mex_imperial_government }
 			NOT = { is_government_potential = uyc_government }
+			NOT = { is_government_potential = brazilian_imperial_government }
 			is_patrician = no
 		}
 		
@@ -739,6 +742,7 @@ feudal_governments = {
 			NOT = { is_government_potential = mex_imperial_government }
 			NOT = { is_government_potential = bureaucratic_government }
 			NOT = { is_government_potential = theocratic_feudal_government }
+			NOT = { is_government_potential = brazilian_imperial_government }
 			NOT = { is_government_potential = uyc_government }
 			NOT = { is_government_potential = reserve_government }
 		}
@@ -802,6 +806,7 @@ feudal_governments = {
 				religion = lamanita
 				religion = furiegi  
 				is_government_potential = military_governorate
+				is_government_potential = brazilian_imperial_government
 			}
 			OR = {
 				primary_title = {
@@ -841,6 +846,79 @@ feudal_governments = {
 		## Modifiers
 		court_size_modifier = 15
 		commander_limit = 11
+	}
+	
+	brazilian_imperial_government = {
+		preferred_holdings = { CASTLE CITY }
+		allowed_holdings = {
+			CASTLE
+			CITY
+			FORT
+			HOSPITAL
+		}
+		allowed_holdings_culture = { # Will not get the wrong government type penalty for tribes of the same culture
+			TRIBAL
+		}
+		accepts_liege_governments = { # Gets the wrong religion modifier instead
+			feudal_government
+			muslim_government
+			theocratic_feudal_government
+		}
+		free_revoke_on_tiers = {
+			duke
+		}
+		free_revoke_on_governments_religion = { # Tribal vassals of other religions can have their titles revoked for free
+			tribal_government
+		}
+		frame_suffix = "_brazilbureaucracy"
+		title_prefix = "br_"
+		potential = {
+			NOR = {
+				religion = mormon
+				religion = woolleyite
+				religion = strangite
+				religion = lamanita
+				religion = furiegi  
+				is_government_potential = military_governorate
+			}
+			tier = EMPEROR
+			primary_title = { has_title_flag = pretender_chinese_empire }
+			OR = {
+				culture_group = portuguese
+				culture_group = portunhol
+				has_character_flag = chinese_imperial_government_preserve #keeps government when player is given culture change opton
+			}
+			is_patrician = no
+		}
+		
+		color = { 118 255 163 }
+
+		barons_need_dynasty = yes
+
+		can_build_tribal = no
+		
+		ignore_in_vassal_limit_calculation = {
+			tribal_government
+		}
+		capital_move_delay = 200
+		
+		can_usurp_kingdoms_and_empires = no
+		can_create_empires = no
+		can_demand_religious_conversion = no
+		gets_religion_opinion_penalties = no
+		gives_religion_opinion_penalties = no
+		vassal_government_opinion_penalties = no
+		can_grant_kingdoms_and_empires_to_other_government_group = yes
+		free_retract_vassalage = yes
+		marriage_ignore_religion = yes
+		
+		vassal_limit = 10
+		
+		character_modifier = {
+			monthly_character_prestige = 1
+		}
+		## Modifiers
+		court_size_modifier = 15
 	}
 	
 	# uyc_government = {
