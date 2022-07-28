@@ -393,7 +393,85 @@ targetted_decisions = {
 		effect = {
 			hidden_tooltip = {
 				ROOT = {
-					character_event = {id = navigant.4 days = 3}
+					character_event = { id = navigant.4 }
+				}
+			}
+			add_trait = adult_converted
+				if = { 
+					limit = { 
+						is_female = no
+					} 
+						add_character_modifier = {
+							name = recently_force_converted
+							duration = 90
+							hidden = yes
+					}  
+				}
+			if = {
+				limit = { 
+					has_game_rule = {
+						name = punishment_release_prisoner
+						value = on
+					}
+				}
+				prisoner = no
+			}
+			opinion = {
+				modifier = opinion_converted_me
+				who = FROM
+			}
+			FROM = {
+				piety = 50
+			}
+			hidden_tooltip = {
+				mother = {
+					opinion = {
+						modifier = opinion_converted_close_kin
+						who = FROM
+					}
+				}
+				father = {
+					opinion = {
+						modifier = opinion_converted_close_kin
+						who = FROM
+					}
+				}
+				spouse = {
+					opinion = {
+						modifier = opinion_converted_close_kin
+						who = FROM
+					}
+				}
+				any_child = {
+					opinion = {
+						modifier = opinion_converted_close_kin
+						who = FROM
+					}
+				}
+				if = {
+					limit = {
+						FROM = {
+							NOT = { dynasty = ROOT }
+							NOT = { sibling = ROOT }
+						}
+					}
+					any_sibling = {
+						opinion = {
+							modifier = opinion_converted_close_kin
+							who = FROM
+						}
+					}
+					any_dynasty_member = {
+						opinion = {
+							modifier = opinion_converted_family
+							who = FROM
+						}
+					}
+				}
+				FROM = {
+					remove_opinion = { who = ROOT modifier = opinion_traitor }
+					remove_opinion = { who = ROOT modifier = opinion_rebel_traitor }
+					remove_opinion = { who = ROOT modifier = opinion_dishonorable }
 				}
 			}
 		}

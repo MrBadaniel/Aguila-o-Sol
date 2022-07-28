@@ -110,6 +110,7 @@ targetted_decisions = {
 			is_playable = yes
 			OR = {
 				trait = cruel
+				culture = khoakineren
 				AND = {
 					trait = envious
 					trait = lustful
@@ -159,7 +160,7 @@ targetted_decisions = {
 			hidden_tooltip = {
 				any_dynasty_member = {
 					opinion = {
-						modifier = opinion_castrated_family
+						modifier = opinion_castrated_family #DAVE
 						who = FROM
 					}
 				}

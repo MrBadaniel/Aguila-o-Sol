@@ -17,6 +17,10 @@ decisions = {
 			religion = nazarene
 			trait = nz_presbyter
 					}
+			AND = {
+			religion = navegante
+			NOT = { trait = adult_converted }
+					}
 				}
 			is_playable = yes
 			prisoner = no
@@ -41,6 +45,10 @@ decisions = {
 			AND = {
 			religion = nazarene
 			trait = nz_presbyter
+					}
+			AND = {
+			religion = navegante
+			NOT = { trait = adult_converted }
 					}
 				}
 			is_playable = yes
