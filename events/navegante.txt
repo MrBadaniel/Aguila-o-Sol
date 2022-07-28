@@ -137,7 +137,7 @@ character_event = { #event that gives the traits
         name = EVTOPTB_navigant_3
 		trigger = {
 			trait = levita
-			check_variable = { which = forced_conversions value = 25 }
+			check_variable = { which = forced_conversions value = 30 }
 		}
 		remove_trait = levita
 		add_trait = aaronita
@@ -152,6 +152,101 @@ character_event = { #event that gives the traits
 		remove_trait = aaronita
 		add_trait = melquisedequita
 	}
+	
+	option = {
+        name = EVTOPTD_navigant_3
+		trigger = {
+			trait = melquisedequita
+			check_variable = { which = forced_conversions value = 100 }
+		}
+		hidden_tooltip = { 
+			if = { 
+				limit = { this_has_super_cool_nickname_trigger = no }
+				random_list = { 
+					20 = { 
+						give_nickname = nick_the_red_storm 
+					} 
+					20 = { 
+						give_nickname = nick_the_scarlet_hands 
+					} 
+					20 = { 
+						give_nickname = nick_the_blood_monger 
+					} 
+					20 = { 
+						give_nickname = nick_the_black_skull 
+					} 
+					20 = { 
+						give_nickname = nick_stepping_razor 
+					} 
+					20 = { 
+						give_nickname = nick_the_firebringer 
+					} 
+					20 = { 
+						give_nickname = nick_the_marksman
+					} 
+					20 = { 
+						give_nickname = nick_the_smoking_mirror 
+					} 
+					20 = { 
+						give_nickname = nick_the_crimson_reaper 
+					} 
+					20 = { 
+						give_nickname = nick_the_wiley 
+					} 
+					20 = { 
+						give_nickname = nick_the_proud_lion
+					} 
+					20 = { 
+						give_nickname = nick_the_ghastly 
+					} 
+					20 = { 
+						give_nickname = nick_the_crusher 
+					} 
+					10 = { 
+						give_nickname = nick_fire_and_brimstone
+					} 
+					10 = { 
+						give_nickname = nick_dragon_del_desierto 
+					} 
+				}
+			}
+		}
+		if = { 
+			limit = { is_female = no }
+			create_bloodline = {
+				type = baptizer_male_bloodline
+			}
+			new_bloodline = {
+				set_description = "bloodline_desc_baptizing_servants_bloodline"
+				random_list = { 
+					20 = { set_name = bloodline_baptist_name_random_a } #Randomize names to avoid too much repetition.
+					20 = { set_name = bloodline_baptist_name_random_b }
+					20 = { set_name = bloodline_baptist_name_random_c }
+					20 = { set_name = bloodline_baptist_name_random_d } 
+					20 = { set_name = bloodline_baptist_name_random_e } 
+					20 = { set_name = bloodline_baptist_name_random_f } 
+				}
+			}
+		}
+		if = { 
+			limit = { is_female = yes }
+			create_bloodline = {
+				type = baptizer_female_bloodline
+			}
+			new_bloodline = {
+				set_description = "bloodline_desc_baptizing_servants_bloodline"
+				random_list = { 
+					20 = { set_name = bloodline_baptist_name_random_a } #Randomize names to avoid too much repetition.
+					20 = { set_name = bloodline_baptist_name_random_b }
+					20 = { set_name = bloodline_baptist_name_random_c }
+					20 = { set_name = bloodline_baptist_name_random_d } 
+					20 = { set_name = bloodline_baptist_name_random_e } 
+					20 = { set_name = bloodline_baptist_name_random_f } 
+				}
+			}		
+		}
+	}	
+	
 }
 
 letter_event = {
@@ -173,7 +268,7 @@ letter_event = {
 						add_character_modifier = {
 							name = recently_force_converted
 							duration = 90
-							hidden = yes
+							hidden = no
 					}  
 				}
 	}
