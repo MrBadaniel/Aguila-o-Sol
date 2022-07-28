@@ -96,7 +96,10 @@ arch_iconoclast = {
 
 levita = { #10 burned_hearts_points
 	potential = {
-	religion = navegante
+		OR = {
+			religion = navegante
+			religion = sacred_heart
+			}
 	}
 	opposites =  {
 		aaronita
@@ -128,7 +131,10 @@ levita = { #10 burned_hearts_points
 }
 aaronita = { #50 burned_hearts_points
 	potential = {
-	religion = navegante
+		OR = {
+			religion = navegante
+			religion = sacred_heart
+			}
 	}
 	opposites =  {
 		levita
@@ -160,7 +166,10 @@ aaronita = { #50 burned_hearts_points
 }
 melquisedequita = { #100 burned_hearts_points
 	potential = {
-	religion = navegante
+		OR = {
+			religion = navegante
+			religion = sacred_heart
+			}
 	}
 	opposites =  {
 		aaronita

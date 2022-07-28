@@ -1,15 +1,12 @@
-namespace = navegante
+namespace = navigant
 
-character_event = { #event to add iconoclast raid variable for when game starts, character converts to purificador or reaches adulthood etc
+character_event = { #event to add forced baptism variable for when game starts, character converts to purificador or reaches adulthood etc
 	id = navigant.1
 	hide_window = yes
 	
 	min_age = 16
-	
 	is_triggered_only = yes
-	
-	is_playable = yes
-	
+	is_playable = yes	
 	religion_group = cult_of_saints
 	
 	trigger = {
@@ -30,7 +27,7 @@ character_event = { #event to add iconoclast raid variable for when game starts,
 	}
 }
 
-character_event = { #iconoclast raid counter
+character_event = { #forced baptism counter
 	id = navigant.2
 
     border = GFX_event_normal_frame_war
@@ -168,5 +165,17 @@ letter_event = {
 	option = {
 		name = EVTOPTA_navigant_4
 		religion = FROMFROM
+		character_event = { id = navigant.2 }
+		character_event = { id = navigant.3 }
+				if = { 
+					limit = { 
+						is_female = no
+					} 
+						add_character_modifier = {
+							name = recently_force_converted
+							duration = 90
+							hidden = yes
+					}  
+				}
 	}
 }

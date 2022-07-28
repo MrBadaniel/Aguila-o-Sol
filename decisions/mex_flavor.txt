@@ -365,7 +365,6 @@ targetted_decisions = {
 		
 		from_potential = {
 			is_playable = yes
-			has_character_flag = dont_worry_about_this_yet #remember the on_actions
 			has_regent = no
 				OR = {  
 					religion = navegante
@@ -397,16 +396,6 @@ targetted_decisions = {
 				}
 			}
 			add_trait = adult_converted
-				if = { 
-					limit = { 
-						is_female = no
-					} 
-						add_character_modifier = {
-							name = recently_force_converted
-							duration = 90
-							hidden = yes
-					}  
-				}
 			if = {
 				limit = { 
 					has_game_rule = {
