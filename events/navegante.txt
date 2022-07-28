@@ -54,6 +54,7 @@ character_event = { #forced baptism counter
 	
 	immediate = {
 		change_variable = { which = forced_conversions value = 1 }
+		character_event = { id = navigant.3 }
 	}
 }
 
@@ -106,15 +107,15 @@ character_event = { #event that gives the traits
 					trait = aaronita
 					trait = melquisedequita
 				}
-				check_variable = { which = forced_conversions value = 5 }
-			}
-			AND = {
-				trait = levita
 				check_variable = { which = forced_conversions value = 10 }
 			}
 			AND = {
+				trait = levita
+				check_variable = { which = forced_conversions value = 25 }
+			}
+			AND = {
 				trait = aaronita
-				check_variable = { which = forced_conversions value = 15 }
+				check_variable = { which = forced_conversions value = 75 }
 			}
 		}
 	}
@@ -165,8 +166,6 @@ letter_event = {
 	option = {
 		name = EVTOPTA_navigant_4
 		religion = FROMFROM
-		character_event = { id = navigant.2 }
-		character_event = { id = navigant.3 }
 				if = { 
 					limit = { 
 						is_female = no
