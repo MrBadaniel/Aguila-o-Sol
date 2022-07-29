@@ -26,3 +26,18 @@ has_indigenous_mexican_culture_trigger = {
 has_norteno_culture_trigger = {
 	culture_group = norteno
 }
+
+has_californian_religion_trigger = {
+	OR = {
+		#religion = assiah
+		religion = alurista
+		religion = cetic
+		religion = imamite
+		religion = nazarene
+		religion = qingzhen
+		#religion = scientologist
+		#religion = siliconist
+		#religion = siliconist_heresy
+		#religion = restorationist
+	}
+}

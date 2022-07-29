@@ -201,20 +201,56 @@
 }
 
 1911020={
-	name="Potrero"
-	female=no
-	dynasty=1849004
-	culture=bayfolk
+	name="Mariángeles"
+	female=yes
+	dynasty=1851178 #Soledad
+	father = 1911080
+	mother=1910216
+	culture=haida
 	religion=nazarene
 	trait=charismatic_negotiator
-	trait=hedonist
-	trait=nz_presbyter
+	trait=twin
+	trait=nz_acolyte
 	trait=way_cowl
+	trait=gregarious
+	trait=uncouth
+	trait=honest
 	trait=imp_ex2
 	trait=drunkard
 	disallow_random_traits=yes
-	2639.12.16={birth=yes}
+	2643.3.1={birth=yes
+	culture=pinoy
+	effect={
+	set_character_flag=diversity
+	set_character_flag=physique
+		}
+	}
 	2696.12.1={death=yes}
+}
+
+1802095={
+	name="Philip"
+	dynasty=1851178 #Soledad
+	father = 1911080
+	mother=1910216
+	trait=legit_bastard
+	culture=haida
+	religion=cetic
+	trait=misguided_warrior
+	trait=nz_acolyte
+	trait=imp_ex2
+	trait=duelist
+	trait=strong
+	trait=wroth
+	trait=brave
+	trait=shy
+	2643.3.1={birth=yes
+	culture=pinoy
+	effect={
+	set_character_flag=diversity
+	set_character_flag=physique
+		}
+	}
 }
 
 1911025={

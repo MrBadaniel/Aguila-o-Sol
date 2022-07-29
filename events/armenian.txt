@@ -1,0 +1,543 @@
+namespace = armenian_apostolic
+
+character_event = {
+    id = armenian_apostolic.1
+	desc = EVTDESCarmenian_apostolic.1
+	picture = GFX_evt_religious_almsgiving
+	border = GFX_event_normal_frame_religion 
+	
+	hide_from = yes 
+	is_triggered_only = yes 
+
+	option = { #Pair of Doves
+	    name = EVTOPTAarmenian_apostolic.1
+		piety = 10
+		wealth = -5
+		character_event = { id = armenian_apostolic.2 days = 4  random = 6 }
+	}
+	
+	option = { #Rooster
+	    name = EVTOPTBarmenian_apostolic.1
+		piety = 20
+		wealth = -10
+		character_event = { id = armenian_apostolic.8 days = 4  random = 6 }
+	}
+	
+	option = { #Ram
+	    name = EVTOPTCarmenian_apostolic.1
+		piety = 30
+		wealth = -15
+		character_event = { id = armenian_apostolic.9 days = 4  random = 6 }
+			random = {
+		    chance = 4
+			add_trait = charitable
+		}
+	}
+	option = { #Bull
+	    name = EVTOPTDarmenian_apostolic.1
+		piety = 40
+		wealth = -25
+		character_event = { id = armenian_apostolic.10 days = 4  random = 6 }
+			random = {
+		    chance = 8
+			add_trait = charitable
+		}
+	}
+}
+
+long_character_event = { #So we are doing some tricks with the Doves
+    id = armenian_apostolic.2
+	desc = EVTDESCarmenian_apostolic.2
+	picture = GFX_evt_mount_ararat
+	
+	hide_from = yes 
+	is_triggered_only = yes 
+	
+	option = { #Join sacrifice
+	    name = EVTOPTAarmenian_apostolic.2
+		character_event = { id = armenian_apostolic.3 days = 3 random = 5 }
+		trigger = { 
+			is_female = yes
+		}
+	}
+	
+	option = { #Servants sacrifice
+	    name = EVTOPTBarmenian_apostolic.2
+		character_event = { id = armenian_apostolic.4 days = 3 random = 5 }
+		trigger = { 
+			is_female = yes
+		}
+		random = {
+		    chance = 10
+			add_trait = slothful
+		}
+	}
+
+	option = { #Servants sacrifice
+	    name = EVTOPTCarmenian_apostolic.2
+		character_event = { id = armenian_apostolic.4 days = 3 random = 5 }
+		trigger = { 
+			is_female = no
+		}
+	}
+}
+
+long_character_event = { #Cock-a-doodle-doo
+    id = armenian_apostolic.8
+	desc = EVTDESCarmenian_apostolic.8
+	picture = GFX_evt_mount_ararat
+	
+	hide_from = yes 
+	is_triggered_only = yes 
+	
+	option = { #Join sacrifice
+	    name = EVTOPTAarmenian_apostolic.8
+		character_event = { id = armenian_apostolic.14 days = 3 random = 5 }
+		trigger = { 
+			is_female = no
+		}
+		random = {
+		    chance = 5
+			add_trait = brave 
+		}
+		random = {
+		    chance = 1
+			add_trait = stressed 
+		}
+	}
+	
+	option = { #Servants sacrifice
+	    name = EVTOPTBarmenian_apostolic.8
+		character_event = { id = armenian_apostolic.15 days = 3 random = 5 }
+		trigger = { 
+			is_female = no
+		}
+		random = {
+		    chance = 10
+			add_trait = craven
+		}
+	}
+
+	option = { #Servants sacrifice
+	    name = EVTOPTCarmenian_apostolic.8
+		character_event = { id = armenian_apostolic.15 days = 3 random = 5 }
+		trigger = { 
+			is_female = yes
+		}
+	}
+}
+
+long_character_event = { #Let's go Rams!
+    id = armenian_apostolic.9
+	desc = EVTDESCarmenian_apostolic.9
+	picture = GFX_evt_mount_ararat
+	
+	hide_from = yes 
+	is_triggered_only = yes 
+	
+	option = { #Join sacrifice
+	    name = EVTOPTAarmenian_apostolic.9
+		character_event = { id = armenian_apostolic.16 days = 3 random = 5 }
+		trigger = { 
+			is_female = no
+		}
+		random = {
+		    chance = 10
+			add_trait = brave 
+		}
+		random = {
+		    chance = 5 
+			add_trait = stressed 
+		}
+	}
+	
+	option = { #Servants sacrifice
+	    name = EVTOPTBarmenian_apostolic.9
+		character_event = { id = armenian_apostolic.17 days = 3 random = 5 }
+		trigger = { 
+			is_female = no
+		}
+		random = {
+		    chance = 10
+			add_trait = craven
+		}
+	}
+
+	option = { #Servants sacrifice
+	    name = EVTOPTCarmenian_apostolic.9
+		character_event = { id = armenian_apostolic.17 days = 3 random = 5 }
+		trigger = { 
+			is_female = yes
+		}
+	}
+}
+
+long_character_event = { #KARA BOĞA
+    id = armenian_apostolic.10
+	desc = EVTDESCarmenian_apostolic.10
+	picture = GFX_evt_mount_ararat
+	
+	hide_from = yes 
+	is_triggered_only = yes 
+	
+	option = { #Join sacrifice
+	    name = EVTOPTAarmenian_apostolic.10
+		prestige = 10
+		character_event = { id = armenian_apostolic.18 days = 3 random = 5 }
+		trigger = { 
+			is_female = no
+		}
+		random = {
+		    chance = 15
+			add_trait = brave 
+		}
+		random = {
+		    chance = 5 
+			add_trait = stressed 
+		}
+	}
+	
+	option = { #Servants sacrifice
+	    name = EVTOPTBarmenian_apostolic.10
+		character_event = { id = armenian_apostolic.19 days = 3 random = 5 }
+		trigger = { 
+			is_female = no
+		}
+		random = {
+		    chance = 5
+			add_trait = craven
+		}
+	}
+
+	option = { #Servants sacrifice
+	    name = EVTOPTCarmenian_apostolic.10
+		character_event = { id = armenian_apostolic.19 days = 3 random = 5 }
+		trigger = { 
+			is_female = yes
+		}
+	}
+}
+
+character_event = { #You release the Doves
+    id = armenian_apostolic.3
+	desc = EVTDESCarmenian_apostolic.3
+	picture = GFX_evt_matagh_releasing_doves
+	border = GFX_event_normal_frame_religion 
+	
+	hide_from = yes 
+	is_triggered_only = yes 
+	
+	option = {
+	    name = EVTOPTAarmenian_apostolic.3
+		character_event = { id = armenian_apostolic.7 days = 5  random = 10 }
+		piety = 5
+	}
+}
+
+character_event = { #The Servant releases the Doves
+    id = armenian_apostolic.4
+	desc = EVTDESCarmenian_apostolic.4
+	picture = GFX_evt_matagh_releasing_doves
+	border = GFX_event_normal_frame_religion 
+	
+	hide_from = yes 
+	is_triggered_only = yes 
+	
+	option = {
+	    name = EVTOPTAarmenian_apostolic.4
+		character_event = { id = armenian_apostolic.7 days = 5  random = 10 }
+		piety = 5
+	}
+}
+
+character_event = { #You kill the rooster
+    id = armenian_apostolic.14
+	desc = EVTDESCarmenian_apostolic.14
+	picture = GFX_evt_matagh_rooster
+	border = GFX_event_normal_frame_religion 
+	
+	hide_from = yes 
+	is_triggered_only = yes 
+	
+	option = {
+	    name = EVTOPTAarmenian_apostolic.14
+		character_event = { id = armenian_apostolic.5 days = 1 random = 3 }
+		piety = 5
+	}
+}
+
+character_event = { #Servants kill the rooster
+    id = armenian_apostolic.15
+	desc = EVTDESCarmenian_apostolic.15
+	picture = GFX_evt_matagh_rooster
+	border = GFX_event_normal_frame_religion 
+	
+	hide_from = yes 
+	is_triggered_only = yes 
+	
+	option = {
+	    name = EVTOPTAarmenian_apostolic.15
+		character_event = { id = armenian_apostolic.5 days = 1 random = 3 }
+		piety = 5
+	}
+}
+
+character_event = { #You kill the ram
+    id = armenian_apostolic.16
+	desc = EVTDESCarmenian_apostolic.16
+	picture = GFX_evt_matagh_ram
+	border = GFX_event_normal_frame_religion 
+	
+	hide_from = yes 
+	is_triggered_only = yes 
+	
+	option = {
+	    name = EVTOPTAarmenian_apostolic.16
+		character_event = { id = armenian_apostolic.11 days = 1 random = 3 }
+		piety = 8
+	}
+}
+
+character_event = { #Servants kill the ram
+    id = armenian_apostolic.17
+	desc = EVTDESCarmenian_apostolic.17
+	picture = GFX_evt_matagh_ram
+	border = GFX_event_normal_frame_religion 
+	
+	hide_from = yes 
+	is_triggered_only = yes 
+	
+	option = {
+	    name = EVTOPTAarmenian_apostolic.17
+		character_event = { id = armenian_apostolic.11 days = 1 random = 3 }
+		piety = 8
+	}
+}
+
+character_event = { #You kill the bull
+    id = armenian_apostolic.18
+	desc = EVTDESCarmenian_apostolic.18
+	picture = GFX_evt_matagh_black_bull
+	border = GFX_event_normal_frame_religion 
+	
+	hide_from = yes 
+	is_triggered_only = yes 
+	
+	option = {
+	    name = EVTOPTAarmenian_apostolic.18
+		character_event = { id = armenian_apostolic.12 days = 1 random = 3 }
+		piety = 12
+	}
+}
+
+character_event = { #Servants kill the bull
+    id = armenian_apostolic.19
+	desc = EVTDESCarmenian_apostolic.19
+	picture = GFX_evt_matagh_black_bull
+	border = GFX_event_normal_frame_religion 
+	
+	hide_from = yes 
+	is_triggered_only = yes 
+	
+	option = {
+	    name = EVTOPTAarmenian_apostolic.19
+		character_event = { id = armenian_apostolic.12 days = 1 random = 3 }
+		piety = 12
+	}
+}
+
+character_event = { #Sharing of sacrifice 
+    id = armenian_apostolic.5
+	desc = EVTDESCarmenian_apostolic.5
+	picture = GFX_evt_market
+	border = GFX_event_normal_frame_religion 
+	
+	hide_from = yes 
+	is_triggered_only = yes 
+	
+	option = { #Share 
+	    name = EVTOPTAarmenian_apostolic.5
+		character_event = { id = armenian_apostolic.7 days = 3 random = 5 }
+		random = { 
+		    chance = 15
+			add_trait = charitable
+		}
+	}
+	option = { #Have it all for myself 
+	    name = EVTOPTBarmenian_apostolic.5
+		ai_chance = {
+			factor = 0
+			modifier = {
+		factor = 10
+			OR = {
+			trait = greedy
+			trait = cynical
+			trait = proud
+			trait = deceitful
+				}	
+			}	
+		}
+  		add_character_modifier = {
+			name = meat_of_rooster
+			years = 6
+			}
+		random_list = {
+		    5 = {
+			    character_event = { id = armenian_apostolic.6 days = 3 random = 5 }
+			}
+			95 = { character_event = { id = armenian_apostolic.7 days = 3 random = 5 }
+			}
+		}
+	}
+}
+
+character_event = { #Sharing of sacrifice 
+    id = armenian_apostolic.11
+	desc = EVTDESCarmenian_apostolic.11
+	picture = GFX_evt_market
+	border = GFX_event_normal_frame_religion 
+	
+	hide_from = yes 
+	is_triggered_only = yes 
+	
+	option = { #Share 
+	    name = EVTOPTAarmenian_apostolic.11
+		character_event = { id = armenian_apostolic.7 days = 3 random = 5 }
+		random = { 
+		    chance = 15
+			add_trait = charitable
+		}
+	}
+	option = { #Have it all for myself 
+	    name = EVTOPTBarmenian_apostolic.11
+		ai_chance = {
+			factor = 0
+			modifier = {
+		factor = 10
+			OR = {
+			trait = greedy
+			trait = cynical
+			trait = proud
+			trait = deceitful
+				}	
+			}	
+		}
+  		add_character_modifier = {
+			name = meat_of_ram
+			years = 6
+			}
+		random_list = {
+		    5 = {
+			    character_event = { id = armenian_apostolic.6 days = 3 random = 5 }
+			}
+			95 = { character_event = { id = armenian_apostolic.7 days = 3 random = 5 }
+			}
+		}
+	}
+}
+
+character_event = { #Sharing of sacrifice 
+    id = armenian_apostolic.12
+	desc = EVTDESCarmenian_apostolic.12
+	picture = GFX_evt_market
+	border = GFX_event_normal_frame_religion 
+	
+	hide_from = yes 
+	is_triggered_only = yes 
+	
+	option = { #Share 
+	    name = EVTOPTAarmenian_apostolic.12
+		character_event = { id = armenian_apostolic.7 days = 3 random = 5 }
+		random = { 
+		    chance = 15
+			add_trait = charitable
+		}
+	}
+	option = { #Have it all for myself 
+	    name = EVTOPTBarmenian_apostolic.12
+		ai_chance = {
+			factor = 0
+			modifier = {
+		factor = 10
+			OR = {
+			trait = greedy
+			trait = cynical
+			trait = proud
+			trait = deceitful
+				}	
+			}	
+		}
+  		add_character_modifier = {
+			name = meat_of_bull
+			years = 6
+			}
+		random_list = {
+		    5 = {
+			    character_event = { id = armenian_apostolic.6 days = 3 random = 5 }
+			}
+			95 = { character_event = { id = armenian_apostolic.7 days = 3 random = 5 }
+			}
+		}
+	}
+}
+
+long_character_event = { 
+    id = armenian_apostolic.6
+	desc = EVTDESCarmenian_apostolic.6
+	picture = GFX_evt_matagh_stealing_of_alms
+	
+	hide_from = yes 
+	is_triggered_only = yes 
+	
+	option = { #Admit theft 
+	    name = EVTOPTAarmenian_apostolic.6
+		character_event = { id = armenian_apostolic.7 days = 3 random = 5 }
+		piety = -10
+		random = { 
+		    chance = 10
+			random_courtier = {
+			    add_friend = ROOT 
+			}
+		}
+	}
+	option = { #Give to people 
+	    name = EVTOPTBarmenian_apostolic.6
+		cash = -15
+		random_list = { 
+		    10 = {
+			    piety = 20
+			    character_event = { id = armenian_apostolic.7 days = 3 random = 5 }
+			}
+			90 = {
+			    piety = -20
+				character_event = { id = armenian_apostolic.7 days = 3 random = 5 }
+			}
+		}
+	}
+	option = { #LIE
+	    name = EVTOPTCarmenian_apostolic.6
+		character_event = { id = armenian_apostolic.7 days = 3 random = 5 }
+		tooltip_info = intrigue
+		trigger = { 
+			intrigue = 12 
+		}
+	}
+}
+
+long_character_event = { 
+    id = armenian_apostolic.7
+	desc = EVTDESCarmenian_apostolic.7
+	picture = GFX_evt_religious_almsgiving
+	
+	hide_from = yes 
+	is_triggered_only = yes 
+	
+	option = {
+	    name = EVTOPTAarmenian_apostolic.7
+		add_character_modifier = {
+			name = celebrated_matagh
+			years = 5
+			}
+		piety = 10
+	}
+}
