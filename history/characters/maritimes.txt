@@ -1,0 +1,2378 @@
+###ÄNSI
+1899000={
+	name="Doughal"
+	dynasty=1813047
+	dna="efmgcliipfp"
+	culture=maritimer
+	religion=high_church
+	father=1899114
+	martial=6
+	diplomacy=5
+	stewardship=5
+	intrigue=3
+	learning=4
+	trait=tough_soldier
+	trait=honest
+	trait=strong
+	trait=wroth
+	trait=cruel
+	trait=zealous
+	2616.10.13={birth=yes}
+	2636.10.14={add_spouse=1899001}
+	2654.5.2={death={
+			death_reason=death_battle
+			killer=1620004
+		}
+	}
+}
+
+1899001={
+	name="Bedelia"
+	female=yes
+	dna="cjnabdopmfo"
+	culture=maritimer
+	religion=high_church
+	martial=4
+	diplomacy=4
+	stewardship=3
+	intrigue=4
+	learning=7
+	trait=flamboyant_schemer
+	trait=charitable
+	trait=brave
+	trait=gluttonous
+	trait=cynical
+	2619.4.18={birth=yes}
+	2636.10.14={add_spouse=1899000}
+	2668.8.28={death=yes}
+}
+	
+1899002={
+	name="Sarah"
+	female=yes
+	dynasty=1813039
+	martial=4
+	diplomacy=6
+	stewardship=4
+	intrigue=7
+	learning=10
+	culture=maritimer
+	religion=high_church
+	trait=flamboyant_schemer 
+	trait=kind
+	trait=shy
+	trait=brave 
+	trait=lustful
+	trait=scholar
+	2644.3.1={birth=yes
+		prestige=200
+	}
+	2686.6.29={death=yes}
+}
+	
+1899003={
+	name="John"
+	dynasty=1813047
+	father=1899000
+	mother=1899001
+	dna="efmgcdoimfp"
+	culture=maritimer
+	religion=high_church
+	diplomacy=5
+	martial=9
+	stewardship=7
+	intrigue=7
+	learning=8
+	trait=tough_soldier
+	trait=quick
+	trait=lustful
+	trait=strong
+	trait=kind
+	trait=honest
+	trait=organizer
+	trait=high_anglican
+	2641.6.29={birth=yes}
+	2679.6.29={death=yes}
+}
+
+1899004={
+	name="David"
+	dynasty=1813041
+	culture=maritimer
+	religion=high_church
+	diplomacy=4
+	martial=5
+	stewardship=6
+	intrigue=7
+	learning=6
+	trait=fortune_builder
+	trait=greedy
+	trait=cynical
+	trait=strong
+	trait=brave
+	2631.2.14={birth=yes}
+	2665.2.1={add_spouse=1899005}
+	2694.12.12={death=yes}
+}
+
+1899005={
+	name="Siobhan"
+	female=yes
+	martial=4
+	diplomacy=6
+	stewardship=5
+	intrigue=8
+	learning=8
+	culture=maritimer
+	religion=high_church
+	trait=kind
+	trait=fair
+	trait=charitable
+	trait=proud
+	trait=charismatic_negotiator
+	2643.1.19={birth=yes}
+	2665.2.1={add_spouse=1899004}
+	2696.12.12={death=yes}
+}
+
+1899006={
+	name="Lorcan"
+	dynasty=1813043
+	culture=maritimer
+	religion=high_church
+	diplomacy=8
+	martial=6
+	stewardship=8
+	intrigue=6
+	learning=9
+	trait=grey_eminence
+	trait=just
+	trait=cruel
+	trait=impaler
+	trait=patient
+	trait=zealous
+	2637.9.7={birth=yes}
+	2655.3.14={add_spouse=1899007}
+	2680.12.12={death=yes}
+}
+
+1899007={
+	name="Caitriona"
+	female=yes
+	culture=maritimer
+	religion=occultist
+	diplomacy=7
+	martial=4
+	stewardship=8
+	intrigue=6
+	learning=9
+	trait=intricate_webweaver
+	trait=just
+	trait=genius
+	trait=shy
+	trait=craven
+	trait=paranoid
+	2637.1.1={birth=yes}
+	2655.3.14={add_spouse=1899006}
+	2691.12.12={death=yes}
+}
+
+1899008={
+	name="Caden"
+	dynasty=1813042
+	culture=maritimer
+	religion=high_church
+	diplomacy=8
+	martial=6
+	stewardship=8
+	intrigue=6
+	learning=9
+	trait=elusive_shadow
+	trait=quick
+	trait=deceitful
+	trait=cruel
+	trait=patient
+	trait=content
+	2636.12.12={birth=yes}
+	2660.1.1={add_spouse=1867143}
+	2684.12.12={death=yes}
+}
+
+1899009={
+	name="Ella"
+	female=yes
+	dynasty=1813045
+	martial=5
+	diplomacy=7
+	stewardship=4
+	intrigue=5
+	learning=9
+	culture=maritimer
+	religion=high_church
+	trait=naive_appeaser
+	trait=patient
+	trait=weak
+	trait=slothful
+	trait=honest
+	trait=quick
+	trait=stutter
+	2643.10.10={birth=yes}
+	2701.10.10={death=yes}
+}
+
+1899010={
+	name="Caitlin"
+	female=yes
+	dynasty=1813001
+	father=1899063
+	mother=1899130
+	dna="ldlngmaeccf"
+	culture=maritimer
+	religion=high_church
+	martial=5
+	diplomacy=7
+	stewardship=6
+	intrigue=1
+	learning=4
+	trait=grey_eminence
+	trait=broad_anglican
+	2609.1.1={birth=yes
+		prestige=100
+	}
+	2627.6.9={
+		effect={
+			set_character_flag=recieved_royal_marriage_aid_duty
+			spouse={
+				set_character_flag=recieved_royal_marriage_aid_duty
+				remove_spouse=spouse
+				add_spouse_matrilineal=ROOT
+				clr_character_flag=recieved_royal_marriage_aid_duty
+			}
+			clr_character_flag=recieved_royal_marriage_aid_duty
+		}
+	}
+	2674.11.26={death=yes}
+}
+
+1899011={
+	name="Ryerson"
+	dynasty=1813000
+	dna="mfhlicdcglp"
+	culture=maritimer
+	religion=high_church
+	martial=1
+	diplomacy=5
+	stewardship=6
+	intrigue=4
+	learning=5
+	trait=brilliant_strategist
+	trait=trusting
+	trait=low_anglican
+	2610.5.30={birth=yes}
+	2627.6.9={add_spouse=1899010}
+	2671.7.13={death=yes}
+}
+
+1899012={
+	name="Therese"
+	female=yes
+	dynasty=1813001
+	dna="ldhngmdeccp"
+	culture=maritimer
+	religion=high_church
+	martial=5
+	diplomacy=5
+	stewardship=4
+	intrigue=8
+	learning=1
+	trait=flamboyant_schemer
+	trait=deceitful
+	trait=broad_anglican
+	father=1899011
+	mother=1899010
+	2628.1.22={birth=yes}
+	2646.5.5={add_spouse=1788021}
+	2692.8.14={death=yes}
+}
+
+1899013={
+	name="Keavy"
+	female=yes
+	dynasty=1813001
+	dna="lelngcdegch"
+	culture=maritimer
+	religion=high_church
+	martial=2
+	diplomacy=1
+	stewardship=5
+	intrigue=5
+	learning=1
+	trait=skilled_tactician
+	trait=hedonist
+	trait=broad_anglican
+	father=1899011
+	mother=1899010
+	2630.7.5={birth=yes}
+	2647.10.2={add_spouse=1788010}
+	2701.10.24={death=yes}
+}
+
+1899014={
+	name="Bairre"
+	dynasty=1813001
+	dna="lfhnicacglf"
+	culture=maritimer
+	religion=high_church
+	martial=5
+	diplomacy=5
+	stewardship=2
+	intrigue=1
+	learning=4
+	trait=underhanded_rogue
+	trait=envious
+	trait=arbitrary
+	trait=broad_anglican
+	father=1899011
+	mother=1899010
+	2637.8.27={birth=yes}
+	2694.6.14={death=yes}
+}
+
+1899015={
+	name="Labhras"
+	dynasty=1813001
+	dna="mdhlgmacgcp"
+	culture=maritimer
+	religion=high_church
+	martial=8
+	diplomacy=5
+	stewardship=1
+	intrigue=6
+	learning=7
+	trait=tough_soldier
+	trait=gluttonous
+	trait=kind
+	trait=broad_anglican
+	father=1899011
+	mother=1899010
+	2643.8.26={birth=yes}
+	2685.5.13={death=yes}
+}
+
+1899016={
+	name="Ivor"
+	dynasty=1813001
+	dna="adlnicdeclp"
+	culture=maritimer
+	religion=high_church
+	martial=4
+	diplomacy=1
+	stewardship=4
+	intrigue=3
+	learning=5
+	trait=brilliant_strategist
+	trait=hunter
+	trait=cynical
+	trait=broad_anglican
+	father=1899011
+	mother=1899010
+	2647.9.26={birth=yes}
+	2684.8.22={death=yes}
+}
+
+1899017={
+	name="Eamon"
+	dna="epgnjhjgeip"
+	dynasty="1813044"
+	culture=maritimer
+	religion=high_church
+	father=1899116
+	mother=1899141
+	martial=2
+	diplomacy=3
+	stewardship=3
+	intrigue=5
+	learning=7
+	trait=intricate_webweaver
+	trait=ambitious
+	trait=deceitful
+	trait=greedy
+	2627.2.1={birth=yes}
+	2647.1.1={add_spouse=1899155}
+	2678.9.12={death=yes}
+}
+
+1899018={
+	name="Michael"
+	dna="gbcmihnlepg"
+	dynasty=1813008
+	culture=maritimer
+	religion=high_church
+	father=1899154
+	mother=1899157
+	martial=6
+	diplomacy=2
+	stewardship=4
+	intrigue=4
+	learning=2
+	trait=elusive_shadow
+	trait=temperate
+	trait=deceitful
+	trait=charitable
+	trait=brave
+	2642.6.3={birth=yes}
+	2660.5.2={add_spouse=1899150}
+	2705.9.26={death=yes}
+}
+
+1899019={
+	name="Caragh"
+	dynasty=1813048
+	culture=maritimer
+	religion=high_church
+	father=1899084
+	mother=1899142
+	diplomacy=7
+	martial=8
+	stewardship=8
+	intrigue=6
+	learning=8
+	trait=tough_soldier
+	trait=duelist
+	trait=cruel
+	trait=brave
+	trait=quick
+	trait=strong
+	trait=possessed
+	2646.1.15={birth=yes effect={set_character_flag=no_historical_family}}
+	2687.2.1={death=yes}
+}
+
+1899020={
+	name="Richard"
+	dna="cjngbloimfp"
+	dynasty=1813047
+	father=1899000
+	mother=1899001
+	culture=maritimer
+	religion=high_church
+	diplomacy=7
+	martial=9
+	stewardship=8
+	intrigue=6
+	learning=9
+	trait=skilled_tactician
+	trait=strong
+	trait=wroth
+	trait=cruel
+	trait=honest
+	trait=just
+	trait=ambitious
+	trait=zealous
+	trait=impaler
+	trait=organizer
+	trait=aggressive_leader
+	trait=high_anglican
+	2641.7.5={birth=yes}
+	2674.2.1={death=yes}
+}
+
+1899021={
+	name="Paige"
+	female=yes
+	dynasty=1813046
+	culture=maritimer
+	religion=high_church
+	diplomacy=9
+	martial=5
+	stewardship=7
+	intrigue=8
+	learning=8
+	trait=grey_eminence
+	trait=lunatic
+	trait=ugly
+	trait=hedonist
+	trait=proud
+	trait=ambitious
+	2645.8.1={birth=yes}
+	2699.2.1={death=yes}
+}
+
+1899023={
+	name="Éric"
+	dynasty=1755018
+	culture=acadien
+	religion=ursuline
+	secret_religion=occultist
+	father=1899110
+	diplomacy=8
+	martial=5
+	stewardship=7
+	intrigue=6
+	learning=8
+	trait=scholarly_theologian
+	trait=lore_old_ones
+	trait=musician
+	trait=mystic
+	trait=quick
+	trait=shy
+	trait=paranoid
+	trait=zealous
+	trait=diligent
+	2616.8.24={birth=yes}
+	2674.10.13={death=yes}
+}
+
+1899024={
+	name="Pépin"
+	dynasty=1755019
+	culture=acadien
+	religion=occultist
+	diplomacy=4
+	martial=4
+	stewardship=5
+	intrigue=8
+	learning=8
+	trait=flamboyant_schemer
+	trait=proud
+	trait=gluttonous
+	trait=hedonist
+	trait=diligent
+	trait=cynical
+	trait=craven
+	2630.1.13={birth=yes}
+	2651.1.3={add_spouse=1620032}
+	2700.1.1={death=yes}
+}
+
+1899025={
+	name="Sinead"
+	female=yes
+	dna="affoejdhilp"
+	culture=west_indian
+	religion=high_church
+	martial=5
+	diplomacy=3
+	stewardship=4
+	intrigue=5
+	learning=4
+	trait=indulgent_wastrel
+	trait=low_anglican
+	trait=zealous
+	trait=chaste
+	trait=kind
+	trait=gluttonous
+	2636.1.1={birth=yes
+		culture=maritimer}
+	2656.5.27={add_spouse=1899026}
+	2697.7.15={death=yes}
+}
+
+1899026={
+	name="Rory"
+	dynasty=1813032
+	dna="mgeobinldng"
+	culture=west_indian
+	religion=high_church
+	father=1899029
+	mother=1899129
+	martial=6
+	diplomacy=5
+	stewardship=3
+	intrigue=4
+	learning=4
+	trait=skilled_tactician
+	trait=ambitious
+	trait=wroth
+	trait=brave
+	trait=proud
+	trait=cynical
+	trait=low_anglican
+	2636.6.4={birth=yes
+		culture=maritimer}
+	2656.5.27={add_spouse=1899025}
+	2660.1.1={effect={add_rival=1899032}}
+	2702.1.25={death=yes}
+}
+
+1899027={
+	name="Grace"
+	female=yes
+	dynasty=1813032
+	dna="agkobodmdlp"
+	culture=west_indian
+	religion=high_church
+	martial=4
+	diplomacy=2
+	stewardship=1
+	intrigue=5
+	learning=4
+	trait=flamboyant_schemer
+	trait=wroth
+	trait=craven
+	trait=gregarious
+	trait=proud
+	trait=ambitious
+	trait=low_anglican
+	father=1899026
+	mother=1899025
+	2658.8.21={birth=yes
+		culture=maritimer}
+	2714.1.24={death=yes}
+}
+
+1899028={
+	name="Finbar"
+	dynasty=1813032
+	dna="mgfobidliln"
+	culture=west_indian
+	religion=high_church
+	martial=4
+	diplomacy=4
+	stewardship=3
+	intrigue=5
+	learning=5
+	trait=fortune_builder
+	trait=hedonist
+	trait=trusting
+	trait=chaste
+	trait=low_anglican
+	father=1899026
+	mother=1899025
+	2663.4.5={birth=yes
+		culture=maritimer}
+	2731.8.10={death=yes}
+}
+
+1899029={
+	name="Art"
+	dynasty=1813032
+	dna="kgfoejnhilp"
+	culture=west_indian
+	religion=high_church
+	martial=6
+	diplomacy=2
+	stewardship=2
+	intrigue=4
+	learning=2
+	trait=elusive_shadow
+	trait=charitable
+	trait=craven
+	trait=gluttonous
+	father=1899030
+	mother=1899120
+	2617.3.5={birth=yes
+		culture=maritimer}
+	2635.1.1={add_spouse=1899129}
+	2656.4.30={death=yes}
+}
+
+1899030={
+	name="Liam"
+	dynasty=1813032
+	dna="agfojinhdlg"
+	culture=west_indian
+	religion=high_church
+	martial=1
+	diplomacy=6
+	stewardship=8
+	intrigue=4
+	learning=5
+	trait=fortune_builder
+	trait=cruel
+	trait=ambitious
+	trait=patient
+	trait=bisexual
+	2559.4.18={birth=yes
+		culture=maritimer}
+	2615.5.5={add_spouse=1899120}
+	2630.3.2={death=yes}
+}
+
+1899031={
+	name="Patricia"
+	female=yes
+	dna="ijjfaackdlf"
+	culture=maritimer
+	religion=high_church
+	martial=0
+	diplomacy=4
+	stewardship=7
+	intrigue=3
+	learning=2
+	trait=flamboyant_schemer
+	trait=paranoid
+	trait=charitable
+	trait=humble
+	2628.1.1={birth=yes}
+	2646.2.1={add_spouse=1899032}
+	2679.1.22={death=yes}
+}
+
+1899032={
+	name="Nioclas"
+	dynasty=1813034
+	dna="nbmimeobogg"
+	culture=maritimer
+	religion=high_church
+	martial=4
+	diplomacy=4
+	stewardship=6
+	intrigue=5
+	learning=4
+	trait=thrifty_clerk
+	trait=shy
+	trait=patient
+	trait=lustful
+	trait=brave
+	2629.5.16={birth=yes}
+	2646.2.1={add_spouse=1899031}
+	#2660.1.1={effect={add_rival=1899026}}
+	2706.4.19={death=yes}
+}
+
+1899033={
+	name="Hugh"
+	dynasty=1813034
+	dna="njjimaabdlf"
+	culture=maritimer
+	religion=high_church
+	martial=4
+	diplomacy=2
+	stewardship=5
+	intrigue=3
+	learning=7
+	trait=charismatic_negotiator
+	trait=celibate
+	trait=zealous
+	trait=slothful
+	trait=craven
+	trait=ill
+	father=1899032
+	mother=1899031
+	2648.1.12={birth=yes}
+	2721.1.28={death=yes}
+}
+
+1899034={
+	name="Kelly"
+	female=yes
+	dynasty=1813034
+	dna="njmfmedkdgf"
+	culture=maritimer
+	religion=high_church
+	martial=1
+	diplomacy=7
+	stewardship=7
+	intrigue=6
+	learning=8
+	trait=skilled_tactician
+	trait=zealous
+	trait=cruel
+	trait=trusting
+	father=1899032
+	mother=1899031
+	2649.11.11={birth=yes}
+	2700.5.9={death=yes}
+}
+
+1899035={
+	name="Anne"
+	female=yes
+	dynasty=1813030
+	martial=4
+	diplomacy=6
+	stewardship=6
+	intrigue=4
+	learning=3
+	culture=maritimer
+	religion=high_church
+	trait=proud
+	trait=diligent
+	trait=gregarious
+	trait=kind
+	trait=stubborn
+	trait=thrifty_clerk
+	2641.3.1={birth=yes}
+	2662.1.1={
+		effect={
+			set_character_flag=recieved_royal_marriage_aid_duty
+			spouse={
+				set_character_flag=recieved_royal_marriage_aid_duty
+				remove_spouse=spouse
+				add_spouse_matrilineal=ROOT
+				clr_character_flag=recieved_royal_marriage_aid_duty
+			}
+			clr_character_flag=recieved_royal_marriage_aid_duty
+		}
+	}
+	2700.1.1={death=yes}
+}
+
+1899040={
+	name="Jacquotte"
+	female=yes
+	dynasty=1755006
+	culture=acadien
+	religion=pelagic
+	diplomacy=5
+	martial=3
+	stewardship=5
+	intrigue=1
+	learning=5
+	trait=skilled_tactician
+	trait=quick
+	trait=fair
+	trait=hunter
+	trait=cruel
+	trait=gregarious
+	trait=honest
+	trait=wroth
+	trait=brave
+	give_nickname=nick_the_wolf
+	2646.8.24={birth=yes
+		effect={set_character_flag=diversity}
+	}
+	2700.1.1={death=yes}
+}
+
+1899041={
+	name="Morgan"
+	female=yes
+	dynasty=1001051 #Fay
+	culture=newfie
+	religion=celtic_pagan
+	diplomacy=5
+	martial=6
+	stewardship=4
+	intrigue=7
+	learning=8
+	trait=scholarly_theologian
+	trait=mystic
+	trait=lustful
+	trait=fair
+	trait=proud
+	trait=envious
+	trait=charitable
+	2643.2.14={birth=yes}
+	2659.8.26={
+		add_spouse=1899042
+		effect={
+			set_character_flag=recieved_royal_marriage_aid_duty
+			spouse={
+				set_character_flag=recieved_royal_marriage_aid_duty
+				remove_spouse=spouse
+				add_spouse_matrilineal=ROOT
+				clr_character_flag=recieved_royal_marriage_aid_duty
+			}
+			clr_character_flag=recieved_royal_marriage_aid_duty
+			prestige=250
+		}
+	}
+	2710.4.11={death=yes}
+}
+
+1899042={
+	name="Accolon"
+	dynasty=1755022
+	culture=acadien
+	religion=celtic_pagan
+	diplomacy=5
+	martial=4
+	stewardship=2
+	intrigue=6
+	learning=3
+	trait=elusive_shadow
+	trait=deceitful
+	trait=strong
+	trait=cruel
+	trait=patient
+	trait=brave
+	2641.9.2={birth=yes}
+	2659.8.26={add_matrilineal_spouse=1899041
+		prestige=50}
+	2690.8.4={death=yes}
+}
+
+1899043={
+	name="Lancelot"
+	dynasty=1001051
+	culture=newfie
+	religion=celtic_pagan
+	diplomacy=2
+	martial=3
+	stewardship=5
+	intrigue=3
+	learning=8
+	father=1899042
+	mother=1899041
+	trait=fair
+	2662.5.12={birth=yes}
+	2720.4.11={death=yes}
+}
+
+1899044={
+	name="Lillian"
+	female=yes
+	dynasty=1001051
+	culture=newfie
+	religion=celtic_pagan
+	diplomacy=6
+	martial=3
+	stewardship=7
+	intrigue=1
+	learning=1
+	father=1899042
+	mother=1899041
+	trait=strong
+	2665.11.13={birth=yes}
+	2686.9.24={death=yes}
+}
+
+1899045={
+	name="Finn"
+	culture=newfie
+	religion=celtic_pagan
+	dna="chgmhybegcn"
+	diplomacy=2
+	martial=8
+	stewardship=5
+	intrigue=3
+	learning=8
+	trait=tough_soldier
+	trait=fian
+	trait=one_handed
+	trait=lefthanded
+	trait=fair
+	trait=strong
+	trait=just
+	trait=honest
+	trait=trusting
+	trait=adventurer
+	2630.5.12={birth=yes}
+	2660.1.1={
+		employer=1899041
+	}
+	2720.4.11={death=yes}
+}
+
+1899046={
+	name="Merlin"
+	culture=newfie
+	religion=celtic_pagan
+	diplomacy=7
+	martial=3
+	stewardship=6
+	intrigue=2
+	learning=7
+	trait=grey_eminence
+	trait=druid
+	trait=genius
+	trait=mystic
+	trait=erudite
+	trait=shy
+	2604.12.12={birth=yes}
+	2660.1.1={
+		employer=1899041
+	}
+	2667.4.11={death=yes}
+}
+
+1899050={
+	name="Dergavel"
+	dynasty=1813076 # Irving
+	culture=maritimer
+	religion=high_church
+	father=1899058
+	mother=1899149
+	trait=greedy
+	trait=cruel
+	trait=ambitious
+	trait=quick
+	trait=patient
+	trait=fortune_builder
+	2632.1.5={birth=yes}
+	2650.1.1={add_spouse=1899117}
+	2694.1.1={death=yes}
+}
+1899051={
+	name="Curtmantle"
+	dynasty=1813076 # Irving
+	culture=maritimer
+	religion=high_church
+	father=1899050
+	mother=1899117
+	trait=slow
+	2653.1.5={birth=yes}
+	2700.1.1={death=yes}
+}
+1899052={
+	name="Brunnel"
+	dynasty=1813076 # Irving
+	culture=maritimer
+	religion=high_church
+	father=1899050
+	mother=1899117
+	trait=quick
+	2655.1.5={birth=yes}
+	2700.1.1={death=yes}
+}
+1899053={
+	name="Turlough"
+	dynasty=1813076 # Irving
+	culture=maritimer
+	religion=high_church
+	father=1899050
+	mother=1899117
+	trait=genius
+	trait=hunchback
+	2660.1.5={birth=yes}
+	2700.1.1={death=yes}
+}
+1899054={
+	name="Galen"
+	dynasty=1813076 # Irving
+	culture=maritimer
+	religion=celtic_pagan
+	father=1899059
+	mother=1899107
+	2470.1.1={birth=yes}
+	2530.8.8={death=yes}
+}
+1899055={
+	name="Kenneth"
+	dynasty=1813076 # Irving
+	culture=maritimer
+	religion=celtic_pagan
+	father=1899054
+	2495.1.1={birth=yes}
+	2560.1.1={death=yes}
+}
+1899056={
+	name="Herygh"
+	dynasty=1813076 # Irving
+	culture=maritimer
+	religion=high_church
+	father=1899055
+	2535.5.10={birth=yes}
+	2579.10.23={death=yes}
+}
+1899057={
+	name="Denholm"
+	dynasty=1813076 # Irving
+	culture=maritimer
+	religion=high_church
+	father=1899056
+	trait=fair
+	trait=lustful
+	trait=ambitious
+	trait=grey_eminence
+	2560.11.28={birth=yes}
+	2584.9.6={death={
+			death_reason=death_execution
+			killer=1899030
+		}
+	}
+}
+1899058={
+	name="Quivox"
+	dynasty=1813076 # Irving
+	culture=maritimer
+	religion=high_church
+	father=1899057
+	2581.7.20={birth=yes}
+	2630.1.1={add_spouse=1899149}
+	2650.6.1={death=yes}
+}
+1899059={
+	name="Tarleton"
+	dynasty=1813076 # Irving
+	father=1899101
+	culture=maritimer
+	religion=celtic_pagan
+	trait=genius
+	trait=strong
+	trait=ambitious
+	trait=cruel
+	trait=wroth
+	trait=lunatic
+	trait=impaler
+	trait=arbitrary
+	trait=skilled_tactician
+	give_nickname=nick_the_mad
+	2434.4.4={birth=yes}
+	2468.1.1={add_spouse=1899107}
+	2469.3.26={
+		create_bloodline={
+			type=irving
+			has_dlc="Holy Fury"
+		}
+	}
+	2488.8.8={death={
+			death_reason=death_battle
+			killer=1899060
+		}
+	}
+}
+
+1899060={
+	name="Ivor"
+	dynasty=1813001
+	culture=maritimer
+	religion=high_church
+	trait=skilled_tactician
+	trait=ambitious
+	trait=quick
+	trait=just
+	trait=zealous 
+	trait=charitable
+	trait=temperate
+	give_nickname=nick_the_just
+	2461.1.1={birth=yes}
+	2512.11.26={death=yes}
+}
+1899061={
+	name="Mayann"
+	female=yes
+	father=1899091
+	dynasty=1813001
+	culture=maritimer
+	religion=high_church
+	trait=skilled_tactician
+	trait=ambitious
+	trait=strong
+	trait=brave
+	trait=diligent
+	trait=proud
+	give_nickname=nick_the_fearless
+	2503.1.1={birth=yes}
+	2525.1.1={
+		effect={
+			set_character_flag=recieved_royal_marriage_aid_duty
+			spouse={
+				set_character_flag=recieved_royal_marriage_aid_duty
+				remove_spouse=spouse
+				add_spouse_matrilineal=ROOT
+				clr_character_flag=recieved_royal_marriage_aid_duty
+			}
+			clr_character_flag=recieved_royal_marriage_aid_duty
+		}
+	}
+	2575.1.1={death=yes}
+}
+1899062={
+	name="Teague"
+	dynasty=1813001
+	father=1899094
+	culture=maritimer
+	religion=high_church
+	trait=martial_cleric
+	trait=theologian
+	trait=patient
+	trait=chaste
+	trait=content
+	trait=zealous
+	give_nickname=nick_the_gentle
+	2573.1.1={birth=yes}
+	2609.6.30={add_trait=pneumonic}
+	2610.1.1={death={death_reason=death_trait}
+	} # pneumonia
+}
+1899063={
+	name="Ogden"
+	dynasty=1813001
+	father=1899094
+	culture=maritimer
+	religion=high_church
+	trait=midas_touched
+	trait=content
+	trait=quick
+	trait=just
+	trait=diligent
+	trait=architect
+	2577.1.1={birth=yes}
+	2600.1.1={add_spouse=1899130}
+	2645.1.2={death=yes}
+}
+1899064={
+	name="Gilbert"
+	dynasty=1813033
+	culture=maritimer
+	religion=high_church
+	2639.1.1={birth=yes}
+	2661.1.1={add_spouse=1899035}
+	2700.1.2={death=yes}
+}
+1899065={
+	name="Garibald"
+	dynasty=1755046
+	culture=acadien
+	religion=ursuline
+	father=1899160
+	2600.11.22={birth=yes}
+	2629.1.1={add_spouse=1899152}
+	2660.1.1={death=yes}
+}
+1899066={
+	name="Daryl"
+	dynasty=1755046
+	culture=acadien
+	religion=ursuline
+	father=1899065
+	mother=1899152
+	trait=fortune_builder
+	2630.11.22={birth=yes}
+	2700.1.1={death=yes}
+}
+1899067={
+	name="Travis"
+	dynasty=1755046
+	culture=acadien
+	religion=high_church
+	father=1899065
+	mother=1899152
+	trait=skilled_tactician
+	2635.11.22={birth=yes}
+	2700.1.1={death=yes}
+}
+1899068={
+	name="Walter"
+	dynasty=1813030
+	culture=maritimer
+	religion=high_church
+	father=1899064
+	mother=1899035
+	2661.1.1={birth=yes}
+	2700.1.2={death=yes}
+}
+1899069={
+	name="Cargyll"
+	dynasty=1813076 # Irving
+	culture=maritimer
+	religion=celtic_pagan
+	father=1899058
+	trait=lunatic
+	trait=possessed
+	trait=mystic
+	trait=zealous
+	trait=one_handed
+	trait=one_eyed
+	trait=mastermind_theologian
+	2638.1.1={birth=yes}
+	2700.1.1={death=yes}
+}
+1899070={
+	name="Reginald"
+	culture=ontarian
+	religion=high_church
+	trait=mastermind_theologian
+	2430.1.1={birth=yes}
+	2499.1.1={death=yes}
+}
+1899071={
+	name="Edward"
+	culture=maritimer
+	religion=high_church
+	2444.1.1={birth=yes}
+	2505.2.2={death=yes}
+}
+1899072={
+	name="Theobald"
+	culture=ontarian
+	religion=high_church
+	2466.1.1={birth=yes}
+	2516.3.6={death=yes}
+}
+1899073={
+	name="Simon"
+	culture=hudsonian
+	religion=high_church
+	2470.1.1={birth=yes}
+	2524.10.12={death=yes}
+}
+1899074={
+	name="Howard"
+	culture=ontarian
+	religion=high_church
+	2487.1.1={birth=yes}
+	2540.6.6={death=yes}
+}
+1899075={
+	name="Clarendon"
+	culture=maritimer
+	religion=high_church
+	2488.1.1={birth=yes}
+	2555.5.5={death=yes}
+}
+1899076={
+	name="Stephen"
+	culture=iroquois
+	religion=high_church
+	2501.1.1={birth=yes}
+	2567.8.4={death=yes}
+}
+1899077={
+	name="Dunstan"
+	dynasty=1813048
+	culture=maritimer
+	religion=high_church
+	father=1899089
+	2507.7.7={birth=yes}
+	2577.7.7={death=yes}
+}
+1899078={
+	name="Whitaker"
+	culture=maritimer
+	religion=high_church
+	2525.2.5={birth=yes}
+	2598.9.8={death=yes}
+}
+1899079={
+	name="Geoffrey"
+	culture=maritimer
+	religion=high_church
+	trait=scholar
+	trait=erudite
+	trait=mastermind_theologian
+	trait=zealous
+	2540.1.1={birth=yes}
+	2609.12.8={death=yes}
+}
+1899080={
+	name="Erasmus"
+	dynasty=1867018
+	culture=ontarian
+	religion=high_church
+	father=1857102
+	2549.1.1={birth=yes}
+	2622.4.21={death=yes}
+}
+1899081={
+	name="Richard"
+	culture=ontarian
+	religion=high_church
+	2565.1.1={birth=yes}
+	2639.8.17={death=yes}
+}
+1899082={
+	name="Percy"
+	dynasty=1813032
+	culture=west_indian
+	religion=high_church
+	father=1899030
+	trait=bastard
+	2610.10.10={birth=yes
+		culture=maritimer}
+	2652.5.2={death=yes}
+}
+1899083={
+	name="Roger"
+	dynasty=1867020
+	father=1857098
+	mother=1867164
+	culture=ontarian
+	religion=high_church
+	trait=scholarly_theologian
+	trait=zealous
+	trait=ambitious
+	trait=deceitful
+	trait=chaste
+	trait=charitable
+	trait=patient
+	2626.5.16={birth=yes}
+	2700.1.1={death=yes}
+}
+1899084={
+	name="Echdrach"
+	dynasty=1813048
+	culture=maritimer
+	religion=high_church
+	father=1899086
+	2595.6.5={birth=yes}
+	2639.1.1={add_spouse=1899142}
+	2665.8.22={death=yes}
+}
+1899085={
+	name="Cathbarr"
+	dynasty=1813048
+	culture=maritimer
+	religion=high_church
+	father=1899086
+	2581.1.1={birth=yes}
+	2640.1.1={death=yes}
+}
+1899086={
+	name="Cedric"
+	dynasty=1813048
+	culture=maritimer
+	religion=high_church
+	father=1899087
+	2557.1.1={birth=yes}
+	2611.1.1={death=yes}
+}
+1899087={
+	name="Gallagher"
+	dynasty=1813048
+	culture=maritimer
+	religion=high_church
+	father=1899088
+	2529.1.1={birth=yes}
+	2580.1.1={death=yes}
+}
+1899088={
+	name="Brian"
+	dynasty=1813048
+	culture=maritimer
+	religion=high_church
+	father=1899089
+	2500.1.1={birth=yes}
+	2556.1.1={death=yes}
+}
+1899089={
+	name="Athracht"
+	dynasty=1813048
+	culture=maritimer
+	religion=celtic_pagan
+	father=1899106
+	2480.1.1={birth=yes}
+	2541.1.1={death=yes}
+}
+1899090={
+	name="Edmund"
+	culture=hudsonian
+	religion=high_church
+	2547.1.1={birth=yes}
+	2641.9.19={death=yes}
+}
+
+1899091={
+	name="Trelane"
+	dynasty=1813001 #Beaton
+	culture=maritimer
+	religion=high_church
+	father=1899060
+	trait=tough_soldier
+	trait=ambitious
+	trait=proud
+	trait=wroth
+	trait=arbitrary 
+	trait=hunter	
+	give_nickname=nick_the_rash
+	2483.6.2={birth=yes}
+	2517.7.4={death={
+			death_reason=death_battle
+			killer=1620106
+		}
+	}
+}
+1899092={
+	name="Labhras"
+	dynasty=1813001 #Beaton
+	culture=maritimer
+	religion=high_church
+	father=1899091
+	trait=tough_soldier
+	trait=brave
+	2500.1.20={birth=yes}
+	2517.7.4={death={
+			death_reason=death_battle
+			killer=1620106
+		}
+	}
+}
+1899093={
+	name="Innis"
+	mother=1899061
+	father=1899122
+	dynasty=1813001
+	culture=maritimer
+	religion=high_church
+	trait=slothful
+	trait=depressed
+	trait=drunkard
+	2536.10.10={birth=yes}
+	2579.4.15={death=yes}
+}
+1899094={
+	name="Burke"
+	father=1899093
+	dynasty=1813001
+	culture=maritimer
+	religion=high_church
+	trait=quick
+	trait=diligent
+	trait=trusting
+	trait=kind
+	trait=charitable
+	2552.12.2={birth=yes}
+	2577.8.6={death={
+			death_reason=death_murder_unknown # Irvings 
+		}
+	}
+}
+1899095={
+	name="Kenneth"
+	dynasty=1813076 # Irving
+	culture=maritimer
+	religion=celtic_pagan
+	trait=genius
+	trait=midas_touched
+	trait=diligent
+	trait=legendary
+	occluded=yes
+	2099.3.14={birth=yes}
+	2199.1.1={death=yes}
+}
+1899096={
+	name="Sulliman"
+	dynasty=1813076 # Irving
+	culture=maritimer
+	religion=celtic_pagan
+	father=1899095
+	trait=fair
+	trait=grey_eminence
+	trait=kind
+	trait=charitable
+	trait=poet
+	trait=legendary
+	occluded=yes
+	2180.1.1={birth=yes}
+	2280.1.1={death=yes}
+}
+1899097={
+	name="Whelan"
+	dynasty=1813076 # Irving
+	culture=maritimer
+	religion=celtic_pagan
+	father=1899096
+	occluded=yes
+	trait=strong
+	trait=musician
+	trait=gregarious
+	trait=brilliant_strategist
+	trait=legendary
+	2275.1.1={birth=yes}
+	2333.1.1={death={
+			death_reason=death_battle
+			killer=1620073
+		}
+	}
+}
+1899098={
+	name="Lulach"
+	dynasty=1813076 # Irving
+	culture=maritimer
+	religion=celtic_pagan
+	father=1899097
+	2308.1.1={birth=yes}
+	2388.1.1={death=yes}
+}
+1899099={
+	name="Seyton"
+	dynasty=1813076 # Irving
+	culture=maritimer
+	religion=celtic_pagan
+	father=1899098
+	2340.1.1={birth=yes}
+	2404.1.1={death=yes}
+}
+1899100={
+	name="Darnley"
+	dynasty=1813076 # Irving
+	culture=maritimer
+	religion=celtic_pagan
+	father=1899099
+	2367.1.1={birth=yes}
+	2424.1.1={death=yes}
+}
+1899101={
+	name="Sumner"
+	dynasty=1813076 # Irving
+	culture=maritimer
+	religion=celtic_pagan
+	father=1899100
+	trait=lustful
+	trait=cynical
+	2390.1.1={birth=yes}
+	2473.1.1={death=yes}
+}
+1899102={
+	name="Canmore"
+	dynasty=1813076 # Irving
+	culture=maritimer
+	religion=celtic_pagan
+	father=1899101
+	2424.1.1={birth=yes}
+	2450.1.1={death={
+			death_reason=death_battle
+		}
+	}
+}
+1899103={
+	name="Hathaway"
+	dynasty=1813076 # Irving
+	culture=maritimer
+	religion=celtic_pagan
+	father=1899101
+	2430.1.1={birth=yes}
+	2452.1.1={death={
+			death_reason=death_battle
+		}
+	}
+}
+1899104={
+	name="Botsford"
+	dynasty=1813076 # Irving
+	culture=maritimer
+	religion=celtic_pagan
+	father=1899101
+	2432.1.1={birth=yes}
+	2459.1.1={death={
+			death_reason=death_battle
+		}
+	}
+}
+1899105={
+	name="Ambrose"
+	dynasty=1813076 # Irving
+	culture=maritimer
+	religion=celtic_pagan
+	father=1899101
+	2438.1.1={birth=yes}
+	2455.1.1={death={
+			death_reason=death_battle
+		}
+	}
+}
+1899106={
+	name="Donalbain"
+	dynasty=1813048
+	culture=maritimer
+	religion=celtic_pagan
+	father=1899108
+	trait=zealous
+	trait=ambitious
+	2456.1.1={birth=yes}
+	2519.1.1={death=yes}
+}
+1899107={
+	name="Slaine"
+	female=yes
+	father=1899108
+	dynasty=1813048
+	culture=maritimer
+	religion=celtic_pagan
+	trait=cruel
+	trait=feeble
+	trait=zealous
+	2441.1.1={birth=yes}
+	2489.3.16={death={
+			death_reason=death_rabble
+		}
+	}
+}
+1899108={
+	name="Malmure"
+	dynasty=1813048
+	culture=maritimer
+	religion=celtic_pagan
+	trait=zealous
+	trait=ambitious
+	2422.1.1={birth=yes}
+	2489.3.16={death={
+			death_reason=death_rabble
+		}
+	}
+}
+1899109={
+	name="Émile"
+	dynasty=1755018
+	culture=acadien
+	father=1899023
+	religion=ursuline
+	secret_religion=occultist
+	2639.6.6={birth=yes}
+	2700.1.1={death=yes}
+}
+1899110={
+	name="Vézian"
+	dynasty=1755018
+	culture=acadien
+	father=1899111
+	religion=occultist
+	2594.6.6={birth=yes}
+	2645.8.1={death=yes}
+}
+1899111={
+	name="Roméo"
+	dynasty=1755018
+	culture=acadien
+	father=1899113
+	religion=occultist
+	2570.6.6={birth=yes}
+	2611.4.3={death={
+			death_reason=death_battle
+			killer=1763070
+		}
+	}
+}
+1899112={
+	name="Émile"
+	dynasty=1755018
+	culture=acadien
+	father=1899113
+	religion=occultist
+	2572.6.6={birth=yes}
+	2592.5.2={death={
+			death_reason=death_duel
+			killer=1763151
+		}
+	}
+}
+1899113={
+	name="Éric"
+	dynasty=1755018
+	culture=acadien
+	religion=occultist
+	2549.6.6={birth=yes}
+	2602.7.22={death=yes}
+}
+1899114={
+	name="John"
+	dynasty=1813047
+	culture=maritimer
+	religion=high_church
+	father=1899115
+	trait=zealous
+	2591.1.13={birth=yes}
+	2644.5.2={death=yes}
+}
+1899115={
+	name="Murphy"
+	dynasty=1813047
+	culture=maritimer
+	religion=high_church
+	trait=zealous
+	2570.1.1={birth=yes}
+	2617.1.1={death=yes}
+}
+1899116={
+	name="Feilim"
+	dynasty="1813044"
+	culture=maritimer
+	religion=high_church
+	2601.2.2={birth=yes}
+	2626.1.1={add_spouse=1899141}
+	2655.12.12={death=yes}
+}
+1899117={
+	name="Clodagh"
+	female=yes
+	father=1899116
+	mother=1899141
+	dynasty="1813044"
+	culture=maritimer
+	religion=high_church
+	2631.4.11={birth=yes}
+	2700.1.1={death=yes}
+}
+1899118={
+	name="Tupper"
+	mother=1899061
+	father=1899122
+	dynasty=1813001
+	culture=maritimer
+	religion=high_church
+	trait=envious
+	trait=schemer
+	trait=stressed
+	trait=ambitious
+	trait=flamboyant_schemer
+	2538.1.1={birth=yes}
+	2587.1.1={death=yes}
+}
+1899119={
+	name="Pryor"
+	mother=1899061
+	father=1899122
+	dynasty=1813001
+	culture=maritimer
+	religion=high_church
+	2541.1.1={birth=yes}
+	2600.1.1={death=yes}
+}
+1899120={
+	name="Mercy"
+	female=yes
+	father=1899121
+	dynasty=1813001
+	culture=maritimer
+	religion=high_church
+	2595.1.1={birth=yes}
+	2650.4.15={death=yes}
+}
+1899121={
+	name="Ivor"
+	father=1899119
+	dynasty=1813001
+	culture=maritimer
+	religion=high_church
+	2564.1.1={birth=yes}
+	2620.1.1={death=yes}
+}
+1899122={
+	name="Bairre"
+	culture=maritimer
+	religion=high_church
+	trait=tough_soldier
+	trait=strong
+	trait=brave
+	trait=scarred
+	2490.1.1={birth=yes}
+	2525.1.1={add_spouse=1899061}
+	2550.1.1={death=yes}
+}
+1899123={
+	name="Lahey"
+	culture=maritimer
+	religion=high_church
+	dynasty=1813102
+	trait=tough_soldier
+	trait=drunkard
+	trait=cruel
+	trait=proud
+	trait=just
+	trait=ambitious
+	trait=bisexual
+	disallow_random_traits=yes
+	2616.1.1={birth=yes}
+	2700.1.1={death=yes}
+}
+1899124={
+	name="Julian"
+	culture=maritimer
+	religion=high_church
+	trait=flamboyant_schemer
+	trait=drunkard
+	trait=diligent
+	trait=proud
+	trait=ambitious
+	trait=robust
+	trait=deceitful
+	disallow_random_traits=yes
+	2636.1.1={birth=yes}
+	2660.1.1={
+		employer=1899123
+	}
+	2700.1.1={death=yes}
+}
+1899125={
+	name="Ricky"
+	culture=maritimer
+	religion=high_church
+	trait=flamboyant_schemer
+	trait=drunkard
+	trait=slow
+	trait=proud
+	trait=ambitious
+	trait=wroth
+	trait=deceitful
+	trait=gardener
+	disallow_random_traits=yes
+	2636.12.4={birth=yes}
+	2660.1.1={
+		employer=1899123
+	}
+	2688.8.14={death=yes}
+}
+1899126={
+	name="Bubbles"
+	culture=maritimer
+	religion=high_church
+	trait=martial_cleric
+	trait=kind
+	trait=content
+	trait=erudite
+	trait=diligent
+	disallow_random_traits=yes
+	2636.1.1={birth=yes}
+	2660.1.1={
+		employer=1899123
+		effect={
+			add_character_modifier={
+				name=pet_cat
+				days=-1
+			}
+		}
+	}
+	2691.10.7={death=yes}
+}
+1899127={
+	name="Randy"
+	culture=maritimer
+	religion=high_church
+	trait=martial_cleric
+	trait=is_fat
+	trait=content
+	trait=gluttonous
+	trait=proud
+	trait=slow
+	trait=trusting
+	trait=bisexual
+	disallow_random_traits=yes
+	2636.2.5={birth=yes}
+	2660.1.1={
+		employer=1899123
+		effect={add_lover=1899123}
+	}
+	2700.1.1={death=yes}
+}
+1899128={
+	name="Sidney"
+	dna="jqohjxpelli"
+	culture=ontarian
+	religion=high_church
+	dynasty=1813101
+	trait=tough_soldier
+	trait=deceitful
+	trait=brave
+	trait=envious
+	trait=greedy
+	trait=gregarious
+	trait=one_legged
+	2626.8.21={birth=yes
+		culture=maritimer}
+	2655.7.2={add_spouse=1899131}
+	2700.3.24={death=yes}
+}
+1899129={
+	name="Linda"
+	female=yes
+	culture=west_indian
+	religion=high_church
+	2615.11.7={birth=yes
+		culture=maritimer}
+	2664.4.2={death=yes}
+}
+1899130={
+	name="Bearnas"
+	female=yes
+	culture=maritimer
+	religion=high_church
+	trait=content
+	trait=just
+	trait=charitable
+	trait=falconer
+	2581.9.21={birth=yes}
+	2651.2.28={death=yes}
+}
+1899131={
+	name="Portia"
+	female=yes
+	culture=west_indian
+	religion=high_church
+	dynasty=2000071
+	trait=thrifty_clerk
+	trait=mystic
+	trait=scarred
+	trait=proud
+	trait=patient
+	2634.2.18={birth=yes}
+	2655.7.2={add_spouse=1899128}
+	2699.7.27={death=yes}
+}
+1899132={
+	name="Seoras"
+	culture=west_indian
+	religion=high_church
+	dynasty=1813101
+	father=1899128
+	mother=1899131
+	trait=strong
+	2660.8.2={birth=yes culture=maritimer}
+	2700.10.15={death=yes}
+}
+1899133={
+	name="Benoît"
+	culture=acadien
+	religion=ursuline
+	dynasty=1755053
+	father=1899139
+	trait=midas_touched
+	trait=cynical
+	trait=greedy
+	trait=ambitious
+	trait=diligent
+	2617.6.29={birth=yes effect={set_character_flag=no_historical_family}}
+	2639.1.1={add_spouse=1899134}
+	2700.1.1={death=yes}
+}
+1899134={
+	name="Édith"
+	female=yes
+	culture=acadien
+	religion=ursuline
+	dynasty=0
+	trait=fair
+	trait=diligent
+	trait=gregarious
+	trait=ambitious
+	trait=cancer
+	2621.9.2={birth=yes}
+	2658.1.1={death={
+			death_reason=death_trait
+		}
+	}
+}
+1899135={
+	name="Aldéa"
+	female=yes
+	culture=acadien
+	religion=ursuline
+	dynasty=1755053
+	father=1899133
+	mother=1899134
+	trait=fair
+	trait=cruel
+	trait=gregarious
+	trait=diligent
+	trait=content
+	trait=charismatic_negotiator
+	2640.8.6={birth=yes}
+	2700.1.1={death=yes}
+}
+1899136={
+	name="Eymard"
+	culture=acadien
+	religion=ursuline
+	dynasty=1755053
+	father=1899133
+	mother=1899134
+	trait=tough_soldier
+	trait=strong
+	trait=hunter
+	trait=proud
+	trait=brave
+	trait=wroth
+	trait=arbitrary
+	2642.9.16={birth=yes}
+	2665.1.1={add_spouse=1899002}
+	2700.1.1={death=yes}
+}
+1899137={
+	name="Eudes"
+	culture=acadien
+	religion=ursuline
+	dynasty=1755053
+	father=1899133
+	mother=1899134
+	trait=tough_soldier
+	trait=scarred
+	trait=duelist
+	trait=cruel
+	trait=greedy
+	trait=wroth
+	trait=lustful
+	trait=craven
+	2645.9.16={birth=yes}
+	2700.1.1={death=yes}
+}
+1899138={
+	name="Evée"
+	culture=acadien
+	religion=ursuline
+	dynasty=1755053
+	father=1899133
+	mother=1899134
+	trait=scholarly_theologian
+	trait=strong
+	trait=kind
+	trait=patient
+	trait=zealous
+	trait=chaste
+	trait=temperate
+	trait=theologian
+	2646.9.16={birth=yes}
+	2700.1.1={death=yes}
+}
+1899139={
+	name="Réginald"
+	culture=acadien
+	religion=ursuline
+	dynasty=1755053
+	trait=charismatic_negotiator
+	trait=diligent
+	trait=ambitious
+	trait=gregarious
+	2591.9.3={birth=yes}
+	2615.1.1={add_spouse=1899140}
+	2644.8.8={death=yes}
+}
+1899140={
+	name="Philomène"
+	female=yes
+	culture=acadien
+	religion=ursuline
+	dynasty=0
+	2592.6.4={birth=yes}
+	2615.1.1={add_spouse=1899139}
+	2650.6.8={death=yes}
+}
+1899141={
+	name="Morag"
+	female=yes
+	dynasty=1813048
+	culture=maritimer
+	religion=high_church
+	father=1899085
+	2610.3.23={birth=yes}
+	2700.1.1={death=yes}
+}
+1899142={
+	name="Oighrig"
+	female=yes
+	dynasty=0
+	culture=maritimer
+	religion=high_church
+	2619.2.4={birth=yes}
+	2663.6.5={death=yes}
+}
+1899143={
+	name="Lachlann"
+	dynasty=1813043
+	culture=maritimer
+	religion=high_church
+	father=1899006
+	mother=1899007
+	2658.6.10={birth=yes}
+	2700.1.1={death=yes}
+}
+1899144={
+	name="Magnolia"
+	female=yes
+	dynasty=1813043
+	culture=maritimer
+	religion=high_church
+	father=1899006
+	mother=1899007
+	2659.6.14={birth=yes}
+	2700.1.1={death=yes}
+}
+1899145={
+	name="Ivor"
+	dynasty=1813042
+	culture=maritimer
+	religion=high_church
+	father=1899008
+	mother=1867143
+	trait=quick
+	2661.6.3={birth=yes}
+	2700.1.1={death=yes}
+}
+1899146={
+	name="Hammel"
+	dynasty=1813042
+	culture=maritimer
+	religion=high_church
+	father=1899008
+	mother=1867143
+	2663.6.12={birth=yes}
+	2700.1.1={death=yes}
+}
+1899147={
+	name="Bridget"
+	female=yes
+	dynasty=1813042
+	culture=maritimer
+	religion=high_church
+	father=1899008
+	mother=1867143
+	2664.9.3={birth=yes}
+	2700.1.1={death=yes}
+}
+1899148={
+	name="Phyllis"
+	female=yes
+	dynasty=1813041
+	culture=maritimer
+	religion=high_church
+	father=1899004
+	mother=1899005
+	2666.2.4={birth=yes}
+	2700.1.1={death=yes}
+}
+1899149={
+	name="Monique"
+	female=yes
+	dynasty=0
+	culture=acadien
+	trait=fair
+	religion=high_church
+	2609.2.8={birth=yes}
+	2661.2.8={death=yes}
+}
+1899150={
+	name="Karla"
+	female=yes
+	dynasty=0
+	culture=maritimer
+	religion=high_church
+	2635.7.3={birth=yes}
+	2700.1.1={death=yes}
+}
+1899151={
+	name="Alexander"
+	dynasty=1813008
+	culture=maritimer
+	religion=high_church
+	father=1899018
+	mother=1899150
+	2662.7.2={birth=yes}
+	2700.1.1={death=yes}
+}
+1899152={
+	name="Jeanne"
+	dynasty=0
+	female=yes
+	culture=acadien
+	religion=ursuline
+	2604.7.12={birth=yes}
+	2664.3.11={death=yes}
+}
+1899153={
+	name="Wellwood"
+	dynasty=1813008
+	culture=maritimer
+	religion=high_church
+	2593.3.5={birth=yes}
+	2620.1.1={add_spouse=1899156}
+	2647.9.26={death=yes}
+}
+1899154={
+	name="William"
+	dynasty=1813008
+	culture=maritimer
+	religion=high_church
+	father=1899153
+	mother=1899156
+	trait=wounded
+	2622.2.18={birth=yes}
+	2640.1.1={add_spouse=1899157}
+	2664.7.27={death=yes}
+}
+1899155={
+	name="Mairi"
+	female=yes
+	dynasty=1813008
+	culture=maritimer
+	father=1899153
+	mother=1899156
+	religion=high_church
+	trait=slow
+	trait=zealous	
+	trait=content
+	trait=charitable
+	trait=chaste
+	2628.2.4={birth=yes}
+	2700.1.1={death=yes}
+}
+1899156={
+	name="Etta"
+	female=yes
+	culture=maritimer
+	religion=high_church
+	2601.5.15={birth=yes}
+	2660.6.26={death=yes}
+}
+1899157={
+	name="Fiona"
+	female=yes
+	culture=maritimer
+	religion=high_church
+	trait=brave
+	trait=ambitious
+	trait=deceitful
+	trait=diligent
+	2618.7.7={birth=yes}
+	2700.1.1={death=yes}
+}
+1899158={
+	name="Gruoch"
+	female=yes
+	dynasty="1813044"
+	culture=maritimer
+	religion=high_church
+	father=1899017
+	mother=1899155
+	trait=cynical
+	trait=paranoid
+	trait=deceitful
+	trait=wroth
+	trait=brave
+	trait=lustful
+	trait=skilled_tactician
+	2649.9.12={birth=yes}
+	2700.1.1={death=yes}
+}
+1899159={
+	name="Edgar"
+	dynasty="1813044"
+	culture=maritimer
+	religion=high_church
+	father=1899017
+	mother=1899155
+	trait=quick
+	trait=slothful
+	trait=deceitful
+	trait=cynical
+	trait=gluttonous
+	trait=brave
+	trait=gregarious
+	trait=intricate_webweaver
+	2650.5.4={birth=yes}
+	2700.1.1={death=yes}
+}
+1899160={
+	name="Georges"
+	dynasty=1755046
+	culture=acadien
+	religion=ursuline
+	trait=scholar
+	trait=genius
+	trait=kind
+	trait=brave
+	trait=mastermind_theologian
+	trait=diligent
+	2578.9.6={birth=yes}
+	2644.6.4={death=yes}
+}
+1899161={
+	name="Trevor"
+	culture=maritimer
+	religion=high_church
+	trait=indulgent_wastrel
+	trait=imbecile
+	trait=trusting
+	trait=charitable
+	disallow_random_traits=yes
+	2646.6.6={birth=yes}
+	2660.1.1={
+		employer=1899123
+	}
+	2688.8.14={death=yes}
+}
+1899162={
+	name="Corey"
+	culture=maritimer
+	religion=high_church
+	trait=amateurish_plotter
+	trait=imbecile
+	trait=trusting
+	trait=charitable
+	disallow_random_traits=yes
+	2646.6.6={birth=yes}
+	2660.1.1={
+		employer=1899123
+	}
+	2688.8.14={death=yes}
+}
