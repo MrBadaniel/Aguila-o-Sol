@@ -3745,17 +3745,6 @@ crusade = {
 					religion_group = amero_syncretic
 					NOT = { religion = ROOT }
 				}
-				NAND = {
-				has_californian_religion_trigger = yes
-				OR = {
-				e_california = {
-					has_holder = yes
-					}
-				e_new_california = {
-					has_holder = yes
-						}
-					}
-				}
 			}
 		}
 	}
@@ -5928,6 +5917,42 @@ religious = {
 				}
 			}
 			NOT = { same_realm = FROM }
+				NAND = {
+					OR = {
+						#religion = assiah
+						#religion = alurista
+						religion = cetic
+						religion = imamite
+						religion = nazarene
+						religion = qingzhen
+						#religion = scientologist
+						#religion = siliconist
+						#religion = siliconist_heresy
+						#religion = restorationist
+						}
+						FROM = {
+								OR {
+								#religion = assiah
+								#religion = alurista
+								religion = cetic
+								religion = imamite
+								religion = nazarene
+								religion = qingzhen
+								#religion = scientologist
+								#religion = siliconist
+								#religion = siliconist_heresy
+								#religion = restorationist
+								}								
+							}
+							OR = {
+										e_california = {
+										has_holder = yes
+									}
+									e_new_california = {
+									has_holder = yes
+								}		
+							 }
+					}
 			OR = {
 				NOT = { religion_group = FROM }
 				is_heresy_of = FROM
@@ -6149,17 +6174,6 @@ religious = {
 				AND = {
 					religion = exovedate
 					NOT = { religion = FROM }
-				}
-				NAND = {
-				has_californian_religion_trigger = yes
-				OR = {
-				e_california = {
-					has_holder = yes
-					}
-				e_new_california = {
-					has_holder = yes
-						}
-					}
 				}
 			}
 			top_liege = {
