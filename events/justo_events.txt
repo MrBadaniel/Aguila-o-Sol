@@ -1,5 +1,7 @@
 namespace = justo
 
+#special thanks to tudesidratado
+
 character_event = { # event to start the main event chain in a few days
 	id = justo.0
 	
@@ -23,7 +25,7 @@ character_event = { # event to start the main event chain in a few days
 	
 	immediate = {
 		ROOT = { save_event_target_as = the_prelate }
-		narrative_event = { id = justo.1  days = 20 random = 10 }
+		narrative_event = { id = justo.1  days = 30 }
 	}
 }
 
@@ -45,7 +47,7 @@ narrative_event = { #prelate had a vision event
 	}
 	
 	immediate = {
-		c_6900449 = { character_event = { id = justo.2 days = 20 random = 10 } }
+		c_6900449 = { character_event = { id = justo.2 months = 6 } }
 	}
 	
 	option = {
@@ -55,18 +57,35 @@ narrative_event = { #prelate had a vision event
 		}
 	}
 	option = {
-		name = "EVTOPTB_justo1" #response from other Christians
+		name = "EVTOPTB_justo1" #response from Sagrado
 		trigger = {
-			NOT = { religion = cristo_rey }
-			religion_group = christian
+			NOT = { has_landed_title = e_mexico }
+			religion = sacred_heart
 		}
 	}
 	option = {
-		name = "EVTOPTC_justo1" #response from non-christians
+		name = "EVTOPTC_justo1" #response from benemerito
 		trigger = {
-			NOT = { religion_group = christian }
+			has_landed_title = e_mexico
 		}
 	}	
+	option = {
+		name = "EVTOPTD_justo1" #response from Justo
+		trigger = {
+			has_character_flag = the_justo_armas
+		}
+	}
+	option = {
+		name = "EVTOPTE_justo1" #response from others
+		trigger = {
+			NOR = {
+				religion = sacred_heart
+				religion = cristo_rey
+				has_character_flag = the_justo_armas
+				has_landed_title = e_mexico
+			} 
+		}
+	}
 }
 
 character_event = { #creates the prelate's envoy
@@ -139,7 +158,7 @@ narrative_event = { #the prelate's envoy at my court!
 		hidden_tooltip = {
 			d_cristo_rey = {
 				holder_scope = {
-					narrative_event = { id = justo.5 days = 15 }
+					narrative_event = { id = justo.5 months = 3 }
 				}
 			}
 		}
@@ -172,7 +191,7 @@ narrative_event = { #the Prelate's Sails Away
 				add_trait = travelling
 			}
 		}
-		c_6900449 = { narrative_event = { id = justo.6 days = 5} }
+		c_6900449 = { narrative_event = { id = justo.6 months = 2 } }
 	}
 	
 	option = {
@@ -182,17 +201,16 @@ narrative_event = { #the Prelate's Sails Away
 		}
 	}
 	option = {
-		name = "EVTOPTB_justo5" #response from other Christians
+		name = "EVTOPTB_justo5" #response from Sagrados
 		trigger = {
-			NOT = { religion = cristo_rey }
-			NOT = { has_character_flag = the_justo_armas }
-			religion_group = christian
+			religion = sacred_heart
+			NOT = { has_landed_title = e_mexico }
 		}
 	}
 	option = {
-		name = "EVTOPTC_justo5" #response from non-christians
+		name = "EVTOPTC_justo5" 
 		trigger = {
-			NOT = { religion_group = christian }
+			has_landed_title = e_mexico
 		}
 	}
 	option = {
@@ -201,8 +219,16 @@ narrative_event = { #the Prelate's Sails Away
 			has_character_flag = the_justo_armas
 			religion_group = christian
 		}
-		custom_tooltip = {
-			text = EVTOPTD_justo5_TT
+	}
+	option = {
+		name = "EVTOPTE_justo5"
+		trigger = {
+			NOR = {
+				religion = sacred_heart
+				religion = cristo_rey
+				has_character_flag = the_justo_armas
+				has_landed_title = e_mexico
+			}
 		}
 	}
 }
@@ -245,9 +271,11 @@ narrative_event = { #an offer you can refuse
 		name = EVTOPTB_justo6
 		custom_tooltip = {
 			text = EVTOPTA_justo6_TT
-			add_claim = k_mexico
+			add_weak_claim = e_mexico
+			piety = 100
+			prestige - 100
 			hidden_tooltip = {
-				narrative_event = { id = justo.7 days = 15 }
+				narrative_event = { id = justo.7 days = 3 }
 			}
 		}
 	}
@@ -301,6 +329,9 @@ narrative_event = { #The Failure of a Prelate
 				years = 2
 			}
 		}
+		event_target:the_prelate = {
+			remove_trait = travelling
+		}
 	}
 	
 	option = {
@@ -310,17 +341,20 @@ narrative_event = { #The Failure of a Prelate
 		}
 	}
 	option = {
-		name = "EVTOPTB_justo7" #response from other Christians
+		name = "EVTOPTB_justo7" #response from Sagrado and Benemerito
+		trigger = {
+			OR = {
+				has_landed_title = { e_mexico }
+				religion = sacred_heart
+			}
+		}
+	}
+	option = {
+		name = "EVTOPTC_justo7" #response from other Christians
 		trigger = {
 			NOT = { religion = cristo_rey }
 			NOT = { has_character_flag = the_justo_armas }
 			religion_group = christian
-		}
-	}
-	option = {
-		name = "EVTOPTC_justo7" #response from non-christians
-		trigger = {
-			NOT = { religion_group = christian }
 		}
 	}
 	option = {
