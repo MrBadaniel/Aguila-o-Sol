@@ -3747,6 +3747,35 @@ crusade = {
 				}
 			}
 		}
+		
+				NAND = {
+				ROOT = {
+						religion = imamite
+						}
+						FROM = {
+								OR {
+								#religion = assiah
+								#religion = alurista
+								religion = cetic
+								religion = imamite
+								religion = nazarene
+								religion = qingzhen
+								#religion = scientologist
+								#religion = siliconist
+								#religion = siliconist_heresy
+								#religion = restorationist
+								}								
+							}
+							OR = {
+										e_california = {
+										has_holder = yes
+									}
+									e_new_california = {
+									has_holder = yes
+								}		
+							 }
+					}		
+		
 	}
 
 	can_use_title = {
@@ -5809,9 +5838,7 @@ religious = {
 	
 	can_use_gui = {
 		ROOT = {
-			NOT = { religion = cetic }
 			NOT = { trait = patria_santander }
-			top_liege = {NOT = { has_law = religion_tolerance_0 }}
 			OR = {
 				NOT = { has_character_modifier = holy_war_cooldown }
 				has_game_rule = { name = holy_war_cooldown_rule value = off }
@@ -5865,7 +5892,6 @@ religious = {
 
 	can_use = { #American Natives no longer have access to the Holy War CB, are given County Conquest CB instead.
 		ROOT = {
-			NOT = { religion = cetic }
 			NAND = {
 				religion = gaian
 				NOR = {
@@ -5917,42 +5943,6 @@ religious = {
 				}
 			}
 			NOT = { same_realm = FROM }
-				NAND = {
-					OR = {
-						#religion = assiah
-						#religion = alurista
-						religion = cetic
-						religion = imamite
-						religion = nazarene
-						religion = qingzhen
-						#religion = scientologist
-						#religion = siliconist
-						#religion = siliconist_heresy
-						#religion = restorationist
-						}
-						FROM = {
-								OR {
-								#religion = assiah
-								#religion = alurista
-								religion = cetic
-								religion = imamite
-								religion = nazarene
-								religion = qingzhen
-								#religion = scientologist
-								#religion = siliconist
-								#religion = siliconist_heresy
-								#religion = restorationist
-								}								
-							}
-							OR = {
-										e_california = {
-										has_holder = yes
-									}
-									e_new_california = {
-									has_holder = yes
-								}		
-							 }
-					}
 			OR = {
 				NOT = { religion_group = FROM }
 				is_heresy_of = FROM
@@ -6027,6 +6017,44 @@ religious = {
 			}
 			mercenary = no
 		}
+				NAND = {
+				ROOT = {
+					OR = {
+						#religion = assiah
+						#religion = alurista
+						religion = cetic
+						religion = imamite
+						religion = nazarene
+						religion = qingzhen
+						#religion = scientologist
+						#religion = siliconist
+						#religion = siliconist_heresy
+						#religion = restorationist
+							}
+						}
+						FROM = {
+								OR {
+								#religion = assiah
+								#religion = alurista
+								religion = cetic
+								religion = imamite
+								religion = nazarene
+								religion = qingzhen
+								#religion = scientologist
+								#religion = siliconist
+								#religion = siliconist_heresy
+								#religion = restorationist
+								}								
+							}
+							OR = {
+										e_california = {
+										has_holder = yes
+									}
+									e_new_california = {
+									has_holder = yes
+								}		
+							 }
+					}
 	}
 	
 	can_use_title = {
@@ -6136,7 +6164,6 @@ religious = {
 
 	is_valid = {
 		ROOT = {
-			NOT = { religion = cetic }
 			NOR = { 
 				religion_group = pagan_group
 				religion = midewiwin

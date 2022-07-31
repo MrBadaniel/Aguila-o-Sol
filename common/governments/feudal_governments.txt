@@ -68,6 +68,12 @@ feudal_governments = {
 					}
 					has_religion_features = no # Old saves, and campaigns without HF, need the Fylkirate to continue working
 				}
+				OR = {
+				character = 2500070
+				character = 2500071
+				character = 1836128
+				character = 2500072
+				}
 			}
 			NOT = { is_government_potential = bureaucratic_government }
 			NOT = { is_government_potential = ghazi_government }
@@ -372,6 +378,12 @@ feudal_governments = {
 					has_title_flag = devolved_bureaucracy
 				}
 			}
+				NOR = {
+				character = 2500070
+				character = 2500071
+				character = 1836128
+				character = 2500072
+				}
 			is_patrician = no
 			NOT = { is_government_potential = colonial_government }										
 			NOT = { is_government_potential = mex_imperial_government }
