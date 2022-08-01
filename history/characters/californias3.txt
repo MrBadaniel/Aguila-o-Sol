@@ -1478,7 +1478,7 @@
 	trait=shy
 	father=2500067
 	2611.1.1={birth=yes}
-	2643.6.29={death={death_reason=death_childbirth}}
+	2645.8.3={death={death_reason=death_childbirth}}
 }
  
 1911200={
@@ -5649,4 +5649,102 @@
     2615.4.4={death=yes}
 }
 
+1802206={
+	name="Tiberio"
+	disallow_random_traits=yes
+	culture=west_slavic
+	dynasty=5001227 #Philippus
+	mother=1802198
+	father=1802201
+    religion=nazarene
+	trait=nz_acolyte
+ 	trait=dorado
+	trait=charismatic_negotiator
+	trait=honest
+	trait=trusting
+	trait=greedy
+	trait=charitable
+    2590.9.1={birth=yes
+	culture=angeleno}
+}
+
+1802207={
+	name="Fritz"
+	disallow_random_traits=yes
+	culture=texaner
+    religion=evangelical
+	trait=skilled_tactician
+ 	trait=dorado
+	trait=poet
+	trait=trusting
+	trait=temperate
+	trait=honest
+    2554.3.12={birth=yes
+	culture=texaner}
+    2640.4.17={death=yes}
+}
+
+1802208={
+	name="Dotty"
+	disallow_random_traits=yes
+	female=yes
+	father=1802207
+	culture=texaner
+    religion=evangelical
+	trait=kind
+	trait=groomed
+	trait=shrewd
+	trait=honest
+	trait=grey_eminence
+    2599.2.1={birth=yes
+	culture=texaner}
+    2630.12.22={add_spouse=1802206}
+	2665.1.1={employer=1836112}
+}
+
+1802209={
+	name="Constancio"
+	disallow_random_traits=yes
+	culture=texaner
+	dynasty=5001227 #Philippus
+	mother=1802208
+	father=1802206
+    religion=nazarene
+	trait=nz_presbyter
+ 	trait=dorado
+	trait=fortune_builder
+	trait=shy
+	trait=lustful
+	trait=erudite
+	trait=greedy
+	trait=kind
+    2634.8.1={birth=yes
+	culture=angeleno}
+	2665.1.1={employer=1836112}
+}
 #dahijbjbcdb #daflaaddbas
+
+1802210={
+	name="Eulalia"
+	dynasty=1851045#Gonzalez
+	female=yes
+	diplomacy=5
+	father=1802157
+	mother=2502078
+	culture=tejano
+	religion=nazarene
+	trait=nz_acolyte
+	trait=charismatic_negotiator
+	trait=fair
+	trait=groomed
+	trait=shrewd
+	trait=charitable
+	trait=zealous
+	2645.8.3={birth=yes
+	culture=joaquino
+			effect={
+			set_character_flag=diversity
+			set_character_flag=physique
+		}
+	}
+}
