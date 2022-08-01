@@ -5666,7 +5666,6 @@
 	trait=charitable
     2590.9.1={birth=yes
 	culture=angeleno}
-    2666.4.7={death=yes}
 }
 
 1802207={
@@ -5682,12 +5681,13 @@
 	trait=honest
     2554.3.12={birth=yes
 	culture=texaner}
-    2540.4.17={death=yes}
+    2640.4.17={death=yes}
 }
 
 1802208={
 	name="Dotty"
 	disallow_random_traits=yes
+	female=yes
 	father=1802207
 	culture=texaner
     religion=evangelical
@@ -5698,7 +5698,8 @@
 	trait=grey_eminence
     2599.2.1={birth=yes
 	culture=texaner}
-    2540.4.17={add_spouse=1802206}
+    2630.12.22={add_spouse=1802206}
+	2665.1.1={employer=1836112}
 }
 
 1802209={
@@ -5719,20 +5720,21 @@
 	trait=kind
     2634.8.1={birth=yes
 	culture=angeleno}
-    2666.4.7={death=yes}
+	2665.1.1={employer=1836112}
 }
 #dahijbjbcdb #daflaaddbas
 
 1802210={
 	name="Eulalia"
 	dynasty=1851045#Gonzalez
+	female=yes
 	diplomacy=5
 	father=1802157
 	mother=2502078
 	culture=tejano
 	religion=nazarene
 	trait=nz_acolyte
-	trait=grey_eminence
+	trait=charismatic_negotiator
 	trait=fair
 	trait=groomed
 	trait=shrewd
