@@ -4427,17 +4427,18 @@
 			OR = {
 				trait = dead_crown_hcc #Dead kings don't have artifacts
 				trait = dead_crown_california #Dead kings don't have artifacts (replacing Byzantine?)
-				trait = dead_bullet_crown #Dead kings don't have artifacts
 				trait = dead_crown_fylkir #Dead kings don't have artifacts
 				trait = dead_crown_revelationist_fylkir #Dead kings don't have artifacts
 				trait = dead_crown_occultist_fylkir
 				trait = dead_crown_celtic_fylkir
 				trait = dead_crown_aztec_fylkir #used for Aztec emperors of Mexico
+				trait = dead_crown_mexico
 				trait = dead_crown_raven_tales_fylkir
 				trait = dead_crown_judah
 				trait = dead_crown_aria_de_machete_fylkir
 				trait = dead_crown_trailwalker_fylkir
 				trait = dead_scepter_midewiwin_fylkir
+				trait = dead_baston_del_pueblo
 				trait = dead_cursed_diamond_crown
 				trait = dead_dogwood_crown
 				trait = dead_restored_dogwood_crown
@@ -4459,7 +4460,6 @@
 					artifact_type = crown_hcc
 					artifact_type = crown_california #will use Byzantine Crown sprite
 					artifact_type = crown_fylkir
-					trait = dead_bullet_crown #Dead kings don't have artifacts
 					artifact_type = crown_revelationist_fylkir
 					artifact_type = crown_occultist_fylkir
 					artifact_type = crown_celtic_fylkir
@@ -4468,11 +4468,13 @@
 					artifact_type = crown_trailwalker_fylkir
 					artifact_type = crown_aria_de_machete_fylkir
 					artifact_type = scepter_midewiwin_fylkir
+					artifact_type = baston_del_pueblo
 					artifact_type = cursed_diamond_crown
 					artifact_type = dogwood_crown
 					artifact_type = restored_dogwood_crown
 					artifact_type = brazilian_beret
 					artifact_type = crown_texas
+					artifact_type = crown_mexico
 				}
 				is_artifact_equipped = yes 
 			}
@@ -4614,7 +4616,6 @@
 				trait = dead_crown_hcc #Dead kings don't have artifacts
 				trait = dead_crown_california #Dead kings don't have artifacts (replacing Byzantine?)
 				trait = dead_crown_fylkir #Dead kings don't have artifacts
-				trait = dead_bullet_crown #Dead kings don't have artifacts
 				trait = dead_crown_revelationist_fylkir #Dead kings don't have artifacts
 				trait = dead_crown_occultist_fylkir
 				trait = dead_crown_celtic_fylkir
@@ -4624,6 +4625,8 @@
 				trait = dead_crown_aria_de_machete_fylkir
 				trait = dead_crown_trailwalker_fylkir
 				trait = dead_scepter_midewiwin_fylkir
+				trait = dead_baston_del_pueblo
+				trait = dead_crown_mexico
 				trait = dead_cursed_diamond_crown
 				trait = dead_dogwood_crown
 				trait = dead_restored_dogwood_crown
@@ -4643,6 +4646,7 @@
 			any_artifact = {
 				OR = {
 					artifact_type = crown_hcc
+					artifact_type = crown_mexico
 					artifact_type = crown_california #will use Byzantine Crown sprite
 					artifact_type = crown_fylkir
 					artifact_type = crown_revelationist_fylkir
@@ -4930,28 +4934,20 @@
 			}
 		}
 	}
-	12 = {
-		factor = 100
-		hide_layers = { 5 = { } } #Hide layer 5 (headgear) when this frame is picked.
-		modifier = {
-			factor = 0
-			in_command = yes
-			has_game_rule = {
-				name = martial_headgear
-				value = on
-			}
-		}
-		modifier = { #Funny Crown
-			factor = 0
-			NOR = { 
-				any_artifact = {
-					artifact_type = bullet_crown
-					is_artifact_equipped = yes 
-				}
-				trait = dead_bullet_crown
-			}
-		}
-	}
+	#12 = { 
+	#	factor = 100
+	#	hide_layers = { 5 = { } } #Hide layer 5 (headgear) when this frame is picked.
+	#	modifier = { #Zunist Fylkir Crown
+	#		factor = 0
+	#		NOR = { 
+	#			any_artifact = {
+	#				artifact_type = crown_zun_fylkir
+	#				is_artifact_equipped = yes 
+	#			}
+	#			trait = dead_crown_zun_fylkir
+	#		}
+	#	}
+	#}
 	#13 = { 
 	#	factor = 100
 	#	hide_layers = { 5 = { } } #Hide layer 5 (headgear) when this frame is picked.
@@ -4999,7 +4995,28 @@
 			}
 		}
 	}
-	
+	16 = {
+		factor = 100
+		hide_layers = { 5 = { } } #Hide layer 5 (headgear) when this frame is picked.
+		modifier = {
+			factor = 0
+			in_command = yes
+			has_game_rule = {
+				name = martial_headgear
+				value = on
+			}
+		}
+		modifier = { # Mexican Presidential band
+			factor = 0
+			NOR = { 
+				any_artifact = {
+					artifact_type = crown_mexico
+					is_artifact_equipped = yes 
+				}
+				trait = dead_crown_mexico
+			}
+		}
+	}
 }
 
 # p20 freckles
