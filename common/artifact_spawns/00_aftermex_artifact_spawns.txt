@@ -19,12 +19,43 @@ crown_mexico = {
 		additive_modifier = {
 			value = 100
 			primary_title = {
-				title = k_mexico
+				title = e_mexico
 			}
 		}
 	}
 	artifacts = {
 		crown_mexico = {
+			value = 1
+		}
+	}
+}
+crown_pickelhaube = {
+	max_amount = 1
+	spawn_date = 2361.1.1
+	
+	spawn_chance = {
+		value = 100
+		modifier = {
+			factor = 0
+			NOT = { has_dlc = "Holy Fury" }
+		}
+		modifier = {
+			factor = 0
+			is_alternate_start = yes
+		}
+	}
+	
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 100
+			primary_title = {
+				title = e_mexico
+			}
+		}
+	}
+	artifacts = {
+		crown_pickelhaube = {
 			value = 1
 		}
 	}
