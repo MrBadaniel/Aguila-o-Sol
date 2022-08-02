@@ -1,6 +1,6 @@
 namespace = justo
 
-#special thanks to tudesidratado
+#special thanks to TuPadre
 
 character_event = { # event to start the main event chain in a few days
 	id = justo.0
@@ -21,12 +21,16 @@ character_event = { # event to start the main event chain in a few days
 		c_6900449 = {
 			has_landed_title = c_chalatenango
 		}
+		NOT = {
+			has_global_flag = justo_chain
+		}
 	}
 	
 	immediate = {
 		ROOT = { save_event_target_as = the_prelate }
 		c_6900449 = { save_event_target_as = el_justo }
 		narrative_event = { id = justo.1  days = 30 }
+		set_global_flag = justo_chain
 	}
 }
 
@@ -270,11 +274,11 @@ narrative_event = { #an offer you can refuse
 	}
 	option = { #decline the offer
 		name = EVTOPTB_justo6
+		add_weak_claim = e_mexico
+		piety = 100
+		prestige = -100
 		custom_tooltip = {
-			text = EVTOPTA_justo6_TT
-			add_weak_claim = e_mexico
-			piety = 100
-			prestige = -100
+			text = EVTOPTA_justo6_TT	
 			hidden_tooltip = {
 				narrative_event = { id = justo.7 days = 3 }
 			}
@@ -282,6 +286,26 @@ narrative_event = { #an offer you can refuse
 	}
 	option = { #decline the offer and imprison the cristeros
 		name = EVTOPTC_justo6
+		custom_tooltip = {
+			text = EVTOPTA_justo6_TT
+			hidden_effect = {
+				e_mexico = {
+					holder_scope = {
+						narrative_event = { id = justo.10 days = 5 }
+					}
+				}
+			}
+		}
+		e_mexico = {
+			holder_scope = {
+				transfer_scaled_wealth = {
+					to = ROOT
+					value = 0.25
+					min = 500
+					max = 1000
+				}
+			}
+		}
 		event_target:prelate_envoy = {
 			remove_friend = ROOT
 			imprison = ROOT
@@ -298,16 +322,6 @@ narrative_event = { #an offer you can refuse
 				modifier = opinion_traitor
 				who = ROOT
 				years = 100
-			}
-		}
-		custom_tooltip = {
-			text = EVTOPTA_justo6_TT
-			hidden_effect = {
-				e_mexico = {
-					holder_scope = {
-						narrative_event = { id = justo.10 days = 5 }
-					}
-				}
 			}
 		}
 	}
@@ -400,7 +414,7 @@ narrative_event = { #A Monarchist Conspiracy Foiled
 	}
 	
 	option = {
-		name = "EVTOPTA_JUSTO10"
+		name = "EVTOPTA_justo10"
 		trigger = {
 			OR = { 
 				k_baijo = {
@@ -495,7 +509,6 @@ narrative_event = { # Mexico’s Vengeance
 	title = "justo.11.name"
 	desc = justo.11.desc
 	picture = GFX_evt_mexico_fusilamento
-	border = GFX_event_normal_frame_religion
 	
 	major = yes
 	only_playable = yes
@@ -653,6 +666,7 @@ narrative_event = { #justicia mexicana
 	desc = justo.12.desc
 	picture = GFX_evt_mexico_fusilamento
 	
+	major = yes
 	is_triggered_only = yes
 	
 	trigger = {
@@ -711,4 +725,14 @@ narrative_event = { #justicia mexicana
 			}
 		}
 	}
+}
+
+narrative_event = {
+	id = justo.13
+	title = "justo.13.name"
+	desc = justo.13.desc
+	
+	major = yes
+	is_triggered_only = yes
+
 }
