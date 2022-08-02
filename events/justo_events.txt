@@ -25,6 +25,7 @@ character_event = { # event to start the main event chain in a few days
 	
 	immediate = {
 		ROOT = { save_event_target_as = the_prelate }
+		c_6900449 = { save_event_target_as = el_justo }
 		narrative_event = { id = justo.1  days = 30 }
 	}
 }
@@ -112,6 +113,7 @@ character_event = { #creates the prelate's envoy
 			trait = ambitious
 			trait = diligent
 			trait = zealous
+			trait = celibate
 		}
 	
 		new_character = {
@@ -250,10 +252,9 @@ narrative_event = { #an offer you can refuse
 	
 	option = { #accept the offer
 		name = EVTOPTA_justo6
+		add_claim = k_mexico
 		custom_tooltip = {
 			text = EVTOPTA_justo6_TT
-			add_claim = k_mexico
-			
 			hidden_effect = {
 				k_justo = {
 					grant_title = ROOT
@@ -273,7 +274,7 @@ narrative_event = { #an offer you can refuse
 			text = EVTOPTA_justo6_TT
 			add_weak_claim = e_mexico
 			piety = 100
-			prestige - 100
+			prestige = -100
 			hidden_tooltip = {
 				narrative_event = { id = justo.7 days = 3 }
 			}
@@ -302,9 +303,9 @@ narrative_event = { #an offer you can refuse
 		custom_tooltip = {
 			text = EVTOPTA_justo6_TT
 			hidden_effect = {
-				k_mexico = {
+				e_mexico = {
 					holder_scope = {
-						narrative_event = { id = justo.10 days = 1 }
+						narrative_event = { id = justo.10 days = 5 }
 					}
 				}
 			}
@@ -326,11 +327,15 @@ narrative_event = { #The Failure of a Prelate
 		cristo_rey = {
 			religion_authority = {
 				modifier = prelate_failure
-				years = 2
 			}
 		}
 		event_target:the_prelate = {
 			remove_trait = travelling
+			abdicate = yes
+			leave_court_for_china_effect = yes
+		}
+		event_target:prelate_envoy = {
+			leave_court_for_china_effect = yes
 		}
 	}
 	
@@ -338,35 +343,42 @@ narrative_event = { #The Failure of a Prelate
 		name = "EVTOPTA_justo7" #response from Cristeros
 		trigger = {
 			religion = cristo_rey
+			NOT = { has_character_flag = the_justo_armas }
+		}
+		custom_tooltip = {
+			text = EVTOPTA_justo7_TT
 		}
 	}
 	option = {
 		name = "EVTOPTB_justo7" #response from Sagrado and Benemerito
 		trigger = {
 			OR = {
-				has_landed_title = { e_mexico }
+				has_landed_title = e_mexico
 				religion = sacred_heart
 			}
+			NOT = { has_character_flag = the_justo_armas }
 		}
 	}
 	option = {
-		name = "EVTOPTC_justo7" #response from other Christians
+		name = "EVTOPTD_justo7" #response from other Christians
 		trigger = {
-			NOT = { religion = cristo_rey }
-			NOT = { has_character_flag = the_justo_armas }
+			NOR = { 
+				has_character_flag = the_justo_armas
+				religion = cristo_rey
+			}
 			religion_group = christian
 		}
 	}
 	option = {
-		name = "EVTOPTD_justo7" #justo response
+		name = "EVTOPTC_justo7" #justo response
 		trigger = {
 			has_character_flag = the_justo_armas
-			religion_group = christian
 		}
+		prestige = -100
 	}
 }
 
-narrative_event = {
+narrative_event = { #A Monarchist Conspiracy Foiled
 	id = justo.10
 	title = "justo.10.name"
 	desc = justo.10.desc
@@ -375,9 +387,328 @@ narrative_event = {
 	is_triggered_only = yes
 	
 	trigger = {
-		has_landed_title = k_mexico
+		has_landed_title = e_mexico
+	}
+	
+	immediate = {
+		event_target:prelate_envoy = {
+			imprison = ROOT
+		}
+		event_target:the_prelate = {
+			imprison = ROOT
+		}
+	}
+	
+	option = {
+		name = "EVTOPTA_JUSTO10"
+		trigger = {
+			OR = { 
+				k_baijo = {
+					has_holder = yes
+					holder_scope = {
+						religion = cristo_rey
+					}
+				}
+				d_queretaro = {
+					has_holder = yes
+					holder_scope = {
+						religion = cristo_rey
+					}
+				}
+				d_guanajuato = {
+					has_holder = yes
+					holder_scope = {
+						religion = cristo_rey
+					}
+				}
+				d_bajio_occidente = {
+					has_holder = yes
+					holder_scope = {
+						religion = cristo_rey
+					}
+				}				
+			}
+		}
+		prestige = 100
+		event_target:prelate_envoy = {
+			death = {
+				death_reason = death_execution
+				killer = ROOT
+			}
+		}
+		event_target:the_prelate = {
+			death = {
+				death_reason = death_execution
+				killer = ROOT
+			}
+		}
+		custom_tooltip = {
+			text = EVTOPTA_justo10_TT
+			hidden_effect = {
+				narrative_event = { id = justo.11 }
+			}
+		}
+	}
+	
+	option = {
+		name = "EVTOPTB_justo10"
+		event_target:prelate_envoy = {
+			death = {
+				death_reason = death_execution
+				killer = ROOT
+			}
+		}
+		event_target:the_prelate = {
+			imprison = no
+			transfer_scaled_wealth = {
+				to = ROOT
+				value = 0.25
+				min = 100
+				max = 500
+			}
+		}
+		hidden_effect = {
+			narrative_event = { id = justo.12 }
+		}
 	}
 	
 	
+	option = {
+		name = "EVTOPTC_justo10"
+		event_target:prelate_envoy = {
+			imprison = no
+		}
+		event_target:the_prelate = {
+			imprison = no
+		}
+		give_nickname = nick_the_merciful
+		prestige = 100
+		hidden_effect = {
+			narrative_event = { id = justo.13 }
+		}
+	}
 
+}
+
+narrative_event = { # Mexico’s Vengeance
+	id = justo.11
+	title = "justo.11.name"
+	desc = justo.11.desc
+	picture = GFX_evt_mexico_fusilamento
+	border = GFX_event_normal_frame_religion
+	
+	major = yes
+	only_playable = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		has_landed_title = e_mexico
+	}
+	
+	immediate = {
+		cristo_rey = {
+			religion_authority = {
+				modifier = prelate_martyr
+			}
+		}
+		if = {
+			limt = {
+				k_baijo = {
+					has_holder = yes
+					holder_scope = {
+						religion = cristo_rey
+					}
+				}
+			}
+			e_mexico = {
+				holder_scope = {
+					war = {
+						target = k_baijo
+						thirdparty_title = PREV
+						casus_belli = claim
+					}
+				}
+			}
+		}
+		else_if = {
+			limt = {
+				d_queretaro = {
+					has_holder = yes
+					holder_scope = {
+						religion = cristo_rey
+					}
+				}
+			}
+			e_mexico = {
+				holder_scope = {
+					war = {
+						target = d_queretaro
+						thirdparty_title = PREV
+						casus_belli = claim
+					}
+				}
+			}
+		}
+		else_if = {
+			limt = {
+				d_guanajuato = {
+					has_holder = yes
+					holder_scope = {
+						religion = cristo_rey
+					}
+				}
+			}
+			e_mexico = {
+				holder_scope = {
+					war = {
+						target = d_guanajuato
+						thirdparty_title = PREV
+						casus_belli = claim
+					}
+				}
+			}
+		}
+		else_if = {
+			limt = {
+				d_bajio_occidente = {
+					has_holder = yes
+					holder_scope = {
+						religion = cristo_rey
+					}
+				}
+			}
+			e_mexico = {
+				holder_scope = {
+					war = {
+						target = d_bajio_occidente
+						thirdparty_title = PREV
+						casus_belli = claim
+					}
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "EVTOPTA_justo11"
+		trigger = {
+			religion = cristo_rey
+			NOR = {
+				 de_jure_liege = k_baijo
+				 has_landed_title = k_baijo
+			}
+		}
+		custom_tooltip = {
+			text = EVTOPTA_justo11_TT
+		}
+	}
+	option = {
+		name = "EVTOPTB_justo11"
+		trigger = {
+			religion = sacred_heart
+			NOT = {
+				has_landed_title = e_mexico
+			}
+		}
+	}
+	option = {
+		name = "EVTOPTC_justo11"
+		trigger = {
+			has_landed_title = e_mexico
+		}
+	}
+	option = {
+		name = "EVTOPTD_justo11"
+		trigger = {
+			religion = cristo_rey
+			OR = {
+				de_jure_liege = k_baijo
+				has_landed_title = k_baijo
+			}
+		}
+	}
+	option = {
+		name = "EVTOPTE_justo11"
+		trigger = {
+			has_character_flag = the_justo_armas
+		}
+		prestige = -300
+	}
+	option = {
+		name = "EVTOPTF_justo11"
+		trigger = {
+			NOR = {
+				religion = sacred_heart
+				religion = cristo_rey
+				has_character_flag = the_justo_armas
+				has_landed_title = e_mexico
+			}
+		}
+	}
+}
+
+narrative_event = { #justicia mexicana
+	id = justo.12
+	title = "justo.12.name"
+	desc = justo.12.desc
+	picture = GFX_evt_mexico_fusilamento
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		has_landed_title = e_mexico
+	}
+	
+	immediate = { 
+		cristo_rey = {
+			religion_authority = {
+				modifier = prelate_failure
+			}
+		}
+		event_target:the_prelate = {
+			abdicate = yes
+			leave_court_for_china_effect = yes
+		}
+	}
+	
+	option = {
+		name = "EVTOPTA_justo7" #response from Cristeros
+		trigger = {
+			religion = cristo_rey
+			NOT = { has_character_flag = the_justo_armas }
+		}
+		custom_tooltip = {
+			text = EVTOPTA_justo7_TT
+		}
+	}
+	option = {
+		name = "EVTOPTB_justo7" #response from Sagrado
+		trigger = {
+			religion = sacred_heart
+			NOT = { has_landed_title = e_mexico }
+		}
+	}
+	option = {
+		name = "EVTOPTC_justo12" #response from the benemerito
+		trigger = {
+			has_landed_title = e_mexico
+		}
+	}
+	option = {
+		name = "EVTOPTD_justo12" #justo response
+		trigger = {
+			has_character_flag = the_justo_armas
+		}
+	}
+	option = {
+		name = "EVTOPTE_justo12" # other response
+		trigger = {
+			NOR = {
+				has_character_flag = the_justo_armas
+				has_landed_title = e_mexico
+				religion = cristo_rey
+				religion = sacred_heart
+			}
+		}
+	}
 }
