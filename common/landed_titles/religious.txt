@@ -1811,3 +1811,30 @@ d_penitente = {
 	
 	dynasty_title_names = no 	# Will not be named "Seljuk", etc.
 }
+
+d_latinate = { 
+    color = { 0.9 0.9 0.9 }
+	color2 = { 255 255 255 }
+	
+	capital = 1 
+	creation_requires_capital = no 
+	
+	title = "PONTIFEX_MAXIMUS"
+	foa = "PONTIFEX_MAXIMUS_FOA"
+	
+	caliphate = yes
+	assimilate = no
+
+	allow = { always = no }
+
+	short_name = yes 
+	dignity = 100
+	
+	controls_religion = latinate
+	religion = latinate
+	
+	dynasty_title_names = no 
+
+	#very silly pope names sadly removed
+	
+}

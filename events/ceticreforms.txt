@@ -3487,25 +3487,25 @@ character_event = {
 		}
 	}
 	option = {
-		name = EVTOPT_ceticreformcatholic
+		name = EVTOPT_ceticreformlatinate
 		trigger = {
 			trait = way_dove
 		}
-		religion = catholic
+		religion = latinate
 		any_courtier = {
 			limit = {
 				religion = cetic
 				employer = { character = ROOT }
 				dynasty = ROOT
 			}
-			religion = catholic
+			religion = latinate
 		}
 		any_demesne_province = {
 			if = {
 				limit = {
 					religion = cetic
 				}
-				religion = catholic
+				religion = latinate
 			}
 		}
 

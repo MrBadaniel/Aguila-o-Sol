@@ -584,6 +584,7 @@ amero_syncretic = {
 		intermarry = ursuline
 		intermarry = neognostic
 		intermarry = sedevacantist
+		intermarry = latinate
 		intermarry = nestorian
 		intermarry = angeline
 
@@ -667,6 +668,7 @@ christian = {
 		
 		intermarry = neognostic
 		intermarry = sedevacantist
+		intermarry = latinate
 		intermarry = nestorian
 		intermarry = charismatic
 		intermarry = postadventist
@@ -724,6 +726,7 @@ christian = {
 		
 		#intermarry = neognostic
 		intermarry = sedevacantist
+		intermarry = latinate
 		intermarry = nestorian
 		intermarry = charismatic
 		intermarry = antinomian
@@ -785,6 +788,7 @@ christian = {
 		
 		intermarry = neognostic
 		#intermarry = sedevacantist
+		intermarry = latinate
 		intermarry = nestorian
 		intermarry = charismatic
 		intermarry = antinomian
@@ -840,6 +844,7 @@ christian = {
 		
 		intermarry = neognostic
 		intermarry = sedevacantist
+		intermarry = latinate
 		#intermarry = nestorian
 		intermarry = charismatic
 		intermarry = antinomian
@@ -863,6 +868,76 @@ christian = {
 		####intermarry = insular
 		####intermarry = la_hermandad
 	}
+	latinate = {
+        graphical_culture = westerngfx
+
+        icon = 1
+		heresy_icon = 10
+        
+        color = { 0.9 0.9 0.9 }
+		parent = catholic
+        
+        crusade_name = EXORCISM
+        use_new_crusade = no
+        
+        scripture_name = THE_VULGATA
+        priest_title = PONTIFEX
+        
+        high_god_name = GOD_DEUS
+        
+        god_names = {
+            GOD_PATER_NOSTER GOD_CHRISTUS GOD_SPIRITUS_SANCTUS GOD_AVE_MARIA GOD_DOMINUM GOD_LEFEBVRE
+        }
+        
+        evil_god_names = {
+            SATAN LUCIFER GOD_DAEMONIUM 
+        }
+        
+        can_excommunicate = yes
+        can_grant_divorce = no
+        can_grant_invasion_cb = invasion
+        can_grant_claim = yes
+        can_call_crusade = yes
+        can_retire_to_monastery = yes
+        priests_can_inherit = no
+        allow_rivermovement = yes
+        
+        religious_clothing_head = 0
+        religious_clothing_priest = 1
+        intermarry = catholic
+		intermarry = evangelical
+		intermarry = ursuline
+		intermarry = high_church
+		intermarry = anabaptist
+		####intermarry = wormwoodist
+		intermarry = apostolic
+		
+		intermarry = neognostic
+		intermarry = sedevacantist
+		#intermarry = latinate
+		intermarry = nestorian
+		intermarry = charismatic
+		intermarry = antinomian
+		intermarry = postadventist
+		intermarry = angeline
+		intermarry = nonconformist
+		intermarry = batenburger
+		intermarry = moravian
+		intermarry = penitente
+		intermarry = purificador
+		####intermarry = alurista
+		intermarry = celeste
+		intermarry = exovedate
+		intermarry = nazarene
+		intermarry = true_cross
+		intermarry = cristo_rey
+		intermarry = reformista
+		
+		intermarry = sacred_heart
+		intermarry = fidencista
+		####intermarry = insular
+		####intermarry = la_hermandad
+    }	
 	ursuline = {
 		graphical_culture = westerngfx
 
@@ -914,6 +989,7 @@ christian = {
 		
 		intermarry = neognostic
 		intermarry = sedevacantist
+		intermarry = latinate
 		intermarry = nestorian
 		intermarry = charismatic
 		intermarry = antinomian
@@ -967,6 +1043,7 @@ christian = {
 		
 		intermarry = neognostic
 		intermarry = sedevacantist
+		intermarry = latinate
 		intermarry = nestorian
 		intermarry = charismatic
 		intermarry = antinomian
@@ -1038,6 +1115,7 @@ christian = {
 		
 		intermarry = neognostic
 		intermarry = sedevacantist
+		intermarry = latinate
 		intermarry = nestorian
 		intermarry = charismatic
 		intermarry = antinomian
@@ -1092,6 +1170,7 @@ christian = {
 		
 		intermarry = neognostic
 		intermarry = sedevacantist
+		intermarry = latinate
 		intermarry = nestorian
 		intermarry = charismatic
 		intermarry = antinomian
@@ -1157,6 +1236,7 @@ christian = {
 		
 		intermarry = neognostic
 		intermarry = sedevacantist
+		intermarry = latinate
 		intermarry = nestorian
 		intermarry = charismatic
 		intermarry = antinomian
@@ -1209,6 +1289,7 @@ christian = {
 		
 		intermarry = neognostic
 		intermarry = sedevacantist
+		intermarry = latinate
 		intermarry = nestorian
 		intermarry = charismatic
 		#intermarry = antinomian
@@ -1264,6 +1345,7 @@ christian = {
 		
 		intermarry = neognostic
 		intermarry = sedevacantist
+		intermarry = latinate
 		intermarry = nestorian
 		#intermarry = charismatic
 		intermarry = antinomian
@@ -1317,6 +1399,7 @@ christian = {
 		
 		intermarry = neognostic
 		intermarry = sedevacantist
+		intermarry = latinate
 		intermarry = nestorian
 		intermarry = charismatic
 		intermarry = antinomian
@@ -1431,6 +1514,7 @@ christian = {
 		
 		intermarry = neognostic
 		intermarry = sedevacantist
+		intermarry = latinate
 		intermarry = nestorian
 		intermarry = charismatic
 		intermarry = postadventist
@@ -1493,6 +1577,7 @@ christian = {
 		
 		intermarry = neognostic
 		intermarry = sedevacantist
+		intermarry = latinate
 		intermarry = nestorian
 		intermarry = charismatic
 		intermarry = postadventist
@@ -1563,6 +1648,7 @@ christian = {
 		
 		intermarry = neognostic
 		intermarry = sedevacantist
+		intermarry = latinate
 		intermarry = nestorian
 		intermarry = charismatic
 		intermarry = antinomian
@@ -1617,6 +1703,7 @@ christian = {
 
 		intermarry = neognostic
 		intermarry = sedevacantist
+		intermarry = latinate
 		intermarry = nestorian
 		intermarry = charismatic
 		intermarry = antinomian
@@ -1681,6 +1768,7 @@ christian = {
 
 		intermarry = neognostic
 		intermarry = sedevacantist
+		intermarry = latinate
 		intermarry = nestorian
 		intermarry = charismatic
 		intermarry = antinomian
@@ -1752,6 +1840,7 @@ christian = {
 
 		intermarry = neognostic
 		intermarry = sedevacantist
+		intermarry = latinate
 		intermarry = nestorian
 		intermarry = charismatic
 		intermarry = antinomian
@@ -1899,6 +1988,7 @@ christian = {
 		
 		intermarry = neognostic
 		intermarry = sedevacantist
+		intermarry = latinate
 		intermarry = nestorian
 		intermarry = charismatic
 		intermarry = postadventist
@@ -1970,6 +2060,7 @@ christian = {
 		
 		intermarry = neognostic
 		intermarry = sedevacantist
+		intermarry = latinate
 		intermarry = nestorian
 		intermarry = charismatic
 		intermarry = postadventist
@@ -2032,6 +2123,7 @@ christian = {
 		
 		intermarry = catholic
 		intermarry = sedevacantist
+		intermarry = latinate
 		intermarry = nazarene
 		intermarry = nestorian
 		intermarry = apostolic
@@ -2091,6 +2183,7 @@ christian = {
 		
 		intermarry = catholic
 		intermarry = sedevacantist
+		intermarry = latinate
 		intermarry = nazarene
 		intermarry = nestorian
 		intermarry = apostolic
@@ -2289,6 +2382,7 @@ cult_of_saints= {
 		intermarry = reformista
 		intermarry = cristo_rey
 		intermarry = sedevacantist
+		intermarry = latinate
 		intermarry = nestorian
 		intermarry = neognostic
 		intermarry = nazarene

@@ -1,0 +1,51 @@
+namespace = latinate
+
+narrative_event = {
+	id = latinate.1
+	title = EVTTITLE_latinate_1
+	desc = EVTDESC_latinate_1
+	picture = GFX_evt_great_schism
+	border = GFX_event_narrative_frame_religion
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		NOT = { has_global_flag = latinate_head_formed }
+	}
+	
+	immediate = {
+		set_global_flag = latinate_head_formed
+		d_latinate = { grant_title = ROOT }
+	}
+	
+	option = {
+		name = EVTOPTA_nazarene_44
+		trigger = {
+			religion = latinate
+			NOT = { has_landed_title = d_latinate }
+		}
+	}
+	
+	option = {
+		name = EVTOPTB_nazarene_44
+		trigger = {
+			NOT = { religion_group = christian }
+		}
+	}
+	
+	option = {
+		name = EVTOPTC_nazarene_44
+		trigger = {
+			religion_group = christian
+			NOT = { religion = latinate }
+		}
+	}
+	
+	option = {
+		name = EVTOPTD_true_cross
+		trigger = {
+			religion = latinate
+			has_landed_title = d_latinate
+		}
+	}
+}
