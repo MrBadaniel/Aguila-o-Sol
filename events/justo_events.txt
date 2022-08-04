@@ -301,7 +301,7 @@ narrative_event = { #an offer you can refuse
 				transfer_scaled_wealth = {
 					to = ROOT
 					value = 0.25
-					min = 500
+					min = 100
 					max = 1000
 				}
 			}
@@ -464,6 +464,7 @@ narrative_event = { #A Monarchist Conspiracy Foiled
 		}
 	}
 	
+	
 	option = {
 		name = "EVTOPTB_justo10"
 		event_target:prelate_envoy = {
@@ -525,7 +526,7 @@ narrative_event = { # Mexico’s Vengeance
 			}
 		}
 		if = {
-			limt = {
+			limit = {
 				k_baijo = {
 					has_holder = yes
 					holder_scope = {
@@ -535,16 +536,17 @@ narrative_event = { # Mexico’s Vengeance
 			}
 			e_mexico = {
 				holder_scope = {
+					add_claim = k_baijo
 					war = {
 						target = k_baijo
-						thirdparty_title = PREV
+						thirdparty_title = k_baijo
 						casus_belli = claim
 					}
 				}
 			}
 		}
 		else_if = {
-			limt = {
+			limit = {
 				d_queretaro = {
 					has_holder = yes
 					holder_scope = {
@@ -554,16 +556,17 @@ narrative_event = { # Mexico’s Vengeance
 			}
 			e_mexico = {
 				holder_scope = {
+					add_claim = d_queretaro
 					war = {
 						target = d_queretaro
-						thirdparty_title = PREV
+						thirdparty_title = d_queretaro
 						casus_belli = claim
 					}
 				}
 			}
 		}
 		else_if = {
-			limt = {
+			limit = {
 				d_guanajuato = {
 					has_holder = yes
 					holder_scope = {
@@ -573,16 +576,17 @@ narrative_event = { # Mexico’s Vengeance
 			}
 			e_mexico = {
 				holder_scope = {
+					add_claim = d_guanajuato
 					war = {
 						target = d_guanajuato
-						thirdparty_title = PREV
+						thirdparty_title = d_guanajuato
 						casus_belli = claim
 					}
 				}
 			}
 		}
 		else_if = {
-			limt = {
+			limit = {
 				d_bajio_occidente = {
 					has_holder = yes
 					holder_scope = {
@@ -594,7 +598,7 @@ narrative_event = { # Mexico’s Vengeance
 				holder_scope = {
 					war = {
 						target = d_bajio_occidente
-						thirdparty_title = PREV
+						thirdparty_title = d_bajio_occidente
 						casus_belli = claim
 					}
 				}
