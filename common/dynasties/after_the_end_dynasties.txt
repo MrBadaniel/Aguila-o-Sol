@@ -17510,7 +17510,20 @@ coat_of_arms = {
 2030030 = { name="Jenningston" culture=bayfolk used_for_random = no }
 2030031 = { name="Thorsson" culture=bayfolk used_for_random = no }
 2030032 = { name="Chester" culture=bayfolk used_for_random = no }
-2030033 = { name="al-Jadid" culture=anjalusi }
+2030033 = { name="al-Jadid" culture=anjalusi 
+	coat_of_arms = {
+		religion = imamite
+		template = 0
+		layer = {
+			texture = 0
+			texture_internal = 8
+			emblem = 0
+			color = 4
+			color = 5
+			color = 0
+		}
+	}
+}
 2030034 = { name="Abdulfattah" culture=anjalusi }
 2030035 = { name="Ayyubi" culture=anjalusi 
 	coat_of_arms = {
