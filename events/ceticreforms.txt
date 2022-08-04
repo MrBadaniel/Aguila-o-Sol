@@ -4014,3 +4014,22 @@ character_event = {
 		}
 	}
 }
+
+character_event = { #debug event meant to reduce Ceticism's Moral Authority and bring forth the END of Ceticism
+	id = ceticreform.19
+	desc = EVTDESC_cetic_easteregg
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		cetic = {
+			religion_authority = {
+				modifier = california_cheatin
+			}
+		}
+	}
+	
+	option = {
+		name = EVTDESC_cetic_easteregg
+	}
+}
