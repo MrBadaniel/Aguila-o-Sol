@@ -631,6 +631,11 @@ character_event = {
 					character_event = { id = zakariyya.44 days = 1}
 				}
 			}
+			c_barstow = {
+				holder_scope = {
+					character_event = { id = raymond.38 days = 2}
+				}
+			}
 		}
 		ai_chance = {
 			factor = 2
@@ -650,9 +655,10 @@ character_event = {
 	trigger = {
 		has_landed_title = k_socal
 		has_character_flag = zakariyya3
+		war = no
 	}
 	mean_time_to_happen = {
-		days = 1
+		days = 10
 	}	
 
 	option = {	
