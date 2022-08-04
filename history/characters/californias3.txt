@@ -1953,7 +1953,8 @@
 	trait=nz_presbyter
 	trait=trusting
 	trait=greedy
-	2629.12.2={birth=yes}
+	2619.12.2={birth=yes}
+	2642.4.3={add_spouse=1802174}
 	2710.1.1={death=yes}
 }
 
@@ -5747,4 +5748,33 @@
 			set_character_flag=physique
 		}
 	}
+}
+
+1802211={
+	name="Anthony"
+	dynasty=1864095 #Sevilla
+	culture=battleborn
+	religion=nazarene
+	trait=nz_presbyter
+	trait=charismatic_negotiator
+	trait=gregarious
+	trait=greedy
+	trait=wroth
+	2645.12.2={birth=yes}
+	father=2500090
+	mother=1802174
+}
+
+1802212={
+	name="Mary"
+	female=yes
+	dynasty=1864095 #Sevilla
+	culture=battleborn
+	religion=nazarene
+	trait=nz_presbyter
+	trait=deceitful
+	trait=humble
+	2652.8.2={birth=yes}
+	father=2500090
+	mother=1802174
 }
