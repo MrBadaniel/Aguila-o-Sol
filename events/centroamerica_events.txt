@@ -180,10 +180,7 @@ character_event = {
 	
 	immediate = {
 		hidden_tooltip = {
-			random = {
-				chance = 50
-				character_event = { id = centroamerica.115 days = 5 } #event that may give the character virtues
-			}
+			
 		}
 	}
 	
@@ -193,6 +190,10 @@ character_event = {
 		custom_tooltip = { text = TXT_EVTOPTA_flagellation_1 }
 		hidden_tooltip = {
 			character_event = { id = centroamerica.101 days = 2 }
+			random = {
+				chance = 10
+				character_event = { id = centroamerica.115 days = 5 } #event that may give the character virtues
+			}
 		}
 	}
 	
@@ -201,21 +202,22 @@ character_event = {
 		custom_tooltip = { text = TXT_EVTOPTB_flagellation_1 }
 		hidden_tooltip = {
 			character_event = { id = centroamerica.102 days = 2 }
+			random = {
+				chance = 10
+				character_event = { id = centroamerica.115 days = 5 } #event that may give the character virtues
+			}
 		}
 	}
 	
 	option = { #flagellation lvl 3
 		name = EVTOPTC_flagellation_1
-		trigger = {
-			OR = {
-				trait = zealous
-				trait = devout
-				piety = 100
-			}
-		}
 		custom_tooltip = { text = TXT_EVTOPTC_flagellation_1 }
 		hidden_tooltip = { #event used to decide outcome
 			character_event = { id = centroamerica.103 days = 2 }
+			random = {
+				chance = 25
+				character_event = { id = centroamerica.115 days = 5 } #event that may give the character virtues
+			}
 		}
 	}
 	
@@ -236,7 +238,7 @@ character_event = { #Cilice event decider
 	
 	immediate = {
 		random_list = {
-			70 = { #Goes well - immense piety and #prestige
+			60 = { #Goes well - immense piety and #prestige
 				modifier = {
 					factor = 1.5
 					OR = {
@@ -258,7 +260,7 @@ character_event = { #Cilice event decider
 				}
 				character_event = { id = centroamerica.104 days = 1}
 			}
-			15 = { #Goes very poorly - infection
+			25 = { #Goes very poorly - infection
 				modifier = {
 					factor = 0.75
 					OR = {
@@ -324,7 +326,7 @@ character_event = { #Discipline whip event decider
 	
 	immediate = {
 		random_list = {
-			60 = { #Goes well - pretty good piety and #prestige
+			50 = { #Goes well - pretty good piety and #prestige
 				modifier = {
 					factor = 1.5
 					OR = {
@@ -346,7 +348,7 @@ character_event = { #Discipline whip event decider
 				}
 				character_event = { id = centroamerica.107 days = 1}
 			}
-			15 = { #Goes poorly - infection
+			25 = { #Goes poorly - infection
 				modifier = {
 					factor = 0.75
 					OR = {
@@ -405,7 +407,7 @@ character_event = { #Crufixion event decider
 	
 	immediate = {
 		random_list = {
-			50 = { #Goes well - alright piety and #prestige
+			40 = { #Goes well - alright piety and #prestige
 				modifier = {
 					factor = 1.5
 					OR = {
@@ -427,7 +429,7 @@ character_event = { #Crufixion event decider
 				}
 				character_event = { id = centroamerica.109 days = 1}
 			}
-			25 = { #Goes poorly - severly injured or maimed
+			30 = { #Goes poorly - severly injured or maimed
 				modifier = {
 					factor = 0.75
 					OR = {
@@ -471,6 +473,28 @@ character_event = { #Crufixion event decider
 				}
 				character_event = { id = centroamerica.112 days = 1}
 			}
+			5 = { #Goes very Poorly - you died man
+				modifier = {
+					factor = 0.25
+					OR = {
+						trait = quick
+						trait = genius
+						trait = shrewd
+						trait = physician
+					}
+				}
+				modifier = {
+					factor = 2
+					OR = {
+						trait = dull
+						trait = slow
+						trait = distractible
+						trait = imbecile
+						trait = inbred
+					}
+				}
+				character_event = { id = centroamerica.113 days = 1} #needs to make it
+			}
 		}
 	}
 }
@@ -491,11 +515,11 @@ character_event = {
 	option = {
 		name = EVTOPTA_flagellation_2
 		#prestige = 350
-		piety = 100
+		piety = 50
 		
 		add_character_modifier = { 
 			name = flagellant_tier_one
-			years = 3
+			years = 1
 		}
 	}
 	
@@ -520,7 +544,7 @@ character_event = {
 	option = {
 		name = EVTOPTA_flagellation_3
 		#prestige = -50
-		piety = 350
+		piety = 50
 		if = {
 			limit = {
 				NOT = {
@@ -541,7 +565,7 @@ character_event = {
 		
 		add_character_modifier = { 
 			name = flagellant_tier_one
-			years = 3
+			years = 1
 		}
 	}
 	after = {
@@ -565,7 +589,7 @@ character_event = {
 	option = {
 		name = EVTOPTA_flagellation_4
 		#prestige = -150
-		piety = 200
+		piety = 50
 		#add_trait = lisp
 		
 		add_character_modifier = {
@@ -574,7 +598,7 @@ character_event = {
 		}
 		add_character_modifier = { 
 			name = flagellant_tier_one
-			years = 3
+			years = 1
 		}
 	}
 	
@@ -603,7 +627,7 @@ character_event = {
 		
 		add_character_modifier = { 
 			name = flagellant_tier_two
-			years = 3
+			years = 1
 		}
 	}
 	
@@ -628,7 +652,7 @@ character_event = {
 	option = {
 		name = EVTOPTA_flagellation_2
 		#prestige = -75
-		piety = 400
+		piety = 150
 		if = {
 			limit = {
 				NOT = {
@@ -649,7 +673,7 @@ character_event = {
 		
 		add_character_modifier = { 
 			name = flagellant_tier_two
-			years = 3
+			years = 1
 		}
 	}
 	
@@ -674,7 +698,7 @@ character_event = {
 	option = {
 		name = EVTOPTA_flagellation_2
 		#prestige = -150
-		piety = 200
+		piety = 150
 		#add_trait = lisp
 		
 		add_character_modifier = {
@@ -683,7 +707,7 @@ character_event = {
 		}
 		add_character_modifier = { 
 			name = flagellant_tier_one
-			years = 3
+			years = 1
 		}
 	}
 	
@@ -739,7 +763,7 @@ character_event = {
 		
 		add_character_modifier = { 
 			modifier = flagellant_tier_three
-			years = 3
+			years = 1
 		}
 		
 		trigger_switch = {
@@ -802,7 +826,7 @@ character_event = {
 	option = {
 		name = EVTOPTA_flagellation_9
 		#prestige = -100
-		piety = 500
+		piety = 300
 		if = {
 			limit = {
 				NOT = {
@@ -821,7 +845,7 @@ character_event = {
 		
 		add_character_modifier = { 
 			modifier = flagellant_tier_three
-			years = 3
+			years = 1
 		}
 		
 		trigger_switch = {
@@ -884,7 +908,7 @@ character_event = {
 	option = {
 		name = EVTOPTA_flagellation_9
 		#prestige = -150
-		piety = 450
+		piety = 300
 		#add_trait = lisp
 		
 		add_character_modifier = {
@@ -893,7 +917,7 @@ character_event = {
 		}
 		add_character_modifier = { 
 			modifier = flagellant_tier_three
-			years = 3
+			years = 1
 		}
 		
 		trigger_switch = {
@@ -906,6 +930,79 @@ character_event = {
 		clr_character_flag = flagellant_remove_cynical
 		clr_character_flag = flagellant_add_zealous
 		clr_character_flag = flagellant_add_devout
+	}
+	
+	after = {
+		clr_character_flag = flagellation_ritual
+	}
+}
+
+#Crucifix event (death)
+character_event = {
+	id = centroamerica.113
+	desc = EVTDESC_flagellation_13
+	picture = GFX_evt_bad_news
+	border = GFX_event_normal_frame_religion
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		has_character_flag = flagellation_ritual
+	}
+	
+	immediate = {
+		if = {
+			limit = {
+				trait = cynical
+			}
+			random = {
+				chance = 50
+				set_character_flag = flagellant_remove_cynical
+			}
+		}
+		
+		if = {
+			limit = {
+				NOR = {
+					trait = cynical
+					trait = zealous
+					trait = devout
+				}
+			}
+			random_list = {
+				25 = { set_character_flag = flagellant_add_zealous }
+				25 = { set_character_flag = flagellant_add_devout }
+				50 = { }
+			}
+		}
+	}
+	
+	option = {
+		name = EVTOPTA_flagellation_13
+		#prestige = -150
+		piety = 300
+		#add_trait = lisp
+		
+		add_character_modifier = { 
+			modifier = flagellant_tier_three
+			years = 1
+		}
+		
+		trigger_switch = {
+			on_trigger = has_character_flag
+			flagellant_remove_cynical = { remove_trait = cynical }
+			flagellant_add_zealous = { add_trait = zealous }
+			flagellant_add_trait = { add_trait = devout }
+		}
+		
+		clr_character_flag = flagellant_remove_cynical
+		clr_character_flag = flagellant_add_zealous
+		clr_character_flag = flagellant_add_devout
+		
+		death = {
+			death_reason = death_accident_crucify
+		}
+
 	}
 	
 	after = {
@@ -1141,7 +1238,7 @@ character_event = { #Event to check if character should receive the fla
 	trigger = {
 		had_character_flag = {
 			flag = flagellation_timer
-			years >= 5
+			years >= 3
 		}
 	}
 	
@@ -1200,7 +1297,7 @@ character_event = { #bad penitente event
 					show_scope_change = no	
 					opinion = {
 						modifier = opinion_offended
-						years = 30
+						years = 10
 						who = ROOT
 					} 
 				} 
