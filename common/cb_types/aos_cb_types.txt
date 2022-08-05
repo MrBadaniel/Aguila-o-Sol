@@ -643,7 +643,6 @@ unseat_unjust_ruler = { #
 			NOR = {
 			trait = hedonist
 			trait = cruel
-			trait = craven
 			trait = drunkard
 			trait = cannibal
 			trait = possessed
@@ -652,6 +651,7 @@ unseat_unjust_ruler = { #
 			any_vassal = {
 			has_opinion_modifier = { who = ROOT modifier = opinion_tyrant }
 			has_opinion_modifier = { who = ROOT modifier = opinion_evil_tyrant }
+			has_opinion_modifier = { who = ROOT modifier = opinion_ruthless }
 				}
 			}
 			piety = 150
