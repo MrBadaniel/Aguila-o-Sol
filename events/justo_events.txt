@@ -278,7 +278,7 @@ narrative_event = { #an offer you can refuse
 		piety = 100
 		prestige = -100
 		custom_tooltip = {
-			text = EVTOPTA_justo6_TT	
+			text = EVTOPTB_justo6_TT	
 			hidden_tooltip = {
 				narrative_event = { id = justo.7 days = 3 }
 			}
@@ -286,8 +286,19 @@ narrative_event = { #an offer you can refuse
 	}
 	option = { #decline the offer and imprison the cristeros
 		name = EVTOPTC_justo6
+		trigger = { #The Emperor must have money in the first place
+			e_mexico = {
+				holder_scope = {
+					scaled_wealth = {
+						value = 0.25
+						min = 100
+						max = 1000
+					}
+				}
+			}
+		}
 		custom_tooltip = {
-			text = EVTOPTA_justo6_TT
+			text = EVTOPTC_justo6_TT
 			hidden_effect = {
 				e_mexico = {
 					holder_scope = {
@@ -556,11 +567,11 @@ narrative_event = { # Mexico’s Vengeance
 			}
 			e_mexico = {
 				holder_scope = {
-					add_claim = d_queretaro
+					#add_claim = d_queretaro
 					war = {
 						target = d_queretaro
 						thirdparty_title = d_queretaro
-						casus_belli = claim
+						casus_belli = religious
 					}
 				}
 			}
@@ -576,11 +587,11 @@ narrative_event = { # Mexico’s Vengeance
 			}
 			e_mexico = {
 				holder_scope = {
-					add_claim = d_guanajuato
+					#add_claim = d_guanajuato
 					war = {
 						target = d_guanajuato
 						thirdparty_title = d_guanajuato
-						casus_belli = claim
+						casus_belli = religious
 					}
 				}
 			}
@@ -596,10 +607,11 @@ narrative_event = { # Mexico’s Vengeance
 			}
 			e_mexico = {
 				holder_scope = {
+					#add_claim = d_bajio_occidente
 					war = {
 						target = d_bajio_occidente
 						thirdparty_title = d_bajio_occidente
-						casus_belli = claim
+						casus_belli = religious
 					}
 				}
 			}
@@ -731,12 +743,64 @@ narrative_event = { #justicia mexicana
 	}
 }
 
-narrative_event = {
+narrative_event = { #Mercy for the Humiliated
 	id = justo.13
 	title = "justo.13.name"
 	desc = justo.13.desc
 	
 	major = yes
 	is_triggered_only = yes
-
+	
+	trigger = {
+		has_landed_title = e_mexico
+	}
+	
+	immediate = {
+		event_target:prelate_envoy = {
+			leave_court_for_china_effect = yes
+		}
+		event_target:the_prelate = {
+			abdicate = yes
+			leave_court_for_china_effect = yes
+		}
+	}
+	
+	option = {
+		name = "EVTOPTA_justo7"
+		trigger = {
+			religion = cristo_rey
+		}
+	}
+	
+	option = {
+		name = "EVTOPTB_justo7"
+		trigger = {
+			religion = sacred_heart
+			NOT = { has_landed_title = e_mexico }
+		}
+	}
+	
+	option = {
+		name = "EVTOPTC_justo12"
+		trigger = {
+			has_landed_title = e_mexico
+		}
+	}
+	
+	option = {
+		name = "EVTOPTD_justo13"
+		trigger = { has_character_flag = the_justo_armas }
+	}
+	
+	option = {
+		name = "EVTOPTE_justo13"
+		trigger = {
+			NOR = {
+				has_character_flag = the_prelate
+				has_landed_title = e_mexico
+				religion = sacred_heart
+				religion = cristo_rey
+			}
+		}
+	}
 }
