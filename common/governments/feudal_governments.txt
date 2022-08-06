@@ -156,7 +156,7 @@ feudal_governments = {
 			NOT = { is_government_potential = order_government }
 			NOT = { is_government_potential = military_governorate }
 			NOT = { is_government_potential = open_range_feudalism_government }
-			NOT = { is_government_potential = usos_costumberes_government }
+			#NOT = { is_government_potential = usos_costumberes_government }
 			NOT = { is_government_potential = mex_imperial_government }
 			NOT = { is_government_potential = brazilian_imperial_government }
 			is_patrician = no
@@ -262,7 +262,7 @@ feudal_governments = {
 			NOT = { is_government_potential = roman_imperial_government }								  
 			NOT = { is_government_potential = order_government }
 			NOT = { is_government_potential = military_governorate }
-			NOT = { is_government_potential = usos_costumberes_government }
+			#NOT = { is_government_potential = usos_costumberes_government }
 			NOT = { is_government_potential = brazilian_imperial_government }
 			is_patrician = no
 		}
@@ -425,7 +425,7 @@ feudal_governments = {
 			NOT = { is_government_potential = roman_imperial_government }
 			NOT = { is_government_potential = order_government }
 			NOT = { is_government_potential = military_governorate }
-			NOT = { is_government_potential = usos_costumberes_government }
+			#NOT = { is_government_potential = usos_costumberes_government }
 			NOT = { is_government_potential = reserve_government }
 			NOT = { is_government_potential = brazilian_imperial_government }
 		}
@@ -535,7 +535,7 @@ feudal_governments = {
 			NOT = { is_government_potential = colonial_government }
 			NOT = { is_government_potential = military_governorate }
 			NOT = { is_government_potential = mex_imperial_government }
-			NOT = { is_government_potential = usos_costumberes_government }
+			#NOT = { is_government_potential = usos_costumberes_government }
 			NOT = { is_government_potential = brazilian_imperial_government }
 			is_patrician = no
 		}
@@ -790,7 +790,7 @@ feudal_governments = {
 			NOT = { is_government_potential = bureaucratic_government }
 			NOT = { is_government_potential = theocratic_feudal_government }
 			NOT = { is_government_potential = brazilian_imperial_government }
-			NOT = { is_government_potential = usos_costumberes_government }
+			#NOT = { is_government_potential = usos_costumberes_government }
 			NOT = { is_government_potential = reserve_government }
 		}
 		
@@ -1016,7 +1016,9 @@ feudal_governments = {
 				 OR = {
 				 religion = mictlantec
 				 religion = qabantajik
+				 religion = sol_invicta
 				 religion_group = christian
+				 religion_group = cult_of_saints
 				 }
 			 }
 			 NOT = { is_government_potential = colonial_government }
@@ -1157,7 +1159,7 @@ feudal_governments = {
 			 NOT = { is_government_potential = colonial_government }
 			 NOT = { is_government_potential = roman_imperial_government }
 			 NOT = { is_government_potential = mex_imperial_government }
-			 NOT = { is_government_potential = usos_costumberes_government }
+			 #NOT = { is_government_potential = usos_costumberes_government }
 			AND = { 
 				religion = montanist
 				higher_tier_than = BARON
