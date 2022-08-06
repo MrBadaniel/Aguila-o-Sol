@@ -11,11 +11,15 @@ feudal_governments = {
 			TRIBAL
 		}
 		accepts_liege_governments = { # Gets the wrong religion modifier instead
+			agrarian_government
 			bureaucratic_government
 			ghazi_government
 			mormon_government
 			theocratic_feudal_government
-			#military_governorate
+			tribal_government
+			reserve_government
+			montane_government
+			usos_costumberes_government
 		}
 		free_revoke_on_governments_religion = { # Tribal vassals of other religions can have their titles revoked for free
 			tribal_government
@@ -366,6 +370,7 @@ feudal_governments = {
 				religion = qingzhen
 				religion = imamite
 				religion = nazarene
+				religion = alurista
 				character = 1802105
 				character = 1802106
 				character = 2500110
@@ -405,6 +410,10 @@ feudal_governments = {
 				character = 2500053
 				AND = {
 					religion = nazarene
+					controls_religion = no
+				}
+				AND = {
+					religion = alurista
 					controls_religion = no
 				}
 			}
@@ -689,15 +698,12 @@ feudal_governments = {
 						title = k_dominionist
 					}
 				top_liege = {
-					primary_title = { 
-						title = k_dominionist
-					}
+					title = k_dominionist
+					government = roman_imperial_government
 				}
 				top_liege = {
-					primary_title = { 
-						title = e_usa
-						has_law = succ_byzantine_elective
-					}
+					title = e_usa
+					government = roman_imperial_government
 				}
 					liege_before_war = {
 						has_landed_title = e_usa
@@ -861,6 +867,7 @@ feudal_governments = {
 				}
 				top_liege = {
 					title = e_mexico
+					government = mex_imperial_government
 				}
 					liege_before_war = {
 						has_landed_title = e_mexico
@@ -1185,6 +1192,76 @@ feudal_governments = {
 		capital_move_delay = 600
 		## Modifiers
 		court_size_modifier = 10
+	}
+
+	agrarian_government = {
+		preferred_holdings = { CASTLE CITY }
+		allowed_holdings = { 
+			CASTLE
+			CITY
+			FORT
+			HOSPITAL
+		}
+		allowed_holdings_culture = { # Will not get the wrong government type penalty for tribes of the same culture
+			TRIBAL
+			FEUDAL
+		}
+		accepts_liege_governments = { # Gets the wrong religion modifier instead
+			feudal_government
+			bureaucratic_government
+			ghazi_government
+			mormon_government
+			theocratic_feudal_government
+			tribal_government
+			reserve_government
+			montane_government
+			usos_costumberes_government
+		}
+		
+		frame_suffix = "_agrarian"
+		title_prefix = "agrarian_"
+		
+		free_revoke_on_tiers = { count }
+
+		potential = {
+			NAND = {
+				controls_religion = no
+				religion = la_hermandad
+			}
+			NAND = {
+				controls_religion = no
+				religion = artiga
+			}
+			OR = {
+				religion = la_hermandad
+				religion = artiga
+			}
+			NOT = { is_government_potential = roman_imperial_government }
+			NOT = { is_government_potential = mex_imperial_government }
+			NOT = { is_government_potential = order_government }
+			NOT = { is_government_potential = colonial_government }
+			NOT = { is_government_potential = military_governorate }
+			is_patrician = no
+		}
+		
+		color = { 216 162 109 }
+		
+		have_gender_laws = yes
+		allows_matrilineal_marriage = yes
+		free_retract_vassalage = yes
+		can_revoke_without_reason = no
+		can_demand_religious_conversion = no
+		gets_religion_opinion_penalties = no
+		gives_religion_opinion_penalties = no
+		uses_bride_price = yes
+		can_build_tribal = no
+		
+		ignore_in_vassal_limit_calculation = {
+			tribal_government
+		} 
+		capital_move_delay = 120
+
+		## Modifiers
+		court_size_modifier = 10
 	}	
-	
 }
