@@ -86,7 +86,7 @@ feudal_governments = {
 			#NOT = { is_government_potential = colonial_government }
 			NOT = { is_government_potential = military_governorate }
 			NOT = { is_government_potential = open_range_feudalism_government }
-			NOT = { is_government_potential = uyc_government }
+			NOT = { is_government_potential = usos_costumberes_government }
 			NOT = { is_government_potential = montane_government }
 			NOT = { has_character_flag = ORF_embrace }
 			NOT = { is_government_potential = theocratic_feudal_government }
@@ -156,7 +156,7 @@ feudal_governments = {
 			NOT = { is_government_potential = order_government }
 			NOT = { is_government_potential = military_governorate }
 			NOT = { is_government_potential = open_range_feudalism_government }
-			NOT = { is_government_potential = uyc_government }
+			NOT = { is_government_potential = usos_costumberes_government }
 			NOT = { is_government_potential = mex_imperial_government }
 			NOT = { is_government_potential = brazilian_imperial_government }
 			is_patrician = no
@@ -262,7 +262,7 @@ feudal_governments = {
 			NOT = { is_government_potential = roman_imperial_government }								  
 			NOT = { is_government_potential = order_government }
 			NOT = { is_government_potential = military_governorate }
-			NOT = { is_government_potential = uyc_government }
+			NOT = { is_government_potential = usos_costumberes_government }
 			NOT = { is_government_potential = brazilian_imperial_government }
 			is_patrician = no
 		}
@@ -425,7 +425,7 @@ feudal_governments = {
 			NOT = { is_government_potential = roman_imperial_government }
 			NOT = { is_government_potential = order_government }
 			NOT = { is_government_potential = military_governorate }
-			NOT = { is_government_potential = uyc_government }
+			NOT = { is_government_potential = usos_costumberes_government }
 			NOT = { is_government_potential = reserve_government }
 			NOT = { is_government_potential = brazilian_imperial_government }
 		}
@@ -535,7 +535,7 @@ feudal_governments = {
 			NOT = { is_government_potential = colonial_government }
 			NOT = { is_government_potential = military_governorate }
 			NOT = { is_government_potential = mex_imperial_government }
-			NOT = { is_government_potential = uyc_government }
+			NOT = { is_government_potential = usos_costumberes_government }
 			NOT = { is_government_potential = brazilian_imperial_government }
 			is_patrician = no
 		}
@@ -790,7 +790,7 @@ feudal_governments = {
 			NOT = { is_government_potential = bureaucratic_government }
 			NOT = { is_government_potential = theocratic_feudal_government }
 			NOT = { is_government_potential = brazilian_imperial_government }
-			NOT = { is_government_potential = uyc_government }
+			NOT = { is_government_potential = usos_costumberes_government }
 			NOT = { is_government_potential = reserve_government }
 		}
 		
@@ -968,11 +968,10 @@ feudal_governments = {
 		court_size_modifier = 15
 	}
 	
-	ususycostrumbres_government = {
-		 preferred_holdings = { CASTLE TEMPLE }
+	usos_costumberes_government = {
+		 preferred_holdings = { CASTLE }
 		 allowed_holdings = { 
 			 CASTLE 
-			 TEMPLE
 			 FORT
 			 HOSPITAL
 		 }
@@ -990,8 +989,7 @@ feudal_governments = {
 		free_revoke_on_governments_religion = { # Tribal vassals of other religions can have their titles revoked for free
 			tribal_government
 		}
-		 frame_suffix = "_usosycostumbres"
-		 title_prefix = "usosycostumbres_"
+		 frame_suffix = "_uyc"
 		potential = {
 			NAND = {
 				controls_religion = no
@@ -1013,6 +1011,7 @@ feudal_governments = {
 				 OR = {
 				 culture_group = taracahita
 				 culture_group = mesoamerican
+				 culture_group = mayan
 					}
 				 OR = {
 				 religion = mictlantec
@@ -1027,10 +1026,6 @@ feudal_governments = {
 			 NOT = { is_government_potential = military_governorate }
 			 NOT = { is_government_potential = theocratic_feudal_government }
 			 NOT = { is_government_potential = bureaucratic_government }
-			AND = { 
-				religion = montanist
-				higher_tier_than = BARON
-			}
 			is_patrician = no
 		}
 		
@@ -1051,10 +1046,6 @@ feudal_governments = {
 		 
 		 builds_with_piety = {
 			 TEMPLE
-		 }
-		
-		 vassal_call_to_arms = {
-			 uyc_government
 		 }
 		
 		can_build_tribal = no
@@ -1166,7 +1157,7 @@ feudal_governments = {
 			 NOT = { is_government_potential = colonial_government }
 			 NOT = { is_government_potential = roman_imperial_government }
 			 NOT = { is_government_potential = mex_imperial_government }
-			 NOT = { is_government_potential = uyc_government }
+			 NOT = { is_government_potential = usos_costumberes_government }
 			AND = { 
 				religion = montanist
 				higher_tier_than = BARON
