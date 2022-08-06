@@ -37,7 +37,7 @@ joseph = {
 	joaquino_opinion = 5
 	#la_hermandad_opinion = 5
 	#alurista_opinion = 5
-	#josephite_opinion = 5
+	#artiga_opinion = 5
 	nazarene_opinion = 5
 	true_cross_opinion = 5
 	bloodline_effect_better_inquisition = 1
@@ -47,14 +47,6 @@ joseph = {
 	allow_bastards = yes
 	picture = GFX_bloodlines_symbol_joseph
 	flags = { historical_bloodline }
-	active = {
-		OR = {
-			#religion = la_hermandad 
-			#religion = josephite
-			#religion = alurista
-			culture = joaquino
-		}
-	}
 }
 
 baptizer_male_bloodline = {
@@ -88,5 +80,17 @@ baptizer_female_bloodline = {
 			religion = sacred_heart
 		}
 	}
+	flags = { created_bloodline }
+}
+
+just_armas = {
+	combat_rating = 5
+	monthly_character_piety = 0.1
+	command_modifier = {
+		religious_enemy = 0.05
+	}
+	inheritance = patrilineal
+	allow_bastards = yes
+	picture = GFX_bloodlines_symbol_justoarmas
 	flags = { created_bloodline }
 }

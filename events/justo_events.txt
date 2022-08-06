@@ -268,7 +268,7 @@ narrative_event = { #an offer you can refuse
 						grant_title_no_opinion = c_chalatenango
 					}
 				}
-				narrative_event = { id = justo.30 days = 15 }
+				narrative_event = { id = justo.30 days = 7 }
 			}
 		}
 	}
@@ -278,7 +278,7 @@ narrative_event = { #an offer you can refuse
 		piety = 100
 		prestige = -100
 		custom_tooltip = {
-			text = EVTOPTA_justo6_TT	
+			text = EVTOPTB_justo6_TT	
 			hidden_tooltip = {
 				narrative_event = { id = justo.7 days = 3 }
 			}
@@ -286,8 +286,19 @@ narrative_event = { #an offer you can refuse
 	}
 	option = { #decline the offer and imprison the cristeros
 		name = EVTOPTC_justo6
+		trigger = { #The Emperor must have money in the first place
+			e_mexico = {
+				holder_scope = {
+					scaled_wealth = {
+						value = 0.25
+						min = 100
+						max = 1000
+					}
+				}
+			}
+		}
 		custom_tooltip = {
-			text = EVTOPTA_justo6_TT
+			text = EVTOPTC_justo6_TT
 			hidden_effect = {
 				e_mexico = {
 					holder_scope = {
@@ -301,7 +312,7 @@ narrative_event = { #an offer you can refuse
 				transfer_scaled_wealth = {
 					to = ROOT
 					value = 0.25
-					min = 500
+					min = 100
 					max = 1000
 				}
 			}
@@ -464,6 +475,7 @@ narrative_event = { #A Monarchist Conspiracy Foiled
 		}
 	}
 	
+	
 	option = {
 		name = "EVTOPTB_justo10"
 		event_target:prelate_envoy = {
@@ -525,7 +537,7 @@ narrative_event = { # Mexico’s Vengeance
 			}
 		}
 		if = {
-			limt = {
+			limit = {
 				k_baijo = {
 					has_holder = yes
 					holder_scope = {
@@ -535,16 +547,17 @@ narrative_event = { # Mexico’s Vengeance
 			}
 			e_mexico = {
 				holder_scope = {
+					add_claim = k_baijo
 					war = {
 						target = k_baijo
-						thirdparty_title = PREV
+						thirdparty_title = k_baijo
 						casus_belli = claim
 					}
 				}
 			}
 		}
 		else_if = {
-			limt = {
+			limit = {
 				d_queretaro = {
 					has_holder = yes
 					holder_scope = {
@@ -554,16 +567,17 @@ narrative_event = { # Mexico’s Vengeance
 			}
 			e_mexico = {
 				holder_scope = {
+					#add_claim = d_queretaro
 					war = {
 						target = d_queretaro
-						thirdparty_title = PREV
-						casus_belli = claim
+						thirdparty_title = d_queretaro
+						casus_belli = religious
 					}
 				}
 			}
 		}
 		else_if = {
-			limt = {
+			limit = {
 				d_guanajuato = {
 					has_holder = yes
 					holder_scope = {
@@ -573,16 +587,17 @@ narrative_event = { # Mexico’s Vengeance
 			}
 			e_mexico = {
 				holder_scope = {
+					#add_claim = d_guanajuato
 					war = {
 						target = d_guanajuato
-						thirdparty_title = PREV
-						casus_belli = claim
+						thirdparty_title = d_guanajuato
+						casus_belli = religious
 					}
 				}
 			}
 		}
 		else_if = {
-			limt = {
+			limit = {
 				d_bajio_occidente = {
 					has_holder = yes
 					holder_scope = {
@@ -592,10 +607,11 @@ narrative_event = { # Mexico’s Vengeance
 			}
 			e_mexico = {
 				holder_scope = {
+					#add_claim = d_bajio_occidente
 					war = {
 						target = d_bajio_occidente
-						thirdparty_title = PREV
-						casus_belli = claim
+						thirdparty_title = d_bajio_occidente
+						casus_belli = religious
 					}
 				}
 			}
@@ -727,12 +743,270 @@ narrative_event = { #justicia mexicana
 	}
 }
 
-narrative_event = {
+narrative_event = { #Mercy for the Humiliated
 	id = justo.13
 	title = "justo.13.name"
 	desc = justo.13.desc
 	
 	major = yes
 	is_triggered_only = yes
+	
+	trigger = {
+		has_landed_title = e_mexico
+	}
+	
+	immediate = {
+		event_target:prelate_envoy = {
+			leave_court_for_china_effect = yes
+		}
+		event_target:the_prelate = {
+			abdicate = yes
+			leave_court_for_china_effect = yes
+		}
+	}
+	
+	option = {
+		name = "EVTOPTA_justo7"
+		trigger = {
+			religion = cristo_rey
+		}
+	}
+	
+	option = {
+		name = "EVTOPTB_justo7"
+		trigger = {
+			religion = sacred_heart
+			NOT = { has_landed_title = e_mexico }
+		}
+	}
+	
+	option = {
+		name = "EVTOPTC_justo12"
+		trigger = {
+			has_landed_title = e_mexico
+		}
+	}
+	
+	option = {
+		name = "EVTOPTD_justo13"
+		trigger = { has_character_flag = the_justo_armas }
+	}
+	
+	option = {
+		name = "EVTOPTE_justo13"
+		trigger = {
+			NOR = {
+				has_character_flag = the_prelate
+				has_landed_title = e_mexico
+				religion = sacred_heart
+				religion = cristo_rey
+			}
+		}
+	}
+}
 
+character_event = { #creates the prelate's envoy
+	id = justo.30
+	hide_window = yes
+	is_triggered_only = yes
+	
+	only_playable = yes
+	religion_group = christian
+	is_triggered_only = yes
+	
+	trigger = {
+		has_character_flag = the_justo_armas
+	}
+	
+	immediate = {
+		create_character = {
+			name = "Henri"
+			dynasty = 14090001
+			religion = catholic
+			culture = cajun
+			historical = yes
+			trait = brilliant_strategist
+			trait = scarred
+			trait = strategist
+			trait = zealous
+			trait = celibate
+			trait = patient
+		}
+	
+		new_character = {
+			set_character_flag = no_court_invites
+			set_character_flag = ignore_refund
+			set_character_flag = is_the_gringo
+			save_event_target_as = the_gringo
+			character_event = { id = justo.29 }
+		}	
+	}
+}
+
+character_event = {
+	id = justo.29
+	has_dlc = "Jade Dragon"
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		FROM = {
+			character_event = { id = justo.31 }
+		}
+	}
+}
+
+narrative_event = { #the Pope's man
+	id = justo.31
+	title = "justo.31.name"
+	desc = justo.31.desc
+	
+	religion_group = christian
+	is_triggered_only = yes
+	
+	trigger = {
+		has_character_flag = the_justo_armas
+		is_incapable = no
+		prisoner = no
+	}
+	
+	immediate = {
+		narrative_event = { id = justo.32 months = 2 }
+	}
+	
+	option = { #accept the offer
+		name = EVTOPTA_justo31
+		custom_tooltip = {
+			text = EVTOPTA_justo31_TT
+			hidden_effect = {
+				activate_title = { title = d_friends status = yes }
+				event_target:the_gringo = {
+					d_friends = {
+						grant_title = PREV
+					}
+				}
+				d_friends = {
+					holder_scope = {
+						wealth = 500
+						ROOT = {
+							set_defacto_vassal = PREV
+						}
+					}
+				}
+				set_global_flag = catholic_friends
+			}
+		}
+	}
+	option = { #decline the offer
+		name = EVTOPTB_justo31
+		k_papal_state = {
+			holder_scope = {
+				event_target:the_gringo = {
+					move_character = PREV
+				}
+			}
+		}
+	}
+}
+
+narrative_event = { #Echoes or Whispers of an Old Name
+	id = justo.32
+	title = { #Echoes
+		trigger = {
+			has_global_flag = catholic_friends
+		}
+		text = "justo.32.name_A"
+	}
+	title = { #Whispers
+		trigger = {
+			NOT = { has_global_flag = catholic_friends }
+		}
+		text = "justo.32.name_B"
+	}
+	
+	desc = {
+		trigger = {
+			has_global_flag = catholic_friends
+		}
+		text = "justo.32.desc_A"
+	}
+	desc = {
+		trigger = {
+			NOT = { has_global_flag = catholic_friends }
+		}
+		text = "justo.32.desc_B"
+	}
+	
+	is_triggered_only = yes
+	major=yes
+	trigger = {
+		has_character_flag = the_justo_armas
+		is_incapable = no
+		prisoner = no
+	}
+	option = {
+		name = EVTOPTA_justo32
+		trigger = {
+			religion = cristo_rey
+		}
+	}	
+	option = {
+		name = EVTOPTB_justo32
+		trigger = {
+			religion = sacred_heart
+			NOT = { has_landed_title = e_mexico }
+		}
+	}
+	option = {
+		name = EVTOPTC_justo32
+		trigger = {
+			has_landed_title = e_mexico
+		}
+	}
+	option = {
+		name = EVTOPTD_justo32
+		trigger = {
+			has_character_flag = the_justo_armas
+		}
+	}
+	option = {
+		name = EVTOPTE_justo32
+		trigger = {
+			religion = catholic
+			has_global_flag = catholic_friends
+		}
+	}
+	option = {
+		name = EVTOPTF_justo32
+		trigger = {
+			religion = catholic
+			NOT = { has_global_flag = catholic_friends }
+		}
+	}
+	option = {
+		name = EVTOPTG_justo32
+		trigger = {
+			NOR = {
+				religion = cristo_rey
+				religion = sacred_heart
+				has_landed_title = e_mexico
+				has_character_flag = the_justo_armas
+				religion = catholic
+			}
+			has_global_flag = catholic_friends
+		}
+	}
+	option = {
+		name = EVTOPTH_justo32
+		trigger = {
+			NOR = {
+				religion = cristo_rey
+				religion = sacred_heart
+				has_landed_title = e_mexico
+				has_character_flag = the_justo_armas
+				religion = catholic
+			}
+			NOT = { has_global_flag = catholic_friends }
+		}
+	}
 }

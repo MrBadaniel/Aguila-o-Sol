@@ -3114,3 +3114,29 @@ d_red_raider_royal_guard = {
 
 	mercenary_type = red_raider_royal_guard_composition
 }	
+
+d_friends = { #The Catholic Friends of Mexico
+	color={ 255 240 240 }
+	color2 = { 220 220 0 }
+
+	capital = 1050 # New Rome
+
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+
+	allow = { always = no }
+
+	# Always exists
+	landless = yes
+
+	mercenary = yes
+
+	mercenary_type = d_friends_composition
+
+	strength_growth_per_century = 1.00
+
+	religion = catholic
+	
+	culture = cajun
+
+}

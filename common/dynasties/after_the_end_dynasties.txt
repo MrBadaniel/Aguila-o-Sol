@@ -10431,7 +10431,20 @@ coat_of_arms = {
 1814079 = { name="Black Jack" culture=texan }
 1814080 = { name="Shoemaker" culture=texan }
 1814081 = { name="Hale" culture=texan }
-1814082 = { name="Cameron" culture=texan }
+1814082 = { name="Cameron" culture=texan 
+	coat_of_arms = {
+		religion = americanist
+		template = 0
+		layer = {
+			texture = 0
+			texture_internal = 8
+			emblem = 0
+			color = 1
+			color = 2
+			color = 0
+		}
+	}
+}
 
 
 1815000 = { name="Parr" culture=tejano }
@@ -12489,7 +12502,20 @@ coat_of_arms = {
 	}
 }
 1851165 = { name="Ngoy" culture=towner }
-1851166 = { name="Bute" culture=angeleno }
+1851166 = { name="Bute" culture=angeleno 
+	coat_of_arms = {
+		religion = americanist
+		template = 0
+		layer = {
+			texture = 0
+			texture_internal = 3
+			emblem = 0
+			color = 3
+			color = 2
+			color = 0
+		}
+	}
+}
 1851167 = { name="Hays" culture=angeleno 
 	coat_of_arms = {
 		religion = americanist
@@ -12928,7 +12954,19 @@ coat_of_arms = {
 1864092 = { name="Potrillo" culture=battleborn }
 1864093 = { name="Lanpher" culture=battleborn }
 1864094 = { name="Faultless" culture=battleborn }
-1864095 = { name="Sevilla" culture=battleborn }
+1864095 = { name="Sevilla" culture=battleborn 
+		coat_of_arms = {
+		template = 0
+		layer = {
+			texture = 11
+			texture_internal = 29
+			emblem = 0
+			color = 0
+			color = 0
+			color = 0
+		}
+	}
+}
 1864096 = { name="Bonarda" culture=battleborn }
 1864097 = { name="Canfield" culture=battleborn }
 1864098 = { name="Oconto" culture=battleborn }
@@ -13589,10 +13627,11 @@ coat_of_arms = {
 1876029 = { name="Renfoe" culture=coloradan }
 1876030 = { name="Stotch" culture=coloradan 
 		coat_of_arms = {
+		religion = edenite
 		template = 0
 		layer = {
-			texture = 11
-			texture_internal = 27
+			texture = 4
+			texture_internal = 5
 			emblem = 0
 			color = 0
 			color = 0
@@ -13606,11 +13645,12 @@ coat_of_arms = {
 1876034 = { name="Flatiron" culture=coloradan }
 1876035 = { name="Valmer" culture=coloradan }
 1876036 = { name="Evans" culture=coloradan 
-	coat_of_arms = {
+		coat_of_arms = {
+		religion = edenite
 		template = 0
 		layer = {
-			texture = 11
-			texture_internal = 24
+			texture = 4
+			texture_internal = 3
 			emblem = 0
 			color = 0
 			color = 0
@@ -13982,11 +14022,12 @@ coat_of_arms = {
 	}
 }
 1889029 = { name="Gilbert" culture=mountainer 
-	coat_of_arms = {
+		coat_of_arms = {
+		religion = edenite
 		template = 0
 		layer = {
-			texture = 11
-			texture_internal = 23
+			texture = 4
+			texture_internal = 4
 			emblem = 0
 			color = 0
 			color = 0
@@ -17510,7 +17551,20 @@ coat_of_arms = {
 2030030 = { name="Jenningston" culture=bayfolk used_for_random = no }
 2030031 = { name="Thorsson" culture=bayfolk used_for_random = no }
 2030032 = { name="Chester" culture=bayfolk used_for_random = no }
-2030033 = { name="al-Jadid" culture=anjalusi }
+2030033 = { name="al-Jadid" culture=anjalusi 
+	coat_of_arms = {
+		religion = imamite
+		template = 0
+		layer = {
+			texture = 0
+			texture_internal = 8
+			emblem = 0
+			color = 4
+			color = 5
+			color = 0
+		}
+	}
+}
 2030034 = { name="Abdulfattah" culture=anjalusi }
 2030035 = { name="Ayyubi" culture=anjalusi 
 	coat_of_arms = {
