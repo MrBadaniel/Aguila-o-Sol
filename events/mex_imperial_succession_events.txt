@@ -103,7 +103,7 @@ narrative_event = {
 	option = {
 		name = EVTOPTA_destape_5 # of course
 		set_character_flag = attending_destape
-		# set_character_flag = do_not_disturb
+		set_character_flag = do_not_disturb
 		hidden_tooltip = { character_event = { id = destape.13 days = 300 } } # Safety catch flag clearing
 	}
 	# option = {
@@ -124,7 +124,7 @@ narrative_event = {
 	#war = no
 	
 	trigger = {
-		has_character_flag = holding_destape
+		# has_character_flag = holding_destape
 		NOT = {
 			has_character_flag = host_destape_begins
 		}
@@ -138,7 +138,7 @@ narrative_event = {
 			
 	option = {
 		name = EVTOPTA_destape_6 # time for the dedazo
-		set_character_flag = host_destape_begins
+		# set_character_flag = host_destape_begins
 		hidden_tooltip = {
 			set_character_flag = destape_begins
 			any_realm_character = {
@@ -154,7 +154,7 @@ narrative_event = {
 					NOR = { 
 						trait = tapado
 						trait = destapado
-						character = ROOT # Benemérito awaits verdict						
+						character = FromFrom # Benemérito awaits verdict						
 					}
 				}
 				character_event = { id = destape.9 }
