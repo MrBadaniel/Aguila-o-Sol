@@ -1693,6 +1693,7 @@ d_navegante = {
 	capital = 2000 # c_la_paz 
 	
 	title = "FISHER_OF_MEN"
+	title_female = "FISHER_OF_WOMEN"
 	foa = "SECULAR_FOA"
 	creation_requires_capital = yes
 	short_name = yes
@@ -1715,9 +1716,27 @@ d_navegante = {
 				AND = {
 				trait = born_in_the_caul
 				prestige = 500
-			}	
+				piety = 500
+				}	
 				AND = {
+				trait = levita
 				prestige = 1000
+				piety = 1000
+				}
+				AND = {
+				trait = aaronita
+				prestige = 500
+				piety = 500
+				}
+				AND = {
+				trait = melquisedequita
+				prestige = 250
+				piety = 250
+				}
+				AND = {
+				prestige = 1500
+				piety = 1500
+				}
 			}
 			completely_controls = d_baja_sur
 			title = k_baja_california
@@ -1726,7 +1745,6 @@ d_navegante = {
 				title = d_sonora
 				title = d_sinaloa
 			}
-		}
 	}
 	dynasty_title_names = no 	# Will not be named "Seljuk", etc.
 }
