@@ -1,0 +1,3897 @@
+namespace = HFATE
+
+#Assign horoscope traits at startup. (Not sure why this isn't in vanilla)
+character_event = {
+	id = HFATE.100
+	desc = "Assign Horoscope Traits"
+	is_triggered_only = yes
+	hide_window = yes
+	
+	has_dlc = "Holy Fury"
+	
+	trigger = {
+		OR = {
+			AND = {
+				NOT = { has_alternate_start_parameter = { key = religion_names value = random } }
+				OR = {
+					religion = gaian
+					religion = neomayan
+					religion = edenite
+				}
+			}
+			has_religion_feature = religion_astrology
+			has_religion_feature = religion_feature_occultist
+		}
+	}
+	
+	option = {
+		name = DEBUG
+		add_western_zodiac_trait_effect = yes
+	}
+}
+
+province_event = {
+	id = HFATE.42306
+	hide_window = yes
+	is_triggered_only = yes
+	has_dlc = "Sons of Abraham"
+
+	trigger = {
+		any_landed_title = {
+			tier = COUNT
+			OR = {
+				empire = {
+					title = e_canada
+				}
+				kingdom = {
+					title = k_louisiana
+				}
+			}
+			owner = {
+				NOT = {
+					religion = FROMFROM
+				}
+			}
+		}
+	}
+
+	immediate = {
+		random_province = {
+			limit = {
+				has_province_flag = shepherds_crusade_originator
+			}
+			clr_province_flag = shepherds_crusade_originator
+			save_event_target_as = shepherds_province
+			owner = {
+				create_random_soldier = {
+					random_traits = yes
+					dynasty = none
+					religion = THIS
+					culture = THIS
+					age = 25
+				}
+				new_character = {
+					save_event_target_as = shepherds_leader
+					create_title = {
+						tier = DUKE
+						landless = yes
+						adventurer = yes
+						name = "THE_SHEPHERDS_CRUSADE"
+						holder = THIS
+					}
+					add_trait = brave
+					add_trait = ambitious
+					add_trait = holy_warrior
+					add_trait = zealous
+					set_focus = focus_war
+					add_ambition = obj_become_exalted
+					set_character_flag = shepherds_leader
+					spawn_unit = {
+						province = ROOT
+						home = ROOT
+						owner = THIS
+						troops = {
+							archers = { 1000 1000 }
+							light_infantry = { 8000 8000 }
+						}
+						attrition = 0
+					}
+					random_landed_title = {
+						limit = {
+							tier = COUNT
+							OR = {
+								empire = {
+									title = e_canada
+								}
+								kingdom = {
+									title = k_louisiana
+								}
+							}
+							owner = {
+								NOT = {
+									religion = FROMFROM
+								}
+							}
+						}
+						preferred_limit = {
+							owner = {
+								OR = {
+									AND = {
+										independent = yes
+										tier = EMPEROR
+									}
+									top_liege = {
+										tier = EMPEROR
+									}
+								}
+							}
+						}
+						preferred_limit = {
+							owner = {
+								OR = {
+									AND = {
+										independent = yes
+										tier = KING
+									}
+									top_liege = {
+										tier = KING
+									}
+								}
+							}
+						}
+						preferred_limit = {
+							owner = {
+								OR = {
+									AND = {
+										independent = yes
+										tier = DUKE
+									}
+									top_liege = {
+										tier = DUKE
+									}
+								}
+							}
+						}
+						kingdom = {
+							save_event_target_as = kingdom_target
+						}
+						owner = {
+							if = {
+								limit = {
+									independent = yes
+								}
+								event_target:shepherds_leader = {
+									unsafe_war = {
+										target = PREV
+										casus_belli = shepherds_crusade_invasion
+										thirdparty_title = event_target:kingdom_target
+										tier = KING
+									}
+								}
+							}
+							else = {
+								top_liege = {
+									event_target:shepherds_leader = {
+										unsafe_war = {
+											target = PREV
+											casus_belli = shepherds_crusade_invasion
+											thirdparty_title = event_target:kingdom_target
+											tier = KING
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+				save_event_target_as = shepherds_owner
+			}
+		}
+		any_playable_ruler = {
+			narrative_event = { id = HFP.42307 }
+		}
+	}
+}
+
+#Hellenic Dedicated Temples.
+#Ruler decides whom to dedicate the temple to.
+#First determine which kind of god you are interested in.
+character_event = {
+	id = HFATE.23200
+	desc = EVTDESCHF23200
+	picture = GFX_evt_hellenic_temple
+	border = GFX_event_normal_frame_religion
+	has_dlc = "Holy Fury"
+	is_triggered_only = yes
+	
+	immediate = {
+		if = {
+			limit = {
+				NOT = { event_target:scoped_temple_barony = { always = yes } }
+			}
+			FROM = { save_event_target_as = scoped_temple_barony } #Only does this on the first go
+		}
+	}
+	option = { #Washington
+		name = EVTOPTAHF23200
+		custom_tooltip = { text = EVTOPTAHF23200_TT }
+		hidden_tooltip = { character_event = { id = HFATE.23201 } }
+		ai_chance = { 
+			factor = 25 
+			modifier = { 
+				factor = 0.25
+				NOR = {
+					has_education_diplomacy_trigger = yes 
+					has_lifestyle_diplomacy_trigger = yes
+					trait = proud
+					trait = ambitious
+					trait = lunatic
+					trait = stubborn
+					trait = envious
+				}
+			}
+
+		}
+	}
+	option = { #Roosevelt
+		name = EVTOPTBHF23200
+		custom_tooltip = { text = EVTOPTBHF23200_TT }
+		hidden_tooltip = { character_event = { id = HFATE.23202 } }
+		ai_chance = { 
+			factor = 25 
+			modifier = { 
+				factor = 0.25
+				NOR = {
+					has_education_martial_trigger = yes 
+					has_lifestyle_martial_trigger = yes 
+					trait = wroth
+					trait = brave
+				}
+			}
+		}
+	}
+	option = { #Jefferson
+		name = EVTOPTCHF23200
+		custom_tooltip = { text = EVTOPTCHF23200_TT }
+		hidden_tooltip = { character_event = { id = HFATE.23203 } }
+		ai_chance = { 
+			factor = 25 
+			modifier = { 
+				factor = 0.25
+				NOR = {
+					has_benevolent_trait_trigger = yes 
+					has_education_stewardship_trigger = yes
+					has_lifestyle_stewardship_trigger = yes
+				}
+			}
+		}
+	}
+	option = { #Lincoln.
+		name = EVTOPTDHF23200
+		custom_tooltip = { text = EVTOPTDHF23200_TT }
+		hidden_tooltip = { character_event = { id = HFATE.23204 } }
+		ai_chance = { 
+			factor = 25 
+			modifier = { 
+				factor = 0.25
+				NOR = {
+					is_pious_trigger = yes 
+					has_pleasant_trait_trigger = yes 
+					trait = celibate
+					trait = scholar
+					has_education_learning_trigger = yes
+					has_lifestyle_learning_trigger = yes
+				}
+			}
+		}
+	}
+}
+
+#Washington
+character_event = {
+	id = HFATE.23201
+	desc = EVTDESCHF23201
+	picture = GFX_evt_hellenic_temple
+	border = GFX_event_normal_frame_religion
+	has_dlc = "Holy Fury"
+	is_triggered_only = yes
+	
+	option = { #Washington
+		name = EVTOPTAHF23201
+		ROOT = { 
+			wealth = -250
+			piety = -200
+			add_character_modifier = { 
+				name = dedicated_to_washington
+				duration = 3650
+				stacking = yes #In case a player invests enough money to dedicate multiple temples within a lifetime.
+			} 
+		}
+		event_target:scoped_temple_barony = { 
+			show_scope_change = no
+			set_flag = flag_dedicated_to_washington
+			add_building = tp_shrine_washington
+		}
+		hidden_tooltip = { 
+			clr_character_flag = flag_dedicating_temple
+			add_character_modifier = { 
+				name = recently_dedicated_temple_cooldown
+				duration = 1250 
+				hidden = yes
+			}
+		}
+	}
+	option = {
+		name = EVTOPT_TEMPLE_BACK_TO_SELECTION
+		custom_tooltip = { text = EVTOPT_TEMPLE_BACK_TO_SELECTION_TT }
+		hidden_effect = { character_event = { id = HFATE.23200 } }
+	}
+}
+
+#Roosevelt
+character_event = {
+	id = HFATE.23202
+	desc = EVTDESCHF23202
+	picture = GFX_evt_hellenic_temple
+	border = GFX_event_normal_frame_religion
+	has_dlc = "Holy Fury"
+	is_triggered_only = yes
+	
+	option = { #Roosevelt
+		name = EVTOPTAHF23202
+		ROOT = { 
+			if = { 
+				limit = { ai = no }
+				wealth = -250 
+			}
+			piety = -200
+			add_character_modifier = { 
+				name = dedicated_to_roosevelt
+				duration = 3650
+				stacking = yes #In case a player invests enough money to dedicate multiple temples within a lifetime.
+			} 
+		}
+		event_target:scoped_temple_barony = { 
+			show_scope_change = no
+			set_flag = flag_dedicated_to_roosevelt
+			add_building = tp_shrine_roosevelt
+		}
+		hidden_tooltip = { 
+			clr_character_flag = flag_dedicating_temple
+			add_character_modifier = { 
+				name = recently_dedicated_temple_cooldown
+				duration = 1250 
+				hidden = yes
+			}
+		}
+	}
+	option = {
+		name = EVTOPT_TEMPLE_BACK_TO_SELECTION
+		custom_tooltip = { text = EVTOPT_TEMPLE_BACK_TO_SELECTION_TT }
+		hidden_effect = { character_event = { id = HFATE.23200 } }
+	}
+}
+
+#Jefferson
+character_event = {
+	id = HFATE.23203
+	desc = EVTDESCHF23203
+	picture = GFX_evt_hellenic_temple
+	border = GFX_event_normal_frame_religion
+	has_dlc = "Holy Fury"
+	is_triggered_only = yes
+	
+	option = { #Jefferson
+		name = EVTOPTAHF23203
+		ROOT = { 
+			if = { 
+				limit = { ai = no }
+				wealth = -250 
+			}
+			piety = -200
+			add_character_modifier = { 
+				name = dedicated_to_jefferson
+				duration = 3650
+				stacking = yes #In case a player invests enough money to dedicate multiple temples within a lifetime.
+			} 
+		}
+		event_target:scoped_temple_barony = { 
+			show_scope_change = no
+			set_flag = flag_dedicated_to_jefferson
+			add_building = tp_shrine_jefferson
+		}
+		hidden_tooltip = { 
+			clr_character_flag = flag_dedicating_temple
+			add_character_modifier = { 
+				name = recently_dedicated_temple_cooldown
+				duration = 1250 
+				hidden = yes
+			}
+		}
+	}
+	option = {
+		name = EVTOPT_TEMPLE_BACK_TO_SELECTION
+		custom_tooltip = { text = EVTOPT_TEMPLE_BACK_TO_SELECTION_TT }
+		hidden_effect = { character_event = { id = HFATE.23200 } }
+	}
+}
+
+#Lincoln
+character_event = {
+	id = HFATE.23204
+	desc = EVTDESCHF23204
+	picture = GFX_evt_hellenic_temple
+	border = GFX_event_normal_frame_religion
+	has_dlc = "Holy Fury"
+	is_triggered_only = yes
+	
+	option = { #Lincoln
+		name = EVTOPTAHF23204
+		ROOT = { 
+			if = { 
+				limit = { ai = no }
+				wealth = -250 
+			}
+			piety = -200
+			add_character_modifier = { 
+				name = dedicated_to_lincoln
+				duration = 3650
+				stacking = yes #In case a player invests enough money to dedicate multiple temples within a lifetime.
+			} 
+		}
+		event_target:scoped_temple_barony = { 
+			show_scope_change = no
+			set_flag = flag_dedicated_to_lincoln
+			add_building = tp_shrine_lincoln
+		}
+		hidden_tooltip = { 
+			clr_character_flag = flag_dedicating_temple
+			add_character_modifier = { 
+				name = recently_dedicated_temple_cooldown
+				duration = 1250 
+				hidden = yes
+			}
+		}
+	}
+	option = {
+		name = EVTOPT_TEMPLE_BACK_TO_SELECTION
+		custom_tooltip = { text = EVTOPT_TEMPLE_BACK_TO_SELECTION_TT }
+		hidden_effect = { character_event = { id = HFATE.23200 } }
+	}
+}
+
+#On_start event to assign crowned_by_traits to existing rulers, so as to prevent a cascade of coronation ceremonies at the beginning of every game.
+character_event = {
+	id = HFATE.20372
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	has_dlc = "Holy Fury"
+
+	trigger = { 
+		has_landed_title = k_ursuline
+		is_save_game = no
+	}
+	immediate = {
+		set_global_flag = flag_crowns_delivered
+		any_playable_ruler = { 
+			limit = { 
+				age = 16
+				religion = ursuline 
+				is_feudal = yes
+				NOT = { government = order_government }
+				higher_real_tier_than = DUKE
+				NOT = { has_character_flag = is_charlemagne }
+				NOT = { has_character_flag = is_carloman }
+				NOT = { trait = crowned_by_priest }
+				NOT = { trait = crowned_by_bishop }
+				NOT = { trait = crowned_by_pope }
+				NOT = { trait = crowned_by_myself }
+				is_vice_royalty = no
+			}
+			random_list = { 
+				#Crowned by Pope
+				#Crowned by Bishop
+				#Crowned by Priest
+
+				10 = { 
+					modifier = { #Excommunicated rulers, possessed rulers, or rulers under an Antipope are never assigned Crowned by the Pope.
+						factor = 0
+						OR = { 
+							trait = excommunicated
+							trait = possessed 
+							NOT = { religion_head = { has_landed_title = k_ursuline } }
+						}
+					}
+					modifier = { #More distant/Less powerful Kingdom less likely to be crowned by the Abbess-General.
+						factor = 0.5
+						religion = ursuline
+						NOR = { 
+							has_landed_title = k_quebec
+							has_landed_title = k_aurora
+							has_landed_title = k_michigan
+							has_landed_title = k_saguenay
+							has_landed_title = k_louisiana
+						} 
+					}
+					modifier = { #If the Pope disliked him, less likely to be crowned by him.
+						factor = 0.5
+						NOT = { 
+							reverse_opinion = { 
+								who = ROOT
+								value = 0 
+							} 
+						} 
+					}
+					modifier = { #Historically more likely.
+						factor = 10
+						religion = ursuline
+						has_landed_title = k_quebec
+					}
+					save_persistent_event_target = { name = coronation_priest_per scope = ROOT } #Needed to localize the trait properly.
+					add_trait = crowned_by_pope
+				}
+				80 = { 
+					modifier = { #Checking if there is no Antipope, and you are not excommunicated, go for the Pope.
+						factor = 0.1
+						NOT = { trait = excommunicated }
+						NOT = { trait = possessed }
+						religion_head = { has_landed_title = k_ursuline } 
+						tier = EMPEROR
+					}
+					modifier = { #Checking if Emperor, Bishop Coronation unavailable when without investiture law.
+						factor = 0
+						tier = EMPEROR
+						NOT = { primary_title = { has_law = investiture_law_0 } }
+					}
+					modifier = { #Checking if there is an available powerful theocrat.
+						factor = 0
+						NOT = { 
+							any_realm_character = { 
+								is_theocracy = yes 
+								religion = ROOT
+								OR = { 
+									higher_real_tier_than = BARON 
+									has_minor_title = title_ursuline_cardinal
+									any_claim = { title = k_ursuline } #Antipope
+								}
+								NOT = { has_landed_title = k_ursuline }
+							}
+						} 
+					}
+					character_event = { id = HFATE.20373 }
+				}
+				10 = { 
+					modifier = { #Emperors always crowned by somebody important.
+						factor = 0
+						NOT = { trait = excommunicated }
+						NOT = { trait = possessed }
+						tier = EMPEROR
+					}
+					modifier = { #Respectable Kings are crowned by Bishops.
+						factor = 0
+						NOT = { trait = excommunicated }
+						NOT = { trait = possessed }
+						tier = KING
+						any_realm_character = { 
+							is_theocracy = yes 
+							religion = ROOT
+							OR = { 
+								higher_real_tier_than = BARON 
+								has_minor_title = title_ursuline_cardinal
+								any_claim = { title = k_ursuline } #Antipope
+							}
+							NOT = { has_landed_title = k_ursuline }
+						}
+					}
+				}
+			}
+			random_list = { #Second list to determine which modifier.
+				40 = { 
+					modifier = {
+						factor = 0.1
+						OR = { 
+							trait = excommunicated
+							trait = possessed 
+						}
+					}
+					modifier = {
+						factor = 0.5
+						tier = KING
+					}
+					modifier = {
+						factor = 2
+						trait = crowned_by_pope
+					}
+					if = { 
+						limit = { NOT = { ruled_years = 20 } }
+						add_character_modifier = {
+							name = extravagant_coronation
+							days = 6000 #Has probably already ruled for a while.
+						}
+					}
+				}
+				50 = { 
+				}
+				10 = { 
+					add_character_modifier = {
+						name = crowned_in_barn
+						days = -1
+					}
+				}
+			}
+		}
+	}
+}
+
+#On_start event to assign crowned_by_traits to existing rulers, so as to prevent a cascade of coronation ceremonies at the beginning of every game.
+character_event = {
+	id = HFATE.20373
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	has_dlc = "Holy Fury"
+
+	trigger = { 
+		has_landed_title = d_quorum_of_the_twelve
+		is_save_game = no
+	}
+	immediate = {
+		set_global_flag = flag_crowns_delivered
+		any_playable_ruler = { 
+			limit = { 
+				age = 16
+				religion = mormon 
+				is_feudal = yes
+				NOT = { government = order_government }
+				higher_real_tier_than = DUKE
+				NOT = { has_character_flag = is_charlemagne }
+				NOT = { has_character_flag = is_carloman }
+				NOT = { trait = crowned_by_priest }
+				NOT = { trait = crowned_by_bishop }
+				NOT = { trait = crowned_by_pope }
+				NOT = { trait = crowned_by_myself }
+				is_vice_royalty = no
+			}
+			random_list = { 
+				#Crowned by Pope
+				#Crowned by Bishop
+				#Crowned by Priest
+
+				10 = { 
+					modifier = { #Excommunicated rulers, possessed rulers, or rulers under an Antipope are never assigned Crowned by the Pope.
+						factor = 0
+						OR = { 
+							trait = excommunicated
+							trait = possessed 
+							NOT = { religion_head = { has_landed_title = d_quorum_of_the_twelve } }
+						}
+					}
+					modifier = { #More distant/Less powerful Kingdom less likely to be crowned by the Pope.
+						factor = 0.5
+						religion = mormon
+						NOR = { 
+							has_landed_title = k_deseret
+							has_landed_title = k_arixo
+						} 
+					}
+					modifier = { #If the Pope disliked him, less likely to be crowned by him.
+						factor = 0.5
+						NOT = { 
+							reverse_opinion = { 
+								who = ROOT
+								value = 0 
+							} 
+						} 
+					}
+					modifier = { #Historically more likely.
+						factor = 10
+						religion = mormon
+						has_landed_title = k_deseret
+					}
+					save_persistent_event_target = { name = coronation_priest_per scope = ROOT } #Needed to localize the trait properly.
+					add_trait = crowned_by_pope
+				}
+				80 = { 
+					modifier = { #Checking if there is no Antipope, and you are not excommunicated, go for the Pope.
+						factor = 0.1
+						NOT = { trait = excommunicated }
+						NOT = { trait = possessed }
+						religion_head = { has_landed_title = d_quorum_of_the_twelve } 
+						tier = EMPEROR
+					}
+					modifier = { #Checking if Emperor, Bishop Coronation unavailable when without investiture law.
+						factor = 0
+						tier = EMPEROR
+						NOT = { primary_title = { has_law = investiture_law_0 } }
+					}
+					modifier = { #Checking if there is an available powerful theocrat.
+						factor = 0
+						NOT = { 
+							any_realm_character = { 
+								is_theocracy = yes 
+								religion = ROOT
+								OR = { 
+									higher_real_tier_than = BARON 
+									has_minor_title = title_mormon_cardinal
+									any_claim = { title = d_quorum_of_the_twelve } #Antipope
+								}
+								NOT = { has_landed_title = d_quorum_of_the_twelve }
+							}
+						} 
+					}
+					character_event = { id = HFATE.20373 }
+				}
+				10 = { 
+					modifier = { #Emperors always crowned by somebody important.
+						factor = 0
+						NOT = { trait = excommunicated }
+						NOT = { trait = possessed }
+						tier = EMPEROR
+					}
+					modifier = { #Respectable Kings are crowned by Bishops.
+						factor = 0
+						NOT = { trait = excommunicated }
+						NOT = { trait = possessed }
+						tier = KING
+						any_realm_character = { 
+							is_theocracy = yes 
+							religion = ROOT
+							OR = { 
+								higher_real_tier_than = BARON 
+								has_minor_title = title_cardinal
+								any_claim = { title = d_quorum_of_the_twelve } #Antipope
+							}
+							NOT = { has_landed_title = d_quorum_of_the_twelve }
+						}
+					}
+				}
+			}
+			random_list = { #Second list to determine which modifier.
+				40 = { 
+					modifier = {
+						factor = 0.1
+						OR = { 
+							trait = excommunicated
+							trait = possessed 
+						}
+					}
+					modifier = {
+						factor = 0.5
+						tier = KING
+					}
+					modifier = {
+						factor = 2
+						trait = crowned_by_pope
+					}
+					if = { 
+						limit = { NOT = { ruled_years = 20 } }
+						add_character_modifier = {
+							name = extravagant_coronation
+							days = 6000 #Has probably already ruled for a while.
+						}
+					}
+				}
+				50 = { 
+				}
+				10 = { 
+					add_character_modifier = {
+						name = crowned_in_barn
+						days = -1
+					}
+				}
+			}
+		}
+	}
+}
+
+#On_start event to assign crowned_by_traits to existing rulers, so as to prevent a cascade of coronation ceremonies at the beginning of every game.
+character_event = {
+	id = HFATE.20374
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	has_dlc = "Holy Fury"
+
+	trigger = { 
+		has_landed_title = k_high_church
+		is_save_game = no
+	}
+	immediate = {
+		set_global_flag = flag_crowns_delivered
+		any_playable_ruler = { 
+			limit = { 
+				age = 16
+				religion = high_church 
+				is_feudal = yes
+				NOT = { government = order_government }
+				higher_real_tier_than = DUKE
+				NOT = { has_character_flag = is_charlemagne }
+				NOT = { has_character_flag = is_carloman }
+				NOT = { trait = crowned_by_priest }
+				NOT = { trait = crowned_by_bishop }
+				NOT = { trait = crowned_by_pope }
+				NOT = { trait = crowned_by_myself }
+				is_vice_royalty = no
+			}
+			random_list = { 
+				#Crowned by Pope
+				#Crowned by Bishop
+				#Crowned by Priest
+
+				10 = { 
+					modifier = { #Excommunicated rulers, possessed rulers, or rulers under an Antipope are never assigned Crowned by the Pope.
+						factor = 0
+						OR = { 
+							trait = excommunicated
+							trait = possessed 
+							NOT = { religion_head = { has_landed_title = k_high_church } }
+						}
+					}
+					modifier = { #More distant/Less powerful Kingdom less likely to be crowned by the Pope.
+						factor = 0.5
+						religion = high_church
+						NOR = { 
+							has_landed_title = k_ontario
+							has_landed_title = k_maritimes
+							has_landed_title = k_quebec
+						} 
+					}
+					modifier = { #If the Pope disliked him, less likely to be crowned by him.
+						factor = 0.5
+						NOT = { 
+							reverse_opinion = { 
+								who = ROOT
+								value = 0 
+							} 
+						} 
+					}
+					modifier = { #Historically more likely.
+						factor = 10
+						religion = high_church
+						OR = { 
+							has_landed_title = k_ontario
+							has_landed_title = k_maritimes
+						} 
+					}
+					save_persistent_event_target = { name = coronation_priest_per scope = ROOT } #Needed to localize the trait properly.
+					add_trait = crowned_by_pope
+				}
+				80 = { 
+					modifier = { #Checking if there is no Antipope, and you are not excommunicated, go for the Pope.
+						factor = 0.1
+						NOT = { trait = excommunicated }
+						NOT = { trait = possessed }
+						religion_head = { has_landed_title = k_high_church } 
+						tier = EMPEROR
+					}
+					modifier = { #Checking if Emperor, Bishop Coronation unavailable when without investiture law.
+						factor = 0
+						tier = EMPEROR
+						NOT = { primary_title = { has_law = investiture_law_0 } }
+					}
+					modifier = { #Checking if there is an available powerful theocrat.
+						factor = 0
+						NOT = { 
+							any_realm_character = { 
+								is_theocracy = yes 
+								religion = ROOT
+								OR = { 
+									higher_real_tier_than = BARON 
+									any_claim = { title = k_high_church } #Antipope
+								}
+								NOT = { has_landed_title = k_high_church }
+							}
+						} 
+					}
+					character_event = { id = HFATE.20373 }
+				}
+				10 = { 
+					modifier = { #Emperors always crowned by somebody important.
+						factor = 0
+						NOT = { trait = excommunicated }
+						NOT = { trait = possessed }
+						tier = EMPEROR
+					}
+					modifier = { #Respectable Kings are crowned by Bishops.
+						factor = 0
+						NOT = { trait = excommunicated }
+						NOT = { trait = possessed }
+						tier = KING
+						any_realm_character = { 
+							is_theocracy = yes 
+							religion = ROOT
+							OR = { 
+								higher_real_tier_than = BARON 
+								any_claim = { title = k_high_church } #Antipope
+							}
+							NOT = { has_landed_title = k_high_church }
+						}
+					}
+				}
+			}
+			random_list = { #Second list to determine which modifier.
+				40 = { 
+					modifier = {
+						factor = 0.1
+						OR = { 
+							trait = excommunicated
+							trait = possessed 
+						}
+					}
+					modifier = {
+						factor = 0.5
+						tier = KING
+					}
+					modifier = {
+						factor = 2
+						trait = crowned_by_pope
+					}
+					if = { 
+						limit = { NOT = { ruled_years = 20 } }
+						add_character_modifier = {
+							name = extravagant_coronation
+							days = 6000 #Has probably already ruled for a while.
+						}
+					}
+				}
+				50 = { 
+				}
+				10 = { 
+					add_character_modifier = {
+						name = crowned_in_barn
+						days = -1
+					}
+				}
+			}
+		}
+	}
+}
+
+###TECUMSEH BLOODLINE###
+###########################################################
+
+# Forging Claim on Tecumseh's Bloodline.
+
+#Opportunity arises.
+narrative_event = {
+	id = HFATE.24200
+	title = EVTTITLEHFATE24200 
+	desc = EVTDESCAHFATE24200
+	picture = GFX_evt_native_horseback
+	border = GFX_event_narrative_frame_war
+	
+	is_triggered_only = yes
+
+	ai = no
+	capable_only = yes
+	prisoner = no
+
+	trigger = { 
+		real_tier = EMPEROR
+		prestige = 15000
+		is_adult = yes
+		ai = no
+		is_alternate_start = no
+		NOT = { trait = content }
+		NOT = { has_character_flag = flag_chance_for_tecumseh_blood } #Opportunity only once per character.
+		NOT = { has_global_flag = flag_tecumseh_blood_restored } #Bloodline unlocked only once per playthrough.
+		OR = {
+			capital_scope = { 
+				region = custom_canada
+			}
+			has_native_culture_trigger = yes
+		}
+	}
+
+	weight_multiplier = { 
+		days = 1
+
+		modifier = {
+			factor = 0.5
+			NOT = { has_native_culture_trigger = yes }
+		}
+		modifier = {
+			factor = 3
+			trait = ambitious
+		}
+		modifier = {
+			factor = 2
+			religion_group = amero_syncretic
+		}
+		modifier = {
+			factor = 2
+			culture_group = anishinaabe
+		}
+		modifier = {
+			factor = 0.5
+			age = 50
+		}
+		modifier = {
+			factor = 2
+			trait = brave
+		}
+		modifier = {
+			factor = 2
+			has_education_martial_trigger = yes
+		}
+		modifier = {
+			factor = 2
+			has_lifestyle_martial_trigger = yes
+		}
+		modifier = {
+			factor = 2
+			capital_scope = {
+				OR = {
+					region = custom_canada
+					region = world_rustlands
+				}
+			}
+		}
+		modifier = {
+			factor = 2
+			trait = scholar
+		}
+		modifier = {
+			factor = 2
+			has_ambition = obj_forge_bloodline
+		}
+		modifier = {
+			factor = 2
+			learning = 8
+		}
+		modifier = {
+			factor = 2
+			learning = 10
+		}
+		modifier = {
+			factor = 2
+			learning = 12
+		}
+		modifier = {
+			factor = 2
+			learning = 14
+		}
+		modifier = {
+			factor = 2
+			learning = 16
+		}
+		modifier = {
+			factor = 2
+			learning = 18
+		}
+		modifier = {
+			factor = 2
+			learning = 20
+		}
+		modifier = {
+			factor = 2
+			learning = 22
+		}
+		modifier = {
+			factor = 2
+			learning = 24
+		}
+		modifier = {
+			factor = 2
+			learning = 26
+		}
+		modifier = {
+			factor = 2
+			learning = 28
+		}
+		modifier = {
+			factor = 2
+			learning = 30
+		}
+		modifier = {
+			factor = 1.5
+			prestige = 22000
+		}
+		modifier = {
+			factor = 1.5
+			prestige = 24000
+		}
+		modifier = {
+			factor = 1.5
+			prestige = 26000
+		}
+		modifier = {
+			factor = 1.5
+			prestige = 28000
+		}
+		modifier = {
+			factor = 1.5
+			prestige = 30000
+		}
+		modifier = {
+			factor = 1.5
+			prestige = 40000
+		}
+		modifier = {
+			factor = 1.5
+			prestige = 50000
+		}
+		modifier = {
+			factor = 1.5
+			piety = 1000
+			religion_group = amero_syncretic
+		}
+		modifier = {
+			factor = 1.5
+			piety = 1500
+			religion_group = amero_syncretic
+		}
+		modifier = {
+			factor = 1.75
+			piety = 2000
+			religion_group = amero_syncretic
+		}
+		modifier = {
+			factor = 1.75
+			check_variable = { which = bloodline_won_wars value = 5 }
+		}
+		modifier = {
+			factor = 1.75
+			check_variable = { which = bloodline_won_wars value = 10 }
+		}
+	}
+
+	immediate = { 
+		set_character_flag = flag_chance_for_tecumseh_blood
+	}
+
+	option = { #Pursue.
+		name = EVTOPTAHF24200
+		custom_tooltip = { text = TT_EVTOPTAHFATE24200 }
+		hidden_tooltip = { narrative_event = { id = HFATE.24201 days = 25 random = 25 } }
+	}
+	option = { #Abandon.
+		name = EVTOPTBHF24200
+	}
+}
+
+
+#The Tomb of Tecumseh.
+narrative_event = {
+	id = HFATE.24201
+	title = EVTTITLEHFATE24201 
+	desc = { 
+		trigger = { 
+			capital_scope = { 
+				region = custom_canada
+			}
+		} 
+		text = EVTDESCAHFATE24201
+	}
+	desc = { 
+		trigger = { 
+			capital_scope = { 
+				NOT = { 
+					region = custom_canada
+				}
+			}
+		} 
+		text = EVTDESCBHFATE24201
+	}
+	picture = GFX_evt_death
+	border = GFX_event_narrative_frame_war
+	
+	is_triggered_only = yes
+	immediate = { 
+		clr_character_flag = flag_tecumseh_tomb_search_high
+		clr_character_flag = flag_tecumseh_tomb_search_medium
+		clr_character_flag = flag_tecumseh_tomb_search_low
+		clr_character_flag = flag_tecumseh_tomb_search_cheap
+		clr_character_flag = flag_tecumseh_scholars_search_high
+		clr_character_flag = flag_tecumseh_scholars_search_medium
+		clr_character_flag = flag_tecumseh_scholars_search_low
+		clr_character_flag = flag_tecumseh_scholars_search_cheap
+	}
+
+	#Search for the Tomb. (Intrigue-based)
+	#Forsake search, hire scholars instead. (Learning-based)
+
+	option = { #Intrigue search.
+		name = EVTOPTAHFATE24201
+		custom_tooltip = { text = TT_EVTOPTAHFATE24201 }
+		hidden_tooltip = { narrative_event = { id = HFATE.24202 } } #Decide budget.
+	}
+	option = { #Learning search.
+		name = EVTOPTBHF24201
+		custom_tooltip = { text = TT_EVTOPTBHFATE24201 }
+		hidden_tooltip = { narrative_event = { id = HFATE.24203 } } #Decide budget.
+	}
+	option = { #Abandon search.
+		name = EVTOPTCHF24201
+		custom_tooltip = { text = TT_EVTOPTCHFATE24201 }
+		if = { 
+			limit = { 
+				trait = ambitious
+			}
+			remove_trait = ambitious
+			if = { 
+				limit = { 
+					NOT = { trait = depressed }
+				}
+				add_trait = depressed
+			}
+		}
+		prestige = -3000
+	}
+}
+
+#Decide budget when searching Alexander's tomb.
+narrative_event = {
+	id = HFATE.24202
+	title = EVTTITLEHFATE24201
+	desc = EVTDESCAHFATE24202
+	picture = GFX_evt_death
+	border = GFX_event_narrative_frame_war
+	
+	is_triggered_only = yes
+
+	immediate = { 
+		clr_character_flag = flag_tecumseh_tomb_search_high
+		clr_character_flag = flag_tecumseh_tomb_search_medium
+		clr_character_flag = flag_tecumseh_tomb_search_low
+		clr_character_flag = flag_tecumseh_tomb_search_cheap
+	}
+
+	option = { 
+		name = EVTOPTAHF24202
+		custom_tooltip = { text = TT_EVTOPTAHF24202 }
+		scaled_wealth = { value = -4 min = -1000 max = -2000 }
+		set_character_flag = flag_alex_tomb_search_high
+	}
+	option = { 
+		name = EVTOPTBHF24202
+		custom_tooltip = { text = TT_EVTOPTBHF24202 }
+		scaled_wealth = { value = -3 min = -750 max = -1500 }
+		set_character_flag = flag_alex_tomb_search_medium
+	}
+	option = { 
+		name = EVTOPTCHF24202
+		custom_tooltip = { text = TT_EVTOPTCHF24202 }
+		scaled_wealth = { value = -2 min = -500 max = -1000 }
+		set_character_flag = flag_alex_tomb_search_low
+	}
+	option = { 
+		name = EVTOPTDHF24202
+		custom_tooltip = { text = TT_EVTOPTDHF24202 }
+		scaled_wealth = { value = -1 min = -250 max = -500 }
+		set_character_flag = flag_alex_tomb_search_cheap
+	}
+	after = { 
+		hidden_tooltip = { 
+			random_list = {
+				#Success. - Tomb "found"
+				#Failure. - Retry or change approach.
+				40 = { #Success
+					modifier = {
+						factor = 0.1
+						has_character_flag = flag_tecumseh_tomb_search_cheap
+					}
+					modifier = {
+						factor = 0.35
+						has_character_flag = flag_tecumseh_tomb_search_low
+					}
+					modifier = {
+						factor = 0.75
+						has_character_flag = flag_tecumseh_tomb_search_medium
+					}
+					modifier = {
+						factor = 1.25
+						trait = schemer
+					}
+					modifier = {
+						factor = 1.25
+						intrigue = 10
+					}
+					modifier = {
+						factor = 1.25
+						intrigue = 12
+					}
+					modifier = {
+						factor = 1.25
+						intrigue = 14
+					}
+					modifier = {
+						factor = 1.25
+						intrigue = 16
+					}
+					modifier = {
+						factor = 1.25
+						intrigue = 18
+					}
+					modifier = {
+						factor = 1.5
+						intrigue = 20
+					}
+					modifier = {
+						factor = 1.5
+						intrigue = 22
+					}
+					modifier = {
+						factor = 1.5
+						intrigue = 24
+					}
+					modifier = {
+						factor = 1.5
+						intrigue = 26
+					}
+					modifier = {
+						factor = 1.5
+						intrigue = 28
+					}
+					modifier = {
+						factor = 1.5
+						intrigue = 30
+					}
+					modifier = {
+						factor = 1.75
+						trait = genius
+					}
+					modifier = {
+						factor = 1.5
+						trait = quick
+					}
+					modifier = {
+						factor = 1.5
+						any_courtier_or_vassal = {
+							has_job_title = job_spymaster
+							intrigue = 8
+						}
+					}
+					modifier = {
+						factor = 1.5
+						any_courtier_or_vassal = {
+							has_job_title = job_spymaster
+							intrigue = 10
+						}
+					}
+					modifier = {
+						factor = 1.5
+						any_courtier_or_vassal = {
+							has_job_title = job_spymaster
+							intrigue = 12
+						}
+					}
+					modifier = {
+						factor = 1.5
+						any_courtier_or_vassal = {
+							has_job_title = job_spymaster
+							intrigue = 14
+						}
+					}
+					modifier = {
+						factor = 1.5
+						any_courtier_or_vassal = {
+							has_job_title = job_spymaster
+							intrigue = 16
+						}
+					}
+					modifier = {
+						factor = 1.5
+						any_courtier_or_vassal = {
+							has_job_title = job_spymaster
+							intrigue = 18
+						}
+					}
+					modifier = {
+						factor = 1.5
+						any_courtier_or_vassal = {
+							has_job_title = job_spymaster
+							intrigue = 20
+						}
+					}
+					modifier = {
+						factor = 0.5
+						capital_scope = { 
+							NOT = { 
+								region = custom_canada
+							}
+						}
+					}
+					modifier = {
+						factor = 0.35
+						NOT = { 
+							any_realm_province = { 
+								region = custom_canada
+							}
+						}
+					}
+					narrative_event = { id = HFATE.24204 days = 150 random = 250 }
+				}
+				60 = { #Failure
+
+					narrative_event = { id = HFATE.24205 days = 150 random = 250 }
+				}
+			}
+		}
+	}
+}
+
+#Decide for budget when searching for scholars to forge claim.
+narrative_event = {
+	id = HFATE.24203
+	title = EVTTITLEHF24203
+	desc = EVTDESCAHFATE24203
+	picture = GFX_evt_library
+	border = GFX_event_narrative_frame_war
+	
+	is_triggered_only = yes
+
+	immediate = { 
+		clr_character_flag = flag_tecumseh_scholars_search_high
+		clr_character_flag = flag_tecumseh_scholars_search_medium
+		clr_character_flag = flag_tecumseh_scholars_search_low
+		clr_character_flag = flag_tecumseh_scholars_search_cheap
+	}
+
+	option = { 
+		name = EVTOPTAHF24203
+		custom_tooltip = { text = TT_EVTOPTAHF24202 }
+		scaled_wealth = { value = -4 min = -1000 max = -2000 }
+		set_character_flag = flag_alex_scholars_search_high
+	}
+	option = { 
+		name = EVTOPTBHF24203
+		custom_tooltip = { text = TT_EVTOPTBHF24202 }
+		scaled_wealth = { value = -3 min = -750 max = -1500 }
+		set_character_flag = flag_alex_scholars_search_medium
+	}
+	option = { 
+		name = EVTOPTCHF24203
+		custom_tooltip = { text = TT_EVTOPTCHF24202 }
+		scaled_wealth = { value = -2 min = -500 max = -1000 }
+		set_character_flag = flag_alex_scholars_search_low
+	}
+	option = { 
+		name = EVTOPTDHF24203
+		custom_tooltip = { text = TT_EVTOPTDHF24202 }
+		scaled_wealth = { value = -1 min = -250 max = -500 }
+		set_character_flag = flag_alex_scholars_search_cheap
+	}
+	after = { 
+		hidden_tooltip = { 
+			random_list = {
+				#Success. - Claim fabricated.
+				#Failure. - Retry or change approach.
+				40 = { #Success
+					modifier = {
+						factor = 0.1
+						has_character_flag = flag_tecumseh_scholars_search_cheap
+					}
+					modifier = {
+						factor = 0.35
+						has_character_flag = flag_tecumseh_scholars_search_low
+					}
+					modifier = {
+						factor = 0.75
+						has_character_flag = flag_tecumseh_scholars_search_medium
+					}
+					modifier = {
+						factor = 1.25
+						trait = scholar
+					}
+					modifier = {
+						factor = 1.25
+						learning = 10
+					}
+					modifier = {
+						factor = 1.25
+						learning = 12
+					}
+					modifier = {
+						factor = 1.25
+						learning = 14
+					}
+					modifier = {
+						factor = 1.25
+						learning = 16
+					}
+					modifier = {
+						factor = 1.25
+						learning = 18
+					}
+					modifier = {
+						factor = 1.5
+						learning = 20
+					}
+					modifier = {
+						factor = 1.5
+						learning = 22
+					}
+					modifier = {
+						factor = 1.5
+						learning = 24
+					}
+					modifier = {
+						factor = 1.5
+						learning = 26
+					}
+					modifier = {
+						factor = 1.5
+						learning = 28
+					}
+					modifier = {
+						factor = 1.5
+						learning = 30
+					}
+					modifier = {
+						factor = 1.75
+						trait = genius
+					}
+					modifier = {
+						factor = 1.5
+						trait = quick
+					}
+					modifier = {
+						factor = 1.5
+						any_courtier_or_vassal = {
+							has_job_title = job_spiritual
+							learning = 8
+						}
+					}
+					modifier = {
+						factor = 1.5
+						any_courtier_or_vassal = {
+							has_job_title = job_spiritual
+							learning = 10
+						}
+					}
+					modifier = {
+						factor = 1.5
+						any_courtier_or_vassal = {
+							has_job_title = job_spiritual
+							learning = 12
+						}
+					}
+					modifier = {
+						factor = 1.5
+						any_courtier_or_vassal = {
+							has_job_title = job_spiritual
+							learning = 14
+						}
+					}
+					modifier = {
+						factor = 1.5
+						any_courtier_or_vassal = {
+							has_job_title = job_spiritual
+							learning = 16
+						}
+					}
+					modifier = {
+						factor = 1.5
+						any_courtier_or_vassal = {
+							has_job_title = job_spiritual
+							learning = 18
+						}
+					}
+					modifier = {
+						factor = 1.5
+						any_courtier_or_vassal = {
+							has_job_title = job_spiritual
+							learning = 20
+						}
+					}
+					modifier = {
+						factor = 1.5
+						culture = greek
+					}
+					narrative_event = { id = HFATE.24206 days = 150 random = 250 }
+				}
+				60 = { #Failure
+
+					narrative_event = { id = HFATE.24207 days = 150 random = 250 }
+				}
+			}
+		}
+	}
+}
+
+#The search for Alexander's Tomb was successful. - Establish claim.
+narrative_event = {
+	id = HFATE.24204
+	title = EVTTITLEHFATE24201
+	desc = EVTDESCAHFATE24204
+	picture = GFX_evt_death
+	border = GFX_event_narrative_frame_war
+	
+	is_triggered_only = yes
+
+	immediate = { 
+		clr_character_flag = flag_tecumseh_tomb_search_high
+		clr_character_flag = flag_tecumseh_tomb_search_medium
+		clr_character_flag = flag_tecumseh_tomb_search_low
+		clr_character_flag = flag_tecumseh_tomb_search_cheap
+		clr_character_flag = flag_tecumseh_prestige_search_high
+		clr_character_flag = flag_tecumseh_prestige_search_medium
+		clr_character_flag = flag_tecumseh_prestige_search_low
+		clr_character_flag = flag_tecumseh_prestige_search_cheap
+	}
+
+	option = { 
+		name = EVTOPTAHF24204
+		custom_tooltip = { text = TT_EVTOPTAHF24202 }
+		prestige = -10000
+		set_character_flag = flag_tecumseh_prestige_search_high
+	}
+	option = { 
+		name = EVTOPTBHF24204
+		custom_tooltip = { text = TT_EVTOPTBHF24202 }
+		prestige = -7500
+		set_character_flag = flag_tecumseh_prestige_search_medium
+	}
+	option = { 
+		name = EVTOPTCHF24204
+		custom_tooltip = { text = TT_EVTOPTCHF24202 }
+		prestige = -5000
+		set_character_flag = flag_tecumseh_prestige_search_low
+	}
+	option = { 
+		name = EVTOPTDHF24204
+		custom_tooltip = { text = TT_EVTOPTDHF24202 }
+		prestige = -2500
+		set_character_flag = flag_tecumseh_prestige_search_cheap
+	}
+	after = { 
+		hidden_tooltip = { 
+			random_list = {
+				#Success. - Bloodline created.
+				#Failure. - Retry or change approach.
+				60 = { #Success
+					modifier = {
+						factor = 0.1
+						has_character_flag = flag_tecumseh_prestige_search_cheap
+					}
+					modifier = {
+						factor = 0.35
+						has_character_flag = flag_tecumseh_prestige_search_low
+					}
+					modifier = {
+						factor = 0.75
+						has_character_flag = flag_tecumseh_prestige_search_medium
+					}
+					modifier = {
+						factor = 1.25
+						trait = socializer
+					}
+					modifier = {
+						factor = 1.25
+						diplomacy = 10
+					}
+					modifier = {
+						factor = 1.25
+						diplomacy = 12
+					}
+					modifier = {
+						factor = 1.25
+						diplomacy = 14
+					}
+					modifier = {
+						factor = 1.25
+						diplomacy = 16
+					}
+					modifier = {
+						factor = 1.25
+						diplomacy = 18
+					}
+					modifier = {
+						factor = 1.5
+						diplomacy = 20
+					}
+					modifier = {
+						factor = 1.5
+						diplomacy = 22
+					}
+					modifier = {
+						factor = 1.5
+						diplomacy = 24
+					}
+					modifier = {
+						factor = 1.5
+						diplomacy = 26
+					}
+					modifier = {
+						factor = 1.5
+						diplomacy = 28
+					}
+					modifier = {
+						factor = 1.5
+						diplomacy = 30
+					}
+					modifier = {
+						factor = 1.75
+						trait = genius
+					}
+					modifier = {
+						factor = 1.5
+						trait = quick
+					}
+					modifier = {
+						factor = 1.5
+						any_courtier_or_vassal = {
+							has_job_title = job_chancellor
+							diplomacy = 8
+						}
+					}
+					modifier = {
+						factor = 1.5
+						any_courtier_or_vassal = {
+							has_job_title = job_chancellor
+							diplomacy = 10
+						}
+					}
+					modifier = {
+						factor = 1.5
+						any_courtier_or_vassal = {
+							has_job_title = job_chancellor
+							diplomacy = 12
+						}
+					}
+					modifier = {
+						factor = 1.5
+						any_courtier_or_vassal = {
+							has_job_title = job_chancellor
+							diplomacy = 14
+						}
+					}
+					modifier = {
+						factor = 1.5
+						any_courtier_or_vassal = {
+							has_job_title = job_chancellor
+							diplomacy = 16
+						}
+					}
+					modifier = {
+						factor = 1.5
+						any_courtier_or_vassal = {
+							has_job_title = job_chancellor
+							diplomacy = 18
+						}
+					}
+					modifier = {
+						factor = 1.5
+						any_courtier_or_vassal = {
+							has_job_title = job_chancellor
+							diplomacy = 20
+						}
+					}
+					narrative_event = { id = HFATE.24208 days = 350 random = 450 }
+				}
+				40 = { #Failure
+
+					narrative_event = { id = HFATE.24209 days = 350 random = 450 }
+				}
+			}
+		}
+	}
+}
+
+#The search for Alexander's Tomb was unsuccessful. - Try again, change approach, or abandon quest.
+narrative_event = {
+	id = HFATE.24205
+	title = EVTTITLEHFATE24201
+	desc = EVTDESCAHF24205
+	picture = GFX_evt_death
+	border = GFX_event_narrative_frame_war
+	
+	is_triggered_only = yes
+
+	immediate = { 
+		clr_character_flag = flag_tecumseh_tomb_search_high
+		clr_character_flag = flag_tecumseh_tomb_search_medium
+		clr_character_flag = flag_tecumseh_tomb_search_low
+		clr_character_flag = flag_tecumseh_tomb_search_cheap
+		clr_character_flag = flag_tecumseh_prestige_search_high
+		clr_character_flag = flag_tecumseh_prestige_search_medium
+		clr_character_flag = flag_tecumseh_prestige_search_low
+		clr_character_flag = flag_tecumseh_prestige_search_cheap
+	}
+
+	option = { #Intrigue search.
+		name = EVTOPTAHF24205
+		custom_tooltip = { text = TT_EVTOPTAHF24201 }
+		hidden_tooltip = { narrative_event = { id = HFATE.24202 } } #Decide budget.
+	}
+	option = { #Learning search.
+		name = EVTOPTBHF24205
+		custom_tooltip = { text = TT_EVTOPTBHF24201 }
+		hidden_tooltip = { narrative_event = { id = HFATE.24203 } } #Decide budget.
+	}
+	option = { #Abandon search.
+		name = EVTOPTCHF24205
+		custom_tooltip = { text = TT_EVTOPTCHF24201 }
+		if = { 
+			limit = { 
+				trait = ambitious
+			}
+			remove_trait = ambitious
+			if = { 
+				limit = { 
+					NOT = { trait = depressed }
+				}
+				add_trait = depressed
+			}
+		}
+		prestige = -3000
+	}
+}
+
+#The scholars have established a lineage. - Establish claim.
+narrative_event = {
+	id = HFATE.24206
+	title = EVTTITLEHF24203
+	desc = EVTDESCAHFATE24206
+	picture = GFX_evt_library
+	border = GFX_event_narrative_frame_war
+	
+	is_triggered_only = yes
+
+	immediate = { 
+		clr_character_flag = flag_tecumseh_scholars_search_high
+		clr_character_flag = flag_tecumseh_scholars_search_medium
+		clr_character_flag = flag_tecumseh_scholars_search_low
+		clr_character_flag = flag_tecumseh_scholars_search_cheap
+		clr_character_flag = flag_tecumseh_prestige_search_high
+		clr_character_flag = flag_tecumseh_prestige_search_medium
+		clr_character_flag = flag_tecumseh_prestige_search_low
+		clr_character_flag = flag_tecumseh_prestige_search_cheap
+	}
+
+	option = { 
+		name = EVTOPTAHF24204
+		custom_tooltip = { text = TT_EVTOPTAHF24202 }
+		prestige = -10000
+		set_character_flag = flag_tecumseh_prestige_search_high
+	}
+	option = { 
+		name = EVTOPTBHF24204
+		custom_tooltip = { text = TT_EVTOPTBHF24202 }
+		prestige = -7500
+		set_character_flag = flag_tecumseh_prestige_search_medium
+	}
+	option = { 
+		name = EVTOPTCHF24204
+		custom_tooltip = { text = TT_EVTOPTCHF24202 }
+		prestige = -5000
+		set_character_flag = flag_tecumseh_prestige_search_low
+	}
+	option = { 
+		name = EVTOPTDHF24204
+		custom_tooltip = { text = TT_EVTOPTDHF24202 }
+		prestige = -2500
+		set_character_flag = flag_tecumseh_prestige_search_cheap
+	}
+	after = { 
+		hidden_tooltip = { 
+			random_list = { #Basic lower chance if tomb was not found.
+				#Success. - Bloodline created.
+				#Failure. - Retry or change approach.
+				40 = { #Success
+					modifier = {
+						factor = 0.1
+						has_character_flag = flag_tecumseh_prestige_search_cheap
+					}
+					modifier = {
+						factor = 0.35
+						has_character_flag = flag_tecumseh_prestige_search_low
+					}
+					modifier = {
+						factor = 0.75
+						has_character_flag = flag_tecumseh_prestige_search_medium
+					}
+					modifier = {
+						factor = 1.25
+						trait = socializer
+					}
+					modifier = {
+						factor = 1.25
+						diplomacy = 10
+					}
+					modifier = {
+						factor = 1.25
+						diplomacy = 12
+					}
+					modifier = {
+						factor = 1.25
+						diplomacy = 14
+					}
+					modifier = {
+						factor = 1.25
+						diplomacy = 16
+					}
+					modifier = {
+						factor = 1.25
+						diplomacy = 18
+					}
+					modifier = {
+						factor = 1.5
+						diplomacy = 20
+					}
+					modifier = {
+						factor = 1.5
+						diplomacy = 22
+					}
+					modifier = {
+						factor = 1.5
+						diplomacy = 24
+					}
+					modifier = {
+						factor = 1.5
+						diplomacy = 26
+					}
+					modifier = {
+						factor = 1.5
+						diplomacy = 28
+					}
+					modifier = {
+						factor = 1.5
+						diplomacy = 30
+					}
+					modifier = {
+						factor = 1.75
+						trait = genius
+					}
+					modifier = {
+						factor = 1.5
+						trait = quick
+					}
+					modifier = {
+						factor = 1.5
+						any_courtier_or_vassal = {
+							has_job_title = job_chancellor
+							diplomacy = 8
+						}
+					}
+					modifier = {
+						factor = 1.5
+						any_courtier_or_vassal = {
+							has_job_title = job_chancellor
+							diplomacy = 10
+						}
+					}
+					modifier = {
+						factor = 1.5
+						any_courtier_or_vassal = {
+							has_job_title = job_chancellor
+							diplomacy = 12
+						}
+					}
+					modifier = {
+						factor = 1.5
+						any_courtier_or_vassal = {
+							has_job_title = job_chancellor
+							diplomacy = 14
+						}
+					}
+					modifier = {
+						factor = 1.5
+						any_courtier_or_vassal = {
+							has_job_title = job_chancellor
+							diplomacy = 16
+						}
+					}
+					modifier = {
+						factor = 1.5
+						any_courtier_or_vassal = {
+							has_job_title = job_chancellor
+							diplomacy = 18
+						}
+					}
+					modifier = {
+						factor = 1.5
+						any_courtier_or_vassal = {
+							has_job_title = job_chancellor
+							diplomacy = 20
+						}
+					}
+					narrative_event = { id = HFATE.24208 days = 350 random = 450 }
+				}
+				60 = { #Failure
+
+					narrative_event = { id = HFATE.24209 days = 350 random = 450 }
+				}
+			}
+		}
+	}
+}
+
+#The scholars' search was unsuccessful. - Try again, change approach, or abandon quest.
+narrative_event = {
+	id = HFATE.24207
+	title = EVTTITLEHF24203
+	desc = EVTDESCAHFATE24207
+	picture = GFX_evt_death
+	border = GFX_event_narrative_frame_war
+	
+	is_triggered_only = yes
+
+	immediate = { 
+		clr_character_flag = flag_tecumseh_scholars_search_high
+		clr_character_flag = flag_tecumseh_scholars_search_medium
+		clr_character_flag = flag_tecumseh_scholars_search_low
+		clr_character_flag = flag_tecumseh_scholars_search_cheap
+		clr_character_flag = flag_tecumseh_prestige_search_high
+		clr_character_flag = flag_tecumseh_prestige_search_medium
+		clr_character_flag = flag_tecumseh_prestige_search_low
+		clr_character_flag = flag_tecumseh_prestige_search_cheap
+	}
+
+	option = { #Learning search.
+		name = EVTOPTBHF24207
+		custom_tooltip = { text = TT_EVTOPTBHF24201 }
+		hidden_tooltip = { narrative_event = { id = HFATE.24203 } } #Decide budget.
+	}
+	option = { #Intrigue search.
+		name = EVTOPTAHFATE24207
+		custom_tooltip = { text = TT_EVTOPTAHF24201 }
+		hidden_tooltip = { narrative_event = { id = HFATE.24202 } } #Decide budget.
+	}
+	option = { #Abandon search.
+		name = EVTOPTCHF24207
+		custom_tooltip = { text = TT_EVTOPTCHF24201 }
+		if = { 
+			limit = { 
+				trait = ambitious
+			}
+			remove_trait = ambitious
+			if = { 
+				limit = { 
+					NOT = { trait = depressed }
+				}
+				add_trait = depressed
+			}
+		}
+		prestige = -3000
+	}
+}
+
+#Alexander Bloodline gained.
+narrative_event = {
+	id = HFATE.24208
+	title = EVTTITLEHFATE24208
+	desc = EVTDESCAHFATE24208
+	picture = GFX_evt_hippodrome_byzantine
+	border = GFX_event_narrative_frame_war
+	
+	is_triggered_only = yes
+
+	immediate = { 
+		clr_character_flag = flag_tecumseh_tomb_search_high
+		clr_character_flag = flag_tecumseh_tomb_search_medium
+		clr_character_flag = flag_tecumseh_tomb_search_low
+		clr_character_flag = flag_tecumseh_tomb_search_cheap
+		clr_character_flag = flag_tecumseh_scholars_search_high
+		clr_character_flag = flag_tecumseh_scholars_search_medium
+		clr_character_flag = flag_tecumseh_scholars_search_low
+		clr_character_flag = flag_tecumseh_scholars_search_cheap
+		clr_character_flag = flag_tecumseh_prestige_search_high
+		clr_character_flag = flag_tecumseh_prestige_search_medium
+		clr_character_flag = flag_tecumseh_prestige_search_low
+		clr_character_flag = flag_tecumseh_prestige_search_cheap
+		set_global_flag = flag_tecumseh_blood_restored
+	}
+
+	option = { 
+		name = EVTOPTAHF24208
+		if = { 
+			limit = { has_nickname = no }
+			ROOT = { give_nickname = nick_the_great }
+		}
+		if = { 
+			limit = { is_female = no }
+			create_bloodline = {
+				type = tecumseh_bloodline_01
+			}
+		}
+		if = { 
+			limit = { is_female = yes }
+			create_bloodline = {
+				type = tecumseh_bloodline_01
+				inheritance = matrilineal
+			}		
+		}
+		any_playable_ruler = { 
+			limit = { 
+				ai = no 
+				is_within_diplo_range = ROOT
+			}
+			narrative_event = { id = HFATE.24210 }
+		}
+	}
+}
+
+#Failed to establish claim. Try again, or abandon quest.
+narrative_event = {
+	id = HFATE.24209
+	title = EVTTITLEHFATE24208
+	desc = EVTDESCAHFATE24209
+	picture = GFX_evt_library
+	border = GFX_event_narrative_frame_war
+	
+	is_triggered_only = yes
+
+	immediate = { 
+		clr_character_flag = flag_tecumseh_tomb_search_high
+		clr_character_flag = flag_tecumseh_tomb_search_medium
+		clr_character_flag = flag_tecumseh_tomb_search_low
+		clr_character_flag = flag_tecumseh_tomb_search_cheap
+		clr_character_flag = flag_tecumseh_scholars_search_high
+		clr_character_flag = flag_tecumseh_scholars_search_medium
+		clr_character_flag = flag_tecumseh_scholars_search_low
+		clr_character_flag = flag_tecumseh_scholars_search_cheap
+		clr_character_flag = flag_tecumseh_prestige_search_high
+		clr_character_flag = flag_tecumseh_prestige_search_medium
+		clr_character_flag = flag_tecumseh_prestige_search_low
+		clr_character_flag = flag_tecumseh_prestige_search_cheap
+	}
+
+	option = { 
+		name = EVTOPTAHF24209
+		custom_tooltip = { text = TT_EVTOPTAHF24202 }
+		prestige = -10000
+		set_character_flag = flag_tecumseh_prestige_search_high
+	}
+	option = { 
+		name = EVTOPTBHF24209
+		custom_tooltip = { text = TT_EVTOPTBHF24202 }
+		prestige = -7500
+		set_character_flag = flag_tecumseh_prestige_search_medium
+	}
+	option = { 
+		name = EVTOPTCHF24209
+		custom_tooltip = { text = TT_EVTOPTCHF24202 }
+		prestige = -5000
+		set_character_flag = flag_tecumseh_prestige_search_low
+	}
+	option = { #Abandon search.
+		name = EVTOPTDHF24209
+		custom_tooltip = { text = TT_EVTOPTCHF24201 }
+		if = { 
+			limit = { 
+				trait = ambitious
+			}
+			remove_trait = ambitious
+			if = { 
+				limit = { 
+					NOT = { trait = depressed }
+				}
+				add_trait = depressed
+			}
+		}
+		prestige = -3000
+		break = yes
+	}
+	after = { 
+		hidden_tooltip = { 
+			random_list = { #Basic lower chance if tomb was not found.
+				#Success. - Bloodline created.
+				#Failure. - Retry or change approach.
+				40 = { #Success
+					modifier = {
+						factor = 0.1
+						has_character_flag = flag_tecumseh_prestige_search_cheap
+					}
+					modifier = {
+						factor = 0.35
+						has_character_flag = flag_tecumseh_prestige_search_low
+					}
+					modifier = {
+						factor = 0.75
+						has_character_flag = flag_tecumseh_prestige_search_medium
+					}
+					modifier = {
+						factor = 1.25
+						trait = socializer
+					}
+					modifier = {
+						factor = 1.25
+						diplomacy = 10
+					}
+					modifier = {
+						factor = 1.25
+						diplomacy = 12
+					}
+					modifier = {
+						factor = 1.25
+						diplomacy = 14
+					}
+					modifier = {
+						factor = 1.25
+						diplomacy = 16
+					}
+					modifier = {
+						factor = 1.25
+						diplomacy = 18
+					}
+					modifier = {
+						factor = 1.5
+						diplomacy = 20
+					}
+					modifier = {
+						factor = 1.5
+						diplomacy = 22
+					}
+					modifier = {
+						factor = 1.5
+						diplomacy = 24
+					}
+					modifier = {
+						factor = 1.5
+						diplomacy = 26
+					}
+					modifier = {
+						factor = 1.5
+						diplomacy = 28
+					}
+					modifier = {
+						factor = 1.5
+						diplomacy = 30
+					}
+					modifier = {
+						factor = 1.75
+						trait = genius
+					}
+					modifier = {
+						factor = 1.5
+						trait = quick
+					}
+					modifier = {
+						factor = 1.5
+						any_courtier_or_vassal = {
+							has_job_title = job_chancellor
+							diplomacy = 8
+						}
+					}
+					modifier = {
+						factor = 1.5
+						any_courtier_or_vassal = {
+							has_job_title = job_chancellor
+							diplomacy = 10
+						}
+					}
+					modifier = {
+						factor = 1.5
+						any_courtier_or_vassal = {
+							has_job_title = job_chancellor
+							diplomacy = 12
+						}
+					}
+					modifier = {
+						factor = 1.5
+						any_courtier_or_vassal = {
+							has_job_title = job_chancellor
+							diplomacy = 14
+						}
+					}
+					modifier = {
+						factor = 1.5
+						any_courtier_or_vassal = {
+							has_job_title = job_chancellor
+							diplomacy = 16
+						}
+					}
+					modifier = {
+						factor = 1.5
+						any_courtier_or_vassal = {
+							has_job_title = job_chancellor
+							diplomacy = 18
+						}
+					}
+					modifier = {
+						factor = 1.5
+						any_courtier_or_vassal = {
+							has_job_title = job_chancellor
+							diplomacy = 20
+						}
+					}
+					narrative_event = { id = HFATE.24208 days = 350 random = 450 }
+				}
+				60 = { #Failure
+
+					narrative_event = { id = HFATE.24209 days = 350 random = 450 }
+				}
+			}
+		}
+	}
+}
+
+#Players notified of accomplishment.
+narrative_event = {
+	id = HFATE.24210
+	title = EVTTITLEHFATE24210
+	desc = EVTDESCAHFATE24210
+	picture = GFX_evt_hippodrome_byzantine
+	border = GFX_event_narrative_frame_war
+	
+	is_triggered_only = yes
+
+	option = { 
+		name = {
+			text = EVTOPTAHF24210
+			trigger = {
+				NOT = { dynasty = FROM }
+			}
+		}
+		name = {
+			text = EVTOPTBHF24210
+			trigger = {
+				dynasty = FROM
+			}
+		}
+	}
+}
+
+###########################################################
+
+# Forging Claim on Che Guevara's Bloodline.
+
+#Opportunity arises.
+narrative_event = {
+	id = HFATE.24220
+	title = EVTTITLEHFATE24220
+	desc = EVTDESCHFATE24220
+	picture = GFX_evt_mounted_combat_day_hf
+	border = GFX_event_narrative_frame_religion
+	
+	is_triggered_only = yes
+
+	ai = no
+	capable_only = yes
+	prisoner = no
+
+	trigger = { 
+		real_tier = EMPEROR
+		prestige = 15000
+		is_adult = yes
+		ai = no
+		is_alternate_start = no
+		NOT = { trait = content }
+		NOT = { has_character_flag = flag_chance_for_guevara_blood } #Opportunity only once per character.
+		NOT = { has_global_flag = flag_guevara_blood_restored } #Bloodline unlocked only once per playthrough.
+		capital_scope = { 
+			region = world_caribbean
+		}
+	}
+
+	weight_multiplier = { 
+		days = 1
+		
+		modifier = {
+			factor = 3
+			trait = zealous
+		}
+		modifier = {
+			factor = 3
+			trait = brave
+		}
+		modifier = {
+			factor = 3
+			religion = santeria
+		}
+		modifier = {
+			factor = 0.5
+			age = 50
+		}
+		modifier = {
+			factor = 2
+			has_education_learning_trigger = yes
+		}
+		modifier = {
+			factor = 2
+			has_lifestyle_learning_trigger = yes
+		}
+		modifier = {
+			factor = 2
+			trait = scholar
+		}
+		modifier = {
+			factor = 2
+			has_ambition = obj_forge_bloodline
+		}
+		modifier = {
+			factor = 2
+			learning = 8
+		}
+		modifier = {
+			factor = 2
+			learning = 10
+		}
+		modifier = {
+			factor = 2
+			learning = 12
+		}
+		modifier = {
+			factor = 2
+			learning = 14
+		}
+		modifier = {
+			factor = 2
+			learning = 16
+		}
+		modifier = {
+			factor = 2
+			learning = 18
+		}
+		modifier = {
+			factor = 2
+			learning = 20
+		}
+		modifier = {
+			factor = 2
+			learning = 22
+		}
+		modifier = {
+			factor = 2
+			learning = 24
+		}
+		modifier = {
+			factor = 2
+			learning = 26
+		}
+		modifier = {
+			factor = 2
+			learning = 28
+		}
+		modifier = {
+			factor = 2
+			learning = 30
+		}
+		modifier = {
+			factor = 1.5
+			prestige = 22000
+		}
+		modifier = {
+			factor = 1.5
+			prestige = 24000
+		}
+		modifier = {
+			factor = 1.5
+			prestige = 26000
+		}
+		modifier = {
+			factor = 1.5
+			prestige = 28000
+		}
+		modifier = {
+			factor = 1.5
+			prestige = 30000
+		}
+		modifier = {
+			factor = 1.5
+			prestige = 40000
+		}
+		modifier = {
+			factor = 1.5
+			prestige = 50000
+		}
+		modifier = {
+			factor = 1.5
+			piety = 1000
+			religion = santeria
+		}
+		modifier = {
+			factor = 1.5
+			piety = 1500
+			religion = santeria
+		}
+		modifier = {
+			factor = 1.75
+			piety = 2000
+			religion = santeria
+		}
+		modifier = {
+			factor = 1.75
+			check_variable = { which = bloodline_won_wars value = 5 }
+		}
+		modifier = {
+			factor = 1.75
+			check_variable = { which = bloodline_won_wars value = 10 }
+		}
+	}
+
+	immediate = { 
+		set_character_flag = flag_chance_for_guevara_blood
+	}
+
+	option = { #Pursue.
+		name = EVTOPTAHF24220
+		custom_tooltip = { text = TT_EVTOPTAHFATE24220 }
+		hidden_tooltip = { narrative_event = { id = HFATE.24221 days = 25 random = 25 } }
+	}
+	option = { #Abandon.
+		name = EVTOPTBHF24220
+	}
+}
+
+#Call priests to examine you.
+narrative_event = {
+	id = HFATE.24221
+	title = EVTTITLEHF24220
+	desc = EVTDESCHFATE24221
+	picture = GFX_evt_bishop
+	border = GFX_event_narrative_frame_religion
+	
+	is_triggered_only = yes
+
+	immediate = { 
+		clr_character_flag = flag_guevara_scholars_search_high
+		clr_character_flag = flag_guevara_scholars_search_medium
+		clr_character_flag = flag_guevara_scholars_search_low
+		clr_character_flag = flag_guevara_scholars_search_cheap
+	}
+
+	option = { 
+		name = EVTOPTAHF24221
+		custom_tooltip = { text = TT_EVTOPTAHF24202 }
+		scaled_wealth = { value = -4 min = -1000 max = -2000 }
+		set_character_flag = flag_guevara_scholars_search_high
+	}
+	option = { 
+		name = EVTOPTBHF24221
+		custom_tooltip = { text = TT_EVTOPTBHF24202 }
+		scaled_wealth = { value = -3 min = -750 max = -1500 }
+		set_character_flag = flag_guevara_scholars_search_medium
+	}
+	option = { 
+		name = EVTOPTCHF24221
+		custom_tooltip = { text = TT_EVTOPTCHF24202 }
+		scaled_wealth = { value = -2 min = -500 max = -1000 }
+		set_character_flag = flag_guevara_scholars_search_low
+	}
+	option = { 
+		name = EVTOPTDHF24221
+		custom_tooltip = { text = TT_EVTOPTDHF24202 }
+		scaled_wealth = { value = -1 min = -250 max = -500 }
+		set_character_flag = flag_guevara_scholars_search_cheap
+	}
+	after = { 
+		character_event = { id = HFATE.24222 days = 150 random = 150 }
+	}
+}
+
+#Test 1: Guevara's Bravery.
+narrative_event = {
+	id = HFATE.24222
+	title = EVTTITLEHFATE24222
+	desc = EVTDESCAHFATE24222
+	picture = GFX_evt_bishop
+	border = GFX_event_narrative_frame_religion
+	
+	is_triggered_only = yes
+
+	immediate = { 
+		clr_character_flag = flag_guevara_intrigue_check
+		clr_character_flag = flag_guevara_learning_check
+		clr_character_flag = flag_guevara_diplomacy_check
+	}
+
+	option = { 
+		name = EVTOPTZHF24222
+		trigger = { diplomacy = 12 trait = brave }
+		tooltip_info = diplomacy
+		set_character_flag = flag_guevara_diplomacy_check
+	}
+	option = { 
+		name = EVTOPTAHF24222
+		trigger = { intrigue = 18 NOT = { trait = brave } }
+		tooltip_info = intrigue
+		set_character_flag = flag_guevara_intrigue_check
+	}
+	option = { 
+		name = EVTOPTBHF24222
+		trigger = { learning = 18 NOT = { trait = brave } }
+		tooltip_info = learning
+		set_character_flag = flag_guevara_learning_check
+	}
+	option = { 
+		name = EVTOPTCHF24222
+		trigger = { trait = brave }
+		tooltip_info = brave
+	}
+	option = { 
+		name = EVTOPTDHF24222
+		trigger = {
+			NOR = {
+				trait = brave
+				trait = craven
+			}
+		}
+	}
+	option = { 
+		name = EVTOPTEHF24222
+		trigger = { trait = craven }
+		tooltip_info = craven
+	}
+	after = { 
+		custom_tooltip = { text = TT_EVTOPTHF24222 }
+		hidden_tooltip = { 
+			random_list = { 
+				#Success. - Move to second test.
+				#Failure. - Retry or change approach.
+				40 = { #Success
+					modifier = {
+						factor = 0.1
+						has_character_flag = flag_guevara_scholars_search_cheap
+					}
+					modifier = {
+						factor = 0.35
+						has_character_flag = flag_guevara_scholars_search_low
+					}
+					modifier = {
+						factor = 0.75
+						has_character_flag = flag_guevara_scholars_search_medium
+					}
+					modifier = {
+						factor = 1.5
+						has_character_flag = flag_guevara_intrigue_check
+						intrigue = 18
+					}
+					modifier = {
+						factor = 1.5
+						has_character_flag = flag_guevara_intrigue_check
+						intrigue = 20
+					}
+					modifier = {
+						factor = 1.5
+						has_character_flag = flag_guevara_intrigue_check
+						intrigue = 22
+					}
+					modifier = {
+						factor = 1.5
+						has_character_flag = flag_guevara_intrigue_check
+						intrigue = 24
+					}
+					modifier = {
+						factor = 1.5
+						has_character_flag = flag_guevara_intrigue_check
+						intrigue = 28
+					}
+					modifier = {
+						factor = 1.5
+						has_character_flag = flag_guevara_intrigue_check
+						intrigue = 30
+					}
+					modifier = {
+						factor = 1.5
+						has_character_flag = flag_guevara_learning_check
+						learning = 18
+					}
+					modifier = {
+						factor = 1.5
+						has_character_flag = flag_guevara_learning_check
+						learning = 20
+					}
+					modifier = {
+						factor = 1.5
+						has_character_flag = flag_guevara_learning_check
+						learning = 22
+					}
+					modifier = {
+						factor = 1.5
+						has_character_flag = flag_guevara_learning_check
+						learning = 24
+					}
+					modifier = {
+						factor = 1.5
+						has_character_flag = flag_guevara_learning_check
+						learning = 28
+					}
+					modifier = {
+						factor = 1.5
+						has_character_flag = flag_guevara_learning_check
+						learning = 30
+					}
+					modifier = {
+						factor = 1.5
+						has_character_flag = flag_guevara_diplomacy_check
+						diplomacy = 12
+					}
+					modifier = {
+						factor = 1.5
+						has_character_flag = flag_guevara_diplomacy_check
+						diplomacy = 14
+					}
+					modifier = {
+						factor = 1.5
+						has_character_flag = flag_guevara_diplomacy_check
+						diplomacy = 16
+					}
+					modifier = {
+						factor = 1.5
+						has_character_flag = flag_guevara_diplomacy_check
+						diplomacy = 18
+					}
+					modifier = {
+						factor = 1.5
+						has_character_flag = flag_guevara_diplomacy_check
+						diplomacy = 20
+					}
+					modifier = {
+						factor = 1.5
+						has_character_flag = flag_guevara_diplomacy_check
+						diplomacy = 22
+					}
+					modifier = {
+						factor = 1.5
+						has_character_flag = flag_guevara_diplomacy_check
+						diplomacy = 24
+					}
+					modifier = {
+						factor = 1.5
+						has_character_flag = flag_guevara_diplomacy_check
+						diplomacy = 28
+					}
+					modifier = {
+						factor = 1.5
+						has_character_flag = flag_guevara_diplomacy_check
+						diplomacy = 30
+					}
+					modifier = {
+						factor = 0.5
+						trait = craven
+					}
+					modifier = {
+						factor = 1.5
+						trait = brave
+					}
+					narrative_event = { id = HFATE.24224 days = 350 random = 450 }
+				}
+				60 = { #Failure
+					narrative_event = { id = HFATE.24223 days = 350 random = 450 }
+				}
+			}
+		}
+	}
+}
+
+#Failed to prove bravery. Try again or abandon quest.
+narrative_event = {
+	id = HFATE.24223
+	title = EVTTITLEHF24222
+	desc = EVTDESCAHFATE24223
+	picture = GFX_evt_bishop
+	border = GFX_event_narrative_frame_religion
+	
+	is_triggered_only = yes
+
+	immediate = { 
+		clr_character_flag = flag_guevara_intrigue_check
+		clr_character_flag = flag_guevara_learning_check
+		clr_character_flag = flag_guevara_diplomacy_check
+	}
+
+	option = { 
+		name = EVTOPTZHF24223
+		trigger = { diplomacy = 12 trait = brave }
+		tooltip_info = diplomacy
+		custom_tooltip = { text = TT_EVTOPTHF24222 }
+		set_character_flag = flag_guevara_diplomacy_check
+	}
+	option = { 
+		name = EVTOPTAHF24223
+		trigger = { intrigue = 18 NOT = { trait = brave } }
+		tooltip_info = intrigue
+		custom_tooltip = { text = TT_EVTOPTHF24222 }
+		set_character_flag = flag_guevara_intrigue_check
+	}
+	option = { 
+		name = EVTOPTBHF24223
+		trigger = { learning = 18 NOT = { trait = brave } }
+		tooltip_info = learning
+		custom_tooltip = { text = TT_EVTOPTHF24222 }
+		set_character_flag = flag_guevara_learning_check
+	}
+	option = { 
+		name = EVTOPTCHF24223
+		trigger = { trait = brave }
+		tooltip_info = brave
+		custom_tooltip = { text = TT_EVTOPTHF24222 }
+	}
+	option = { 
+		name = EVTOPTDHF24223
+		trigger = {
+			NOR = {
+				trait = brave
+				trait = craven
+			}
+		}
+		custom_tooltip = { text = TT_EVTOPTHF24222 }
+	}
+	option = { 
+		name = EVTOPTEHF24223
+		trigger = { trait = craven }
+		tooltip_info = craven
+		custom_tooltip = { text = TT_EVTOPTHF24222 }
+	}
+	option = { #Abandon search.
+		name = EVTOPTFHF24223
+		custom_tooltip = { text = TT_EVTOPTFHFATE24223 }
+		if = { 
+			limit = { 
+				trait = ambitious
+			}
+			remove_trait = ambitious
+			if = { 
+				limit = { 
+					NOT = { trait = depressed }
+				}
+				add_trait = depressed
+			}
+		}
+		piety = -2000
+		set_character_flag = flag_guevara_abandoning_quest
+	}
+	after = { 
+		if = { 
+			limit = { 
+				NOT = { has_character_flag = flag_guevara_abandoning_quest }
+			}
+			piety = -500
+			hidden_tooltip = { 
+				random_list = { 
+					#Success. - Move to second test.
+					#Failure. - Retry or change approach.
+					40 = { #Success
+						modifier = {
+							factor = 0.1
+							has_character_flag = flag_guevara_scholars_search_cheap
+						}
+						modifier = {
+							factor = 0.35
+							has_character_flag = flag_guevara_scholars_search_low
+						}
+						modifier = {
+							factor = 0.75
+							has_character_flag = flag_guevara_scholars_search_medium
+						}
+						modifier = {
+							factor = 1.5
+							has_character_flag = flag_guevara_intrigue_check
+							intrigue = 18
+						}
+						modifier = {
+							factor = 1.5
+							has_character_flag = flag_guevara_intrigue_check
+							intrigue = 20
+						}
+						modifier = {
+							factor = 1.5
+							has_character_flag = flag_guevara_intrigue_check
+							intrigue = 22
+						}
+						modifier = {
+							factor = 1.5
+							has_character_flag = flag_guevara_intrigue_check
+							intrigue = 24
+						}
+						modifier = {
+							factor = 1.5
+							has_character_flag = flag_guevara_intrigue_check
+							intrigue = 28
+						}
+						modifier = {
+							factor = 1.5
+							has_character_flag = flag_guevara_intrigue_check
+							intrigue = 30
+						}
+						modifier = {
+							factor = 1.5
+							has_character_flag = flag_guevara_learning_check
+							learning = 18
+						}
+						modifier = {
+							factor = 1.5
+							has_character_flag = flag_guevara_learning_check
+							learning = 20
+						}
+						modifier = {
+							factor = 1.5
+							has_character_flag = flag_guevara_learning_check
+							learning = 22
+						}
+						modifier = {
+							factor = 1.5
+							has_character_flag = flag_guevara_learning_check
+							learning = 24
+						}
+						modifier = {
+							factor = 1.5
+							has_character_flag = flag_guevara_learning_check
+							learning = 28
+						}
+						modifier = {
+							factor = 1.5
+							has_character_flag = flag_guevara_learning_check
+							learning = 30
+						}
+						modifier = {
+							factor = 1.5
+							has_character_flag = flag_guevara_diplomacy_check
+							diplomacy = 12
+						}
+						modifier = {
+							factor = 1.5
+							has_character_flag = flag_guevara_diplomacy_check
+							diplomacy = 14
+						}
+						modifier = {
+							factor = 1.5
+							has_character_flag = flag_guevara_diplomacy_check
+							diplomacy = 16
+						}
+						modifier = {
+							factor = 1.5
+							has_character_flag = flag_guevara_diplomacy_check
+							diplomacy = 18
+						}
+						modifier = {
+							factor = 1.5
+							has_character_flag = flag_guevara_diplomacy_check
+							diplomacy = 20
+						}
+						modifier = {
+							factor = 1.5
+							has_character_flag = flag_guevara_diplomacy_check
+							diplomacy = 22
+						}
+						modifier = {
+							factor = 1.5
+							has_character_flag = flag_guevara_diplomacy_check
+							diplomacy = 24
+						}
+						modifier = {
+							factor = 1.5
+							has_character_flag = flag_guevara_diplomacy_check
+							diplomacy = 28
+						}
+						modifier = {
+							factor = 1.5
+							has_character_flag = flag_guevara_diplomacy_check
+							diplomacy = 30
+						}
+						modifier = {
+							factor = 0.5
+							trait = craven
+						}
+						modifier = {
+							factor = 1.5
+							trait = brave
+						}
+						narrative_event = { id = HFATE.24224 days = 350 random = 450 }
+					}
+					60 = { #Failure
+						narrative_event = { id = HFATE.24223 days = 350 random = 450 }
+					}
+				}
+			}
+		}
+		else = {
+			clr_character_flag = flag_guevara_abandoning_quest
+		}
+	}
+}
+
+#Test 2: Guevara's Ambition.
+narrative_event = {
+	id = HFATE.24224
+	title = EVTTITLEHFATE24224
+	desc = EVTDESCAHFATE24224
+	picture = GFX_evt_bishop
+	border = GFX_event_narrative_frame_religion
+	
+	is_triggered_only = yes
+
+	immediate = { 
+		clr_character_flag = flag_guevara_intrigue_check
+		clr_character_flag = flag_guevara_learning_check
+		clr_character_flag = flag_guevara_diplomacy_check
+	}
+
+	option = { 
+		name = EVTOPTZHF24224
+		trigger = { diplomacy = 12 trait = ambitious }
+		tooltip_info = diplomacy
+		set_character_flag = flag_guevara_diplomacy_check
+	}
+	option = { 
+		name = EVTOPTAHF24224
+		trigger = { intrigue = 18 NOT = { trait = ambitious } }
+		tooltip_info = intrigue
+		set_character_flag = flag_guevara_intrigue_check
+	}
+	option = { 
+		name = EVTOPTBHF24224
+		trigger = { learning = 18 NOT = { trait = ambitious } }
+		tooltip_info = learning
+		set_character_flag = flag_guevara_learning_check
+	}
+	option = { 
+		name = EVTOPTCHF24224
+		trigger = { trait = ambitious }
+		tooltip_info = ambitious
+	}
+	option = { 
+		name = EVTOPTDHF24224
+		trigger = {
+			NOR = {
+				trait = ambitious
+				trait = content
+			}
+		}
+	}
+	option = { 
+		name = EVTOPTEHF24224
+		trigger = { trait = content }
+		tooltip_info = content
+	}
+	after = { 
+		custom_tooltip = { text = TT_EVTOPTHF24222 }
+		hidden_tooltip = { 
+			random_list = { 
+				#Success. - Move to third test.
+				#Failure. - Retry or change approach.
+				40 = { #Success
+					modifier = {
+						factor = 0.1
+						has_character_flag = flag_guevara_scholars_search_cheap
+					}
+					modifier = {
+						factor = 0.35
+						has_character_flag = flag_guevara_scholars_search_low
+					}
+					modifier = {
+						factor = 0.75
+						has_character_flag = flag_guevara_scholars_search_medium
+					}
+					modifier = {
+						factor = 1.5
+						has_character_flag = flag_guevara_intrigue_check
+						intrigue = 18
+					}
+					modifier = {
+						factor = 1.5
+						has_character_flag = flag_guevara_intrigue_check
+						intrigue = 20
+					}
+					modifier = {
+						factor = 1.5
+						has_character_flag = flag_guevara_intrigue_check
+						intrigue = 22
+					}
+					modifier = {
+						factor = 1.5
+						has_character_flag = flag_guevara_intrigue_check
+						intrigue = 24
+					}
+					modifier = {
+						factor = 1.5
+						has_character_flag = flag_guevara_intrigue_check
+						intrigue = 28
+					}
+					modifier = {
+						factor = 1.5
+						has_character_flag = flag_guevara_intrigue_check
+						intrigue = 30
+					}
+					modifier = {
+						factor = 1.5
+						has_character_flag = flag_guevara_learning_check
+						learning = 18
+					}
+					modifier = {
+						factor = 1.5
+						has_character_flag = flag_guevara_learning_check
+						learning = 20
+					}
+					modifier = {
+						factor = 1.5
+						has_character_flag = flag_guevara_learning_check
+						learning = 22
+					}
+					modifier = {
+						factor = 1.5
+						has_character_flag = flag_guevara_learning_check
+						learning = 24
+					}
+					modifier = {
+						factor = 1.5
+						has_character_flag = flag_guevara_learning_check
+						learning = 28
+					}
+					modifier = {
+						factor = 1.5
+						has_character_flag = flag_guevara_learning_check
+						learning = 30
+					}
+					modifier = {
+						factor = 1.5
+						has_character_flag = flag_guevara_diplomacy_check
+						diplomacy = 12
+					}
+					modifier = {
+						factor = 1.5
+						has_character_flag = flag_guevara_diplomacy_check
+						diplomacy = 14
+					}
+					modifier = {
+						factor = 1.5
+						has_character_flag = flag_guevara_diplomacy_check
+						diplomacy = 16
+					}
+					modifier = {
+						factor = 1.5
+						has_character_flag = flag_guevara_diplomacy_check
+						diplomacy = 18
+					}
+					modifier = {
+						factor = 1.5
+						has_character_flag = flag_guevara_diplomacy_check
+						diplomacy = 20
+					}
+					modifier = {
+						factor = 1.5
+						has_character_flag = flag_guevara_diplomacy_check
+						diplomacy = 22
+					}
+					modifier = {
+						factor = 1.5
+						has_character_flag = flag_guevara_diplomacy_check
+						diplomacy = 24
+					}
+					modifier = {
+						factor = 1.5
+						has_character_flag = flag_guevara_diplomacy_check
+						diplomacy = 28
+					}
+					modifier = {
+						factor = 1.5
+						has_character_flag = flag_guevara_diplomacy_check
+						diplomacy = 30
+					}
+					modifier = {
+						factor = 0.5
+						trait = content
+					}
+					modifier = {
+						factor = 1.5
+						trait = ambitious
+					}
+					narrative_event = { id = HFATE.24226 days = 350 random = 450 }
+				}
+				60 = { #Failure
+					narrative_event = { id = HFATE.24225 days = 350 random = 450 }
+				}
+			}
+		}
+	}
+}
+
+#Failed to prove ambition. Try again or abandon quest.
+narrative_event = {
+	id = HFATE.24225
+	title = EVTTITLEHF24224
+	desc = EVTDESCBHF24225
+	picture = GFX_evt_bishop
+	border = GFX_event_narrative_frame_religion
+	
+	is_triggered_only = yes
+
+	immediate = { 
+		clr_character_flag = flag_guevara_intrigue_check
+		clr_character_flag = flag_guevara_learning_check
+		clr_character_flag = flag_guevara_diplomacy_check
+	}
+
+	option = { 
+		name = EVTOPTZHF24225
+		trigger = { diplomacy = 12 trait = ambitious }
+		tooltip_info = diplomacy
+		custom_tooltip = { text = TT_EVTOPTHF24222 }
+		set_character_flag = flag_guevara_diplomacy_check
+	}
+	option = { 
+		name = EVTOPTAHF24225
+		trigger = { intrigue = 18 NOT = { trait = ambitious } }
+		tooltip_info = intrigue
+		custom_tooltip = { text = TT_EVTOPTHF24222 }
+		set_character_flag = flag_guevara_intrigue_check
+	}
+	option = { 
+		name = EVTOPTBHF24225
+		trigger = { learning = 18 NOT = { trait = ambitious } }
+		tooltip_info = learning
+		custom_tooltip = { text = TT_EVTOPTHF24222 }
+		set_character_flag = flag_guevara_learning_check
+	}
+	option = { 
+		name = EVTOPTCHF24225
+		trigger = { trait = ambitious }
+		tooltip_info = ambitious
+		custom_tooltip = { text = TT_EVTOPTHF24222 }
+	}
+	option = { 
+		name = EVTOPTDHF24225
+		trigger = {
+			NOR = {
+				trait = ambitious
+				trait = content
+			}
+		}
+		custom_tooltip = { text = TT_EVTOPTHF24222 }
+	}
+	option = { 
+		name = EVTOPTEHF24225
+		trigger = { trait = content }
+		tooltip_info = content
+		custom_tooltip = { text = TT_EVTOPTHF24222 }
+	}
+	option = { #Abandon search.
+		name = EVTOPTFHF24225
+		custom_tooltip = { text = TT_EVTOPTFHF24223 }
+		if = { 
+			limit = { 
+				trait = ambitious
+			}
+			remove_trait = ambitious
+			if = { 
+				limit = { 
+					NOT = { trait = depressed }
+				}
+				add_trait = depressed
+			}
+		}
+		piety = -2000
+		set_character_flag = flag_guevara_abandoning_quest
+	}
+	after = { 
+		if = { 
+			limit = { 
+				NOT = { has_character_flag = flag_guevara_abandoning_quest }
+			}
+			piety = -500
+			hidden_tooltip = { 
+				random_list = { 
+					#Success. - Move to third test.
+					#Failure. - Retry or change approach.
+					40 = { #Success
+						modifier = {
+							factor = 0.1
+							has_character_flag = flag_guevara_scholars_search_cheap
+						}
+						modifier = {
+							factor = 0.35
+							has_character_flag = flag_guevara_scholars_search_low
+						}
+						modifier = {
+							factor = 0.75
+							has_character_flag = flag_guevara_scholars_search_medium
+						}
+						modifier = {
+							factor = 1.5
+							has_character_flag = flag_guevara_intrigue_check
+							intrigue = 18
+						}
+						modifier = {
+							factor = 1.5
+							has_character_flag = flag_guevara_intrigue_check
+							intrigue = 20
+						}
+						modifier = {
+							factor = 1.5
+							has_character_flag = flag_guevara_intrigue_check
+							intrigue = 22
+						}
+						modifier = {
+							factor = 1.5
+							has_character_flag = flag_guevara_intrigue_check
+							intrigue = 24
+						}
+						modifier = {
+							factor = 1.5
+							has_character_flag = flag_guevara_intrigue_check
+							intrigue = 28
+						}
+						modifier = {
+							factor = 1.5
+							has_character_flag = flag_guevara_intrigue_check
+							intrigue = 30
+						}
+						modifier = {
+							factor = 1.5
+							has_character_flag = flag_guevara_learning_check
+							learning = 18
+						}
+						modifier = {
+							factor = 1.5
+							has_character_flag = flag_guevara_learning_check
+							learning = 20
+						}
+						modifier = {
+							factor = 1.5
+							has_character_flag = flag_guevara_learning_check
+							learning = 22
+						}
+						modifier = {
+							factor = 1.5
+							has_character_flag = flag_guevara_learning_check
+							learning = 24
+						}
+						modifier = {
+							factor = 1.5
+							has_character_flag = flag_guevara_learning_check
+							learning = 28
+						}
+						modifier = {
+							factor = 1.5
+							has_character_flag = flag_guevara_learning_check
+							learning = 30
+						}
+						modifier = {
+							factor = 1.5
+							has_character_flag = flag_guevara_diplomacy_check
+							diplomacy = 12
+						}
+						modifier = {
+							factor = 1.5
+							has_character_flag = flag_guevara_diplomacy_check
+							diplomacy = 14
+						}
+						modifier = {
+							factor = 1.5
+							has_character_flag = flag_guevara_diplomacy_check
+							diplomacy = 16
+						}
+						modifier = {
+							factor = 1.5
+							has_character_flag = flag_guevara_diplomacy_check
+							diplomacy = 18
+						}
+						modifier = {
+							factor = 1.5
+							has_character_flag = flag_guevara_diplomacy_check
+							diplomacy = 20
+						}
+						modifier = {
+							factor = 1.5
+							has_character_flag = flag_guevara_diplomacy_check
+							diplomacy = 22
+						}
+						modifier = {
+							factor = 1.5
+							has_character_flag = flag_guevara_diplomacy_check
+							diplomacy = 24
+						}
+						modifier = {
+							factor = 1.5
+							has_character_flag = flag_guevara_diplomacy_check
+							diplomacy = 28
+						}
+						modifier = {
+							factor = 1.5
+							has_character_flag = flag_guevara_diplomacy_check
+							diplomacy = 30
+						}
+						modifier = {
+							factor = 0.5
+							trait = content
+						}
+						modifier = {
+							factor = 1.5
+							trait = ambitious
+						}
+						narrative_event = { id = HFATE.24226 days = 350 random = 450 }
+					}
+					60 = { #Failure
+						narrative_event = { id = HFATE.24225 days = 350 random = 450 }
+					}
+				}
+			}
+		}
+		else = { 
+			clr_character_flag = flag_guevara_abandoning_quest
+		}
+	}
+}
+
+#Test 3: Guevara's Charity.
+narrative_event = {
+	id = HFATE.24226
+	title = EVTTITLEHFATE24226
+	desc = EVTDESCBHFATE24226
+	picture = GFX_evt_bishop
+	border = GFX_event_narrative_frame_religion
+	
+	is_triggered_only = yes
+
+	immediate = { 
+		clr_character_flag = flag_guevara_intrigue_check
+		clr_character_flag = flag_guevara_learning_check
+		clr_character_flag = flag_guevara_diplomacy_check
+	}
+
+	option = { 
+		name = EVTOPTZHF24226
+		trigger = { diplomacy = 12 trait = charitable }
+		tooltip_info = diplomacy
+		set_character_flag = flag_guevara_diplomacy_check
+		scaled_wealth = { value = -4 min = -750 max = -1000 }
+	}
+	option = { 
+		name = EVTOPTAHF24226
+		trigger = { intrigue = 18 NOT = { trait = charitable } }
+		tooltip_info = intrigue
+		set_character_flag = flag_guevara_intrigue_check
+		scaled_wealth = { value = -3 min = -500 max = -750 }
+	}
+	option = { 
+		name = EVTOPTBHF24226
+		trigger = { learning = 18 NOT = { trait = charitable } }
+		tooltip_info = learning
+		set_character_flag = flag_guevara_learning_check
+		scaled_wealth = { value = -3 min = -500 max = -750 }
+	}
+	option = { 
+		name = EVTOPTCHF24226
+		trigger = { trait = charitable }
+		tooltip_info = charitable
+		scaled_wealth = { value = -4 min = -750 max = -1000 }
+	}
+	option = { 
+		name = EVTOPTDHF24226
+		trigger = {
+			NOR = {
+				trait = charitable
+				trait = greedy
+			}
+		}
+		scaled_wealth = { value = -3 min = -500 max = -750 }
+	}
+	option = { 
+		name = EVTOPTEHF24226
+		trigger = { trait = greedy }
+		tooltip_info = greedy
+		scaled_wealth = { value = -2 min = -350 max = -500 }
+	}
+	after = { 
+		custom_tooltip = { text = TT_EVTOPTHF24222 }
+		hidden_tooltip = { 
+			random_list = { 
+				#Success. - Found Bloodline.
+				#Failure. - Retry or change approach.
+				40 = { #Success
+					modifier = {
+						factor = 0.1
+						has_character_flag = flag_guevara_scholars_search_cheap
+					}
+					modifier = {
+						factor = 0.35
+						has_character_flag = flag_guevara_scholars_search_low
+					}
+					modifier = {
+						factor = 0.75
+						has_character_flag = flag_guevara_scholars_search_medium
+					}
+					modifier = {
+						factor = 1.5
+						has_character_flag = flag_guevara_intrigue_check
+						intrigue = 18
+					}
+					modifier = {
+						factor = 1.5
+						has_character_flag = flag_guevara_intrigue_check
+						intrigue = 20
+					}
+					modifier = {
+						factor = 1.5
+						has_character_flag = flag_guevara_intrigue_check
+						intrigue = 22
+					}
+					modifier = {
+						factor = 1.5
+						has_character_flag = flag_guevara_intrigue_check
+						intrigue = 24
+					}
+					modifier = {
+						factor = 1.5
+						has_character_flag = flag_guevara_intrigue_check
+						intrigue = 28
+					}
+					modifier = {
+						factor = 1.5
+						has_character_flag = flag_guevara_intrigue_check
+						intrigue = 30
+					}
+					modifier = {
+						factor = 1.5
+						has_character_flag = flag_guevara_learning_check
+						learning = 18
+					}
+					modifier = {
+						factor = 1.5
+						has_character_flag = flag_guevara_learning_check
+						learning = 20
+					}
+					modifier = {
+						factor = 1.5
+						has_character_flag = flag_guevara_learning_check
+						learning = 22
+					}
+					modifier = {
+						factor = 1.5
+						has_character_flag = flag_guevara_learning_check
+						learning = 24
+					}
+					modifier = {
+						factor = 1.5
+						has_character_flag = flag_guevara_learning_check
+						learning = 28
+					}
+					modifier = {
+						factor = 1.5
+						has_character_flag = flag_guevara_learning_check
+						learning = 30
+					}
+					modifier = {
+						factor = 1.5
+						has_character_flag = flag_guevara_diplomacy_check
+						diplomacy = 12
+					}
+					modifier = {
+						factor = 1.5
+						has_character_flag = flag_guevara_diplomacy_check
+						diplomacy = 14
+					}
+					modifier = {
+						factor = 1.5
+						has_character_flag = flag_guevara_diplomacy_check
+						diplomacy = 16
+					}
+					modifier = {
+						factor = 1.5
+						has_character_flag = flag_guevara_diplomacy_check
+						diplomacy = 18
+					}
+					modifier = {
+						factor = 1.5
+						has_character_flag = flag_guevara_diplomacy_check
+						diplomacy = 20
+					}
+					modifier = {
+						factor = 1.5
+						has_character_flag = flag_guevara_diplomacy_check
+						diplomacy = 22
+					}
+					modifier = {
+						factor = 1.5
+						has_character_flag = flag_guevara_diplomacy_check
+						diplomacy = 24
+					}
+					modifier = {
+						factor = 1.5
+						has_character_flag = flag_guevara_diplomacy_check
+						diplomacy = 28
+					}
+					modifier = {
+						factor = 1.5
+						has_character_flag = flag_guevara_diplomacy_check
+						diplomacy = 30
+					}
+					modifier = {
+						factor = 0.5
+						trait = greedy
+					}
+					modifier = {
+						factor = 1.5
+						trait = charitable
+					}
+					narrative_event = { id = HFATE.24228 days = 350 random = 450 }
+				}
+				60 = { #Failure
+					narrative_event = { id = HFATE.24227 days = 350 random = 450 }
+				}
+			}
+		}
+	}
+}
+#Failed to prove charity. Try again or abandon quest.
+narrative_event = {
+	id = HFATE.24227
+	title = EVTTITLEHFATE24226
+	desc = EVTDESCAHFATE24227
+	picture = GFX_evt_bishop
+	border = GFX_event_narrative_frame_religion
+	
+	is_triggered_only = yes
+
+	immediate = { 
+		clr_character_flag = flag_guevara_intrigue_check
+		clr_character_flag = flag_guevara_learning_check
+		clr_character_flag = flag_guevara_diplomacy_check
+	}
+
+	option = { 
+		name = EVTOPTZHF24227
+		trigger = { diplomacy = 12 trait = charitable }
+		tooltip_info = diplomacy
+		custom_tooltip = { text = TT_EVTOPTHF24222 }
+		set_character_flag = flag_guevara_diplomacy_check
+		scaled_piety = { value = -4 min = -750 max = -1000 }
+	}
+	option = { 
+		name = EVTOPTAHF24227
+		trigger = { intrigue = 18 NOT = { trait = charitable } }
+		tooltip_info = intrigue
+		custom_tooltip = { text = TT_EVTOPTHF24222 }
+		set_character_flag = flag_guevara_intrigue_check
+		scaled_piety = { value = -3 min = -500 max = -750 }
+	}
+	option = { 
+		name = EVTOPTBHF24227
+		trigger = { learning = 18 NOT = { trait = charitable } }
+		tooltip_info = learning
+		custom_tooltip = { text = TT_EVTOPTHF24222 }
+		set_character_flag = flag_guevara_learning_check
+		scaled_piety = { value = -3 min = -500 max = -750 }
+	}
+	option = { 
+		name = EVTOPTCHF24227
+		trigger = { trait = charitable }
+		tooltip_info = charitable
+		custom_tooltip = { text = TT_EVTOPTHF24222 }
+		scaled_piety = { value = -4 min = -750 max = -1000 }
+	}
+	option = { 
+		name = EVTOPTDHF24227
+		trigger = {
+			NOR = {
+				trait = charitable
+				trait = greedy
+			}
+		}
+		custom_tooltip = { text = TT_EVTOPTHF24222 }
+		scaled_piety = { value = -3 min = -500 max = -750 }
+	}
+	option = { 
+		name = EVTOPTEHFATE24227
+		trigger = { trait = greedy }
+		tooltip_info = greedy
+		custom_tooltip = { text = TT_EVTOPTHF24222 }
+		scaled_piety = { value = -2 min = -350 max = -500 }
+	}
+	option = { #Abandon search.
+		name = EVTOPTFHF24227
+		custom_tooltip = { text = TT_EVTOPTFHF24223 }
+		if = { 
+			limit = { 
+				trait = ambitious
+			}
+			remove_trait = ambitious
+			if = { 
+				limit = { 
+					NOT = { trait = depressed }
+				}
+				add_trait = depressed
+			}
+		}
+		piety = -2000
+		set_character_flag = flag_guevara_abandoning_quest
+	}
+	after = { 
+		if = { 
+			limit = { 
+				NOT = { has_character_flag = flag_guevara_abandoning_quest }
+			}
+			piety = -500
+			hidden_tooltip = { 
+				random_list = { 
+					#Success. - Move to third test.
+					#Failure. - Retry or change approach.
+					40 = { #Success
+						modifier = {
+							factor = 0.1
+							has_character_flag = flag_guevara_scholars_search_cheap
+						}
+						modifier = {
+							factor = 0.35
+							has_character_flag = flag_guevara_scholars_search_low
+						}
+						modifier = {
+							factor = 0.75
+							has_character_flag = flag_guevara_scholars_search_medium
+						}
+						modifier = {
+							factor = 1.5
+							has_character_flag = flag_guevara_intrigue_check
+							intrigue = 18
+						}
+						modifier = {
+							factor = 1.5
+							has_character_flag = flag_guevara_intrigue_check
+							intrigue = 20
+						}
+						modifier = {
+							factor = 1.5
+							has_character_flag = flag_guevara_intrigue_check
+							intrigue = 22
+						}
+						modifier = {
+							factor = 1.5
+							has_character_flag = flag_guevara_intrigue_check
+							intrigue = 24
+						}
+						modifier = {
+							factor = 1.5
+							has_character_flag = flag_guevara_intrigue_check
+							intrigue = 28
+						}
+						modifier = {
+							factor = 1.5
+							has_character_flag = flag_guevara_intrigue_check
+							intrigue = 30
+						}
+						modifier = {
+							factor = 1.5
+							has_character_flag = flag_guevara_learning_check
+							learning = 18
+						}
+						modifier = {
+							factor = 1.5
+							has_character_flag = flag_guevara_learning_check
+							learning = 20
+						}
+						modifier = {
+							factor = 1.5
+							has_character_flag = flag_guevara_learning_check
+							learning = 22
+						}
+						modifier = {
+							factor = 1.5
+							has_character_flag = flag_guevara_learning_check
+							learning = 24
+						}
+						modifier = {
+							factor = 1.5
+							has_character_flag = flag_guevara_learning_check
+							learning = 28
+						}
+						modifier = {
+							factor = 1.5
+							has_character_flag = flag_guevara_learning_check
+							learning = 30
+						}
+						modifier = {
+							factor = 1.5
+							has_character_flag = flag_guevara_diplomacy_check
+							diplomacy = 12
+						}
+						modifier = {
+							factor = 1.5
+							has_character_flag = flag_guevara_diplomacy_check
+							diplomacy = 14
+						}
+						modifier = {
+							factor = 1.5
+							has_character_flag = flag_guevara_diplomacy_check
+							diplomacy = 16
+						}
+						modifier = {
+							factor = 1.5
+							has_character_flag = flag_guevara_diplomacy_check
+							diplomacy = 18
+						}
+						modifier = {
+							factor = 1.5
+							has_character_flag = flag_guevara_diplomacy_check
+							diplomacy = 20
+						}
+						modifier = {
+							factor = 1.5
+							has_character_flag = flag_guevara_diplomacy_check
+							diplomacy = 22
+						}
+						modifier = {
+							factor = 1.5
+							has_character_flag = flag_guevara_diplomacy_check
+							diplomacy = 24
+						}
+						modifier = {
+							factor = 1.5
+							has_character_flag = flag_guevara_diplomacy_check
+							diplomacy = 28
+						}
+						modifier = {
+							factor = 1.5
+							has_character_flag = flag_guevara_diplomacy_check
+							diplomacy = 30
+						}
+						modifier = {
+							factor = 0.5
+							trait = greedy
+						}
+						modifier = {
+							factor = 1.5
+							trait = charitable
+						}
+						narrative_event = { id = HFATE.24228 days = 350 random = 450 }
+					}
+					60 = { #Failure
+						narrative_event = { id = HFATE.24227 days = 350 random = 450 }
+					}
+				}
+			}
+		}
+		else = { 
+			clr_character_flag = flag_guevara_abandoning_quest
+		}
+	}
+}
+
+#Acquired Bolivar's Bloodline.
+narrative_event = {
+	id = HFATE.24228
+	title = EVTTITLEHFATE24228
+	desc = EVTDESCHFATE24228
+	picture = GFX_evt_bishop
+	border = GFX_event_narrative_frame_religion
+	
+	is_triggered_only = yes
+
+	immediate = { 
+		clr_character_flag = flag_guevara_intrigue_check
+		clr_character_flag = flag_guevara_learning_check
+		clr_character_flag = flag_guevara_diplomacy_check
+		set_global_flag = flag_guevara_blood_restored
+	}
+
+	option = { 
+		name = EVTOPTAHF24228
+		if = { 
+			limit = { 
+				this_has_cool_nickname_trigger = no
+				this_has_super_cool_nickname_trigger = no
+			}
+			ROOT = { give_nickname = nick_the_liberator }
+		}
+		if = { 
+			limit = { is_female = no }
+			create_bloodline = {
+				type = guevara_bloodline_01
+			}
+		}
+		if = { 
+			limit = { is_female = yes }
+			create_bloodline = {
+				type = guevara_bloodline_01
+				inheritance = matrilineal
+			}		
+		}
+		any_playable_ruler = { 
+			limit = { 
+				ai = no 
+				is_within_diplo_range = ROOT
+			}
+			narrative_event = { id = HFATE.24229 }
+		}
+	}
+}
+
+narrative_event = {
+	id = HFATE.24229
+	title = EVTTITLEHFATE24228
+	desc = EVTDESCHFATE24229
+	picture = GFX_evt_bishop
+	border = GFX_event_narrative_frame_religion
+	
+	is_triggered_only = yes
+
+	option = { 
+		name = EVTOPTAHF24229
+	}
+}
