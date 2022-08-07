@@ -196,17 +196,19 @@ EVTDESC_destape_5;The [FromFrom.GetTitle] is planning to reveal [FromFrom.GetHer
 EVTOPTA_destape_5;Let us see who the [FromFrom.GetTitle] has named as [FromFrom.GetHerHis] successor;;;;;;;;;;;;;x
 EVTDESC_destape_6;The most powerful of the political class gather into the chamber awaiting the great unveiling of the next heir to the Silla Presidencial. The crowd falls silent as the [FromFrom.GetTitle] enters the room, with bated breath all await the "Dedazo" - when the [FromFrom.GetTitle] will point to the one [FromFrom.GetSheHe] deems worthy to wear the Imperial Band. The [FromFrom.GetTitle] gives a brief, rehearsed speech and then points to [FromFrom.GetHerHis] chosen candidate, shaping the future of Mexico...;;;;;;;;;;;;;x
 EVTOPTA_destape_6;I wonder who it will be!;;;;;;;;;;;;;x
-EVTDESC_destape_7;The grand Destape Ceremony has been cancelled due to war.;;;;;;;;;;;;;x
-EVTOPTA_destape_7;I guess we must wait and see who will be the next to lead...;;;;;;;;;;;;;x
+EVTDESC_destape_7;The most powerful of the political class gather into the chamber awaiting the great unveiling of the next heir to the Silla Presidencial. The crowd falls silent as the you enter the room, with bated breath all await the "Dedazo" - when you will point to the one you deem worthy to wear the Imperial Band. You give a brief, rehearsed speech and then point to your chosen candidate, to shape the future of Mexico...;;;;;;;;;;;;;x
+EVTOPTA_destape_7;El que quiera silla que se forme.;;;;;;;;;;;;;x
 EVTDESC_destape_8;The [FromFrom.GetTitle]'s finger is directly pointing toward you. You have been chosen to be the next in line to be the [FromFrom.GetTitle]!;;;;;;;;;;;;;x
 EVTOPTA_destape_8;I am at the service of La República.;;;;;;;;;;;;;x
 EVTDESC_destape_9;The [FromFrom.GetTitle]'s finger comes to rest in front of [FromFrom.GetHerHis] chosen successor, [From.GetBestName]. Thus, the veil is lifted and all can see who has been chosen to rule after the current [FromFrom.GetTitle]. The lines will quickly be drawn. Should this "Destapado" be supported as the ancient tradition dictates? Or is another more worthy to lead?;;;;;;;;;;;;;x
 EVTOPTA_destape_9;The ancient tradition must be upheld;;;;;;;;;;;;;x
 EVTOPTB_destape_9;I will not suffer this fool on the Silla Presidencial;;;;;;;;;;;;;x
-EVTDESC_destape_10;My finger comes to rest in front of my chosen successor, [From.GetBestName]. Thus, the veil is lifted and all can see who has been chosen to rule after the current [From.GetTitle]. The lines will quickly be drawn. Should this "Destapado" be supported as the ancient tradition dictates? or is another more worthy to lead? The chamber is emptied after the usual mingling and political schmoozing, yet the dust has yet to settle. Will my choice persevere as has according to tradition? or will it fall prey to political machinations?;;;;;;;;;;;;;x 
+EVTDESC_destape_10;My finger comes to rest in front of my chosen successor, [From.GetBestName]. Thus, the veil is lifted and all can see who has been chosen to rule after the current [Root.GetTitle]. The lines will quickly be drawn. Should this "Destapado" be supported as the ancient tradition dictates? or is another more worthy to lead? The chamber is emptied after the usual mingling and political schmoozing, yet the dust has yet to settle. Will my choice persevere as has according to tradition? or will it fall prey to political machinations?;;;;;;;;;;;;;x 
 EVTOPTA_destape_10;Let us wait and see what becomes of this...;;;;;;;;;;;;;x
 EVTDESC_destape_11;The chamber is emptied after the usual mingling and political schmoozing, yet the dust has yet to settle. Will this choice persevere as has according to tradition? or will it fall prey to political machinations?;;;;;;;;;;;;;x 
 EVTOPTA_destape_11;Let us wait and see what becomes of this...;;;;;;;;;;;;;x
+EVTDESC_destape_12;The grand Destape Ceremony has been cancelled due to war.;;;;;;;;;;;;;x
+EVTOPTA_destape_12;I guess we must wait and see who will be the next to lead...;;;;;;;;;;;;;x
 
 #####PILGRIMAGE EVENTS#####
 CHRONICLE_PILGRIMAGE_TO_MEXICO;[Root.GetTitledName] made a pilgrimage to the city of Mexico.;;;;;;;;;x
@@ -418,3 +420,37 @@ EVTOPTE_justo32;We should prepare, in any moment the Pope may ask for a donation
 EVTOPTF_justo32;Whatever it is, it seems we will not be a part of it. Maybe that is for the best.;;;;;;;;;;;;x
 EVTOPTG_justo32;Are the Cristeros and Catholics working together? That cannot be good.;;;;;;;;;;;;;x
 EVTOPTH_justo32;We do live indeed in some interesting times.;;;;;;;;;;;;;x
+
+justo.34.name;The Prelate Asks for your Support;;;;;;;;;;;;;x
+justo.34.desc;I have received a letter from Prelado [the_prelate.GetFirstName] in which he requests my assistance for the fulfillment of his divine mission given to the Prelature of Cristo Rey by La Virgen de Guadalupe herself. He says that he still cannot tell me what that mission is until the time is right, but that Dios will reward me in this life or the next.\n He accepts donations in coin, soldiers, or oaths of fealty.;;;;;;;;;;;;;x
+EVTOPTA_justo34;I shall donate to the Prelate’s coffers.;;;;;;;;;;;;;x
+EVTOPT_justo34_TT;The [Root.RelHead.GetTitle] shall §Glift your excommunication§! by virtue of your aid.;;;;;;;;;;;;;x
+EVTOPTB_justo34;I shall send a company of volunteers to serve the Prelature.;;;;;;;;;;;;;x
+EVTOPTB_justo34_TT;We shall send some troops to aid the §Y[Root.RelHead.GetTitle]§!;;;;;;;;;;;;;x
+EVTOPTC_justo34;I shall send a small army led by my best commander.;;;;;;;;;;;;;x
+EVTOPTD_justo34;I swear I will be forever loyal to… whatever the Prelate says I must be loyal to.;;;;;;;;;;;;;x
+EVTOPTD_justo34_TT;You shall join Justo Armas as an ally in the war when the invasion starts and if he wins you shall be vassalized by him;;;;;;;;;;;;;x
+EVTOPTE_justo34;Maybe later, I have more urgent things to do than to help the Prelate in his mission…;;;;;;;;;;;;;x
+EVTOPTE_justo34_TT;You will have the possibility of helping the Prelate later.;;;;;;;;;;;;;x
+
+justo.35.name;The Need for More Dorados;;;;;;;;;;;;;x
+justo.35.desc;It has become clear that La República is in danger of being attacked from both old traitors and yet undiscovered enemies.  And while our armies may be large enough to defeat anyone that may attack us, it would not be a waste to recruit some more men to bolster the ranks. I have ordered my advisors and El Congreso to provide me with options for our defense.;;;;;;;;;;;;;x
+EVTOPT_justo35;Now, what do we need the most?;;;;;;;;;;;;;x
+EVTOPT_justo35_TT;New decisions to §Gaid in the defense§! will be available to you;;;;;;;;;;;;;x
+
+justo.36.name;Catholic Friends of Mexico Ask for a Donation;;;;;;;;;;;;;x
+justo.36.desc;I have given Henri Ledonnant an audience in my court, he requests in the name of Pope [Root.RelHead.GetTitle] my assistance in a most daring expedition to expand the faith. He assures me that I will be in good grace with Our Lord if I help, but says that he still cannot tell me where his mission to God will take him… I think the name of his company might be a hint, though.\n He accepts donations in coin or soldiers.;;;;;;;;;;;;;x
+EVTOPTA_justo36;I shall donate to their coffers.;;;;;;;;;;;;;x
+EVTOPTB_justo36;I shall send a company of volunteers to serve the faith.;;;;;;;;;;;;;x
+EVTOPTC_justo36;I shall send a small army led by my best commander.;;;;;;;;;;;;;x
+EVTOPTD_justo36;Maybe later, I have more urgent things to do...;;;;;;;;;;;;;x
+EVTOPTD_justo36_TT;You will have the possibility of helping the Friends of Mexico later.;;;;;;;;;;;;;x
+
+justo.40.name;Justo Armas!;;;;;;;;;;;;;x
+justo.40.desc_A;After years of careful secret planning, Justo Armas has launched his expedition to make war on Mexico and its Benemérito in order to seize the throne that rightfully belongs to him, the blood of the last Emperor of Mexico before the restoration of La República centuries before the Event.\n The head of the Prelature of Cristo Rey has joined Justo Armas’ call to arms, claiming that winning this war was the mission given to his church by La Virgen de Guadalupe years back. The St. Louis Pope has also joined in supporting Justo Armas’ claim via the authorization of the expedition of the Catholic Friends of Mexico to those ancient lands.\n The war will most probably be bloody and extremely difficult for Justo Armas and his valiant commanders, Nepomuceno Miramón and Henri Ledonnant, but the prize of the Mexican throne is most definitely worth the risk.;;;;;;;;;;;;;x
+justo.40.desc_B;After years of careful secret planning, Justo Armas has launched his expedition to make war on Mexico and its Benemérito in order to seize the throne that rightfully belongs to him, the blood of the last Emperor of Mexico before the restoration of La República centuries before the Event.\n The head of the Prelature of Cristo Rey has joined Justo Armas’ call to arms, claiming that winning this war was the mission given to his church by La Virgen de Guadalupe years back.\n The war will most probably be bloody and extremely difficult for Justo Armas and his valiant commanders, like Nepomuceno Miramón, but the prize of the Mexican throne is most definitely worth the risk.;;;;;;;;;;;;;x
+EVTOPTA_justo40;¡Viva Cristo Rey!;;;;;;;;;;;;;x
+EVTOPTB_justo40;¡Justo Armas y su banda serán hechos justos por las armas!;;;;;;;;;;;;;x
+EVTOPTC_justo40;I am no longer the owner of my life, it belongs to the people of Mexico!;;;;;;;;;;;;;x
+EVTOPTD_justo40;Deus Vult!;;;;;;;;;;;;;x
+EVTOPTE_justo40;How can this be? Are the history books wrong?;;;;;;;;;;;;;x
