@@ -211,3 +211,179 @@ adult_converted = {
 	religious = yes
 	ruler_designer_cost = 0
 }
+
+school_giver = { #School of Day
+	monthly_character_piety = 0.35 #balancing
+	global_revolt_risk = -0.01
+	religious = yes
+	
+	potential = { #this ensures that only braceros get it
+			OR = {
+			religion = la_hermandad
+			religion = artiga 
+			religion = alurista
+			}
+	}
+	
+	opposites = {
+		school_organizer
+		school_teacher
+		school_leader
+	}
+	
+	opposite_opinion = -5
+	same_opinion = 5
+	
+	customizer = no
+	random = no
+}
+
+school_organizer = { #School of Huerta 
+	levy_reinforce_rate = 0.15
+	intrigue = 1
+	religious = yes
+	
+	potential = { #this ensures that only braceros get it
+			OR = {
+			religion = la_hermandad
+			religion = artiga 
+			religion = alurista
+			}
+	}
+	
+	opposites = {
+		school_giver
+		school_teacher
+		school_leader
+	}
+	
+	opposite_opinion = -5
+	same_opinion = 5
+	
+	customizer = no
+	random = no
+}
+
+school_teacher = { #School of Belloc and Chesterton 
+	monthly_character_piety = 0.35 #balancing
+	learning = 2
+	religious = yes
+	
+	potential = { #this ensures that only braceros get it
+			OR = {
+			religion = la_hermandad
+			religion = artiga 
+			religion = alurista
+			}
+	}
+	
+	opposites = {
+		school_giver
+		school_organizer
+		school_leader
+	}
+	
+	opposite_opinion = -5
+	same_opinion = 5
+	
+	customizer = no
+	random = no
+}
+
+school_leader = { #School of Chavez 
+	command_modifier = {
+		morale_offence = 0.15
+		morale_defence = 0.15
+	}
+	martial = 1
+	religious = yes
+	
+	potential = { #this ensures that only braceros get it
+			OR = {
+			religion = la_hermandad
+			religion = artiga 
+			religion = alurista
+			}
+	}
+	
+	opposites = {
+		school_giver
+		school_teacher
+		school_organizer
+	}
+	
+	opposite_opinion = -5
+	same_opinion = 5
+	
+	customizer = no
+	random = no
+}
+
+la_hermandad_viejo = {
+	potential = { #this ensures that only braceros get it
+			OR = { 
+			religion = la_hermandad
+			religion = artiga 
+			religion = alurista
+		}
+		is_female = no
+	}
+	
+	opposites = {
+		la_hermandad_padre
+		la_hermandad_vieja
+	}	
+	monthly_character_piety = 0.5
+	same_religion_opinion = 10
+	
+	religious = yes
+	customizer = no
+	random = no
+}
+
+la_hermandad_vieja = {
+	potential = { #this ensures that only braceros get it
+			OR = { 
+			religion = la_hermandad
+			religion = artiga 
+			religion = alurista
+		}
+		is_female = yes
+	}
+	
+	opposites = {
+		la_hermandad_padre
+		la_hermandad_viejo
+	}	
+	monthly_character_piety = 0.5
+	same_religion_opinion = 10
+	
+	religious = yes
+	customizer = no
+	random = no
+}
+
+la_hermandad_padre = {
+	potential = { #this ensures that only braceros get it
+			OR = {
+			religion = la_hermandad
+			religion = artiga 
+			religion = alurista
+			}
+		is_female = no
+	}
+	opposites = {
+		la_hermandad_vieja
+		la_hermandad_viejo
+	}
+	monthly_character_piety = 0.15
+	same_religion_opinion = 15
+	
+	religious = yes
+	cannot_marry = yes
+	cannot_inherit = no
+	customizer = no
+	random = no
+	
+	male_compliment = COMPL_MONK
+}

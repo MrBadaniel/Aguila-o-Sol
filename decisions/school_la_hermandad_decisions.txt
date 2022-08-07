@@ -1,0 +1,42 @@
+targetted_decisions = {
+	embrace_la_hermandad_school = {
+		only_playable = yes
+		
+		filter = self
+		ai_target_filter = self
+		ai_check_interval = 60
+		
+		potential = {
+			is_playable = yes
+			OR = {
+			religion = la_hermandad
+			religion = artiga
+			religion = alurista
+			}
+			NOR = { 
+		trait = school_leader
+		trait = school_giver
+		trait = school_teacher
+		trait = school_organizer
+			}
+			is_adult = yes
+			prisoner = no
+			NOT = {
+				has_alternate_start_parameter = { key = religion_names value = random }
+			}
+		}
+		
+		allow = {
+			piety = 50
+		}
+		
+		effect = {
+			character_event = { id = LHE.1 tooltip = EVTTOOLTIP_LHE_1 }
+		}
+		
+		revoke_allowed = {
+			always = no
+		}
+
+	}
+}
