@@ -110,9 +110,10 @@ narrative_event = {
 		}	
 		hidden_tooltip = {
 			liege = {
-				character_event = { id = raymond.7 days = 5 }
+				character_event = { id = raymond.7 days = 8 }
 			}
-		}	
+		}
+		ai_chance = { factor = 1 }		
 	}
 	
 	option = {
@@ -127,9 +128,10 @@ narrative_event = {
 		}	
 		hidden_tooltip = {
 			liege = {
-				character_event = { id = raymond.7 days = 5 }
+				character_event = { id = raymond.7 days = 8 }
 			}
-		}	
+		}
+		ai_chance = { factor = 100 }			
 	}
 }
 
@@ -231,9 +233,6 @@ character_event = {
 			name = "Carmine Loyalists"
 			holder = ROOT
 		}
-		c_blythe = {
-			holder_scope = { add_friend = ROOT }
-		}
 		add_trait = deceitful
 		add_trait = paranoid
 			d_imamite = {
@@ -255,10 +254,24 @@ character_event = {
 			province = c_barstow
 			home = c_barstow
 			troops = {
-				light_infantry = { 1400 1400 }
-				heavy_infantry = { 1000 1000 }
-				light_cavalry = { 320 320 }
-				pikemen = { 150 150 }
+				light_infantry = { 1000 1000 }
+				heavy_infantry = { 900 900 }
+				light_cavalry = { 300 300 }
+				pikemen = { 100 100 }
+			}
+			attrition = 0.5
+			maintenance_multiplier = 0.25
+			disband_on_peace = yes
+		}
+		spawn_unit = {
+			character = c_1836112
+			province = c_blythe
+			home = c_blythe
+			troops = {
+				light_infantry = { 400 400 }
+				heavy_infantry = { 100 100 }
+				light_cavalry = { 20 20 }
+				pikemen = { 50 50 }
 			}
 			attrition = 0.5
 			maintenance_multiplier = 0.25
@@ -267,20 +280,6 @@ character_event = {
 		c_blythe = {
 				holder_scope = { set_defacto_liege = ROOT }
 			}
-		spawn_unit = {
-			character = c_1910185
-			province = c_blythe
-			home = c_blythe
-			troops = {
-				light_infantry = { 800 800 }
-				heavy_infantry = { 350 350 }
-				light_cavalry = { 40 40 }
-				pikemen = { 25 25 }
-			}
-			attrition = 0.5
-			maintenance_multiplier = 0.25
-			disband_on_peace = yes
-		}
 		ai_chance = {
 			factor = 20
 		}
