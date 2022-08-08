@@ -175,7 +175,7 @@
 	name="Plumblon"
 	dynasty=1876019
 	culture=coloradan
-	religion=trailwalker
+	religion=trailwalker#montanist
 	trait=legit_bastard
 	father=1890012
 	2662.1.1={birth=yes}
@@ -187,6 +187,7 @@
 	dynasty=1876034
 	culture=coloradan
 	religion=edenite
+	mother=1890098
 	2642.1.1={birth=yes}
 	2710.1.1={death=yes}
 }
@@ -1114,4 +1115,261 @@
 	trait=ambitious
 	2628.2.16={birth=yes}
 	2720.2.16={death=yes}
+}
+
+1890083={
+	name="Gourka"
+	dynasty=1889028
+	#dna="bniigdosopu"
+	culture=snakelander
+	religion=mormon
+	trait=zealous
+	trait=fussy
+	mother=1830020
+	father=1890002
+	2663.1.10={birth=yes}
+}
+
+1890084={
+	name="Columbette"
+	dynasty=1889028
+	female=yes
+	dna="bniigdosopu"
+	culture=snakelander
+	religion=mormon
+	trait=curious
+	mother=1830020
+	father=1890002
+	2664.11.3={birth=yes}
+}
+
+1890085={
+	name="Stonarm"
+	dynasty=1876034
+	culture=coloradan
+	religion=trailwalker
+	father=1890064
+	2459.1.18={birth=yes}
+	2519.4.2={death=yes}
+}
+
+1890086={
+	name="Javier"
+	dynasty=1876034
+	culture=coloradan
+	religion=trailwalker
+	father=1890085
+	2471.11.11={birth=yes}
+	2535.2.1={death=yes}
+}
+
+1890087={
+	name="Raton"
+	dynasty=1876034
+	culture=coloradan
+	religion=edenite
+	father=1890086
+	trait=ambitious
+	trait=atom_curse
+	trait=deacon
+	trait=lustful
+	trait=sympathy_oldworld
+	trait=sympathy_judaism
+	trait=sympathy_pagans
+	trait=just
+	trait=brilliant_strategist
+	give_nickname=nick_the_radiant
+	2502.1.1={birth=yes}
+	2579.4.20={death=yes}
+}
+
+1890088={
+	name="Copal"
+	culture=yiddish
+	female=yes
+	religion=reform
+	trait=fair
+	trait=devout
+	trait=charismatic_negotiator
+	trait=honest
+	trait=kind
+	2504.1.1={birth=yes
+	culture=grangelander
+	}
+	2525.1.1={add_spouse=1890087}
+	2580.3.19={death=yes}
+}
+
+1890089={
+	name="Sloan"
+	dynasty=1797024
+	culture=coloradan
+	religion=trailwalker
+	trait=zealous
+	trait=wroth
+	father=1890086
+	2505.9.1={birth=yes}
+	2585.2.1={death=yes}
+}
+
+1890090={
+	name="Jesse"
+	dynasty=1797024
+	culture=coloradan
+	religion=trailwalker
+	father=1890089
+	2545.8.6={birth=yes}
+	2612.2.21={death=yes}
+}
+
+1890091={
+	name="Montanos"
+	dynasty=1797024
+	culture=coloradan
+	religion=trailwalker
+	trait=skilled_tactician
+	trait=adventurer
+	trait=duelist
+	trait=wroth
+	trait=one_eyed
+	trait=robust
+	father=1890090
+	2581.8.6={birth=yes}
+	2653.1.21={death=yes}
+}
+
+1890092={
+	name="Ebeneezer"
+	dynasty=1797021
+	culture=coloradan
+	religion=catholic
+	trait=scholarly_theologian
+	trait=chaste
+	trait=is_malnourished
+	trait=kind
+	trait=devout
+	father=1890091
+	2602.9.11={birth=yes}
+	2660.1.18={death={
+			death_reason=death_battle
+			killer=1890094
+		}
+	}
+}
+
+1890093={
+	name="Olympos"
+	dynasty=1797024
+	culture=coloradan
+	religion=trailwalker
+	father=1890090
+	trait=trailwalker_leader
+	trait=aggressive_leader
+	trait=adventurer
+	trait=brilliant_strategist
+	trait=devout
+	trait=just
+	trait=charitable
+	2586.1.16={birth=yes}
+	2646.1.11={death=yes}
+}
+
+1890094={
+	name="Mephesto"
+	dynasty=1797024
+	culture=coloradan
+	religion=trailwalker
+	father=1890093
+	trait=mastermind_theologian
+	trait=tribal_kinslayer
+	trait=physician
+	trait=uncouth
+	trait=lunatic
+	trait=erudite
+	trait=honest
+	2604.1.2={birth=yes}
+	2664.8.10={death={
+		death_reason=death_accident
+	}
+}
+
+1890095={
+	name="Regis"
+	dynasty=1876034
+	culture=coloradan
+	religion=edenite
+	father=1890087
+	mother=1890088
+	2531.10.1={birth=yes}
+	2581.1.20={death={
+			death_reason=death_battle
+			#killer=1875055 #Edward Stilbern
+		}
+	}
+}
+
+1890096={
+	name="Sadie"
+	dynasty=1876034
+	culture=coloradan
+	religion=edenite
+	father=1890095
+	trait=skilled_tactician
+	trait=cavalry_leader
+	2566.8.19={birth=yes}
+	2629.1.11={death=yes}
+}
+
+1890097={
+	name="Phineas"
+	dynasty=1876034
+	culture=coloradan
+	religion=edenite
+	mother=1890096
+	2594.12.20={birth=yes}
+	2647.2.9={death=yes}
+}
+
+1890098={
+	name="Eliza"
+	dynasty=1876034
+	female=yes
+	culture=coloradan
+	religion=edenite
+	father=1890097
+	2614.1.20={birth=yes}
+	2664.8.11={death=yes}
+}
+
+1890099={
+	name="Tilly"
+	dynasty=1876034
+	female=yes
+	culture=coloradan
+	religion=edenite
+	mother=1890098
+	trait=skilled_tactician
+	trait=duelist
+	2644.1.1={birth=yes}
+	2710.1.1={death=yes}
+}
+
+1890100={
+	name="Alta"
+	dynasty=1876034
+	female=yes
+	culture=coloradan
+	religion=edenite
+	mother=1890098
+	2646.1.1={birth=yes}
+	2710.1.1={death=yes}
+}
+
+1890101={
+	name="Elmo"
+	culture=coloradan
+	religion=edenite
+	trait=fortune_builder
+	2640.1.1={birth=yes}
+	2710.1.1={add_matrilineal_spouse=1890099}
 }
