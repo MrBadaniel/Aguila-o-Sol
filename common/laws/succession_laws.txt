@@ -2096,6 +2096,7 @@ gender_laws = {
 			holder_scope = {
 				NOT = { religion = gaian }
 				NOT = { religion = neomayan }
+				NOT = { religion = edenite }
 				NOT = { has_religion_feature = religion_matriarchal } 
 				NOT = { has_religion_feature = religion_equal }
 				NOT = { has_religion_feature = religion_feature_aria_de_machete }
@@ -2178,6 +2179,7 @@ gender_laws = {
 									OR = {
 										religion = ursuline
 										religion = gaian
+										religion = edenite
 									}
 								}
 								OR = {
@@ -2190,7 +2192,7 @@ gender_laws = {
 							}
 							has_horde_culture = no
 							#is_tribal = no
-							is_nomadic = no
+							#is_nomadic = no
 							#is_merchant_republic = no
 							#is_patrician = no
 						}
@@ -2251,6 +2253,7 @@ gender_laws = {
 						religion = gaian
 						religion = ursuline
 						religion = angeline
+						religion = edenite
 						religion = reform
 						religion = neomayan
 						religion = neognostic
@@ -2312,6 +2315,12 @@ gender_laws = {
 					}
 				}
 			}
+			modifier = {
+				factor = 100
+				holder_scope = {
+					religion = edenite
+				}
+			}
 		}
 	}
 	
@@ -2321,6 +2330,7 @@ gender_laws = {
 		
 		potential = {
 			holder_scope = {
+				NOT = { religion = edenite }
 				OR = {
 					has_religion_feature = religion_matriarchal
 					religion = gaian
@@ -2368,6 +2378,7 @@ gender_laws = {
 						has_bloodline_flag = bloodline_enatic_cognatic 
 					}
 					religion = gaian
+					religion = edenite
 					trait = way_branch
 					#religion = neomayan					
 				}
@@ -2379,6 +2390,7 @@ gender_laws = {
 					OR = {
 						religion = ursuline
 						religion = gaian
+						religion = edenite
 					}
 				}
 			}
