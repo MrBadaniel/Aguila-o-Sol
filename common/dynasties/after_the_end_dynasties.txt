@@ -11835,7 +11835,20 @@ coat_of_arms = {
 1849007 = { name="Huichica" culture=bayfolk }
 1849008 = { name="Mallacomes" culture=bayfolk }
 1849009 = { name="Vandegriff" culture=bayfolk }
-1849010 = { name="Brannan" culture=bayfolk }
+1849010 = { name="Brannan" culture=bayfolk 
+		coat_of_arms = {
+		religion = cetic
+		template = 0
+		layer = {
+			texture = 1
+			texture_internal = 24
+			emblem = 0
+			color = 0
+			color = 0
+			color = 0
+		}
+	}
+}
 1849011 = { name="Chardonnay" culture=bayfolk }
 1849012 = { name="Barryessa" culture=bayfolk }
 1849013 = { name="Nortgustus" culture=bayfolk }
@@ -11948,7 +11961,19 @@ coat_of_arms = {
 		}
 	}
 }
-1849074 = { name="Bravante" culture=bayfolk }
+1849074 = { name="Bravante" culture=bayfolk 
+		coat_of_arms = {
+		template = 0
+		layer = {
+			texture = 11
+			texture_internal = 27
+			emblem = 0
+			color = 0
+			color = 0
+			color = 0
+		}
+	}
+}
 1849075 = { name="Artesa" culture=bayfolk }
 1849076 = { name="Nihomachi" culture=bayfolk }
 1849077 = { name="Tongyangai" culture=bayfolk }
@@ -13602,7 +13627,7 @@ coat_of_arms = {
 		}
 	}
 }
-1876019 = { name="Haggott" culture=coloradan }
+1876019 = { name="Gessler" culture=coloradan }
 1876020 = { name="Bronck" culture=coloradan }
 1876021 = { name="Howsam" culture=coloradan }
 1876022 = { name="Cheesman" culture=coloradan }
@@ -13640,7 +13665,7 @@ coat_of_arms = {
 	}
 }
 1876031 = { name="Packer" culture=coloradan }
-1876032 = { name="Gessler" culture=coloradan }
+1876032 = { name="Tweak" culture=coloradan }
 1876033 = { name="Poudre" culture=coloradan }
 1876034 = { name="Flatiron" culture=coloradan }
 1876035 = { name="Valmer" culture=coloradan 
