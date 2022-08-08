@@ -1,0 +1,132 @@
+# Island regions - no land path from the continent
+# The AI needs these to optimize path finding
+#
+# NOTE: do not add any regions here that are NOT islands
+
+# Regions can be declared with one or more of the following fields:
+#	duchies = { }, takes duchy title names declared in landed_titles.txt
+#	counties = { }, takes county title names declared in landed_titles.txt
+#	provinces = { }, takes province id numbers declared in /history/provinces
+#	regions = { }, a region can also include other regions, however the subregions needs to be declared before the parent region. 
+#		E.g. If the region world_europe contains the region world_europe_west then world_europe_west needs to be declared as a region before (i.e. higher up in this file) world_europe.
+
+region_cuba = {
+	provinces = { 754 1100 1101 1102 1103 1105 1106 1107 1109 1110 1111 1112 1113 1114 1115 2104 2105 }
+}
+
+region_bermuda = {
+	provinces = { 601 }
+}
+
+region_la_gonave = {
+	provinces = { 2106 }
+}
+
+region_isla_de_pinos = {
+	provinces = { 1104 }
+}
+
+region_isle_royale = {
+	provinces = { 1141 }
+}
+
+region_jamaica = {
+	provinces = { 1172 1173 1174 }
+}
+
+region_trinidad_tobago = {
+	provinces = { 1877 1878 }
+}
+region_abc = {
+	provinces = { 1879 1880 1881 }
+}
+region_bahamas = {
+	provinces = { 1196 1197 1198 2017 1875 }
+}
+
+region_windward_isles = {
+	provinces = { 1176 1177 2088 }
+}
+region_french_antilles = {
+	provinces = { 1178 1179 1180 }
+}
+region_leeward_isles = {
+	provinces = { 688 1181 2087 }
+}
+region_isla_margarita = {
+	provinces = { 1876 }
+}
+region_barbados = {
+	provinces = { 1175 }
+}
+region_puerto_rico = {
+	provinces = { 1183 1184 1185 1186 1182 }
+}
+
+region_hispaniola = {
+	provinces = { 735 736 737 1187 1188 1189 1190 1191 1192 1193 1194 1195 2107 }
+}
+
+region_cozumel = {
+	provinces = { 1811 }
+}
+
+region_islas_de_la_bahia = {
+	provinces = { 1860 }
+}
+
+region_san_andres = {
+	provinces = { 1872 }
+}
+
+region_cayman = {
+	provinces = { 1873 }
+}
+
+region_anticosti = {
+	provinces = { 593 }
+}
+
+region_madeleine = {
+	provinces = { 589 }
+}
+
+region_newfoundland = {
+	provinces = { 687 778 2078 2079 2080 2081 2082 2083 }
+}
+
+region_coiba = {
+	provinces = { 1994 }
+}
+
+region_las_perlas = {
+	provinces = { 1993 }
+}
+
+region_channel_islands = {
+	provinces = { 2023 }
+}
+
+region_isla_guadalupe = {
+	provinces = { 609 }
+}
+
+region_isla_socorro = {
+	provinces = { 608 }
+}
+
+region_haida = {
+	provinces = { 846 847 }
+}
+
+region_sanikiluaq = {
+	provinces = { 862 }
+}
+
+region_east_nunavik = {
+	provinces = { 624 863 864 }
+}
+
+region_west_nunavik = {
+	provinces = { 860 861 }
+}
