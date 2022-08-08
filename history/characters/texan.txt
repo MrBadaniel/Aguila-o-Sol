@@ -602,7 +602,7 @@
 1836035={
 	name="Angelo"
 	culture=tejano
-	religion=catholic
+	religion=la_hermandad
 	2622.2.2={birth=yes}
 	2700.1.1={death=yes}
 }
@@ -646,7 +646,7 @@
 	name="Preston"
 	dynasty=1814010
 	culture=texan
-	religion=catholic
+	religion=la_hermandad
 	2624.2.1={birth=yes}
 	2700.1.1={death=yes}
 }
@@ -665,7 +665,7 @@
 	name="Adrian"
 	dynasty=1815005
 	culture=tejano
-	religion=fidencista
+	religion=la_hermandad
 	father=1836060
 	trait=bastard
 	2650.7.6={birth=yes}
@@ -881,7 +881,7 @@
 	dynasty=1815002
 	dna="debogngbgmp"
 	culture=tejano
-	religion=catholic
+	religion=la_hermandad
 	martial=3
 	diplomacy=5
 	stewardship=3
@@ -905,7 +905,7 @@
 	dynasty=1815002
 	dna="dphegnggghn"
 	culture=tejano
-	religion=catholic
+	religion=la_hermandad
 	martial=5
 	diplomacy=1
 	stewardship=5
@@ -3884,8 +3884,8 @@
 
 1836189={
 	name="John" #Horrigan
-	culture=slavic
-	religion=la_hermandad
+	culture=german
+	religion=artiga
 	trait=skilled_tactician
 	trait=narrow_flank_leader
 	trait=peasant_leader
@@ -3970,4 +3970,25 @@
 	disallow_random_traits=yes
 	2643.12.25={birth=yes}
 	2665.1.1={employer=1836065}
+}
+
+1836192 = {
+	name="Zacarías"
+	dynasty=5100152
+	martial=12
+	diplomacy=7
+	stewardship=8
+	intrigue=4
+	learning=10
+	trait=gladiator
+	trait=duelist
+	trait=diligent
+	trait=zealous
+	trait=honest
+	trait=proud
+	trait=skilled_tactician
+	culture=meseteno
+	religion=la_hermandad
+	disallow_random_traits=yes
+	2643.12.25={birth=yes}
 }
