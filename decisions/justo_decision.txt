@@ -1,5 +1,92 @@
 decisions = {
-	donate_soldiers = {
+	donate_money_prelate = {
+		only_rulers = yes
+		is_high_prio = yes
+	
+		potential = {
+			is_playable = yes
+			OR = {
+				religion = catholic
+				religion = cristo_rey
+			}
+			has_character_flag = denied_help_prelate
+			NOT = {
+				has_global_flag = justo_war
+			}
+			date < 2670.10.1
+		}
+		
+		allow = {
+			if = {
+				limit = { religion = cristo_rey }
+				wealth = 750
+			}
+			if = {
+				limit = { religion = catholic }
+				wealth = 500
+			}
+		}
+		
+		effect = {
+			clr_character_flag = denied_help_prelate
+			if = {
+				limit = { religion = cristo_rey }
+				d_cristo_rey = {
+					holder_scope = {
+						transfer_scaled_wealth = {
+							from = ROOT
+							value = 0.25
+							min = 750
+							max = 750
+						}
+					}
+				}
+				piety = 500
+			}
+			if = {
+				limit = { religion = catholic }
+				d_friends = {
+					holder_scope = {
+						transfer_scaled_wealth = {
+							from = ROOT
+							value = 0.25
+							min = 500
+							max = 500
+						}
+					}
+				}
+				piety = 200
+			}
+		}
+		
+		revoke_allowed = {
+			always = no
+		}
+		
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				factor = 0.5
+				war = yes
+			}
+			modifier = {
+				factor = 0
+				religion = catholic
+				wealth = 700
+			}
+			modifier = {
+				factor = 2
+				wealth = 1000
+			}
+			modifier = {
+				factor = 0
+				religion = cristo_rey
+				wealth = 900
+			}
+		}
+	}
+
+	donate_soldiers_prelate = {
 		only_rulers = yes
 		is_high_prio = yes
 
@@ -10,6 +97,10 @@ decisions = {
 				religion = cristo_rey
 			}
 			has_character_flag = denied_help_prelate
+			NOT = {
+				has_global_flag = justo_war
+			}
+			date < 2670.10.1
 		}
 		
 		allow = {
@@ -25,6 +116,13 @@ decisions = {
 		}
 		
 		effect = {
+			clr_character_flag = denied_help_prelate
+			capital_holding = {
+				add_holding_modifier = {
+					modifier = helping_relhead_levies
+					years = 5
+				}
+			}
 			if = {
 				limit = {
 					religion = cristo_rey
@@ -54,6 +152,7 @@ decisions = {
 						}
 					}
 				}
+				piety = 500
 			}
 			if = {
 				limit = {
@@ -83,8 +182,67 @@ decisions = {
 						}
 					}
 				}
+				piety = 200
+			}
+		}
+		
+		revoke_allowed = {
+			always = no
+		}
+		
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				factor = 0
+				war = yes
+			}
+			modifier = {
+				factor = 2
+				trait = zealous
 			}
 		}
 	}
-
+	
+	swear_oath_prelate = {
+		only_rulers = yes
+		is_high_prio = yes
+	
+		potential = {
+			is_playable = yes
+			religion = cristo_rey
+			has_character_flag = denied_help_prelate
+			NOT = {
+				has_global_flag = justo_war
+			}
+			date < 2670.10.1
+			de_jure_liege = e_mexico
+			independent = yes	
+		}
+		
+		effect = {
+			custom_tooltip = {
+				text = EVTOPTD_justo34_TT
+				hidden_effect = {
+					set_character_flag = justo_oath
+				}
+			}
+			piety = 500
+		}
+		
+		revoke_allowed = {
+			always = no
+		}
+		
+		ai_will_do = {
+			factor = 50
+			modifier = {
+				factor = 0.5
+				trait = proud
+			}
+			modifier = {
+				factor = 0.5
+				trait = cynical
+			}
+		}
+	}
 }
