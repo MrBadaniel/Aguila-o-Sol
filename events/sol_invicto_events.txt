@@ -732,3 +732,41 @@ character_event = {
 		}
 	}
 }
+
+# Hijo del Sol antipope immediately loses claim if he or liege is no longer sol invicto
+character_event = {
+	id = 39703
+
+	hide_window = yes
+
+	only_playable = yes
+	
+	trigger = {
+		k_hijo_del_sol = {
+			any_claimant = {
+				OR = {
+					NOT = { religion = sol_invicta }
+					any_liege = { NOT = { religion = sol_invicta } }
+				}
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	immediate = {
+		k_hijo_del_sol = {
+			any_claimant = {
+				limit = {
+					OR = {
+						NOT = { religion = sol_invicta }
+						any_liege = { NOT = { religion = sol_invicta } }
+					}
+				}
+				remove_claim = k_hijo_del_sol
+			}
+		}
+	}
+}

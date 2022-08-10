@@ -4320,6 +4320,7 @@ new_crusade = {
 					has_global_flag = mormon_expeditions_unlocked
 					has_global_flag = pagan_ghws_unlocked
 					has_global_flag = christian_crusades_unlocked
+					has_global_flag = sol_iluminations_unlocked
 				}
 			}
 			conditional_tooltip = {
@@ -4345,6 +4346,13 @@ new_crusade = {
 						custom_tooltip = {
 							text = CTT_URSULINE_CRUSADES_UNLOCKED
 							has_global_flag = ursuline_crusades_unlocked
+						}
+					}
+					AND = {
+						religion = sol_invicta
+						custom_tooltip = {
+							text = CTT_SOL_ILUMINATIONS_UNLOCKED
+							has_global_flag = sol_iluminations_unlocked
 						}
 					}
 				}
@@ -4568,6 +4576,7 @@ new_crusade = {
 						NOR = {
 							has_landed_title = k_papal_state
 							has_landed_title = k_ursuline
+							has_landed_title = k_hijo_del_sol
 						}
 						OR = {
 							AND = {
@@ -5487,6 +5496,52 @@ new_crusade = {
 				}
 			}
 
+			# Special bloodline for the recipient of the first Sol Ilumination
+			if = {
+				limit = {
+					NOT = {
+						has_global_flag = first_sol_ilumination_complete
+					}
+					most_participating_crusader = {
+						religion = sol_invicta
+						NOT = {
+							crusader_king = {
+								character = PREV
+							}
+						}
+					}
+				}
+				if = {
+					limit = {
+						has_dlc = "Holy Fury"
+					}
+					if = {
+						limit = {
+							crusader_king = {
+								is_female = yes
+							}
+						}
+						crusader_king = {
+							create_bloodline = {
+								type = crusade_lord
+								religion = THIS
+								inheritance = matrilineal
+							}
+							set_bloodline_founder_religion_flag_effect = yes
+						}
+					}
+					else = {
+						crusader_king = {
+							create_bloodline = {
+								type = crusade_lord
+								religion = THIS
+								inheritance = patrilineal
+							}
+							set_bloodline_founder_religion_flag_effect = yes
+						}
+					}
+				}
+			}
 			# Checks if First Crusade (Catholic)
 			if = {
 				limit = {
@@ -5507,6 +5562,17 @@ new_crusade = {
 					}
 				}
 				set_global_flag = first_ursuline_crusade_complete
+			}
+			
+			# Checks if First Crusade (Sol Invicto)
+			if = {
+				limit = {
+					most_participating_crusader = { religion = sol_invicta }
+					NOT = {
+						has_global_flag = first_sol_ilumination_complete
+					}
+				}
+				set_global_flag = first_sol_ilumination_complete
 			}
 
 			# Adds a negative opinion modifier for selfish Crusaders
@@ -12814,6 +12880,12 @@ dejure_county_claim = {
 						}
 					}
 					AND = {
+						primary_title = { title = d_san_patricios }
+						ROOT = {
+							has_character_modifier = expelled_d_san_patricios
+						}
+					}
+					AND = {
 						primary_title = { title = d_order_of_brotherhood }
 						ROOT = {
 							has_character_modifier = expelled_d_order_of_brotherhood
@@ -13165,6 +13237,7 @@ dejure_county_claim = {
 					religion = ursuline
 					religion = mormon
 					religion = high_church
+					religion = cristo_rey
 				}
 				NOR = {
 					trait = crowned_by_priest
@@ -13326,6 +13399,12 @@ dejure_barony_claim = {
 						primary_title = { title = d_masked_knights }
 						ROOT = {
 							has_character_modifier = expelled_d_masked_knights
+						}
+					}
+					AND = {
+						primary_title = { title = d_san_patricios }
+						ROOT = {
+							has_character_modifier = expelled_d_san_patricios
 						}
 					}
 					AND = {
@@ -13836,6 +13915,12 @@ other_dejure_county_claim = {
 						}
 					}
 					AND = {
+						primary_title = { title = d_san_patricios }
+						ROOT = {
+							has_character_modifier = expelled_d_san_patricios
+						}
+					}
+					AND = {
 						primary_title = { title = d_order_of_brotherhood }
 						ROOT = {
 							has_character_modifier = expelled_d_order_of_brotherhood
@@ -14245,6 +14330,7 @@ depose_antipope = {
 				NOT = { has_claim = k_papal_state }
 				NOT = { has_claim = k_ursuline }
 				NOT = { has_claim = k_high_church }
+				NOT = { has_claim = k_hijo_del_sol }
 			}
 			mercenary = no
 		}
@@ -14255,6 +14341,7 @@ depose_antipope = {
 					has_claim = k_papal_state
 					has_claim = k_ursuline
 					has_claim = k_high_church
+					has_claim = k_hijo_del_sol
 				}
 			}
 		}
@@ -14267,11 +14354,13 @@ depose_antipope = {
 				religion = catholic
 				religion = ursuline
 				religion = high_church
+				religion = sol_invicta
 			}
 			rightful_religious_head_scope = {
 				NOT = { has_claim = k_papal_state }
 				NOT = { has_claim = k_ursuline }
 				NOT = { has_claim = k_high_church }
+				NOT = { has_claim = k_hijo_del_sol }
 			}
 		}
 		FROM = {
@@ -14281,6 +14370,7 @@ depose_antipope = {
 					has_claim = k_papal_state
 					has_claim = k_ursuline
 					has_claim = k_high_church
+					has_claim = k_hijo_del_sol
 				}
 			}
 		}
@@ -14363,6 +14453,7 @@ depose_antipope = {
 				remove_claim = k_papal_state
 				remove_claim = k_ursuline
 				remove_claim = k_high_church
+				remove_claim = k_hijo_del_sol
 			}
 		}
 	}
@@ -14451,6 +14542,7 @@ cb_install_antiking = {
 				religion = catholic
 				religion = ursuline
 				religion = high_church
+				religion = sol_invicta
 			}
 		}
 	}
@@ -14469,6 +14561,7 @@ cb_install_antiking = {
 				religion = catholic
 				religion = ursuline
 				religion = high_church
+				religion = sol_invicta
 			}
 		}
 		
@@ -14564,6 +14657,7 @@ cb_install_antiking = {
 					remove_claim = k_papal_state
 					remove_claim = k_ursuline
 					remove_claim = k_high_church
+					remove_claim = k_hijo_del_sol
 				}
 			}
 
@@ -15679,6 +15773,7 @@ tributary_cb = {
 					religion = ursuline
 					religion = mormon
 					religion = high_church
+					religion = cristo_rey
 				}
 				NOR = {
 					trait = crowned_by_priest
@@ -16078,6 +16173,7 @@ free_tributary_cb = {
 					religion = ursuline
 					religion = mormon
 					religion = high_church
+					religion = cristo_rey
 				}
 				NOR = {
 					trait = crowned_by_priest
@@ -16400,6 +16496,7 @@ nomad_dispute = {
 					religion = ursuline
 					religion = mormon
 					religion = high_church
+					religion = cristo_rey
 				}
 				NOR = {
 					trait = crowned_by_priest
@@ -16638,6 +16735,7 @@ cb_liberate_nomad_duchy = {
 					religion = ursuline
 					religion = mormon
 					religion = high_church
+					religion = cristo_rey
 				}
 				NOR = {
 					trait = crowned_by_priest

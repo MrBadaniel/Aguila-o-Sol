@@ -19,6 +19,37 @@ cdmx_capital;Mexico City once more becomes the seat of imperial power.;Rome est 
 
 ######RECONQUISTA######
 
+CB_NAME_RECONQUISTA_JALISCO;Reconquest of Jalisco;;;;;;;;;;;;;x
+WAR_NAME_RECONQUISTA_JALISCO;$ORDER$Reconquest War for Jalisco;;;;;;;;;;;;;x
+reconquista_jalisco_desc;§Y[Root.GetTitledName]§! can start a war to oust the infidels from the region of §Y[k_jalisco.GetBaseName]§!, and retake all provinces in the area held by §Y$TARGET$§!.;;;;;;;;;;;;;x
+CB_NAME_RECONQUISTA_COLIMA;Reconquest of Colima;;;;;;;;;;;;;x
+WAR_NAME_RECONQUISTA_COLIMA;$ORDER$Reconquest War for Colima;;;;;;;;;;;;;x
+reconquista_colima_desc;§Y[Root.GetTitledName]§! can start a war to oust the infidels from the region of §Y[k_colima.GetBaseName]§!, and retake all provinces in the area held by §Y$TARGET$§!.;;;;;;;;;;;;;x
+CB_NAME_RECONQUISTA_MICHOACAN;Reconquest of Michoacan;;;;;;;;;;;;;x
+WAR_NAME_RECONQUISTA_MICHOACAN;$ORDER$Reconquest War for Michoacan;;;;;;;;;;;;;x
+reconquista_michoacan_desc;§Y[Root.GetTitledName]§! can start a war to oust the infidels from the region of §Y[k_michoacan.GetBaseName]§!, and retake all provinces in the area held by §Y$TARGET$§!.;;;;;;;;;;;;;x
+CB_NAME_RECONQUISTA_MIXTECA;Reconquest of Mixteca;;;;;;;;;;;;;x
+WAR_NAME_RECONQUISTA_MIXTECA;$ORDER$Reconquest War for Mixteca;;;;;;;;;;;;;x
+reconquista_mixteca_desc;§Y[Root.GetTitledName]§! can start a war to oust the infidels from the region of §Y[k_mixteca.GetBaseName]§!, and retake all provinces in the area held by §Y$TARGET$§!.;;;;;;;;;;;;;x
+CB_NAME_RECONQUISTA_OAXACA;Reconquest of Oaxaca;;;;;;;;;;;;;x
+WAR_NAME_RECONQUISTA_OAXACA;$ORDER$Reconquest War for Oaxaca;;;;;;;;;;;;;x
+reconquista_oaxaca_desc;§Y[Root.GetTitledName]§! can start a war to oust the infidels from the region of §Y[k_oaxaca.GetBaseName]§!, and retake all provinces in the area held by §Y$TARGET$§!.;;;;;;;;;;;;;x
+CB_NAME_RECONQUISTA_MEXICOAST;Reconquest of Mexican Coast;;;;;;;;;;;;;x
+WAR_NAME_RECONQUISTA_MEXICOAST;$ORDER$Reconquest War for Mexican Coast;;;;;;;;;;;;;x
+reconquista_mexicoast_desc;§Y[Root.GetTitledName]§! can start a war to oust the infidels from the region of §Y[d_veracruz.GetBaseName]§!, and retake all provinces in the area held by §Y$TARGET$§!.;;;;;;;;;;;;;x
+CB_NAME_RECONQUISTA_MEXICO;Reconquest of Valley of Mexico;;;;;;;;;;;;;x
+WAR_NAME_RECONQUISTA_MEXICO;$ORDER$Reconquest War for Valley of Mexico;;;;;;;;;;;;;x
+reconquista_mexico_desc;§Y[Root.GetTitledName]§! can start a war to oust the infidels from the region of §Y[d_mexico.GetBaseName]§!, and retake all provinces in the area held by §Y$TARGET$§!.;;;;;;;;;;;;;x
+CB_NAME_RECONQUISTA_BAJIO;Reconquest of Bajio;;;;;;;;;;;;;x
+WAR_NAME_RECONQUISTA_BAJIO;$ORDER$Reconquest War for Bajio;;;;;;;;;;;;;x
+reconquista_bajio_desc;§Y[Root.GetTitledName]§! can start a war to oust the infidels from the region of §Y[k_bajio.GetBaseName]§!, and retake all provinces in the area held by §Y$TARGET$§!.;;;;;;;;;;;;;x
+CB_NAME_RECONQUISTA_CHICHIMECA;Reconquest of Gran Chichimeca;;;;;;;;;;;;;x
+WAR_NAME_RECONQUISTA_CHICHIMECA;$ORDER$Reconquest War for Gran Chichimeca;;;;;;;;;;;;;x
+reconquista_chichimeca_desc;§Y[Root.GetTitledName]§! can start a war to oust the infidels from the region of §Y[k_gran_chichimeca.GetBaseName]§!, and retake all provinces in the area held by §Y$TARGET$§!.;;;;;;;;;;;;;x
+CB_NAME_RECONQUISTA_HUASTECA;Reconquest of Huasteca and Puebla;;;;;;;;;;;;;x
+WAR_NAME_RECONQUISTA_HUASTECA;$ORDER$Reconquest War for Huasteca and Puebla;;;;;;;;;;;;;x
+reconquista_huasteca_desc;§Y[Root.GetTitledName]§! can start a war to oust the infidels from the region of §Y[d_huasteca.GetBaseName]§! and §Y[d_peubla.GetBaseName]§!, and retake all provinces in the area held by §Y$TARGET$§!.;;;;;;;;;;;;;x
+
 RECONQUISTAS_STARTED;The Cristero Wars have Begun\n;;;;;;;;;;;;;x
 EVTNAME_masked_knights_creation;La Orden de la Máscara;;;;;;;;;;;;;x
 EVTDESC_masked_knights_creation;A new organization has formed in response to the continued encroachment of heathens and heretics onto rightful Mexican land. They call themselves La Orden de la Máscara - "The Order of the Mask" - and emulate El Santo by renouncing their identities and dawning masks to defend the innocents of Mexico against the heathen bandits. Many experienced soldiers have already joined their ranks.;;;;;;;;;;;;;x
@@ -138,34 +169,17 @@ EVTOPT_fide_incarnate_lifestyle;I feel my lifestyle changing.;;;;;;;;;;;;x
 EVTOPT_fide_incarnate_traits;I feel my habits changing.;;;;;;;;;;;;x
 EVTOPT_fide_incarnate_aligned;I truly embody the Saint.;;;;;;;;;;;;x
 
-######INDIGENOUS######
+######SACRED BALL GAME######
 
 EVTDESC_ulama_game_start;The preparations have been made and the players have been selected. It is time for the sacred ballgame to begin!;;;;;;;;;;;;;x
 EVTDESC_ulama_game_conclusion;The game and its associated rituals have finally concluded, and the attendees begin to return home. The people must surely be pleased, and it is thanks in large part to my own wealth and diligence.;;;;;;;;;;;;;x
 recent_ritual_ballgame;Recent Ballgame Match;;;;;;;;;;;;;x
 recent_ritual_ballgame_desc;This character has recently held a ritual game of "Fut", the sacred ballgame.;;;;;;;;;;;;;x
 
-EVTDESC_fallingstar_8;San Salvador, what a fascinating place! A holy place for many religions, the city and surrounding area are full of monuments giving tribute to both the Saints of Jesucristo and indigenous gods. Somehow when you look closer, they don't seem all that different. It really makes you think, doesn't it?;;;;;;;;;;;;;x
-EVTOPTA_fallingstar_8;The indigenous religions are most fascinating.;;;;;;;;;;;;;x
+
+#######TONALTECAS########
 
 EVTDESC_SSI_060;The Tonaltecs have sacrificed [From.GetTitledName] to their demon gods! After bringing [From.GetHerHim] to one of their new temple pyramids, their wicked priests placed [From.GetFirstName] on an altar and sliced [From.GetHerHim] open with a ceremonial dagger. They then tore out [From.GetHerHis] still beating heart to the cheers of their assembled warriors.;;;;;;;;;;;;;x
-
-
-######SOL_INVICTO######
-
-EVTDESC_amexsol1;You've been thrown into a pit dug out in the middle of the desert. The guards explain to you that you are to be judged by the almighty Sun. If you are guilty, the Sun will punish you for your crimes.;;;;;;;;;x
-EVTDESC_amexsol9;Word reaches you that [From.GetBestName], who you ordered to be judged by the Sun, has been found guilty.;;;;;;;;;;;;;x
-EVTDESC_amexsol10;Word reaches you that [From.GetBestName], who you ordered to be judged by the Sun, has been found innocent.;;;;;;;;;;;;;x
-
-hold_zun_feast;Hold Festival of the Sun;;;;;;;;;x
-hold_zun_feast_desc;Hold a Festival of the Sun with your vassals and courtiers, celebrating the summer solstice and paying homage to the the almighty God the Sun, the Giver of Light and Justice.;;;;;;;;;x
-EVTOPTA_CM_4100;Come all to celebrate his Light!;;;;;;;;;x
-EVTDESC_CM_4196;The Festival of the Sun is over for this time. [Root.Religion.GetRandomGodName] has been properly honored and the realm is looking forward to a bright future under His blinding gaze.;;;;;;;;;x
-EVTDESC_CM_4130;The time has come for one of the main events of the Festival of the Sun - the ceremony known as Sol de Justicia. A sunny day is chosen, and on it God's faithful walk barefoot around the circumference of the temple ninety-nine times, all the while chanting pious rhymes. It is a ritual of physical and spiritual cleansing, as well as a tribute to the Radiant Mistress Eréndira.\n\nIt is known both for inspiring great piety and for causing great physical and mental exertion.;;;;;;;;;x
-EVTOPTA_CM_4130;Together we shall walk in His light!;;;;;;;;;x
-EVTOPTA_CM_4137;Praise His sacred light!;;;;;;;;;x
-EVTDESC_CM_4143;You walk for hours in the sun to honor [Root.Religion.GetRandomGodName]. As your limbs grow more tired and the heat pulses through your brain, you turn your face upwards towards the Sun. As you feel His strong warmth and presence embrace you, you open your eyes and stare into Her face to embrace the divine mysteries to be seen therein. You stare for a long while...;;;;;;;;;x
-EVTDESC_CM_4190;The ceremony of thanksgiving to the Sun, the Giver of Justice is held in courtyard of the temple. All the attendants bare their heads and kneel to give thanks for the light, warmth, justice, wisdom and fertility that He gives His faithful worshipers. Bread spiced with holy saffron is passed around and consumed by the worshipers.;;;;;;;;;x
 
 
 #####PELAYO#####
