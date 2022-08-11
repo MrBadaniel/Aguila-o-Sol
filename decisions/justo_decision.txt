@@ -245,4 +245,186 @@ decisions = {
 			}
 		}
 	}
+	
+	recruit_dorado_benemerito = {
+		only_rulers = yes
+		is_high_prio = yes
+		
+		potential = {
+			is_playable = yes
+			has_landed_title = e_mexico
+			has_global_flag = preparing_for_war_benemerito
+			date < 2670.10.1
+		}
+		
+		allow = {
+			prestige = 15
+			custom_tooltip = {
+				text = benemerito_decisions_TT
+				hidden_effect = {
+					NOT = { has_character_modifier = benemerito_decisions }
+				}
+			}
+		}
+		
+		effect = {
+			prestige = -15
+			add_character_modifier = {
+				name = benemerito_decisions
+				months = 4
+			}
+			create_random_soldier = {
+				random_traits = yes
+				dynasty = random
+				female = no
+				attributes = {
+					diplomacy = 4
+					learning = 4
+					stewardship = 4
+					intrigue = 4
+					martial = 16
+				}
+				add_trait = dorado
+			}
+			new_character = {
+				if = {
+					limit = {
+						ROOT = { can_grant_title = title_commander }
+					}
+					give_minor_title = title_commander
+				}
+			}
+		}
+		
+		revoke_allowed = {
+			always = no
+		}
+
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				factor = 0
+				NOT = { can_grant_title = title_commander }
+			}
+		}
+	}
+	
+	recruit_foreign_benemerito = {
+		only_rulers = yes
+		is_high_prio = yes
+		
+		potential = {
+			is_playable = yes
+			has_landed_title = e_mexico
+			has_global_flag = preparing_for_war_benemerito
+			date < 2670.10.1
+			d_dorados = { has_holder = yes }
+		}
+		
+		allow = {
+			prestige = 150
+			custom_tooltip = {
+				text = benemerito_decisions_TT
+				hidden_effect = {
+					NOT = { has_character_modifier = benemerito_decisions }
+				}
+			}
+		}
+		
+		effect = {
+			prestige = -150
+			add_character_modifier = {
+				name = benemerito_decisions
+				months = 4
+			}
+			d_dorados = {
+				holder_scope = {
+					spawn_unit = {
+						owner = THIS
+						province = ROOT
+						home = ROOT
+						troops = {
+							archers = { 30 30 }
+							cowboys = { 15 15 }
+							light_infantry = { 50 50 }
+							heavy_infantry = { 35 35 }
+						}
+						attrition = 0
+						maintenance_multiplier = 0.25
+					}
+				}
+			}
+		}
+		
+		revoke_allowed = {
+			always = no
+		}
+		
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				factor = 0
+				prestige <= 200
+			}
+		}
+	}
+	
+	conscription_benemerito = {
+		only_rulers = yes
+		is_high_prio = yes
+		
+		potential = {
+			is_playable = yes
+			has_landed_title = e_mexico
+			has_global_flag = preparing_for_war_benemerito
+			date < 2670.10.1
+		}
+		
+		allow = { 
+			treasury = 250
+			custom_tooltip = {
+				text = benemerito_decisions_TT
+				hidden_effect = {
+					NOT = { has_character_modifier = benemerito_decisions }
+				}
+			}
+		}
+		
+		effect = {
+			treasury = -250
+			custom_tooltip = {
+				text = benemerito_decisions_TT
+				hidden_effect = {
+					NOT = { has_character_modifier = benemerito_decisions }
+				}
+			}
+			spawn_unit = {
+				owner = ROOT
+				province = ROOT
+				home = ROOT
+				troops = {
+					light_infantry = { 200 200 }
+					pikemen = { 100 100 }
+					heavy_infantry = { 25 25 }
+					light_cavalry = { 50 50 }
+					knights = { 25 25 }
+					archers = { 100 100 }	
+				}
+				attrition = 0
+				maintenance_multiplier = 0.25
+			}
+		}
+		
+		revoke_allowed = {
+			always = no
+		}
+		
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				factor = 0
+				prestige <= 300
+			}
+		}
+	}
 }
