@@ -1464,7 +1464,7 @@ narrative_event = { #JUSTO ARMAS!!!!!
 	}
 	
 	immediate = {
-		set_global_flag = justo_war
+		set_global_flag = justo_war_one
 		c_6900449 = {
 			spawn_unit = {
 				province = 1767
@@ -1496,6 +1496,10 @@ narrative_event = { #JUSTO ARMAS!!!!!
 			holder_scope = {
 				join_attacker_wars = c_6900449
 			}
+		}
+		any_independent_ruler = {
+			limit = { has_character_flag = justo_oath }
+			join_attacker_wars = c_6900449
 		}
 	}
 	
@@ -1547,3 +1551,210 @@ narrative_event = { #JUSTO ARMAS!!!!!
 		}
 	}
 }
+
+character_event = { #fires the death events for the Prelade and Miramón
+	id = justo.41
+	hide_window = yes
+
+	is_triggered_only = yes
+	
+	trigger = {
+		OR = {
+			has_character_flag = is_prelate_envoy
+			has_landed_title = d_cristo_rey
+		}
+		has_global_flag = justo_war_one
+	}
+	
+	immediate = {
+		if = {
+			limit = {
+				has_character_flag = is_prelate_envoy
+			}
+			e_mexico = { #fires for anyone at war with the Benemerito
+				holder_scope = {
+					any_current_enemy = {
+						narrative_event = { id = justo.42 }
+					}
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				has_landed_title = d_cristo_rey
+			}
+			e_mexico = { #fires for anyone at war with the Benemerito
+				holder_scope = {
+					any_current_enemy = {
+						narrative_event = { id = justo.43 }
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				prisoner = yes
+			}
+			death = {
+				death_reason = death_execution
+				killer = FROM
+			}
+		}
+	}
+}
+
+narrative_event = { #Death of a Commander-Bishop
+	id = justo.42
+	title = "justo.42.name"
+	desc = justo.42.desc
+	
+	is_triggered_only = {
+		has_global_flag = justo_war_one
+	}
+	
+	option = {
+		name = EVTOPTA_justo42
+		trigger = {
+			religion = cristo_rey
+		}
+	}
+	option = {
+		name = EVTOPTB_justo42
+		trigger = {
+			has_landed_title = e_mexico
+		}
+	}
+	option = {
+		name = EVTOPTC_justo42
+		trigger = {
+			has_character_flag = the_justo_armas
+		}
+		random = {
+			chance = 40
+			add_trait = depressed
+		}
+	}
+	option = {
+		name = EVTOPTD_justo42
+		trigger = {
+			NOR = {
+				religion = cristo_rey
+				has_landed_title = e_mexico
+				has_character_flag = the_justo_armas
+			}
+		}
+	}
+}
+
+narrative_event = { #Death of a Prelate
+	id = justo.43
+	title = "justo.43.name"
+	desc = justo.43.desc
+	
+	is_triggered_only = {
+		has_global_flag = justo_war_one
+	}
+	
+	option = {
+		name = EVTOPTA_justo43
+		trigger = {
+			religion = cristo_rey
+		}
+	}
+	option = {
+		name = EVTOPTB_justo43
+		trigger = {
+			has_landed_title = e_mexico
+		}
+	}
+	option = {
+		name = EVTOPTC_justo43
+		trigger = {
+			has_character_flag = the_justo_armas
+		}
+		random = {
+			chance = 40
+			add_trait = depressed
+		}
+	}
+	option = {
+		name = EVTOPTD_justo43
+		trigger = {
+			NOR = {
+				religion = cristo_rey
+				has_landed_title = e_mexico
+				has_character_flag = the_justo_armas
+			}
+		}
+	}
+}
+
+character_event = { #triggers the Benemerito's death event
+	id = justo.44
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		has_landed_title = e_mexico
+		has_global_flag = justo_war_one
+	}
+	
+	immediate = {
+		e_mexico = { #fires for anyone at war with the Benemerito
+			holder_scope = {
+				narrative_event = { id = justo.45 days = 1 }
+				any_war = {
+					any_defender = {
+						narrative_event = { id = justo.45 }
+					}
+					any_defender = {
+						narrative_event = { id = justo.45 }
+					}
+				}
+			}
+		}
+	}	
+}
+
+narrative_event = { #Death of a benemerito
+	id = justo.45
+	title = "justo.45.title"
+	desc = justo.45.desc
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		has_global_flag = justo_war_one
+	}
+	
+	option = {
+		name = EVTOPTA_justo45
+		trigger = {
+			religion = cristo_rey
+		}
+	}
+	option = {
+		name = EVTOPTB_justo45
+		trigger = {
+			has_landed_title = e_mexico
+		}
+	}
+	option = {
+		name = EVTOPTC_justo45
+		trigger = {
+			has_character_flag = the_justo_armas
+		}
+	}
+	option = {
+		name = EVTOPTD_justo45
+		trigger = {
+			NOR = {
+				religion = cristo_rey
+				has_landed_title = e_mexico
+				has_character_flag = the_justo_armas
+			}
+		}
+	}
+}
+

@@ -1875,6 +1875,7 @@ on_become_imprisoned_any_reason = {
 		HFP.23024 # Stop pilgrimage when arrested.
 		HF.12305 # Legendary Hero has been imprisoned - notifies society members
 		HFP.24024 # Elder imprisoned without reason, other Elders upset.
+		justo.41 # Justo Armas event chain important characters death or imprisoned.
 	}
 }
 
@@ -2069,6 +2070,8 @@ on_death = {
 		orfelection.100 #reigning senator dies mid-election
 		orfelection.102 #reigning senator dies mid-election
 		#ORFmaint.12
+		
+		justo.41 #Justo Armas event chain, important character's death
 	}
 	random_events = {
 		1 = RIP.29800 #reincarnation investigation
