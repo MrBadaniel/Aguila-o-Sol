@@ -1057,6 +1057,12 @@ character_event = { #the event that will fire the request events
 		}
 		if = {
 			limit = { has_global_flag = catholic_friends }
+			d_friends = {
+				set_variable = {
+					which = friendstroops
+					value = 0
+				}
+			}
 			any_playable_ruler	= {
 				limit = {
 					religion = catholic
@@ -1349,6 +1355,10 @@ narrative_event = { #Catholic Friends of Mexico Ask for a Donation
 							maintenance_multiplier = 0.5
 						}
 					}
+					change_variable = {
+						which = friendstroops
+						value = 1
+					}
 				}
 			}
 		}
@@ -1610,7 +1620,9 @@ narrative_event = { #Death of a Commander-Bishop
 	title = "justo.42.name"
 	desc = justo.42.desc
 	
-	is_triggered_only = {
+	is_triggered_only = yes
+
+	trigger = {
 		has_global_flag = justo_war_one
 	}
 	
@@ -1653,7 +1665,9 @@ narrative_event = { #Death of a Prelate
 	title = "justo.43.name"
 	desc = justo.43.desc
 	
-	is_triggered_only = {
+	is_triggered_only = yes
+	
+	trigger = {
 		has_global_flag = justo_war_one
 	}
 	
@@ -1706,9 +1720,8 @@ character_event = { #triggers the Benemerito's death event
 		ROOT = { save_event_target_as = dead_benemerito }
 		e_mexico = { #fires for anyone at war with the Benemerito
 			holder_scope = {
-				narrative_event = { id = justo.45 days = 1 }
 				any_war = {
-					any_defender = {
+					any_attacker = {
 						narrative_event = { id = justo.45 }
 					}
 					any_defender = {
@@ -1722,7 +1735,7 @@ character_event = { #triggers the Benemerito's death event
 
 narrative_event = { #Death of a benemerito
 	id = justo.45
-	title = "justo.45.title"
+	title = "justo.45.name"
 	desc = justo.45.desc
 	
 	is_triggered_only = yes
@@ -1761,21 +1774,118 @@ narrative_event = { #Death of a benemerito
 	}
 }
 
-narrative_event = { #The Friends Arrive
+character_event = { #The Friends Arrive
 	id = justo.46
-	#title = "justo.46.title"
-	#desc = justo.46.desc
 	hide_window = yes
 	
 	is_triggered_only = yes
 	
 	trigger = {
-		location = {
-			can_naval_path_to = c_new_orleans
+		OR = { #checks if ROOT is JUSTO GANG
+			has_landed_title = d_justo
+			has_landed_title = d_cristo_rey
+			has_character_flag = justo_oath
 		}
-		has_global_flag = catholic_friends
-		NOT = { has_global_flag = friends_arrived }
+		FROM = { location = { is_coastal = yes } } #checks if province is coastal
+		has_global_flag = catholic_friends #checks if the friends are supposed to spawn in the first place
+		has_global_flag = justo_war_one #checks if the war began
+		NOT = { has_global_flag = friends_arrived }  #checks if the friends arrived
 	}
 	
+	immediate = {
+		e_mexico = { #fires for anyone at war with the Benemerito
+			holder_scope = {
+				any_war = {
+					any_attacker = {
+						narrative_event = { id = justo.47 }
+					}
+					any_defender = {
+						narrative_event = { id = justo.47 }
+					}
+				}
+			}
+		}
+		FROM = { location = { save_event_target_as = friends_arriving_location } }
+		set_global_flag = friends_arrived
+	}
+}
+
+narrative_event = {
+	id = justo.47
+	title = "justo.47.name"
+	desc = justo.47.desc
 	
+	only_playable = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		has_global_flag = catholic_friends #checks if the friends are supposed to spawn in the first place
+		has_global_flag = justo_war_one #checks if the war began
+	}
+	
+	option = {
+		name = EVTOPTA_justo47
+		trigger = {
+			has_character_flag = the_justo_armas
+		}
+		d_friends = {
+			hidden_effect = {
+				while = {
+					limit = {
+						check_variable = {
+							which = friendstroops
+							value >= 1
+						}
+					}
+					subtract_variable = {
+						which = friendstroops
+						value = 1
+					}
+					holder_scope = {
+						spawn_unit = {
+							owner = PREV
+							province = friends_arriving_location
+							home = PREV
+							  
+							troops = {
+								archers = { 50 50 }
+								heavy_infantry = { 25 50 }
+								knights  = { 25 25 }
+							}
+
+							attrition = 0
+				
+							maintenance_multiplier = 0.5
+						}
+					}
+				}
+			}
+			holder_scope = {
+				join_attacker_wars = c_6900449
+			}
+		}
+	}
+	
+	option = {
+		name = EVTOPTB_justo47
+		trigger = {
+			NOT = { has_character_flag = the_justo_armas }
+			war_with = e_mexico
+		}
+	}
+	
+	option = {
+		name = EVTOPTC_justo47
+		trigger = {
+			has_landed_title = e_mexico
+		}
+	}
+	
+	option = {
+		name = EVTOPTD_justo47
+		trigger = {
+			war_with = d_justo
+			NOT = { has_landed_title = e_mexico }
+		}
+	}
 }
