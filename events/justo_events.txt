@@ -1573,6 +1573,7 @@ character_event = { #fires the death events for the Prelade and Miramón
 			}
 			e_mexico = { #fires for anyone at war with the Benemerito
 				holder_scope = {
+					narrative_event = { id = justo.42 }
 					any_current_enemy = {
 						narrative_event = { id = justo.42 }
 					}
@@ -1585,6 +1586,7 @@ character_event = { #fires the death events for the Prelade and Miramón
 			}
 			e_mexico = { #fires for anyone at war with the Benemerito
 				holder_scope = {
+					narrative_event = { id = justo.42 }
 					any_current_enemy = {
 						narrative_event = { id = justo.43 }
 					}
@@ -1656,19 +1658,19 @@ narrative_event = { #Death of a Prelate
 	}
 	
 	option = {
-		name = EVTOPTA_justo43
+		name = EVTOPTA_justo42
 		trigger = {
 			religion = cristo_rey
 		}
 	}
 	option = {
-		name = EVTOPTB_justo43
+		name = EVTOPTB_justo42
 		trigger = {
 			has_landed_title = e_mexico
 		}
 	}
 	option = {
-		name = EVTOPTC_justo43
+		name = EVTOPTC_justo42
 		trigger = {
 			has_character_flag = the_justo_armas
 		}
@@ -1678,7 +1680,7 @@ narrative_event = { #Death of a Prelate
 		}
 	}
 	option = {
-		name = EVTOPTD_justo43
+		name = EVTOPTD_justo42
 		trigger = {
 			NOR = {
 				religion = cristo_rey
@@ -1701,6 +1703,7 @@ character_event = { #triggers the Benemerito's death event
 	}
 	
 	immediate = {
+		ROOT = { save_event_target_as = dead_benemerito }
 		e_mexico = { #fires for anyone at war with the Benemerito
 			holder_scope = {
 				narrative_event = { id = justo.45 days = 1 }
@@ -1758,3 +1761,21 @@ narrative_event = { #Death of a benemerito
 	}
 }
 
+narrative_event = { #The Friends Arrive
+	id = justo.46
+	#title = "justo.46.title"
+	#desc = justo.46.desc
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		location = {
+			can_naval_path_to = c_new_orleans
+		}
+		has_global_flag = catholic_friends
+		NOT = { has_global_flag = friends_arrived }
+	}
+	
+	
+}
