@@ -1508,7 +1508,9 @@ narrative_event = { #JUSTO ARMAS!!!!!
 		}
 		if = {
 			limit = {
-				d_justo = { holder_scope = { ai = no } }
+				OR = {
+					d_justo = { holder_scope = { ai = yes } }	
+				}
 			}
 			d_friends = {
 				hidden_effect = {
@@ -1546,6 +1548,7 @@ narrative_event = { #JUSTO ARMAS!!!!!
 					join_attacker_wars = c_6900449
 				}
 			}
+			set_global_flag = friends_arrived
 		}
 	}
 	
@@ -1573,6 +1576,14 @@ narrative_event = { #JUSTO ARMAS!!!!!
 		event_target:the_gringo = {
 			add_friend = root
 			add_friend = prelate_envoy
+		}
+		if = {
+			limit = { 
+				e_mexico = { NOT = { any_realm_province = { is_coastal = yes } } } #Mexico has no coastal provinces
+			}
+			custom_tooltip = {
+				text = EVTOPTC_justo40_TT
+			}
 		}
 	}
 	option = {
@@ -2007,6 +2018,7 @@ narrative_event = { #Death of a pretender
 				modifier = prelate_failure
 			}
 		}
+		clr_global_flag  = justo_war_one
 	}
 	
 	option = {
@@ -2042,6 +2054,105 @@ narrative_event = { #Death of a pretender
 				father = { has_character_flag = the_justo_armas }
 			}
 		}
+	}	
+}
+
+narrative_event = { #Su Alteza Imperial or Justo Armas Victorious
+	id = justo.50
+	title = { #Echoes
+		trigger = {
+			has_global_flag = catholic_friends
+		}
+		text = "justo.50.name_A"
+	}
+	title = { #Whispers
+		trigger = {
+			NOT = { has_global_flag = catholic_friends }
+		}
+		text = "justo.50.name_B"
 	}
 	
+	desc = {
+		trigger = {
+			has_global_flag = catholic_friends
+		}
+		text = "justo.50.desc_A"
+	}
+	desc = {
+		trigger = {
+			NOT = { has_global_flag = catholic_friends }
+		}
+		text = "justo.50.desc_B"
+	}
+	
+	is_triggered_only = yes
+	major = yes
+	
+	trigger = {
+		has_global_flag = justo_war_one
+	}
+	
+	immediate = {
+		clr_global_flag = justo_war_one
+	}
+	
+	option = {
+		name = EVTOPTA_justo50
+		trigger = {
+			religion = cristo_rey
+		}
+	}
+	
+	option = {
+		name = EVTOPTB_justo50
+		trigger = {
+			de_jure_liege_or_above = e_mexico
+		}
+	}
+	
+	option = {
+		name = EVTOPTC_justo50
+		trigger = {
+			has_character_flag = the_justo_armas
+		}
+		if = {
+			limit = { has_global_flag = catholic_friends }
+			set_defacto_vassal = d_friends
+			if = {
+				limit = { completely_controls = d_veracruz }
+				d_veracruz = {
+					grant_title = d_friends
+				}
+			}
+		}
+		any_independent_ruler = {
+			limit = {
+				has_character_flag = justo_oath
+			}
+			set_defacto_liege = e_mexico
+		}
+	}
+	
+	option = {
+		name = EVTOPTD_justo50
+		trigger = {
+			has_global_flag = catholic_friends
+			religion = catholic
+		}
+	}
+	
+	option = {
+		name = EVTOPTE_justo50
+		trigger = {
+			NOR = {
+				religion = cristo_rey
+				de_jure_liege_or_above = e_mexico
+				the_justo_armas
+				AND = {
+					has_global_flag = catholic_friends
+					religion = catholic
+				}
+			}
+		}
+	}
 }
