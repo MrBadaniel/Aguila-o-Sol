@@ -16235,6 +16235,140 @@ spawn_elder_effect = {
 	}
 }
 
+spawn_viejo_effect = {
+		random_list = {
+			50 = {
+				create_random_priest = {
+					random_traits = yes
+					dynasty = actually_culture
+					female = no
+					age = 50
+					attributes = {
+						diplomacy = 4
+						learning = 10
+						stewardship = 6
+						intrigue = 4
+						martial = 4
+					}
+				}
+			}
+			50 = {
+				create_random_priest = {
+					random_traits = yes
+					dynasty = actually_culture
+					female = yes
+					age = 50
+					attributes = {
+						diplomacy = 4
+						learning = 10
+						stewardship = 6
+						intrigue = 4
+						martial = 4
+					}
+				}
+			}
+		}
+	new_character = {
+		character_event = { id = misc.3 } # Diversity
+		character_event = { id = misc.4 } # Physique
+		remove_trait = weak
+		remove_trait = slow
+		remove_trait = imbecile
+		remove_trait = distractible
+		remove_trait = dull
+		remove_trait = dwarf
+		remove_trait = giant
+		remove_trait = hunchback
+		remove_trait = clubfooted
+		remove_trait = craven
+		remove_trait = paranoid
+		
+		remove_trait = mystic
+		remove_trait = socializer
+		remove_trait = gamer
+		remove_trait = hedonist
+		remove_trait = duelist
+		remove_trait = hunter
+		remove_trait = strategist
+		remove_trait = administrator
+		remove_trait = architect
+		remove_trait = gardener
+		remove_trait = schemer
+		remove_trait = impaler
+		remove_trait = seducer
+		remove_trait = seductress
+		remove_trait = theologian
+		remove_trait = scholar
+		
+		remove_trait = detached_priest
+		remove_trait = martial_cleric
+		remove_trait = scholarly_theologian
+		remove_trait = mastermind_theologian
+		
+		add_character_modifier = { name = elder_long_life_modifier years = 100 }
+
+		random_list = {
+			50 = {
+				add_trait = martial_cleric
+			}
+			25 = {
+				add_trait = scholarly_theologian
+			}
+			10 = {
+				add_trait = mastermind_theologian
+			}
+		}
+		random_list = {
+			5 = {
+				add_trait = stubborn
+			}
+			1 = {
+				add_trait = mystic
+			}
+			1 = {
+				add_trait = hunchback
+			}
+			1 = {
+				add_trait = ugly
+			}
+			10 = {
+				add_scarred_tiered_effect = yes
+			}
+			70 = {
+				change_stewardship = 1
+			}
+		}
+		
+		hidden_tooltip = {
+		if = { 
+			limit = { 
+				is_female = yes
+			}
+			give_nickname = nick_vieja
+			add_trait = la_hermandad_vieja			
+			}
+			
+		if = { 
+			limit = { 
+				is_female = no
+			}
+			random_list = {
+					50 = {
+					give_nickname = nick_viejo
+					add_trait = la_hermandad_viejo	
+					}
+					25 = {
+						give_nickname = nick_viejo
+						add_trait = la_hermandad_padre	
+					}
+				}			
+			}		
+		}
+		set_character_flag = invited_elder
+		save_event_target_as = invited_character
+	}
+}
+
 select_random_hermetic_ingredient_herb_effect = { # If run once, this will set a flag on ONE herbal ingredient. If run twice, it will set a second flag on another herbal ingredient...
 	if = {
 		limit = {

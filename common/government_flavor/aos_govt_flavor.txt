@@ -1,0 +1,125 @@
+government_flavor = {
+	name = gov_edenite_count
+	graphics = GFX_evt_forest_park
+	priority = 2
+	trigger = {
+		government = reserve_government
+		religion = edenite
+		tier = COUNT
+	}
+}
+
+government_flavor = {
+	name = gov_edenite_duke
+	graphics = GFX_evt_forest_park
+	priority = 2
+	trigger = {
+		government = reserve_government
+		religion = edenite
+		tier = DUKE
+	}
+}
+
+government_flavor = {
+	name = gov_edenite_king
+	graphics = GFX_evt_forest_park
+	priority = 2
+	trigger = {
+		government = reserve_government
+		religion = edenite
+		tier = KING
+	}
+}
+
+government_flavor = {
+	name = gov_edenite_emperor
+	graphics = GFX_evt_forest_park
+	priority = 2
+	trigger = {
+		government = reserve_government
+		religion = edenite
+		tier = EMPEROR
+	}
+}
+
+government_flavor = {
+	name = gov_forester_count
+	graphics = GFX_evt_forest_park
+	priority = 2
+	trigger = {
+		government = reserve_government
+		religion = forester
+		tier = COUNT
+	}
+}
+
+government_flavor = {
+	name = gov_forester_duke
+	graphics = GFX_evt_forest_park
+	priority = 2
+	trigger = {
+		government = reserve_government
+		religion = forester
+		tier = DUKE
+	}
+}
+
+government_flavor = {
+	name = gov_forester_king
+	graphics = GFX_evt_forest_park
+	priority = 2
+	trigger = {
+		government = reserve_government
+		religion = forester
+		tier = KING
+	}
+}
+
+government_flavor = {
+	name = gov_forester_emperor
+	graphics = GFX_evt_forest_park
+	priority = 2
+	trigger = {
+		government = reserve_government
+		religion = forester
+		tier = EMPEROR
+	}
+}
+
+government_flavor = {
+	name = gov_peasant_kingdom
+	graphics = GFX_evt_california_peasantry
+	priority = 2
+	trigger = {
+		religion = la_hermandad
+	}
+}
+
+government_flavor = {
+	name = gov_peasant_kingdom
+	graphics = GFX_evt_golden_hind
+	priority = 2
+	trigger = {
+		government = montane_government
+	}
+}
+
+government_flavor = {
+	name = gov_dominionate
+	graphics = GFX_evt_crusading_knights_cross
+	priority = 2
+	trigger = {
+		religion = dominionist
+		controls_religion = yes
+	}
+}
+
+government_flavor = {
+	name = gov_americanist_constitutional
+	graphics = GFX_evt_found_hre
+	priority = 2
+	trigger = {
+		religion = dominionist
+		controls_religion = no
+	}
+}

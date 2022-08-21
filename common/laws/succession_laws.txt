@@ -108,6 +108,10 @@ succession_laws = {
 				}
 				#
 				is_merchant_republic = no
+				NOT = { religion = dominionist }
+				NOT = { religion = la_hermandad }
+				NOT = { religion = artiga }
+				NOT = { religion = alurista }
 				is_patrician = no
 				OR = {
 					independent = yes
@@ -166,7 +170,6 @@ succession_laws = {
 						religion = patria_grande
 						trait = patria_bolivar
 					}
-					religion = dominionist
 				}
 				NAND = {
 					OR = {
@@ -256,6 +259,10 @@ succession_laws = {
 						}
 					}
 				}
+				NOT = { religion = dominionist }
+				NOT = { religion = la_hermandad }
+				NOT = { religion = artiga }
+				NOT = { religion = alurista }
 				is_merchant_republic = no
 				is_patrician = no
 				OR = {
@@ -276,7 +283,6 @@ succession_laws = {
 						religion = patria_grande
 						trait = patria_bolivar
 					}
-					religion = dominionist
 				}
 			}
 			OR = {
@@ -405,6 +411,7 @@ succession_laws = {
 					religion = mictlantec
 					religion = qabantajik
 					religion = edenite
+					religion = forester
 					culture = metis
 					AND = {
 						is_tribal = yes
@@ -422,6 +429,10 @@ succession_laws = {
 					has_religion_feature = religion_feature_revelationist
 					has_religion_feature = religion_feature_occultist
 				}
+				NOT = { religion = dominionist }
+				NOT = { religion = la_hermandad }
+				NOT = { religion = artiga }
+				NOT = { religion = alurista }
 				NOR = {
 					has_religion_feature = religion_matriarchal
 					has_religion_feature = religion_patriarchal
@@ -493,6 +504,7 @@ succession_laws = {
 						religion = qabantajik
 						religion = gaian
 						culture = metis
+						government = usos_costumberes_government
 						AND = {
 							religion = moravian
 							trait = pastoral
@@ -588,6 +600,7 @@ succession_laws = {
 					NOT = { religion_group = pagan_group }
 					NOT = { religion = midewiwin }
 					NOT = { religion = raven_tales }
+					NOT = { religion = dominionist }
 					is_reformed_religion = yes
 					is_patrician = yes
 				}
@@ -642,6 +655,7 @@ succession_laws = {
 					OR = {
 						government = mormon_government
 						government = ghazi_government
+						government = agrarian_government
 					}
 				}
 			}
@@ -737,6 +751,7 @@ succession_laws = {
 					OR = {
 						government = mormon_government
 						government = ghazi_government
+						government = agrarian_government
 					}
 				}
 			}
@@ -838,6 +853,7 @@ succession_laws = {
 					OR = {
 						government = mormon_government
 						government = ghazi_government
+						government = agrarian_government
 					}
 				}
 			}
@@ -949,6 +965,7 @@ succession_laws = {
 					OR = {
 						government = mormon_government
 						government = ghazi_government
+						government = agrarian_government
 					}
 				}
 			}
@@ -1075,6 +1092,8 @@ succession_laws = {
 					OR = {
 						government = mormon_government
 						government = ghazi_government
+						government = agrarian_government
+						government = bureaucratic_government
 					}
 				}
 			}
@@ -1570,6 +1589,7 @@ succession_laws = {
 					OR = {
 						government = mormon_government
 						government = ghazi_government
+						government = agrarian_government
 					}
 				}
 			}
@@ -1678,6 +1698,7 @@ succession_laws = {
 				AND = {
 					has_law = succ_byzantine_elective 
 					title = e_usa
+					NOT = { religion = dominionist }
 				}
 				AND = {
 					has_law = succ_mex_elective 
@@ -1690,6 +1711,7 @@ succession_laws = {
 			}
 			holder_scope = {
 				OR = {
+					religion = dominionist
 					AND = {
 						has_religion_feature = religion_patriarchal
 						is_theocracy = no
@@ -1698,7 +1720,6 @@ succession_laws = {
 						has_religion_feature = religion_matriarchal
 						is_theocracy = no
 					}
-					religion = dominionist
 				}
 				is_republic = no
 				is_merchant_republic = no
@@ -1746,6 +1767,7 @@ succession_laws = {
 					OR = {
 						government = mormon_government
 						government = ghazi_government
+						government = agrarian_government
 					}
 				}
 			}

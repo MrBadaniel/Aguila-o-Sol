@@ -142,13 +142,27 @@ character_event = {
         }
             
         government = agrarian_government
-        NOT = { has_law = succ_communal_eldership }
     }
     
     immediate = {
-        if = {
-            limit = { government = agrarian_government }
-            primary_title = { add_law = { law = succ_communal_eldership opinion_effect = no } }
-        }
+		ROOT = { 
+			primary_title = { #First apply law.
+				add_law = {
+					law = succ_communal_eldership
+					cooldown = no
+					opinion_effect = no
+				}
+			}
+			#Then create grumpy Elder characters, so you are not without electors on start.
+			spawn_viejo_effect = yes
+			spawn_viejo_effect = yes
+			spawn_viejo_effect = yes
+			spawn_viejo_effect = yes
+			spawn_viejo_effect = yes
+			spawn_viejo_effect = yes
+			spawn_viejo_effect = yes
+			spawn_viejo_effect = yes
+		}	
+	
     }
 }

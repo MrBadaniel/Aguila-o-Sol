@@ -1,0 +1,1018 @@
+government_flavor = {
+	name = gov_elec_bureaucratic
+	graphics = GFX_evt_book_carolingian_script
+	priority = 2
+	trigger = {
+		OR = {
+			has_law = succ_feudal_elective
+			has_law = succ_hre_elective
+			has_law = succ_byzantine_elective
+		}
+		government = bureaucratic_government
+	}
+}
+government_flavor = {
+	name = gov_subservient_imamate
+	graphics = GFX_evt_bishop_muslim
+	priority = 3
+	trigger = {
+		has_landed_title = d_imamite
+		religion = imamite
+		government = bureaucratic_government
+		independent = no	
+	}
+}
+government_flavor = {
+	name = gov_imamite_warlord_state
+	graphics = GFX_evt_suspicious_noble
+	priority = 3
+	trigger = {
+		religion = imamite
+		government = bureaucratic_government
+		independent = yes
+	}
+}
+government_flavor = {
+	name = gov_true_theodemocracy
+	graphics = GFX_evt_state_diplomacy
+	priority = 1
+	trigger = {
+		government = mormon_government
+		has_law = succ_mormon_elective
+	}
+}
+government_flavor = {
+	name = gov_despotic_theodemocracy
+	graphics = GFX_evt_state_diplomacy
+	priority = 1
+	trigger = {
+		government = mormon_government
+		NOT = { has_law = succ_mormon_elective }
+	}
+}
+government_flavor = {
+	name = gov_pioneer_state
+	graphics = GFX_evt_natrona
+	priority = 3
+	trigger = {
+		government = mormon_government
+		OR = {
+			AND = {
+				tier = DUKE
+				independent = yes	
+			}
+			AND = {
+				trait = danite
+				independent = no
+			}
+		}
+	}
+}
+government_flavor = {
+	name = gov_priestly_court
+	graphics = GFX_evt_ot_river
+	priority = 3
+	trigger = {
+		government = mormon_government
+		tier = DUKE
+		independent = no	
+	}
+}
+
+government_flavor = {
+	name = gov_realm_of_god
+	graphics = GFX_evt_coronation
+	priority = 10
+	trigger = {
+		has_landed_title = e_zion
+	}
+}
+
+government_flavor = {
+	name = gov_hered_bureaucratic
+	graphics = GFX_evt_book_carolingian_script
+	priority = 2
+	trigger = {
+		NOR = {
+			has_law = succ_feudal_elective
+			has_law = succ_hre_elective
+			has_law = succ_byzantine_elective
+		}
+		government = bureaucratic_government
+	}
+}
+
+government_flavor = {
+	name = gov_bureaucratic
+	graphics = GFX_evt_book_carolingian_script
+	priority = 1
+	trigger = {
+		government = bureaucratic_government
+	}
+}
+
+government_flavor = {
+	name = gov_celestial_empire
+	graphics = GFX_evt_chinese_emissary
+	priority = 3
+	trigger = {
+		government = bureaucratic_government
+		religion = cetic
+		has_landed_title = e_california
+		NOR = { 
+			trait = figurehead 
+			trait = weak_emperor
+		}
+	}
+}
+
+government_flavor = {
+	name = gov_figurehead_empire
+	graphics = GFX_evt_chinese_emissary
+	priority = 3
+	trigger = {
+		government = bureaucratic_government
+		religion = cetic
+		has_landed_title = e_california
+		NOR = { 
+			trait = figurehead 
+			trait = weak_emperor
+		}
+	}
+}
+
+government_flavor = {
+	name = gov_colonial_jap
+	graphics = GFX_evt_colonial_japan
+	priority = 3
+	trigger = {
+		government = colonial_government
+		has_landed_title = e_edokko
+	}
+}
+
+government_flavor = {
+	name = gov_colonial_rus
+	graphics = GFX_evt_colonial_russia
+	priority = 3
+	trigger = {
+		government = colonial_government
+		has_landed_title = e_novorusskiy
+	}
+}
+
+#HCC stuff moved to vanilla
+#Californian viceroyalties (copied from vanilla byz viceroyalties) (moved to vanilla)
+
+#Caribbean Realms
+government_flavor = {
+	name = gov_afro_chiefdom
+	graphics = GFX_evt_west_african_ruler
+	priority = 2
+	trigger = {
+		religion_group = afro_syncretic
+		NOT = { has_law = succ_gavelkind }
+		government = tribal_government
+	}
+}
+
+government_flavor = {
+	name = gov_noble_afro_chiefdom
+	graphics = GFX_evt_west_african_ruler
+	priority = 2
+	trigger = {
+		religion_group = afro_syncretic
+		government = tribal_government
+		has_law = succ_gavelkind
+	}
+}
+
+government_flavor = {
+	name = gov_afro_feudal
+	graphics = GFX_evt_west_african_ruler
+	priority = 2
+	trigger = {
+		religion_group = afro_syncretic
+		government = feudal_government
+	}
+}
+
+#The Yanklaw
+government_flavor = {
+	name = gov_hereditary_yanklaw
+	graphics = GFX_evt_midwinter_blot_oldgods
+	priority = 2
+	trigger = {
+		capital_scope = { region = world_central_canada }
+		NOR = {
+			has_law = succ_feudal_elective
+			has_law = succ_hre_elective
+			has_law = succ_byzantine_elective
+		}
+		mercenary = no
+		OR = {
+			religion = norse_pagan
+			religion = norse_pagan_reformed
+		}
+		culture_group = ameronordic
+	}
+}
+
+government_flavor = {
+	name = gov_electorial_yanklaw
+	graphics = GFX_evt_midwinter_blot_oldgods
+	priority = 2
+	trigger = {
+		capital_scope = { region = world_central_canada }
+		OR = {
+			has_law = succ_feudal_elective
+			has_law = succ_hre_elective
+			has_law = succ_byzantine_elective
+		}
+		OR = {
+			religion = norse_pagan
+			religion = norse_pagan_reformed
+		}
+		culture_group = ameronordic
+	}
+}
+
+#Afro-Syncretic govt flavor
+government_flavor = {
+	name = gov_afro_aristocratic_monarchy
+	graphics = GFX_evt_west_african_ruler
+	priority = 1
+	trigger = {
+		OR = {
+			government = feudal_government
+		
+		}
+		religion_group = afro_syncretic
+		NOR = {
+			has_law = succ_feudal_elective
+			has_law = succ_hre_elective
+			has_law = succ_byzantine_elective
+		}
+		mercenary = no
+		NOR = { 
+			has_law = imperial_administration
+			has_law = ze_administration_laws_2
+		}
+		OR = {
+			NOT = { has_dlc = "Conclave" }
+			calc_true_if = {
+				amount = 6
+				has_law = law_voting_power_1
+				has_law = banish_voting_power_1
+				has_law = execution_voting_power_1
+				has_law = revoke_title_voting_power_1
+				has_law = grant_title_voting_power_1
+				has_law = imprison_voting_power_1
+				has_law = war_voting_power_1
+			}
+		}
+	}
+}
+
+government_flavor = {
+	name = gov_elective_afro_aristocratic_monarchy
+	graphics = GFX_evt_west_african_ruler
+	priority = 1
+	trigger = {
+		OR = {
+			government = feudal_government
+		
+		}
+		religion_group = afro_syncretic
+		OR = {
+			has_law = succ_feudal_elective
+			has_law = succ_hre_elective
+			has_law = succ_byzantine_elective
+		}
+		NOR = { 
+			has_law = imperial_administration
+			has_law = ze_administration_laws_2
+		}
+		OR = {
+			NOT = { has_dlc = "Conclave" }
+			calc_true_if = {
+				amount = 6
+				has_law = law_voting_power_1
+				has_law = banish_voting_power_1
+				has_law = execution_voting_power_1
+				has_law = revoke_title_voting_power_1
+				has_law = grant_title_voting_power_1
+				has_law = imprison_voting_power_1
+				has_law = war_voting_power_1
+			}
+		}
+	}
+}
+
+government_flavor = {
+	name = gov_afro_despotic_monarchy
+	graphics = GFX_evt_west_african_ruler
+	priority = 1
+	trigger = {
+		OR = {
+			government = feudal_government
+		
+		}
+		religion_group = afro_syncretic
+		NOR = {
+			has_law = succ_feudal_elective
+			has_law = succ_hre_elective
+			has_law = succ_byzantine_elective
+		}
+		mercenary = no
+		NOR = { 
+			has_law = imperial_administration
+			has_law = ze_administration_laws_2
+		}
+		OR = {
+			NOT = { has_dlc = "Conclave" }
+			calc_true_if = {
+				amount = 2
+				has_law = banish_voting_power_0
+				has_law = execution_voting_power_0
+				has_law = revoke_title_voting_power_0
+				has_law = grant_title_voting_power_0
+				has_law = imprison_voting_power_0
+				has_law = war_voting_power_0
+			}
+		}
+		NOT = {
+			calc_true_if = {
+				amount = 7
+				has_law = law_voting_power_0
+				has_law = banish_voting_power_0
+				has_law = execution_voting_power_0
+				has_law = revoke_title_voting_power_0
+				has_law = grant_title_voting_power_0
+				has_law = imprison_voting_power_0
+				has_law = war_voting_power_0
+			}
+		}
+	}	
+}
+
+government_flavor = {
+	name = gov_elective_afro_despotic_monarchy
+	graphics = GFX_evt_west_african_ruler
+	priority = 1
+	trigger = {
+		OR = {
+			government = feudal_government
+		
+		}
+		religion_group = afro_syncretic
+		OR = {
+			has_law = succ_feudal_elective
+			has_law = succ_hre_elective
+			has_law = succ_byzantine_elective
+		}
+		NOR = { 
+			has_law = imperial_administration
+			has_law = ze_administration_laws_2
+		}
+		OR = {
+			NOT = { has_dlc = "Conclave" }
+			calc_true_if = {
+				amount = 2
+				has_law = banish_voting_power_0
+				has_law = execution_voting_power_0
+				has_law = revoke_title_voting_power_0
+				has_law = grant_title_voting_power_0
+				has_law = imprison_voting_power_0
+				has_law = war_voting_power_0
+			}
+		}
+		NOT = {
+			calc_true_if = {
+				amount = 7
+				has_law = law_voting_power_0
+				has_law = banish_voting_power_0
+				has_law = execution_voting_power_0
+				has_law = revoke_title_voting_power_0
+				has_law = grant_title_voting_power_0
+				has_law = imprison_voting_power_0
+				has_law = war_voting_power_0
+			}
+		}
+	}	
+}
+
+government_flavor = {
+	name = gov_afro_absolute_monarchy
+	graphics = GFX_evt_west_african_ruler
+	priority = 1
+	trigger = {
+		OR = {
+			government = feudal_government
+		
+		}
+		religion_group = afro_syncretic
+		NOR = {
+			has_law = succ_feudal_elective
+			has_law = succ_hre_elective
+			has_law = succ_byzantine_elective
+		}
+		mercenary = no
+		NOR = { 
+			has_law = imperial_administration
+			has_law = ze_administration_laws_2
+		}
+		has_law = law_voting_power_0
+		has_law = banish_voting_power_0
+		has_law = execution_voting_power_0
+		has_law = revoke_title_voting_power_0
+		has_law = grant_title_voting_power_0
+		has_law = imprison_voting_power_0
+		has_law = war_voting_power_0
+	}
+}
+
+government_flavor = {
+	name = gov_elective_afro_absolute_monarchy
+	graphics = GFX_evt_west_african_ruler
+	priority = 1
+	trigger = {
+		OR = {
+			government = feudal_government
+		
+		}
+		religion_group = afro_syncretic
+		OR = {
+			has_law = succ_feudal_elective
+			has_law = succ_hre_elective
+			has_law = succ_byzantine_elective
+		}
+		NOR = { 
+			has_law = imperial_administration
+			has_law = ze_administration_laws_2
+		}
+		has_law = law_voting_power_0
+		has_law = banish_voting_power_0
+		has_law = execution_voting_power_0
+		has_law = revoke_title_voting_power_0
+		has_law = grant_title_voting_power_0
+		has_law = imprison_voting_power_0
+		has_law = war_voting_power_0
+	}
+}
+
+government_flavor = {
+	name = gov_afro_absolute_autocracy
+	graphics = GFX_evt_lunatic_arabic
+	priority = 1
+	trigger = {
+		OR = {
+			government = feudal_government
+		
+		}
+		OR = {
+			has_law = imperial_administration
+			has_law = ze_administration_laws_2
+		}
+		religion_group = afro_syncretic
+		NOR = {
+			has_law = succ_feudal_elective
+			has_law = succ_hre_elective
+			has_law = succ_byzantine_elective
+		}
+		mercenary = no
+		has_law = law_voting_power_0
+		has_law = banish_voting_power_0
+		has_law = execution_voting_power_0
+		has_law = revoke_title_voting_power_0
+		has_law = grant_title_voting_power_0
+		has_law = imprison_voting_power_0
+		has_law = war_voting_power_0
+	}	
+}
+
+government_flavor = {
+	name = gov_elective_afro_absolute_autocracy
+	graphics = GFX_evt_lunatic_arabic
+	priority = 1
+	trigger = {
+		OR = {
+			government = feudal_government
+		
+		}
+		OR = {
+			has_law = imperial_administration
+			has_law = ze_administration_laws_2
+		}
+		religion_group = afro_syncretic
+		OR = {
+			has_law = succ_feudal_elective
+			has_law = succ_hre_elective
+			has_law = succ_byzantine_elective
+		}
+		has_law = law_voting_power_0
+		has_law = banish_voting_power_0
+		has_law = execution_voting_power_0
+		has_law = revoke_title_voting_power_0
+		has_law = grant_title_voting_power_0
+		has_law = imprison_voting_power_0
+		has_law = war_voting_power_0
+	}	
+}
+
+government_flavor = {
+	name = gov_afro_despotic_autocracy
+	graphics = GFX_evt_jugglers_arabic
+	priority = 1
+	trigger = {
+		OR = {
+			government = feudal_government
+		
+		}
+		religion_group = afro_syncretic
+		NOR = {
+			has_law = succ_feudal_elective
+			has_law = succ_hre_elective
+			has_law = succ_byzantine_elective
+		}
+		mercenary = no
+		OR = { 
+			has_law = imperial_administration
+			has_law = ze_administration_laws_2
+		}
+		OR = {
+			NOT = { has_dlc = "Conclave" }
+			calc_true_if = {
+				amount = 2
+				has_law = banish_voting_power_0
+				has_law = execution_voting_power_0
+				has_law = revoke_title_voting_power_0
+				has_law = grant_title_voting_power_0
+				has_law = imprison_voting_power_0
+				has_law = war_voting_power_0
+			}
+		}
+		NOT = {
+			calc_true_if = {
+				amount = 7
+				has_law = law_voting_power_0
+				has_law = banish_voting_power_0
+				has_law = execution_voting_power_0
+				has_law = revoke_title_voting_power_0
+				has_law = grant_title_voting_power_0
+				has_law = imprison_voting_power_0
+				has_law = war_voting_power_0
+			}
+		}
+	}	
+}
+
+government_flavor = {
+	name = gov_elective_afro_despotic_autocracy
+	graphics = GFX_evt_jugglers_arabic
+	priority = 1
+	trigger = {
+		OR = {
+			government = feudal_government
+		
+		}
+		religion_group = afro_syncretic
+		OR = {
+			has_law = succ_feudal_elective
+			has_law = succ_hre_elective
+			has_law = succ_byzantine_elective
+		}
+		OR = { 
+			has_law = imperial_administration
+			has_law = ze_administration_laws_2
+		}
+		OR = {
+			NOT = { has_dlc = "Conclave" }
+			calc_true_if = {
+				amount = 2
+				has_law = banish_voting_power_0
+				has_law = execution_voting_power_0
+				has_law = revoke_title_voting_power_0
+				has_law = grant_title_voting_power_0
+				has_law = imprison_voting_power_0
+				has_law = war_voting_power_0
+			}
+		}
+		NOT = {
+			calc_true_if = {
+				amount = 7
+				has_law = law_voting_power_0
+				has_law = banish_voting_power_0
+				has_law = execution_voting_power_0
+				has_law = revoke_title_voting_power_0
+				has_law = grant_title_voting_power_0
+				has_law = imprison_voting_power_0
+				has_law = war_voting_power_0
+			}
+		}
+	}	
+}
+
+government_flavor = {
+	name = gov_afro_aristocratic_autocracy
+	graphics = GFX_evt_council_speaker
+	priority = 1
+	trigger = {
+		OR = {
+			government = feudal_government
+		
+		}
+		religion_group = afro_syncretic
+		NOR = {
+			has_law = succ_feudal_elective
+			has_law = succ_hre_elective
+			has_law = succ_byzantine_elective
+		}
+		mercenary = no
+		OR = { 
+			has_law = imperial_administration
+			has_law = ze_administration_laws_2
+		}
+		calc_true_if = {
+			amount = 6
+			has_law = law_voting_power_1
+			has_law = banish_voting_power_1
+			has_law = execution_voting_power_1
+			has_law = revoke_title_voting_power_1
+			has_law = grant_title_voting_power_1
+			has_law = imprison_voting_power_1
+			has_law = war_voting_power_1
+		}
+	}
+}
+
+government_flavor = {
+	name = gov_elective_afro_aristocratic_autocracy
+	graphics = GFX_evt_council_speaker
+	priority = 1
+	trigger = {
+		OR = {
+			government = feudal_government
+		
+		}
+		religion_group = afro_syncretic
+		OR = {
+			has_law = succ_feudal_elective
+			has_law = succ_hre_elective
+			has_law = succ_byzantine_elective
+		}
+		OR = { 
+			has_law = imperial_administration
+			has_law = ze_administration_laws_2
+		}
+		calc_true_if = {
+			amount = 6
+			has_law = law_voting_power_1
+			has_law = banish_voting_power_1
+			has_law = execution_voting_power_1
+			has_law = revoke_title_voting_power_1
+			has_law = grant_title_voting_power_1
+			has_law = imprison_voting_power_1
+			has_law = war_voting_power_1
+		}
+	}
+}
+
+# After the End religion specific flavor overrides
+government_flavor = {
+	name = gov_americanist_constitutional
+	graphics = GFX_evt_found_hre
+	priority = 3
+	trigger = {
+		OR = {
+			government = merchant_republic_government
+			AND = {
+				OR = {
+					government = feudal_government
+	
+				}
+				has_law = succ_feudal_elective
+				has_law = succ_hre_elective
+				has_law = succ_byzantine_elective
+			}
+		}
+		OR = {
+			religion = americanist
+			religion = hamiltonian
+			religion = jeffersonian
+			religion = libertarian
+		}
+		OR = {
+			NOT = { has_dlc = "Conclave" }
+			calc_true_if = {
+				amount = 2
+				has_law = law_voting_power_1
+				has_law = banish_voting_power_1
+				has_law = execution_voting_power_1
+				has_law = revoke_title_voting_power_1
+				has_law = grant_title_voting_power_1
+				has_law = imprison_voting_power_1
+				has_law = war_voting_power_1
+			}
+		}
+	}
+}
+
+government_flavor = {
+	name = gov_hereditary_sol
+	graphics = GFX_evt_sun_temple
+	priority = 2
+	trigger = {
+		OR = {
+			government = feudal_government
+		
+		}
+		NOR = {
+			has_law = succ_feudal_elective
+			has_law = succ_hre_elective
+			has_law = succ_byzantine_elective
+		}
+		mercenary = no
+		religion = sol_invicta
+		tier = EMPEROR
+	}
+}
+
+government_flavor = {
+	name = gov_electorial_sol
+	graphics = GFX_evt_sun_temple
+	priority = 2
+	trigger = {
+		OR = {
+			government = feudal_government
+		
+		}
+		OR = {
+			has_law = succ_feudal_elective
+			has_law = succ_hre_elective
+			has_law = succ_byzantine_elective
+		}
+		religion = sol_invicta
+		tier = EMPEROR
+	}
+}
+
+government_flavor = {
+	name = gov_native_eldership
+	graphics = GFX_evt_tribal_shrine
+	priority = 2
+	trigger = {
+		NOT = { capital_scope = { region = custom_neoladino } }
+		religion_group = american_native
+		NOT = { has_law = succ_gavelkind }
+		government = tribal_government
+	}
+}
+
+government_flavor = {
+	name = gov_noble_native_eldership
+	graphics = GFX_evt_tribal_shrine
+	priority = 2
+	trigger = {
+		NOT = { capital_scope = { region = custom_neoladino } }
+		religion_group = american_native
+		government = tribal_government
+		has_law = succ_gavelkind
+	}
+}
+
+government_flavor = {
+	name = gov_ecumenical
+	graphics = GFX_evt_bishop_byzantine
+	priority = 4
+	trigger = {
+		is_theocracy = yes
+		OR = {
+			religion = evangelical
+			religion = charismatic
+			religion = antinomian
+			religion = high_church
+		}
+	}
+}
+
+government_flavor = {
+	name = gov_abbess
+	graphics = GFX_evt_pope
+	priority = 4
+	trigger = {
+		has_landed_title = k_ursuline
+		NOT = { trait = bad_priest_christian }
+	}
+}
+
+government_flavor = {
+	name = gov_abbess_bad
+	graphics = GFX_evt_pope
+	priority = 4
+	trigger = {
+		has_landed_title = k_ursuline
+		trait = bad_priest_christian
+	}
+}
+
+government_flavor = {
+	name = gov_quorum
+	graphics = GFX_evt_pope
+	priority = 4
+	trigger = {
+		has_landed_title = d_quorum_of_the_twelve
+		trait = bad_priest_mormon
+	}
+}
+
+government_flavor = {
+	name = gov_romuva_eldership
+	graphics = GFX_evt_elder_council
+	priority = 3
+	trigger = {
+		has_law = succ_eldership
+		NOT = { 
+			religion_group = afro_syncretic
+			has_law = succ_eldership
+		}
+	}
+}
+
+government_flavor = {
+	name = gov_afro_eldership
+	graphics = GFX_evt_west_african_ruler
+	priority = 3
+	trigger = {
+		religion_group = afro_syncretic
+		has_law = succ_eldership
+	}
+}
+
+government_flavor = {
+	name = gov_elective_ghazi_state
+	graphics = GFX_evt_battle
+	priority = 2
+	trigger = {
+		government = ghazi_government
+		NOR = { has_law = succ_gavelkind has_law = succ_elective_gavelkind }
+		NOT = { tier = EMPEROR }
+		NOT = { has_landed_title = d_revivalist }
+	}
+}
+
+government_flavor = {
+	name = gov_noble_ghazi_state
+	graphics = GFX_evt_battle
+	priority = 2
+	trigger = {
+		government = ghazi_government
+		OR = { has_law = succ_gavelkind has_law = succ_elective_gavelkind }
+		NOT = { tier = EMPEROR }
+		NOT = { has_landed_title = d_revivalist }
+	}
+}
+
+government_flavor = {
+	name = gov_exalted_ghazi_state
+	graphics = GFX_evt_emissary_arabic
+	priority = 2
+	trigger = {
+		government = ghazi_government
+		tier = EMPEROR
+		NOT = { has_landed_title = d_revivalist }
+	}
+}
+
+government_flavor = {
+	name = gov_islamic_republic
+	graphics = GFX_evt_carriage_arabic
+	priority = 2
+	trigger = {
+		religion_group = muslim
+		OR = {
+			government = merchant_republic_government
+			government = republic_government
+			government = colonial_government
+		}
+		NOT = { has_landed_title = d_revivalist }
+	}
+}
+
+government_flavor = {
+	name = gov_ghazi_caliphate
+	graphics = GFX_evt_carriage_arabic
+	priority = 2
+	trigger = {
+		government = ghazi_government
+		has_landed_title = d_revivalist
+	}
+}
+
+government_flavor = {
+	name = gov_gaian_eldership
+	graphics = GFX_evt_gaian_eldership
+	priority = 5
+	trigger = {
+		AND = {
+			religion = gaian
+			has_law = succ_eldership
+		}
+	}
+}
+
+government_flavor = {
+	name = gov_gaian_learned_apointment
+	graphics = GFX_evt_gaian_learned_apointment
+	priority = 5
+	trigger = {
+		AND = {
+			government = theocratic_feudal_government
+			has_law = succ_rel_gaian_elective
+		}
+	}
+}
+
+government_flavor = {
+	name = gov_gaian_military_apointment
+	graphics = GFX_evt_gaian_military_apointment
+	priority = 5
+	trigger = {
+		AND = {
+			government = theocratic_feudal_government
+			has_law = succ_mil_gaian_elective
+		}
+	}
+}
+
+government_flavor = {
+	name = gov_gaian_gavelkind
+	graphics = GFX_evt_daughter_asking_mother
+	priority = 5
+	trigger = {
+		AND = {
+			government = theocratic_feudal_government
+			has_law = succ_gavelkind
+		}
+	}
+}
+
+government_flavor = {
+	name = gov_gaian_fully_militarized
+	graphics = GFX_evt_fully_militarized
+	priority = 10
+	trigger = {
+		AND = {
+			government = theocratic_feudal_government
+			has_law = captaincy_mobilization_3
+		}
+	}
+}
+
+government_flavor = {
+	name = gov_gaian_tribe
+	graphics = GFX_evt_gaian_tribal
+	priority = 6
+	trigger = {
+		AND = {
+			government = tribal_government
+			religion = gaian
+			NOT = {
+				has_law = succ_eldership
+			}
+		}
+	}
+}
+
+government_flavor = {
+	name = gov_gaian_tribe_eldership
+	graphics = GFX_evt_gaian_eldership
+	priority = 6
+	trigger = {
+		AND = {
+			government = tribal_government
+			religion = gaian
+			has_law = succ_eldership
+		}
+	}
+}
+
+government_flavor = {
+	name = gov_king_mex
+	graphics = GFX_evt_camaraderie
+	priority = 2
+	trigger = {
+		government = mex_imperial_government
+		NOT = { tier = EMPEROR }
+	}
+}
+
+government_flavor = {
+	name = gov_mex
+	graphics = GFX_evt_throne_room_byzantine
+	priority = 2
+	trigger = {
+		government = mex_imperial_government
+		tier = EMPEROR
+	}
+}
