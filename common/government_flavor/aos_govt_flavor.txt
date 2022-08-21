@@ -88,12 +88,21 @@ government_flavor = {
 
 government_flavor = {
 	name = gov_peasant_kingdom
-	graphics = GFX_evt_california_peasantry
+	graphics = GFX_evt_california_peasants
 	priority = 2
 	trigger = {
 		religion = la_hermandad
 	}
 }
+
+government_flavor = {
+	name = gov_peasant_kingdom
+	graphics = GFX_evt_california_peasants
+	priority = 2
+	trigger = {
+		religion = artiga
+	}
+
 
 government_flavor = {
 	name = gov_peasant_kingdom

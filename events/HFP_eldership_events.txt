@@ -233,7 +233,12 @@ character_event = {
 		custom_tooltip = { text = tooltip_other_elders_pleased }
 		hidden_tooltip = {
 			any_demesne_title = { 
-				limit = { has_law = succ_eldership }
+				limit = { 
+				OR = {
+				has_law = succ_eldership
+				has_law = succ_communal_eldership
+					} 
+				}
 				any_elector_character = { 
 					limit = {
 						NOT = { character = FROM }
@@ -261,7 +266,12 @@ character_event = {
 		custom_tooltip = { text = tooltip_other_elders_displeased }
 		hidden_tooltip = {
 			any_demesne_title = { 
-				limit = { has_law = succ_eldership }
+				limit = { 
+				OR = {
+				has_law = succ_eldership
+				has_law = succ_communal_eldership
+					} 
+				}
 				any_elector_character = { 
 					limit = {
 						NOT = { character = FROM }
@@ -405,7 +415,12 @@ character_event = {
 		custom_tooltip = { text = tooltip_EVTOPTAHFP24005 }
 		hidden_tooltip = {
 			any_demesne_title = { 
-				limit = { has_law = succ_eldership }
+				limit = { 
+				OR = {
+				has_law = succ_eldership
+				has_law = succ_communal_eldership
+					} 
+				}
 				any_elector_character = { 
 					limit = {
 						NOT = { character = FROM }
@@ -429,7 +444,12 @@ character_event = {
 		tiered_prestige_negative_effect = yes
 		hidden_tooltip = {
 			any_demesne_title = { 
-				limit = { has_law = succ_eldership }
+				limit = { 
+				OR = {
+				has_law = succ_eldership
+				has_law = succ_communal_eldership
+					} 
+				}
 				any_elector_character = { 
 					limit = {
 						NOT = { character = FROM }
@@ -919,7 +939,12 @@ character_event = {
 		hidden_tooltip = {
 			FROM = { character_event = { id = HFP.24008 } }
 			any_demesne_title = { 
-				limit = { has_law = succ_eldership }
+				limit = { 
+				OR = {
+				has_law = succ_eldership
+				has_law = succ_communal_eldership
+					} 
+				}
 				any_elector_character = { 
 					limit = {
 						NOT = { character = FROM }
@@ -949,7 +974,12 @@ character_event = {
 		hidden_tooltip = {
 			FROM = { character_event = { id = HFP.24009 } }
 			any_demesne_title = { 
-				limit = { has_law = succ_eldership }
+				limit = { 
+				OR = {
+				has_law = succ_eldership
+				has_law = succ_communal_eldership
+					} 
+				}
 				any_elector_character = { 
 					limit = {
 						NOT = { character = FROM }
@@ -1549,7 +1579,12 @@ character_event = {
 		hidden_tooltip = {
 			FROM = { character_event = { id = HFP.24012 } }
 			any_demesne_title = { 
-				limit = { has_law = succ_eldership }
+				limit = { 
+				OR = {
+				has_law = succ_eldership
+				has_law = succ_communal_eldership
+					} 
+				}
 				any_elector_character = { 
 					limit = {
 						NOT = { character = FROM }
@@ -1579,7 +1614,12 @@ character_event = {
 		hidden_tooltip = {
 			FROM = { character_event = { id = HFP.24013 } }
 			any_demesne_title = { 
-				limit = { has_law = succ_eldership }
+				limit = { 
+				OR = {
+				has_law = succ_eldership
+				has_law = succ_communal_eldership
+					} 
+				}
 				any_elector_character = { 
 					limit = {
 						NOT = { character = FROM }
@@ -1826,7 +1866,12 @@ character_event = {
 		custom_tooltip = { text = tooltip_other_elders_pleased }
 		hidden_tooltip = {
 			any_demesne_title = { 
-				limit = { has_law = succ_eldership }
+				limit = { 
+				OR = {
+				has_law = succ_eldership
+				has_law = succ_communal_eldership
+					} 
+				}
 				any_elector_character = { 
 					limit = {
 						NOT = { character = FROM }
@@ -1860,7 +1905,12 @@ character_event = {
 		custom_tooltip = { text = tooltip_other_elders_pleased }
 		hidden_tooltip = {
 			any_demesne_title = { 
-				limit = { has_law = succ_eldership }
+				limit = { 
+				OR = {
+				has_law = succ_eldership
+				has_law = succ_communal_eldership
+					} 
+				}
 				any_elector_character = { 
 					limit = {
 						NOT = { character = FROM }
@@ -1889,7 +1939,12 @@ character_event = {
 		custom_tooltip = { text = tooltip_other_elders_pleased }
 		hidden_tooltip = {
 			any_demesne_title = { 
-				limit = { has_law = succ_eldership }
+				limit = { 
+				OR = {
+				has_law = succ_eldership
+				has_law = succ_communal_eldership
+					} 
+				}
 				any_elector_character = { 
 					limit = {
 						NOT = { character = FROM }
@@ -1917,7 +1972,12 @@ character_event = {
 		custom_tooltip = { text = tooltip_other_elders_displeased }
 		hidden_tooltip = {
 			any_demesne_title = { 
-				limit = { has_law = succ_eldership }
+				limit = { 
+				OR = {
+				has_law = succ_eldership
+				has_law = succ_communal_eldership
+					} 
+				}
 				any_elector_character = { 
 					limit = {
 						NOT = { character = FROM }
@@ -2303,7 +2363,12 @@ character_event = {
 	immediate = {
 		killer = { 
 			any_demesne_title = { 
-				limit = { has_law = succ_eldership }
+				limit = { 
+				OR = {
+				has_law = succ_eldership
+				has_law = succ_communal_eldership
+					} 
+				}
 				any_elector_character = { 
 					opinion = { 
 						who = PREVPREV
@@ -2835,7 +2900,12 @@ character_event = {
 	immediate = {
 		FROM = { 
 			any_demesne_title = { 
-				limit = { has_law = succ_eldership }
+				limit = { 
+				OR = {
+				has_law = succ_eldership
+				has_law = succ_communal_eldership
+					} 
+				}
 				any_elector_character = { 
 					opinion = { 
 						who = PREVPREV
