@@ -893,6 +893,12 @@ can_be_mercenary_leader_potential_trigger = {
 				religion = neomayan
 			}
 		}
+		AND = {
+			religion = edenite
+			FROM = {
+				religion = edenite
+			}
+		}
 		FROM = {
 			has_law = true_cognatic_succession
 		}
@@ -1049,6 +1055,10 @@ can_be_chancellor_trigger = {
 					liege = { religion = neognostic }
 				}
 				AND = {
+					religion = edenite
+					liege = { religion = edenite }
+				}
+				AND = {
 					liege = {
 						primary_title = {
 							OR = {
@@ -1146,6 +1156,10 @@ can_be_marshal_trigger = {
 						religion = reform
 						liege = { religion = reform }
 					}
+					AND = {
+						religion = edenite
+						liege = { religion = edenite }
+					}
 				}
 				AND = {
 					liege = {
@@ -1237,6 +1251,10 @@ can_be_treasurer_trigger = {
 				AND = {
 					religion = reform
 					liege = { religion = reform }
+				}
+				AND = {
+					religion = edenite
+					liege = { religion = edenite }
 				}
 				AND = {
 					liege = {
@@ -1355,6 +1373,16 @@ can_be_spymaster_trigger = {
 					religion = gaian
 					liege = { 
 						religion = gaian 
+						NOR = {
+							liege = { has_religion_feature = religion_matriarchal } 
+							liege = { has_religion_feature = religion_patriarchal } 
+						}
+					}
+				}
+				AND = {
+					religion = edenite
+					liege = { 
+						religion = edenite 
 						NOR = {
 							liege = { has_religion_feature = religion_matriarchal } 
 							liege = { has_religion_feature = religion_patriarchal } 
@@ -1541,6 +1569,7 @@ can_be_councilmember_king_trigger = {
 					religion = angeline
 					religion = reform
 					religion = neomayan
+					religion = edenite
 				}
 				liege = { religion = ROOT }
 			}
@@ -1621,6 +1650,10 @@ can_be_councilmember_emperor_trigger = {
 				AND = {
 					religion = reform
 					liege = { religion = reform }
+				}
+				AND = {
+					religion = edenite
+					liege = { religion = edenite }
 				}
 				AND = {
 					is_female = yes
@@ -1996,6 +2029,7 @@ gender_equality_trigger = {
 		religion = angeline
 		religion = reform
 		religion = neomayan
+		religion = edenite
 		has_religion_feature = religion_equal
 		has_religion_feature = religion_feature_aria_de_machete
 		has_religion_feature = religion_feature_midewiwin
@@ -2067,6 +2101,7 @@ female_can_hold_minor_title_trigger = {
 						religion = neogodbeite
 						religion = strangite
 						religion = neomayan
+						religion = edenite
 						religion = americanist
 						religion = libertarian
 					}
@@ -2142,6 +2177,7 @@ female_can_hold_minor_commander_title_trigger = {
 						religion = gaian
 						religion = neomayan
 						religion = reform
+						religion = edenite
 					}
 					liege = { religion = ROOT }
 				}
@@ -9382,6 +9418,10 @@ can_still_be_marshal_byzantine_trigger = {
 						religion = gaian
 						liege = { religion = gaian }
 					}
+					AND = {
+						religion = edenite
+						liege = { religion = edenite }
+					}
 				}
 				AND = {
 					liege = {
@@ -9452,6 +9492,7 @@ warrior_trigger = {
 				religion = ursuline
 				religion = angeline
 				religion = reform
+				religion = edenite
 				religion = neomayan
 			}
 		}
@@ -9600,6 +9641,7 @@ is_feminist_religion_trigger = {
 		religion = antinomian
 		religion = nonconformist
 		religion = gaian
+		religion = edenite
 		religion = neogodbeite
 		religion = strangite
 		religion = neomayan
@@ -9747,6 +9789,7 @@ has_feminist_religion_trigger = {
 		religion = ursuline
 		religion = angeline
 		religion = reform
+		religion = edenite
 		religion = neomayan
 		religion = nonconformist
 		religion = neognostic
@@ -9947,6 +9990,7 @@ is_accepting_of_homosexuality_trigger = {
 		OR = { 
 			religion = gaian
 			religion = reform
+			trait = edenite
 			religion = thelema
 			religion = nonconformist
 			religion = neognostic
@@ -9955,11 +9999,9 @@ is_accepting_of_homosexuality_trigger = {
 			religion = candomble
 			religion = neomayan
 			religion = fidencista
-			religion = edenite
 			trait = marian_santa_muerte
 			trait = marian_santo_nino_fidencio
 			trait = way_branch
-			trait = jewish_assiah
 			has_character_flag = overridemarriage
 			has_religion_feature = religion_equal
 			has_religion_feature = religion_feature_midewiwin
