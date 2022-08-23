@@ -14,7 +14,7 @@ crown_mexico = {
 		}
 	}
 	flags = { unique crown jewelry crown_jewel }
-	picture = "GFX_veil_of_veronica"
+	picture = "GFX_pres_band_mex"
 	slot = crown
 	indestructible = yes
 	allowed_gift = {
@@ -35,7 +35,7 @@ crown_pickelhaube = {
 		}
 	}
 	flags = { unique crown jewelry crown_jewel }
-	picture = "GFX_veil_of_veronica"
+	picture = "GFX_pickelaube_helmet"
 	slot = crown
 	indestructible = yes
 	allowed_gift = {
@@ -63,7 +63,7 @@ image_of_virgin = {
 	flags = { religious cult_of_saints christian mexicano unique }
 	indestructible = yes
 	stacking = no
-	picture = "GFX_seamless_robe_of_jesus"
+	picture = "GFX_image_of_virgin"
 }
 
 golden_lance = {
@@ -153,5 +153,28 @@ bullet_crown = {
 	allowed_gift = {
 		always = no
 	}
+}
+
+sword_of_ichthys = {
+	monthly_character_piety = 0.5
+	combat_rating = 15
+	martial = 2
+	vassal_opinion = 10
+	quality = 4
+	command_modifier = {
+		morale_defence = 0.2
+		religious_enemy = 0.15
+	}
+	active = {
+		AND = {
+			age = 14
+			religion = navegante
+		}
+		
+	}
+	flags = { combat_weapon sword }
+	stacking = no
+	picture = "GFX_ichthys_sword"
+	slot = weapon
 }
 
