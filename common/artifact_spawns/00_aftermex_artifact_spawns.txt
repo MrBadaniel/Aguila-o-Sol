@@ -153,3 +153,34 @@ campana_de_dolores = {
 		}
 	}
 }
+sword_of_ichthys = {
+	max_amount = 1
+	spawn_date = 2400.3.22
+	
+	spawn_chance = {
+		value = 100
+		modifier = {
+			factor = 0
+			NOT = { has_dlc = "Mystics" }
+		}
+		modifier = {
+			factor = 0
+			is_alternate_start = yes
+		}
+	}
+	
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 100
+			primary_title = {
+				title = k_baja
+			}
+		}
+	}
+	artifacts = {
+		sword_of_ichthys = {
+			value = 1
+		}
+	}
+}
