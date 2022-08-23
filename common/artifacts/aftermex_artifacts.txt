@@ -25,9 +25,8 @@ crown_mexico = {
 crown_pickelhaube = { 
 	monthly_character_prestige = 1.0
 	monthly_character_piety = 1.0
-	intrigue = 4
-	quality = 5
-	church_opinion = 10
+	martial = 3
+	quality = 4
 	active = { 
 		is_feudal = yes
 		OR = {
@@ -84,6 +83,34 @@ golden_lance = {
 	stacking = no
 	picture = "GFX_golden_lance"
 	slot = weapon
+}
+
+campana_de_dolores = {
+	monthly_character_prestige = 0.5
+	monthly_character_piety = 0.2
+	same_religion_opinion = 10
+	church_opinion = 10
+	intrigue = 3
+	active = {
+		OR = {
+			culture_group = mexicano
+			culture_group = norteno
+			culture_group = mesoamerican
+			culture_group = taracahita
+		}
+	}
+	allowed_gift = {
+		OR = {
+			culture_group = mexicano
+			culture_group = norteno
+			culture_group = mesoamerican
+			culture_group = taracahita
+		}
+	}
+	quality = 4
+	flags = { religious cult_of_saints christian mexicano bell unique }
+	
+	picture = "GFX_bell_of_batoche"  # TODO: replace with bell of dolores gfx
 }
 
 ###################MICTLANTECA#####################
