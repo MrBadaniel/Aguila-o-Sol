@@ -1478,8 +1478,8 @@
 	trait=gamer
 	trait=shy
 	father=2500067
-	2611.1.1={birth=yes}
-	2645.8.3={death={death_reason=death_childbirth}}
+	2600.1.1={birth=yes}
+	2633.12.16={death={death_reason=death_childbirth}}
 }
  
 1911200={
@@ -4102,7 +4102,7 @@
 	name="Sarah"
 	culture=english
 	religion=sacred_heart#la_hermandad
-	trait=female=yes
+	female=yes
 	trait=freckles_2
 	trait=naive_appeaser
 	trait=trusting
@@ -4422,12 +4422,12 @@
 }
 
 1802156={
-	name="Purasdan"
+	name="Elizabeth"
 	female=yes
-	culture=khoakineren
+	culture=german
 	religion=nazarene
 	trait=midas_touched
-	trait=nz_oriental
+	trait=nz_presbyter
 	trait=fair
 	trait=shy	
 	trait=shrewd
@@ -4462,7 +4462,7 @@
 	2601.4.15={birth=yes
 	culture=joaquino
 	}
-	2640.1.2={add_spouse=2502078}
+	2640.1.2={add_spouse=1802218}
 	2662.12.2={death=yes}
 }
 
@@ -4965,28 +4965,6 @@
     2637.1.1={birth=yes
 	culture=battleborn}
 	2654.10.12={add_spouse=1802176}
-}
-
-1802178={
-	name="Barron"
-	father=1802176
-	mother=1802177
-	disallow_random_traits=yes
-	culture=tanner
-	#dna="kqrlpezhbnd"
-	dynasty=1802108 #Crossheart
-    religion=nazarene
-    martial=5
-    diplomacy=5
-    stewardship=5
-    intrigue=5
-    learning=5
-    trait=nz_presbyter
-    trait=reclusive
-    trait=brooding
-    trait=timid
-    2656.1.1={birth=yes
-	culture=battleborn}
 }
 
 1802178={
@@ -5736,7 +5714,7 @@
 	female=yes
 	diplomacy=5
 	father=1802157
-	mother=2502078
+	mother=1802218
 	culture=tejano
 	religion=nazarene
 	trait=nz_acolyte
@@ -5862,4 +5840,20 @@
 			add_friend=1836112
 		}
 	}
+}
+
+1802218={
+	name="Violet"
+	culture=valleyan
+	religion=nazarene
+	female=yes
+	trait=martial_cleric
+	trait=nz_presbyter
+	trait=shrewd
+	trait=erudite
+	trait=kind
+	trait=slothful
+	father=2500067
+	2611.1.1={birth=yes}
+	2645.8.3={death={death_reason=death_childbirth}}
 }

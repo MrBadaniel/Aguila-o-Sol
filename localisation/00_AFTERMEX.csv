@@ -25,6 +25,9 @@ ERA_CHAR_INFO_1910000;King Gastón of las Bajas is one of the few truly great rul
  
 tapatio;Tapatío;;;;;;;;;;;;;x
 
+yucatanense;Yucatanense;;;;;;;;;;;;;x
+yucatanense_opinion;[yucatanense.GetName] Opinion;;;;;;;;;;;;;x 
+
 meseteno;Meseteño;;;;;;;;;;;;;x
 meseteño_opinion;[meseteño.GetName] Opinion;;;;;;;;;;;;;x 
  
@@ -97,6 +100,7 @@ calentano;Calentano;;;;;;;;;;;;;x
 calentano_opinion;[calentano.GetName] Opinion;;;;;;;;;;;;;x
 
 portunhol_FEATURES;§Y*§! May adopt §GBrazilian Imperial§! government;;;;;;;;;;;;;x
+
 ###########Religions########### 
  
 #cult_of_saints;Folk Catholic;;;;;;;;;;;;;x
@@ -140,7 +144,7 @@ mictlantec_DESC;Mictlanteca is a continuation of ancient indigenous traditions a
 mictlantec_FEATURES;§Y*§! May go on vision quests with the aid of sacramental herbs.\n§Y*§! Mictlantecos may sacrifice animals to the Dueños.;;;;;;;;;;;;;x
  
 sol_invicta;Sol Invicto;;;;;;;;;;;;;x
-sol_invicta_DESC;The Soltaic Church of the Sol Invicto believes that at the end of the second era, the Serpent covered the world in darkness and chaos. To combat this evil, the Sun clothed his wife, the Moon, in his fiery raiment and gave life to a son who would be sent to bring light back to the world. As with the great sacrifice of the Messiah of the second era, this Messiah, the first Son of the Sun and incarnation of the god Quetzalcoatl, devoted his life to creating the Seven Seals and rituals that trap the Serpent in the underworld and keep the darkness at bay. As successor of this final Messiah, the Gran Hijo del Sol and his Guardians must keep ever viligant and maintain the seals through proper worship of God the Sun - the Sol Invicto - lest the Serpent return.;;;;;;;;;;;;;x
+sol_invicta_DESC;The Soltaic Church of the Sol Invicto believes that at the end of the second era, the Serpent covered the world in darkness and chaos. To combat this evil, God the Sun clothed his wife, the Moon, in his fiery raiment and gave life to a son who would be sent to bring light back to the world. Like the great sacrifice of the Messiah of the second era, this Messiah, the first Son of the Sun, devoted his life to creating the Seven Seals and rituals that trap the Serpent in the underworld and keep the darkness at bay. As successor of this final Messiah, the Gran Hijo del Sol and his Guardians must keep ever viligant and maintain the seals through proper worship of God the Sun - the Sol Invicto - lest the Serpent return.;;;;;;;;;;;;;x
 sol_invicta_FEATURES;§Y*§! The Gran Hijo del Sol is elected using the same mechanics as the Pope.;;;;;;;;;;;;;x
  
 lamanita;Lamanita;;;;;;;;;;;;x
@@ -160,7 +164,6 @@ PREFERATI_SOL_TOOLTIP;The Jefe Supremo of the Seven Seals is the Jefe next in li
 COLLEGE_OF_CARDINALS_SOL;La Cúpula Pontificia.;;;;;;;;;;;;;x
 title_sol_cardinal;Jefe of the Seven Seals;;;;;;;;;;;;;x
 POPE_SOL_INVICTO;Gran Hijo del Sol;;;;;;;;;;;;;x
- 
  
 expected_next_title_sol_cardinal;Next Expected Jefe;;;;;;;;;;;;;x
 expected_next_title_sol_cardinal_tooltip;This Guardian is probably next in line for an Jefatura when one becomes available.;;;;;;;;;;;;;x
@@ -212,7 +215,7 @@ bloodline_desc_mexican;Like the prophets and great teachers of the faith before 
 nick_the_cockroach;la Cucaracha;;;;;;;;;;;;x
 nick_dragon_del_desierto;el Dragon del Desierto;;;;;;;;;;;;x
 nick_mascara_de_oro;la Mascara de Oro;;;;;;;;;;;;x
-#nick_cuernoverde;Green-Horn;;;;;;;;;;;;x
+nick_cuernoverde;Cuernoverde;;;;;;;;;;;;x
 nick_restaurador_del_mundo;el Restaurador del Mundo;;;;;;;;;;;;x
 nick_sword_of_curicaueri;the Sword of Curicaueri;;;;;;;;;;;;x
 nick_the_china;la China;;;;;;;;;;;;x
@@ -240,13 +243,15 @@ nick_son_of_blucifer;the Son of Blucifer;;;;;;;;;;;;x
 nick_the_quarreler;the Quarreler;;;;;;;;;;;;x
 nick_the_unifier;the Unifier;;;;;;;;;;;;x
 nick_the_gambit;the Gambit;;;;;;;;;;;;x
+
 ###########Other########### 
  
 METROPOLI;Metrópoli de;;;;;;;;;;;;;x
 DELEGACION;Delegación de;;;;;;;;;;;;;x
 BASILICA;Basílica de;;;;;;;;;;;;;x
 ALTEZA_FOA;Su Alteza Serenísima;;;;;;;;;;;;;x
- 
+
+ILUMINACION;Iluminación;;;;;;;;;;;;;x 
 luchadore;Luchador;;;;;;;;;;;;x
  
 PRELATE;Prelate;;;;;;;;;;;;x
@@ -293,6 +298,7 @@ GOD_CATRINES;the Catrines;;;;;;;;;;;;;x
 GOD_JONAS;Jonás;;;;;;;;;;;;;x
 GOD_DAG_GADOL;Dag Gadol;;;;;;;;;;;;;x
 GOD_APOSTLE_PETER;Apóstol Pedro;;;;;;;;;;;;;x
+GOD_ELIAS;Elías;;;;;;;;;;;;;x
 MINISTER;Minister;;;;;;;;;;;;;x
 title_lamanita_cardinal;Apóstol;;;;;;;;;;;;;x
 LAMANITA_PRESIDENT;Primer Elder;;;;;;;;;;;;;x
@@ -315,10 +321,7 @@ GOD_SANTO_NINO;el Santo Niño;;;;;;;;;;;;;x
 GOD_CHUYITO;Chuyito;;;;;;;;;;;;;x
 MATERIA;Materia;;;;;;;;;;;;;x
 THE_SCRIPTURES;The Sacred Scriptures;;;;;;;;;;;;;x
-ILUSTRACION;Ilustración;;;;;;;;;;;;;x
 GOD_EL_ALTISIMO;el Altísimo;;;;;;;;;;;;;x
-GOD_CURICAUERI;Curicaueri;;;;;;;;;;;;;x
-GOD_ONORUAME;Onoruame;;;;;;;;;;;;;x
 GOD_THE_TRINITY;the Trinity;;;;;;;;;;;;;x
 GOD_TATAROQUITO;Tataroquito;;;;;;;;;;;;;x
 GOD_PADRE_CELESTIAL;Padre Celestial;;;;;;;;;;;;;x
@@ -335,7 +338,6 @@ Holy_Order_Fidencista;la Brigada Roja;;;;;;;;;;;;;x
  
  
 DYN10_DESC;With a score of $SCORE$ you$FAILED$ beat House Nájera, Jefes Máximos of Mexico. Julián accomplished something few ever have, restoring most of the borders of a pre-Event nation and gaining recognition as a true continuation of that ancient land. For a time, they nearly ruled the entirety of Old Mexican territory. Nearly all of this was lost over the centuries, but they maintained control of the ancient capital, and stubbornly keep the memory of Mexico alive.;;;;;;;;;;;;;x
-=======
 GOD_JUAREZ;Bejota;;;;;;;;;;;;;x  
 GOD_PADRE_CELESTIAL;Padre Celestial;;;;;;;;;;;;;x  
 GOD_CURICAUERI;Curicaueri;;;;;;;;;;;;;x  
@@ -379,6 +381,8 @@ flagellant_tier_one;Flagellant;;;;;;;;;x
 flagellant_tier_two;Pious Flagellant;;;;;;;;;x
 flagellant_tier_three;Most Pious Flagellant;;;;;;;;;x
 bad_penitente;Bad Penitente;;;;;;;;;x
+
+helping_relhead_levies;Helping the [This.Holder.RelHead.GetTitle];;;;;;;;;x
 
 ###########Traits########### 
  
@@ -467,16 +471,16 @@ montezuma_headdress_desc;Surely this headdress must have belonged to the legenda
 death_whistle;Death Whistle;;;;;;;;;;;;;x
 death_whistle_desc;This intimidating-looking instrument produces a tone that sounds eerily similar to a person screaming in pain. Anceint indigenous Mexicans once used them on the field of battle to intimidate their foes and now they serve the same purpose in our armies.;;;;;;;;;;;;;x
  
-crown_mexico;Imperial Band of Mexico;;;;;;;;;;;;;x
-crown_mexico_desc;The Band is a symbol of Mexican Imperial authority and continuity. Expertly Crafted out of Quetzal, Macaw, and Heron feathers, the resplendent band serves as the Mexican Regalia and illustrates the majesty of the Empire.;;;;;;;;;;;;;x
+crown_mexico;Imperial Sash of Mexico;;;;;;;;;;;;;x
+crown_mexico_desc;The Sash is a symbol of Mexican Imperial authority and continuity. Expertly Crafted out of Quetzal, Macaw, and Heron feathers, the resplendent sash serves as the Mexican Regalia and illustrates the majesty of the Empire.;;;;;;;;;;;;;x
 image_of_virgin;The Image of Our Lady of Guadalupe;;;;;;;;;;;;;x
-image_of_virgin_desc;This most venerable image of the Virgin of Guadalupe was imprinted in the clothes of Juan Diego Cuauhtlatoatzin more than a thousand years ago by the Virgin Mary herself. Surviving every calamity to have befallen her children, the mother of all Mexicans continues to serve as the most enduring symbol of México and its sanctity.;;;;;;;;;;;;;x
+image_of_virgin_desc;This most venerable image of the Virgin of Guadalupe was imprinted in the tilma of Juan Diego Cuauhtlatoatzin more than a thousand years ago by the Virgin Mary herself. Surviving every calamity to have befallen her children, the mother of all Mexicans continues to serve as the most enduring symbol of Mexico and its sanctity. \n§Y*§!Mexican religions gain a Moral Authority bonus when this artifact is held by its head of faith.;;;;;;;;;;;;;x
 campana_de_dolores;La Campana de Dolores;;;;;;;;;;;;;x
-campana_de_dolores_desc;Although details have been lost to the passage of time and The Event itself, it is still known that this bell rang when the idea of a free México was conceived. Flanked by ornate cherubs and with the names of legendary heroic figures of ancient times carved in it, this resplendent brass bell exudes an aura of patriotic mysticism, and when it chimes everyone hears: "Mexicans, to the cry for war!".;;;;;;;;;;;;;x
+campana_de_dolores_desc;According to legend, this bell rang clear when the very idea of Mexico was conceived. Flanked by ornate cherubs and with the names of legendary heroic figures of ancient times carved in it, this resplendent brass bell exudes an aura of patriotic mysticism, and when it chimes everyone hears: "Mexicans, at the cry of war!".;;;;;;;;;;;;;x
 santa_ana_leg;Santianna's Leg;;;;;;;;;;;;;x
-santa_ana_leg_desc;Meticulously preserved for countless generations, legends say this prosthetic leg once belonged to a tyrant king who had made war in the Lone Star. Now it adorns a wall as a conversation piece and ocasionally serves as the club of choice when recieving the ceremonial first pitch of a strike-ball game.;;;;;;;;;;;;;x
+santa_ana_leg_desc;Meticulously preserved for countless generations, legends say this prosthetic leg once belonged to a tyrant king who had made war in the lands of the Lone Star. Now it adorns a wall as a conversation piece and ocasionally serves as the club of choice when recieving the ceremonial first pitch of a strike-ball game.;;;;;;;;;;;;;x
 golden_lance;Matarinches;;;;;;;;;;;;;x
-golden_lance_desc;This ancient Golden lance adorned with scenes of long lost myths and legends, was inherited by Paleo's ancestral house. Said to have been a weapon of great hero's blessed by Saint George to slay both man and beasts, with its greatest foe being a Texan Goliath from elder days before the event. However, The previous holders of the artifact have been lost to history.;;;;;;;;;;;;;x
+golden_lance_desc;This ancient Golden lance adorned with scenes of long lost myths and legends. Said to have been a weapon of an unlikely hero who slayed a Texan Goliath from elder days before the event, the the artifact was thought to have been lost to history until it came into the possession of the house of Paleo.;;;;;;;;;;;;;x
  
 ###########Landmarks########### 
  
@@ -510,8 +514,6 @@ upgrade_grand_mural_desc;A beautiful mural portraying the ancient history and an
  
 ###########DECISIONS########### 
  
-sol_de_justicia;Sol de Justicia;;;;;;;;;x
-sol_de_justicia_desc;By having [This.GetBestName] thrown into a pit in the middle of the desert, [This.GetSubjectPronoun] shall be exposed to the sun for weeks and will most likely be given the 'justice' that [This.GetSubjectPronoun] deserves.;;;;;;;;;x
 organize_ulama_game;Organize the ball game;;;;;;;;;x
 
 cristero_peasant_army;Raise the Cristiada;;;;;;;;;x
@@ -537,6 +539,28 @@ latinate_form_head;Become the Pontifex Maximus;;;;;;;;;x
 latinate_form_head_desc;For a long time the faithful awaited for the return of the Pontifex Maximus. Your current position has led many among clergy to see you as the restored Pontifex yourself. Now, it's only up to you to recognize the claim yourself.;;;;;;;;;x
 latinate_form_head_TT;Controls New Rome;;;;;;;;;x
 TXT_latinate_form_head;You become the Pontifex Maximus.;;;;;;;;;;;;;x
+
+donate_money_prelate;Donate money to the [JustoDecisionBeneficiary].;;;;;;;;;;;;;x
+donate_money_prelate_desc;Send money to aid in the cause of Justo Armas;;;;;;;;;;;;;x
+
+donate_soldiers_prelate;Send soldiers to the [JustoDecisionBeneficiary].;;;;;;;;;;;;;x
+donate_soldiers_prelate_desc;Send soldiers to aid in the cause of Justo Armas;;;;;;;;;;;;;x
+
+swear_oath_prelate;Swear the Prelate’s oath of fealty;;;;;;;;;;;;;x
+swear_oath_prelate_desc;Join Justo Armas' war as an ally and be vassalized by him if he wins the war;;;;;;;;;;;;;x
+
+JustoDecisionBeneficiary_Cristero;Prelate;;;;;;;;;;;;;x
+JustoDecisionBeneficiary_Catholic;Friends of Mexico;;;;;;;;;;;;;x
+
+benemerito_decisions_TT;Hasn't taken a war preparation decision in the last 4 months;;;;;;;;;;;;;x
+recruit_dorado_benemerito;Recruit a Dorado Commander;;;;;;;;;;;;;x
+recruit_dorado_benemerito_desc;Recruit a Dorado commander into the Benemérito's court;;;;;;;;;;;;;x
+
+recruit_foreign_benemerito;Recruit Foreign Volunteers;;;;;;;;;;;;;x
+recruit_foreign_benemerito_desc;Los Dorados army will be increased by 10% of their base size;;;;;;;;;;;;;x
+
+conscription_benemerito;El Congreso Authorizes Conscription;;;;;;;;;;;;;x
+conscription_benemerito_desc;Will receive a new army of conscripts in your capital;;;;;;;;;;;;;x
 
 ###########RETINUES########### 
  
@@ -615,3 +639,6 @@ EVTDESC_sacred_heart_navegante;Navegantes, the strange faith that arose in the s
 ##########Death Motives########### 
 
 DEATH_ACCIDENT_CRUCIFY;died in an accident during a re-enactment of Jesus Christ's crucifixion;;;;;;;;;x
+
+##########Insults###########
+INSULT_NAIVE;Naive;;;;;;;;;x

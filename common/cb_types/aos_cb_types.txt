@@ -649,11 +649,10 @@ justo_adventure = {
 		ROOT = { 
 			prestige = 250
 			narrative_event = {
-				id = justo.45
+				id = justo.50
 			}
 			#clr_character_flag = duchy_adventurer
 			#give_nickname = VICEROY_NICKNAME
-	
 		}
 
 		FROM = {
@@ -665,12 +664,9 @@ justo_adventure = {
 		custom_tooltip = {
 			text = other_invasion_succ_tip
 			hidden_tooltip = {
-				ROOT = {
-					vassalize_or_take_under_title = {
-						title = PREV
-						enemy = FROM
-						same_religion = yes # Only vassalize rulers of my religion
-						type = host
+				FROM = { 
+					any_demesne_title = {
+						usurp_title = ROOT
 					}
 				}
 			}
@@ -724,6 +720,7 @@ justo_adventure = {
 	}
 	
 	on_attacker_leader_death = {
+		narrative_event = { id = justo.49 }
 		ROOT = {
 			hidden_tooltip = {
 				disband_event_forces = yes
