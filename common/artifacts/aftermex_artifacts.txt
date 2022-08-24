@@ -79,7 +79,7 @@ golden_lance = {
 	active = {
 		age = 14
 	}
-	flags = { combat_weapon sword }
+	flags = { combat_weapon sword unique }
 	stacking = no
 	picture = "GFX_golden_lance"
 	slot = weapon
@@ -107,6 +107,9 @@ campana_de_dolores = {
 			culture_group = taracahita
 		}
 	}
+	allowed_gift = {
+		always = no
+	}
 	quality = 4
 	flags = { religious cult_of_saints christian mexicano bell unique }
 	
@@ -115,26 +118,26 @@ campana_de_dolores = {
 
 ###################MICTLANTECA#####################
 
-corazon_del_pueblo = {
-	quality = 4
-	monthly_character_prestige = 0.25
-	monthly_character_piety = 0.25
-	active = { 
-		OR = {
-			religion_group = mesoamerican_gods
-			culture_group = mesoamerican
-		}
-	}
-	allowed_gift = { 
-		OR = {
-			religion_group = mesoamerican_gods
-			culture_group = mesoamerican
-		}
-	}
-	flags = { unique religious mesoamerican_gods jewelry }
-	stacking = no
-	picture = "GFX_pouch" #placeholder
-}
+# corazon_del_pueblo = {
+	# quality = 4
+	# monthly_character_prestige = 0.25
+	# monthly_character_piety = 0.25
+	# active = { 
+		# OR = {
+			# religion_group = mesoamerican_gods
+			# culture_group = mesoamerican
+		# }
+	# }
+	# allowed_gift = { 
+		# OR = {
+			# religion_group = mesoamerican_gods
+			# culture_group = mesoamerican
+		# }
+	# }
+	# flags = { unique religious mesoamerican_gods jewelry }
+	# stacking = no
+	# picture = "GFX_pouch" #placeholder
+# }
 
 ###################MISCELLANEOUS#####################
 
@@ -177,4 +180,17 @@ sword_of_ichthys = {
 	picture = "GFX_ichthys_sword"
 	slot = weapon
 }
+
+santa_ana_leg = {
+	quality = 3
+	monthly_character_prestige = 0.3
+	tribal_opinion = 6
+	castle_opinion = 3
+	town_opinion = 2
+	flags = { sword jewelry unique }
+	stacking = no
+	picture = "GFX_prosthetic_leg"
+	slot = ceremonial_weapon
+}
+
 
