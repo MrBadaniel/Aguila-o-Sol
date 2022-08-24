@@ -1,4 +1,4 @@
-max_provinces = 2277
+max_provinces = 2292
 definitions = "definition.csv"
 provinces = "provinces.bmp"
 positions = "positions.txt"
@@ -33,9 +33,11 @@ sea_zones = { 2153 2184 }
 sea_zones = { 2207 2222 }
 # Lakes 9
 sea_zones = { 2230 2242 }
+# Bravo 10
+sea_zones = { 2285 2286 }
 
 ocean_region = {	
-	sea_zones = { 1 2 6 7 } # Atlantic Ocean
+	sea_zones = { 1 2 6 7 10 } # Atlantic Ocean
 }
 
 ocean_region = {	
