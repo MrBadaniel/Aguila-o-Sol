@@ -271,32 +271,6 @@ targetted_decisions = {
 		revoke_allowed = {
 			always = no
 		}
-		# TODO: reevaluate AI logic
-		ai_will_do = {
-			factor = 0.1
-			
-			modifier = {
-				factor = 1.5
-				reverse_opinion = { who = FROM value = 40 }
-			}
-			modifier = {
-				factor = 0.2
-				NOT = { reverse_opinion = { who = FROM value = 5 } }
-			}
-			modifier = {
-				factor = 0
-				FROM = { is_rival = ROOT }
-			}
-			modifier = {
-				factor = 80
-				FROM = {
-					OR = {
-						is_friend = ROOT
-						dynasty = ROOT
-					}
-				}
-			}
-		}
 	}
 	
 	relieve_tapado = {
@@ -351,18 +325,6 @@ targetted_decisions = {
 			modifier = {
 				factor = 100
 				FROM = { is_rival = ROOT }
-			}
-		}
-		ai_will_do = {
-			factor = 0.1
-			
-			modifier = {
-				factor = 10
-				FROM = { is_rival = ROOT }
-			}
-			modifier = {
-				factor = 10
-				NOT = { intrigue = 8 }
 			}
 		}
 	}

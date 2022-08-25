@@ -579,17 +579,13 @@ horn_gabriel = {
 		morale_offence = 0.2
 		morale_defence = 0.2
 	}
-	active = {
-		OR = {
-			religion_group = christian
-			religion_group = cult_of_saints
-		}
+	active = { 
+		religion_group = christian
+		religion_group = cult_of_saints
 	}
 	allowed_gift = { 
-		OR = {
-			religion_group = christian
-			religion_group = cult_of_saints
-		}
+		religion_group = christian 
+		religion_group = cult_of_saints
 	}
 	quality = 4
 	flags = { religious christian angel rare unique horn troops_morale }

@@ -3115,37 +3115,33 @@ d_red_raider_royal_guard = {
 	mercenary_type = red_raider_royal_guard_composition
 }	
 
-d_friends_mercenary = { #The Catholic Friends of Mexico as Mercenaries now
+d_friends = { #The Catholic Friends of Mexico
 	color={ 255 240 240 }
 	color2 = { 220 220 0 }
 
-	capital = 1779 # Heroica Veracruz
+	capital = 1767 # c_mexico
 
 	title = "CAPTAIN"
 	foa = "CAPTAIN_FOA"
 
-	allow = { 
-		OR = {
-			#has_character_flag = the_justo_armas
-			has_landed_title = e_latino
-			has_landed_title = k_justo
-			AND = {
-				has_landed_title = e_mexico
-				NOT = { religion = cristo_rey }
-			}
-		}
-	}
+	#allow = { 
+	#	OR = {
+	#		#has_character_flag = the_justo_armas
+	#		has_landed_title = e_latino
+	#		has_landed_title = k_justo
+	#	}
+	#}
 
 	# Always exists
 	landless = yes
 
-	mercenary = yes
+	#mercenary = yes
 
 	religion = catholic
 	
 	culture = cajun
 
-	mercenary_type = d_friends_composition
+	#mercenary_type = d_friends_composition
 
-	strength_growth_per_century = 1.00
-}	
+	#strength_growth_per_century = 1.00
+}

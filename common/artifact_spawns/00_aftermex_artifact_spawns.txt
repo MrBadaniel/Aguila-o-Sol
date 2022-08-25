@@ -60,37 +60,37 @@ crown_pickelhaube = {
 		}
 	}
 }
-# corazon_del_pueblo = {
-	# max_amount = 1
-	# spawn_date = 2437.11.30
+corazon_del_pueblo = {
+	max_amount = 1
+	spawn_date = 2437.11.30
 	
-	# spawn_chance = {
-		# value = 100
-		# modifier = {
-			# factor = 0
-			# NOT = { has_dlc = "Mystics" }
-		# }
-		# modifier = {
-			# factor = 0
-			# is_alternate_start = yes
-		# }
-	# }
+	spawn_chance = {
+		value = 100
+		modifier = {
+			factor = 0
+			NOT = { has_dlc = "Mystics" }
+		}
+		modifier = {
+			factor = 0
+			is_alternate_start = yes
+		}
+	}
 	
-	# weight = {
-		# value = 0
-		# additive_modifier = {
-			# value = 100
-			# primary_title = {
-				# title = d_mixteca
-			# }
-		# }
-	# }
-	# artifacts = {
-		# corazon_del_pueblo = {
-			# value = 1
-		# }
-	# }
-# }
+	weight = {
+		value = 0
+		additive_modifier = {
+			value = 100
+			primary_title = {
+				title = d_mixteca
+			}
+		}
+	}
+	artifacts = {
+		corazon_del_pueblo = {
+			value = 1
+		}
+	}
+}
 image_of_virgin = {
 	max_amount = 1
 	spawn_date = 1531.12.12
@@ -118,99 +118,6 @@ image_of_virgin = {
 	}
 	artifacts = {
 		image_of_virgin = {
-			value = 1
-		}
-	}
-}
-campana_de_dolores = {
-	max_amount = 1
-	spawn_date = 1768.6.28
-	
-	spawn_chance = {
-		value = 100
-		modifier = {
-			factor = 0
-			NOT = { has_dlc = "Mystics" }
-		}
-		modifier = {
-			factor = 0
-			is_alternate_start = yes
-		}
-	}
-	
-	weight = {
-		value = 0
-		additive_modifier = {
-			value = 100
-			primary_title = {
-				title = d_guanajuato
-			}
-		}
-	}
-	artifacts = {
-		campana_de_dolores = {
-			value = 1
-		}
-	}
-}
-sword_of_ichthys = {
-	max_amount = 1
-	spawn_date = 2400.3.22
-	
-	spawn_chance = {
-		value = 100
-		modifier = {
-			factor = 0
-			NOT = { has_dlc = "Mystics" }
-		}
-		modifier = {
-			factor = 0
-			is_alternate_start = yes
-		}
-	}
-	
-	weight = {
-		value = 0
-		additive_modifier = {
-			value = 100
-			primary_title = {
-				title = k_baja
-			}
-		}
-	}
-	artifacts = {
-		sword_of_ichthys = {
-			value = 1
-		}
-	}
-}
-santa_ana_leg = {
-	max_amount = 1
-	spawn_date = 1768.6.28
-	
-	spawn_chance = {
-		value = 100
-		modifier = {
-			factor = 0
-			NOT = { has_dlc = "Mystics" }
-		}
-		modifier = {
-			factor = 0
-			is_alternate_start = yes
-		}
-	}
-	
-	weight = {
-		value = 0
-		additive_modifier = {
-			value = 100
-			primary_title = {
-				title = d_illinois
-			}
-		}
-	}
-	artifacts = {
-		santa_ana_leg = {
 			value = 1
 		}
 	}
