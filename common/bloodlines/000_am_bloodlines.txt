@@ -1016,7 +1016,10 @@ tex_texarkana_female = {
 
 #male texan king
 high_king_bloodline = { 
-	starfolk_opinion = 10
+	texan_opinion = 10
+	tejano_opinion = 10
+	texaner_opinion = 10
+	czexan_opinion = 10
 	monthly_character_prestige = 0.5
 	bloodline_effect_one_invasion = 1
 	command_modifier = {
@@ -1027,13 +1030,21 @@ high_king_bloodline = {
 	picture = GFX_bloodlines_symbol_texas
 	flags = { bloodline_heroes }
 	active = {
-		culture_group = starfolk
+		OR = {
+			culture = texan
+			culture = tejano
+			culture = texaner
+			culture = czexan
+		}
 	}
 }
 
 #female texan king
 high_queen_bloodline = { 
-	starfolk_opinion = 10
+	texan_opinion = 10
+	tejano_opinion = 10
+	texaner_opinion = 10
+	czexan_opinion = 10
 	monthly_character_prestige = 0.5
 	bloodline_effect_one_invasion = 1
 	command_modifier = {
@@ -1044,7 +1055,12 @@ high_queen_bloodline = {
 	picture = GFX_bloodlines_symbol_rexas
 	flags = { bloodline_heroes }
 	active = {
-		culture_group = starfolk
+		OR = {
+			culture = texan
+			culture = tejano
+			culture = texaner
+			culture = czexan
+		}
 	}
 }
 

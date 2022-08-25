@@ -1,0 +1,2822 @@
+# 1		southern knight
+# 2		old world conveniences
+# 3		american dream
+# 4 	interact with scholars in center of learning province
+# 5-7	ancient warfare
+# 8		old world music
+# 10	baseball game
+# 11	baseball team wins
+# 12	baseball team loses
+# 13	baseball for the whole realm
+# 20	[hidden] select courtiers for fate of the old world
+# 21	[hidden] courtier chooses opinion about the fate of the old world
+# 22	fate of the old world
+# 30-32	easter egg events
+# 40-54	additional easter egg events
+# 60	neognostic abdication event
+# 60	abram events
+# 71-	title conversion
+
+namespace = flavor
+
+character_event = {
+	id = flavor.1
+	desc = EVTDESC_flavor_southernknight
+	picture = GFX_evt_knight_kneeling
+	
+	min_age = 16
+	prisoner = no
+	only_rulers = yes
+
+	trigger = {
+		non_historical_culture_names_in_alt_start_trigger = no #will not fire if using non-historical culture names
+		OR = {
+			culture = southron
+			culture = dixie
+			culture = tuskegean
+			culture = yanquito
+		}
+	}
+	
+	mean_time_to_happen = {
+		years = 40
+	}
+	
+	option = {
+		name = EVTOPT_flavor_southernknight_kind
+		piety = 5
+		random_list = {
+			10 = { add_trait = kind }
+			10 = { add_trait = gregarious }
+		}
+		ai_chance = { factor = 10 }
+	}
+	
+	option = {
+		name = EVTOPT_flavor_southernknight_honest
+		piety = 5
+		random_list = {
+			10 = { add_trait = honest }
+			10 = { add_trait = trusting }
+		}
+		ai_chance = { factor = 10 }
+	}
+	
+	option = {
+		name = EVTOPT_flavor_southernknight_honor
+		piety = 5
+		random_list = {
+			10 = { add_trait = brave }
+			10 = { add_trait = proud }
+		}
+		ai_chance = { factor = 10 }
+	}
+	
+	option = {
+		name = EVTOPT_flavor_southernknight_arbit
+		random_list = {
+			10 = { add_trait = arbitrary }
+			10 = { add_trait = cruel }
+			10 = { add_trait = deceitful }
+			10 = { add_trait = wroth }
+		}
+		ai_chance = {
+			factor = 10
+			modifier = { factor = 5 trait = arbitrary }
+			modifier = { factor = 5 trait = lunatic }
+			modifier = { factor = 0.5 trait = zealous }
+			modifier = { factor = 0 trait = kind }
+			modifier = { factor = 0 trait = just }
+		}
+	}
+}
+
+narrative_event = {
+	id = flavor.2
+	title = EVTNAME_flavor_convenience
+	desc = EVTDESC_flavor_convenience
+	picture = GFX_evt_library
+	
+	min_age = 16
+	prisoner = no
+	only_rulers = yes
+
+	trigger = {
+		OR = {
+			learning = 10
+			trait = scholar
+			trait = poet
+			has_artifact = ate_textbooks
+		}
+	}
+	
+	mean_time_to_happen = {
+		years = 150
+	}
+	
+	option = {
+		name = EVTOPT_flavor_convenience_wish
+		random_list = {
+			10 = { add_trait = envious }
+			10 = { add_trait = honest }
+			80 = { }
+		}
+	}
+	
+	option = {
+		name = EVTOPT_flavor_convenience_blasphemy
+		random_list = {
+			10 = { add_trait = zealous }
+			90 = { }
+		}
+	}
+	
+	option = {
+		name = EVTOPT_flavor_convenience_diligent
+		random_list = {
+			10 = { add_trait = diligent }
+			10 = { add_trait = shy }
+			80 = { }
+		}
+	}
+}
+
+narrative_event = {
+	id = flavor.3
+	title = EVTNAME_flavor_amerdream
+	desc = EVTDESC_flavor_amerdream
+	picture = GFX_evt_courtiers_talking
+
+	prisoner = no
+	only_rulers = yes
+
+	trigger = {
+		non_historical_culture_names_in_alt_start_trigger = no #will not fire if using non-historical culture names
+		OR = {
+			culture_group = amerodeutsch
+			culture_group = ameronordic
+			culture_group = californian
+			culture_group = laurentian
+			culture_group = mid_atlantic
+			culture_group = upland
+			culture_group = south_anglo
+			culture_group = west_anglo
+			culture = texaner
+			culture = czexan
+			culture_group = louisianais
+			culture = mountainer
+			culture = coloradan
+			culture = utahn
+			culture = siskiyouan
+			culture = cascadian
+			culture = yankee
+		}
+		OR = {
+			age = 16
+			learning = 8
+		}
+		NOT = { has_character_flag = flavor_dream }
+	}
+	
+	mean_time_to_happen = {
+		years = 150
+		modifier = { factor = 0.8 trait = gregarious }
+		modifier = { factor = 0.8 trait = scholar }
+	}
+	
+	immediate = {
+		set_character_flag = flavor_dream
+	}
+	
+	option = {
+		name = EVTOPT_flavor_amerdream_zeal
+		piety = 20
+		add_trait = zealous
+		any_vassal = {
+			limit = { trait = zealous }
+			opinion = { modifier = zealous_pos who = ROOT years = 2 }
+		}
+		ai_chance = {
+			factor = 10
+			modifier = { factor = 10 trait = zealous }
+		}
+	}
+	
+	option = {
+		name = EVTOPT_flavor_amerdream_good
+		random_list = {
+			40 = { add_trait = content }
+			20 = { add_trait = kind }
+			20 = { add_trait = gregarious }
+			20 = { add_trait = humble }
+		}
+		any_vassal = {
+			limit = { trait = kind }
+			opinion = { modifier = kind_pos who = ROOT years = 2 }
+		}
+		ai_chance = {
+			factor = 10
+			modifier = { factor = 4 trait = content }
+			modifier = { factor = 2 trait = kind }
+			modifier = { factor = 2 trait = gregarious }
+			modifier = { factor = 2 trait = humble }
+		}
+	}
+	
+	option = {
+		name = EVTOPT_flavor_amerdream_ambition
+		random_list = {
+			40 = { add_trait = ambitious }
+			20 = { add_trait = envious }
+			20 = { add_trait = greedy }
+			20 = { add_trait = brave }
+		}
+		any_vassal = {
+			limit = { trait = brave }
+			opinion = { modifier = brave_pos who = ROOT years = 2 }
+		}
+		ai_chance = {
+			factor = 10
+			modifier = { factor = 4 trait = ambitious }
+			modifier = { factor = 2 trait = envious }
+			modifier = { factor = 2 trait = greedy }
+			modifier = { factor = 2 trait = brave }
+		}
+	}
+	
+	option = {
+		name = EVTOPT_flavor_amerdream_cynic
+		add_trait = cynical
+		any_vassal = {
+			limit = { trait = cynical }
+			opinion = { modifier = cynical_pos who = ROOT years = 2 }
+		}
+		ai_chance = {
+			factor = 10
+			modifier = { factor = 10 trait = cynical }
+		}
+	}
+}
+
+province_event = {
+	id = flavor.4
+	desc = EVTDESC_flavor_knowledge
+	picture = GFX_evt_monk
+
+	trigger = {
+		NOR = {
+			has_alternate_start_setting = {
+				setting = technology
+				option = random
+			}
+			has_alternate_start_setting = {
+				setting = technology
+				option = flat
+			}
+		}
+		OR = { 
+			3 = { province = ROOT }		# manhattan
+			1050 = { province = ROOT }	# st. louis
+			1124 = { province = ROOT }	# new orleans
+			1199 = { province = ROOT }	# cap diamant
+			2031 = { province = ROOT }	# san francisco
+			1749 = { province = ROOT }	# colima
+		}
+	}
+
+	mean_time_to_happen = {
+		years = 120
+	}
+	
+	option = {
+		name = EVTOPT_flavor_knowledge_realm
+		trigger = {
+			holder_scope = {
+				trait = diligent
+				scaled_wealth = 0.5
+			}
+		}
+		tooltip_info = diligent
+		holder_scope = {
+			scaled_wealth = -0.5
+			hidden_tooltip = {
+				any_realm_province = {
+					add_province_modifier = { name = temple_scholars duration = 720 }
+				}
+			}
+		}
+		custom_tooltip = { text = TXT_flavor_knowledge_realm } 
+		ai_chance = { factor = 40 }
+	}
+	
+	option = {
+		name = EVTOPT_flavor_knowledge_learn
+		trigger = {
+			holder_scope = {
+				lifestyle_traits = 1
+				trait = scholar
+			}
+		}
+		tooltip_info = scholar
+		holder_scope = {
+			change_learning = 1
+			random_list = {
+				10 = { military_techpoints = 10 }
+				10 = { economy_techpoints = 10 }
+				10 = { culture_techpoints = 10 }
+			}
+		}
+		ai_chance = { factor = 10 }
+	}
+	
+	option = {
+		name = EVTOPT_flavor_knowledge_learn
+		trigger = {
+			holder_scope = {
+				NOT = { lifestyle_traits = 1 }
+			}
+		}
+		holder_scope = {
+			add_trait = scholar
+		}
+		ai_chance = { factor = 10 }
+	}
+	
+	option = {
+		name = EVTOPT_flavor_knowledge_reward
+		holder_scope = {
+			wealth = -25
+			any_vassal = {
+				limit = {
+					OR = {
+						trait = scholar
+						trait = diligent
+						trait = charitable
+					}
+				}
+				opinion = { modifier = charitable_pos who = PREV years = 1 }
+			}
+		}
+		ai_chance = {
+			factor = 5
+			modifier = { factor = 2 holder_scope = { trait = charitable } }
+		}
+	}
+	
+	option = {
+		name = EVTOPT_flavor_knowledge_bookworms
+		ai_chance = { factor = 5 }
+	}
+}
+
+narrative_event = {
+	id = flavor.5
+	title = EVTNAME_flavor_warfare
+	desc = EVTDESC_flavor_warfare
+	picture = GFX_evt_siege
+
+	only_rulers = yes
+	min_age = 16
+	prisoner = no
+
+	trigger = {
+		martial = 8
+		num_of_count_titles = 1
+		is_nomadic = no
+		is_tribal = no
+		NOT = { has_character_flag = flavor_warfare }
+	}
+	
+	mean_time_to_happen = {
+		years = 150
+		modifier = { factor = 0.8 trait = hunter }
+		modifier = { factor = 0.8 trait = strategist }
+		modifier = { factor = 0.8 trait = envious }
+		modifier = { factor = 0.8 trait = wroth }
+		modifier = { factor = 0.8 trait = ambitious }
+	}
+	
+	immediate = {
+		set_character_flag = flavor_warfare
+	}
+	
+	option = {
+		name = EVTOPT_flavor_war_seek
+		trigger = {
+			wealth = 300
+			intrigue = 15
+			NOT = { has_artifact = ate_firearm }
+		}
+		tooltip_info = intrigue
+		wealth = -300
+		custom_tooltip = { text = TXT_flavor_war_seek }
+		hidden_tooltip = {
+			random_list = {
+				10 = { character_event = { id = flavor.6 days = 350 random = 300 } }
+				10 = { character_event = { id = flavor.7 days = 100 random = 200 } }
+			}
+		}
+		ai_chance = { factor = 5 }
+	}
+	
+	option = {
+		name = EVTOPT_flavor_war_desire
+		trigger = {
+			OR = {
+				NOT = { wealth = 300 }
+				NOT = { intrigue = 15 }
+			}
+			NOT = { has_artifact = ate_firearm }
+		}
+		random_list = {
+			50 = { add_trait = envious }
+			40 = { add_trait = proud }
+			10 = { add_trait = ambitious }
+		}
+		ai_chance = {
+			factor = 50
+			modifier = { factor = 2 trait = envious }
+			modifier = { factor = 2 trait = proud }
+			modifier = { factor = 5 trait = ambitious }
+		}
+	}
+	
+	option = {
+		name = EVTOPT_flavor_war_armed
+		trigger = {
+			has_artifact = ate_firearm
+		}
+		prestige = 25
+		ai_chance = { factor = 500 }
+	}
+	
+	option = {
+		name = EVTOPT_flavor_war_peace
+		random_list = {
+			40 = { add_trait = kind }
+			40 = { add_trait = humble }
+			20 = { add_trait = content }
+		}
+		ai_chance = {
+			factor = 50
+			modifier = { factor = 4 trait = kind }
+			modifier = { factor = 2 trait = humble }
+			modifier = { factor = 2 trait = content }
+		}
+	}
+	
+	option = {
+		name = EVTOPT_flavor_war_zeal
+		piety = 5
+		ai_chance = {
+			factor = 50
+			modifier = { factor = 5 trait = zealous }
+		}
+	}
+	
+	option = {
+		name = EVTOPT_flavor_war_lies
+		prestige = 10
+		ai_chance = {
+			factor = 50
+			modifier = { factor = 5 trait = cynical }
+		}
+	}
+}
+
+character_event = {
+	id = flavor.6
+	desc = EVTDESC_acquire_fail
+	picture = GFX_evt_carriage
+
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPT_flavor_acq_cash
+		prestige = -50
+		wealth = 200
+		add_trait = greedy
+		if = {
+			limit = { trait = just }
+			remove_trait = just
+		}
+		if = {
+			limit = { trait = patient }
+			remove_trait = patient
+		}
+		if = {
+			limit = { trait = trusting }
+			remove_trait = trusting
+		}
+	}
+	
+	option = {
+		name = EVTOPT_flavor_acq_fail
+		piety = -20
+		add_trait = cruel
+		add_trait = wroth
+		if = {
+			limit = { NOT = { lifestyle_traits = 1 } }
+			add_trait = impaler
+		}
+		create_random_intriguer = {
+			dynasty = none
+			religion = ROOT
+			culture = ROOT
+			female = no
+			age = 31
+			random_traits = yes
+		}
+		new_character = {
+			imprison = ROOT
+			reverse_opinion = { modifier = opinion_failed_me who = PREV years = 10 }
+		}
+		custom_tooltip = { text = TXT_flavor_jail }
+	}
+	
+	option = {
+		name = EVTOPT_flavor_acq_kind
+		prestige = -100
+	}
+}
+
+character_event = {
+	id = flavor.7
+	desc = EVTDESC_acquire_success
+	picture = GFX_evt_carriage
+
+	is_triggered_only = yes
+	
+	immediate = {
+		character_event = { id = salvage.70 days = 21 }
+	}
+	
+	option = {
+		name = EVTOPT_flavor_acq_hire
+		wealth = -5
+		create_random_intriguer = {
+			dynasty = none
+			religion = ROOT
+			culture = ROOT
+			female = no
+			age = 31
+			random_traits = yes
+		}
+	}
+	
+	option = {
+		name = EVTOPT_flavor_acq_fix
+	}
+}
+
+narrative_event = {
+	id = flavor.8
+	title = EVTNAME_flavor_music
+	desc = EVTDESC_flavor_music
+	picture = GFX_evt_feast
+	
+	min_age = 16
+	prisoner = no
+	only_rulers = yes
+	war = no
+	
+	trigger = {
+		NOT = { has_character_flag = flavor_music }
+	}
+	
+	mean_time_to_happen = {
+		years = 250
+		modifier = { factor = 0.8 trait = poet }
+		modifier = { factor = 0.8 trait = gregarious }
+		modifier = { factor = 0.8 trait = hedonist }
+		modifier = { factor = 1.5 trait = shy }
+	}
+	
+	immediate = {
+		random_demesne_province = {
+			save_event_target_as = musician_home
+		}
+		set_character_flag = flavor_music
+	}
+	
+	option = {
+		name = EVTOPT_flavor_music_yes
+		wealth = -10
+		prestige = 10
+		culture_techpoints = 10
+		create_random_diplomat = {
+			dynasty = NONE
+			female = no
+			age = 19
+			religion = ROOT
+			culture = ROOT
+			trait = musician
+			trait = gregarious
+		}
+		new_character = {
+			random_list = {
+				5 = { add_trait = hedonist }
+				5 = { add_trait = socializer }
+				3 = { add_trait = seducer }
+			}
+			random = { chance = 80 add_trait = lustful }
+			random = { chance = 60 add_trait = fair }
+			random = { chance = 60 add_trait = kind }
+			random = { chance = 60 add_trait = proud }
+			random = { chance = 60 add_trait = trusting }
+			random = { chance = 50 add_trait = content }
+			random = { chance = 30 add_trait = slow }
+			give_nickname = nick_the_troubadour
+		}
+		ai_chance = { factor = 50 }
+	}
+	
+	option = {
+		name = EVTOPT_flavor_music_no
+		piety = 5
+		ai_chance = { factor = 10 }
+	}
+}
+
+narrative_event = {
+	id = flavor.10
+	title = EVTNAME_flavor_baseball
+	desc = EVTDESC_flavor_baseball
+	picture = GFX_evt_baseball
+	
+	min_age = 16
+	prisoner = no
+	war = no
+	only_playable = yes
+	
+	trigger = {
+		non_historical_culture_names_in_alt_start_trigger = no #will not fire if using non-historical culture names
+		month = 5
+		NOT = { month = 8 }
+		OR = {
+			culture_group = amerodeutsch
+			culture_group = ameronordic
+			culture_group = californian
+			culture_group = laurentian
+			culture_group = mid_atlantic
+			culture_group = north_atlantic
+			culture_group = upland
+			culture_group = south_anglo
+			culture_group = west_anglo
+			culture_group = rockland #also in the US/Canada
+			culture_group = north_pacific #also in the US/Canada
+			culture_group = gallomerican #also in the US/Canada
+			culture_group = louisianais #also in the US/Canada
+			culture_group = caribeno #Cubans, Puerto Ricans, and Dominicans love baseball
+			culture_group = nihonjin #Japanese people love baseball
+			culture_group = centrolatino #Nicaraguans, Costa Ricans, and Panamanians love baseball
+			culture_group = filipino #Filipinos love baseball
+			culture_group = costero #??? love baseball
+		}
+	}
+	
+	mean_time_to_happen = {
+		years = 13
+	}
+
+	option = {
+		name = EVTOPT_flavor_baseball_nowager
+		piety = 5
+		random_list = {
+			20 = { add_trait = temperate }
+			10 = { add_trait = content }
+			70 = { }
+		}
+		hidden_tooltip = {
+			narrative_event = { id = flavor.13 days = 10 random = 10 }
+		}
+		ai_chance = {
+			factor = 10
+			modifier = { factor = 4 trait = temperate }
+			modifier = { factor = 4 trait = content }
+		}
+	}
+	
+	option = {
+		name = EVTOPT_flavor_baseball_home
+		wealth = -10
+		custom_tooltip = { text = TXT_baseball_tooltip }
+		hidden_tooltip = {
+			narrative_event = { id = flavor.13 days = 10 random = 10 }
+			random_list = {
+				10 = { character_event = { id = flavor.11 } }
+				20 = { character_event = { id = flavor.12 } }
+			}
+		}
+		ai_chance = {
+			factor = 10
+			modifier = { factor = 0 NOT = { wealth = 10 } }
+		}
+	}
+	
+	option = {
+		name = EVTOPT_flavor_baseball_away
+		wealth = -10
+		custom_tooltip = { text = TXT_baseball_tooltip }
+		hidden_tooltip = {
+			narrative_event = { id = flavor.13 days = 10 random = 10 }
+			random_list = {
+				20 = { character_event = { id = flavor.11 } }
+				10 = { character_event = { id = flavor.12 } }
+			}
+		}
+		capital_scope = {
+			add_province_modifier = { name = peasants_upset duration = 90 }
+		}
+		ai_chance = {
+			factor = 10
+			modifier = { factor = 4 trait = greedy }
+			modifier = { factor = 0 NOT = { wealth = 10 } }
+		}
+	}
+	
+	option = {
+		name = EVTOPT_flavor_baseball_lazy
+		random_list = {
+			20 = { add_trait = greedy }
+			10 = { add_trait = diligent }
+			70 = { }
+		}
+		capital_scope = {
+			add_province_modifier = { name = peasants_upset duration = 360 }
+		}
+		ai_chance = {
+			factor = 10
+			modifier = { factor = 4 trait = diligent }
+		}
+	}
+}
+
+character_event = {
+	id = flavor.11
+	is_triggered_only = yes
+	desc = EVTDESC_flavor_baseball_win
+	picture = GFX_evt_baseball
+
+	option = {
+		name = EVTOPT_flavor_baseball_result
+		prestige = 25
+		wealth = 20
+	}
+}
+
+character_event = {
+	id = flavor.12
+	is_triggered_only = yes
+	desc = EVTDESC_flavor_baseball_lose
+	picture = GFX_evt_baseball
+
+	option = {
+		name = EVTOPT_flavor_baseball_result
+		prestige = -10
+	}
+}
+
+narrative_event = {
+	id = flavor.13
+	is_triggered_only = yes
+	title = EVTNAME_flavor_baseball_realm
+	desc = EVTDESC_flavor_baseball_realm
+	picture = GFX_evt_baseball
+
+	option = {
+		name = EVTOPT_flavor_baseball_realm_pay
+		trigger = {
+			scaled_wealth = 0.5
+		}
+		scaled_wealth = -0.5
+		prestige = 50
+		random = { chance = 50 add_trait = charitable }
+		hidden_tooltip = {
+			any_realm_province = {
+				add_province_modifier = { name = idle_sport duration = 1000 }
+			}
+		}
+	}
+	
+	option = {
+		name = EVTOPT_flavor_baseball_realm_cheap
+		trigger = {
+			scaled_wealth = 0.2
+		}
+		scaled_wealth = -0.2
+		prestige = 20
+		random = { chance = 25 add_trait = charitable }
+		hidden_tooltip = {
+			any_realm_province = {
+				add_province_modifier = { name = idle_sport duration = 400 }
+			}
+		}
+	}
+	
+	option = {
+		name = EVTOPT_flavor_baseball_realm_deny
+	}
+}
+
+narrative_event = {
+	id = flavor.20
+	title = EVTNAME_flavor_calamity
+	desc = EVTDESC_flavor_calamity
+	picture = GFX_evt_courtiers_talking
+	
+	hide_window = yes
+	min_age = 16
+	prisoner = no
+	only_rulers = yes
+	ai = no
+	
+	mean_time_to_happen = {
+		years = 100
+	}
+	
+	immediate = {
+		any_courtier = {
+			limit = {
+				prisoner = no
+				age = 16
+				NOT = { is_incapable = yes }
+			}
+			score_value = { #Prioritizes selecting an interesting courtier...
+				value = 10
+				interesting_courtier_selection_score = yes
+			}
+			save_event_target_as = debater1
+			character_event = { id = flavor.21 days = 2 }
+		}
+		any_courtier = {
+			limit = {
+				prisoner = no
+				age = 10
+				NOT = { is_incapable = yes }
+				event_target:debater1 = {
+					NOT = { character = PREV }
+				}
+			}
+			score_value = { #Prioritizes selecting an interesting courtier...
+				value = 10
+				interesting_courtier_selection_score = yes
+			}
+			save_event_target_as = debater2
+			character_event = { id = flavor.21 days = 3 }
+		}
+		any_courtier = {
+			limit = {
+				prisoner = no
+				age = 16
+				NOT = { is_incapable = yes }
+				event_target:debater1 = {
+					NOT = { character = PREV }
+				}
+				event_target:debater2 = {
+					NOT = { character = PREV }
+				}
+			}
+			score_value = { #Prioritizes selecting an interesting courtier...
+				value = 10
+				interesting_courtier_selection_score = yes
+			}
+			save_event_target_as = debater3
+			character_event = { id = flavor.21 days = 4 }
+		}
+		
+		narrative_event = { id = flavor.22 days = 6 }
+	}
+	
+	option = {
+		name = OK
+	}
+}	
+
+character_event = {
+	id = flavor.21
+	desc = EVTDESC_bounce
+	picture = GFX_evt_courtiers_talking
+	
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		is_random_world = no #just doesn't fire for random worlds
+	}
+	
+	immediate = {
+		random_list = {
+			10 = { set_variable = { which = debate_opinion value = 1 }
+				modifier = { factor = 0 trait = cynical }
+			}
+			10 = { set_variable = { which = debate_opinion value = 2 } 
+				modifier = { factor = 0 trait = cynical }
+				modifier = { factor = 2 trait = zealous }
+			}
+			10 = { set_variable = { which = debate_opinion value = 3 } 
+				modifier = { factor = 0.5 trait = cynical }
+				modifier = { factor = 1.5 trait = humble }
+				modifier = { factor = 0 religion_group = jewish_group } #makes no theological sense
+ 			}
+			10 = { set_variable = { which = debate_opinion value = 4 } 
+				modifier = { factor = 0 trait = cynical }
+				modifier = { factor = 2 trait = zealous }
+				modifier = { factor = 1.5 religion_group = jewish_group } #fits with events in Old Testament
+			}
+			10 = { set_variable = { which = debate_opinion value = 5 } 
+				modifier = { factor = 0.5 trait = cynical }
+				modifier = { factor = 1.5 trait = wroth }
+			}
+			20 = { set_variable = { which = debate_opinion value = 6 } 
+				modifier = { factor = 0 trait = cynical }
+				modifier = { factor = 0 NOT = { religion_group = christian } }
+			}
+			10 = { set_variable = { which = debate_opinion value = 7 } 
+				modifier = { factor = 1.5 learning = 8 }
+			}
+			10 = { set_variable = { which = debate_opinion value = 8 } 
+				modifier = { factor = 0 trait = slothful }
+				modifier = { factor = 2 trait = diligent }
+			}
+			10 = { set_variable = { which = debate_opinion value = 9 } 
+				modifier = { factor = 1.5 learning = 8 }
+			}
+			10 = { set_variable = { which = debate_opinion value = 10 } 
+				modifier = { factor = 1.5 learning = 8 }
+			}
+			10 = { set_variable = { which = debate_opinion value = 11 }
+				modifier = { factor = 2 religion = gaian }
+			}
+			10 = { set_variable = { which = debate_opinion value = 12 } 
+			}
+			10 = { set_variable = { which = debate_opinion value = 13 }
+				modifier = { factor = 0 religion = gaian } #there's no way a Gaian would say this
+			}
+			10 = { set_variable = { which = debate_opinion value = 14 } 
+				modifier = { factor = 1.5 learning = 8 }
+			}
+			10 = { set_variable = { which = debate_opinion value = 15 } 
+				modifier = { factor = 1.5 learning = 8 }
+				modifier = { factor = 2 religion = gaian }
+			}
+			10 = { set_variable = { which = debate_opinion value = 16 } 
+				modifier = { factor = 2 trait = cynical }
+				modifier = { factor = 2 trait = arbitrary }
+			}
+			10 = { set_variable = { which = debate_opinion value = 17 } 
+				modifier = { factor = 2 trait = cynical }
+				modifier = { factor = 2 trait = paranoid }
+			}
+			10 = { set_variable = { which = debate_opinion value = 18 }
+			}
+			20 = { set_variable = { which = debate_opinion value = 19 } 
+				modifier = { factor = 0 trait = cynical }
+				modifier = { factor = 0 NOT = { religion_group = mesoamerican_gods } }
+			}
+			4 = { set_variable = { which = debate_opinion value = 20 } 
+				modifier = { factor = 5 religion_group = pagan_group }
+			}
+		}
+	}
+	
+	option = {
+		name = OK
+	}
+}
+
+narrative_event = {
+	id = flavor.22
+	title = EVTNAME_flavor_calamity
+	desc = EVTDESC_flavor_calamity
+	picture = GFX_evt_courtiers_talking
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPT_flav_calam_opt1
+		
+		if = {
+			limit = { event_target:debater1 = { is_variable_equal = { which = debate_opinion value = 1 } } }
+			custom_tooltip = { text = TXT_opinion1_A } 
+		}
+		if = {
+			limit = { event_target:debater1 = { is_variable_equal = { which = debate_opinion value = 2 } } }
+			custom_tooltip = { text = TXT_opinion2_A } 
+		}
+		if = {
+			limit = { event_target:debater1 = { is_variable_equal = { which = debate_opinion value = 3 } } }
+			custom_tooltip = { text = TXT_opinion3_A } 
+		}
+		if = {
+			limit = { event_target:debater1 = { is_variable_equal = { which = debate_opinion value = 4 } } }
+			custom_tooltip = { text = TXT_opinion4_A } 
+		}
+		if = {
+			limit = { event_target:debater1 = { is_variable_equal = { which = debate_opinion value = 5 } } }
+			custom_tooltip = { text = TXT_opinion5_A } 
+		}
+		if = {
+			limit = { event_target:debater1 = { is_variable_equal = { which = debate_opinion value = 6 } } }
+			custom_tooltip = { text = TXT_opinion6_A } 
+		}
+		if = {
+			limit = { event_target:debater1 = { is_variable_equal = { which = debate_opinion value = 7 } } }
+			custom_tooltip = { text = TXT_opinion7 } 
+		}
+		if = {
+			limit = { event_target:debater1 = { is_variable_equal = { which = debate_opinion value = 8 } } }
+			custom_tooltip = { text = TXT_opinion8 } 
+		}
+		if = {
+			limit = { event_target:debater1 = { is_variable_equal = { which = debate_opinion value = 9 } } }
+			custom_tooltip = { text = TXT_opinion9 } 
+		}
+		if = {
+			limit = { event_target:debater1 = { is_variable_equal = { which = debate_opinion value = 10 } } }
+			custom_tooltip = { text = TXT_opinion10 } 
+		}
+		if = {
+			limit = { event_target:debater1 = { is_variable_equal = { which = debate_opinion value = 11 } } }
+			custom_tooltip = { text = TXT_opinion11 } 
+		}
+		if = {
+			limit = { event_target:debater1 = { is_variable_equal = { which = debate_opinion value = 12 } } }
+			custom_tooltip = { text = TXT_opinion12 } 
+		}
+		if = {
+			limit = { event_target:debater1 = { is_variable_equal = { which = debate_opinion value = 13 } } }
+			custom_tooltip = { text = TXT_opinion13 } 
+		}
+		if = {
+			limit = { event_target:debater1 = { is_variable_equal = { which = debate_opinion value = 14 } } }
+			custom_tooltip = { text = TXT_opinion14 } 
+		}
+		if = {
+			limit = { event_target:debater1 = { is_variable_equal = { which = debate_opinion value = 15 } } }
+			custom_tooltip = { text = TXT_opinion15 } 
+		}
+		if = {
+			limit = { event_target:debater1 = { is_variable_equal = { which = debate_opinion value = 16 } } }
+			custom_tooltip = { text = TXT_opinion16 } 
+		}
+		if = {
+			limit = { event_target:debater1 = { is_variable_equal = { which = debate_opinion value = 17 } } }
+			custom_tooltip = { text = TXT_opinion17 } 
+		}
+		if = {
+			limit = { event_target:debater1 = { is_variable_equal = { which = debate_opinion value = 18 } } }
+			custom_tooltip = { text = TXT_opinion18 } 
+		}
+		if = {
+			limit = { event_target:debater1 = { is_variable_equal = { which = debate_opinion value = 19 } } }
+			custom_tooltip = { text = TXT_opinion19 } 
+		}
+		if = {
+			limit = { event_target:debater1 = { is_variable_equal = { which = debate_opinion value = 20 } } }
+			custom_tooltip = { text = TXT_opinion20 } 
+		}
+		
+		event_target:debater1 = {
+			prestige = 10
+			opinion = { modifier = opinion_pleased who = ROOT years = 2 }
+		}
+	}
+	
+	option = {
+		name = EVTOPT_flav_calam_opt2
+		
+		if = {
+			limit = { event_target:debater2 = { is_variable_equal = { which = debate_opinion value = 1 } } }
+			custom_tooltip = { text = TXT_opinion1_B } 
+		}
+		if = {
+			limit = { event_target:debater2 = { is_variable_equal = { which = debate_opinion value = 2 } } }
+			custom_tooltip = { text = TXT_opinion2_B } 
+		}
+		if = {
+			limit = { event_target:debater2 = { is_variable_equal = { which = debate_opinion value = 3 } } }
+			custom_tooltip = { text = TXT_opinion3_B } 
+		}
+		if = {
+			limit = { event_target:debater2 = { is_variable_equal = { which = debate_opinion value = 4 } } }
+			custom_tooltip = { text = TXT_opinion4_B } 
+		}
+		if = {
+			limit = { event_target:debater2 = { is_variable_equal = { which = debate_opinion value = 5 } } }
+			custom_tooltip = { text = TXT_opinion5_B } 
+		}
+		if = {
+			limit = { event_target:debater2 = { is_variable_equal = { which = debate_opinion value = 6 } } }
+			custom_tooltip = { text = TXT_opinion6_B } 
+		}
+		if = {
+			limit = { event_target:debater2 = { is_variable_equal = { which = debate_opinion value = 7 } } }
+			custom_tooltip = { text = TXT_opinion7 } 
+		}
+		if = {
+			limit = { event_target:debater2 = { is_variable_equal = { which = debate_opinion value = 8 } } }
+			custom_tooltip = { text = TXT_opinion8 } 
+		}
+		if = {
+			limit = { event_target:debater2 = { is_variable_equal = { which = debate_opinion value = 9 } } }
+			custom_tooltip = { text = TXT_opinion9 } 
+		}
+		if = {
+			limit = { event_target:debater2 = { is_variable_equal = { which = debate_opinion value = 10 } } }
+			custom_tooltip = { text = TXT_opinion10 } 
+		}
+		if = {
+			limit = { event_target:debater2 = { is_variable_equal = { which = debate_opinion value = 11 } } }
+			custom_tooltip = { text = TXT_opinion11 } 
+		}
+		if = {
+			limit = { event_target:debater2 = { is_variable_equal = { which = debate_opinion value = 12 } } }
+			custom_tooltip = { text = TXT_opinion12 } 
+		}
+		if = {
+			limit = { event_target:debater2 = { is_variable_equal = { which = debate_opinion value = 13 } } }
+			custom_tooltip = { text = TXT_opinion13 } 
+		}
+		if = {
+			limit = { event_target:debater2 = { is_variable_equal = { which = debate_opinion value = 14 } } }
+			custom_tooltip = { text = TXT_opinion14 } 
+		}
+		if = {
+			limit = { event_target:debater2 = { is_variable_equal = { which = debate_opinion value = 15 } } }
+			custom_tooltip = { text = TXT_opinion15 } 
+		}
+		if = {
+			limit = { event_target:debater2 = { is_variable_equal = { which = debate_opinion value = 16 } } }
+			custom_tooltip = { text = TXT_opinion16 } 
+		}
+		if = {
+			limit = { event_target:debater2 = { is_variable_equal = { which = debate_opinion value = 17 } } }
+			custom_tooltip = { text = TXT_opinion17 } 
+		}
+		if = {
+			limit = { event_target:debater2 = { is_variable_equal = { which = debate_opinion value = 18 } } }
+			custom_tooltip = { text = TXT_opinion18 } 
+		}
+		if = {
+			limit = { event_target:debater2 = { is_variable_equal = { which = debate_opinion value = 19 } } }
+			custom_tooltip = { text = TXT_opinion19 } 
+		}
+		if = {
+			limit = { event_target:debater2 = { is_variable_equal = { which = debate_opinion value = 20 } } }
+			custom_tooltip = { text = TXT_opinion20 } 
+		}
+		
+		event_target:debater2 = {
+			prestige = 10
+			opinion = { modifier = opinion_pleased who = ROOT years = 2 }
+		}
+	}
+	
+	option = {
+		name = EVTOPT_flav_calam_opt3
+		
+		if = {
+			limit = { event_target:debater3 = { is_variable_equal = { which = debate_opinion value = 1 } } }
+			custom_tooltip = { text = TXT_opinion1_C } 
+		}
+		if = {
+			limit = { event_target:debater3 = { is_variable_equal = { which = debate_opinion value = 2 } } }
+			custom_tooltip = { text = TXT_opinion2_C } 
+		}
+		if = {
+			limit = { event_target:debater3 = { is_variable_equal = { which = debate_opinion value = 3 } } }
+			custom_tooltip = { text = TXT_opinion3_C } 
+		}
+		if = {
+			limit = { event_target:debater3 = { is_variable_equal = { which = debate_opinion value = 4 } } }
+			custom_tooltip = { text = TXT_opinion4_C } 
+		}
+		if = {
+			limit = { event_target:debater3 = { is_variable_equal = { which = debate_opinion value = 5 } } }
+			custom_tooltip = { text = TXT_opinion5_C } 
+		}
+		if = {
+			limit = { event_target:debater3 = { is_variable_equal = { which = debate_opinion value = 6 } } }
+			custom_tooltip = { text = TXT_opinion6_C } 
+		}
+		if = {
+			limit = { event_target:debater3 = { is_variable_equal = { which = debate_opinion value = 7 } } }
+			custom_tooltip = { text = TXT_opinion7 } 
+		}
+		if = {
+			limit = { event_target:debater3 = { is_variable_equal = { which = debate_opinion value = 8 } } }
+			custom_tooltip = { text = TXT_opinion8 } 
+		}
+		if = {
+			limit = { event_target:debater3 = { is_variable_equal = { which = debate_opinion value = 9 } } }
+			custom_tooltip = { text = TXT_opinion9 } 
+		}
+		if = {
+			limit = { event_target:debater3 = { is_variable_equal = { which = debate_opinion value = 10 } } }
+			custom_tooltip = { text = TXT_opinion10 } 
+		}
+		if = {
+			limit = { event_target:debater3 = { is_variable_equal = { which = debate_opinion value = 11 } } }
+			custom_tooltip = { text = TXT_opinion11 } 
+		}
+		if = {
+			limit = { event_target:debater3 = { is_variable_equal = { which = debate_opinion value = 12 } } }
+			custom_tooltip = { text = TXT_opinion12 } 
+		}
+		if = {
+			limit = { event_target:debater3 = { is_variable_equal = { which = debate_opinion value = 13 } } }
+			custom_tooltip = { text = TXT_opinion13 } 
+		}
+		if = {
+			limit = { event_target:debater3 = { is_variable_equal = { which = debate_opinion value = 14 } } }
+			custom_tooltip = { text = TXT_opinion14 } 
+		}
+		if = {
+			limit = { event_target:debater3 = { is_variable_equal = { which = debate_opinion value = 15 } } }
+			custom_tooltip = { text = TXT_opinion15 } 
+		}
+		if = {
+			limit = { event_target:debater3 = { is_variable_equal = { which = debate_opinion value = 16 } } }
+			custom_tooltip = { text = TXT_opinion16 } 
+		}
+		if = {
+			limit = { event_target:debater3 = { is_variable_equal = { which = debate_opinion value = 17 } } }
+			custom_tooltip = { text = TXT_opinion17 } 
+		}
+		if = {
+			limit = { event_target:debater3 = { is_variable_equal = { which = debate_opinion value = 18 } } }
+			custom_tooltip = { text = TXT_opinion18 } 
+		}
+		if = {
+			limit = { event_target:debater3 = { is_variable_equal = { which = debate_opinion value = 19 } } }
+			custom_tooltip = { text = TXT_opinion19 } 
+		}
+		if = {
+			limit = { event_target:debater3 = { is_variable_equal = { which = debate_opinion value = 20 } } }
+			custom_tooltip = { text = TXT_opinion20 } 
+		}
+		
+		event_target:debater3 = { 
+			prestige = 10
+			opinion = { modifier = opinion_pleased who = ROOT years = 2 }
+		}
+	}
+	
+	option = {
+		name = EVTOPT_flav_calam_humble
+		trigger = {
+			trait = humble
+		}
+		tooltip_info = humble
+		prestige = -5
+		piety = 10
+	}
+	
+	option = {
+		name = EVTOPT_flav_calam_proud
+		trigger = {
+			trait = proud
+		}
+		tooltip_info = proud
+		prestige = 10
+	}
+	
+	option = {
+		name = EVTOPT_flav_calam_zeal
+		trigger = {
+			NOT = { trait = humble }
+			NOT = { trait = proud }
+			trait = zealous
+		}
+		tooltip_info = zealous
+		piety = 10
+	}
+	
+	option = {
+		name = EVTOPT_flav_calam_neither
+		trigger = {
+			NOT = { trait = humble }
+			NOT = { trait = proud }
+			NOT = { trait = zealous }
+		}
+	}
+}
+
+character_event = {
+	id = flavor.30
+	hide_window = yes
+	is_triggered_only = yes
+	has_character_flag = is_person_of_interest
+	
+	trigger = {
+		NOT = { year = 2669 }
+	}
+	
+	immediate = {
+		character_event = { id = flavor.31 days = 400 }
+	}
+}
+
+character_event = {
+	id = flavor.31
+	desc = EVTDESC_flavor_alley
+	picture = GFX_evt_family_feud_republic
+
+	is_triggered_only = yes
+	has_character_flag = is_person_of_interest
+	
+	trigger = {
+		any_child = { has_character_flag = is_person_of_interest_son }
+	}
+	
+	option = {
+		name = EVTOPT_no
+		wealth = -5
+		death = { death_reason = death_murder }
+		any_spouse = { death = { death_reason = death_murder } }
+		any_child = {
+			limit = { has_character_flag = is_person_of_interest_son }
+			#character_event = { id = flavor.32 days = 7 }
+		}
+	}
+}
+
+character_event = {
+	id = flavor.32
+	desc = EVTDESC_flavor_bat
+	picture = GFX_evt_plague_doctor
+
+	is_triggered_only = yes
+	has_character_flag = is_person_of_interest_son
+
+	option = {
+		name = EVTOPT_flavor_bat
+		give_nickname = nick_the_bat
+		add_trait = robust
+		add_trait = shrewd
+		add_trait = brave
+		add_trait = just
+		add_trait = diligent
+		add_trait = shy
+		if = {
+			limit = { NOT = { lifestyle_traits = 1 } }
+			add_trait = duelist
+		}
+		if = {
+			limit = { trait = gluttonous }
+			remove_trait = gluttonous
+		}
+		if = {
+			limit = { trait = gregarious }
+			remove_trait = gregarious
+		}
+		if = {
+			limit = { trait = trusting }
+			remove_trait = trusting
+		}
+		if = {
+			limit = { trait = cruel }
+			remove_trait = cruel
+		}
+		if = {
+			limit = { trait = uncouth }
+			remove_trait = uncouth
+		}
+	}
+}
+
+character_event = {
+	id = flavor.40
+	hide_window = yes
+	is_triggered_only = yes
+	has_character_flag = is_shaggy
+	
+	trigger = {
+		NOT = { has_global_flag = scooby_arrives }
+	}
+	
+	immediate = {
+		character_event = { id = flavor.41 days = 30 }
+	}
+}
+
+character_event = {
+	id = flavor.41
+	desc = EVTDESC_flavor_scooby_1
+	picture = GFX_evt_hunting_scene
+	is_triggered_only = yes
+	has_character_flag = is_shaggy
+	
+	trigger = {
+		NOT = { has_global_flag = scooby_arrives }
+	}
+	
+	immediate = {
+		set_global_flag = scooby_arrives
+		character_event = { id = flavor.42 days = 7 }
+	}
+	
+	option = { # Accept (why wouldn't you?)
+		name = EVTOPTA_flavor_scooby_1
+		custom_tooltip = { text = TXT_adopt_scoobert }
+		hidden_tooltip = {
+			if = {
+				limit = {
+					NOT = {
+						has_game_rule = {
+							name = silly_events
+							value = off
+						}
+					}
+				}
+				create_character = {
+					name = "Scoobert"
+					age = 16
+					female = no
+					religion = ROOT
+					culture = dog_culture
+					dynasty = NONE
+					diplomacy = 7 #the dude can talk
+					martial = 2 #scooby has more bark than bite
+					stewardship = 1 #he's a dog
+					intrigue = 1 #too much of a good boy to plot
+					learning = 5 #surprisingly smart
+					trait = underhanded_rogue
+					trait = dog
+					trait = quick
+					trait = erudite
+					trait = craven
+					trait = trusting
+					trait = kind
+					trait = gluttonous
+				}
+				new_character = {
+					character_event = { id = misc.3 } # Diversity
+					add_friend = ROOT
+				}
+			}
+			else = {
+				add_character_modifier = {
+					modifier = pet_hunting_dog
+					duration = -1
+				}
+				set_character_flag = dog_name_scoobert
+			}
+		}
+	}
+}
+
+character_event = {
+	id = flavor.42
+	desc = EVTDESC_flavor_scooby_2
+	picture = GFX_evt_throne_room
+	is_triggered_only = yes
+	has_character_flag = is_shaggy
+	
+	trigger = {
+		NOT = { has_global_flag = mystery_gang_arrives }
+	}
+	
+	immediate = {
+		set_global_flag = mystery_gang_arrives
+		random_demesne_province = {
+			add_province_modifier = { name = scooby_haunting duration = 720 }
+		}
+	}
+	
+	option = { # Are you in need of a bloodhound?
+		name = EVTOPTA_flavor_scooby_2
+		custom_tooltip = { text = TXT_scooby_investigate }
+		hidden_tooltip = { character_event = { id = flavor.43 days = 3 } }
+	}
+	
+	option = { # Not interested.
+		name = EVTOPTB_flavor_scooby_2
+		wealth = -5
+		custom_tooltip = { text = TXT_scooby_refuse }
+		#Event chain ends here.
+	}
+}
+
+character_event = {
+	id = flavor.43
+	desc = EVTDESC_flavor_scooby_3
+	picture = GFX_evt_mysterious_forest
+	is_triggered_only = yes
+	has_character_flag = is_shaggy
+	
+	option = { # Let's split up, gang!
+		name = EVTOPTA_flavor_scooby_3
+		custom_tooltip = { text = TXT_scooby_split_up }
+		hidden_tooltip = { character_event = { id = flavor.44 days = 1 } }
+	}
+}
+
+character_event = {
+	id = flavor.44
+	desc = EVTDESC_flavor_scooby_4
+	picture = GFX_evt_hooded_figure_hf
+	is_triggered_only = yes
+	has_character_flag = is_shaggy
+	
+	option = { # Run away!
+		name = EVTOPTA_flavor_scooby_4
+		custom_tooltip = { text = TXT_scooby_zoinks }
+		hidden_tooltip = { character_event = { id = flavor.45 days = 1 } }
+	}
+	
+	option = { # Let me at him!
+		name = EVTOPTB_flavor_scooby_4
+		custom_tooltip = { text = TXT_scooby_fight }
+		hidden_tooltip = {
+			random_list = {
+				25 = { # win, no injury
+					character_event = { id = flavor.51 days = 1 }
+				}
+				50 = { # win, wounded
+					character_event = { id = flavor.52 days = 1 }
+				}
+				20 = { # win, severely wounded
+					character_event = { id = flavor.53 days = 1 }
+				}
+				5 = { # die
+					character_event = { id = flavor.54 days = 1 }
+				}
+			}
+		}
+	}
+}
+
+character_event = {
+	id = flavor.45
+	desc = EVTDESC_flavor_scooby_5
+	picture = GFX_evt_mysterious_forest
+	is_triggered_only = yes
+	has_character_flag = is_shaggy
+	
+	option = { # If you must...
+		name = EVTOPTA_flavor_scooby_5
+		prestige = -10
+		custom_tooltip = { text = TXT_scooby_bait }
+		hidden_tooltip = { character_event = { id = flavor.46 days = 1 } }
+	}
+}
+
+character_event = {
+	id = flavor.46
+	desc = EVTDESC_flavor_scooby_6
+	picture = GFX_evt_mysterious_forest
+	is_triggered_only = yes
+	has_character_flag = is_shaggy
+	
+	option = { # Now, we wait..
+		name = EVTOPTA_flavor_scooby_6
+		custom_tooltip = { text = TXT_scooby_trap }
+		hidden_tooltip = {
+			random_list = {
+				75 = { # successfully caught
+					character_event = { id = flavor.48 days = 2 }
+				}
+				25 = { # escape
+					character_event = { id = flavor.47 days = 3 }
+				}
+			}
+		}
+	}
+}
+
+character_event = {
+	id = flavor.47
+	desc = EVTDESC_flavor_scooby_7
+	picture = GFX_evt_bad_news
+	is_triggered_only = yes
+	has_character_flag = is_shaggy
+	
+	option = { # I guess that's it..
+		name = EVTOPTA_flavor_scooby_7
+		prestige = -10
+		custom_tooltip = { text = TXT_scooby_bad_end }
+	}
+}
+
+character_event = { # Catch the villain!
+	id = flavor.48
+	desc = EVTDESC_flavor_scooby_8
+	picture = GFX_evt_mysterious_forest
+	is_triggered_only = yes
+	has_character_flag = is_shaggy
+	
+	option = { # We got him
+		name = EVTOPTA_flavor_scooby_8
+		prestige = 25
+		custom_tooltip = { text = TXT_scooby_unmask }
+		hidden_tooltip = {
+			character_event = { id = flavor.49 days = 1 }
+		}
+	}
+}
+
+character_event = { # Lord Jenkins?
+	id = flavor.49
+	desc = EVTDESC_flavor_scooby_9
+	picture = GFX_evt_judged_by_ruler
+	is_triggered_only = yes
+	has_character_flag = is_shaggy
+	
+	immediate = {
+		any_demesne_province = {
+			if = {
+				limit = {
+					has_province_modifier = scooby_haunting
+				}
+				remove_province_modifier = scooby_haunting
+			}
+		}
+	}
+	
+	option = { # We got him
+		name = EVTOPTA_flavor_scooby_9
+		prestige = 25
+		custom_tooltip = { text = TXT_scooby_imprison }
+		hidden_tooltip = {
+			create_character = {
+				name = "Jenkins"
+				religion = ROOT
+				culture = ROOT
+				dynasty = culture
+				female = no
+				age = 51
+				random_traits = yes
+			}
+			new_character = {
+				wealth = 50
+				imprison = ROOT
+			}
+			character_event = { id = flavor.50 days = 1 }
+		}
+	}
+}
+
+character_event = { # Invite the Scooby Gang to your court
+	id = flavor.50
+	desc = EVTDESC_flavor_scooby_10
+	picture = GFX_evt_throne_room
+	is_triggered_only = yes
+	has_character_flag = is_shaggy
+	
+	option = { # Welcome to my court!
+		name = EVTOPTA_flavor_scooby_10
+		prestige = 10
+		custom_tooltip = { text = TXT_scooby_gang }
+		hidden_tooltip = {
+			create_character = {
+				name = "Frederick"
+				religion = ROOT
+				culture = ROOT
+				dynasty = 1788052 #Jones
+				age = 17
+				female = no
+				random_traits = no
+				diplomacy = 5
+				martial = 10
+				stewardship = 8
+				intrigue = 8
+				learning = 6
+				trait = brilliant_strategist
+				trait = strategist
+				trait = proud
+				trait = diligent
+				trait = patient
+				trait = ambitious
+			}
+			new_character = {
+				prestige = 15
+				character_event = { id = misc.3 } # Diversity
+				add_friend = ROOT
+			}
+			create_character = {
+				name = "Laurel"
+				religion = ROOT
+				culture = ROOT
+				dynasty = 1788053 #Blake
+				age = 17
+				female = yes
+				random_traits = no
+				diplomacy = 10
+				martial = 6
+				stewardship = 6
+				intrigue = 6
+				learning = 5
+				trait = grey_eminence
+				trait = socializer
+				trait = fair
+				trait = gregarious
+				trait = temperate
+				trait = lustful
+			}
+			new_character = {
+				prestige = 15
+				character_event = { id = misc.3 } # Diversity
+				add_friend = ROOT
+			}
+			create_character = {
+				name = "Wilhelmina"
+				religion = ROOT
+				culture = ROOT
+				dynasty = 1788054 #Dinkley
+				age = 17
+				female = yes
+				random_traits = no
+				diplomacy = 6
+				martial = 5
+				stewardship = 8
+				intrigue = 6
+				learning = 10
+				trait = mastermind_theologian
+				trait = scholar
+				trait = genius
+				trait = erudite
+				trait = shy
+				trait = cynical
+				trait = diligent
+			}
+			new_character = {
+				prestige = 15
+				character_event = { id = misc.3 } # Diversity
+				add_friend = ROOT
+			}
+		}
+	}
+}
+
+character_event = { # Fight the villain and emerge unscathed!
+	id = flavor.51
+	desc = EVTDESC_flavor_scooby_11
+	picture = GFX_evt_melee
+	is_triggered_only = yes
+	has_character_flag = is_shaggy
+	
+	option = { # We got him
+		name = EVTOPTA_flavor_scooby_11
+		prestige = 100
+		custom_tooltip = { text = TXT_scooby_victorious }
+		hidden_tooltip = {
+			remove_trait = craven
+			remove_trait = slothful
+			remove_trait = misguided_warrior
+			add_trait = tough_soldier
+			add_trait = brave
+			change_martial = 5
+			remove_nickname = yes
+			give_nickname = nick_the_brave
+			character_event = { id = flavor.49 days = 1 }
+		}
+	}
+}
+
+character_event = { # Fight the villain and emerge wounded!
+	id = flavor.52
+	desc = EVTDESC_flavor_scooby_12
+	picture = GFX_evt_melee
+	is_triggered_only = yes
+	has_character_flag = is_shaggy
+	
+	option = { # Nevertheless, I win!
+		name = EVTOPTA_flavor_scooby_12
+		prestige = 80
+		add_trait = wounded
+		custom_tooltip = { text = TXT_scooby_victorious }
+		hidden_tooltip = {
+			remove_trait = craven
+			remove_trait = slothful
+			remove_trait = misguided_warrior
+			add_trait = tough_soldier
+			add_trait = brave
+			change_martial = 5
+			remove_nickname = yes
+			give_nickname = nick_the_brave
+			character_event = { id = flavor.49 days = 1 }
+		}
+	}
+}
+
+character_event = { # Fight the villain and emerge severely wounded!
+	id = flavor.53
+	desc = EVTDESC_flavor_scooby_13
+	picture = GFX_evt_melee
+	is_triggered_only = yes
+	has_character_flag = is_shaggy
+	
+	option = { # Nevertheless, I win!
+		name = EVTOPTA_flavor_scooby_13
+		prestige = 60
+		add_maimed_trait_effect = yes
+		custom_tooltip = { text = TXT_scooby_victorious }
+		hidden_tooltip = {
+			remove_trait = craven
+			remove_trait = slothful
+			remove_trait = misguided_warrior
+			add_trait = tough_soldier
+			add_trait = brave
+			change_martial = 5
+			remove_nickname = yes
+			give_nickname = nick_the_brave
+			character_event = { id = flavor.49 days = 1 }
+		}
+	}
+}
+
+character_event = { # You die.
+	id = flavor.54
+	desc = EVTDESC_flavor_scooby_14
+	picture = GFX_evt_melee
+	is_triggered_only = yes
+	has_character_flag = is_shaggy
+	
+	option = { # Goodbye, Scoobert...
+		name = EVTOPTA_flavor_scooby_14
+		add_maimed_trait_effect = yes
+		custom_tooltip = { text = TXT_scooby_death }
+		hidden_tooltip = {
+			death = { death_reason = death_murder }
+		}
+	}
+}
+
+narrative_event = {
+	id = flavor.60
+	title = EVTNAME_neognostic_become_perfectus
+	desc = EVTDESC_neognostic_become_perfectus
+	picture = GFX_evt_beatification
+	border = GFX_event_narrative_frame_religion
+	is_triggered_only = yes
+	
+	religion = neognostic
+	
+	option = {
+		name = EVTOPTA_neognostic_become_perfectus
+		custom_tooltip = { text = TXT_EVTOPTA_neognostic_become_perfectus }
+		piety = 1000
+		abdicate = yes
+		add_trait = celibate
+		if = {
+			limit = {
+				is_female = no
+			}
+			add_trait = monk
+		}
+		else_if = {
+			limit = {
+				is_female = yes
+			}
+			add_trait = nun
+		}
+		hidden_tooltip = {
+			remove_trait = lustful
+			remove_trait = gluttonous
+			remove_trait = greedy
+			remove_trait = slothful
+			remove_trait = wroth
+			remove_trait = envious
+			remove_trait = proud
+		}
+	}
+}
+
+character_event = {
+	id = flavor.61
+	desc = EVTDESC_abram_1
+	picture = GFX_evt_woman_at_window_hf
+	
+	trigger = {
+		has_character_flag = king_abram
+		any_spouse = {
+			has_character_flag = issac_mother
+		}
+		NOT = { has_global_flag = issac_conceived }
+	}
+	
+	mean_time_to_happen = {
+		months = 2
+	}
+	
+	option = {
+		name = EVTOPTA_abram_1
+		custom_tooltip = { text = TXT_EVTOPTA_abram_1 }
+		hidden_tooltip = {
+			any_spouse = {
+				character_event = { id = flavor.62 }
+			}
+		}
+	}
+	
+	after = {
+		set_global_flag = issac_conceived
+	}
+}
+
+character_event = {
+	id = flavor.62
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		unsafe_impregnate = FROM
+		set_character_flag = issac_pregnant
+	}
+}
+
+character_event = {
+	id = flavor.63
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		mother_even_if_dead = {
+			has_character_flag = issac_pregnant
+		}
+	}
+	
+	immediate = {
+		remove_trait = weak
+		remove_trait = clubfooted
+		remove_trait = harelip
+		remove_trait = hunchback
+		remove_trait = imbecile
+		remove_trait = inbred
+		remove_trait = lisp
+		remove_trait = slow
+		remove_trait = stutter
+		remove_trait = ugly
+		remove_trait = giant
+		if = {
+			limit = {
+				is_female = no
+			}
+			set_name = "Issac"
+		}
+		if = {
+			limit = {
+				is_female = yes
+			}
+			set_name = "Isidora"
+		}
+		mother_even_if_dead = {
+			clr_character_flag = issac_pregnant
+			clr_character_flag = issac_pregnant
+		}
+		true_father = {
+			clr_character_flag = king_abram
+			character_event = { id = flavor.64 days = 1 }
+		}
+	}
+}
+
+character_event = {
+	id = flavor.64
+	desc = EVTDESC_abram_2
+	picture = GFX_evt_birth
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_abram_2
+		piety = 25
+	}
+}
+
+narrative_event = {
+	id = flavor.70
+	title = EVTTITLE_mountain_king
+	desc = EVTDESC_mountain_king
+	picture = GFX_evt_knight_kneeling
+	border = GFX_event_narrative_frame_diplomacy
+	
+	is_triggered_only = yes
+	
+	culture_group = rockland
+	
+	trigger = {
+		has_landed_title = e_the_rockies
+		NOT = { has_global_flag = mountain_king_crowned }
+	}
+	
+	immediate = {
+		set_global_flag = mountain_king_crowned
+	}
+	
+	option = {
+		name = EVTOPTA_mountain_king
+		prestige = 3000
+		give_nickname = nick_the_glorious
+		if = {
+			limit = { 
+				has_dlc = "Holy Fury" 
+				is_female = no
+			}
+			create_bloodline = {
+				type = mountain_lord_male
+			}
+			new_bloodline = {
+				set_description = "bloodline_desc_mountain_lord"
+			}	
+			sound_effect = bloodline_added
+		}
+		else_if = {
+			limit = { 
+				has_dlc = "Holy Fury" 
+				is_female = yes
+			}
+			create_bloodline = {
+				type = mountain_lord_female
+			}
+			new_bloodline = {
+				set_description = "bloodline_desc_mountain_lord"
+			}	
+			sound_effect = bloodline_added
+		}
+	}
+}
+
+# Fall of Haida Tlagaang
+narrative_event = {
+	id = flavor.71
+	title = EVTTITLE_great_coast
+	desc = EVTDESC_great_coast
+	picture = GFX_evt_book_carolingian_script
+	border = GFX_event_narrative_frame_war
+	
+	only_playable = yes
+
+	major = yes
+	
+	trigger = {
+		has_landed_title = k_great_coast
+		NOT = { culture_group = northwest_coast }
+		NOT = { has_global_flag = fall_of_haida_tlagaang }
+	}
+
+	major_trigger = {
+		capital_scope = {
+			NOT = {
+				distance = {
+					where = 846 # Kiis Gwaii
+					value = 800	# Same part of the world
+				}
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	immediate = {
+		set_global_flag = fall_of_haida_tlagaang
+		if = {
+			limit = {
+				culture = alaskan
+			}
+			k_great_coast = {
+				set_name = ""
+				adjective = "ALASKA_ADJ"
+				reset_coa = THIS
+			}
+		}
+		else = {
+			k_great_coast = {
+				set_name = ""
+				adjective = ""
+				reset_coa = THIS
+			}
+		}
+	}
+	
+	option = {
+		name = EVTOPTA_CM_502
+		trigger = {
+			has_landed_title = k_great_coast
+		}
+	}
+	option = {
+		name = EVTOPTB_great_coast
+		trigger = {
+			NOT = { has_landed_title = k_great_coast }
+			culture = haida
+		}
+	}
+	option = {
+		name = EVTOPTC_great_coast
+		trigger = {
+			NOT = { has_landed_title = k_great_coast }
+			NOT = { culture = haida }
+		}
+	}
+}
+
+# Return of Haida Tlagaang
+narrative_event = {
+	id = flavor.72
+	title = EVTTITLE_haida_tlagaang
+	desc = EVTDESC_haida_tlagaang
+	picture = GFX_evt_book_carolingian_script
+	border = GFX_event_narrative_frame_war
+	
+	only_playable = yes
+
+	major = yes
+	
+	trigger = {
+		has_landed_title = k_great_coast
+		culture = haida
+		has_global_flag = fall_of_haida_tlagaang
+	}
+
+	major_trigger = {
+		capital_scope = {
+			NOT = {
+				distance = {
+					where = 846 # Kiis Gwaii
+					value = 800	# Same part of the world
+				}
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	immediate = {
+		clr_global_flag = fall_of_haida_tlagaang
+		k_great_coast = {
+			set_name = "HAIDA_TLAGAANG"
+			adjective = "HAIDA_TLAGAANG_ADJ"
+			set_coa = k_haida
+		}
+	}
+	
+	option = {
+		name = EVTOPTA_CM_502
+		trigger = {
+			has_landed_title = k_great_coast
+		}
+	}
+	option = {
+		name = EVTOPTB_haida_tlagaang
+		trigger = {
+			NOT = { has_landed_title = k_great_coast }
+			culture = haida
+		}
+	}
+	option = {
+		name = EVTOPTC_great_coast
+		trigger = {
+			NOT = { has_landed_title = k_great_coast }
+			NOT = { culture = haida }
+		}
+	}
+}
+
+# Rebirth of Acadia
+narrative_event = {
+	id = flavor.73
+	title = EVTTITLE_acadia
+	desc = EVTDESC_acadia
+	picture = GFX_evt_book_carolingian_script
+	border = GFX_event_narrative_frame_war
+	
+	only_playable = yes
+
+	major = yes
+	
+	trigger = {
+		has_landed_title = k_maritimes
+		OR = {
+			culture = acadien
+			culture = cajun
+		}
+		NOT = { has_global_flag = rebirth_of_acadia }
+	}
+
+	major_trigger = {
+		capital_scope = {
+			NOT = {
+				distance = {
+					where = 1260 # Halifax
+					value = 800	# Same part of the world
+				}
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	immediate = {
+		set_global_flag = rebirth_of_acadia
+		k_maritimes = {
+			set_name = ""
+			adjective = "ACADIA_ADJ"
+			set_coa = k_acadia
+		}
+	}
+	
+	option = {
+		name = EVTOPTA_CM_502
+		trigger = {
+			has_landed_title = k_maritimes
+		}
+	}
+	option = {
+		name = EVTOPTB_acadia
+		trigger = {
+			NOT = { has_landed_title = k_maritimes }
+			culture = acadien
+		}
+	}
+	option = {
+		name = EVTOPTC_great_coast
+		trigger = {
+			NOT = { has_landed_title = k_maritimes }
+			NOT = { culture = acadien }
+		}
+	}
+}
+
+# Return of Maritimes
+narrative_event = {
+	id = flavor.74
+	title = EVTTITLE_acadia
+	desc = EVTDESC_maritimes
+	picture = GFX_evt_book_carolingian_script
+	border = GFX_event_narrative_frame_war
+	
+	only_playable = yes
+
+	major = yes
+	
+	trigger = {
+		has_landed_title = k_maritimes
+		culture = maritimer
+		has_global_flag = rebirth_of_acadia
+	}
+
+	major_trigger = {
+		capital_scope = {
+			NOT = {
+				distance = {
+					where = 1260 # Halifax
+					value = 800	# Same part of the world
+				}
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	immediate = {
+		clr_global_flag = rebirth_of_acadia
+		k_maritimes = {
+			set_name = ""
+			adjective = ""
+			reset_coa = THIS
+		}
+	}
+	
+	option = {
+		name = EVTOPTA_CM_502
+		trigger = {
+			has_landed_title = k_maritimes
+		}
+	}
+	option = {
+		name = EVTOPTB_acadia
+		trigger = {
+			NOT = { has_landed_title = k_maritimes }
+			culture = acadien
+		}
+	}
+	option = {
+		name = EVTOPTC_great_coast
+		trigger = {
+			NOT = { has_landed_title = k_maritimes }
+			NOT = { culture = acadien }
+		}
+	}
+}
+
+# Rebirth of Dakota
+narrative_event = {
+	id = flavor.75
+	title = EVTTITLE_dakota
+	desc = EVTDESC_dakota
+	picture = GFX_evt_book_carolingian_script
+	border = GFX_event_narrative_frame_war
+	
+	only_playable = yes
+
+	major = yes
+	
+	trigger = {
+		has_landed_title = k_lakotah
+		NOT = { culture_group = plains }
+		NOT = { culture_group = ameronordic }
+		NOT = { has_global_flag = rebirth_of_dakota }
+	}
+
+	major_trigger = {
+		capital_scope = {
+			NOT = {
+				distance = {
+					where = 382 # Wazi Ahanghang / Pine Ridge / Porcupine
+					value = 800	# Same part of the world
+				}
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	immediate = {
+		set_global_flag = rebirth_of_dakota
+		k_lakotah = {
+			set_name = "DAKOTA"
+			adjective = "DAKOTA_ADJ"
+			set_coa = k_dakota
+		}
+	}
+	
+	option = {
+		name = EVTOPTA_CM_502
+		trigger = {
+			has_landed_title = k_lakotah
+		}
+	}
+	option = {
+		name = EVTOPTB_dakota
+		trigger = {
+			culture_group = plains
+		}
+	}
+	option = {
+		name = EVTOPTC_great_coast
+		trigger = {
+			NOT = { has_landed_title = k_lakotah }
+			NOT = { culture_group = plains }
+			NOT = { culture = ROOT }
+		}
+	}
+	option = {
+		name = EVTOPTD_dakota
+		trigger = {
+			NOT = { has_landed_title = k_lakotah }
+			culture = ROOT
+		}
+	}
+}
+
+# Birth of Northland
+narrative_event = {
+	id = flavor.76
+	title = EVTTITLE_dakota
+	desc = EVTDESC_northland
+	picture = GFX_evt_book_carolingian_script
+	border = GFX_event_narrative_frame_war
+	
+	only_playable = yes
+
+	major = yes
+	
+	trigger = {
+		has_landed_title = k_lakotah
+		culture_group = ameronordic
+		NOT = { has_global_flag = birth_of_northland }
+	}
+
+	major_trigger = {
+		capital_scope = {
+			NOT = {
+				distance = {
+					where = 382 # Wazi Ahanghang / Pine Ridge / Porcupine
+					value = 800	# Same part of the world
+				}
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	immediate = {
+		set_global_flag = birth_of_northland
+		k_lakotah = {
+			set_name = "NORTHLAND"
+			adjective = "NORTHLAND_ADJ"
+			set_coa = k_northland
+		}
+	}
+	
+	option = {
+		name = EVTOPTA_CM_502
+		trigger = {
+			has_landed_title = k_northland
+		}
+	}
+	option = {
+		name = EVTOPTB_dakota
+		trigger = {
+			culture_group = plains
+		}
+	}
+	option = {
+		name = EVTOPTC_great_coast
+		trigger = {
+			NOT = { has_landed_title = k_lakotah }
+			NOT = { culture_group = plains }
+			NOT = { culture_group = ameronordic }
+		}
+	}
+	option = {
+		name = EVTOPTD_dakota
+		trigger = {
+			NOT = { has_landed_title = k_lakotah }
+			culture_group = ameronordic
+		}
+	}
+}
+
+# Return of Lakotah
+narrative_event = {
+	id = flavor.77
+	title = EVTTITLE_dakota
+	desc = EVTDESC_lakotah
+	picture = GFX_evt_book_carolingian_script
+	border = GFX_event_narrative_frame_war
+	
+	only_playable = yes
+
+	major = yes
+	
+	trigger = {
+		has_landed_title = k_lakotah
+		culture_group = plains
+		OR = {
+			has_global_flag = rebirth_of_dakota
+			has_global_flag = birth_of_northland
+		}
+	}
+
+	major_trigger = {
+		capital_scope = {
+			NOT = {
+				distance = {
+					where = 382 # Wazi Ahanghang / Pine Ridge / Porcupine
+					value = 800	# Same part of the world
+				}
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	immediate = {
+		clr_global_flag = rebirth_of_dakota
+		clr_global_flag = birth_of_northland
+		k_lakotah = {
+			set_name = ""
+			adjective = ""
+			reset_coa = THIS
+		}
+	}
+	
+	option = {
+		name = EVTOPTA_CM_502
+		trigger = {
+			has_landed_title = k_lakotah
+		}
+	}
+	option = {
+		name = EVTOPTB_dakota_2
+		trigger = {
+			NOT = { has_landed_title = k_lakotah }
+			culture_group = plains
+		}
+	}
+	option = {
+		name = EVTOPTC_great_coast
+		trigger = {
+			NOT = { has_landed_title = k_lakotah }
+			NOT = { culture_group = plains }
+		}
+	}
+}
+
+# Rebirth of Utah
+narrative_event = {
+	id = flavor.78
+	title = EVTTITLE_utah
+	desc = EVTDESC_utah
+	picture = GFX_evt_book_carolingian_script
+	border = GFX_event_narrative_frame_war
+	
+	only_playable = yes
+
+	major = yes
+	
+	trigger = {
+		has_landed_title = k_deseret
+		NOT = { religion_group = latter_day_saints }
+		NOT = { has_global_flag = rebirth_of_utah }
+	}
+
+	major_trigger = {
+		capital_scope = {
+			NOT = {
+				distance = {
+					where = 430 # Salt Lake
+					value = 800	# Same part of the world
+				}
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	immediate = {
+		set_global_flag = rebirth_of_utah
+		k_deseret = {
+			set_name = "UTAH"
+			adjective = "UTAH_ADJ"
+		}
+	}
+	
+	option = {
+		name = EVTOPTA_CM_502
+		trigger = {
+			has_landed_title = k_deseret
+		}
+	}
+	option = {
+		name = EVTOPTB_dakota
+		trigger = {
+			religion_group = latter_day_saints
+		}
+	}
+	option = {
+		name = EVTOPTC_great_coast
+		trigger = {
+			NOT = { has_landed_title = k_deseret }
+			NOT = { religion_group = latter_day_saints }
+		}
+	}
+}
+
+# Return of Deseret
+narrative_event = {
+	id = flavor.79
+	title = EVTTITLE_utah
+	desc = EVTDESC_deseret
+	picture = GFX_evt_book_carolingian_script
+	border = GFX_event_narrative_frame_war
+	
+	only_playable = yes
+
+	major = yes
+	
+	trigger = {
+		has_landed_title = k_deseret
+		religion_group = latter_day_saints
+		has_global_flag = rebirth_of_utah
+	}
+
+	major_trigger = {
+		capital_scope = {
+			NOT = {
+				distance = {
+					where = 430 # Salt Lake
+					value = 800	# Same part of the world
+				}
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	immediate = {
+		clr_global_flag = rebirth_of_utah
+		k_deseret = {
+			set_name = ""
+			adjective = ""
+		}
+	}
+	
+	option = {
+		name = EVTOPTA_CM_502
+		trigger = {
+			has_landed_title = k_deseret
+		}
+	}
+	option = {
+		name = EVTOPTB_utah
+		trigger = {
+			NOT = { has_landed_title = k_deseret }
+			religion_group = latter_day_saints
+		}
+	}
+	option = {
+		name = EVTOPTC_great_coast
+		trigger = {
+			NOT = { has_landed_title = k_deseret }
+			NOT = { religion_group = latter_day_saints }
+		}
+	}
+}
+
+# fall of Chicagoland, other
+narrative_event = {
+	id = flavor.80
+	title = EVTTITLE_fall_chicagoland
+	desc = EVTDESC_wiscon_indiana_formed
+	picture = GFX_evt_book_carolingian_script
+	border = GFX_event_narrative_frame_war
+	
+	only_playable = yes
+
+	major = yes
+	
+	trigger = {
+		has_global_flag = wisconsin_formed
+		has_global_flag = indiana_formed
+		NOT = { has_global_flag = fall_of_chicagoland }
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	immediate = {
+		set_global_flag = fall_of_chicagoland
+		k_chicagoland = {
+			set_name = "ILLINOIS"
+			adjective = "ILLINOIS_ADJ"
+			set_coa = k_illinois
+		}
+		d_illinois = {
+			set_name = "LITTLEILLINOIS"
+			adjective = "LITTLEILLINOIS_ADJ"
+		}
+		if = {
+			limit = {
+				k_missouri = {
+					has_holder = no
+				}
+			}
+			d_forgottonia = {
+				de_jure_liege = k_chicagoland
+			}
+			c_kaskaskia = {
+				de_jure_liege = d_little_egypt
+			}
+		}
+		if = {
+			limit = {
+				k_booneland = {
+					has_holder = no
+				}
+			}
+			d_little_egypt = {
+				de_jure_liege = k_chicagoland
+			}
+		}
+	}
+	
+	option = {
+		name = EVTOPTA_illinois
+		trigger = {
+			has_landed_title = k_chicagoland
+		}
+	}
+
+	option = {
+		name = EVTOPTB_illinois
+		trigger = {
+			NOT = { has_landed_title = k_chicagoland }
+		}
+	}
+}
+
+# fall of Chicagoland, Illinois
+narrative_event = {
+	id = flavor.81
+	title = EVTTITLE_fall_chicagoland
+	desc = EVTDESC_illinois_formed
+	picture = GFX_evt_book_carolingian_script
+	border = GFX_event_narrative_frame_war
+	
+	only_playable = yes
+
+	major = yes
+	
+	trigger = {
+		has_global_flag = illinois_united
+		NOT = { has_global_flag = fall_of_chicagoland }
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	immediate = {
+		set_global_flag = fall_of_chicagoland
+		d_indianapolis = {
+			de_jure_liege = k_indiana
+		}
+		d_wabash = {
+			de_jure_liege = k_indiana
+		}
+		d_michiana = {
+			de_jure_liege = k_indiana
+		}
+		d_badgerlings = {
+			de_jure_liege = k_wisconsin
+		}
+		d_green_bay = {
+				de_jure_liege = k_wisconsin
+		}
+		if = {
+			limit = {
+				k_michigan = {
+					has_holder = no
+				}
+			}
+			d_michiana = {
+				de_jure_liege = k_indiana
+			}
+		}
+		if = {
+			limit = {
+				k_superior = {
+					has_holder = no
+				}
+			}
+			d_badgerland = {
+				de_jure_liege = k_wisconsin
+			}
+			d_coulee = {
+				de_jure_liege = k_wisconsin
+			}
+		}
+		if = {
+			limit = {
+				k_superior = {
+					has_holder = yes
+				}
+			}
+			d_badgerland = {
+				de_jure_liege = k_superior
+			}
+			d_coulee = {
+				de_jure_liege = k_superior
+			}
+		}
+	}
+	
+	option = {
+		name = EVTOPTD_illinois
+		trigger = {
+			has_landed_title = k_chicagoland
+		}
+	}
+	option = {
+		name = EVTOPTC_illinois
+		trigger = {
+			OR = {
+				has_landed_title = k_wisconsin
+				has_landed_title = k_indiana
+				has_landed_title = k_superior
+			}
+		}
+	}
+	option = {
+		name = EVTOPTB_illinois
+		trigger = {
+			NOT = { has_landed_title = k_chicagoland }
+			NOT = { has_landed_title = k_wisconsin }
+			NOT = { has_landed_title = k_indiana }
+			NOT = { has_landed_title = k_superior }
+		}
+	}
+}

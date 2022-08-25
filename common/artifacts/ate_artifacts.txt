@@ -3262,7 +3262,10 @@ crown_texas = {
 	command_modifier = {
 		light_cavalry = 0.15
 	}
-	starfolk_opinion = 5
+	texan_opinion = 5
+	tejano_opinion = 5
+	texaner_opinion = 5
+	czexan_opinion = 5
 	comanche_opinion = 5
 	quality = 4
 
@@ -3270,7 +3273,10 @@ crown_texas = {
 		OR = {
 			has_landed_title = e_texas
 			culture = comanche
-			culture_group = starfolk
+			culture = texan
+			culture = tejano
+			culture = texaner
+			culture = czexan
 		}
 	}
 	flags = { texas_crown unique crown jewelry crown_jewel }
