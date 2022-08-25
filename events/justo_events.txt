@@ -2193,6 +2193,8 @@ narrative_event = { #with Friends Like This or A Promise to Keep
 		text = "justo.51.desc_B"
 	}
 	
+	is_triggered_only = yes
+	
 	option = {
 		name = EVTOPTA_justo51
 		religion = cristo_rey
@@ -2391,5 +2393,69 @@ character_event = { #either fires a war or the last event
 			narrative_event = { id = justo.53 days = 1 }
 		}
 	}
+}
 
+narrative_event = {
+	id = justo.53
+	title = "justo.53.name"
+	desc = justo.53.desc
+	
+	is_triggered_only = yes
+	major = yes
+	
+	option = {
+		name = EVTOPTA_justo53
+		trigger = {
+			religion = cristo_rey
+			independent = yes
+			de_jure_liege = e_mexico
+		}
+	}
+	option = {
+		name = EVTOPTB_justo53
+		trigger = {
+			religion = cristo_rey
+			NOR = {
+				independent = yes
+				de_jure_liege = e_mexico
+			}
+		}
+	}
+	option = {
+		name = EVTOPTC_justo53
+		trigger = {
+			religion = sacred_heart
+			independent = yes
+		}
+	}
+	option = {
+		name = EVTOPTD_justo53
+		trigger = {
+			NOT = { religion = cristo_rey }
+			de_facto_liege_or_above = e_mexico
+		}
+	}
+	option = {
+		name = EVTOPTE_justo53
+		trigger = {
+			has_character_flag = the_justo_armas
+		}
+		if = {
+			limit = { has_dlc = "Holy Fury" }
+			create_bloodline = {
+				type = just_armas
+			}
+		}
+	}
+	option = {
+		name = EVTOPTF_justo53
+		trigger = {
+			NOR = {
+				religion = cristo_rey
+				religion = sacred_heart
+				has_landed_title = e_mexico
+				de_facto_liege_or_above = e_mexico
+			}
+		}
+	}
 }
