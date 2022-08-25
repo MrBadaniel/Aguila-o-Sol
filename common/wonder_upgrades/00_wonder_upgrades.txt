@@ -4803,7 +4803,12 @@ upgrade_alamo_mission = {
 	}
 	allow = { }
 	active = {
-		culture_group = starfolk
+		OR = {
+			culture = texan
+			culture = tejano
+			culture = czexan
+			culture = texaner
+		}
 	}
 
 	flags = {
@@ -4818,7 +4823,10 @@ upgrade_alamo_mission = {
 	}
 	owner_modifier = {
 		diplomacy = 1
-		starfolk_opinion = 5
+		texan_opinion = 5
+		tejano_opinion = 5
+		texaner_opinion = 5
+		czexan_opinion = 5
 	}
 }
 
@@ -4829,7 +4837,12 @@ upgrade_riverwalk = {
 	}
 	allow = { }
 	active = {
-		culture_group = starfolk
+		OR = {
+			culture = texan
+			culture = texaner
+			culture = tejano
+			culture = czexan
+		}
 	}
 
 	flags = {

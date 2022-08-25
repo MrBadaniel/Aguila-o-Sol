@@ -122,13 +122,13 @@ decisions = {
 			NOT = {
 				has_character_flag = ex_reconquistador
 			}
-			#NOT = {
-			#	e_mexico = {
-			#		owner = {
-			#			always = yes
-			#		}
-			#	}
-			#}
+			NOT = {
+				e_mexico = {
+					owner = {
+						always = yes
+					}
+				}
+			}
 			has_global_flag = mexican_reconquistas_unlocked
 			NOT = {
 				has_global_flag = reconquista_finished
