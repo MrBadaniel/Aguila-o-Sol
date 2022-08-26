@@ -1433,6 +1433,7 @@
 	trait=stressed
 	trait=robust
 	2644.8.10={birth=yes}
+	2659.8.8={add_spouse=1876023}
 }
 
 1890105={
@@ -1511,6 +1512,182 @@
 	2657.9.12={death=yes}
 } 
 
+1890110={
+	name="Stan"
+	dynasty=1876030
+	culture=coloradan
+	religion=edenite
+	trait=cynical
+	father=1876009
+	mother=1876004
+	2654.6.30={birth=yes
+		culture=coloradan
+	}
+}
+
+1890111={
+	name="Wendy"
+	dynasty=1876030
+	religion=edenite
+	culture=coloradan
+	female=yes
+	trait=quick
+	father=1876009
+	mother=1876004
+	2656.2.12={birth=yes
+		culture=coloradan
+	}
+}
+
+1890112={
+	name="Kevin"
+	dynasty=1876030
+	culture=coloradan
+	religion=edenite
+	trait=deceitful
+	trait=sympathy_latter_day_saints
+	father=1876009
+	mother=1876004
+	2564.6.1={birth=yes
+		culture=coloradan
+	}
+}
+
+1890113={
+	name="Kyle"
+	culture=yiddish
+	religion=reform
+	trait=honest
+	2654.8.21={birth=yes
+		culture=coloradan
+	}
+	2665.1.1={employer=1876009}
+	2665.10.10={	
+		effect={
+			add_friend=1890110
+		}
+	}
+}
+
+1890114={
+	name="Arnold"
+	culture=coloradan
+	religion=neogodbeite
+	trait=deceitful
+	trait=kind
+	2564.9.1={birth=yes
+		culture=coloradan
+	}
+	2665.1.1={employer=1876009}
+	2665.10.10={	
+		effect={
+			add_friend=1890112
+		}
+	}
+}
+
+1890115={
+	name="Margarine"
+	culture=neomexicano
+	female=yes
+	dynasty=1876030
+	father=1890109
+	religion=edenite
+	trait=intricate_webweaver
+	trait=shy
+	trait=deceitful
+	trait=chaste
+	trait=kind
+	2626.1.8={birth=yes
+	culture=coloradan
+	}
+	2647.9.19={add_spouse=1876011}
+} 
+
+1890116={
+	name="Winter"
+	culture=coloradan
+	female=yes
+	dynasty=1876034
+	father=1876011
+	mother=1890115
+	religion=edenite
+	2650.3.11={birth=yes
+	culture=coloradan
+	}
+	2666.6.4={add_matrilineal_spouse=1890105}
+} 
+
+1890117={
+	name="Torrance"
+	culture=neomexicano
+	female=no
+	dynasty=1876034
+	father=1876011
+	mother=1890115
+	religion=edenite
+	2653.8.9={birth=yes
+	culture=coloradan
+	}
+} 
+
+1890118={
+	name="Erica"
+	culture=coloradan
+	female=yes
+	dynasty=1876034
+	father=1876011
+	mother=1890115
+	trait=is_fat
+	trait=gluttonous
+	trait=bisexual
+	religion=edenite
+	2655.1.22={birth=yes
+	culture=coloradan
+	}
+}
+
+1890119={
+	name="James"
+	culture=coloradan
+	dynasty=1876028
+	trait=skilled_tactician
+	trait=heresiarch
+	trait=stubborn
+	trait=drunkard
+	religion=edenite
+	trait=diligent
+	trait=lustful
+	trait=brave
+	give_nickname=nick_the_heresiarch
+	2596.4.22={birth=yes
+	culture=coloradan
+	}
+	2666.5.20={death=yes}
+}
+
+1890120={
+	name="Clifton"
+	dynasty=1876028
+	culture=coloradan
+	religion=edenite
+	female=no
+	father=1876023
+	mother=1890104
+	2661.8.19={birth=yes}
+}
+
+1890121={
+	name="Linda"
+	dynasty=1876028
+	culture=coloradan
+	religion=edenite
+	female=yes
+	father=1876023
+	mother=1890104
+	2665.2.25={birth=yes}
+}
+
 #1875068={
 #	name="Huck"
 #	dynasty=5001192 #Krakauer
@@ -1518,7 +1695,6 @@
 #	religion=gaian#forester
 #	2642.9.19={birth=yes}
 #}
-
 #1886086={
 #	name="Vienna"
 #	dynasty=1886014
