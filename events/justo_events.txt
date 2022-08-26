@@ -1548,3 +1548,858 @@ narrative_event = { #JUSTO ARMAS!!!!!
 		}
 	}
 }
+
+character_event = { #fires the death events for the Prelade and Miramón and the Gringo
+	id = justo.41
+	hide_window = yes
+
+	is_triggered_only = yes
+	
+	trigger = {
+		OR = {
+			has_character_flag = is_prelate_envoy
+			has_landed_title = d_cristo_rey
+			has_character_flag = is_the_gringo
+		}
+		has_global_flag = justo_war_one
+	}
+	
+	immediate = {
+		if = {
+			limit = {
+				has_character_flag = is_prelate_envoy
+			}
+			e_mexico = { #fires for anyone at war with the Benemerito
+				holder_scope = {
+					narrative_event = { id = justo.42 }
+					any_current_enemy = {
+						narrative_event = { id = justo.42 }
+					}
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				has_landed_title = d_cristo_rey
+			}
+			e_mexico = { #fires for anyone at war with the Benemerito
+				holder_scope = {
+					narrative_event = { id = justo.42 }
+					any_current_enemy = {
+						narrative_event = { id = justo.43 }
+					}
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				has_character_flag = is_the_gringo
+			}
+			e_mexico = { #fires for anyone at war with the Benemerito
+				holder_scope = {
+					narrative_event = { id = justo.48 }
+					any_current_enemy = {
+						narrative_event = { id = justo.48 }
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				prisoner = yes
+			}
+			death = {
+				death_reason = death_execution
+				killer = FROM
+			}
+		}
+	}
+}
+
+narrative_event = { #Death of a Commander-Bishop
+	id = justo.42
+	title = "justo.42.name"
+	desc = justo.42.desc
+	
+	is_triggered_only = yes
+
+	trigger = {
+		has_global_flag = justo_war_one
+	}
+	
+	option = {
+		name = EVTOPTA_justo42
+		trigger = {
+			religion = cristo_rey
+		}
+	}
+	option = {
+		name = EVTOPTB_justo42
+		trigger = {
+			has_landed_title = e_mexico
+		}
+	}
+	option = {
+		name = EVTOPTC_justo42
+		trigger = {
+			has_character_flag = the_justo_armas
+		}
+		random = {
+			chance = 40
+			add_trait = depressed
+		}
+	}
+	option = {
+		name = EVTOPTD_justo42
+		trigger = {
+			NOR = {
+				religion = cristo_rey
+				has_landed_title = e_mexico
+				has_character_flag = the_justo_armas
+			}
+		}
+	}
+}
+
+narrative_event = { #Death of a Prelate
+	id = justo.43
+	title = "justo.43.name"
+	desc = justo.43.desc
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		has_global_flag = justo_war_one
+	}
+	
+	option = {
+		name = EVTOPTA_justo42
+		trigger = {
+			religion = cristo_rey
+		}
+	}
+	option = {
+		name = EVTOPTB_justo42
+		trigger = {
+			has_landed_title = e_mexico
+		}
+	}
+	option = {
+		name = EVTOPTC_justo42
+		trigger = {
+			has_character_flag = the_justo_armas
+		}
+		random = {
+			chance = 40
+			add_trait = depressed
+		}
+	}
+	option = {
+		name = EVTOPTD_justo42
+		trigger = {
+			NOR = {
+				religion = cristo_rey
+				has_landed_title = e_mexico
+				has_character_flag = the_justo_armas
+			}
+		}
+	}
+}
+
+character_event = { #triggers the Benemerito's death event
+	id = justo.44
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		has_landed_title = e_mexico
+		has_global_flag = justo_war_one
+	}
+	
+	immediate = {
+		ROOT = { save_event_target_as = dead_benemerito }
+		e_mexico = { #fires for anyone at war with the Benemerito
+			holder_scope = {
+				any_war = {
+					any_attacker = {
+						narrative_event = { id = justo.45 }
+					}
+					any_defender = {
+						narrative_event = { id = justo.45 }
+					}
+				}
+			}
+		}
+	}	
+}
+
+narrative_event = { #Death of a benemerito
+	id = justo.45
+	title = "justo.45.name"
+	desc = justo.45.desc
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		has_global_flag = justo_war_one
+	}
+	
+	option = {
+		name = EVTOPTA_justo45
+		trigger = {
+			religion = cristo_rey
+		}
+	}
+	option = {
+		name = EVTOPTB_justo45
+		trigger = {
+			has_landed_title = e_mexico
+		}
+	}
+	option = {
+		name = EVTOPTC_justo45
+		trigger = {
+			has_character_flag = the_justo_armas
+		}
+	}
+	option = {
+		name = EVTOPTD_justo45
+		trigger = {
+			NOR = {
+				religion = cristo_rey
+				has_landed_title = e_mexico
+				has_character_flag = the_justo_armas
+			}
+		}
+	}
+}
+
+character_event = { #triggers The Friends Arrive
+	id = justo.46
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		OR = { #checks if ROOT is JUSTO GANG
+			has_landed_title = d_justo
+			has_landed_title = d_cristo_rey
+			has_character_flag = justo_oath
+		}
+		FROM = { location = { is_coastal = yes } } #checks if province is coastal
+		has_global_flag = catholic_friends #checks if the friends are supposed to spawn in the first place
+		has_global_flag = justo_war_one #checks if the war began
+		NOT = { has_global_flag = friends_arrived }  #checks if the friends arrived
+	}
+	
+	immediate = {
+		e_mexico = { #fires for anyone at war with the Benemerito
+			holder_scope = {
+				any_war = {
+					any_attacker = {
+						narrative_event = { id = justo.47 }
+					}
+					any_defender = {
+						narrative_event = { id = justo.47 }
+					}
+				}
+			}
+		}
+		FROM = { location = { save_event_target_as = friends_arriving_location } }
+		set_global_flag = friends_arrived
+	}
+}
+
+narrative_event = { #The Friends Arrive
+	id = justo.47
+	title = "justo.47.name"
+	desc = justo.47.desc
+	
+	only_playable = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		has_global_flag = catholic_friends #checks if the friends are supposed to spawn in the first place
+		has_global_flag = justo_war_one #checks if the war began
+	}
+		
+	option = {
+		name = EVTOPTA_justo47
+		trigger = {
+			has_character_flag = the_justo_armas
+		}
+		d_friends = {
+			hidden_effect = {
+				while = {
+					limit = {
+						check_variable = {
+							which = friendstroops
+							value >= 1
+						}
+					}
+					subtract_variable = {
+						which = friendstroops
+						value = 1
+					}
+					holder_scope = {
+						spawn_unit = {
+							owner = PREV
+							province = friends_arriving_location
+							home = PREV
+							  
+							troops = {
+								archers = { 50 50 }
+								heavy_infantry = { 25 50 }
+								knights  = { 25 25 }
+							}
+
+							attrition = 0
+				
+							maintenance_multiplier = 0.5
+						}
+					}
+				}
+			}
+			holder_scope = {
+				join_attacker_wars = c_6900449
+				if = {
+					limit = { has_character_flag = is_the_gringo }
+					save_event_target_as = the_gringo
+				}
+			}
+		}
+		event_target:the_gringo = {
+			add_friend = root
+			add_friend = prelate_envoy
+		}
+	}
+	
+	option = {
+		name = EVTOPTB_justo47
+		trigger = {
+			NOT = { has_character_flag = the_justo_armas }
+			war_with = e_mexico
+		}
+	}
+	
+	option = {
+		name = EVTOPTC_justo47
+		trigger = {
+			has_landed_title = e_mexico
+		}
+	}
+	
+	option = {
+		name = EVTOPTD_justo47
+		trigger = {
+			war_with = d_justo
+			NOT = { has_landed_title = e_mexico }
+		}
+	}
+}
+
+narrative_event = { #Death of a friend
+	id = justo.48
+	title = "justo.48.name"
+	desc = justo.48.desc
+	
+	only_playable = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		has_global_flag = justo_war_one
+	}
+	
+	option = {
+		name = EVTOPTA_justo48
+		trigger = {
+			has_character_flag = the_justo_armas
+		}
+		random = {
+			chance = 40
+			add_trait = depressed
+		}
+	}
+	
+	option = {
+		name = EVTOPTB_justo48
+		trigger = {
+			NOT = { has_character_flag = the_justo_armas }
+			war_with = e_mexico
+		}
+	}
+	
+	option = {
+		name = EVTOPTC_justo48
+		trigger = {
+			has_landed_title = e_mexico
+		}
+	}
+	
+	option = {
+		name = EVTOPTD_justo48
+		trigger = {
+			war_with = d_justo
+			NOT = { has_landed_title = e_mexico }
+		}
+	}
+}
+
+narrative_event = { #Death of a pretender
+	id = justo.49
+	title = "justo.49.name"
+	desc = justo.49.desc
+	
+	only_playable = yes
+	religion_group = christian
+	is_triggered_only = yes
+	major = yes
+	
+	trigger = {
+		has_character_flag = the_justo_armas
+	}
+	
+	immediate = {
+		cristo_rey = {
+			religion_authority = {
+				modifier = prelate_failure
+			}
+		}
+		clr_global_flag  = justo_war_one
+	}
+	
+	option = {
+		name = EVTOPTA_justo49
+		trigger = {
+			religion = cristo_rey
+		}
+		custom_tooltip = {
+			text = EVTOPTA_justo7_TT
+		}
+	}
+	
+	option = {
+		name = EVTOPTB_justo49
+		trigger = {
+			has_landed_title = e_mexico
+		}
+	}
+	
+	option = {
+		name = EVTOPTC_justo49
+		trigger = {
+			father = { has_character_flag = the_justo_armas }
+		}
+	}
+	
+	option = {
+		name = EVTOPTD_justo49
+		trigger = {
+			NOR = {
+				religion = cristo_rey
+				has_landed_title = e_mexico
+				father = { has_character_flag = the_justo_armas }
+			}
+		}
+	}	
+}
+
+narrative_event = { #Su Alteza Imperial or Justo Armas Victorious
+	id = justo.50
+	title = { #Echoes
+		trigger = {
+			has_global_flag = catholic_friends
+		}
+		text = "justo.50.name_A"
+	}
+	title = { #Whispers
+		trigger = {
+			NOT = { has_global_flag = catholic_friends }
+		}
+		text = "justo.50.name_B"
+	}
+	
+	desc = {
+		trigger = {
+			has_global_flag = catholic_friends
+		}
+		text = "justo.50.desc_A"
+	}
+	desc = {
+		trigger = {
+			NOT = { has_global_flag = catholic_friends }
+		}
+		text = "justo.50.desc_B"
+	}
+	
+	is_triggered_only = yes
+	major = yes
+	
+	trigger = {
+		has_global_flag = justo_war_one
+	}
+	
+	immediate = {
+		clr_global_flag = justo_war_one
+		d_friends = {
+			holder_scope = {
+				save_event_target_as = the_gringo #needs to be done once again due to event chain break
+			}
+		}
+		any_realm_character = {
+			limit = { has_character_flag = is_prelate_envoy }
+			save_event_target_as = prelate_envoy
+		}
+	}
+	
+	option = {
+		name = EVTOPTA_justo50
+		trigger = {
+			religion = cristo_rey
+		}
+	}
+	
+	option = {
+		name = EVTOPTB_justo50
+		trigger = {
+			de_jure_liege_or_above = e_mexico
+		}
+	}
+	
+	option = {
+		name = EVTOPTC_justo50
+		trigger = {
+			has_character_flag = the_justo_armas
+		}
+		narrative_event = { id = justo.51 days = 1}
+		if = {
+			limit = { has_global_flag = catholic_friends }
+			set_defacto_vassal = d_friends
+		}
+		any_independent_ruler = {
+			limit = {
+				has_character_flag = justo_oath
+			}
+			set_defacto_liege = e_mexico
+		}
+	}
+	
+	option = {
+		name = EVTOPTD_justo50
+		trigger = {
+			has_global_flag = catholic_friends
+			religion = catholic
+		}
+	}
+	
+	option = {
+		name = EVTOPTE_justo50
+		trigger = {
+			NOR = {
+				religion = cristo_rey
+				de_jure_liege_or_above = e_mexico
+				has_character_flag = the_justo_armas
+				AND = {
+					has_global_flag = catholic_friends
+					religion = catholic
+				}
+			}
+		}
+	}
+}
+
+narrative_event = { #with Friends Like This or A Promise to Keep
+	id = justo.51 
+	title = {
+		trigger = {
+			has_global_flag = catholic_friends
+		}
+		text = "justo.51.name_A"
+	}
+	title = {
+		trigger = {
+			NOT = { has_global_flag = catholic_friends }
+		}
+		text = "justo.51.name_B"
+	}
+	
+	desc = {
+		trigger = {
+			has_global_flag = catholic_friends
+		}
+		text = "justo.51.desc_A"
+	}
+	desc = {
+		trigger = {
+			NOT = { has_global_flag = catholic_friends }
+		}
+		text = "justo.51.desc_B"
+	}
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_justo51
+		religion = cristo_rey
+		if = {
+			limit = { has_global_flag = catholic_friends }
+			event_target:the_gringo = {
+				add_rival = ROOT
+				add_rival = event_target:prelate_envoy
+			}
+			custom_tooltip = {
+				text = EVTOPTA_justo51_TT #the Friends of Mexico occupy Veracruz! This looks like trouble...
+				hidden_effect = {
+					if = {
+						limit = { completely_controls = d_veracruz }
+						d_veracruz = {
+							holder_scope = {
+								any_demesne_title = {
+									usurp_title = event_target:the_gringo
+								}
+							}
+						}
+					}
+					set_global_flag = friends_rebel
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = EVTOPTB_justo51
+		trigger = {
+			has_global_flag = catholic_friends
+		}
+		religion = catholic
+		event_target:prelate_envoy = {
+			add_rival = ROOT
+			add_rival = event_target:the_gringo
+		}
+		custom_tooltip = {
+			text = EVTOPTB_justo51_TT
+			hidden_effect = {
+				activate_title = { title = d_friends_mercenary status = yes }
+				d_friends = {
+					holder_scope = {
+						grant_title = d_friends_mercenary
+						destroy_landed_title = d_friends
+					}
+				}
+				set_global_flag = prelate_rebel
+			}
+		}
+		custom_tooltip = {
+			text = EVTOPTB_justo51_B_TT
+			hidden_effect = {
+				set_global_flag = prelate_rebel
+			}
+		}
+	}
+	
+	option = {
+		name = {
+			text = EVTOPTC_justo51_A
+			trigger = {
+				has_global_flag = catholic_friends
+			}
+		}
+		name = {
+			text = EVTOPTC_justo51_B
+			trigger = {
+				NOT = { has_global_flag = catholic_friends }
+			}
+		}
+		add_trait = zealous
+		
+		event_target:prelate_envoy = {
+			add_rival = ROOT
+		}
+		custom_tooltip = {
+			text = EVTOPTB_justo51_B_TT
+			hidden_effect = {
+				set_global_flag = prelate_rebel
+			}
+		}
+		
+		if = {
+			limit = { has_global_flag = catholic_friends }
+			event_target:the_gringo = {
+				add_rival = ROOT
+				add_rival = event_target:prelate_envoy
+			}
+			custom_tooltip = {
+				text = EVTOPTA_justo51_TT #the Friends of Mexico occupy Veracruz! This looks like trouble...
+				hidden_effect = {
+					if = {
+						limit = { completely_controls = d_veracruz }
+						d_veracruz = {
+							holder_scope = {
+								any_demesne_title = {
+									usurp_title = event_target:the_gringo
+								}
+							}
+						}
+					}
+					set_global_flag = friends_rebel
+				}
+			}
+		}
+	}
+	
+	after = {
+		character_event = { id = justo.52 } #either fires or ends the chain depending on the chosen option
+	}
+}
+
+character_event = { #either fires a war or the last event
+	id = justo.52
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		if = {
+			limit = { has_global_flag = friends_rebel }
+			d_friends = {
+				holder_scope = {
+					add_claim = e_mexico
+					create_title = {
+						tier = EMPEROR
+						landless = yes
+						temporary = yes
+						culture = THIS
+						name = "American Revenge"
+						holder = THIS
+					}
+					e_mexico = {
+						holder_scope = {
+							reverse_war = {
+								target = PREVPREVPREV
+								thirdparty_title = PREV
+								casus_belli = claim
+							}
+						}
+					}
+				}
+			}
+			if = { #if the prelate is not rebelling then he helps you beat the pesky americans
+				limit = { NOT = { has_global_flag = prelate_rebel } }
+				d_cristo_rey = {
+					holder_scope = {
+						join_defender_wars = ROOT
+					}
+				}
+			}
+		}
+		
+		if = {
+			limit = { has_global_flag = prelate_rebel }
+			set_defacto_vassal = d_cristo_rey
+			d_cristo_rey = {
+				holder_scope = {
+					add_claim = e_mexico
+					create_title = {
+						tier = EMPEROR
+						landless = yes
+						temporary = yes
+						culture = THIS
+						name = "The Prelate Faction"
+						holder = THIS
+					}
+					e_mexico = {
+						any_realm_character = {
+							limit = { religion = cristo_rey }
+							set_defacto_liege = PREVPREV
+						}
+					}
+					e_mexico = {
+						holder_scope = {
+							reverse_war = {
+								target = PREVPREVPREV
+								thirdparty_title = PREV
+								casus_belli = claim
+							}
+						}
+					}
+				}
+			}
+		}
+		
+		if = {
+			limit = { 
+				NOR = {
+					has_global_flag = prelate_rebel
+					has_global_flag = friends_rebel
+				} 
+			}
+			narrative_event = { id = justo.53 days = 1 }
+		}
+	}
+}
+
+narrative_event = {
+	id = justo.53
+	title = "justo.53.name"
+	desc = justo.53.desc
+	
+	is_triggered_only = yes
+	major = yes
+	
+	option = {
+		name = EVTOPTA_justo53
+		trigger = {
+			religion = cristo_rey
+			independent = yes
+			de_jure_liege = e_mexico
+		}
+	}
+	option = {
+		name = EVTOPTB_justo53
+		trigger = {
+			religion = cristo_rey
+			NOR = {
+				independent = yes
+				de_jure_liege = e_mexico
+			}
+		}
+	}
+	option = {
+		name = EVTOPTC_justo53
+		trigger = {
+			religion = sacred_heart
+			independent = yes
+		}
+	}
+	option = {
+		name = EVTOPTD_justo53
+		trigger = {
+			NOT = { religion = cristo_rey }
+			de_facto_liege_or_above = e_mexico
+		}
+	}
+	option = {
+		name = EVTOPTE_justo53
+		trigger = {
+			has_character_flag = the_justo_armas
+		}
+		if = {
+			limit = { has_dlc = "Holy Fury" }
+			create_bloodline = {
+				type = just_armas
+			}
+		}
+	}
+	option = {
+		name = EVTOPTF_justo53
+		trigger = {
+			NOR = {
+				religion = cristo_rey
+				religion = sacred_heart
+				has_landed_title = e_mexico
+				de_facto_liege_or_above = e_mexico
+			}
+		}
+	}
+}
