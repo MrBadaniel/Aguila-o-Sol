@@ -275,7 +275,7 @@ narrative_event = { #an offer you can refuse
 		custom_tooltip = {
 			text = EVTOPTA_justo6_TT
 			hidden_effect = {
-				k_justo = {
+				d_justo = {
 					grant_title = ROOT
 				}
 				d_salvador = { 
@@ -1057,11 +1057,17 @@ character_event = { #the event that will fire the request events
 		}
 		if = {
 			limit = { has_global_flag = catholic_friends }
+			d_friends = {
+				set_variable = {
+					which = friendstroops
+					value = 0
+				}
+			}
 			any_playable_ruler	= {
 				limit = {
 					religion = catholic
 				}
-				narrative_event = { id = justo.36 } #Pope asks for support
+				narrative_event = { id = justo.36 months = 6 random = 29 } #Pope asks for support
 			}
 		}
 	}
@@ -1270,7 +1276,7 @@ narrative_event = { #the need for more Dorados
 		custom_tooltip = {
 			text = EVTOPT_justo35_TT
 			hidden_effect = {
-				set_character_flag = preparing_for_war_benemerito
+				set_global_flag = preparing_for_war_benemerito
 			}
 		}
 	}
@@ -1344,10 +1350,14 @@ narrative_event = { #Catholic Friends of Mexico Ask for a Donation
 								knights  = { 25 25 }
 							}
 
-							attrition = 1.0
+							attrition = 0
 			
 							maintenance_multiplier = 0.5
 						}
+					}
+					change_variable = {
+						which = friendstroops
+						value = 1
 					}
 				}
 			}
@@ -1382,7 +1392,7 @@ narrative_event = { #Catholic Friends of Mexico Ask for a Donation
 			}
 			save_event_target_as = commander_to_send
 		}
-		d_cristo_rey = {
+		d_friends = {
 			holder_scope = {
 				event_target:commander_to_send = {
 					move_character = PREV
@@ -1392,7 +1402,7 @@ narrative_event = { #Catholic Friends of Mexico Ask for a Donation
 		custom_tooltip = {
 			text = EVTOPTB_justo34_TT
 			hidden_effect = {
-				d_cristo_rey = {
+				d_friends = {
 					holder_scope = {
 						spawn_unit = {
 							owner = PREV
@@ -1401,12 +1411,11 @@ narrative_event = { #Catholic Friends of Mexico Ask for a Donation
 						  
 							troops = {
 								archers = { 50 50 }
-								light_infantry = { 100 100 }
-								heavy_infantry = { 25 25 }
-								light_cavalry = { 25 25 }
+								heavy_infantry = { 25 50 }
+								knights  = { 25 25 }
 							}
 
-							attrition = 1.0
+							attrition = 0
 			
 							maintenance_multiplier = 0.5
 						}
@@ -1465,7 +1474,7 @@ narrative_event = { #JUSTO ARMAS!!!!!
 	}
 	
 	immediate = {
-		set_global_flag = justo_war
+		set_global_flag = justo_war_one
 		c_6900449 = {
 			spawn_unit = {
 				province = 1767
@@ -1480,7 +1489,7 @@ narrative_event = { #JUSTO ARMAS!!!!!
 					light_cavalry = { 100 100 }
 				}
 				
-				attrition = 0.25
+				attrition = 0
 			}
 			war = {
 				target = e_mexico
@@ -1493,10 +1502,53 @@ narrative_event = { #JUSTO ARMAS!!!!!
 				join_attacker_wars = c_6900449
 			}
 		}
-		d_friends = {
-			holder_scope = {
-				join_attacker_wars = c_6900449
+		any_independent_ruler = {
+			limit = { has_character_flag = justo_oath }
+			join_attacker_wars = c_6900449
+		}
+		if = {
+			limit = {
+				OR = {
+					d_justo = { holder_scope = { ai = yes } }	
+				}
 			}
+			d_friends = {
+				hidden_effect = {
+					while = {
+						limit = {
+							check_variable = {
+								which = friendstroops
+								value >= 1
+							}
+						}
+						subtract_variable = {
+							which = friendstroops
+							value = 1
+						}
+						holder_scope = {
+							spawn_unit = {
+								owner = PREV
+								province = PREV
+								home = PREV
+								  
+								troops = {
+									archers = { 50 50 }
+									heavy_infantry = { 25 50 }
+									knights  = { 25 25 }
+								}
+
+								attrition = 0
+					
+								maintenance_multiplier = 0.5
+							}
+						}
+					}
+				}
+				holder_scope = {
+					join_attacker_wars = c_6900449
+				}
+			}
+			set_global_flag = friends_arrived
 		}
 	}
 	
@@ -1521,9 +1573,13 @@ narrative_event = { #JUSTO ARMAS!!!!!
 			add_friend = root
 			add_friend = the_gringo
 		}
-		event_target:the_gringo = {
-			add_friend = root
-			add_friend = prelate_envoy
+		if = {
+			limit = { 
+				e_mexico = { NOT = { any_realm_province = { is_coastal = yes } } } #Mexico has no coastal provinces
+			}
+			custom_tooltip = {
+				text = EVTOPTC_justo40_TT
+			}
 		}
 	}
 	option = {
@@ -2138,7 +2194,7 @@ narrative_event = { #with Friends Like This or A Promise to Keep
 	}
 	
 	is_triggered_only = yes
-	
+
 	option = {
 		name = EVTOPTA_justo51
 		religion = cristo_rey

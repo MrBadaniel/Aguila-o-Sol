@@ -3065,7 +3065,7 @@ mesoamerican_gods = {
 		high_god_name = GOD_SOL_INVICTA 
 		
 		god_names = {
-			GOD_EL_ALTISIMO GOD_CURICAUERI GOD_ONORUAME GOD_THE_TRINITY GOD_THE_BLESSED_VIRGIN GOD_TATAROQUITO
+			GOD_EL_ALTISIMO GOD_THE_TRINITY GOD_TATAROQUITO GOD_ELIAS GOD_JESUCRISTO
 		}
 		
 		evil_god_names = {
@@ -3110,9 +3110,12 @@ mesoamerican_gods = {
 		can_grant_claim = yes
 		attacking_same_religion_piety_loss = yes
 		
-		crusade_name = ILUSTRACION
+		crusade_name = ILUMINACION
+		use_new_crusade = yes
+		crusade_cb = new_crusade
+		
 		scripture_name = EL_ULTIMO_TESTAMENTO
-		priest_title = BAJADIOS
+		priest_title = PASTOR
 		
 		religious_clothing_head = 3
 		religious_clothing_priest = 2
