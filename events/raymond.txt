@@ -169,6 +169,7 @@ character_event = {
 					limit = {
 						is_female = yes
 						is_married = no
+						NOT = { has_character_flag = richies_halfsister }
 					}
 					add_spouse = ROOT
 				}
