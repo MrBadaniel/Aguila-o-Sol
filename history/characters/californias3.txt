@@ -5844,8 +5844,9 @@
 
 1802218={
 	name="Violet"
-	culture=valleyan
+	culture=angeleno
 	religion=nazarene
+	dynasty=1850057
 	female=yes
 	trait=martial_cleric
 	trait=nz_presbyter
@@ -5853,7 +5854,49 @@
 	trait=erudite
 	trait=kind
 	trait=slothful
-	father=2500067
+	father=1910135
 	2611.1.1={birth=yes}
 	2645.8.3={death={death_reason=death_childbirth}}
 }
+
+1802219={
+	name="Chano"
+	culture=haida
+	religion=nazarene
+	dynasty=1851178 #Soledad
+	trait=brilliant_strategist
+	trait=nz_acolyte
+	trait=shrewd
+	trait=peasant_leader
+	trait=brave
+	trait=diligent
+	trait=deceitful
+	2579.8.1={birth=yes
+	culture=pinoy
+	}
+	2640.1.8={death=yes}
+}
+
+1802220={
+	name="Bongbong"
+	culture=haida
+	religion=nazarene
+	dynasty=1851178 #Soledad
+	trait=rough_terrain_leader
+	trait=tough_soldier
+	trait=nz_acolyte
+	trait=trusting
+	trait=wroth
+	trait=stubborn
+	trait=diligent
+	trait=brave
+	father=1802219
+	2601.8.1={birth=yes
+	culture=pinoy
+	}
+	2622.5.14={death={
+			death_reason=death_battle #Murdered in combat.
+			killer=1802158
+		}
+	}
+} 
