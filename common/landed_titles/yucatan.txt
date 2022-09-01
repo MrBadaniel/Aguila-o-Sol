@@ -687,9 +687,7 @@ e_yucatan = {
 				b_xpujil_CM = {}
 			}
 		}
-		
 		d_laguna_de_terminos = {
-		
 			color={ 80 100 240 }
 			color2={ 255 255 255 }
 
@@ -699,11 +697,11 @@ e_yucatan = {
 				color={ 39 97 205 }
 				color2={ 255 255 255 }
 			
-				b_ciudad_del_carmen_CM = {}
-				b_el_zacatal_CM = {}
-				b_puerto_real_CM = {}
-				b_quinta_chilla_CM = {}
-				b_boca_nueva_CM = {}
+			b_ciudad_del_carmen_CM = {}
+			b_el_zacatal_CM = {}
+			b_puerto_real_CM = {}
+			b_quinta_chilla_CM = {}
+			b_boca_nueva_CM = {}
 			}
 			
 			c_carmen = { # 1819
@@ -732,7 +730,6 @@ e_yucatan = {
 					quichean = "Hol tun"
 				}
 			}
-			
 			c_palizada = {
 				color={ 55 81 185 }
 				color2={ 255 255 255 }
@@ -745,17 +742,10 @@ e_yucatan = {
 				b_chacah_CM = {}
 				b_el_chinal_CM = {}
 			}
+		}	
+			
 
-			c_isla_del_carmen = { # 2271
-				color={ 39 97 205 }
-				color2={ 255 255 255 }
-				
-				b_ciudad_del_carmen_CM = {}
-				b_puerto_real_CM = {}
-				b_quinta_chilla_CM = {}
-			}
-		}
-
+		
 		d_tabasco = {
 			color={ 89 128 120 }
 			color2={ 255 255 255 }
@@ -1441,15 +1431,28 @@ e_yucatan = {
 					cholano = "Chachaclúm"
 				}
 				b_san_andres_PT = {}
-
+				b_la_libertad_PT = {
+					yucateco = "Sacluk"
+					lacandon = "Sacluk"
+					quichean = "Sacluk"
+					cholano = "Sacluk"
+				}
 			}
 			c_poptun = { # 1826
 				color={ 97 156 121 }
 				color2={ 255 255 255 }
 	
 				b_poptun_PT = {}
-				b_nuevo_machaquila_PT = {}
+				b_el_chal_PT = {}
+				b_machaquila_PT = {}
+				b_nuevo_horizonte_PT = {}
 				b_san_luis_PT = {}
+				b_dolores_PT = {
+					yucateco = "Ixkún"
+					lacandon = "Ixkún"
+					quichean = "Ixkún"
+					cholano = "Ixkún"
+				}
 				b_chacte_PT = {}
 				b_santa_cruz_PT = {}
 			}
@@ -1479,6 +1482,7 @@ e_yucatan = {
 					cholano = "Sa'aal"
 				}
 				b_nakum_PT = {}
+				b_melchor_de_mencos_PT = {}
 				b_zotz_PT = {
 					yucateco = "Zodz"
 					quichean = "Sotz'"
@@ -1546,9 +1550,10 @@ e_yucatan = {
 				b_pirul_CP	= {}
 			}
 		}
-	}
+	
 		
-		d_chetumal = {
+		
+		d_corozal = {
 			color={ 100 154 123 }
 			color2={ 255 255 255 }
 
@@ -1619,7 +1624,6 @@ e_yucatan = {
 					kriol = "Cerros"
 				}
 			}
-			
 			c_ambergris = { # 2299
 				color={ 255 127 182 }
 				color2={ 255 255 255 }
@@ -2005,15 +2009,14 @@ e_yucatan = {
 				color={ 64 110 161 }
 				color2={ 255 255 255 }
 	
-				b_sayaxche_PT = {}#c_sayaxche
-				b_itzan_PT = {}
-				b_aguateca_PT = {}
-				b_el_jordan_PT = {}#c_sayaxche
+				b_sayaxche_PT = {}
+				b_benemerito_de_las_americas_CP = {}
+				b_las_cruces_PT = {}
+				b_seibal_PT = {}
+				b_el_jordan_PT = {}
 				b_las_pozas_PT = {}
-				#b_lacanja_chansayab_PT = {}#c_montes_azules
-				#b_benemerito_de_las_americas_CP = {}#c_lacatun
-				#b_las_cruces_PT = {}#c_las_cruces
-				#b_seibal_PT = {}#c_las_cruces
+				b_lacanja_chansayab_PT = {}
+				b_la_reinita_PT = {}
 			}
 			c_lacandon = { # 1828
 				color={ 19 123 149 }
@@ -2068,3 +2071,4 @@ e_yucatan = {
 			}
 		}
 	}
+ }
