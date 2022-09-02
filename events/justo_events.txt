@@ -2316,6 +2316,8 @@ character_event = { #either fires a war or the last event
 	is_triggered_only = yes
 	
 	immediate = {
+		set_global_flag = justo_war_two
+	
 		if = {
 			limit = { has_global_flag = friends_rebel }
 			d_friends = {
@@ -2395,13 +2397,25 @@ character_event = { #either fires a war or the last event
 	}
 }
 
-narrative_event = {
+###################################################
+###################ENDING EVENTS###################
+###################################################
+
+narrative_event = { #El Justo Cristero
 	id = justo.53
 	title = "justo.53.name"
 	desc = justo.53.desc
 	
 	is_triggered_only = yes
 	major = yes
+	
+	trigger = {
+		NOT = { has_global_flag = catholic_friends }
+	}
+	
+	immediate = {
+		clr_global_flag = justo_war_two
+	}
 	
 	option = {
 		name = EVTOPTA_justo53
@@ -2455,6 +2469,73 @@ narrative_event = {
 				religion = sacred_heart
 				has_landed_title = e_mexico
 				de_facto_liege_or_above = e_mexico
+			}
+		}
+	}
+}
+
+narrative_event = { #Viva Cristo Rey
+	id = justo.54
+	title = "justo.54.name"
+	desc = justo.54.desc
+	
+	is_triggered_only = yes
+	major = yes
+	
+	trigger = {
+		NOT = { has_global_flag = catholic_friends }
+	}
+	
+	immediate = {
+		clr_global_flag = justo_war_two
+	}
+	
+	option = {
+		name = EVTOPTA_justo54
+		trigger = {
+			has_character_flag = the_justo_armas
+		}
+	}
+	option = {
+		name = EVTOPTB_justo54
+		trigger = {
+			religion = cristo_rey
+			independent = yes
+		}
+	}
+	option = {
+		name = EVTOPTC_justo54
+		trigger = {
+			religion = cristo_rey
+			de_facto_liege_or_above = e_mexico
+			ai = yes
+		}
+	}
+	option = { #makes non-ai character emperor
+		name = EVTOPTC_justo54
+		trigger = {
+			religion = cristo_rey
+			de_facto_liege_or_above = e_mexico
+			ai = no
+		}
+		e_mexico = {
+			grant_title = ROOT
+		}
+	}
+	option = {
+		name = EVTOPTD_justo54
+		trigger = {
+			NOT = { religion = cristo_rey }
+			de_facto_liege_or_above = e_mexico
+		}
+	}
+	option = {
+		name = EVTOPTE_justo54
+		trigger = {
+			NOR = {
+				religion = cristo_rey
+				de_facto_liege_or_above = e_mexico
+				has_character_flag = the_justo_armas
 			}
 		}
 	}
