@@ -194,7 +194,20 @@
 4401163 = { name="Téllez" culture=occidental }   # basically clones from californiano. Needs work
 4401164 = { name="Rosales" culture=occidental }
 4401165 = { name="el Toro" culture=occidental }
-4401166 = { name="Estrada" culture=occidental }
+4401166 = { name="Estrada" culture=occidental 
+	coat_of_arms = {
+		religion = voodoo
+		template = 0
+		layer = {
+			texture = 2
+			texture_internal = 9
+			emblem = 0
+			color = 0
+			color = 0
+			color = 0
+		}
+	}
+}
 4401167 = { name="Moreno" culture=occidental }
 4401168 = { name="Arce" culture=occidental }
 4401169 = { name="Romero" culture=occidental }
@@ -224,18 +237,6 @@
 4401193 = { name="Miranda" culture=occidental }
 4401194 = { name="Mendoza" culture=occidental }
 4401195 = { name="Estrada" culture=occidental 
-	coat_of_arms = {
-		religion = voodoo
-		template = 0
-		layer = {
-			texture = 2
-			texture_internal = 9
-			emblem = 0
-			color = 0
-			color = 0
-			color = 0
-		}
-	}
 }
 4401196 = { name="Dominguez" culture=occidental }
 4401197 = { name="Calderón" culture=occidental }
