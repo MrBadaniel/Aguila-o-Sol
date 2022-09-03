@@ -191,6 +191,394 @@ character_event = {
 }
 
 character_event = {
+	id = raymond.7
+	desc = "EVTDESC_raymond7"
+	picture = GFX_evt_eavesdropping
+	border = GFX_event_normal_frame_religion
+	prisoner = no
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPT_raymondCourtierHunt"
+		hidden_tooltip = {
+			character_event = { id = raymond.8 days = 30 }
+		}
+	}
+}
+
+character_event = {
+	id = raymond.8
+
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		random_list = {
+			50 = { character_event = { id = raymond.9 } }
+			25 = { character_event = { id = raymond.10 } }
+			25 = { character_event = { id = raymond.11 } }
+		}
+	}
+}
+
+character_event = {
+	id = raymond.9
+	desc = "EVTDESC_raymond9"
+	picture = GFX_evt_eavesdropping
+	border = GFX_event_normal_frame_religion
+	prisoner = no
+	is_triggered_only = yes
+	option = {
+		name = "EVTOPT_ZKCourtierHuntContinue"
+		hidden_tooltip = {
+			character_event = { id = raymond.8 days = 30 }
+		}
+		ai_chance = { factor = 10 }
+	}
+	option = {
+		name = "EVTOPT_RYCourtierHuntStop"
+		add_trait = depressed
+		ai_chance = { factor = 1 }
+	}
+}
+
+character_event = {
+	id = raymond.10
+	desc = "EVTDESC_raymond10"
+	picture = GFX_evt_court_physician
+	border = GFX_event_normal_frame_religion
+	prisoner = no
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPT_RYKCourtierArrived"
+		hidden_tooltip = {
+			character_event = { id = zakariyya.12 days = 30 }
+		}	
+		create_character = {
+			culture = battleborn
+			dynasty = none
+			religion = nazarene
+			age = 48
+			add_trait = skilled_tactician
+			add_trait = nz_presbyter 
+			add_trait = diligent
+			add_trait = patient
+			add_trait = brave
+			attributes = {
+				martial = 10
+			}
+		}
+		new_character = {
+			character_event = { id = misc.3 } # Diversity
+			character_event = { id = misc.4 } # Physique
+			save_event_target_as = true_witness_in_christ
+		}
+	}
+}
+
+character_event = {
+	id = raymond.11
+	desc = "EVTDESC_raymond10"
+	picture = GFX_evt_court_physician
+	border = GFX_event_normal_frame_religion
+	prisoner = no
+	is_triggered_only = yes
+	option = {
+		name = "EVTOPT_RYKCourtierArrived"
+		hidden_tooltip = {
+			character_event = { id = zakariyya.15 days = 30 }
+		}	
+		create_character = {
+			culture = battleborn
+			dynasty = none
+			religion = nazarene
+			age = 48
+			add_trait = skilled_tactician
+			add_trait = nz_presbyter 
+			add_trait = diligent
+			add_trait = patient
+			add_trait = brave
+			attributes = {
+				intrigue = 10
+			}
+		}
+		new_character = {
+			character_event = { id = misc.3 } # Diversity
+			character_event = { id = misc.4 } # Physique
+			save_event_target_as = roday_spy
+		}
+	}
+}
+
+character_event = {
+	id = raymond.12
+	desc = "EVTDESC_raymond12"
+	picture = GFX_evt_bad_news
+	border = GFX_event_normal_frame_religion
+	prisoner = no
+	is_triggered_only = yes
+	option = {
+		name = "EVTOPT_rytrust"
+		hidden_tooltip = {
+			character_event = { id = raymond.13 days = 5 }
+		}	
+		ai_chance = { factor = 6 }
+	}
+	option = {
+		name = "EVTOPT_rycondemn"
+		hidden_tooltip = {
+			character_event = { id = raymond.14 days = 5 }
+		}
+		ai_chance = { factor = 4 }	
+	}
+}
+
+narrative_event = {
+	id = raymond.13
+	title= EVTTITLE_rytrustedwitness
+	desc = "EVTDESC_raymond13"
+	picture = GFX_evt_sway_hf
+	border = GFX_event_narrative_frame_religion
+	prisoner = no
+	is_triggered_only = yes
+	option = {
+		name = "EVTOPT_rytrustwitness"
+		hidden_tooltip = {
+			character_event = { id = raymond.18 days = 5 }
+		}	
+	}
+}
+
+narrative_event = {
+	id = raymond.14
+	title= EVTTITLE_rycondemnedwitness
+	desc = "EVTDESC_raymond14"
+	picture = GFX_evt_dead_body_hf
+	border = GFX_event_narrative_frame_religion
+	prisoner = no
+	is_triggered_only = yes
+	option = {	
+		name = "EVTOPT_rycondemnedwitness"
+		add_trait = depressed
+		event_target:true_witness = {
+			death = { death_reason = death_murder_unknown }
+		}
+	}
+}
+
+character_event = {
+	id = raymond.15
+	desc = "EVTDESC_raymond12"
+	picture = GFX_evt_bad_news
+	border = GFX_event_normal_frame_religion
+	prisoner = no
+	is_triggered_only = yes
+	option = {
+		name = "EVTOPT_rycondemn"
+		hidden_tooltip = {
+			character_event = { id = raymond.17 days = 5 }
+		}	
+		ai_chance = { factor = 6 }		
+	}
+	option = {
+		name = "EVTOPT_rytrust"
+		hidden_tooltip = {
+			character_event = { id = raymond.16 days = 5 }
+		}
+		ai_chance = { factor = 4 }		
+	}
+}
+
+narrative_event = {
+	id = raymond.16
+	title= EVTTITLE_rytrustedspy
+	desc = "EVTDESC_raymond16"
+	picture = GFX_evt_cornered_duel_hf
+	border = GFX_event_narrative_frame_religion
+	prisoner = no
+	is_triggered_only = yes
+	option = {
+		name = "EVTOPT_rytrustspy"
+		death = { death_reason = death_murder_unknown }
+		event_target:carmine_spy = {
+			leave_court_effect = yes
+		}
+	}
+}
+
+narrative_event = {
+	id = raymond.17
+	title= EVTTITLE_rycondemnedspy
+	desc = "EVTDESC_raymond17"
+	picture = GFX_evt_assassination
+	border = GFX_event_narrative_frame_religion
+	prisoner = no
+	is_triggered_only = yes
+	option = {	
+		name = "EVTOPT_rycondemnedspy"
+		event_target:carmine_spy = {
+			death = { death_reason = death_battle_duel }
+		}
+		hidden_tooltip = {
+			character_event = { id = raymond.18 days = 5 }
+		}	
+	}
+}
+
+character_event = {
+	id = raymond.18
+	desc = "EVTDESC_raymond18"
+	picture = GFX_evt_war_planning
+	border = GFX_event_normal_frame_religion
+	prisoner = no
+	is_triggered_only = yes
+	option = {
+		name = "EVTOPT_ryquiet"
+		add_claim = k_socal
+		ai_chance = { factor = 5 }		
+	}
+	option = {
+		name = "EVTOPT_rywar"
+		grant_title_no_opinion = d_mojave
+		add_claim = k_socal
+		k_socal = {
+			holder_scope = {	
+				reverse_war = {
+					target = ROOT
+					thirdparty_title = PREV
+					casus_belli = claim
+				}
+			}
+		}
+		spawn_unit = {
+			character = c_1836112
+			province = c_barstow
+			home = c_barstow
+			troops = {
+				light_infantry = { 1100 1100 }
+				heavy_infantry = { 925 925 }
+				light_cavalry = { 360 360 }
+				pikemen = { 150 150 }
+			}
+			attrition = 0.5
+			maintenance_multiplier = 0.25
+			disband_on_peace = yes
+		}
+		spawn_unit = {
+			character = c_1836112
+			province = c_blythe
+			home = c_blythe
+			troops = {
+				light_infantry = { 450 450 }
+				heavy_infantry = { 125 125 }
+				light_cavalry = { 20 20 }
+				pikemen = { 75 75 }
+			}
+			attrition = 0.5
+			maintenance_multiplier = 0.25
+			disband_on_peace = yes
+		}
+		c_blythe = {
+				holder_scope = { set_defacto_liege = ROOT }
+			}
+		ai_chance = {
+			factor = 4
+			modifier = {
+				factor = 10
+				has_character_flag = granfranciscoray
+			}
+		}
+		ai_chance = {
+			factor = 2
+			modifier = {
+				factor = 10
+				has_character_flag = bakomarriageray
+			}
+		}
+	}
+}
+
+character_event = {
+	id = raymond.37
+	desc = "EVTDESC_raymond37"
+	title = "EVTTITLE_raymondcarmineneutral"
+	picture = GFX_evt_flaming_skull
+	border = GFX_event_normal_frame_religion
+	prisoner = no
+	is_triggered_only = yes
+	option = {	
+		name = "EVTOPT_raymond37a"
+		ai_chance = {
+			factor = 80
+		}
+		create_title = {
+			tier = DUKE
+			landless = yes
+			temporary = yes
+			culture = joshuan
+			name = "Mojave Loyalists"
+			holder = ROOT
+		}
+		add_trait = deceitful
+		add_trait = paranoid
+		add_claim = k_socal
+		grant_title_no_opinion = d_mojave
+		k_socal = {
+			holder_scope = {	
+				reverse_war = {
+					target = ROOT
+					thirdparty_title = PREV
+					casus_belli = claim
+				}
+			}
+		}
+		spawn_unit = {
+			character = c_1836112
+			province = c_barstow
+			home = c_barstow
+			troops = {
+				light_infantry = { 975 975 }
+				heavy_infantry = { 885 885 }
+				light_cavalry = { 255 255 }
+				pikemen = { 75 75 }
+			}
+			attrition = 0.5
+			maintenance_multiplier = 0.25
+			disband_on_peace = yes
+		}
+		spawn_unit = {
+			character = c_1836112
+			province = c_blythe
+			home = c_blythe
+			troops = {
+				light_infantry = { 200 200 }
+				heavy_infantry = { 50 50 }
+				light_cavalry = { 10 10 }
+				pikemen = { 25 25 }
+			}
+			attrition = 0.5
+			maintenance_multiplier = 0.25
+			disband_on_peace = yes
+		}
+		c_blythe = {
+				holder_scope = { set_defacto_liege = ROOT }
+			}
+		ai_chance = {
+			factor = 20
+		}
+	}
+	option = {	
+		name = "EVTOPT_raymond37b"
+		add_claim = k_socal
+		ai_chance = {
+			factor = 20
+		}
+	}
+}
+
+character_event = {
 	id = raymond.38
 	desc = "EVTDESC_raymond38"
 	title = "EVTTITLE_raymondcarmineabdication"

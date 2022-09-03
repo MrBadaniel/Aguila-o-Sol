@@ -464,13 +464,6 @@ character_event = {
 				has_character_flag = bajamarriage
 			}
 		}
-		hidden_tooltip = {
-			e_california = {
-				holder_scope = {
-					character_event = { id = zakariyya.43 }
-				}
-			}
-		}
 	}
 }
 
@@ -606,6 +599,11 @@ character_event = {
 				character_event = { id = zakariyya.37 days = 1 }
 			}
 		}
+		c_barstow = {
+				holder_scope = {
+					character_event = { id = raymond.37 days = 1}
+			}
+		}
 		ai_chance = {
 			factor = 2
 		}
@@ -658,7 +656,7 @@ character_event = {
 		war = no
 	}
 	mean_time_to_happen = {
-		days = 10
+		days = 25
 	}	
 
 	option = {	
