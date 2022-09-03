@@ -275,7 +275,20 @@ letter_event = {
 							name = recently_force_converted
 							duration = 90
 							hidden = no
-					}  
+					}
 				}
+				if = { 
+					limit = { 
+						OR = {
+						trait = zealous
+						trait = devout
+						}
+					}
+					effect = {
+						flip_to_secret_religion_effect = yes
+					}
+					remove_trait = zealous
+					remove_trait = devout
+			}
 	}
 }
