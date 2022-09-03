@@ -434,7 +434,10 @@
 	trait=maimed
 	trait=imp_ex2
 	trait=scarred
+	father=1802221
+	prestige=1600
 	2636.1.11={birth=yes}
+	2656.1.11={prestige=1600}
 	2701.2.1={death=yes}
 }
 
@@ -1030,6 +1033,8 @@
 	trait=proud
 	trait=patient
 	trait=imp_ex1
+	father=1802231
+	mother=1802232
 	give_nickname=nick_the_hunter
 	2611.3.1={birth=yes}
 	2638.3.1={add_spouse=1911116}
@@ -1220,6 +1225,7 @@
 	trait=patient
 	trait=charitable
 	trait=failed_exam
+	father=1802227
 	#trait=not_evaluated
 	2622.3.1={birth=yes}
 	2644.3.1={add_spouse=1911136}
@@ -1229,11 +1235,14 @@
 1911136={
 	name="Cheryl"
 	female=yes
-	culture=bayfolk
+	culture=valleyan
+	dynasty=1941025
 	religion=cetic
 	trait=fortune_builder
 	trait=way_book
-	2622.3.1={birth=yes}
+	father=1802231
+	mother=1802232
+	2622.11.16={birth=yes}
 	2644.3.1={add_spouse=1911135}
 	2695.3.1={death=yes}
 }
