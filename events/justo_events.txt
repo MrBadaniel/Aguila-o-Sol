@@ -2098,15 +2098,6 @@ narrative_event = { #Su Alteza Imperial or Justo Armas Victorious
 	
 	immediate = {
 		clr_global_flag = justo_war_one
-		d_friends = {
-			holder_scope = {
-				save_event_target_as = the_gringo #needs to be done once again due to event chain break
-			}
-		}
-		any_realm_character = {
-			limit = { has_character_flag = is_prelate_envoy }
-			save_event_target_as = prelate_envoy
-		}
 	}
 	
 	option = {
@@ -2194,6 +2185,18 @@ narrative_event = { #with Friends Like This or A Promise to Keep
 	}
 	
 	is_triggered_only = yes
+	
+	immediate = {
+		d_friends = {
+			holder_scope = {
+				save_event_target_as = the_gringo #needs to be done once again due to event chain break
+			}
+		}
+		any_realm_character = {
+			limit = { has_character_flag = is_prelate_envoy }
+			save_event_target_as = prelate_envoy
+		}
+	}
 
 	option = {
 		name = EVTOPTA_justo51
@@ -2240,8 +2243,8 @@ narrative_event = { #with Friends Like This or A Promise to Keep
 				d_friends = {
 					holder_scope = {
 						grant_title = d_friends_mercenary
-						destroy_landed_title = d_friends
 					}
+					destroy_landed_title = THIS
 				}
 				set_global_flag = prelate_rebel
 			}
@@ -2549,7 +2552,10 @@ narrative_event = { #Viva Cristo Rey
 						NOT = { has_character_flag = new_cristero_emperor }
 					}
 				}
-				c_2302227 = { is_alive = yes } #don pelayo still alive
+				c_2302227 = { 
+					is_alive = yes 
+					religion = cristo_rey
+				} #don pelayo still alive and cristero
 			}
 			e_mexico = {
 				grant_title = c_2302227 #gives the empire for don pelayo, for osme reason
