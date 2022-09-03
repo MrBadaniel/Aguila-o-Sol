@@ -223,7 +223,20 @@
 4401192 = { name="Vasco" culture=occidental }
 4401193 = { name="Miranda" culture=occidental }
 4401194 = { name="Mendoza" culture=occidental }
-4401195 = { name="Estrada" culture=occidental }
+4401195 = { name="Estrada" culture=occidental 
+	coat_of_arms = {
+		religion = voodoo
+		template = 0
+		layer = {
+			texture = 2
+			texture_internal = 9
+			emblem = 0
+			color = 0
+			color = 0
+			color = 0
+		}
+	}
+}
 4401196 = { name="Dominguez" culture=occidental }
 4401197 = { name="Calderón" culture=occidental }
 4401198 = { name="Meza" culture=occidental }
@@ -854,10 +867,10 @@
 }
 #5001185 = { name="Nilsen" culture=coloradan 
 #		coat_of_arms = {
-#		religion = sacred_heart
+#		religion = nazarene
 #		template = 0
 #		layer = {
-#			texture = 10
+#			texture = 11
 #			texture_internal = 1
 #			emblem = 0
 #			color = 0
@@ -1063,7 +1076,7 @@
 		template = 0
 		layer = {
 			texture = 11
-			texture_internal = 3
+			texture_internal = 0
 			emblem = 0
 			color = 0
 			color = 0

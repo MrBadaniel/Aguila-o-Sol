@@ -5366,7 +5366,20 @@ coat_of_arms = {
 1700023 = { name="Betemea" culture=yaqui }
 1700024 = { name="Arenas" culture=yaqui }
 1700025 = { name="Buichileme" culture=yaqui }
-1700026 = { name="Moroyoqui" culture=yaqui }
+1700026 = { name="Moroyoqui" culture=yaqui 
+        coat_of_arms = {
+		religion = mictlantec
+        template = 0
+        layer = {
+            texture = 2
+            texture_internal = 1
+            emblem = 0
+            color = 0
+            color = 0
+            color = 0
+        }
+    }
+}
 1700027 = { name="Chuumujji" culture=yaqui }
 1700028 = { name="Elesuqui" culture=yaqui }
 1700029 = { name="Granillo" culture=yaqui }
@@ -9532,7 +9545,7 @@ coat_of_arms = {
 		}
 	}}
 1797023 = { name="Triticum" culture=grangelander }
-1797024 = { name="Ironman" culture=grangelander }
+1797024 = { name="Klaus" culture=grangelander }
 1797025 = { name="Einkorn" culture=grangelander }
 1797026 = { name="Zeamays" culture=grangelander }
 1797027 = { name="Sedgwick" culture=grangelander }
@@ -13096,7 +13109,20 @@ coat_of_arms = {
 		}
 	}}
 1864103 = { name="Groom" culture=arixan }
-1864104 = { name="Preston" culture=battleborn }
+1864104 = { name="Preston" culture=battleborn 
+		coat_of_arms = {
+		religion = atomicist
+		template = 0
+		layer = {
+			texture = 2
+			texture_internal = 2
+			emblem = 0
+			color = 0
+			color = 0
+			color = 0
+		}
+	}
+}
 
 1867000 = { name="Grune" culture=ontarian }
 1867001 = { name="Movenpick" culture=ontarian }
