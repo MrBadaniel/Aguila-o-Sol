@@ -5985,21 +5985,6 @@
 	2641.3.1={death=yes}
 }
 
-1802227={
-	name="Cornell"
-	female=no
-	dynasty=1849010
-	culture=bayfolk
-	religion=cetic
-	trait=craven
-	trait=way_book
-	trait=chaste
-	trait=imp_ex1
-	#trait=not_evaluated
-	2576.3.13={birth=yes}
-	2641.3.1={death=yes}
-}
-
 1802228={
 	name="Joan"
 	female=yes
@@ -6151,4 +6136,30 @@
 	religion=cetic
 	trait=way_branch
 	2646.8.12={birth=yes}
+}
+
+1802240={
+	name="Yogi"
+	female=no
+	dynasty=1851024
+	culture=valleyan
+	religion=cetic
+	trait=way_branch
+	trait=cynical
+	trait=mystic
+	father=1802134
+	2621.3.11={birth=yes}
+	2651.10.2={add_spouse=1802228}
+}
+
+1802241={
+	name="Ayres"
+	female=no
+	dynasty=1851024
+	father=1802240
+	mother=1802228
+	culture=valleyan
+	religion=cetic
+	trait=way_book
+	2655.1.11={birth=yes}
 }
