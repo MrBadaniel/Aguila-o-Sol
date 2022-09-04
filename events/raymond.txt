@@ -421,6 +421,7 @@ narrative_event = {
 		event_target:carmine_spy = {
 			death = { death_reason = death_battle_duel }
 		}
+		add_claim = k_socal
 		hidden_tooltip = {
 			character_event = { id = raymond.18 days = 5 }
 		}	
@@ -442,7 +443,7 @@ character_event = {
 	option = {
 		name = "EVTOPT_rywar"
 		grant_title_no_opinion = d_mojave
-		add_claim = k_socal
+		add_trait = erudite
 		k_socal = {
 			holder_scope = {	
 				reverse_war = {
@@ -452,46 +453,23 @@ character_event = {
 				}
 			}
 		}
-		spawn_unit = {
-			character = c_1836112
-			province = c_barstow
-			home = c_barstow
-			troops = {
-				light_infantry = { 1100 1100 }
-				heavy_infantry = { 925 925 }
-				light_cavalry = { 360 360 }
-				pikemen = { 150 150 }
-			}
-			attrition = 0.5
-			maintenance_multiplier = 0.25
-			disband_on_peace = yes
+		create_title = {
+			tier = DUKE
+			landless = yes
+			temporary = yes
+			culture = joshuan
+			name = "the Great Mojave"
+			holder = ROOT
+		}		
+		hidden_tooltip = {
+			character_event = { id = raymond.46 }
 		}
-		spawn_unit = {
-			character = c_1836112
-			province = c_blythe
-			home = c_blythe
-			troops = {
-				light_infantry = { 450 450 }
-				heavy_infantry = { 125 125 }
-				light_cavalry = { 20 20 }
-				pikemen = { 75 75 }
-			}
-			attrition = 0.5
-			maintenance_multiplier = 0.25
-			disband_on_peace = yes
-		}
-		c_blythe = {
-				holder_scope = { set_defacto_liege = ROOT }
-			}
 		ai_chance = {
 			factor = 4
 			modifier = {
 				factor = 10
 				has_character_flag = granfranciscoray
 			}
-		}
-		ai_chance = {
-			factor = 2
 			modifier = {
 				factor = 10
 				has_character_flag = bakomarriageray
@@ -500,30 +478,18 @@ character_event = {
 	}
 }
 
-character_event = {
+long_character_event = {
 	id = raymond.37
 	desc = "EVTDESC_raymond37"
 	title = "EVTTITLE_raymondcarmineneutral"
 	picture = GFX_evt_flaming_skull
-	border = GFX_event_normal_frame_religion
+	border =  GFX_event_long_frame_war
 	prisoner = no
 	is_triggered_only = yes
 	option = {	
 		name = "EVTOPT_raymond37a"
-		ai_chance = {
-			factor = 80
-		}
-		create_title = {
-			tier = DUKE
-			landless = yes
-			temporary = yes
-			culture = joshuan
-			name = "Mojave Loyalists"
-			holder = ROOT
-		}
 		add_trait = deceitful
 		add_trait = paranoid
-		add_claim = k_socal
 		grant_title_no_opinion = d_mojave
 		k_socal = {
 			holder_scope = {	
@@ -539,10 +505,10 @@ character_event = {
 			province = c_barstow
 			home = c_barstow
 			troops = {
-				light_infantry = { 975 975 }
-				heavy_infantry = { 885 885 }
-				light_cavalry = { 255 255 }
-				pikemen = { 75 75 }
+				light_infantry = { 825 825 }
+				heavy_infantry = { 725 725 }
+				light_cavalry = { 135 135 }
+				pikemen = { 50 50 }
 			}
 			attrition = 0.5
 			maintenance_multiplier = 0.25
@@ -553,10 +519,10 @@ character_event = {
 			province = c_blythe
 			home = c_blythe
 			troops = {
-				light_infantry = { 200 200 }
+				light_infantry = { 175 175 }
 				heavy_infantry = { 50 50 }
 				light_cavalry = { 10 10 }
-				pikemen = { 25 25 }
+				pikemen = { 15 15 }
 			}
 			attrition = 0.5
 			maintenance_multiplier = 0.25
@@ -566,7 +532,7 @@ character_event = {
 				holder_scope = { set_defacto_liege = ROOT }
 			}
 		ai_chance = {
-			factor = 20
+			factor = 80
 		}
 	}
 	option = {	
@@ -619,7 +585,7 @@ character_event = {
 			landless = yes
 			temporary = yes
 			culture = joshuan
-			name = "Carmine Loyalists"
+			name = "the Mojaveans"
 			holder = ROOT
 		}
 		add_trait = deceitful
@@ -697,6 +663,42 @@ character_event = {
 		add_trait = craven
 		ai_chance = {
 			factor = 10
+		}
+	}
+}
+
+character_event = {
+	id = raymond.46
+	hide_from = yes
+	picture = GFX_evt_leaving_table_angrily
+	border = GFX_event_normal_frame_religion
+	is_triggered_only = yes
+	option = {	
+		spawn_unit = {
+			character = c_1836112
+			province = c_barstow
+			home = c_barstow
+			troops = {
+				light_infantry = { 1100 1100 }
+				heavy_infantry = { 925 925 }
+				light_cavalry = { 560 560 }
+				pikemen = { 250 250 }
+			}
+			attrition = 0.5
+			maintenance_multiplier = 0.25
+			disband_on_peace = no
+		}
+		spawn_unit = {
+			character = c_1836112
+			province = c_barstow
+			home = c_barstow
+			troops = {
+				cowboys = { 400 400 }
+				horse_archers = { 300 300 }
+			}
+			attrition = 0
+			maintenance_multiplier = 0.15
+			disband_on_peace = yes
 		}
 	}
 }
