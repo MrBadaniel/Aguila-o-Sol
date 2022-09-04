@@ -464,6 +464,13 @@ character_event = {
 				has_character_flag = bajamarriage
 			}
 		}
+		hidden_tooltip = {
+			e_california = {
+				holder_scope = {
+					character_event = { id = zakariyya.43 }
+				}
+			}
+		}
 	}
 }
 
@@ -579,11 +586,6 @@ character_event = {
 				character_event = { id = zakariyya.7 days = 1 }
 			}
 		}
-		c_barstow = {
-			holder_scope = {
-				character_event = { id = raymond.7 days = 1 }
-			}
-		}
 		remove_trait = honest
 		ai_chance = {
 			factor = 2
@@ -602,12 +604,6 @@ character_event = {
 		d_imamite = {
 			holder_scope = {
 				character_event = { id = zakariyya.37 days = 1 }
-			}
-		}
-		c_barstow = {
-				holder_scope = {
-					character_event = { id = raymond.37 days = 1} #Ray is seething!
-					add_claim = k_socal
 			}
 		}
 		ai_chance = {
@@ -662,7 +658,7 @@ character_event = {
 		war = no
 	}
 	mean_time_to_happen = {
-		days = 25
+		days = 10
 	}	
 
 	option = {	
