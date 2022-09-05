@@ -1432,24 +1432,7 @@ e_yucatan = {
 					cholano = "Sacluk"
 				}
 			}
-			c_poptun = { # 1826
-				color={ 97 156 121 }
-				color2={ 255 255 255 }
-	
-				b_poptun_PT = {}
-				b_el_chal_PT = {}
-				b_machaquila_PT = {}
-				b_nuevo_horizonte_PT = {}
-				b_san_luis_PT = {}
-				b_dolores_PT = {
-					yucateco = "Ixkún"
-					lacandon = "Ixkún"
-					quichean = "Ixkún"
-					cholano = "Ixkún"
-				}
-				b_chacte_PT = {}
-				b_santa_cruz_PT = {}
-			}
+
 			c_tikal = { # 1824
 				color={ 82 177 185 }
 				color2={ 255 255 255 }
@@ -1488,6 +1471,41 @@ e_yucatan = {
 					quichean = "Tik'al"
 					cholano = "Tik'al"
 				}
+			}
+		}	
+			
+		d_poptun = {	
+			color={ 90	90	50 }
+			color2={ 255 255 255 }
+
+			capital = 1826 # c_poptun
+			
+					yucateco = "Poptún"
+					lacandon = "Poptún"
+					quichean = "Poptún"
+					cholano = "Poptún"
+					yucatanense = "Poptún"
+					trifinio = "Poptún"
+					centrolatino = "Dolores"
+					mexicano = "Dolores"
+					
+			c_poptun = { # 1826
+				color={ 97 156 121 }
+				color2={ 255 255 255 }
+	
+				b_poptun_PT = {}
+				b_el_chal_PT = {}
+				b_machaquila_PT = {}
+				b_nuevo_horizonte_PT = {}
+				b_san_luis_PT = {}
+				b_dolores_PT = {
+					yucateco = "Ixkún"
+					lacandon = "Ixkún"
+					quichean = "Ixkún"
+					cholano = "Ixkún"
+				}
+				b_chacte_PT = {}
+				b_santa_cruz_PT = {}
 			}
 			c_dolores ={
 				color={ 65 159 226 }
