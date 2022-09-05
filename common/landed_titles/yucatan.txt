@@ -1214,25 +1214,10 @@ e_yucatan = {
 				b_las_margaritas_CP = {}
 				b_frontera_comalapa_CP = {}
 				b_altamirano_CP = {}
-				b_el_triunfo_CP = {}
 				b_chincultik_CP = {} 
 				b_santa_rosa_CP = {}
 			}
-			c_montes_azules = { # 1835
-				color={ 191 118 6 }
-				color2={ 255 255 255 }
-	
-				holy_site = qabantajik
-	
-				b_ocosingo_CP = {}
-				b_nueva_palestina_CP = {}
-				b_plan_de_ayutla_CP = {}
-				b_bonampak_CP = {}
-				b_yajalon_CP = {}
-				b_tila_CP = {}
-				b_maravilla_tenejapa_CP = {}
-				b_nuevo_marzam_CP = {}
-			}
+
 			c_nezahualcoyatl = { # 1836
 				color={ 218 11 79 }
 				color2={ 255 255 255 }
@@ -1246,6 +1231,19 @@ e_yucatan = {
 				b_rayon_CP = {}
 				b_copainala_CP = {}
 				b_pueblo_nuevo_solistahuacan_CP = {}
+			}
+			c_ocosingo = { # 2307
+				color={ 191 118 6 }
+				color2={ 255 255 255 }	
+				
+				b_ocosingo_CP = {}
+				b_nueva_palestina_CP = {}
+				b_plan_de_ayutla_CP = {}
+				
+				b_yajalon_CP = {}
+				b_tila_CP = {}
+				b_maravilla_tenejapa_CP = {}
+				b_nuevo_marzam_CP = {}
 			}
 		}
 		d_chiapas = {
@@ -1367,7 +1365,7 @@ e_yucatan = {
 			color={ 21 192 166 }
 			color2={ 255 255 255 }
 
-			capital = 1825 # c_nojpeten
+			capital = 1824 # c_nojpeten
 
 			c_chuntuki = { # 1823
 				color={ 61 142 161 }
@@ -1386,51 +1384,6 @@ e_yucatan = {
 				}
 				b_santa_amelia_PT = {}
 				b_paso_caballos_PT = {}
-			}
-			c_nojpeten = { # 1825
-				color={ 111 134 200 }
-				color2={ 255 255 255 }
-
-				b_nojpeten_PT = {
-					centrano = "Flores"
-				}
-				b_santa_elena_PT = {
-					yucateco = "Actún Kan"
-					lacandon = "Actún Kan"
-					quichean = "Actún Kan"
-					cholano = "Actún Kan"
-				}
-				b_san_jose_PT = {
-					yucateco = "Mu ul tul"
-					lacandon = "Mu ul tul"
-					quichean = "Mu ul tul"
-					cholano = "Mu ul tul"
-				}
-				b_el_remate_PT = {
-					yucateco = "Ixlu"
-					lacandon = "Ixlu"
-					quichean = "Ixlu"
-					cholano = "Ixlu"
-				}
-				b_santa_ana_PT = {
-					yucateco = "Ixponé"
-					lacandon = "Ixponé"
-					quichean = "Ixponé"
-					cholano = "Ixponé"
-				}
-				b_san_francisco_PT = {
-					yucateco = "Chachaclúm"
-					lacandon = "Chachaclúm"
-					quichean = "Chachaclúm"
-					cholano = "Chachaclúm"
-				}
-				b_san_andres_PT = {}
-				b_la_libertad_PT = {
-					yucateco = "Sacluk"
-					lacandon = "Sacluk"
-					quichean = "Sacluk"
-					cholano = "Sacluk"
-				}
 			}
 
 			c_tikal = { # 1824
@@ -1472,7 +1425,82 @@ e_yucatan = {
 					cholano = "Tik'al"
 				}
 			}
-		}	
+		}
+		
+		d_nojpeten = {
+			color={ 21 192 166 }
+			color2={ 255 255 255 }
+		
+		
+			c_nojpeten = { # 1825
+				color={ 111 134 200 }
+				color2={ 255 255 255 }
+
+					yucateco = "Taj Itsja'"
+					lacandon = "Taj Itsja'"
+					quichean = "Taj Itsja'"
+					cholano = "Taj Itsja'"
+					centrolatino = "Tayasal"
+					mexicano = "Tayasal"
+					
+				b_nojpeten_PT = {
+					trifinio = "Flores"
+					centrolatino = "Flores"
+					mexicano = "Flores"
+				}
+				b_santa_elena_PT = {
+					yucateco = "Actún Kan"
+					lacandon = "Actún Kan"
+					quichean = "Actún Kan"
+					cholano = "Actún Kan"
+				}
+				b_san_jose_PT = {
+					yucateco = "Mu ul tul"
+					lacandon = "Mu ul tul"
+					quichean = "Mu ul tul"
+					cholano = "Mu ul tul"
+				}
+				b_el_remate_PT = {
+					yucateco = "Ixlu"
+					lacandon = "Ixlu"
+					quichean = "Ixlu"
+					cholano = "Ixlu"
+				}
+				b_san_andres_PT = {}
+				b_san_roman_PT = {}
+				b_ponderosa_PT = {}
+			}
+			c_salpeten = { # 2304
+				color={ 30 32 81 }
+				color2={ 255 255 255 }
+				
+				b_san_francisco_PT = {
+					yucateco = "Chachaclúm"
+					lacandon = "Chachaclúm"
+					quichean = "Chachaclúm"
+					cholano = "Chachaclúm"
+				}
+				b_santa_ana_PT = {
+					yucateco = "Ixponé"
+					lacandon = "Ixponé"
+					quichean = "Ixponé"
+					cholano = "Ixponé"
+				}
+				b_san_antonio_PT = {}
+				b_purucila_PT = {}
+				b_macanche_PT = {}
+			}
+			c_sacpuy = { # 2305
+				color={ 73 79 198 }
+				color2={ 255 255 255 }
+				
+				b_sacpuy_PT = {}
+				b_san_benito_PT = {}
+				b_san_jorge_PT = {}
+				b_san_diego_PT = {}
+			}
+					
+		}		
 			
 		d_poptun = {	
 			color={ 90	90	50 }
@@ -1575,8 +1603,6 @@ e_yucatan = {
 	
 				b_sayaxche_PT = {}
 				b_benemerito_de_las_americas_CP = {}
-				b_las_cruces_PT = {}
-				b_seibal_PT = {}
 				b_el_jordan_PT = {}
 				b_las_pozas_PT = {}
 				b_lacanja_chansayab_PT = {}
@@ -2036,6 +2062,18 @@ e_yucatan = {
 
 			capital = 1829 # c_tenosique
 
+			c_montes_azules = { # 1835
+				color={ 191 118 6 }
+				color2={ 255 255 255 }
+	
+				holy_site = qabantajik
+				
+				b_frontera_corozal_CP = {}	
+				b_bonampak_CP = {}
+				b_yaxchilan_CP = {}
+				b_lacanja_CP = {}
+				
+			}
 			c_lacandon = { # 1828
 				color={ 19 123 149 }
 				color2={ 255 255 255 }
@@ -2046,24 +2084,23 @@ e_yucatan = {
 					quichean = "Yo'k'ib'"
 					cholano = "Yo'k'ib'"
 				}
-				b_yaxchilan_CP = {}
 				b_san_juan_villa_nueva_PT = {}
 				b_tonina_PT = {}
 				b_el_ceibo_PT = {}
-				b_frontera_corozal_CP = {}
 				b_tierra_linda_el_zapotal_PT = {}
 				b_macabilaro_PT = {}
+				
 			}
 			c_tenosique = { # 1829
 				color={ 29 149 145 }
 				color2={ 255 255 255 }
-				holy_site = neomayan
-				holy_site = lamanita
 
-				yucateco = "Bàak'"
-				lacandon = "Bàak'"
-				quichean = "Bàak'"
-				cholano = "Bàak'"
+					yucateco = "Tana-Tsiic"
+					lacandon = "Tana-Tsiic"
+					quichean = "Tana-Tsiic"
+					cholano = "Tana-Tsiic"
+					nahua = "Tsauatecpan"
+
 	
 				b_tenosique_TB = {
 					yucateco = "Tana-Tsiic"
@@ -2072,21 +2109,42 @@ e_yucatan = {
 					cholano = "Tana-Tsiic"
 					nahua = "Tsauatecpan"
 				}
+				b_balancan_TB = {}
+				b_jonuta_TB = {
+					cholano = "Honochtah"
+				}
+				b_el_triunfo_CP = {}
+
+			}
+			c_palenque = { # 1829
+				color={ 29 149 145 }
+				color2={ 255 255 255 }
+				holy_site = neomayan
+				holy_site = lamanita
+				
+				yucateco = "Bàak'"
+				lacandon = "Bàak'"
+				quichean = "Bàak'"
+				cholano = "Bàak'"
+				
 				b_palenque_CP = {
 					yucateco = "Bàak'"
 					lacandon = "Bàak'"
 					quichean = "Bàak'"
 					cholano = "Bàak'"
 				}
-				b_balancan_TB = {}
-				b_jonuta_TB = {
-					cholano = "Honochtah"
+				b_palenque_nuevo_CP = {
+					yucateco = "Lakam Ja'"
+					lacandon = "Lakam Ja'"
+					quichean = "Lakam Ja'"
+					cholano = "Lakam Ja'"
 				}
-				b_emiliano_zapata_TB = {}
-				b_catazaja_CP = {}
-				b_la_libertad_TB = {}
 				b_salto_el_agua_CP = {}
-			}
+				b_catazaja_CP = {}
+				b_emiliano_zapata_TB = {}
+				b_la_libertad_TB = {}
+				
+			}		
 		}
 	}
- }
+}
