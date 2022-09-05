@@ -2596,7 +2596,10 @@ narrative_event = { #The Foreign Benemerito
 	option = {
 		name = EVTOPTB_justo55
 		trigger = {
-			has_character_flag = the_justo_armas
+			OR = {
+				has_character_flag = the_justo_armas
+				has_landed_title = e_mexico
+			}
 		}
 		if = {
 			limit = { has_dlc = "Holy Fury" }
@@ -2614,6 +2617,487 @@ narrative_event = { #The Foreign Benemerito
 				religion = cristo_rey
 				has_landed_title = e_mexico
 				de_facto_liege_or_above = e_mexico
+			}
+		}
+	}
+}
+
+narrative_event = { #A man of his word
+	id = justo.56
+	title = "justo.56.name"
+	desc = justo.56.desc
+	
+	is_triggered_only = yes
+	major = yes
+	
+	trigger = {
+		has_global_flag = catholic_friends
+	}
+	
+	immediate = {
+		clr_global_flag = justo_war_two
+		cristo_rey = {
+			religion_authority = {
+				modifier = prelate_success
+			}
+		}
+		catholic = {
+			religion_authority = {
+				modifier = friends_failure
+			}
+		}
+	}
+	
+	option = {
+		name = EVTOPTA_justo56
+		trigger = {
+			has_landed_title = e_mexico
+		}
+		d_friends = {
+			destroy_landed_title = THIS
+		}
+		if = {
+			limit = { has_dlc = "Holy Fury" }
+			create_bloodline = {
+				type = just_armas
+			}
+			add_trait = crowned_by_pope
+		}
+		prestige = 2000
+		piety = 1000
+		if = { #kills Ledonnant if he's still alive
+			limit = {
+				any_realm_character	= {
+					has_character_flag = is_the_gringo
+				}
+			}
+			any_realm_character	= {
+				limit = { has_character_flag = is_the_gringo }
+				death = {
+					death_reason = death_execution
+					killer = ROOT
+				}
+			}
+		}
+	}
+	option = {
+		name = EVTOPTB_justo56
+		trigger = {
+			religion = cristo_rey
+		}
+	}
+	option = {
+		name = EVTOPTC_justo56
+		trigger = {
+			religion = catholic
+		}
+	}
+	
+	option = {
+		name = EVTOPTD_justo56
+		trigger = {
+			de_facto_liege_or_above = e_mexico
+		}
+	}
+	
+	option = {
+		name = EVTOPTE_justo56
+		trigger = {
+			NOR = {
+				religion = catholic
+				religion = cristo_rey
+				has_landed_title = e_mexico
+				de_facto_liege_or_above = e_mexico
+			}
+		}
+	}
+}
+
+narrative_event = { #Benemérito Prelado
+	id = justo.57
+	title = "justo.57.name"
+	desc = justo.57.desc
+	
+	is_triggered_only = yes
+	major = yes
+	
+	trigger = {
+		has_global_flag = catholic_friends
+	}
+	
+	immediate = {
+		clr_global_flag = justo_war_two
+		cristo_rey = {
+			religion_authority = {
+				modifier = prelate_success
+			}
+		}
+		catholic = {
+			religion_authority = {
+				modifier = friends_failure
+			}
+		}
+	}
+	
+	option = {
+		name = EVTOPTA_justo54
+		trigger = {
+			has_character_flag = the_justo_armas
+		}
+	}
+	option = {
+		name = EVTOPTC_justo54
+		trigger = {
+			religion = cristo_rey
+			NOT = { de_facto_liege_or_above = e_mexico }
+		}
+	}
+	option = {
+		name = EVTOPTC_justo57
+		trigger = {
+			religion = cristo_rey
+			de_facto_liege_or_above = e_mexico
+		}
+	}
+	
+	option = {
+		name = EVTOPTD_justo57
+		trigger = {
+			de_facto_liege_or_above = e_mexico
+			NOR = { 
+				religion = cristo_rey 
+				religion = catholic
+			}
+		}
+	}
+	
+	option = {
+		name = EVTOPTE_justo57
+		trigger = {
+			religion = catholic
+		}
+	}
+	
+	option = {
+		name = EVTOPTF_justo57
+		trigger = {
+			NOR = {
+				religion = cristo_rey
+				religion = catholic
+				de_facto_liege_or_above = e_mexico
+			}
+		}	
+	}
+}
+
+narrative_event = { #The Conqueror of Mexico
+	id = justo.58
+	title = "justo.58.name"
+	desc = justo.58.desc
+	
+	is_triggered_only = yes
+	major = yes
+	
+	trigger = {
+		has_global_flag = catholic_friends
+	}
+	
+	immediate = {
+		clr_global_flag = justo_war_two
+		cristo_rey = {
+			religion_authority = {
+				modifier = prelate_failure
+			}
+		}
+		catholic = {
+			religion_authority = {
+				modifier = friends_failure
+			}
+		}
+	}
+	
+	option = {
+		name = EVTOPTA_justo55
+		trigger = {
+			religion = cristo_rey
+		}
+	}
+	
+	option = {
+		name = EVTOPTB_justo58
+		trigger = {
+			religion = catholic
+		}
+	}
+	
+	option = {
+		name = EVTOPTB_justo55
+		trigger = {
+			has_landed_title = e_mexico
+		}
+		if = {
+			limit = { has_dlc = "Holy Fury" }
+			create_bloodline = {
+				type = just_armas
+			}
+		}
+		prestige = 2000
+		piety = 1000
+	}
+	
+	option = {
+		name = EVTOPTC_justo55
+		trigger = {
+			NOR = {
+				religion = catholic
+				religion = cristo_rey
+			}
+			de_facto_liege_or_above = e_mexico
+		}
+	}
+	
+	option = {
+		name = EVTOPTD_justo55
+		trigger = {
+			NOR = {
+				religion = cristo_rey
+				religion = catholic
+				has_landed_title = e_mexico
+				de_facto_liege_or_above = e_mexico
+			}
+		}
+	}
+}
+
+narrative_event = {
+	id = justo.59
+	title = "justo.59.name"
+	desc = justo.59.desc
+	
+	trigger = {
+		has_global_flag = catholic_friends
+	}
+	
+	immediate = {
+		clr_global_flag = justo_war_two
+		cristo_rey = {
+			religion_authority = {
+				modifier = prelate_failure
+			}
+		}
+		catholic = {
+			religion_authority = {
+				modifier = friends_success
+			}
+		}
+	}
+	
+	option = {
+		name = EVTOPTA_justo59
+		trigger = {
+			religion = cristo_rey
+		}
+	}
+	
+	option = {
+		name = EVTOPTB_justo59
+		trigger = {
+			religion = catholic
+			NOT = { has_landed_title = e_mexico }
+		}
+	}
+	
+	option = {
+		name = EVTOPTC_justo59
+		trigger = {
+			has_landed_title = e_mexico
+		}
+		hidden_effect = {
+			e_latino = {
+				show_scope_change = no
+				grant_title = ROOT
+				copy_title_laws = e_mexico
+			}
+			k_baijo = {
+				show_scope_change = no
+				de_jure_liege = e_latino
+			}
+			k_gran_chichimeca = {
+				show_scope_change = no
+				de_jure_liege = e_latino
+			}
+			k_jalisco = {
+				show_scope_change = no
+				de_jure_liege = e_latino
+			}
+			k_mexico = {
+				show_scope_change = no
+				de_jure_liege = e_latino
+			}
+			k_veracruz = {
+				show_scope_change = no
+				de_jure_liege = e_latino
+			}
+			k_michoacan = {
+				show_scope_change = no
+				de_jure_liege = e_latino
+			}
+			k_oaxaca = {
+				show_scope_change = no
+				de_jure_liege = e_latino
+			}
+			k_guerrero = {
+				show_scope_change = no
+				de_jure_liege = e_latino
+			}
+			e_mexico = {
+				destroy_landed_title = THIS
+			}
+		}
+	}
+	
+	option = {
+		name = EVTOPTD_justo59
+		trigger = {
+			NOR = {
+				religion = catholic
+				religion = cristo_rey
+				has_landed_title = e_mexico
+			}
+			de_facto_liege_or_above = e_mexico
+		}
+	}
+	
+	option = {
+		name = EVTOPTE_justo59
+		trigger = {
+			NOR = {
+				religion = catholic
+				religion = cristo_rey
+				has_landed_title = e_mexico
+				de_facto_liege_or_above = e_mexico
+			}
+		}
+	}
+}
+
+narrative_event = {
+	id = justo.60
+	title = "justo.60.name"
+	desc = justo.60.desc
+	
+	trigger = {
+		has_global_flag = catholic_friends
+	}
+	
+	immediate = {
+		clr_global_flag = justo_war_two
+		cristo_rey = {
+			religion_authority = {
+				modifier = prelate_failure
+			}
+		}
+		catholic = {
+			religion_authority = {
+				modifier = friends_success
+			}
+		}
+	}
+	
+	option = {
+		name = EVTOPTA_justo54
+		trigger = {
+			has_character_flag = the_justo_armas
+		}
+	}
+	
+	option = {
+		name = EVTOPTA_justo59
+		trigger = {
+			religion = cristo_rey
+		}
+	}
+	
+	option = {
+		name = EVTOPTC_justo60
+		trigger = {
+			NOR = {
+				religion = cristo_rey
+				religion = catholic
+			}
+			OR = {
+				de_facto_liege_or_above = e_mexico
+				de_facto_liege_or_above = e_latino
+			}
+		}
+	}
+	
+	option = {
+		name = EVTOPTD_justo40
+		trigger = {
+			religion = catholic
+		}
+		if = {
+			limit = {
+				has_landed_title = e_mexico
+			}
+			hidden_effect = {
+				activate_title = { title = e_latino status = yes }
+				activate_title = { title = d_friends_mercenary status = yes }
+				e_latino = {
+					show_scope_change = no
+					grant_title = ROOT
+					copy_title_laws = e_mexico
+					set_defacto_vassal = d_friends_mercenary
+				}
+				k_baijo = {
+					show_scope_change = no
+					de_jure_liege = e_latino
+				}
+				k_gran_chichimeca = {
+					show_scope_change = no
+					de_jure_liege = e_latino
+				}
+				k_jalisco = {
+					show_scope_change = no
+					de_jure_liege = e_latino
+				}
+				k_mexico = {
+					show_scope_change = no
+					de_jure_liege = e_latino
+				}
+				k_veracruz = {
+					show_scope_change = no
+					de_jure_liege = e_latino
+				}
+				k_michoacan = {
+					show_scope_change = no
+					de_jure_liege = e_latino
+				}
+				k_oaxaca = {
+					show_scope_change = no
+					de_jure_liege = e_latino
+				}
+				k_guerrero = {
+					show_scope_change = no
+					de_jure_liege = e_latino
+				}
+				e_mexico = {
+					destroy_landed_title = THIS
+				}				
+			}
+		}
+	}
+	
+	option = { 
+		name = EVTOPTE_justo59
+		trigger = {
+			NOR = {
+				religion = cristo_rey
+				religion = catholic
+				de_facto_liege_or_above = e_mexico
+				de_facto_liege_or_above = e_latino
+				has_character_flag = the_justo_armas
 			}
 		}
 	}
