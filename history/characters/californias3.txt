@@ -1657,7 +1657,7 @@
 	trait=zealous
 	trait=paranoid
 	father=1836126
-	mother=1836127
+	#mother=1836127
 	give_nickname=nick_the_grizzly
 	2124.1.1={birth=yes}
 	2190.2.15={death=yes}
@@ -3416,7 +3416,7 @@
 }
 
 1802109={
-	name="Zachary"
+	name="Abram"
 	dynasty=1851024#Muir
 	culture=english
 	religion=pagan#forester
@@ -3638,23 +3638,23 @@
 	2392.4.12={death=yes}
 }
 
-1802120={
-	name="Abram"
-	dynasty=1851024#Muir
-	culture=english
-	religion=pagan#forester
-	trait=skilled_tactician
-	trait=content
-	trait=honest
-	trait=devout
-	trait=chaste
-	disallow_random_traits=yes
-	father=1802119
-	2340.1.8={birth=yes
-	culture=valleyan
-	}
-	2401.10.10={death=yes}
-}
+#1802120={
+#	name="Abram"
+#	dynasty=1851024#Muir
+#	culture=english
+#	religion=pagan#forester
+#	trait=skilled_tactician
+#	trait=content
+#	trait=honest
+#	trait=devout
+#	trait=chaste
+#	disallow_random_traits=yes
+#	father=1802119
+#	2340.1.8={birth=yes
+#	culture=valleyan
+#	}
+#	2401.10.10={death=yes}
+#}
 
 1802121={
 	name="Walton"
@@ -3667,7 +3667,7 @@
 	trait=dull
 	trait=temperate
 	disallow_random_traits=yes
-	father=1802120
+	father=1802119
 	2365.5.11={birth=yes
 	culture=valleyan
 	}
@@ -4031,6 +4031,7 @@
 	}
 	2199.2.22={death={
 			death_reason=death_battle #Murdered in combat.
+			killer=1836128
 		}
 	}
 }
@@ -4427,7 +4428,7 @@
 	culture=german
 	religion=nazarene
 	trait=midas_touched
-	trait=nz_presbyter
+	trait=nz_acolyte
 	trait=fair
 	trait=shy	
 	trait=shrewd
@@ -4438,6 +4439,7 @@
 	trait=uncouth
 	disallow_random_traits=yes
 	2577.3.14={birth=yes
+	culture=valleyan
 	}
 	2597.3.16={add_spouse=1802155}
 	2650.8.11={death=yes}
@@ -4936,6 +4938,7 @@
     learning=5
     trait=mastermind_theologian
     trait=nz_presbyter
+	trait=imp_ex4
     trait=theologian
     trait=brawny
     trait=diligent
@@ -5503,18 +5506,18 @@
 }
 
 1802200={
-	name="Anit"
+	name="Anne"
 	disallow_random_traits=yes
-	culture=khoakineren
+	culture=german
 	female=yes
-	trait=nz_oriental
+	trait=nz_presbyter
     religion=nazarene
 	trait=fortune_builder
 	trait=physician
 	trait=kind
 	trait=patient
     2536.8.11={birth=yes
-	culture=khoakineren}
+	culture=battleborn}
     2558.8.4={add_spouse=1802199}
     2610.2.10={death=yes}
 }
