@@ -6010,6 +6010,7 @@
 	trait=way_book
 	#trait=not_evaluated
 	2639.1.1={birth=yes}
+	2661.1.1={add_spouse=1911025}
 }
 
 1802230={
@@ -6165,4 +6166,82 @@
 	religion=cetic
 	trait=way_book
 	2655.1.11={birth=yes}
+}
+
+1802242={
+	name="Melody"
+	female=yes
+	culture=battleborn
+	religion=imamite
+	trait=zealous
+	2601.3.1={birth=yes
+	}
+	2637.3.10={add_spouse=1910184}
+	2666.1.4={death=yes}
+}
+
+1802243={
+	name="Lola"
+	female=yes
+	#dynasty=1402023
+	culture=battleborn
+	religion=atomicist
+	trait=shy
+	2641.8.9={birth=yes
+	}
+	2657.3.10={add_spouse=1910185}
+}
+
+1802244={
+	name="Ned"
+	female=no
+	dynasty=1850015
+	culture=ugric
+	religion=cetic
+	trait=way_fist
+	trait=sympathy_oldworld
+	father=1910185
+	mother=1802243
+	2659.8.9={birth=yes
+	culture=angeleno
+	}
+}
+
+1802245={
+	name="Pebbles"
+	female=yes
+	dynasty=1850015
+	culture=ugric
+	religion=cetic
+	trait=way_dove
+	trait=sympathy_oldworld
+	father=1910185
+	mother=1802243
+	2661.1.11={birth=yes
+	culture=angeleno
+	}
+}
+
+1802246={
+	name="Amber"
+	female=yes
+	dynasty=1849074
+	culture=bayfolk
+	religion=cetic
+	trait=way_book
+	mother=1802229
+	father=1911025
+	2665.2.3={birth=yes}
+}
+
+1802246={
+	name="Walter"
+	female=no
+	dynasty=1849074
+	culture=bayfolk
+	religion=cetic
+	trait=way_book
+	mother=1802229
+	father=1911025
+	2666.1.10={birth=yes}
 }
