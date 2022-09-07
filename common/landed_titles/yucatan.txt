@@ -303,6 +303,12 @@ e_yucatan = {
 				tapatio =  "Bacalar"
 				abajeno = "Bacalar"
 
+				b_bacalar_QR = {
+					yucateco = "B'ak Halal"
+					lacandon = "B'ak Halal"
+					quichean = "B'ak Halal"
+					cholano = "B'ak Halal"
+				}
 				b_chacchoben_QR = {
 					yucateco = "Chak Ch'óoben" #Redcornland
 					lacandon = "Chäk Wajte'"
@@ -313,11 +319,11 @@ e_yucatan = {
 					tapatio =  "Almagre"
 					abajeno = "Almagre"					
 				}
-
 				b_maya_balam_QR = {}
 				b_san_pedro_QR = {}
 				b_noh_bec_QR = {}
 				b_pedro_antonio_santos_QR = {}
+				b_huay_pix_QR = {}
 			}
 			c_chetumal = { # 1831
 				color={ 52 124 183 }
@@ -334,14 +340,9 @@ e_yucatan = {
 					quichean = "Chactemàal"
 					cholano = "Chactemàal"
 				}
+				b_oxtankah_QR = {}
+				b_tamalcab_QE = {}
 				b_calderitas_QR = {}
-
-				b_bacalar_QR = {
-					yucateco = "B'ak Halal"
-					lacandon = "B'ak Halal"
-					quichean = "B'ak Halal"
-					cholano = "B'ak Halal"
-				}
 				b_dzibanche_QR = {}
 				b_xul_ha_QR = {}
 				b_huay_pix_QR = {}
@@ -2195,3 +2196,22 @@ e_yucatan = {
 		}
 	}
 }
+
+
+
+
+#TITULAR TITLES IN THE YUCATAN PENINSULA
+
+		d_chetumal_republic = {
+			color = { 203 19 54 }
+			color2 = { 255 255 255 }
+			
+			culture = yucatanense
+			capital = 1831 # Chetumal
+			title = PRIMICE #Primicio
+			title_female = PRIMICE_FEMALE #Primicia		
+			short_name = yes
+			allow = { title_duke_basic_allow = yes }
+			can_be_usurped = no
+			primary = yes
+		}
