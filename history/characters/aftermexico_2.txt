@@ -2469,3 +2469,103 @@
 
 	2647.11.20={birth=yes}
 }
+#LOUISVILLE FAMILY
+#father of Lousville dude in Yucatan from vanilla ATEFF
+6900656 = {
+	name="Wilbur"
+	dynasty=1546040
+	culture=gulfard
+	religion=neomayan
+	martial=6
+	diplomacy=8
+	stewardship=5
+	intrigue=5
+	learning=15
+	trait= scholar
+	trait= scholarly_theologian
+	trait= devout
+	trait= patient
+	trait= adventurer
+	2570.11.20={birth=yes}
+	2637.6.30={
+			death=yes
+			death_reason=death_accident_drowning
+			}
+	father= 6900657
+} 
+#grandfather of Louisville dude in Yucatan. former count of everglades.
+6900657 = {
+	name="Wilfrid"
+	dynasty=1546040
+	culture=gulfard
+	religion=americanist
+	martial=3
+	diplomacy=10
+	stewardship=8
+	intrigue=3
+	learning=8
+	trait= administrator
+	trait= honest
+	trait= humble
+	trait= chaste
+	2543.11.20={birth=yes}
+	2590.1.1={death=yes}
+}
+1650085={
+	name="Wilbert"
+	dynasty=1546040
+	culture=yucateco
+	religion=neomayan
+	trait=strong
+	trait=brilliant_strategist
+	trait=diligent
+	2607.6.30={birth=yes}
+	2637.1.1={add_spouse=1650086}
+	2695.1.1={death=yes}
+	father= 6900656
+} 
+
+1650087={
+	name="Laura Kisa"
+	female=yes
+	dynasty=1546040
+	culture=yucateco
+	religion=neomayan
+	ethnicity=gulfard
+	father=1650085
+	mother=1650086
+	2641.8.16={birth=yes}
+	2705.1.1={death=yes}
+}
+
+1650088={
+	name="Alma"
+	female=yes
+	dynasty=1546040
+	culture=yucateco
+	religion=neomayan
+	ethnicity=yucatanense
+	father=1650085
+	mother=1650086
+	2646.2.17={birth=yes}
+	2705.1.1={death=yes}
+}
+
+###Louisville FAMILY ENDS HERE
+
+6900658 = {
+	name="Santiago"
+	dynasty=5200104
+	culture=yucatanense
+	religion=cristo_rey
+	martial=15
+	diplomacy=6
+	stewardship=3
+	intrigue=8
+	learning=5
+	trait= peasant_leader
+	trait= gregarious
+	trait= zealous
+	trait= inspiring_leader
+	2620.1.2={birth=yes}
+}
