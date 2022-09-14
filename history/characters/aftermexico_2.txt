@@ -2694,3 +2694,179 @@
 	}
 	2646.2.12={add_spouse=6900663}
 }
+
+##############Republic of the Rio Grande#######################
+
+6900665 = {
+	name="Chepe"
+	dynasty=4600135  # neptuno
+	culture=trifinio
+	give_nickname=nick_mojado
+	religion=moravian
+	martial=3
+	diplomacy=5
+	stewardship=4
+	intrigue=5
+	learning=2
+	trait=tough_soldier
+	trait=diligent
+	trait=ambitious
+	trait=parroquial
+	2618.4.5={
+		birth=yes
+	}
+	2656.2.12={add_spouse=6900666}
+}
+
+6900666 = {
+	name="María"
+	female=yes
+	culture=tejano
+	religion=sacred_heart
+	martial=2
+	diplomacy=1
+	stewardship=4
+	intrigue=5
+	learning=2
+	trait=naive_appeaser
+	trait=marian_san_juditas
+	2626.2.15={
+		birth=yes
+	}
+	2656.2.12={add_spouse=6900665}
+}
+
+6900667 = {
+	name="Junior"
+	dynasty=4600135  # neptuno
+	culture=trifinio
+	religion=moravian
+	martial=4
+	diplomacy=2
+	stewardship=4
+	intrigue=6
+	learning=2
+	trait=amateurish_plotter
+	trait=parroquial
+	father=6900665
+	mother=6900666
+	2648.4.5={
+		birth=yes
+	}
+}
+
+6900668 = {
+	name="Richard"
+	dynasty=4600135  # neptuno
+	culture=trifinio
+	religion=moravian
+	martial=3
+	diplomacy=1
+	stewardship=5
+	intrigue=5
+	learning=4
+	trait=thrifty_clerk
+	trait=parroquial
+	father=6900665
+	mother=6900666
+	2656.2.15={
+		birth=yes
+	}
+}
+
+6900669 = {
+	name="Geraldo"
+	dynasty=1815064  # castillo
+	culture=tejano
+	religion=catholic
+	martial=5
+	diplomacy=1
+	stewardship=5
+	intrigue=2
+	learning=3
+	trait=martial_cleric
+	trait=parroquial
+	2632.4.5={
+		birth=yes
+	}
+}
+
+6900670 = {
+	name="Samuel"
+	dynasty=1810052  # de la Garza y Garza
+	culture=mediterranean
+	religion=fidencista
+	martial=2
+	diplomacy=5
+	stewardship=4
+	intrigue=5
+	learning=4
+	trait=fortune_builder
+	trait=diligent
+	trait=ambitious
+	trait=parroquial
+	2642.4.5={
+		birth=yes
+		culture=bravo
+	}
+	2662.2.12={add_spouse=6900671}
+}
+
+6900671 = {
+	name="Estefania"
+	dynasty=1810015
+	female=yes
+	culture=mediterranean
+	religion=fidencista
+	martial=3
+	diplomacy=1
+	stewardship=2
+	intrigue=3
+	learning=2
+	trait=charismatic_negotiator
+	2645.2.15={
+		birth=yes
+		culture=bravo
+	}
+	2662.2.12={add_spouse=6900670}
+}
+
+6900672 = {
+	name="Cristóbal"
+	dynasty=1810052  # de la Garza y Garza
+	culture=mediterranean
+	religion=fidencista
+	martial=5
+	diplomacy=1
+	stewardship=4
+	intrigue=3
+	learning=2
+	trait=misguided_warrior
+	father=6900670
+	mother=6900671
+	2648.4.5={
+		birth=yes
+		culture=bravo
+	}
+}
+
+6900673 = {
+	name="Margarita"
+	dynasty=1810052  # de la Garza y Garza
+	female=yes
+	culture=mediterranean
+	religion=fidencista
+	martial=1
+	diplomacy=5
+	stewardship=5
+	intrigue=5
+	learning=2
+	trait=thrifty_clerk
+	father=6900670
+	mother=6900671
+	2656.2.15={
+		birth=yes
+		culture=bravo
+	}
+}
+
