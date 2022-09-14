@@ -1388,7 +1388,7 @@ government_flavor = {
 		OR = {
 			government = feudal_government
 		}
-		NOR = { has_law = succ_feudal_elective has_law = succ_hre_elective }
+		NOR = { has_law = succ_feudal_elective has_law = succ_hre_elective has_law = succ_eldership }
 		mercenary = no
 		religion = sol_invicta
 		tier = EMPEROR
@@ -1403,7 +1403,7 @@ government_flavor = {
 		OR = {
 			government = feudal_government
 		}
-		OR = { has_law = succ_feudal_elective has_law = succ_hre_elective }
+		OR = { has_law = succ_feudal_elective has_law = succ_hre_elective has_law = succ_eldership }
 		religion = sol_invicta
 		tier = EMPEROR
 	}
