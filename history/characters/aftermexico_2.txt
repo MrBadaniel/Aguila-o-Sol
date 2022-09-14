@@ -2792,7 +2792,7 @@
 }
 
 6900670 = {
-	name="Samuel"
+	name="Alejandro"
 	dynasty=1810052  # de la Garza y Garza
 	culture=mediterranean
 	religion=fidencista
@@ -2801,10 +2801,8 @@
 	stewardship=4
 	intrigue=5
 	learning=4
-	trait=fortune_builder
-	trait=diligent
-	trait=ambitious
-	trait=parroquial
+	trait=thrifty_clerk
+	trait=greedy
 	2642.4.5={
 		birth=yes
 		culture=bravo
@@ -2844,7 +2842,7 @@
 	trait=misguided_warrior
 	father=6900670
 	mother=6900671
-	2648.4.5={
+	2662.4.5={
 		birth=yes
 		culture=bravo
 	}
@@ -2864,9 +2862,51 @@
 	trait=thrifty_clerk
 	father=6900670
 	mother=6900671
-	2656.2.15={
+	2665.2.15={
 		birth=yes
 		culture=bravo
 	}
+}
+
+6900674 = {
+	name="Samuel"
+	dynasty=2006001  # lumbroso
+	culture=neoladino
+	religion=sacred_heart
+	secret_religion=reform
+	martial=4
+	diplomacy=2
+	stewardship=5
+	intrigue=5
+	learning=6
+	trait=scholarly_theologian
+	trait=diligent
+	trait=ambitious
+	trait=parroquial
+	2638.12.5={
+		birth=yes
+		culture=bravo
+	}
+	2662.2.12={add_spouse=6900675}
+}
+
+6900675 = {
+	name="Valentina"
+	dynasty=2006045
+	female=yes
+	culture=neoladino
+	religion=sacred_heart
+	secret_religion=reform
+	martial=3
+	diplomacy=1
+	stewardship=2
+	intrigue=3
+	learning=2
+	trait=charismatic_negotiator
+	2645.5.15={
+		birth=yes
+		culture=bravo
+	}
+	2662.2.12={add_spouse=6900674}
 }
 
