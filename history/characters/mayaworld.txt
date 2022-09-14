@@ -2,9 +2,136 @@
 
 ###### MAYAN STRONG DUKES WHICH HAVE TO RESIST THE YUCATECAN CONQUEST OF THEIR TERRITORIES. THEY'RE BASED ON THE CACIQUES
 
-# ItzÃ¡ family that rules NojpetÃ©n
+# Flores family, trifinio pagan ruler of Nojpetén, austed by the Itzá rebellion
+1431420={
+	name="Gómez"
+	dynasty=4600111 #Flores
+	culture=trifinio
+	religion=pagan
+	martial=5
+	diplomacy=10
+	stewardship=6
+	intrigue=5
+	learning=10	
+	trait=grey_eminence
+	trait=sympathy_mesoamerican_gods
+	trait=attractive
+	trait=diligent
+	trait=just
+	trait=cancer
+	father=1431423
+	2480.1.1={birth=yes}
+	2518.1.1={
+		death= {
+			death_reason=death_trait
+		}
+	}
+}
+1431421={
+	name="Enrique"
+	dynasty=4600111 #Flores
+	culture=trifinio
+	religion=pagan
+	martial=8
+	diplomacy=9
+	stewardship=8
+	intrigue=0
+	learning=5	
+	trait=charismatic_negotiator
+	trait=sympathy_mesoamerican_gods
+	trait=stubborn
+	trait=trusting
+	trait=humble
+	trait=inspiring_leader
+	father=1431420
+	2505.1.1={birth=yes}
+	2521.1.1={
+		death={
+			death_reason=death_murder
+			killer=1431422
+		}
+	}	#killed by coup of his own family
+}
+1431422={
+	name="Fulgencio"
+	dynasty=4600111 #Flores
+	culture=trifinio
+	religion=pagan
+	martial=5
+	diplomacy=10
+	stewardship=6
+	intrigue=13
+	learning=10	
+	trait=flamboyant_schemer
+	trait=cynical
+	trait=attractive
+	trait=diligent
+	trait=arbitrary
+	trait=cruel
+	trait=proud
+	trait=agressive_leader
+	trait=familial_kinslayer
+	father=1431423
+	2489.1.1={birth=yes}
+	2562.1.1={
+		death={
+			death_reason=death_execution
+			killer=1431434
+			}
+	}
+}
+1431423={
+	name="Bernal"
+	dynasty=4600111 #Flores
+	culture=trifinio
+	religion=pagan
+	martial=5
+	diplomacy=10
+	stewardship=6
+	intrigue=5
+	learning=10	
+	trait=grey_eminence
+	trait=sympathy_mesoamerican_gods
+	trait=attractive
+	trait=diligent
+	trait=just
+	trait=is_fat
+	trait=gout
+	2455.1.1={birth=yes}
+	2498.1.1={death=yes}
+}
+1431424={
+	name="Pablo"
+	dynasty=4600111 #Flores
+	culture=trifinio
+	religion=pagan
+	martial=15
+	diplomacy=6
+	stewardship=6
+	intrigue=6
+	learning=6	
+	trait=tough_soldier
+	trait=duelist
+	trait=attractive
+	trait=diligent
+	trait=cruel
+	trait=proud
+	trait_wroth
+	trait=zealous
+	trait=agressive_leader
+	trait=holy_warrior
+	father=1431422
+	2521.1.1={birth=yes}
+	2560.1.1={
+		death={
+			death_reason=death_battle
+			killer=1431434
+			}
+	}
+}
+# Itzá family that rules Nojpetén
 1431431={
-	name="Rosendo"
+	name="Rosendo" 
 	dynasty=1438061
 	culture=lacandon
 	religion=qabantajik
@@ -77,6 +204,9 @@
 	trait=zealous
 	trait=strong
 	trait=gregarious
+	trait=wroth
+	father=1431438
+	mother=1431439
 	2538.1.1={birth=yes}
 	2600.1.1={death=yes}
 }
@@ -115,7 +245,7 @@
 	father=1431432
 	2660.1.1={birth=yes}
 }
-1431436={
+1431437={
 	name="Jaime"
 	dynasty=1438061
 	culture=lacandon
@@ -132,7 +262,49 @@
 	father=1431432
 	2662.1.1={birth=yes}
 }
-
+1431438={
+	name="Itzá"
+	culture=lacandon
+	religion=qabantajik
+	martial=15
+	diplomacy=0
+	stewardship=8
+	intrigue=1
+	learning=1
+	trait=peasant_leader
+	trait=tough_soldier
+	trait=zealous
+	trait=inspiring_leader
+	trait=unyeilding_leader
+	2492.1.1={birth=yes}
+	2560.1.1={		
+		death={
+			death_reason=death_execution
+			killer=1431422
+		}
+	}	#hanged drawn and quartered by the heathen rulers of Peten
+}
+1431439={
+	name="Xelha"
+	female=yes
+	culture=lacandon
+	religion=qabantajik
+	martial=15
+	diplomacy=0
+	stewardship=8
+	intrigue=1
+	learning=1
+	trait=chaste
+	trait=underhanded_rogue
+	trait=kind
+		2520.1.1={birth=yes}
+	2549.1.1={		
+		death={
+			death_reason=death_murder
+			killer=1431422
+		}
+	}	
+}
 #The Mopanes, dukes of BelmopÃ¡n
 
 
@@ -154,7 +326,7 @@
 	2535.1.1={death=yes}
 }
 1431441 = {
-	name="RamÃ³n"
+	name="Ramón"
 	dynasty=1438062
 	culture=yucateco
 	religion=qabantajik
@@ -174,7 +346,7 @@
 	2570.1.1={death=yes}
 }
 1431442 = {
-	name="ZacarÃ­as"
+	name="Zacarías"
 	dynasty=1438062
 	culture=yucateco
 	religion=neomayan
@@ -195,7 +367,7 @@
 	2610.1.1={death=yes}
 }
 1431443 = {
-	name="RamÃ³n"
+	name="Ramón"
 	dynasty=1438062
 	culture=yucateco
 	religion=neomayan
@@ -271,6 +443,7 @@
 	trait=patient
 	trait=gluttonous
 	father=1431443
+	mother=1431444
 	2637.1.1={birth=yes}
 }
 1431447 = {
@@ -357,6 +530,7 @@
 }
 1431452 = { #2nd Count of Macal
 	name="Antonio"
+	dynasty=1438062	
 	culture=yucateco
 	religion=qabantajik
 	trait= thirfty_clerk
@@ -369,6 +543,7 @@
 }
 1431453 = { #3rd Count of Macal
 	name="Jacinto"
+	dynasty=1438062
 	culture=yucateco
 	religion=qabantajik
 	trait= thirfty_clerk
@@ -381,6 +556,7 @@
 }
 1431454 = { #4th Count of Macal
 	name="Gervasio"
+	dynasty=1438062
 	culture=yucateco
 	religion=qabantajik
 	martial=8
@@ -396,10 +572,11 @@
 	trait= is_fat
 	father=1431453
 	2576.11.15={birth=yes}
-	25641.1.1={death=yes}
+	2641.1.1={death=yes}
 }
 1431455 = { #5th Count of Macal
 	name="Antonio"
+	dynasty=1438062
 	culture=yucateco
 	religion=qabantajik
 	martial=9
@@ -420,6 +597,7 @@
 }
 1431456 = { 
 	name="Gervasio"
+	dynasty=1438062
 	culture=yucateco
 	religion=qabantajik
 	trait=strong
@@ -431,6 +609,7 @@
 }
 1431457 = { #6th Count of Macal
 	name="Jacinto"
+	dynasty=1438062
 	culture=yucateco
 	religion=qabantajik
 	martial=10
@@ -446,8 +625,9 @@
 	2625.9.25={birth=yes}
 }
 1431458 = { 
-	name="ZenÃ³n"
+	name="Diego"
 	culture=yucateco
+	dynasty=1438062
 	religion=qabantajik
 	martial=8
 	diplomacy=8
@@ -463,6 +643,7 @@
 }
 1431459 = { 
 	name="Vicente"
+	dynasty=1438062
 	culture=yucateco
 	religion=qabantajik
 	martial=8
@@ -481,12 +662,12 @@
 	2638.3.21={birth=yes}
 }
 
-#The Lords of SayaxchÃ©
+#The Lords of Sayaxché
 
 1438063 = {
-	name="RÃ³mulo"
+	name="Rómulo"
 	dynasty=1438063
-	culture=quichean
+	culture=lacandon
 	religion=qabantajik
 	martial=8
 	diplomacy=7
@@ -496,7 +677,153 @@
 	trait=hunter
 	trait=patient
 	trait=robust
-	father=1431445 #Raymond III, duke of Belmopan
-	mother=1638013
 	2640.1.1={birth=yes}
+} 
+
+#The Lords of Poptún
+1438099= {
+	name="Jerónimo"
+	dynasty=1438064
+	culture=lacandon
+	religion=qabantajik
+	martial=11
+	diplomacy=7
+	stewardship=6
+	intrigue=2
+	learning=3
+	trait= skilled_tactician
+	trait= ugly
+	trait=strong
+	2631.1.1={birth=yes}
+} 
+
+#The Lords of Palenque. Theocracy!
+1438100= {
+	name="Canek"
+	dynasty=1438065
+	culture=lacandon
+	religion=qabantajik
+	martial=11
+	diplomacy=7
+	stewardship=6
+	intrigue=2
+	learning=8
+	trait= martial_cleric
+	trait= proud
+	trait= gregarious
+	trait= charitable
+	2531.1.1={birth=yes}
+	2598.1.1={death=yes}
+	} 
+1438101= {
+	name="Camazotz"
+	dynasty=1438065
+	culture=lacandon
+	religion=neomayan
+	martial=2
+	diplomacy=16
+	stewardship=6
+	intrigue=6
+	learning=8
+	trait= charismatic_negotiator
+	trait= content
+	trait= humble
+	trait= frail
+	father= 1438100
+	2565.1.1={birth=yes}
+	2628.1.1={death=yes}
+} 
+1438102= {
+	name="Ek Balam"
+	dynasty=1438065
+	culture=lacandon
+	religion=neomayan
+	martial=8
+	diplomacy=6
+	stewardship=6
+	intrigue=6
+	learning=8
+	trait= martial_cleric
+	trait= ambitious
+	trait= kind
+	trait= sturdy
+	father= 1438101
+	2591.1.1={birth=yes}
+	2653.1.1={death=yes}
+} 
+1438103= {
+	name="Box Balam"
+	dynasty=1438065
+	culture=lacandon
+	religion=neomayan
+	martial=8
+	diplomacy=6
+	stewardship=6
+	intrigue=6
+	learning=8
+	trait= mastermind_theologian
+	trait= arbitrary
+	trait= sturdy
+	trait= clubfooted
+	father= 1438102
+	2619.1.1={birth=yes}
+	2639.1.1={add_spouse=1438104}
+}
+ 
+1438104= {
+	name="Lolbé"
+	female=yes
+	culture=lacandon
+	religion=neomayan
+	martial=8
+	diplomacy=6
+	stewardship=6
+	intrigue=7
+	learning=10
+	trait= charismatic_negotiator
+	trait= devout
+	trait= humble
+	trait= gregarious
+	trait= honest
+	2625.1.31={birth=yes}
+} 
+1438105= {
+	name="León Balam"
+	dynasty=1438065
+	culture=lacandon
+	religion=neomayan
+	martial=11
+	diplomacy=6
+	stewardship=6
+	intrigue=6
+	learning=8
+	trait= martial_cleric
+	trait= shrewd
+	trait= robust
+	trait= envious
+	father= 1438103
+	mother= 1438104
+	2645.1.1={birth=yes}
+} 
+
+
+#### LORDS OF JOLPATÍN
+
+1438120= {
+	name="Kukulkán Abdalá" 
+	dynasty=1438065 		#PLACEHOLDER
+	culture=lacandon
+	religion=neomayan
+	martial=11
+	diplomacy=6
+	stewardship=6
+	intrigue=6
+	learning=8
+	trait= martial_cleric
+	trait= shrewd
+	trait= robust
+	trait= envious
+	father= 1438103
+	mother= 1438104
+	2645.1.1={birth=yes}
 } 
