@@ -2555,3 +2555,142 @@
 	trait= inspiring_leader
 	2589.1.2={birth=yes}
 }
+
+#####Shawshank reference########
+
+6900659 = {
+	name="Andrés"
+	dynasty=1813141
+	properties="ka0k0a000000000000000000000000000000"
+	culture=yankee
+	religion=sacred_heart
+	martial=2
+	diplomacy=8
+	stewardship=8
+	intrigue=8
+	learning=8
+	trait=midas_touched
+	trait=erudite
+	trait=deceitful
+	trait=patient
+	trait=marian_san_juditas
+	2608.4.5={
+		birth=yes
+		culture=calentano
+	}
+	2633.2.14={add_spouse=6900662}
+	2639.3.10={effect={add_friend=6900660}}
+}
+
+6900660 = {
+	name="Elías"
+	dynasty=1813142
+	culture=tuskegee
+	religion=sacred_heart
+	martial=4
+	diplomacy=8
+	stewardship=4
+	intrigue=8
+	learning=3
+	trait=amateurish_plotter
+	trait=content
+	trait=gregarious
+	trait=shrewd
+	trait=marian_santa_muerte
+	2607.4.15={
+		birth=yes
+		culture=calentano
+	}
+	2639.3.10={effect={add_friend=6900659}}
+}
+
+6900661 = {
+	name="Tomás"
+	dynasty=1813141
+	culture=yankee
+	religion=sacred_heart
+	martial=6
+	diplomacy=3
+	stewardship=3
+	intrigue=2
+	learning=2
+	trait=amateurish_plotter
+	trait=trusting
+	trait=diligent
+	trait=marian_santa_muerte
+	trait=adopted_child
+	father=6900659
+	2639.6.28={
+		birth=yes
+		culture=calentano
+	}
+}
+
+6900662 = {
+	name="Linda"
+	female=yes
+	dynasty=0
+	culture=yankee
+	religion=sacred_heart
+	martial=6
+	diplomacy=3
+	stewardship=3
+	intrigue=8
+	learning=2
+	trait=amateurish_plotter
+	trait=trusting
+	trait=marian_santa_muerte
+	2610.2.5={
+		birth=yes
+		culture=calentano
+	}
+	2633.2.14={add_spouse=6900659}
+	2638.12.22={death={
+			death_reason=death_murder
+			killer=6900659
+		}
+	}
+}
+
+#####Acapulco republic - de Tepito###########
+
+6900663 = {
+	name="Ulises"
+	dynasty=1519081
+	culture=chilango
+	religion=sacred_heart
+	martial=6
+	diplomacy=1
+	stewardship=2
+	intrigue=3
+	learning=2
+	trait=misguided_warrior
+	trait=proud
+	trait=wroth
+	trait=zealous
+	trait=marian_santa_muerte
+	trait=aggressive_leader
+	2628.4.5={
+		birth=yes
+	}
+	2646.2.12={add_spouse=6900664}
+}
+
+6900664 = {
+	name="Ximena"
+	female=yes
+	culture=chilango
+	religion=sacred_heart
+	martial=2
+	diplomacy=1
+	stewardship=4
+	intrigue=5
+	learning=2
+	trait=naive_appeaser
+	trait=proud
+	trait=marian_santa_muerte
+	2630.2.15={
+		birth=yes
+	}
+	2646.2.12={add_spouse=6900663}
+}
