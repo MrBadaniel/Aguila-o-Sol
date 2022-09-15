@@ -1,0 +1,409 @@
+# By SKY
+
+castle = {
+	ca_texas_building_1 = {# Cowboy dormitories
+		desc = ca_texas_building_desc
+		potential = { 
+			OR = {
+				FROMFROM = { has_building = ca_texas_building_1 } #Show the building only if it has been already built or if the owner has the proper bloodline to build it.
+				FROM = {
+					any_owned_bloodline = {
+						has_bloodline_flag = bloodline_texas_building 
+					}
+				}
+				FROM = {
+					any_liege = {
+						any_owned_bloodline = {
+							has_bloodline_flag = bloodline_texas_building 
+						}	
+					}
+				}
+			}
+		}
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 0
+			custom_tooltip = {
+				text = tooltip_has_texas_bloodline
+				hidden_tooltip = {
+					OR = {
+						FROM = {
+							any_owned_bloodline = {
+								has_bloodline_flag = bloodline_texas_building 
+							}
+						}
+						FROM = {
+							any_liege = {
+								any_owned_bloodline = {
+									has_bloodline_flag = bloodline_texas_building 
+								}	
+							}
+						}
+					}
+				}
+			}
+		}
+		is_active_trigger = {
+			FROM = {
+				NOR = {
+					is_tribal = yes
+					is_nomadic = yes
+				}
+			}
+		}
+
+		gold_cost = 150
+		build_time = 365
+		garrison_size = 0.03
+		levy_size = 0.03
+		cowboys = 10
+		cowboys_morale = 0.03
+		
+		add_number_to_name = no
+
+		ai_creation_factor = 88
+
+		extra_tech_building_start = 1.2
+	}
+	ca_texas_building_2 = {# Cowboy dormitories
+		desc = ca_texas_building_desc
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 4
+			custom_tooltip = {
+				text = tooltip_has_texas_bloodline
+				hidden_tooltip = {
+					OR = {
+						FROM = {
+							any_owned_bloodline = {
+								has_bloodline_flag = bloodline_texas_building 
+							}
+						}
+						FROM = {
+							any_liege = {
+								any_owned_bloodline = {
+									has_bloodline_flag = bloodline_texas_building 
+								}	
+							}
+						}
+					}
+				}
+			}
+		}
+		is_active_trigger = {
+			FROM = {
+				NOR = {
+					is_tribal = yes
+					is_nomadic = yes
+				}
+			}
+		}
+		upgrades_from = ca_texas_building_1
+		gold_cost = 200
+		build_time = 560
+		garrison_size = 0.03
+		levy_size = 0.03
+		cowboys = 15
+		cowboys_morale = 0.03
+
+		add_number_to_name = no
+		
+		ai_creation_factor = 88
+
+		extra_tech_building_start = 1.2
+	}
+	ca_texas_building_3 = {# Cowboy dormitories
+		desc = ca_texas_building_desc
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 6
+			custom_tooltip = {
+				text = tooltip_has_texas_bloodline
+				hidden_tooltip = {
+					OR = {
+						FROM = {
+							any_owned_bloodline = {
+								has_bloodline_flag = bloodline_texas_building 
+							}
+						}
+						FROM = {
+							any_liege = {
+								any_owned_bloodline = {
+									has_bloodline_flag = bloodline_texas_building 
+								}	
+							}
+						}
+					}
+				}
+			}
+		}
+		is_active_trigger = {
+			FROM = {
+				NOR = {
+					is_tribal = yes
+					is_nomadic = yes
+				}
+			}
+		}
+		upgrades_from = ca_texas_building_2
+		gold_cost = 250
+		build_time = 560
+		garrison_size = 0.03
+		levy_size = 0.03
+		cowboys = 20
+		cowboys_morale = 0.03
+
+		add_number_to_name = no
+		
+		ai_creation_factor = 88
+
+		extra_tech_building_start = 1.2
+	}
+	ca_texas_building_4 = {# Cowboy dormitories
+		desc = ca_texas_building_desc
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 8
+			custom_tooltip = {
+				text = tooltip_has_texas_bloodline
+				hidden_tooltip = {
+					OR = {
+						FROM = {
+							any_owned_bloodline = {
+								has_bloodline_flag = bloodline_texas_building 
+							}
+						}
+						FROM = {
+							any_liege = {
+								any_owned_bloodline = {
+									has_bloodline_flag = bloodline_texas_building 
+								}	
+							}
+						}
+					}
+				}
+			}
+		}
+		is_active_trigger = {
+			FROM = {
+				NOR = {
+					is_tribal = yes
+					is_nomadic = yes
+				}
+			}
+		}
+		upgrades_from = ca_texas_building_3
+		gold_cost = 300
+		build_time = 760
+		garrison_size = 0.03
+		levy_size = 0.03
+		cowboys = 25
+		cowboys_morale = 0.03
+
+		add_number_to_name = no
+		
+		ai_creation_factor = 88
+
+		extra_tech_building_start = 1.2
+	}
+}
+
+city = {
+	ct_texas_building_1 = {# Saloon
+		desc = ct_texas_building_desc
+		potential = { 
+			OR = {
+				FROMFROM = { has_building = ct_texas_building_1 } #Show the building only if it has been already built or if the owner has the proper bloodline to build it.
+				FROM = {
+					any_owned_bloodline = {
+						has_bloodline_flag = bloodline_texas_building 
+					}
+				}
+				FROM = {
+					any_liege = {
+						any_owned_bloodline = {
+							has_bloodline_flag = bloodline_texas_building 
+						}	
+					}
+				}
+			}
+		}
+		trigger = { 
+			TECH_CITY_CONSTRUCTION = 0
+			custom_tooltip = {
+				text = tooltip_has_texas_bloodline
+				hidden_tooltip = {
+					OR = {
+						FROM = {
+							any_owned_bloodline = {
+								has_bloodline_flag = bloodline_texas_building 
+							}
+						}
+						FROM = {
+							any_liege = {
+								any_owned_bloodline = {
+									has_bloodline_flag = bloodline_texas_building 
+								}	
+							}
+						}
+					}
+				}
+			}
+		}
+		is_active_trigger = {
+			FROM = {
+				NOR = {
+					is_tribal = yes
+					is_nomadic = yes
+				}
+			}
+		}
+
+		gold_cost = 150
+		build_time = 365
+		local_revolt_risk = -0.01
+		tax_income = 0.3
+		cowboys = 10
+		cowboys_morale = 0.05
+		
+		add_number_to_name = no
+
+		ai_creation_factor = 88
+
+		extra_tech_building_start = 1.2
+	}
+	ct_texas_building_2 = {# Saloon
+		desc = ct_texas_building_desc
+		trigger = { 
+			TECH_CITY_CONSTRUCTION = 2
+			custom_tooltip = {
+				text = tooltip_has_texas_bloodline
+				hidden_tooltip = {
+					OR = {
+						FROM = {
+							any_owned_bloodline = {
+								has_bloodline_flag = bloodline_texas_building 
+							}
+						}
+						FROM = {
+							any_liege = {
+								any_owned_bloodline = {
+									has_bloodline_flag = bloodline_texas_building 
+								}	
+							}
+						}
+					}
+				}
+			}
+		}
+		is_active_trigger = {
+			FROM = {
+				NOR = {
+					is_tribal = yes
+					is_nomadic = yes
+				}
+			}
+		}
+		upgrades_from = ct_texas_building_1
+		gold_cost = 200
+		build_time = 560
+		local_revolt_risk = -0.02
+		tax_income = 0.3
+		cowboys = 15
+		cowboys_morale = 0.05
+
+		add_number_to_name = no
+		
+		ai_creation_factor = 88
+
+		extra_tech_building_start = 1.2
+	}
+	ct_texas_building_3 = {# Saloon
+		desc = ct_texas_building_desc
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 6
+			custom_tooltip = {
+				text = tooltip_has_texas_bloodline
+				hidden_tooltip = {
+					OR = {
+						FROM = {
+							any_owned_bloodline = {
+								has_bloodline_flag = bloodline_texas_building 
+							}
+						}
+						FROM = {
+							any_liege = {
+								any_owned_bloodline = {
+									has_bloodline_flag = bloodline_texas_building 
+								}	
+							}
+						}
+					}
+				}
+			}
+		}
+		is_active_trigger = {
+			FROM = {
+				NOR = {
+					is_tribal = yes
+					is_nomadic = yes
+				}
+			}
+		}
+		upgrades_from = ct_texas_building_2
+		gold_cost = 250
+		build_time = 560
+		local_revolt_risk = -0.02
+		tax_income = 0.5
+		cowboys = 20
+		cowboys_morale = 0.05
+
+		add_number_to_name = no
+		
+		ai_creation_factor = 88
+
+		extra_tech_building_start = 1.2
+	}
+	ct_texas_building_4 = {# Saloon
+		desc = ct_texas_building_desc
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 8
+			custom_tooltip = {
+				text = tooltip_has_texas_bloodline
+				hidden_tooltip = {
+					OR = {
+						FROM = {
+							any_owned_bloodline = {
+								has_bloodline_flag = bloodline_texas_building 
+							}
+						}
+						FROM = {
+							any_liege = {
+								any_owned_bloodline = {
+									has_bloodline_flag = bloodline_texas_building 
+								}	
+							}
+						}
+					}
+				}
+			}
+		}
+		is_active_trigger = {
+			FROM = {
+				NOR = {
+					is_tribal = yes
+					is_nomadic = yes
+				}
+			}
+		}
+		upgrades_from = ct_texas_building_3
+		gold_cost = 300
+		build_time = 760
+		local_revolt_risk = -0.02
+		tax_income = 0.5
+		cowboys = 25
+		cowboys_morale = 0.05
+
+		add_number_to_name = no
+		
+		ai_creation_factor = 88
+
+		extra_tech_building_start = 1.2
+	}
+}

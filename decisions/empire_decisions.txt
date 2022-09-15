@@ -1965,6 +1965,25 @@ decisions = {
 				limit = { tier = KING }
 				destroy_landed_title = THIS
 			}
+
+			give_nickname = nick_the_blessed
+			if = {
+				limit = {
+					is_female = no
+				}
+				create_bloodline = {
+					type = tex_texarkana_male
+				}
+			}
+			if = {
+				limit = {
+					is_female = yes
+				}
+				create_bloodline = {
+					type = tex_texarkana_female
+				}
+			}
+
 			e_dixie = {
 				show_scope_change = no
 				holder_scope = {
@@ -1987,6 +2006,8 @@ decisions = {
 					}
 				}
 			}
+
+
 			hidden_tooltip = { narrative_event = { id = tex.2 } } 
 			set_character_flag = founded_texarkana
 

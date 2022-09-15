@@ -1,0 +1,205 @@
+### By SKY
+
+## Historical bloodlines
+
+iurhuri = { #The first Sol Invicto Tata
+	command_modifier = {
+		religious_enemy = 0.10
+	}
+	monthly_character_piety = 0.2
+	sol_invicta_opinion = 8
+	bloodline_effect_great_heroes_appear = 1
+	inheritance = patrilineal
+	allow_bastards = yes
+	active = {
+		religion = sol_invicta
+	}
+	picture = GFX_bloodlines_symbol_zun_sun
+	flags = { historical_bloodline bloodline_heroes }
+}
+
+cervantes = { #Rey of Bajio
+	monthly_character_piety = 0.1
+	command_modifier = {
+		religious_enemy = 0.05
+	}
+	cristo_rey_opinion = 5
+	saintly_defender_bloodline = 1
+	inheritance = patrilineal
+	allow_bastards = no
+	active = {
+		religion_group = christian
+	}
+	picture = GFX_bloodlines_symbol_cross_crusader
+	flags = { historical_bloodline defender_of_the_faith }
+}
+
+## Created bloodlines
+
+high_king_texan_bloodline = {# Texian High king of Texas
+	texan_opinion = 10
+	monthly_character_prestige = 0.4
+	bloodline_effect_texas_building = 1 
+	command_modifier = {
+		morale_defence = 0.10
+		morale_offence = 0.10
+	}
+	inheritance = patrilineal
+	allow_bastards = yes
+	picture = GFX_bloodlines_symbol_texas
+	flags = { created_bloodlines bloodline_texas_building }
+	active = {
+		culture = texan
+		NOR = {
+			is_nomadic = yes
+			is_tribal = yes
+		}
+	}
+}
+
+high_king_tejano_bloodline = {# Tejano High king of Texas
+	tejano_opinion = 10
+	monthly_character_prestige = 0.4
+	bloodline_effect_texas_building = 1 
+	command_modifier = {
+		morale_defence = 0.10
+		morale_offence = 0.10
+	}
+	inheritance = patrilineal
+	allow_bastards = yes
+	picture = GFX_bloodlines_symbol_texas
+	flags = { created_bloodlines bloodline_texas_building }
+	active = {
+		culture = tejano
+		NOR = {
+			is_nomadic = yes
+			is_tribal = yes
+		}
+	}
+}
+
+high_king_texaner_bloodline = {# Texaner High king of Texas
+	texaner_opinion = 10
+	monthly_character_prestige = 0.4
+	bloodline_effect_texas_building = 1 
+	command_modifier = {
+		morale_defence = 0.10
+		morale_offence = 0.10
+	}
+	inheritance = patrilineal
+	allow_bastards = yes
+	picture = GFX_bloodlines_symbol_texas
+	flags = { created_bloodlines bloodline_texas_building }
+	active = {
+		culture = texaner
+		NOR = {
+			is_nomadic = yes
+			is_tribal = yes
+		}
+	}
+}
+
+high_king_czexan_bloodline = {# Czexan High king of Texas
+	czexan_opinion = 10
+	monthly_character_prestige = 0.4
+	bloodline_effect_texas_building = 1 
+	command_modifier = {
+		morale_defence = 0.10
+		morale_offence = 0.10
+	}
+	inheritance = patrilineal
+	allow_bastards = yes
+	picture = GFX_bloodlines_symbol_texas
+	flags = { created_bloodlines bloodline_texas_building }
+	active = {
+		culture = czexan
+		NOR = {
+			is_nomadic = yes
+			is_tribal = yes
+		}
+	}
+}
+
+high_queen_texan_bloodline = {# Texian High queen of Texas
+	texan_opinion = 10
+	monthly_character_prestige = 0.4
+	bloodline_effect_texas_building = 1 
+	command_modifier = {
+		morale_defence = 0.10
+		morale_offence = 0.10
+	}
+	inheritance = matrilineal
+	allow_bastards = yes
+	picture = GFX_bloodlines_symbol_texas
+	flags = { created_bloodline bloodline_texas_building }
+	active = {
+		culture = texan
+		NOR = {
+			is_nomadic = yes
+			is_tribal = yes
+		}
+	}
+}
+
+high_queen_tejano_bloodline = {# Tejano High queen of Texas
+	tejano_opinion = 10
+	monthly_character_prestige = 0.4
+	bloodline_effect_texas_building = 1 
+	command_modifier = {
+		morale_defence = 0.10
+		morale_offence = 0.10
+	}
+	inheritance = matrilineal
+	allow_bastards = yes
+	picture = GFX_bloodlines_symbol_texas
+	flags = { created_bloodline bloodline_texas_building }
+	active = {
+		culture = tejano
+		NOR = {
+			is_nomadic = yes
+			is_tribal = yes
+		}
+	}
+}
+
+high_queen_texaner_bloodline = {# Texaner High queen of Texas
+	texaner_opinion = 10
+	monthly_character_prestige = 0.4
+	bloodline_effect_texas_building = 1 
+	command_modifier = {
+		morale_defence = 0.10
+		morale_offence = 0.10
+	}
+	inheritance = matrilineal
+	allow_bastards = yes
+	picture = GFX_bloodlines_symbol_texas
+	flags = { created_bloodline bloodline_texas_building }
+	active = {
+		culture = texaner
+		NOR = {
+			is_nomadic = yes
+			is_tribal = yes
+		}
+	}
+}
+
+high_queen_czexan_bloodline = {# Czexan High queen of Texas
+	czexan_opinion = 10
+	monthly_character_prestige = 0.4
+	bloodline_effect_texas_building = 1 
+	command_modifier = {
+		morale_defence = 0.10
+		morale_offence = 0.10
+	}
+	inheritance = matrilineal
+	allow_bastards = yes
+	picture = GFX_bloodlines_symbol_texas
+	flags = { created_bloodline bloodline_texas_building }
+	active = {
+		culture = czexan
+		NOR = {
+			is_nomadic = yes
+			is_tribal = yes
+		}
+	}
+}
