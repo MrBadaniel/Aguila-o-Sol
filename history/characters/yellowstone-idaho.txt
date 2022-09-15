@@ -24,6 +24,8 @@
 	trait=humble
 	trait=diligent
 	trait=patient
+	father=1890135
+	mother=1890136
 	2642.1.1={birth=yes}
 	2662.9.16={add_spouse=1830020}
 	2720.1.1={death=yes}
@@ -33,7 +35,7 @@
 	name="Lawrence Peter"
 	dynasty=1889029
 	culture=mountainer
-	religion=edenite #By request of Ally, represents the blending of religions
+	religion=edenite #By request of Ally, represents the blending of religions, modified by Ekans much later
 	trait=poet
 	trait=sympathy_pacific
 	trait=sympathy_latter_day_saints
@@ -43,6 +45,8 @@
 	trait=gregarious
 	trait=skilled_tactician
 	martial=10
+	father=1890130
+	mother=1890131
 	2640.5.12={birth=yes}
 	2665.12.2={add_spouse=1890005}
 	2720.1.19={death=yes}
@@ -1713,7 +1717,7 @@
 1890123={
 	name="Alexandros"
 	dynasty=1889030
-	culture=snakelander
+	culture=greek
 	religion=edenite
 	trait=brilliant_strategist
 	trait=strong
@@ -1725,6 +1729,7 @@
 	give_nickname=nick_the_snake
 	2496.8.11={birth=yes
 	name="Alexandros"
+	culture=snakelander
 	}
 	2560.12.3={death=yes}
 }
@@ -1734,7 +1739,7 @@
 	dynasty=1889030
 	father=1890123
 	female=yes
-	culture=snakelander
+	culture=greek
 	religion=edenite
 	trait=midas_touched
 	trait=greedy
@@ -1742,7 +1747,9 @@
 	trait=lunatic
 	trait=temperate
 	trait=chaste
-	2509.9.10={birth=yes}
+	2509.9.10={birth=yes
+	culture=snakelander
+	}
 	2577.1.4={death=yes}
 }
 
@@ -1751,14 +1758,16 @@
 	dynasty=1889030
 	mother=1890124
 	female=yes
-	culture=snakelander
+	culture=greek
 	religion=edenite
 	trait=martial_cleric
 	trait=slothful
 	trait=honest
 	trait=wroth
 	trait=humble
-	2535.6.15={birth=yes}
+	2535.6.15={birth=yes
+	culture=snakelander
+	}
 	2591.1.14={death=yes}
 }
 
@@ -1767,14 +1776,16 @@
 	dynasty=1889030
 	mother=1890125
 	female=yes
-	culture=snakelander
+	culture=greek
 	religion=edenite
 	trait=skilled_tactician
 	trait=shieldmaiden
 	trait=reclusive
 	trait=brave
 	trait=chaste
-	2564.8.1={birth=yes}
+	2564.8.1={birth=yes
+	culture=snakelander
+	}
 	2597.9.1={death={
 			death_reason=death_battle
 			killer=1890041 #Moses Silvermount
@@ -1789,7 +1800,7 @@
 	female=yes
 	culture=snakelander
 	religion=edenite
-	trait=flu
+	trait=pneumonic
 	2592.1.12={birth=yes}
 	2595.7.11={death={death_reason=death_trait}}
 }
@@ -1798,14 +1809,16 @@
 	name="Thomas"
 	dynasty=1889030
 	mother=1890125
-	culture=snakelander
+	culture=greek
 	religion=edenite
 	trait=fortune_builder
 	trait=dull
 	trait=greedy
 	trait=erudite
 	trait=honest
-	2570.9.1={birth=yes}
+	2570.9.1={birth=yes
+	culture=snakelander
+	}
 	2640.2.22={death=yes}
 }
 
@@ -1825,14 +1838,150 @@
 	2641.5.3={death=yes}
 }
 
+1890130={
+	name="Oakley"
+	dynasty=1889029
+	culture=mountainer
+	religion=edenite
+	trait=fortune_builder
+	trait=bisexual
+	trait=kind
+	trait=gregarious
+	trait=dull
+	father=1890128
+	mother=1890129
+	2594.6.15={birth=yes}
+	2638.8.8={add_spouse=1890131}
+	2660.5.3 ={death=yes}
+}
 
-#Oakley Gilbert 2594.6.15 to 2660.5.3 
-#Oakley was steward 3, kind, gregarious, and dull. 
-#Lawrence Peter Gilbert
-#Martial 3, robust, shy, kind, humble 
-#son of Sigma Gay Oakley Gilbert and Mary Anne Stilbern in 2640.1.19 (2605.4.3 #t2666.2.1)
-#Mary Anne Stilbern Learning 4, devout, deaconess, temperate, shy, chaste
+1890131={
+	name="Mary Anne"
+	dynasty=5001184
+	culture=coloradan
+	religion=edenite
+	trait=mastermind_theologian
+	trait=devout
+	trait=deaconess
+	trait=temperate
+	trait=shy
+	trait=chaste
+	2605.4.3={birth=yes}
+	2666.2.1 ={death=yes}
+}
 
+1890132={
+	name="Penny"
+	dynasty=1889030
+	mother=1890125
+	female=yes
+	culture=greek
+	religion=edenite
+	trait=martial_cleric
+	trait=cynical
+	trait=temperate
+	trait=chaste
+	2568.3.3={birth=yes
+	culture=snakelander
+	}
+	2644.8.1 ={death=yes}
+}
+
+1890133={
+	name="Griffin"
+	dynasty=1889028
+	#dna="bniigdosopu"
+	culture=snakelander
+	religion=mormon
+	trait=brilliant_strategist
+	trait=is_malnourished
+	trait=duelist
+	trait=gregarious
+	trait=stubborn
+	2558.9.9={birth=yes}
+	2582.11.16={add_spouse=1890132}
+	2649.9.1={death=yes}
+}
+
+1890134={
+	name="Lehi"
+	dynasty=1889028
+	dna="bniigdosopu"
+	culture=greek
+	religion=mormon
+	trait=skilled_tactician
+	trait=robust
+	trait=brave
+	trait=kind
+	trait=charitable
+	father=1890133
+	mother=1890132
+	2585.1.9={birth=yes
+	culture=snakelander
+	}
+	2651.9.24={death=yes}
+}
+
+1890135={
+	name="Jonathan"
+	dynasty=1889028
+	#dna="bniigdosopu"
+	culture=snakelander
+	religion=mormon
+	trait=charismatic_negotiator
+	trait=groomed
+	trait=gregarious
+	trait=honest
+	trait=charitable
+	2608.11.5={birth=yes}
+	2640.1.1={add_spouse=1890136}
+	2664.8.12={death=yes}
+}
+
+1890136={
+	name="Kayla"
+	dynasty=1830021
+	female=yes
+	culture=utahn
+	religion=mormon
+	trait=martial_cleric
+	trait=kind
+	trait=devout
+	trait=honest
+	mother=1830009
+	father=1830008
+	2610.10.15={birth=yes}
+	2665.9.11={death=yes}
+}
+
+#Tom Barbera 2388.1.1 to 2444.1.1 
+#Learning 1, wroth, stubborn, diligent, deceitful
+#Jerry Barbera 2401.1 to 2466.1.1 
+#Learning 4, quick, shrewd, deceitful, patient 
+
+
+
+
+#Madeleine (Battleborn pagan) 2411.6.19 to 2479.4.11 who married Chilikoot #Sam Muir in 2432.4.1 
+#Madeleine, devout, learning 3, fat, gluttonous, gregarious, socializer, #sympathy pacific
+
+#Sam and Madeline had Har Har Hardy Krakauer 2433.6.16 to 2496.11.5 
+#Diplomacy 2, ugly, gregarious, uncouth, worth, charitable
+
+#Countess Hannah Barbera 2434.1.14 to 2487.12.11 married to Har Har Hardy #Krakauer in 2452.1.10. 
+#Stewardship 4, artist, shrewd, ambitious, diligent, kind 
+
+#Quick Draw Daws Krakauer 2454.8.11 to 2515.9.9 who was the best gun north of #Texas. 
+#Martial 4, duelist, quick, brave, temperate, charitable
+
+#1836188={
+#	name="Sam"
+#	dynasty=1851024#Muir
+#	culture=english
+#	religion=pagan#forester
+#	2410.9.2={birth=yes
+#	}
+#}
 
 
 #1875068={

@@ -26,6 +26,27 @@
 	}
 }
 
+1876018={
+	name="Barnum"
+	dynasty=1876018
+	culture=coloradan
+	religion=trailwalker
+	trait=tough_soldier
+    trait=robust
+    trait=pious
+	trait=stubborn
+	trait=patient
+	father=1875069
+	2635.1.1={birth=yes
+			effect={
+			add_strong_claim=k_colorado
+		}
+	}
+	2662.10.21={effect={add_rival=1875086}}
+	2700.1.1={death=yes}
+}
+
+
 1876019={
 	name="Jeroboam"
 	dynasty=1797024
@@ -232,10 +253,37 @@
 	2700.1.1={death=yes}
 }
 
+1875069={
+	name="Micah"
+	dynasty=1876018
+	culture=grangelander
+	religion=trailwalker
+	diplomacy = 7
+	martial = 7
+	stewardship = 7 
+	intrigue = 6
+	learning = 6
+	trait = skilled_tactician
+	trait = adventurer
+	trait = stubborn
+	trait = wroth
+	trait = brave
+	trait = chaste
+	give_nickname=nick_the_pale_rider
+	2591.1.1={birth=yes}
+#	2622.12.17={
+#		create_bloodline={
+#			type=pale_rider
+#			has_dlc="Holy Fury"
+#		}
+#	}
+	2658.1.1={death=yes}
+}
+
 1875073= { name="Hernán"
 	dynasty=5001228 #Montoya
 	culture=neomexicano
-	religion=atomicist#misional
+	religion=sacred_heart#misional
 	trait=scholarly_theologian
 	trait=bastard
 	#trait=cristero_branch
@@ -252,7 +300,7 @@
 1875074= { name="Trinidad"
 	female=yes
 	culture=neomexicano
-	religion=atomicist#misional
+	religion=sacred_heart#misional
 	trait=indulgent_wastrel
 	#trait=franciscan_branch
 	trait=fair
@@ -276,33 +324,236 @@
 	2662.4.2={death=yes}
 }
 
+1875076= { name="Conrado"
+	dynasty=5001228 #Montoya
+	culture=neomexicano
+	religion=sacred_heart#misional
+	father=1875073
+	2410.4.1={birth=yes}
+	2486.6.18={death=yes}
+}
+
+1875077= { name="Germán"
+	dynasty=5001228 #Montoya
+	culture=neomexicano
+	religion=sacred_heart#misional
+	father=1875076
+	2440.9.12={birth=yes}
+	2506.1.1={death=yes}
+}
+
+1875078= { name="Conrado"
+	dynasty=5001228 #Montoya
+	culture=neomexicano
+	religion=sacred_heart#misional
+	father=1875077
+	trait=skilled_tactician
+	trait=slow
+	trait=brave
+	trait=stubborn
+	trait=duelist
+	trait=one_handed
+	trait=one_eyed
+	trait=mangled
+	2464.9.12={birth=yes}
+	2511.8.2={death={death_reason=death_trait}}
+}
+
+1875079= { name="Óscar"
+	dynasty=5001228 #Montoya
+	culture=neomexicano
+	religion=sacred_heart#misional
+	father=1875077
+	trait=thrifty_clerk
+	trait=craven
+	trait=shrewd
+	trait=devout
+	trait=temperate
+	2466.12.2={birth=yes}
+	2546.6.12={death=yes}
+}
+
+1875080= { name="Ludovico"
+	dynasty=5001228 #Montoya
+	culture=neomexicano
+	religion=sacred_heart#misional
+	father=1875079
+	trait=midas_touched
+	trait=lunatic
+	trait=clubfooted
+	trait=shrewd
+	trait=greedy
+	trait=gregarious
+	trait=musician
+	2491.5.4={birth=yes}
+	2555.4.4={death=yes}
+}
+
+1875081= { name="Adolfo"
+	dynasty=5001228 #Montoya
+	culture=neomexicano
+	religion=edenite#misional
+	father=1875080
+	trait=brilliant_strategist
+	trait=charitable
+	trait=wroth
+	trait=cruel
+	trait=gregarious
+	give_nickname=nick_el_soldado
+	2518.2.9={birth=yes}
+	2588.5.25={death=yes}
+}
+
 1875082= { name="Hernán"
 	dynasty=5001228 #Montoya
 	culture=neomexicano
-	religion=atomicist#montanist
-	trait=skilled_tactician	
+	religion=edenite#montanist
+	trait=fortune_builder	
 	father=1875081
 	trait=shrewd
 	trait=brave
-	trait=brawny
+	trait=greedy
 	2540.3.12={birth=yes}
 	2605.8.19={death=yes}
 }
 
-2410 Conrado 1875076
-2440 Germán 1875077
-2464 Conrado 1875078
-2466 Ludovico 1875079
-2491 Óscar 1875080
-2518 Adolfo 1875081
+1875083= { name="Conrado"
+	dynasty=5001228 #Montoya
+	culture=neomexicano
+	religion=edenite#montanist
+	trait=tough_soldier	
+	father=1875082
+	trait=stubborn
+	trait=honest
+	trait=just
+	2577.1.20={birth=yes}
+	2622.9.26={death={
+			death_reason=death_battle #Died in combat.
+			killer=1875069
+		}
+	}
+}
 
+1875084= { name="Gilberto"
+	dynasty=5001228 #Montoya
+	culture=neomexicano
+	religion=edenite#montanist
+	trait=detached_priest	
+	father=1875083
+	trait=slothful
+	trait=brave
+	trait=wroth
+	trait=stressed
+	2593.5.25={birth=yes}
+	2614.1.1={add_spouse=1875087}
+	2635.7.26={
+		death={
+			death_reason=death_suicide_fall
+		}
+	}
+}
 
-1875083 Conrado 2577.1.20 to COLORADOFALL, father of Mantequila
-Learning 1, slothful, brave, wroth, stressed
-1875084 Gilberto 2593.5.25 to 2635.7.26 suicide
-1875085 Jáins 2615.10.11 to 2664.2.11
-Suicide
-diplomacy 4, genius, stubborn, dull, diligent, lunatic, just 
-1875086 Gonzalo brother of Jáins, 2620.12.22 
-to Present
-diplomacy 4, quick, stubborn, lustful, kind, diligent
+1875085= { name="Jáins"
+	dynasty=5001228 #Montoya
+	culture=comanche
+	religion=edenite#montanist
+	trait=grey_eminence	
+	father=1875084
+	mother=1875087
+	trait=genius
+	trait=stubborn
+	trait=dull
+	trait=diligent
+	trait=just
+	trait=lunatic
+	trait=depressed
+	2615.10.11={birth=yes
+	culture=neomexicano
+	}
+	2664.2.11={death={
+			death_reason=death_suicide_hanging
+		}
+	}
+}
+
+1875086= { name="Gonzalo"
+	dynasty=5001228 #Montoya
+	culture=neomexicano
+	religion=edenite#montanist
+	trait=grey_eminence	
+	father=1875084
+	mother=1875087
+	trait=quick
+	trait=stubborn
+	trait=lustful
+	trait=diligent
+	trait=kind
+	trait=deceitful
+	2620.12.22={birth=yes}
+	2662.10.21={effect={add_rival=1876018}}
+}
+
+1875087= { name="Rebecca"
+	female=yes
+	culture=comanche
+	religion=edenite#montanist
+	trait=scholarly_theologian
+	trait=deaconess
+	trait=kind
+	trait=devout
+	trait=trusting
+	2599.9.14={birth=yes}
+	2646.6.12={death=yes}
+}
+
+1875088= { name="Irena"
+	female=yes
+	dynasty=5001228 #Montoya
+	culture=neomexicano
+	father=1875083
+	religion=edenite#montanist
+	trait=martial_cleric
+	trait=erudite
+	trait=kind
+	trait=canoness
+	trait=zealous
+	2599.6.7={birth=yes}
+	2662.10.21={death={death_reason=death_execution_hanging killer=1876018}}
+}
+
+1875089= { name="Élia"
+	female=yes
+	culture=neomexicano
+	religion=edenite#montanist
+	trait=trusting
+	trait=chaste
+	2621.9.14={birth=yes}
+	2651.1.1={add_spouse=1875086}
+	2662.10.21={death={death_reason=death_execution_hanging killer=1876018}}
+}
+
+1875090= { name="Nicolasa"
+	female=yes
+	dynasty=5001228 #Montoya
+	culture=neomexicano
+	religion=edenite#montanist
+	mother=1875089
+	father=1875086
+	trait=idolizer
+	trait=timid	
+	2652.12.22={birth=yes}
+	2662.10.21={death={death_reason=death_execution_hanging killer=1876018}}
+}
+
+1875091= { name="Fé"
+	female=yes
+	dynasty=5001228 #Montoya
+	culture=neomexicano
+	religion=edenite#montanist
+	mother=1875089
+	father=1875086
+	trait=curious
+	trait=affectionate
+	trait=devout
+	2654.6.9={birth=yes}
+}
