@@ -465,6 +465,119 @@ decisions = {
 				add_law = orf_senate_type_law_1
 			}
 			add_artifact = crown_texas
+			if = { #New Imperial Bloodline. (Texan male)
+				limit = { 
+					has_dlc = "Holy Fury" 
+					is_female = no
+					culture = texan
+				}
+				create_bloodline = {
+					type = high_king_texan_bloodline
+				}
+				new_bloodline = {
+					set_description = "texas_bloodline_desc"
+				}	
+				sound_effect = bloodline_added
+			}
+			else_if = { #New Imperial Bloodline. (Texan female)
+				limit = { 
+					has_dlc = "Holy Fury" 
+					is_female = yes
+					culture = texan
+				}
+				create_bloodline = {
+					type = high_queen_texan_bloodline
+				}
+				new_bloodline = {
+					set_description = "texas_bloodline_desc"
+				}	
+				sound_effect = bloodline_added
+			}
+			else_if = { #New Imperial Bloodline. (Tejano male)
+				limit = { 
+					has_dlc = "Holy Fury" 
+					is_female = no
+					culture = tejano
+				}
+				create_bloodline = {
+					type = high_king_tejano_bloodline
+				}
+				new_bloodline = {
+					set_description = "texas_bloodline_desc"
+				}	
+				sound_effect = bloodline_added
+			}
+			else_if = { #New Imperial Bloodline. (Tejano female)
+				limit = { 
+					has_dlc = "Holy Fury" 
+					is_female = yes
+					culture = tejano
+				}
+				create_bloodline = {
+					type = high_queen_tejano_bloodline
+				}
+				new_bloodline = {
+					set_description = "texas_bloodline_desc"
+				}	
+				sound_effect = bloodline_added
+			}
+			else_if = { #New Imperial Bloodline. (Texaner male)
+				limit = { 
+					has_dlc = "Holy Fury" 
+					is_female = no
+					culture = texaner
+				}
+				create_bloodline = {
+					type = high_king_texaner_bloodline
+				}
+				new_bloodline = {
+					set_description = "texas_bloodline_desc"
+				}	
+				sound_effect = bloodline_added
+			}
+			else_if = { #New Imperial Bloodline. (Texaner female)
+				limit = { 
+					has_dlc = "Holy Fury" 
+					is_female = yes
+					culture = texaner
+				}
+				create_bloodline = {
+					type = high_queen_texaner_bloodline
+				}
+				new_bloodline = {
+					set_description = "texas_bloodline_desc"
+				}	
+				sound_effect = bloodline_added
+			}
+			else_if = { #New Imperial Bloodline. (Czexan male)
+				limit = { 
+					has_dlc = "Holy Fury" 
+					is_female = no
+					culture = czexan
+				}
+				create_bloodline = {
+					type = high_king_czexan_bloodline
+				}
+				new_bloodline = {
+					set_description = "texas_bloodline_desc"
+				}	
+				sound_effect = bloodline_added
+			}
+			else_if = { #New Imperial Bloodline. (Czexan female)
+				limit = { 
+					has_dlc = "Holy Fury" 
+					is_female = yes
+					culture = czexan
+				}
+				create_bloodline = {
+					type = high_queen_czexan_bloodline
+				}
+				new_bloodline = {
+					set_description = "texas_bloodline_desc"
+				}	
+				sound_effect = bloodline_added
+			}
+
 			set_global_flag = texas_restored
 			narrative_event = {id = texas.3}
 			

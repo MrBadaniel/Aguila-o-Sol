@@ -20,7 +20,13 @@
 	trait=zealous
 	trait=holy_warrior
 	give_nickname=nick_sword_of_curicaueri 
-	2578.11.28={birth=yes}
+	2578.11.28={
+		birth=yes
+		create_bloodline={
+			type=iurhuri
+			has_dlc="Holy Fury"
+		}
+	}
 	2628.6.3={death=yes}
 }
 
