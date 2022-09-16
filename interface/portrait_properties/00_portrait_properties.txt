@@ -6686,6 +6686,8 @@
 				has_landed_title = d_flaming_sword
 				has_landed_title = d_national_cathedral
 				has_landed_title = d_salvation_army
+				has_landed_title = d_cristo_rey
+				has_landed_title = e_mexico
 				liege = { has_landed_title = d_knights_of_columbus }
 				liege = { has_landed_title = d_knights_of_peter_claver }
 				liege = { has_landed_title = d_st_ursulas_chosen }
@@ -6694,6 +6696,7 @@
 				liege = { has_landed_title = d_flaming_sword }
 				liege = { has_landed_title = d_national_cathedral }
 				liege = { has_landed_title = d_salvation_army }
+				liege = { has_landed_title = e_mexico}
 			}
 		}
 		modifier = { #Wearable Crown artifacts.
@@ -7056,9 +7059,61 @@
 			}
 		}
 	}
+
+#	12 = { #Prelado's Helm
+#				factor = 100
+#		hide_layers = { 12 = { } } #Hide layer 12 (disfigured masks) when this frame is picked.
+#		hide_layers = { 5 = { } } #Hide layer 5 (headgear) when this frame is picked.
+#		hide_layers = { 1 = { } } #Hide Hair.
+#		hide_layers = { 18 = { } } #Hide layers with special crowns.
+#		hide_layers = { 19 = { } } #Hide layers with special crowns.
+#		hide_layers = { 31 = { } } #Veil overload.
+#		hide_layers = { 32 = { } } 
+#		hide_layers = { 33 = { } }
+#		modifier = {
+#			factor = 0
+#			NOT = {
+#				has_landed_title = d_cristo_rey
+#				}
+#		}
+#	}
+
+    12 = { #Prelado's Helm
+                factor = 100
+        hide_layers = { 12 = { } } #Hide layer 12 (disfigured masks) when this frame is picked.
+        hide_layers = { 5 = { } } #Hide layer 5 (headgear) when this frame is picked.
+        hide_layers = { 1 = { } } #Hide Hair.
+        hide_layers = { 18 = { } } #Hide layers with special crowns.
+        hide_layers = { 19 = { } } #Hide layers with special crowns.
+        hide_layers = { 31 = { } } #Veil overload.
+        hide_layers = { 32 = { } } 
+        hide_layers = { 33 = { } }
+        modifier = {
+            factor = 0
+            NOT = { has_landed_title = d_cristo_rey }
+        }
+    }	
+
+	13 = { #Dorado
+		factor= 100
+		
+		hide_layers = { 12 = { } } #Hide layer 12 (disfigured masks) when this frame is picked.
+		hide_layers = { 5 = { } } #Hide layer 5 (headgear) when this frame is picked.
+		hide_layers = { 1 = { } } #Hide Hair.
+		hide_layers = { 18 = { } } #Hide layers with special crowns.
+		hide_layers = { 19 = { } } #Hide layers with special crowns.
+		hide_layers = { 31 = { } } #Veil overload.
+		hide_layers = { 32 = { } } 
+		hide_layers = { 33 = { } }
+		
+		modifier = {
+			factor= 0
+			NOT = {
+				has_trait= dorado
+			}
+		}
+	}
 }
-
-
 # p35 Special Masks 
 35 = {
 	0 = { # blank
