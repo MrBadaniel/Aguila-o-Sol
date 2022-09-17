@@ -171,7 +171,35 @@ claim = {
 			}
 		}
 	}
-
+	
+	on_success = {
+		hidden_tooltip = {
+			if = {
+				limit = { 
+					FROM = { has_landed_title = e_mexico }
+					has_global_flag = justo_war_two 
+				} #checks if the Justo War is happening
+				if = {
+					limit = { has_landed_title = d_cristo_rey } #Prelate's endings
+					if = {
+						limit = { has_global_flag = catholic_friends }
+						narrative_event = { id = justo.57 } #Benemerito Prelado
+					}
+					else = {
+						narrative_event = { id = justo.54 }
+					}
+				}
+				else_if = {
+					limit = { 
+						has_landed_title = d_friends
+						has_global_flag = friends_rebel
+					}
+					narrative_event = { id = justo.60 }
+				}
+			}
+		}
+	}
+	
 	on_success_title = {
 	
 		hidden_tooltip = {
@@ -252,7 +280,67 @@ claim = {
 			}
 		}
 	}
-
+	
+	on_fail = {
+		hidden_tooltip = {			
+			if = {
+				limit = { 
+					FROM = { has_landed_title = e_mexico }
+					has_global_flag = justo_war_two 
+					OR = {
+						ROOT = { has_landed_title = d_cristo_rey }
+						ROOT = { has_landed_title = d_friends }
+					}
+				} #checks if the Justo War is happening and if ROOT is either Prelate or Ledonant
+				d_cristo_rey = {
+					holder_scope = {
+						save_event_target_as = the_prelate #needs to be done once again due to event chain break
+					}
+				}
+				d_friends = {
+					holder_scope = {
+						save_event_target_as = the_gringo #needs to be done once again due to event chain break
+					}
+				}
+				if = {
+					limit = { 
+						NOT = { has_global_flag = catholic_friends }
+						has_global_flag = prelate_rebel
+					}
+					FROM = { narrative_event = { id = justo.55 } }
+				}
+				else_if = {
+					limit = { #checks if both prelate and friends are rebelling, and that only one war must be happening
+						has_global_flag = prelate_rebel
+						has_global_flag = friends_rebel #both are rebelling
+						#NAND = {
+						#	FROM = { war_with = event_target:the_prelate }
+						#	FROM = { war_with = event_target:the_gringo }
+						#}
+					}
+					FROM = { narrative_event = { id = justo.58 } }
+				}
+				else_if = {
+					limit = { #checks if only war against ledonnant is happening and Justo is Cristero
+						has_global_flag = friends_rebel
+						NOT = { has_global_flag = prelate_rebel }
+						FROM = { religion = cristo_rey }
+					}
+					FROM = { narrative_event = { id = justo.56 } }
+				}
+				else_if = {
+					limit = { #checks if only war against ledonnant is happening and Justo is Cristero
+						NOT = { has_global_flag = friends_rebel }
+						has_global_flag = prelate_rebel
+						FROM = { religion = catholic }
+					}
+					FROM = { narrative_event = { id = justo.59 } }
+				}
+				
+			}
+		}
+	}
+	
 	on_fail_title = {
 		ROOT = {
 			show_scope_change = no
@@ -321,6 +409,53 @@ claim = {
 						}
 					}
 				}
+			}
+		}
+		hidden_tooltip = { #justo stuff
+			if = {
+				limit = { 
+					FROM = { has_landed_title = e_mexico }
+					has_global_flag = justo_war_two 
+					OR = {
+						ROOT = { has_landed_title = d_cristo_rey }
+						ROOT = { has_landed_title = d_friends }
+					}
+				} #checks if the Justo War is happening and if ROOT is either Prelate or Ledonant
+				if = {
+					limit = { 
+						NOT = { has_global_flag = catholic_friends }
+						has_global_flag = prelate_rebel
+					}
+					FROM = { narrative_event = { id = justo.55 } }
+				}
+				else_if = {
+					limit = { #checks if both prelate and friends are rebelling, and that only one war must be happening
+						has_global_flag = prelate_rebel
+						has_global_flag = friends_rebel #both are rebelling
+						NAND = {
+							FROM = { war_with = d_cristo_rey }
+							FROM = { war_with = d_friends }
+						}
+					}
+					FROM = { narrative_event = { id = justo.58 } }
+				}
+				else_if = {
+					limit = { #checks if only war against ledonnant is happening and Justo is Cristero
+						has_global_flag = friends_rebel
+						NOT = { has_global_flag = prelate_rebel }
+						FROM = { religion = cristo_rey }
+					}
+					FROM = { narrative_event = { id = justo.56 } }
+				}
+				else_if = {
+					limit = { #checks if only war against ledonnant is happening and Justo is Cristero
+						NOT = { has_global_flag = friends_rebel }
+						has_global_flag = prelate_rebel
+						FROM = { religion = catholic }
+					}
+					FROM = { narrative_event = { id = justo.59 } }
+				}
+				
 			}
 		}
 	}

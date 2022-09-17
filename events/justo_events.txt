@@ -267,10 +267,16 @@ narrative_event = { #an offer you can refuse
 		hidden_effect = {
 			event_target:prelate_envoy = {
 				remove_trait = travelling
+				opinion = {
+					modifier = opinion_loyal_servant
+					who = ROOT
+					years = 100
+				}
 			}
 		}
 		event_target:prelate_envoy = {
 			move_character = ROOT
+			
 		}
 		custom_tooltip = {
 			text = EVTOPTA_justo6_TT
@@ -1556,6 +1562,7 @@ narrative_event = { #JUSTO ARMAS!!!!!
 		name = EVTOPTA_justo40
 		trigger = {
 			religion = cristo_rey
+			NOT = { has_character_flag = the_justo_armas }
 		}
 	}
 	option = {
@@ -2104,6 +2111,7 @@ narrative_event = { #Su Alteza Imperial or Justo Armas Victorious
 		name = EVTOPTA_justo50
 		trigger = {
 			religion = cristo_rey
+			NOT = { has_character_flag = the_justo_armas }
 		}
 	}
 	
@@ -2325,6 +2333,7 @@ character_event = { #either fires a war or the last event
 			limit = { has_global_flag = friends_rebel }
 			d_friends = {
 				holder_scope = {
+					set_character_flag = the_rebel_friend
 					add_claim = e_mexico
 					create_title = {
 						tier = EMPEROR
@@ -2360,6 +2369,7 @@ character_event = { #either fires a war or the last event
 			set_defacto_vassal = d_cristo_rey
 			d_cristo_rey = {
 				holder_scope = {
+					set_character_flag = the_rebel_prelate
 					add_claim = e_mexico
 					create_title = {
 						tier = EMPEROR
@@ -2487,6 +2497,7 @@ narrative_event = { #Viva Cristo Rey
 	
 	trigger = {
 		NOT = { has_global_flag = catholic_friends }
+		has_character_flag = the_rebel_prelate
 	}
 	
 	immediate = {
@@ -2723,6 +2734,7 @@ narrative_event = { #Benemérito Prelado
 	
 	trigger = {
 		has_global_flag = catholic_friends
+		has_character_flag = the_rebel_prelate
 	}
 	
 	immediate = {
@@ -2870,7 +2882,7 @@ narrative_event = { #The Conqueror of Mexico
 }
 
 narrative_event = {
-	id = justo.59
+	id = justo.59 #The Latino Emperor
 	title = "justo.59.name"
 	desc = justo.59.desc
 	
@@ -2914,46 +2926,55 @@ narrative_event = {
 		trigger = {
 			has_landed_title = e_mexico
 		}
-		hidden_effect = {
-			e_latino = {
-				show_scope_change = no
-				grant_title = ROOT
-				copy_title_laws = e_mexico
+		custom_tooltip = {
+			text = EVTOPTC_justo59_TT
+			hidden_effect = {
+				e_latino = {
+					show_scope_change = no
+					grant_title = ROOT
+					copy_title_laws = e_mexico
+				}
+				k_baijo = {
+					show_scope_change = no
+					de_jure_liege = e_latino
+				}
+				k_gran_chichimeca = {
+					show_scope_change = no
+					de_jure_liege = e_latino
+				}
+				k_jalisco = {
+					show_scope_change = no
+					de_jure_liege = e_latino
+				}
+				k_mexico = {
+					show_scope_change = no
+					de_jure_liege = e_latino
+				}
+				k_veracruz = {
+					show_scope_change = no
+					de_jure_liege = e_latino
+				}
+				k_michoacan = {
+					show_scope_change = no
+					de_jure_liege = e_latino
+				}
+				k_oaxaca = {
+					show_scope_change = no
+					de_jure_liege = e_latino
+				}
+				k_guerrero = {
+					show_scope_change = no
+					de_jure_liege = e_latino
+				}
+				e_mexico = {
+					destroy_landed_title = THIS
+				}
 			}
-			k_baijo = {
-				show_scope_change = no
-				de_jure_liege = e_latino
-			}
-			k_gran_chichimeca = {
-				show_scope_change = no
-				de_jure_liege = e_latino
-			}
-			k_jalisco = {
-				show_scope_change = no
-				de_jure_liege = e_latino
-			}
-			k_mexico = {
-				show_scope_change = no
-				de_jure_liege = e_latino
-			}
-			k_veracruz = {
-				show_scope_change = no
-				de_jure_liege = e_latino
-			}
-			k_michoacan = {
-				show_scope_change = no
-				de_jure_liege = e_latino
-			}
-			k_oaxaca = {
-				show_scope_change = no
-				de_jure_liege = e_latino
-			}
-			k_guerrero = {
-				show_scope_change = no
-				de_jure_liege = e_latino
-			}
-			e_mexico = {
-				destroy_landed_title = THIS
+		}
+		if = {
+			limit = { has_dlc = "Holy Fury" }
+			create_bloodline = {
+				type = just_armas
 			}
 		}
 	}
@@ -2984,7 +3005,7 @@ narrative_event = {
 }
 
 narrative_event = {
-	id = justo.60
+	id = justo.60 #Not Latino but indeed an Empire
 	title = "justo.60.name"
 	desc = justo.60.desc
 	
@@ -2992,6 +3013,7 @@ narrative_event = {
 	
 	trigger = {
 		has_global_flag = catholic_friends
+		has_character_flag = the_rebel_friend
 	}
 	
 	immediate = {
