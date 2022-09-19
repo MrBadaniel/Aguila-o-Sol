@@ -1185,6 +1185,12 @@
 	trait=brilliant_strategist
 	give_nickname=nick_the_radiant
 	2502.1.1={birth=yes}
+	2557.8.25={
+		create_bloodline={
+			type=flatiron
+			has_dlc="Holy Fury"
+		}
+	}
 	2579.4.20={death=yes}
 }
 
@@ -1357,7 +1363,7 @@
 	mother=1890098
 	trait=skilled_tactician
 	trait=duelist
-	2644.1.1={birth=yes}
+	2644.10.1={birth=yes}
 	2710.1.1={death=yes}
 }
 
@@ -1774,6 +1780,7 @@
 1890126={
 	name="Rebecca"
 	dynasty=1889030
+	father=1890148
 	mother=1890125
 	female=yes
 	culture=greek
@@ -1786,6 +1793,7 @@
 	2564.8.1={birth=yes
 	culture=snakelander
 	}
+	2590.5.22={add_matrilineal_spouse=1890157}
 	2597.9.1={death={
 			death_reason=death_battle
 			killer=1890041 #Moses Silvermount
@@ -1808,6 +1816,7 @@
 1890128={
 	name="Thomas"
 	dynasty=1889030
+	father=1890148
 	mother=1890125
 	culture=greek
 	religion=edenite
@@ -1874,6 +1883,7 @@
 	name="Penny"
 	dynasty=1889030
 	mother=1890125
+	father=1890148
 	female=yes
 	culture=greek
 	religion=edenite
@@ -1954,47 +1964,658 @@
 	2665.9.11={death=yes}
 }
 
-#Tom Barbera 2388.1.1 to 2444.1.1 
-#Learning 1, wroth, stubborn, diligent, deceitful
-#Jerry Barbera 2401.1 to 2466.1.1 
-#Learning 4, quick, shrewd, deceitful, patient 
+1890137={
+	name="Tom"
+	dynasty=1802107#140900029 Barbera
+	culture=mountainer
+	religion=edenite#forester
+	trait=detached_priest
+	trait=wroth
+	trait=stubborn
+	trait=diligent
+	trait=deceitful
+	2388.1.1={birth=yes}
+	2444.1.1={death=yes}
+}
+
+1890138={
+	name="Jerry"
+	dynasty=1802107#140900029 Barbera
+	father=1890137
+	culture=mountainer
+	religion=edenite#forester
+	trait=mastermind_theologian
+	trait=quick
+	trait=shrewd
+	trait=patient
+	trait=deceitful
+	2401.1={birth=yes}
+	2466.1.1={death=yes}
+}
+
+1890139={
+	name="Madeleine"
+	dynasty=1802106#140900030 Murgatroyd
+	culture=siskiyouan
+	father=1890142
+	mother=1890143
+	religion=pagan#forester
+	trait=scholarly_theologian
+	trait=socializer
+	trait=sympathy_oldworld
+	trait=is_fat
+	trait=gluttonous
+	trait=gregarious
+	2411.6.19={birth=yes}
+	2432.4.1={add_spouse=1836188}
+	2479.4.11={death=yes}
+}
+
+1890140={
+	name="Hardy"
+	dynasty=5001192 #Krakauer
+	culture=siskiyouan
+	father=1836188
+	mother=1890139
+	religion=pagan#forester
+	trait=underhanded_rogue
+	trait=ugly
+	trait=gregarious
+	trait=uncouth
+	trait=charitable
+	2433.6.16= {birth=yes
+		effect_even_if_dead = {
+			set_special_character_title = RANGER_HAR_HAR
+			}		
+		}
+	2496.11.5={death=yes}
+}
+
+1890141={
+	name="Hannah"
+	female=yes
+	dynasty=1802107#140900029 Barbera
+	father=1890138
+	culture=mountainer
+	religion=edenite#forester
+	trait=midas_touched
+	trait=artist
+	trait=shrewd
+	trait=ambitious
+	trait=diligent
+	trait=kind
+	2434.1.14={birth=yes}
+	2452.1.10={add_spouse=1890140}
+	2487.12.11={death=yes}
+}
+
+1890142={
+	name="Roderick"
+	dynasty=1802106#140900030 Murgatroyd
+	culture=siskiyouan
+	religion=pagan#forester
+	trait=martial_cleric
+	trait=lowborn
+	trait=just
+	trait=kind
+	trait=brave
+	give_nickname=nick_the_top_cat
+	2371.6.3={birth=yes}
+	2392.5.5={add_spouse=1890143}
+	2449.3.18={death=yes}
+}
+
+1890143={
+	name="Penny"
+	female=yes
+	culture=battleborn
+	religion=aphite
+	trait=indulgent_wastrel
+	trait=fair
+	trait=sympathy_pacific
+	trait=kind
+	trait=brave
+	trait=trusting
+	2374.2.1={birth=yes
+		effect_even_if_dead = {
+			set_special_character_title = RANGER_PRETTY_PENNY
+			}
+	}
+	2392.5.5={add_spouse=1890143}
+	2452.4.12={death=yes}
+}
+
+1890144={
+	name="Ayres"
+	dynasty=1802106#140900030 Murgatroyd
+	father=1890142
+	mother=1890143
+	culture=siskiyouan
+	religion=pagan#forester
+	trait=underhanded_rogue
+	trait=socializer
+	trait=lisp
+	trait=erudite
+	trait=gregarious
+	trait=kind
+	give_nickname=nick_snaggletooth
+	2394.9.21={birth=yes}
+	2456.12.6={death=yes}
+}
+
+1890145={
+	name="Daws"
+	dynasty=5001192 #Krakauer
+	culture=siskiyouan
+	father=1890140
+	mother=1890141
+	religion=edenite#forester
+	trait=brilliant_strategist
+	trait=duelist
+	trait=quick
+	trait=brave
+	trait=charitable
+	trait=temperate
+	2454.8.11= {birth=yes
+		effect_even_if_dead = {
+			set_special_character_title = RANGER_QUICK_DRAW
+			}		
+		}
+	2515.9.9={death=yes}
+}
+
+1890146={
+	name="Johnny"
+	dynasty=5001192 #Krakauer
+	culture=siskiyouan
+	father=1890145
+	religion=edenite#forester
+	trait=brilliant_strategist
+	trait=adventurer
+	trait=ambitious
+	trait=brave
+	trait=diligent
+	trait=wroth
+	give_nickname=nick_quest
+	2480.1.1= {birth=yes		
+		}
+	2531.8.8={death=yes}
+}  
+
+1890147={
+	name="Huckleberry"
+	dynasty=5001192 #Krakauer
+	culture=mountainer
+	father=1890146
+	religion=edenite#forester
+	trait=scholarly_theologian
+	trait=slow
+	trait=honest
+	trait=slothful
+	trait=patient
+	2511.8.23= {birth=yes		
+		}
+	2578.12.12={death=yes}
+}  
+
+1890148={
+	name="Hat"
+	dynasty=1876034
+	culture=coloradan
+	religion=edenite
+	father=1890087
+	mother=1890088
+	2533.3.2={birth=yes}
+	2561.4.8={add_matrilineal_spouse=1890125}
+	2606.1.11={death=yes}
+}
+
+1890149={
+	name="Megillah"
+	dynasty=5001192 #Krakauer
+	culture=mountainer
+	father=1890147
+	religion=edenite#forester
+	trait=fortune_builder
+	trait=giant
+	trait=kind
+	trait=envious
+	trait=trusting
+	trait=ambitious
+	2530.11.5={birth=yes		
+		}
+	2596.11.26={death=yes}
+} 
+
+1890150={
+	name="Azrael"
+	dynasty=1802106#140900030 Murgatroyd
+	father=1890144
+	culture=siskiyouan
+	religion=edenite#forester
+	trait=intricate_webweaver
+	trait=deceitful
+	trait=ambitious
+	trait=envious
+	trait=erudite
+	give_nickname=nick_the_dastardly
+	2412.9.11={birth=yes}
+	2469.2.13={death={
+			death_reason=death_mission_duel
+			killer=1890145
+		}
+	}
+}
+
+1890151={
+	name="Ayres"
+	dynasty=1802106#140900030 Murgatroyd
+	father=1890150
+	culture=mountainer
+	religion=edenite#forester
+	trait=strong
+	trait=robust
+	2431.9.15={birth=yes
+			effect_even_if_dead = {
+			set_special_character_title = RANGER_HEFTY
+			}
+	}
+	2482.8.8={death=yes}
+}
+
+1890152={
+	name="Reuel"
+	dynasty=1802106#140900030 Murgatroyd
+	father=1890151
+	culture=mountainer
+	religion=edenite#forester
+	trait=genius
+	trait=erudite
+	2452.9.1={birth=yes
+			effect_even_if_dead = {
+			set_special_character_title = RANGER_BRAINY
+			}
+	}
+	2539.2.16={death=yes}
+}
+
+1890153={
+	name="Roderick"
+	dynasty=1802106#140900030 Murgatroyd
+	father=1890152
+	culture=mountainer
+	religion=edenite#forester
+	trait=uncouth
+	trait=dull
+	2481.8.1={birth=yes
+			effect_even_if_dead = {
+			set_special_character_title = RANGER_GROUCHY
+			}
+	}
+	2546.3.1={death=yes}
+}
+
+1890154={
+	name="Johnny"
+	dynasty=1802106#140900030 Murgatroyd
+	father=1890153
+	culture=mountainer
+	religion=edenite#forester
+	trait=socializer
+	trait=gregarious
+	2517.2.25={birth=yes
+			effect_even_if_dead = {
+			set_special_character_title = RANGER_JOKEY
+			}
+	}
+	2583.1.2={death=yes}
+}
+
+1890154={
+	name="Abram"
+	dynasty=1802106#140900030 Murgatroyd
+	father=1890153
+	culture=mountainer
+	religion=edenite#forester
+	trait=uncouth
+	trait=wroth
+	2543.1.4={birth=yes
+			effect_even_if_dead = {
+			set_special_character_title = RANGER_GRUMPY
+			}
+	}
+	2613.2.1={death=yes}
+}
+
+1890155={
+	name="Johnny"
+	dynasty=1802106#140900030 Murgatroyd
+	father=1890154
+	culture=mountainer
+	religion=gaian#forester
+	trait=uncouth
+	trait=wroth
+	health=12
+	2593.9.5={birth=yes
+			effect_even_if_dead = {
+			set_special_character_title = RANGER_PAPA
+			}
+	}
+	2665.1.1={employer=1875068}
+}
+
+1890156={
+	name="Ogee"
+	dynasty=1802106#140900030 Murgatroyd
+	female=yes
+	culture=mountainer
+	father=1890153
+	religion=edenite#forester
+	trait=kind
+	trait=charitable
+	trait=devout
+	2535.5.11={birth=yes		
+		}
+	2554.2.1={add_spouse=1890149}
+	2605.2.4={death=yes}
+} 
+
+1890157={
+	name="Yogi"
+	dynasty=5001192 #Krakauer
+	culture=mountainer
+	father=1890149
+	mother=1890156
+	religion=edenite#forester
+	trait=grey_eminence
+	trait=quick
+	trait=gluttonous
+	trait=deceitful
+	trait=gregarious
+	trait=charitable
+	trait=envious
+	2555.8.1={birth=yes		
+		}
+	2599.2.22={death={
+			death_reason=death_battle
+			killer=1890041 #Moses Silvermount
+		}
+	}
+} 
+
+1890158={
+	name="Cindy"
+	female=yes
+	culture=snakelander
+	religion=neogodbeite
+	trait=groomed
+	2559.8.1={birth=yes		
+		}
+	2597.12.2={add_spouse=1890157}
+	2622.2.4={death=yes}
+} 
+
+1890159={
+	name="Boo Boo"
+	dynasty=5001192 #Krakauer
+	culture=mountainer
+	father=1890157
+	mother=1890158
+	religion=gaian#forester
+	trait=underhanded_rogue
+	trait=drunkard
+	trait=slow
+	trait=groomed
+	trait=charitable
+	trait=envious
+	trait=trusting
+	2598.10.14={birth=yes		
+		}
+	2630.10.14={death={
+			death_reason=death_drank_to_death
+		}
+	}
+} 
+
+1890160={
+	name="Johnny"
+	dynasty=5001192 #Krakauer
+	culture=mountainer
+	father=1890149
+	mother=1890156
+	religion=gaian#forester
+	trait=naive_appeaser
+	trait=fair
+	trait=robust
+	trait=lustful
+	trait=uncouth
+	trait=stubborn
+	trait=diligent
+	give_nickname=nick_bravo
+	2558.1.3={birth=yes}
+	2637.8.24={death=yes}
+} 
+
+1890161={
+	name="Edmond"
+	dynasty=5001192 #Krakauer
+	culture=mountainer
+	father=1890159
+	religion=gaian#forester
+	2616.2.2={birth=yes}
+	2633.2.12={add_spouse=1886086}
+} 
+
+1890162={
+	name="Suzy"
+	female=yes
+	culture=mountainer
+	trait=kind
+	trait=chaste
+	religion=gaian#forester
+	2566.4.7={birth=yes}
+	2582.4.8={add_spouse=1890160}
+	2649.7.18={death=yes}
+} 
+
+1890163={
+	name="Pierce"
+	dynasty=1889030
+	father=1890148
+	mother=1890125
+	culture=greek
+	religion=edenite
+	trait=mastermind_theologian
+	trait=deacon
+	trait=humble
+	trait=content
+	trait=chaste
+	2571.10.21={birth=yes
+	culture=snakelander
+	}
+	2649.2.5={death=yes}
+}
+
+1890164={
+	name="Bonneville"
+	female=yes
+	culture=angeleno
+	religion=edenite
+	trait=devout
+	trait=deaconess
+	2573.5.21={birth=yes
+	culture=mountainer
+	}
+	2612.2.5={add_spouse=1890163}
+	2648.12.5={death=yes}
+}
+
+1890165={
+	name="Monika"
+	dynasty=1889030
+	father=1890163
+	mother=1890164
+	female=yes
+	culture=greek
+	religion=edenite
+	2616.5.2={birth=yes
+	culture=snakelander
+	}
+	2665.1.1={employer=1890003}
+}
+
+1890166={
+	name="Winonmie"
+	dynasty=1889030
+	mother=1890165
+	female=yes
+	culture=greek
+	religion=edenite
+	2455.2.10={birth=yes
+	culture=snakelander
+	}
+	2665.1.1={employer=1890003}
+}
+
+1890167={
+	name="Petri"
+	dynasty=1889030
+	mother=1890165
+	culture=greek
+	religion=edenite
+	2649.2.11={birth=yes
+	culture=snakelander
+	}
+	2665.1.1={employer=1890003}
+}
+
+1890168={
+	name="George"
+	dynasty=5001192 #Krakauer
+	culture=mountainer
+	father=1890160
+	mother=1890162
+	religion=gaian#forester
+	trait=scholarly_theologian
+	trait=theologian
+	trait=kind
+	trait=trusting
+	trait=humble
+	give_nickname=nick_jets
+	2583.10.10={birth=yes}
+	2655.5.5={death=yes}
+} 
+
+1890169={
+	name="Jane"
+	culture=snakelander
+	dynasty=1889030
+	female=yes
+	father=1890128
+	religion=edenite
+	trait=kind
+	trait=shrewd
+	trait=honest
+	2590.10.10={birth=yes
+	name="Jane"
+	}
+	2607.7.7={add_spouse=1890168}
+	2666.6.6={death=yes}
+} 
+
+1890170={
+	name="Judy"
+	dynasty=5001192 #Krakauer
+	culture=mountainer
+	female=yes
+	father=1890168
+	mother=1890169
+	religion=gaian#forester
+	trait=skilled_tactician
+	trait=fair
+	trait=brave
+	trait=wroth
+	trait=dull
+	trait=greedy
+	2608.3.3={birth=yes}
+} 
+
+1890171={
+	name="Elroy"
+	dynasty=5001192 #Krakauer
+	culture=mountainer
+	father=1890168
+	mother=1890169
+	religion=gaian#forester
+	trait=mastermind_theologian
+	trait=physician
+	trait=erudite
+	trait=diligent
+	trait=patient
+	trait=envious
+	2617.3.3={birth=yes}
+	2662.9.1={birth=yes
+	add_trait=crippled
+		effect={
+			add_rival=1890003 #Lawrence Peter overthrew him
+		}
+	}
+}
+
+1890172={
+	name="Marcia"
+	culture=crow
+	female=yes
+	religion=peyotist
+	father=1890173
+	trait=fair
+	trait=peyotist_manitous
+	2609.2.1={birth=yes}
+	2640.10.12={add_spouse=1890171}
+} 
+
+1890173={
+	name="Baalushúahawatash"
+	culture=crow
+	religion=peyotist
+	trait=peyotist_manitous
+	2579.2.1={birth=yes}
+	2641.2.1={death=yes}
+}
+
+1890174={
+	name="Wilma"
+	dynasty=1876034
+	female=yes
+	culture=coloradan
+	religion=edenite
+	trait=scholarly_theologian
+	trait=fair
+	trait=kind
+	trait=honest
+	trait=shrewd
+	mother=1890098
+	2643.9.19={birth=yes}
+	2662.9.8={add_spouse=1875068}
+}
+
+1890175={
+	name="Pebbles"
+	dynasty=5001192 #Krakauer
+	culture=mountainer
+	father=1875068
+	mother=1890174
+	religion=gaian#forester
+	2664.10.10={birth=yes}
+}
+
+#Judy matri-married Gazoo (nick_the_great) (chicagoan) (born 2605.5.15) in 2627.7.7 and #in 2630.2.2 they had Dexter.
+
+Lisa Krakauer, Daughter of Vienna (and of Edmond) married Dexter Krakauer in 2659.4.14. Born in 2634.9.10 and is a mountaineer like her mother but converted to Foresters when she married Dexter Krakauer. On 2660.10.10 Blossom was born. In 2661.8.8 Buttercup was born. In 2662.12.12 Blossom was born. Barney Rubble is Judy's second child and was born on 2644.1.1. Barney married Betty Gilbert (sister of Lawrence Peter) in 2663.1.1 who was born in 2644.2.2. On Bamm Bamm Krakauer was adopted on 2664.10.10. 
+
+Dorothy born 2628.12.4 is the elder sister of Barney and Dexter and is married to Mandark (2628.1.4) they marry 2645.8.8 and have Maggie Krakauer. 
 
 
-
-
-#Madeleine (Battleborn pagan) 2411.6.19 to 2479.4.11 who married Chilikoot #Sam Muir in 2432.4.1 
-#Madeleine, devout, learning 3, fat, gluttonous, gregarious, socializer, #sympathy pacific
-
-#Sam and Madeline had Har Har Hardy Krakauer 2433.6.16 to 2496.11.5 
-#Diplomacy 2, ugly, gregarious, uncouth, worth, charitable
-
-#Countess Hannah Barbera 2434.1.14 to 2487.12.11 married to Har Har Hardy #Krakauer in 2452.1.10. 
-#Stewardship 4, artist, shrewd, ambitious, diligent, kind 
-
-#Quick Draw Daws Krakauer 2454.8.11 to 2515.9.9 who was the best gun north of #Texas. 
-#Martial 4, duelist, quick, brave, temperate, charitable
-
-#1836188={
-#	name="Sam"
-#	dynasty=1851024#Muir
-#	culture=english
-#	religion=pagan#forester
-#	2410.9.2={birth=yes
-#	}
-#}
-
-
-#1875068={
-#	name="Huck"
-#	dynasty=5001192 #Krakauer
-#	culture=mountainer
-#	religion=gaian#forester
-#	2642.9.19={birth=yes}
-#}
-#1886086={
-#	name="Vienna"
-#	dynasty=1886014
-#	culture=mountainer
-#}
-#Johnny 
-#nick_bravo
+#Thaddeus Murgatroyd martial 4, honest, just, brave, kind, brawny
+#Change Maggie's name to Janet, make Mandark the son of Papa Johnny and Thaddeus his younger brother. Give Papa Johnny health 12
+#Give Papa Johnny a Krakauer Wife

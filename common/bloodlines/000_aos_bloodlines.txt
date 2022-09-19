@@ -7,7 +7,8 @@ silbern = {
 	inheritance = patrilineal
 	allow_bastards = yes
 	picture = GFX_bloodlines_symbol_silbern
-	flags = { historical_bloodline }
+	bloodline_effect_dynastic_meddling = 1
+	flags = { historical_bloodline bloodline_dynastic_meddling }
 	active = {
 		OR = {
 			religion = evangelical 
@@ -89,4 +90,27 @@ baptizer_female_bloodline = {
 		}
 	}
 	flags = { created_bloodline }
+}
+
+flatiron = {
+	coloradan_opinion = 10
+	mountainer_opinion = 10
+	#montanist_opinion = 5
+	edenite_opinion = 5
+	monthly_character_piety = 1.5
+	inheritance = patrilineal
+	allow_bastards = yes
+	church_opinion = 4
+	temple_vassal_tax_modifier = 0.05
+	bloodline_effect_monumental = 1 
+	picture = GFX_bloodlines_symbol_romuva_tree
+	flags = { historical_bloodline bloodline_monumental }
+	active = {
+		OR = {
+			religion = gaian 
+			#religion = montanist
+			religion = edenite
+			#religion = forester
+		}
+	}
 }
