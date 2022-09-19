@@ -285,15 +285,7 @@ narrative_event = { #an offer you can refuse
 		custom_tooltip = {
 			text = EVTOPTA_justo6_TT
 			hidden_effect = {
-				d_justo = {
-					grant_title = ROOT
-				}
-				d_salvador = { 
-					holder_scope = {
-						grant_title_no_opinion = c_chalatenango
-					}
-				}
-				narrative_event = { id = justo.30 days = 7 }
+				narrative_event = { id = justo.30 months = 1 }
 			}
 		}
 	}
@@ -978,6 +970,7 @@ narrative_event = { #Echoes or Whispers of an Old Name
 				remove_trait = travelling
 			}
 		}
+		set_global_flag = justo_war_preparations
 	}
 	
 	option = {
@@ -1103,7 +1096,7 @@ narrative_event = { #The Prelate Asks for your Support
 	
 	trigger = { 
 		has_global_flag = justo_chain
-		date < 2670.9.1
+		has_global_flag = justo_war_preparations
 	}
 	
 	option = {
@@ -1490,9 +1483,18 @@ narrative_event = { #JUSTO ARMAS!!!!!
 		has_character_flag = the_justo_armas
 		is_incapable = no
 		prisoner = no
+		clr_global_flag = justo_war_preparations
 	}
 	
 	immediate = {
+		d_justo = {
+			grant_title = c_6900449
+		}
+		d_salvador = { 
+			holder_scope = {
+				grant_title_no_opinion = c_chalatenango
+			}
+		}
 		set_global_flag = justo_war_one
 		c_6900449 = {
 			spawn_unit = {
@@ -1527,9 +1529,7 @@ narrative_event = { #JUSTO ARMAS!!!!!
 		}
 		if = {
 			limit = {
-				OR = {
-					d_justo = { holder_scope = { ai = yes } }	
-				}
+				c_6900449 = { ai = yes }	
 			}
 			d_friends = {
 				hidden_effect = {
@@ -1590,7 +1590,7 @@ narrative_event = { #JUSTO ARMAS!!!!!
 			has_character_flag = the_justo_armas
 		}
 		event_target:prelate_envoy = {
-			add_friend = root
+			add_friend = ROOT
 			add_friend = the_gringo
 		}
 		if = {
@@ -1949,7 +1949,7 @@ narrative_event = { #The Friends Arrive
 			}
 		}
 		event_target:the_gringo = {
-			add_friend = root
+			add_friend = ROOT
 			add_friend = prelate_envoy
 		}
 	}
@@ -2120,6 +2120,9 @@ narrative_event = { #Su Alteza Imperial or Justo Armas Victorious
 	
 	trigger = {
 		has_global_flag = justo_war_one
+		d_justo = {
+			destroy_landed_title = THIS
+		}
 	}
 	
 	immediate = {
@@ -2270,10 +2273,10 @@ narrative_event = { #with Friends Like This or A Promise to Keep
 			hidden_effect = {
 				activate_title = { title = d_friends_mercenary status = yes }
 				d_friends = {
-					holder_scope = {
-						grant_title = d_friends_mercenary
-					}
 					destroy_landed_title = THIS
+				}
+				event_target:the_gringo = {
+					grant_title = d_friends_mercenary
 				}
 				set_global_flag = prelate_rebel
 			}
