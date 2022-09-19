@@ -1,6 +1,6 @@
 namespace = justo
 
-#special thanks to TuPadre
+#special thanks to TuPadre, Sky and Mongoose Corsair
 
 character_event = { # event to start the main event chain in a few days
 	id = justo.0
@@ -38,6 +38,7 @@ narrative_event = { #prelate had a vision event
 	id = justo.1
 	title = "justo.1.name"
 	desc = justo.1.desc
+	picture = GFX_evt_marian_vision
 	major = yes
 	
 	only_playable = yes
@@ -147,6 +148,7 @@ narrative_event = { #the prelate's envoy at my court!
 	id = justo.4
 	title = "justo.4.name"
 	desc = justo.4.desc
+	picture = GFX_evt_old_cardinals
 	
 	only_playable = yes
 	religion_group = christian
@@ -179,6 +181,7 @@ narrative_event = { #the Prelate's Sails Away
 	id = justo.5
 	title = "justo.5.name"
 	desc = justo.5.desc
+	picture = GFX_evt_sails_away
 	
 	major = yes
 	only_playable = yes
@@ -250,6 +253,7 @@ narrative_event = { #an offer you can refuse
 	id = justo.6
 	title = "justo.6.name"
 	desc = justo.6.desc
+	picture = GFX_evt_medieval_deal
 	
 	only_playable = yes
 	religion_group = christian
@@ -364,6 +368,7 @@ narrative_event = { #The Failure of a Prelate
 	id = justo.7
 	title = "justo.7.name"
 	desc = justo.7.desc
+	picture = GFX_evt_old_vaquero
 	
 	major = yes
 	only_playable = yes
@@ -428,6 +433,7 @@ narrative_event = { #A Monarchist Conspiracy Foiled
 	id = justo.10
 	title = "justo.10.name"
 	desc = justo.10.desc
+	picture = GFX_evt_failed_plot
 	
 	only_playable = yes
 	is_triggered_only = yes
@@ -768,6 +774,7 @@ narrative_event = { #Mercy for the Humiliated
 	id = justo.13
 	title = "justo.13.name"
 	desc = justo.13.desc
+	picture = GFX_evt_imperial_mercy
 	
 	major = yes
 	is_triggered_only = yes
@@ -881,6 +888,7 @@ narrative_event = { #the Pope's man
 	id = justo.31
 	title = "justo.31.name"
 	desc = justo.31.desc
+	picture = GFX_evt_papal_diplomats
 	
 	religion_group = christian
 	is_triggered_only = yes
@@ -954,6 +962,7 @@ narrative_event = { #Echoes or Whispers of an Old Name
 		}
 		text = "justo.32.desc_B"
 	}
+	picture = GFX_evt_echoes_old_name
 	
 	is_triggered_only = yes
 	major=yes
@@ -1084,6 +1093,7 @@ narrative_event = { #The Prelate Asks for your Support
 	id = justo.34
 	title = "justo.34.name"
 	desc = justo.34.desc
+	picture = GFX_evt_prelate_help
 	
 	only_playable = yes
 	religion = cristo_rey
@@ -1271,6 +1281,7 @@ narrative_event = { #the need for more Dorados
 	id = justo.35
 	title = "justo.35.name"
 	desc = justo.35.desc
+	picture = GFX_evt_dorados_wanted
 	
 	only_playable = yes
 	is_triggered_only = yes
@@ -1292,6 +1303,7 @@ narrative_event = { #Catholic Friends of Mexico Ask for a Donation
 	id = justo.36
 	title = "justo.36.name"
 	desc = justo.36.desc
+	picture = GFX_evt_friends_donation
 	
 	only_playable = yes
 	religion = catholic
@@ -1468,6 +1480,7 @@ narrative_event = { #JUSTO ARMAS!!!!!
 		}
 		text = "justo.40.desc_B"
 	}
+	picture = GFX_evt_justo_arrival
 	
 	major = yes
 	
@@ -1683,6 +1696,7 @@ narrative_event = { #Death of a Commander-Bishop
 	id = justo.42
 	title = "justo.42.name"
 	desc = justo.42.desc
+	picture = GFX_evt_death_commander_bishop
 	
 	is_triggered_only = yes
 
@@ -1728,6 +1742,7 @@ narrative_event = { #Death of a Prelate
 	id = justo.43
 	title = "justo.43.name"
 	desc = justo.43.desc
+	picture = GFX_evt_death_prelate
 	
 	is_triggered_only = yes
 	
@@ -1801,6 +1816,7 @@ narrative_event = { #Death of a benemerito
 	id = justo.45
 	title = "justo.45.name"
 	desc = justo.45.desc
+	picture = GFX_evt_death_benemerito
 	
 	is_triggered_only = yes
 	
@@ -1966,6 +1982,7 @@ narrative_event = { #Death of a friend
 	id = justo.48
 	title = "justo.48.name"
 	desc = justo.48.desc
+	picture = GFX_evt_death_friend
 	
 	only_playable = yes
 	is_triggered_only = yes
@@ -2013,6 +2030,7 @@ narrative_event = { #Death of a pretender
 	id = justo.49
 	title = "justo.49.name"
 	desc = justo.49.desc
+	picture = GFX_evt_death_pretender
 	
 	only_playable = yes
 	religion_group = christian
@@ -2095,6 +2113,7 @@ narrative_event = { #Su Alteza Imperial or Justo Armas Victorious
 		}
 		text = "justo.50.desc_B"
 	}
+	picture = GFX_evt_deja_vu
 	
 	is_triggered_only = yes
 	major = yes
@@ -2191,6 +2210,8 @@ narrative_event = { #with Friends Like This or A Promise to Keep
 		}
 		text = "justo.51.desc_B"
 	}
+	
+	picture = GFX_evt_bunch_of_knights
 	
 	is_triggered_only = yes
 	
@@ -2418,6 +2439,7 @@ narrative_event = { #El Justo Cristero
 	id = justo.53
 	title = "justo.53.name"
 	desc = justo.53.desc
+	picture = GFX_evt_CRISTO_REY
 	
 	is_triggered_only = yes
 	major = yes
@@ -2491,6 +2513,7 @@ narrative_event = { #Viva Cristo Rey
 	id = justo.54
 	title = "justo.54.name"
 	desc = justo.54.desc
+	picture = GFX_evt_prelate_procession
 	
 	is_triggered_only = yes
 	major = yes
@@ -2579,6 +2602,7 @@ narrative_event = { #The Foreign Benemerito
 	id = justo.55
 	title = "justo.55.name"
 	desc = justo.55.desc
+	picture = GFX_evt_zocalo
 	
 	is_triggered_only = yes
 	major = yes
@@ -2637,6 +2661,7 @@ narrative_event = { #A man of his word
 	id = justo.56
 	title = "justo.56.name"
 	desc = justo.56.desc
+	picture = GFX_evt_CRISTO_REY
 	
 	is_triggered_only = yes
 	major = yes
@@ -2728,6 +2753,7 @@ narrative_event = { #Benemérito Prelado
 	id = justo.57
 	title = "justo.57.name"
 	desc = justo.57.desc
+	picture = GFX_evt_prelate_procession
 	
 	is_triggered_only = yes
 	major = yes
@@ -2806,6 +2832,7 @@ narrative_event = { #The Conqueror of Mexico
 	id = justo.58
 	title = "justo.58.name"
 	desc = justo.58.desc
+	picture = GFX_evt_victory_parade
 	
 	is_triggered_only = yes
 	major = yes
@@ -2885,6 +2912,7 @@ narrative_event = {
 	id = justo.59 #The Latino Emperor
 	title = "justo.59.name"
 	desc = justo.59.desc
+	picture = GFX_evt_zocalo
 	
 	is_triggered_only = yes
 	
@@ -2934,7 +2962,7 @@ narrative_event = {
 					grant_title = ROOT
 					copy_title_laws = e_mexico
 				}
-				k_baijo = {
+				k_bajio = {
 					show_scope_change = no
 					de_jure_liege = e_latino
 				}
@@ -2969,6 +2997,7 @@ narrative_event = {
 				e_mexico = {
 					destroy_landed_title = THIS
 				}
+				set_government_type = feudal_government
 			}
 		}
 		if = {
@@ -3008,6 +3037,7 @@ narrative_event = {
 	id = justo.60 #Not Latino but indeed an Empire
 	title = "justo.60.name"
 	desc = justo.60.desc
+	picture = GFX_evt_desert_crusaders
 	
 	is_triggered_only = yes
 	
@@ -3076,7 +3106,7 @@ narrative_event = {
 					copy_title_laws = e_mexico
 					set_defacto_vassal = d_friends_mercenary
 				}
-				k_baijo = {
+				k_bajio = {
 					show_scope_change = no
 					de_jure_liege = e_latino
 				}
@@ -3111,6 +3141,7 @@ narrative_event = {
 				e_mexico = {
 					destroy_landed_title = THIS
 				}				
+				set_government_type = feudal_government
 			}
 		}
 	}
