@@ -1489,12 +1489,16 @@ narrative_event = { #JUSTO ARMAS!!!!!
 					has_character_flag = is_prelate_envoy
 					has_character_flag = is_the_gringo
 				}
-				save_event_target_as = target_titles_receiver
 			}
+			save_event_target_as = target_titles_receiver
 		}
 		clr_global_flag = justo_war_preparations
 		ROOT = {
-			abdicate_to_most_liked_by = event_target:target_titles_receiver 
+			any_demesne_title = {
+				limit = { NOT = {title=d_justo} }
+				grant_title = event_target:target_titles_receiver 
+			}
+			set_defacto_liege = THIS
 		}
 		d_justo = {
 			grant_title = ROOT
@@ -1502,7 +1506,7 @@ narrative_event = { #JUSTO ARMAS!!!!!
 		set_global_flag = justo_war_one
 		ROOT = {
 			spawn_unit = {
-				province = 1767
+				province = 1850
 				home = 1767
 				owner = THIS
 				leader = THIS
