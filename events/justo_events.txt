@@ -905,10 +905,6 @@ narrative_event = { #the Pope's man
 				event_target:the_gringo = {
 					grant_title = d_friends
 					set_defacto_liege = ROOT
-					add_alliance = {
-						who = ROOT
-						years = 10
-					}
 					wealth = 500
 				}
 				set_global_flag = catholic_friends
@@ -1486,17 +1482,30 @@ narrative_event = { #JUSTO ARMAS!!!!!
 	}
 	
 	immediate = {
-		clr_global_flag = justo_war_preparations
-		d_justo = {
-			grant_title = c_6900449
+		any_realm_character = {
+			limit = {
+				NOR = { 
+					has_character_flag = the_justo_armas
+					has_character_flag = is_prelate_envoy
+					has_character_flag = is_the_gringo
+				}
+				save_event_target_as = target_titles_receiver
+			}
 		}
+		clr_global_flag = justo_war_preparations
 		d_salvador = { 
 			holder_scope = {
 				grant_title_no_opinion = c_chalatenango
 			}
 		}
+		ROOT = {
+			abdicate_to_most_liked_by = event_target:target_titles_receiver 
+		}
+		d_justo = {
+			grant_title = ROOT
+		}
 		set_global_flag = justo_war_one
-		c_6900449 = {
+		ROOT = {
 			spawn_unit = {
 				province = 1767
 				home = 1767
@@ -2120,13 +2129,13 @@ narrative_event = { #Su Alteza Imperial or Justo Armas Victorious
 	
 	trigger = {
 		has_global_flag = justo_war_one
-		d_justo = {
-			destroy_landed_title = THIS
-		}
 	}
 	
 	immediate = {
 		clr_global_flag = justo_war_one
+		d_justo = {
+			destroy_landed_title = THIS
+		}
 	}
 	
 	option = {
