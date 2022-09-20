@@ -180,21 +180,23 @@ claim = {
 					has_global_flag = justo_war_two 
 				} #checks if the Justo War is happening
 				if = {
-					limit = { has_landed_title = d_cristo_rey } #Prelate's endings
+					limit = { 
+						ROOT = { has_landed_title = d_cristo_rey }  #Prelate's endings
+					} 
 					if = {
 						limit = { has_global_flag = catholic_friends }
-						narrative_event = { id = justo.57 } #Benemerito Prelado
+						ROOT = { narrative_event = { id = justo.57 days = 2 } } #Benemerito Prelado
 					}
 					else = {
-						narrative_event = { id = justo.54 }
+						ROOT = { narrative_event = { id = justo.54 days = 2 } }	
 					}
 				}
 				else_if = {
 					limit = { 
-						has_landed_title = d_friends
-						has_global_flag = friends_rebel
+						ROOT = { has_landed_title = d_friends }
+						#has_global_flag = friends_rebel
 					}
-					narrative_event = { id = justo.60 }
+					ROOT = { narrative_event = { id = justo.60 days = 2 } }
 				}
 			}
 		}
@@ -455,7 +457,6 @@ claim = {
 					}
 					FROM = { narrative_event = { id = justo.59 } }
 				}
-				
 			}
 		}
 	}

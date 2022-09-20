@@ -1415,11 +1415,12 @@ narrative_event = { #Catholic Friends of Mexico Ask for a Donation
 							owner = PREV
 							province = PREV
 							home = PREV
+							earmark = friends_units
 						  
 							troops = {
-								archers = { 50 50 }
-								heavy_infantry = { 25 50 }
-								knights  = { 25 25 }
+								archers = { 5 10 }
+								heavy_infantry = { 10 15 }
+								knights  = { 10 15 }
 							}
 
 							attrition = 0
@@ -2132,9 +2133,6 @@ narrative_event = { #Su Alteza Imperial or Justo Armas Victorious
 	
 	immediate = {
 		clr_global_flag = justo_war_one
-		d_justo = {
-			destroy_landed_title = THIS
-		}
 	}
 	
 	option = {
@@ -2167,6 +2165,9 @@ narrative_event = { #Su Alteza Imperial or Justo Armas Victorious
 				has_character_flag = justo_oath
 			}
 			set_defacto_liege = e_mexico
+		}
+		d_justo = {
+			unsafe_destroy_landed_title = THIS
 		}
 	}
 	
@@ -2251,7 +2252,9 @@ narrative_event = { #with Friends Like This or A Promise to Keep
 				text = EVTOPTA_justo51_TT #the Friends of Mexico occupy Veracruz! This looks like trouble...
 				hidden_effect = {
 					if = {
-						limit = { completely_controls = d_veracruz }
+						limit = {
+							any_vassal = { has_landed_title = d_veracruz }
+						}
 						d_veracruz = {
 							holder_scope = {
 								any_demesne_title = {
@@ -2279,12 +2282,12 @@ narrative_event = { #with Friends Like This or A Promise to Keep
 		custom_tooltip = {
 			text = EVTOPTB_justo51_TT
 			hidden_effect = {
+				unsafe_destroy_landed_title = d_friends
 				activate_title = { title = d_friends_mercenary status = yes }
-				d_friends = {
-					destroy_landed_title = THIS
-				}
 				event_target:the_gringo = {
 					grant_title = d_friends_mercenary
+					set_defacto_liege = e_mexico
+					disband_event_forces = friends_units
 				}
 				set_global_flag = prelate_rebel
 			}
@@ -2332,7 +2335,9 @@ narrative_event = { #with Friends Like This or A Promise to Keep
 				text = EVTOPTA_justo51_TT #the Friends of Mexico occupy Veracruz! This looks like trouble...
 				hidden_effect = {
 					if = {
-						limit = { completely_controls = d_veracruz }
+						limit = {
+							any_vassal = { has_landed_title = d_veracruz }
+						}
 						d_veracruz = {
 							holder_scope = {
 								any_demesne_title = {
@@ -2693,6 +2698,9 @@ narrative_event = { #A man of his word
 				modifier = friends_failure
 			}
 		}
+		d_friends = {
+			unsafe_destroy_landed_title = THIS
+		}
 	}
 	
 	option = {
@@ -2701,7 +2709,7 @@ narrative_event = { #A man of his word
 			has_landed_title = e_mexico
 		}
 		d_friends = {
-			destroy_landed_title = THIS
+			unsafe_destroy_landed_title = THIS
 		}
 		if = {
 			limit = { has_dlc = "Holy Fury" }
@@ -2786,6 +2794,9 @@ narrative_event = { #Benemérito Prelado
 				modifier = friends_failure
 			}
 		}
+		d_friends = {
+			unsafe_destroy_landed_title = THIS
+		}
 	}
 	
 	option = {
@@ -2863,6 +2874,9 @@ narrative_event = { #The Conqueror of Mexico
 			religion_authority = {
 				modifier = friends_failure
 			}
+		}
+		d_friends = {
+			unsafe_destroy_landed_title = THIS
 		}
 	}
 	
@@ -2942,6 +2956,9 @@ narrative_event = {
 			religion_authority = {
 				modifier = friends_success
 			}
+		}
+		d_friends = {
+			unsafe_destroy_landed_title = THIS
 		}
 	}
 	
@@ -3050,11 +3067,13 @@ narrative_event = {
 	desc = justo.60.desc
 	picture = GFX_evt_desert_crusaders
 	
+	major = yes
+	
 	is_triggered_only = yes
 	
 	trigger = {
 		has_global_flag = catholic_friends
-		has_character_flag = the_rebel_friend
+		#has_character_flag = the_rebel_friend
 	}
 	
 	immediate = {
@@ -3069,6 +3088,9 @@ narrative_event = {
 				modifier = friends_success
 			}
 		}
+		d_friends = {
+			unsafe_destroy_landed_title = THIS
+		}
 	}
 	
 	option = {
@@ -3082,6 +3104,7 @@ narrative_event = {
 		name = EVTOPTA_justo59
 		trigger = {
 			religion = cristo_rey
+			NOT = { has_character_flag = the_justo_armas }
 		}
 	}
 	
@@ -3103,58 +3126,62 @@ narrative_event = {
 		name = EVTOPTD_justo40
 		trigger = {
 			religion = catholic
+			NOT = { has_landed_title = e_mexico }
 		}
-		if = {
-			limit = {
-				has_landed_title = e_mexico
-			}
-			hidden_effect = {
-				activate_title = { title = e_latino status = yes }
-				activate_title = { title = d_friends_mercenary status = yes }
-				e_latino = {
-					show_scope_change = no
-					grant_title = ROOT
-					copy_title_laws = e_mexico
-					set_defacto_vassal = d_friends_mercenary
-				}
-				k_bajio = {
-					show_scope_change = no
-					de_jure_liege = e_latino
-				}
-				k_gran_chichimeca = {
-					show_scope_change = no
-					de_jure_liege = e_latino
-				}
-				k_jalisco = {
-					show_scope_change = no
-					de_jure_liege = e_latino
-				}
-				k_mexico = {
-					show_scope_change = no
-					de_jure_liege = e_latino
-				}
-				k_veracruz = {
-					show_scope_change = no
-					de_jure_liege = e_latino
-				}
-				k_michoacan = {
-					show_scope_change = no
-					de_jure_liege = e_latino
-				}
-				k_oaxaca = {
-					show_scope_change = no
-					de_jure_liege = e_latino
-				}
-				k_guerrero = {
-					show_scope_change = no
-					de_jure_liege = e_latino
-				}
-				e_mexico = {
-					destroy_landed_title = THIS
-				}				
-				set_government_type = feudal_government
-			}
+	}
+	
+	option = {
+		name = EVTOPTD_justo40
+		trigger = {
+			has_landed_title = e_mexico
 		}
+		custom_tooltip = {
+				text = EVTOPTC_justo59_TT
+				hidden_effect = {
+					e_latino = {
+						show_scope_change = no
+						grant_title = ROOT
+						copy_title_laws = e_mexico
+					}
+					k_bajio = {
+						show_scope_change = no
+						de_jure_liege = e_latino
+					}
+					k_gran_chichimeca = {
+						show_scope_change = no
+						de_jure_liege = e_latino
+					}
+					k_jalisco = {
+						show_scope_change = no
+						de_jure_liege = e_latino
+					}
+					k_mexico = {
+						show_scope_change = no
+						de_jure_liege = e_latino
+					}
+					k_veracruz = {
+						show_scope_change = no
+						de_jure_liege = e_latino
+					}
+					k_michoacan = {
+						show_scope_change = no
+						de_jure_liege = e_latino
+					}
+					k_oaxaca = {
+						show_scope_change = no
+						de_jure_liege = e_latino
+					}
+					k_guerrero = {
+						show_scope_change = no
+						de_jure_liege = e_latino
+					}
+					e_mexico = {
+						destroy_landed_title = THIS
+					}
+					set_government_type = feudal_government
+				}
+		}
+		
 	}
 	
 	option = { 
