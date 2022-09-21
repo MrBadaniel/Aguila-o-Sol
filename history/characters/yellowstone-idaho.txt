@@ -43,12 +43,13 @@
 	trait=diligent
 	trait=greedy
 	trait=gregarious
+	trait=lustful
 	trait=skilled_tactician
 	martial=10
 	father=1890130
 	mother=1890131
 	2640.5.12={birth=yes}
-	2665.12.2={add_spouse=1890005}
+	2659.8.19={add_spouse=1890005}
 	2720.1.19={death=yes}
 }
 
@@ -62,11 +63,13 @@
 }
 
 1890005={
-	name="Winonmie"
+	name="Janet"
 	female=yes
-	#dynasty=1889030
+	dynasty=1802106#140900030 #Murgatroyd
+	father=1890177
+	mother=1890182
 	culture=mountainer
-	religion=gaian
+	religion=gaian#forester
 	trait=tough_soldier
 	trait=strong
 	trait=sympathy_christendom
@@ -74,9 +77,9 @@
 	trait=deceitful
 	trait=charitable
 	trait=brave
-	2645.12.11={birth=yes}
-	2665.12.2={secret_religion=gaian}
-	2665.12.2={add_spouse=1890003}
+	2646.4.10={birth=yes}
+	2655.12.2={secret_religion=gaian}
+	2659.8.19={add_spouse=1890003}
 	2720.11.28={death=yes}
 }
 
@@ -1995,7 +1998,7 @@
 
 1890139={
 	name="Madeleine"
-	dynasty=1802106#140900030 Murgatroyd
+	dynasty=1802106#140900030 #Murgatroyd
 	culture=siskiyouan
 	father=1890142
 	mother=1890143
@@ -2051,7 +2054,7 @@
 
 1890142={
 	name="Roderick"
-	dynasty=1802106#140900030 Murgatroyd
+	dynasty=1802106#140900030 #Murgatroyd
 	culture=siskiyouan
 	religion=pagan#forester
 	trait=martial_cleric
@@ -2087,7 +2090,7 @@
 
 1890144={
 	name="Ayres"
-	dynasty=1802106#140900030 Murgatroyd
+	dynasty=1802106#140900030 #Murgatroyd
 	father=1890142
 	mother=1890143
 	culture=siskiyouan
@@ -2189,7 +2192,7 @@
 
 1890150={
 	name="Azrael"
-	dynasty=1802106#140900030 Murgatroyd
+	dynasty=1802106#140900030 #Murgatroyd
 	father=1890144
 	culture=siskiyouan
 	religion=edenite#forester
@@ -2209,7 +2212,7 @@
 
 1890151={
 	name="Ayres"
-	dynasty=1802106#140900030 Murgatroyd
+	dynasty=1802106#140900030 #Murgatroyd
 	father=1890150
 	culture=mountainer
 	religion=edenite#forester
@@ -2225,7 +2228,7 @@
 
 1890152={
 	name="Reuel"
-	dynasty=1802106#140900030 Murgatroyd
+	dynasty=1802106#140900030 #Murgatroyd
 	father=1890151
 	culture=mountainer
 	religion=edenite#forester
@@ -2241,7 +2244,7 @@
 
 1890153={
 	name="Roderick"
-	dynasty=1802106#140900030 Murgatroyd
+	dynasty=1802106#140900030 #Murgatroyd
 	father=1890152
 	culture=mountainer
 	religion=edenite#forester
@@ -2257,7 +2260,7 @@
 
 1890154={
 	name="Johnny"
-	dynasty=1802106#140900030 Murgatroyd
+	dynasty=1802106#140900030 #Murgatroyd
 	father=1890153
 	culture=mountainer
 	religion=edenite#forester
@@ -2273,7 +2276,7 @@
 
 1890154={
 	name="Abram"
-	dynasty=1802106#140900030 Murgatroyd
+	dynasty=1802106#140900030 #Murgatroyd
 	father=1890153
 	culture=mountainer
 	religion=edenite#forester
@@ -2289,7 +2292,7 @@
 
 1890155={
 	name="Johnny"
-	dynasty=1802106#140900030 Murgatroyd
+	dynasty=1802106#140900030 #Murgatroyd
 	father=1890154
 	culture=mountainer
 	religion=gaian#forester
@@ -2306,7 +2309,7 @@
 
 1890156={
 	name="Ogee"
-	dynasty=1802106#140900030 Murgatroyd
+	dynasty=1802106#140900030 #Murgatroyd
 	female=yes
 	culture=mountainer
 	father=1890153
@@ -2609,13 +2612,219 @@
 	2664.10.10={birth=yes}
 }
 
-#Judy matri-married Gazoo (nick_the_great) (chicagoan) (born 2605.5.15) in 2627.7.7 and #in 2630.2.2 they had Dexter.
+1890176={
+	name="Gazoo"
+	culture=chicagoan
+	religion=gaian#forester
+	give_nickname=nick_the_great
+	trait=erudite
+	trait=proud
+	2605.5.15={birth=yes}
+	2627.7.7={add_matrilineal_spouse=1890170}
+}
 
-Lisa Krakauer, Daughter of Vienna (and of Edmond) married Dexter Krakauer in 2659.4.14. Born in 2634.9.10 and is a mountaineer like her mother but converted to Foresters when she married Dexter Krakauer. On 2660.10.10 Blossom was born. In 2661.8.8 Buttercup was born. In 2662.12.12 Blossom was born. Barney Rubble is Judy's second child and was born on 2644.1.1. Barney married Betty Gilbert (sister of Lawrence Peter) in 2663.1.1 who was born in 2644.2.2. On Bamm Bamm Krakauer was adopted on 2664.10.10. 
+1890177={
+	name="Mandark"
+	culture=mountaineer
+	dynasty=1802106#140900030 #Murgatroyd
+	father=1890155
+	mother=1890179
+	trait=quick
+	trait=envious
+	trait=erudite
+	trait=scholar
+	religion=gaian#forester
+	give_nickname=nick_the_great
+	2625.2.11={birth=yes}
+	2665.1.1={employer=1875068}
+}
 
-Dorothy born 2628.12.4 is the elder sister of Barney and Dexter and is married to Mandark (2628.1.4) they marry 2645.8.8 and have Maggie Krakauer. 
+1890178={
+	name="Thaddeus"
+	culture=mountaineer
+	dynasty=1802106#140900030 #Murgatroyd
+	father=1890155
+	mother=1890179
+	trait=brilliant_strategist
+	trait=brawny
+	trait=honest
+	trait=brave
+	trait=kind
+	religion=gaian#forester
+	2633.4.10={birth=yes}
+	2665.1.1={employer=1875068}
+}
 
+1890179={
+	name="Lilith"
+	female=yes
+	dynasty=5001192 #Krakauer
+	culture=mountainer
+	health=1
+	trait=kind
+	trait=trusting
+	trait=chaste
+	mother=1890162
+	father=1890160
+	religion=gaian#forester
+	2694.4.7={birth=yes}
+	2624.4.8={add_spouse=1890155}
+	2665.1.1={employer=1875068}
+}
 
-#Thaddeus Murgatroyd martial 4, honest, just, brave, kind, brawny
-#Change Maggie's name to Janet, make Mandark the son of Papa Johnny and Thaddeus his younger brother. Give Papa Johnny health 12
-#Give Papa Johnny a Krakauer Wife
+1890180={
+	name="Dexter"
+	dynasty=5001192 #Krakauer
+	culture=mountainer
+	father=1890176
+	mother=1890176
+	religion=gaian#forester
+	trait=mastermind_theologian
+	trait=genius
+	trait=scholar
+	trait=erudite
+	trait=proud
+	trait=shy
+	2632.9.15={birth=yes}
+} 
+
+1890181={
+	name="Barney"
+	dynasty=5001192 #Krakauer
+	culture=mountainer
+	father=1890176
+	mother=1890176
+	religion=gaian#forester
+	trait=skilled_tactician
+	trait=distractible
+	trait=strong
+	trait=kind
+	trait=charitable
+	trait=gregarious
+	trait=humble
+	give_nickname=nick_rubble
+	2644.1.1={birth=yes}
+} 
+
+1890182={
+	name="Dorothy"
+	dynasty=5001192 #Krakauer
+	culture=mountainer
+	female=yes
+	father=1890176
+	mother=1890176
+	religion=gaian#forester
+	trait=distractible
+	trait=gregarious
+	trait=kind
+	2628.12.4={birth=yes}
+	2645.8.8={add_spouse=1890177}
+} 
+
+1890183={
+	name="Michael"
+	dynasty=1889029
+	culture=mountainer
+	religion=edenite 
+	give_nickname=nick_stormbrush
+	trait=freckles_5
+	trait=quick
+	father=1890003
+	mother=1890005
+	2660.8.1={birth=yes}
+}
+
+1890184={
+	name="Alicent"
+	dynasty=1889029
+	culture=mountainer
+	religion=edenite 
+	female=yes
+	trait=distractible
+	father=1890003
+	mother=1890005
+	2664.5.1={birth=yes}
+}
+
+1890185={
+	name="Betty"
+	dynasty=1889029
+	female=yes
+	culture=mountainer
+	religion=edenite
+	trait=kind
+	trait=trusting
+	trait=sympathy_pacific
+	trait=sympathy_latter_day_saints
+	father=1890130
+	mother=1890131
+	2663.1.1={birth=yes}
+	2644.2.2={add_spouse=1890181}
+	2720.1.19={death=yes}
+}
+
+1890186={
+	name="Bamm Bamm"
+	dynasty=5001192 #Krakauer
+	culture=mountainer
+	trait=adopted
+	trait=strong
+	father=1890185
+	mother=1890181
+	religion=gaian#forester
+	2664.10.10={birth=yes}
+} 
+
+1890187={
+	name="Lisa"
+	dynasty=5001192 #Krakauer
+	female=yes
+	culture=mountainer
+	father=1890161
+	mother=1886086
+	religion=gaian#forester
+	2634.9.10={birth=yes}
+	2659.4.14={add_spouse=1890180}
+} 
+
+1890188={
+	name="Blossom"
+	dynasty=5001192 #Krakauer
+	female=yes
+	culture=mountainer
+	father=1890180
+	mother=1890187
+	trait=quick
+	trait=willful
+	trait=curious
+	religion=gaian#forester
+	2660.10.10={birth=yes}
+} 
+
+1890189={
+	name="Buttercup"
+	dynasty=5001192 #Krakauer
+	female=yes
+	culture=mountainer
+	father=1890180
+	mother=1890187
+	trait=strong
+	trait=brooding
+	trait=indolent
+	religion=gaian#forester
+	2661.8.8={birth=yes}
+} 
+
+18901909={
+	name="Blossom"
+	dynasty=5001192 #Krakauer
+	female=yes
+	culture=mountainer
+	father=1890180
+	mother=1890187
+	trait=fair
+	trait=idolizer
+	trait=affectionate
+	religion=gaian#forester
+	2662.12.12={birth=yes}
+} 
