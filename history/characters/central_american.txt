@@ -1382,6 +1382,7 @@
 	trait=proud
 	trait=ambitious
 	trait=cruel
+	father=1431081
 	2539.7.20={birth=yes}
 	2568.11.28={
 		create_bloodline={
@@ -1408,6 +1409,7 @@
 	trait=just
 	trait=greedy
 	father=1650070
+	mother=1431215
 	2569.4.22={birth=yes
 		culture=yucatanense
 	}
@@ -1540,9 +1542,10 @@
 
 1650082={
 	name="Enrique"
-	dynasty=1546030
+	dynasty=5200088
 	culture=yucatanense
 	religion=neomayan
+	father= 1431224
 	2623.4.16={birth=yes}
 	2695.1.1={death=yes}
 }
@@ -1571,12 +1574,16 @@
 1650085={
 	name="Wilbert"
 	dynasty=1546040
-	culture=yucateco
+#	dna=fxqqkwyopxp (mayan portrait)
+#	properties=eeacei (mayan portrait)§	
+	culture=gulfard
 	religion=neomayan
 	trait=strong
 	trait=brilliant_strategist
 	trait=diligent
-	2607.6.30={birth=yes}
+	2607.6.30={birth=yes
+				culture=yucatanense
+	}
 	2637.1.1={add_spouse=1650086}
 	2695.1.1={death=yes}
 	father= 6900656
@@ -1585,7 +1592,7 @@
 1650086={
 	name="Ileana"
 	female=yes
-	culture=yucateco
+	culture=yucatanense
 	religion=neomayan
 	2617.2.10={birth=yes}
 	2637.1.1={add_spouse=1650085}
@@ -1593,26 +1600,28 @@
 }
 
 1650087={
-	name="Laura Kisa"
+	name="Laura"
 	female=yes
 	dynasty=1546040
-	culture=yucateco
+	culture=gulfard
 	religion=neomayan
 	father=1650085
 	mother=1650086
-	2641.8.16={birth=yes}
+	2641.8.16={birth=yes
+				culture=yucatanense}
 	2705.1.1={death=yes}
 }
 
 1650088={
-	name="Alma"
+	name="Jennifer"
 	female=yes
 	dynasty=1546040
-	culture=yucateco
+	culture=gulfard
 	religion=neomayan
 	father=1650085
 	mother=1650086
-	2646.2.17={birth=yes}
+	2646.2.17={birth=yes
+			culture=yucatanense}
 	2705.1.1={death=yes}
 }
 

@@ -1267,7 +1267,21 @@
 5200006 = { name="Bacal" culture=yucatanense }
 5200007 = { name="Bak" culture=yucatanense } #Human Flesh
 5200008 = { name="Baz" culture=yucatanense }
-5200009 = { name="Balán" culture=yucatanense } #Balam (jaguar)
+5200009 = { name="Balán" culture=yucatanense
+         coat_of_arms = {
+		religion = mictlantec
+        template = 0
+        layer = {
+            texture = 2
+            texture_internal = 3
+            emblem = 0
+            color = 0
+            color = 0
+            color = 0
+        }
+    }
+}
+ #Balam (jaguar)
 5200010 = { name="Balché" culture=yucatanense }
 5200011 = { name="Batún" culture=yucatanense }
 5200012 = { name="Bé" culture=yucatanense }
@@ -1297,7 +1311,20 @@
 
 #COLONIAS DE MÉRIDA
 5200036 = { name="García Ginerés" culture=yucatanense }
-5200037 = { name="de Montejo" culture=yucatanense }
+5200037 = { name="de Montejo" culture=yucatanense 
+		coat_of_arms = {
+				religion = sacred_heart
+        template = 0
+		layer = {
+			texture = 9
+			texture_internal = 35
+			emblem = 0
+			color = 0
+			color = 0
+			color = 0
+		}
+	}
+}
 5200039 = { name="Montejo" culture=yucatanense }
 5200040 = { name="Alcalá Martín" culture=yucatanense }
 5200041 = { name="Amalia Solórzano" culture=yucatanense }
@@ -1336,10 +1363,36 @@
 5200070 = { name="Ponce" culture=yucatanense }
 5200071 = { name="Ponce de León" culture=yucatanense }
 5200072 = { name="León" culture=yucatanense }
-5200073 = { name="Barbachano" culture=yucatanense } #Probably needs a custom COA. Chichen Castle
+5200073 = { name="Barbachano" culture=yucatanense 
+		coat_of_arms = {
+				religion = sacred_heart
+        template = 0
+		layer = {
+			texture = 9
+			texture_internal = 37
+			emblem = 0
+			color = 0
+			color = 0
+			color = 0
+		}
+	}
+} #Probably needs a custom COA. Chichen Castle
 5200074 = { name="Pacheco" culture=yucatanense }
 5200075 = { name="Granja Ricalde" culture=yucatanense }
-5200076 = { name="Cervera" culture=yucatanense }
+5200076 = { name="Cervera" culture=yucatanense 
+		coat_of_arms = {
+				religion = sacred_heart
+        template = 0
+		layer = {
+			texture = 9
+			texture_internal = 38
+			emblem = 0
+			color = 0
+			color = 0
+			color = 0
+		}
+	}
+}
 5200077 = { name="Sauri" culture=yucatanense }
 5200078 = { name="Alpuche" culture=yucatanense }
 5200079 = { name="Mena" culture=yucatanense }
@@ -1351,7 +1404,19 @@
 5200085 = { name="Iturralde" culture=yucatanense }
 5200086 = { name="Traconis" culture=yucatanense }
 5200087 = { name="O'Horan" culture=yucatanense }
-5200088 = { name="Albertos" culture=yucatanense }
+5200088 = { name="Albertos" culture=yucatanense 
+	coat_of_arms = {
+		template = 0
+		layer = {
+			texture = 11
+			texture_internal = 35
+			emblem = 0
+			color = 0
+			color = 0
+			color = 0
+		}
+	}
+}
 5200089 = { name="Garrido" culture=yucatanense }
 5200090 = { name="Solís" culture=yucatanense }
 5200091 = { name="Berzunza" culture=yucatanense }
@@ -1365,10 +1430,54 @@
 5200099 = { name="Cicerol" culture=yucatanense }
 5200100 = { name="León Marín" culture=yucatanense }
 5200101 = { name="Zoreda" culture=yucatanense }
-5200102 = { name="Triay" culture=yucatanense }
+5200102 = { name="Triay" culture=yucatanense 		
+			coat_of_arms = {
+				religion = sacred_heart
+			template = 0
+			layer = {
+			texture = 9
+			texture_internal = 39
+			emblem = 0
+			color = 0
+			color = 0
+			color = 0
+			}
+		}
+}
 5200103 = { name="Pinto" culture=yucatanense }
 5200104 = { name="Peniche" culture=yucatanense }
-5200105 = { name="Luna" culture=yucatanense }
+5200105 = { name="Luna" culture=yucatanense}
+5200106 = { name="Leonmarí" culture=yucatanense 
+		coat_of_arms = {
+				religion = sacred_heart
+        template = 0
+		layer = {
+			texture = 9
+			texture_internal = 36
+			emblem = 0
+			color = 0
+			color = 0
+			color = 0
+		}
+	}
+}
+5200107 = {name="Marín" culture =yucatanense}
+5200108 = {name="Castillo" culture=yucatanense}
+5200109 = {name="Luna Kan" culture=yucatanense} #CoA Moon and Snake
+5200110 = {name="Piña" culture=yucatanense}
+5200111 = {name="Chan Piña" culture=yucatanense
+	coat_of_arms = {
+		template = 0
+		layer = {
+			texture = 11
+			texture_internal = 34
+			emblem = 0
+			color = 0
+			color = 0
+			color = 0
+		}
+	}
+}
 
 2111001 = { name="Silverio" culture=pinoy }
 2111002 = { name="Tobera" culture=pinoy }
@@ -1751,6 +1860,56 @@
 	}
 }
 
+####YUCATECO/LACANDON/CHOLANO 154095 was the last one used in after_the_end_dynasties
+154096 ={ name= "Mopán" culture=yucateco
+        coat_of_arms = {
+		religion = mictlantec
+        template = 0
+        layer = {
+            texture = 2
+            texture_internal = 5
+            emblem = 0
+            color = 0
+            color = 0
+            color = 0
+        }
+    }
+}
+154097 ={ name= "Ixkán" culture=lacandon}
+154098 ={ name= "Lakamha" culture=lacandon}
+154099 ={ name= "Jooyok'" culture=yucateco
+     coat_of_arms = {
+		religion = mictlantec
+        template = 0
+        layer = {
+            texture = 2
+            texture_internal = 4
+            emblem = 0
+            color = 0
+            color = 0
+            color = 0
+        }
+    }
+}
+
+
+
+#QUICHEAN 1697091 was the last one used in after_the_end_dynasties
+1697092 = { name= "Itzá" culture=quichean
+        coat_of_arms = {
+		religion = mictlantec
+        template = 0
+        layer = {
+            texture = 2
+            texture_internal = 2
+            emblem = 0
+            color = 0
+            color = 0
+            color = 0
+        }
+    }
+}
+1697093 = { name= "Kaibé" culture=quichean}
 
 1438061 = { name= "Itzá" culture=quichean}
 1438062 = { name= "Mopán" culture=yucateco}

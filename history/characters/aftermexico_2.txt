@@ -1158,7 +1158,8 @@
 	2388.1.2={birth=yes}
 	2409.5.26={add_spouse=6900488}
 	2448.5.18={death={
-			death_reason=death_battle
+			death=yes
+			death_reason=eath_battle_duel
 			killer=6900428
 		}
 	}
@@ -2269,57 +2270,7 @@
 	2643.11.22={birth=yes}
 }
 
-6900645={
-	name="Hermilo"
-	dynasty=5200102
-	culture=yucatanense
-	religion=cristo_rey
-	martial=10
-	diplomacy=3
-	stewardship=10
-	intrigue=3
-	learning=8
-	trait= diligent
-	trait= zealous
-	trait= administrator
-	trait= wroth
-	2600.05.22={birth=yes}
-}
-
-6900646={
-	name="Miguel"
-	dynasty=5200073
-	culture=yucatanense
-	religion=cristo_rey
-	martial=3
-	diplomacy=8
-	stewardship=10
-	intrigue=10
-	learning=10
-	trait= diligent
-	trait= craven
-	trait= cynical
-	trait= content
-	2580.05.22={birth=yes}
-	2665.11.11={death=yes}
-}
-6900647={
-	name="Fernando"
-	dynasty=5200073
-	culture=yucatanense
-	religion=cristo_rey
-	martial=6
-	diplomacy=6
-	stewardship=4
-	intrigue=15
-	learning=8
-	trait= arbitrary
-	trait= deceitful
-	trait= envious
-	trait= ambitious
-	father= 6900646
-	2620.05.12={birth=yes}
-}
+#### don't use 6900645 6900646 6900647
 6900648={
 	name="Eliodoro"
 	dynasty=5200080
@@ -2339,7 +2290,7 @@
 6900649={
 	name="Francisco"
 	dynasty=5200037
-	culture=yucatanense
+	culture=neomexicano
 	religion=cristo_rey
 	martial=15
 	diplomacy=8
@@ -2350,13 +2301,15 @@
 	trait= proud
 	trait= diligent
 	trait= inspiring_leader
-	2550.06.06={birth=yes}
+	2550.06.06={birth=yes
+				culture=yucatanense	
+	}
 	2600.01.01={death=yes}
 }
 6900650={
 	name="Francisco"
 	dynasty=5200037
-	culture=yucatanense
+	culture=neomexicano
 	religion=cristo_rey
 	martial=10
 	diplomacy=10
@@ -2369,13 +2322,15 @@
 	trait= hunter
 	trait= just
 	father= 6900649
-	2572.06.06={birth=yes}
+	2572.06.06={birth=yes
+		culture= yucatanense
+	}
 	2650.01.01={death=yes}
 }
 6900651={
 	name="Francisco"
 	dynasty=5200037
-	culture=yucatanense
+	culture=neomexicano
 	religion=cristo_rey
 	martial=6
 	diplomacy=5
@@ -2388,13 +2343,15 @@
 	trait= arbitrary
 	trait= scholar
 	father= 6900650
-	2600.12.12={birth=yes}
-	2649.01.10={death=yes}
+	2600.12.12={birth=yes
+		culture=yucatanense	
+	}
 }
 6900652={
 	name="Francisco"
 	dynasty=5200037
 	culture=yucatanense
+	dna=cqlxamvtswf
 	religion=cristo_rey
 	martial=15
 	diplomacy=8
@@ -2557,7 +2514,12 @@
 	trait= gregarious
 	trait= zealous
 	trait= inspiring_leader
-	2589.1.2={birth=yes}
+	2579.1.2={birth=yes}
+	2645.1.1={death= {
+		death_reason=death_battle
+		killer= 1650072	
+		}
+	}
 }
 
 #####Shawshank reference########
