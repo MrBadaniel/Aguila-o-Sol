@@ -8,10 +8,7 @@ crown_mexico = {
 	church_opinion = 10
 	active = { 
 		is_feudal = yes
-		OR = {
-			has_landed_title = e_mexico
-			has_landed_title = k_mexico
-		}
+		has_landed_title = e_mexico
 	}
 	flags = { unique crown jewelry crown_jewel }
 	picture = "GFX_pres_band_mex"
@@ -29,10 +26,7 @@ crown_pickelhaube = {
 	quality = 4
 	active = { 
 		is_feudal = yes
-		OR = {
-			has_landed_title = e_mexico
-			has_landed_title = k_mexico
-		}
+		has_landed_title = e_mexico
 	}
 	flags = { unique crown jewelry crown_jewel }
 	picture = "GFX_pickelaube_helmet"
@@ -97,6 +91,7 @@ campana_de_dolores = {
 			culture_group = norteno
 			culture_group = mesoamerican
 			culture_group = taracahita
+			culture = yucateco
 		}
 	}
 	allowed_gift = {
@@ -105,6 +100,7 @@ campana_de_dolores = {
 			culture_group = norteno
 			culture_group = mesoamerican
 			culture_group = taracahita
+			culture = yucateco
 		}
 	}
 	allowed_gift = {

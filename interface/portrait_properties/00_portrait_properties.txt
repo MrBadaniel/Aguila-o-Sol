@@ -448,6 +448,7 @@
 				AND = {
 					OR = {
 						culture_group = west_anglo
+						culture_group = norteno
 						culture = texaner
 						culture = czexan
 						culture_group = rockland
@@ -482,6 +483,7 @@
 				AND = {
 					OR = {
 						culture_group = west_anglo
+						culture_group = norteno
 						culture_group = rockland
 						culture = texaner
 						culture = czexan
@@ -590,7 +592,6 @@
 				culture_group = gallomerican
 				culture_group = louisianais
 				culture_group = mexicano
-				culture_group = chicano
 				culture_group = caribeno
 				culture_group = centrolatino
 				culture_group = costero
@@ -1796,7 +1797,7 @@
 			}
 			OR = {
 				culture_group = mexicano
-				culture_group = chicano
+				culture_group = norteno
 				culture_group = orinocense
 				culture_group = caribeno
 				culture_group = centrolatino
@@ -1994,7 +1995,7 @@
 			}
 			OR = {
 				culture_group = mexicano
-				culture_group = chicano
+				culture_group = norteno
 				culture_group = orinocense
 				culture_group = caribeno
 				culture_group = centrolatino
@@ -2045,7 +2046,7 @@
 			}
 			OR = {
 				culture_group = mexicano
-				culture_group = chicano
+				culture_group = norteno
 				culture_group = orinocense
 				culture_group = caribeno
 				culture_group = centrolatino
@@ -2190,6 +2191,7 @@
 				religion = ursuline
 				religion = mormon
 				religion = high_church
+				religion = sol_invicta
 			} 
 			NOR = { 
 				trait = crowned_by_priest 
@@ -2227,6 +2229,7 @@
 					religion = ursuline
 					religion = mormon
 					religion = high_church
+					religion = sol_invicta
 				} 
 				NOR = { 
 					trait = crowned_by_priest 
@@ -2341,6 +2344,7 @@
 				religion = ursuline
 				religion = mormon
 				religion = high_church
+				religion = sol_invicta
 			} 
 			NOR = { 
 				trait = crowned_by_priest 
@@ -2378,6 +2382,7 @@
 					religion = ursuline
 					religion = mormon
 					religion = high_church
+					religion = sol_invicta
 				} 
 				NOR = { 
 					trait = crowned_by_priest 
@@ -2482,6 +2487,7 @@
 				religion = ursuline
 				religion = mormon
 				religion = high_church
+				religion = sol_invicta
 			} 
 			NOR = { 
 				trait = crowned_by_priest 
@@ -2519,6 +2525,7 @@
 					religion = ursuline
 					religion = mormon
 					religion = high_church
+					religion = sol_invicta
 				} 
 				NOR = { 
 					trait = crowned_by_priest 
@@ -2635,6 +2642,7 @@
 				religion = ursuline
 				religion = mormon
 				religion = high_church
+				religion = sol_invicta
 			} 
 			NOR = { 
 				trait = crowned_by_priest 
@@ -2672,6 +2680,7 @@
 					religion = ursuline
 					religion = mormon
 					religion = high_church
+					religion = sol_invicta
 				} 
 				NOR = { 
 					trait = crowned_by_priest 
@@ -2722,6 +2731,7 @@
 						religion = ursuline
 						religion = mormon
 						religion = high_church
+						religion = sol_invicta
 					}
 					OR = { 
 						trait = crowned_by_priest
@@ -2746,6 +2756,7 @@
 						religion = ursuline
 						religion = mormon
 						religion = high_church
+						religion = sol_invicta
 					}
 					OR = { 
 						trait = crowned_by_priest
@@ -3029,6 +3040,10 @@
 		}
 		modifier = {
 			factor = 0
+			trait = adelita
+		}
+		modifier = {
+			factor = 0
 			NOT = { trait = peasant_leader }
 			NOT = { trait = heresiarch }
 			OR = {
@@ -3140,6 +3155,8 @@
 						title = d_st_ursulas_chosen
 						title = k_ursuline_state
 						title = d_lebanon_brethren
+						# title = d_dorados
+						# title = d_cristo_rey
 						title = e_china_west_governor
 					}
 				}
@@ -3148,6 +3165,17 @@
 		modifier = {
 			factor = 0
 			trait = shieldmaiden
+			NAND = { 
+				in_command = yes 
+				has_game_rule = {
+					name = martial_headgear
+					value = on
+				}
+			}
+		}
+		modifier = {
+			factor = 0
+			trait = adelita
 			NAND = { 
 				in_command = yes 
 				has_game_rule = {
@@ -3178,6 +3206,17 @@
 		}
 		modifier = {
 			factor = 20000
+			trait = adelita
+			NAND = { 
+				in_command = yes 
+				has_game_rule = {
+					name = martial_headgear
+					value = on
+				}
+			}
+		}
+		modifier = {
+			factor = 20000
 			OR = { 
 				government = order_government 
 				primary_title = { #Holy Orders in peace time should wear martial clothes, but not the helmet.
@@ -3187,6 +3226,8 @@
 						title = d_st_ursulas_chosen
 						title = k_ursuline_state
 						title = d_lebanon_brethren
+						# title = d_dorados
+						# title = d_cristo_rey
 					}
 				}
 			}
@@ -4936,34 +4977,34 @@
 			}
 		}
 	}
-	#12 = { 
-	#	factor = 100
-	#	hide_layers = { 5 = { } } #Hide layer 5 (headgear) when this frame is picked.
-	#	modifier = { #Zunist Fylkir Crown
-	#		factor = 0
-	#		NOR = { 
-	#			any_artifact = {
-	#				artifact_type = crown_zun_fylkir
-	#				is_artifact_equipped = yes 
-	#			}
-	#			trait = dead_crown_zun_fylkir
-	#		}
-	#	}
-	#}
-	#13 = { 
-	#	factor = 100
-	#	hide_layers = { 5 = { } } #Hide layer 5 (headgear) when this frame is picked.
-	#	modifier = { #Aztec Fylkir Crown
-	#		factor = 0
-	#		NOR = { 
-	#			any_artifact = {
-	#				artifact_type = crown_aztec_fylkir
-	#				is_artifact_equipped = yes 
-	#			}
-	#			trait = dead_crown_aztec_fylkir
-	#		}
-	#	}
-	#}
+	12 = { 
+		factor = 100
+		hide_layers = { 5 = { } } #Hide layer 5 (headgear) when this frame is picked.
+		modifier = { #Bullet Crown
+			factor = 0
+			NOR = { 
+				any_artifact = {
+					artifact_type = bullet_crown
+					is_artifact_equipped = yes 
+				}
+				trait = dead_bullet_crown
+			}
+		}
+	}
+	13 = { 
+		factor = 100
+		hide_layers = { 5 = { } } #Hide layer 5 (headgear) when this frame is picked.
+		modifier = { #Baston del Pueblo
+			factor = 0
+			NOR = { 
+				any_artifact = {
+					artifact_type = baston_del_pueblo
+					is_artifact_equipped = yes 
+				}
+				trait = dead_baston_del_pueblo
+			}
+		}
+	}
 	14 = { 
 		factor = 100
 		hide_layers = { 5 = { } } #Hide layer 5 (headgear) when this frame is picked.
@@ -6116,21 +6157,25 @@
 		}
 	}
 	2 = { # Military Helm 02
+		factor = 1
 		trigger = {
 			french_martial_overlayer_trigger = yes
 		}
 	}
 	3 = { # Military Helm 03
+		factor = 1
 		trigger = {
 			french_martial_overlayer_trigger = yes
 		}
 	}
 	4 = { # Military Helm 04
+		factor = 1
 		trigger = {
 			french_martial_overlayer_trigger = yes
 		}
 	}
 	5 = { # Count Accessories
+		factor = 1
 		trigger = {
 			french_count_overlayer_trigger = yes
 			NOR = { 
@@ -6181,6 +6226,7 @@
 		}
 	}
 	10 = { # Duke Accessories
+		factor = 1
 		trigger = {
 			french_duke_overlayer_trigger = yes
 			OR = { 
@@ -6190,6 +6236,7 @@
 		}
 	}
 	11 = { # Duke Accessories
+		factor = 1
 		trigger = {
 			french_duke_overlayer_trigger = yes
 			OR = { 
@@ -6199,6 +6246,7 @@
 		}
 	}
 	12 = { # Duke Accessories
+		factor = 1
 		trigger = {
 			french_duke_overlayer_trigger = yes
 			OR = { 
@@ -6208,6 +6256,7 @@
 		}
 	}
 	13 = { # Duke Accessories
+		factor = 1
 		trigger = {
 			french_duke_overlayer_trigger = yes
 			OR = { 
@@ -6687,7 +6736,8 @@
 				has_landed_title = d_national_cathedral
 				has_landed_title = d_salvation_army
 				has_landed_title = d_cristo_rey
-				has_landed_title = e_mexico
+				has_landed_title = d_dorados
+				# has_landed_title = e_mexico
 				liege = { has_landed_title = d_knights_of_columbus }
 				liege = { has_landed_title = d_knights_of_peter_claver }
 				liege = { has_landed_title = d_st_ursulas_chosen }
@@ -6696,7 +6746,8 @@
 				liege = { has_landed_title = d_flaming_sword }
 				liege = { has_landed_title = d_national_cathedral }
 				liege = { has_landed_title = d_salvation_army }
-				liege = { has_landed_title = e_mexico}
+				liege = { has_landed_title = d_dorados }
+				# liege = { has_landed_title = e_mexico}
 			}
 		}
 		modifier = { #Wearable Crown artifacts.
@@ -6709,7 +6760,8 @@
 			OR = { 
 				any_artifact = { artifact_type = crown_crusader_king is_artifact_equipped = yes } 
 				any_artifact = { artifact_type = crown_winged_helmet is_artifact_equipped = yes } 
-				any_artifact = { artifact_type = crown_wrapped_helmet is_artifact_equipped = yes } 
+				any_artifact = { artifact_type = crown_wrapped_helmet is_artifact_equipped = yes }
+				# any_artifact = { artifact_type = crown_pickelhaube is_artifact_equipped = yes } 
 			}
 		}
 		modifier = { #Unicorn
@@ -7079,7 +7131,7 @@
 #	}
 
     12 = { #Prelado's Helm
-                factor = 100
+        factor = 100
         hide_layers = { 12 = { } } #Hide layer 12 (disfigured masks) when this frame is picked.
         hide_layers = { 5 = { } } #Hide layer 5 (headgear) when this frame is picked.
         hide_layers = { 1 = { } } #Hide Hair.
@@ -7109,7 +7161,7 @@
 		modifier = {
 			factor= 0
 			NOT = {
-				has_trait= dorado
+				trait= dorado
 			}
 		}
 	}
@@ -7293,28 +7345,28 @@
 			}
 		}
 	}
-	#2 = {	#UNUSED
-	#	factor = 100
-	#	#hide_layers = { 5 = { } } #Hide layer 5 (headgear) when this frame is picked.
-	#	modifier = {
-	#		factor = 0
-	#		in_command = yes
-	#		has_game_rule = {
-	#			name = martial_headgear
-	#			value = on
-	#		}
-	#	}
-	#	modifier = { #Hellenic Fylkir Scepter
-	#		factor = 0
-	#		NOR = { 
-	#			any_artifact = {
-	#				artifact_type = scepter_hellenic_fylkir
-	#				is_artifact_equipped = yes 
-	#			}
-	#			trait = dead_scepter_hellenic_fylkir
-	#		}
-	#	}
-	#}
+	# 2 = {	#UNUSED
+		# factor = 100
+		# #hide_layers = { 5 = { } } #Hide layer 5 (headgear) when this frame is picked.
+		# modifier = {
+			# factor = 0
+			# in_command = yes
+			# has_game_rule = {
+				# name = martial_headgear
+				# value = on
+			# }
+		# }
+		# modifier = { #Baston del Pueblo
+			# factor = 0
+			# NOR = { 
+				# any_artifact = {
+					# artifact_type = baston_del_pueblo
+					# is_artifact_equipped = yes 
+				# }
+				# trait = dead_baston_del_pueblo
+			# }
+		# }
+	# }
 }
 
 # p37 Special Relations (lover/rival) #TODO_CD: update once we have proper scopes
