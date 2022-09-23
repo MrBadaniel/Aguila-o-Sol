@@ -395,6 +395,7 @@ spriteTypes = {
 		noOfFrames = 15
 		norefcount = yes
 	}
+	
 
 	# CULTURE_INDEX: 0 = clothes behind, 1 = headgear behind, 2 = clothes, 3 = headgear mid, 4 = clothes infront, 5 = headgear
 
@@ -422,7 +423,7 @@ spriteTypes = {
 			"GFX_indigena_male_ear:d7"
 			"GFX_character_freckles:p20"
 			"GFX_character_muslim_male_pale:p22"
-			"GFX_character_muslim_male_physique:p21"
+			"GFX_character_indigena_male_physique:p21"
 			"GFX_character_scars_dark:p7:y"
 			"GFX_character_scars_mid_dark:p25"
 			"GFX_character_scars_high_dark:p26"
@@ -491,7 +492,7 @@ spriteTypes = {
 			"GFX_indigena_male_base_midage:p2"
 			"GFX_indigena_male_neck_midage:d0"
 			"GFX_indigena_male_chin_midage:d1"
-			"GFX_character_muslim_male_physique:p21"
+			"GFX_character_indigena_male_physique:p21"
 			"GFX_indigena_male_cheeks_midage:d4"
 			"GFX_indigena_male_mouth_midage:d2"
 			"GFX_indigena_male_nose_midage:d3"
@@ -570,7 +571,7 @@ spriteTypes = {
 			"GFX_indigena_male_base_oldage:p2"
 			"GFX_indigena_male_neck_oldage:d0"
 			"GFX_indigena_male_chin_oldage:d1"
-			"GFX_character_muslim_male_physique:p21"
+			"GFX_character_indigena_male_physique:p21"
 			"GFX_indigena_male_cheeks_oldage:d4"
 			"GFX_indigena_male_mouth_oldage:d2"
 			"GFX_indigena_male_nose_oldage:d3"
@@ -883,7 +884,24 @@ spriteTypes = {
 		noOfFrames = 12
 		norefcount = yes
 	}
+
+
+###physiques	
+	spriteType = {
+		name = "GFX_character_indigena_male_physique"
+		texturefile = "gfx\\characters\\shared\\physique\\indigena_male_physique.dds"
+		noOfFrames = 7
+		norefcount = yes
+	}
 	
+	spriteType = {
+		name = "GFX_character_indigena_female_physique"
+		texturefile = "gfx\\characters\\shared\\physique\\indigena_female_physique.dds"
+		noOfFrames = 7
+		norefcount = yes
+	}
+	
+		
 	# CULTURE_INDEX: 0 = clothes behind, 1 = headgear behind, 2 = clothes, 3 = headgear mid, 4 = clothes infront, 5 = headgear
 
 	# indigena female
@@ -905,7 +923,7 @@ spriteTypes = {
 			"GFX_indigena_female_mouth:d2"
 			"GFX_indigena_female_nose:d3"
 			"GFX_indigena_female_chin:d1"
-			"GFX_character_muslim_female_physique:p21"
+			"GFX_character_indigena_female_physique:p21"
 			"GFX_indigena_female_cheeks:d4"
 			"GFX_indigena_female_eyes:d6"
 			"GFX_indigena_female_eyes2:d6:e"
@@ -985,7 +1003,7 @@ spriteTypes = {
 			"GFX_indigena_female_mouth_midage:d2"
 			"GFX_indigena_female_nose_midage:d3"
 			"GFX_indigena_female_chin_midage:d1"
-			"GFX_character_muslim_female_physique:p21"
+			"GFX_character_indigena_female_physique:p21"
 			"GFX_indigena_female_cheeks_midage:d4"
 			"GFX_indigena_female_eyes_midage:d6"
 			"GFX_indigena_female_eyes2:d6:e"
@@ -1064,7 +1082,7 @@ spriteTypes = {
 			"GFX_indigena_female_mouth_oldage:d2"
 			"GFX_indigena_female_nose_oldage:d3"
 			"GFX_indigena_female_chin_oldage:d1"
-			"GFX_character_muslim_female_physique:p21"
+			"GFX_character_indigena_female_physique:p21"
 			"GFX_indigena_female_cheeks_oldage:d4"
 			"GFX_indigena_female_eyes_oldage:d6"
 			"GFX_indigena_female_eyes2:d6:e"
@@ -1149,7 +1167,7 @@ spriteTypes = {
 			"GFX_indigena_male_ear:d7"
 			"GFX_character_freckles:p20"
 			"GFX_character_muslim_male_pale:p22"
-			"GFX_character_muslim_male_physique:p21"
+			"GFX_character_indigena_male_physique:p21"
 			"GFX_character_scars_dark:p7:y"
 			"GFX_character_scars_mid_dark:p25"
 			"GFX_character_scars_high_dark:p26"
@@ -1227,7 +1245,7 @@ spriteTypes = {
 			"GFX_indigena_male_ear_midage:d7"
 			"GFX_character_freckles:p20"
 			"GFX_character_muslim_male_pale:p22"
-			"GFX_character_muslim_male_physique:p21"
+			"GFX_character_indigena_male_physique:p21"
 			"GFX_character_scars_dark:p7:y"
 			"GFX_character_scars_mid_dark:p25"
 			"GFX_character_scars_high_dark:p26"
@@ -1305,7 +1323,7 @@ spriteTypes = {
 			"GFX_indigena_male_ear_oldage:d7"
 			"GFX_character_freckles:p20"
 			"GFX_character_muslim_male_pale:p22"
-			"GFX_character_muslim_male_physique:p21"
+			"GFX_character_indigena_male_physique:p21"
 			"GFX_character_scars_dark:p7:y"
 			"GFX_character_scars_mid_dark:p25"
 			"GFX_character_scars_high_dark:p26"
@@ -1378,7 +1396,7 @@ spriteTypes = {
 			"GFX_indigena_female_mouth:d2"
 			"GFX_indigena_female_nose:d3"
 			"GFX_indigena_female_chin:d1"
-			"GFX_character_muslim_female_physique:p21"
+			"GFX_character_indigena_female_physique:p21"
 			"GFX_indigena_female_cheeks:d4"
 			"GFX_indigena_female_eyes:d6"
 			"GFX_indigena_female_eyes2:d6:e"
@@ -1457,7 +1475,7 @@ spriteTypes = {
 			"GFX_indigena_female_mouth_midage:d2"
 			"GFX_indigena_female_nose_midage:d3"
 			"GFX_indigena_female_chin_midage:d1"
-			"GFX_character_muslim_female_physique:p21"
+			"GFX_character_indigena_female_physique:p21"
 			"GFX_indigena_female_cheeks_midage:d4"
 			"GFX_indigena_female_eyes_midage:d6"
 			"GFX_indigena_female_eyes2:d6:e"
@@ -1536,7 +1554,7 @@ spriteTypes = {
 			"GFX_indigena_female_mouth_oldage:d2"
 			"GFX_indigena_female_nose_oldage:d3"
 			"GFX_indigena_female_chin_oldage:d1"
-			"GFX_character_muslim_female_physique:p21"
+			"GFX_character_indigena_female_physique:p21"
 			"GFX_indigena_female_cheeks_oldage:d4"
 			"GFX_indigena_female_eyes_oldage:d6"
 			"GFX_indigena_female_eyes2:d6:e"
@@ -1693,7 +1711,7 @@ spriteTypes = {
 			"GFX_indigena_male_ear:d7"
 			"GFX_character_freckles:p20"
 			"GFX_character_muslim_male_pale:p22"
-			"GFX_character_muslim_male_physique:p21"
+			"GFX_character_indigena_male_physique:p21"
 			"GFX_character_scars_dark:p7:y"
 			"GFX_character_scars_mid_dark:p25"
 			"GFX_character_scars_high_dark:p26"
@@ -1771,7 +1789,7 @@ spriteTypes = {
 			"GFX_indigena_male_ear_midage:d7"
 			"GFX_character_freckles:p20"
 			"GFX_character_muslim_male_pale:p22"
-			"GFX_character_muslim_male_physique:p21"
+			"GFX_character_indigena_male_physique:p21"
 			"GFX_character_scars_dark:p7:y"
 			"GFX_character_scars_mid_dark:p25"
 			"GFX_character_scars_high_dark:p26"
@@ -1849,7 +1867,7 @@ spriteTypes = {
 			"GFX_indigena_male_ear_oldage:d7"
 			"GFX_character_freckles:p20"
 			"GFX_character_muslim_male_pale:p22"
-			"GFX_character_muslim_male_physique:p21"
+			"GFX_character_indigena_male_physique:p21"
 			"GFX_character_scars_dark:p7:y"
 			"GFX_character_scars_mid_dark:p25"
 			"GFX_character_scars_high_dark:p26"
@@ -1922,7 +1940,7 @@ spriteTypes = {
 			"GFX_indigena_female_mouth:d2"
 			"GFX_indigena_female_nose:d3"
 			"GFX_indigena_female_chin:d1"
-			"GFX_character_muslim_female_physique:p21"
+			"GFX_character_indigena_female_physique:p21"
 			"GFX_indigena_female_cheeks:d4"
 			"GFX_indigena_female_eyes:d6"
 			"GFX_indigena_female_eyes2:d6:e"
@@ -2001,7 +2019,7 @@ spriteTypes = {
 			"GFX_indigena_female_mouth_midage:d2"
 			"GFX_indigena_female_nose_midage:d3"
 			"GFX_indigena_female_chin_midage:d1"
-			"GFX_character_muslim_female_physique:p21"
+			"GFX_character_indigena_female_physique:p21"
 			"GFX_indigena_female_cheeks_midage:d4"
 			"GFX_indigena_female_eyes_midage:d6"
 			"GFX_indigena_female_eyes2:d6:e"
@@ -2080,7 +2098,7 @@ spriteTypes = {
 			"GFX_indigena_female_mouth_oldage:d2"
 			"GFX_indigena_female_nose_oldage:d3"
 			"GFX_indigena_female_chin_oldage:d1"
-			"GFX_character_muslim_female_physique:p21"
+			"GFX_character_indigena_female_physique:p21"
 			"GFX_indigena_female_cheeks_oldage:d4"
 			"GFX_indigena_female_eyes_oldage:d6"
 			"GFX_indigena_female_eyes2:d6:e"
@@ -2166,7 +2184,7 @@ spriteTypes = {
 			"GFX_indigena_male_ear:d7"
 			"GFX_character_freckles:p20"
 			"GFX_character_muslim_male_pale:p22"
-			"GFX_character_muslim_male_physique:p21"
+			"GFX_character_indigena_male_physique:p21"
 			"GFX_character_scars_dark:p7:y"
 			"GFX_character_scars_mid_dark:p25"
 			"GFX_character_scars_high_dark:p26"
@@ -2244,7 +2262,7 @@ spriteTypes = {
 			"GFX_indigena_male_ear_midage:d7"
 			"GFX_character_freckles:p20"
 			"GFX_character_muslim_male_pale:p22"
-			"GFX_character_muslim_male_physique:p21"
+			"GFX_character_indigena_male_physique:p21"
 			"GFX_character_scars_dark:p7:y"
 			"GFX_character_scars_mid_dark:p25"
 			"GFX_character_scars_high_dark:p26"
@@ -2322,7 +2340,7 @@ spriteTypes = {
 			"GFX_indigena_male_ear_oldage:d7"
 			"GFX_character_freckles:p20"
 			"GFX_character_muslim_male_pale:p22"
-			"GFX_character_muslim_male_physique:p21"
+			"GFX_character_indigena_male_physique:p21"
 			"GFX_character_scars_dark:p7:y"
 			"GFX_character_scars_mid_dark:p25"
 			"GFX_character_scars_high_dark:p26"
@@ -2395,7 +2413,7 @@ spriteTypes = {
 			"GFX_indigena_female_mouth:d2"
 			"GFX_indigena_female_nose:d3"
 			"GFX_indigena_female_chin:d1"
-			"GFX_character_muslim_female_physique:p21"
+			"GFX_character_indigena_female_physique:p21"
 			"GFX_indigena_female_cheeks:d4"
 			"GFX_indigena_female_eyes:d6"
 			"GFX_indigena_female_eyes2:d6:e"
@@ -2474,7 +2492,7 @@ spriteTypes = {
 			"GFX_indigena_female_mouth_midage:d2"
 			"GFX_indigena_female_nose_midage:d3"
 			"GFX_indigena_female_chin_midage:d1"
-			"GFX_character_muslim_female_physique:p21"
+			"GFX_character_indigena_female_physique:p21"
 			"GFX_indigena_female_cheeks_midage:d4"
 			"GFX_indigena_female_eyes_midage:d6"
 			"GFX_indigena_female_eyes2:d6:e"
@@ -2553,7 +2571,7 @@ spriteTypes = {
 			"GFX_indigena_female_mouth_oldage:d2"
 			"GFX_indigena_female_nose_oldage:d3"
 			"GFX_indigena_female_chin_oldage:d1"
-			"GFX_character_muslim_female_physique:p21"
+			"GFX_character_indigena_female_physique:p21"
 			"GFX_indigena_female_cheeks_oldage:d4"
 			"GFX_indigena_female_eyes_oldage:d6"
 			"GFX_indigena_female_eyes2:d6:e"
@@ -2639,7 +2657,7 @@ spriteTypes = {
 			"GFX_indigena_male_ear:d7"
 			"GFX_character_freckles:p20"
 			"GFX_character_muslim_male_pale:p22"
-			"GFX_character_muslim_male_physique:p21"
+			"GFX_character_indigena_male_physique:p21"
 			"GFX_character_scars_dark:p7:y"
 			"GFX_character_scars_mid_dark:p25"
 			"GFX_character_scars_high_dark:p26"
@@ -2717,7 +2735,7 @@ spriteTypes = {
 			"GFX_indigena_male_ear_midage:d7"
 			"GFX_character_freckles:p20"
 			"GFX_character_muslim_male_pale:p22"
-			"GFX_character_muslim_male_physique:p21"
+			"GFX_character_indigena_male_physique:p21"
 			"GFX_character_scars_dark:p7:y"
 			"GFX_character_scars_mid_dark:p25"
 			"GFX_character_scars_high_dark:p26"
@@ -2795,7 +2813,7 @@ spriteTypes = {
 			"GFX_indigena_male_ear_oldage:d7"
 			"GFX_character_freckles:p20"
 			"GFX_character_muslim_male_pale:p22"
-			"GFX_character_muslim_male_physique:p21"
+			"GFX_character_indigena_male_physique:p21"
 			"GFX_character_scars_dark:p7:y"
 			"GFX_character_scars_mid_dark:p25"
 			"GFX_character_scars_high_dark:p26"
@@ -2868,7 +2886,7 @@ spriteTypes = {
 			"GFX_indigena_female_mouth:d2"
 			"GFX_indigena_female_nose:d3"
 			"GFX_indigena_female_chin:d1"
-			"GFX_character_muslim_female_physique:p21"
+			"GFX_character_indigena_female_physique:p21"
 			"GFX_indigena_female_cheeks:d4"
 			"GFX_indigena_female_eyes:d6"
 			"GFX_indigena_female_eyes2:d6:e"
@@ -2947,7 +2965,7 @@ spriteTypes = {
 			"GFX_indigena_female_mouth_midage:d2"
 			"GFX_indigena_female_nose_midage:d3"
 			"GFX_indigena_female_chin_midage:d1"
-			"GFX_character_muslim_female_physique:p21"
+			"GFX_character_indigena_female_physique:p21"
 			"GFX_indigena_female_cheeks_midage:d4"
 			"GFX_indigena_female_eyes_midage:d6"
 			"GFX_indigena_female_eyes2:d6:e"
@@ -3026,7 +3044,7 @@ spriteTypes = {
 			"GFX_indigena_female_mouth_oldage:d2"
 			"GFX_indigena_female_nose_oldage:d3"
 			"GFX_indigena_female_chin_oldage:d1"
-			"GFX_character_muslim_female_physique:p21"
+			"GFX_character_indigena_female_physique:p21"
 			"GFX_indigena_female_cheeks_oldage:d4"
 			"GFX_indigena_female_eyes_oldage:d6"
 			"GFX_indigena_female_eyes2:d6:e"
@@ -3085,5 +3103,5 @@ spriteTypes = {
 		
 		headgear_that_hides_hair = { 10 }
 	}
-	
+
 }
