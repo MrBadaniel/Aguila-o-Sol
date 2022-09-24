@@ -1072,7 +1072,7 @@ feudal_governments = {
 	}
 	
 	montane_government = {
-		preferred_holdings = { CASTLE TEMPLE }
+		preferred_holdings = { CASTLE }
 		allowed_holdings = { 
 			CASTLE 
 			TEMPLE
@@ -1103,10 +1103,7 @@ feudal_governments = {
 			 NOT = { is_government_potential = roman_imperial_government }
 			 NOT = { is_government_potential = mex_imperial_government }
 			 #NOT = { is_government_potential = usos_costumberes_government }
-			AND = { 
-				religion = montanist
-				higher_tier_than = BARON
-			}
+			 religion = montanist
 			is_patrician = no
 		}
 		
@@ -1172,13 +1169,10 @@ feudal_governments = {
 				religion = la_hermandad
 				religion = artiga
 			}
-				AND = {
-					OR = {
-					religion = la_hermandad
-					religion = artiga
-					}
-					higher_tier_than = BARON
-				}
+			OR = {
+				religion = la_hermandad
+				religion = artiga
+			}
 			NOT = { is_government_potential = roman_imperial_government }
 			NOT = { is_government_potential = mex_imperial_government }
 			NOT = { is_government_potential = order_government }
@@ -1192,7 +1186,7 @@ feudal_governments = {
 		have_gender_laws = yes
 		allows_matrilineal_marriage = yes
 		free_retract_vassalage = yes
-		can_revoke_without_reason = no
+		can_revoke_without_reason = yes
 		can_demand_religious_conversion = no
 		gets_religion_opinion_penalties = no
 		gives_religion_opinion_penalties = no
@@ -1207,4 +1201,67 @@ feudal_governments = {
 		## Modifiers
 		court_size_modifier = 10
 	}	
+	
+	epcot_government = {
+		preferred_holdings = { CASTLE }
+		allowed_holdings = { 
+			CASTLE
+			CITY
+			FORT
+			HOSPITAL
+		}
+		allowed_holdings_culture = { # Will not get the wrong government type penalty for tribes of the same culture
+			TRIBAL
+			FEUDAL
+		}
+		accepts_liege_governments = { # Gets the wrong religion modifier instead
+			feudal_government
+			bureaucratic_government
+			ghazi_government
+			mormon_government
+			theocratic_feudal_government
+			tribal_government
+			reserve_government
+			montane_government
+			usos_costumberes_government
+		}
+		
+		frame_suffix = "_epcot"
+		title_prefix = "epcot_"
+		
+		free_revoke_on_tiers = { duke count }
+
+		potential = {
+			OR = { 
+				religion = phantasmic
+				religion = renaissancist
+			}
+			NOT = { is_government_potential = colonial_government }
+			NOT = { is_government_potential = roman_imperial_government }
+			NOT = { is_government_potential = order_government }
+			NOT = { is_government_potential = military_governorate }
+			NOT = { is_government_potential = open_range_feudalism_government }
+			NOT = { is_government_potential = mex_imperial_government }
+			NOT = { is_government_potential = uyc_government }
+			is_patrician = no
+		}
+		
+        color = { 0.4 0.4 0.4 }
+		
+		have_gender_laws = yes
+		allows_matrilineal_marriage = yes
+		free_retract_vassalage = yes
+		can_revoke_without_reason = yes
+		can_demand_religious_conversion = no
+		can_build_tribal = no
+		
+		ignore_in_vassal_limit_calculation = {
+			tribal_government
+		} 
+		capital_move_delay = 120
+
+		## Modifiers
+		court_size_modifier = 10
+	}	
+	
 }
