@@ -894,7 +894,7 @@ narrative_event = { #the Pope's man
 	immediate = {
 		narrative_event = { id = justo.32 months = 2 }
 		character_event = { id = justo.33 months = 2 } #Event to fire the other events
-		narrative_event = { id = justo.40 years = 3 } #WAR EVENT
+		narrative_event = { id = justo.40 years = 2 } #WAR EVENT
 	}
 	
 	option = { #accept the offer
@@ -1345,23 +1345,6 @@ narrative_event = { #Catholic Friends of Mexico Ask for a Donation
 			text = EVTOPTB_justo34_TT
 			hidden_effect = {
 				d_friends = {
-					holder_scope = {
-						spawn_unit = {
-							owner = PREV
-							province = PREV
-							home = PREV
-						  
-							troops = {
-								archers = { 50 50 }
-								heavy_infantry = { 25 50 }
-								knights  = { 25 25 }
-							}
-
-							attrition = 0
-			
-							maintenance_multiplier = 0.5
-						}
-					}
 					change_variable = {
 						which = friendstroops
 						value = 1
@@ -1483,6 +1466,7 @@ narrative_event = { #JUSTO ARMAS!!!!!
 	}
 	
 	immediate = {
+		hidden_effect = {
 		any_realm_character = {
 			limit = {
 				NOR = { 
@@ -1577,6 +1561,7 @@ narrative_event = { #JUSTO ARMAS!!!!!
 				}
 			}
 			set_global_flag = friends_arrived
+		}
 		}
 	}
 	
@@ -1788,6 +1773,14 @@ narrative_event = { #Death of a Prelate
 				religion = cristo_rey
 				has_landed_title = e_mexico
 				has_character_flag = the_justo_armas
+			}
+		}
+	}
+	
+	after = {
+		d_cristo_rey = {
+			holder_scope = {
+				join_attacker_wars = ROOT
 			}
 		}
 	}
