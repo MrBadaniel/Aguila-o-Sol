@@ -3594,6 +3594,7 @@ crusade = {
 					has_global_flag = christian_crusades_unlocked
 					has_global_flag = rust_cultist_industrial_actions_unlocked
 					has_global_flag = patria_grande_liberation_wars_unlocked
+					has_global_flag = fallingstar_outer_invasions_unlocked
 				}
 			}
 			conditional_tooltip = {
@@ -3703,6 +3704,14 @@ crusade = {
 						custom_tooltip = {
 							text = CTT_PATRIA_GRANDE_LIBERATION_WARS_UNLOCKED
 							has_global_flag = patria_grande_liberation_wars_unlocked
+						}
+					}
+
+					AND = {
+						religion = falling_star
+						custom_tooltip = {
+							text = CTT_FALLING_STAR_OUTER_INVASIONS_UNLOCKED
+							has_global_flag = fallingstar_outer_invasions_unlocked
 						}
 					}
 
