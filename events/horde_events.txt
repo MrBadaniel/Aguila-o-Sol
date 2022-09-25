@@ -1,0 +1,2224 @@
+
+
+###################################
+#
+# Mongol Horde Events
+#
+# Id 60000 - 61000 is reserved
+#
+###################################
+ 
+# The lights of Old North
+narrative_event = {
+	id = 177501
+	title = "redcoats.1.name"
+	desc = redcoats.1.desc
+	major = yes
+	
+	picture = "GFX_evt_redcoat_rumors"
+	border = "GFX_event_narrative_frame_war"
+	
+	only_playable = yes
+	hide_from = yes
+	religion = catholic
+	
+	trigger = {
+		OR = {
+			AND = {
+				has_game_rule = {
+					name = redcoat_invasion
+					value = historical
+				}
+				year = 2815
+				total_years_played = 50
+			}
+			AND = {
+				has_game_rule = {
+					name = redcoat_invasion
+					value = random
+				}
+				year = 2650
+				total_years_played = 50
+			}
+		}
+		NOR = { 
+			year = 2840
+			has_game_rule = {
+				name = redcoat_invasion
+				value = off
+			}
+		}
+		controls_religion = yes # Let it happen for the Pope - he's always around
+		
+		NOT = { has_global_flag = redcoat_rumors }
+		NOT = { has_global_flag = redcoat_arrival }
+	}
+	
+	mean_time_to_happen = {
+		years = 40
+		
+		modifier = {
+			factor = 0.5
+			year = 2730
+		}
+		modifier = {
+			factor = 0.5
+			year = 2770
+		}
+		modifier = {
+			factor = 0.5
+			year = 2810
+		}
+		modifier = {
+			factor = 0.5
+			year = 2820
+		}
+		modifier = {
+			factor = 0.5
+			year = 2825
+		}
+	}
+	
+	immediate = {
+		set_global_flag = redcoat_rumors
+		activate_title = { title = e_redcoat_dominion status = yes }
+		create_character = {
+			random_traits = no
+			dynasty = 1812044 # FitzSpatstone
+			name = "Havelock"
+			culture = anglish
+			religion = glorian
+			age = 30
+			attributes = {
+				martial = 7
+				diplomacy = 3
+				stewardship = 5
+				intrigue = 4
+				learning = 3
+			}
+			health = 6
+			fertility = 0.7
+			trait = brilliant_strategist
+			trait = wroth
+			trait = cruel
+			trait = proud
+			trait = zealous
+			trait = ambitious
+		}
+		new_character = {
+			e_redcoat_dominion = {
+				grant_title = PREV
+				add_law = succ_gavelkind
+			}
+			set_government_type = feudal_government
+			set_defacto_liege = THIS
+			set_character_flag = horde_invader
+			military_techpoints = 1000
+			economy_techpoints = 1000
+			culture_techpoints = 1000
+			#character_event = { id = misc.3 } # Diversity
+		}
+		
+	}
+	
+	option = {
+		name = "redcoats.1.optA"
+	}
+}
+ 
+# Arrival of the Redcoats
+narrative_event = {
+	id = 177502
+	title = redcoats.2.name
+	desc = "redcoats.2.desc"
+	major = yes
+	hide_new = yes
+	
+	picture = "GFX_evt_brit_troops"
+	border = "GFX_event_narrative_frame_war"
+	
+	only_playable = yes
+	
+	trigger = {
+		year = 2650
+		has_landed_title = e_redcoat_dominion
+		NOT = { year = 2841 }
+		NOT = { has_global_flag = redcoat_arrival }
+	}
+	
+	mean_time_to_happen = {
+		months = 12
+	}
+	
+	option = {
+		name = "OK"
+		trigger = {
+			has_landed_title = e_redcoat_dominion
+			culture_group = britannic
+		}
+		set_global_flag = redcoat_arrival
+		
+		# redcoats attacks a huge swath of land around boston
+		69 = {	# Boston
+			any_neighbor_province = {
+				any_neighbor_province = {
+					kingdom = {
+						ROOT = {
+							war = {
+								casus_belli = tribal_invasion
+								target = PREVPREV
+								thirdparty_title = PREV
+							}
+						}
+					}
+				}
+			}
+		}
+		
+		wealth = 5000
+		create_character = {
+			random_traits = yes
+			dynasty = actually_culture
+			religion = glorian
+			culture = anglish
+			female = no
+			age = 30
+			attributes = {
+				martial = 12
+			}
+			trait = brilliant_strategist
+		}
+		new_character = {
+			spawn_unit = {
+				province = 68 # Plymouth
+				troops =
+				{
+					light_infantry = { 1241 1241 }
+					heavy_infantry = { 1010 1010 }
+					light_cavalry = { 1337 1337 }
+					knights = { 1024 1024 }
+				}
+				attrition = 0.25
+			}
+			character_event = { id = misc.3 } # Diversity
+			character_event = { id = misc.4 } # Physique
+		}
+		create_character = {
+			random_traits = yes
+			dynasty = actually_culture
+			religion = glorian
+			culture = anglish
+			female = no
+			age = 35
+			attributes = {
+				martial = 12
+			}
+			trait = brilliant_strategist
+		}
+		new_character = {
+			spawn_unit = {
+				province = 68 # Plymouth
+				troops =
+				{
+					archers = { 1620 1620 }
+					light_infantry = { 1100 1100 }
+					heavy_infantry = { 1230 1230 }
+				}
+				attrition = 0.25
+			}
+			character_event = { id = misc.3 } # Diversity
+			character_event = { id = misc.4 } # Physique
+		}
+		create_character = {
+			random_traits = yes
+			dynasty = actually_culture
+			religion = glorian
+			culture = northumbrian
+			female = no
+			age = 39
+			attributes = {
+				martial = 12
+			}
+			trait = brilliant_strategist
+		}
+		new_character = {
+			spawn_unit = {
+				province = 68 # Plymouth
+				troops =
+				{
+					archers = { 1620 1620 }
+					light_infantry = { 1100 1100 }
+					heavy_infantry = { 1230 1230 }
+				}
+				attrition = 0.25
+			}
+			character_event = { id = misc.3 } # Diversity
+			character_event = { id = misc.4 } # Physique
+		}
+		
+		create_character = {
+			random_traits = yes
+			dynasty = actually_culture
+			religion = glorian
+			culture = anglish
+			female = no
+			age = 30
+			attributes = {
+				martial = 12
+			}
+			trait = brilliant_strategist
+		}
+		new_character = {
+			spawn_unit = {
+				province = 68 # Plymouth
+				troops =
+				{
+					archers = { 1620 1620 }
+					light_infantry = { 1100 1100 }
+					heavy_infantry = { 1230 1230 }
+				}
+				attrition = 0.25
+			}
+			character_event = { id = misc.3 } # Diversity
+			character_event = { id = misc.4 } # Physique
+		}
+		create_character = {
+			random_traits = yes
+			dynasty = actually_culture
+			religion = glorian
+			culture = scottish
+			female = no
+			age = 35
+			attributes = {
+				martial = 12
+			}
+			trait = brilliant_strategist
+		}
+		new_character = {
+			spawn_unit = {
+				province = 68 # Plymouth
+				troops =
+				{
+					archers = { 1620 1620 }
+					light_infantry = { 1100 1100 }
+					heavy_infantry = { 1230 1230 }
+				}
+				attrition = 0.25
+			}
+			character_event = { id = misc.3 } # Diversity
+			character_event = { id = misc.4 } # Physique
+		}
+		create_character = {
+			random_traits = yes
+			dynasty = actually_culture
+			religion = glorian
+			culture = anglish
+			female = no
+			age = 39
+			attributes = {
+				martial = 12
+			}
+			trait = brilliant_strategist
+		}
+		new_character = {
+			spawn_unit = {
+				province = 68 # Plymouth
+				troops =
+				{
+					archers = { 1620 1620 }
+					light_infantry = { 1100 1100 }
+					heavy_infantry = { 1230 1230 }
+				}
+				attrition = 0.25
+			}
+			character_event = { id = misc.3 } # Diversity
+			character_event = { id = misc.4 } # Physique
+		}
+		create_character = {
+			random_traits = yes
+			dynasty = actually_culture
+			religion = glorian
+			culture = northumbrian
+			female = no
+			age = 30
+			attributes = {
+				martial = 12
+			}
+			trait = brilliant_strategist
+		}
+		new_character = {
+			spawn_unit = {
+				province = 68 # Plymouth
+				troops =
+				{
+					archers = { 1620 1620 }
+					light_infantry = { 1100 1100 }
+					heavy_infantry = { 1230 1230 }
+				}
+				attrition = 0.25
+			}
+			character_event = { id = misc.3 } # Diversity
+			character_event = { id = misc.4 } # Physique
+		}
+		create_character = {
+			random_traits = yes
+			dynasty = actually_culture
+			religion = glorian
+			culture = scottish
+			female = no
+			age = 35
+			attributes = {
+				martial = 12
+			}
+			trait = brilliant_strategist
+		}
+		new_character = {
+			spawn_unit = {
+				province = 68 # Plymouth
+				troops =
+				{
+					archers = { 1620 1620 }
+					light_infantry = { 1100 1100 }
+					heavy_infantry = { 1230 1230 }
+				}
+				attrition = 0.25
+			}
+			character_event = { id = misc.3 } # Diversity
+			character_event = { id = misc.4 } # Physique
+		}
+		create_character = {
+			random_traits = yes
+			dynasty = actually_culture
+			religion = glorian
+			culture = anglish
+			female = no
+			age = 39
+			attributes = {
+				martial = 12
+			}
+			trait = brilliant_strategist
+		}
+		new_character = {
+			spawn_unit = {
+				province = 68 # Plymouth
+				troops =
+				{
+					archers = { 1620 1620 }
+					light_infantry = { 1100 1100 }
+					heavy_infantry = { 1230 1230 }
+				}
+				attrition = 0.25
+			}
+			character_event = { id = misc.3 } # Diversity
+			character_event = { id = misc.4 } # Physique
+		}
+		
+		create_character = {
+			random_traits = yes
+			dynasty = actually_culture
+			religion = glorian
+			culture = scottish
+			female = no
+			age = 30
+			attributes = {
+				martial = 12
+			}
+			trait = brilliant_strategist
+		}
+		new_character = {
+			spawn_unit = {
+				province = 70 # Merrimack
+				troops =
+				{
+					archers = { 1620 1620 }
+					light_infantry = { 1100 1100 }
+					heavy_infantry = { 1230 1230 }
+				}
+				attrition = 0.25
+			}
+			character_event = { id = misc.3 } # Diversity
+			character_event = { id = misc.4 } # Physique
+		}
+		
+		create_character = {
+			random_traits = yes
+			dynasty = actually_culture
+			religion = glorian
+			culture = northumbrian
+			female = no
+			age = 35
+			attributes = {
+				martial = 12
+			}
+			trait = brilliant_strategist
+		}
+		new_character = {
+			spawn_unit = {
+				province = 70 # Merrimack
+				troops =
+				{
+					archers = { 1620 1620 }
+					light_infantry = { 1100 1100 }
+					heavy_infantry = { 1230 1230 }
+				}
+				attrition = 0.25
+			}
+			character_event = { id = misc.3 } # Diversity
+			character_event = { id = misc.4 } # Physique
+		}
+		create_character = {
+			random_traits = yes
+			dynasty = actually_culture
+			religion = glorian
+			culture = anglish
+			female = no
+			age = 39
+			attributes = {
+				martial = 12
+			}
+			trait = brilliant_strategist
+		}
+		new_character = {
+			spawn_unit = {
+				province = 70 # Merrimack
+				troops =
+				{
+					archers = { 1620 1620 }
+					light_infantry = { 1100 1100 }
+					heavy_infantry = { 1230 1230 }
+				}
+				attrition = 0.25
+			}
+			character_event = { id = misc.3 } # Diversity
+			character_event = { id = misc.4 } # Physique
+		}
+		new_character = {
+			spawn_unit = {
+				province = 70 # Merrimack
+				troops =
+				{
+					archers = { 1620 1620 }
+					light_infantry = { 1100 1100 }
+					heavy_infantry = { 1230 1230 }
+				}
+				attrition = 0.25
+			}
+			character_event = { id = misc.3 } # Diversity
+			character_event = { id = misc.4 } # Physique
+		}
+		
+ 
+		random = {
+			chance = 50
+
+			create_character = {
+				random_traits = yes
+				dynasty = actually_culture
+				religion = glorian
+				culture = scottish
+				female = no
+				age = 30
+				attributes = {
+					martial = 12
+				}
+				trait = brilliant_strategist
+			}
+			new_character = {
+				spawn_unit = {
+					province = 47 # Hartford
+					troops =
+					{
+						light_cavalry = { 960 960 }
+						archers = { 1620 1620 }
+						light_infantry = { 1100 1100 }
+						heavy_infantry = { 1230 1230 }
+					}
+					attrition = 0.25
+				}
+				character_event = { id = misc.3 } # Diversity
+				character_event = { id = misc.4 } # Physique
+			}
+			create_character = {
+				random_traits = yes
+				dynasty = actually_culture
+				religion = glorian
+				culture = northumbrian
+				female = no
+				age = 35
+				attributes = {
+					martial = 12
+				}
+				trait = brilliant_strategist
+			}
+			new_character = {
+				spawn_unit = {
+					province = 47 # Hartford
+					troops =
+					{
+						light_cavalry = { 960 960 }
+						archers = { 1620 1620 }
+						light_infantry = { 1100 1100 }
+						heavy_infantry = { 1230 1230 }
+					}
+					attrition = 0.25
+				}
+				character_event = { id = misc.3 } # Diversity
+				character_event = { id = misc.4 } # Physique
+			}
+			create_character = {
+				random_traits = yes
+				dynasty = actually_culture
+				religion = glorian
+				culture = anglish
+				female = no
+				age = 39
+				attributes = {
+					martial = 12
+				}
+				trait = brilliant_strategist
+			}
+			new_character = {
+				spawn_unit = {
+					province = 47 # Hartford
+					troops =
+					{
+						light_cavalry = { 960 960 }
+						archers = { 1620 1620 }
+						light_infantry = { 1100 1100 }
+						heavy_infantry = { 1230 1230 }
+					}
+					attrition = 0.25
+				}
+				character_event = { id = misc.3 } # Diversity
+				character_event = { id = misc.4 } # Physique
+			}
+		}
+		random = {
+			chance = 50
+			create_character = {
+				random_traits = yes
+				dynasty = actually_culture
+				religion = glorian
+				culture = anglish
+				female = no
+				age = 39
+				attributes = {
+					martial = 12
+				}
+				trait = brilliant_strategist
+			}
+			new_character = {
+				spawn_unit = {
+					province = 47 # Hartford
+					troops =
+					{
+						light_cavalry = { 960 960 }
+						archers = { 1620 1620 }
+						light_infantry = { 1100 1100 }
+						heavy_infantry = { 1230 1230 }
+					}
+					attrition = 0.25
+				}
+				character_event = { id = misc.3 } # Diversity
+				character_event = { id = misc.4 } # Physique
+			}
+			create_character = {
+				random_traits = yes
+				dynasty = actually_culture
+				religion = glorian
+				culture = anglish
+				female = no
+				age = 39
+				attributes = {
+					martial = 12
+				}
+				trait = brilliant_strategist
+			}
+			new_character = {
+				spawn_unit = {
+					province = 47 # Hartford
+					troops =
+					{
+						light_cavalry = { 960 960 }
+						archers = { 1620 1620 }
+						light_infantry = { 1100 1100 }
+						heavy_infantry = { 1230 1230 }
+					}
+					attrition = 0.25
+				}
+				character_event = { id = misc.3 } # Diversity
+				character_event = { id = misc.4 } # Physique
+			}
+			create_character = {
+				random_traits = yes
+				dynasty = actually_culture
+				religion = glorian
+				culture = anglish
+				female = no
+				age = 39
+				attributes = {
+					martial = 12
+				}
+				trait = brilliant_strategist
+			}
+			new_character = {
+				spawn_unit = {
+					province = 47 # Hartford
+					troops =
+					{
+						light_cavalry = { 960 960 }
+						archers = { 1620 1620 }
+						light_infantry = { 1100 1100 }
+						heavy_infantry = { 1230 1230 }
+					}
+					attrition = 0.25
+				}
+				character_event = { id = misc.3 } # Diversity
+				character_event = { id = misc.4 } # Physique
+			}
+		}
+		
+		# Some extra courtiers
+		create_character = {
+			random_traits = yes
+			dynasty = actually_culture
+			religion = glorian
+			culture = scottish
+			female = no
+			age = 16
+		}
+		new_character = { character_event = { id = misc.3 } character_event = { id = misc.4 } } # Diversity
+		create_character = {
+			random_traits = yes
+			dynasty = actually_culture
+			religion = glorian
+			culture = northumbrian
+			female = no
+			age = 18
+		}
+		new_character = { character_event = { id = misc.3 } character_event = { id = misc.4 } } # Diversity
+		create_character = {
+			random_traits = yes
+			dynasty = actually_culture
+			religion = glorian
+			culture = scottish
+			female = no
+			age = 18
+		}
+		new_character = { character_event = { id = misc.3 } character_event = { id = misc.4 } } # Diversity
+		create_character = {
+			random_traits = yes
+			dynasty = actually_culture
+			religion = glorian
+			culture = northumbrian
+			female = no
+			age = 22
+		}
+		new_character = { character_event = { id = misc.3 } character_event = { id = misc.4 } } # Diversity
+		create_character = {
+			random_traits = yes
+			dynasty = actually_culture
+			religion = glorian
+			culture = anglish
+			female = no
+			age = 25
+		}
+		new_character = { character_event = { id = misc.3 } character_event = { id = misc.4 } } # Diversity
+		create_character = {
+			random_traits = yes
+			dynasty = actually_culture
+			religion = glorian
+			culture = anglish
+			female = no
+			age = 26
+		}
+		new_character = { character_event = { id = misc.3 } character_event = { id = misc.4 } } # Diversity
+		create_character = {
+			random_traits = yes
+			dynasty = actually_culture
+			religion = glorian
+			culture = anglish
+			female = no
+			age = 28
+		}
+		new_character = { character_event = { id = misc.3 } character_event = { id = misc.4 } } # Diversity
+		create_character = {
+			random_traits = yes
+			dynasty = actually_culture
+			religion = glorian
+			culture = anglish
+			female = yes
+			age = 23
+		}
+		new_character = { character_event = { id = misc.3 } character_event = { id = misc.4 }} # Diversity
+		create_character = {
+			random_traits = no
+			name="Gwendolyn"
+			dynasty = 1812072
+			dna=bdedgegcfat
+			religion = glorian
+			culture = anglish
+			female = yes
+			age = 18
+			attributes={
+				martial=8
+				diplomacy=3
+				stewardship=4
+				intrigue=4
+				learning=3
+			}
+			health=6
+			fertility=1.5
+			trait=tough_soldier
+			trait=flat_terrain_leader
+			trait=drunkard
+			trait=wroth
+			trait=proud
+			trait=stubborn
+			trait=brave
+		}
+		new_character = {
+			set_character_flag=diversity
+			set_character_flag=physique
+		} 
+		create_character = {
+			random_traits = yes
+			dynasty = actually_culture
+			religion = glorian
+			culture = scottish
+			female = yes
+			age = 17
+		}
+		new_character = { # Diversity
+			character_event = { id = misc.3 }
+			character_event = { id = misc.4 } # Physique 
+		} 
+		create_character = {
+			random_traits = yes
+			dynasty = actually_culture
+			religion = glorian
+			culture = northumbrian
+			female = yes
+			age = 18
+		}
+		new_character = { # Diversity
+			character_event = { id = misc.3 }
+			character_event = { id = misc.4 } # Physique 
+		} 
+		create_character = {
+			random_traits = yes
+			dynasty = actually_culture
+			religion = glorian
+			culture = anglish
+			female = yes
+			age = 18
+		}
+		new_character = { # Diversity
+			character_event = { id = misc.3 }
+			character_event = { id = misc.4 } # Physique 
+		} 
+		create_character = {
+			random_traits = no
+			name = "Chloe"
+			dynasty = 1812074
+			religion = glorian
+			culture = anglish
+			martial = 3
+			diplomacy = 7
+			stewardship = 5
+			intrigue = 4
+			learning = 7
+			trait = scholarly_theologian
+			trait = kind
+			trait = lustful
+			trait = patient
+			trait = humble
+			female = yes
+			age = 22
+		}
+		new_character = { # Diversity
+			#character_event = { id = misc.3 }
+			character_event = { id = misc.4 } # Physique 
+		} 
+	}
+	option = {
+		name = "redcoats.2.optA"
+		trigger = {
+			religion = glorian
+			NOT = { has_landed_title = e_redcoat_dominion }
+		}
+	}
+	option = {
+		name = "redcoats.2.optB"
+		trigger = {
+			religion_group = christian
+			NOT = { has_landed_title = e_redcoat_dominion }
+		}
+	}
+	option = {
+		name = "redcoats.2.optC"
+		trigger = {
+			NOT = { religion_group = christian }
+			NOT = { religion = glorian }
+			NOT = { has_landed_title = e_redcoat_dominion }
+		}
+	}
+}
+ 
+# Redcoat reinforcements
+character_event = {
+	id = 177503
+	title = redcoats.3.name
+	desc = "redcoats.3.desc"
+	
+	picture = "GFX_evt_brit_troops"
+	border = "GFX_event_normal_frame_war"
+	
+	only_playable = yes
+	
+	trigger = {
+		NOT = { year = 2900 }
+		has_landed_title = e_redcoat_dominion
+		NOT = { has_global_flag = redcoat_reinf }
+		had_global_flag = { flag = redcoat_arrival days = 1825 } # Valid for 5 years rather than vanilla 10
+		e_redcoat_dominion = {
+			holder_scope = {
+				culture_group = britannic
+				religion = glorian
+				OR = {
+					war = yes
+					is_landed = yes
+				}
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+	option = {
+		name = "OK"
+		set_global_flag = redcoat_reinf
+ 
+		trigger = {
+			has_landed_title = e_redcoat_dominion
+		}
+		
+		create_character = {
+			random_traits = yes
+			dynasty = random
+			religion = glorian
+			culture = anglish
+			female = no
+			age = 25
+			attributes = {
+				martial = 12
+			}
+			trait = brilliant_strategist
+		}
+		new_character = {
+			spawn_unit = {
+				province = 68 # Plymouth
+				troops =
+				{
+					light_cavalry = { 500 500 }
+					archers = { 1500 1500 }
+					heavy_infantry = { 1500 1500 }
+					knights = { 333 333 }
+				}
+				attrition = 0.25
+			}
+			character_event = { id = misc.3 } # Diversity
+			character_event = { id = misc.4 } # Physique
+		}
+		create_character = {
+			random_traits = yes
+			dynasty = random
+			religion = glorian
+			culture = northumbrian
+			female = no
+			age = 26
+			attributes = {
+				martial = 12
+			}
+			trait = brilliant_strategist
+		}
+		new_character = {
+			spawn_unit = {
+				province = 68 # Plymouth
+				troops =
+				{
+					light_cavalry = { 500 500 }
+					archers = { 1500 1500 }
+					heavy_infantry = { 1500 1500 }
+					knights = { 333 333 }
+				}
+				attrition = 0.25
+			}
+			character_event = { id = misc.3 } # Diversity
+			character_event = { id = misc.4 } # Physique
+		}
+		create_character = {
+			random_traits = yes
+			dynasty = random
+			religion = glorian
+			culture = scottish
+			female = no
+			age = 27
+			attributes = {
+				martial = 12
+			}
+			trait = brilliant_strategist
+		}
+		new_character = {
+			spawn_unit = {
+				province = 68 # Plymouth
+				troops =
+				{
+					light_cavalry = { 500 500 }
+					archers = { 1500 1500 }
+					heavy_infantry = { 1500 1500 }
+					knights = { 333 333 }
+				}
+				attrition = 0.25
+			}
+			character_event = { id = misc.3 } # Diversity
+			character_event = { id = misc.4 } # Physique
+		}
+		
+		random = {
+			chance = 50
+			create_character = {
+				random_traits = yes
+				dynasty = random
+				religion = glorian
+				culture = anglish
+				female = no
+				age = 25
+				attributes = {
+					martial = 12
+				}
+				trait = brilliant_strategist
+			}
+			new_character = {
+				spawn_unit = {
+					province = 68 # Plymouth
+					troops =
+					{
+						light_cavalry = { 500 500 }
+						archers = { 1500 1500 }
+						heavy_infantry = { 1500 1500 }
+						knights = { 333 333 }
+					}
+					attrition = 0.25
+				}
+				character_event = { id = misc.3 } # Diversity
+				character_event = { id = misc.4 } # Physique
+			}
+			create_character = {
+				random_traits = yes
+				dynasty = random
+				religion = glorian
+				culture = northumbrian
+				female = no
+				age = 26
+				attributes = {
+					martial = 12
+				}
+				trait = brilliant_strategist
+			}
+			new_character = {
+				spawn_unit = {
+					province = 68 # Plymouth
+					troops =
+					{
+						light_cavalry = { 500 500 }
+						archers = { 1500 1500 }
+						heavy_infantry = { 1500 1500 }
+						knights = { 333 333 }
+					}
+					attrition = 0.25
+				}
+				character_event = { id = misc.3 } # Diversity
+				character_event = { id = misc.4 } # Physique
+			}
+		}
+	}
+}
+ 
+### The Redcoats Convert ###
+ 
+# Redcoat Dominion converts to Ursuline
+character_event = {
+	id = 177504
+	title = redcoats.4.name
+	desc = "redcoats.4.desc"
+	picture = "GFX_evt_brit_laughing"
+	border = "GFX_event_normal_frame_war"
+	major = yes
+	
+	only_playable = yes
+	
+	trigger = {
+		primary_title = {
+			title = e_redcoat_dominion
+			holder_scope = {
+				religion = glorian
+				NOT = { trait = zealous }
+			}
+		}
+		had_global_flag = { flag = redcoat_arrival days = 7300 } # 20 years
+		NOT = { had_global_flag = { flag = redcoat_arrival days = 14600 } } # 40 years
+		NOT = { has_global_flag = redcoats_convert }
+		any_realm_province = {
+			religion = ursuline
+		}
+	}
+ 
+	mean_time_to_happen = {
+		years = 120
+		modifier = {
+			factor = 0.75
+			any_demesne_province = {
+				is_capital = yes
+				religion = ursuline
+			}
+		}
+	}
+	
+	immediate = {
+		set_global_flag = redcoats_convert
+	}
+	
+	option = {	# ursuline
+		name = "redcoats.4.optA"
+		trigger = {
+			has_landed_title = e_redcoat_dominion
+		}
+		religion = ursuline
+		capital_scope = {
+			religion = ursuline
+		}
+		
+		any_realm_character = {
+			limit = { religion = glorian }
+			religion = ursuline
+			if = {
+				limit = {
+					is_playable = yes
+					capital_scope = {
+						religion = glorian
+					}
+				}
+				capital_scope = {
+					religion = ursuline
+				}
+			}
+		}
+	}
+	# Other rulers are informed
+	option = {
+		name = "EXCELLENT"
+		trigger = {
+			religion_group = christian
+			NOT = { has_landed_title = e_redcoat_dominion }
+		}
+	}
+	option = {
+		name = "redcoats.4.optC"
+		trigger = {
+			NOT = { religion_group = christian }
+			NOT = { has_landed_title = e_redcoat_dominion }
+		}
+	}
+}
+ 
+# Redcoat Dominion converts to High Church
+character_event = {
+	id = 177505
+	title = redcoats.5.name
+	desc = "redcoats.5.desc"
+	picture = "GFX_evt_brit_laughing"
+	border = "GFX_event_normal_frame_religion"
+	major = yes
+	
+	only_playable = yes
+	
+	trigger = {
+		primary_title = {
+			title = e_redcoat_dominion
+			holder_scope = {
+				religion = glorian
+				NOT = { trait = zealous }
+			}
+		}
+		had_global_flag = { flag = redcoats_arrival days = 14600 }
+		NOT = { had_global_flag = { flag = redcoats_arrival days = 29200 } }
+		NOT = { has_global_flag = redcoats_convert }
+		any_realm_province = {
+			religion = high_church
+		}
+	}
+ 
+	mean_time_to_happen = {
+		years = 80
+		modifier = {
+			factor = 0.75
+			any_demesne_province = {
+				is_capital = yes
+				religion = high_church
+			}
+		}
+	}
+	
+	immediate = {
+		set_global_flag = redcoats_convert
+	}
+	
+	option = {	# High Church
+		name = "EVTOPTA60010"
+		trigger = {
+			has_landed_title = e_redcoat_dominion
+		}
+		religion = high_church
+		any_realm_character = {
+			limit = { religion = glorian }
+			religion = high_church
+			if = {
+				limit = {
+					is_playable = yes
+					capital_scope = {
+						religion = glorian
+					}
+				}
+				capital_scope = {
+					religion = high_church
+				}
+			}
+		}
+	}
+	# Other rulers are informed
+	option = {
+		name = "EXCELLENT"
+		trigger = {
+			religion_group = christian
+			NOT = { has_landed_title = e_redcoat_dominion }
+		}
+	}
+	option = {
+		name = "redcoats.5.optC"
+		trigger = {
+			NOT = { religion_group = christian }
+			NOT = { has_landed_title = e_redcoat_dominion }
+		}
+	}
+}
+
+
+ 
+### Redcoats sack American cities ###
+ 
+# Redcoats sack DC
+narrative_event = {
+	id = 177506
+	title = "redcoats.6.name"
+	desc = "redcoats.6.desc"
+	major = yes
+	
+	picture = "GFX_evt_brit_laughing"
+	border = "GFX_event_narrative_frame_war"
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		NOT = { has_global_flag = redcoats_sack_DC }
+		OR = {
+			has_landed_title = e_redcoat_dominion
+			liege = { has_landed_title = e_redcoat_dominion }
+			top_liege = { has_landed_title = e_redcoat_dominion }
+		}
+		FROM = { title = b_washington_DC }
+		culture_group = britannic
+		NOT = {
+			FROM = {
+				owner = {
+					OR = {
+						has_landed_title = e_redcoat_dominion
+						liege = { has_landed_title = e_redcoat_dominion }
+						top_liege = { has_landed_title = e_redcoat_dominion }
+					}
+				}
+			}
+		}
+	}
+	
+	major_trigger = {
+		NOT = {
+			has_landed_title = e_redcoat_dominion
+			liege = { has_landed_title = e_redcoat_dominion }
+			top_liege = { has_landed_title = e_redcoat_dominion }
+		}
+	}
+	
+	immediate = {
+		set_global_flag = redcoats_sack_DC
+		any_playable_ruler = {
+			limit = {
+				ai = no
+				OR = {
+					has_landed_title = e_redcoat_dominion
+					liege = { has_landed_title = e_redcoat_dominion }
+					top_liege = { has_landed_title = e_redcoat_dominion }
+				}
+			}
+			#narrative_event = { id = TOG.1 }
+		}
+	}
+	
+	option = {
+		name = "redcoats.6.optA"
+		trigger = { 
+			NOT = { religion_group = christian }
+			NOT = { religion = americanist }
+		}
+	}
+	option = {
+		name = "redcoats.6.optB"
+		trigger = { 
+			OR = {
+				religion_group = christian
+				religion = americanist
+			}
+		}
+	}
+}
+ 
+# Redcoats sack Manhattan
+# Redcoats sack Richmond
+# Redcoats sack Montreal
+# Redcoats sack Toronto
+# Redcoats sack St. Louis / New Rome
+# Redcoats sack New Orleans
+# Redcoats sack Denver
+# Redcoats sack Mexico City
+# Redcoats sack San Francisco
+# Redcoats sack Seattle
+# Redcoats sack Salt Lake City
+# Redcoats sack Los Angeles
+
+
+### American reaction - The Minutemen ###
+narrative_event = {
+	id = 177510
+	title = "redcoats.100.name"
+	desc = "redcoats.100.desc"
+	picture = "GFX_evt_crusaders"
+	border = "GFX_event_narrative_frame_religion"
+	
+	hide_from = yes
+	major = yes
+	only_playable = yes
+	
+	trigger = {
+		has_global_flag = redcoat_arrival
+		NOT = { is_title_active = d_minutemen }
+	}
+	
+	mean_time_to_happen = {
+		years = 5 # 5 years after the Redcoats begin their rampage of destruction and tea
+	}
+	
+	immediate = {
+		activate_title = { title = d_minutemen status = yes }
+		create_random_soldier = {
+			dynasty = none
+			random_traits = yes
+			religion = americanist
+		}
+		new_character = {
+			d_minutemen = {
+				grant_title = PREV
+			}
+			set_defacto_liege = THIS
+			wealth = 500
+		}
+	}
+	option = {
+		name = "EXCELLENT"
+		trigger = {
+			NOT = { has_landed_title = e_redcoat_dominion }
+		}
+	}
+	option = {
+		name = "redcoats.100.OptB"
+		trigger = {
+			has_landed_title = e_redcoat_dominion
+		}
+	}
+}
+
+
+##################################
+# Rise of the Renovators
+##################################
+
+# Renovator distinguishes himself in a caribbanglo or west anglo court
+character_event = {
+	id = 60200
+	desc = "renovator.1.desc"
+	
+	picture = GFX_evt_mongols
+	border = GFX_event_normal_frame_war
+	
+	only_men = yes
+	capable_only = yes
+	prisoner = no
+	ai = yes
+	
+	trigger = {
+		NOT = { has_global_flag = falling_star_exposed }
+		NOT = { has_global_flag = renovator_player }
+		NOT = {
+			has_game_rule = {
+				name = renovator_invasion
+				value = off
+			}
+		}
+		OR = {
+			AND = {
+				NOT = {
+					has_game_rule = {
+						name = renovator_invasion
+						value = random
+					}
+				}
+				year = 2750
+				NOT = { year = 2770 }
+			}
+			AND = {
+				has_game_rule = {
+					name = renovator_invasion
+					value = random
+				}
+				year = 2700
+				NOT = { year = 3100 }
+			}
+		}
+		is_landed = no
+		is_ruler = no
+		OR = {
+			culture_group = west_anglo
+			culture_group = texan_group
+		}
+		NOT = { has_disease = yes }
+		OR = {
+			martial = 13
+			diplomacy = 13
+		}
+		location = {is_island = no}
+		liege = {
+			primary_title = { holy_order = no }
+		}
+		NOT = { has_global_flag = seljuk_spawned }
+	}
+	
+	mean_time_to_happen = {
+		months = 1
+		modifier = {
+			factor = 4.0
+			NOT = { culture_group = caribbanglo }
+		}
+	}
+	
+	immediate = {		
+		religion = falling_star		
+		health = 9
+		fertility = 0.8
+		add_trait = brilliant_strategist
+		remove_trait = humble
+		remove_trait = cynical
+		add_artifact = sword_from_heaven #seems fitting...
+		add_trait = proud
+		add_trait = adventurer
+		add_trait = zealous
+		character_event = {
+			id = 60201
+			days = 100
+		}
+		set_character_flag = is_special_character
+		set_character_flag = renovator_himself
+		set_character_flag = do_not_disturb
+		set_character_flag = ai_flag_refuse_conversion
+		log = "60200: Renovator is chosen!"
+	}
+	
+	option = { # A most capable young man
+		name = "renovator.1.optA"
+		
+		set_global_flag = seljuk_spawned
+		set_global_flag = seljuk_spawned_by_event
+		log = "60200: Renovator global flag set!"
+	}
+}
+
+# Renovator and his men consider starting an adventure
+character_event = {
+	id = 60201
+	desc = "EVTDESC_renovator2"
+	
+	picture = GFX_evt_mongols
+	border = GFX_event_normal_frame_war
+	
+	is_triggered_only = yes
+	
+	prisoner = no
+	only_capable = yes
+	
+	trigger = {
+		is_alive = yes
+		NOT = { trait = blinded }
+		NOT = { trait = eunuch }
+		NOT = { trait = infirm }
+		lower_tier_than = king
+		NOT = { has_disease = yes }
+		OR = {
+			1238 = { # Harris / Houston
+				owner = {
+					NOT = { same_realm = ROOT }
+					NOT = { realm = { temporary = yes }}
+					NOT = { religion = falling_star }
+				}
+			}
+			316 = { # Lubbock
+				owner = {
+					NOT = { same_realm = ROOT }
+					NOT = { realm = { temporary = yes }}
+					NOT = { religion = falling_star }
+				}
+			}
+			1848 = { # Oklahoma City
+				owner = {
+					NOT = { same_realm = ROOT }
+					NOT = { realm = { temporary = yes }}
+					NOT = { religion = falling_star }
+				}
+			}
+		}
+	}
+	
+	option = { # Houston it is!
+		name = EVTOPTA_renovator2
+		trigger = {
+			1238 = { # Houston
+				owner = {
+					NOT = { same_realm = ROOT }
+					NOT = { realm = { temporary = yes }}
+					NOT = { religion = falling_star }
+				}
+			}
+		}
+		
+		ai_chance = {
+			factor = 100
+		}
+		
+		1238 = {
+			province_event = {
+				id = 60202
+				days = 2
+			}
+		}
+		
+		clr_character_flag = do_not_disturb
+	}
+	option = { # Lubbock
+		name = EVTOPTB_renovator2
+		trigger = {
+			316 = { # Lubbock
+				owner = {
+					NOT = { same_realm = ROOT }
+					NOT = { realm = { temporary = yes }}
+					NOT = { religion = falling_star }
+				}
+			}
+		}
+		
+		ai_chance = {
+			factor = 100
+		}
+		
+		316 = {
+			province_event = {
+				id = 60202
+				days = 2
+			}
+		}
+		
+		clr_character_flag = do_not_disturb
+	}
+	option = { # Okaysee
+		name = EVTOPTC_renovator2
+		trigger = {
+			325 = { # Oklahoma City
+				owner = {
+					NOT = { same_realm = ROOT }
+					NOT = { realm = { temporary = yes }}
+					NOT = { religion = falling_star }
+				}
+			}
+		}
+		
+		ai_chance = {
+			factor = 100
+		}
+		
+		325 = {
+			province_event = {
+				id = 60202
+				days = 2
+			}
+		}
+		
+		clr_character_flag = do_not_disturb
+	}
+}
+
+# Ping the target province
+province_event = {
+	id = 60202
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		if = {
+			limit = {
+				FROM = {
+					is_ruler = yes
+					primary_title = { holy_order = no }
+					NOT = { ai = no }
+				}
+			}
+			FROM = {
+				character_event = {
+					id = 60204
+				}
+			}
+		}
+		if = {
+			limit = {
+				FROM = {
+					OR = { 
+						is_ruler = no	
+						NOT = { ai = yes }
+					}
+				}
+			}
+			FROM = {
+				character_event = {
+					id = 60203
+				}
+			}
+		}
+		#Cleanup in case something goes wrong
+		if = {
+			limit = {
+				FROM = {
+					primary_title = { holy_order = yes }
+				}
+			}
+			clr_character_flag = renovator_himself
+			clr_global_flag = seljuk_spawned
+			clr_global_flag = seljuk_spawned_by_event
+		}
+	}
+}
+
+# The landless Renovator and his men start an adventure
+character_event = {
+	id = 60203
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	prisoner = no
+	only_capable = yes
+	is_sick = no
+	
+	trigger = {
+		is_alive = yes
+		NOT = { trait = blinded }
+		NOT = { trait = eunuch }
+		NOT = { trait = infirm }
+		lower_tier_than = king
+	}
+	
+	immediate = {
+		wealth = 500
+		religion = falling_star		
+
+		any_liege = {
+			character_event = {
+				id = 60205
+				days = 1
+			}
+		}
+		
+		liege = {
+			capital_scope = {
+				FROM = {
+					owner = {
+						top_liege = {
+							ROOT = {
+								set_defacto_liege = ROOT
+								create_title = {
+									tier = DUKE
+									landless = yes
+									temporary = yes
+									culture = ROOT
+									name = "CLAIMANT_ADVENTURE"
+									holder = ROOT
+								}
+
+								set_character_flag = duchy_adventurer
+	
+								spawn_unit = {
+									province = PREVPREVPREVPREV
+									home = PREVPREVPREVPREV
+									owner = THIS
+									match_character = PREV
+									match_mult = 0.5	
+									match_min = 500
+									match_max = 2000
+									attrition = 0.25
+								}
+								spawn_unit = {
+									province = PREVPREVPREVPREV
+									home = PREVPREVPREVPREV
+									owner = THIS
+									match_character = PREV
+									match_mult = 0.5	
+									match_min = 500
+									match_max = 2000
+									attrition = 0.25
+								}
+								spawn_unit = {
+									province = PREVPREVPREVPREV
+									home = PREVPREVPREVPREV
+									owner = THIS
+									match_character = PREV
+									match_mult = 0.5	
+									match_min = 500
+									match_max = 2000
+									attrition = 0.25
+								}
+								spawn_unit = {
+									province = PREVPREVPREVPREV
+									home = PREVPREVPREVPREV
+									owner = THIS
+									match_character = PREV
+									match_mult = 0.5	
+									match_min = 500
+									match_max = 2000
+									attrition = 0.25
+								}
+								spawn_unit = {
+									province = PREVPREVPREVPREV
+									home = PREVPREVPREVPREV
+									owner = THIS
+									match_character = PREV
+									match_mult = 0.5	
+									match_min = 500
+									match_max = 2000
+									attrition = 0.25
+								}
+								spawn_unit = {
+									province = PREVPREVPREVPREV
+									home = PREVPREVPREVPREV
+									owner = THIS
+									match_character = PREV
+									match_mult = 0.5	
+									match_min = 500
+									match_max = 2000
+									attrition = 0.25
+								}
+
+								war = {
+									target = PREV
+									casus_belli = duchy_adventure
+									thirdparty_title = PREVPREVPREV
+									tier = DUKE
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		
+		# Create some characters
+		create_random_soldier = {
+			random_traits = yes
+			dynasty = none
+			religion = ROOT
+			culture = ROOT
+			female = no
+			age = 30
+		}
+		create_random_soldier = {
+			random_traits = yes
+			dynasty = none
+			religion = ROOT
+			culture = ROOT
+			female = no
+			age = 25
+		}
+		create_random_soldier = {
+			random_traits = yes
+			dynasty = none
+			religion = ROOT
+			culture = ROOT
+			female = no
+			age = 22
+		}
+		create_character = {
+			random_traits = yes
+			dynasty = none
+			religion = ROOT
+			culture = ROOT
+			female = yes
+			age = 16
+		}
+		create_character = {
+			random_traits = yes
+			dynasty = none
+			religion = ROOT
+			culture = ROOT
+			female = yes
+			age = 17
+		}
+		create_character = {
+			random_traits = yes
+			dynasty = none
+			religion = ROOT
+			culture = ROOT
+			female = yes
+			age = 18
+		}
+		
+		log = "60203: Renovator starts his first war as a landless character!"
+	}
+	option = {
+		name = EVTOPTA60204
+		c_dallas = { 
+			holder_scope = {
+				grant_title_no_opinion = b_plano_TX
+			}
+		}
+
+	}
+}
+
+# The landed Renovator and his men start an adventure
+character_event = {
+	id = 60204
+	desc = EVTDESC60204
+	
+	picture = GFX_evt_mongols
+	border = GFX_event_normal_frame_war
+	
+	is_triggered_only = yes
+	
+	prisoner = no
+	only_capable = yes
+	
+	trigger = {
+		is_alive = yes
+		NOT = { trait = blinded }
+		NOT = { trait = eunuch }
+		NOT = { trait = infirm }
+		lower_tier_than = king
+		NOT = { has_disease = yes }
+	}
+	
+	immediate = {
+		religion = falling_star		
+
+		if = {
+			limit = {
+				tier = BARON
+			}
+			abdicate = yes
+			character_event = { id = 60203 }
+			break = yes
+		}
+		wealth = 500
+		
+		any_liege = {
+			character_event = {
+				id = 60205
+				days = 1
+			}
+		}
+		
+		FROM = {
+			owner = {
+				top_liege = {
+					ROOT = {
+						capital_scope = {
+							ROOT = {
+								set_character_flag = duchy_adventurer
+								spawn_unit = {
+									province = PREV
+									home = PREV
+									owner = THIS
+									#leader = THIS
+									match_character = PREVPREVPREV
+									match_mult = 0.5
+									match_min = 500
+									match_max = 2000
+									attrition = 0.2
+								}
+								spawn_unit = {
+									province = PREV
+									home = PREV
+									owner = THIS
+									match_character = PREVPREVPREV
+									match_mult = 0.5
+									match_min = 500
+									match_max = 2000
+									attrition = 0.2
+								}
+								spawn_unit = {
+									province = PREV
+									home = PREV
+									owner = THIS
+									match_character = PREVPREVPREV
+									match_mult = 0.5
+									match_min = 500
+									match_max = 2000
+									attrition = 0.2
+								}
+								spawn_unit = {
+									province = PREV
+									home = PREV
+									owner = THIS
+									match_character = PREVPREVPREV
+									match_mult = 0.5
+									match_min = 500
+									match_max = 2000
+									attrition = 0.2
+								}
+								spawn_unit = {
+									province = PREV
+									home = PREV
+									owner = THIS
+									match_character = PREVPREVPREV
+									match_mult = 0.5
+									match_min = 500
+									match_max = 2000
+									attrition = 0.2
+								}
+								spawn_unit = {
+									province = PREV
+									home = PREV
+									owner = THIS
+									match_character = PREVPREVPREV
+									match_mult = 0.5
+									match_min = 500
+									match_max = 2000
+									attrition = 0.2
+								}
+							}
+						}
+
+						war = {
+							target = PREV
+							casus_belli = duchy_adventure
+							thirdparty_title = PREVPREVPREV
+							tier = DUKE
+						}
+					}
+				}
+			}
+		}
+		
+		# Create some characters
+		create_random_soldier = {
+			random_traits = yes
+			dynasty = none
+			religion = ROOT
+			culture = ROOT
+			female = no
+			age = 30
+		}
+		create_random_soldier = {
+			random_traits = yes
+			dynasty = none
+			religion = ROOT
+			culture = ROOT
+			female = no
+			age = 25
+		}
+		create_random_soldier = {
+			random_traits = yes
+			dynasty = none
+			religion = ROOT
+			culture = ROOT
+			female = no
+			age = 22
+		}
+		create_character = {
+			random_traits = yes
+			dynasty = none
+			religion = ROOT
+			culture = ROOT
+			female = yes
+			age = 16
+		}
+		create_character = {
+			random_traits = yes
+			dynasty = none
+			religion = ROOT
+			culture = ROOT
+			female = yes
+			age = 17
+		}
+		create_character = {
+			random_traits = yes
+			dynasty = none
+			religion = ROOT
+			culture = ROOT
+			female = yes
+			age = 18
+		}
+		
+		log = "60204: Renovator starts his first war as a landed character!"
+	}
+	
+	option = {
+		name = EVTOPTA60204
+		c_dallas = { 
+			holder_scope = {
+				grant_title_no_opinion = b_plano_TX
+			}
+		}
+
+	}
+}
+
+# Notify Renovator's old liege
+character_event = {
+	id = 60205
+	desc = "renovator.5.desc"
+	picture = GFX_evt_mongols
+	border = GFX_event_normal_frame_war
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		FROM = { is_ruler = yes } # The DoW worked and the adventurer has a temporary title
+	}
+	
+	option = {
+		name = "renovator.5.optA"
+	}
+}
+
+# Renovator is successful!
+# Fired from the duchy_adventure CB
+narrative_event = {
+	id = 60206
+	title = "renovator.6.title"
+	desc = "renovator.6.desc"
+	picture = GFX_evt_battle_byzantine
+	border = GFX_event_narrative_frame_war
+	
+	is_triggered_only = yes
+	
+	major = yes
+	
+	immediate = {
+		if = {
+			limit = {
+				OR = {
+					independent = yes
+					liege = {
+						ai = yes
+					}
+				}
+			}
+			set_defacto_liege = ROOT
+			activate_title = { title = e_estelaria status = yes }
+			e_estelaria = {
+				grant_title = ROOT
+				succession = feudal_elective
+			}
+		}		
+		
+		prestige = 1000
+		give_nickname = RENOVATOR_NICKNAME
+		capital_scope = {
+			ROOT = {
+				spawn_unit = {
+					province = PREV
+					home = PREV
+					owner = THIS
+					troops = {
+						light_infantry = { 4250 4250 }
+						light_cavalry = { 2000 2000 }
+						horse_archers = { 500 500 }
+						knights = { 50 50 }
+					}
+				}
+				spawn_unit = {
+					province = PREV
+					home = PREV
+					owner = THIS
+					troops = {
+						light_infantry = { 4250 4250 }
+						light_cavalry = { 2000 2000 }
+						horse_archers = { 500 500 }
+						knights = { 50 50 }
+					}
+				}
+				spawn_unit = {
+					province = PREV
+					home = PREV
+					owner = THIS
+					troops = {
+						light_infantry = { 4250 4250 }
+						light_cavalry = { 2000 2000 }
+						horse_archers = { 500 500 }
+						knights = { 50 50 }
+					}
+				}
+				spawn_unit = {
+					province = PREV
+					home = PREV
+					owner = THIS
+					troops = {
+						light_infantry = { 4250 4250 }
+						light_cavalry = { 2000 2000 }
+						horse_archers = { 500 500 }
+						knights = { 50 50 }
+					}
+				}
+				spawn_unit = {
+					province = PREV
+					home = PREV
+					owner = THIS
+					troops = {
+						light_infantry = { 4250 4250 }
+						light_cavalry = { 2000 2000 }
+						horse_archers = { 500 500 }
+						knights = { 50 50 }
+					}
+				}
+				spawn_unit = {
+					province = PREV
+					home = PREV
+					owner = THIS
+					troops = {
+						light_infantry = { 4250 4250 }
+						light_cavalry = { 2000 2000 }
+						horse_archers = { 500 500 }
+						knights = { 50 50 }
+					}
+				}
+				any_realm_province = {
+					religion = falling_star
+				}
+			}
+
+		}
+		
+		log = "60206: Renovator wins his first war!"
+	}
+	
+	option = {
+		name = "renovator.6.optA"
+		trigger = {
+			has_character_flag = renovator_himself
+		}
+	}
+	option = {
+		name = "renovator.6.optB"
+		trigger = {
+			NOT = { has_character_flag = renovator_himself }
+			religion_group = oldworld
+		}
+	}
+	option = {
+		name = "renovator.6.optC"
+		trigger = {
+			NOT = { has_character_flag = renovator_himself }
+			NOT = { religion_group = oldworld }
+		}
+		ai_chance = {
+			factor = 10		
+		}
+	}
+	option = {
+		name = "renovator.6.optD"
+		trigger = {
+			independent = yes #can't exactly renounce your liege, can you
+			NOT = { tier = EMPEROR }
+			NOT = { has_character_flag = renovator_himself }
+			OR = {
+				religion = falling_star
+				true_religion = falling_star
+				AND = {
+					religion_group = cult_of_saints
+					trait = cynical
+				}
+			}
+			primary_title = { holy_order = no }
+			NOT = {
+				primary_title = {
+					capital_scope = {
+						region = custom_oldworld_mexico
+					}
+				}
+			}
+			NOT = {
+				primary_title = {
+					capital_scope = {
+						region = custom_usa
+					}
+				}
+			}
+			NOT = {
+				primary_title = {
+					capital_scope = {
+						region = custom_canada
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				NOT = { religion = falling_star }
+			}
+			religion = falling_star
+		}
+		capital_scope = {
+			religion = falling_star
+		}
+		set_defacto_liege = FROM
+		ai_chance = {
+			factor = 10		
+		}
+	}
+	option = { #Switch to playing as NPC Renovator
+		name = "renovator.6.optE"
+		trigger = {
+			NOT = { has_character_flag = renovator_himself }
+		}
+		custom_tooltip = {
+			text = player_character_newrenovator_TT
+			set_player_character = ROOT
+		}
+	}
+}
