@@ -1,0 +1,203 @@
+decisions = {
+	celebrate_ufo_day = {
+		only_playable = yes
+		is_high_prio = yes
+		ai_check_interval = 3
+		potential = {
+			is_playable = yes
+			prisoner = no
+			religion = falling_star
+			NOT = { has_character_modifier = celebrated_ufo_day }
+			NOT = {
+				has_alternate_start_parameter = { key =  religion_names value = random }
+			}
+		}
+		allow = {
+			war = no
+			prisoner = no
+			NOT = { is_inaccessible_trigger = yes }
+			custom_tooltip = {
+				text = is_not_busy_trigger_tooltip
+				hidden_tooltip = { NOT = { has_character_flag = do_not_disturb } }
+			}
+		}
+		effect = {
+			set_character_flag = ufo_day_celebrations
+			set_character_flag = recent_minor_decision
+			set_character_flag = do_not_disturb
+			hidden_tooltip = { character_event = { id = newfallingstar.6 days = 30 } } # Safety catch flag clearing
+			custom_tooltip = {
+				text = TXT_ufo_day_decision
+				hidden_tooltip = { 
+					narrative_event = { id = newfallingstar.3 } 
+				}
+			}
+			if = {
+				limit = {
+					has_dlc = "Reapers"
+				}
+				custom_tooltip = {
+					text = capital_prospers_custom_tooltip
+					hidden_tooltip = {
+						capital_scope = {
+							change_variable = { which = prosperity_value value = 4 }
+						}
+					}
+				}
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+
+			modifier = {
+				factor = 0
+				NOT = {
+					wealth = 200
+				}
+			}
+			modifier = {
+				factor = 0
+				trait = cynical
+			}	
+			modifier = {
+				factor = 0
+				has_character_flag = recent_minor_decision
+				NOT = {
+					had_character_flag = {
+						flag = recent_minor_decision
+						days = 730
+					}
+				}
+			}
+		}
+	}
+
+	become_cosmic_oracle = {
+		only_playable = yes
+		only_independent = yes
+		is_high_prio = yes
+		ai_check_interval = 24
+		
+		potential = {
+			religion = falling_star
+			d_falling_star = { has_holder = no }
+			NOT = {
+				has_alternate_start_parameter = { key = religion_names value = random }
+			}
+		}
+		
+		allow = {
+			religion = falling_star
+			prestige = 500
+			piety = 250
+			num_of_holy_sites = 3
+		}
+		
+		effect = {
+			narrative_event = { id = newfallingstar.1 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	alien_pilgrimage = {		# Falling Star and Xenoclast
+		only_playable = yes
+		is_high_prio = yes
+		ai_check_interval = 120
+		potential = {
+			is_playable = yes
+			OR = {
+				religion = falling_star
+				religion = xenoclast
+			}
+			NOT = { is_incapable = yes }
+			NOT = { trait = on_pilgrimage }
+			NOT = { has_character_flag = failed_pilgrim }
+			NOT = { trait = legendary }
+			NOT = { trait = pilgrim }
+			NOT = {
+				has_alternate_start_parameter = { key = religion_names value = random }
+			}
+		}
+		allow = {
+			war = no
+			in_command = no
+			conditional_tooltip = {
+				trigger = { has_character_modifier = coronation_request_cooldown }
+				custom_tooltip = {
+					text = TT_NOT_RECENTLY_ASKED_CORONATION
+					hidden_tooltip = { 
+						NOT = { has_character_modifier = coronation_request_cooldown } 
+					} 
+				} 
+			} 
+			custom_tooltip = {
+				text = UNOCCUPIED_DEMESNE_TITLE
+				hidden_tooltip = {
+					any_demesne_title = {
+						NOT = { higher_tier_than = count }
+						is_occupied = no
+					}
+				}
+			}
+			prisoner = no
+			NOT = { is_inaccessible_trigger = yes }
+			scaled_wealth = 0.2
+			age = 16
+			custom_tooltip = {
+				text = health_travel_condition
+				hidden_tooltip = {
+					NOT = {	trait = pregnant }
+					NOT = {	is_incapable = yes }
+					NOT = {	trait = blinded }
+					NOT = {	trait = has_tuberculosis }
+					NOT = {	trait = has_typhoid_fever }
+					NOT = {	trait = has_typhus }
+					NOT = {	trait = has_bubonic_plague }
+					NOT = {	trait = has_measles }
+					NOT = {	trait = has_small_pox }
+					NOT = {	trait = has_aztec_disease }
+				}
+			}
+			custom_tooltip = {
+				text = is_not_busy_trigger_tooltip
+				hidden_tooltip = { NOT = { has_character_flag = do_not_disturb } }
+			}
+		}
+		effect = {
+			scaled_wealth = -0.2
+			add_trait = on_pilgrimage
+			hidden_tooltip = {
+				character_event = { 
+					id = fallingstar.0
+				}
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+
+			modifier = {
+				factor = 0.1			# Only a small minority of Christians ever go on a pilgrimage
+			}
+			modifier = {
+				factor = 3
+				trait = zealous
+			}
+			modifier = {
+				factor = 0
+				NOT = { wealth = 200 }
+			}
+			modifier = {
+				factor = 0
+				NOT = { age = 30 }
+			}
+		}
+	}
+}
