@@ -8972,7 +8972,12 @@ warrior_lodge_atomicist = {
 			prisoner = no
 		}
 		OR = {
-			religion = atomicist
+			OR = {
+				religion = atomicist
+				religion = aphite
+				religion = falling_star
+				religion = xenoclast
+			}
 			AND = {
 				custom_tooltip = {
 					text = society_has_at_least_10_members_tt
@@ -8998,13 +9003,37 @@ warrior_lodge_atomicist = {
 	
 				OR = {
 					#You have neighbors, etc, of the correct religion...
-					any_vassal = { religion = atomicist }
-					any_liege = { religion = atomicist }
-					any_neighbor_independent_ruler = { religion = atomicist }
+					any_vassal = {
+						OR = {
+							religion = atomicist
+							religion = aphite
+							religion = falling_star
+							religion = xenoclast
+						}
+					}
+					any_liege = {
+						OR = {
+							religion = atomicist
+							religion = aphite
+							religion = falling_star
+							religion = xenoclast
+						}
+					}
+					any_neighbor_independent_ruler = {
+						OR = {
+							religion = atomicist
+							religion = aphite
+							religion = falling_star
+							religion = xenoclast
+						}
+					}
 				}
 			}
 			NOT = { #Hide if: you don't have a religion that corresponds to this lodge, but there is another society available to you already
 				NOT = { religion = atomicist }
+				NOT = { religion = aphite }
+				NOT = { religion = falling_star }
+				NOT = { religion = xenoclast }
 				has_religion_matching_available_warrior_lodge_trigger = yes
 			}
 			#Always show if: You are already a member. Duh.
@@ -9015,9 +9044,17 @@ warrior_lodge_atomicist = {
 
 	potential = { #if you change religion or become zealous while NOT pagan, you are kicked out
 		OR = {
-			religion = atomicist
+			OR = {
+				religion = atomicist
+				religion = aphite
+				religion = falling_star
+				religion = xenoclast
+			}
 			AND = {
 				NOT = { religion = atomicist }
+				NOT = { religion = aphite }
+				NOT = { religion = falling_star }
+				NOT = { religion = xenoclast }
 				NOT = { trait = zealous }
 			}
 		}
@@ -9493,8 +9530,11 @@ warrior_lodge_atomicist = {
 	startup_populate = {
 		trigger = {
 			ai = yes
-			controls_religion = no
-				religion = atomicist
+			OR = {
+				controls_religion = no
+					religion = atomicist
+					religion = falling_star
+			}
 			is_adult = yes
 			is_in_society = no
 			OR = {
