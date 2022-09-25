@@ -74,16 +74,6 @@ character_event = {
 			if = {
 				limit = {
 					OR = {
-						religion = falling_star
-						#religion = moravian
-						religion = wormwoodist
-					}
-				}
-				character_event = { id = fallingstar.1 }
-			}
-			if = {
-				limit = {
-					OR = {
 						religion = cristo_rey
 						religion = sacred_heart
 					}
@@ -2895,7 +2885,7 @@ character_event = {
 					character_event = { id = SoA.5067 }
 				}
 				if = {
-					limit = { has_character_flag = pilgrimage_to_san_salvador }
+					limit = { has_character_flag = pilgrimage_to_rainier }
 					character_event = { id = fallingstar.8 }
 				}
 				if = {
@@ -2906,7 +2896,7 @@ character_event = {
 							tier = EMPEROR
 						}
 						NOT = { has_character_flag = renovator_himself } #obvious
-						has_character_flag = pilgrimage_to_panama
+						has_character_flag = pilgrimage_to_roswell
 					}
 					character_event = { id = fallingstar.9 } #Start of the Moravian event chain
 				}
