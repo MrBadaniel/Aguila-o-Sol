@@ -1278,7 +1278,7 @@
 #The Mopanes, dukes of Belmopán
 
 
-1431440 = { #Someone should have kill him
+1431440 = { #Someone should have him killed
 	name="Jacinto"
 	dynasty=154096
 	culture=yucateco
@@ -1379,7 +1379,7 @@
 1431445 = {
 	name="Raymond"
 	dynasty=154096
-	culture=kriol
+	culture=yucatanense
 	religion=neomayan
 	martial=10
 	diplomacy=10
@@ -1394,14 +1394,16 @@
 	trait=arbitrary
 	father=1431443
 	mother=1431444
-	2628.1.1={birth=yes}
+	2628.1.1={birth=yes
+				culture=kriol
+	}
 	2648.1.1={add_spouse=1638013
 	}
 }
 1431446 = {
 	name="Israel"
 	dynasty=154096
-	culture=kriol
+	culture=yucatanense
 	religion=neomayan
 	martial=3
 	diplomacy=9
@@ -1414,7 +1416,8 @@
 	trait=gluttonous
 	father=1431443
 	mother=1431444
-	2637.1.1={birth=yes}
+	2637.1.1={birth=yes
+		culture=kriol}
 }
 1431447 = {
 	name="Clarice"
@@ -1439,7 +1442,7 @@
 	name="Clementine"
 	female=yes
 	dynasty=154096
-	culture=kriol
+	culture=brown
 	religion=neomayan
 	martial=6
 	diplomacy=4
@@ -1450,13 +1453,14 @@
 	trait=willful
 	father=1431445 #Raymond III, duke of Belmopan
 	mother=1638013
-	2655.1.1={birth=yes}
+	2655.1.1={birth=yes
+			culture=kriol}
 }
 1431449 = {
 	name="Raymond"
 	dynasty=154096
-	culture=kriol
-	religion=neomayan
+	culture=brown
+	religion=yucatanense
 	martial=0
 	diplomacy=3
 	stewardship=3
@@ -1466,12 +1470,13 @@
 	trait=brooding
 	father=1431445 #Raymond III, duke of Belmopan
 	mother=1638013
-	2658.1.1={birth=yes}
+	2658.1.1={birth=yes
+			culture=kriol}
 }
 1431450 = {
 	name="Israel"
 	dynasty=154096
-	culture=kriol
+	culture=yucatanense
 	religion=neomayan
 	martial=0
 	diplomacy=0
@@ -1480,7 +1485,8 @@
 	learning=0
 	mother=1431451
 	father=1431446
-	2662.8.1={birth=yes}
+	2662.8.1={birth=yes
+			culture=kriol}
 }
 1431451 = {
 	name="Jennifer"
