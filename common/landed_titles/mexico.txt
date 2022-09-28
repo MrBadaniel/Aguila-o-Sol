@@ -87,6 +87,10 @@ e_mexico = {
 	k_bajio = {
 		color={ 246 249 176 }
 		color2={ 255 255 255 }
+
+		allow = {
+			NOT = { has_landed_title = e_mexico }
+		}
 		
 		#Crusade target weight
 		lamanita = 100
@@ -271,6 +275,10 @@ e_mexico = {
 	k_gran_chichimeca = {
 		color={ 201 41 24 }
 		color2={ 255 255 255 }
+
+		allow = {
+			NOT = { has_landed_title = e_mexico }
+		}
 		
 		#Crusade target weight
 		lamanita = 100
@@ -452,6 +460,10 @@ e_mexico = {
 	k_jalisco = {
 		color={ 67 145 161 }
 		color2={ 255 255 255 }
+
+		allow = {
+			NOT = { has_landed_title = e_mexico }
+		}
 		
 		#Crusade target weight
 		lamanita = 100
@@ -620,36 +632,15 @@ e_mexico = {
 	k_mexico = {
 		color = { 0 104 71 }
 		color2= { 220 220 0 }
-		
-		can_be_usurped = no
-		assimilate = no
-		dignity = 1000
+
+		allow = {
+			NOT = { has_landed_title = e_mexico }
+		}
 		
 		#Crusade target weight
 		lamanita = 500
 		
 		capital = 1767 # c_mexico
-	
-		name_tier = emperor
-		
-		nahua = "Mexkotlalli"
-		mixtec = "Ñuko'yo"
-		zapotec = "Guidxindxó Mexicu"
-		purepecha = "Méjiku"
-		raramuri = "Mésiko"
-		yaqui = "Mejiiko"
-		neoladino = "Nuevo Sefarad"
-		bravo = "Imperio Mexicano"
-		tapatio = "Imperio Mexicano"
-		abajeno = "Imperio Mexicano"
-		jarocho = "Imperio Mexicano"
-		tejano = "Imperio Mejicano"
-		chilango = "Imperio Mexicano"
-		neomexicano = "Imperio Mexicano"
-		chino = "Imperio Mexicano"
-		
-		short_name = yes
-		foa = "ALTEZA_FOA"
 		
 		d_hidalgo = {
 			color={ 184 126 49 }
@@ -942,6 +933,10 @@ e_mexico = {
 	k_veracruz = {
 		color={ 0.65 0.5 0.05 }
 		color2={ 255 255 255 }
+
+		allow = {
+			NOT = { has_landed_title = e_mexico }
+		}
 		
 		#Crusade target weight
 		lamanita = 500
@@ -1143,6 +1138,10 @@ e_mexico = {
 	k_michoacan = {
 		color={ 84 50 90 }
 		color2={ 255 255 255 }
+
+		allow = {
+			NOT = { has_landed_title = e_mexico }
+		}
 		
 		#Crusade target weight
 		lamanita = 100
@@ -1368,6 +1367,10 @@ e_mexico = {
 	k_oaxaca = {
 		color={ 91 61 155 } 
 		color2={ 255 255 255 }
+
+		allow = {
+			NOT = { has_landed_title = e_mexico }
+		}
 		
 		#Crusade target weight
 		lamanita = 500
@@ -1723,6 +1726,10 @@ e_mexico = {
 	k_guerrero = {
 		color={ 150 0 0 }
 		color2={ 255 255 255 }
+
+		allow = {
+			NOT = { has_landed_title = e_mexico }
+		}
 		
 		#Crusade target weight
 		lamanita = 500
