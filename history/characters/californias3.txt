@@ -2872,31 +2872,6 @@
 	}
 }
 
-1802077={
-	name="Marvin"
-	culture=valleyan
-	religion=pagan#olympian
-	trait=brilliant_strategist
-	trait=strong
-	trait=legendary
-	occluded=yes
-	trait=proud
-	trait=stubborn
-	give_nickname=nick_the_olympian
-	2120.2.2={birth=yes}
-	2174.6.2={death={
-			death_reason=death_duel
-			killer=1802074
-		}
-	}
-}
-
-#Winnie, Marie, and Sadie daughers of Lucy and Brian Sanders inlander 1802078 1802079
-#death_execution_hanging
-#Winnie dies in battle the others are hung 1802080 1802081 1802083
-#5001231 = { name="Sanders" culture=inlander }
-
-
 1802082={
 	name="Diego"
 	culture=english
@@ -5040,30 +5015,6 @@
     2316.10.18={death=yes}
 }
 
-1802180={
-	name="Constantius"
-	disallow_random_traits=yes
-	culture=west_slavic
-	dynasty=5001227 #Philippus
-	father=1802179
-    religion=latinate
-    martial=5
-    diplomacy=5
-    stewardship=5
-    intrigue=5
-    learning=5
-    trait=grey_eminence
-	trait=strategist
-    trait=just
-    trait=ambitious
-    trait=shrewd
-	trait=paranoid
-	give_nickname=nick_the_golden_mouthed
-    2251.9.20={birth=yes
-	culture=joshuan}
-    2316.10.18={death=yes}
-}
-
 1802181={
 	name="Ignacio"
 	culture=bayfolk
@@ -6272,4 +6223,40 @@
 	religion=gaian
 	2577.1.2={birth=yes}
 	2639.5.1={death=yes}
+}
+
+1802250={
+	name="Stanley"
+	#female=yes Bruh what?
+	dynasty=1851016
+	father=2500023
+	culture=valleyan
+	religion=cetic
+	trait=fortune_builder
+	trait=way_book
+	trait=patient
+	trait=diligent
+	trait=ill
+	father=1910135
+	2637.12.16={birth=yes}
+	2690.12.1={death=yes}
+}
+
+1802251={
+	name="Marvin"
+	culture=valleyan
+	religion=pagan#olympian
+	trait=brilliant_strategist
+	trait=strong
+	trait=legendary
+	occluded=yes
+	trait=proud
+	trait=stubborn
+	give_nickname=nick_the_olympian
+	2120.2.2={birth=yes}
+	2174.6.2={death={
+			death_reason=death_duel
+			killer=1802074
+		}
+	}
 }
