@@ -92,10 +92,6 @@ succession_laws = {
 					has_law = succ_mex_elective 
 					title = e_mexico
 				}
-				AND = {
-					has_law = succ_mex_elective 
-					title = k_mexico
-				}
 			}
 			holder_scope = {
 				OR = {
@@ -241,10 +237,6 @@ succession_laws = {
 					has_law = succ_mex_elective 
 					title = e_mexico
 				}
-				AND = {
-					has_law = succ_mex_elective 
-					title = k_mexico
-				}
 			}
 			holder_scope = {
 				is_nomadic = no
@@ -388,10 +380,6 @@ succession_laws = {
 				AND = {
 					has_law = succ_mex_elective 
 					title = e_mexico
-				}
-				AND = {
-					has_law = succ_mex_elective 
-					title = k_mexico
 				}
 			}
 			holder_scope = {
@@ -555,10 +543,6 @@ succession_laws = {
 				AND = {
 					has_law = succ_mex_elective 
 					title = e_mexico
-				}
-				AND = {
-					has_law = succ_mex_elective 
-					title = k_mexico
 				}
 			}
 			holder_scope = {
@@ -765,10 +749,6 @@ succession_laws = {
 					has_law = succ_mex_elective 
 					title = e_mexico
 				}
-				AND = {
-					has_law = succ_mex_elective 
-					title = k_mexico
-				}
 			}
 			holder_scope = {
 				is_merchant_republic = no
@@ -796,6 +776,7 @@ succession_laws = {
 								NOT = { religion = glorian }
 							}
 							NOT = { religion = midewiwin }
+							NOT = { religion = mictlantec }
 							NOT = { religion = raven_tales }
 							AND = {
 								religion = patria_grande
@@ -977,10 +958,6 @@ succession_laws = {
 					has_law = succ_mex_elective 
 					title = e_mexico
 				}
-				AND = {
-					has_law = succ_mex_elective 
-					title = k_mexico
-				}
 			}
 			holder_scope = {
 				OR = {
@@ -1010,6 +987,7 @@ succession_laws = {
 				OR = {
 					NOT = { religion_group = pagan_group }
 					NOT = { religion = midewiwin }
+					NOT = { religion = mictlantec }
 					NOT = { religion = raven_tales }
 					is_reformed_religion = yes
 					has_law = succession_voting_power_1
@@ -1113,10 +1091,6 @@ succession_laws = {
 					has_law = succ_mex_elective 
 					title = e_mexico
 				}
-				AND = {
-					has_law = succ_mex_elective 
-					title = k_mexico
-				}
 			}
 			NAND = {
 				OR = {
@@ -1159,6 +1133,7 @@ succession_laws = {
 				OR = {
 					NOT = { religion_group = pagan_group }
 					NOT = { religion = midewiwin }
+					NOT = { religion = mictlantec }
 					NOT = { religion = raven_tales }
 					is_reformed_religion = yes
 					has_law = succession_voting_power_1
@@ -1353,10 +1328,6 @@ succession_laws = {
 					has_law = succ_mex_elective 
 					title = e_mexico
 				}
-				AND = {
-					has_law = succ_mex_elective 
-					title = k_mexico
-				}
 			}
 			NAND = {
 				OR = {
@@ -1494,10 +1465,6 @@ succession_laws = {
 					has_law = succ_mex_elective 
 					title = e_mexico
 				}
-				AND = {
-					has_law = succ_mex_elective 
-					title = k_mexico
-				}
 			}
 
 			holder_scope = {
@@ -1519,6 +1486,7 @@ succession_laws = {
 						NOT = { religion = celtic_pagan }
 						NOT = { religion = aria_de_machete }
 						NOT = { religion = trailwalker }
+						NOT = { religion = mictlantec }
 					}
 					AND = {
 						religion = patria_grande
@@ -1683,10 +1651,6 @@ succession_laws = {
 					has_law = succ_mex_elective 
 					title = e_mexico
 				}
-				AND = {
-					has_law = succ_mex_elective 
-					title = k_mexico
-				}
 			}
 			holder_scope = {
 				OR = {
@@ -1812,10 +1776,6 @@ succession_laws = {
 				AND = { 
 					has_law = succ_mex_elective 
 					title = e_mexico
-				}
-				AND = { 
-					has_law = succ_mex_elective 
-					title = k_mexico
 				}
 				religion_group = latter_day_saints
 			}
