@@ -1838,3 +1838,45 @@ d_latinate = {
 	#very silly pope names sadly removed
 	
 }
+
+k_la_hermandad = {
+	color = { 216 162 109 }
+	color2={ 220 220 0 }
+	
+	capital = 313 # El Paso
+	
+	title = "VIEJO_ROBLE"
+	title_female = "VIEJA_ROBLE"
+	foa = "POPE_FOA"
+	short_name = yes
+	location_ruler_title = yes
+	
+	landless = yes
+	controls_religion = la_hermandad
+	religion = la_hermandad
+	primary = yes
+	assimilate = no # Nothing drifts in or out
+	
+	dynasty_title_names = no 	# Will not be named "Seljuk", etc.
+}
+
+d_artiga = {
+	color = { 214 164 115 }
+	color2={ 220 220 0 }
+	
+	capital = 313 # El Paso
+	
+	title = "VIEJO_ROBLE"
+	title_female = "VIEJA_ROBLE"
+	foa = "POPE_FOA"
+	short_name = yes
+	location_ruler_title = yes
+	
+	landless = yes
+	controls_religion = artiga
+	religion = artiga
+	primary = yes
+	assimilate = no # Nothing drifts in or out
+	
+	dynasty_title_names = no 	# Will not be named "Seljuk", etc.
+}
