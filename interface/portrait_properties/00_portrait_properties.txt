@@ -1586,7 +1586,10 @@
 		factor = 100
 		modifier = {
 			factor = 0
-			NOT = { trait = shieldmaiden }
+			NOR = { 
+				trait = shieldmaiden 
+				trait = adelita
+			}
 			NOT = { has_job_title = job_marshal }
 			NAND = { 
 				has_minor_title = title_commander 
@@ -1605,6 +1608,7 @@
 				primary_title = {
 					OR = {
 						title = d_knights_of_columbus
+						title = d_cristo_rey
 						title = d_knights_of_peter_claver
 						title = d_st_ursulas_chosen
 						title = k_ursuline_state
@@ -1612,6 +1616,7 @@
 						title = e_china_west_governor
 					}
 				}
+				trait = dorado
 			}
 		}
 		modifier = {
@@ -1619,7 +1624,10 @@
 			OR = {
 				AND = {
 					is_female = yes
-					NOT = { trait = shieldmaiden }
+					NOR = { 
+						trait = shieldmaiden
+						trait = adelita
+					}
 					NOT = { has_minor_title = title_commander }
 					NAND = { 
 						in_command = yes 
@@ -1648,6 +1656,7 @@
 						primary_title = {
 							OR = {
 								title = d_knights_of_columbus
+								title = d_cristo_rey
 								title = d_knights_of_peter_claver
 								title = d_st_ursulas_chosen
 								title = k_ursuline_state
@@ -2191,6 +2200,7 @@
 				religion = ursuline
 				religion = mormon
 				religion = high_church
+				religion = cristo_rey
 				religion = sol_invicta
 			} 
 			NOR = { 
@@ -2230,6 +2240,7 @@
 					religion = mormon
 					religion = high_church
 					religion = sol_invicta
+					religion = cristo_rey
 				} 
 				NOR = { 
 					trait = crowned_by_priest 
@@ -2345,6 +2356,7 @@
 				religion = mormon
 				religion = high_church
 				religion = sol_invicta
+				# religion = cristo_rey
 			} 
 			NOR = { 
 				trait = crowned_by_priest 
@@ -2383,6 +2395,7 @@
 					religion = mormon
 					religion = high_church
 					religion = sol_invicta
+					# religion = cristo_rey
 				} 
 				NOR = { 
 					trait = crowned_by_priest 
@@ -2488,6 +2501,7 @@
 				religion = mormon
 				religion = high_church
 				religion = sol_invicta
+				# religion = cristo_rey
 			} 
 			NOR = { 
 				trait = crowned_by_priest 
@@ -2526,6 +2540,7 @@
 					religion = mormon
 					religion = high_church
 					religion = sol_invicta
+					# religion = cristo_rey
 				} 
 				NOR = { 
 					trait = crowned_by_priest 
@@ -2643,6 +2658,7 @@
 				religion = mormon
 				religion = high_church
 				religion = sol_invicta
+				# religion = cristo_rey
 			} 
 			NOR = { 
 				trait = crowned_by_priest 
@@ -2681,6 +2697,7 @@
 					religion = mormon
 					religion = high_church
 					religion = sol_invicta
+					# religion = cristo_rey
 				} 
 				NOR = { 
 					trait = crowned_by_priest 
@@ -2732,6 +2749,7 @@
 						religion = mormon
 						religion = high_church
 						religion = sol_invicta
+						# religion = cristo_rey
 					}
 					OR = { 
 						trait = crowned_by_priest
@@ -2757,6 +2775,7 @@
 						religion = mormon
 						religion = high_church
 						religion = sol_invicta
+						# religion = cristo_rey
 					}
 					OR = { 
 						trait = crowned_by_priest
@@ -2802,6 +2821,7 @@
 			NOT = { religion = ursuline }
 			NOT = { religion = mormon }
 			NOT = { religion = high_church }
+			# NOT = { religion = cristo_rey }
 			higher_real_tier_than = DUKE
 			OR = { 
 				is_nomadic = no 
@@ -2878,7 +2898,10 @@
 		}
 		modifier = {
 			factor = 0
-			trait = shieldmaiden
+			OR = {
+				trait = shieldmaiden
+				trait = adelita
+			}
 		}
 		modifier = {
 			factor = 10
@@ -2921,7 +2944,10 @@
 		}
 		modifier = {
 			factor = 0
-			trait = shieldmaiden
+			OR = {
+				trait = shieldmaiden
+				trait = adelita
+			}
 		}
 		modifier = {
 			factor = 0
@@ -2978,7 +3004,10 @@
 		}
 		modifier = {
 			factor = 0
-			trait = shieldmaiden
+			OR = {
+				trait = adelita
+				trait = shieldmaiden
+			}
 		}
 		modifier = {
 			factor = 0
@@ -3036,11 +3065,10 @@
 		}
 		modifier = {
 			factor = 0
-			trait = shieldmaiden
-		}
-		modifier = {
-			factor = 0
-			trait = adelita
+			OR = {
+				trait = adelita
+				trait = shieldmaiden
+			}
 		}
 		modifier = {
 			factor = 0
@@ -3151,12 +3179,12 @@
 				primary_title = { #Holy Orders in peace time should wear martial clothes, but not the helmet.
 					OR = {
 						title = d_knights_of_columbus
+						title = d_cristo_rey
 						title = d_knights_of_peter_claver
 						title = d_st_ursulas_chosen
 						title = k_ursuline_state
 						title = d_lebanon_brethren
 						title = d_dorados
-						title = d_cristo_rey
 						title = e_china_west_governor
 					}
 				}
@@ -3164,18 +3192,10 @@
 		}
 		modifier = {
 			factor = 0
-			trait = shieldmaiden
-			NAND = { 
-				in_command = yes 
-				has_game_rule = {
-					name = martial_headgear
-					value = on
-				}
+			OR = {
+				trait = adelita
+				trait = shieldmaiden
 			}
-		}
-		modifier = {
-			factor = 0
-			trait = adelita
 			NAND = { 
 				in_command = yes 
 				has_game_rule = {
@@ -3195,18 +3215,10 @@
 		}
 		modifier = {
 			factor = 20000
-			trait = shieldmaiden
-			NAND = { 
-				in_command = yes 
-				has_game_rule = {
-					name = martial_headgear
-					value = on
-				}
+			OR = { 
+				trait = adelita
+				trait = shieldmaiden
 			}
-		}
-		modifier = {
-			factor = 20000
-			trait = adelita
 			NAND = { 
 				in_command = yes 
 				has_game_rule = {
@@ -3218,16 +3230,20 @@
 		modifier = {
 			factor = 20000
 			OR = { 
-				government = order_government 
+				AND  = { 
+					government = order_government
+					NOT = { has_landed_title = d_cristo_rey }
+				}
 				primary_title = { #Holy Orders in peace time should wear martial clothes, but not the helmet.
 					OR = {
 						title = d_knights_of_columbus
+						# title = d_cristo_rey
 						title = d_knights_of_peter_claver
 						title = d_st_ursulas_chosen
 						title = k_ursuline_state
 						title = d_lebanon_brethren
 						title = d_dorados
-						title = d_cristo_rey
+						
 					}
 				}
 			}
@@ -3245,7 +3261,10 @@
 			factor = 0
 			NOT = { trait = saint }
 			NOT = { is_republic = yes }
-			NOT = { government = order_government }
+			NAND = { 
+				government = order_government
+				NOT = { has_landed_title = d_cristo_rey }
+			}
 			OR = {
 				real_tier = emperor
 				real_tier = king
@@ -6716,7 +6735,10 @@
 		factor = 100
 		modifier = { #Templar special headgear.
 			factor = 0
-			in_command = yes
+			OR = {
+				in_command = yes
+				has_landed_title = d_cristo_rey
+			}
 			has_game_rule = {
 				name = martial_headgear
 				value = on
@@ -6725,9 +6747,11 @@
 				religion = catholic
 				religion = ursuline
 				religion = revelationist_reformed
+				religion = cristo_rey
 			}
 			OR = {
-				has_landed_title = d_knights_of_columbus 
+				has_landed_title = d_knights_of_columbus
+				has_landed_title = d_cristo_rey 
 				has_landed_title = d_knights_of_peter_claver
 				has_landed_title = d_st_ursulas_chosen
 				has_landed_title = k_ursuline_state
@@ -6735,9 +6759,7 @@
 				has_landed_title = d_flaming_sword
 				has_landed_title = d_national_cathedral
 				has_landed_title = d_salvation_army
-				has_landed_title = d_cristo_rey
 				has_landed_title = d_dorados
-				# has_landed_title = e_mexico
 				liege = { has_landed_title = d_knights_of_columbus }
 				liege = { has_landed_title = d_knights_of_peter_claver }
 				liege = { has_landed_title = d_st_ursulas_chosen }
@@ -6747,7 +6769,6 @@
 				liege = { has_landed_title = d_national_cathedral }
 				liege = { has_landed_title = d_salvation_army }
 				liege = { has_landed_title = d_dorados }
-				# liege = { has_landed_title = e_mexico}
 			}
 		}
 		modifier = { #Wearable Crown artifacts.
@@ -6761,7 +6782,7 @@
 				any_artifact = { artifact_type = crown_crusader_king is_artifact_equipped = yes } 
 				any_artifact = { artifact_type = crown_winged_helmet is_artifact_equipped = yes } 
 				any_artifact = { artifact_type = crown_wrapped_helmet is_artifact_equipped = yes }
-				# any_artifact = { artifact_type = crown_pickelhaube is_artifact_equipped = yes } 
+				any_artifact = { artifact_type = crown_pickelhaube is_artifact_equipped = yes } 
 			}
 		}
 		modifier = { #Unicorn
@@ -7045,7 +7066,7 @@
 		modifier = {
 			factor = 0
 			NOR = {
-				has_landed_title = d_flaming_sword 
+				has_landed_title = d_flaming_sword
 				liege = { has_landed_title = d_flaming_sword }
 			}
 		}
@@ -7100,35 +7121,17 @@
 				}
 			}
 		}
-		modifier = { 
-			factor = 0
-			NAND = { 
-				in_command = yes 
-				has_game_rule = {
-					name = martial_headgear
-					value = on
-				}
-			}
-		}
+		# modifier = { 
+		# 	factor = 0
+		# 	NAND = { 
+		# 		in_command = yes 
+		# 		has_game_rule = {
+		# 			name = martial_headgear
+		# 			value = on
+		# 		}
+		# 	}
+		# }
 	}
-
-#	12 = { #Prelado's Helm
-#				factor = 100
-#		hide_layers = { 12 = { } } #Hide layer 12 (disfigured masks) when this frame is picked.
-#		hide_layers = { 5 = { } } #Hide layer 5 (headgear) when this frame is picked.
-#		hide_layers = { 1 = { } } #Hide Hair.
-#		hide_layers = { 18 = { } } #Hide layers with special crowns.
-#		hide_layers = { 19 = { } } #Hide layers with special crowns.
-#		hide_layers = { 31 = { } } #Veil overload.
-#		hide_layers = { 32 = { } } 
-#		hide_layers = { 33 = { } }
-#		modifier = {
-#			factor = 0
-#			NOT = {
-#				has_landed_title = d_cristo_rey
-#				}
-#		}
-#	}
 
     12 = { #Prelado's Helm
         factor = 100
@@ -7140,7 +7143,17 @@
         hide_layers = { 31 = { } } #Veil overload.
         hide_layers = { 32 = { } } 
         hide_layers = { 33 = { } }
-        modifier = {
+        # modifier = {
+		# 	factor = 0
+		# 	NAND = { 
+		# 		in_command = yes 
+		# 		has_game_rule = {
+		# 			name = martial_headgear
+		# 			value = on
+		# 		}
+		# 	}
+		# }
+		modifier = {
             factor = 0
             NOT = { has_landed_title = d_cristo_rey }
         }
@@ -7160,9 +7173,7 @@
 		
 		modifier = {
 			factor= 0
-			NOT = {
-				trait= dorado
-			}
+			NOT = { trait= dorado }
 		}
 	}
 }
