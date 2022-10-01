@@ -1191,6 +1191,18 @@ e_yucatan = {
 		#Crusade target weight
 		lamanita = 4000
 		
+					yucateco = "Ch'ol-Lum"
+					lacandon = "Ch'iknunk Wiinikob-Ru'um"
+					quichean = "Ch'olulew"
+					cholano = "Lak-Lum"
+					tsotsil = "Sots-Lum"
+					tseltal = "Atel-Lum"
+					nahua = "Chiapan"
+					mixtec = "Chiapan"
+					zapotec = "Chiapan" 
+					purepecha = "Chiapan"
+					
+		
 		capital = 1837 # c_tuxtla_gutierrez
 		
 		d_zapata = {
@@ -1209,21 +1221,95 @@ e_yucatan = {
 				lacandon = "Balún Canán"
 				quichean = "Balún Canán"
 				cholano = "Balún Canán"
-	
+				tseltal = "Balún Canán"
+				tsotsil = "Balún Canán"
+				
 				b_comitan_CP = {
 					yucateco = "Balún Canán"
 					lacandon = "Balún Canán"
 					quichean = "Balún Canán"
 					cholano = "Balún Canán"
+					tseltal = "Balún Canán"
+					tsotsil = "Balún Canán"
 				}
-				b_la_trinitaria_CP = {}
+				b_la_trinitaria_CP = {
+					yucateco = "Chincultik"
+					lacandon = "Chincultik"
+					quichean = "Chincultik"
+					cholano = "Chincultik"
+					tseltal = "Chincultik"
+					tsotsil = "Chincultik"
+					nahua = "Zapalutlan"
+				}
 				b_las_margaritas_CP = {}
-				b_frontera_comalapa_CP = {}
 				b_altamirano_CP = {}
 				b_chincultik_CP = {} 
+			}
+			
+			c_comalapa = { #2318 #Chiapas
+				color = { 205 255 81 }
+				color2 { 255 255 255 }
+				
+				yucateco = "Xamach Ja'"
+				lacandon = "Xamach Ja'"
+				quichean = "Xamach Ja'"
+				cholano = "Tsemet Ja'"
+				tseltal = "Tsemet O'"
+				tsotsil = "Tsemet O'"
+				
+				b_frontera_comalapa_CP = {
+					yucateco = "Xu'ul Xamach Ja'"
+					lacandon = "Ch'ejer Xamach Ja'"
+					quichean = "Tza'nja Xamach Ja'"
+					cholano = "Jilibal Tsemet Ja'"
+					tseltal = "Lajun Tsemet O'"
+					tsotsil = "Lajun Tsemet O'"
+					nahua = "Zapalutlan"}
 				b_santa_rosa_CP = {}
+				b_chicomuselo_CP = {}
+				b_siltepec_CP = {}
+				b_mazapa_de_madero_CP = {
+					yucateco = "Kakchikel"
+					lacandon = "Kakchikel"
+					quichean = "Kakchikel"
+					cholano = "Kakchikel"
+					tseltal = "Kakchikel"
+					tsotsil = "Kakchikel"
+				}
+				b_bella_vista_CP = {
+					yucateco = "Pacayal"
+					lacandon = "Pacayal"
+					quichean = "Pacayal"
+					cholano = "Pacayal"
+					tseltal = "Pacayal"
+					tsotsil = "Pacayal"
+					nahua = "Zapote"
+				}
 			}
 
+			c_la_concordia = { #2319 #Chiapas
+				color = { 148 175 77 }
+				color2 { 255 255 255 }
+				
+				yucateco = "Sam Tulum"
+				lacandon = "Sa'am Ji'che'"
+				quichean = "Sanib' Ko"
+				cholano = "Ji Salulmal"
+				tseltal = "I' Salul"
+				tsotsil = "I' Salul"
+				nahua = "Jaltenango"
+			
+				b_la_concordia_CP = {
+				yucateco = "Sam Tulum"
+				lacandon = "Sa'am Ji'che'"
+				quichean = "Sanib' Ko"
+				cholano = "Ji Salulmal"
+				tseltal = "I' Salul"
+				tsotsil = "I' Salul"
+				}
+				b_jaltenango_de_la_paz_CP = {}
+
+			}	
 			c_nezahualcoyatl = { # 1836
 				color={ 218 11 79 }
 				color2={ 255 255 255 }
@@ -1300,6 +1386,31 @@ e_yucatan = {
 				b_boca_del_cielo_CP = {}
 				b_paredon_CP = {}
 			}
+
+			c_la_fraylesca = { # 1840
+				color={ 159 109 79 }
+				color2={ 255 255 255 }
+	
+				b_villaflores_CP = {}
+				b_el_parral_CP = {}
+				b_cristobal_obregon_CP = {}
+				b_la_sepultera_CP = {}
+				b_villa_corzo_CP = {}
+				b_buenavista_CP = {}
+				b_jesus_maria_garza_CP = {}
+				b_la_simpatia_CP = {}
+			}
+		}
+
+		d_altos_chiapas = {
+			color={ 188 57 4 }
+			color2={ 255 255 255 }
+
+			capital = 1838 # c_san_cristobal
+			
+				tseltal = "Vits"
+				tsotsil = "Vits"
+
 			c_san_cristobal = { # 1838
 				color={ 221 173 91 }
 				color2={ 255 255 255 }
@@ -1326,17 +1437,31 @@ e_yucatan = {
 					raramuri = "Job'el"
 				}
 				b_zinacantan_CP = {
-					yucateco = "Sots'leb"
-					lacandon = "Sots'leb"
-					quichean = "Sots'leb"
-					cholano = "Sots'leb"
+					yucateco = "Soots'il"
+					lacandon = "Soots'leb"
+					quichean = "Soots'leb"
+					cholano = "Suts Bak"
+					tseltal = "Soots'leb"
+					tsotsil = "Soots'leb"
 				}
-				b_la_concordia_CP = {}
-				b_jaltenango_de_la_paz_CP = {}
 				b_acala_CP ={}
-				b_san_juan_CP ={}
 				b_emiliano_zapata_CP = {}
 				b_san_antonio_del_monte_CP = {}
+				b_san_lucas_CP = {}
+				b_chiapilla_CP = {
+					lacandon = "Tséementuun"
+					quichean = "Tséementuun"
+					cholano = "Tséementuun"
+					yucateco = "Tséementuun"
+					cholano = "Tséementuun"
+					tseltal = "Tséementuun" 
+					tsotsil = "Tséementuun"
+					nahua 	= "Totolapa"
+					mixtec = "Totolapa"
+					zapotec = "Totolapa"
+					purepecha = "Totolapa"
+				}
+				
 			}
 			
 			c_chamula = { #2319
@@ -1352,7 +1477,7 @@ e_yucatan = {
 				b_mitontic_CP = {}
 				b_tenejapa_CP = {}
 				b_oxchuc_CP = {}
-
+				b_san_juan_CP ={}
 			}
 			
 			c_amatenango = { #2320
@@ -1371,21 +1496,7 @@ e_yucatan = {
 				b_san_francisco_pujiltic_CP = {}
 				b_aguacatenango_CP = {}
 			}
-			
-			c_la_fraylesca = { # 1840
-				color={ 159 109 79 }
-				color2={ 255 255 255 }
-	
-				b_villaflores_CP = {}
-				b_el_parral_CP = {}
-				b_cristobal_obregon_CP = {}
-				b_la_sepultera_CP = {}
-				b_villa_corzo_CP = {}
-				b_buenavista_CP = {}
-				b_jesus_maria_garza_CP = {}
-				b_la_simpatia_CP = {}
-			}
-		}
+		}	
 	}
 	k_peten = {
 		color={ 254 206 2 }
