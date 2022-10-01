@@ -2037,6 +2037,7 @@ gender_laws = {
 							AND = {
 								OR = {
 									NOT = { religion = gaian }
+									NOT = { religion = furiegi }
 									NOT = { trait = machete_female }
 									NOT = { trait = machete_female_ref }
 									NOT = { trait = machete_male } #these guys are locked to agnatic
@@ -2119,6 +2120,7 @@ gender_laws = {
 				NOT = { religion = gaian }
 				NOT = { religion = neomayan }
 				NOT = { religion = edenite }
+				NOT = { religion = furiegi }
 				NOT = { has_religion_feature = religion_matriarchal } 
 				NOT = { has_religion_feature = religion_equal }
 				NOT = { has_religion_feature = religion_feature_aria_de_machete }
@@ -2201,7 +2203,6 @@ gender_laws = {
 									OR = {
 										religion = ursuline
 										religion = gaian
-										religion = edenite
 									}
 								}
 								OR = {
@@ -2279,6 +2280,7 @@ gender_laws = {
 						religion = reform
 						religion = neomayan
 						religion = neognostic
+						religion = furiegi
 						religion_group = oldworld
 						culture_group = mid_atlantic
 						culture_group = north_atlantic
@@ -2356,6 +2358,7 @@ gender_laws = {
 				OR = {
 					has_religion_feature = religion_matriarchal
 					religion = gaian
+					religion = furiegi
 					trait = way_branch
 					trait = machete_female
 					AND = {
@@ -2401,6 +2404,7 @@ gender_laws = {
 					}
 					religion = gaian
 					religion = edenite
+					religion = furiegi
 					trait = way_branch
 					#religion = neomayan					
 				}
