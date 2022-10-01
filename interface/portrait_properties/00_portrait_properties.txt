@@ -1614,10 +1614,11 @@
 						title = k_ursuline_state
 						title = d_lebanon_brethren
 						title = e_china_west_governor
+						title = d_dorados
 					}
 				}
-				trait = dorado
 			}
+			NOT = { trait = dorado }
 		}
 		modifier = {
 			factor = 0
@@ -1662,6 +1663,7 @@
 								title = k_ursuline_state
 								title = d_lebanon_brethren
 								title = e_china_west_governor
+								title = d_dorados
 							}
 						}
 					}
@@ -3184,7 +3186,6 @@
 						title = d_st_ursulas_chosen
 						title = k_ursuline_state
 						title = d_lebanon_brethren
-						title = d_dorados
 						title = e_china_west_governor
 					}
 				}
@@ -3241,9 +3242,7 @@
 						title = d_knights_of_peter_claver
 						title = d_st_ursulas_chosen
 						title = k_ursuline_state
-						title = d_lebanon_brethren
-						title = d_dorados
-						
+						title = d_lebanon_brethren						
 					}
 				}
 			}
@@ -6744,14 +6743,17 @@
 				value = on
 			}
 			OR = {
-				religion = catholic
-				religion = ursuline
+				religion_group = christian
+				# religion = catholic
+				# religion = ursuline
+				# religion = cristo_rey
 				religion = revelationist_reformed
-				religion = cristo_rey
+				religion_group = cult_of_saints
 			}
 			OR = {
 				has_landed_title = d_knights_of_columbus
-				has_landed_title = d_cristo_rey 
+				has_landed_title = d_cristo_rey
+				has_landed_title = d_dorados
 				has_landed_title = d_knights_of_peter_claver
 				has_landed_title = d_st_ursulas_chosen
 				has_landed_title = k_ursuline_state
@@ -6759,7 +6761,6 @@
 				has_landed_title = d_flaming_sword
 				has_landed_title = d_national_cathedral
 				has_landed_title = d_salvation_army
-				has_landed_title = d_dorados
 				liege = { has_landed_title = d_knights_of_columbus }
 				liege = { has_landed_title = d_knights_of_peter_claver }
 				liege = { has_landed_title = d_st_ursulas_chosen }
@@ -6769,6 +6770,7 @@
 				liege = { has_landed_title = d_national_cathedral }
 				liege = { has_landed_title = d_salvation_army }
 				liege = { has_landed_title = d_dorados }
+				trait = dorado
 			}
 		}
 		modifier = { #Wearable Crown artifacts.
@@ -7173,7 +7175,11 @@
 		
 		modifier = {
 			factor= 0
-			NOT = { trait= dorado }
+			NOR = {
+				has_landed_title = d_dorados
+				liege = { has_landed_title = d_dorados }
+				trait = dorado
+			}
 		}
 	}
 }
