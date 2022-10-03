@@ -1,4 +1,4 @@
-max_provinces = 2322
+max_provinces = 2325
 definitions = "definition.csv"
 provinces = "provinces.bmp"
 positions = "positions.txt"
@@ -20,11 +20,11 @@ sea_zones = { 870 915 }
 # Atlantic 2
 sea_zones = { 1443 1588 }
 # Pacific 3
-sea_zones = { 1589 1626 }
+sea_zones = { 1589 1627 }
 # Lakes 4
 sea_zones = { 1301 1442 }
 # Lakes 5
-sea_zones = { 1627 1727 }
+sea_zones = { 1627 1729 } #1627 is now a Sea of Cortes region
 # Atlantic 6
 sea_zones = { 923 963 }
 # Atlantic 7
@@ -35,7 +35,8 @@ sea_zones = { 2207 2222 }
 sea_zones = { 2230 2242 }#2242
 # Bravo 10
 sea_zones = { 2285 2286 }
-
+#Lakes 11
+sea_zones = {2322 2324}
 ocean_region = {	
 	sea_zones = { 1 2 6 7 10 } # Atlantic Ocean
 }
