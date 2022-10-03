@@ -665,9 +665,8 @@ justo_adventure = {
 			text = other_invasion_succ_tip
 			hidden_tooltip = {
 				FROM = { 
-					usurp_title_plus_barony_if_unlanded_and_vassals = {
-						target = ROOT 
-						type = claim
+					any_demesne_title = {
+						usurp_title = ROOT
 					}
 				}
 			}
