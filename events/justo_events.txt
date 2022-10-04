@@ -1,6 +1,6 @@
 namespace = justo
 
-#special thanks to TuPadre, Sky and Mongoose Corsair
+#special thanks to TuPadre, Sky, Mongoose Corsair, Whizzer and Huk
 
 character_event = { # event to start the main event chain in a few days
 	id = justo.0
@@ -101,7 +101,6 @@ character_event = { #creates the prelate's envoy
 	
 	only_playable = yes
 	religion_group = christian
-	is_triggered_only = yes
 	
 	trigger = {
 		has_character_flag = the_justo_armas
@@ -832,7 +831,6 @@ character_event = { #creates the Pope's envoy
 	
 	only_playable = yes
 	religion_group = christian
-	is_triggered_only = yes
 	
 	trigger = {
 		has_character_flag = the_justo_armas
@@ -906,6 +904,11 @@ narrative_event = { #the Pope's man
 					grant_title = d_friends
 					set_defacto_liege = ROOT
 					wealth = 500
+					opinion = {
+						modifier = opinion_loyal_servant
+						who = ROOT
+						years = 100
+					}
 				}
 				set_global_flag = catholic_friends
 			}
@@ -1062,9 +1065,11 @@ character_event = { #the event that will fire the request events
 		if = {
 			limit = { has_global_flag = catholic_friends }
 			d_friends = {
-				set_variable = {
-					which = friendstroops
-					value = 0
+				holder_scope = {
+					set_variable = {
+						which = friendstroops
+						value = 0
+					}
 				}
 			}
 			any_playable_ruler	= {
@@ -1345,9 +1350,11 @@ narrative_event = { #Catholic Friends of Mexico Ask for a Donation
 			text = EVTOPTB_justo34_TT
 			hidden_effect = {
 				d_friends = {
-					change_variable = {
-						which = friendstroops
-						value = 1
+					holder_scope = {
+						change_variable = {
+							which = friendstroops
+							value = 1
+						}
 					}
 				}
 			}
@@ -1394,21 +1401,9 @@ narrative_event = { #Catholic Friends of Mexico Ask for a Donation
 			hidden_effect = {
 				d_friends = {
 					holder_scope = {
-						spawn_unit = {
-							owner = PREV
-							province = PREV
-							home = PREV
-							earmark = friends_units
-						  
-							troops = {
-								archers = { 5 10 }
-								heavy_infantry = { 10 15 }
-								knights  = { 10 15 }
-							}
-
-							attrition = 0
-			
-							maintenance_multiplier = 0.5
+						change_variable = {
+							which = friendstroops
+							value = 1
 						}
 					}
 				}
@@ -1533,10 +1528,6 @@ narrative_event = { #JUSTO ARMAS!!!!!
 								value >= 1
 							}
 						}
-						subtract_variable = {
-							which = friendstroops
-							value = 1
-						}
 						holder_scope = {
 							spawn_unit = {
 								owner = PREV
@@ -1544,15 +1535,19 @@ narrative_event = { #JUSTO ARMAS!!!!!
 								home = PREV
 								  
 								troops = {
-									archers = { 50 50 }
-									heavy_infantry = { 25 50 }
-									knights  = { 25 25 }
+									archers = { 15 15 }
+									heavy_infantry = { 10 10 }
+									knights  = { 5 5 }
 								}
 
 								attrition = 0
 					
 								maintenance_multiplier = 0.5
 							}
+						}
+						subtract_variable = {
+							which = friendstroops
+							value = 1
 						}
 					}
 				}
@@ -1680,7 +1675,6 @@ character_event = { #fires the death events for the Prelade and Miramón and the
 			}
 			death = {
 				death_reason = death_execution
-				killer = FROM
 			}
 		}
 	}
@@ -1875,6 +1869,8 @@ character_event = { #triggers The Friends Arrive
 	}
 	
 	immediate = {
+		FROM = { location = { save_event_target_as = friends_arriving_location } }
+		set_global_flag = friends_arrived
 		e_mexico = { #fires for anyone at war with the Benemerito
 			holder_scope = {
 				any_war = {
@@ -1887,8 +1883,6 @@ character_event = { #triggers The Friends Arrive
 				}
 			}
 		}
-		FROM = { location = { save_event_target_as = friends_arriving_location } }
-		set_global_flag = friends_arrived
 	}
 }
 
@@ -1896,6 +1890,7 @@ narrative_event = { #The Friends Arrive
 	id = justo.47
 	title = "justo.47.name"
 	desc = justo.47.desc
+	picture = GFX_evt_bunch_of_knights
 	
 	only_playable = yes
 	is_triggered_only = yes
@@ -1911,48 +1906,47 @@ narrative_event = { #The Friends Arrive
 			has_character_flag = the_justo_armas
 		}
 		d_friends = {
-			hidden_effect = {
-				while = {
-					limit = {
-						check_variable = {
-							which = friendstroops
-							value >= 1
-						}
-					}
-					subtract_variable = {
-						which = friendstroops
-						value = 1
-					}
-					holder_scope = {
-						spawn_unit = {
-							owner = PREV
-							province = friends_arriving_location
-							home = PREV
-							  
-							troops = {
-								archers = { 50 50 }
-								heavy_infantry = { 25 50 }
-								knights  = { 25 25 }
-							}
+            holder_scope = {
+                hidden_effect = {
+                    while = {
+                        limit = {
+                            check_variable = {
+                                which = friendstroops
+                                value >= 1
+                            }
+                        }
+                        subtract_variable = {
+                            which = friendstroops
+                            value = 1
+                        }
+                        spawn_unit = {
+                            owner = THIS
+                            province = event_target:friends_arriving_location
+                            home = event_target:friends_arriving_location
+                              
+                            troops = {
+                                archers = { 15 15 }
+                                heavy_infantry = { 10 10 }
+                                knights  = { 5 5 }
+                            }
 
-							attrition = 0
-				
-							maintenance_multiplier = 0.5
-						}
-					}
-				}
-			}
-			holder_scope = {
-				join_attacker_wars = c_6900449
-				if = {
-					limit = { has_character_flag = is_the_gringo }
-					save_event_target_as = the_gringo
-				}
-			}
-		}
+                            attrition = 0
+                    
+                            maintenance_multiplier = 0.5
+                        }
+                    }
+                }
+                join_attacker_wars = c_6900449
+                    if = {
+                        limit = { has_character_flag = is_the_gringo }
+                        save_event_target_as = the_gringo
+                    }
+            }
+        }
+
 		event_target:the_gringo = {
 			add_friend = ROOT
-			add_friend = prelate_envoy
+			add_friend = event_target:prelate_envoy
 		}
 	}
 	
@@ -2151,7 +2145,11 @@ narrative_event = { #Su Alteza Imperial or Justo Armas Victorious
 		narrative_event = { id = justo.51 days = 1}
 		if = {
 			limit = { has_global_flag = catholic_friends }
-			set_defacto_vassal = d_friends
+			d_friends = {
+				holder_scope = {
+					set_defacto_liege = ROOT
+				}
+			}
 		}
 		any_independent_ruler = {
 			limit = {
@@ -2161,6 +2159,11 @@ narrative_event = { #Su Alteza Imperial or Justo Armas Victorious
 		}
 		d_justo = {
 			unsafe_destroy_landed_title = THIS
+		}
+		hidden_effect = {
+			any_demesne_province = {
+				remove_province_modifier = occupied
+			}
 		}
 	}
 	
@@ -2186,6 +2189,7 @@ narrative_event = { #Su Alteza Imperial or Justo Armas Victorious
 			}
 		}
 	}
+	
 }
 
 narrative_event = { #with Friends Like This or A Promise to Keep
@@ -2392,11 +2396,29 @@ character_event = { #either fires a war or the last event
 					}
 				}
 			}
+			else = {
+				ROOT = {
+					spawn_unit = {
+						province = 1767
+						home = 1767
+						owner = THIS
+						leader = THIS
+						
+						troops = {
+							archers = { 50 50 }
+							light_infantry = { 500 500 }
+							heavy_infantry = { 800 800 }
+							light_cavalry = { 100 100 }
+						}
+						
+						attrition = 0
+					}
+				}
+			}
 		}
 		
 		if = {
 			limit = { has_global_flag = prelate_rebel }
-			set_defacto_vassal = d_cristo_rey
 			d_cristo_rey = {
 				holder_scope = {
 					set_character_flag = the_rebel_prelate
@@ -2424,6 +2446,24 @@ character_event = { #either fires a war or the last event
 							}
 						}
 					}
+				}
+			}
+			set_defacto_vassal = event_target:the_rebel_prelate
+			ROOT = {
+				spawn_unit = {
+					province = 1767
+					home = 1767
+					owner = THIS
+					leader = THIS
+						
+					troops = {
+						archers = { 50 50 }
+						light_infantry = { 500 500 }
+						heavy_infantry = { 800 800 }
+						light_cavalry = { 100 100 }
+					}
+					
+					attrition = 0
 				}
 			}
 		}
@@ -2490,7 +2530,7 @@ narrative_event = { #El Justo Cristero
 		name = EVTOPTD_justo53
 		trigger = {
 			NOT = { religion = cristo_rey }
-			de_facto_liege_or_above = e_mexico
+			de_facto_liege_title = e_mexico
 		}
 	}
 	option = {
@@ -2512,7 +2552,7 @@ narrative_event = { #El Justo Cristero
 				religion = cristo_rey
 				religion = sacred_heart
 				has_landed_title = e_mexico
-				de_facto_liege_or_above = e_mexico
+				de_facto_liege = e_mexico
 			}
 		}
 	}
@@ -2553,7 +2593,7 @@ narrative_event = { #Viva Cristo Rey
 		name = EVTOPTC_justo54
 		trigger = {
 			religion = cristo_rey
-			de_facto_liege_or_above = e_mexico
+			de_facto_liege  = e_mexico
 			ai = yes
 		}
 	}
@@ -2561,7 +2601,7 @@ narrative_event = { #Viva Cristo Rey
 		name = EVTOPTC_justo54
 		trigger = {
 			religion = cristo_rey
-			de_facto_liege_or_above = e_mexico
+			de_facto_liege  = e_mexico
 			ai = no
 		}
 		e_mexico = {
@@ -2573,7 +2613,7 @@ narrative_event = { #Viva Cristo Rey
 		name = EVTOPTD_justo54
 		trigger = {
 			NOT = { religion = cristo_rey }
-			de_facto_liege_or_above = e_mexico
+			de_facto_liege  = e_mexico
 		}
 	}
 	option = {
@@ -2581,7 +2621,7 @@ narrative_event = { #Viva Cristo Rey
 		trigger = {
 			NOR = {
 				religion = cristo_rey
-				de_facto_liege_or_above = e_mexico
+				de_facto_liege  = e_mexico
 				has_character_flag = the_justo_armas
 			}
 		}
@@ -2634,7 +2674,7 @@ narrative_event = { #The Foreign Benemerito
 		name = EVTOPTC_justo55
 		trigger = {
 			NOT = { religion = cristo_rey }
-			de_facto_liege_or_above = e_mexico
+			de_facto_liege  = e_mexico
 		}
 	}
 	option = {
@@ -2660,7 +2700,7 @@ narrative_event = { #The Foreign Benemerito
 			NOR = {
 				religion = cristo_rey
 				has_landed_title = e_mexico
-				de_facto_liege_or_above = e_mexico
+				de_facto_liege  = e_mexico
 			}
 		}
 	}
@@ -2744,7 +2784,7 @@ narrative_event = { #A man of his word
 	option = {
 		name = EVTOPTD_justo56
 		trigger = {
-			de_facto_liege_or_above = e_mexico
+			de_facto_liege  = e_mexico
 		}
 	}
 	
@@ -2755,7 +2795,7 @@ narrative_event = { #A man of his word
 				religion = catholic
 				religion = cristo_rey
 				has_landed_title = e_mexico
-				de_facto_liege_or_above = e_mexico
+				de_facto_liege  = e_mexico
 			}
 		}
 	}
@@ -2802,21 +2842,21 @@ narrative_event = { #Benemérito Prelado
 		name = EVTOPTC_justo54
 		trigger = {
 			religion = cristo_rey
-			NOT = { de_facto_liege_or_above = e_mexico }
+			NOT = { de_facto_liege  = e_mexico }
 		}
 	}
 	option = {
 		name = EVTOPTC_justo57
 		trigger = {
 			religion = cristo_rey
-			de_facto_liege_or_above = e_mexico
+			de_facto_liege  = e_mexico
 		}
 	}
 	
 	option = {
 		name = EVTOPTD_justo57
 		trigger = {
-			de_facto_liege_or_above = e_mexico
+			de_facto_liege  = e_mexico
 			NOR = { 
 				religion = cristo_rey 
 				religion = catholic
@@ -2837,7 +2877,7 @@ narrative_event = { #Benemérito Prelado
 			NOR = {
 				religion = cristo_rey
 				religion = catholic
-				de_facto_liege_or_above = e_mexico
+				de_facto_liege  = e_mexico
 			}
 		}	
 	}
@@ -2909,7 +2949,7 @@ narrative_event = { #The Conqueror of Mexico
 				religion = catholic
 				religion = cristo_rey
 			}
-			de_facto_liege_or_above = e_mexico
+			de_facto_liege  = e_mexico
 		}
 	}
 	
@@ -2920,7 +2960,7 @@ narrative_event = { #The Conqueror of Mexico
 				religion = cristo_rey
 				religion = catholic
 				has_landed_title = e_mexico
-				de_facto_liege_or_above = e_mexico
+				de_facto_liege  = e_mexico
 			}
 		}
 	}
@@ -3037,7 +3077,7 @@ narrative_event = {
 				religion = cristo_rey
 				has_landed_title = e_mexico
 			}
-			de_facto_liege_or_above = e_mexico
+			de_facto_liege  = e_mexico
 		}
 	}
 	
@@ -3048,7 +3088,7 @@ narrative_event = {
 				religion = catholic
 				religion = cristo_rey
 				has_landed_title = e_mexico
-				de_facto_liege_or_above = e_mexico
+				de_facto_liege  = e_mexico
 			}
 		}
 	}
@@ -3109,8 +3149,8 @@ narrative_event = {
 				religion = catholic
 			}
 			OR = {
-				de_facto_liege_or_above = e_mexico
-				de_facto_liege_or_above = e_latino
+				de_facto_liege  = e_mexico
+				de_facto_liege  = e_latino
 			}
 		}
 	}
@@ -3183,8 +3223,8 @@ narrative_event = {
 			NOR = {
 				religion = cristo_rey
 				religion = catholic
-				de_facto_liege_or_above = e_mexico
-				de_facto_liege_or_above = e_latino
+				de_facto_liege = e_mexico
+				de_facto_liege = e_latino
 				has_character_flag = the_justo_armas
 			}
 		}

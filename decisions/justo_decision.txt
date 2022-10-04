@@ -160,20 +160,9 @@ decisions = {
 					hidden_effect = {
 						d_friends = {
 							holder_scope = {
-								spawn_unit = {
-									owner = PREV
-									province = PREV
-									home = PREV
-								  
-									troops = {
-										archers = { 50 50 }
-										heavy_infantry = { 25 50 }
-										knights  = { 25 25 }
-									}
-
-									attrition = 0
-					
-									maintenance_multiplier = 0.5
+								change_variable = {
+									which = friendstroops
+									value = 1
 								}
 							}
 						}
