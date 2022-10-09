@@ -1364,6 +1364,7 @@
 	culture=coloradan
 	religion=edenite
 	mother=1890098
+	prestige=400
 	trait=skilled_tactician
 	trait=duelist
 	2644.10.1={birth=yes}
@@ -1808,10 +1809,11 @@
 	name="Alicent"
 	dynasty=1889030
 	mother=1890126
+	father=1890157
 	female=yes
 	culture=snakelander
 	religion=edenite
-	trait=pneumonic
+	trait=sickly
 	2592.1.12={birth=yes}
 	2595.7.11={death={death_reason=death_trait}}
 }
@@ -1846,7 +1848,7 @@
 	trait=chaste
 	trait=deceitful
 	2572.9.11={birth=yes}
-	2590.8.8={add_matrilineal_spouse=1890128}
+	2588.8.8={add_matrilineal_spouse=1890128}
 	2641.5.3={death=yes}
 }
 
@@ -1862,8 +1864,8 @@
 	trait=dull
 	father=1890128
 	mother=1890129
-	2594.6.15={birth=yes}
-	2638.8.8={add_spouse=1890131}
+	2589.6.15={birth=yes}
+	2628.8.8={add_spouse=1890131}
 	2660.5.3 ={death=yes}
 }
 
@@ -1871,6 +1873,7 @@
 	name="Mary Anne"
 	dynasty=5001184
 	culture=coloradan
+	female=yes
 	religion=edenite
 	trait=mastermind_theologian
 	trait=devout
@@ -1938,6 +1941,7 @@
 1890135={
 	name="Jonathan"
 	dynasty=1889028
+	father=1890134
 	#dna="bniigdosopu"
 	culture=snakelander
 	religion=mormon
@@ -1992,7 +1996,7 @@
 	trait=shrewd
 	trait=patient
 	trait=deceitful
-	2401.1={birth=yes}
+	2401.1.1={birth=yes}
 	2466.1.1={death=yes}
 }
 
@@ -2000,6 +2004,7 @@
 	name="Madeleine"
 	dynasty=1802106#140900030 #Murgatroyd
 	culture=siskiyouan
+	female=yes
 	father=1890142
 	mother=1890143
 	religion=pagan#forester
@@ -2515,6 +2520,7 @@
 	dynasty=1889030
 	female=yes
 	father=1890128
+	mother=1890129
 	religion=edenite
 	trait=kind
 	trait=shrewd
@@ -2557,10 +2563,10 @@
 	trait=patient
 	trait=envious
 	2617.3.3={birth=yes}
-	2662.9.1={birth=yes
-	add_trait=crippled
+	2662.9.1={
 		effect={
 			add_rival=1890003 #Lawrence Peter overthrew him
+			add_trait=crippled
 		}
 	}
 }
@@ -2606,6 +2612,7 @@
 	name="Pebbles"
 	dynasty=5001192 #Krakauer
 	culture=mountainer
+	female=yes
 	father=1875068
 	mother=1890174
 	religion=gaian#forester
@@ -2625,8 +2632,8 @@
 
 1890177={
 	name="Mandark"
-	culture=mountaineer
-	dynasty=1802106#140900030 #Murgatroyd
+	culture=mountainer 
+	dynasty=1802106#140900030 #Murgatroyd 
 	father=1890155
 	mother=1890179
 	trait=quick
@@ -2641,7 +2648,7 @@
 
 1890178={
 	name="Thaddeus"
-	culture=mountaineer
+	culture=mountainer
 	dynasty=1802106#140900030 #Murgatroyd
 	father=1890155
 	mother=1890179
@@ -2667,7 +2674,7 @@
 	mother=1890162
 	father=1890160
 	religion=gaian#forester
-	2694.4.7={birth=yes}
+	2594.4.7={birth=yes}
 	2624.4.8={add_spouse=1890155}
 	2665.1.1={employer=1875068}
 }
@@ -2677,7 +2684,7 @@
 	dynasty=5001192 #Krakauer
 	culture=mountainer
 	father=1890176
-	mother=1890176
+	mother=1890170
 	religion=gaian#forester
 	trait=mastermind_theologian
 	trait=genius
@@ -2693,7 +2700,7 @@
 	dynasty=5001192 #Krakauer
 	culture=mountainer
 	father=1890176
-	mother=1890176
+	mother=1890170
 	religion=gaian#forester
 	trait=skilled_tactician
 	trait=distractible
@@ -2712,7 +2719,7 @@
 	culture=mountainer
 	female=yes
 	father=1890176
-	mother=1890176
+	mother=1890170
 	religion=gaian#forester
 	trait=distractible
 	trait=gregarious
@@ -2758,7 +2765,7 @@
 	trait=sympathy_latter_day_saints
 	father=1890130
 	mother=1890131
-	2663.1.1={birth=yes}
+	2643.1.1={birth=yes}
 	2644.2.2={add_spouse=1890181}
 	2720.1.19={death=yes}
 }
@@ -2769,8 +2776,8 @@
 	culture=mountainer
 	trait=adopted
 	trait=strong
-	father=1890185
-	mother=1890181
+	mother=1890185
+	father=1890181
 	religion=gaian#forester
 	2664.10.10={birth=yes}
 } 
