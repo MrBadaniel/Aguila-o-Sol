@@ -42,7 +42,6 @@ narrative_event = { #prelate had a vision event
 	major = yes
 	
 	only_playable = yes
-	#
 	is_triggered_only = yes
 	
 	trigger = {
@@ -3022,6 +3021,7 @@ narrative_event = {
 					show_scope_change = no
 					grant_title = ROOT
 					copy_title_laws = e_mexico
+					succession = gavelkind
 				}
 				k_bajio = {
 					show_scope_change = no
@@ -3059,6 +3059,7 @@ narrative_event = {
 					destroy_landed_title = THIS
 				}
 				set_government_type = feudal_government
+				
 			}
 		}
 		if = {
@@ -3175,6 +3176,7 @@ narrative_event = {
 						show_scope_change = no
 						grant_title = ROOT
 						copy_title_laws = e_mexico
+						succession = gavelkind
 					}
 					k_bajio = {
 						show_scope_change = no
