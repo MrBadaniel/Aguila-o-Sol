@@ -1710,8 +1710,11 @@ d_navegante = {
 	
 	assimilate = no # Nothing drifts in or out
 	caliphate = yes	
-	allow = {
+	allow = { 
 		religion = navegante
+	OR = {
+		AND = {
+			ai = no
 		OR = {
 				AND = {
 				trait = born_in_the_caul
@@ -1745,6 +1748,39 @@ d_navegante = {
 				title = d_sonora
 				title = d_sinaloa
 			}
+		}
+		AND = {
+			ai = yes
+		OR = {
+				AND = {
+				trait = born_in_the_caul
+				prestige = 225
+				piety = 225
+				}	
+				AND = {
+				trait = levita
+				prestige = 500
+				piety = 500
+				}
+				AND = {
+				trait = aaronita
+				prestige = 225
+				piety = 225
+				}
+				AND = {
+				trait = melquisedequita
+				prestige = 125
+				piety = 125
+				}
+				AND = {
+				prestige = 750
+				piety = 750
+				}
+			}
+			completely_controls = d_baja_sur
+			#title = k_baja_california
+			}	
+		}
 	}
 	dynasty_title_names = no 	# Will not be named "Seljuk", etc.
 }
