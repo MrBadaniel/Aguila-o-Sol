@@ -16,7 +16,7 @@ decisions = {
 			}
 		}
 		allow = {
-			primary_title = { title = k_mexico }
+			#primary_title = { title = k_mexico }
 			prestige = 8000
 			completely_controls = k_mexico
 			completely_controls = d_veracruz
@@ -27,6 +27,12 @@ decisions = {
 		}
 		effect = {
 			set_global_flag = mexico_restored
+			if = {
+				limit = {
+					NOT = {	religion_group = christian }
+				}
+				set_global_flag = no_more_cristiadas
+			}
 			narrative_event = { id = MXR.20 tooltip = EVTTOOLTIPLoR.20 }
 		}
 		ai_will_do = {
