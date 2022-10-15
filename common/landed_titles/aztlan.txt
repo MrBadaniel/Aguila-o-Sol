@@ -1341,31 +1341,27 @@ e_aztlan = {
 
 			capital = 228 # c_matamoros
 
-			c_matamoros = {
-				color = { 239 228 175 }
+			c_reynosa = {
+				color = { 235 218 95 }
 				color2= { 255 255 255 }
-
-				b_matamoros_TAM = {}
+				
 				b_reynosa_TAM = {}
 				b_ciudad_rio_bravo_TAM = {
 					used_for_dynasty_names = no
 					short_name = yes
 				}
-				b_valle_hermoso_TAM = {
-					used_for_dynasty_names = no
-				}
-				b_el_mezquital_TAM = {}
 				b_nuevo_progresso_TAM = {
 					used_for_dynasty_names = no
 				}
-				b_rio_rico_TM = {}
-				b_el_control_TAM = {}
+				b_ejido_los_cavazos_TAM = {}
+				b_buenavista_TAM = {}
+				b_balcones_de_alcala_TAM = {}
+				b_el_ebanito_TAM = {}
+				b_alfredo_v_bonfil_TAM = {} 
 			}
-			c_falcon = {
+			c_brazo_del_benemerito = {
 				color = { 247 240 191 }
 				color2= { 255 255 255 }
-	
-				plautdietsch = "Falke"
 
 				b_ciudad_miguel_aleman_TAM = {
 					used_for_dynasty_names = no
@@ -1383,10 +1379,40 @@ e_aztlan = {
 					used_for_dynasty_names = no
 					short_name = yes
 				}
-				b_los_aldamas_NLE = {}
-				b_agualeguas_NLE = {}
 				b_gustavo_diaz_ordaz_TM = {}
+				b_valadeces_TAM = {}
 			}
+			c_matamoros = {
+				color = { 239 228 175 }
+				color2= { 255 255 255 }
+
+				b_matamoros_TAM = {}
+				b_ejido_longoreno_TAM = {}
+				b_valle_hermoso_TAM = {
+					used_for_dynasty_names = no
+				}
+				b_anahuac_TAM = { }
+				b_el_control_TAM = {}
+				b_arojo_del_tigre_TAM = {}
+				b_el_galanero_TAM = {}
+				b_el_ranchito_y_refugio_TAM = {}
+				b_faro_bagdad_TAM = {}
+
+#				b_el_mezquital_TAM = {}
+#				b_nuevo_progresso_TAM = {
+#					used_for_dynasty_names = no
+#				}
+#				b_rio_rico_TM = {}
+				
+			}
+		}
+		
+		d_la_punta = {
+			color = { 247 240 91 }
+			color2 = { 255 255 255 }
+			
+			capital = 231 #Nuevo Laredo
+			
 			c_nuevo_laredo = {
 				color = { 235 218 95 }
 				color2= { 255 255 255 }
@@ -1394,13 +1420,52 @@ e_aztlan = {
 				b_nuevo_laredo_TAM = {
 					used_for_dynasty_names = no
 				}
+				b_hector_calderon_TAM = {}
+				b_valle_dorado_TAM = {}
+				b_santa_cecilia_TAM = {}
+				b_puente_uno_TAM = {}
+				b_puente_dos_TAM = {}
+				b_puente_tres_TAM = {}
+			}
+			
+			c_punta_de_lampazos = {
+				color = { 247 240 191 }
+				color2 = { 255 255 255 }
+				
+				b_lampazos_de_naranjo_NL = {}
 				b_colombia_NLE = {}
-				b_las_artistas_TAM = {}
-				b_el_campanario_TAM = {}
-				b_america_TAM = {}
-				b_el_desierio_TAM = {}
-				b_el_ebano_TAM = {}
-				b_el_urribeno_TAM = {}
+				b_salinillas_NL = {}
+				b_camaron_NL = {}
+				b_horcones_NL = {}
+			}
+			c_falcon = { #c_sabinas
+				color = { 247 240 191 }
+				color2= { 255 255 255 }
+
+				plautdietsch = "Falke"
+
+				b_sabinas_hidalgo_NL = {}
+				b_villaldama_NL = {}
+				b_cerralvo_NL = {}
+				b_agualeguas_NLE = {}
+				b_bustamante_NL = {}
+				b_general_trevino_NL = {}
+				b_melchor_ocampo_NL = {}
+				b_paras_NL = {}
+			}
+		}
+
+				
+
+
+
+			#	b_colombia_NLE = {}
+			#	b_las_artistas_TAM = {}
+			#	b_el_campanario_TAM = {}
+			#	b_america_TAM = {}
+			#	b_el_desierio_TAM = {}
+			#	b_el_ebano_TAM = {}
+			#	b_el_urribeno_TAM = {}
 			}
 		}
 	}
