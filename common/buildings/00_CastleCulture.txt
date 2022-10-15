@@ -11427,19 +11427,19 @@ castle = {
 		desc = ca_culture_pinoy_1_desc
 		potential = {
 			OR = {
-				culture_group = pinoy
+				culture = pinoy
 				has_building = ca_culture_pinoy_1
 			}
 		}
 		is_active_trigger = {
 			ROOT = {
-				culture_group = pinoy
+				culture = pinoy
 			}
 		} 
 		trigger = { 
 			TECH_CASTLE_CONSTRUCTION = 0
 			ROOT = {
-				culture_group = pinoy
+				culture = pinoy
 			}
 		}
 		prerequisites = { ca_wall_2 }
@@ -11457,20 +11457,20 @@ castle = {
 		desc = ca_culture_pinoy_1_desc
 		potential = {
 			OR = {
-				culture_group = pinoy
+				culture = pinoy
 				has_building = ca_culture_pinoy_1
 				has_building = ca_culture_pinoy_2
 			}
 		}
 		is_active_trigger = {
 			ROOT = {
-				culture_group = pinoy
+				culture = pinoy
 			}
 		} 
 		trigger = { 
 			TECH_CASTLE_CONSTRUCTION = 1
 			ROOT = {
-				culture_group = pinoy
+				culture = pinoy
 			}
 		}
 		upgrades_from = ca_culture_pinoy_1
@@ -11488,7 +11488,7 @@ castle = {
 		desc = ca_culture_pinoy_1_desc
 		potential = {
 			OR = {
-				culture_group = pinoy
+				culture = pinoy
 				has_building = ca_culture_pinoy_1
 				has_building = ca_culture_pinoy_2
 				has_building = ca_culture_pinoy_3
@@ -11496,13 +11496,13 @@ castle = {
 		}
 		is_active_trigger = {
 			ROOT = {
-				culture_group = pinoy
+				culture = pinoy
 			}
 		} 
 		trigger = { 
 			TECH_CASTLE_CONSTRUCTION = 2
 			ROOT = {
-				culture_group = pinoy
+				culture = pinoy
 			}
 		}
 		upgrades_from = ca_culture_pinoy_2
@@ -11520,7 +11520,7 @@ castle = {
 		desc = ca_culture_pinoy_1_desc
 		potential = {
 			OR = {
-				culture_group = pinoy
+				culture = pinoy
 				has_building = ca_culture_pinoy_1
 				has_building = ca_culture_pinoy_2
 				has_building = ca_culture_pinoy_3
@@ -11529,13 +11529,13 @@ castle = {
 		}
 		is_active_trigger = {
 			ROOT = {
-				culture_group = pinoy
+				culture = pinoy
 			}
 		} 
 		trigger = { 
 			TECH_CASTLE_CONSTRUCTION = 4
 			ROOT = {
-				culture_group = pinoy
+				culture = pinoy
 			}
 		}
 		upgrades_from = ca_culture_pinoy_3
