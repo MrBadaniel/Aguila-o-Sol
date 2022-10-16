@@ -1,4 +1,4 @@
-###√ÑNSI
+###ƒNSI
 
 e_lone_star = {
 	color = { 4 144 178 }
@@ -931,17 +931,17 @@ e_lone_star = {
 			c_gonzales = {
 				color = { 0 75 255 }
 				texan = "Lavaca"
-				tejano = "Gonz√°les"
-				bravo = "Gonz√°les"
-				menomex = "Gonz√°les"
-				altiplanense = "Gonz√°les"
-				chino = "Gonz√°les"
-				choyero = "Gonz√°les"
-				chilango = "Gonz√°les"
-				abajeno = "Gonz√°les"
-				jarocho = "Gonz√°les"
-				tapatio = "Gonz√°les"
-				occidental = "Gonz√°les"
+				tejano = "Gonz·les"
+				bravo = "Gonz·les"
+				menomex = "Gonz·les"
+				altiplanense = "Gonz·les"
+				chino = "Gonz·les"
+				choyero = "Gonz·les"
+				chilango = "Gonz·les"
+				abajeno = "Gonz·les"
+				jarocho = "Gonz·les"
+				tapatio = "Gonz·les"
+				occidental = "Gonz·les"
 				b_gonzales_TX = {}
 				b_nixon_TX = {
 					used_for_dynasty_names = no
@@ -1133,16 +1133,16 @@ e_lone_star = {
 		
 		texan = "Texahoma"
 		grangelander = "Texahoma"
-		bravo = "Comancher√≠a"
-		menomex = "Comancher√≠a"
-		altiplanense = "Comancher√≠a"
-		chino = "Comancher√≠a"
-		choyero = "Comancher√≠a"
-		chilango = "Comancher√≠a"
-		abajeno = "Comancher√≠a"
-		jarocho = "Comancher√≠a"
-		tapatio = "Comancher√≠a"
-		occidental = "Comancher√≠a"
+		bravo = "ComancherÌa"
+		menomex = "ComancherÌa"
+		altiplanense = "ComancherÌa"
+		chino = "ComancherÌa"
+		choyero = "ComancherÌa"
+		chilango = "ComancherÌa"
+		abajeno = "ComancherÌa"
+		jarocho = "ComancherÌa"
+		tapatio = "ComancherÌa"
+		occidental = "ComancherÌa"
 
 		capital = 322 # Lawton / Fort Sill
 
@@ -1347,7 +1347,7 @@ e_lone_star = {
 				color = { 255 250 100 }
 				color2= { 255 255 255 }
 
-				comanche = "G√∫lv√†u"
+				comanche = "G˙lv‡u"
 				texan = "Farhandle"
 				b_dalhart_TX = {}
 				b_dumas_TX = {}
@@ -1519,168 +1519,6 @@ e_lone_star = {
 				b_shattuck_OK = {}
 				b_rosston_OK = {}
 				b_gate_OK = {}
-			}
-		}
-	}
-	k_new_mexico = {
-		color={ 231 229 36 }
-		color2={ 137 253 243 }
-	
-		tejano = "Nuevo M√©jico"
-		bravo = "Nuevo M√©xico"
-		altiplanense = "Nuevo M√©xico"
-		menomex = "Nuevo M√©xico"
-		chino = "Nuevo M√©xico"
-		occidental = "Nuevo M√©xico"
-		neomexicano = "Nuevo M√©xico"
-		navajo = "Yoot√≥ Hahoodzo"
-		southron = "South Virginia"
-
-		capital = 339 # Santa Fe
-	
-		#allow = {
-		#	conditional_tooltip = {
-		#		trigger = {
-		#			k_new_mexico = {
-		#				is_titular = yes
-		#			}
-		#		}
-		#		k_new_mexico = {
-		#			is_titular = no
-		#		}
-		#	}
-		#}
-		
-		# Crusade target weight
-		catholic = 150
-		revelationist_reformed = 5
-		atomicist = 200
-		americanist = 20
-	
-		d_new_mexico = {
-			color = { 45 98 223 }
-			color2= { 255 255 255 }
-
-			tejano = "Nuevo M√©jico"
-			bravo = "Nuevo M√©xico"
-			altiplanense = "Nuevo M√©xico"
-			menomex = "Nuevo M√©xico"
-			chino = "Nuevo M√©xico"
-			occidental = "Nuevo M√©xico"
-			neomexicano = "Nuevo M√©xico"
-			navajo = "Yoot√≥ Hahoodzo"
-
-			capital = 339 # Santa Fe
-
-			c_socorro = {
-				color = { 26 68 166 }
-				color2= { 255 255 255 }
-	
-				apache = "H√©nd√©"
-
-				b_socorro_NM = {}
-				b_alto_NM = {}
-				b_ruidoso_NM = {}
-				b_carrizozo_NM = {}
-				b_capitan_NM = {}
-				b_san_antonio_NM = {}
-				b_kelly_NM = {}
-			}
-			c_sandia = {
-				color = { 107 145 233 }
-				color2= { 255 255 255 }
-
-				b_albuquerque_NM = {}
-				b_rio_rancho_NM = {}
-				b_kirtland_NM = {}
-				b_corrales_NM = {}
-				b_edgewood_NM = {}
-				b_moriarty_NM = {}
-				b_bernalillo_NM = {}
-				b_placitas_NM = {}
-			}
-			c_santa_fe = {
-				color = { 33 89 222 }
-				color2= { 255 255 255 }
-
-				b_santa_fe_NM = {}
-				b_espanola_NM = {}
-				b_chimayo_NM = {}
-				b_hernandez_NM = {}
-				b_agua_fria_NM = { #BIG IRON
-					used_for_dynasty_names = no
-				}
-				b_pecos_NM = {}
-				b_rowe_NM = {}
-				b_eldorado_NM = {}
-			}
-			c_tucumcari = {
-				color = { 164 41 28 }
-				color2= { 255 255 255 }
-
-				b_tucumcari_NM = {}
-				b_wagon_mound_NM = {}
-				b_logan_NM = {}
-				b_portales_NM = {}
-				b_san_jon_NM = {}
-				b_newkirk_NM = {}
-				b_cannon_NM = {} #major Air Force Base
-			}
-			c_roswell = {
-				color = { 101 54 24 }
-				color2= { 255 255 255 }
-				holy_site = falling_star
-				holy_site = xenoclast
-	
-				b_roswell_NM = {}
-				b_fort_sumner_NM = {}
-				b_elida_NM = {}
-				b_vaughn_NM = {}
-				b_clovis_NM = {}
-				b_caprock_NM = {}
-				b_acme_NM = {}
-			}
-		}
-		d_mesilla = {
-			color = { 106 20 21 }
-			color2= { 255 255 255 }
-
-			capital = 755 #White Sands
-
-			c_white_sands = {
-				color = { 27 130 205 }
-				color2= { 255 255 255 }
-
-				holy_site = atomicist
-				holy_site = aphite
-	
-				b_las_cruces_NM = {}
-				b_alamogordo_NM = {}
-				b_holloman_NM = {}
-				b_mesilla_NM = {}
-				b_radium_springs_NM = {
-					used_for_dynasty_names = no
-				}
-				b_rincon_NM = {}
-				b_salem_NM = {}
-				b_vado_NM = {}
-				b_truth_or_consequences_NM = {
-					used_for_dynasty_names = no
-				}
-			}
-			c_mescalero = {
-				color = { 122 90 55 }
-				color2= { 255 255 255 }
-	
-				b_mescalero_NM = {}
-				b_carlsbad_NM = {}
-				b_artesia_NM = {}
-				b_dexter_NM = {}
-				b_hagerman_NM = {}
-				b_lake_arthur_NM = {
-					used_for_dynasty_names = no
-				}
-				b_atoka_NM = {}
 			}
 		}
 	}
