@@ -1398,17 +1398,10 @@ province_event = {
 	picture = GFX_evt_stone_church
 	border = GFX_event_normal_frame_diplomacy
 	
+	culture = angeleno
+	religion_group = christian
 	only_playable = yes
 	trigger = {
-		capital_scope = {
-			region = custom_former_kingdom_mojave
-		}
-		OR = {
-			culture_group = californian
-			culture_group = west_anglo
-		}
-		independent = yes
-		religion_group = christian
 		any_demesne_province = {
 			region = custom_former_kingdom_mojave
 			NOT = { province = c_riverside }
@@ -1421,8 +1414,8 @@ province_event = {
 				NOT = { holding_type = nomad }
 			}
 		}
-		year = 2680 #doesn't happen unless Orientalism survives long enough
-		NOT = { year = 2770 }
+		year = 2680
+		NOT = { year = 2810 }
 	}	
 	
 	mean_time_to_happen = {
