@@ -1608,7 +1608,13 @@
 	trait=zealous
 	trait=just
 	trait=sayyid2
-	2590.1.1={birth=yes}
+	2590.1.1={
+		birth=yes
+		create_bloodline={
+			type=khan
+			has_dlc="Holy Fury"
+		}
+	}
 	2640.1.1={death=yes}
 }
 
