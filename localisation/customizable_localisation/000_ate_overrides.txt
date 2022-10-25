@@ -5698,6 +5698,12 @@ defined_text = { #for coronation events
 	}
 	text = {
 		trigger = {
+			religion = cristo_rey
+		}
+		localisation_key = String_Bishop
+	}
+	text = {
+		trigger = {
 			NOR = {
 				religion = catholic
 				religion = ursuline
@@ -6274,6 +6280,20 @@ defined_text = {
 	
 	text = {
 		localisation_key = String_High_Church_Crown_Desc
+		trigger = {
+			religion = high_church
+		}
+	}
+	
+	text = {
+		localisation_key = String_High_Church_Crown_Desc
+		trigger = {
+			religion = high_church
+		}
+	}
+	
+	text = {
+		localisation_key = String_Cristo_Rey_Crown_Desc
 		trigger = {
 			religion = high_church
 		}
