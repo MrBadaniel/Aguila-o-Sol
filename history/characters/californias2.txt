@@ -1297,7 +1297,7 @@
 1911140={
 	name="Sofía"
 	female=yes
-	dynasty=5001180
+	dynasty=5001180 #melendez
 	culture=joaquino
 	religion=cetic
 	trait=humble
@@ -1305,6 +1305,7 @@
 	trait=way_dove
 	trait=failed_exam
 	#trait=not_evaluated
+	father=1910148
 	2635.6.1={birth=yes}
 	2685.12.1={death=yes}
 }
@@ -1556,4 +1557,18 @@
 		}
 	}
 	2660.1.1={employer=1911075}
+}
+
+1910148 ={
+	name="Chuck"
+	dynasty=5001180
+	culture=joaquino
+	religion=nazarene
+	trait=humble
+	trait=shy
+	trait=depressed
+	trait=failed_exam
+	#trait=not_evaluated
+	2605.5.30={birth=yes}
+	2655.2.13={death=yes}
 }
