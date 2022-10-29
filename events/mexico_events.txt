@@ -5,9 +5,6 @@
 # Event ID MXR.1 - MXR.199 reserved
 #
 #######################################
-
-# Written by Henrik Eklund
-
 namespace = MXR
 
 ### Mexican Empire Restored
@@ -52,22 +49,11 @@ narrative_event = {
 				}
 			}
 		}
-		e_mexico = {
-			show_scope_change = no
-			grant_title = ROOT
-			hidden_tooltip = { make_primary_title = yes }
-			copy_title_laws = k_mexico
-			copy_title_history = k_mexico
-		}
-		k_mexico = {
-			show_scope_change = no
-			destroy_landed_title = THIS
-		}
 		hidden_tooltip = {
-			activate_title = { title = k_mexico status = no }
+			activate_title = { title = e_mexico status = no }
 			any_playable_ruler = {
 				limit = {
-					NOT = { has_landed_title = k_mexico }
+					NOT = { has_landed_title = e_mexico }
 					ai = no
 				}
 				narrative_event = { id = MXR.21 }
