@@ -1026,7 +1026,7 @@ e_yucatan = {
 	
 				yucateco = "Ich Ka'an Síijo'"
 				lacandon = "Jaban Ka'an Jok'or"
-				quichean = "Ich Ka'an Síijo'"
+				quichean = "Nïm Tinamit Elem"
 				cholano = "Ich Ka'an Síijo'"
 	
 				b_merida_YU = {
@@ -1104,6 +1104,9 @@ e_yucatan = {
 					lacandon = "Ch'óoch ool ja'"
 					quichean = "Ch'óoch ool ja'"
 					cholano = "Ch'óoch ool ja'"
+				b_tetiz_YU = {}
+				b_samahil_YU = {}
+				b_ucu_YU = {}
 				}
 			}
 			
@@ -1159,6 +1162,8 @@ e_yucatan = {
 					quichean = "Te' K'an Tok'"
 					cholano = "Te' K'an Tok'"
 				}
+				b_muxupip_YU = {}
+
 			}
 			c_ticul = { # 2278
 					color={ 78 155 128 }
@@ -1167,9 +1172,16 @@ e_yucatan = {
 				b_abala_YU ={}
 				b_chapab_YU ={}
 				b_mama_YU ={}
-				b_mayapan_YU ={}
+				b_mayapan_YU ={
+						yucateco = "Màayapáan"
+						lacandon = "Màayapáan"
+						quichean = "Màayapáan"
+						cholano = "Màayapáan"
+				}
 				b_telchaquillo_YU ={}
 				b_tecoh_YU ={}
+				b_sacalum_YU = {}
+				b_muxupip_YU = {}
 			}
 		}				
 		d_valladolid = {
@@ -1191,6 +1203,7 @@ e_yucatan = {
 				holy_site = qabantajik
 				holy_site = neomayan
 	
+				yucatanense = "Izamal"
 				yucateco = "Chi' ch'e'en Itsja'"
 				lacandon = "Chi' ch'e'en Itsja'"
 				quichean = "Chi' ch'e'en Itsja'"
@@ -1218,6 +1231,8 @@ e_yucatan = {
 				b_kantunil_YU = {}
 				b_tunkas_YU = {}
 				b_piste_YU = {}
+				b_kaua_YU = {}
+
 			}
 
 			c_valladolid = { 
@@ -1241,6 +1256,8 @@ e_yucatan = {
 				b_popola_YU = {}
 				b_ek_balam_YU = {}
 				b_xocen_YU = {}
+				b_tekom_YU = {}
+
 			}
 		}
 		
@@ -1250,6 +1267,7 @@ e_yucatan = {
 
 			capital = 2280 #c_tizimin	
 			
+				yucatanense = Tizimín
 			
 			c_tizimin = { 
 				color={ 38 127 0 }
@@ -1261,11 +1279,11 @@ e_yucatan = {
 					quichean = "X Pit Há"
 					cholano = "X Pit Há"
 				}
-				b_sucila_YU = {
-					yucateco = "Su'ukil Ja'"
-					lacandon = "Su'ukil Ja'"
-					quichean = "Su'ukil Ja'"
-					cholano = "Su'ukil Ja'"
+				b_calotmul_YU = {
+					yucateco = "Ka'a lot Múul"
+					lacandon = "Ka'a lot Múul"
+					quichean = "Ka'a lot Múul"
+					cholano = "Ka'a lot Múul"
 				}
 				b_panaba_YU = {
 					yucateco = "Páanab Ja'"
@@ -1285,8 +1303,16 @@ e_yucatan = {
 					quichean = "Jo'ol Kobén"
 					cholano = "Jo'ol Kobén"
 				}
-				b_dzonot_carretero_YU = {}
+				b_dzonot_carretero_YU = {
+					yucateco = "Ts'ono'ot Bej"
+					lacandon = "Ts'ono'ot Bej"
+					quichean = "Ts'ono'ot Bej"
+					cholano = "Ts'ono'ot Bej"
+				}
 				b_loche_YU = {}
+				b_chisahcab_YU = {}
+
+				
 
 			}
 			
@@ -1320,6 +1346,10 @@ e_yucatan = {
 					cholano = "Jo'ol Kaab"
 				}
 				b_yasilhon_YU = {}
+				b_dzitas_YU = {}
+				b_tinum_YU = {}
+
+
 			}
 			
 			c_dzilam = { 
@@ -2011,9 +2041,12 @@ e_yucatan = {
 			cholano = "Beel Mopán"
 			yucatanense = "Belmopán"
 			chilango = "Belmopán"
+			choco = "Belmopán"
+			norteño = "Belmopán"
+			altiplanense = "Belmopán"
+			abajeño = "Belmopán"
+			tapatio = "Belmopán"
 			trifinio = "Belmopán"
-			english = "Belmopan"
-			kriol = "Belmopan"
 			
 			c_belmopan = { # 2297 
 				color={ 0 155 177 }
@@ -2025,9 +2058,12 @@ e_yucatan = {
 				cholano = "Beel Mopán"
 				yucatanense = "Belmopán"
 				chilango = "Belmopán"
+				choco = "Belmopán"
+				norteño = "Belmopán"
+				altiplanense = "Belmopán"
+				abajeño = "Belmopán"
+				tapatio = "Belmopán"
 				trifinio = "Belmopán"
-				english = "Belmopan"
-				kriol = "Belmopan"
 	
 				b_belmopan_BL = {
 					yucateco = "Beel Mopán"
@@ -2036,64 +2072,104 @@ e_yucatan = {
 					cholano = "Beel Mopán"
 					yucatanense = "Belmopán"
 					chilango = "Belmopán"
+					choco = "Belmopán"
+					norteño = "Belmopán"
+					altiplanense = "Belmopán"
+					abajeño = "Belmopán"
+					tapatio = "Belmopán"
 					trifinio = "Belmopán"
-					english = "Belmopan"
-					kriol = "Belmopan"
 				}
 				b_armenia_BL = {}				
 				b_camalote_BL = {}
-				b_la_democracia_BL = {}
-				b_savannah_bank_BL = {}
-				b_dry_creek_BL = {}
+				b_la_democracia_BL = {
+					yucateco = "Demokrasia'e'"
+					lacandon = "Demokrasia'e'"
+					quichean = "Demokrasia'e'"
+					cholano = "Demokrasia'e'"
+				}
+				b_savannah_bank_BL = {
+					yucateco = "Chakánchí"
+					lacandon = "Chakánchí"
+					quichean = "Chakánchí"
+					cholano = "Chakánchí"
+					yucatanense = "Chakanchí"
+					chilango = "Bancosabana"
+					choco = "Bancosabana"
+					norteño = "Bancosabana"
+					altiplanense = "Bancosabana"
+					abajeño = "Bancosabana"
+					tapatio = "Bancosabana"
+					trifinio = "Bancosabana"
+				}
+				b_dry_creek_BL = {
+					yucateco = "Tikinchí"
+					lacandon = "Tikinchí"
+					quichean = "Tikinchí"
+					cholano = "Tikinchí"
+					yucatanense = "Tikinchí"
+					chilango = "Ríoseco"
+					choco = "Ríoseco"
+					norteño = "Ríoseco"
+					altiplanense = "Ríoseco"
+					abajeño = "Ríoseco"
+					tapatio = "Ríoseco"
+					trifinio = "Ríoseco"
+				}
 			}
 			
 			c_cayo = { # 2294
 				color={ 24 114 54 }
 				color2={ 255 255 255 }
-	
+					
+				yucateco = "Te'"
+				lacandon = "Te'"
+				quichean = "Te'"
+				cholano = "Te'"	
+				anglish = "Caye"
+				calypsonian = "Caye"
+				texian = "Caye"
+				gulfard = "Caye"
+				west_indian = "Caye"
+
 				b_san_ignacio_BL = {
-					yucateco = "Cahal Pech"
-					lacandon = "Cahal Pech"
-					quichean = "Cahal Pech"
-					cholano = "Cahal Pech"
-				}	
+					yucateco = "San Ignacio Te'"
+					lacandon = "San Ignacio Te'"
+					quichean = "San Ignacio Te'"
+					cholano = "San Ignacio Te'"
+				}
 				b_santa_elena_BL = {}
-				b_cahal_pech_BL = {}
-				b_valley_of_peace_BL = {}
+				b_cahal_pech_BL = {
+					yucateco = "Kajal Pech"
+					lacandon = "Kajal Pech"
+					quichean = "Kajal Pech"
+					cholano = "Kajal Pech"	
+					chilango = "El Cayo"
+					choco = "El Cayo"
+					norteño = "El Cayo"
+					altiplanense = "El Cayo"
+					abajeño = "El Cayo"
+					tapatio = "El Cayo"
+					trifinio = "El Cayo"
+					anglish = "Caye"
+					calypsonian = "Caye"
+					texian = "Caye"
+					gulfard = "Caye"
+					west_indian = "Caye"
+				}
+				b_valley_of_peace_BL = {
+					chilango = "Valle de Paz"
+					yucatanense = "Valle de Paz"
+					choco = "Valle de Paz"
+					norteño = "Valle de Paz"
+					altiplanense = "Valle de Paz"
+					abajeño = "Valle de Paz"
+					tapatio = "Valle de Paz"
+				}
+				b_esperanza_BL = {}
+
 			}
 			
-			c_yalbac = { # 1830
-				color={ 66 124 128 }
-				color2={ 255 255 255 }
-	
-				holy_site = lamanita
-				#holy_site = purificador
-	
-				b_spanish_lookout_BL = {
-					yucateco = "Ka'anal Kastlan"
-					lacandon = "Ka'anal Kastlan"
-					quichean = "Ka'anal Kastlan"
-					cholano = "Ka'anal Kastlan"
-					yucatanense = "Mirador Español"
-					chilango = "Mirador Español"
-					trifinio = "Mirador Español"
-					plautdietsch = "Spaanse Uitkijk"
-				}
-				b_yalbac_BL = {
-					yucateco = "Yalbak"
-					lacandon = "Yalbak"
-					quichean = "Yalbak"
-					cholano = "Yalbak"
-				}	
-				b_el_pilar_BL = {
-					yucateco = "Tsunu'un"
-					lacandon = "Tsunu'un"
-					quichean = "Tsunu'un"
-					cholano = "Tsunu'un"
-				}
-				b_wamil_BL = {}
-			}
-			
+				
 			c_macal = { # 2296
 				color={ 24 114 54 }
 				color2={ 255 255 255 }
@@ -2119,7 +2195,126 @@ e_yucatan = {
 				b_san_jose_succotz_BL = {}
 			}
 		}
+		
+		d_orange_walk = {
+			color = { 255 143 0 }
+			color2 = { 255 255 255 }
 
+				capital = 2298
+		
+			yucateco = "Jol Pat'in"
+			lacandon = "Jol Pat'in"
+			quichean = "Jol Pat'in"
+			cholano = "Jol Pat'in"		
+			yucatanense = "Holpatín"
+			trifinio = "Naranjas"
+			chilango = "Naranjas"
+			choco = "Naranjas"
+			altiplanense = "Naranjas"
+			tapatio = "Naranjas"
+			bravo = "Naranjas"
+			calentano = "Naranjas"
+			
+
+			c_orange_walk = { # 2298
+				color={ 59 154 128 }
+				color2={ 255 255 255 }
+				
+				holy_site = falling_star
+	
+				yucateco = "Jol Pat'in"
+				lacandon = "Jol Pat'in"
+				quichean = "Jol Pat'in"
+				cholano = "Jol Pat'in"		
+				yucatanense = "Holpatín"
+				trifinio = "Paseo Naranja"
+				chilango = "Paseo Naranja"
+				choco = "Paseo Naranja"
+				altiplanense = "Paseo Naranja"
+				bravo = "Paseo Naranja"
+				calentano = "Paseo Naranja"
+
+				b_orange_walk_BL = {
+					yucateco = "Jol Pat'in"
+					lacandon = "Jol Pat'in"
+					quichean = "Jol Pat'in"
+					cholano = "Jol Pat'in"
+					yucatanense = "Holpatín"
+					trifinio = "Paseo Naranja"
+					chilango = "Paseo Naranja"
+					choco = "Paseo Naranja"
+					altiplanense = "Paseo Naranja"
+					bravo = "Paseo Naranja"
+					calentano = "Paseo Naranja"
+				}
+			 	b_indian_church_BL = {
+					short_name = yes
+					
+					yucateco = "Lam'an'ain Túunben"
+					lacandon = "Lam'an'ain Túunben"
+					quichean = "Lam'an'ain Túunben"
+					cholano = "Lam'an'ain Túunben"
+					yucatanense = "Nuevo Lamanai"
+					trifinio = "Iglesia Maya"
+					chilango = "Iglesia Maya"
+				}
+				b_lamanai_BL = {
+					yucateco = "Lam'an'ain"
+					lacandon = "Lam'an'ain"
+					quichean = "Lam'an'ain"
+					cholano = "Lam'an'ain"
+				}
+				b_cuello_BL = {
+					yucateco = "Chin"
+					lacandon = "Chin"
+					quichean = "Chin"
+					cholano = "Chin"	
+				}
+			}
+			c_yalbac = { # 1830
+				color={ 66 124 128 }
+				color2={ 255 255 255 }
+	
+				holy_site = lamanita
+				#holy_site = purificador
+	
+				yucateco = "Yalbak"
+				lacandon = "Yalbak"
+				quichean = "Yalbak"
+				cholano = "Yalbak"
+				trifinio = "Río Bravo"
+				chilango = "Río Bravo"
+				choco = "Río Bravo"
+				altiplanense = "Río Bravo"
+				tapatio = "Río Bravo"
+				bravo = "Río Bravo"
+				calentano = "Río Bravo"
+				
+				b_spanish_lookout_BL = {
+					yucateco = "Ka'anal Kastlan"
+					lacandon = "Ka'anal Kastlan"
+					quichean = "Ka'anal Kastlan"
+					cholano = "Ka'anal Kastlan"
+					yucatanense = "El Mirador"
+					chilango = "Mirador Español"
+					trifinio = "Mirador Español"
+					plautdietsch = "Spaanse Uitkijk"
+				}
+				b_yalbac_BL = {
+					yucateco = "Yalbak"
+					lacandon = "Yalbak"
+					quichean = "Yalbak"
+					cholano = "Yalbak"
+				}	
+				b_el_pilar_BL = {
+					yucateco = "Tsunu'un"
+					lacandon = "Tsunu'un"
+					quichean = "Tsunu'un"
+					cholano = "Tsunu'un"
+				}
+				b_wamil_BL = {}
+			}
+		}
 		d_belize = {
 			color={ 47 154 123 }
 			color2={ 255 255 255 }
@@ -2172,12 +2367,92 @@ e_yucatan = {
 					lacandon = "Xunáan Kaaj"
 					quichean = "Xunáan Kaaj"
 					cholano = "Xunáan Kaaj"
+					yucatanense = "Xunanká"
+					chilango = "Villadama"
+					trifinio = "Villadama"
+					abajeño = "Villadama"
+					bravo = "Villadama"
+					altiplanense = "Villadama"
+					choco = "Villadama" 
+					calentano = "Villadama"
+				}
+				b_hattieville_BL = {
+					yucateco = "Jati'kaaj"
+					lacandon = "Jati'kaaj"
+					quichean = "Jati'kaaj"
+					cholano = "Jati'kaaj"
+					tseltal = "Jati'kaaj"
+					tsotsil = "Jati'kaaj"
+					yucatanense = "Hatiká"
+					chilango = "Villalta"
+					trifinio = "Villalta"
+					abajeño = "Villalta"
+					bravo = "Villalta"
+					altiplanense = "Villalta"
+					choco = "Villalta" 
+					calentano = "Villalta"
+				}
+				b_rockville_BL = {
+ 					yucateco = "Túun'kaaj"
+					lacandon = "Túun'kaaj"
+					quichean = "Túun'kaaj"
+					cholano = "Túun'kaaj"
+					tseltal = "Túun'kaaj"
+					tsotsil = "Túun'kaaj"
+					yucatanense = "Tunká"
+					chilango = "Villarroca"
+					trifinio = "Villarroca"
+					abajeño = "Villarroca"
+					bravo = "Villarroca"
+					altiplanense = "Villarroca"
+					choco = "Villarroca" 
+					calentano = "Villarroca"
+				}
+				b_sand_hill_BL = {
+					yucateco = "Sam K'áax"
+					lacandon = "Sam K'áax"
+					quichean = "Sam K'áax"
+					cholano = "Sam K'áax"
+					tseltal = "Sam K'áax"
+					tsotsil = "Sam K'áax"
+					yucatanense = "Samkax"
+					chilango = "Montearena"
+					trifinio = "Montearena"
+					abajeño = "Montearena"
+					bravo = "Montearena"
+					altiplanense = "Montearena"
+					choco = "Montearena" 
+					calentano = "Montearena"
+				}
+				b_freshpond_BL = {
+					yucateco = "Sujuy-síis-óola’"
+					lacandon = "Tibil Ja'"
+					quichean = "Tibil Ja'"
+					cholano = "Tibil Ja'"
+					tseltal = "Tibil Ja'"
+					tsotsil = "Tibil Ja'"
+					yucatanense = "Aguafresca"
+					chilango = "Aguafresca"
+					trifinio = "Aguafresca"
+					abajeño = "Aguafresca"
+					bravo = "Aguafresca"
+					altiplanense = "Aguafresca"
+					choco = "Aguafresca" 
+					calentano = "Aguafresca"
 				}
 				b_burrell_boom_BL = {
 					yucateco = "Jook'ob"
 					lacandon = "Jook'ob"
 					quichean = "Jook'ob"
 					cholano = "Jook'ob"
+					yucatanense = "Jokob"
+					chilango = "El Aguilón"
+					trifinio = "Burrell"
+					abajeño = "El Aguilón"
+					bravo = "El Aguilón"
+					altiplanense = "El Aguilón"
+					choco = "El Aguilón"
+					calentano = "El Aguilón"				
 				}
 			}
 			
@@ -2189,16 +2464,18 @@ e_yucatan = {
 					lacandon = "K'i'ik' Nikte'il"
 					quichean = "K'i'ik' Nikte'il"
 					cholano = "K'i'ik' Nikte'il"
-					yucatanense = "Refugio"
+					yucatanense = "Jopkín"
 					chilango = "Refugio"
 					trifinio = "Refugio"
+					choco = "Refugio"
+					calentano = "Refugio"
 				
 				b_dangriga_BL = {
 					yucateco = "Chu'ujuk Ja'"
 					lacandon = "Chu'ujuk Ja'"
 					quichean = "Chu'ujuk Ja'"
 					cholano = "Chu'ujuk Ja'"
-					yucatanense = "Chujukhá"
+					yucatanense = "Chujuká"
 					chilango = "Aguadulce"
 					trifinio = "Aguadulce"
 					anglish = "Stann Creek"
@@ -2208,7 +2485,7 @@ e_yucatan = {
 					lacandon = "Jopk'in"
 					quichean = "Jopk'in"
 					cholano = "Jopk'in"
-					yucatanense = "Atizasol"
+					yucatanense = "Jopkín"
 					chilango = "Atizasol"
 					trifinio = "Atizasol"
 					garinagu = "Yugadan"
@@ -2221,71 +2498,200 @@ e_yucatan = {
 					yucatanense = "Baychuc"
 					chilango = "Bahíacerca"
 					trifinio = "Bahíacerca"
+					choco = "Bahíacerca"
 				}				
 				b_placencia_BL ={}
 			}
 			
-			c_orange_walk = { # 2298
-				color={ 59 154 128 }
-				color2={ 255 255 255 }
-				
-				holy_site = falling_star
-	
-				yucateco = "Jol Pat'in"
-				lacandon = "Jol Pat'in"
-				quichean = "Jol Pat'in"
-				cholano = "Jol Pat'in"		
-				yucatanense = "Holpatín"
-				trifinio = "Paseo Naranja"
-				chilango = "Paseo Naranja"
-	
-				b_orange_walk_BL = {
-					yucateco = "Holpatin"
-					lacandon = "Holpatin"
-					quichean = "Holpatin"
-					cholano = "Holpatin"
-				}
-			 	b_indian_church_BL = {
-					yucateco = "Lam'an'ain Túunben"
-					lacandon = "Lam'an'ain Túunben"
-					quichean = "Lam'an'ain Túunben"
-					cholano = "Lam'an'ain Túunben"
-					yucatanense = "Nuevo Lamanai"
-					trifinio = "Iglesia Maya"
-					chilango = "Iglesia Maya"
-				}
-				b_lamanai_BL = {
-					yucateco = "Lam'an'ain"
-					lacandon = "Lam'an'ain"
-					quichean = "Lam'an'ain"
-					cholano = "Lam'an'ain"
-				}
-				b_cuello_BL = {
-					yucateco = "Chin"
-					lacandon = "Chin"
-					quichean = "Chin"
-					cholano = "Chin"	
-				}
-			}
+		}
+		d_toledo = {
+			color = { 70 120 110 }
+			color2= { 255 255 255 }
+			
+			yucateco = "Manché"
+			lacandon = "Manché"
+			quichean = "Manché"
+			cholano = "Manché"
+			tsotsil = "Manché"
+			tseltal = "Manché"
+			west_indian = "Columbia"
+			calypsonian = "Columbia"
+			anglish = "Columbia"
+			
+			
+			capital = 1833 #manche
+			
 			c_manche = { # 1833
 				color={ 86 134 124 }
 				color2={ 255 255 255 }
 	
 				b_punta_gorda_BL = {
+					yucateco = "Nojochté"
+					lacandon = "Nojochté"
+					quichean = "Nojochté"
+					cholano = "Nojochté"
+					tseltal = "Nojochté"
+					tsotsil = "Nojochté"
 					garinagu = "Peini"
 				}
-				b_san_pedro_columbia_BL = {
-					yucateco = "Lubaantun"
-					lacandon = "Lubaantun"
-					quichean = "Lubaantun"
-					cholano = "Lubaantun"
+				b_monkey_river = {
+					yucateco = "Ba'ats' Ja'"
+					lacandon = "Ba'ats' Ja'"
+					quichean = "Ba'ats' Ja'"
+					cholano = "Ba'ats' Ja'"
+					tseltal = "Ba'ats' Ja'"
+					tsotsil = "Ba'ats' Ja'"
+					chilango = "Ríomono"
+					trifinio  = "Ríomono"
+					yucatanense "Ríomono"
+					abajeño  = "Ríomono"
+					nicoyano  = "Ríomono"
+					bravo  = "Ríomono"
+					altiplanense  = "Ríomono"
 				}
-				b_aguacate_BL = {}
-				b_monkey_river = {}
-				b_placencia_BL = {}
-				b_forest_home_BL = {}
-				b_independence_and_mango_creek_BL = {}
-				b_big_falls_BL = {}
+				b_forest_home_BL = {
+					yucateco = "K'áax Otoch"
+					lacandon = "K'áax Otoch"
+					quichean = "K'áax Otoch"
+					cholano = "K'áax Otoch"
+					tseltal = "K'áax Otoch"
+					tsotsil = "K'áax Otoch"
+					chilango = "Boscasa"
+					trifinio  = "Boscasa"
+					yucatanense "Káaxotoch"
+					abajeño  = "Boscasa"
+					nicoyano  = "Boscasa"
+					bravo  = "Boscasa"
+					altiplanense  = "Boscasa"
+				}
+				b_independence_and_mango_creek_BL = {
+					yucateco = "Lap’k’abil Ja'"
+					lacandon = "Mangoja'"
+					quichean = "Mangoja'"
+					cholano = "Lap’k’abil Ja'"
+					tseltal = "Lap’k’abil Ja'"
+					tsotsil = "Lap’k’abil Ja'"
+					chilango = "Independencia"
+					trifinio  = "Independencia"
+					yucatanense "Independencia"
+					abajeño  = "Independencia"
+					nicoyano  = "Independencia"
+					bravo  = "Independencia"
+					altiplanense  = "Independencia"
+				}
+				b_nim_li_punit_BL = {
+					yucateco = "Nojoch P'óok"
+					lacandon = "Nim Li Punit"
+					quichean = "Nim Li Punit"
+					cholano = "Nojoch P'óok"
+					tseltal = "Nojoch P'óok"
+					tsotsil = "Nojoch P'óok"
+					west_indian = "Indian Creek"
+					gulfard = "Indian Creek"
+					texian = "Indian Creek"
+				}
+				b_hopeville_BL = {
+					yucateco = "Alab óol Kaaj"
+					lacandon = "Alab óol Kaaj"
+					quichean = "Alab óol Kaaj"
+					cholano = "Alab óol Kaaj"
+					tseltal = "Alab óol Kaaj"
+					tsotsil = "Alab óol Kaaj"
+					chilango = "Esperanzavilla"
+					trifinio  = "Esperanzavilla"
+					yucatanense "Esperanzavilla"
+					abajeño  = "Esperanzavilla"
+					nicoyano  = "Esperanzavilla"
+					bravo  = "Esperanzavilla"
+					altiplanense  = "Esperanzavilla"
+				}
+				b_jacintoville_BL = {
+					yucateco = "Jasinto'kaaj"
+					lacandon = "Jasinto'kaaj"
+					quichean = "Jasinto'kaaj"
+					cholano = "Jasinto'kaaj"
+					tseltal = "Jasinto'kaaj"
+					tsotsil = "Jasinto'kaaj"
+					chilango = "Jacinto Villa"
+					trifinio  = "Jacinto Villa"
+					yucatanense "Jacinto Villa"
+					abajeño  = "Jacinto Villa"
+					nicoyano  = "Jacinto Villa"
+					bravo  = "Jacinto Villa"
+					altiplanense  = "Jacinto Villa"				
+				}
+			}
+			c_columbia_BL = {
+				color = { 108 132 128 }
+				color2 = { 255 255 255 }
+				
+				b_san_pedro_columbia_BL = {
+					yucateco = "San Pedro Manché"
+					lacandon = "San Pedro Manché"
+					quichean = "San Pedro Manché"
+					cholano = "San Pedro Manché"
+					chilango = "San Pedro Colombia"
+					trifinio  = "San Pedro Colombia"
+					yucatanense "San Pedro Manché"
+					abajeño  = "San Pedro Colombia"
+					nicoyano  = "San Pedro Colombia"
+					bravo  = "San Pedro Colombia"
+					altiplanense  = "San Pedro Colombia"
+				}
+				b_lubaantun_BL = {
+					yucateco = "Lúuluuban Tuun"
+					lacandon = "Lúuluuban Tuun"
+					quichean = "Lúuluuban Tuun"
+					cholano = "Lúuluuban Tuun"
+				}
+				b_big_falls_BL = {
+					yucateco = "Nuk Luuban Ja'"
+					lacandon = "Yum Jo'or Maktun"
+					quichean = "Utixixb'äl Ja'"
+					cholano = "Nuk Luuban Ja'"
+					chilango = "Cataratas"
+					trifinio  = "Cataratas"
+					yucatanense "Nukluubanhá"
+					abajeño  = "Cataratas"
+					nicoyano  = "Cataratas"
+					bravo  = "Cataratas"
+					altiplanense  = "Cataratas"
+				}
+				b_aguacate_BL = {
+					yucateco = "Oon"
+					lacandon = "Oj"
+					quichean = "On"
+					cholano = "Oon"
+				}
+				b_pueblo_viejo_BL = {
+					chilango = "Pueblo Viejo"
+					trifinio  = "Pueblo Viejo"
+					yucatanense "Pueblo Viejo"
+					abajeño  = "Pueblo Viejo"
+					nicoyano  = "Pueblo Viejo"
+					bravo  = "Pueblo Viejo"
+					altiplanense  = "Pueblo Viejo"
+					kriol = "Pueblo Viejo"
+				}
+				b_jalacte_BL = {
+					west_indian = "Gonetree"
+					yucateco = "Jalak Te'"
+					lacandon = "Jalak Te'"
+					quichean = "Jalak Te'"
+					cholano = "Jalak Te'"
+				}
+				b_santa_cruz_BL = {
+					yucateco = "Santa Cruz Uchben'Kaj"
+					lacandon = "Santa Cruz Uchben'Kaj"
+					quichean = "Santa Cruz Uchben'Kaj"
+					cholano = "Santa Cruz Uchben'Kaj"
+				}
+				b_san_jose_BL = {
+					yucateco = "San José Na Luum Ka'"
+					lacandon = "San José Na Luum Ka'"
+					quichean = "San José Na Luum Ka'"
+					cholano = "San José Na Luum Ka'"
+				}
 			}
 		}
 		d_lacandon = {
