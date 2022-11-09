@@ -95,6 +95,19 @@
 	father=6900645
 	2602.05.22={birth=yes}
 }
+1431094 = {
+	name = Beatriz
+	female=yes
+	dynasty=5200102 #de Montejo
+	culture=neomexicano
+	religion=cristo_rey
+	father=6900645
+	2610.11.11={birth=yes
+			culture=yucatanense
+	}
+	2629.1.1 = {add_spouse=1431130}
+}
+
 ###Historical triays
 1431091 = {
 	name= Enrique
@@ -126,16 +139,18 @@
 	2528.1.1 = {birth=yes}
 	2600.1.1 = {death=yes}
 }
-	
-#Leonmarí dynasty
+
+#DON'T USE 1431094; it's Graciela Triay.
+
+#Leonmarí dynasty; rulers of Motul and probably the next dukes of Merida
 
 1431100={
 	name="Enrique"
 	dynasty=5200106 #Leonmarí
 	culture=chilango
 	religion=cristo_rey
-	dna= "cgfjgaeddd" #neck chin mouth nose cheeks unused eyes ears hair_color eye_color
-	properties = "gaaaaaa"
+	dna="cdbab0ebbc0"
+	properties="ag000k000000000000000000000000000000"
 	martial=7
 	diplomacy=9
 	stewardship=7
@@ -163,13 +178,13 @@
 	dynasty=5200106 #Lionmarí
 	culture=yucatanense
 	religion=cristo_rey
-	dna= "bfeifadddd"
-	properties="acaff"
+	dna="bfeif0d0000"
+	properties="0e0jej000000000000000000000000000000"
 	martial=11
-	diplomacy=7
-	stewardship=3
-	intrigue=8
-	learning=9	
+	diplomacy=6
+	stewardship=4
+	intrigue=4
+	learning=10	
 	trait=martial_cleric
 	trait=sturdy
 	trait=quick
@@ -290,6 +305,8 @@
 	dynasty=5200106 #Leonmarí
 	culture=neomexicano
 	religion=cristo_rey
+	dna="agffd0dbe00"
+	properties="cc0h0k00000000000000000000000000000"
 	martial=6
 	diplomacy=6
 	stewardship=4
@@ -334,8 +351,9 @@
 	trait=devout
 	trait=content
 	trait=just
-	add_lover=1431101
-	2640.07.22={birth=yes}
+	father=1431108
+	mother=1431109
+	2635.07.22={birth=yes}
 	2660.2.13= {
 			effect={
 				add_lover=1431101
@@ -343,7 +361,66 @@
 	}
 	2665.03.22={add_spouse=1431101}
 }
-
+1431108 = {
+	name=José
+	dynasty=5200108 #Castillo
+	culture=yucatanense
+	dna= "adfbcanbea"
+	properties="adad"
+	religion=cristo_rey
+	trait=cynical
+	trait=delicate
+	2599.12.28={birth=yes}
+	2619.01.22={add_spouse=1431109}
+}
+1431109 = {
+	name=Alejandra
+	female=yes
+	dynasty=5200108 #Castillo
+	culture=yucatanense
+	religion=cristo_rey
+	diplomacy=10
+	trait=charismatic_negotiator
+	trait=devout
+	trait=gregarious
+	2600.04.25={birth=yes}
+	2619.01.22={add_spouse=1431108}
+}
+1431110 = {
+	name=David
+	dynasty=5200108 #Castillo
+	culture=yucatanense
+	religion=cristo_rey
+	trait=detached_priest
+	trait=is_fat
+	trait=diligent
+	trait=kind
+	father=1431108
+	mother=1431109	
+	2625.12.28={birth=yes}
+}
+1431111 = {
+	name=Julio
+	dynasty=5200113 #Correa
+	culture=neomexicano
+	dna="0k0kk0j0e00"
+	properties="ci000k00000000000000000000000000000"
+	religion=cristo_rey
+	martial=5
+	stewardship=8
+	trait=thrifty_clerk
+	trait=strong
+	trait=diligent
+	2636.1.20={birth=yes
+		culture=yucatanense
+	}
+	2665.2.13= {
+			effect={
+				add_lover=1431104
+			}
+	}
+	2666.4.1={add_spouse=1431104}
+}
 
 ###END LEONMARÍ DYNASTY
 
@@ -416,7 +493,7 @@
 ###de montejo dynasty great rulers of Mérida. comes from 6900651
 
 1431130= {
-	name = Segundo
+	name = Miguel 
 	female=no
 	dynasty=5200037 #de Montejo
 	culture=neomexicano
@@ -432,13 +509,12 @@
 	trait=brave
 	trait=direct_leader
 	father=6900650
-	add_rival=1431120
 	2608.01.22={birth=yes
 			culture=yucatanense
 	}
 }
 1431131= {
-	name = Francisco
+	name = Francisco #Adventurer ruler of Tayasal (d_nojpeten)
 	female=no
 	dynasty=5200037 #de Montejo
 	culture=neomexicano
@@ -454,13 +530,16 @@
 	trait=brave
 	trait=direct_leader
 	trait=adventurer
+	trait=deceitful
 	father=1431130
-	2642.11.11={birth=yes
+	mother=1431094
+	2638.11.11={birth=yes
 			culture=yucatanense
 	}
 }
 
 
+	
 
 
 
@@ -968,6 +1047,118 @@
 	}
 	2508.1.1={add_spouse=1431230}
 	2570.1.1={death=yes}
+}
+1431234 = {
+name = "Patricia"
+	dynasty = 5200073 #Wife of the duke of Merida
+	female=yes
+	culture=yucatanense
+	religion=cristo_rey
+	trait=devout
+	trait=patient
+	trait=ambitious
+	father=6900646
+	2610.1.1={birth=yes}
+	2624.1.1={add_spouse=6900651}
+}
+
+
+# Blanco Dynasty, former Primicios of Chetumal and current dukes of Bacalar.
+1431235 ={
+	name = "Cornelia"
+	dynasty = 5001139 #2nd Daughter of Otón Sotomayor, Comissar of Yucatan
+	female=yes
+	culture=neomexicano
+	religion=cristo_rey
+	trait=devout
+	trait=patient
+	trait=ambitious
+	father=1431204
+	2497.1.1={birth=yes
+				culture=yucatanense
+	}
+	2520.1.1={add_spouse=1431236}
+	2590.1.1={death=yes}
+}
+1431236 = {
+	name = "Zacarías"
+	dynasty = 5200112 #Primicio of Chetumal
+	culture=yucatanense
+	religion=cristo_rey
+	2485.1.1={birth=yes}
+	2520.1.1={add_spouse=1431236}
+	2560.1.1={death=yes}
+}
+1431237 = {
+	name = "Otón"
+	dynasty = 5200112 #Primicio of Chetumal
+	culture=neomexicano
+	religion=cristo_rey
+	trait=strong
+	trait=zealous
+	father=1431236
+	mother=1431235
+	2530.1.1={birth=yes
+				culture=yucatanense
+	}
+	2600.1.1={death=yes}
+}
+1431238 = {
+	name = "Marcelo"
+	dynasty = 5200112 # Primicio of Chetumal that swear fealty to Yucatan
+	culture=yucatanense
+	religion=neomayan
+	trait=weak
+	trait=craven
+	trait=sympathy_mesoamerican_gods
+	father=1431237
+	2569.1.1={birth=yes
+				culture=yucatanense
+	}
+	2630.1.1={death=yes}
+}
+1431239 = {
+	name = "Venancio"
+	dynasty = 5200112 # Last Blanco Primicio of Chetumal 
+	culture=yucatanense
+	religion=neomayan
+	trait=sympathy_christendom
+	father=1431238
+	2593.1.1={birth=yes
+				culture=yucatanense
+	}
+	2650.1.1={death=yes}
+}
+1431240 = {
+	name = "Otón"
+	dynasty = 5200112 # First duke of Bacalar
+	culture=yucatanense
+	religion=cristo_rey
+	trait=robust
+	trait=zealous
+	father=1431238
+	2597.1.1={birth=yes
+				culture=yucatanense
+	}
+	2635.1.1={death=
+		death_reason= death_battle #Died in battle against the Salazar; his son was subjugated later.
+		killer=1650072
+	}
+}
+1431241 = {
+	name = "Otón"
+	dynasty = 5200112
+	culture=yucatanense
+	religion=cristo_rey
+	intrigue=10
+	trait=tough_soldier
+	trait=strong
+	trait=zealous
+	trait=wroth
+	trait=aggressive_leader
+	father=1431240
+	2625.1.1={birth=yes}
+	2635.1.1={add_rival=1650072}
 }
 
 ###### MAYAN STRONG DUKES WHICH HAVE TO RESIST THE YUCATECAN CONQUEST OF THEIR TERRITORIES. THEY'RE BASED ON THE CACIQUES
@@ -1644,7 +1835,11 @@
 	trait=proud
 	father=1431457
 	2645.3.21={birth=yes}
-	2664.12.31={add_lover=1431447}
+	2664.12.31={
+		effect= {
+			efect={add_lover=1431447}
+			}
+	}
 }
 
 #The Lords of Sayaxché
