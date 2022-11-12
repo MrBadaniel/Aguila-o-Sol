@@ -43,7 +43,9 @@ decisions = {
 
 		allow = {
 			war = no
+			has_landed_title = d_belize
 			completely_controls = d_belize
+			has_landed_title = d_belmopan
 			completely_controls = d_belmopan
 			OR = {
 				AND = {
@@ -61,55 +63,55 @@ decisions = {
 			}
 			prestige = 800
 			piety = 500
-                        wealth = 600
+			wealth = 600
 		}
 
 		effect = {
 			prestige = 500
 			piety = -500
-                        wealth = -600
+			wealth = -600
 			give_nickname = nick_the_great
 			activate_title = { title = k_belize status = yes }
  			k_belize = {
 				grant_title = ROOT
 				copy_title_laws = PREV
-				insert_title_history = PREV
+				insert_title_history = d_belize
 			}
-                        d_belize = {
+			d_belize = {
 				show_scope_change = no
-                                de_jure_liege = k_belize
-                        }
-                        d_belmopan = {
+				de_jure_liege = k_belize
+			}
+			d_belmopan = {
 				show_scope_change = no
-                                de_jure_liege = k_belize
-                        }
+				de_jure_liege = k_belize
+			}
 			if = {
 				limit = {
-					has_landed_title = d_corozal
+					completely_controls = d_corozal
 				}
 				d_corozal = {
 					show_scope_change = no
 					de_jure_liege = k_belize
 				}
-                        }
+			}
 			if = {
 				limit = {
-					has_landed_title = orange_walk
+					completely_controls = orange_walk
 				}
 				d_orange_walk = {
 					show_scope_change = no
 					de_jure_liege = k_belize
 				}
-                        }
+			}
 			if = {
 				limit = {
-					has_landed_title = d_toledo
+					completely_controls = d_toledo
 				}
 				d_toledo = {
 					show_scope_change = no
 					de_jure_liege = k_belize
 				}
-                        }
+			}
 		}
 		ai_will_do = {
 			factor = 1
