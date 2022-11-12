@@ -743,6 +743,30 @@ e_yucatan = {
 	k_yucatan = {
 		color={ 224 219 209 }
 		color2={ 255 255 255 }
+
+#TITULAR TITLES IN THE YUCATAN PENINSULA
+
+		d_chetumal_republic = {
+			color = { 203 19 54 }
+			color2 = { 255 255 255 }
+			
+			culture = yucatanense
+			capital = 1831 # Chetumal
+			title = PRIMICE #Primicio
+			title_female = PRIMICE_FEMALE #Primicia		
+			short_name = yes
+			allow = { title_duke_basic_allow = yes }
+		}
+		
+		d_tizimin_republic = {
+			culture = yucatanense
+			capital = 2280 # Chetumal
+			title = PRIMICE #Primicio
+			title_female = PRIMICE_FEMALE #Primicia		
+			short_name = yes
+			allow = { title_duke_basic_allow = yes }
+		}
+
 		
 		#Crusade target weight
 		lamanita = 5000
@@ -1916,6 +1940,7 @@ e_yucatan = {
 				}
 				b_chunhuitz = {}
 				b_yaloch = {}
+			}
 				
 		}
 		
@@ -2858,21 +2883,3 @@ e_yucatan = {
 	}
 }
 
-
-
-
-#TITULAR TITLES IN THE YUCATAN PENINSULA
-
-		d_chetumal_republic = {
-			color = { 203 19 54 }
-			color2 = { 255 255 255 }
-			
-			culture = yucatanense
-			capital = 1831 # Chetumal
-			title = PRIMICE #Primicio
-			title_female = PRIMICE_FEMALE #Primicia		
-			short_name = yes
-			allow = { title_duke_basic_allow = yes }
-			can_be_usurped = no
-			primary = yes
-		}
