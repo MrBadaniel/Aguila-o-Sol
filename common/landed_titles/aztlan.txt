@@ -1546,16 +1546,39 @@ b_tombstone_AZ = {
 
 			capital = 791 # c_caborca
 
+			seri = "Tepoca"
+			
 			c_caborca = { # 791
 				color={ 194 152 128 }
 				color2={ 255 255 255 }
 	
-				b_heroica_caborca_SO = {}
+				b_heroica_caborca_SO = {
+					arixan = "Caborca"
+					texan = "Caborca"
+					valleyan = "Caborca"
+					bayfolk = "Caborca"	
+				}
 				b_altar_SO = {}
 				b_pitiquito_SO = {}
-				b_puerto_lobos_SO = {}
-				b_puerto_libertad_SO = {}
-				b_ultimo_esfuerzo_SO = {}
+				b_puerto_lobos_SO = {
+					arixan = "Port Lobos" #Lobosport?
+					texan = "Port Lobos"
+					valleyan = "Port Lobos"
+					bayfolk = "Port Lobos"		
+					
+				}
+				b_puerto_libertad_SO = {
+					arixan = "Port Liberty"
+					texan = "Port Liberty"
+					valleyan = "Port Liberty"
+					bayfolk = "Port Liberty"					
+				}
+				b_ultimo_esfuerzo_SO = {
+					arixan = "Last Stand"
+					texan = "Last Stand"
+					valleyan = "Last Stand"
+					bayfolk = "Last Stand"					
+				}
 				b_trincheras_SO = {}
 				b_atil_SO = {}
 			}
@@ -1564,59 +1587,223 @@ b_tombstone_AZ = {
 				color2={ 255 255 255 }
 	
 				arixan = "Rocky Point"
+				texan = "Rocky Point"
+				valleyan = "Rocky Point"
+				bayfolk = "Rocky Point"
 	
-				b_puerto_penasco_SO = {}
+				b_puerto_penasco_SO = {
+					chino = "Puerto Peñasco"
+					menomex = "Puerto Peñasco"
+					altiplanense = "Puerto Peñasco"
+					bravo = "Puerto Peñasco"
+					abajeno = "Puerto Peñasco"
+					chilango = "Puerto Peñasco"
+					tapatio = "Puerto Peñasco"
+					jarocho = "Puerto Peñasco"
+					yucatanense = "Puerto Peñasco"
+					choco = "Puerto Peñasco"
+					calentano = "Puerto Peñasco"
+					californiano = "Puerto Peñasco"
+					occidental = "Puerto Peñasco"
+					yaqui = "Puerto Peñasco"		
+					arixan = "Rocky Port"
+					texan = "Rocky Port"
+					valleyan = "Rocky Port"
+					bayfolk = "Rocky Port"					
+				}
 				b_sonoyta_SO = {}
-				b_san_luis_rio_colorado_SO = {}
-				b_colonia_reforma_SO = {}
+				b_san_luis_rio_colorado_SO = {
+					chino = "San Luis Río Colorado"
+					menomex = "San Luis Río Colorado"
+					altiplanense = "San Luis Río Colorado"
+					bravo = "San Luis Río Colorado"
+					abajeno = "San Luis Río Colorado"
+					chilango = "San Luis Río Colorado"
+					tapatio = "San Luis Río Colorado"
+					jarocho = "San Luis Río Colorado"
+					yucatanense = "San Luis Río Colorado"
+					choco = "San Luis Río Colorado"
+					calentano = "San Luis Río Colorado"
+					californiano = "San Luis Río Colorado"
+					occidental = "San Luis Río Colorado"
+					yaqui = "San Luis Río Colorado"					
+				}
+				b_colonia_reforma_SO = {
+					arixan = "Reform Colony"
+					texan = "Reform Colony"
+					valleyan = "Reform Colony"
+					bayfolk = "Reform Colony"	
+				}
 				b_desemboque_SO = {}
-				b_el_pinacate_SO = {}
+				b_el_pinacate_SO = {
+					arixan = "Rocky Point"
+					texan = "Rocky Point"
+					valleyan = "Rocky Point"
+					bayfolk = "Rocky Point"				
+				}
 				b_costa_rica_SO = {}
-				b_riito_SO = {}
+				b_riito_SO = {
+					chino = "Ríito"
+					menomex = "Ríito"
+					altiplanense = "Ríito"
+					bravo = "Ríito"
+					abajeno = "Ríito"
+					chilango = "Ríito"
+					tapatio = "Ríito"
+					jarocho = "Ríito"
+					yucatanense = "Ríito"
+					choco = "Ríito"
+					calentano = "Ríito"
+					californiano = "Ríito"
+					occidental = "Ríito"
+					yaqui = "Ríito"		
+					arixan = "Riito Creek"
+					texan = "Riito Creek"
+					valleyan = "Riito Creek"
+					bayfolk = "Riito Creek"							
+				}
 			}
 		}
-		
 		d_sonora = {
 			color={ 185 104 75 }
 			color2={ 255 255 255 }
 
 			capital = 793 # c_hermosillo
+			 
+			 seri= "Tsatiote"
 
 			c_hermosillo = { # 793
 				color={ 179 124 100 }
 				color2={ 255 255 255 }
 	
 				yaqui = "Pi'itikuni"
+				seri = "Pi'itikuni"
 	
-				b_santisima_trinidad_del_pitic_SO = {}
+				b_santisima_trinidad_del_pitic_SO = {
+					chino = "Santísima Trinidad del Pitic"
+					menomex = "Santísima Trinidad del Pitic"
+					altiplanense = "Santísima Trinidad del Pitic"
+					bravo = "Santísima Trinidad del Pitic"
+					abajeno = "Santísima Trinidad del Pitic"
+					chilango = "Santísima Trinidad del Pitic"
+					tapatio = "Santísima Trinidad del Pitic"
+					jarocho = "Santísima Trinidad del Pitic"
+					yucatanense = "Santísima Trinidad del Pitic"
+					choco = "Santísima Trinidad del Pitic"
+					calentano = "Santísima Trinidad del Pitic"
+					californiano = "Santísima Trinidad del Pitic"
+					occidental = "Santísima Trinidad del Pitic"
+					yaqui = "Santísima Trinidad del Pitic"						
+				}
 				b_hermosillo_SO = {
 					yaqui = "Peesio"
+					seri = "Peesio"
 				}
 				b_baviacora_SO = {}
 				b_san_miguel_horcasitas_SO = {}
 				b_aconchi_SO = {}
 				b_ures_SO = {}
-				b_rayon_SO = {}
-				b_mazatan_SO = {}
+				b_rayon_SO = {
+					chino = "Rayón"
+					menomex = "Rayón"
+					altiplanense = "Rayón"
+					bravo = "Rayón"
+					abajeno = "Rayón"
+					chilango = "Rayón"
+					tapatio = "Rayón"
+					jarocho = "Rayón"
+					yucatanense = "Rayón"
+					choco = "Rayón"
+					calentano = "Rayón"
+					californiano = "Rayón"
+					occidental = "Rayón"
+					yaqui = "Rayón"				}
+				b_mazatan_SO = {
+					chino = "Mazatán"
+					menomex = "Mazatán"
+					altiplanense = "Mazatán"
+					bravo = "Mazatán"
+					abajeno = "Mazatán"
+					chilango = "Mazatán"
+					tapatio = "Mazatán"
+					jarocho = "Mazatán"
+					yucatanense = "Mazatán"
+					choco = "Mazatán"
+					calentano = "Mazatán"
+					californiano = "Mazatán"
+					occidental = "Mazatán"
+					yaqui = "Mazatán"					
+				}
 			}
 			c_bahia_kino = {
 				color={ 151 141 120 }
 				color2={ 255 255 255 }
 	
 				yaqui = "See'e Seri"
+				seri = "See'e Seri"
 				arixan = "Kino Bay"
-	
+				texan = "Kino Bay"
+				valleyan = "Kino Bay"
+				bayfolk = "Kino Bay"
+				chino = "Bahía Kino"
+				menomex = "Bahía Kino"
+				altiplanense = "Bahía Kino"
+				bravo = "Bahía Kino"
+				abajeno = "Bahía Kino"
+				chilango = "Bahía Kino"
+				tapatio = "Bahía Kino"
+				jarocho = "Bahía Kino"
+				yucatanense = "Bahía Kino"
+				choco = "Bahía Kino"
+				calentano = "Bahía Kino"
+				californiano = "Bahía Kino"
+				occidental = "Bahía Kino"				
+				
 				b_bahia_kino_SO = {
+					yaqui = "See'e Seri"
+					seri = "See'e Seri"
+					arixan = "Kino Bay"
+					texan = "Kino Bay"
+					valleyan = "Kino Bay"
+					bayfolk = "Kino Bay"
+					chino = "Bahía Kino"
+					menomex = "Bahía Kino"
+					altiplanense = "Bahía Kino"
+					bravo = "Bahía Kino"
+					abajeno = "Bahía Kino"
+					chilango = "Bahía Kino"
+					tapatio = "Bahía Kino"
+					jarocho = "Bahía Kino"
+					yucatanense = "Bahía Kino"
+					choco = "Bahía Kino"
+					calentano = "Bahía Kino"
+					californiano = "Bahía Kino"
+					occidental = "Bahía Kino"				
 				}
 				b_punta_chueca_SO = {
+					arixan = "Crooked Point"
+					texan = "Crooked Point"
+					valleyan = "Crooked Point"
+					bayfolk = "Crooked Point"
+					seri= "Socaaix"
 				}
 				b_el_desemboque_SO = {
+					seri = "Haxöl Iihom"
 				}
 				b_punta_tormenta_SO = {
+					arixan = "Storm Point"
+					texan = "Storm Point"
+					valleyan = "Storm Point"
+					bayfolk = "Storm Point"					
 				}
 				b_la_yuta_SO = {}
 				b_el_oregano_SO = {}
-				b_campo_dulce_SO = {}
+				b_campo_dulce_SO = {
+					arixan = "Sweetfield"
+					texan = "Sweetfield"
+					valleyan = "Sweetfield"
+					bayfolk = "Sweetfield"				
+				}
 			}
 			c_nogales = { 
 				color={ 146 124 121 }
@@ -1624,7 +1811,12 @@ b_tombstone_AZ = {
 	
 				b_nogales_SO = {}
 				b_santa_ana_SO = {}
-				b_magdalena_de_kino_SO = {}
+				b_magdalena_de_kino_SO = {
+					arixan = "Magdalena Kino"
+					texan = "Magdalena Kino"
+					valleyan = "Magdalena Kino"
+					bayfolk = "Magdalena Kino"					
+				}
 				b_imuris_SO = {}
 				b_san_felipe_SO = {}
 				b_tubutama_SO = {}
@@ -1639,7 +1831,25 @@ b_tombstone_AZ = {
 				b_fronteras_SO = {}
 				b_cananea_SO = {}
 				b_arizpe_SO = {}
-				b_nacozari_de_garcia_SO = {}
+				b_nacozari_de_garcia_SO = {
+					arixan = "Nacozari"
+					texan = "Nacozari"
+					valleyan = "Nacozari"
+					bayfolk = "Nacozari"					
+					chino = "Nacozari de García"
+					menomex = "Nacozari de García"
+					altiplanense = "Nacozari de García"
+					bravo = "Nacozari de García"
+					abajeno = "Nacozari de García"
+					chilango = "Nacozari de García"
+					tapatio = "Nacozari de García"
+					jarocho = "Nacozari de García"
+					yucatanense = "Nacozari de García"
+					choco = "Nacozari de García"
+					calentano = "Nacozari de García"
+					californiano = "Nacozari de García"
+					occidental = "Nacozari de García"					
+				}
 				b_naco_SO = {}
 				b_esqueda_SO = {}
 				b_cumpas_SO = {}
@@ -1648,22 +1858,57 @@ b_tombstone_AZ = {
 				color={ 100 87 113 }
 				color2={ 255 255 255 }
 	
+				arixan = "Novillo"
+				texan = "Novillo"
+				valleyan = "Novillo"
+				bayfolk = "Novillo"
+				yaqui = "Hiak Vatwe"
+					
 				b_moctezuma_SO = {}
-				b_nacori_chico_SO = {}
-				b_sahuaripa_SO = {}
-				b_tepache_SO = {}
-				b_bacanora_SO = {}
+				b_nacori_chico_SO = {
+					chino = "Nácori Chico"
+					menomex = "Nácori Chico"
+					altiplanense = "Nácori Chico"
+					bravo = "Nácori Chico"
+					abajeno = "Nácori Chico"
+					chilango = "Nácori Chico"
+					tapatio = "Nácori Chico"
+					jarocho = "Nácori Chico"
+					yucatanense = "Nácori Chico"
+					choco = "Nácori Chico"
+					calentano = "Nácori Chico"
+					californiano = "Nácori Chico"
+					occidental = "Nácori Chico"
+					yaqui = "Nácori"
+					
+				}
+				b_sahuaripa_SO = {
+					yaqui = "Sawwaripa"
+					seri = "Sawwaripa"
+				}
+				b_tepache_SO = {
+					yaqui = "Tepatzi"
+					seri = "Tepatzi"
+					nahua = "Tepiatl"
+				}
+				b_bacanora_SO = {
+					yaqui = "Vacat Noraca"
+					seri = "Vacat Noraca"
+				}
 				b_granados_SO = {}
-				b_arivechi_SO = {}
+				b_arivechi_SO = {
+					yaqui = "Arivetzi"
+					seri = "Arivetzi"
+				}
 				b_divisaderos_SO = {}
 			}
 		}
-		
 		d_yaqui = {
 			color={ 255 102 0 }
 			color2={ 255 255 255 }
 
 			yaqui = "Jiak Bwia"
+			seri = "Heeno"
 
 			capital = 795 #c_guaymas
 
@@ -1672,32 +1917,63 @@ b_tombstone_AZ = {
 				color2={ 255 255 255 }
 	
 				yaqui = "Kaje'eme"
+				seri = "Upanguaymas"
 	
 				b_guaymas_SO = {
 					yaqui = "Wa'imam"
+					seri = "Uayemas"
 				}
 				b_ciudad_obregon_SO = {
 					yaqui = "Kaje'eme"
 					used_for_dynasty_names = no
 					short_name = yes
+					
+					arixan = "Obregon City"
+					texan = "Obregon City"
+					valleyan = "Obregon City"
+					bayfolk = "Obregon City"					
+					chino = "Ciudad Obregón"
+					menomex = "Ciudad Obregón"
+					altiplanense = "Ciudad Obregón"
+					bravo = "Ciudad Obregón"
+					abajeno = "Ciudad Obregón"
+					chilango = "Ciudad Obregón"
+					tapatio = "Ciudad Obregón"
+					jarocho = "Ciudad Obregón"
+					yucatanense = "Ciudad Obregón"
+					choco = "Ciudad Obregón"
+					calentano = "Ciudad Obregón"
+					californiano = "Ciudad Obregón"
+					occidental = "Ciudad Obregón"	
+					yaqui = "Bwe’u jo’ara Obregón"
 				}
-				b_rio_muerto_SO = {}
+				b_rio_muerto_SO = {
+					arixan = "Dead River"
+					texan = "Dead River"
+					valleyan = "Dead River"
+					bayfolk = "Dead River"					
+				}
 				b_san_carlos_SO = {
 					yaqui = "Tákale"
+					seri = "Tákale"
 				}
 				b_empalme_SO = {
 					yaqui = "Cochórit"
+					seri = "Cochórit"
 				}
 				b_vicam_SO = {
 					yaqui = "Bika"
+					seri = "Bika"
 				}
 				b_cocorit_SO = {
 					yaqui = "Ko'okoi"
+					seri = "Ko'okoi"
 				}
 				b_potam_SO = {
 					yaqui = "Pota"
+					seri = "Pota"
 				}
-			}
+			}	
 			c_yecora = { 
 				color={ 145 95 47 }
 				color2={ 255 255 255 }
@@ -1705,6 +1981,7 @@ b_tombstone_AZ = {
 				b_yecora_SO = {}
 				b_rosario_SO = {
 					yaqui = "Tesopaco"
+					seri = "Tesopaco"
 				}
 				b_nuri_SO = {}
 				b_movas_SO = {}
@@ -1721,45 +1998,85 @@ b_tombstone_AZ = {
 				holy_site = fidencista
 	
 				yaqui = "Na'avojowa"
+				seri = "Na'avojowa"
 	
 				b_navojoa_SO = {
 					yaqui = "Na'avojowa"
+					seri = "Na'avojowa"
 				}
 				b_huatabampo_SO = {}
-				b_alamos_SO = {}
-				b_etchojoa_SO = {}
+				b_alamos_SO = {
+					chino = "Álamos"
+					menomex = "Álamos"
+					altiplanense = "Álamos"
+					bravo = "Álamos"
+					abajeno = "Álamos"
+					chilango = "Álamos"
+					tapatio = "Álamos"
+					jarocho = "Álamos"
+					yucatanense = "Álamos"
+					choco = "Álamos"
+					calentano = "Álamos"
+					californiano = "Álamos"
+					occidental = "Álamos"					
+				}
+				b_etchojoa_SO = {
+					yaqui = "Etcho Jówwa"
+					seri = "Etcho Jówwa"
+				}
 				b_cabora_SO = {}
-				b_villa_juarez_SO = {}
+				b_villa_juarez_SO = {
+					arixan = "Juarezville"	
+					texan = "Juarezville"	
+					valleyan = "Juarezville"	
+					bayfolk = "Juarezville"									
+				}
 				b_las_bocas_SO = {}
 				b_masiaca_SO = {
 					yaqui = "Masiacahui"
+					seri = "Masiacahui"
 				}
 			}
 		}
-		
 		d_sinaloa = {
 			color={ 176 128 131 }
 			color2={ 255 255 255 }
 
 			capital = 796 # c_culiacan
+			
+			yaqui = "Sinalobola"
+			seri = "Xnaamotat"
 
 			c_los_mochis = { 
 				color={ 170 155 152 }
 				color2={ 255 255 255 }
 	
 				yaqui = "Mochic"
+				seri = "Mochic"
 	
 				b_los_mochis_SI = {
 					yaqui = "Mochic"
+					seri = "Mochic"
 				}
-				b_jahuara_SI = {}
-				b_topolobampo_SI = {}
+				b_jahuara_SI = {
+					yaqui = "Jawwara"
+					seri = "Jawwara"
+				}
+				b_topolobampo_SI = {
+				
+				}
 				b_choix_SI = {
 					yaqui = "Choim"
+					seri = "Choim"
 				}
 				b_el_fuerte_SI = {}
 				b_las_vacas_SI = {}
-				b_higuera_de_zaragoza_SI = {}
+				b_higuera_de_zaragoza_SI = {
+					arixan = "Higuera"
+					texan = "Higuera"
+					valleyan = "Higuera"
+					bayfolk = "Higuera"				
+				}
 				b_ahome_SI = {}
 			}
 			c_guasave = { 
@@ -1767,15 +2084,36 @@ b_tombstone_AZ = {
 				color2={ 255 255 255 }
 	
 				yaqui = "Huazaba"
+				seri = "Huazaba"
 	
 				b_guasave_SI = {
 					yaqui = "Huazaba"
+					seri = "Huazaba"
 				}
 				b_guamuchil_SI = {}
-				b_sinaloa_de_leyva_SI = {}
-				b_leyva_solano_SI = {}
+				b_sinaloa_de_leyva_SI = {
+					yaqui = "Sinalobola"
+					seri = "Sinalobola"
+					arixan = "Sinaloa"
+					czexan = "Sinaloa"
+					texaner = "Sinaloa"
+					texan = "Sinaloa"
+					bayfolk = "Sinaloa"				
+					valleyan = "Sinaloa"					
+				}
+				b_leyva_solano_SI = {
+					arixan = "Levy Solano"
+					texan = "Levy Solano"
+					bayfolk = "Levy Solano"				
+					valleyan = "Levy Solano"				
+				}
 				b_angostura_SI = {}
-				b_estacion_naranjo_SI = {}
+				b_estacion_naranjo_SI = {
+					arixan = "Naranjo Station"
+					texan = "Naranjo Station"
+					bayfolk = "Naranjo Station"				
+					valleyan = "Naranjo Station"
+				}
 				b_bacubirito_SI = {}
 				b_cortines_SI = {}
 				b_mocorito_SI = {}
@@ -1787,15 +2125,60 @@ b_tombstone_AZ = {
 	
 				holy_site = navegante
 	
+				chino = "Culiacán"
+				menomex = "Culiacán"
+				altiplanense = "Culiacán"
+				bravo = "Culiacán"
+				abajeno = "Culiacán"
+				chilango = "Culiacán"
+				tapatio = "Culiacán"
+				jarocho = "Culiacán"
+				yucatanense = "Culiacán"
+				choco = "Culiacán"
+				calentano = "Culiacán"
+				californiano = "Culiacán"
+				occidental = "Culiacán"
 				nahua = "Colhuahcan"
+				yaqui = "Colhuahcan"
+				seri = "Colhuahcan"
+				
 				b_culiacan_SI = {
 					nahua = "Colhuahcan"
+					yaqui = "Colhuahcan"
+					seri = "Colhuahcan"				
+					chino = "Culiacán"
+					menomex = "Culiacán"
+					altiplanense = "Culiacán"
+					bravo = "Culiacán"
+					abajeno = "Culiacán"
+					chilango = "Culiacán"
+					tapatio = "Culiacán"
+					jarocho = "Culiacán"
+					yucatanense = "Culiacán"
+					choco = "Culiacán"
+					calentano = "Culiacán"
+					californiano = "Culiacán"
+					occidental = "Culiacán"
 				}
 				b_navalato_SI = {}
 				b_quila_SI = {}
 				b_costa_rica_SI = {}
 				b_eldorado_SI = {}
-				b_cosala_SI = {}
+				b_cosala_SI = {
+					chino = "Cosalá"
+					menomex = "Cosalá"
+					altiplanense = "Cosalá"
+					bravo = "Cosalá"
+					abajeno = "Cosalá"
+					chilango = "Cosalá"
+					tapatio = "Cosalá"
+					jarocho = "Cosalá"
+					yucatanense = "Cosalá"
+					choco = "Cosalá"
+					calentano = "Cosalá"
+					californiano = "Cosalá"
+					occidental = "Cosalá"					
+				}
 				b_altata_SI = {}
 				b_culiacancito_SI = {}
 			}
@@ -1814,7 +2197,6 @@ b_tombstone_AZ = {
 				b_surutato_SI = {}
 			}
 		}
-
 		d_mazatlan = {
 			color={ 200 93 40 }
 			color2={ 255 255 255 }
@@ -1825,9 +2207,47 @@ b_tombstone_AZ = {
 				color={ 124 109 94 }
 				color2={ 255 255 255 }
 	
-				b_mazatlan_SI = {}
+				nahua = "Mazatltlan"
+				yaqui = "Masatlan"
+				seri = "Masatlan"
+				chino = "Mazatlán"
+				menomex = "Mazatlán"
+				altiplanense = "Mazatlán"
+				bravo = "Mazatlán"
+				abajeno = "Mazatlán"
+				chilango = "Mazatlán"
+				tapatio = "Mazatlán"
+				jarocho = "Mazatlán"
+				yucatanense = "Mazatlán"
+				choco = "Mazatlán"
+				calentano = "Mazatlán"
+				californiano = "Mazatlán"
+				occidental = "Mazatlán"
+				
+				
+				b_mazatlan_SI = {
+					nahua = "Mazatltlan"
+					yaqui = "Masatlan"
+					seri = "Masatlan"
+					chino = "Mazatlán"
+					menomex = "Mazatlán"
+					altiplanense = "Mazatlán"
+					bravo = "Mazatlán"
+					abajeno = "Mazatlán"
+					chilango = "Mazatlán"
+					tapatio = "Mazatlán"
+					jarocho = "Mazatlán"
+					yucatanense = "Mazatlán"
+					choco = "Mazatlán"
+					calentano = "Mazatlán"
+					californiano = "Mazatlán"
+					occidental = "Mazatlán"				
+				}
 				b_el_castillo_SI = {}
-				b_el_roble_SI = {}
+				b_el_roble_SI = {
+					yaqui = "Kutnamakia"
+				
+				}
 				b_la_cruz_SI = {}
 				b_san_ignacio_SI = {}
 				b_villa_union_SI = {}
@@ -1845,7 +2265,14 @@ b_tombstone_AZ = {
 				b_cacalotan_SI = {}
 				b_teodoro_beltran_SI = {}
 				b_el_rosario_SI = {}
-				b_escuinapa_de_hidalgo = {}
+				b_escuinapa_de_hidalgo = {
+					arixan = "Escuinapa"
+					texan = "Escuinapa"
+					czexan = "Escuinapa"
+					texaner = "Escuinapa"
+					valleyan = "Escuinapa"
+					bayfolk = "Escuinapa"	
+				}
 			}
 		}
 		d_mar_de_cortes = {
@@ -1854,29 +2281,265 @@ b_tombstone_AZ = {
 
 			capital = 2272 # c_isla_tiburon
 					
-					seri = "Comcaac"
+			seri = "Comcaac"
+			chino = "Mar de Cortés"
+			menomex = "Mar de Cortés"
+			altiplanense = "Mar de Cortés"
+			bravo = "Mar de Cortés"
+			abajeno = "Mar de Cortés"
+			chilango = "Mar de Cortés"
+			tapatio = "Mar de Cortés"
+			jarocho = "Mar de Cortés"
+			yucatanense = "Mar de Cortés"
+			choco = "Mar de Cortés"
+			calentano = "Mar de Cortés"
+			californiano = "Mar de Cortés"
+			occidental = "Mar de Cortés"				 
+			arixan = "Cortes"
+			texan = "Cortes"
+			valleyan = "Cortes"
+			bayfolk = "Cortes"	
 			
 			c_isla_tiburon = { 
 				color={ 137 61 55 }
 				color2={ 255 255 255 }
 				
+
+				chino = "Tiburón"
+				menomex = "Tiburón"
+				altiplanense = "Tiburón"
+				bravo = "Tiburón"
+				abajeno = "Tiburón"
+				chilango = "Tiburón"
+				tapatio = "Tiburón"
+				jarocho = "Tiburón"
+				yucatanense = "Tiburón"
+				choco = "Tiburón"
+				calentano = "Tiburón"
+				californiano = "Tiburón"
+				occidental = "Tiburón"					
 				seri = "Tahejöc"
-				b_tecomate = { }
-				b_comcaac = { }
+				yaqui = "Kuchu Kuchi'im" #Pez cuchillo
+			
+				b_tecomate = { 
+					nahua = Tecomatl
+				}
+				b_hant_yapol = { #Lit. Tiburón Ballena
+					arixan = "Whaleshark"
+					texan = "Whaleshark"
+					valleyan = "Whaleshark"
+					bayfolk = "Whaleshark"					
+					chino = "Jantiapo"
+					menomex = "Jantiapo"
+					altiplanense = "Jantiapo"
+					bravo = "Jantiapo"
+					abajeno = "Jantiapo"
+					chilango = "Jantiapo"
+					tapatio = "Jantiapo"
+					jarocho = "Jantiapo"
+					yucatanense = "Jantiapo"
+					choco = "Jantiapo"
+					calentano = "Jantiapo"
+					californiano = "Jantiapo"
+					occidental = "Jantiapo"						
+				}
+				b_an_icatazatoj = {#An Icatázatoj
+					arixan = "Slaughterhouse"
+					texan = "Slaughterhouse"
+					valleyan = "Slaughterhouse"
+					bayfolk = "Slaughterhouse"						
+					chino = "Anicatázato"
+					menomex = "Anicatázato"
+					altiplanense = "Anicatázato"
+					bravo = "Anicatázato"
+					abajeno = "Anicatázato"
+					chilango = "Anicatázato"
+					tapatio = "Anicatázato"
+					jarocho = "Anicatázato"
+					yucatanense = "Anicatázato"
+					choco = "Anicatázato"
+					calentano = "Anicatázato"
+					californiano = "Anicatázato"
+					occidental = "Anicatázato"					
+				}
+				b_ano_yait={ #Ocaso
+					arixan = "Twilight"
+					texan = "Twilight"
+					valleyan = "Twilight"
+					bayfolk = "Twilight"					
+					chino = "El Ocaso"
+					menomex = "El Ocaso"
+					altiplanense = "El Ocaso"
+					bravo = "El Ocaso"
+					abajeno = "El Ocaso"
+					chilango = "El Ocaso"
+					tapatio = "El Ocaso"
+					jarocho = "El Ocaso"
+					yucatanense = "El Ocaso"
+					choco = "El Ocaso"
+					calentano = "El Ocaso"
+					californiano = "El Ocaso"
+					occidental = "Anoyaite"					
+				}
+				b_paaza_caaitic = {#Lugar Blando
+					arixan = "Softplace"
+					texan = "Softplace"
+					valleyan = "Softplace"
+					bayfolk = "Softplace"					
+					chino = "Pazacaitico"
+					menomex = "Pazacaitico"
+					altiplanense = "Pazacaitico"
+					bravo = "Pazacaitico"
+					abajeno = "Pazacaitico"
+					chilango = "Pazacaitico"
+					tapatio = "Pazacaitico"
+					jarocho = "Pazacaitico"
+					yucatanense = "Pazacaitico"
+					choco = "Pazacaitico"
+					calentano = "Pazacaitico"
+					californiano = "Pazacaitico"
+					occidental = "Pazacaitico"				
+				}
+				b_caanj_iitom = { #habla de la baya
+					arixan = "Berryspeak"
+					texan = "Berryspeak"
+					valleyan = "Berryspeak"
+					bayfolk = "Berryspeak"				
+					chino = "Canjítome"
+					menomex = "Canjítome"
+					altiplanense = "Canjítome"
+					bravo = "Canjítome"
+					abajeno = "Canjítome"
+					chilango = "Canjítome"
+					tapatio = "Canjítome"
+					jarocho = "Canjítome"
+					yucatanense = "Canjítome"
+					choco = "Canjítome"
+					calentano = "Canjítome"
+					californiano = "Canjítome"
+					occidental = "Canjítome"
+				}
+				b_hataamt_ihozl = { #Hatáamt Ihózl
+					chino = "Jatámtijozote"
+					menomex = "Jatámtijozote"
+					altiplanense = "Jatámtijozote"
+					bravo = "Jatámtijozote"
+					abajeno = "Jatámtijozote"
+					chilango = "Jatámtijozote"
+					tapatio = "Jatámtijozote"
+					jarocho = "Jatámtijozote"
+					yucatanense = "Jatámtijozote"
+					choco = "Jatámtijozote"
+					calentano = "Jatámtijozote"
+					californiano = "Jatámtijozote"
+					occidental = "Jatámtijozote"			
+				}
 			}
 			c_isla_angel_de_la_guarda = { 
 				color={ 173 132 27 }
 				color2={ 255 255 255 }
+				
 				seri = "Xazl Iimt"
-				b_Refugio = { seri = "Xazl"}
+				yaqui = "Ankeles"
+				
+				b_Refugio = { 
+					seri = "Xazl"
+					yaqui = "Eusilia"
+				}
+				b_tjamojiil_yacaai = {
+					arixan = "Whitestone"
+					texan = "Whitestone"
+					valleyan = "Whitestone"
+					bayfolk = "Whitestone"	
+					seri = "Tjamojíil Yacáai"
+					yaqui = "Tetatosai"
+					chino = "Piedra Blanca"
+					menomex = "Piedra Blanca"
+					altiplanense = "Piedra Blanca"
+					bravo = "Piedra Blanca"
+					abajeno = "Piedra Blanca"
+					chilango = "Piedra Blanca"
+					tapatio = "Piedra Blanca"
+					jarocho = "Piedra Blanca"
+					yucatanense = "Piedra Blanca"
+					choco = "Piedra Blanca"
+					calentano = "Piedra Blanca"
+					californiano = "Piedra Blanca"
+					occidental = "Piedra Blanca"	
+				}
 			}
 			c_isla_san_esteban = { 
 				color={ 76 34 31 }
 				color2={ 255 255 255 }
 					
-					seri = "Coféecöl"
+					seri = "Coftéecöl "
 					
-				b_san_esteban = { seri= "Hast"}
+				b_san_esteban = { 
+				seri= "Hast"
+				}
+				b_caamajoj_zaaj = { #Caamajoj Zaaj
+					arixan = "Mountcave"
+					texan = "Mountcave"
+					valleyan = "Mountcave"
+					bayfolk = "Mountcave"	
+					seri = "Caamájoj Zaaj"
+					yaqui = "Kawi Teeso"
+					chino = "Camajozaje"
+					menomex = "Camajozaje"
+					altiplanense = "Camajozaje"
+					bravo = "Camajozaje"
+					abajeno = "Camajozaje"
+					chilango = "Camajozaje"
+					tapatio = "Camajozaje"
+					jarocho = "Camajozaje"
+					yucatanense = "Camajozaje"
+					choco = "Camajozaje"
+					calentano = "Camajozaje"
+					californiano = "Camajozaje"
+					occidental = "Camajozaje"						
+				}
+				b_caamajoj_hax = { #Camájoj Hax
+					arixan = "Freshwater"
+					texan = "Freshwater"
+					valleyan = "Freshwater"
+					bayfolk = "Freshwater"	
+					seri = "Caamájoj Hax"
+					yaqui = "Kawi Teeso"
+					chino = "Aguadulce"
+					menomex = "Aguadulce"
+					altiplanense = "Aguadulce"
+					bravo = "Aguadulce"
+					abajeno = "Aguadulce"
+					chilango = "Aguadulce"
+					tapatio = "Aguadulce"
+					jarocho = "Aguadulce"
+					yucatanense = "Aguadulce"
+					choco = "Aguadulce"
+					calentano = "Aguadulce"
+					californiano = "Aguadulce"
+					occidental = "Camajojaj"
+				}					
+				b_iifa = { 
+					arixan = "Point Iifa"
+					texan = "Point Iifa"
+					valleyan = "Point Iifa"
+					bayfolk = "Point Iifa"	
+					seri = "Caamájoj Hax"
+					yaqui = "Kawi Teeso"
+					chino = "El Cascajal"
+					menomex = "El Cascajal"
+					altiplanense = "El Cascajal"
+					bravo = "El Cascajal"
+					abajeno = "El Cascajal"
+					chilango = "El Cascajal"
+					tapatio = "El Cascajal"
+					jarocho = "El Cascajal"
+					yucatanense = "El Cascajal"
+					choco = "El Cascajal"
+					calentano = "El Cascajal"
+					californiano = "El Cascajal"
+					occidental = "El Cascajal"		
+				}					
 			}
 		}
 	}
@@ -1885,12 +2548,20 @@ b_tombstone_AZ = {
 		color={ 207 202 170 }
 		color2={ 255 255 255 }
 		
-		plautdietsch = "Mutterberg"
+		plautdietsch = "Mutterbergreich"
 		texan = "Kingdom of the North"
 		czexan = "Kingdom of the North"
 		texaner = "Kingdom of the North"
 		arixan = "Kingdom of the North"
-		
+		valleyan = "Wastelands"
+		bayfolk = "Wastelands"	
+		chilango = "El Altiplano"
+		jarocho = "El Altiplano"
+		abajeno = "El Altiplano"
+		tapatio = "El Altiplano"
+		choco = "El Altiplano"
+		yucatanense = "El Altiplano"
+				
 		short_name = yes
 		
 		#Crusade target weight
@@ -1917,7 +2588,12 @@ b_tombstone_AZ = {
 				nahua = "Chihuahhua"
 				raramuri = "Taba'ráopa"
 	
-				b_riva_palacio_CH = {}
+				b_riva_palacio_CH = {
+					arixan = "Riva Palace"
+					texan = "Riva Palace"
+					valleyan = "Riva Palace"
+					bayfolk = "Riva Palace"					
+				}
 				b_chihuahua_CH = {
 					nahua = "Chihuahhua"
 					raramuri = "Taba'ráopa"
@@ -1927,15 +2603,47 @@ b_tombstone_AZ = {
 				b_satevo_CH = {}
 				b_santa_rosa_CH = {}
 				b_nombre_de_dios_CH = {}
-				b_el_saucito_CH = {}
+				b_el_saucito_CH = {
+					yaqui = Wata
+				}
 			}
 			c_paso_del_norte = { # 800
 				color={ 200 109 128 }
 				color2={ 255 255 255 }
 	
-				b_ciudad_juarez_CH = {}
+				b_ciudad_juarez_CH = {
+				short_name = yes
+				
+					arixan = "Juarez City"
+					texan = "Juarez City"
+					czexan = "Juarez City"
+					texaner = "Juarez City"
+					valleyan = "Juarez City"
+					bayfolk = "Juarez City"	
+					yaqui = "Bwe’u jo’ara Jwarez"
+					chino = "Ciudad Juárez"
+					menomex = "Ciudad Juárez"
+					altiplanense = "Ciudad Juárez"
+					bravo = "Ciudad Juárez"
+					abajeno = "Ciudad Juárez"
+					chilango = "Ciudad Juárez"
+					tapatio = "Ciudad Juárez"
+					jarocho = "Ciudad Juárez"
+					yucatanense = "Ciudad Juárez"
+					choco = "Ciudad Juárez"
+					calentano = "Ciudad Juárez"
+					californiano = "Ciudad Juárez"
+					occidental = "Ciudad Juárez"					
+				}
 				b_samalayuca_CH = {}
-				b_villa_ahumada_CH = {}
+				b_villa_ahumada_CH = {
+					texan = "Ahumadaville"
+					czexan = "Ahumadaville"
+					texaner = "Ahumadaville"
+					arixan = "Ahumadaville"
+					valleyan = "Ahumadaville"
+					bayfolk = "Ahumadaville"				
+				}
 				b_anapra_CH = {}
 				b_san_isidro_CH = {}
 				b_sauzal_CH = {}	   
@@ -1951,11 +2659,46 @@ b_tombstone_AZ = {
 				b_rubio_CH = {}
 				b_anahuac_CH = {}
 				b_guerrero_CH = {}
-				b_los_jagueyes_CH = {}
+				b_los_jagueyes_CH = {
+					chino = "Los Jagüeyes"
+					menomex = "Los Jagüeyes"
+					altiplanense = "Los Jagüeyes"
+					bravo = "Los Jagüeyes"
+					abajeno = "Los Jagüeyes"
+					chilango = "Los Jagüeyes"
+					tapatio = "Los Jagüeyes"
+					jarocho = "Los Jagüeyes"
+					yucatanense = "Los Jagüeyes"
+					choco = "Los Jagüeyes"
+					calentano = "Los Jagüeyes"
+					californiano = "Los Jagüeyes"
+					occidental = "Los Jagüeyes"				
+				}
 				b_namiquipa_CH = {}
 				b_ciudad_cuauhtemoc_CH = {
 					used_for_dynasty_names = no
 					short_name = yes
+					
+					arixan = "Cuauhtemoc CityCuauhtemoc City"
+					texan = "Cuauhtemoc City"
+					czexan = "Cuauhtemoc City"
+					texaner = "Cuauhtemoc City"
+					valleyan = "Cuauhtemoc City"
+					bayfolk = "Cuauhtemoc City"	
+					chino = "Ciudad Cuauhtémoc"
+					menomex = "Ciudad Cuauhtémoc"
+					altiplanense = "Ciudad Cuauhtémoc"
+					bravo = "Ciudad Cuauhtémoc"
+					abajeno = "Ciudad Cuauhtémoc"
+					chilango = "Ciudad Cuauhtémoc"
+					tapatio = "Ciudad Cuauhtémoc"
+					jarocho = "Ciudad Cuauhtémoc"
+					yucatanense = "Ciudad Cuauhtémoc"
+					choco = "Ciudad Cuauhtémoc"
+					calentano = "Ciudad Cuauhtémoc"
+					californiano = "Ciudad Cuauhtémoc"
+					occidental = "Ciudad Cuauhtémoc"	
+					yaqui = "Bwe’u jo’ara Cwawtemok"
 				}
 				b_bachiniva_CH = {}
 			}
@@ -1965,8 +2708,17 @@ b_tombstone_AZ = {
 	
 				b_hidalgo_del_parral_CH = {}
 				b_jimenez_CH = {}
-				b_valle_de_allende_CH = {}
-				b_saucillo_CH = {}
+				b_valle_de_allende_CH = {
+					arixan = "Allende Valley"
+					texan = "Allende Valley"
+					czexan = "Allende Valley"
+					texaner = "Allende Valley"
+					valleyan = "Allende Valley"
+					bayfolk = "Allende Valley"	
+				}
+				b_saucillo_CH = {
+					yaqui = Wata
+				}
 				b_santa_barbara_CH = {}
 				b_delicias_CH = {}
 				b_san_francisco_del_oro_CH = {}
@@ -1981,7 +2733,14 @@ b_tombstone_AZ = {
 				b_carmargo_CH = {}
 				b_meoqui_CH = {}
 				b_santa_eulalia_CH = {}
-				b_san_francisco_de_conchos_CH = {}
+				b_san_francisco_de_conchos_CH = {
+					arixan = "San Francisco Conchos"
+					texan = "San Francisco Conchos"
+					czexan = "San Francisco Conchos"
+					texaner = "San Francisco Conchos"
+					valleyan = "San Francisco Conchos"
+					bayfolk = "San Francisco Conchos"					
+				}
 				b_coyame_CH = {}
 				b_julimes_CH = {}
 				b_manuel_benavides_CH = {}
@@ -1994,7 +2753,13 @@ b_tombstone_AZ = {
 			color2={ 255 255 255 }
 
 			plautdietsch = "Lagunenregion"
-
+			arixan = "Lagunas"
+			texan = "Lagunas"
+			czexan = "Lagunas"
+			texaner = "Lagunas"
+			valleyan = "Lagunas"
+			bayfolk = "Lagunas"
+				
 			capital = 816 # c_torreon
 
 			c_torreon = { # 816
@@ -2005,16 +2770,64 @@ b_tombstone_AZ = {
 	
 				holy_site = fidencista
 	
-				b_torreon_COA = {}
-				b_gomez_palacio_DU = {}
+				b_torreon_COA = {
+					arixan = "Big Tower"
+					texan = "Big Tower"
+					czexan = "Big Tower"
+					texaner = "Big Tower"
+					valleyan = "Big Tower"
+					bayfolk = "Big Tower"	
+					chino = "Torreón"
+					menomex = "Torreón"
+					altiplanense = "Torreón"
+					bravo = "Torreón"
+					abajeno = "Torreón"
+					chilango = "Torreón"
+					tapatio = "Torreón"
+					jarocho = "Torreón"
+					yucatanense = "Torreón"
+					choco = "Torreón"
+					calentano = "Torreón"
+					californiano = "Torreón"
+					occidental = "Torreón"	
+					yaqui = "Torreón"				
+				}
+				b_gomez_palacio_DU = {
+					arixan = "Gomez Palace"
+					texan = "Gomez Palace"
+					czexan = "Gomez Palace"
+					texaner = "Gomez Palace"
+					valleyan = "Gomez Palace"
+					bayfolk = "Gomez Palace"
+				}
 				b_ciudad_lerdo_DU = {
 					used_for_dynasty_names = no
 					short_name = yes
+					arixan = "Lerdo City"
+					texan = "Lerdo City"
+					czexan = "Lerdo City"
+					texaner = "Lerdo City"
+					valleyan = "Lerdo City"
+					bayfolk = "Lerdo City"					
 				}
 				b_matamoros_COA = {}
-				b_parras_de_la_fuente_COA = {}
+				b_parras_de_la_fuente_COA = {
+					arixan = "Parras"
+					texan = "Parras"
+					czexan = "Parras"
+					texaner = "Parras"
+					valleyan = "Parras"
+					bayfolk = "Parras"
+				}
 				b_viesca_COA = {}
-				b_hacienda_de_hornos_COA = {}
+				b_hacienda_de_hornos_COA = {
+					arixan = "Hornos"
+					texan = "Hornos"
+					czexan = "Hornos"
+					texaner = "Hornos"
+					valleyan = "Hornos"
+					bayfolk = "Hornos"				
+				}
 				b_la_sagra_COA = {}
 			}
 			c_cuencame = {
@@ -2036,15 +2849,44 @@ b_tombstone_AZ = {
 				color={ 142 64 66 }
 				color2={ 255 255 255 }
 	
-				b_villa_hidalgo_DU = {}
+				b_villa_hidalgo_DU = {
+					arixan = "Hidalgoville"
+					texan = "Hidalgoville"
+					czexan = "Hidalgoville"
+					texaner = "Hidalgoville"
+					valleyan = "Hidalgoville"
+					bayfolk = "Hidalgoville"					
+				}
 				b_mapimi_DU = {}
 				b_inde_DU = {}
-				b_san_pedro_del_gallo_DU = {}
-				b_villa_ocampo_DU = {}
+				b_san_pedro_del_gallo_DU = {
+					arixan = "San Pedro Gallo"
+					texan = "San Pedro Gallo"
+					czexan = "San Pedro Gallo"
+					texaner = "San Pedro Gallo"
+					valleyan = "San Pedro Gallo"
+					bayfolk = "San Pedro Gallo"					
+				}
+				b_villa_ocampo_DU = {
+					arixan = "Ocampoville"
+					texan = "Ocampoville"
+					czexan = "Ocampoville"
+					texaner = "Ocampoville"
+					valleyan = "Ocampoville"
+					bayfolk = "Ocampoville"	
+				}
 				b_el_ciento_veinte_DU = {}
-				b_tlahualilo_de_zaragoza_DU = {}
+				b_tlahualilo_de_zaragoza_DU = {
+					arixan = "Tlahualilo"
+					texan = "Tlahualilo"
+					czexan = "Tlahualilo"
+					texaner = "Tlahualilo"
+					valleyan = "Tlahualilo"
+					bayfolk = "Tlahualilo"
+				
+				}
 			}
-		}
+		}		#end of the loc project Metaluis90
 		d_casas_altas = {
 			color={ 189 162 87 }
 			color2={ 255 255 255 }
@@ -2559,7 +3401,7 @@ b_tombstone_AZ = {
 		
 		capital = 818 #Galeana
 		
-		c_galeana = { # 818
+			c_galeana = { # 818
 			color= { 176 155 88 }
 			color2= { 255 255 255 }
 
@@ -2572,19 +3414,21 @@ b_tombstone_AZ = {
 			b_rio_de_san_jose_NL = {}
 			b_san_jose_de_raices_NL = {}
 
-		}
+			}
 		
-		c_arroyo = { #2339
-			color = { 190 160 99 }
-			color2 = { 255 255 255 }
+			c_arroyo = { #2339
+				color = { 190 160 99 }
+				color2 = { 255 255 255 }
+				
+				b_doctor_arroyo_NL = {}
+				b_aramberri_NL = {}
+				b_general_zaragoza_NL = {}
+				b_mier_y_noriega_NL = {}
+				b_la_ascension_NL = {}
+				b_san_isidro_de_fernandez_NL = {}
 			
-			b_doctor_arroyo_NL = {}
-			b_aramberri_NL = {}
-			b_general_zaragoza_NL = {}
-			b_mier_y_noriega_NL = {}
-			b_la_ascension_NL = {}
-			b_san_isidro_de_fernandez_NL = {}
-
+			}
+		}
 			
 			
 			
