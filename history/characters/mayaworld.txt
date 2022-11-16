@@ -266,7 +266,6 @@
 	learning=8	
 	trait=elusive_shadow
 	trait=diligent
-	trait=affectionate
 	trait=ambitious
 	trait=gregarious
 	father=1431100
@@ -1086,7 +1085,7 @@ name = "Patricia"
 	culture=yucatanense
 	religion=cristo_rey
 	2485.1.1={birth=yes}
-	2520.1.1={add_spouse=1431236}
+	2520.1.1={add_spouse=1431235}
 	2560.1.1={death=yes}
 }
 1431237 = {
@@ -1140,9 +1139,10 @@ name = "Patricia"
 	2597.1.1={birth=yes
 				culture=yucatanense
 	}
-	2635.1.1={death=
+	2635.1.1={death= {
 		death_reason= death_battle #Died in battle against the Salazar; his son was subjugated later.
 		killer=1650072
+		}
 	}
 }
 1431241 = {
@@ -1366,6 +1366,7 @@ name = "Patricia"
 	trait=strong
 	trait=gregarious
 	trait=wroth
+	trait=child_of_consort
 	father=1431438
 	mother=1431439
 	2538.1.1={birth=yes}
@@ -1466,8 +1467,7 @@ name = "Patricia"
 		}
 	}	
 }
-#The Mopanes, dukes of Belmopán
-
+#The Mopanes, dukes of Belmop�n
 
 1431440 = { #Someone should have him killed
 	name="Jacinto"
@@ -1549,7 +1549,7 @@ name = "Patricia"
 1431444 = {
 	name="Crispina"
 	female=yes
-	dynasty=1546023 #Sister of Israel Soberón Salazar, king of Yucatán
+	dynasty=1546023 #Sister of Israel Soberon Salazar, king of Yucatan
 	culture=yucatanense
 	religion=neomayan
 	martial=8
@@ -1651,7 +1651,7 @@ name = "Patricia"
 	name="Raymond"
 	dynasty=154096
 	culture=brown
-	religion=yucatanense
+	religion=neomayan
 	martial=0
 	diplomacy=3
 	stewardship=3
@@ -1700,7 +1700,7 @@ name = "Patricia"
 	dynasty=154096	
 	culture=yucateco
 	religion=qabantajik
-	trait= thirfty_clerk
+	trait= thrifty_clerk 
 	trait= content
 	trait= diligent
 	trait= gardener
@@ -1713,7 +1713,7 @@ name = "Patricia"
 	dynasty=154096
 	culture=yucateco
 	religion=qabantajik
-	trait= thirfty_clerk
+	trait= thrifty_clerk
 	trait= content
 	trait= diligent
 	trait= gardener
@@ -1761,7 +1761,6 @@ name = "Patricia"
 	father=1431454
 	2600.6.25={birth=yes}
 	2642.1.1={death= {
-				death=yes
 				death_reason=death_trait
 			} #died of depression
 	}
@@ -2080,3 +2079,10 @@ name = "Patricia"
 	2120.1.1={death= yes} 
 }
 
+1438160 = {
+name=Morgan
+dynasty=5200209
+culture=garinagu
+religion=brethren
+2640.1.1={birth=yes}
+}

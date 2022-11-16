@@ -15,6 +15,19 @@ e_yucatan = {
 	k_belize = {
 		color={ 27 134 103 }
 		color2={ 255 255 255 }
+			capital = 2297 # Chetumal
+			title = PRINCE
+			title_female = PRINCE_FEMALE 				
+			
+			anglish = "British Honduras"
+			yucateco = "Bel Itsja'"
+			lacandon = "Bel Itza"
+			quichean = "Bel Itza"
+			cholano = "Bel Itza"
+			trifinio = "Veliz"
+			yucatanense = "Belice"
+			chilango = "Belice"
+		
 
 		capital = 1832 # dzuluinicob
 	}
@@ -626,6 +639,7 @@ e_yucatan = {
 				yucatanense = "Carmen"
 				choco = "Carmen"
 
+	
 			c_isla_del_carmen = { # 2271
 				color={ 39 97 205 }
 				color2={ 255 255 255 }
@@ -637,7 +651,6 @@ e_yucatan = {
 				lacandon = "Hol tun"
 				quichean = "Hol tun"
 				}
-				b_el_zacatal_CM = {}
 				b_puerto_real_CM = {}
 				b_quinta_chilla_CM = {}
 				b_boca_nueva_CM = {}
@@ -666,17 +679,29 @@ e_yucatan = {
 				b_chicbul_CM = {}
 				b_santa_maria_xbacab_CM = {}
 			}
-			c_palizada = {
+			c_palizada = { #2367
 				color={ 55 81 185 }
 				color2={ 255 255 255 }
 	
 				b_palizada_CM = {}
-				b_entre_hermanos_CM = {}
-				b_nuevo_progreso_CM = {}
-				b_atasta_CM = {}
-				b_el_playaso_CM = {}
 				b_chacah_CM = {}
 				b_el_chinal_CM = {}
+				b_balchacah_CM = {}
+				b_la_toza_CM = {}
+				b_blanca_mariposa_CM = {}
+				b_entre_hermanos_CM = {}
+			}
+			c_frontera = { #2367
+				color = { 31 85 58 }
+				color2 = { 255 255 255 }
+				
+				b_frontera_TB = {}
+				b_el_zacatal_CM = {}
+				b_nuevo_progreso_CM = {}
+				b_nuevo_centla_TB = {}
+				b_atasta_CM = {}
+				b_el_playaso_CM = {}
+				b_xicalango_CM = {}
 			}
 		}	
 			
@@ -692,7 +717,6 @@ e_yucatan = {
 	
 				b_paraiso_TB = {}
 				b_comalcalco_TB = {}
-				b_frontera_TB = {}
 				b_jalpa_de_mendez_TB = {}
 				b_macultepec_TB = {
 					yucateco = "Macuiltepeque"
@@ -707,18 +731,47 @@ e_yucatan = {
 					nahua = "Nacaxuxucan"
 				}
 			}
+			c_lagunas = { #2364
+				color = { 79 118 70 }
+				color2 = { 255 255 255 }
+				
+				b_tecolutilla_TB = {}	
+				b_sanchez_magallanes_TB = {}			
+				b_la_venta_TB = {}
+				b_barra_de_tupilco_TB = {}
+				b_cuauhtemoczin_TB = {}
+				b_ignacio_gutierrez_gomez_TB = {}
+				b_naranjeno_TB = {}
+				
+			}
+			c_la_chontalpa = { #2365 
+				color = { 47 39 70 }
+				color2 = { 255 255 255 }
+			
+				b_chontalpa_TB = {}
+				b_huimanguillo_TB = {}
+				b_san_manuel_TB = {} #should be in nezahualcoyotl or chontalpa.
+				b_zanapa_TB = {}
+				b_laguna_del_rosario_TB = {
+					short_name=yes
+					used_for_dynasty_names = no
+				}
+				b_macabilito_TB = {}
+				b_francisco_rueda_TB = {}
+				
+			}
 			c_cardenas = { # 1821
 				color={ 76 51 161 }
 				color2={ 255 255 255 }
 	
 				b_cardenas_TB = {}
-				b_huimanguillo_TB = {}
-				b_sanchez_magallanes_TB = {}
-				b_chontalpa_TB = {}
-				b_san_manuel_TB = {}
+				b_cunduacan_TB = {}
+				b_tecominoacan_TB = {}
+				b_mecatepec_TB = {}
+				b_ocuapan_TB = {}
 				b_benito_juarez_TB = {}
 				b_rosario_TB = {}
-				b_la_venta_TB = {}
+
 			}
 			c_villahermosa = { # 1822
 				color={ 128 134 109 }
@@ -726,7 +779,7 @@ e_yucatan = {
 	
 				b_villahermosa_TB = {}
 				b_macuspana_TB = {}
-				b_cunduacan_TB = {}
+
 				b_playas_del_rosario_TB = {}
 				b_jalapa_TB = {
 					nahua = "Xalapa"
