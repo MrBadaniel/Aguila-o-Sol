@@ -341,6 +341,29 @@ spriteTypes = {
 		norefcount = yes
 		can_be_lowres = yes
 	}
+	spriteType = {
+		name = "GFX_centralmexican_male_beard_behind"
+		texturefile = "gfx\\characters\\centralmexican_male\\centralmexican_male_beard_1.dds"
+		noOfFrames = 15
+		norefcount = yes
+		can_be_lowres = yes
+	}
+
+	spriteType = {
+		name = "GFX_centralmexican_male_beard_behind_midage"
+		texturefile = "gfx\\characters\\centralmexican_male\\centralmexican_male_beard_behind_2.dds"
+		noOfFrames = 15
+		norefcount = yes
+		can_be_lowres = yes
+	}
+
+	spriteType = {
+		name = "GFX_centralmexican_male_beard_behind_oldage"
+		texturefile = "gfx\\characters\\centralmexican_male\\centralmexican_male_beard_behind_3.dds"
+		noOfFrames = 15
+		norefcount = yes
+		can_be_lowres = yes
+	}
 	
 	spriteType = {
 		name = "GFX_southindian_male_hair_behind"
@@ -678,7 +701,7 @@ spriteTypes = {
 			"GFX_character_special_crowns_behind:p18"
 			"GFX_southindian_male_hair_behind:p1:h:y"
 			"GFX_centralmexican_male_beard_behind:p4:h:y"
-			":p5:c6"
+			#"GFX_empty:p5:c6:h"
 			"GFX_centralmexican_male_base:p2"							#5
 			"GFX_centralmexican_male_neck:d0"
 			"GFX_centralmexican_male_chin:d1"
@@ -708,7 +731,7 @@ spriteTypes = {
 			"GFX_frankish_male_overlayer_mid:p31"
 			"GFX_character_eyepatch:p13:y:o32x63"							#15
 			"GFX_southindian_male_hair:p1:h:y"
-			":p5:c7"
+			#"GFX_empty:p5:c7:h"
 			"GFX_character_mask:p12:y:o40x45"
 			"GFX_mexican_male_clothes_infront:p3:c4"											#20
 			"GFX_mexican_male_headgear:p5:c5"
@@ -770,7 +793,7 @@ spriteTypes = {
 			"GFX_character_special_crowns_behind:p18"
 			"GFX_southindian_male_hair_behind_midage:p1:h:y"
 			"GFX_centralmexican_male_beard_behind_midage:p4:h:y"
-			":p5:c6"
+			#"GFX_empty:p5:c6:h"
 			"GFX_centralmexican_male_base_midage:p2"
 			"GFX_centralmexican_male_neck_midage:d0"
 			"GFX_centralmexican_male_chin_midage:d1"
@@ -801,7 +824,7 @@ spriteTypes = {
 			"GFX_frankish_male_overlayer_mid:p31"
 			"GFX_character_eyepatch:p13:y:o32x63"
 			"GFX_southindian_male_hair_midage:p1:h:y"
-			":p5:c7"
+			#"GFX_empty:p5:c7:h"
 			"GFX_character_mask:p12:y:o40x45"
 			"GFX_mexican_male_clothes_infront:p3:c4"		
 			"GFX_mexican_male_headgear:p5:c5"
@@ -865,7 +888,7 @@ spriteTypes = {
 			"GFX_character_special_crowns_behind:p18"
 			"GFX_southindian_male_hair_behind_oldage:p1:h:y"
 			"GFX_centralmexican_male_beard_behind_oldage:p4:h:y"
-			":p5:c6"
+			#"GFX_empty:p5:c6:h"
 			"GFX_centralmexican_male_base_oldage:p2"
 			"GFX_centralmexican_male_neck_oldage:d0"
 			"GFX_centralmexican_male_chin_oldage:d1"
@@ -896,7 +919,7 @@ spriteTypes = {
 			"GFX_frankish_male_overlayer_mid:p31"
 			"GFX_character_eyepatch:p13:y:o32x63"
 			"GFX_southindian_male_hair_oldage:p1:h:y"
-			":p5:c7"
+			#"GFX_empty:p5:c7:h"
 			"GFX_character_mask:p12:y:o40x45"
 			"GFX_mexican_male_clothes_infront:p3:c4"
 			"GFX_mexican_male_headgear:p5:c5"
@@ -963,7 +986,7 @@ spriteTypes = {
 			"GFX_frankish_female_overlayer_behind:p32"
 			"GFX_character_special_crowns_behind:p18"    
 			"GFX_southindian_female_hair_behind:p1:h:y"           
-			":p5:c6"
+			#"GFX_empty:p5:c6:h"
 			"GFX_centralmexican_female_base:p2"                      
 			"GFX_centralmexican_female_neck:d0"                      #5
 			"GFX_centralmexican_female_chin:d1"
@@ -991,9 +1014,9 @@ spriteTypes = {
 			"GFX_mexican_female_clothes:p3:c2"	
 			"GFX_mexican_female_headgear_mid:p5:c3"
 			"GFX_southindian_female_hair:p1:h:y"                         
-			":p5:c7"
+			#"GFX_empty:p5:c7:h"
 			"GFX_character_mask:p12:y:o40x45"
-			"GFX_empty:p3:c4"
+			#"GFX_empty:p3:c4"
 			"GFX_frankish_female_undermain_hair:p33:h"
 			"GFX_frankish_female_undermain:p33"
 			"GFX_mexican_female_headgear:p5:c5"
@@ -1059,7 +1082,7 @@ spriteTypes = {
 			"GFX_frankish_female_overlayer_behind:p32"
 			"GFX_character_special_crowns_behind:p18"
 			"GFX_southindian_female_hair_behind_midage:p1:h:y"
-			":p5:c6"
+			#"GFX_empty:p5:c6:h"
 			"GFX_centralmexican_female_base_midage:p2"
 			"GFX_centralmexican_female_neck_midage:d0"
 			"GFX_centralmexican_female_chin_midage:d1"
@@ -1087,9 +1110,9 @@ spriteTypes = {
 			"GFX_mexican_female_clothes:p3:c2"
 			"GFX_mexican_female_headgear_mid:p5:c3"
 			"GFX_southindian_female_hair_midage:p1:h:y"
-			":p5:c7"
+			#"GFX_empty:p5:c7:h"
 			"GFX_character_mask:p12:y:o40x45"
-			"GFX_empty:p3:c4"
+			#"GFX_empty:p3:c4"
 			"GFX_frankish_female_undermain_hair:p33:h"
 			"GFX_frankish_female_undermain:p33"
 			"GFX_mexican_female_headgear:p5:c5"
@@ -1154,7 +1177,7 @@ spriteTypes = {
 			"GFX_frankish_female_overlayer_behind:p32"
 			"GFX_character_special_crowns_behind:p18"
 			"GFX_southindian_female_hair_behind_oldage:p1:h:y"
-			":p5:c6"
+			#"GFX_empty:p5:c6:h"
 			"GFX_centralmexican_female_base_oldage:p2"
 			"GFX_centralmexican_female_neck_oldage:d0"
 			"GFX_centralmexican_female_chin_oldage:d1"
@@ -1182,9 +1205,9 @@ spriteTypes = {
 			"GFX_mexican_female_clothes:p3:c2"
 			"GFX_mexican_female_headgear_mid:p5:c3"
 			"GFX_southindian_female_hair_oldage:p1:h:y"
-			":p5:c7"
+			#"GFX_empty:p5:c7:h"
 			"GFX_character_mask:p12:y:o40x45"
-			"GFX_empty:p3:c4"
+			#"GFX_empty:p3:c4"
 			"GFX_frankish_female_undermain_hair:p33:h"
 			"GFX_frankish_female_undermain:p33"
 			"GFX_southindian_female_headgear:p5:c5"
@@ -1248,7 +1271,7 @@ spriteTypes = {
 			"GFX_character_special_crowns_behind:p18"
 			"GFX_southindian_male_hair_behind:p1:h:y"
 			"GFX_centralmexican_male_beard_behind:p4:h:y"
-			":p5:c6"
+			#"GFX_empty:p5:c6:h"
 			"GFX_centralmexican_male_base:p2"							#5
 			"GFX_centralmexican_male_neck:d0"
 			"GFX_centralmexican_male_chin:d1"
@@ -1278,7 +1301,7 @@ spriteTypes = {
 			"GFX_frankish_male_overlayer_mid:p31"
 			"GFX_character_eyepatch:p13:y:o32x63"							#15
 			"GFX_southindian_male_hair:p1:h:y"
-			":p5:c7"
+			#"GFX_empty:p5:c7:h"
 			"GFX_character_mask:p12:y:o40x45"
 			"GFX_vaquero_male_clothes_infront:p3:c4"											#20
 			"GFX_vaquero_male_headgear:p5:c5"
@@ -1340,7 +1363,7 @@ spriteTypes = {
 			"GFX_character_special_crowns_behind:p18"
 			"GFX_southindian_male_hair_behind_midage:p1:h:y"
 			"GFX_centralmexican_male_beard_behind_midage:p4:h:y"
-			":p5:c6"
+			#"GFX_empty:p5:c6:h"
 			"GFX_centralmexican_male_base_midage:p2"
 			"GFX_centralmexican_male_neck_midage:d0"
 			"GFX_centralmexican_male_chin_midage:d1"
@@ -1371,7 +1394,7 @@ spriteTypes = {
 			"GFX_frankish_male_overlayer_mid:p31"
 			"GFX_character_eyepatch:p13:y:o32x63"
 			"GFX_southindian_male_hair_midage:p1:h:y"
-			":p5:c7"
+			#"GFX_empty:p5:c7:h"
 			"GFX_character_mask:p12:y:o40x45"
 			"GFX_vaquero_male_clothes_infront:p3:c4"		
 			"GFX_vaquero_male_headgear:p5:c5"
@@ -1435,7 +1458,7 @@ spriteTypes = {
 			"GFX_character_special_crowns_behind:p18"
 			"GFX_southindian_male_hair_behind_oldage:p1:h:y"
 			"GFX_centralmexican_male_beard_behind_oldage:p4:h:y"
-			":p5:c6"
+			#"GFX_empty:p5:c6:h"
 			"GFX_centralmexican_male_base_oldage:p2"
 			"GFX_centralmexican_male_neck_oldage:d0"
 			"GFX_centralmexican_male_chin_oldage:d1"
@@ -1466,7 +1489,7 @@ spriteTypes = {
 			"GFX_frankish_male_overlayer_mid:p31"
 			"GFX_character_eyepatch:p13:y:o32x63"
 			"GFX_southindian_male_hair_oldage:p1:h:y"
-			":p5:c7"
+			#"GFX_empty:p5:c7:h"
 			"GFX_character_mask:p12:y:o40x45"
 			"GFX_vaquero_male_clothes_infront:p3:c4"
 			"GFX_vaquero_male_headgear:p5:c5"
@@ -1533,7 +1556,7 @@ spriteTypes = {
 			"GFX_frankish_female_overlayer_behind:p32"
 			"GFX_character_special_crowns_behind:p18"    
 			"GFX_southindian_female_hair_behind:p1:h:y"           
-			":p5:c6"
+			#"GFX_empty:p5:c6:h"
 			"GFX_centralmexican_female_base:p2"                      
 			"GFX_centralmexican_female_neck:d0"                      #5
 			"GFX_centralmexican_female_chin:d1"
@@ -1561,9 +1584,9 @@ spriteTypes = {
 			"GFX_vaquero_female_clothes:p3:c2"	
 			"GFX_vaquero_female_headgear_mid:p5:c3"
 			"GFX_southindian_female_hair:p1:h:y"                         
-			":p5:c7"
+			#"GFX_empty:p5:c7:h"
 			"GFX_character_mask:p12:y:o40x45"
-			"GFX_empty:p3:c4"
+			#"GFX_empty:p3:c4"
 			"GFX_frankish_female_undermain_hair:p33:h"
 			"GFX_frankish_female_undermain:p33"
 			"GFX_vaquero_female_headgear:p5:c5"
@@ -1629,7 +1652,7 @@ spriteTypes = {
 			"GFX_frankish_female_overlayer_behind:p32"
 			"GFX_character_special_crowns_behind:p18"
 			"GFX_southindian_female_hair_behind_midage:p1:h:y"
-			":p5:c6"
+			#"GFX_empty:p5:c6:h"
 			"GFX_centralmexican_female_base_midage:p2"
 			"GFX_centralmexican_female_neck_midage:d0"
 			"GFX_centralmexican_female_chin_midage:d1"
@@ -1657,9 +1680,9 @@ spriteTypes = {
 			"GFX_vaquero_female_clothes:p3:c2"
 			"GFX_vaquero_female_headgear_mid:p5:c3"
 			"GFX_southindian_female_hair_midage:p1:h:y"
-			":p5:c7"
+			#"GFX_empty:p5:c7:h"
 			"GFX_character_mask:p12:y:o40x45"
-			"GFX_empty:p3:c4"
+			#"GFX_empty:p3:c4"
 			"GFX_frankish_female_undermain_hair:p33:h"
 			"GFX_frankish_female_undermain:p33"
 			"GFX_vaquero_female_headgear:p5:c5"
@@ -1724,7 +1747,7 @@ spriteTypes = {
 			"GFX_frankish_female_overlayer_behind:p32"
 			"GFX_character_special_crowns_behind:p18"
 			"GFX_southindian_female_hair_behind_oldage:p1:h:y"
-			":p5:c6"
+			#"GFX_empty:p5:c6:h"
 			"GFX_centralmexican_female_base_oldage:p2"
 			"GFX_centralmexican_female_neck_oldage:d0"
 			"GFX_centralmexican_female_chin_oldage:d1"
@@ -1752,9 +1775,9 @@ spriteTypes = {
 			"GFX_vaquero_female_clothes:p3:c2"
 			"GFX_vaquero_female_headgear_mid:p5:c3"
 			"GFX_southindian_female_hair_oldage:p1:h:y"
-			":p5:c7"
+			#"GFX_empty:p5:c7:h"
 			"GFX_character_mask:p12:y:o40x45"
-			"GFX_empty:p3:c4"
+			#"GFX_empty:p3:c4"
 			"GFX_frankish_female_undermain_hair:p33:h"
 			"GFX_frankish_female_undermain:p33"
 			"GFX_southindian_female_headgear:p5:c5"
@@ -1817,7 +1840,7 @@ spriteTypes = {
 			"GFX_character_special_crowns_behind:p18"
 			"GFX_southindian_male_hair_behind:p1:y"
 			"GFX_centralmexican_male_beard_behind:p4:y"
-			":p5:c6"
+			#"GFX_empty:p5:c6:h"
 			"GFX_centralmexican_male_base:p2"							#5
 			"GFX_centralmexican_male_neck:d0"
 			"GFX_centralmexican_male_chin:d1"
@@ -1847,7 +1870,7 @@ spriteTypes = {
 			"GFX_frankish_male_overlayer_mid:p31"
 			"GFX_character_eyepatch:p13:y:o32x63"							#15
 			"GFX_southindian_male_hair:p1:y"
-			":p5:c7"
+			#"GFX_empty:p5:c7:h"
 			"GFX_character_mask:p12:y:o40x45"
 			"GFX_pacific_male_clothes_infront:p3:c4"											#20
 			"GFX_pacific_male_headgear:p5:c5"
@@ -1864,22 +1887,37 @@ spriteTypes = {
 
 		hair_color_index = 8
 		hair_color = { # dark, base, highlight
-			{ 10 10 10 } { 50 50 50 } { 255 255 255 } #Black
-			{ 10 10 10 } { 125 85 56 } { 255 255 255 } #Darker Brown
-			{ 30 22 18 } { 150 90 55 } { 255 255 255 } #Brown
-			{ 20 12 8 } { 78 54 37 } { 255 255 255 } #Darkest Brown
+			 { 10 10 10 } {  50 50 50 } { 255 255 255 }
+			 { 10 10 10 } {  67 55 50 } { 255 255 255 }
+			 { 10 10 10 } { 93 66 53 } { 255 255 255 }
+			 { 10 10 10 } { 125 85 56 } { 255 255 255 }
+			 { 15 8 0 } { 176 155 108 } { 255 255 255 }
+			{ 10 10 10 } {  50 50 50 } { 255 255 255 } #Black
+			{ 15 8 0 } { 80 47 22 } { 255 255 255 } #Medium Brown
+			{ 10 10 10 } { 27 25 23 } { 255 255 255 } #Second Black
+			{ 20 12 8 } { 78 54 37 } { 255 255 255 } #Second Brown
+			{ 10 10 10 } { 65 65 65 } { 255 255 255 } #Third Black
+			{ 10 10 10 } {  50 50 50 } { 255 255 255 } #Black
+			{ 15 8 0 } { 80 47 22 } { 255 255 255 } #Medium Brown
+			{ 10 10 10 } { 27 25 23 } { 255 255 255 } #Second Black
+			{ 20 12 8 } { 78 54 37 } { 255 255 255 } #Second Brown
+			{ 10 10 10 } { 65 65 65 } { 255 255 255 } #Third Black
 		}
 
 		eye_color_index = 9
 		eye_color = {
-			{ 120 74 46 } #Brown 01
-			{ 48 37 19 } #Brown 02
-			{ 62 45 16 } #Brown Black 01
-			{ 42 26 9 } #Brown Black 02
-			{ 37 54 24 } #Brown-Green
+			{ 80 64 38 } #Dark Brown 
+ 			{ 77 54 21 } #Medium Brown 
+ 			{ 134 97 34 } #Light Hazel 
+ 			{ 170 116 40 } #Lighter Hazel 
+ 			{ 47 52 121 } #Dark blue 
+ 			{ 85 122 209 } #Light blue 01 
+ 			{ 98 165 221 } #Light blue 02 
+ 			{ 105 155 93 } #Green 
+ 			
 		}
 		
-		headgear_that_hides_hair = { 10 }	
+		headgear_that_hides_hair = { 10 }
 	}
 
 	# CALIFORNIANO male midage
@@ -1894,7 +1932,7 @@ spriteTypes = {
 			"GFX_character_special_crowns_behind:p18"
 			"GFX_southindian_male_hair_behind_midage:p1:y"
 			"GFX_centralmexican_male_beard_behind_midage:p4:y"
-			":p5:c6"
+			#"GFX_empty:p5:c6:h"
 			"GFX_centralmexican_male_base_midage:p2"
 			"GFX_centralmexican_male_neck_midage:d0"
 			"GFX_centralmexican_male_chin_midage:d1"
@@ -1925,7 +1963,7 @@ spriteTypes = {
 			"GFX_frankish_male_overlayer_mid:p31"
 			"GFX_character_eyepatch:p13:y:o32x63"
 			"GFX_southindian_male_hair_midage:p1:y"
-			":p5:c7"
+			#"GFX_empty:p5:c7:h"
 			"GFX_character_mask:p12:y:o40x45"
 			"GFX_pacific_male_clothes_infront:p3:c4"		
 			"GFX_pacific_male_headgear:p5:c5"
@@ -1940,21 +1978,39 @@ spriteTypes = {
 			"GFX_player_overlay:p11"
 		}
 
+	
 		hair_color_index = 8
 		hair_color = { # dark, base, highlight
-			{ 10 10 10 } { 50 50 50 } { 255 255 255 } #Black
-			{ 10 10 10 } { 125 85 56 } { 255 255 255 } #Darker Brown
-			{ 30 22 18 } { 150 90 55 } { 255 255 255 } #Brown
-			{ 20 12 8 } { 78 54 37 } { 255 255 255 } #Darkest Brown
-		}
+
+			 { 10 10 10 } {  50 50 50 } { 255 255 255 }
+			 { 10 10 10 } {  67 55 50 } { 255 255 255 }
+			 { 10 10 10 } { 93 66 53 } { 255 255 255 }
+			 { 10 10 10 } { 125 85 56 } { 255 255 255 }
+			 { 15 8 0 } { 176 155 108 } { 255 255 255 }
+			{ 10 10 10 } {  50 50 50 } { 255 255 255 } #Black
+			{ 15 8 0 } { 80 47 22 } { 255 255 255 } #Medium Brown
+			{ 10 10 10 } { 27 25 23 } { 255 255 255 } #Second Black
+			{ 20 12 8 } { 78 54 37 } { 255 255 255 } #Second Brown
+			{ 10 10 10 } { 65 65 65 } { 255 255 255 } #Third Black
+			{ 10 10 10 } {  50 50 50 } { 255 255 255 } #Black
+			{ 15 8 0 } { 80 47 22 } { 255 255 255 } #Medium Brown
+			{ 10 10 10 } { 27 25 23 } { 255 255 255 } #Second Black
+			{ 20 12 8 } { 78 54 37 } { 255 255 255 } #Second Brown
+			{ 10 10 10 } { 65 65 65 } { 255 255 255 } #Third Black
+
+		 }
 
 		eye_color_index = 9
 		eye_color = {
-			{ 120 74 46 } #Brown 01
-			{ 48 37 19 } #Brown 02
-			{ 62 45 16 } #Brown Black 01
-			{ 42 26 9 } #Brown Black 02
-			{ 37 54 24 } #Brown-Green
+			{ 80 64 38 } #Dark Brown 
+ 			{ 77 54 21 } #Medium Brown 
+ 			{ 134 97 34 } #Light Hazel 
+ 			{ 170 116 40 } #Lighter Hazel 
+ 			{ 47 52 121 } #Dark blue 
+ 			{ 85 122 209 } #Light blue 01 
+ 			{ 98 165 221 } #Light blue 02 
+ 			{ 105 155 93 } #Green 
+ 			
 		}
 		
 		headgear_that_hides_hair = { 10 }
@@ -1972,7 +2028,7 @@ spriteTypes = {
 			"GFX_character_special_crowns_behind:p18"
 			"GFX_southindian_male_hair_behind_oldage:p1:y"
 			"GFX_centralmexican_male_beard_behind_oldage:p4:y"
-			":p5:c6"
+			#"GFX_empty:p5:c6:h"
 			"GFX_centralmexican_male_base_oldage:p2"
 			"GFX_centralmexican_male_neck_oldage:d0"
 			"GFX_centralmexican_male_chin_oldage:d1"
@@ -2003,7 +2059,7 @@ spriteTypes = {
 			"GFX_frankish_male_overlayer_mid:p31"
 			"GFX_character_eyepatch:p13:y:o32x63"
 			"GFX_southindian_male_hair_oldage:p1:y"
-			":p5:c7"
+			#"GFX_empty:p5:c7:h"
 			"GFX_character_mask:p12:y:o40x45"
 			"GFX_pacific_male_clothes_infront:p3:c4"
 			"GFX_pacific_male_headgear:p5:c5"
@@ -2020,23 +2076,40 @@ spriteTypes = {
 
 		hair_color_index = 8
 		hair_color = { # dark, base, highlight
-			{ 10 10 10 } { 200 200 200 } { 255 255 255 } #Was Black, now white
-			{ 10 10 10 } { 143 134 127 } { 255 255 255 } #Was Darker Brown, now grey
-			{ 30 22 18 } { 174 161 151 } { 255 255 255 } #Was Brown, now grey
-			{ 30 22 18 } { 180 170 151 } { 255 255 255 } #Was Darkest Brown, now sandy grey
-		}
+		
+			 { 10 10 10 } { 100 100 100 } { 255 255 255 }
+			 { 10 10 10 } { 120 120 120 } { 255 255 255 }
+			 { 10 10 10 } { 130 130 130 } { 255 255 255 }
+			 { 10 10 10 } { 130 130 130 } { 255 255 255 }
+			 { 30 30 30 } { 150 150 150 } { 255 255 255 }
+			{ 10 10 10 } {  200 200 200 } { 255 255 255 } #Black
+			{ 15 8 0 } { 174 166 160 } { 255 255 255 } #Medium Brown
+			{ 10 10 10 } { 150 146 140 } { 255 255 255 } #Second Black
+			{ 20 12 8 } { 138 116 99 } { 255 255 255 } #Second Brown
+			{ 10 10 10 } { 185 185 185 } { 255 255 255 } #Third Black
+			{ 10 10 10 } {  200 200 200 } { 255 255 255 } #Black
+			{ 15 8 0 } { 174 166 160 } { 255 255 255 } #Medium Brown
+			{ 10 10 10 } { 150 146 140 } { 255 255 255 } #Second Black
+			{ 20 12 8 } { 138 116 99 } { 255 255 255 } #Second Brown
+			{ 10 10 10 } { 185 185 185 } { 255 255 255 } #Third Black
+		 }
 
 		eye_color_index = 9
 		eye_color = {
-			{ 120 74 46 } #Brown 01
-			{ 48 37 19 } #Brown 02
-			{ 62 45 16 } #Brown Black 01
-			{ 42 26 9 } #Brown Black 02
-			{ 37 54 24 } #Brown-Green
+			{ 80 64 38 } #Dark Brown 
+ 			{ 77 54 21 } #Medium Brown 
+ 			{ 134 97 34 } #Light Hazel 
+ 			{ 170 116 40 } #Lighter Hazel 
+ 			{ 47 52 121 } #Dark blue 
+ 			{ 85 122 209 } #Light blue 01 
+ 			{ 98 165 221 } #Light blue 02 
+ 			{ 105 155 93 } #Green 
+ 			
 		}
 		
 		headgear_that_hides_hair = { 10 }
 	}
+
 	
 ### CALIFORNIANO FEMALE ####
 	portraitType = {
@@ -2079,9 +2152,9 @@ spriteTypes = {
 			"GFX_pacific_female_clothes:p3:c2"	
 			"GFX_pacific_female_headgear_mid:p5:c3"
 			"GFX_southindian_female_hair:p1:y"
-			":p5:c7"
+			#"GFX_empty:p5:c7:h"
 			"GFX_character_mask:p12:y:o40x45"
-			"GFX_empty:p3:c4"
+			#"GFX_empty:p3:c4"
 			"GFX_frankish_female_undermain_hair:p33:h"
 			"GFX_frankish_female_undermain:p33"
 			"GFX_pacific_female_headgear:p5:c5"
@@ -2096,24 +2169,39 @@ spriteTypes = {
 			"GFX_player_overlay:p11"
 		}
 
-		hair_color_index = 8
+			hair_color_index = 8
 		hair_color = { # dark, base, highlight
-			{ 10 10 10 } { 50 50 50 } { 255 255 255 } #Black
-			{ 10 10 10 } { 125 85 56 } { 255 255 255 } #Darker Brown
-			{ 30 22 18 } { 150 90 55 } { 255 255 255 } #Brown
-			{ 20 12 8 } { 78 54 37 } { 255 255 255 } #Darkest Brown
+			 { 10 10 10 } {  50 50 50 } { 255 255 255 }
+			 { 10 10 10 } {  67 55 50 } { 255 255 255 }
+			 { 10 10 10 } { 93 66 53 } { 255 255 255 }
+			 { 10 10 10 } { 125 85 56 } { 255 255 255 }
+			 { 15 8 0 } { 176 155 108 } { 255 255 255 }
+			{ 10 10 10 } {  50 50 50 } { 255 255 255 } #Black
+			{ 15 8 0 } { 80 47 22 } { 255 255 255 } #Medium Brown
+			{ 10 10 10 } { 27 25 23 } { 255 255 255 } #Second Black
+			{ 20 12 8 } { 78 54 37 } { 255 255 255 } #Second Brown
+			{ 10 10 10 } { 65 65 65 } { 255 255 255 } #Third Black
+			{ 10 10 10 } {  50 50 50 } { 255 255 255 } #Black
+			{ 15 8 0 } { 80 47 22 } { 255 255 255 } #Medium Brown
+			{ 10 10 10 } { 27 25 23 } { 255 255 255 } #Second Black
+			{ 20 12 8 } { 78 54 37 } { 255 255 255 } #Second Brown
+			{ 10 10 10 } { 65 65 65 } { 255 255 255 } #Third Black
 		}
 
 		eye_color_index = 9
 		eye_color = {
-			{ 120 74 46 } #Brown 01
-			{ 48 37 19 } #Brown 02
-			{ 62 45 16 } #Brown Black 01
-			{ 42 26 9 } #Brown Black 02
-			{ 37 54 24 } #Brown-Green
+			{ 80 64 38 } #Dark Brown 
+ 			{ 77 54 21 } #Medium Brown 
+ 			{ 134 97 34 } #Light Hazel 
+ 			{ 170 116 40 } #Lighter Hazel 
+ 			{ 47 52 121 } #Dark blue 
+ 			{ 85 122 209 } #Light blue 01 
+ 			{ 98 165 221 } #Light blue 02 
+ 			{ 105 155 93 } #Green 
+ 			
 		}
 		
-		headgear_that_hides_hair = { }
+		headgear_that_hides_hair = { 10 }
 	}
 
 	# midage
@@ -2157,9 +2245,9 @@ spriteTypes = {
 			"GFX_pacific_female_clothes:p3:c2"
 			"GFX_pacific_female_headgear_mid:p5:c3"
 			"GFX_southindian_female_hair_midage:p1:y"
-			":p5:c7"
+			#"GFX_empty:p5:c7:h"
 			"GFX_character_mask:p12:y:o40x45"
-			"GFX_empty:p3:c4"
+			#"GFX_empty:p3:c4"
 			"GFX_frankish_female_undermain_hair:p33:h"
 			"GFX_frankish_female_undermain:p33"
 			"GFX_pacific_female_headgear:p5:c5"
@@ -2174,24 +2262,42 @@ spriteTypes = {
 			"GFX_player_overlay:p11"
 		}
 
+	
 		hair_color_index = 8
 		hair_color = { # dark, base, highlight
-			{ 10 10 10 } { 50 50 50 } { 255 255 255 } #Black
-			{ 10 10 10 } { 125 85 56 } { 255 255 255 } #Darker Brown
-			{ 30 22 18 } { 150 90 55 } { 255 255 255 } #Brown
-			{ 20 12 8 } { 78 54 37 } { 255 255 255 } #Darkest Brown
-		}
+
+			 { 10 10 10 } {  50 50 50 } { 255 255 255 }
+			 { 10 10 10 } {  67 55 50 } { 255 255 255 }
+			 { 10 10 10 } { 93 66 53 } { 255 255 255 }
+			 { 10 10 10 } { 125 85 56 } { 255 255 255 }
+			 { 15 8 0 } { 176 155 108 } { 255 255 255 }
+			{ 10 10 10 } {  50 50 50 } { 255 255 255 } #Black
+			{ 15 8 0 } { 80 47 22 } { 255 255 255 } #Medium Brown
+			{ 10 10 10 } { 27 25 23 } { 255 255 255 } #Second Black
+			{ 20 12 8 } { 78 54 37 } { 255 255 255 } #Second Brown
+			{ 10 10 10 } { 65 65 65 } { 255 255 255 } #Third Black
+			{ 10 10 10 } {  50 50 50 } { 255 255 255 } #Black
+			{ 15 8 0 } { 80 47 22 } { 255 255 255 } #Medium Brown
+			{ 10 10 10 } { 27 25 23 } { 255 255 255 } #Second Black
+			{ 20 12 8 } { 78 54 37 } { 255 255 255 } #Second Brown
+			{ 10 10 10 } { 65 65 65 } { 255 255 255 } #Third Black
+
+		 }
 
 		eye_color_index = 9
 		eye_color = {
-			{ 120 74 46 } #Brown 01
-			{ 48 37 19 } #Brown 02
-			{ 62 45 16 } #Brown Black 01
-			{ 42 26 9 } #Brown Black 02
-			{ 37 54 24 } #Brown-Green
+			{ 80 64 38 } #Dark Brown 
+ 			{ 77 54 21 } #Medium Brown 
+ 			{ 134 97 34 } #Light Hazel 
+ 			{ 170 116 40 } #Lighter Hazel 
+ 			{ 47 52 121 } #Dark blue 
+ 			{ 85 122 209 } #Light blue 01 
+ 			{ 98 165 221 } #Light blue 02 
+ 			{ 105 155 93 } #Green 
+ 			
 		}
 		
-		headgear_that_hides_hair = { }
+		headgear_that_hides_hair = { 10 }
 	}
 
 	# oldage
@@ -2235,9 +2341,9 @@ spriteTypes = {
 			"GFX_mexican_female_clothes:p3:c2"
 			"GFX_mexican_female_headgear_mid:p5:c3"
 			"GFX_southindian_female_hair_oldage:p1:y"
-			":p5:c7"
+			#"GFX_empty:p5:c7:h"
 			"GFX_character_mask:p12:y:o40x45"
-			"GFX_empty:p3:c4"
+			#"GFX_empty:p3:c4"
 			"GFX_frankish_female_undermain_hair:p33:h"
 			"GFX_frankish_female_undermain:p33"
 			"GFX_mexican_female_headgear:p5:c5"
@@ -2255,23 +2361,40 @@ spriteTypes = {
 		
 		hair_color_index = 8
 		hair_color = { # dark, base, highlight
-			{ 10 10 10 } { 200 200 200 } { 255 255 255 } #Was Black, now white
-			{ 10 10 10 } { 143 134 127 } { 255 255 255 } #Was Darker Brown, now grey
-			{ 30 22 18 } { 174 161 151 } { 255 255 255 } #Was Brown, now grey
-			{ 30 22 18 } { 180 170 151 } { 255 255 255 } #Was Darkest Brown, now sandy grey
-		}
+		
+			 { 10 10 10 } { 100 100 100 } { 255 255 255 }
+			 { 10 10 10 } { 120 120 120 } { 255 255 255 }
+			 { 10 10 10 } { 130 130 130 } { 255 255 255 }
+			 { 10 10 10 } { 130 130 130 } { 255 255 255 }
+			 { 30 30 30 } { 150 150 150 } { 255 255 255 }
+			{ 10 10 10 } {  200 200 200 } { 255 255 255 } #Black
+			{ 15 8 0 } { 174 166 160 } { 255 255 255 } #Medium Brown
+			{ 10 10 10 } { 150 146 140 } { 255 255 255 } #Second Black
+			{ 20 12 8 } { 138 116 99 } { 255 255 255 } #Second Brown
+			{ 10 10 10 } { 185 185 185 } { 255 255 255 } #Third Black
+			{ 10 10 10 } {  200 200 200 } { 255 255 255 } #Black
+			{ 15 8 0 } { 174 166 160 } { 255 255 255 } #Medium Brown
+			{ 10 10 10 } { 150 146 140 } { 255 255 255 } #Second Black
+			{ 20 12 8 } { 138 116 99 } { 255 255 255 } #Second Brown
+			{ 10 10 10 } { 185 185 185 } { 255 255 255 } #Third Black
+		 }
 
 		eye_color_index = 9
 		eye_color = {
-			{ 120 74 46 } #Brown 01
-			{ 48 37 19 } #Brown 02
-			{ 62 45 16 } #Brown Black 01
-			{ 42 26 9 } #Brown Black 02
-			{ 37 54 24 } #Brown-Green
+			{ 80 64 38 } #Dark Brown 
+ 			{ 77 54 21 } #Medium Brown 
+ 			{ 134 97 34 } #Light Hazel 
+ 			{ 170 116 40 } #Lighter Hazel 
+ 			{ 47 52 121 } #Dark blue 
+ 			{ 85 122 209 } #Light blue 01 
+ 			{ 98 165 221 } #Light blue 02 
+ 			{ 105 155 93 } #Green 
+ 			
 		}
 		
-		headgear_that_hides_hair = { }
+		headgear_that_hides_hair = { 10 }
 	}
+
 	
 ### Melungeon male
 	portraitType = {
@@ -2285,7 +2408,7 @@ spriteTypes = {
 			"GFX_character_special_crowns_behind:p18"
 			"GFX_egyptian_male_hair_behind:p1:y"
 			"GFX_egyptian_male_beard_behind:p4:y"
-			":p5:c6"
+			#"GFX_empty:p5:c6:h"
 			"GFX_egyptian_male_base:p2"							#5
 			"GFX_egyptian_male_neck:d0"
 			"GFX_egyptian_male_chin:d1"
@@ -2315,7 +2438,7 @@ spriteTypes = {
 			"GFX_frankish_male_overlayer_mid:p31"
 			"GFX_character_eyepatch:p13:y:o32x63"							#15
 			"GFX_egyptian_male_hair:p1:y"
-			":p5:c7"
+			#"GFX_empty:p5:c7:h"
 			"GFX_character_mask:p12:y:o40x45"
 			"GFX_bluegrass_male_clothes_infront:p3:c4"											#20
 			"GFX_bluegrass_male_headgear:p5:c5"
@@ -2362,7 +2485,7 @@ spriteTypes = {
 			"GFX_character_special_crowns_behind:p18"
 			"GFX_egyptian_male_hair_behind_midage:p1:y"
 			"GFX_egyptian_male_beard_behind_midage:p4:y"
-			":p5:c6"
+			#"GFX_empty:p5:c6:h"
 			"GFX_egyptian_male_base_midage:p2"
 			"GFX_egyptian_male_neck_midage:d0"
 			"GFX_egyptian_male_chin_midage:d1"
@@ -2393,7 +2516,7 @@ spriteTypes = {
 			"GFX_frankish_male_overlayer_mid:p31"
 			"GFX_character_eyepatch:p13:y:o32x63"
 			"GFX_egyptian_male_hair_midage:p1:y"
-			":p5:c7"
+			#"GFX_empty:p5:c7:h"
 			"GFX_character_mask:p12:y:o40x45"
 			"GFX_bluegrass_male_clothes_infront:p3:c4"		
 			"GFX_bluegrass_male_headgear:p5:c5"
@@ -2440,7 +2563,7 @@ spriteTypes = {
 			"GFX_character_special_crowns_behind:p18"
 			"GFX_egyptian_male_hair_behind_oldage:p1:y"
 			"GFX_egyptian_male_beard_behind_oldage:p4:y"
-			":p5:c6"
+			#"GFX_empty:p5:c6:h"
 			"GFX_egyptian_male_base_oldage:p2"
 			"GFX_egyptian_male_neck_oldage:d0"
 			"GFX_egyptian_male_chin_oldage:d1"
@@ -2471,7 +2594,7 @@ spriteTypes = {
 			"GFX_frankish_male_overlayer_mid:p31"
 			"GFX_character_eyepatch:p13:y:o32x63"
 			"GFX_egyptian_male_hair_oldage:p1:y"
-			":p5:c7"
+			#"GFX_empty:p5:c7:h"
 			"GFX_character_mask:p12:y:o40x45"
 			"GFX_bluegrass_male_clothes_infront:p3:c4"
 			"GFX_bluegrass_male_headgear:p5:c5"
@@ -2547,9 +2670,9 @@ spriteTypes = {
 			"GFX_bluegrass_female_clothes:p3:c2"	
 			"GFX_bluegrass_female_headgear_mid:p5:c3"
 			"GFX_egyptian_female_hair:p1:y"
-			":p5:c7"
+			#"GFX_empty:p5:c7:h"
 			"GFX_character_mask:p12:y:o40x45"
-			"GFX_empty:p3:c4"
+			#"GFX_empty:p3:c4"
 			"GFX_frankish_female_undermain_hair:p33:h"
 			"GFX_frankish_female_undermain:p33"
 			"GFX_bluegrass_female_headgear:p5:c5"
@@ -2625,9 +2748,9 @@ spriteTypes = {
 			"GFX_bluegrass_female_clothes:p3:c2"
 			"GFX_bluegrass_female_headgear_mid:p5:c3"
 			"GFX_egyptian_female_hair_midage:p1:y"
-			":p5:c7"
+			#"GFX_empty:p5:c7:h"
 			"GFX_character_mask:p12:y:o40x45"
-			"GFX_empty:p3:c4"
+			#"GFX_empty:p3:c4"
 			"GFX_frankish_female_undermain_hair:p33:h"
 			"GFX_frankish_female_undermain:p33"
 			"GFX_bluegrass_female_headgear:p5:c5"
@@ -2703,9 +2826,9 @@ spriteTypes = {
 			"GFX_bluegrass_female_clothes:p3:c2"
 			"GFX_bluegrass_female_headgear_mid:p5:c3"
 			"GFX_egyptian_female_hair_oldage:p1:y"
-			":p5:c7"
+			#"GFX_empty:p5:c7:h"
 			"GFX_character_mask:p12:y:o40x45"
-			"GFX_empty:p3:c4"
+			#"GFX_empty:p3:c4"
 			"GFX_frankish_female_undermain_hair:p33:h"
 			"GFX_frankish_female_undermain:p33"
 			"GFX_bluegrass_female_headgear:p5:c5"
@@ -2753,7 +2876,7 @@ spriteTypes = {
 			"GFX_character_special_crowns_behind:p18"
 			"GFX_egyptian_male_hair_behind:p1:y"
 			"GFX_egyptian_male_beard_behind:p4:y"
-			":p5:c6"
+			#"GFX_empty:p5:c6:h"
 			"GFX_egyptian_male_base:p2"							#5
 			"GFX_egyptian_male_neck:d0"
 			"GFX_egyptian_male_chin:d1"
@@ -2783,7 +2906,7 @@ spriteTypes = {
 			"GFX_frankish_male_overlayer_mid:p31"
 			"GFX_character_eyepatch:p13:y:o32x63"							#15
 			"GFX_egyptian_male_hair:p1:y"
-			":p5:c7"
+			#"GFX_empty:p5:c7:h"
 			"GFX_character_mask:p12:y:o40x45"
 			"GFX_byzantine_male_clothes_infront:p3:c4"											#20
 			"GFX_byzantine_male_headgear:p5:c5"
@@ -2830,7 +2953,7 @@ spriteTypes = {
 			"GFX_character_special_crowns_behind:p18"
 			"GFX_egyptian_male_hair_behind_midage:p1:y"
 			"GFX_egyptian_male_beard_behind_midage:p4:y"
-			":p5:c6"
+			#"GFX_empty:p5:c6:h"
 			"GFX_egyptian_male_base_midage:p2"
 			"GFX_egyptian_male_neck_midage:d0"
 			"GFX_egyptian_male_chin_midage:d1"
@@ -2861,7 +2984,7 @@ spriteTypes = {
 			"GFX_frankish_male_overlayer_mid:p31"
 			"GFX_character_eyepatch:p13:y:o32x63"
 			"GFX_egyptian_male_hair_midage:p1:y"
-			":p5:c7"
+			#"GFX_empty:p5:c7:h"
 			"GFX_character_mask:p12:y:o40x45"
 			"GFX_byzantine_male_clothes_infront:p3:c4"		
 			"GFX_byzantine_male_headgear:p5:c5"
@@ -2908,7 +3031,7 @@ spriteTypes = {
 			"GFX_character_special_crowns_behind:p18"
 			"GFX_egyptian_male_hair_behind_oldage:p1:y"
 			"GFX_egyptian_male_beard_behind_oldage:p4:y"
-			":p5:c6"
+			#"GFX_empty:p5:c6:h"
 			"GFX_egyptian_male_base_oldage:p2"
 			"GFX_egyptian_male_neck_oldage:d0"
 			"GFX_egyptian_male_chin_oldage:d1"
@@ -2939,7 +3062,7 @@ spriteTypes = {
 			"GFX_frankish_male_overlayer_mid:p31"
 			"GFX_character_eyepatch:p13:y:o32x63"
 			"GFX_egyptian_male_hair_oldage:p1:y"
-			":p5:c7"
+			#"GFX_empty:p5:c7:h"
 			"GFX_character_mask:p12:y:o40x45"
 			"GFX_byzantine_male_clothes_infront:p3:c4"
 			"GFX_byzantine_male_headgear:p5:c5"
@@ -3015,9 +3138,9 @@ spriteTypes = {
 			"GFX_byzantine_female_clothes:p3:c2"	
 			"GFX_byzantine_female_headgear_mid:p5:c3"
 			"GFX_egyptian_female_hair:p1:y"
-			":p5:c7"
+			#"GFX_empty:p5:c7:h"
 			"GFX_character_mask:p12:y:o40x45"
-			"GFX_empty:p3:c4"
+			#"GFX_empty:p3:c4"
 			"GFX_frankish_female_undermain_hair:p33:h"
 			"GFX_frankish_female_undermain:p33"
 			"GFX_byzantine_female_headgear:p5:c5"
@@ -3093,9 +3216,9 @@ spriteTypes = {
 			"GFX_byzantine_female_clothes:p3:c2"
 			"GFX_byzantine_female_headgear_mid:p5:c3"
 			"GFX_egyptian_female_hair_midage:p1:y"
-			":p5:c7"
+			#"GFX_empty:p5:c7:h"
 			"GFX_character_mask:p12:y:o40x45"
-			"GFX_empty:p3:c4"
+			#"GFX_empty:p3:c4"
 			"GFX_frankish_female_undermain_hair:p33:h"
 			"GFX_frankish_female_undermain:p33"
 			"GFX_byzantine_female_headgear:p5:c5"
@@ -3171,9 +3294,9 @@ spriteTypes = {
 			"GFX_byzantine_female_clothes:p3:c2"
 			"GFX_byzantine_female_headgear_mid:p5:c3"
 			"GFX_egyptian_female_hair_oldage:p1:y"
-			":p5:c7"
+			#"GFX_empty:p5:c7:h"
 			"GFX_character_mask:p12:y:o40x45"
-			"GFX_empty:p3:c4"
+			#"GFX_empty:p3:c4"
 			"GFX_frankish_female_undermain_hair:p33:h"
 			"GFX_frankish_female_undermain:p33"
 			"GFX_byzantine_female_headgear:p5:c5"
