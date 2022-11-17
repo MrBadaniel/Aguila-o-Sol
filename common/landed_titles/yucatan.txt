@@ -300,7 +300,6 @@ e_yucatan = {
 				b_san_pedro_QR = {}
 				b_noh_bec_QR = {}
 				b_pedro_antonio_santos_QR = {}
-				b_huay_pix_QR = {}
 			}
 			c_chetumal = { # 1831
 				color={ 52 124 183 }
@@ -585,7 +584,6 @@ e_yucatan = {
 				b_pakchen_CM = {}
 				b_hochob_CM ={}
 				b_kankabchen_CM = {}
-				b_x_canha_CM = {}
 				b_ucum_CM = {}
 				b_yaiak_CM = {}
 			}
@@ -597,7 +595,6 @@ e_yucatan = {
 				b_hopelchen_CM = {}
 				b_bolonchen_CM = {}
 				b_xtampak_CM = {}
-				b_x_canha_CM = {}
 				b_ich_ek_CM = {}
 				b_suctuc_CM = {}
 				b_nohalal_CM = {}
@@ -866,6 +863,7 @@ e_yucatan = {
 					yucatanense = "Nichupté"
 				}
 				b_puerto_morelos_QR = {
+					short_name = yes
 					yucateco = "Chawaykaaj" #Reef City, refering to the reef which can be visited from Puerto Morelos
 					lacandon = "Chawaykaaj"
 					quichean = "Carha Tinamit" #Tinamit city, Car= peces ha= casa
@@ -1108,7 +1106,9 @@ e_yucatan = {
 					cholano = "Jalal Ch'o"
 				}
 				b_chactun_YU = {}
-				b_oxkintok_YU = {}
+				b_oxkintok_YU = {#archeological site
+				short_name=yes
+				}
 			}
 
 			c_merida = { # 1816
@@ -1167,7 +1167,7 @@ e_yucatan = {
 				lacandon = "Tukelam K'ulunik"
 				quichean = "Juun Núuk Ma'"
 				cholano = "Juun Núuk Ma'"	
-				yucatanense = Sisal
+				yucatanense = "Sisal"
 				
 				
 				b_hunucma_YU = {
@@ -1175,12 +1175,14 @@ e_yucatan = {
 					lacandon = "Tukelam K'ulunik"
 					quichean = "Juun Núuk Ma'"
 					cholano = "Juun Núuk Ma'"
+					yucatanense = "Hunucmá"
 				}
 				b_uman_YU = {
 					yucateco = "uMaan"
 					lacandon = "uMaan"
 					quichean = "uMaan"
 					cholano = "uMaan"
+					yucatanense = "Umán"
 				}
 				b_sisal_YU = {
 					yucateco = "Síis Aal"
@@ -1191,25 +1193,29 @@ e_yucatan = {
 				b_kinchil_YU = {
 					yucateco = "Kinichil"
 					lacandon = "Kinichtuj"
-					quichean = "uMaan"
-					cholano = "uMaan"
+					quichean = "Kinichil"
+					cholano = "Kinichil"
 				}
 				b_chochola_YU = {
 					yucateco = "Ch'óoch ool ja'"
 					lacandon = "Ch'óoch ool ja'"
 					quichean = "Ch'óoch ool ja'"
 					cholano = "Ch'óoch ool ja'"
+					yucatanense = "Chocholá"	
+				}
 				b_tetiz_YU = {}
 				b_samahil_YU = {}
-				b_ucu_YU = {}
+				b_ucu_YU = {
+				yucatanense = "Ucú"	
 				}
 			}
+		
 			
 			c_chicxulub = { # 2278
 				color={ 91 127 0 }
 				color2={ 255 255 255 }
 			
-				yucatanense = Motul
+				yucatanense = "Motul"
 				yucateco = "Chi'ik Xulub"
 				lacandon = "Chi'ik Xulub"
 				quichean = "Chi'ik Xulub"
@@ -1256,6 +1262,7 @@ e_yucatan = {
 					lacandon = "Te' K'an Tok'"
 					quichean = "Te' K'an Tok'"
 					cholano = "Te' K'an Tok'"
+					yucatanense = "Tekantó"					
 				}
 				b_muxupip_YU = {}
 
@@ -1309,8 +1316,12 @@ e_yucatan = {
 					cholano = "Zutut Ha"
 				}
 				b_kantunil_YU = {}
-				b_tunkas_YU = {}
-				b_piste_YU = {}
+				b_tunkas_YU = {
+					yucatanense = "Tunkás"
+				}
+				b_piste_YU = {
+					yucatanense = "Pisté"
+				}
 				b_kaua_YU = {}
 
 			}
@@ -1331,13 +1342,21 @@ e_yucatan = {
 					cholano = "Saki'"
 				}
 				b_chemax_YU = {}
-				b_temozon_YU = {}
-				b_chichimila_YU = {}
-				b_popola_YU = {}
+				b_temozon_YU = {
+					yucatanense = "Temozón"				
+				}
+				b_chichimila_YU = {
+					yucatanense = "Chichimilá"		
+				}
+				b_popola_YU = {
+					yucatanense = "Popolá"
+				}
 				b_ek_balam_YU = {#archeological site
 					short_name = yes
 				}
-				b_xocen_YU = {}
+				b_xocen_YU = {
+					yucatanense = "Xocén"			
+				}
 				b_tekom_YU = {}
 
 			}
@@ -1356,16 +1375,18 @@ e_yucatan = {
 				color2={ 255 255 255 }
 
 				b_tizimin_YU = {
-					yucateco = "X Pit Há"
-					lacandon = "X Pit Há"
-					quichean = "X Pit Há"
-					cholano = "X Pit Há"
+					yucateco = "Te' Ts'iimin"
+					lacandon = "Te' Ts'iimin"
+					quichean = "Te' Ts'iimin"
+					cholano = "Te' Ts'iimin"
+					yucatanense = "Tizimín"				
 				}
 				b_panaba_YU = {
 					yucateco = "Páanab Ja'"
 					lacandon = "Páanab Ja'"
 					quichean = "Páanab Ja'"
 					cholano = "Páanab Ja'"
+					yucatanense = "Panabá"
 				}				
 				b_san_felipe_YU = {
 					yucateco = "Aktáan Chuleb"
@@ -1384,6 +1405,7 @@ e_yucatan = {
 					lacandon = "Jo'ol Kobén"
 					quichean = "Jo'ol Kobén"
 					cholano = "Jo'ol Kobén"
+					yucatanense = "Río Lagartos"
 				}
 				b_dzonot_carretero_YU = {
 					yucateco = "Ts'ono'ot Bej"
@@ -1391,7 +1413,9 @@ e_yucatan = {
 					quichean = "Ts'ono'ot Bej"
 					cholano = "Ts'ono'ot Bej"
 				}
-				b_loche_YU = {}
+				b_loche_YU = {
+					yucatanense = "Loché"
+				}
 				b_chisahcab_YU = {}
 
 				
@@ -1403,10 +1427,11 @@ e_yucatan = {
 				color2={ 255 255 255 }
 
 				b_espita_YU = {
-					yucateco = "Te' Ts'iimin"
-					lacandon = "Te' Ts'iimin"
-					quichean = "Te' Ts'iimin"
-					cholano = "Te' Ts'iimin"
+					yucateco = "X Pit Há"
+					lacandon = "X Pit Há"
+					quichean = "X Pit Há"
+					cholano = "X Pit Há"
+					
 				}
 				b_cenotillo_YU = {
 					yucateco = "Chan Ts'ono'ot"
@@ -1419,6 +1444,7 @@ e_yucatan = {
 					lacandon = "Su'ukil Ja'"
 					quichean = "Su'ukil Ja'"
 					cholano = "Su'ukil Ja'"
+					yucatanense = "Sucilá"
 				}
 				b_tuzik_YU = {				}
 				b_holca_YU = {
@@ -1426,9 +1452,14 @@ e_yucatan = {
 					lacandon = "Jo'ol Kaab"
 					quichean = "Jo'ol Kaab"
 					cholano = "Jo'ol Kaab"
+					yucatanense = "Holcá"
 				}
-				b_yasilhon_YU = {}
-				b_dzitas_YU = {}
+				b_yasilhon_YU = {
+					yucatanense = "Yasilhón"
+				}
+				b_dzitas_YU = {
+					yucatanense = "Dzitás"
+				}
 				b_tinum_YU = {}
 
 
@@ -1473,17 +1504,17 @@ e_yucatan = {
 			lacandon = "Màayapáan"
 			quichean = "Màayapáan"
 			cholano = "Màayapáan"
-			yucatanense = "Puuc"
-			chilango = "Puuc"
-			abajeno = "Puuc"
-			bravo = "Puuc"
-			calentano = "Puuc"
-			altiplanense = "Puuc"
-			choco = "Puuc"
-			jarocho = "Puuc"
-			tapatio = "Puuc"
-			occidental = "Puuc"
-			californiano = "Puuc"
+			yucatanense = "El Puuc"
+			chilango = "El Puuc"
+			abajeno = "El Puuc"
+			bravo = "El Puuc"
+			calentano = "El Puuc"
+			altiplanense = "El Puuc"
+			choco = "El Puuc"
+			jarocho = "El Puuc"
+			tapatio = "El Puuc"
+			occidental = "El Puuc"
+			californiano = "El Puuc"
 			
 
 			c_mayapan = { # 1815
@@ -2004,6 +2035,10 @@ e_yucatan = {
 		
 			yucatanense = "Tayasal"
 			trifinio = "Tayasal"
+			yucateco = "Taj Itsja'"
+			lacandon = "Taj Itsja'"
+			quichean = "Nojpetén"
+			cholano = "Taj Itsja'"
 		
 			c_nojpeten = { # 1825
 				color={ 111 134 200 }
@@ -2011,16 +2046,20 @@ e_yucatan = {
 
 					yucateco = "Taj Itsja'"
 					lacandon = "Taj Itsja'"
-					quichean = "Taj Itsja'"
+					quichean = "Nojpetén"
 					cholano = "Taj Itsja'"
 					trifinio = "Tayasal"
 					yucatanense = "Tayasal"
 					chilango = "Tayasal"
 					
 				b_nojpeten_PT = {
-					trifinio = "Flores"
-					yucatanense = "Flores"
-					chilango = "Flores"
+					trifinio = "Tayasal"
+					yucatanense = "Tayasal"
+					chilango = "Tayasal"
+					yucateco = "Taj Itsja'"
+					lacandon = "Taj Itsja'"
+					quichean = "Nojpetén"
+					cholano = "Taj Itsja'"
 				}
 				b_santa_elena_PT = {
 					yucateco = "Actún Kan"
@@ -2096,12 +2135,13 @@ e_yucatan = {
 				color2={ 255 255 255 }
 	
 				b_poptun_PT = {}
-				b_el_chal_PT = {}
 				b_nuevo_machaquila_PT = {}
-				b_nuevo_horizonte_PT = {}
 				b_san_luis_PT = {}
 				b_chacte_PT = {}
 				b_santa_cruz_PT = {}
+				b_el_chal_PT = {#archeological site
+					short_name = yes
+				}
 			}
 			c_dolores ={
 				color={ 65 159 226 }
@@ -2113,7 +2153,6 @@ e_yucatan = {
 					quichean = "Ixkún"
 					cholano = "Ixkún"
 				}
-				b_el_chal_PT = {}
 				b_nuevo_horizonte_PT = {}
 				b_melchor_de_mencos_PT = {}
 				b_salpet_PT = {}
@@ -2127,10 +2166,13 @@ e_yucatan = {
 				b_machaquila_PT = {#archeological site
 				short_name = yes
 				}
-				b_poxte_PT = {}
-				b_la_reinita_PT = {}
+				b_poxte_PT = {#archeological site
+				short_name = yes
+				}
 				b_la_machaca_PT ={}
-				b_santa_amelia_PT = {}
+				b_santa_amelia_rio_poxte_PT = {}
+				b_san_pedro_la_machaca_PT = {}
+				b_santa_maria_PT = {}
 			}	
 			
 		}
@@ -2146,7 +2188,7 @@ e_yucatan = {
 				color2={ 255 255 255 }				
 			
 				b_ixcan_GT = {}
-				b_benemerito_de_las_americas_CP = {}#c_lacatun
+				b_benemerito_de_las_americas_CP = {}
 				b_pico_de_oro_CP = {}
 				b_tlatizapan_CP	= {}
 				b_tres_rios_CP	= {}
