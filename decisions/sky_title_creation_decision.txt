@@ -1,0 +1,286 @@
+decisions = {
+	create_belize = {
+		only_playable = yes
+		is_high_prio = yes
+		ai_check_interval = 1
+		potential = {
+			independent = yes
+			NOT = {
+				trait = incapable
+			}
+			OR = {
+				culture = kriol
+				culture = yucateco
+			}
+			OR = {
+				has_landed_title = d_belize
+				has_landed_title = d_belmopan
+			}			
+			k_belize = {
+				has_holder = no
+			}
+			k_belize = {
+				is_titular = yes
+			}
+			NOT = {
+				higher_tier_than = DUKE
+			}
+			NOR = {
+				has_alternate_start_setting = {
+					setting = dejure
+					value = random
+				}
+				has_alternate_start_setting = {
+					setting = title_names
+					value = random
+				}
+				has_alternate_start_setting = {
+					setting = title_names
+					value = random_including_duchies
+				}
+			}
+		}
+
+		allow = {
+			war = no
+			has_landed_title = d_belize
+			completely_controls = d_belize
+			has_landed_title = d_belmopan
+			completely_controls = d_belmopan
+			OR = {
+				AND = {
+					has_landed_title = d_corozal
+					completely_controls = d_corozal
+				}
+				AND = {
+					has_landed_title = d_orange_walk
+					completely_controls = d_orange_walk
+				}
+				AND = {
+					has_landed_title = d_toledo
+					completely_controls = d_toledo
+				}
+			}
+			prestige = 800
+			piety = 500
+			wealth = 600
+		}
+
+		effect = {
+			prestige = 500
+			piety = -500
+			wealth = -600
+			give_nickname = nick_the_great
+			activate_title = { title = k_belize status = yes }
+ 			k_belize = {
+				grant_title = ROOT
+				copy_title_laws = PREV
+				insert_title_history = d_belize
+			}
+			d_belize = {
+				show_scope_change = no
+				de_jure_liege = k_belize
+			}
+			d_belmopan = {
+				show_scope_change = no
+				de_jure_liege = k_belize
+			}
+			if = {
+				limit = {
+					completely_controls = d_corozal
+				}
+				d_corozal = {
+					show_scope_change = no
+					de_jure_liege = k_belize
+				}
+			}
+			if = {
+				limit = {
+					completely_controls = d_orange_walk
+				}
+				d_orange_walk = {
+					show_scope_change = no
+					de_jure_liege = k_belize
+				}
+			}
+			if = {
+				limit = {
+					completely_controls = d_toledo
+				}
+				d_toledo = {
+					show_scope_change = no
+					de_jure_liege = k_belize
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	create_coahuila = {
+		only_playable = yes
+		is_high_prio = yes
+		ai_check_interval = 1
+		potential = {
+			independent = yes
+			NOT = {
+				trait = incapable
+			}
+			has_landed_title = d_coahuila
+			k_coahuila = {
+				has_holder = no
+			}
+			k_coahuila = {
+				is_titular = yes
+			}
+			NOT = {
+				higher_tier_than = DUKE
+			}
+			NOR = {
+				has_alternate_start_setting = {
+					setting = dejure
+					value = random
+				}
+				has_alternate_start_setting = {
+					setting = title_names
+					value = random
+				}
+				has_alternate_start_setting = {
+					setting = title_names
+					value = random_including_duchies
+				}
+			}
+		}
+
+		allow = {
+			war = no
+			has_landed_title = d_coahuila
+			completely_controls = d_coahuila
+			has_landed_title = d_desertica
+			completely_controls = d_desertica
+			OR = {
+				AND = {
+					has_landed_title = d_comarga_lagunera
+					completely_controls = d_comarga_lagunera
+				}
+				AND = {
+					has_landed_title = d_nueva_extremadura
+					completely_controls = d_nueva_extremadura
+				}
+			}
+			prestige = 600
+			piety = 500
+			wealth = 500
+		}
+
+		effect = {
+			prestige = 500
+			piety = -500
+			wealth = -500
+			activate_title = { title = k_coahuila status = yes }
+ 			k_coahuila = {
+				grant_title = ROOT
+				copy_title_laws = PREV
+			}
+			d_coahuila = {
+				show_scope_change = no
+				de_jure_liege = k_coahuila
+			}
+			d_belmopan = {
+				show_scope_change = no
+				de_jure_liege = k_coahuila
+			}
+			if = {
+				limit = {
+					completely_controls = d_comarga_lagunera
+				}
+				d_comarga_lagunera = {
+					show_scope_change = no
+					de_jure_liege = k_coahuila
+				}
+			}
+			if = {
+				limit = {
+					completely_controls = d_nueva_extremadura
+				}
+				d_nueva_extremadura = {
+					show_scope_change = no
+					de_jure_liege = k_coahuila
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	create_tamaulipas = {
+		only_playable = yes
+		is_high_prio = yes
+		ai_check_interval = 1
+		potential = {
+			independent = yes
+			NOT = {
+				trait = incapable
+			}
+			has_landed_title = d_tamaulipas
+			k_tamaulipas = {
+				has_holder = no
+			}
+			k_tamaulipas = {
+				is_titular = yes
+			}
+			NOT = {
+				higher_tier_than = DUKE
+			}
+			NOR = {
+				has_alternate_start_setting = {
+					setting = dejure
+					value = random
+				}
+				has_alternate_start_setting = {
+					setting = title_names
+					value = random
+				}
+				has_alternate_start_setting = {
+					setting = title_names
+					value = random_including_duchies
+				}
+			}
+		}
+
+		allow = {
+			war = no
+			has_landed_title = d_tamaulipas
+			completely_controls = d_tamaulipas
+			has_landed_title = d_rio_bravo_del_norte
+			completely_controls = d_rio_bravo_del_norte
+			prestige = 500
+			piety = 500
+			wealth = 500
+		}
+
+		effect = {
+			prestige = 600
+			piety = -500
+			wealth = -500
+			activate_title = { title = k_tamaulipas status = yes }
+ 			k_tamaulipas = {
+				grant_title = ROOT
+				copy_title_laws = PREV
+			}
+			d_tamaulipas = {
+				show_scope_change = no
+				de_jure_liege = k_tamaulipas
+			}
+			d_rio_bravo_del_norte = {
+				show_scope_change = no
+				de_jure_liege = k_tamaulipas
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}
