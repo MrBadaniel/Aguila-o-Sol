@@ -19,22 +19,27 @@
 }
 
 1810001={
-	name="Octavio"
+	name="José Francisco"
 	dynasty=1810016 # Reyes
 	culture=bravo
-	religion=fidencista
+	religion=sacred_heart
 	trait=legit_bastard
 	trait=cajita
+	trait=mangled
 	father=1810002
-	2603.1.1={birth=yes}
-	2660.1.1={death=yes}
+	2587.1.1={birth=yes}
+	2612.1.1 = { add_spouse=181263}
+	2625.1.1={death= {
+		death_reason=death_trait
+		}
+	}
 }
 
 1810002={
 	name="Gaspar"
 	dynasty=1810016 # Reyes
 	culture=bravo
-	religion=fidencista
+	religion=sacred_heart
 	martial=8
 	diplomacy=6
 	stewardship=6
@@ -44,15 +49,45 @@
 	trait=cajita
 	trait=brave
 	give_nickname=nick_the_culture
+	father=181265
 	2578.6.5={birth=yes}
-	2623.7.20={death=yes}
+	2619.7.19={death={
+		death_reason=death_battle
+		}
+	}
 }
-
-1810003={
-	name="Pancho"
+1810008={
+	name="José"
 	dynasty=1810016 # Reyes
 	culture=bravo
 	religion=sacred_heart
+	martial=1
+	diplomacy=5
+	stewardship=3
+	intrigue=5
+	learning=2
+	trait=flamboyant_schemer
+	trait=paranoid
+	trait=deceitful
+	trait=wroth
+	trait=stubborn
+	trait=impaler
+	trait=twin
+	trait=is_fat
+	father=1810001
+	mother=181263
+	give_nickname=nick_don_pepe
+	2619.6.1={birth=yes}
+	2650.1.1={effect={add_rival=1810003}}
+	2645.9.13={add_spouse=1810204}
+	2700.1.1={death=yes}
+}
+
+1810003={
+	name="Francisco"
+	dynasty=1810016 # Reyes
+	culture=bravo
+	religion=fidencista
 	martial=5
 	diplomacy=3
 	stewardship=2
@@ -63,18 +98,20 @@
 	trait=trusting
 	trait=inspiring_leader
 	trait=skilled_tactician
-	trait=marian_san_juditas
+	#trait=marian_san_juditas
 	trait=twin
 	trait=is_fat
 	father=1810001
-	2627.6.1={birth=yes}
+	mother=181263
+	give_nickname=nick_don_pancho
+	2619.6.1={birth=yes}
 	2650.1.1={effect={add_rival=1810008}}
 	2700.1.1={death=yes}
 }
 
 1810004={
 	name="Cándido"
-	dynasty=1810015 # Garza
+	dynasty=1810073 # Garza Soto
 	culture=bravo
 	religion=sacred_heart
 	martial=1
@@ -82,9 +119,12 @@
 	stewardship=2
 	intrigue=5
 	learning=5
+	father=181230
+	mother=181171
 	trait=naive_appeaser
 	trait=just
-	2620.10.3={birth=yes}
+	2611.10.3={birth=yes}
+	2633.1.1={add_spouse=181253}
 	2660.1.1={add_claim=c_tampico}
 	2672.1.1={death=yes}
 }
@@ -165,27 +205,6 @@
 	2700.1.1={death=yes}
 }
 
-1810008={
-	name="Pepe"
-	dynasty=1810016 # Reyes
-	culture=bravo
-	religion=fidencista
-	martial=3
-	diplomacy=5
-	stewardship=3
-	intrigue=5
-	learning=2
-	trait=deceitful
-	trait=greedy
-	trait=cynical
-	trait=twin
-	trait=is_fat
-	father=1810001
-	2627.6.1={birth=yes}
-	2650.1.1={effect={add_rival=1810003}}
-	2645.9.13={add_spouse=1810204}
-	2700.1.1={death=yes}
-}
 
 1810010={
 	name="Vicente"
@@ -2906,6 +2925,7 @@
 	trait=intricate_webweaver
 	trait=ambitious
 	trait=just
+	trait=twin
 	mother=1810201
 	father=1810200
 	2622.5.8={birth=yes}
@@ -2930,18 +2950,20 @@
 }
 
 1810204={
-	name="Susana"
+	name="Catalina"
 	female=yes
-	dynasty=1815018
-	culture=bravo
+	dynasty=1815018 
+	culture=bravo #should be altiplanense but all her dynasty is bravo
 	religion=fidencista
 	trait=intricate_webweaver
+	trait=patient
 	trait=ambitious
 	trait=proud
+	trait=twin
 	mother=1810201
 	father=1810200
-	2629.5.8={birth=yes}
-	2645.9.13={add_spouse=1810008}
+	2622.5.8={birth=yes}
+	2638.8.18={add_spouse=1810003}
 	2690.7.13={death=yes}
 }
 
@@ -4045,6 +4067,7 @@
 	trait=affectionate
 	trait=playful
 	trait=haughty
+	trait=legit_bastard
 	father=1810280
 	mother=1810281
 	disallow_random_traits = yes

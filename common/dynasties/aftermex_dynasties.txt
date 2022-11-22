@@ -1487,8 +1487,40 @@ coat_of_arms = {
 		}
 	}
 }
-5200107 = {name="Marín" culture =yucatanense}
-5200108 = {name="Castillo" culture=yucatanense}
+5200107 = {name="Marín" culture =yucatanense
+    coat_of_arms = {
+        template = 0
+        layer = {
+            texture = 0
+            texture_internal = 13
+            emblem = 0
+            color = 1
+            color = 2
+            color = 0
+        }
+    }
+}
+5200108 = {name="Castillo" culture=yucatanense
+    coat_of_arms = {
+        template = 2
+        layer = {
+            texture = 0
+            texture_internal = 1
+            emblem = 13
+            color = 4
+            color = 4
+            color = 1
+        }
+        layer = {
+            texture = 0
+            texture_internal = 8
+            emblem = 0
+            color = 3
+            color = 1
+            color = 0
+        }
+    }
+}
 5200109 = {name="Luna Kan" culture=yucatanense} #CoA Moon and Snake
 5200110 = {name="Piña" culture=yucatanense}
 5200111 = {name="Chan Piña" culture=yucatanense
@@ -1506,7 +1538,7 @@ coat_of_arms = {
 }
 5200112 = {name="Blanco" culture =yucatanense
 	coat_of_arms = {
-	religion="conclavist"
+	religion="catholic"
 		template = 0
 		layer = {
 			texture = 11
@@ -2075,6 +2107,7 @@ coat_of_arms = {
 }
 
 
+###### 1810052 go to after_the_end_dynasties
 1810053 = { name = "Cobarrubias" culture = bravo } 
 1810054 = { name = "Guerra" culture = bravo } 
 1810055 = { name = "Mora" culture = bravo } 
@@ -2083,3 +2116,16 @@ coat_of_arms = {
 1810058 = { name = "de Arca" culture = bravo } 
 1810059 = { name = "Rojo" culture = bravo } 
 1810060 = { name = "Soto" culture = bravo } 
+1810061 = { name="Cobarrubias" culture=bravo }
+1810062 = { name="García Huerta" culture=bravo }
+1810063 = { name="Garza" culture=bravo }
+1810064 = { name= "Soto" culture=bravo }
+1810065 = { name= "Mata" culture=bravo }
+1810066 = { name= "Figueroa" culture=bravo }
+1810067 = { name= "de la Peña" culture=bravo }
+1810068 = { name= "Montemayor" culture=bravo }
+1810069 = { name= "García Flores" culture=bravo }
+1810070 = { name= "Adás" culture=bravo }
+1810071 = { name= "Rubio" culture=bravo }
+1810072 = { name= "Ugalde" culture=bravo }
+1810073 = { name= "Garza Soto" culture=bravo }

@@ -841,7 +841,7 @@
 	culture=nicoyano 
 	dynasty=5001161
 	religion=moravian
-	trait=sympathy_judiasm
+	trait=sympathy_judaism
 	trait=pastoral
 	trait=dorado
 	trait=greedy
@@ -1158,8 +1158,7 @@
 	2388.1.2={birth=yes}
 	2409.5.26={add_spouse=6900488}
 	2448.5.18={death={
-			death=yes
-			death_reason=eath_battle_duel
+			death_reason=death_battle_duel
 			killer=6900428
 		}
 	}
@@ -1690,64 +1689,75 @@
 	stewardship=7
 	intrigue=5
 	learning=2
-	trait=homosexual
 	trait=cruel
 	trait=patient
 	trait=stubborn
-	trait=fortune_builder
+	trait=slothful
+	trait=indulgent_wastrel
 	father=1810008
-	mother=1810204
+	mother=181189
 	2648.12.10={birth=yes}
 }
 
 6900510={
-	name="Eduardo"
+	name="Natividad"
 	dynasty=1810016 # Reyes
 	culture=bravo
-	religion=sacred_heart
-	martial=5
-	diplomacy=3
-	stewardship=2
-	intrigue=2
-	learning=3
+	religion=fidencista
+	#martial=5
+	#diplomacy=3
+	#stewardship=2
+	#intrigue=2
+	#learning=3
+	trait=mastermind_theologian
 	trait=patient
-	trait=paranoid
-	trait=gregarious
-	trait=intricate_webweaver
+	trait=trusting
+	trait=envious
 	father=1810003
-	2646.6.1={birth=yes}
+	mother=1810204
+	2643.6.1={birth=yes}
 }
 
 6900511={
-	name="Gabino"
+	name="Francisco"
 	dynasty=1810016 # Reyes
 	culture=bravo
-	religion=sacred_heart
+	religion=fidencista
 	trait=robust
 	trait=shrewd
 	trait=proud
 	trait=envious
 	trait=skilled_tactician
+	trait=cruel
+	trait=impaler
+	give_nickname=nick_panchito
 	father=1810003
-	2644.9.8={birth=yes}
+	mother=1810204
+	2639.9.8={birth=yes}
+	2660.1.1 = {
+				effect= {
+					add_rival=181260
+				}
+	}
 }
 
 6900512={
-	name="Camilo"
+	name="Heliodoro"
 	dynasty=1810016 # Reyes
 	culture=bravo
-	religion=sacred_heart
-	martial=5
-	diplomacy=3
-	stewardship=2
-	intrigue=2
-	learning=3
-	trait=charitable
-	trait=slothful
-	trait=cynical
-	trait=indulgent_wastrel
+	religion=fidencista
+	#martial=5
+	#diplomacy=3
+	#stewardship=2
+	#intrigue=2
+	#learning=3
+		trait=wroth
+	trait=arbitrary
+	trait=craven
+	trait=charismatic_negotiator
 	father=1810003
-	2646.3.16={birth=yes}
+	mother=1810204
+	2642.3.16={birth=yes}
 }
 
 6900513={
@@ -2089,11 +2099,11 @@
 6900635={
     name=Winardo
     dynasty=1802101
-    trait=distractable
+    trait=districtable
     trait=one_eyed
     trait=envious
     trait=lustful
-    trait=attractive
+    trait=fair
     trait=architect
     trait=arbitrary
     trait=trusting
@@ -2347,10 +2357,10 @@
 	father= 6900650
 	2600.12.12={birth=yes
 		culture=yucatanense	
-	2624.1.1={add_spouse=1431234}		
 	}
-	
+	2624.1.1={add_spouse=1431234}		
 }
+	
 6900652={
 	name="Francisco"
 	dynasty=5200037
@@ -2442,9 +2452,10 @@
 	trait= adventurer
 	2570.11.20={birth=yes}
 	2637.6.30={
-			death=yes
-			death_reason=death_accident_drowning
+			death= {
+			death_reason=death_accident_drowning 
 			}
+	}
 	father= 6900657
 } 
 #grandfather of Louisville dude in Yucatan. former count of everglades.
@@ -2466,15 +2477,16 @@
 	2590.1.1={death=yes}
 }
 1650087={
-	name="Laura Kisa"
+	name="Laura"
 	female=yes
 	dynasty=1546040
-	culture=yucateco
+	culture=gulfard
 	religion=neomayan
-	ethnicity=gulfard
 	father=1650085
 	mother=1650086
-	2641.8.16={birth=yes}
+	trait=twin
+	2641.8.16={birth=yes
+	culture=yucateco}
 	2705.1.1={death=yes}
 }
 
@@ -2482,12 +2494,13 @@
 	name="Alma"
 	female=yes
 	dynasty=1546040
-	culture=yucateco
+	culture=yucatanense
 	religion=neomayan
-	ethnicity=yucatanense
 	father=1650085
 	mother=1650086
-	2646.2.17={birth=yes}
+	trait=twin
+	2646.2.17={birth=yes
+	culture=	yucateco}
 	2705.1.1={death=yes}
 }
 
@@ -2544,7 +2557,7 @@
 6900660 = {
 	name="Elías"
 	dynasty=1813142
-	culture=tuskegee
+	culture=tuskegean
 	religion=sacred_heart
 	martial=4
 	diplomacy=8
@@ -2707,6 +2720,7 @@
 	learning=2
 	trait=amateurish_plotter
 	trait=parroquial
+	trait=legit_bastard #validator 
 	father=6900665
 	mother=6900666
 	2648.4.5={
@@ -2771,7 +2785,7 @@
 
 6900671 = {
 	name="Estefania"
-	dynasty=1810015
+	dynasty=1810073
 	female=yes
 	culture=mediterranean
 	religion=fidencista
@@ -2780,6 +2794,8 @@
 	stewardship=2
 	intrigue=3
 	learning=2
+	father=1810004
+	mother=181253
 	trait=charismatic_negotiator
 	2645.2.15={
 		birth=yes
