@@ -246,7 +246,7 @@
 	trait=honest
 	trait=sturdy
 	father=6900645
-	mother=1431103
+	#mother=1431103
 	2608.04.24={birth=yes
 				culture=yucatanense
 				}
@@ -322,7 +322,6 @@
 	trait=ambitious
 	father=1431100
 	mother=1431103
-	add_friend=1431101
 	2646.12.18={birth=yes
 				culture=yucatanense
 				}
@@ -368,7 +367,7 @@
 	properties="adad"
 	religion=cristo_rey
 	trait=cynical
-	trait=delicate
+	#trait=delicate
 	2599.12.28={birth=yes}
 	2619.01.22={add_spouse=1431109}
 }
@@ -443,6 +442,11 @@
 	trait=deceitful
 	father=6900658
 	add_rival=1431121
+	2635.1.13= {
+			effect={
+				add_rival=1431121
+			}
+	}
 	2613.07.22={birth=yes}
 }
 1431121	= {
@@ -460,7 +464,7 @@
 	trait=wroth
 	trait=ambitious
 	trait=brave
-	trait=injured
+	trait=severely_injured
 	trait=one_eyed
 	trait=zealous
 	father=6900658
@@ -506,7 +510,7 @@
 	trait=trusting
 	trait=ambitious
 	trait=brave
-	trait=direct_leader
+	trait=experimenter
 	father=6900650
 	2608.01.22={birth=yes
 			culture=yucatanense
@@ -527,7 +531,7 @@
 	trait=trusting
 	trait=ambitious
 	trait=brave
-	trait=direct_leader
+	trait=experimenter
 	trait=adventurer
 	trait=deceitful
 	father=1431130
@@ -599,7 +603,7 @@
 	intrigue=8
 	learning=1
 	trait=misguided_warrior
-	trait=light_infantry_leader
+	trait=light_foot_leader
 	trait=duelist
 	father=1431201
 	2295.1.1={birth=yes}
@@ -626,10 +630,10 @@
 	trait=fair
 	trait=sympathy_christendom
 	father=1431202
-	2334.1.1={birth=yes
+	2333.1.1={birth=yes
 			culture=yucatanense
 	}
-	2349.1.1={add_spouse=1431205}
+	2350.1.1={add_spouse=1431205}
 	2365.1.1={death=yes} #childbirth
 }
 1431204 = {
@@ -837,8 +841,7 @@
 	religion=sacred_heart
 	father=1431214
 	2563.1.1={birth=yes}
-	2597.1.1={death={
-					death=yes
+	2597.5.1={death={
 					death_reason=death_execution
 					killer=1650070
 					}
@@ -851,8 +854,7 @@
 	religion=sacred_heart
 	father=1431216
 	2580.1.1={birth=yes}
-	2597.1.1={death={
-					death=yes
+	2597.3.1={death={
 					death_reason=death_execution
 					killer=1650070
 					}
@@ -892,7 +894,7 @@
 	religion=cristo_rey
 	trait=patient
 	trait=devout
-	father=1431211
+	#father=1431211
 	2431.1.1 ={birth=yes}
 	2460.1.1 ={add_spouse=1431221}
 	2520.1.1 ={death=yes}
@@ -906,7 +908,7 @@
 	religion=sacred_heart
 	father=1431225
 	2423.1.1={birth=yes}
-	2460.1.1 ={add_spouse=1431221}
+	2460.1.1 ={add_spouse=1431220}
 	2507.1.1={death=yes}	
 }
 1431222 = 	{
@@ -948,7 +950,6 @@
 	culture=yucatanense
 	religion=cristo_rey
 	trait=chest_pain
-	father=1431223
 	2390.1.1={birth=yes}
 	2465.4.16 ={death={
 			death_reason=death_trait
@@ -991,7 +992,6 @@
 	father=1431231
 	2565.1.1={birth=yes}
 	2600.1.1={death={
-				death=yes
 				death_reason=death_trait
 			}
 	}
@@ -1057,7 +1057,7 @@ name = "Patricia"
 	trait=patient
 	trait=ambitious
 	father=6900646
-	2610.1.1={birth=yes}
+	2607.1.1={birth=yes}
 	2624.1.1={add_spouse=6900651}
 }
 
@@ -1776,7 +1776,6 @@ name = "Patricia"
 	father=1431455
 	2640.6.25={birth=yes}
 	2641.12.1={death={
-			death=yes
 			death_reason=death_accident_drowning
 			}
 	} #died in a drowning accident
@@ -1836,8 +1835,8 @@ name = "Patricia"
 	2645.3.21={birth=yes}
 	2664.12.31={
 		effect= {
-			efect={add_lover=1431447}
-			}
+			add_lover=1431447
+		}
 	}
 }
 
@@ -1907,7 +1906,7 @@ name = "Patricia"
 	trait= charismatic_negotiator
 	trait= content
 	trait= humble
-	trait= frail
+	trait= feeble
 	father= 1438100
 	2565.1.1={birth=yes}
 	2628.1.1={death=yes}
