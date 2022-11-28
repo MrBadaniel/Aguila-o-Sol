@@ -2,6 +2,28 @@
 
 
 #YUCATAN DYNASTIES
+#XIU DYNASTY
+#1431000 = {
+#name="Aj Suytok" #founder of the dynasty
+#dynasty=154151 
+#culture=yucateco
+#religion=qabantajik
+#620.1.1={birth=yes religion=pagan} #669.1.1 founds Uxmal
+#670.1.1={give_nickname=nick_the_only_mountain_of_chac}	#"The Only Mountain of Chac"
+#710.1.1={death=yes}
+#}
+#1431001 = {
+#name="Lineage of Tutul"
+#dynasty=154151
+#culture=yucateco
+#religion=pagan
+#father=1431000
+#trait=legendary
+#trait=grey_eminence
+#disallow_random_traits=yes
+#710.1.1={birth=yes}
+#1400.1.1={death=yes}
+#}
 
 #SALAZAR DYNASTY, current kings of Yucatan, in their humble origins as landowners in Veracruz
 1431080 = {
@@ -66,10 +88,10 @@
 	2628.1.1={death=yes}
 }
 
-#Triay 1431090-1431099
+#Marín 1431090-1431099
 6900645={
 	name="Hermilo"
-	dynasty=5200102
+	dynasty=5200107  #Marín
 	culture=yucatanense
 	religion=cristo_rey
 	dna= rzzsxnpyyzx
@@ -80,34 +102,29 @@
 	learning=8
 	trait= diligent
 	trait= zealous
-	trait= administrator
+	trait= gardener
 	trait= wroth
-	father=1431093
-	2560.05.22={birth=yes}
-	2647.1.1={death=yes}
+	mother=1431095
+	2573.5.22={birth=yes}
+	2648.5.4={death=yes}
 }
 1431090={
 	name="Roberto"
-	dynasty=5200102
+	dynasty=5200107
 	culture=yucatanense
 	religion=cristo_rey
+	trait=thrifty_clerk
 	trait= gregarious
+	trait= kind
+	trait= cancer
 	father=6900645
-	2602.05.22={birth=yes}
-}
-1431094 = {
-	name = Beatriz
-	female=yes
-	dynasty=5200102 #de Montejo
-	culture=neomexicano
-	religion=cristo_rey
-	father=6900645
-	2610.11.11={birth=yes
-			culture=yucatanense
+	2595.05.22={birth=yes}
+	2663.12.26={ 
+		death={
+			death_reason=death_trait
+		}
 	}
-	2629.1.1 = {add_spouse=1431130}
 }
-
 ###Historical triays
 1431091 = {
 	name= Enrique
@@ -131,7 +148,7 @@
 	2580.1.1= {death=yes}
 }
 1431093 = {
-	name = Camilo #1st Triay ruler of Espita
+	name = Enrique #1st Triay ruler of Espita
 	dynasty=5200102
 	culture=yucatanense
 	religion=cristo_rey
@@ -139,13 +156,51 @@
 	2528.1.1 = {birth=yes}
 	2600.1.1 = {death=yes}
 }
-
-#DON'T USE 1431094; it's Graciela Triay.
+1431094 = {
+	name = Beatriz
+	female=yes
+	dynasty=5200107 #de Montejo
+	culture=neomexicano
+	religion=cristo_rey
+	father=6900645
+	2610.11.11={birth=yes
+			culture=yucatanense
+	}
+	2629.1.1 = {add_spouse=1431130}
+}
+1431095 = {
+	name = Beatriz 
+	female=yes
+	dynasty=5200102
+	culture=yucatanense
+	religion=cristo_rey
+	father=1431093
+	2548.1.1 = {birth=yes}
+	2615.1.1 = {death=yes}
+}
+1431096 = {
+	name = Beatriz 
+	female=yes
+	dynasty=5200107
+	culture=neomexicano
+	religion=cristo_rey
+	father=1431090
+	trait=fair
+	trait=ambitious
+	2645.10.1 = {birth=yes
+			culture=yucatanense
+	}
+	2664.1.10 = {
+		death={
+			death_reason=death_went_to_china
+		}
+	}
+}
 
 #Leonmarí dynasty; rulers of Motul and probably the next dukes of Merida
 
 1431100={
-	name="Enrique"
+	name="Enrique" #ruler of Motul
 	dynasty=5200106 #Leonmarí
 	culture=chilango
 	religion=cristo_rey
@@ -174,17 +229,17 @@
 }
 
 1431101={
-	name="León"
+	name="Enrique"
 	dynasty=5200106 #Lionmarí
 	culture=yucatanense
 	religion=cristo_rey
 	dna="bfeif0d0000"
 	properties="0e0jej000000000000000000000000000000"
-	martial=11
+	martial=8
 	diplomacy=6
 	stewardship=4
 	intrigue=4
-	learning=10	
+	learning=8	
 	trait=martial_cleric
 	trait=sturdy
 	trait=quick
@@ -208,6 +263,7 @@
 				add_lover=1431107
 			}
 	}
+	2665.11.29= { give_nickname=nick_the_lion }
 }
 1431102 = {
 	name="Luis"
@@ -231,11 +287,11 @@
 1431103= {
 	name="Eugenia"
 	female=yes
-	dynasty=5200102 #Triay
+	dynasty=5200107 #Marín
 	dna=dcdflalaaa
 	culture=neomexicano
 	religion=cristo_rey
-	martial=10
+	martial=6
 	diplomacy=8
 	stewardship=10
 	intrigue=9
@@ -246,7 +302,6 @@
 	trait=honest
 	trait=sturdy
 	father=6900645
-	#mother=1431103
 	2608.04.24={birth=yes
 				culture=yucatanense
 				}
@@ -367,22 +422,27 @@
 	properties="adad"
 	religion=cristo_rey
 	trait=cynical
-	#trait=delicate
+	trait=feeble
 	2599.12.28={birth=yes}
 	2619.01.22={add_spouse=1431109}
 }
 1431109 = {
 	name=Alejandra
 	female=yes
-	dynasty=5200108 #Castillo
+	#dynasty=5200108 #Castillo
 	culture=yucatanense
 	religion=cristo_rey
 	diplomacy=10
 	trait=charismatic_negotiator
-	trait=devout
+	trait=zealous
 	trait=gregarious
+	trait=charitable
+	trait=nun
+	employer=1431100
 	2600.04.25={birth=yes}
 	2619.01.22={add_spouse=1431108}
+	2646.1.1={remove_spouse=1431108}
+	2666.7.1={give_job_title=job_court_tutor}
 }
 1431110 = {
 	name=David
@@ -396,9 +456,10 @@
 	father=1431108
 	mother=1431109	
 	2625.12.28={birth=yes}
+	2659.1.1={add_spouse=1431113}	
 }
 1431111 = {
-	name=Julio
+	name="Julio César"
 	dynasty=5200113 #Correa
 	culture=neomexicano
 	dna="0k0kk0j0e00"
@@ -418,6 +479,62 @@
 			}
 	}
 	2666.4.1={add_spouse=1431104}
+}
+1431112 = {
+	name=Alejandro
+	dynasty=5200108 #Castillo
+	culture=yucatanense
+	religion=cristo_rey
+	trait=thrifty_clerk
+	trait=sturdy
+	trait=diligent
+	trait=architect
+	father=1431108
+	mother=1431109	
+	employer=1910130
+	2623.1.1={birth=yes}
+	2641.1.1={culture=angeleno}
+    2645.1.1={religion=cetic}
+}
+1431113 = {
+	name=Lucía
+	female=yes
+	culture=yucatanense
+	religion=cristo_rey
+	trait=thrifty_clerk
+	trait=feeble
+	trait=wroth
+	trait=socializer
+	2631.6.18={birth=yes}
+}
+1431114 = {
+	name=Juan
+	dynasty=5200108 #Castillo
+	culture=yucatanense
+	religion=cristo_rey
+	martial=2
+	intrigue=2
+	father=1431110
+	mother=1431113
+	trait=curious
+	trait=willful
+	2661.9.15={birth=yes}
+}
+1431115 = {
+	name=Leonardo
+	dynasty=5200108 #Castillo
+	culture=yucateco
+	religion=cristo_rey
+	martial=5
+	trait=adopted_child
+	trait=timid
+	trait=brooding
+	trait=idolizer
+	trait=child_of_consort
+	father=1431110
+	mother=1431113
+	2652.1.1={birth=yes}
+	2657.1.1={culture=yucatanense}
 }
 
 ###END LEONMARÍ DYNASTY
@@ -441,7 +558,6 @@
 	trait=craven
 	trait=deceitful
 	father=6900658
-	add_rival=1431121
 	2635.1.13= {
 			effect={
 				add_rival=1431121
@@ -467,8 +583,7 @@
 	trait=severely_injured
 	trait=one_eyed
 	trait=zealous
-	father=6900658
-	add_rival=1431120
+	father=6900658 #Don't mind the validator
 	2624.07.22={birth=yes}
 }
 1431122 ={
@@ -485,9 +600,9 @@
 	trait=flamboyant_schemer
 	trait=patient
 	father=1431120
-	add_rival=1431121
 	2639.12.29={birth=yes}
-	2660.1.1={add_spouse=6900652}
+	2660.1.1={add_spouse=6900652} #don't mind the Validator
+	2666.1.1=	{add_rival=1431121}
 }
 
 ###END PENICHE DYNASTY
@@ -531,7 +646,7 @@
 	trait=trusting
 	trait=ambitious
 	trait=brave
-	trait=experimenter
+	trait=experimenter #direct_leader
 	trait=adventurer
 	trait=deceitful
 	father=1431130
@@ -608,7 +723,6 @@
 	father=1431201
 	2295.1.1={birth=yes}
 	2336.1.1={death={
-				death=yes
 				death_reason=death_battle
 				}
 			} #died in wars against Mérida
@@ -630,7 +744,7 @@
 	trait=fair
 	trait=sympathy_christendom
 	father=1431202
-	2333.1.1={birth=yes
+	2334.1.1={birth=yes
 			culture=yucatanense
 	}
 	2350.1.1={add_spouse=1431205}
@@ -649,7 +763,7 @@
 	trait=strategist
 	trait=cavalry_leader
 	trait=rough_terrain_leader
-	father=6900494
+	father=6900494 #don't mind Validator
 	2458.1.1={birth=yes
 			culture=chilango
 	}
@@ -730,9 +844,8 @@
 	trait=organizer
 	trait=cruel
 	father=1431207
-	2423.1.1={birth=yes}
+	2410.1.1={birth=yes}
 	2478.1.1={death={
-				death=yes
 				death_reason= death_battle #Again, battles against Mérida
 				}
 	}
@@ -753,8 +866,7 @@
 	father=1431208
 	2458.1.1={birth=yes}
 	2483.1.1={death={
-				death=yes
-				death_reason= death_murder #To show the how much power of the Merida dukes				
+				death_reason= death_murder #To show the power of the Merida dukes				
 				}
 	}
 }
@@ -766,7 +878,6 @@
 	father=1431209
 	2478.1.1={birth=yes}
 	2527.1.1={death= {
-				death=yes
 				death_reason=death_battle
 			}
 	}
@@ -814,7 +925,6 @@
 	father=1431213
 	2540.1.1={birth=yes}
 	2565.1.1={death={
-					death=yes
 					death_reason=death_murder
 					killer=1650070
 					}
@@ -841,7 +951,7 @@
 	religion=sacred_heart
 	father=1431214
 	2563.1.1={birth=yes}
-	2597.5.1={death={
+	2597.1.1={death={
 					death_reason=death_execution
 					killer=1650070
 					}
@@ -854,7 +964,7 @@
 	religion=sacred_heart
 	father=1431216
 	2580.1.1={birth=yes}
-	2597.3.1={death={
+	2597.1.1={death={
 					death_reason=death_execution
 					killer=1650070
 					}
@@ -869,7 +979,7 @@
 	trait=content
 	trait=humble
 	father=1431216
-	2598.1.1={birth=yes}
+	2597.10.21={birth=yes}
 	2652.1.1={death=yes}
 }
 1431219 = {
@@ -890,12 +1000,13 @@
 1431220 = {
 	name = "Manuela"
 	female = yes
+	dynasty = 5200111	
 	culture=yucatanense
 	religion=cristo_rey
 	trait=patient
 	trait=devout
-	#father=1431211
-	2431.1.1 ={birth=yes}
+	father=1431208
+	2439.1.1 ={birth=yes}
 	2460.1.1 ={add_spouse=1431221}
 	2520.1.1 ={death=yes}
 }
@@ -1058,7 +1169,7 @@ name = "Patricia"
 	trait=ambitious
 	father=6900646
 	2607.1.1={birth=yes}
-	2624.1.1={add_spouse=6900651}
+	2626.11.30={add_spouse=6900051}
 }
 
 
@@ -1158,10 +1269,73 @@ name = "Patricia"
 	trait=aggressive_leader
 	father=1431240
 	2625.1.1={birth=yes}
-	2635.1.1={add_rival=1650072}
+	2635.1.1={ effect={add_rival=1650072}}
 }
 
+
 ###### MAYAN STRONG DUKES WHICH HAVE TO RESIST THE YUCATECAN CONQUEST OF THEIR TERRITORIES. THEY'RE BASED ON THE CACIQUES
+#CASTE WAR CHARACTERS
+1432000 = {
+	name="Manuel Antonio" 
+	dynasty=154152 		#Ay
+	culture=yucateco
+	religion=conclavist
+
+	1817.1.1={birth=yes}
+	1847.7.26={
+		death={
+			death_reason=death_execution_hanging
+			killer=1432002
+		}
+	}
+}
+1432001 = {
+	name="Antonio" 
+	dynasty=154152 		#Ay
+	culture=yucateco
+	religion=conclavist
+	trait=martial_cleric
+	trait=trusting
+	trait=aggressive_leader
+	1835.1.1={birth=yes}
+	1850.7.26={
+		death={
+			death_reason=death_battle
+		}
+	}
+}
+1432002 = {
+	name="Eulogio" 
+	dynasty=5200114 		#Rosado
+	culture=yucatanense
+	religion=conclavist
+	trait=skilled_tactician
+	trait=cruel
+	trait=devout
+	trait=diligent
+	trait=ill
+	disallow_random_traits=yes
+	1590.1.1={birth=yes}
+	1853.7.30={
+		death={
+			death_reason=death_trait
+		}
+	}
+}
+#1432003 = {
+#	name="Octavio" 
+#	dynasty=5200114 		#Rosado
+#	culture=yucatanense
+#	religion=reformista
+#	trait=skilled_tactician
+#	trait=
+#	trait=devout
+#	trait=diligent
+#	disallow_random_traits=yes
+#	1590.1.1={birth=yes}
+#	1853.7.26={death=yes}
+#	}
+#}
 
 # Flores family, trifinio pagan ruler of Nojpetén, austed by the Itzá rebellion
 1431420={
@@ -1326,7 +1500,7 @@ name = "Patricia"
 	trait=paranoid
 	father=1431431
 	2620.1.1={birth=yes}
-	2653.1.1={add_spouse=1431435 #Betty Bolom
+	2643.1.1={add_spouse=1431435 #Betty Bolom
 	}
 	2708.1.1={death=yes}
 }
@@ -1389,23 +1563,33 @@ name = "Patricia"
 	trait=patient
 	trait=shy
 	father=1650117
-	2637.1.1={birth=yes}
+	2630.1.1={birth=yes}
 }
 1431436={
 	name="Rosendo"
 	dynasty=1697092
 	culture=lacandon
 	religion=qabantajik
-	martial=4
+	martial=15
 	diplomacy=0
 	stewardship=0
 	intrigue=0
 	learning=0
-	trait=rowdy
+	trait=tough_soldier
+	trait=strong
+	trait=giant
+	trait=slow
 	trait=wroth
 	mother=1431435
 	father=1431432
-	2660.1.1={birth=yes}
+	2647.1.1={birth=yes}
+	2664.1.1={give_nickname=nick_the_giant}
+	2665.11.29={
+		death={
+			death_reason=death_battle_duel
+			killer=1431101
+		}
+	}
 }
 1431437={
 	name="Jaime"
@@ -1836,7 +2020,7 @@ name = "Patricia"
 	2664.12.31={
 		effect= {
 			add_lover=1431447
-		}
+			}
 	}
 }
 
@@ -2059,8 +2243,8 @@ name = "Patricia"
 	2178.1.1={birth=yes}
 	2250.1.1={death= {
 			death_reason=death_battle
-	}
-} 
+		}
+	} 
 }
 
 

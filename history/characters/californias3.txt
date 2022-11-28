@@ -543,6 +543,7 @@
 	trait=skilled_tactician
 	trait=shrewd
 	trait=chaste
+	trait=legit_bastard #validator
 	disallow_random_traits=yes
 	2569.4.20={birth=yes} #nice
 	2622.5.5={death={
@@ -1137,7 +1138,7 @@
 	religion=rust_cultist#siliconist
 	dynasty=1849057#Woz
 	trait=skilled_tactician
-	trait=python
+	#trait=python
 	trait=strong
 	trait=erudite
 	trait=scholar
@@ -1164,7 +1165,7 @@
 	mother=2500050
 	father=2500051
 	trait=martial_cleric
-	trait=python
+	#trait=python
 	trait=theologian
 	trait=temperate
 	trait=diligent
@@ -1188,7 +1189,7 @@
 	dynasty=1849057#Woz
 	father=2500052
 	trait=underhanded_rogue
-	trait=python
+	#trait=python
 	trait=gregarious
 	trait=deceitful
 	trait=diligent
@@ -1212,7 +1213,7 @@
 	dynasty=1849057#Woz
 	father=2500053
 	trait=indulgent_wastrel
-	trait=python
+	#trait=python
 	trait=groomed
 	trait=is_fat
 	trait=gluttonous
@@ -1234,7 +1235,7 @@
 	religion=cetic#siliconist
 	dynasty=1849057#Woz
 	father=2500053
-	trait=python
+	#trait=python
 	trait=imp_ex1
 	2499.1.1={
 		birth=yes
@@ -1250,7 +1251,7 @@
 	religion=cetic#siliconist
 	dynasty=1849057#Woz
 	father=2500055
-	trait=python
+	#trait=python
 	trait=imp_ex2
 	2533.1.1={
 		birth=yes
@@ -1266,7 +1267,7 @@
 	religion=cetic#siliconist
 	dynasty=1849057#Woz
 	father=2500056
-	trait=python
+	#trait=python
 	trait=imp_ex2
 	2556.1.1={
 		birth=yes
@@ -2359,7 +2360,7 @@
 	religion=pagan#kinemite
 	trait=elusive_shadow
 	trait=quick
-	trai=peasant_leader
+	trait=peasant_leader
 	trait=shrewd
 	trait=uncouth
 	trait=charitable
@@ -2644,9 +2645,9 @@
 	trait=just
 	disallow_random_traits=yes
 	give_nickname=nick_el_jefecito
-	2080.5.12={birth=yes
+	2070.5.12={birth=yes 
 	culture=joaquino
-	}
+	} #former birthday 2080.5.12 had to push dates back to accomodate several character's history
 	2161.10.24={death=yes}
 }
 
@@ -2664,9 +2665,9 @@
 	trait=content
 	father=1802065
 	disallow_random_traits=yes
-	2106.2.19={birth=yes
+	2096.2.19={birth=yes
 	culture=joaquino
-	}
+	} #formerly 2106.2.19
 	2184.7.21={death=yes}
 }
 
@@ -2824,10 +2825,10 @@
 	father=1802066
 	give_nickname=nick_porky
 	disallow_random_traits=yes
-	2126.9.9={birth=yes
+	2112.9.9={birth=yes
 	culture=joaquino
-	}
-	2150.1.1={add_spouse=1802075}
+	} #formerly in the year of 2122
+	2132.1.1={add_spouse=1802075} #formerly in the year of 2150
 	2199.11.7={death=yes}
 }
 
@@ -2845,9 +2846,9 @@
 	trait=kind
 	father=1802093
 	disallow_random_traits=yes
-	2128.10.10={birth=yes
+	2118.10.10={birth=yes
 	culture=meseteno
-	}
+	} #formerly ---- in the year 2230
 	2150.1.1={add_spouse=1802074}
 	2205.12.16={death=yes}
 }
@@ -3850,7 +3851,7 @@
 	2510.11.5={birth=yes
 	culture=valleyan
 	}
-	2512.2.2={add_matrilineal_spouse=1802131}
+	2542.2.2={add_matrilineal_spouse=1802131}
 	2577.2.1={death=yes}
 }
 
@@ -4068,9 +4069,9 @@
 	trait=erudite
 	trait=lustful
 	disallow_random_traits=yes
-	2268.6.5={birth=yes
+	2266.6.5={birth=yes
 	culture=joaquino
-	}
+	} #2262.6.5
 	2341.10.22={death=yes}
 }
 
@@ -4084,11 +4085,10 @@
 	trait=trusting
 	trait=gregarious
 	trait=brave
-	female=yes
 	disallow_random_traits=yes
-	2270.4.24={birth=yes
+	2269.4.24={birth=yes
 	culture=valleyan
-	}
+	} #2264.4.24
 	2289.10.22={add_spouse=1802140}
 	2335.5.5={death=yes}
 }
@@ -4560,7 +4560,7 @@
     trait=diligent
     trait=proud
     trait=wroth
-	father=2500146
+	#father=2500146
 	disallow_random_traits=yes
 	2495.1.1={birth=yes
 	culture=siskiyouan}
@@ -4840,7 +4840,7 @@
     learning=5
     trait=tough_soldier
     trait=nz_presbyter
-	trait=twin
+	#trait=twin
     trait=hunter
     trait=one_handed
     trait=brave
@@ -4871,7 +4871,7 @@
     trait=patient
     trait=sturdy
     trait=content
-    2620.1.1={birth=yes
+    2621.1.1={birth=yes
 	culture=battleborn}
 }
 
@@ -6106,7 +6106,7 @@
 	trait=mystic
 	father=1802134
 	2621.3.11={birth=yes}
-	2651.10.2={add_spouse=1802228}
+	2655.10.2={add_spouse=1802228}
 }
 
 1802241={
@@ -6118,7 +6118,7 @@
 	culture=valleyan
 	religion=cetic
 	trait=way_book
-	2655.1.11={birth=yes}
+	2656.1.11={birth=yes}
 }
 
 1802242={
@@ -6239,8 +6239,9 @@
 	trait=patient
 	trait=diligent
 	trait=ill
-	father=1910135
-	2637.12.16={birth=yes}
+	#father=1910135 #most likely a mistake
+	#2637.12.16={birth=yes}
+	2620.12.16={birth=yes}
 	2690.12.1={death=yes}
 }
 
