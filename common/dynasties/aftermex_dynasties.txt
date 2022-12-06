@@ -894,20 +894,20 @@ coat_of_arms = {
 		}
 	}
 }
-#5001185 = { name="Nilsen" culture=coloradan 
-#		coat_of_arms = {
-#		religion = nazarene
-#		template = 0
-#		layer = {
-#			texture = 11
-#			texture_internal = 1
-#			emblem = 0
-#			color = 0
-#			color = 0
-#			color = 0
-#		}
-#	}
-#}
+5001185 = { name="Nilsen" culture=coloradan 
+		coat_of_arms = {
+		religion = nazarene
+		template = 0
+		layer = {
+			texture = 11
+			texture_internal = 1
+			emblem = 0
+			color = 0
+			color = 0
+			color = 0
+		}
+	}
+}
 5001186 = { name="Nemechek" culture=czexan }
 5001187 = { name="Holekamp" culture=texaner }
 5001188 = { name="Eberly" culture=texan }
@@ -1365,7 +1365,6 @@ coat_of_arms = {
 5200050 = { name="Cortés Sarmiento" culture=yucatanense }
 5200051 = { name="Moreno Cantón" culture=yucatanense }
 5200052 = { name="Dolores Otero" culture=yucatanense }
-5200052 = { name="Dolores Patrón" culture=yucatanense }
 5200053 = { name="Carrillo Puerto" culture=yucatanense }
 5200054 = { name="Fidel Velázquez" culture=yucatanense }
 5200055 = { name="Ricalde" culture=yucatanense }
@@ -1551,6 +1550,7 @@ coat_of_arms = {
 	}
 }
 5200113 = {name="Correa" culture=yucatanense}
+5200114 = {name="Rosado" culture=yucatanense}
 
 5200200 = {name="Chanona" culture=choco}
 5200201 = {name="Garrido" culture=choco}
@@ -1587,6 +1587,9 @@ coat_of_arms = {
 5200232 = {name="Jiménez" culture=choco}
 5200233 = {name="Vélez" culture=choco}
 5200234 = {name="Sánchez" culture=choco}
+
+# moved here to fix duplicate id issue
+5200235 = { name="Dolores Patrón" culture=yucatanense }
 
 2111001 = { name="Silverio" culture=pinoy }
 2111002 = { name="Tobera" culture=pinoy }
@@ -1635,107 +1638,87 @@ coat_of_arms = {
 1802017 = { name="Margaryan" culture=khoakineren }
 1802018 = { name="Arakelyan" culture=khoakineren }
 1802019 = { name="Davtyan" culture=khoakineren }
-1802010 = { name="Mkrtchyan" culture=khoakineren }
-1802011 = { name="Manukyan" culture=khoakineren }
-1802012 = { name="Ghazaryan" culture=khoakineren }
-1802013 = { name="Avestisyan" culture=khoakineren }
-1802014 = { name="Martirosyan" culture=khoakineren }
-1802015 = { name="Poghosyan" culture=khoakineren }
-1802016 = { name="Sahakyan" culture=khoakineren }
-1802017 = { name="Margaryan" culture=khoakineren }
-1802018 = { name="Arakelyan" culture=khoakineren }
-1802019 = { name="Davtyan" culture=khoakineren }
-1802010 = { name="Mkrtchyan" culture=khoakineren }
-1802011 = { name="Manukyan" culture=khoakineren }
-1802012 = { name="Ghazaryan" culture=khoakineren }
-1802013 = { name="Avestisyan" culture=khoakineren }
-1802014 = { name="Martirosyan" culture=khoakineren }
-1802015 = { name="Poghosyan" culture=khoakineren }
-1802016 = { name="Sahakyan" culture=khoakineren }
-1802017 = { name="Margaryan" culture=khoakineren }
-1802018 = { name="Arakelyan" culture=khoakineren }
-1802019 = { name="Davtyan" culture=khoakineren }
-1802020 = { name="Simonyan" culture=khoakineren }
-1802021 = { name="Stepanyan" culture=khoakineren }
-1802022 = { name="Galstyan" culture=khoakineren }
-1802023 = { name="Hayrapetyan" culture=khoakineren }
-1802024 = { name="Muradyan" culture=khoakineren }
-1802025 = { name="Gasparyan" culture=khoakineren }
-1802026 = { name="Avagyan" culture=khoakineren }
-1802027 = { name="Baghdasaryan" culture=khoakineren }
-1802028 = { name="Abrahamyan" culture=khoakineren }
-1802029 = { name="Asatryan" culture=khoakineren }
-1802030 = { name="Hovsepyan" culture=khoakineren }
-1802031 = { name="Melkonyan" culture=khoakineren }
-1802032 = { name="Minasyan" culture=khoakineren }
-1802033 = { name="Kirakosyan" culture=khoakineren }
-1802034 = { name="Mkhitaryan" culture=khoakineren }
-1802035 = { name="Babayan" culture=khoakineren }
-1802036 = { name="Alexsanyan" culture=khoakineren }
-1802037 = { name="Barseghyan" culture=khoakineren }
-1802038 = { name="Tadevosyan" culture=khoakineren }
-1802039 = { name="Yeghiazaryan" culture=khoakineren }
-1802040 = { name="Zakaryan" culture=khoakineren }
-1802041 = { name="Ohanyan" culture=khoakineren }
-1802042 = { name="Mnacakanyan" culture=khoakineren }
-1802043 = { name="Movsisyan" culture=khoakineren }
-1802044 = { name="Hambardzumyan" culture=khoakineren }
-1802045 = { name="Danielyan" culture=khoakineren }
-1802046 = { name="Badalyan" culture=khoakineren }
-1802047 = { name="Ayvazyan" culture=khoakineren }
-1802048 = { name="Torosyan" culture=khoakineren }
-1802049 = { name="Tovmasyan" culture=khoakineren }
-1802050 = { name="Nersisyan" culture=khoakineren }
-1802051 = { name="Nazaryan" culture=khoakineren }
-1802052 = { name="Mirzoyan" culture=khoakineren }
-1802053 = { name="Antonyan" culture=khoakineren }
-1802054 = { name="Gabrielyan" culture=khoakineren }
-1802055 = { name="Safaryan" culture=khoakineren }
-1802056 = { name="Matevosyan" culture=khoakineren }
-1802057 = { name="Kocharyan" culture=khoakineren }
-1802058 = { name="Ghukasyan" culture=khoakineren }
-1802059 = { name="Melikyan" culture=khoakineren }
-1802060 = { name="Adamyan" culture=khoakineren }
-1802061 = { name="Mikayelyan" culture=khoakineren }
-1802062 = { name="Aslanyan" culture=khoakineren }
-1802063 = { name="Oskanyan" culture=khoakineren }
-1802064 = { name="Gharibyan" culture=khoakineren }
-1802065 = { name="Hovakimyan" culture=khoakineren }
-1802066 = { name="Sukiasyan" culture=khoakineren }
-1802067 = { name="Aghajanyan" culture=khoakineren }
-1802068 = { name="Tonoyan" culture=khoakineren }
-1802069 = { name="Arzumanyan" culture=khoakineren }
-1802070 = { name="Nikoghosyan" culture=khoakineren }
-1802071 = { name="Markosyan" culture=khoakineren }
-1802072 = { name="Shahbazyan" culture=khoakineren }
-1802073 = { name="Arshakyan" culture=khoakineren }
-1802074 = { name="Shahinyan" culture=khoakineren }
-1802075 = { name="Soghomonyan" culture=khoakineren }
-1802076 = { name="Yesayan" culture=khoakineren }
-1802077 = { name="Abgaryan" culture=khoakineren }
-1802078 = { name="Hunanyan" culture=khoakineren }
-1802079 = { name="Saribekyan" culture=khoakineren }
-1802080 = { name="Darbinyan" culture=khoakineren }
-1802081 = { name="Aloyan" culture=khoakineren }
-1802082 = { name="Makaryan" culture=khoakineren }
-1802083 = { name="Alaverdyan" culture=khoakineren }
-1802084 = { name="Tumanyan" culture=khoakineren }
-1802085 = { name="Nahapetyan" culture=khoakineren }
-1802086 = { name="Shahnazaryan" culture=khoakineren }
-1802087 = { name="Nalbandyan" culture=khoakineren }
-1802088 = { name="Manucharyan" culture=khoakineren }
-1802089 = { name="Navasardyan" culture=khoakineren }
-1802090 = { name="Dallakyan" culture=khoakineren }
-1802091 = { name="Andreasyan" culture=khoakineren }
-1802092 = { name="Malkhasyan" culture=khoakineren }
-1802093 = { name="Avdalyan" culture=khoakineren }
-1802094 = { name="Serobyan" culture=khoakineren }
-1802095 = { name="Beglaryan" culture=khoakineren }
-1802096 = { name="Avanesyan" culture=khoakineren }
-1802097 = { name="Amirkhanyan" culture=khoakineren }
-1802098 = { name="Movsesyan" culture=khoakineren }
-1802099 = { name="Melkumyan" culture=khoakineren }
-1802100 = { name="Atoyan" culture=khoakineren }
+1802020 = { name="Mkrtchyan" culture=khoakineren }
+1802021 = { name="Manukyan" culture=khoakineren }
+1802022 = { name="Ghazaryan" culture=khoakineren }
+1802023 = { name="Avestisyan" culture=khoakineren }
+1802024 = { name="Martirosyan" culture=khoakineren }
+1802025 = { name="Poghosyan" culture=khoakineren }
+1802026 = { name="Sahakyan" culture=khoakineren }
+1802027 = { name="Margaryan" culture=khoakineren }
+1802028 = { name="Arakelyan" culture=khoakineren }
+1802029 = { name="Davtyan" culture=khoakineren }
+1802030 = { name="Mkrtchyan" culture=khoakineren }
+1802031 = { name="Manukyan" culture=khoakineren }
+1802032 = { name="Ghazaryan" culture=khoakineren }
+1802033 = { name="Avestisyan" culture=khoakineren }
+1802034 = { name="Martirosyan" culture=khoakineren }
+1802035 = { name="Poghosyan" culture=khoakineren }
+1802036 = { name="Sahakyan" culture=khoakineren }
+1802037 = { name="Margaryan" culture=khoakineren }
+1802038 = { name="Arakelyan" culture=khoakineren }
+1802039 = { name="Davtyan" culture=khoakineren }
+1802040 = { name="Simonyan" culture=khoakineren }
+1802041 = { name="Stepanyan" culture=khoakineren }
+1802042 = { name="Galstyan" culture=khoakineren }
+1802043 = { name="Hayrapetyan" culture=khoakineren }
+1802044 = { name="Muradyan" culture=khoakineren }
+1802045 = { name="Gasparyan" culture=khoakineren }
+1802046 = { name="Avagyan" culture=khoakineren }
+1802047 = { name="Baghdasaryan" culture=khoakineren }
+1802048 = { name="Abrahamyan" culture=khoakineren }
+1802049 = { name="Asatryan" culture=khoakineren }
+1802050 = { name="Hovsepyan" culture=khoakineren }
+1802051 = { name="Melkonyan" culture=khoakineren }
+1802052 = { name="Minasyan" culture=khoakineren }
+1802053 = { name="Kirakosyan" culture=khoakineren }
+1802054 = { name="Mkhitaryan" culture=khoakineren }
+1802055 = { name="Babayan" culture=khoakineren }
+1802056 = { name="Alexsanyan" culture=khoakineren }
+1802057 = { name="Barseghyan" culture=khoakineren }
+1802058 = { name="Tadevosyan" culture=khoakineren }
+1802059 = { name="Yeghiazaryan" culture=khoakineren }
+1802060 = { name="Zakaryan" culture=khoakineren }
+1802061 = { name="Ohanyan" culture=khoakineren }
+1802062 = { name="Mnacakanyan" culture=khoakineren }
+1802063 = { name="Movsisyan" culture=khoakineren }
+1802064 = { name="Hambardzumyan" culture=khoakineren }
+1802065 = { name="Danielyan" culture=khoakineren }
+1802066 = { name="Badalyan" culture=khoakineren }
+1802067 = { name="Ayvazyan" culture=khoakineren }
+1802068 = { name="Torosyan" culture=khoakineren }
+1802069 = { name="Tovmasyan" culture=khoakineren }
+1802070 = { name="Nersisyan" culture=khoakineren }
+1802071 = { name="Nazaryan" culture=khoakineren }
+1802072 = { name="Mirzoyan" culture=khoakineren }
+1802073 = { name="Antonyan" culture=khoakineren }
+1802074 = { name="Gabrielyan" culture=khoakineren }
+1802075 = { name="Safaryan" culture=khoakineren }
+1802076 = { name="Matevosyan" culture=khoakineren }
+1802077 = { name="Kocharyan" culture=khoakineren }
+1802078 = { name="Ghukasyan" culture=khoakineren }
+1802079 = { name="Melikyan" culture=khoakineren }
+1802080 = { name="Adamyan" culture=khoakineren }
+1802081 = { name="Mikayelyan" culture=khoakineren }
+1802082 = { name="Aslanyan" culture=khoakineren }
+1802083 = { name="Oskanyan" culture=khoakineren }
+1802084 = { name="Gharibyan" culture=khoakineren }
+1802085 = { name="Hovakimyan" culture=khoakineren }
+1802086 = { name="Sukiasyan" culture=khoakineren }
+1802087 = { name="Aghajanyan" culture=khoakineren }
+1802088 = { name="Tonoyan" culture=khoakineren }
+1802089 = { name="Arzumanyan" culture=khoakineren }
+1802090 = { name="Nikoghosyan" culture=khoakineren }
+1802091 = { name="Markosyan" culture=khoakineren }
+1802092 = { name="Shahbazyan" culture=khoakineren }
+1802093 = { name="Arshakyan" culture=khoakineren }
+1802094 = { name="Shahinyan" culture=khoakineren }
+1802095 = { name="Soghomonyan" culture=khoakineren }
+1802096 = { name="Yesayan" culture=khoakineren }
+1802097 = { name="Abgaryan" culture=khoakineren }
+1802098 = { name="Hunanyan" culture=khoakineren }
+1802099 = { name="Saribekyan" culture=khoakineren }
+1802100 = { name="Darbinyan" culture=khoakineren }
 
 #####Putting rest of Dorados aqui
 1802101 = { name="Sonorense" culture=occidental }
@@ -2027,7 +2010,7 @@ coat_of_arms = {
 154122 = { name="J-Alis Vet"  culture = tsotsil}
 154123 = { name="J-Alis Saben"  culture = tsotsil}
 154124 = { name="J-Alis A'al"  culture = tsotsil}
-154125 = { name="J-Alis Poypoy" culture = tsotsil}
+154152 = { name="J-Alis Poypoy" culture = tsotsil}
 154127 = { name="J-Alis Ib mail chon" culture = tsotsil}
 154128 = { name="J-Alis Chuchetik" culture = tsotsil}
 154129 = { name="J-Alis Yaxalchuch" culture = tsotsil}
