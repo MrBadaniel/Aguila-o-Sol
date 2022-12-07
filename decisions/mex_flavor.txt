@@ -5,16 +5,14 @@ decisions = {
 		potential = {
 			has_dlc = "Mystics"
 			OR = {
-			religion = fidencista
-			trait = marian_santo_nino_fidencio
+				religion = fidencista
+				trait = marian_santo_nino_fidencio
 			}
 			NOT = { has_character_flag = ascetic_arriving }
 			NOT = { has_character_modifier = recently_invited_ascetic }
 		}
 
-		allow = {
-
-		}
+		allow = {}
 
 		effect = {
 			set_character_flag = ascetic_arriving
@@ -52,9 +50,9 @@ decisions = {
 			NOT = { #immersion-breaking
 				has_alternate_start_parameter = { key = religion_names value = random }
 			}
-				OR = {
-			religion = fidencista
-			trait = marian_santo_nino_fidencio
+			OR = {
+				religion = fidencista
+				# trait = marian_santo_nino_fidencio
 			}
 			NOT = { trait = cajita }
 			NOR = {
@@ -67,9 +65,9 @@ decisions = {
 		}
 
 		allow = {
-						OR = {
-			religion = fidencista
-			trait = marian_santo_nino_fidencio
+			OR = {
+				religion = fidencista
+			# trait = marian_santo_nino_fidencio
 			}
 			piety = 500
 			custom_tooltip = {
@@ -90,7 +88,6 @@ decisions = {
 				trait = drunkard
 				trait = cynical
 			}
-
 		}
 
 		effect = {
@@ -98,7 +95,6 @@ decisions = {
 			FROM = {
 				character_event = { id = fide.123 }
 			}
-
 		}
 
 		revoke_allowed = {
@@ -198,7 +194,6 @@ decisions = {
 			completely_controls = k_sierra_madre
 			religion_authority = 0.7	
 			piety = 1000
-
 		}
 		
 		effect = {
@@ -273,16 +268,16 @@ targetted_decisions = {
 		}
 		effect = {
 			hidden_tooltip = {
-			remove_trait = marian_el_santo
-			remove_trait = marian_guadalupe
-			remove_trait = marian_san_charbel
-			remove_trait = marian_san_juditas
-			remove_trait = marian_san_pascual
-			remove_trait = marian_stella_maris
-			remove_trait = marian_santo_nino_fidencio
-			remove_trait = marian_santa_inocencia
-			remove_trait = marian_la_hermandad
-			remove_trait = marian_cristo_rey
+				remove_trait = marian_el_santo
+				remove_trait = marian_guadalupe
+				remove_trait = marian_san_charbel
+				remove_trait = marian_san_juditas
+				remove_trait = marian_san_pascual
+				remove_trait = marian_stella_maris
+				remove_trait = marian_santo_nino_fidencio
+				remove_trait = marian_santa_inocencia
+				remove_trait = marian_la_hermandad
+				remove_trait = marian_cristo_rey
 			}
 			if = {
 				limit = {
