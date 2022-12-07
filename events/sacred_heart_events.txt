@@ -2493,3 +2493,32 @@ narrative_event = {
 		}
 	}	
 }
+
+# sagrado mystic 210
+character_event = {
+	id = sacredheart.210
+	desc = EVTDESC_sacredheart_210
+	picture = GFX_evt_cathedral_pagan_group
+	is_triggered_only = yes
+	
+	trigger = {
+		religion = sacred_heart
+		trait = marian_el_santo_nino_fidencio
+		age = 16
+		learning = 14
+		NOT = {trait = mystic}
+	}
+	
+	
+	immediate = {
+		effect = {
+			piety = 100
+			prestige = 50
+			add_trait = mystic
+		}
+	}
+	
+	option = {
+		name = EVTOPTA_sacredheart_210
+	}
+}
