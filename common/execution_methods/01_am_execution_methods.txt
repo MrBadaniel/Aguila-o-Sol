@@ -278,16 +278,14 @@ execution_method = {
 	}
 	trigger = {
 		FROM = {
-			AND = {
-				capital_scope = {
-					OR = {
-						kindgom = k_socal
-						duchy = d_los_angeles
-					}
-					OR = {
-						religion = kinemite
-					}
+			capital_scope = {
+				OR = {
+					kindgom = k_socal
+					duchy = d_los_angeles
 				}
+				# OR = {
+				# 	religion = kinemite
+				# }
 			}
 		}
 	}

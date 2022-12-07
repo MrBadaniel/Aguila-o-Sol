@@ -13140,6 +13140,24 @@ character_event = {
 					} 
 				} 
 			}
+			AND = { 
+				has_landed_title = e_mexico
+				any_artifact = { artifact_type = crown_mexico }
+				e_mexico = { 
+					current_heir = { 
+						NOT = { dynasty = ROOT }
+					} 
+				} 
+			}
+			AND = { 
+				has_landed_title = e_mexico
+				any_artifact = { artifact_type = campana_de_dolores }
+				e_mexico = { 
+					current_heir = { 
+						NOT = { dynasty = ROOT }
+					} 
+				} 
+			}
 			AND =  { 
 				has_landed_title = k_dominionist
 				any_artifact = { artifact_type = bullet_crown }
@@ -13335,6 +13353,36 @@ character_event = {
 		}
 		if = { 
 			limit = { 
+				has_landed_title = e_mexico
+				any_artifact = { artifact_type = crown_mexico }
+			}
+			e_mexico = { 
+				current_heir = { save_event_target_as = worthy_mexico_crown }
+			}
+			player_heir = { save_event_target_as = unworthy_mexico_crown }
+			any_artifact = { 
+				limit = { artifact_type = crown_mexico }
+				save_event_target_as = inheriting_artifact_4
+			}
+			current_heir = { character_event = { id = HF.20407 days = 1 } }
+		}
+		if = { 
+			limit = { 
+				has_landed_title = e_mexico
+				any_artifact = { artifact_type = campana_de_dolores }
+			}
+			e_mexico = { 
+				current_heir = { save_event_target_as = worthy_campana_de_dolores }
+			}
+			player_heir = { save_event_target_as = unworthy_campana_de_dolores }
+			any_artifact = { 
+				limit = { artifact_type = campana_de_dolores }
+				save_event_target_as = inheriting_artifact_4
+			}
+			current_heir = { character_event = { id = HF.20407 days = 1 } }
+		}
+		if = { 
+			limit = { 
 				has_landed_title = k_dominionist
 				any_artifact = { artifact_type = bullet_crown }
 			}
@@ -13434,6 +13482,18 @@ character_event = {
 			transfer_artifact = {
 				from = event_target:unworthy_california_crown
 				to = event_target:worthy_california_crown
+ 			} 
+ 		}
+		 event_target:inheriting_artifact_4 = {
+			transfer_artifact = {
+				from = event_target:unworthy_mexico_crown
+				to = event_target:worthy_mexico_crown
+ 			} 
+ 		}
+		 event_target:inheriting_artifact_4 = {
+			transfer_artifact = {
+				from = event_target:unworthy_campana_de_dolores
+				to = event_target:worthy_campana_de_dolores
  			} 
  		}
 		event_target:inheriting_artifact_4 = {
