@@ -937,7 +937,8 @@
 	trait=diligent
 	trait=cruel
 	2415.3.24={birth=yes}
-	2460.1.30={death={
+	2460.1.30={
+		death={
 			death_reason= death_execution_beheading #was executed after trying to reclaim Jefferon
 			killer=1910100
 		}
@@ -2346,7 +2347,8 @@
 	father=2500110
 	give_nickname=nick_the_kine_slayer
 	2071.2.5={birth=yes}
-	2129.4.1={death={
+	2129.4.1={
+		death={
 			death_reason=death_murder_butchered
 			killer=2500152
 		}
@@ -2707,7 +2709,8 @@
 	occluded=yes
 	trait=legendary
 	2137.5.2={birth=yes}
-	2186.9.9={death={
+	2186.9.9={
+		death={
 			death_reason=death_left_life_entered_history
 		}
 	}
@@ -4484,8 +4487,9 @@
 	trait=shy
 	trait=elusive_shadow
 	disallow_random_traits=yes
-	2605.4.15={birth=yes
-	culture=siskiyouan
+	2605.4.15={
+		birth=yes
+		culture=siskiyouan
 	}
 	2640.1.2={add_matrilineal_spouse=2500107}
 }
@@ -5389,12 +5393,15 @@
     trait=brave
 	trait=diligent
 	give_nickname=nick_the_black_bastard
-    2531.3.3={birth=yes
-	culture=joshuan}
-	2565.1.12={death={
-		death_reason=death_battle_duel
-		killer=2200204
-	}}
+    2531.3.3={
+		birth=yes
+		culture=joshuan}
+	2565.1.12={
+		death={
+			death_reason=death_battle_duel
+			killer=2200204
+		}
+	}
 }
 
 1802197={
