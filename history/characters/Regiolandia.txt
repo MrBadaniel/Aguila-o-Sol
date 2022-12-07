@@ -1,6 +1,6 @@
 ######REGIOLANDIA
 
-####NEW CHARACTERS FOR THE NEW NORTEñO PROVINCES
+####NEW CHARACTERS FOR THE NEW NORTEO PROVINCES
 
 181171 = { #2nd wife of eugenio_garza_1
  	name="Luisa"
@@ -15,7 +15,7 @@
 	trait=schemer	
 	2579.10.31 = { birth =yes }
 	2599.12.1 = { add_spouse=181230 }
-	}
+}
 
 181172 = { #1st wife of eugenio_garza_1
  	name="Consuelo"
@@ -30,14 +30,15 @@
 	trait=cancer
 	2544.1.20 = { birth =yes }
 	2560.5.15 = { add_spouse=181230 }
-	2598.3.26 = { death = { 
-				death_reason=death_trait
-				}
+	2598.3.26 = { 
+		death = { 
+			death_reason=death_trait
+		}
 	}
 }
 181173 = {
  	name="Consuelo"
-	dynasty= 1810070 #Adás
+	dynasty= 1810070 #Ads
 	female=yes
 	culture=bravo
 	religion=sacred_heart
@@ -105,9 +106,10 @@
 	trait=diligent
 	2588.7.4 = { birth=yes }
 	2608.7.10 = { add_spouse = 181187 }
-	2620.7.10 = { death= {
+	2620.7.10 = { 
+		death= {
 			death_reason = death_suicide 
-			}
+		}
 	}
 }
 181178 =	{
@@ -124,7 +126,7 @@
 	trait=bisexual
 	2626.9.24 = { birth=yes }
 	2647.11.20 = { add_spouse = 181188 }
-	}
+}
 ####181180-181189 de Arcas y Rojos
 181180 = {
 	name="Argos"
@@ -133,10 +135,10 @@
 	religion=sacred_heart
 	father=181182
 	mother=181176
-	2638.1.1={birth=yes}
 	trait=thrifty_clerk
 	trait=greedy
 	trait=wroth
+	2638.1.1={birth=yes}
 }
 181181= { #arnulfo_de_arca
 	name="Arnulfo"
@@ -179,7 +181,7 @@
 	2649.1.1 = { birth=yes }
 }	
 181187={
-	name="Matías"
+	name="Matas"
 	female=no
 	dynasty=1810059 #Rojo 
 	culture=bravo
@@ -192,9 +194,10 @@
 	trait=gregarious
 	trait=drunkard
 	2587.1.1 = {birth=yes}
-	2619.9.10 = { death = {
+	2619.9.10 = { 
+		death = {
 			death_reason = death_soldier_rabble
-			}
+		}
 	}
 }
 181188={
@@ -214,7 +217,7 @@
 	2609.1.1 = {birth=yes}
 }
 181189={ 
-	name="María" #Wife of Don Pepe
+	name="Mara" #Wife of Don Pepe
 	female=yes
 	dynasty=1810059 #Rojo 
 	culture=bravo
@@ -305,7 +308,6 @@
 	mother=181193
 	trait=legit_bastard
 	2665.4.1={birth=yes}
-
 }
 181195 = {
 	name="Ismael"
@@ -378,7 +380,7 @@
 181200 = {
 	name="Mariana"
 	female=yes
-	dynasty=1810056 #Garza García
+	dynasty=1810056 #Garza Garca
 	culture=italian
 	religion=reformista
 	dna="ahbd00hbb00"
@@ -400,7 +402,7 @@
 181201 = {
 	name="Laura"
 	female=yes
-	dynasty=1810056 #Garza García
+	dynasty=1810056 #Garza Garca
 	culture=bravo
 	religion=reformista
 	father=181202
@@ -412,14 +414,15 @@
 	trait=lustful
 	trait=weak
 	2646.1.1 = { birth=yes }
-	2666.7.10 = { death = {
+	2666.7.10 = { 
+		death = {
 			death_reason=death_suicide
-			}
+		}
 	}
 }
 181202 = {
 	name="Laureano"
-	dynasty=1810056 #Garza García
+	dynasty=1810056 #Garza Garca
 	culture=bravo
 	religion=reformista
 	father=181204
@@ -439,21 +442,22 @@
 181203 = {
 	name="Angelina"
 	female=yes
-	dynasty= 1810062 #García Huerta
+	dynasty= 1810062 #Garca Huerta
 	culture=italian
 	religion=reformista
 	trait=charismatic_negotiator
 	trait=fair
 	father=181207
 	mother=181174
-	2622.1.1 = { birth=yes 
+	2622.1.1 = { 
+		birth=yes 
 		culture=bravo
 	}
 	2640.1.1 = { add_spouse = 181202 }
 }
 181204 = {
 	name="Luis"
-	dynasty=1810056 #Garza García
+	dynasty=1810056 #Garza Garca
 	culture=bravo
 	religion=reformista
 	father=181230
@@ -466,15 +470,15 @@
 	2600.11.29 = { birth=yes }
 	2640.6.30 = { add_spouse = 181203 }
 	2662.12.12 = { 
-			death = {
-				death_reason = death_trait
-			}
+		death = {
+			death_reason = death_trait
+		}
 	}
 }
 181205 = {
 	name="Pedro"
 	female=no
-	dynasty= 1810062 #García Huerta
+	dynasty= 1810062 #Garca Huerta
 	culture=bravo
 	religion=sacred_heart
 	martial=10
@@ -490,24 +494,24 @@
 	2642.1.1 = { birth=yes }
 	2664.1.1 = {effect={add_lover=1810059}}
 	2665.1.1 = { give_nickname = nick_el_diablo }
-	2664.10.15 = { death = {	
-				death_reason = death_murder_unknown
-				killer=1810008
-				}
+	2664.10.15 = { 
+		death = {	
+			death_reason = death_murder_unknown
+			killer=1810008
+		}
 	}
 }
 181206 = {
 	name="Benjamin"
 	female=no
-	dynasty= 1810062 #García Huerta
+	dynasty= 1810062 #Garca Huerta
 	culture=bravo
 	religion=sacred_heart
 	martial=10
 	trait=skilled_tactician
 	trait=just
 	trait=kind
-	trait=tengri_leader
-	trait=marauder
+	# trait=tengri_leader
 	trait=stubborn
 	trait=bastard
 	father=181207
@@ -518,7 +522,7 @@
 181207 = {
 	name="Mariano"
 	female=no
-	dynasty= 1810062 #García Huerta
+	dynasty= 1810062 #Garca Huerta
 	culture=bravo
 	religion=sacred_heart
 	health=9
@@ -534,7 +538,7 @@
 181208= {
 	name="Pablo"
 	female=no
-	dynasty= 1810062 #García Huerta
+	dynasty= 1810062 #Garca Huerta
 	culture=bravo
 	religion=sacred_heart
 	trait=tough_soldier
@@ -551,9 +555,9 @@
 	}
 }
 181209= {
-	name="Simón"
+	name="Simn"
 	female=no
-	dynasty= 1810062 #García Huerta
+	dynasty= 1810062 #Garca Huerta
 	culture=bravo
 	religion=sacred_heart
 	father=181207
@@ -573,7 +577,7 @@
 181217 = {
 	name="Juan"
 	female=no
-	dynasty= 1810062 #García Huerta
+	dynasty= 1810062 #Garca Huerta
 	culture=italian
 	religion=cristo_rey
 	father=181207
@@ -589,8 +593,10 @@
 	trait=strong
 	trait=bastard
 	employer=6900002
-	2625.5.29 = { birth=yes
-			culture=bravo}
+	2625.5.29 = { 
+		birth=yes
+		culture=bravo
+	}
 }		
 
 181210 = {
@@ -606,10 +612,10 @@
 	2603.1.1 = { birth=yes }
 	2627.1.1 = { add_spouse = 181212 }
 	2645.3.5 = { 
-			death= {
-				death_reason=death_execution_guillotine
-				killer=1810003
-			}
+		death= {
+			death_reason=death_execution_guillotine
+			killer=1810003
+		}
 	}
 }
 181211 = {
@@ -625,15 +631,14 @@
 	trait=kind
 	2641.1.1 = { birth=yes }
 	2647.1.1 = {
-			add_friend=6900511
-		}
-	
+		effect = {add_friend=6900511}
+	}
 }
 181212 = {
 	name="Andrea"
 	female=yes
 	culture=bravo
-	dynasty=1810069 #García Flores
+	dynasty=1810069 #Garca Flores
 	religion=sacred_heart
 	trait=temperate
 	trait=shy
@@ -652,9 +657,10 @@
 	trait=aggressive_leader
 	father=181214
 	2580.1.1 = { birth=yes }
-	2619.7.19 = { death= { 
-					death_reason = death_battle
-				}
+	2619.7.19 = { 
+		death= { 
+			death_reason = death_battle
+		}
 	}	
 }
 181214 = {
@@ -733,12 +739,13 @@
 	trait=charitable
 	trait=diligent
 	2539.1.1 = { birth=yes }
+	2561.12.2 = {add_spouse=181172}
+	2599.12.2 = {remove_spouse=181172}
 	2619.7.10 = { 
 		death = {
 			death_reason = death_battle
 		}
 	}
-	2599.12.2 = {remove_spouse=181172}
 }
 
 181231 = {  #eugenio_garza_3
@@ -807,9 +814,9 @@
 	father=181229
 	2502.1.1 = { birth=yes }
 	2558.8.6 = {
-				death= {
-					death_reason = death_trait
-				}
+		death= {
+			death_reason = death_trait
+		}
 	}
 }
 181235 =	{ #eugenia_garza
@@ -827,9 +834,9 @@
 	trait=bisexual
 	2530.1.1 = { birth=yes }
 	2558.8.6 = {
-				death= {
-					death_reason = death_childbirth
-				}
+		death= {
+			death_reason = death_childbirth
+		}
 	}
 }
 181236 =	{ #eufrosina_garza #1st wife of Mariano the Old
@@ -846,9 +853,9 @@
 	trait=cruel
 	2534.1.1 = { birth=yes }
 	2558.8.6 = {
-				death= {
-					death_reason = death_childbirth
-				}
+		death= {
+			death_reason = death_childbirth
+		}
 	}
 }
 181237 = { #consuelo_garza_1 ; 1st wife of Mariano the Old 181207
@@ -865,9 +872,9 @@
 	2579.11.25 = { birth=yes }
 	2596.1.30 = {add_spouse = 181207 }
 	2609.11.20 = {
-				death= {
-					death_reason = death_childbirth
-				}
+		death= {
+			death_reason = death_childbirth
+		}
 	}
 }
 181238= { #abraham_g_m
@@ -915,9 +922,9 @@
 	trait=cancer
 	2622.1.1 = { birth=yes }
 	2664.4.4 = {
-				death= {
-					death_reason = death_trait
-				}
+		death= {
+			death_reason = death_trait
+		}
 	}
 }
 181251 = {
@@ -953,9 +960,9 @@
 	trait=flu
 	2595.5.15 = { birth=yes }
 	2650.12.24 = { 
-			death ={
-				death_reason=death_trait
-			}
+		death ={
+			death_reason=death_trait
+		}
 	}
 }
 181253 = {
@@ -988,7 +995,7 @@
 
 #Reyes
 181260 = {
-	name="Jesús"
+	name="Jess"
 	female=no
 	dynasty=1810016 #Reyes
 	culture=bravo
@@ -1003,13 +1010,12 @@
 	trait=homosexual
 	2646.4.5 = { birth=yes }
 	2660.1.1 = {
-				add_rival=6900511
-				}
-	
+		effect = {add_rival=6900511 }
+	}	
 	2663.1.1 = {
-				effect= {
-					add_lover=181260
-				}
+		effect= {
+			add_lover=181260
+		}
 	}	
 }
 181261 = {
@@ -1020,8 +1026,6 @@
 	religion=sacred_heart
 	#mother=
 	#father=
-	employer=1810008
-	give_nickname=nick_el_cochiloco
 	trait=skilled_tactician
 	trait=lustful
 	trait=trusting
@@ -1030,6 +1034,10 @@
 	trait=strong
 	trait=aggressive_leader
 	2632.10.20 = { birth=yes }
+	2661.9.12 = {
+		employer=1810008
+		give_nickname=nick_el_cochiloco
+	}
 }	
 181262 = {
 	name="Alfonso"
@@ -1039,7 +1047,6 @@
 	religion=sacred_heart
 	#mother=
 	#father=
-	employer=1810008
 	trait=tough_soldier
 	trait=robust
 	trait=lustful
@@ -1048,20 +1055,20 @@
 	trait=homosexual
 	2648.2.21 = { birth=yes }
 	2663.1.1 = {
-				effect= {
-					add_lover=181260
-				}
+		employer=1810008
+		effect= {
+			add_lover=181260
+		}
 	}
 }
 181264 = {
 	name="Heliodoro"
 	female=no
-	dynasty=1810067 #de la Peña
+	dynasty=1810067 #de la Pea
 	culture=bravo
 	religion=sacred_heart
 	#mother=
 	#father=
-	employer=1810008
 	trait=underhanded_rogue
 	trait=erudite
 	trait=patient
@@ -1070,21 +1077,21 @@
 	trait=robust
 	trait=duelist
 	2570.2.21 = { birth=yes }
+	2590.1.21 = {employer=1810001}
 	2619.7.19 = {
-				death= {
-					death_reason=death_battle
-				}
+		death= {
+			death_reason=death_battle
+		}
 	}
 }
 181263 = {
 	name="Susana"
 	female=yes
-	dynasty=1810067 #de la Peña
+	dynasty=1810067 #de la Pea
 	culture=bravo
 	religion=sacred_heart
 	#mother=
 	#father=
-	employer=1810008
 	trait=midas_touched
 	trait=kind
 	trait=honest
@@ -1093,15 +1100,18 @@
 	trait=depressed
 	father=181264
 	2595.5.1 = { birth=yes }
-	2612.1.1 = { add_spouse=1810001}
+	2612.1.1 = { 
+		add_spouse=1810001
+		employer=1810001
+	}
 	2640.12.6 = { 
-					death = {
-						death_reason=death_trait
-					}
+		death = {
+			death_reason=death_trait
+		}
 	}
 }
 181265 = {
-	name="José Francisco"
+	name="Jos Francisco"
 	female=no
 	dynasty=1810016 #Reyes
 	culture=bravo
@@ -1112,7 +1122,7 @@
 	2590.1.1 = { death = yes }
 }
 181266 = {
-	name="José Francisco"
+	name="Jos Francisco"
 	female=no
 	dynasty=1810016 #Reyes
 	culture=bravo
@@ -1127,9 +1137,9 @@
 	2568.1.1 = { birth=yes }
 	2588.1.1 = { add_spouse=181216 } 
 	2619.7.19 = {
-				death= {
-					death_reason=death_battle
-				}
+		death= {
+			death_reason=death_battle
+		}
 	}
 }
 181267 = {
@@ -1145,8 +1155,8 @@
 	father=181266
 	2610.11.1 = { birth=yes }
 	2610.12.1 = {
-				death= {
-					death_reason=death_trait
-				}
+		death= {
+			death_reason=death_trait
+		}
 	}
 }		

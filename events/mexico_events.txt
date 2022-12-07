@@ -157,9 +157,7 @@ narrative_event = {
 	}
 	desc = {
 		trigger = {
-			OR = { 
-				religion_group = mesoamerican_gods
-			}
+			religion_group = mesoamerican_gods
 		}
 		text = EVTDESCLoR40_HELLENIC
 	}
@@ -184,7 +182,7 @@ narrative_event = {
 		OR = {
 			has_landed_title = e_mexico
 		}
-		NOT = { has_global_flag = roman_borders }
+		NOT = { has_global_flag = mexican_borders }
 		
 		completely_controls_region = custom_oldworld_mexico
 

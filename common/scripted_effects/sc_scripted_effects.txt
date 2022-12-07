@@ -1,46 +1,46 @@
 add_sacred_heart_branch_effect = {
 	if = {
-			limit = {
+		limit = {
 			OR = {
 				culture = tapatio
 				trait = kind
-					}
 			}
-			add_trait = marian_santa_inocencia
+		}
+		add_trait = marian_santa_inocencia
 	}
 	if = {
 		limit = { 
-		 OR = {
-			trait = is_fat
-			trait = gregarious
-			trait = gluttonous
-			trait = trusting
-				} 
-			}
-			add_trait = marian_san_pascual
-	}
-	if = {
-		limit = { 
-		 OR = {
-			trait = marian_santa_muerte
-			trait = elusive_shadow
-			trait = intricate_webweaver
-			trait = flamboyant_schemer
-			trait = amateurish_plotter	
-			trait = deceitful
-			trait = sympathy_mesoamerican_gods
-			trait = bisexual
-			trait = homosexual	
-			trait = hedonist
-				} 
-			}
-			add_trait = marian_santa_muerte
-	}
-	if = {
-			limit = {
-			AND = {
-			has_global_flag = la_hermandad_absorbed_into_fold
 			OR = {
+				trait = is_fat
+				trait = gregarious
+				trait = gluttonous
+				trait = trusting
+			} 
+		}
+		add_trait = marian_san_pascual
+	}
+	if = {
+		limit = { 
+			OR = {
+				trait = marian_santa_muerte
+				trait = elusive_shadow
+				trait = intricate_webweaver
+				trait = flamboyant_schemer
+				trait = amateurish_plotter	
+				trait = deceitful
+				trait = sympathy_mesoamerican_gods
+				trait = bisexual
+				trait = homosexual	
+				trait = hedonist
+			} 
+		}
+		add_trait = marian_santa_muerte
+	}
+	if = {
+		limit = {
+			AND = {
+				has_global_flag = la_hermandad_absorbed_into_fold
+				OR = {
 					culture = tejano
 					culture = neomexicano
 					culture = angeleno
@@ -51,119 +51,119 @@ add_sacred_heart_branch_effect = {
 					trait = hunter
 					trait = painter
 					trait = humble
-					}
 				}
 			}
-			add_trait = marian_la_hermandad
+		}
+		add_trait = marian_la_hermandad
 	}
 	if = {
-			limit = {
-			AND = {
-			has_global_flag = cristeros_absorbed_into_fold
-			OR = {
-					culture = abajeno
-					trait = brave
-					trait = zealous
-					martial >= 10
-					trait = brilliant_strategist
-					trait = skilled_tactician
-					trait = tough_soldier
-					trait = misguided_warrior
-					trait = duelist
-					trait = strategist
-					trait = light_foot_leader
-					trait = heavy_infantry_leader 
-					trait = cavalry_leader
-					trait = inspiring_leader
-					trait = trickster
-					trait = organizer
-					trait = defensive_leader
-					trait = experimenter
-					trait = flanker
-					trait = aggressive_leader
-					trait = siege_leader
-					trait = flat_terrain_leader
-					trait = rough_terrain_leader
-					trait = mountain_terrain_leader
-					trait = desert_terrain_leader
-					trait = unyielding_leader
-					trait = narrow_flank_leader
-					trait = war_elephant_leader
-					trait = jungle_terrain_leader
-					trait = winter_soldier
-					}
+		limit = {
+		AND = {
+		has_global_flag = cristeros_absorbed_into_fold
+		OR = {
+				culture = abajeno
+				trait = brave
+				trait = zealous
+				martial >= 10
+				trait = brilliant_strategist
+				trait = skilled_tactician
+				trait = tough_soldier
+				trait = misguided_warrior
+				trait = duelist
+				trait = strategist
+				trait = light_foot_leader
+				trait = heavy_infantry_leader 
+				trait = cavalry_leader
+				trait = inspiring_leader
+				trait = trickster
+				trait = organizer
+				trait = defensive_leader
+				trait = experimenter
+				trait = flanker
+				trait = aggressive_leader
+				trait = siege_leader
+				trait = flat_terrain_leader
+				trait = rough_terrain_leader
+				trait = mountain_terrain_leader
+				trait = desert_terrain_leader
+				trait = unyielding_leader
+				trait = narrow_flank_leader
+				trait = war_elephant_leader
+				trait = jungle_terrain_leader
+				trait = winter_soldier
 				}
 			}
-			add_trait = marian_cristo_rey
+		}
+		add_trait = marian_cristo_rey
 	}
 	if = {
-			limit = {
-			AND = {
-			has_global_flag = navegantes_absorbed_into_fold
-			OR = {
-					culture = californiano
-					culture = chino
-					culture = occidental
-					trait = melquisedequita
-					trait = aaronita
-					trait = levita
-					trait = sympathy_pagans
-					trait = sympathy_judaism
-					trait = sympathy_islam
-					trait = sturdy
-					}
+		limit = {
+		AND = {
+		has_global_flag = navegantes_absorbed_into_fold
+		OR = {
+				culture = californiano
+				culture = chino
+				culture = occidental
+				trait = melquisedequita
+				trait = aaronita
+				trait = levita
+				trait = sympathy_pagans
+				trait = sympathy_judaism
+				trait = sympathy_islam
+				trait = sturdy
 				}
 			}
-			add_trait = marian_stella_maris
+		}
+		add_trait = marian_stella_maris
 	}
 	if = {
-			limit = {
-			AND = {
-			has_global_flag = fidencistas_absorbed_into_fold
-			OR = {
-					culture = bravo
-					culture = altiplanense
-					culture = menomex
-					culture = neomexicano
-					trait = mystic	
-					trait = dorado
-					trait = robust
-					trait = sympathy_mesoamerican_gods
-					trait = sympathy_pagans
-					trait = adelita
-					trait = cajita
-					}
+		limit = {
+		AND = {
+		has_global_flag = fidencistas_absorbed_into_fold
+		OR = {
+				culture = bravo
+				culture = altiplanense
+				culture = menomex
+				culture = neomexicano
+				trait = mystic	
+				trait = dorado
+				trait = robust
+				trait = sympathy_mesoamerican_gods
+				trait = sympathy_pagans
+				trait = adelita
+				trait = cajita
 				}
 			}
-			add_trait = marian_santo_nino_fidencio
+		}
+		add_trait = marian_santo_nino_fidencio
 	}
 	if = {
 		limit = { 
-		 OR = {
-			trait = midas_touched
-			trait = fortune_builder
-			trait = thrifty_clerk
-			trait = indulgent_wastrel
-			trait = patient
-				} 
-			}
-			add_trait = marian_san_juditas
+			OR = {
+				trait = midas_touched
+				trait = fortune_builder
+				trait = thrifty_clerk
+				trait = indulgent_wastrel
+				trait = patient
+			} 
+		}
+		add_trait = marian_san_juditas
 	}
 	if = {
 		limit = { 
-		 OR = {
-			trait = mastermind_theologian
-			trait = scholarly_theologian
-			trait = martial_cleric
-			trait = detached_priest
-			trait = physician	
-			trait = kind
-				} 
-			}
-			add_trait = marian_san_charbel
+			OR = {
+				trait = mastermind_theologian
+				trait = scholarly_theologian
+				trait = martial_cleric
+				trait = detached_priest
+				trait = physician	
+				trait = kind
+			} 
+		}
+		add_trait = marian_san_charbel
 	}
 	if = {
-			limit = {
+		limit = {
 			OR = {
 
 					trait = brilliant_strategist
@@ -192,12 +192,12 @@ add_sacred_heart_branch_effect = {
 					trait = war_elephant_leader
 					trait = jungle_terrain_leader
 					trait = winter_soldier
-					}
 			}
-			add_trait = marian_el_santo
+		}
+		add_trait = marian_el_santo
 	}
 	else = {
-			add_trait = marian_guadalupe
+		add_trait = marian_guadalupe
 	}
 }
 
