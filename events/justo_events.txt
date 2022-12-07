@@ -400,11 +400,12 @@ narrative_event = { #The Failure of a Prelate
 		}
 	}
 	option = {
-		name = "EVTOPTD_justo7" #response from other Christians
+		name = "EVTOPTD_justo7" #response from Everyone else
 		trigger = {
 			NOR = { 
 				has_character_flag = the_justo_armas
 				religion = cristo_rey
+				religion = sacred_heart
 			}
 		}
 	}
