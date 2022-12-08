@@ -28,7 +28,7 @@ character_event = {
 	}
 }
 
-### Lose Tapado trait by being exiled from realm
+### Lose Tapado trait by being exiled from realm, dying, or becoming emperor
 character_event = {
 	id = destape.3
 	desc = DEBUG
@@ -371,3 +371,21 @@ character_event = {
 		}		
 	}
 }
+
+# #Clear variables on first start for the Emperor.
+# character_event = {
+# 	id = destape.20
+# 	hide_window = yes 
+# 	is_triggered_only = yes
+	
+
+# 	trigger = {
+# 		is_save_game = no
+# 		has_law = succ_mex_elective 
+# 	}
+
+# 	immediate = {
+# 		set_variable = { which = byzantine_credibility_discharged_hero value = 0 }
+# 		set_variable = { which = byzantine_credibility_appointed_sycophant value = 0 }
+# 	}
+# }
