@@ -99,7 +99,6 @@
 	female=yes
 	culture=bravo
 	religion=sacred_heart
-	2638.1.1={birth=yes}
 	trait=brilliant_strategist
 	trait=brave
 	trait=wroth
@@ -231,11 +230,11 @@
 	trait=seductress
 	father=181187
 	mother=181177
+	give_nickname=nick_dona_mari
 	#mother=1810201
 	#father=1810200
 	2620.5.8={birth=yes}
 	2645.9.13={add_spouse=1810008}
-	2660.1.1 = {give_nickname=nick_dona_mari}
 	2664.1.1 = {effect={add_lover=1810059}}
 }
 #Garza Montemayor
@@ -491,11 +490,11 @@
 	trait=cynical
 	trait=seducer
 	trait=bastard
+	give_nickname = nick_el_diablo
 	father=181207	
 	employer=1810008
 	2642.1.1 = { birth=yes }
 	2664.1.1 = {effect={add_lover=1810059}}
-	2665.1.1 = { give_nickname = nick_el_diablo }
 	2664.10.15 = { 
 		death = {	
 			death_reason = death_murder_unknown
@@ -513,13 +512,14 @@
 	trait=skilled_tactician
 	trait=just
 	trait=kind
+	trait=marian_san_juditas
 	# trait=tengri_leader
 	trait=stubborn
 	trait=bastard
+	give_nickname = nick_el_benny
 	father=181207
 	employer=1810008
 	2633.1.1 = { birth=yes }
-	2660.1.1 = { give_nickname = nick_el_benny }
 }
 181207 = {
 	name="Mariano"
@@ -704,9 +704,9 @@
 	culture=bravo
 	religion=sacred_heart
     trait=troubled_pregnancy
+	give_nickname=nick_the_usurper
 	father=181215
 	2565.1.1 = { birth=yes }
-	2605.11.1 = { give_nickname=nick_the_usurper }
 	2610.11.2 = { 
 		death = {
 			death_reason = death_troubled_pregnancy
@@ -727,7 +727,7 @@
 	trait=socializer
 	trait=inspiring_leader
 	2465.1.1 = { birth=yes }
-	2541.7.11 = { death = yes	}
+	2541.7.11 = { death = yes }
 }
 181230 = { #eugenio_garza_1
 	name="Eugenio"
@@ -742,7 +742,7 @@
 	trait=diligent
 	2539.1.1 = { birth=yes }
 	2560.5.15 = { add_spouse=181172 }
-	2599.12.1 = { add_spouse=181171 }
+	# 2599.12.1 = { add_spouse=181171 }
 	# 2599.12.2 = {remove_spouse=181172}
 	2619.7.10 = { 
 		death = {
@@ -1036,10 +1036,11 @@
 	trait=brave
 	trait=strong
 	trait=aggressive_leader
+	trait=marian_santa_muerte
+	give_nickname=nick_el_cochiloco
 	2632.10.20 = { birth=yes }
 	2661.9.12 = {
 		employer=1810008
-		give_nickname=nick_el_cochiloco
 	}
 }	
 181262 = {
