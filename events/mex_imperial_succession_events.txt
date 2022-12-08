@@ -28,7 +28,7 @@ character_event = {
 	}
 }
 
-### Lose Tapado trait by being exiled from realm, dying, or becoming emperor
+### Lose Tapado trait by being exiled from realm, dying
 character_event = {
 	id = destape.3
 	desc = DEBUG
@@ -369,6 +369,33 @@ character_event = {
 			}
 			clr_character_flag = attending_destape
 		}		
+	}
+}
+
+### Lose Tapado trait by becoming emperor
+character_event = {
+	id = destape.14
+	desc = DEBUG
+	is_triggered_only = yes # Triggered by on_death, on_yearly_pulse
+	hide_window = yes
+	
+	trigger = {
+		has_landed_title = e_mexico
+		OR = {
+			trait = tapado
+			trait = destapado
+			# trait = se_movio
+		}
+	}
+	
+	immediate = {
+		remove_trait = tapado
+		remove_trait = destapado
+		# remove_trait = se_movio
+	}
+	
+	option = {
+		name = DEBUG
 	}
 }
 
