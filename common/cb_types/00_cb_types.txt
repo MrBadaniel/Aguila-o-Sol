@@ -171,7 +171,37 @@ claim = {
 			}
 		}
 	}
-
+	
+	on_success = {
+		hidden_tooltip = {
+			if = {
+				limit = { 
+					FROM = { has_landed_title = e_mexico }
+					has_global_flag = justo_war_two 
+				} #checks if the Justo War is happening
+				if = {
+					limit = { 
+						ROOT = { has_landed_title = d_cristo_rey }  #Prelate's endings
+					} 
+					if = {
+						limit = { has_global_flag = catholic_friends }
+						ROOT = { narrative_event = { id = justo.57 days = 2 } } #Benemerito Prelado
+					}
+					else = {
+						ROOT = { narrative_event = { id = justo.54 days = 2 } }	
+					}
+				}
+				else_if = {
+					limit = { 
+						ROOT = { has_landed_title = d_friends }
+						#has_global_flag = friends_rebel
+					}
+					ROOT = { narrative_event = { id = justo.60 days = 2 } }
+				}
+			}
+		}
+	}
+	
 	on_success_title = {
 	
 		hidden_tooltip = {
@@ -252,7 +282,67 @@ claim = {
 			}
 		}
 	}
-
+	
+	on_fail = {
+		hidden_tooltip = {			
+			if = {
+				limit = { 
+					FROM = { has_landed_title = e_mexico }
+					has_global_flag = justo_war_two 
+					OR = {
+						ROOT = { has_landed_title = d_cristo_rey }
+						ROOT = { has_landed_title = d_friends }
+					}
+				} #checks if the Justo War is happening and if ROOT is either Prelate or Ledonant
+				d_cristo_rey = {
+					holder_scope = {
+						save_event_target_as = the_prelate #needs to be done once again due to event chain break
+					}
+				}
+				d_friends = {
+					holder_scope = {
+						save_event_target_as = the_gringo #needs to be done once again due to event chain break
+					}
+				}
+				if = {
+					limit = { 
+						NOT = { has_global_flag = catholic_friends }
+						has_global_flag = prelate_rebel
+					}
+					FROM = { narrative_event = { id = justo.55 } }
+				}
+				else_if = {
+					limit = { #checks if both prelate and friends are rebelling, and that only one war must be happening
+						has_global_flag = prelate_rebel
+						has_global_flag = friends_rebel #both are rebelling
+						#NAND = {
+						#	FROM = { war_with = event_target:the_prelate }
+						#	FROM = { war_with = event_target:the_gringo }
+						#}
+					}
+					FROM = { narrative_event = { id = justo.58 } }
+				}
+				else_if = {
+					limit = { #checks if only war against ledonnant is happening and Justo is Cristero
+						has_global_flag = friends_rebel
+						NOT = { has_global_flag = prelate_rebel }
+						FROM = { religion = cristo_rey }
+					}
+					FROM = { narrative_event = { id = justo.56 } }
+				}
+				else_if = {
+					limit = { #checks if only war against ledonnant is happening and Justo is Cristero
+						NOT = { has_global_flag = friends_rebel }
+						has_global_flag = prelate_rebel
+						FROM = { religion = catholic }
+					}
+					FROM = { narrative_event = { id = justo.59 } }
+				}
+				
+			}
+		}
+	}
+	
 	on_fail_title = {
 		ROOT = {
 			show_scope_change = no
@@ -320,6 +410,52 @@ claim = {
 							log = "-------------------------------------"
 						}
 					}
+				}
+			}
+		}
+		hidden_tooltip = { #justo stuff
+			if = {
+				limit = { 
+					FROM = { has_landed_title = e_mexico }
+					has_global_flag = justo_war_two 
+					OR = {
+						ROOT = { has_landed_title = d_cristo_rey }
+						ROOT = { has_landed_title = d_friends }
+					}
+				} #checks if the Justo War is happening and if ROOT is either Prelate or Ledonant
+				if = {
+					limit = { 
+						NOT = { has_global_flag = catholic_friends }
+						has_global_flag = prelate_rebel
+					}
+					FROM = { narrative_event = { id = justo.55 } }
+				}
+				else_if = {
+					limit = { #checks if both prelate and friends are rebelling, and that only one war must be happening
+						has_global_flag = prelate_rebel
+						has_global_flag = friends_rebel #both are rebelling
+						NAND = {
+							FROM = { war_with = d_cristo_rey }
+							FROM = { war_with = d_friends }
+						}
+					}
+					FROM = { narrative_event = { id = justo.58 } }
+				}
+				else_if = {
+					limit = { #checks if only war against ledonnant is happening and Justo is Cristero
+						has_global_flag = friends_rebel
+						NOT = { has_global_flag = prelate_rebel }
+						FROM = { religion = cristo_rey }
+					}
+					FROM = { narrative_event = { id = justo.56 } }
+				}
+				else_if = {
+					limit = { #checks if only war against ledonnant is happening and Justo is Cristero
+						NOT = { has_global_flag = friends_rebel }
+						has_global_flag = prelate_rebel
+						FROM = { religion = catholic }
+					}
+					FROM = { narrative_event = { id = justo.59 } }
 				}
 			}
 		}
@@ -3762,7 +3898,7 @@ crusade = {
 						religion = imamite
 						}
 						FROM = {
-								OR {
+								OR = {
 								#religion = assiah
 								#religion = alurista
 								religion = cetic
@@ -4329,6 +4465,7 @@ new_crusade = {
 					has_global_flag = mormon_expeditions_unlocked
 					has_global_flag = pagan_ghws_unlocked
 					has_global_flag = christian_crusades_unlocked
+					has_global_flag = sol_iluminations_unlocked
 				}
 			}
 			conditional_tooltip = {
@@ -4354,6 +4491,13 @@ new_crusade = {
 						custom_tooltip = {
 							text = CTT_URSULINE_CRUSADES_UNLOCKED
 							has_global_flag = ursuline_crusades_unlocked
+						}
+					}
+					AND = {
+						religion = sol_invicta
+						custom_tooltip = {
+							text = CTT_SOL_ILUMINATIONS_UNLOCKED
+							has_global_flag = sol_iluminations_unlocked
 						}
 					}
 				}
@@ -4577,6 +4721,7 @@ new_crusade = {
 						NOR = {
 							has_landed_title = k_papal_state
 							has_landed_title = k_ursuline
+							has_landed_title = k_hijo_del_sol
 						}
 						OR = {
 							AND = {
@@ -5496,6 +5641,52 @@ new_crusade = {
 				}
 			}
 
+			# Special bloodline for the recipient of the first Sol Ilumination
+			if = {
+				limit = {
+					NOT = {
+						has_global_flag = first_sol_ilumination_complete
+					}
+					most_participating_crusader = {
+						religion = sol_invicta
+						NOT = {
+							crusader_king = {
+								character = PREV
+							}
+						}
+					}
+				}
+				if = {
+					limit = {
+						has_dlc = "Holy Fury"
+					}
+					if = {
+						limit = {
+							crusader_king = {
+								is_female = yes
+							}
+						}
+						crusader_king = {
+							create_bloodline = {
+								type = crusade_lord
+								religion = THIS
+								inheritance = matrilineal
+							}
+							set_bloodline_founder_religion_flag_effect = yes
+						}
+					}
+					else = {
+						crusader_king = {
+							create_bloodline = {
+								type = crusade_lord
+								religion = THIS
+								inheritance = patrilineal
+							}
+							set_bloodline_founder_religion_flag_effect = yes
+						}
+					}
+				}
+			}
 			# Checks if First Crusade (Catholic)
 			if = {
 				limit = {
@@ -5516,6 +5707,17 @@ new_crusade = {
 					}
 				}
 				set_global_flag = first_ursuline_crusade_complete
+			}
+			
+			# Checks if First Crusade (Sol Invicto)
+			if = {
+				limit = {
+					most_participating_crusader = { religion = sol_invicta }
+					NOT = {
+						has_global_flag = first_sol_ilumination_complete
+					}
+				}
+				set_global_flag = first_sol_ilumination_complete
 			}
 
 			# Adds a negative opinion modifier for selfish Crusaders
@@ -6042,7 +6244,7 @@ religious = {
 							}
 						}
 						FROM = {
-								OR {
+								OR = {
 								#religion = assiah
 								#religion = alurista
 								religion = cetic
@@ -12256,6 +12458,7 @@ pagan_county_conquest = {
 						}
 						religion_group = nautical
 						religion = espiritista
+						religion = navegante
 						AND = {
 							religion = exovedate
 							is_tribal = yes
@@ -12299,6 +12502,7 @@ pagan_county_conquest = {
 					ROOT = { religion = norse_pagan }
 					ROOT = { religion = norse_pagan_reformed }
 					ROOT = { religion_group = nautical }
+					ROOT = { religion = navegante }
 					AND = {
 						ROOT = {
 							OR = {
@@ -12351,6 +12555,7 @@ pagan_county_conquest = {
 						}
 						religion_group = nautical
 						religion = espiritista
+						religion = navegante
 					}
 					NOT = { same_realm = FROM }
 				}
@@ -12598,6 +12803,7 @@ pagan_county_conquest = {
 				OR = {
 					religion = norse_pagan
 					religion = norse_pagan_reformed
+					religion = navegante
 				}
 			}
 			FROM = { NOT = { religion_group = pagan_group } }
@@ -12820,6 +13026,12 @@ dejure_county_claim = {
 						primary_title = { title = d_masked_knights }
 						ROOT = {
 							has_character_modifier = expelled_d_masked_knights
+						}
+					}
+					AND = {
+						primary_title = { title = d_san_patricios }
+						ROOT = {
+							has_character_modifier = expelled_d_san_patricios
 						}
 					}
 					AND = {
@@ -13174,6 +13386,7 @@ dejure_county_claim = {
 					religion = ursuline
 					religion = mormon
 					religion = high_church
+					religion = cristo_rey
 				}
 				NOR = {
 					trait = crowned_by_priest
@@ -13335,6 +13548,12 @@ dejure_barony_claim = {
 						primary_title = { title = d_masked_knights }
 						ROOT = {
 							has_character_modifier = expelled_d_masked_knights
+						}
+					}
+					AND = {
+						primary_title = { title = d_san_patricios }
+						ROOT = {
+							has_character_modifier = expelled_d_san_patricios
 						}
 					}
 					AND = {
@@ -13845,6 +14064,12 @@ other_dejure_county_claim = {
 						}
 					}
 					AND = {
+						primary_title = { title = d_san_patricios }
+						ROOT = {
+							has_character_modifier = expelled_d_san_patricios
+						}
+					}
+					AND = {
 						primary_title = { title = d_order_of_brotherhood }
 						ROOT = {
 							has_character_modifier = expelled_d_order_of_brotherhood
@@ -14254,6 +14479,7 @@ depose_antipope = {
 				NOT = { has_claim = k_papal_state }
 				NOT = { has_claim = k_ursuline }
 				NOT = { has_claim = k_high_church }
+				NOT = { has_claim = k_hijo_del_sol }
 			}
 			mercenary = no
 		}
@@ -14264,6 +14490,7 @@ depose_antipope = {
 					has_claim = k_papal_state
 					has_claim = k_ursuline
 					has_claim = k_high_church
+					has_claim = k_hijo_del_sol
 				}
 			}
 		}
@@ -14276,11 +14503,13 @@ depose_antipope = {
 				religion = catholic
 				religion = ursuline
 				religion = high_church
+				religion = sol_invicta
 			}
 			rightful_religious_head_scope = {
 				NOT = { has_claim = k_papal_state }
 				NOT = { has_claim = k_ursuline }
 				NOT = { has_claim = k_high_church }
+				NOT = { has_claim = k_hijo_del_sol }
 			}
 		}
 		FROM = {
@@ -14290,6 +14519,7 @@ depose_antipope = {
 					has_claim = k_papal_state
 					has_claim = k_ursuline
 					has_claim = k_high_church
+					has_claim = k_hijo_del_sol
 				}
 			}
 		}
@@ -14372,6 +14602,7 @@ depose_antipope = {
 				remove_claim = k_papal_state
 				remove_claim = k_ursuline
 				remove_claim = k_high_church
+				remove_claim = k_hijo_del_sol
 			}
 		}
 	}
@@ -14460,6 +14691,7 @@ cb_install_antiking = {
 				religion = catholic
 				religion = ursuline
 				religion = high_church
+				religion = sol_invicta
 			}
 		}
 	}
@@ -14478,6 +14710,7 @@ cb_install_antiking = {
 				religion = catholic
 				religion = ursuline
 				religion = high_church
+				religion = sol_invicta
 			}
 		}
 		
@@ -14573,6 +14806,7 @@ cb_install_antiking = {
 					remove_claim = k_papal_state
 					remove_claim = k_ursuline
 					remove_claim = k_high_church
+					remove_claim = k_hijo_del_sol
 				}
 			}
 
@@ -15688,6 +15922,7 @@ tributary_cb = {
 					religion = ursuline
 					religion = mormon
 					religion = high_church
+					religion = cristo_rey
 				}
 				NOR = {
 					trait = crowned_by_priest
@@ -16087,6 +16322,7 @@ free_tributary_cb = {
 					religion = ursuline
 					religion = mormon
 					religion = high_church
+					religion = cristo_rey
 				}
 				NOR = {
 					trait = crowned_by_priest
@@ -16409,6 +16645,7 @@ nomad_dispute = {
 					religion = ursuline
 					religion = mormon
 					religion = high_church
+					religion = cristo_rey
 				}
 				NOR = {
 					trait = crowned_by_priest
@@ -16647,6 +16884,7 @@ cb_liberate_nomad_duchy = {
 					religion = ursuline
 					religion = mormon
 					religion = high_church
+					religion = cristo_rey
 				}
 				NOR = {
 					trait = crowned_by_priest

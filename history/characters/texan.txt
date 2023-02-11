@@ -1014,6 +1014,7 @@
 	trait=cruel
 	trait=arbitrary
 	trait=cynical
+	trait=legit_bastard
 	2613.4.7={birth=yes}
 	2643.10.26={add_spouse=1810203}
 	
@@ -1193,7 +1194,8 @@
 	name="George"
 	dynasty=1814073
 	culture=czexan
-	religion=falling_star
+	# religion=falling_star
+	religion=americanist
 	martial=10
 	diplomacy=5
 	stewardship=6
@@ -2191,25 +2193,6 @@
 	2655.12.1={death=yes}
 }
 
-1836105={
-	name="Oliver"
-	female=no
-	dynasty=1850066
-	father=2200030
-	culture=italian
-	religion=cetic
-	diplomacy=8
-	learning=5
-	martial=5
-	trait=scholarly_theologian
-	trait=kind
-	trait=honest
-	2600.2.10={birth=yes
-	culture=angeleno
-	}
-	2655.12.1={death=yes}
-}
-
 1836106={
 	name="Marlon"
 	dynasty=1850066
@@ -2344,17 +2327,11 @@
 			set_character_flag=raymond
 			set_character_flag=diversity
 			set_character_flag=physique
-			add_friend=2200038
-			add_friend=2200040
-			add_friend=1384010
-			add_friend=1384011
-			add_friend=1911151
 		}
 	}
 	2660.1.2={
 		effect={
-			add_weak_claim=c_las_vegas
-			add_weak_claim=c_blythe
+			add_strong_claim=c_las_vegas
 		}
 	}
 	2705.12.1={death=yes}
@@ -2373,7 +2350,6 @@
 	trait=robust
 	trait=honest
 	trait=slothful
-	father=6900494
 	2099.3.4={birth=yes}
 	2171.2.3={death=yes}
 }
@@ -2405,7 +2381,7 @@
 	trait=fortune_builder
 	trait=legendary
 	occluded=yes
-	trait=painter
+	# # trait=painter
 	trait=diligent
 	trait=slothful
 	trait=zealous
@@ -2430,7 +2406,7 @@
 	trait=honest
 	trait=devout
 	father=1836115
-	2170.5.20={birth=yes}
+	2190.5.20={birth=yes}
 	2215.2.12={
 		religion=postadventist
 		trait=adult_baptized
@@ -2588,7 +2564,7 @@
 	trait=proud
 	trait=gregarious
 	father=1836126
-	mother=1836127
+	#mother=1836127
 	2123.1.19={birth=yes}
 	2140.1.24={add_matrilineal_spouse=1836125}
 	2180.10.5={death=yes}
@@ -2621,30 +2597,28 @@
 	trait=honest
 	trait=kind
 	trait=zealous
-    mother=1836124
-    father=1836125
 	2099.4.4={birth=yes}
-	2116.1.10={add_spouse=1836127}
+	#2116.1.10={add_spouse=1836127}
 	2153.12.23={death=yes}
 }
 
-1836127={
-	name="Margaret"
-	culture=valleyan
-	female=yes
-	religion=evangelical
-	occluded=yes
-	trait=scholarly_theologian
-	trait=legendary
-	trait=chaste
-	trait=shy
-	trait=devout
-    mother=1836124
-    father=1836125
-	2099.4.4={birth=yes}
-	2116.1.10={add_spouse=1836126}
-	2153.12.23={death=yes}
-}
+#1836127={
+#	name="Margaret"
+#	culture=valleyan
+#	female=yes
+#	religion=evangelical
+#	occluded=yes
+#	trait=scholarly_theologian
+#	trait=legendary
+#	trait=chaste
+#	trait=shy
+#	trait=devout
+#    mother=1836124
+#    father=1836125
+#	2099.4.4={birth=yes}
+#	2116.1.10={add_spouse=1836126}
+#	2153.12.23={death=yes}
+#}
 	
 1836128={
 	name="Ephraim"
@@ -2691,7 +2665,6 @@
 	female=yes
 	culture=valleyan
 	dynasty=1802105
-	father=1836116
 	trait=underhanded_rogue
 	trait=honest
 	trait=kind
@@ -2846,7 +2819,7 @@
 	mother=1836154
 	give_nickname=nick_kindling
 	2184.10.2={birth=yes}
-	2250.4.1={add_spouse=1836138}
+	2210.4.1={add_spouse=1836138}
 	2245.1.4={death={
 			death_reason=death_execution_great_pyre
 			killer=6900513
@@ -2926,7 +2899,7 @@
 	dynasty=5001230#Clark
     trait=martial_cleric
 	trait=adult_baptized
-    trait=painter
+    # trait=painter
     trait=devout
 	trait=diligent
 	father=1836137
@@ -3110,7 +3083,7 @@
 	trait=charismatic_negotiator
 	trait=honest
 	trait=charitable
-	trait=painter
+	# trait=painter
 	father=1836150
 	disallow_random_traits=yes
 	2123.11.4={birth=yes
@@ -3127,7 +3100,7 @@
 	trait=legendary
 	occluded=yes
 	trait=flamboyant_schemer
-	trait=crul
+	trait=cruel
 	trait=humble
 	trait=slothful
 	trait=devout
@@ -3169,6 +3142,7 @@
 	name="Georgia"
 	dynasty=5001230#Clark
 	culture=english
+	female=yes
 	religion=pagan#forester
 	trait=legendary
 	occluded=yes
@@ -3241,7 +3215,7 @@
 	culture=chilango
 	religion=la_hermandad
 	trait=charismatic_negotiator
-	trait=school_giver
+	# trait=school_giver
 	trait=trusting
 	trait=charitable
 	trait=humble
@@ -3329,7 +3303,7 @@
 	trait=fair
 	trait=cruel
 	trait=erudite
-	trait=properties
+	# trait=properties
 	trait=charitable
 	give_nickname=nick_the_witch_of_ventura
 	female=yes
@@ -3521,7 +3495,7 @@
 	culture=tejano
 	religion=la_hermandad
 	trait=skilled_tactician
-	trait=baltic_leader
+	# trait=baltic_leader
 	trait=just
 	trait=honest
 	trait=wroth
@@ -3576,7 +3550,7 @@
 	culture=german
 	religion=la_hermandad
 	trait=mastermind_theologian
-	trait=la_hermandad_padre
+	# trait=la_hermandad_padre
 	trait=celibate
 	trait=kind
 	trait=just
@@ -3600,7 +3574,7 @@
 	culture=german
 	religion=la_hermandad
 	trait=skilled_tactician
-	trait=school_leader
+	# trait=school_leader
 	trait=brave
 	trait=stubborn
 	trait=just
@@ -3619,7 +3593,7 @@
 	culture=german
 	religion=la_hermandad
 	trait=martial_cleric
-    trait=painter
+    # trait=painter
     trait=devout
 	trait=diligent
 	trait=shy

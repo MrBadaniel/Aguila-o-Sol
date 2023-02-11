@@ -1,0 +1,615 @@
+##Contains events related to pilgrimages, will one day contain the "Tomb of the Falling Star" event chain##
+
+namespace = fallingstar
+
+#Choose destination as Falling Star
+character_event = {
+	id = fallingstar.1
+	desc = EVTDESC_SoA_5011
+	picture = GFX_evt_icon
+	border = GFX_event_normal_frame_religion
+	
+	is_triggered_only = yes
+
+	option = {
+		name = EVTOPTA_fallingstar_1
+		trigger = {
+			NOT = { capital_scope = { province_id = 1889 } } #Panama
+		}
+		set_character_flag = pilgrimage_to_panama
+		hidden_tooltip = {
+			character_event = { id = fallingstar.2 days = 15 }
+		}
+		if = {
+			limit = { ai = no }
+			chronicle = {
+				entry = CHRONICLE_PILGRIMAGE_TO_PANAMA
+				picture = GFX_evt_pilgrims_epic_journey
+			}
+		}
+	}
+
+	option = {
+		name = EVTOPTB_fallingstar_1
+		trigger = {
+			NOT = { capital_scope = { province_id = 1848 } } #San Salvador
+		}
+		set_character_flag = pilgrimage_to_san_salvador
+		hidden_tooltip = {
+			character_event = { id = fallingstar.3 days = 15 }
+		}
+		if = {
+			limit = { ai = no }
+			chronicle = {
+				entry = CHRONICLE_PILGRIMAGE_TO_SAN_SALVADOR
+				picture = GFX_evt_pilgrims_epic_journey
+			}
+		}
+	}
+	option = {
+		name = EVTOPTC_fallingstar_1
+		trigger = {
+			NOT = { capital_scope = { province_id = 1832 } } #Belize
+		}
+		set_character_flag = pilgrimage_to_belize
+		hidden_tooltip = {
+			character_event = { id = fallingstar.4 days = 15 }
+		}
+		if = {
+			limit = { ai = no }
+			chronicle = {
+				entry = CHRONICLE_PILGRIMAGE_TO_BELIZE
+				picture = GFX_evt_pilgrims_epic_journey
+			}
+		}
+	}
+}
+
+# Setting out for Panama (also selects events for road)
+character_event = {
+	id = fallingstar.2
+	desc = EVTDESC_fallingstar_2
+	picture = GFX_evt_pilgrims_epic_journey
+	border = GFX_event_normal_frame_religion
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_SoA_5021
+		clr_character_flag = preparing_pilgrimage
+		hidden_tooltip = {
+			add_trait = on_pilgrimage
+			set_character_flag = good_pilgrimage
+			narrative_event = { id = fallingstar.5 days = 30 }
+		}
+		hidden_tooltip = {
+			if = {
+				limit = {
+					location = {
+						distance = {
+							where = 1889 # Panama
+							value = 400	# Longer journey
+						}
+					}
+				}
+				random_list = {
+					10 = { character_event = { id = SoA.5026 days = 5 random = 9 } } # List for longer journeys only
+					10 = { character_event = { id = SoA.5027 days = 5 random = 9 } }
+					10 = { narrative_event = { id = SoA.5028 days = 5 random = 9 } }
+					10 = { character_event = { id = SoA.5029 days = 5 random = 9 } }
+					10 = { character_event = { id = SoA.5030 days = 5 random = 9 } }
+				}
+			}
+	
+			random_list = {
+				10 = { character_event = { id = SoA.5031 days = 15 random = 7 } } # List that is always checked
+				10 = { character_event = { id = SoA.5032 days = 15 random = 7 } }
+				10 = { narrative_event = { id = SoA.5033 days = 15 random = 7 } }
+				10 = { character_event = { id = SoA.5034 days = 15 random = 7 } }
+				10 = { character_event = { id = SoA.5035 days = 15 random = 7 } }
+				10 = { character_event = { id = SoA.5036 days = 15 random = 7 } }
+				10 = { character_event = { id = SoA.5037 days = 15 random = 7 } }
+				10 = { character_event = { id = SoA.5038 days = 15 random = 7 } }
+				10 = { character_event = { id = SoA.5039 days = 15 random = 7 } }
+			}
+			#if = {
+			#	limit = {
+			#			OR = {
+			#				is_title_active = d_knights_templar
+			#				is_title_active = d_teutonic_order
+			#				is_title_active = d_knights_hospitaler
+			#			}
+			#	}
+			#	random_list = {
+			#		10 = { narrative_event = { id = SoA.5045 days = 23 random = 4 } } # Holy orders events, close to destination
+			#		10 = { character_event = { id = SoA.5046 days = 23 random = 4 } }
+			#		10 = { character_event = { id = SoA.5047 days = 23 random = 4 } }
+			#	}
+			#}
+		}
+	}
+}
+
+# Setting out for San Salvador (also selects events for road)
+character_event = {
+	id = fallingstar.3
+	desc = EVTDESC_fallingstar_3
+	picture = GFX_evt_pilgrims_epic_journey
+	border = GFX_event_normal_frame_religion
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_SoA_5021
+		clr_character_flag = preparing_pilgrimage
+		hidden_tooltip = {
+			add_trait = on_pilgrimage
+			set_character_flag = good_pilgrimage
+			narrative_event = { id = fallingstar.6 days = 30 }
+		}
+		hidden_tooltip = {
+			if = {
+				limit = {
+					location = {
+						distance = {
+							where = 1889 # Panama
+							value = 400	# Longer journey
+						}
+					}
+				}
+				random_list = {
+					10 = { character_event = { id = SoA.5026 days = 5 random = 9 } } # List for longer journeys only
+					10 = { character_event = { id = SoA.5027 days = 5 random = 9 } }
+					10 = { narrative_event = { id = SoA.5028 days = 5 random = 9 } }
+					10 = { character_event = { id = SoA.5029 days = 5 random = 9 } }
+					10 = { character_event = { id = SoA.5030 days = 5 random = 9 } }
+				}
+			}
+	
+			random_list = {
+				10 = { character_event = { id = SoA.5031 days = 15 random = 7 } } # List that is always checked
+				10 = { character_event = { id = SoA.5032 days = 15 random = 7 } }
+				10 = { narrative_event = { id = SoA.5033 days = 15 random = 7 } }
+				10 = { character_event = { id = SoA.5034 days = 15 random = 7 } }
+				10 = { character_event = { id = SoA.5035 days = 15 random = 7 } }
+				10 = { character_event = { id = SoA.5036 days = 15 random = 7 } }
+				10 = { character_event = { id = SoA.5037 days = 15 random = 7 } }
+				10 = { character_event = { id = SoA.5038 days = 15 random = 7 } }
+				10 = { character_event = { id = SoA.5039 days = 15 random = 7 } }
+			}
+			#if = {
+			#	limit = {
+			#			OR = {
+			#				is_title_active = d_knights_templar
+			#				is_title_active = d_teutonic_order
+			#				is_title_active = d_knights_hospitaler
+			#			}
+			#	}
+			#	random_list = {
+			#		10 = { narrative_event = { id = SoA.5045 days = 23 random = 4 } } # Holy orders events, close to destination
+			#		10 = { character_event = { id = SoA.5046 days = 23 random = 4 } }
+			#		10 = { character_event = { id = SoA.5047 days = 23 random = 4 } }
+			#	}
+			#}
+		}
+	}
+}
+
+# Setting out for Belize (also selects events for road)
+character_event = {
+	id = fallingstar.4
+	desc = EVTDESC_fallingstar_4
+	picture = GFX_evt_pilgrims_epic_journey
+	border = GFX_event_normal_frame_religion
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_SoA_5021
+		clr_character_flag = preparing_pilgrimage
+		hidden_tooltip = {
+			add_trait = on_pilgrimage
+			set_character_flag = good_pilgrimage
+			narrative_event = { id = fallingstar.7 days = 30 }
+		}
+		hidden_tooltip = {
+			if = {
+				limit = {
+					location = {
+						distance = {
+							where = 1848 # San Salvador
+							value = 400	# Longer journey
+						}
+					}
+				}
+				random_list = {
+					10 = { character_event = { id = SoA.5026 days = 5 random = 9 } } # List for longer journeys only
+					10 = { character_event = { id = SoA.5027 days = 5 random = 9 } }
+					10 = { narrative_event = { id = SoA.5028 days = 5 random = 9 } }
+					10 = { character_event = { id = SoA.5029 days = 5 random = 9 } }
+					10 = { character_event = { id = SoA.5030 days = 5 random = 9 } }
+				}
+			}
+	
+			random_list = {
+				10 = { character_event = { id = SoA.5031 days = 15 random = 7 } } # List that is always checked
+				10 = { character_event = { id = SoA.5032 days = 15 random = 7 } }
+				10 = { narrative_event = { id = SoA.5033 days = 15 random = 7 } }
+				10 = { character_event = { id = SoA.5034 days = 15 random = 7 } }
+				10 = { character_event = { id = SoA.5035 days = 15 random = 7 } }
+				10 = { character_event = { id = SoA.5036 days = 15 random = 7 } }
+				10 = { character_event = { id = SoA.5037 days = 15 random = 7 } }
+				10 = { character_event = { id = SoA.5038 days = 15 random = 7 } }
+				10 = { character_event = { id = SoA.5039 days = 15 random = 7 } }
+			}
+			#if = {
+			#	limit = {
+			#			OR = {
+			#				is_title_active = d_knights_templar
+			#				is_title_active = d_teutonic_order
+			#				is_title_active = d_knights_hospitaler
+			#			}
+			#	}
+			#	random_list = {
+			#		10 = { narrative_event = { id = SoA.5045 days = 23 random = 4 } } # Holy orders events, close to destination
+			#		10 = { character_event = { id = SoA.5046 days = 23 random = 4 } }
+			#		10 = { character_event = { id = SoA.5047 days = 23 random = 4 } }
+			#	}
+			#}
+		}
+	}
+}
+
+# Arrived at Panama
+narrative_event = {
+	id = fallingstar.5
+	title = EVTNAME_fallingstar_5
+	desc = EVTDESC_fallingstar_5
+	picture = GFX_evt_cathedral
+	border = GFX_event_narrative_frame_religion
+	
+	is_triggered_only = yes
+
+	option = {
+		name = EVTOPTA_fallingstar_5
+		hidden_tooltip = { character_event = { id = SoA.5055 days = 5 } }
+	}
+}
+
+# Arrived at San Salvador
+narrative_event = {
+	id = fallingstar.6
+	title = EVTNAME_fallingstar_6
+	desc = EVTDESC_fallingstar_6
+	picture = GFX_evt_cathedral
+	border = GFX_event_narrative_frame_religion
+	
+	is_triggered_only = yes
+
+	option = {
+		name = EVTOPTA_fallingstar_6
+		hidden_tooltip = { character_event = { id = SoA.5055 days = 5 } }
+	}
+}
+
+# Arrived at Belize
+narrative_event = {
+	id = fallingstar.7
+	title = EVTNAME_fallingstar_7
+	desc = EVTDESC_fallingstar_7
+	picture = GFX_evt_cathedral
+	border = GFX_event_narrative_frame_religion
+	
+	is_triggered_only = yes
+
+	option = {
+		name = EVTOPTA_fallingstar_7
+		hidden_tooltip = { character_event = { id = SoA.5055 days = 5 } }
+	}
+}
+
+# Impressed by Cult of Saints/Mesoamerican (San Salvador only)
+character_event = {
+	id = fallingstar.8
+	desc = EVTDESC_fallingstar_8
+	picture = GFX_evt_aztec_explorers
+	border = GFX_event_normal_frame_religion
+	
+	is_triggered_only = yes
+
+	option = {
+		name = EVTOPTA_fallingstar_8
+		if = {
+			limit = { trait = zealous }
+			remove_trait = zealous
+		}
+		add_trait = sympathy_mesoamerican_gods
+		hidden_tooltip = { character_event = { id = SoA.5090 days = 10 } } # Stay a little longer then go home
+	}
+	option = {
+		name = EVTOPTB_fallingstar_8
+		if = {
+			limit = { trait = zealous }
+			remove_trait = zealous
+		}
+		add_trait = sympathy_cult_of_saints
+		hidden_tooltip = { character_event = { id = SoA.5090 days = 10 } } # Stay a little longer then go home
+	}
+}
+
+#Falling Star Exposed - Start of Chain
+character_event = { #Find a drunkard across the street from the cathedral
+	id = fallingstar.9
+	desc = EVTDESC_fallingstar_9
+	picture = GFX_evt_drunk
+	border = GFX_event_normal_frame_religion
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_fallingstar_9
+		trigger = {
+			NOT = { trait = zealous }
+		}
+		custom_tooltip = { text = EVTOPTA_falling_star_9_tt }
+		wealth = -5
+		hidden_tooltip = { character_event = { id = fallingstar.10 } } # Enter the church...
+	}
+	option = {
+		name = EVTOPTB_fallingstar_9
+		custom_tooltip = { text = EVTOPTB_falling_star_9_tt }
+		hidden_tooltip = { character_event = { id = SoA.5090 days = 10 } } # Stay a little longer then go home
+		#Does nothing
+	}
+}
+
+#Falling Star Exposed - Enter the Church
+character_event = { #Enter the church and proceed underground
+	id = fallingstar.10
+	desc = EVTDESC_fallingstar_10
+	picture = GFX_evt_stone_church
+	border = GFX_event_normal_frame_religion
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_fallingstar_10
+		custom_tooltip = { text = EVTOPTA_falling_star_10_tt }
+		hidden_tooltip = { narrative_event = { id = fallingstar.11 } } # Go underground...
+	}
+	
+	option = {
+		name = EVTOPTB_fallingstar_10
+		custom_tooltip = { text = EVTOPTB_falling_star_10_tt }
+		add_trait = stressed
+		
+		clr_character_flag = good_pilgrimage
+		clr_character_flag = abominable_pilgrimage
+		set_character_flag = bad_pilgrimage
+
+		hidden_tooltip = { character_event = { id = SoA.5090 days = 10 } } # Stay a little longer then go home
+	}
+}
+
+#Falling Star Exposed - Go beneath the church, satellite found. (End of event chain)
+narrative_event = {
+	id = fallingstar.11
+	title = EVTTITLE_fallingstar_11
+	desc = EVTDESC_fallingstar_11
+	picture = GFX_evt_great_schism
+	border = GFX_event_narrative_frame_religion
+	
+	is_triggered_only = yes
+	
+	option = { #Convert to Moravianism on the spot
+		name = EVTOPTA_fallingstar_11
+		custom_tooltip = { text = EVTOPTA_fallingstar_11_tt }
+		hidden_tooltip = {
+			religion = moravian
+			remove_trait = cynical
+			add_trait = zealous
+			falling_star = { religion_authority = { modifier = falling_star_exposed } } #Falling Star MA tanks
+			moravian = { religion_authority = { modifier = rise_of_moravian } } #Moravian MA soars
+		
+			clr_character_flag = abominable_pilgrimage
+			clr_character_flag = bad_pilgrimage
+			set_character_flag = good_pilgrimage
+
+			narrative_event = { id = fallingstar.12 days = 1 } #Notifies world of this happening
+			character_event = { id = SoA.5090 days = 10 } # Stay a little longer then go home
+		}
+	}
+	
+	option = { #Secretly convert to Moravian
+		name = EVTOPTB_fallingstar_11
+		custom_tooltip = { text = EVTOPTB_fallingstar_11_tt }
+		hidden_tooltip = {
+			set_secret_religion = moravian
+
+			clr_character_flag = abominable_pilgrimage
+			clr_character_flag = bad_pilgrimage
+			set_character_flag = good_pilgrimage
+
+			character_event = { id = SoA.5090 days = 10 } # Stay a little longer then go home
+		}
+	}
+	
+	option = { #Keep it secret!
+		name = EVTOPTC_fallingstar_11
+		custom_tooltip = { text = EVTOPTC_falling_star_11_tt }
+		add_trait = cynical
+		add_trait = stressed
+		add_trait = depressed
+		
+		clr_character_flag = good_pilgrimage
+		clr_character_flag = bad_pilgrimage
+		set_character_flag = abominable_pilgrimage
+		
+		hidden_tooltip = { character_event = { id = SoA.5090 days = 10 } } # Stay a little longer then go home
+	}
+}
+
+#Falling Star Exposed - World Notified
+narrative_event = {
+	id = fallingstar.12
+	title = EVTTITLE_fallingstar_12
+	desc = EVTDESC_fallingstar_12
+	picture = GFX_evt_great_schism
+	border = GFX_event_narrative_frame_religion
+	religion_group = christian
+	is_triggered_only = yes
+	major = yes
+	
+	immediate = {
+		set_global_flag = falling_star_exposed
+	}
+
+	option = { #Moravians very happy
+		name = EVTOPTA_fallingstar_12
+		trigger = {
+			religion = moravian
+		}
+	}
+	
+	option = { #Falling Star horrified
+		name = EVTOPTB_fallingstar_12
+		trigger = {
+			religion = falling_star
+		}
+	}
+	
+	option = { #Everyone else merely interested
+		name = EVTOPTC_fallingstar_12
+		trigger = {
+			NOR = {
+				religion = moravian
+				religion = falling_star
+			}
+		}
+	}
+}
+
+#removed agape feast because it's not worth it.
+
+character_event = {
+	id = fallingstar.13
+	desc = "EVTDESC_renovator"
+	picture = GFX_evt_open_book_hf
+	
+	is_triggered_only = yes
+	trigger = {
+		has_landed_title = d_renovator_host
+		NOT = { has_global_flag = renovator_player }
+		NOT = { 
+			has_game_rule = {
+				name = playercol
+				value = customized
+			}
+		}
+	}
+	option = {
+		trigger = {
+			b_rockwall_TX = {
+				holder_scope = {
+					ai = yes #Culls AI colonizers.
+				}
+			}
+		}
+
+		c_plano = { 
+			holder_scope = {
+				grant_title_no_opinion = b_rockwall_TX
+			}
+		}
+		set_global_flag = renovator_player
+		destroy_landed_title = d_renovator_host
+		death = { death_reason = death_vanished }
+	}
+	option = {
+		trigger = {
+			b_rockwall_TX = {
+				holder_scope = {
+					ai = no #Culls AI colonizers.
+				}
+			}
+		}
+		name = "EVTOPT_playerjolly"
+		set_global_flag = renovator_player
+		health = 9
+		fertility = 0.8
+		add_trait = brilliant_strategist
+		remove_trait = humble
+		remove_trait = cynical
+		add_artifact = sword_from_heaven #seems fitting...
+		add_trait = proud
+		add_trait = adventurer
+		add_trait = zealous
+		character_event = {
+			id = 60201
+		}
+		set_character_flag = is_special_character
+		set_character_flag = renovator_himself
+		set_character_flag = ai_flag_refuse_conversion
+	}
+}
+character_event = {
+	id = fallingstar.14
+	desc = "EVTDESC_renovator"
+	picture = GFX_evt_open_book_hf
+	trigger = {
+		has_landed_title = d_renovator_host
+		NOT = { has_global_flag = renovator_player }
+		has_game_rule = {
+			name = playercol
+			value = customized
+		}
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+	option = {
+		trigger = {
+			b_rockwall_TX = {
+				holder_scope = {
+					ai = yes #Culls AI colonizers.
+				}
+			}
+		}
+
+		c_plano = { 
+			holder_scope = {
+				grant_title_no_opinion = b_rockwall_TX
+			}
+		}
+		set_global_flag = renovator_player
+		destroy_landed_title = d_renovator_host
+		death = { death_reason = death_vanished }
+	}
+	option = {
+		trigger = {
+			b_rockwall_TX = {
+				holder_scope = {
+					ai = no #Culls AI colonizers.
+				}
+			}
+		}
+		name = "EVTOPT_playerjolly"
+		set_global_flag = renovator_player
+		health = 9
+		fertility = 0.8
+		add_trait = brilliant_strategist
+		remove_trait = humble
+		remove_trait = cynical
+		add_artifact = sword_from_heaven #seems fitting...
+		add_trait = proud
+		add_trait = adventurer
+		add_trait = zealous
+		character_event = {
+			id = 60201
+		}
+		set_character_flag = is_special_character
+		set_character_flag = renovator_himself
+		set_character_flag = ai_flag_refuse_conversion
+	}
+}
+

@@ -48,7 +48,7 @@
 	intrigue=2
 	learning=8
 	trait=fortune_builder
-	trait=african_tattoo_3
+	trait=norse_tattoo_1
 	trait=way_dove
 	trait=just
 	trait=kind
@@ -217,28 +217,31 @@
 	trait=honest
 	trait=imp_ex2
 	trait=drunkard
+	trait=bastard
 	disallow_random_traits=yes
-	2643.3.1={birth=yes
-	culture=pinoy
-	effect={
-	set_character_flag=diversity
-	set_character_flag=physique
+	2643.3.1={
+		birth=yes
+		culture=pinoy
+		effect={
+			set_character_flag=diversity
+			set_character_flag=physique
 		}
 	}
+	2660.1.1={employer=1802095}
 	2696.12.1={death=yes}
 }
 
 1911025={
-	name="Gus"
+	name="Nigel"
 	female=no
 	dynasty=1849074
 	culture=bayfolk
-	religion=nazarene
-	trait=nz_presbyter
+	religion=cetic
+	trait=way_fist
 	trait=strong
 	trait=robust
 	trait=drunkard
-	2653.12.16={birth=yes}
+	2633.12.16={birth=yes}
 	2696.12.1={death=yes}
 }
 
@@ -255,7 +258,7 @@
 	intrigue=0
 	learning=8
 	trait=mastermind_theologian
-	trait=python
+	##trait=python
 	trait=trusting
 	trait=content
 	trait=honest
@@ -290,7 +293,7 @@
 	culture=guyanese
 	religion=cetic#siliconist
 	trait=elusive_shadow
-	trait=python
+	##trait=python
 	trait=twin
 	trait=cruel
 	trait=greedy
@@ -313,7 +316,7 @@
 	culture=guyanese
 	religion=cetic#siliconist
 	trait=fortune_builder
-	trait=python
+	#trait=python
 	trait=twin
 	trait=kind
 	trait=charitable
@@ -333,7 +336,7 @@
 	dynasty=1849057
 	culture=guyanese
 	religion=cetic#siliconist
-	trait=python
+	#trait=python
 	father=1911030
 	mother=1911031
 	2649.12.16={birth=yes
@@ -434,7 +437,10 @@
 	trait=maimed
 	trait=imp_ex2
 	trait=scarred
+	father=1802221
+	prestige=1600
 	2636.1.11={birth=yes}
+	2656.1.11={prestige=1600}
 	2701.2.1={death=yes}
 }
 
@@ -701,7 +707,7 @@
 	name="Luisa"
 	female=yes
 	dna=wfykauspfps
-	dynasty=4301157
+	dynasty=1697094
 	culture=celtic
 	religion=nazarene
 	trait=freckles_4
@@ -848,8 +854,9 @@
 	trait=way_cowl
 	father=1911080
 	mother=1910214
-	2643.3.1={birth=yes
-	culture=valleyan
+	2643.3.1={
+		birth=yes
+		culture=valleyan
 	}
 	2690.3.1={death=yes}
 }
@@ -962,6 +969,7 @@
 1911104={
 	name="April"
 	dynasty=1864026
+	father=1802252
 	female=yes
 	culture=battleborn
 	religion=gaian
@@ -969,8 +977,9 @@
 	trait=socializer
 	trait=gregarious
 	trait=charitable
-	2610.2.6={birth=yes}
-	2652.12.1={death=yes}
+	mother=1802249
+	2613.2.6={birth=yes}
+	2655.12.1={death=yes}
 }
 
 1911105={
@@ -980,14 +989,17 @@
 	culture=battleborn
 	religion=cetic
 	trait=elusive_shadow
+	trait=legit_bastard
 	trait=way_fist
 	trait=strategist
 	trait=patient
 	trait=humble
 	trait=gregarious
 	trait=imp_ex2
+	father=1911080
 	mother=1911104
-	2633.3.1={birth=yes}
+	secret_religion=gaian
+	2652.3.1={birth=yes}
 	2699.12.1={death=yes}
 }
 
@@ -998,6 +1010,7 @@
 	culture=battleborn
 	religion=cetic
 	trait=skilled_tactician
+	trait=legit_bastard
 	trait=way_book
 	trait=mystic
 	trait=patient
@@ -1006,7 +1019,8 @@
 	trait=just
 	trait=imp_ex3
 	mother=1911104
-	2629.3.1={birth=yes}
+	father=1911080
+	2651.3.1={birth=yes}
 	2699.12.1={death=yes}
 }
 
@@ -1030,6 +1044,8 @@
 	trait=proud
 	trait=patient
 	trait=imp_ex1
+	father=1802231
+	mother=1802232
 	give_nickname=nick_the_hunter
 	2611.3.1={birth=yes}
 	2638.3.1={add_spouse=1911116}
@@ -1220,6 +1236,7 @@
 	trait=patient
 	trait=charitable
 	trait=failed_exam
+	father=1802227
 	#trait=not_evaluated
 	2622.3.1={birth=yes}
 	2644.3.1={add_spouse=1911136}
@@ -1229,11 +1246,14 @@
 1911136={
 	name="Cheryl"
 	female=yes
-	culture=bayfolk
+	culture=valleyan
+	dynasty=1941025
 	religion=cetic
 	trait=fortune_builder
 	trait=way_book
-	2622.3.1={birth=yes}
+	father=1802231
+	mother=1802232
+	2622.11.16={birth=yes}
 	2644.3.1={add_spouse=1911135}
 	2695.3.1={death=yes}
 }
@@ -1280,7 +1300,7 @@
 1911140={
 	name="Sofía"
 	female=yes
-	dynasty=5001180
+	dynasty=5001180 #melendez
 	culture=joaquino
 	religion=cetic
 	trait=humble
@@ -1288,6 +1308,7 @@
 	trait=way_dove
 	trait=failed_exam
 	#trait=not_evaluated
+	father=1910148
 	2635.6.1={birth=yes}
 	2685.12.1={death=yes}
 }
@@ -1539,4 +1560,18 @@
 		}
 	}
 	2660.1.1={employer=1911075}
+}
+
+1910149 ={
+	name="Chuck"
+	dynasty=5001180
+	culture=joaquino
+	religion=nazarene
+	trait=humble
+	trait=shy
+	trait=depressed
+	trait=failed_exam
+	#trait=not_evaluated
+	2605.5.30={birth=yes}
+	2655.2.13={death=yes}
 }

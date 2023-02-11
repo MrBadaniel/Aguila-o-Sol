@@ -7,9 +7,9 @@ BM_SOUTH_OF_THE_BORDER;Águila o Sol;;;;;;;;;;;;;x
 BM_SOUTH_OF_THE_BORDER_ERA;Águila o Sol;;;;;;;;;;;;;x
 BM_SOUTH_OF_THE_BORDER_DESC;The once-glorious Mexican Empire has been shattered: Left open to rebellion in the North due to constant incursions by the Californians, the imperial army was shattered by Luis "la Cucaracha" at the watershed Battle of Ojinaga. That loss allowed the Plan of Ixcateopan — a coalition of freedom-minded indigenous leaders in the South to enact their wish for dissolution of the Empire and self-rule. Meanwhile, the Cristero lords of the Bajío now whisper of a new Cristiada, to reclaim their home in the name of Cristo Rey. In the Southeast, the nascent Kingdom of Yucatán seems poised to usurp Mexico's position as the dominant power, but turmoil within and the Caribbean Empire without, stand in its way.;;;;;;;;;;;;;x
 BM_SOUTH_OF_THE_BORDER_ERA_INFO;The once-glorious Mexican Empire has been shattered: Left open to rebellion in the North due to constant incursions by the Californians, the imperial army was shattered by Luis "la Cucaracha" at the watershed Battle of Ojinaga. That loss allowed the Plan of Ixcateopan — a coalition of freedom-minded indigenous leaders in the South to enact their wish for dissolution of the Empire and self-rule. Meanwhile, the Cristero lords of the Bajío now whisper of a new Cristiada, to reclaim their home in the name of Cristo Rey. In the Southeast, the nascent Kingdom of Yucatán seems poised to usurp Mexico's position as the dominant power, but turmoil within and the Caribbean Empire without, stand in its way.;;;;;;;;;;;;;x
-ERA_CHAR_INFO_1325022;Once allies in the Plan de Ixcateopan that shattered the Mexican Empire, the Zapotecas and Mixtecas quickly found themselves at odds with each other over territorial disputes. After a brief conflict between the two peoples, the Zapoteca princess Pinopiaa and her sister, Nadxieelii, were offered offered up by their father as hostages to the Mixtecas as a pledge of peace. However, with the death of the Zapoteca king and no male heir, Pinopiaa now must return to Oaxaca to be queen of her people. But will her love and marriage to a Mixteca prince allow her to free her sister from captivity, or will it doom her bloodline and her people to subjugation by the Mixtecas?;;;;;;;;;;;;;x
+ERA_CHAR_INFO_1325022;Once allies in the Plan de Ixcateopan that shattered the Mexican Empire, the Zapotecas and Mixtecas quickly found themselves at odds with each other over territorial disputes. After a brief conflict between the two peoples, the Zapoteca princess Pinopiaa and her sister, Nadxieelii, were offered up by their father as hostages to the Mixtecas as a pledge of peace. However, with the death of the Zapoteca king and no male heir, Pinopiaa now must return to Oaxaca to be queen of her people. But will her love and marriage to a Mixteca prince allow her to free her sister from captivity, or will it doom her bloodline and her people to subjugation by the Mixtecas?;;;;;;;;;;;;;x
 ERA_CHAR_INFO_1810083;The house of Iturbide descends from Julián "el Grande", the legendary Jefe Máximo of Mexico that was able to reclaim most of the lost lands of the empire, but the family has fallen on hard times by the year 2666. The current head of the Iturbides, Wenceslao I, rules over a vestigial state barely worthy of the name Mexico. Surrounded by heathens, rival caudillos, and squabbling principalities, it seems unlikely that the rulers of Mexico will ever be able to regain their former glory. Will Wenceslao defy the odds and reverse his dynasty's recent fortune, or is the empire doomed to be swallowed by the tides of history like its contemperaries from days long forgotten?;;;;;;;;;;;;;x
-ERA_CHAR_INFO_1810200;When he was a young man, King Luis was a member of the Dorados, the legendary company of vaqueros and cowboys that served as the empires most effective — and unruly — task force. While in the service, he found salvation in the holy Atom and convinced many of his compatriots and fellow disciples to embark on a holy conquest of Mexico. At the battle of El Paso, Luis "la Cucaracha" destroyed the Imperial Army and carved out a realm for himself south of the Rio Grande. However, King Louis is no longer a young man — he is now 80 years old, and it seems that he will soon become one with the Atom. Although his son Jesús seems like a worthy successor, some still fear that without Luis to guide it, this new kingdom is doomed to fall as quickly as it emerged.;;;;;;;;;;;;;x
+ERA_CHAR_INFO_1810200;When he was a young man, King Luis was a member of the Dorados, the legendary company of vaqueros and cowboys that served as the empires most effective — and unruly — task force. While in the service, he found salvation in the sacred teachings of Niño Fidencio and convinced many of his compatriots and fellow disciples to embark on a holy conquest of Mexico. At the battle of El Paso, Luis "la Cucaracha" destroyed the Imperial Army and carved out a realm for himself south of the Rio Grande as the "Eternal Kingdom of the North". However, King Luis is no longer a young man — he is now 80 years old, and it seems that he will soon pass to the heavens of the Divino Niño. Although his son Jesús seems like a worthy successor, some still fear that without Luis to guide it, this new kingdom is doomed to fall as quickly as it emerged.;;;;;;;;;;;;;x
 ERA_CHAR_NAME_WENECESLAO;Wenceslao Paleo y Lagos;;;;;;;;;;;;;x
 ERA_CHAR_NAME_PINOPIAA;Pinopiaa Quecuya;;;;;;;;;;;;;x
 ERA_CHAR_NAME_LUIS;Luis de Armas;;;;;;;;;;;;;x
@@ -24,6 +24,15 @@ ERA_CHAR_INFO_1910000;King Gastón of las Bajas is one of the few truly great rul
 ###########Cultures########### 
  
 tapatio;Tapatío;;;;;;;;;;;;;x
+
+huastec;Huasteco;;;;;;;;;;;;;x
+huastec_opinion;[huastec.GetName] Opinion;;;;;;;;;;;;;x 
+
+seri;Seri;;;;;;;;;;;;;x
+seri_opinion;[seri.GetName] Opinion;;;;;;;;;;;;;x 
+
+yucatanense;Yucatanense;;;;;;;;;;;;;x
+yucatanense_opinion;[yucatanense.GetName] Opinion;;;;;;;;;;;;;x 
 
 meseteno;Meseteño;;;;;;;;;;;;;x
 meseteño_opinion;[meseteño.GetName] Opinion;;;;;;;;;;;;;x 
@@ -97,17 +106,27 @@ calentano;Calentano;;;;;;;;;;;;;x
 calentano_opinion;[calentano.GetName] Opinion;;;;;;;;;;;;;x
 
 portunhol_FEATURES;§Y*§! May adopt §GBrazilian Imperial§! government;;;;;;;;;;;;;x
+
+###########Game Rules###########
+
+RULE_JUSTO_EVETCHAIN;The Mexican Adventure;;;;;;;;;;;;;x
+RULE_JUSTO_EVETCHAIN_OFF_DESC;The Mexican Adventure event chain will §Rnever§! fire.;;;;;;;;;;;;;x
+RULE_JUSTO_EVETCHAIN_EARLY_DESC;The §GMexican Adventure§! event chain will fire as early as possible.;;;;;;;;;;;;;x
+RULE_JUSTO_EVETCHAIN_EARLY;Early game;;;;;;;;;;;;;x
+RULE_OPTION_EARLY;Early game;;;;;;;;;;;;;x
+
 ###########Religions########### 
  
-#cult_of_saints;Folk Catholic;;;;;;;;;;;;;x
+cult_of_saints;Vernacular;;;;;;;;;;;;;x
  
 fidencista;Fidencista;;;;;;;;;;;;;x
 fidencista_DESC;The cult of "el Niño Fidencio" follows a pantheon of quasi-deities derived from Catholic saints and heroes of the past, who are ultimately subservient to God but powerful in their own right. These entities are called upon for guidance and can be communed with through ritualistic means, but the most faithful heirs to "el Niñito" can allow themselves to become possessed by the saints to perform miracles and act as a conduit to allow the divine to directly influence the world.;;;;;;;;;;;;;x
 fidencista_FEATURES;§Y*§!Homosexual Fidencistas are allowed to marry other homosexual characters.\n§Y*§! Kings and emperors are expected to become "Cajitas" — Those who play host to the most revered spirits.;;;;;;;;;;;;;x
+fidencista_opinion;Fidencista opinion;;;;;;;;;;;;;x
  
 sacred_heart;Sagrado Corazón;;;;;;;;;;;;;x
 sacred_heart_DESC;The "Missionaries of the Sacred Heart" combine traditions of the old Catholic church with an eagerness to incorporate local traditions and saints into the faith — even going as far as to elevate the angel of death to a quasi-deity. While this adaptability has allowed the religion to quickly take root in the religious chaos of Mexico, it has caused great divergence from the other Catholic splinter churches who now regard the faithful as polytheistic heathens.;;;;;;;;;;;;;x
-sacred_heart_FEATURES;§Y*§!Homosexual followers of La Santa Muerte are allowed to marry other homosexual characters. \n§Y*§! May experience visions of the Blessed Virgin called Marian Apparitions.\n§Y*§! La Santa Muerte demands respect for the dead and can be called on to help exact revenge.;;;;;;;;;;;;;x
+sacred_heart_FEATURES;§Y*§! May experience visions of the Blessed Virgin called Marian Apparitions.\n§Y*§!Homosexual followers of La Santa Muerte are allowed to marry other homosexual characters. \n§Y*§! La Santa Muerte demands respect for the dead and can be called on to help exact revenge.;;;;;;;;;;;;;x
  
 patria_grande;Patria Grande;;;;;;;;;;;;;x
 patria_grande_DESC;The term Patria Grande, or Great Fatherland, is to its followers both a political ideal and a divine mandate of Dios. The adherents of the faith worship both the Holy Trinity and the hero-saints of the past who liberated and ruled the original Patria Grande, bringing what they consider a golden age. As a result the faithful aspire to see the legendary homeland unified once more. Their pantheon is made up of "próceres", divinities originating from the syncretism between the founders of Gran Colombia and several Catholic saints.;;;;;;;;;;;;;x
@@ -122,35 +141,43 @@ reformista_DESC;The Reformista faith has its origins in the idea that belief sho
  
 purificador;Purificador;;;;;;;;;;;;;x
 purificador_DESC;Purificadores — Purifiers — are a loosely organized christian doctrine that has its roots in pentecostal missions established not long before the Event. They believe that the faith's arrival to Central America was the first seal of the Apocalypse being broken. Such is their eschatology, that they identify even their fellow Christians as the prophesied Whore of Babylon. Their fundamentalist views on the Bible make them reject all other faiths as idolatrous and satanic, and they are willing to make them see their error, by force if needed — For those who are taken into the family of God, shall be gifted.;;;;;;;;;;;;;x
+purificador_opinion;Purificador opinion;;;;;;;;;;;;;x
  
 penitente;Penitente;;;;;;;;;;;;;x
 penitente_DESC;Penitentes — Penitents — are so called because they believe that after the Event, the world was given a second chance at redemption — which must be atoned for with sorrowful and extenuant rituals that were once reserved for the holiest of weeks — as now every week must be Holy. The Penance that must be performed can be as little as praying, face to the floor, to being honored pallbearers of enormous images from the Passion of Christ. These traditions make them a disciplined people, capable of doing anything for their brothers in sacrifice.;;;;;;;;;;;;;x
+penitente_opinion;Penitente opinion;;;;;;;;;;;;;x
  
 moravian;Unitas Fratrum;;;;;;;;;;;;x
 moravian_DESC;Unitas Fratrum, or "Unity of the Brethren", is a Christian church whose message of reformation and unity quickly took root in Central America in the wake of the Event. The Unitas Fratrum, who owes its origin in Central America to ancient missions in La Moskitia, cherishes its unity as a valuable treasure entrusted to it by the Lord as it represents the oneness of all humankind in the Body of Christ. Therefore the ecumenical movement is of its very lifeblood — permitting the incorporation of many traditions and structures with its middle-ground theology under the guidance of the Church. For a millennia, it has pointed towards the unity of the scattered children of God that they may become one in their Lord.;;;;;;;;;;;;x
- 
+
 navegante;Navegante;;;;;;;;;;;;;x
 navegante_DESC;Navigants believe those who are brave, those who are patient, are blessed by the sea. Legends warn of the dangers and curses beneath the rolling waves, our Saviour and Provider calls us to walk over the waters to his grace so he may gift us our daily Manna of the Sea.;;;;;;;;;;;;;x
 navegante_FEATURES;§Y*§!Navegantes are allowed to forcefully baptize prisoners.\n§Y*§! Navegantes may sacrifice animals to Ichtys.;;;;;;;;;;;;;x
+navegante_opinion;Navegante opinion;;;;;;;;;;;;;x
  
-mesoamerican_gods;Indigenous Mexican;;;;;;;;;;;;;x
+mesoamerican_gods;Originario;;;;;;;;;;;;;x
  
 mictlantec;Mictlanteca;;;;;;;;;;;;;x
 mictlantec_DESC;Mictlanteca is a continuation of ancient indigenous traditions and maintains that the keeper of the underworld had mercy after the complete destruction of Humanity in the previous cycle and guided them back to the land of the living. According to the Mictlantecos, the destruction of the last cycle was the result of the neglect and abandonment of sacrifice to spiritual entities known as dueños" — the true "owners" of the land who dwell in the hills, springs, caves, and other natural features that dot the landscape. The Mictlantecos believe that the equilibrium of life requires death and that a regular practice of the ancient sacrifices and rituals is necessary to maintain the balance of the world.;;;;;;;;;;;;;x
 mictlantec_FEATURES;§Y*§! May go on vision quests with the aid of sacramental herbs.\n§Y*§! Mictlantecos may sacrifice animals to the Dueños.;;;;;;;;;;;;;x
  
 sol_invicta;Sol Invicto;;;;;;;;;;;;;x
-sol_invicta_DESC;The Soltaic Church of the Sol Invicto believes that at the end of the second era, the Serpent covered the world in darkness and chaos. To combat this evil, the Sun clothed his wife, the Moon, in his fiery raiment and gave life to a son who would be sent to bring light back to the world. As with the great sacrifice of the Messiah of the second era, this Messiah, the first Son of the Sun and incarnation of the god Quetzalcoatl, devoted his life to creating the Seven Seals and rituals that trap the Serpent in the underworld and keep the darkness at bay. As successor of this final Messiah, the Gran Hijo del Sol and his Guardians must keep ever viligant and maintain the seals through proper worship of God the Sun - the Sol Invicto - lest the Serpent return.;;;;;;;;;;;;;x
+sol_invicta_DESC;The Soltaic Church of the Sol Invicto believes that at the end of the second era, the Serpent covered the world in darkness and chaos. To combat this evil, God the Sun clothed his wife, the Moon, in his fiery raiment and gave life to a son who would be sent to bring light back to the world. Like the great sacrifice of the Messiah of the second era, this Messiah, the first Son of the Sun, devoted his life to creating the Seven Seals and rituals that trap the Serpent in the underworld and keep the darkness at bay. As successor of this final Messiah, the Gran Hijo del Sol and his Guardians must keep ever viligant and maintain the seals through proper worship of God the Sun - the Sol Invicto - lest the Serpent return.;;;;;;;;;;;;;x
 sol_invicta_FEATURES;§Y*§! The Gran Hijo del Sol is elected using the same mechanics as the Pope.;;;;;;;;;;;;;x
+sol_invicta_opinion;Sol Invicto opinion;;;;;;;;;;;;;x 
+ 
  
 lamanita;Lamanita;;;;;;;;;;;;x
 lamanita_DESC;The history of the Latter Day Saints in Central America began not long before the Event, as Elder missionaries came to preach the message of Prophet Joseph Smith to the Lamanites. They firmly believe that the events described in the Book of Mormon happened in Central America, mixing the veneration of ancestors and exalted figures who were mistaken as gods in the past. An ancient prophecy holds that the Lamanites 'shall blossom as a rose', and they are keen to see its fulfillment.;;;;;;;;;;;;x
+lamanita_opinion;Lamanita opinion;;;;;;;;;;;;;x
 
 furiegi;Furiegi;;;;;;;;;;;;x
 furiegi_DESC;Furiegi — the Prayers — are the ancestral beliefs of the Garifuna, syncretized with Mormon theology introduced by missionary work. Furiegi differs from the Lamanite Church in structure and practice, with a priority on traditional matriarchal authority, and a purely ritual use of alcohol.;;;;;;;;;;;;x
+furiegi_opinion;Furiegi opinion;;;;;;;;;;;;;x
  
 insular;Insular;;;;;;;;;;;;;x
 insular_DESC;Steadfastly refusing to recognize the religious authorities in Mexico, St. Louis, or Quebec as legitimate leaders of Catholicism, the Catholic Bishops in the Caribbean began administering their respective dioceses or "Insula" with their own unique rites. While the teachings of Caribbean Catholic priests generally stay within mainstream Catholicism, foreign Christians often opine that many of the "African Saints" venerated by individual Insular Catholics are suspiciously similar to the entities venerated in Voodoo and Santeria;;;;;;;;;;;;;x
+insular_opinion;Insular opinion;;;;;;;;;;;;;x
 
 wormwoodist;Wormwoodist;;;;;;;;;;;;x
 wormwoodist_DESC;Wormwoodism began as a movement within Insular Catholicism, named after Bishop Wormwood of Andros. Bishop Wormwood strongly condemned the practices of the African-rooted syncretic religions of the Caribbean, condemning especially those who engaged in those practices while professing Catholicism. He also accused the Popes in St. Louis of forging a false apostolic succession from whole cloth, characterizing them as wolves in sheep's clothing. After the conquest of the Caribbean by Portia Bustamante, Wormwoodists turned on the Insular clergy, claiming that their inaction with regards to the growing influence of the Afro-syncretists and the St. Louis Papacy means that the Insular Clergy must be violently overthrown and replaced.;;;;;;;;;;;;;x
@@ -160,7 +187,6 @@ PREFERATI_SOL_TOOLTIP;The Jefe Supremo of the Seven Seals is the Jefe next in li
 COLLEGE_OF_CARDINALS_SOL;La Cúpula Pontificia.;;;;;;;;;;;;;x
 title_sol_cardinal;Jefe of the Seven Seals;;;;;;;;;;;;;x
 POPE_SOL_INVICTO;Gran Hijo del Sol;;;;;;;;;;;;;x
- 
  
 expected_next_title_sol_cardinal;Next Expected Jefe;;;;;;;;;;;;;x
 expected_next_title_sol_cardinal_tooltip;This Guardian is probably next in line for an Jefatura when one becomes available.;;;;;;;;;;;;;x
@@ -184,7 +210,11 @@ d_latinate_adj;Pontifical;;;;;;;;;;;;;x
 EXORCISM;Exorcism;;;;;;;;;;;;;x
 
 prelate_failure;Failure of a Prelate;;;;;;;;;;;;;x
+prelate_failure;Prelate's Victory;;;;;;;;;;;;;x
 prelate_martyr;Martyrdom of a Prelate;;;;;;;;;;;;;x
+
+friends_success;Victory of the Friends;;;;;;;;;;;;;x
+friends_failure;Broken Friendship;;;;;;;;;;;;;x
  
 ###########Bloodlines########### 
  
@@ -207,12 +237,15 @@ restaurador_male;Blood of [This.GetFirstNameWithNick];;;;;;;;;;;;;x
 restaurador_female;Blood of [This.GetFirstNameWithNick];;;;;;;;;;;;;x
 bloodline_desc_mexican;Like the prophets and great teachers of the faith before [Root.GetFirstName] has fulfilled tghteousness with God founding a newbloodline.;;;;;;;;;;;;;x
  
+just_armas;Blood of Armas;;;;;;;;;;;;;x
+just_armas_desc;This blood once ruled Ancient Mexico as an Empire in which the Sun never set. It is now restored to glory by victorious [This.GetNameWithNick].;;;;;;;;;;;;;x
+
 ###########Nicknames########### 
  
 nick_the_cockroach;la Cucaracha;;;;;;;;;;;;x
 nick_dragon_del_desierto;el Dragon del Desierto;;;;;;;;;;;;x
 nick_mascara_de_oro;la Mascara de Oro;;;;;;;;;;;;x
-#nick_cuernoverde;Green-Horn;;;;;;;;;;;;x
+nick_cuernoverde;Cuernoverde;;;;;;;;;;;;x
 nick_restaurador_del_mundo;el Restaurador del Mundo;;;;;;;;;;;;x
 nick_sword_of_curicaueri;the Sword of Curicaueri;;;;;;;;;;;;x
 nick_the_china;la China;;;;;;;;;;;;x
@@ -240,13 +273,16 @@ nick_son_of_blucifer;the Son of Blucifer;;;;;;;;;;;;x
 nick_the_quarreler;the Quarreler;;;;;;;;;;;;x
 nick_the_unifier;the Unifier;;;;;;;;;;;;x
 nick_the_gambit;the Gambit;;;;;;;;;;;;x
+nick_mojado;Mojado;;;;;;;;;;;;x
+
 ###########Other########### 
  
 METROPOLI;Metrópoli de;;;;;;;;;;;;;x
 DELEGACION;Delegación de;;;;;;;;;;;;;x
 BASILICA;Basílica de;;;;;;;;;;;;;x
 ALTEZA_FOA;Su Alteza Serenísima;;;;;;;;;;;;;x
- 
+
+ILUMINACION;Iluminación;;;;;;;;;;;;;x 
 luchadore;Luchador;;;;;;;;;;;;x
  
 PRELATE;Prelate;;;;;;;;;;;;x
@@ -262,8 +298,9 @@ GOD_SAN_BOLIVAR;San Simon Peter Bolívar;;;;;;;;;;;;;x
 GOD_SANTANDER;San Fransisco Santander;;;;;;;;;;;;;x
 GOD_MANUELITA;Santa Manuelita Magdalena;;;;;;;;;;;;;x
 GOD_THE_FISHER_OF_MEN;The Fisher of Men;;;;;;;;;;;;;x
+GOD_YAHVE;Yahvé;;;;;;;;;;;;;x
 GOD_ICHTYS;Ichtys;;;;;;;;;;;;;x
-GOD_LIVING_WATER;Living Water;;;;;;;;;;;;;x
+GOD_LIVING_WATER;Agua Viva;;;;;;;;;;;;;x
 GOD_SALVADOR_GAVIOTA;Salvador Gaviota;;;;;;;;;;;;;x
 GOD_THE_DEVIL;The Devil;;;;;;;;;;;;;x
 GOD_TEMPEST;Tempest;;;;;;;;;;;;;x
@@ -293,6 +330,7 @@ GOD_CATRINES;the Catrines;;;;;;;;;;;;;x
 GOD_JONAS;Jonás;;;;;;;;;;;;;x
 GOD_DAG_GADOL;Dag Gadol;;;;;;;;;;;;;x
 GOD_APOSTLE_PETER;Apóstol Pedro;;;;;;;;;;;;;x
+GOD_ELIAS;Elías;;;;;;;;;;;;;x
 MINISTER;Minister;;;;;;;;;;;;;x
 title_lamanita_cardinal;Apóstol;;;;;;;;;;;;;x
 LAMANITA_PRESIDENT;Primer Elder;;;;;;;;;;;;;x
@@ -306,6 +344,7 @@ expected_next_title_lamanita_cardinal_tooltip;This bishop is probably next in li
 best_candidate_title_lamanita_cardinal;My Best Apóstol Candidate;;;;;;;;;;;;;x
 best_candidate_title_lamanita_cardinal_tooltip;Of all the bishops in my realm, this one is the likeliest to get called as an Apóstol.;;;;;;;;;;;;;x
 FISHER_OF_MEN;Pescador de Hombres;;;;;;;;;;;;;x
+FISHER_OF_WOMEN;Pescadora de Hombres;;;;;;;;;;;;;x
 MORAVIAN_PRESIDENT;Presidente;;;;;;;;;;;;;x
 EL_ULTIMO_TESTAMENTO;the Last Testament;;;;;;;;;;;;;x
 GOD_MALOS_AIRES;Malos Aires;;;;;;;;;;;;;x
@@ -314,10 +353,7 @@ GOD_SANTO_NINO;el Santo Niño;;;;;;;;;;;;;x
 GOD_CHUYITO;Chuyito;;;;;;;;;;;;;x
 MATERIA;Materia;;;;;;;;;;;;;x
 THE_SCRIPTURES;The Sacred Scriptures;;;;;;;;;;;;;x
-ILUSTRACION;Ilustración;;;;;;;;;;;;;x
 GOD_EL_ALTISIMO;el Altísimo;;;;;;;;;;;;;x
-GOD_CURICAUERI;Curicaueri;;;;;;;;;;;;;x
-GOD_ONORUAME;Onoruame;;;;;;;;;;;;;x
 GOD_THE_TRINITY;the Trinity;;;;;;;;;;;;;x
 GOD_TATAROQUITO;Tataroquito;;;;;;;;;;;;;x
 GOD_PADRE_CELESTIAL;Padre Celestial;;;;;;;;;;;;;x
@@ -334,7 +370,6 @@ Holy_Order_Fidencista;la Brigada Roja;;;;;;;;;;;;;x
  
  
 DYN10_DESC;With a score of $SCORE$ you$FAILED$ beat House Nájera, Jefes Máximos of Mexico. Julián accomplished something few ever have, restoring most of the borders of a pre-Event nation and gaining recognition as a true continuation of that ancient land. For a time, they nearly ruled the entirety of Old Mexican territory. Nearly all of this was lost over the centuries, but they maintained control of the ancient capital, and stubbornly keep the memory of Mexico alive.;;;;;;;;;;;;;x
-=======
 GOD_JUAREZ;Bejota;;;;;;;;;;;;;x  
 GOD_PADRE_CELESTIAL;Padre Celestial;;;;;;;;;;;;;x  
 GOD_CURICAUERI;Curicaueri;;;;;;;;;;;;;x  
@@ -370,6 +405,10 @@ EVTOPTD_MHR.3;More strange men with strange robes we shall prove our gods are st
 EVTOPTD_sacredheart_1;To San Charbel the patron of the sick and needy I focus my attention.;;;;;;;;;x
 EVTOPTE_sacredheart_1;I look to San Juditas the patron saint of lost causes.;;;;;;;;;x
 
+vassalize_arzobispo;Vassalize the Arzobispo of Mexico;;;;;;;;;;;;;x
+vassalize_arzobispo_desc;Now that we have reclaimed most of what was lost of our ancient empire, we may be able to use our influence to bring the Arzobispo of Mexico back under the official guidance of the Benemérito. Doing so would further legitimize our rule of La República and her faithful.;;;;;;;;;;;;;x
+TXT_vassalize_arzobispo;The Arzobispo of Mexico becomes your vassal.;;;;;;;;;;;;;x
+
 EVTDESC_cetic_easteregg;California Cheatin;;;;;;;;;x
  
 ###########Event Modifiers########### 
@@ -379,13 +418,17 @@ flagellant_tier_two;Pious Flagellant;;;;;;;;;x
 flagellant_tier_three;Most Pious Flagellant;;;;;;;;;x
 bad_penitente;Bad Penitente;;;;;;;;;x
 
+helping_relhead_levies;Helping the [This.Holder.RelHead.GetTitle];;;;;;;;;x
+
 ###########Traits########### 
- 
-born_in_the_purple;Porfirogénito;;;;;;;;;x
-born_in_the_purple_desc;[Root.GetBornInPurpleDesc];;;;;;;;;x
+
+tapado;Tapado;;;;;;;;;;;;;x
+tapado_desc;This is the chosen heir to the Mexican Empire. Their position must remain secret so that each vassal can believe that they are the next in line for the Silla Imperial.;;;;;;;;;;;;;x
+destapado;Destapado;;;;;;;;;;;;;x
+destapado_desc;This is the chosen heir to the Mexican Empire, revealed before the many factions of La República in the "Destape" ceremony;;;;;;;;;;;;;x
  
 marian_santa_muerte;Santa Muerte;;;;;;;;;;;;;x
-"marian_santa_muerte_desc;This follower of the Sagrado Corazón is a "Muerteño" — one of those devoted to la Santa Muerte, the Holy Death.;;;;;;;;;;;;;x
+marian_santa_muerte_desc;This follower of the Sagrado Corazón is a "Muerteño" — one of those devoted to la Santa Muerte, the Holy Death.;;;;;;;;;;;;;x
 marian_guadalupe;Our Lady of Guadalupe;;;;Nuestra Señora de Guadalupe;;;;;;;;;x
 marian_guadalupe_desc;This disciple of the Sagrado Corazón has a devotion to the patroness and mother of all Mexico, Our Lady of Guadalupe, who has been the most popular figure in the pantheon of el Sagrado Corazón since ancient times.;;;;;;;;;;;;;x
 marian_san_charbel;San Charbel;;;;San Charbel;;;;;;;;;x
@@ -432,22 +475,29 @@ dorado_desc;Named after the legendary armies of a Great Northern Mexican Caudill
 ###########Government########### 
  
  
-mex_imperial_government;Ancient Regime;;;;;;;;;;;;;x
-mex_imperial_government_desc;The leaders of the Mexican Empire have long claimed that their system of governance is a direct continuation of the administration of Old Mexico. While their claim is unverifiable, it is unquestionable that their system retains many of the qualities of centralized government that Old Mexico possessed. In this system, all land and water within imperial territory is originally owned by the crown, who has the right to transfer this ownership to particular. Hence, private property is a privilege created by the Emperor. This permits the Emperor to grant and revoke titles at will.;;;;;;x
+mex_imperial_government;Antiguo Régimen;;;;;;;;;;;;;x
+mex_imperial_government_desc;The leaders of the Mexican Empire have long claimed that their system of governance is a direct continuation of the administration of Old Mexico. While their claim is unverifiable, it is unquestionable that their system retains many of the qualities of centralized government that Old Mexico possessed. In this system, all land and water within imperial territory is originally owned by the crown, who has the right to transfer this ownership to a particular. Hence, private property is a privilege created by the Benemérito. This permits the Benemérito to grant and revoke titles at will.;;;;;;x
 mex_elective;Dedocracia;;;;;;;;;;;;;x
 succ_mex_elective;Dedocracia;;;;;;;;;;;;;x
-succ_mex_elective_desc;The Mexican Empire follows an ancient tradition of succession in which the Benemérito must secretly select his heir — known as the "Tapado" and then reveal him in a ceremony known as "el Destape." During the ceremony, the Benemérito points to his chosen successor and the most powerful individuals of the realm must decide whether to accept the charge or to defy his wishes and nominate their own candidate. Only commanders of the Empire, the Benemérito's council and immediate family are able to be selected as the "Tapado" and care should be taken in the selection — as the secrecy of the process is vital to the stability of the Empire. Should one discover who is to be the nextBenemérito, the cunning minds of the court of Mexico may be able to undermine the Empire with their ambitions.;;;;;;x
+succ_mex_elective_desc;The Mexican Empire follows an ancient tradition of succession in which the Benemérito must select his heir — known as the "Tapado" — in secret to give the impression that any loyal vassal is the next potential successor. The Benemérito then reveal him in a ceremony known as "el Destape." where he points to his chosen successor with his finger and the most powerful individuals of the realm must decide whether to fall in line and accept the charge or to defy his wishes and try to support their own candidate. Care should be taken in the selection — as the secrecy of the process is vital to the stability of the Empire. Should one discover who is to be the next Benemérito prematurely, the cunning minds of the court of Mexico may be able to undermine the Empire with their ambitions.;;;;;;x
 
 gov_mex;Dictadura Perfecta;;;;;;;;;;;;;x
 gov_king_mex;Dictadura imperfecta;;;;;;;;;;;;;x
 gov_duchy_viceroy_mex;[Liege.PrimaryTitle.GetAdjective] Departament;;;;;;;;;;;;;x
 gov_king_viceroy_mex;[Liege.PrimaryTitle.GetAdjective] Captaincy General;;;;;;;;;;;;;x
- 
-gov_hereditary_sol;Hereditary [PrimaryTitle.GetTier] of Sol Invicto;;;;;;;;;;;;;x
-gov_electorial_sol;Elective [PrimaryTitle.GetTier] of Sol Invicto;;;;;;;;;;;;;x
+
+uyc_government;Usos y Costumbres;;;;;;;;;;;;;x
+uyc_government_desc;A multi-ethnic confederation that is designed to respect the Traditions and Customs of its members, this form of government allows limited authority to a central figure, but most decision making is made at a local level and each major action by the central figure must be approved by a majority of a council representing the ethnicities of the government.;;;;;;x
+
+gov_hereditary_sol;Hereditary Solar [PrimaryTitle.GetTier];;;;;;;;;;;;;x
+gov_electorial_sol;Elective Solar [PrimaryTitle.GetTier];;;;;;;;;;;;;x
 
 brazilian_imperial_government;Imperial Bureaucracy;;;;;;;;;;;;;x
 brazilian_imperial_government_desc;Having it's origins in the reforms of Empress Fátima, Brazilian bureaucracy is a system that has a Monarch on the top, the lands underneath do not necessarily have one, and much of the power resides on the hands of a vast, complex group of officials, civil servants and courtiers, of which the most defining ones are the Governors and Captains, civil and military vassals respectively. Thus proper government lies in a carerful balance of power between the three main factions, the bureaucracy, the military and the Emperor himself.;;;;;;;;;;;;;x
+
+tooltip_imperial_vote_strength_no_destapado;The Benemérito has not yet called a destape ceremony to reveal the next heir to the Silla Presidencial;;;;;;;;;;;;;x
+tooltip_feudal_elector_vote_despot;[From.GetSheHeCap] is the §YPresidente§!;;;;;;;;;;;;;x
+tooltip_imperial_vote_strength_elector_despot;[Root.GetFirstName] is the §YPresidente§!;;;;;;;;;;;;;x
 
 ###########Casus Bellis########### 
 
@@ -458,7 +508,7 @@ purification_desc;Engage idolatrous "Christians" in holy war to eliminate heresy
 ###########Artifacts########### 
  
 baston_del_pueblo;el Bastón del Pueblo;;;;;;;;;;;;;x
-baston_del_pueblo_desc;This chicahuaztli scepter is said to have been carved from a bone of Death herself, gifted to Humanity when she took pity on them and allowed them to return to the land of the living from the underworld. The scepter stands as a symbol of the covenant that must be followed to keep balance in the world and the benevolence of those spirits who must be venerated.;;;;;;;;;;;;;x
+baston_del_pueblo_desc;This chicahuaztli scepter is said to have been carved from a bone of the Dueña of Death herself, gifted to Humanity when she took pity on them and allowed them to return to the land of the living from the underworld. The scepter stands as a symbol of the covenant that must be followed to keep balance in the world and the benevolence of those spirits who must be venerated.;;;;;;;;;;;;;x
 aztec_codex;Codex Chimalpopoca;;;;;;;;;;;;;x
 aztec_codex_desc;This codex is said to have been considered ancient even by the time of the event! In its ancient languages, it speaks of history and also of old gods who became the suns to protect the cycles of the world. We must not neglect them as they were in the past, lest the current cycle end and destroy the world once more.;;;;;;;;;;;;;x
 montezuma_headdress;Moctezuma's Headdress;;;;;;;;;;;;;x
@@ -466,16 +516,16 @@ montezuma_headdress_desc;Surely this headdress must have belonged to the legenda
 death_whistle;Death Whistle;;;;;;;;;;;;;x
 death_whistle_desc;This intimidating-looking instrument produces a tone that sounds eerily similar to a person screaming in pain. Anceint indigenous Mexicans once used them on the field of battle to intimidate their foes and now they serve the same purpose in our armies.;;;;;;;;;;;;;x
  
-crown_mexico;Imperial Band of Mexico;;;;;;;;;;;;;x
-crown_mexico_desc;The Band is a symbol of Mexican Imperial authority and continuity. Expertly Crafted out of Quetzal, Macaw, and Heron feathers, the resplendent band serves as the Mexican Regalia and illustrates the majesty of the Empire.;;;;;;;;;;;;;x
+crown_mexico;Imperial Sash of Mexico;;;;;;;;;;;;;x
+crown_mexico_desc;This Sash is a symbol of Mexican Imperial authority and continuity. Expertly Crafted out of Quetzal, Macaw, and Heron feathers, the resplendent sash serves as the Mexican Regalia and illustrates the majesty of the Empire.;;;;;;;;;;;;;x
 image_of_virgin;The Image of Our Lady of Guadalupe;;;;;;;;;;;;;x
-image_of_virgin_desc;This most venerable image of the Virgin of Guadalupe was imprinted in the clothes of Juan Diego Cuauhtlatoatzin more than a thousand years ago by the Virgin Mary herself. Surviving every calamity to have befallen her children, the mother of all Mexicans continues to serve as the most enduring symbol of México and its sanctity.;;;;;;;;;;;;;x
+image_of_virgin_desc;This most venerable image of the Virgin of Guadalupe was imprinted in the tilma of Juan Diego Cuauhtlatoatzin more than a thousand years ago by the Virgin Mary herself. Surviving every calamity to have befallen her children, the mother of all Mexicans continues to serve as the most enduring symbol of Mexico and its sanctity. \n§Y*§!Mexican religions gain a Moral Authority bonus when this artifact is held by its head of faith.;;;;;;;;;;;;;x
 campana_de_dolores;La Campana de Dolores;;;;;;;;;;;;;x
-campana_de_dolores_desc;Although details have been lost to the passage of time and The Event itself, it is still known that this bell rang when the idea of a free México was conceived. Flanked by ornate cherubs and with the names of legendary heroic figures of ancient times carved in it, this resplendent brass bell exudes an aura of patriotic mysticism, and when it chimes everyone hears: "Mexicans, to the cry for war!".;;;;;;;;;;;;;x
+campana_de_dolores_desc;According to legend, this bell rang clear when the very idea of Mexico was conceived. Flanked by ornate cherubs and with the names of legendary heroic figures of ancient times carved in it, this resplendent brass bell exudes an aura of patriotic mysticism, and when it chimes everyone hears: "Mexicans, at the cry of war!".;;;;;;;;;;;;;x
 santa_ana_leg;Santianna's Leg;;;;;;;;;;;;;x
-santa_ana_leg_desc;Meticulously preserved for countless generations, legends say this prosthetic leg once belonged to a tyrant king who had made war in the Lone Star. Now it adorns a wall as a conversation piece and ocasionally serves as the club of choice when recieving the ceremonial first pitch of a strike-ball game.;;;;;;;;;;;;;x
+santa_ana_leg_desc;Meticulously preserved for countless generations, legends say this prosthetic leg once belonged to a tyrant king who had made war in the lands of the Lone Star. Now it adorns a wall as a conversation piece and ocasionally serves as the club of choice when recieving the ceremonial first pitch of a strike-ball game.;;;;;;;;;;;;;x
 golden_lance;Matarinches;;;;;;;;;;;;;x
-golden_lance_desc;This ancient Golden lance adorned with scenes of long lost myths and legends, was inherited by Paleo's ancestral house. Said to have been a weapon of great hero's blessed by Saint George to slay both man and beasts, with its greatest foe being a Texan Goliath from elder days before the event. However, The previous holders of the artifact have been lost to history.;;;;;;;;;;;;;x
+golden_lance_desc;This ancient Golden lance adorned with scenes of long lost myths and legends. Said to have been a weapon of an unlikely hero who slayed a Texan Goliath from elder days before the event, the the artifact was thought to have been lost to history until it came into the possession of the house of Paleo.;;;;;;;;;;;;;x
  
 ###########Landmarks########### 
  
@@ -498,6 +548,8 @@ upgrade_cincalco;Cave of Cincalco;;;;;;;;;;;;;x
 upgrade_cincalco_desc;Deep inside Chapultepec Forrest lies the entrance to a cave — an entrance to the underworld — that is said to have been used by Moctezuma himself to enter Mictlán. Some even whisper of secret passages and lost treasures within...;;;;;;;;;;;;;x
 upgrade_colegio_militar;Colegio Militar;;;;;;;;;;;;;x
 upgrade_colegio_militar_desc;Only the best and the brightest children of the Mexican aristocracy can hope to enter the Heroic Military College and bring honor to the legacy of the Niños Heroes.;;;;;;;;;;;;;x
+colegio_militar_custom_modifier_tt;Colegio Militar;;;;;;;;;;;;;x
+colegio_militar_custom_modifier_tt_desc;This is the Heroic Military College, given the heroic distinction after valiantly defending La República from foreign agressors with the lives of six heroic cadets.;;;;;;;;;;;;;x
 upgrade_aquaduct;Aquaduct of Chapultepec;;;;;;;;;;;;;x
 upgrade_aquaduct_desc;The water of the lakes surrounding the Grand Metropoli of Mexico is brackish and unfit for human consumption. The aqueduct of Chapultepec is a necessary component of the city and a symbol of the Empire's patronage of the people.;;;;;;;;;;;;;x
 upgrade_general_archive_nation;Archivo General del Imperio;;;;;;;;;;;;;x
@@ -509,8 +561,6 @@ upgrade_grand_mural_desc;A beautiful mural portraying the ancient history and an
  
 ###########DECISIONS########### 
  
-sol_de_justicia;Sol de Justicia;;;;;;;;;x
-sol_de_justicia_desc;By having [This.GetBestName] thrown into a pit in the middle of the desert, [This.GetSubjectPronoun] shall be exposed to the sun for weeks and will most likely be given the 'justice' that [This.GetSubjectPronoun] deserves.;;;;;;;;;x
 organize_ulama_game;Organize the ball game;;;;;;;;;x
 
 cristero_peasant_army;Raise the Cristiada;;;;;;;;;x
@@ -522,6 +572,9 @@ designate_tapado;Designate Tapado;;;;;;;;;x
 relieve_tapado;Relieve Tapado;;;;;;;;;x
 reform_lamanita;Formalize the Lamanita Faith;;;;;;;;;x
 reform_lamanita_desc;Reorganize the Lamanita Faith for all ages.;;;;;;;;;x
+
+vassalize_dorados;Vassalize the Dorados;;;;;;;;;;;;;x
+vassalize_dorados_desc;With Mexico restored to its former glory, the Dorados could be subjugated and reorganized by a sufficiently wealthy and powerful Benemérito such as in the golden years of La República.;;;;;;;;;;;;;x
 
 flagellation_ritual;Mortification of the Flesh;;;;;;;;;x
 flagellation_ritual_desc;Sanctify thyself through an act to mortify your sins.;;;;;;;;;x
@@ -537,18 +590,50 @@ latinate_form_head_desc;For a long time the faithful awaited for the return of t
 latinate_form_head_TT;Controls New Rome;;;;;;;;;x
 TXT_latinate_form_head;You become the Pontifex Maximus.;;;;;;;;;;;;;x
 
+donate_money_prelate;Donate money to the [JustoDecisionBeneficiary].;;;;;;;;;;;;;x
+donate_money_prelate_desc;Send money to aid in the cause of Justo Armas;;;;;;;;;;;;;x
+
+donate_soldiers_prelate;Send soldiers to the [JustoDecisionBeneficiary].;;;;;;;;;;;;;x
+donate_soldiers_prelate_desc;Send soldiers to aid in the cause of Justo Armas;;;;;;;;;;;;;x
+
+swear_oath_prelate;Swear the Prelate’s oath of fealty;;;;;;;;;;;;;x
+swear_oath_prelate_desc;Join Justo Armas' war as an ally and be vassalized by him if he wins the war;;;;;;;;;;;;;x
+
+JustoDecisionBeneficiary_Cristero;Prelate;;;;;;;;;;;;;x
+JustoDecisionBeneficiary_Catholic;Friends of Mexico;;;;;;;;;;;;;x
+
+benemerito_decisions_TT;Hasn't taken a war preparation decision in the last 4 months;;;;;;;;;;;;;x
+recruit_dorado_benemerito;Recruit a Dorado Commander;;;;;;;;;;;;;x
+recruit_dorado_benemerito_desc;Recruit a Dorado commander into the Benemérito's court;;;;;;;;;;;;;x
+
+recruit_foreign_benemerito;Recruit Foreign Volunteers;;;;;;;;;;;;;x
+recruit_foreign_benemerito_desc;Los Dorados army will be increased by 10% of their base size;;;;;;;;;;;;;x
+
+conscription_benemerito;El Congreso Authorizes Conscription;;;;;;;;;;;;;x
+conscription_benemerito_desc;Will receive a new army of conscripts in your capital;;;;;;;;;;;;;x
+
+decision_incorporate_navegantes;Create the Rite of the Navegantes;;;;;;;;;;;;;x
+decision_incorporate_navegantes_desc;The fisher-folk of the Mar de Cortés could be brought into the fold of the Sacred Heart if we respect their traditions and allow them to keep certain rites...;;;;;;;;;;;;;x 
+
+decision_incorporate_fidencismo;Create the Rite of the Fidencistas;;;;;;;;;;;;;x
+decision_incorporate_fidencismo_desc;The espiritists of the cult of el Niño Fidencio could be brought into the fold of the Sacred Heart if we respect their traditions and allow them to keep certain rites...;;;;;;;;;;;;;x 
+
+decision_incorporate_cristo_rey;Create the Rite of the Cristeros;;;;;;;;;;;;;x
+decision_incorporate_cristo_rey_desc;The faithful numeraries of the Prelature of Cristo Rey could be brought into the fold of the Sacred Heart if we respect their traditions and allow them to keep certain organizational independence...;;;;;;;;;;;;;x 
+
+
 ###########RETINUES########### 
  
-RETTYPE_CUL_PUREPECHA;Purépecha Marksmen;;;;;;;;;;;;;x
+RETTYPE_CUL_PUREPECHA;Purépecha Longbowmen;;;;;;;;;;;;;x
  
 ###########BUILDINGS########### 
  
 ca_culture_mexican_1_desc;The agile light cavalry of the old Mexican tradition are raised here. These gallant horsemen are masters of the saddle, full of daring and bravado. When they aren't skirmishing and harrassing the enemy in battle, they can be found in the many equestrian competitions of the charrería;;;;;;;;;;;;;x
  
-ca_culture_purepecha_1;Marksmen Training Ground;;;;;;;;;;;;;x
-ca_culture_purepecha_2;Marksmen Training Ground;;;;;;;;;;;;;x
-ca_culture_purepecha_3;Marksmen Training Ground;;;;;;;;;;;;;x
-ca_culture_purepecha_4;Marksmen Training Ground;;;;;;;;;;;;;x
+ca_culture_purepecha_1;Purépecha Longbow Training Ground;;;;;;;;;;;;;x
+ca_culture_purepecha_2;Purépecha Longbow Training Ground;;;;;;;;;;;;;x
+ca_culture_purepecha_3;Purépecha Longbow Training Ground;;;;;;;;;;;;;x
+ca_culture_purepecha_4;Purépecha Longbow Training Ground;;;;;;;;;;;;;x
 ca_culture_purepecha_1_desc;Trained here are he archers of the Purépechas who are said to be so skilled as to be able to fell a hummingbird in flight with a single arrow. The prestigious bowmen are respected among the Purépechas and are rarely seen without their bow — measuring the size of a man — at their side.;;;;;;;;;;;;;x
  
  
@@ -563,7 +648,7 @@ EVTOPTA_unitasfratrum_710;Focus on personal faith and decentralized authority.;;
 EVTOPTB_unitasfratrum_710;Focus on tradition and the church heirarchy.;;;;;;;;;;;;;x
 
 sagrado_mystic;Delve into Mysticism;;;;;;;;;;;;;x
-sagrado_mystic_desc;With your hefty knowledge of all things, you can choose to delve into the more esoteric aspects of faith.;;;;;;;;;;;;;x
+sagrado_mystic_desc;With your hefty knowledge of all things and your devotion to El Santo Niño Fidencio, you can choose to delve into the more esoteric aspects of faith.;;;;;;;;;;;;;x
 TXT_sagrado_mystic;Become a mystic.;;;;;;;;;;;;;x
 EVTDESC_sacredheart_210;After the lighting of incense and a night of intense, monotonous prayer, you have begun your journey into the esoteric, into the realm of the greatest saints and preachers. As the sweat pours down your face, you feel a warm, gracious presence.;;;;;;;;;;;;;x
 EVTOPTA_sacredheart_210;Señor Jesucristo, Hijo de Dios, ten piedad de mí...;;;;;;;;;;;;;x
@@ -602,6 +687,7 @@ educate_child_sc;Educate Child in Religious Thought;;;;;;;;;;;;;x
 educate_child_sc_desc;This child in my court is falling for the traps of a wayward and foul school of thought or just lacks any religious consideration at all. I will show them the light.;;;;;;;;;;;;;x
 
 ###########Mexican Aborbtion########### 
+
 EVTDESC_sacred_heart_cristo_rey;For too long has the faith been splintered by the bickering of those who were not willing to give up their special privileges and submit to the rightful authority of El Arzobispado de México, rightful head of the church under the protection of La República. Those days are now over and the (adjective for Sagrado Corazón faithful) rejoice as not only the faith is restored, but also the realm, with the official incorporations of Jalisco and El Bajío into La República after finally reclaiming the totality of their territory. The Cristeros have been granted tolerance and they won't need to abandon their ways of veneration, as long as they also tolerate those that El Arzobispo deems non-heretical. No longer will the shouts of "Viva Cristo Rey!" strike fear in the hearts of the (faithful of the Sagrado Corazón), but rather be a warm reminder that Jesucristo is the true lord of us all.;;;;;;;;;x
 
 EVTDESC_sacred_heart_la_hermandad;Even since before the Event, there has been a stigma from the wider Mexican population to those that venerated the folk saint Niño Fidencio, that should end today. El Arzobispado de México has now decreed the beatification of El Santo Niño Fidencio and extending protections to the Fidencista Church and their unique rituals as long as they acknowledge the supremacy of El Arzobispo and that El Santo Niño Fidencio is only a saint, not a new prophet. El Arzobispo thanked Benemérito (INSERT NAME) for making this absorption of Fidencismo possible after finally reconquering the former states of Chihuahua and Durango. Sagrado Corazón priests now journey to Espinazo to study the Cajitas and the rituals with muddy water.;;;;;;;;;x
@@ -609,3 +695,10 @@ EVTDESC_sacred_heart_la_hermandad;Even since before the Event, there has been a 
 EVTDESC_sacred_heart_fidencista;Mexico Restored!;;;;;;;;;x
 
 EVTDESC_sacred_heart_navegante;Navegantes, the strange faith that arose in the shores of the Sea of Cortés, they had always been far away from the influence of Mexico proper, even if it was a territory of Old Mexico. After the conquest of the baja California Peninsula by La República, the Benemérito and Arzobispo both quietly pondered how they could absorb the Jonás Priesthood into the Sagrado Corazón Church. After a brief council it has been decided that the Church of the Navegantes will become subordinate to El Arzobispado de México, in exchange for this the Navegantes will no longer be able to continue their rituals with their co-religionaries but must direct their fury to infidels.;;;;;;;;;x
+
+##########Death Motives########### 
+
+DEATH_ACCIDENT_CRUCIFY;died in an accident during a re-enactment of Jesus Christ's crucifixion;;;;;;;;;x
+
+##########Insults###########
+INSULT_NAIVE;Naive;;;;;;;;;x

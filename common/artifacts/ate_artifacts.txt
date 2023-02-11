@@ -579,13 +579,17 @@ horn_gabriel = {
 		morale_offence = 0.2
 		morale_defence = 0.2
 	}
-	active = { 
-		religion_group = christian
-		religion_group = cult_of_saints
+	active = {
+		OR = {
+			religion_group = christian
+			religion_group = cult_of_saints
+		}
 	}
 	allowed_gift = { 
-		religion_group = christian 
-		religion_group = cult_of_saints
+		OR = {
+			religion_group = christian
+			religion_group = cult_of_saints
+		}
 	}
 	quality = 4
 	flags = { religious christian angel rare unique horn troops_morale }
@@ -783,10 +787,10 @@ baston_del_pueblo = { # Actually a scepter now
 	}
 	quality = 4
 	indestructible = yes
-	flags = { religious mesoamerican jewelry unique scepter }
+	flags = { religious mesoamerican jewelry unique crown }
 	stacking = no
 	picture = "GFX_scepter_african_3"
-	slot = scepter
+	slot = crown
 }
 
 chacmool_of_mirrors = {
@@ -3262,7 +3266,10 @@ crown_texas = {
 	command_modifier = {
 		light_cavalry = 0.15
 	}
-	starfolk_opinion = 5
+	texan_opinion = 5
+	tejano_opinion = 5
+	texaner_opinion = 5
+	czexan_opinion = 5
 	comanche_opinion = 5
 	quality = 4
 
@@ -3270,7 +3277,10 @@ crown_texas = {
 		OR = {
 			has_landed_title = e_texas
 			culture = comanche
-			culture_group = starfolk
+			culture = texan
+			culture = tejano
+			culture = texaner
+			culture = czexan
 		}
 	}
 	flags = { texas_crown unique crown jewelry crown_jewel }

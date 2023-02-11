@@ -1,0 +1,9654 @@
+###ÄNSI
+1861001={
+	name="Algernon" # Algernon I Littlepage of Dixie
+	dynasty=1782002 # Littlepage
+	martial=6
+	diplomacy=6
+	intrigue=9
+	stewardship=7
+	learning=6
+	culture=southron
+	religion=evangelical
+	father=1861023 # Wade I Littlepage
+	mother=1861386
+	trait=paranoid
+	trait=temperate
+	trait=misguided_warrior
+	trait=ram_hcc
+	2629.5.1={birth=yes}
+	2650.2.11={add_spouse=1861033}# Empress Sarah
+	2665.1.1={effect={add_rival=1861104}} # Octavian Bagley
+	2689.5.18={death=yes}
+}
+
+1861002={
+	name="Leonidas" # Leonidas I Royall
+	dynasty=1782000 # Royall
+	martial=8
+	diplomacy=5
+	intrigue=4
+	stewardship=6
+	learning=8
+	disallow_random_traits=yes
+	culture=tuskegean
+	religion=evangelical
+	trait=dead_crown_hcc
+	trait=temperate
+	trait=just
+	trait=zealous
+	trait=ambitious
+	trait=shrewd
+	trait=erudite
+	trait=duelist
+	trait=gregarious
+	trait=diligent
+	trait=knight
+	trait=brilliant_strategist
+	2327.1.15={birth=yes
+		culture=southron
+	}
+	2347.1.1={add_spouse=1862000}# Empress Eleanore
+	2382.3.10={
+		create_bloodline={
+			type=royall
+			has_dlc="Holy Fury"
+		}
+		give_nickname=nick_the_great
+	}
+	2382.3.11={death=yes}
+}
+
+1861003={
+	name="Jason" # Jason I Royall
+	dynasty=1782000 # Royall
+	culture=tuskegean
+	religion=evangelical
+	trait=dead_crown_hcc
+	father=1861002 # Leonidas I Royall
+	mother=1862000
+	2349.1.1={birth=yes
+		culture=southron
+	}
+	2397.1.1={death=yes}
+}
+
+1861004={
+	name="Leonidas" # Leonidas II Royall
+	dynasty=1782000 # Royall
+	culture=tuskegean
+	religion=evangelical
+	trait=dead_crown_hcc
+	father=1861002 # Leonidas I Royall
+	mother=1862000
+	2356.1.1={birth=yes
+		culture=southron
+	}
+	2410.1.1={death=yes}
+}
+
+1861005={
+	name="Leonidas" # Leonidas III Royall
+	dynasty=1782000 # Royall
+	culture=tuskegean
+	religion=evangelical
+	trait=dead_crown_hcc
+	trait=craven
+	trait=possessed
+	trait=cynical
+	trait=incapable
+	father=1861004 # Leonidas II Royall
+	2373.1.1={birth=yes
+		culture=southron
+		give_nickname=nick_the_accursed
+	}
+	2419.1.1={death={
+			death_reason=death_trait
+		}
+	}
+}
+
+1861006={
+	name="Ulixes" # Ulixes I Royall
+	dynasty=1782000 # Royall
+	martial=6
+	diplomacy=4
+	intrigue=3
+	stewardship=5
+	learning=5
+	disallow_random_traits=yes
+	culture=tuskegean
+	religion=evangelical
+	trait=dead_crown_hcc
+	trait=trusting
+	trait=ambitious	
+	trait=chaste
+	trait=skilled_tactician
+	trait=brave
+	trait=zealous
+	trait=shrewd
+	trait=knight
+	father=1861005 # Leonidas III Royall
+	2403.1.1={birth=yes
+		culture=southron
+		give_nickname=nick_the_careless
+	}
+	2428.1.1={death={death_reason=death_missing}}
+}
+
+1861007={
+	name="Atticus" # Atticus I Yelverton
+	dynasty=1782004 # Yelverton
+	martial=7
+	diplomacy=7
+	intrigue=6
+	stewardship=5
+	learning=4
+	disallow_random_traits=yes
+	culture=dixie
+	religion=evangelical
+	trait=dead_crown_hcc
+	trait=ambitious
+	trait=scarred
+	trait=zealous
+	trait=gregarious
+	trait=greedy
+	trait=wroth
+	trait=rough_terrain_leader
+	trait=skilled_tactician
+	trait=knight
+	2398.1.1={birth=yes}
+	2420.3.10={
+		create_bloodline={
+			type=yelverton
+			has_dlc="Holy Fury"
+		}
+		give_nickname=nick_the_ironside
+	}
+	2462.1.1={death=yes}
+}
+
+1861008={
+	name="Hank" # Hank Yelverton
+	dynasty=1782004 # Yelverton
+	culture=dixie
+	religion=evangelical
+	father=1861007 # Atticus I Yelverton
+	2417.1.1={birth=yes}
+	2461.1.1={death=yes}
+}
+
+1861009={
+	name="Atticus" # Atticus II Yelverton
+	dynasty=1782004 # Yelverton
+	culture=dixie
+	religion=evangelical
+	trait=cruel
+	trait=stubborn
+	trait=dead_crown_hcc
+	father=1861008 # Hank Yelverton
+	2440.1.1={birth=yes}
+	2441.1.1={give_nickname=nick_the_terrible}
+	2495.1.1={death=yes}
+}
+
+1861010={
+	name="Preston" # Preston I Yelverton
+	dynasty=1782004 # Yelverton
+	culture=dixie
+	religion=evangelical
+	trait=dead_crown_hcc
+	father=1861009 # Atticus II Yelverton
+	2464.1.1={birth=yes}
+	2503.1.1={death=yes}
+}
+
+1861011={
+	name="Samuel" # Samuel I Royall
+	dynasty=1782000 # Royall
+	culture=tuskegean
+	religion=evangelical
+	trait=dead_crown_hcc
+	trait=ambitious
+	trait=paranoid
+	trait=brave
+	trait=arbitrary
+	trait=skilled_tactician
+	father=1861388
+	give_nickname=nick_the_butcher
+	2442.1.1={birth=yes
+		culture=southron
+	}
+	2509.1.1={death={
+			death_reason=death_battle
+			killer=1861245
+		}
+	}
+}
+
+1861012={
+	name="Baldwin" # Baldwin I Bagley
+	dynasty=1782001 # Bagley
+	culture=southron
+	religion=evangelical
+	trait=dead_crown_hcc
+	trait=ambitious
+	trait=charitable
+	trait=diligent
+	trait=just
+	trait=midas_touched
+	trait=knight
+	2471.1.1={birth=yes}
+	2524.12.31={
+		create_bloodline={
+			type=bagley
+			has_dlc="Holy Fury"
+		}
+		give_nickname=nick_the_able
+	}
+	2525.1.1={death=yes}
+}
+
+1861013={
+	name="Baldwin" # Baldwin II Bagley
+	dynasty=1782001 # Bagley
+	culture=southron
+	religion=evangelical
+	trait=chaste
+	trait=dead_crown_hcc
+	father=1861012 # Baldwin I Bagley
+	2499.1.1={birth=yes}
+	2500.1.1={give_nickname=nick_the_effeminate}
+	2552.1.1={death=yes}
+}
+
+1861014={
+	name="Ulixes" # Ulixes II Bagley
+	dynasty=1782001 # Bagley
+	culture=southron
+	religion=evangelical
+	trait=dead_crown_hcc
+	father=1861013 # Baldwin II Bagley
+	2519.1.1={birth=yes}
+	2573.1.1={death=yes}
+}
+
+1861015={
+	name="Leonidas" # Leonidas IV Bagley
+	dynasty=1782001 # Bagley
+	culture=southron
+	religion=evangelical
+	trait=honest
+	trait=just
+	trait=dead_crown_hcc
+	father=1861014 # Ulixes II Bagley
+	2541.1.1={birth=yes}
+	2542.1.1={give_nickname=nick_the_just}
+	2599.1.1={death=yes}
+}
+
+1861016={
+	name="Baldwin" # Baldwin III Bagley
+	dynasty=1782001 # Bagley
+	culture=southron
+	religion=evangelical
+	trait=dead_crown_hcc
+	father=1861015 # Leonidas IV Bagley
+	2565.1.1={birth=yes}
+	2609.1.1={death=yes}
+}
+
+1861017={
+	name="Leonidas" # Leonidas V Bagley
+	dynasty=1782001 # Bagley
+	culture=southron
+	religion=evangelical
+	trait=dead_crown_hcc
+	father=1861016 # Baldwin III Bagley
+	2583.1.1={birth=yes}
+	2624.1.1={death=yes}
+}
+
+1861018={
+	name="Baldwin" # Baldwin IV Bagley
+	dynasty=1782001 # Bagley
+	culture=southron
+	religion=evangelical
+	trait=deceitful
+	trait=dead_crown_hcc
+	father=1861016 # Baldwin III Bagley
+	2581.1.1={birth=yes}
+	2582.1.1={give_nickname=nick_the_jackal}
+	2647.1.1={death=yes}
+}
+
+1861019={
+	name="Rhett" # Rhett I Eldrige
+	dynasty=1782003 # Eldrige
+	culture=southron
+	religion=americanist #evangelical
+	2582.1.1={birth=yes}
+	2638.1.1={death=yes}
+}
+
+1861020={
+	name="Rhett" # Rhett II Eldrige
+	dynasty=1782003 # Eldrige
+	culture=southron
+	religion=americanist #evangelical
+	father=1861019 # Rhett I Eldrige
+	2600.1.1={birth=yes}
+	2639.1.1={death=yes}
+}
+
+1861021={
+	name="Rhett" # Rhett III Eldrige
+	dynasty=1782003 # Eldrige
+	culture=southron
+	religion=americanist #evangelical
+	martial=4
+	diplomacy=7
+	intrigue=9
+	stewardship=5
+	learning=5
+	father=1861020 # Rhett II Eldrige
+	trait=patient
+	trait=shy
+	trait=elusive_shadow
+	2628.1.1={birth=yes}
+	2680.1.1={death=yes}
+}
+
+1861022={
+	name="Davis" # Davis I Bagley
+	dynasty=1782001 # Bagley
+	culture=southron
+	religion=evangelical
+	trait=dead_crown_hcc
+	father=1861017 # Leonidas V Bagley
+	2603.1.1={birth=yes}
+	2652.1.1={death=yes}
+}
+
+1861023={
+	name="Wade" # Wade I Littlepage
+	dynasty=1782002 # Littlepage
+	culture=southron
+	religion=evangelical
+	father=1861348
+	trait=dead_crown_hcc
+	trait=skilled_tactician
+	trait=gregarious
+	trait=ambitious
+	trait=brave
+	trait=honest
+	trait=cynical
+	trait=strong
+	trait=knight
+	give_nickname=nick_the_strong
+	2612.1.1={birth=yes}
+	2628.1.1={add_spouse=1861386}
+	2659.12.31={
+		create_bloodline={
+			type=littlepage
+			has_dlc="Holy Fury"
+		}
+	}
+	2660.1.1={death=yes}
+}
+
+1861024={
+	name="Leonidas" # Leonidas VI Bagley
+	dynasty=1782001
+	dna="iiolcigkcln"
+	culture=southron
+	religion=evangelical
+	father=1861022 # Davis II Bagley
+	martial=6
+	diplomacy=4
+	stewardship=3
+	intrigue=4
+	learning=4
+	trait=flamboyant_schemer
+	trait=lustful
+	trait=cruel
+	trait=arbitrary
+	trait=paranoid
+	trait=dead_crown_hcc
+	2629.1.1={birth=yes}
+	2647.6.7={add_spouse=1861101}
+	2648.1.1={give_nickname=nick_the_cruel}
+	2665.1.1={death={
+			death_reason=death_murder
+			killer=1861101
+		}
+	}
+}
+
+1861025={
+	name="Peyton"
+	dynasty=1782023 # Randolph
+	martial=6
+	diplomacy=9
+	intrigue=4
+	stewardship=5
+	learning=7
+	culture=southron
+	religion=americanist #evangelical
+	trait=honest
+	trait=gregarious
+	trait=grey_eminence
+	2609.1.1={birth=yes}
+	2634.1.1={add_spouse=1861067} # Melantha
+	2700.1.1={death=yes}
+}
+
+1861026={
+	name="Marmaduke"
+	dynasty=1782036 # Coriaceus
+	martial=6
+	diplomacy=5
+	intrigue=5
+	stewardship=7
+	learning=4
+	culture=southron
+	religion=americanist #evangelical
+	trait=greedy
+	trait=slothful
+	trait=martial_cleric
+	2603.1.1={birth=yes}
+	2700.1.1={death=yes}
+}
+
+1861027={
+	name="Wade"
+	dynasty=1782002 # Littlepage
+	martial=6
+	diplomacy=6
+	intrigue=6
+	stewardship=6
+	learning=6
+	culture=southron
+	religion=evangelical
+	father=1861023 # Wade I Littlepage
+	mother=1861386
+	trait=gluttonous
+	trait=shy
+	trait=fortune_builder
+	2633.1.1={birth=yes}
+	2700.1.1={death=yes}
+}
+
+1861028={
+	name="Lilburn" # 
+	dynasty=1783006
+	martial=6
+	diplomacy=6
+	intrigue=7
+	stewardship=5
+	learning=4
+	culture=appalachian
+	religion=charismatic
+	trait=proud
+	trait=deceitful
+	trait=intricate_webweaver
+	2612.1.1={birth=yes}
+	2700.1.1={death=yes}
+}
+
+1861029={
+	name="Raleigh"
+	dynasty=1782012 # Faulcon
+	martial=5
+	diplomacy=6
+	intrigue=4
+	stewardship=7
+	learning=5
+	culture=southron
+	religion=evangelical
+	trait=hunchback
+	trait=charitable
+	trait=underhanded_rogue
+	2630.1.1={birth=yes}
+	2700.1.1={death=yes}
+}
+
+1861030={
+	name="Cornelia"
+	dynasty=1782038 # Pixane
+	father=1861371
+	female=yes
+	martial=5
+	diplomacy=7
+	intrigue=6
+	stewardship=4
+	learning=5
+	culture=southron
+	religion=evangelical
+	trait=fair
+	trait=chaste
+	trait=proud
+	trait=flamboyant_schemer
+	trait=knight
+	trait=brave
+	2634.1.1={birth=yes}
+	2651.7.1={
+		effect={
+			set_character_flag=recieved_royal_marriage_aid_duty
+			spouse={
+				set_character_flag=recieved_royal_marriage_aid_duty
+				remove_spouse=spouse
+				add_spouse_matrilineal=ROOT
+				clr_character_flag=recieved_royal_marriage_aid_duty
+			}
+			clr_character_flag=recieved_royal_marriage_aid_duty
+		}
+	}
+	2700.1.1={death=yes}
+}
+
+1861031={
+	name="Lionel"
+	dynasty=1782033 # Pridemore
+	martial=6
+	diplomacy=6
+	intrigue=4
+	stewardship=5
+	learning=5
+	culture=southron
+	religion=evangelical
+	trait=scarred
+	trait=temperate
+	trait=honest
+	trait=tough_soldier
+	2615.1.1={birth=yes}
+	2700.1.1={death=yes}
+}
+
+1861032={
+	name="John Archer"
+	dynasty=1782056 # Leatherneck
+	martial=8
+	diplomacy=6
+	intrigue=9
+	stewardship=7
+	learning=6
+	culture=southron
+	religion=evangelical
+	secret_religion=americanist
+	father=1861265
+	trait=unyielding_leader
+	trait=temperate
+	trait=skilled_tactician
+	trait=knight
+	2610.1.1={birth=yes}
+	2700.1.1={death=yes}
+}
+
+1861033={
+	name="Sarah"
+	female=yes
+	martial=4
+	diplomacy=7
+	intrigue=7
+	stewardship=5
+	learning=6
+	culture=southron
+	religion=evangelical
+	trait=fair
+	trait=proud
+	trait=indulgent_wastrel
+	2632.1.1={birth=yes}
+	2700.1.1={death=yes}
+}
+
+1861034={
+	name="Algernon" # Prince Algernon (RIP)
+	dynasty=1782002 # Littlepage
+	culture=southron
+	religion=evangelical
+	father=1861001 # Algernon III Littlepage
+	mother=1861033 # Empress Sarah
+	trait=leper
+	2651.3.1={birth=yes}
+	2660.1.1={death=yes}
+}
+
+1861035={
+	name="Scarlett"
+	dynasty=1782002 # Littlepage
+	female=yes
+	martial=6
+	diplomacy=6
+	intrigue=6
+	stewardship=6
+	learning=6
+	culture=southron
+	religion=evangelical
+	father=1861001 # Algernon III Littlepage
+	mother=1861033 # Empress Sarah
+	trait=proud
+	trait=greedy
+	2653.1.1={birth=yes}
+	2670.1.1={death=yes}
+}
+
+1861036={
+	name="Beauregard"
+	dynasty=1782002 # Littlepage
+	martial=6
+	diplomacy=6
+	intrigue=6
+	stewardship=6
+	learning=6
+	culture=southron
+	religion=evangelical
+	father=1861001 # Algernon III Littlepage
+	mother=1861033 # Empress Sarah
+	trait=weak
+	trait=gregarious
+	2661.2.4={birth=yes}
+	2670.1.1={death=yes}
+}
+
+1861037={
+	name="Wade"
+	dynasty=1782002 # Littlepage
+	culture=southron
+	religion=evangelical
+	father=1861001 # Algernon III Littlepage
+	mother=1861033 # Empress Sarah
+	2663.1.1={birth=yes}
+	2670.1.1={death=yes}
+}
+
+1861038={
+	name="Leonidas"
+	dynasty=1782002 # Littlepage
+	culture=southron
+	religion=evangelical
+	father=1861001 # Algernon III Littlepage
+	mother=1861033 # Empress Sarah
+	2664.3.11={birth=yes}
+	2670.1.1={death=yes}
+}
+
+1861039={
+	name="Sarah"
+	female=yes
+	dynasty=1782002 # Littlepage
+	culture=southron
+	religion=evangelical
+	father=1861001 # Algernon III Littlepage
+	mother=1861033 # Empress Sarah
+	2665.11.1={birth=yes}
+	2670.1.1={death=yes}
+}
+
+1861040={
+	name="Albert"
+	dynasty=1786027 # Airwright
+	martial=4
+	diplomacy=6
+	intrigue=5
+	stewardship=7
+	learning=7
+	culture=rostmann
+	religion=evangelical
+	trait=paranoid
+	trait=scholar
+	trait=fortune_builder
+	2621.8.19={birth=yes}
+	2700.1.1={death=yes}
+}
+
+1861041={
+	name="Webster-Lee"
+	dynasty=1782057 # Sutton-Pulley
+	martial=6
+	diplomacy=6
+	intrigue=6
+	stewardship=5
+	learning=9
+	culture=southron
+	religion=evangelical
+	father=1861257
+	give_nickname=nick_iron_hand
+	trait=one_handed
+	trait=scarred_mid
+	trait=strong
+	trait=poet
+	trait=duelist
+	trait=brave
+	trait=honest
+	trait=cynical
+	trait=stubborn
+	trait=tough_soldier
+	trait=knight
+	2623.1.1={birth=yes}
+	2645.1.1={add_spouse=1861263}
+	2650.1.1={
+		effect={add_artifact=prosthetic_hand_metal} 
+	}
+	2700.1.1={death=yes}
+}
+
+1861042={
+	name="Walter"
+	dynasty=1782058 # Oakheart
+	martial=5
+	diplomacy=6
+	intrigue=6
+	stewardship=6
+	learning=6
+	culture=southron
+	religion=evangelical
+	father=1861262
+	trait=gregarious
+	trait=ambitious
+	trait=gardener
+	trait=naive_appeaser
+	2648.1.1={birth=yes}
+	2700.1.1={death=yes}
+}
+
+1861043={
+	name="Porter"
+	dynasty=1782059 # Quarles
+	martial=5
+	diplomacy=5
+	intrigue=5
+	stewardship=5
+	learning=5
+	culture=southron
+	religion=evangelical
+	father=1861223
+	mother=3000098
+	trait=scarred
+	trait=defensive_leader
+	trait=content
+	trait=thrifty_clerk
+	2648.1.1={birth=yes}
+	2700.1.1={death=yes}
+}
+
+1861044={
+	name="Nathaniel"
+	dynasty=1782060 # Josias
+	culture=southron
+	religion=evangelical
+	father=1861307
+	mother=1861316
+	trait=quick
+	trait=flu
+	2652.1.1={birth=yes}
+	2656.1.1={death={death_reason=death_poor_health}}
+}
+
+1861045={
+	name="Robert"
+	dynasty=1786033 # Rowan
+	father=1861225
+	martial=5
+	diplomacy=6
+	intrigue=5
+	stewardship=5
+	learning=6
+	culture=tuskegean
+	religion=evangelical
+	trait=charitable
+	trait=humble
+	trait=fair
+	trait=underhanded_rogue
+	2640.1.1={birth=yes}
+	2700.1.1={death=yes}
+}
+
+1861046={
+	name="Belle"
+	female=yes
+	dynasty=1782003 # Eldrige
+	culture=southron
+	religion=americanist
+	martial=3
+	diplomacy=5
+	intrigue=6
+	stewardship=5
+	learning=5
+	father=1861020 # Rhett II Eldrige
+	trait=diligent
+	trait=brave
+	trait=thrifty_clerk
+	2635.1.1={birth=yes}
+	2680.1.1={death=yes}
+}
+
+1861047={
+	name="Julius"
+	dynasty=1785019 # Gee
+	culture=tuskegean
+	religion=evangelical
+	father=1861188
+	martial=5
+	diplomacy=5
+	intrigue=6
+	stewardship=5
+	learning=5
+	trait=patient
+	trait=envious
+	trait=martial_cleric
+	trait=bulldog_hcc
+	2630.1.1={birth=yes}
+	2650.2.2={add_spouse=1861385}
+	2700.1.1={death=yes}
+}
+
+1861048={
+	name="Tristan"
+	dynasty=1792019 # Duvol
+	culture=gulfard
+	religion=evangelical
+	martial=5
+	diplomacy=4
+	intrigue=5
+	stewardship=5
+	learning=5
+	trait=lustful
+	trait=flamboyant_schemer
+	father=3000007
+	mother=3000008
+	2628.10.15={birth=yes}
+	2692.5.12={death=yes}
+}
+
+1861049={
+	name="Alan"
+	dynasty=1787041
+	culture=dixie
+	religion=evangelical
+	martial=4
+	diplomacy=6
+	intrigue=5
+	stewardship=5
+	learning=5
+	trait=poet
+	trait=gregarious
+	trait=zealous
+	trait=grey_eminence
+	2634.1.1={birth=yes}
+	2700.1.1={death=yes}
+}
+
+1861050={
+	name="Dale"
+	dynasty=1783037 # McPoyle
+	culture=appalachian
+	religion=charismatic
+	martial=5
+	diplomacy=6
+	intrigue=5
+	stewardship=6
+	learning=5
+	trait=kind
+	trait=gregarious
+	trait=diligent
+	trait=thrifty_clerk
+	2622.1.1={birth=yes}
+	2700.1.1={death=yes}
+}
+
+1861051={
+	name="Tatham"
+	dynasty=1786025
+	culture=melungeon
+	religion=charismatic
+	martial=5
+	diplomacy=6
+	intrigue=5
+	stewardship=6
+	learning=5
+	trait=shy
+	trait=content
+	trait=naive_appeaser
+	2612.1.1={birth=yes}
+	2700.1.1={death=yes}
+}
+
+1861052={
+	name="Justitia"
+	female=yes
+	dynasty=1787043 # Hampton
+	culture=dixie
+	religion=evangelical
+	father=1861170
+	martial=5
+	diplomacy=5
+	intrigue=5
+	stewardship=5
+	learning=5
+	trait=ambitious
+	trait=cynical
+	trait=martial_cleric
+	trait=bulldog_hcc
+	2624.1.1={birth=yes}
+	2641.1.1={add_spouse=1861132}
+	2700.1.1={death=yes}
+}
+
+1861053={
+	name="Regina"
+	female=yes
+	dynasty=1782000 # Royall
+	culture=tuskegean
+	religion=evangelical
+	martial=3
+	diplomacy=4
+	intrigue=5
+	stewardship=5
+	learning=5
+	mother=1861052
+	father=1861132
+	trait=proud
+	trait=gluttonous
+	trait=indulgent_wastrel
+	2643.1.1={birth=yes
+		culture=southron
+	}
+	2700.1.1={death=yes}
+}
+
+1861054={
+	name="Delmont"
+	dynasty=1787044
+	culture=dixie
+	religion=evangelical
+	martial=5
+	diplomacy=4
+	intrigue=3
+	stewardship=4
+	learning=4
+	2635.1.1={birth=yes}
+	2700.1.1={death=yes}
+}
+
+1861055={
+	name="Templeton"
+	dynasty=1787043 # Hampton
+	culture=dixie
+	religion=evangelical
+	father=1861171
+	martial=5
+	diplomacy=5
+	intrigue=4
+	stewardship=5
+	learning=4
+	2625.1.1={birth=yes}
+	2700.1.1={death=yes}
+}
+
+1861056={
+	name="Sheridan" # Council President
+	dynasty=1785006
+	culture=tuskegean
+	religion=evangelical
+	martial=3
+	diplomacy=5
+	intrigue=5
+	stewardship=5
+	learning=6
+	trait=zealous
+	trait=deceitful
+	trait=temperate
+	trait=weak
+	trait=mastermind_theologian
+	trait=bulldog_hcc
+	2613.1.1={birth=yes}
+	2700.1.1={death=yes}
+}
+
+1861057={
+	name="Augustus"
+	dynasty=1782032 # Seddon
+	culture=southron
+	religion=evangelical
+	father=1861335
+	martial=4
+	diplomacy=5
+	intrigue=4
+	stewardship=5
+	learning=5
+	trait=falconer
+	trait=stutter
+	trait=shy
+	trait=envious
+	trait=detached_priest
+	2616.1.1={birth=yes}
+	2635.1.1={add_spouse=1861384}
+	2700.1.1={death=yes}
+}
+
+1861058={
+	name="Walker"
+	dynasty=1787008 # Frymore
+	culture=dixie
+	religion=evangelical
+	martial=4
+	diplomacy=5
+	intrigue=4
+	stewardship=7
+	learning=5
+	father=1861155
+	trait=ambitious
+	trait=gluttonous
+	trait=trusting
+	trait=fortune_builder
+	2620.1.1={birth=yes}
+	2700.1.1={death=yes}
+}
+
+1861059={
+	name="Kayton"
+	dynasty=1785032 # Backus 
+	culture=tuskegean
+	religion=evangelical
+	father=1861321
+	martial=6
+	diplomacy=5
+	intrigue=2
+	stewardship=4
+	learning=4
+	trait=brave
+	trait=greedy
+	trait=misguided_warrior
+	2627.2.8={birth=yes}
+	2700.1.1={death=yes}
+}
+
+1861060={
+	name="Robert"
+	dynasty=1782037
+	culture=southron
+	religion=evangelical
+	martial=6
+	diplomacy=4
+	intrigue=4
+	stewardship=4
+	learning=4
+	trait=humble
+	trait=skilled_tactician
+	trait=unyielding_leader
+	2635.1.1={birth=yes}
+	2700.1.1={death=yes}
+}
+
+1861061={
+	name="James"
+	dynasty=1782005
+	culture=southron #dixie
+	religion=americanist #evangelical
+	mother=1861110
+	martial=5
+	diplomacy=5
+	intrigue=4
+	stewardship=5
+	learning=5
+	trait=proud
+	trait=siege_leader
+	trait=scholar
+	trait=tough_soldier
+	2625.1.1={birth=yes}
+	2654.1.1={add_spouse="1861046"}
+	2700.1.1={death=yes}
+}
+
+1861062={
+	name="Cameron"
+	dynasty=1782035
+	martial=6
+	diplomacy=5
+	intrigue=5
+	stewardship=5
+	learning=6
+	culture=southron
+	religion=americanist #evangelical
+	trait=zealous
+	trait=brave
+	trait=misguided_warrior
+	2637.1.1={birth=yes}
+	2700.1.1={death=yes}
+}
+
+1861063={
+	name="Fred"
+	dynasty=1787013 # Dunwoody
+	martial=4
+	diplomacy=5
+	intrigue=5
+	stewardship=5
+	learning=5
+	culture=dixie
+	religion=evangelical
+	father=1861176
+	trait=diligent
+	trait=envious
+	trait=charismatic_negotiator
+	2622.2.2={birth=yes}
+	2700.1.1={death=yes}
+}
+
+1861064={
+	name="Mary"
+	female=yes
+	dynasty=1787060
+	martial=6
+	diplomacy=5
+	intrigue=5
+	stewardship=5
+	learning=5
+	culture=dixie
+	religion=evangelical
+	trait=wroth
+	trait=skilled_tactician
+	2636.1.1={birth=yes}
+	2700.1.1={death=yes}
+}
+
+1861065={
+	name="Seth"
+	dynasty=1787061 # Lore
+	martial=5
+	diplomacy=5
+	intrigue=5
+	stewardship=5
+	learning=5
+	culture=dixie
+	religion=evangelical
+	trait=deceitful
+	trait=underhanded_rogue
+	2632.6.3={birth=yes}
+	2700.1.1={death=yes}
+}
+
+1861066={
+	name="Roscoe"
+	dynasty=1787062 # Sheats
+	martial=5
+	diplomacy=5
+	intrigue=5
+	stewardship=5
+	learning=5
+	culture=dixie
+	religion=evangelical
+	father=1861398
+	trait=patient
+	trait=amateurish_plotter
+	2642.1.1={birth=yes}
+	2700.1.1={death=yes}
+}
+
+1861067={
+	name="Elizabeth"
+	female=yes
+	martial=3
+	diplomacy=5
+	intrigue=5
+	stewardship=5
+	learning=6
+	culture=southron
+	religion=americanist #evangelical
+	trait=kind
+	trait=greedy
+	trait=flamboyant_schemer
+	2617.1.1={birth=yes}
+	#2634.1.1 married to 1861025
+	2700.1.1={death=yes}
+}
+
+1861068={
+	name="Virginia"
+	female=yes
+	dynasty=1782023 # Randolph
+	martial=6
+	diplomacy=5
+	intrigue=4
+	stewardship=5
+	learning=4
+	culture=southron
+	religion=americanist
+	father=1861025
+	mother=1861067
+	trait=envious
+	trait=brave
+	trait=misguided_warrior
+	2636.1.1={birth=yes}
+	2700.1.1={death=yes}
+}
+
+1861069={
+	name="Edmund"
+	dynasty=1782023 # Randoplh
+	martial=6
+	diplomacy=5
+	intrigue=4
+	stewardship=5
+	learning=8
+	culture=southron
+	religion=americanist
+	father=1861025
+	mother=1861067
+	trait=deceitful
+	trait=duelist
+	trait=skilled_tactician
+	2639.12.3={birth=yes}
+	2702.3.7={death=yes}
+}
+
+1861070={
+	name="Rhea"
+	female=yes
+	dynasty=1782023 # Randolph
+	martial=3
+	diplomacy=5
+	intrigue=4
+	stewardship=5
+	learning=4
+	culture=southron
+	religion=americanist
+	father=1861025
+	mother=1861067
+	trait=charitable
+	trait=cynical
+	trait=naive_appeaser
+	2641.10.15={birth=yes}
+	2700.12.27={death=yes}
+}
+
+1861071={
+	name="Pelecand"
+	dynasty=1792007 # Thimogone
+	martial=3
+	diplomacy=5
+	intrigue=4
+	stewardship=5
+	learning=6
+	culture=gulfard
+	religion=evangelical
+	trait=craven
+	trait=temperate
+	trait=gregarious
+	trait=detached_priest
+	2647.3.30={birth=yes}
+	2700.11.12={death=yes}
+}
+
+1861072={
+	name="Heron"
+	dynasty=1787064 # McGillin
+	martial=8
+	diplomacy=6
+	intrigue=4
+	stewardship=1
+	learning=4
+	culture=dixie
+	religion=evangelical
+	father=1861208
+	trait=ambitious
+	trait=greedy
+	trait=tough_soldier
+	2641.11.28={birth=yes}
+	2700.6.2={death=yes}
+}
+
+1861073={
+	name="Thomas"
+	dynasty=1782044 # Spratt
+	martial=4
+	diplomacy=2
+	intrigue=6
+	stewardship=9
+	learning=8
+	culture=southron
+	religion=evangelical
+	father=1861286
+	trait=content
+	trait=trusting
+	trait=diligent
+	trait=brave
+	trait=indulgent_wastrel
+	2614.5.20={birth=yes}
+	2635.3.3={add_spouse=1861376}
+	2673.10.3={death=yes}
+}
+
+1861074={
+	name="Issac"
+	dynasty=1763004 # Blue
+	martial=3
+	diplomacy=9
+	intrigue=6
+	stewardship=4
+	learning=4
+	culture=catawba
+	religion=evangelical
+	father=1861330
+	2632.2.4={birth=yes}
+	2700.1.1={death=yes}
+}
+
+1861075={
+	name="Gabriel"
+	dynasty=1782046 # Johnston
+	martial=9
+	diplomacy=3
+	intrigue=5
+	stewardship=3
+	learning=3
+	culture=southron
+	religion=evangelical
+	father=1861277
+	trait=homosexual
+	2635.6.30={birth=yes}
+	2661.3.3={add_spouse=1861101}
+	2700.1.1={death=yes}
+}
+
+1861076={
+	name="Wallace"
+	dynasty=1782047 # Harllee
+	martial=9
+	diplomacy=4
+	intrigue=1
+	stewardship=3
+	learning=5
+	culture=southron #dixie
+	religion=americanist #evangelical
+	2636.10.15={birth=yes}
+	2700.1.1={death=yes}
+}
+
+1861077={
+	name="George"
+	dynasty=1782006
+	martial=7
+	diplomacy=7
+	intrigue=6
+	stewardship=5
+	learning=9
+	culture=southron #dixie
+	religion=americanist #evangelical
+	2631.9.28={birth=yes}
+	2700.1.1={death=yes}
+}
+
+1861078={
+	name="Henry"
+	dynasty=1782049 # Somers
+	father=1861250
+	mother=1861091
+	martial=5
+	diplomacy=7
+	intrigue=8
+	stewardship=3
+	learning=5
+	culture=dixie
+	religion=evangelical
+	trait=quick
+	trait=ambitious
+	trait=lustful
+	trait=amateurish_plotter
+	trait=bulldog_hcc
+	2638.6.16={birth=yes}
+	2660.1.1={add_claim=c_beaufort}
+	2700.1.1={death=yes}
+}
+
+1861079={
+	name="Samuel"
+	dynasty=1782050 # Hammond
+	martial=1
+	diplomacy=9
+	intrigue=6
+	stewardship=7
+	learning=1
+	culture=dixie
+	religion=evangelical
+	2639.3.22={birth=yes}
+	2700.1.1={death=yes}
+}
+
+1861080={
+	name="Tift"
+	dynasty=1787065
+	martial=5
+	diplomacy=5
+	intrigue=5
+	stewardship=5
+	learning=5
+	culture=dixie
+	religion=evangelical
+	2610.1.1={birth=yes}
+	2700.1.1={death=yes}
+}
+
+1861081={
+	name="Colquitt"
+	dynasty=1787018 # Cockrell-South
+	martial=5
+	diplomacy=5
+	intrigue=5
+	stewardship=5
+	learning=5
+	culture=dixie
+	religion=evangelical
+	father=1861213
+	trait=one_eyed
+	trait=zealous
+	trait=deceitful
+	trait=cruel
+	trait=brave
+	trait=gregarious
+	trait=erudite
+	trait=misguided_warrior
+	2620.1.1={birth=yes}
+	2700.1.1={death=yes}
+}
+
+1861082={
+	name="Ricky"
+	dynasty=1787066 # Bobrell
+	martial=6
+	diplomacy=5
+	intrigue=4
+	stewardship=4
+	learning=3
+	trait=slow
+	trait=trusting
+	trait=proud
+	trait=envious
+	culture=dixie
+	religion=evangelical
+	2635.1.1={birth=yes}
+	2700.1.1={death=yes}
+}
+
+1861099={
+	name="Elias"
+	dynasty=1491207
+	culture=cherokee
+	religion=charismatic
+	martial=4
+	diplomacy=6
+	stewardship=5
+	intrigue=8
+	learning=5
+	trait=intricate_webweaver
+	trait=ambitious
+	trait=gregarious
+	trait=diligent
+	trait=proud
+	2643.3.13={birth=yes}
+}
+
+
+3000000={
+	name="Huey"
+	dynasty=1785000 # Latimer
+	religion=evangelical
+	culture=tuskegean
+	father=1861324
+	martial=4
+	diplomacy=4
+	stewardship=7
+	intrigue=4
+	learning=1
+	trait=skilled_tactician
+	trait=honest
+	trait=cruel
+	trait=ram_hcc
+	trait=knight
+	2635.1.1={birth=yes}
+	2658.3.29={add_spouse=3000001}
+	2704.11.14={death=yes}
+}
+
+3000001={
+	name="Charlotte"
+	female=yes
+	religion=evangelical
+	culture=tuskegean
+	martial=3
+	diplomacy=3
+	stewardship=4
+	intrigue=4
+	learning=1
+	trait=skilled_tactician
+	trait=impaler
+	trait=cruel
+	trait=zealous
+	trait=humble
+	trait=chaste
+	2638.6.23={birth=yes}
+	2658.3.29={add_spouse=3000000}
+	2705.5.1={death=yes}
+}
+
+3000002={
+	name="Emma"
+	female=yes
+	dynasty=1785000 # Latimer
+	religion=evangelical
+	culture=tuskegean
+	martial=2
+	diplomacy=2
+	stewardship=6
+	intrigue=7
+	learning=7
+	trait=tough_soldier
+	trait=wroth
+	trait=shy
+	trait=envious
+	father=3000000
+	mother=3000001
+	2659.1.14={birth=yes}
+	2701.10.5={death=yes}
+}
+
+3000003={
+	name="Omar"
+	dynasty=1785000 # Latimer
+	religion=evangelical
+	culture=tuskegean
+	martial=3
+	diplomacy=1
+	stewardship=0
+	intrigue=6
+	learning=4
+	trait=thrifty_clerk
+	trait=duelist
+	trait=cruel
+	trait=stressed
+	father=3000000
+	mother=3000001
+	2660.11.8={birth=yes}
+	2707.9.5={death=yes}
+}
+
+3000004={
+	name="Loretta"
+	female=yes
+	dynasty=1785019 # Gee
+	father=1861113
+	religion=evangelical
+	culture=tuskegean
+	martial=8
+	diplomacy=3
+	stewardship=5
+	intrigue=2
+	learning=4
+	trait=misguided_warrior
+	trait=just
+	trait=content
+	trait=bulldog_hcc
+	2662.10.3={birth=yes}
+	2711.11.5={death=yes}
+}
+
+3000005={
+	name="Jade"
+	female=yes
+	dynasty=1785000
+	religion=evangelical
+	culture=tuskegean
+	martial=3
+	diplomacy=7
+	stewardship=6
+	intrigue=4
+	learning=4
+	trait=charismatic_negotiator
+	trait=just
+	trait=slothful
+	father=3000000
+	mother=3000001
+	2666.1.1={birth=yes}
+	2723.9.14={death=yes}
+}
+
+3000007={
+	name="David"
+	dynasty=1792019 # Duvol
+	culture=gulfard
+	religion=voodoo 
+	father=1861389
+	martial=7
+	diplomacy=5
+	stewardship=2
+	intrigue=2
+	learning=7
+	trait=misguided_warrior
+	trait=kind
+	2602.1.1={birth=yes}
+	2620.12.20={add_spouse=3000008}
+	2668.12.6={death=yes}
+}
+
+3000008={
+	name="Audrey"
+	female=yes
+	dynasty=1787001
+	dna="jlhcgfoimbc"
+	culture=gulfard
+	religion=evangelical
+	martial=5
+	diplomacy=8
+	stewardship=5
+	intrigue=1
+	learning=5
+	trait=fortune_builder
+	trait=cruel
+	2602.4.14={birth=yes}
+	2620.12.20={add_spouse=3000007}
+	2654.4.30={death=yes}
+}
+
+3000009={
+	name="Girard"
+	dynasty=1792019 # Duvol
+	dna="gjlcgdhijic"
+	culture=gulfard
+	religion=voodoo 
+	martial=2
+	diplomacy=6
+	stewardship=3
+	intrigue=2
+	learning=3
+	trait=thrifty_clerk
+	trait=honest
+	trait=lustful
+	father=3000007
+	mother=3000008
+	2628.1.19={birth=yes}
+	2680.11.15={death=yes}
+}
+
+3000010={
+	name="Jed"
+	dynasty=1787067
+	culture=dixie
+	religion=evangelical
+	martial=5
+	diplomacy=4
+	stewardship=3
+	intrigue=1
+	learning=2
+	trait=honest
+	trait=brave
+	trait=just
+	trait=trusting
+	trait=proud
+	trait=skilled_tactician
+	2620.1.1={birth=yes}
+	2641.7.28={add_spouse=3000011}
+	2707.5.18={death=yes}
+}
+
+3000011={
+	name="Katrina"
+	female=yes
+	dynasty=1792019
+	culture=gulfard
+	religion=voodoo #occultist
+	martial=1
+	diplomacy=4
+	stewardship=3
+	intrigue=5
+	learning=3
+	trait=wroth
+	trait=gregarious
+	trait=brave
+	trait=proud
+	trait=charismatic_negotiator
+	father=3000007
+	mother=3000008
+	2621.7.5={birth=yes}
+	2641.7.28={add_spouse=3000010}
+	2698.8.10={death=yes}
+}
+
+3000012={
+	name="Jim"
+	dynasty=1787067
+	culture=dixie
+	religion=evangelical
+	martial=3
+	diplomacy=4
+	intrigue=1
+	stewardship=4
+	learning=2
+	trait=bastard
+	trait=brave
+	trait=honest
+	trait=diligent
+	trait=tough_soldier
+	father=3000010
+	2640.1.3={birth=yes}
+	2690.1.3={death=yes}
+}
+
+3000013={
+	name="Bobby"
+	dynasty=1787067
+	culture=dixie
+	religion=evangelical
+	martial=4
+	diplomacy=4
+	intrigue=1
+	stewardship=2
+	learning=3
+	trait=proud
+	trait=brave
+	trait=just
+	trait=honest
+	trait=kind
+	trait=skilled_tactician
+	father=3000010
+	mother=3000011
+	2642.4.3={birth=yes}
+	2692.4.3={death=yes}
+}
+
+3000014={
+	name="Sandy"
+	female=yes
+	dynasty=1787067
+	culture=dixie
+	religion=evangelical
+	martial=1
+	diplomacy=4
+	intrigue=4
+	stewardship=3
+	learning=2
+	trait=fair
+	trait=trusting
+	trait=proud
+	trait=patient
+	trait=deceitful
+	#trait=skilled_tactician
+	trait=intricate_webweaver
+	father=3000010
+	mother=3000011
+	2644.10.7={birth=yes}
+	2684.10.7={death=yes}
+}
+
+3000015={
+	name="Arlene"
+	female=yes
+	dynasty=1787067
+	culture=dixie
+	religion=evangelical
+	martial=5
+	diplomacy=2
+	intrigue=4
+	stewardship=2
+	learning=3
+	trait=wroth
+	trait=duelist
+	trait=brave
+	trait=elusive_shadow
+	father=3000010
+	mother=3000011
+	2648.3.9={birth=yes}
+	2698.3.9={death=yes}
+}
+
+3000016={
+	name="Coleman"
+	dna="jncgafcmbib"
+	culture=tuskegean
+	religion=evangelical
+	martial=5
+	diplomacy=1
+	stewardship=2
+	intrigue=4
+	learning=3
+	trait=intricate_webweaver
+	trait=poet
+	trait=wroth
+	trait=diligent
+	trait=cynical
+	2616.1.1={birth=yes}
+	2677.1.23={death=yes}
+}
+
+
+
+
+3000050={
+	name="Andrea"
+	female=yes
+	dna="hnohifhkgoc"
+	culture=tuskegean 
+	religion=evangelical
+	martial=7
+	diplomacy=3
+	stewardship=3
+	intrigue=5
+	learning=2
+	trait=charismatic_negotiator
+	trait=just
+	2619.1.1={birth=yes}
+	2642.10.29={add_spouse=3000051}
+	2689.7.1={death=yes}
+}
+
+3000051={
+	name="Omar"
+	dynasty=1787027 # Hillyer
+	father=1861233
+	dna="hbhedhffdeb"
+	culture=tuskegean 
+	religion=evangelical
+	martial=2
+	diplomacy=5
+	stewardship=3
+	intrigue=4
+	learning=2
+	trait=underhanded_rogue
+	trait=content
+	trait=wroth
+	trait=brave
+	trait=greedy
+	2622.7.12={birth=yes}
+	2642.10.29={add_spouse=3000050}
+	2669.9.18={death=yes}
+}
+
+3000052={
+	name="Sterling"
+	dynasty=1787027 # Hillyer
+	dna="dbohihhkdoc"
+	culture=tuskegean 
+	religion=evangelical
+	martial=7
+	diplomacy=5
+	stewardship=1
+	intrigue=1
+	learning=4
+	trait=intricate_webweaver
+	trait=brave
+	trait=shy
+	trait=cruel
+	father=3000051
+	mother=3000050
+	2643.8.26={birth=yes}
+	2689.6.1={death=yes}
+}
+
+3000053={
+	name="Jackson"
+	dynasty=1787027 # Hillyer
+	dna="hbohicfbgon"
+	culture=tuskegean 
+	religion=evangelical
+	martial=4
+	diplomacy=1
+	stewardship=0
+	intrigue=2
+	learning=3
+	trait=thrifty_clerk
+	trait=shy
+	trait=patient
+	trait=trusting
+	father=3000051
+	mother=3000050
+	2645.1.31={birth=yes}
+	2665.7.12={add_spouse=3000054}
+	2691.12.20={death=yes}
+}
+
+3000054={
+	name="Patrice"
+	female=yes
+	dna="lclnnadkdml"
+	culture=dixie
+	religion=evangelical
+	martial=4
+	diplomacy=6
+	stewardship=3
+	intrigue=0
+	learning=5
+	trait=flamboyant_schemer
+	trait=cynical
+	trait=gregarious
+	2645.1.9={birth=yes}
+	2665.7.12={add_spouse=3000053}
+	2709.7.19={death=yes}
+}
+
+3000055={
+	name="Jean"
+	female=yes
+	dynasty=1787027 # Hillyer
+	dna="hnohbhffdoc"
+	culture=tuskegean 
+	religion=evangelical
+	martial=4
+	diplomacy=3
+	stewardship=5
+	intrigue=5
+	learning=7
+	trait=fortune_builder
+	trait=scholar
+	trait=ambitious
+	father=3000051
+	mother=3000050
+	2646.2.3={birth=yes}
+	2693.10.4={death=yes}
+}
+
+3000056={
+	name="Spencer"
+	dynasty=1787027 # Hillyer
+	dna="hnhepfhfdeb"
+	culture=tuskegean 
+	religion=evangelical
+	martial=6
+	diplomacy=3
+	stewardship=4
+	intrigue=8
+	learning=3
+	trait=elusive_shadow
+	trait=honest
+	trait=chaste
+	father=3000051
+	mother=3000050
+	2646.11.18={birth=yes}
+	2665.1.5={add_spouse=3000057}
+	2716.1.11={death=yes}
+}
+
+3000057={
+	name="Linda"
+	female=yes
+	dna="flilpnbofdi"
+	culture=tuskegean 
+	religion=evangelical
+	martial=4
+	diplomacy=1
+	stewardship=1
+	intrigue=4
+	learning=4
+	trait=naive_appeaser
+	trait=cruel
+	trait=shy
+	trait=zealous
+	trait=content
+	2649.7.23={birth=yes}
+	2666.1.5={add_spouse=3000056}
+	2715.1.7={death=yes}
+}
+
+3000060={
+	name="Ellen"
+	female=yes
+	dynasty=1787016
+	dna="dclbpfmiihm"
+	culture=dixie
+	religion=evangelical
+	martial=3
+	diplomacy=1
+	stewardship=6
+	intrigue=4
+	learning=4
+	trait=flamboyant_schemer
+	trait=humble
+	trait=patient
+	trait=content
+	trait=kind
+	2640.1.1={birth=yes}
+	2658.8.28={add_spouse=3000061}
+	2692.9.7={death=yes}
+}
+
+3000061={
+	name="Cleavon"
+	dynasty=1787017 # Candler
+	dna="ckmnmbkakjk"
+	culture=dixie
+	religion=evangelical
+	father=1861325
+	martial=8
+	diplomacy=3
+	stewardship=7
+	intrigue=2
+	learning=7
+	trait=tough_soldier
+	trait=impaler
+	trait=slothful
+	trait=brave
+	trait=shy
+	trait=wroth
+	2640.9.11={birth=yes}
+	2658.8.28={add_spouse=3000060}
+	2682.7.28={death=yes}
+}
+
+3000062={
+	name="Garth"
+	dynasty=1787017 # Candler
+	dna="ckmnpfkaijk"
+	culture=dixie
+	religion=evangelical
+	martial=3
+	diplomacy=6
+	stewardship=4
+	intrigue=4
+	learning=1
+	trait=midas_touched
+	trait=hedonist
+	trait=zealous
+	trait=arbitrary
+	trait=chaste
+	trait=content
+	trait=craven
+	father=3000061
+	mother=3000060
+	2662.5.16={birth=yes}
+	2708.7.30={death=yes}
+}
+
+3000063={
+	name="Otis"
+	dynasty=1787017 # Candler
+	dna="dclbpbkiihm"
+	culture=dixie
+	religion=evangelical
+	martial=3
+	diplomacy=3
+	stewardship=0
+	intrigue=2
+	learning=8
+	trait=tough_soldier
+	trait=hunter
+	trait=chaste
+	trait=paranoid
+	trait=cruel
+	father=3000061
+	mother=3000060
+	2665.3.4={birth=yes}
+	2713.1.29={death=yes}
+}
+
+3000064={
+	name="Tiffany"
+	female=yes
+	dynasty=1787018
+	dna="knjemfelpkn"
+	culture=dixie
+	religion=evangelical
+	martial=4
+	diplomacy=8
+	stewardship=1
+	intrigue=1
+	learning=2
+	trait=fortune_builder
+	trait=patient
+	trait=humble
+	trait=chaste
+	trait=brave
+	trait=gluttonous
+	trait=twin
+	father=1861081
+	2647.9.16={birth=yes}
+	2727.4.9={death=yes}
+}
+
+3000065={
+	name="Hank"
+	dynasty=1787017
+	dna="dcmnmbkakhm"
+	culture=dixie
+	religion=evangelical
+	martial=2
+	diplomacy=1
+	stewardship=4
+	intrigue=3
+	learning=1
+	trait=grey_eminence
+	trait=cruel
+	trait=lustful
+	trait=craven
+	trait=ambitious
+	father=3000061
+	mother=3000060
+	2668.3.21={birth=yes}
+	2705.2.21={death=yes}
+}
+
+3000066={
+	name="April"
+	female=yes
+	dynasty=1787017
+	dna="cdmnmekiijm"
+	culture=dixie
+	religion=evangelical
+	martial=3
+	diplomacy=4
+	stewardship=6
+	intrigue=3
+	learning=6
+	trait=flamboyant_schemer
+	trait=charitable
+	trait=wroth
+	trait=lustful
+	trait=drunkard
+	father=3000061
+	mother=3000060
+	2673.4.6={birth=yes}
+	2739.2.19={death=yes}
+}
+
+3000070={
+	name="Tiberius"
+	dynasty=1787014 # Angier
+	dna="dfechcdkcpe"
+	culture=dixie
+	religion=evangelical
+	martial=2
+	diplomacy=6
+	stewardship=2
+	intrigue=3
+	learning=5
+	trait=underhanded_rogue
+	trait=hedonist
+	trait=wroth
+	trait=cruel
+	trait=depressed
+	2597.1.1={birth=yes}
+	2616.7.18={add_spouse=3000071}
+	2656.2.14={death=yes}
+}
+
+3000071={
+	name="Patty"
+	female=yes
+	dynasty=1787015
+	dna="lklmgcocggn"
+	culture=dixie
+	religion=evangelical
+	martial=4
+	diplomacy=7
+	stewardship=4
+	intrigue=8
+	learning=4
+	trait=misguided_warrior
+	trait=ambitious
+	trait=cynical
+	trait=wroth
+	2599.1.1={birth=yes}
+	2616.7.18={add_spouse=3000070}
+	2656.11.25={death=yes}
+}
+
+3000072={
+	name="Cyndilou"
+	female=yes
+	dynasty=1787014 # Angier
+	dna="lklmhcokgpe"
+	culture=dixie
+	religion=evangelical
+	martial=3
+	diplomacy=7
+	stewardship=1
+	intrigue=8
+	learning=6
+	trait=charismatic_negotiator
+	trait=zealous
+	trait=cruel
+	father=3000070
+	mother=3000071
+	2622.3.3={birth=yes}
+	2683.4.24={death=yes}
+}
+
+3000073={
+	name="Jubal"
+	dynasty=1787014 # Angier
+	dna="dflchcdkcpe"
+	culture=dixie
+	religion=evangelical
+	martial=5
+	diplomacy=6
+	stewardship=1
+	intrigue=7
+	learning=5
+	trait=misguided_warrior
+	trait=ambitious
+	trait=gregarious
+	trait=zealous
+	trait=envious
+	father=3000070
+	mother=3000071
+	2623.1.20={birth=yes}
+	2693.4.23={death=yes}
+}
+
+3000074={
+	name="Ike"
+	dynasty=1787014 # Angier
+	dna="dklmgcdfcge"
+	culture=dixie
+	religion=evangelical
+	martial=5
+	diplomacy=2
+	stewardship=7
+	intrigue=7
+	learning=7
+	trait=charismatic_negotiator
+	trait=proud
+	trait=slothful
+	trait=drunkard
+	father=3000070
+	mother=3000071
+	2628.12.8={birth=yes}
+	2670.1.4={death=yes}
+}
+
+3000075={
+	name="Ann"
+	female=yes
+	dynasty=1787012
+	dna="phlegjhkabb"
+	culture=dixie
+	religion=evangelical
+	martial=0
+	diplomacy=3
+	stewardship=5
+	intrigue=0
+	learning=4
+	trait=tough_soldier
+	trait=impaler
+	trait=greedy
+	trait=diligent
+	trait=wroth
+	trait=paranoid
+	2646.1.1={birth=yes}
+	2717.3.16={death=yes}
+}
+
+3000076={
+	name="Bubba"
+	dynasty=1787013 # Dunwoody
+	dna="cpccapofnkm"
+	culture=dixie
+	religion=evangelical
+	martial=8
+	diplomacy=2
+	stewardship=5
+	intrigue=2
+	learning=5
+	trait=fortune_builder
+	trait=wroth
+	trait=diligent
+	father=1861063
+	2648.8.31={birth=yes}
+	2666.1.1={add_spouse=1861103}
+	2704.5.26={death=yes}
+}
+
+3000077={
+	name="Claudine"
+	female=yes
+	dynasty=1787013 # Dunwoody
+	dna="ppceaphknbm"
+	culture=dixie
+	religion=evangelical
+	martial=4
+	diplomacy=4
+	stewardship=4
+	intrigue=3
+	learning=2
+	trait=underhanded_rogue
+	trait=impaler
+	trait=greedy
+	father=3000078
+	2471.1.8={birth=yes}
+	2510.1.9={death=yes}
+}
+
+3000078={
+	name="Dwayne"
+	dynasty=1787013 # Dunwoody
+	dna="chccaphkgbb"
+	culture=dixie
+	religion=evangelical
+	martial=5
+	diplomacy=4
+	stewardship=8
+	intrigue=8
+	learning=7
+	trait=elusive_shadow
+	trait=lustful
+	trait=temperate
+	2444.9.15={birth=yes}
+	2501.4.26={death=yes}
+}
+
+3000079={
+	name="Alexander"
+	dynasty=1787013 # Dunwoody
+	dna="cplegpofnka"
+	culture=dixie
+	religion=evangelical
+	martial=6
+	diplomacy=2
+	stewardship=3
+	intrigue=4
+	learning=7
+	trait=skilled_tactician
+	trait=cruel
+	trait=chaste
+	father=3000078
+	2462.10.20={birth=yes}
+	2528.9.27={death=yes}
+}
+
+3000080={
+	name="Tommylee"
+	dynasty=1787013 # Dunwoody
+	dna="chcegjhknkb"
+	culture=dixie
+	religion=evangelical
+	martial=6
+	diplomacy=4
+	stewardship=2
+	intrigue=4
+	learning=3
+	trait=misguided_warrior
+	trait=mystic
+	trait=temperate
+	trait=cruel
+	trait=trusting
+	trait=craven
+	father=3000079
+	2488.5.20={birth=yes}
+	2559.2.3={death=yes}
+}
+
+# Norfolk patricians
+3000081={
+	name="Beauregard"
+	dynasty=1787070 # Commodore
+	dna="mhfjhgcigah"
+	culture=southron
+	religion=evangelical
+	martial=2
+	diplomacy=4
+	stewardship=2
+	intrigue=0
+	learning=2
+	trait=detached_priest
+	trait=humble
+	trait=gregarious
+	2613.1.1={birth=yes}
+	2636.2.16={add_spouse=3000082}
+	2671.8.9={death=yes}
+}
+
+3000082={
+	name="Carolina"
+	female=yes
+	dna="mhkighikhoc"
+	culture=southron
+	religion=evangelical
+	martial=5
+	diplomacy=5
+	stewardship=7
+	intrigue=1
+	learning=6
+	trait=charismatic_negotiator
+	trait=proud
+	2615.9.1={birth=yes}
+	2636.2.16={add_spouse=3000081}
+	2676.2.18={death=yes}
+}
+
+3000083={
+	name="Brandegoris"
+	dynasty=1787070
+	dna="mhfaehckgac"
+	culture=southron
+	religion=evangelical
+	martial=4
+	diplomacy=2
+	stewardship=5
+	intrigue=8
+	learning=4
+	trait=tough_soldier
+	trait=patient
+	trait=deceitful
+	trait=slothful
+	father=3000081
+	mother=3000082
+	2641.4.8={birth=yes}
+	2696.5.21={death=yes}
+}
+
+3000084={
+	name="Joanna"
+	female=yes
+	dynasty=1787070
+	dna="mhfmhggkhoh"
+	culture=southron
+	religion=evangelical
+	martial=2
+	diplomacy=4
+	stewardship=1
+	intrigue=0
+	learning=4
+	trait=misguided_warrior
+	trait=proud
+	trait=envious
+	trait=arbitrary
+	father=3000081
+	mother=3000082
+	2643.7.23={birth=yes}
+	2699.4.18={death=yes}
+}
+
+3000085={
+	name="Hannibal"
+	dynasty=1787070
+	dna="mhfjggckhoh"
+	culture=southron
+	religion=evangelical
+	martial=6
+	diplomacy=5
+	stewardship=4
+	intrigue=0
+	learning=2
+	trait=brilliant_strategist
+	trait=hunter
+	trait=patient
+	father=3000081
+	mother=3000082
+	2648.2.23={birth=yes}
+	2719.10.28={death=yes}
+}
+
+3000086={
+	name="Rufus"
+	dynasty=1787070
+	dna="mhhjihikhac"
+	culture=southron
+	religion=evangelical
+	martial=3
+	diplomacy=8
+	stewardship=5
+	intrigue=4
+	learning=6
+	trait=underhanded_rogue
+	trait=zealous
+	trait=brave
+	trait=gluttonous
+	father=3000081
+	mother=3000082
+	2654.3.10={birth=yes}
+	2715.7.8={death=yes}
+}
+
+3000087={
+	name="Thomas"
+	dynasty=1787070
+	dna="mhkjhgikhah"
+	culture=southron
+	religion=evangelical
+	martial=4
+	diplomacy=4
+	stewardship=4
+	intrigue=3
+	learning=0
+	trait=grey_eminence
+	trait=brave
+	trait=patient
+	father=3000081
+	mother=3000082
+	2658.2.19={birth=yes}
+	2719.9.10={death=yes}
+}
+
+3000088={
+	name="Breunor"
+	dynasty=1787070
+	dna="mhkjggiigah"
+	culture=southron
+	religion=evangelical
+	martial=2
+	diplomacy=6
+	stewardship=4
+	intrigue=3
+	learning=3
+	trait=intricate_webweaver
+	trait=duelist
+	trait=zealous
+	trait=gluttonous
+	father=3000081
+	mother=3000082
+	2660.4.13={birth=yes}
+	2711.10.8={death=yes}
+}
+
+3000089={
+	name="Claudius"
+	dynasty=1787071 # Seahawk
+	dna="pbnfjaanoil"
+	culture=tuskegean
+	religion=evangelical
+	martial=3
+	diplomacy=4
+	stewardship=4
+	intrigue=5
+	learning=3
+	trait=intricate_webweaver
+	trait=lustful
+	trait=deceitful
+	trait=arbitrary
+	trait=gregarious
+	2646.9.9={birth=yes
+		culture=southron
+	}
+	2711.4.28={death=yes}
+}
+
+3000090={
+	name="Frederick"
+	dynasty=1787072 # Kearsarge
+	dna="ohfdgddemdg"
+	culture=southron
+	religion=evangelical
+	martial=3
+	diplomacy=4
+	stewardship=7
+	intrigue=3
+	learning=3
+	trait=indulgent_wastrel
+	trait=greedy
+	trait=humble
+	trait=lustful
+	2637.10.3={birth=yes}
+	2661.5.19={add_spouse=3000091}
+	2679.10.4={death=yes}
+}
+
+3000091={
+	name="Virginia"
+	female=yes
+	dna="bekdfkfchnb"
+	culture=southron
+	religion=evangelical
+	martial=6
+	diplomacy=2
+	stewardship=2
+	intrigue=4
+	learning=4
+	trait=underhanded_rogue
+	trait=diligent
+	trait=chaste
+	trait=proud
+	trait=stressed
+	2640.12.23={birth=yes}
+	2661.5.19={add_spouse=3000090}
+	2690.8.11={death=yes}
+}
+
+3000092={
+	name="Gwendolyn"
+	female=yes
+	dynasty=1787072
+	dna="bbkdgdfemnf"
+	culture=southron
+	religion=evangelical
+	martial=7
+	diplomacy=7
+	stewardship=5
+	intrigue=3
+	learning=3
+	trait=flamboyant_schemer
+	trait=cruel
+	trait=greedy
+	trait=slothful
+	trait=ambitious
+	trait=twin
+	father=3000090
+	mother=3000091
+	2664.2.22={birth=yes}
+	2721.11.14={death=yes}
+}
+
+3000093={
+	name="Gareth"
+	dynasty=1787072
+	dna="bbkdgdfemnf"
+	culture=southron
+	religion=evangelical
+	martial=8
+	diplomacy=8
+	stewardship=7
+	intrigue=5
+	learning=6
+	trait=flamboyant_schemer
+	trait=honest
+	trait=temperate
+	trait=chaste
+	trait=shy
+	trait=twin
+	trait=just
+	father=3000090
+	mother=3000091
+	2664.2.22={birth=yes}
+	2711.3.20={death=yes}
+}
+
+3000094={
+	name="Joanna"
+	female=yes
+	dna="nmckaehjfnb"
+	culture=southron
+	religion=evangelical
+	martial=4
+	diplomacy=5
+	stewardship=3
+	intrigue=6
+	learning=3
+	trait=underhanded_rogue
+	trait=lustful
+	trait=proud
+	trait=kind
+	trait=greedy
+	trait=craven
+	2588.1.1={birth=yes}
+	2610.4.16={add_spouse=3000095}
+	2665.6.24={death=yes}
+}
+
+3000095={
+	name="Braxton"
+	dynasty=1787073 # Farragut
+	dna="lmiemnbomck"
+	culture=southron
+	religion=evangelical
+	martial=3
+	diplomacy=3
+	stewardship=3
+	intrigue=7
+	learning=1
+	trait=skilled_tactician
+	trait=wroth
+	trait=cruel
+	trait=humble
+	trait=content
+	2591.8.7={birth=yes}
+	2610.4.16={add_spouse=3000094}
+	2646.9.12={death=yes}
+}
+
+3000096={
+	name="Winfield"
+	dynasty=1787073
+	dna="lmifmnhjpnb"
+	culture=southron
+	religion=evangelical
+	martial=4
+	diplomacy=6
+	stewardship=5
+	intrigue=7
+	learning=4
+	trait=thrifty_clerk
+	trait=patient
+	trait=diligent
+	father=3000095
+	mother=3000094
+	2614.7.10={birth=yes}
+	2630.12.21={add_spouse=3000099}
+	2673.1.1={death=yes}
+}
+
+3000097={
+	name="Blanchet"
+	female=yes
+	dynasty=1787073
+	dna="lmieanbjmcb"
+	culture=southron
+	religion=evangelical
+	martial=6
+	diplomacy=3
+	stewardship=5
+	intrigue=8
+	learning=2
+	trait=midas_touched
+	trait=temperate
+	trait=just
+	trait=craven
+	trait=kind
+	father=3000095
+	mother=3000094
+	2615.5.15={birth=yes}
+	2681.4.9={death=yes}
+}
+
+3000098={
+	name="Harriet"
+	female=yes
+	dynasty=1787073
+	dna="lmiemebjmnk"
+	culture=southron
+	religion=evangelical
+	martial=6
+	diplomacy=5
+	stewardship=1
+	intrigue=4
+	learning=5
+	trait=naive_appeaser
+	trait=brave
+	trait=humble
+	trait=kind
+	trait=shy
+	father=3000095
+	mother=3000094
+	2610.8.14={birth=yes}
+	2630.10.2={add_spouse=1861223}
+	2662.1.8={death=yes}
+}
+
+3000099={
+	name="Rhea"
+	female=yes
+	dynasty=1787080
+	dna="kaffedpffej"
+	culture=southron
+	religion=evangelical
+	martial=2
+	diplomacy=3
+	stewardship=4
+	intrigue=3
+	learning=5
+	trait=flamboyant_schemer
+	trait=gregarious
+	trait=diligent
+	2614.10.27={birth=yes}
+	2630.12.21={add_spouse=3000096}
+	2662.11.16={death=yes}
+}
+
+3000100={
+	name="Antigone"
+	female=yes
+	dynasty=1787073
+	dna="afffmdhfpnj"
+	culture=southron
+	religion=evangelical
+	martial=4
+	diplomacy=3
+	stewardship=2
+	intrigue=6
+	learning=4
+	trait=underhanded_rogue
+	trait=chaste
+	trait=depressed
+	father=3000096
+	mother=3000099
+	2633.5.21={birth=yes}
+	2676.10.5={death=yes}
+}
+
+3000101={
+	name="Laurentius"
+	dynasty=1787073
+	dna="lmifedpdpnj"
+	culture=southron
+	religion=evangelical
+	martial=7
+	diplomacy=6
+	stewardship=4
+	intrigue=5
+	learning=7
+	trait=grey_eminence
+	trait=content
+	father=3000096
+	mother=3000099
+	2634.3.15={birth=yes}
+	2651.7.1={add_spouse=1861030}
+	2694.10.11={death=yes}
+}
+
+3000102={
+	name="Elisabeth"
+	female=yes
+	dynasty=1782038
+	culture=southron
+	religion=evangelical
+	martial=1
+	diplomacy=0
+	stewardship=1
+	intrigue=3
+	learning=2
+	trait=underhanded_rogue
+	trait=cruel
+	trait=arbitrary
+	father=3000101
+	mother=1861030
+	2656.1.31={birth=yes}
+	2725.11.21={death=yes}
+}
+
+3000103={
+	name="Percival"
+	dynasty=1787074
+	dna="obmgmhedpfm"
+	culture=southron
+	religion=evangelical
+	martial=5
+	diplomacy=4
+	stewardship=6
+	intrigue=3
+	learning=7
+	trait=brilliant_strategist
+	trait=hunter
+	trait=craven
+	trait=cruel
+	2596.4.1={birth=yes}
+	2618.10.6={add_spouse=3000104}
+	2657.2.23={death=yes}
+}
+
+3000104={
+	name="Alexandra"
+	female=yes
+	dna="giffkblpihp"
+	culture=southron
+	religion=evangelical
+	martial=6
+	diplomacy=3
+	stewardship=3
+	intrigue=6
+	learning=5
+	trait=indulgent_wastrel
+	trait=scholar
+	trait=wroth
+	trait=cynical
+	trait=charitable
+	2598.5.23={birth=yes}
+	2618.10.6={add_spouse=3000103}
+	2654.12.23={death=yes}
+}
+
+3000105={
+	name="Elaine"
+	female=yes
+	dynasty=1787074
+	dna="jifgkblppfm"
+	culture=southron
+	religion=evangelical
+	martial=6
+	diplomacy=4
+	stewardship=4
+	intrigue=7
+	learning=3
+	trait=brilliant_strategist
+	trait=ambitious
+	trait=envious
+	trait=lustful
+	father=3000103
+	mother=3000104
+	2624.5.6={birth=yes}
+	2681.5.12={death=yes}
+}
+
+3000106={
+	name="Pericles"
+	dynasty=1787074
+	dna="gbffmbepphd"
+	culture=southron
+	religion=evangelical
+	martial=1
+	diplomacy=3
+	stewardship=3
+	intrigue=5
+	learning=8
+	trait=fortune_builder
+	trait=humble
+	trait=trusting
+	trait=envious
+	trait=greedy
+	father=3000103
+	mother=3000104
+	2627.8.16={birth=yes}
+	2644.6.29={add_spouse=3000108}
+	2669.4.7={death=yes}
+}
+
+3000107={
+	name="Clover"
+	female=yes
+	dynasty=1787074
+	dna="obffkhedihf"
+	culture=southron
+	religion=evangelical
+	martial=4
+	diplomacy=4
+	stewardship=8
+	intrigue=3
+	learning=4
+	trait=skilled_tactician
+	trait=greedy
+	trait=proud
+	trait=patient
+	trait=paranoid
+	father=3000103
+	mother=3000104
+	2629.11.19={birth=yes}
+	2681.11.21={death=yes}
+}
+
+3000108={
+	name="Harriet"
+	female=yes
+	dna="bpnpkmdmhpp"
+	culture=southron
+	religion=evangelical
+	martial=7
+	diplomacy=4
+	stewardship=6
+	intrigue=6
+	learning=2
+	trait=brilliant_strategist
+	trait=gardener
+	trait=gregarious
+	trait=craven
+	trait=paranoid
+	2623.12.9={birth=yes}
+	2644.6.29={add_spouse=3000106}
+	2692.8.19={death=yes}
+}
+
+3000109={
+	name="Lucilla"
+	female=yes
+	dynasty=1787074
+	dna="gbhfmkeppho"
+	culture=southron
+	religion=evangelical
+	martial=7
+	diplomacy=0
+	stewardship=1
+	intrigue=1
+	learning=4
+	trait=tough_soldier
+	trait=wroth
+	trait=just
+	trait=lustful
+	trait=envious
+	father=3000106
+	mother=3000108
+	2647.4.4={birth=yes}
+	2703.5.30={death=yes}
+}
+
+3000110={
+	name="Marcellus"
+	dynasty=1787074
+	dna="bpnpmkepkpp"
+	culture=southron
+	religion=evangelical
+	martial=2
+	diplomacy=5
+	stewardship=4
+	intrigue=3
+	learning=3
+	trait=underhanded_rogue
+	trait=cruel
+	trait=cynical
+	trait=charitable
+	father=3000106
+	mother=3000108
+	2648.12.14={birth=yes}
+	2708.7.19={death=yes}
+}
+
+1861083={
+	name="Harvey"
+	dynasty=1787068
+	martial=4
+	diplomacy=5
+	intrigue=5
+	stewardship=4
+	learning=7
+	trait=gluttonous
+	trait=zealous
+	trait=detached_priest
+	culture=dixie
+	religion=evangelical
+	2630.1.1={birth=yes}
+	2700.1.1={death=yes}
+}
+
+1861084={
+	name="Jubal"
+	dynasty=1836025
+	martial=5
+	diplomacy=8
+	intrigue=5
+	stewardship=6
+	learning=5
+	culture=ozark
+	religion=catholic
+	trait=gregarious
+	trait=sympathy_pagans
+	trait=lustful
+	trait=charitable
+	trait=grey_eminence
+	father=1821041
+	2624.8.19={birth=yes}
+	2700.1.1={death=yes}
+}
+
+1861085={
+	name="Corbin"
+	dynasty=1787075
+	martial=5
+	diplomacy=4
+	intrigue=3
+	stewardship=6
+	learning=7
+	trait=kind
+	culture=dixie
+	religion=catholic
+	trait=sympathy_pagans
+	2630.1.1={birth=yes}
+	2700.1.1={death=yes}
+}
+
+1861086={#Last scion of the Royall dynasty
+	name="Orpheus"
+	dynasty=1782000 # Royall
+	martial=2
+	diplomacy=3
+	intrigue=5
+	stewardship=2
+	learning=4
+	trait=musician
+	trait=honest
+	trait=proud
+	trait=just
+	trait=kind
+	trait=diligent
+	trait=underhanded_rogue
+	trait=ram_hcc
+	trait=knight
+	culture=tuskegean
+	religion=evangelical
+	father=1861132 # Alexander II Royall
+	mother=1861052
+	2646.1.1={birth=yes
+		culture=southron
+	}
+	2700.1.1={death=yes}
+}
+
+1861087={
+	name="Mohomet"
+	dynasty=1826034
+	culture=gullah
+	religion=evangelical
+	2581.1.1={birth=yes}
+	2600.1.1={add_spouse=1861088}
+	2639.1.1={death=yes}
+}
+
+1861088={
+	name="Cornelia"
+	female=yes
+	culture=gullah
+	religion=evangelical
+	2579.1.1={birth=yes}
+	2670.1.1={death=yes}
+}
+
+1861089={
+	name="Osman"
+	father=1861087
+	mother=1861088
+	dynasty=1826034
+	martial=6
+	diplomacy=7
+	intrigue=5
+	stewardship=4
+	learning=5
+	trait=content
+	trait=patient
+	trait=gregarious
+	trait=twin
+	culture=gullah
+	religion=evangelical
+	2603.1.1={birth=yes}
+	2627.1.1={add_spouse=1861094}
+	2630.1.1={religion=evangelical}
+	2680.1.1={death=yes}
+}
+
+1861090={
+	name="Dosar"
+	father=1861087
+	mother=1861088
+	dynasty=1826034
+	culture=gullah
+	religion=evangelical
+	2606.1.1={birth=yes}
+	2661.1.1={death=yes}
+}
+
+1861091={
+	name="Althea"
+	female=yes
+	father=1861087
+	mother=1861088
+	dynasty=1826034
+	martial=4
+	diplomacy=8
+	intrigue=6
+	stewardship=5
+	learning=6
+	trait=grey_eminence
+	culture=gullah
+	religion=evangelical
+	2607.1.1={birth=yes}
+	2680.1.1={death=yes}
+}
+
+1861092={
+	name="Crissy"
+	female=yes
+	father=1861087
+	mother=1861088
+	dynasty=1826034
+	culture=gullah
+	religion=evangelical
+	2608.1.1={birth=yes}
+	2680.1.1={death=yes}
+}
+
+1861093={
+	name="Eulis"
+	father=1861087
+	mother=1861088
+	dynasty=1826034
+	martial=6
+	diplomacy=7
+	intrigue=5
+	stewardship=4
+	learning=5
+	trait=content
+	trait=patient
+	trait=gregarious
+	trait=twin
+	culture=gullah
+	religion=evangelical
+	2603.1.1={birth=yes}
+	2680.1.1={death=yes}
+}
+
+1861094={
+	name="Mae"
+	female=yes
+	martial=3
+	diplomacy=5
+	intrigue=7
+	stewardship=6
+	learning=6
+	trait=humble
+	trait=kind
+	trait=zealous
+	trait=intricate_webweaver
+	culture=gullah
+	religion=evangelical
+	2609.1.1={birth=yes}
+	2700.1.1={death=yes}
+}
+
+1861095={
+	name="Mohomet"
+	father=1861089
+	mother=1861094
+	dynasty=1826034
+	martial=4
+	diplomacy=5
+	intrigue=6
+	stewardship=8
+	learning=7
+	trait=charitable
+	trait=shy
+	trait=thrifty_clerk
+	culture=gullah
+	religion=evangelical
+	2628.1.1={birth=yes}
+	2680.1.1={death=yes}
+}
+
+1861096={
+	name="Benjermun"
+	father=1861089
+	mother=1861094
+	dynasty=1826034
+	culture=gullah
+	religion=evangelical
+	2630.1.1={birth=yes}
+	2680.1.1={death=yes}
+}
+
+1861097={
+	name="Antigone"
+	female=yes
+	culture=southron
+	religion=evangelical
+	2612.2.25={birth=yes}
+	2628.9.7={add_spouse=1861032}
+	2654.3.2={death=yes}
+}
+
+1861098={
+	name="Raynault"
+	culture=southron
+	religion=evangelical
+	dynasty=1782056 # Leatherneck
+	father=1861032
+	mother=1861097
+	diplomacy=5
+	martial=7
+	stewardship=5
+	intrigue=3
+	learning=4
+	trait=skilled_tactician
+	trait=organizer
+	trait=wroth
+	trait=gregarious
+	trait=brave
+	trait=cruel
+	2630.1.12={birth=yes}
+	2670.3.3={death=yes}
+}
+
+1861101={
+	name="Violet"
+	female=yes
+	dynasty=1782056 # Leatherneck
+	father=1861032
+	mother=1861097
+	dna="pjehffoblge"
+	culture=southron
+	religion=evangelical
+	martial=6
+	diplomacy=6
+	stewardship=5
+	intrigue=6
+	learning=4
+	trait=elusive_shadow
+	trait=ambitious
+	trait=deceitful
+	trait=brave
+	trait=diligent
+	2628.12.6={birth=yes}
+	2647.6.7={add_spouse=1861024}
+	2661.3.3={add_spouse=1861075}
+	2688.6.26={death=yes}
+}
+
+1861102={
+	name="Jocasta"
+	female=yes
+	dynasty=1782001 # Bagley
+	dna="ijohcfcklln"
+	culture=southron
+	religion=evangelical
+	martial=4
+	diplomacy=5
+	stewardship=4
+	intrigue=7
+	learning=4
+	trait=naive_appeaser
+	trait=patient
+	trait=brave
+	trait=kind
+	trait=gregarious
+	father=1861024
+	mother=1861101
+	2648.4.12={birth=yes}
+	2701.8.14={death=yes}
+}
+
+1861103={
+	name="Julia"
+	female=yes
+	dynasty=1782001 # Bagley
+	dna="piohciofcle"
+	culture=southron
+	religion=evangelical
+	martial=1
+	diplomacy=6
+	stewardship=2
+	intrigue=4
+	learning=4
+	trait=charismatic_negotiator
+	trait=ambitious
+	trait=humble
+	trait=cruel
+	trait=diligent
+	father=1861024
+	mother=1861101
+	2649.5.7={birth=yes}
+	2666.1.1={add_spouse=3000076}
+	2692.9.7={death=yes}
+}
+
+1861104={
+	name="Octavian"
+	dynasty=1782001 # Bagley
+	dna="ojolcfgblln"
+	culture=southron
+	religion=evangelical
+	martial=3
+	diplomacy=5
+	stewardship=4
+	intrigue=4
+	learning=7
+	trait=charismatic_negotiator
+	trait=impaler
+	trait=charitable
+	trait=ambitious
+	trait=diligent
+	trait=ram_hcc
+	trait=knight
+	father=1861024
+	mother=1861101
+	2649.12.18={birth=yes}
+	2665.1.1={effect={add_rival=1861001}} # Emperor Algernon
+	2700.3.29={death=yes}
+}
+
+1861105={
+	name="Plato"
+	dynasty=1782001 # Bagley
+	dna="iillfffkage"
+	culture=southron
+	religion=evangelical
+	martial=1
+	diplomacy=4
+	stewardship=2
+	intrigue=7
+	learning=5
+	trait=midas_touched
+	trait=patient
+	trait=honest
+	trait=lustful
+	father=1861024
+	mother=1861101
+	2653.3.3={birth=yes}
+	2717.1.23={death=yes}
+}
+
+1866106={
+	name="Cornelia"
+	female=yes
+	dynasty=1782046
+	culture=southron
+	religion=evangelical
+	father=1861075
+	mother=1861101
+	2665.1.2={birth=yes}
+	2750.2.22={death=yes}
+}
+
+1866107={
+	name="Joshua"
+	dynasty=1787026
+	dna="camamdpaicf"
+	culture=dixie
+	religion=catholic
+	martial=2
+	diplomacy=2
+	stewardship=6
+	intrigue=3
+	learning=2
+	trait=elusive_shadow
+	trait=cruel
+	trait=honest
+	trait=shy
+	father=1821043
+	2642.1.20={birth=yes}
+	2708.12.9={death=yes}
+}
+
+1866108={
+	name="Booker"
+	dna="khgpoaoghaf"
+	culture=tuskegean
+	religion=revelationist
+	martial=2
+	diplomacy=4
+	stewardship=4
+	intrigue=3
+	learning=2
+	trait=indulgent_wastrel
+	trait=cynical
+	trait=kind
+	trait=ambitious
+	trait=craven
+	trait=humble
+	2636.1.1={birth=yes}
+	2654.6.4={add_spouse=1866109}
+	2694.5.7={death=yes}
+}
+
+1866109={
+	name="Violet"
+	dynasty=1785001
+	female=yes
+	dna="bagdkipkbkn"
+	culture=tuskegean
+	religion=revelationist
+	martial=5
+	diplomacy=2
+	stewardship=2
+	intrigue=3
+	learning=2
+	father=1861431
+	trait=indulgent_wastrel
+	trait=craven
+	trait=arbitrary
+	trait=proud
+	trait=ambitious
+	2636.5.31={birth=yes}
+	2654.6.4={
+		effect={
+			set_character_flag=recieved_royal_marriage_aid_duty
+			spouse={
+				set_character_flag=recieved_royal_marriage_aid_duty
+				remove_spouse=spouse
+				add_spouse_matrilineal=ROOT
+				clr_character_flag=recieved_royal_marriage_aid_duty
+			}
+			clr_character_flag=recieved_royal_marriage_aid_duty
+		}
+	}
+	2701.8.31={death=yes}
+}
+
+1866110={
+	name="Eula"
+	female=yes
+	dynasty=1785001
+	dna="bjgpkapghkp"
+	culture=tuskegean
+	religion=revelationist
+	martial=4
+	diplomacy=1
+	stewardship=5
+	intrigue=4
+	learning=2
+	trait=midas_touched
+	trait=diligent
+	father=1866108
+	mother=1866109
+	2658.4.7={birth=yes}
+	2714.2.16={death=yes}
+}
+
+1866111={
+	name="Tyrone"
+	dynasty=1785001
+	dna="bagloaogbaf"
+	culture=tuskegean
+	religion=revelationist
+	martial=4
+	diplomacy=1
+	stewardship=3
+	intrigue=8
+	learning=4
+	trait=grey_eminence
+	trait=lustful
+	trait=ambitious
+	trait=zealous
+	father=1866108
+	mother=1866109
+	2660.2.4={birth=yes}
+	2711.11.17={death=yes}
+}
+
+1861106={
+	name="Calhoun"
+	dynasty=1782005 # Dandridge
+	culture=southron
+	religion=americanist
+	father=666107
+	2501.4.27={birth=yes}
+	2573.2.20={death=yes}
+}
+
+1861107={
+	name="Marcus"
+	dynasty=1782005 # Dandridge
+	culture=southron
+	religion=americanist
+	father=1861106
+	2526.6.26={birth=yes}
+	2596.10.16={death=yes}
+}
+
+1861108={
+	name="Calhoun"
+	dynasty=1782005 # Dandridge
+	culture=southron
+	religion=americanist
+	father=1861107 
+	2551.5.24={birth=yes}
+	2619.10.6={death=yes}
+}
+
+1861109={
+	name="Hannibal"
+	dynasty=1782005 # Dandridge
+	culture=southron
+	religion=americanist
+	father=1861107 
+	2559.7.24={birth=yes}
+	2624.1.10={death=yes}
+}
+
+1861110={
+	name="Beatrice"
+	female=yes
+	dynasty=1782005 # Dandridge
+	culture=southron
+	religion=americanist
+	father=1861109
+	2592.12.6={birth=yes}
+	2640.9.15={death=yes}
+}
+
+1861111={
+	name="William"
+	dynasty=1782054 #Graham
+	culture=southron
+	religion=evangelical
+	martial=3
+	diplomacy=7
+	stewardship=3
+	intrigue=5
+	learning=7
+	trait=scholarly_theologian
+	trait=zealous
+	trait=ambitious
+	2618.11.7={birth=yes}
+}
+
+1861112={
+	name="Antipas"
+	dynasty=1787078 #Pratchet
+	culture=dixie
+	religion=evangelical
+	father=1861346
+	martial=2
+	diplomacy=6
+	stewardship=3
+	intrigue=9
+	learning=9
+	trait=charismatic_negotiator
+	trait=slothful
+	trait=ambitious
+	trait=trusting
+	trait=erudite
+	2638.9.14={birth=yes}
+	2658.1.1={add_spouse=1861377}
+}
+
+1861113={#Count of Deepstep
+	name="Stephanus"
+	dynasty=1785019 #Gee
+	father=1861236
+	culture=tuskegean
+	religion=evangelical
+	martial=7
+	diplomacy=1
+	stewardship=1
+	intrigue=3
+	learning=9
+	trait=flamboyant_schemer
+	trait=craven
+	trait=slothful
+	trait=humble
+	2638.7.1={birth=yes}
+}
+
+1861114={#Count of Oconee
+	name="Samuel"
+	dynasty=1785027 #Bevel
+	culture=tuskegean
+	religion=evangelical
+	martial=1
+	diplomacy=3
+	stewardship=8
+	intrigue=6
+	learning=8
+	trait=misguided_warrior
+	trait=cruel
+	trait=erudite
+	trait=lustful
+	trait=paranoid
+	2631.6.18={birth=yes}
+}
+
+1861115={#Count of Dardanelle
+	name="Johnny"
+	dynasty=1836024 #Digger
+	culture=ozark
+	religion=catholic
+	diplomacy=1
+	martial=8
+	stewardship=2
+	intrigue=7
+	learning=5
+	trait=tough_soldier
+	trait=brave
+	trait=patient
+	trait=diligent
+	trait=honest
+	father=1821090
+	2639.6.14={birth=yes}
+	2661.1.1={add_spouse=1861124}
+}
+
+1861116={#Count of Chicot
+	name="Walter"
+	dynasty=1787079
+	culture=tuskegean
+	religion=catholic
+	diplomacy=7
+	martial=5
+	stewardship=1
+	intrigue=9
+	learning=3
+	trait=charismatic_negotiator
+	trait=content
+	trait=humble
+	trait=temperate
+	trait=cruel
+	2630.9.7={birth=yes}
+}
+
+1861117={#Count of Crowley
+	name=Philius
+	culture=riverlander
+	religion=catholic
+	diplomacy=0
+	martial=5
+	stewardship=9
+	intrigue=6
+	learning=2
+	trait=martial_cleric
+	trait=wroth
+	trait=cruel
+	trait=gregarious
+	trait=content
+	mother=1821070
+	dynasty=1791061
+	2629.9.29={birth=yes}
+}
+
+1861118={#Father of both Counts in Choctaw
+	name=Lamar
+	dynasty=1785030 #Jackson
+	culture=tuskegean
+	religion=evangelical
+	diplomacy=7
+	martial=3
+	stewardship=7
+	intrigue=5
+	learning=4
+	trait=intricate_webweaver
+	trait=cynical
+	trait=wroth
+	trait=stubborn
+	2575.7.29={birth=yes}
+	2657.10.8={death=yes}
+}
+
+1861119={#Count of Meridian
+	name=Lamar
+	dynasty=1785030 #Jackson
+	culture=tuskegean
+	religion=evangelical
+	diplomacy=9
+	martial=2
+	stewardship=9
+	intrigue=3
+	learning=5
+	trait=flamboyant_schemer
+	trait=diligent
+	trait=ambitious
+	trait=lustful
+	trait=stubborn
+	father=1861118
+	2637.10.18={birth=yes}
+	2657.10.18={add_claim=c_jackson}
+}
+
+1861120={#Count of Jackson
+	name="Claudius"
+	dynasty=1785030
+	culture=tuskegean
+	religion=evangelical
+	martial=6
+	diplomacy=7
+	stewardship=8
+	intrigue=7
+	learning=4
+	trait=intricate_webweaver
+	trait=diligent
+	trait=ambitious
+	trait=wroth
+	trait=trusting
+	father=1861118
+	2640.9.18={birth=yes}
+	2657.10.18={add_claim=c_meridian}
+}
+
+1861121={#Count of Kosciusko
+	name="Tadeusz"
+	dynasty=1789017 #Kosciusko
+	culture=chicagoan
+	religion=catholic
+	martial=7
+	diplomacy=4
+	stewardship=6
+	intrigue=4
+	learning=6
+	trait=brilliant_strategist
+	trait=brave
+	trait=proud
+	trait=kind
+	2646.2.4={birth=yes}
+}
+
+1861122={#Count of Yalobusha
+	name="Marlo"
+	culture=tuskegean
+	religion=evangelical
+	martial=7
+	diplomacy=3
+	stewardship=9
+	intrigue=4
+	learning=9
+	trait=detached_priest
+	trait=charitable
+	trait=zealous
+	trait=deceitful
+	trait=stubborn
+	2629.3.29={birth=yes}
+}
+
+1861123={#Count of Conecuh
+	name="Micco"
+	dynasty=1491301
+	culture=muscogee
+	religion=evangelical
+	2641.2.14={birth=yes}
+}
+
+1861124={
+	name="Matilda"
+	female=yes
+	culture=ozark
+	religion=catholic
+	2641.6.15={birth=yes}
+	2661.1.1={add_spouse=1861115}
+}
+
+1861125={
+	name="Raleigh"
+	dynasty=1791025
+	culture=riverlander
+	religion=catholic
+	diplomacy=4
+	martial=3
+	stewardship=2
+	intrigue=5
+	learning=6
+	trait=flamboyant_schemer
+	trait=shy
+	trait=cynical
+	trait=gluttonous
+	trait=cruel
+	2635.11.20={birth=yes}
+}
+
+1861126={
+	name="Samuel"
+	dynasty=1782000 # Royall
+	culture=tuskegean
+	religion=evangelical
+	father=1861011 # Samuel I Royall
+	trait=twin
+	2465.1.1={birth=yes
+		culture=southron
+	}
+	2520.1.1={death=yes}
+}
+
+1861127={
+	name="Alexander"
+	dynasty=1782000 # Royall
+	culture=tuskegean
+	religion=evangelical
+	father=1861126 # Ulixes Royall
+	2492.3.5={birth=yes
+		culture=southron
+	}
+	2539.5.22={death=yes}
+}
+
+1861128={
+	name="Samuel"
+	dynasty=1782000 # Royall
+	culture=tuskegean
+	religion=evangelical
+	father=1861127 # Alexander I Royall
+	2512.5.3={birth=yes
+		culture=southron
+	}
+	2566.5.23={death=yes}
+}
+
+1861129={
+	name="Alexander"
+	dynasty=1782000 # Royall
+	culture=tuskegean
+	religion=evangelical
+	father=1861128 # Samuel III Royall
+	2538.1.1={birth=yes
+		culture=southron
+	}
+	2591.1.1={death=yes}
+}
+
+1861130={
+	name="Alexander"
+	dynasty=1782000 # Royall
+	culture=tuskegean
+	religion=evangelical
+	father=1861129 # Alexander II Royall
+	2561.1.1={birth=yes
+		culture=southron
+	}
+	2619.1.1={death=yes}
+}
+
+1861131={
+	name="Alexander"
+	dynasty=1782000 # Royall
+	culture=tuskegean
+	religion=evangelical
+	father=1861130 # Alexander II Royall
+	2584.1.1={birth=yes
+		culture=southron
+	}
+	2640.1.1={death=yes}
+}
+
+1861132={
+	name="Orpheus"
+	dynasty=1782000 # Royall
+	culture=tuskegean
+	religion=evangelical
+	father=1861131 # Alexander II Royall
+	2610.1.1={birth=yes
+		culture=southron
+	}
+	2641.1.1={add_spouse=1861052}
+	2664.1.1={death=yes}
+}
+
+1861998={
+	name="Owain"
+	# AKA: Owain ap Gruffydd
+	dynasty=2015045 #Aberffraw
+	culture=gwladfeg
+	occluded=yes
+	religion=catholic
+	trait=legendary
+	trait=skilled_tactician
+	trait=lustful
+	1100.1.1={birth=yes}
+	1169.11.1={death=yes}
+}
+
+1861999={#Madoc ab Owain Gwynedd, first Duke of Mobile
+	name="Madoc"
+	dynasty=2015045 #Aberffraw
+	culture=gwladfeg
+	occluded=yes
+	religion=catholic
+	trait=charismatic_negotiator
+	trait=bastard
+	trait=legendary
+	trait=ambitious
+	father=1861998
+	1150.1.1={birth=yes}
+	1186.1.1={death={death_reason=death_missing}}
+}
+
+1862000={#Eleanore, wife of Leonidas
+	name="Eleanore"
+	dynasty=1782055 #Findlay
+	father=1862001
+	female=yes
+	culture=southron
+	religion=evangelical
+	trait=charismatic_negotiator
+	trait=diligent
+	trait=just
+	trait=stubborn
+	trait=ambitious
+	2331.1.1={birth=yes}
+	2347.1.1={add_spouse=1861002}# Leonidas I
+	2377.1.1={death=yes}
+}
+
+1862001={
+	name="Jerome"
+	dynasty=1782055 #Findlay
+	culture=southron
+	religion=evangelical
+	trait=underhanded_rogue
+	trait=brave
+	trait=just
+	trait=content
+	trait=diligent
+	2300.1.1={birth=yes}
+	2347.8.1={death={
+			death_reason=death_execution_crucifixion
+			killer=1862004
+		}
+	}
+}
+
+1862002={
+	name="Jeremy"
+	dynasty=1782055 #Findlay
+	father=1862001
+	culture=southron
+	religion=evangelical
+	2331.1.1={birth=yes}
+	2347.8.1={death={
+			death_reason=death_execution_crucifixion
+			killer=1862004
+		}
+	}
+}
+
+1862003={
+	name="Johnathan"
+	dynasty=1782055 #Findlay
+	father=1862001
+	culture=southron
+	religion=evangelical
+	2331.1.1={birth=yes}
+	2347.8.1={death={
+			death_reason=death_execution_crucifixion
+			killer=1862004
+		}
+	}
+}
+
+1862004={
+	name="Hardin"
+	dynasty=1787087 #Titus
+	culture=southron
+	religion=evangelical
+	trait=tough_soldier
+	trait=cruel
+	trait=impaler
+	trait=envious
+	2301.1.1={birth=yes}
+	2348.3.3={death={
+			death_reason=death_battle_duel
+			killer=1861002
+		}
+	}
+}
+
+###CIVILWARTWO
+1861133={
+	name="Vernon" # Vernon Yelverton
+	dynasty=1782004 # Yelverton
+	culture=dixie
+	religion=evangelical
+	father=1861010 # Preston I Yelverton
+	trait=zealous	
+	trait=cruel
+	trait=brave
+	trait=ambitious
+	trait=diligent
+	trait=skilled_tactician
+	trait=knight
+	2485.1.1={birth=yes}
+	2507.11.24={death={
+			death_reason=death_battle
+			killer=1861011
+		}
+	}
+}
+1861134={
+	name="Robbie" # Robbie Yelverton
+	dynasty=1782004 # Yelverton
+	culture=dixie
+	religion=evangelical
+	father=1861009 # Atticus II Yelverton
+	2467.1.1={birth=yes}
+	2504.3.18={death={
+			death_reason=death_execution_hanging
+			killer=1861011
+		}
+	}
+}
+1861135={
+	name="Atticus" # Atticus Yelverton
+	dynasty=1782004 # Yelverton
+	culture=dixie
+	religion=evangelical
+	father=1861009 # Atticus II Yelverton
+	2469.1.1={birth=yes}
+	2504.3.18={death={
+			death_reason=death_battle
+			killer=1861011
+		}
+	}
+}
+1861136={
+	name="Lee" # Lee Yelverton
+	dynasty=1782004 # Yelverton
+	culture=dixie
+	religion=evangelical
+	father=1861134 # Robbie Yelverton
+	2484.1.1={birth=yes}
+	2504.3.18={death={
+			death_reason=death_execution_hanging
+			killer=1861011
+		}
+	}
+}
+1861137={
+	name="Hylan" # Hylan Yelverton
+	dynasty=1782004 # Yelverton
+	culture=dixie
+	religion=evangelical
+	father=1861134 # Robbie Yelverton
+	2490.1.1={birth=yes}
+	2507.11.24={death={
+			death_reason=death_battle
+			killer=1861011
+		}
+	}
+}
+1861138={
+	name="Larry" 
+	dynasty=1782004 # Yelverton
+	culture=dixie
+	religion=evangelical
+	father=1861135 # Atticus Yelverton
+	2495.1.1={birth=yes}
+	2505.1.1={death={
+			death_reason=death_execution_beheading
+			killer=1861200
+		}
+	}
+}
+1861139={
+	name="Preston" # Preston Yelverton
+	dynasty=1782004 # Yelverton
+	culture=dixie
+	religion=evangelical
+	father=1861136 # Lee Yelverton
+	2502.1.1={birth=yes}
+	2505.1.1={death={
+			death_reason=death_execution_beheading
+			killer=1861200
+		}
+	}
+}
+1861140={
+	name="Leonidas"
+	dynasty=1782000 # Royall
+	culture=tuskegean
+	religion=evangelical
+	father=1861011 # Samuel I Royall
+	trait=twin
+	2465.1.1={birth=yes
+		culture=southron
+	}
+	2504.3.18={death={
+			death_reason=death_battle
+			killer=1861133
+		}
+	}
+}
+1861141={
+	name="Lysander"
+	dynasty=1782000 # Royall
+	culture=tuskegean
+	religion=evangelical
+	father=1861140 # Leonidas Royall
+	2485.1.1={birth=yes
+		culture=southron
+	}
+	2509.1.1={death={
+			death_reason=death_battle
+			killer=1861245
+		}
+	}
+}
+1861142={
+	name="Ulixes"
+	dynasty=1782000 # Royall
+	culture=tuskegean
+	religion=evangelical
+	father=1861126 # Samuel II Royall
+	2487.1.1={birth=yes
+		culture=southron
+	}
+	2507.11.24={death={
+			death_reason=death_battle
+			killer=1863000
+		}
+	}
+}
+
+1861150={
+	name="Adam"
+	dynasty=1787008 # Frymore
+	culture=dixie
+	religion=evangelical
+	diplomacy=9
+	stewardship=1
+	trait=quick
+	trait=diligent
+	trait=humble
+	trait=kind
+	trait=erudite
+	trait=naive_appeaser
+	2480.7.3={birth=yes}
+	2509.1.1={add_spouse=1861156}
+	2565.1.1={death=yes}
+}
+1861151={
+	name="Avery"
+	dynasty=1787008 # Frymore
+	culture=dixie
+	religion=evangelical
+	father=1861150
+	mother=1861156
+	2511.1.1={birth=yes}
+	2571.1.1={death=yes}
+}
+1861152={
+	name="Leon"
+	dynasty=1787008 # Frymore
+	culture=dixie
+	religion=evangelical
+	father=1861151
+	2534.1.1={birth=yes}
+	2586.1.1={death=yes}
+}
+1861153={
+	name="Adam"
+	dynasty=1787008 # Frymore
+	culture=dixie
+	religion=evangelical
+	father=1861152
+	2555.1.1={birth=yes}
+	2601.1.1={death=yes}
+}
+1861154={
+	name="John"
+	dynasty=1787008 # Frymore
+	culture=dixie
+	religion=evangelical
+	father=1861153
+	2573.1.1={birth=yes}
+	2635.1.1={death=yes}
+}
+1861155={
+	name="Uriah"
+	dynasty=1787008 # Frymore
+	culture=dixie
+	religion=evangelical
+	father=1861154
+	2592.1.1={birth=yes}
+	2645.1.1={death=yes}
+}
+1861156={
+	name="Sarah"
+	female=yes
+	culture=southron
+	religion=evangelical
+	trait=fair
+	trait=erudite
+	2481.1.1={birth=yes}
+	2560.1.1={death=yes}
+}
+1861157={
+	name="Adam"
+	dynasty=1787008 # Frymore
+	culture=dixie
+	religion=evangelical
+	father=1861058
+	trait=ambitious
+	trait=patient
+	trait=temperate
+	trait=thrifty_clerk
+	2641.1.1={birth=yes}
+	2700.1.1={death=yes}
+}
+1861158={
+	name="Leon"
+	dynasty=1787008 # Frymore
+	culture=dixie
+	religion=evangelical
+	father=1861058
+	trait=gluttonous
+	trait=trusting
+	trait=content
+	trait=thrifty_clerk
+	2643.1.1={birth=yes}
+	2700.1.1={death=yes}
+}
+1861159={
+	name="Carolina"
+	female=yes 
+	dynasty=1787008 # Frymore
+	culture=dixie
+	religion=evangelical
+	father=1861058
+	trait=trusting
+	2646.1.1={birth=yes}
+	2700.1.1={death=yes}
+}
+1861160={
+	name="Cronus"
+	dynasty=1782058 # Oakheart
+	culture=southron
+	religion=evangelical
+	trait=deceitful
+	trait=brave
+	trait=amateurish_plotter
+	2470.1.1={birth=yes}
+	2525.1.1={death=yes}
+}
+1861161={
+	name="Arys"
+	dynasty=1782058 # Oakheart
+	culture=southron
+	religion=evangelical
+	father=1861160
+	trait=lustful
+	trait=brave
+	trait=wroth
+	2498.1.1={birth=yes}
+	2555.1.1={death=yes}
+}
+1861162={
+	name="John"
+	dynasty=1782058 # Oakheart
+	culture=southron
+	religion=evangelical
+	father=1861161
+	2520.1.1={birth=yes}
+	2570.1.1={death=yes}
+}
+1861163={
+	name="Gawain"
+	dynasty=1782058 # Oakheart
+	culture=southron
+	religion=evangelical
+	father=1861162
+	2543.1.1={birth=yes}
+	2605.1.1={death=yes}
+}
+1861164={
+	name="William"
+	dynasty=1782058 # Oakheart
+	culture=southron
+	religion=evangelical
+	father=1861163
+	2575.1.1={birth=yes}
+	2629.1.1={death=yes}
+}
+1861165={
+	name="Percival"
+	dynasty=1782058 # Oakheart
+	culture=southron
+	religion=evangelical
+	father=1861164
+	2599.1.1={birth=yes}
+	2645.1.1={death=yes}
+}
+1861166={
+	name="Taylor"
+	dynasty=1787043 # Hampton
+	culture=dixie
+	religion=evangelical
+	2485.1.1={birth=yes}
+	2547.1.1={death=yes}
+}
+1861167={
+	name="Merriman"
+	dynasty=1787043 # Hampton
+	culture=dixie
+	religion=evangelical
+	father=1861166
+	2509.1.1={birth=yes}
+	2561.1.1={death=yes}
+}
+1861168={
+	name="Taylor"
+	dynasty=1787043 # Hampton
+	culture=dixie
+	religion=evangelical
+	father=1861167
+	2530.1.1={birth=yes}
+	2585.1.1={death=yes}
+}
+1861169={
+	name="Justinian"
+	dynasty=1787043 # Hampton
+	culture=dixie
+	religion=evangelical
+	father=1861168
+	2560.1.1={birth=yes}
+	2617.1.1={death=yes}
+}
+1861170={
+	name="Taylor"
+	dynasty=1787043 # Hampton
+	culture=dixie
+	religion=evangelical
+	father=1861169
+	trait=chaste
+	trait=content
+	trait=just
+	2588.1.1={birth=yes}
+	2653.1.1={death=yes}
+}
+1861171={
+	name="Ashley"
+	dynasty=1787043 # Hampton
+	culture=dixie
+	religion=evangelical
+	father=1861169
+	2591.1.1={birth=yes}
+	2648.1.1={death=yes}
+}
+1861172={
+	name="Catesby"
+	dynasty=1787043 # Hampton
+	culture=dixie
+	religion=evangelical
+	father=1861055
+	trait=craven
+	trait=ambitious
+	trait=envious
+	trait=diligent
+	trait=tough_soldier
+	2649.6.11={birth=yes}
+	2700.1.1={death=yes}
+}
+1861174={
+	name="Fred"
+	dynasty=1787013 # Dunwoody
+	culture=dixie
+	religion=evangelical
+	father=3000080
+	2519.9.1={birth=yes}
+	2568.3.19={death=yes}
+}
+1861175={
+	name="Dan" # Dunwoody
+	dynasty=1787013
+	culture=dixie
+	religion=evangelical
+	father=1861174
+	trait=giant
+	trait=brave
+	trait=wroth
+	trait=proud
+	trait=duelist
+	trait=skilled_tactician
+	2545.5.7={birth=yes}
+	2575.12.10={death={
+			death_reason=death_battle
+			killer=3000035
+		}
+	}
+}
+1861176={
+	name="Dwayne" # Dunwoody
+	dynasty=1787013
+	culture=dixie
+	religion=evangelical
+	father=1861175
+	2570.5.25={birth=yes}
+	2648.8.31={death=yes}
+}
+1861180={
+	name="Lucius"
+	dynasty=1785019 # Gee
+	culture=tuskegean
+	religion=evangelical
+	trait=zealous
+	trait=just
+	trait=charitable
+	trait=scholar
+	trait=diligent
+	give_nickname=nick_the_wise
+	2401.1.1={birth=yes}
+	2420.3.10={
+		create_bloodline={
+			type=gee
+			has_dlc="Holy Fury"
+		}
+	}
+	2479.1.1={death=yes}
+}
+1861181={
+	name="Xerxes"
+	dynasty=1785019 # Gee
+	culture=tuskegean
+	religion=evangelical
+	father=1861180
+	2425.1.1={birth=yes}
+	2484.1.1={death=yes}
+}
+1861182={
+	name="Darius"
+	dynasty=1785019 # Gee
+	culture=tuskegean
+	religion=evangelical
+	father=1861181
+	2452.1.1={birth=yes}
+	2502.1.1={death=yes}
+}
+1861183={
+	name="Darius"
+	dynasty=1785019 # Gee
+	culture=tuskegean
+	religion=evangelical
+	father=1861182
+	2473.1.1={birth=yes}
+	2536.1.1={death=yes}
+}
+1861184={
+	name="Scipio"
+	dynasty=1785019 # Gee
+	culture=tuskegean
+	religion=evangelical
+	father=1861183
+	trait=ambitious
+	trait=arbitrary
+	trait=gregarious
+	trait=charitable
+	trait=charismatic_negotiator
+	give_nickname=nick_the_ill_ruler
+	2498.1.1={birth=yes}
+	2564.1.1={death=yes}
+}
+1861185={
+	name="Romulus"
+	dynasty=1785019 # Gee
+	culture=tuskegean
+	religion=evangelical
+	father=1861184
+	2520.1.1={birth=yes}
+	2579.1.1={death=yes}
+}
+1861186={
+	name="Darius"
+	dynasty=1785019 # Gee
+	culture=tuskegean
+	religion=evangelical
+	father=1861185
+	2544.1.1={birth=yes}
+	2608.1.1={death=yes}
+}
+1861187={
+	name="Scipio"
+	dynasty=1785019 # Gee
+	culture=tuskegean
+	religion=evangelical
+	father=1861186
+	2570.1.1={birth=yes}
+	2631.1.1={death=yes}
+}
+1861188={
+	name="Darius"
+	dynasty=1785019 # Gee
+	culture=tuskegean
+	religion=evangelical
+	father=1861187
+	2590.1.1={birth=yes}
+	2643.1.1={death=yes}
+}
+1861200={
+	name="Micah" #Red Micah 
+	dynasty=1787064 # McGillin
+	culture=dixie
+	religion=evangelical
+	trait=cruel	
+	trait=deceitful
+	trait=ambitious
+	trait=brave
+	trait=cynical
+	trait=impaler
+	trait=tough_soldier
+	trait=quick
+	give_nickname=nick_the_red
+	2458.1.8={birth=yes}
+	2517.1.1={death=yes}
+}
+1861201={
+	name="Garrison"
+	dynasty=1787064 # McGillin
+	culture=dixie
+	religion=evangelical
+	father=1861200
+	2482.1.1={birth=yes}
+	2535.1.1={death=yes}
+}
+1861202={
+	name="Tyree"
+	dynasty=1787064 # McGillin
+	culture=dixie
+	religion=evangelical
+	father=1861201
+	2505.1.1={birth=yes}
+	2557.1.1={death=yes}
+}
+1861203={
+	name="Cullen"
+	dynasty=1787064 # McGillin
+	culture=dixie
+	religion=evangelical
+	father=1861202
+	2524.1.1={birth=yes}
+	2589.1.1={death=yes}
+}
+1861204={
+	name="Bushrod"
+	dynasty=1787064 # McGillin
+	culture=dixie
+	religion=evangelical
+	father=1861203
+	trait=brave
+	trait=one_eyed
+	trait=patient
+	trait=just
+	2547.1.1={birth=yes}
+	2608.1.1={death=yes}
+}
+1861205={
+	name="Fontaine"
+	dynasty=1787064 # McGillin
+	culture=dixie
+	religion=evangelical
+	father=1861203
+	trait=brave
+	trait=wroth
+	2551.1.1={birth=yes}
+	2575.12.10={death={
+			death_reason=death_battle
+			killer=3000035
+		}
+	}
+}
+1861206={
+	name="Philander"
+	dynasty=1787064 # McGillin
+	culture=dixie
+	religion=evangelical
+	father=1861204
+	2568.1.1={birth=yes}
+	2626.1.1={death=yes}
+}
+1861207={
+	name="Harry"
+	dynasty=1787064 # McGillin
+	culture=dixie
+	religion=evangelical
+	father=1861206
+	2590.1.1={birth=yes}
+	2638.1.1={death=yes}
+}
+1861208={
+	name="Harley"
+	dynasty=1787064 # McGillin
+	culture=dixie
+	religion=evangelical
+	father=1861207
+	2610.1.1={birth=yes}
+	2661.1.1={death=yes}
+}
+1861209={
+	name="Jeptha"
+	dynasty=1787064 # McGillin
+	culture=dixie
+	religion=evangelical
+	father=1861208
+	trait=wroth
+	trait=honest
+	trait=just
+	trait=brave
+	trait=tough_soldier
+	2643.8.20={birth=yes}
+	2700.1.1={death=yes}
+}
+
+1861210={
+	name="Tarquin"
+	dynasty=1787018 # Cockrell-South
+	culture=dixie
+	religion=evangelical
+	2515.1.1={birth=yes}
+	2564.1.1={death=yes}
+}
+1861211={
+	name="Irvine"
+	dynasty=1787018 # Cockrell-South
+	culture=dixie
+	religion=evangelical
+	father=1861210
+	2536.1.1={birth=yes}
+	2575.12.10={death={
+			death_reason=death_battle
+			killer=3000035
+		}
+	}
+}
+1861212={
+	name="Redding"
+	dynasty=1787018 # Cockrell-South
+	culture=dixie
+	religion=evangelical
+	father=1861211
+	2568.1.1={birth=yes}
+	2623.1.1={death=yes}
+}
+1861213={
+	name="Junius"
+	dynasty=1787018 # Cockrell-South
+	culture=dixie
+	religion=evangelical
+	father=1861212
+	2590.1.1={birth=yes}
+	2642.1.1={death=yes}
+}
+1861214={
+	name="Buford"
+	dynasty=1787018 # Cockrell-South
+	martial=7
+	culture=dixie
+	religion=evangelical
+	father=1861081
+	trait=twin
+	trait=mystic
+	trait=brave
+	trait=humble
+	trait=zealous
+	trait=martial_cleric
+	2647.9.16={birth=yes}
+	2700.1.1={death=yes}
+}
+1861215={
+	name="Hanno"
+	dynasty=1782059 # Quarles
+	culture=southron
+	religion=evangelical
+	2454.1.1={birth=yes}
+	2498.1.1={death=yes}
+}
+1861216={
+	name="Micah" #Black Micah
+	dynasty=1782059 # Quarles
+	culture=southron
+	religion=evangelical
+	father=1861215
+	trait=kind
+	trait=charitable
+	trait=brave
+	trait=diligent
+	trait=strong
+	trait=duelist
+	trait=tough_soldier
+	give_nickname=nick_the_black
+	2478.1.1={birth=yes}
+	2504.3.18={death={
+			death_reason=death_battle
+			killer=1861011
+		}
+	}
+}
+1861217={
+	name="Lowther" 
+	dynasty=1782059 # Quarles
+	culture=southron
+	religion=evangelical
+	father=1861216
+	2500.1.1={birth=yes}
+	2563.1.1={death=yes}
+}
+1861218={
+	name="Micah" 
+	dynasty=1782059 # Quarles
+	culture=southron
+	religion=evangelical
+	father=1861217
+	2522.1.1={birth=yes}
+	2568.1.1={death=yes}
+}
+1861219={
+	name="Otho" 
+	dynasty=1782059 # Quarles
+	culture=southron
+	religion=evangelical
+	father=1861218
+	trait=scurvy
+	2544.1.1={birth=yes}
+	2578.1.1={death=yes}
+}
+1861220={
+	name="Gholson" 
+	dynasty=1782059 # Quarles
+	culture=southron
+	religion=evangelical
+	father=1861218
+	2546.1.1={birth=yes}
+	2596.1.1={death=yes}
+}
+1861221={
+	name="Calbraith" 
+	dynasty=1782059 # Quarles
+	culture=southron
+	religion=evangelical
+	father=1861220
+	2570.1.1={birth=yes}
+	2629.1.1={death=yes}
+}
+1861222={
+	name="Menander" 
+	dynasty=1782059 # Quarles
+	culture=southron
+	religion=evangelical
+	father=1861221
+	2588.1.1={birth=yes}
+	2639.1.1={death=yes}
+}
+1861223={
+	name="Micah" 
+	dynasty=1782059 # Quarles
+	culture=southron
+	religion=evangelical
+	father=1861222
+	2605.9.6={birth=yes}
+	2630.10.2={add_spouse=3000098}
+	2658.1.3={death=yes}
+}
+1861224={
+	name="Stewart"
+	dynasty=1786033 # Rowan
+	culture=tuskegean
+	religion=evangelical
+	2582.3.10={birth=yes}
+	2600.1.1={add_spouse=1861243}
+	2639.12.8={death=yes}
+}
+1861225={
+	name="Wallace"
+	dynasty=1786033 # Rowan
+	culture=tuskegean
+	religion=evangelical
+	father=1861224
+	mother=1861243
+	2610.7.27={birth=yes}
+	2654.8.9={death=yes}
+}
+1861226={
+	name="Martin"
+	dynasty=1787027 # Hillyer
+	culture=tuskegean 
+	religion=evangelical
+	father=1861425
+	2458.1.1={birth=yes}
+	2516.1.1={death=yes}
+}
+1861227={
+	name="Tomlin"
+	dynasty=1787027 # Hillyer
+	culture=tuskegean 
+	religion=evangelical
+	father=1861226
+	2481.1.1={birth=yes}
+	2507.11.24={death={
+			death_reason=death_battle
+			killer=1861133
+		}
+	}
+}
+1861228={
+	name="Malcolm"
+	dynasty=1787027 # Hillyer
+	culture=tuskegean 
+	religion=evangelical
+	father=1861226
+	2485.1.1={birth=yes}
+	2542.1.1={death=yes}
+}
+1861229={
+	name="Denzel"
+	dynasty=1787027 # Hillyer
+	culture=tuskegean 
+	religion=evangelical
+	father=1861226
+	2489.1.1={birth=yes}
+	2507.11.24={death={
+			death_reason=death_battle
+			killer=1861133
+		}
+	}
+}
+1861230={
+	name="Trayvon" # Hillyer
+	dynasty=1787027
+	culture=tuskegean 
+	religion=evangelical
+	father=1861228
+	2511.1.1={birth=yes}
+	2567.1.1={death=yes}
+}
+1861231={
+	name="Amery" # Hillyer
+	dynasty=1787027
+	culture=tuskegean 
+	religion=evangelical
+	father=1861230
+	2540.1.1={birth=yes}
+	2593.1.1={death=yes}
+}
+1861232={
+	name="Reginald" # Hillyer
+	dynasty=1787027
+	culture=tuskegean 
+	religion=evangelical
+	father=1861231
+	2561.1.1={birth=yes}
+	2629.1.1={death=yes}
+}
+1861233={
+	name="Myron" # Hillyer
+	dynasty=1787027
+	culture=tuskegean 
+	religion=evangelical
+	father=1861232
+	2584.1.1={birth=yes}
+	2641.7.12={death=yes}
+}
+1861234={#Count of Deepstep
+	name="Cassius"
+	dynasty=1785019 # Gee
+	culture=tuskegean
+	religion=evangelical
+	father=1861185
+	2548.1.1={birth=yes}
+	2596.1.1={death=yes}
+}
+1861235={#Count of Deepstep
+	name="Lucius"
+	dynasty=1785019 # Gee
+	culture=tuskegean
+	religion=evangelical
+	father=1861234
+	2572.1.1={birth=yes}
+	2626.1.1={death=yes}
+}
+1861236={#Count of Deepstep
+	name="Columbus"
+	dynasty=1785019 # Gee
+	culture=tuskegean
+	religion=evangelical
+	father=1861235
+	2589.1.1={birth=yes}
+	2645.1.1={death=yes}
+}
+1861237={
+	name="Ramesses"
+	dynasty=1785019 # Gee
+	culture=tuskegean
+	religion=evangelical
+	father=1861180
+	2428.1.1={birth=yes}
+	2498.1.1={death=yes}
+}
+1861238={
+	name="Lucius"
+	dynasty=1785019 # Gee
+	culture=tuskegean
+	religion=evangelical
+	father=1861237
+	2450.1.1={birth=yes}
+	2510.1.1={death=yes}
+}
+1861239={
+	name="Lucius"
+	dynasty=1785019 # Gee
+	culture=tuskegean
+	religion=evangelical
+	father=1861238
+	2475.1.1={birth=yes}
+	2530.1.1={death=yes}
+}
+1861240={
+	name="Cato"
+	dynasty=1785019 # Gee
+	culture=tuskegean
+	religion=evangelical
+	father=1861239
+	2500.1.1={birth=yes}
+	2549.1.1={death=yes}
+}
+1861241={
+	name="Hercules"
+	dynasty=1785019 # Gee
+	culture=tuskegean
+	religion=evangelical
+	father=1861240
+	2521.1.1={birth=yes}
+	2584.1.1={death=yes}
+}
+1861242={
+	name="Marcellus"
+	dynasty=1785019 # Gee
+	culture=tuskegean
+	religion=evangelical
+	father=1861241
+	2552.1.1={birth=yes}
+	2603.1.1={death=yes}
+}
+1861243={
+	name="Helen"
+	female=yes
+	dynasty=1785019 # Gee
+	culture=tuskegean
+	religion=evangelical
+	father=1861242
+	2579.1.1={birth=yes}
+	2640.1.1={death=yes}
+}
+1861244={
+	name="Homer"
+	dynasty=1782049 # Somers
+	father=1861009
+	culture=dixie
+	religion=evangelical
+	trait=bastard
+	trait=strong
+	2458.1.1={birth=yes}
+	2519.1.1={death=yes}
+}
+1861245={
+	name="Pompey"
+	dynasty=1782049 # Somers
+	culture=dixie
+	religion=evangelical
+	father=1861244
+	trait=paranoid
+	trait=just
+	trait=ambitious
+	trait=diligent
+	trait=scarred_high
+	trait=deceitful
+	trait=tough_soldier
+	2480.1.1={birth=yes}
+	2535.1.1={death=yes}
+}
+1861246={
+	name="Patrick"
+	dynasty=1782049 # Somers
+	culture=dixie
+	religion=evangelical
+	father=1861245
+	2507.1.1={birth=yes}
+	2559.1.1={death=yes}
+}
+1861247={
+	name="Achilles"
+	dynasty=1782049 # Somers
+	culture=dixie
+	religion=evangelical
+	father=1861246
+	2529.1.1={birth=yes}
+	2571.1.1={death=yes}
+}
+1861248={
+	name="Lamar"
+	dynasty=1782049 # Somers
+	culture=dixie
+	religion=evangelical
+	father=1861247
+	2550.1.1={birth=yes}
+	2604.1.1={death=yes}
+}
+1861249={
+	name="Trajan"
+	dynasty=1782049 # Somers
+	culture=dixie
+	religion=evangelical
+	father=1861248
+	2584.1.1={birth=yes}
+	2638.1.1={death=yes}
+}
+1861250={
+	name="Ralph"
+	dynasty=1782049 # Somers
+	culture=dixie
+	religion=evangelical
+	father=1861249
+	2611.1.1={birth=yes}
+	2630.2.11={add_spouse=1861091}
+	2649.1.1={death=yes}
+}
+1861251={
+	name="Montgomery"
+	dynasty=1782057 # Sutton-Pulley
+	culture=southron
+	religion=evangelical
+	father=1861041
+	mother=1861263
+	trait=cynical
+	trait=gluttonous
+	trait=amateurish_plotter
+	2647.1.1={birth=yes}
+	2700.1.1={death=yes}
+}
+1861252={
+	name="Cleon-Joshua"
+	dynasty=1782057 # Sutton-Pulley
+	culture=southron
+	religion=evangelical
+	trait=zealous
+	trait=temperate
+	trait=brave
+	trait=just
+	trait=humble
+	trait=chaste
+	trait=tough_soldier
+	2470.1.1={birth=yes}
+	2521.1.1={death=yes}
+}
+1861253={
+	name="Orville"
+	dynasty=1782057 # Sutton-Pulley
+	culture=southron
+	religion=evangelical
+	father=1861252
+	2495.1.1={birth=yes}
+	2560.1.1={death=yes}
+}
+1861254={
+	name="Atticus"
+	dynasty=1782057 # Sutton-Pulley
+	culture=southron
+	religion=evangelical
+	father=1861253
+	2516.1.1={birth=yes}
+	2574.1.1={death=yes}
+}
+1861255={
+	name="Wilbur"
+	dynasty=1782057 # Sutton-Pulley
+	culture=southron
+	religion=evangelical
+	father=1861254
+	2540.1.1={birth=yes}
+	2593.1.1={death=yes}
+}
+1861256={
+	name="Medgar"
+	dynasty=1782057 # Sutton-Pulley
+	culture=southron
+	religion=evangelical
+	father=1861255
+	2560.1.1={birth=yes}
+	2614.1.1={death=yes}
+}
+1861257={
+	name="Euergetes"
+	dynasty=1782057 # Sutton-Pulley
+	culture=southron
+	religion=evangelical
+	father=1861256
+	2586.1.1={birth=yes}
+	2644.1.1={death=yes}
+}
+1861258={
+	name="Olympia"
+	female=yes
+	dynasty=1782057 # Sutton-Pulley
+	culture=southron
+	religion=evangelical
+	father=1861041
+	mother=1861263
+	trait=cynical
+	trait=gregarious
+	trait=kind
+	trait=proud
+	2649.1.1={birth=yes}
+	2700.1.1={death=yes}
+}
+1861259={
+	name="Athena"
+	female=yes
+	dynasty=1782057 # Sutton-Pulley
+	culture=southron
+	religion=evangelical
+	father=1861041
+	mother=1861263
+	trait=cynical
+	trait=gregarious
+	trait=lustful
+	trait=proud
+	trait=deceitful
+	trait=amateurish_plotter
+	2650.1.1={birth=yes}
+	2700.1.1={death=yes}
+}
+1861260={
+	name="Coretta"
+	female=yes
+	dynasty=1782057 # Sutton-Pulley
+	culture=southron
+	religion=evangelical
+	father=1861041
+	mother=1861263
+	trait=twin
+	trait=fair
+	2653.1.1={birth=yes}
+	2700.1.1={death=yes}
+}
+1861261={
+	name="Margaret"
+	female=yes
+	dynasty=1782057 # Sutton-Pulley
+	culture=southron
+	religion=evangelical
+	father=1861041
+	mother=1861263
+	trait=twin
+	trait=strong
+	2653.1.1={birth=yes}
+	2700.1.1={death=yes}
+}
+1861262={
+	name="John"
+	dynasty=1782058 # Oakheart
+	culture=southron
+	religion=evangelical
+	father=1861165
+	2618.1.1={birth=yes}
+	2652.1.1={death=yes}
+}
+1861263={
+	name="Mary"
+	female=yes
+	dynasty=1782058 # Oakheart
+	culture=southron
+	religion=evangelical
+	father=1861165
+	trait=scholar
+	trait=diligent
+	trait=erudite
+	trait=charitable
+	trait=honest
+	trait=thrifty_clerk
+	2626.1.1={birth=yes}
+	2700.1.1={death=yes}
+}
+1861264={
+	name="Absalom"
+	dynasty=1782056 # Leatherneck
+	culture=southron
+	religion=evangelical
+	2560.1.1={birth=yes}
+	2615.1.1={death=yes}
+}
+1861265={
+	name="Thomas"
+	dynasty=1782056 # Leatherneck
+	culture=southron
+	religion=evangelical
+	father=1861264
+	2586.1.1={birth=yes}
+	2638.1.1={death=yes}
+}
+1861266={
+	name="Lycurgus"
+	dynasty=1782056 # Leatherneck
+	culture=southron
+	religion=evangelical
+	father=1861265
+	trait=brave
+	trait=duelist
+	2613.1.1={birth=yes}
+	2644.1.1={death={death_reason=death_duel
+		killer=1861041
+		}
+	}
+}
+1861270={
+	name="Davis"
+	dynasty=1782046 # Johnston
+	culture=southron
+	religion=evangelical
+	give_nickname=nick_the_old
+	trait=proud
+	trait=patient
+	2435.1.1={birth=yes}
+	2511.1.1={death=yes}
+}
+1861271={
+	name="Davis"
+	dynasty=1782046 # Johnston
+	culture=southron
+	religion=evangelical
+	give_nickname=nick_the_young
+	father=1861270
+	2463.1.1={birth=yes}
+	2540.1.1={death=yes}
+}
+1861272={
+	name="Euripides"
+	dynasty=1782046 # Johnston
+	culture=southron
+	religion=evangelical
+	father=1861271
+	2485.1.1={birth=yes}
+	2536.1.1={death=yes}
+}
+1861273={
+	name="Vespasian"
+	dynasty=1782046 # Johnston
+	culture=southron
+	religion=evangelical
+	father=1861272
+	2512.1.1={birth=yes}
+	2562.1.1={death=yes}
+}
+1861274={
+	name="Jason"
+	dynasty=1782046 # Johnston
+	culture=southron
+	religion=evangelical
+	father=1861273
+	2533.1.1={birth=yes}
+	2585.1.1={death=yes}
+}
+1861275={
+	name="Titus"
+	dynasty=1782046 # Johnston
+	culture=southron
+	religion=evangelical
+	father=1861274
+	2560.1.1={birth=yes}
+	2609.1.1={death=yes}
+}
+1861276={
+	name="Titus"
+	dynasty=1782046 # Johnston
+	culture=southron
+	religion=evangelical
+	father=1861275
+	2591.1.1={birth=yes}
+	2645.1.1={death=yes}
+}
+1861277={
+	name="Jefferson"
+	dynasty=1782046 # Johnston
+	culture=southron
+	religion=evangelical
+	father=1861276
+	2615.1.1={birth=yes}
+	2659.1.1={death=yes}
+}
+1861280={
+	name="Byron"
+	dynasty=1782044 # Spratt
+	culture=southron
+	religion=evangelical
+	2469.1.1={birth=yes}
+	2504.3.18={death={
+			death_reason=death_battle
+			killer=1861011
+		}
+	}
+}
+1861281={
+	name="Elbert"
+	dynasty=1782044 # Spratt
+	culture=southron
+	religion=evangelical
+	father=1861280
+	2490.1.1={birth=yes}
+	2507.11.24={death={
+			death_reason=death_battle
+			killer=1863000
+		}
+	}
+}
+1861282={
+	name="Overton"
+	dynasty=1782044 # Spratt
+	culture=southron
+	religion=evangelical
+	father=1861280
+	2494.1.1={birth=yes}
+	2555.1.1={death=yes}
+}
+1861283={
+	name="Charlton"
+	dynasty=1782044 # Spratt
+	culture=southron
+	religion=evangelical
+	father=1861282
+	2523.1.1={birth=yes}
+	2579.1.1={death=yes}
+}
+1861284={
+	name="Virgil"
+	dynasty=1782044 # Spratt
+	culture=southron
+	religion=evangelical
+	father=1861283
+	2548.1.1={birth=yes}
+	2600.1.1={death=yes}
+}
+1861285={
+	name="Alton"
+	dynasty=1782044 # Spratt
+	culture=southron
+	religion=evangelical
+	father=1861284
+	2570.1.1={birth=yes}
+	2621.1.1={death=yes}
+}
+1861286={
+	name="Timon"
+	dynasty=1782044 # Spratt
+	culture=southron
+	religion=evangelical
+	father=1861285
+	2595.1.1={birth=yes}
+	2647.1.1={death=yes}
+}
+1861290={
+	name="Arsinoe"
+	female=yes
+	dynasty=1782059 # Quarles
+	culture=southron
+	religion=evangelical
+	father=1861223
+	mother=3000098
+	trait=quick
+	trait=slothful
+	trait=content
+	trait=indulgent_wastrel
+	2650.1.1={birth=yes}
+	2700.1.1={death=yes}
+}
+1861291={
+	name="Demetrius"
+	dynasty=1782059 # Quarles
+	martial=7
+	diplomacy=7
+	intrigue=7
+	stewardship=7
+	learning=7
+	culture=southron
+	religion=evangelical
+	father=1861223
+	mother=3000098
+	trait=craven
+	trait=diligent
+	2654.1.1={birth=yes}
+	2700.1.1={death=yes}
+}
+1861292={
+	name="John"
+	dynasty=1782058 # Oakheart
+	culture=southron
+	religion=evangelical
+	father=1861262
+	2651.1.1={birth=yes}
+	2700.1.1={death=yes}
+}
+1861293={
+	name="James"
+	dynasty=1782058 # Oakheart
+	culture=southron
+	religion=evangelical
+	father=1861165
+	trait=ambitious
+	trait=cruel
+	2627.1.1={birth=yes}
+	2660.2.11={add_spouse=1861295}
+	2700.1.1={death=yes}
+}
+1861294={
+	name="Vernon"
+	dynasty=1782044 # Spratt
+	culture=southron
+	religion=evangelical
+	father=1861073
+	mother=1861376
+	learning=8
+	diplomacy=4
+	stewardship=6
+	trait=erudite
+	trait=scholar
+	trait=martial_cleric
+	trait=quick
+	trait=drunkard
+	trait=arbitrary
+	2639.2.24={birth=yes}
+	2683.4.12={death=yes}
+}
+1861295={
+	name="Anne"
+	female=yes
+	dynasty=1782044 # Spratt
+	culture=southron
+	religion=evangelical
+	father=1861073
+	mother=1861376
+	trait=charismatic_negotiator
+	trait=sturdy
+	trait=kind
+	trait=diligent
+	2641.10.4={birth=yes}
+	2711.10.10={death=yes}
+}
+1861296={
+	name="Hermoine"
+	female=yes
+	dynasty=1782044 # Spratt
+	culture=southron
+	religion=evangelical
+	father=1861073
+	mother=1861376
+	trait=chaste
+	trait=shy
+	trait=fortune_builder
+	2643.4.1={birth=yes}
+	2706.9.23={death=yes}
+}
+1861297={
+	name="Everett"
+	dynasty=1782044 # Spratt
+	culture=southron
+	religion=evangelical
+	father=1861073
+	mother=1861376
+	trait=lustful
+	trait=gregarious
+	trait=brave
+	trait=kind
+	trait=tough_soldier
+	2646.8.17={birth=yes}
+	2665.2.11={add_spouse=1861299}
+	2697.1.4={death=yes}
+}
+1861298={
+	name="Perdiccas"
+	dynasty=1782044 # Spratt
+	culture=southron
+	religion=evangelical
+	father=1861297
+	mother=1861299
+	trait=legit_bastard
+	trait=genius
+	2664.3.13={birth=yes}
+	2686.7.10={death=yes}
+}
+1861299={
+	name="Delilah"
+	female=yes
+	culture=southron
+	religion=evangelical
+	trait=fair
+	trait=brave
+	trait=gregarious
+	2644.6.20={birth=yes}
+	2665.2.11={add_spouse=1861297}
+	2702.3.15={death=yes}
+}
+1861300={
+	name="Fitzhugh"
+	dynasty=1782046 # Johnston
+	martial=3
+	diplomacy=3
+	intrigue=9
+	stewardship=9
+	learning=3
+	culture=southron
+	religion=evangelical
+	father=1861277
+	trait=clubfooted
+	trait=envious
+	trait=cynical
+	trait=depressed
+	trait=intricate_webweaver
+	2639.7.21={birth=yes}
+	2701.2.10={death=yes}
+}
+1861301={
+	name="Walter"
+	dynasty=1782060 # Josias
+	culture=southron
+	religion=evangelical
+	father=1861420
+	2466.1.7={birth=yes}
+	2522.3.29={death=yes}
+}
+1861302={
+	name="Benjamin"
+	dynasty=1782060 # Josias
+	culture=southron
+	religion=evangelical
+	father=1861301
+	trait=one_legged
+	2487.3.5={birth=yes}
+	2542.8.24={death=yes}
+}
+1861303={
+	name="Maynard"
+	dynasty=1782060 # Josias
+	culture=southron
+	religion=evangelical
+	father=1861302
+	2510.1.1={birth=yes}
+	2565.1.1={death=yes}
+}
+1861304={
+	name="Benjamin"
+	dynasty=1782060 # Josias
+	culture=southron
+	religion=evangelical
+	father=1861303
+	2535.1.1={birth=yes}
+	2599.1.1={death=yes}
+}
+1861305={
+	name="Worden"
+	dynasty=1782060 # Josias
+	culture=southron
+	religion=evangelical
+	father=1861304
+	2560.1.1={birth=yes}
+	2610.1.1={death=yes}
+}
+1861306={
+	name="Georgina"
+	female=yes
+	dynasty=1782060 # Josias
+	culture=southron
+	religion=evangelical
+	father=1861305
+	2584.1.1={birth=yes}
+	2601.1.1={
+		effect={
+			set_character_flag=recieved_royal_marriage_aid_duty
+			spouse={
+				set_character_flag=recieved_royal_marriage_aid_duty
+				remove_spouse=spouse
+				add_spouse_matrilineal=ROOT
+				clr_character_flag=recieved_royal_marriage_aid_duty
+			}
+			clr_character_flag=recieved_royal_marriage_aid_duty
+		}
+	}
+	2639.1.1={death=yes}
+}
+1861307={
+	name="Philip"
+	dynasty=1782060 # Josias
+	culture=southron
+	religion=evangelical
+	father=1861315
+	mother=1861306
+	trait=chaste
+	trait=patient
+	trait=content
+	trait=fortune_builder
+	trait=flu
+	2604.1.1={birth=yes}
+	2640.1.11={add_spouse=1861316}
+	2656.1.1={death={death_reason=death_trait}}
+}
+1861308={
+	name="Nestor"
+	dynasty=1782060 # Josias
+	culture=southron
+	religion=evangelical
+	father=1861315
+	mother=1861306
+	trait=zealous
+	trait=patient
+	trait=craven
+	2606.1.1={birth=yes}
+	2663.1.1={death=yes}
+}
+1861309={
+	name="Agamemnon"
+	dynasty=1782060 # Josias
+	culture=southron
+	religion=evangelical
+	father=1861315
+	mother=1861306
+	trait=wroth
+	trait=proud
+	trait=drunkard
+	trait=skilled_tactician
+	2610.1.1={birth=yes}
+	2663.1.1={death=yes}
+}
+1861310={
+	name="Benjamin"
+	dynasty=1782060 # Josias
+	culture=southron
+	religion=evangelical
+	father=1861315
+	mother=1861306
+	trait=weak
+	trait=content
+	trait=midas_touched
+	2612.1.1={birth=yes}
+	2657.1.1={death=yes}
+}
+1861311={
+	name="George"
+	dynasty=1782060 # Josias
+	culture=southron
+	religion=evangelical
+	father=1861315
+	mother=1861306
+	trait=chaste
+	trait=gamer
+	trait=content
+	trait=diligent
+	2614.1.1={birth=yes}
+	2665.1.1={death=yes}
+}
+1861312={
+	name="Abraham"
+	dynasty=1782060 # Josias
+	culture=southron
+	religion=evangelical
+	father=1861315
+	mother=1861306
+	trait=tough_soldier
+	trait=cynical
+	trait=lisp
+	2616.1.1={birth=yes}
+	2700.1.1={death=yes}
+}
+1861313={
+	name="Robert"
+	dynasty=1782060 # Josias
+	culture=southron
+	religion=evangelical
+	#mother=1861308 Is this intentional or an oopsie?
+	father=1861308 #Added this just in case
+	trait=hunchback
+	trait=ugly
+	trait=patient
+	trait=slow
+	trait=cruel
+	trait=brave
+	trait=tough_soldier
+	2630.1.1={birth=yes}
+	2700.1.1={death=yes}
+}
+1861314={
+	name="Jackson"
+	dynasty=1782060 # Josias
+	culture=southron
+	religion=evangelical
+	father=1861307
+	mother=1861316
+	trait=flu
+	2655.1.1={birth=yes}
+	2656.1.1={death={death_reason=death_poor_health}}
+}
+1861315={
+	name="Leonidas" 
+	dynasty=1782059 # Quarles
+	culture=southron
+	religion=evangelical
+	father=1861220
+	2574.1.1={birth=yes}
+	2600.1.11={add_spouse=1861306}
+	2627.1.1={death=yes}
+}
+1861316={
+	name="Brandine"
+	female=yes
+	dynasty=1787064 # McGillin
+	culture=dixie
+	religion=evangelical
+	father=1861207
+	trait=lustful
+	trait=gluttonous
+	trait=slothful
+	trait=honest
+	trait=content
+	trait=ugly
+	2614.1.1={birth=yes}
+	2700.1.1={death=yes}
+}
+1861317={
+	name="Talbert"
+	dynasty=1785032 #Backus 
+	culture=tuskegean
+	religion=evangelical
+	2489.1.1={birth=yes}
+	2556.1.1={death=yes}
+}
+1861318={
+	name="Dexter"
+	dynasty=1785032 #Backus 
+	culture=tuskegean
+	religion=evangelical
+	father=1861317
+	2521.1.1={birth=yes}
+	2575.1.1={death=yes}
+}
+1861319={
+	name="Luther"
+	dynasty=1785032 #Backus 
+	culture=tuskegean
+	religion=evangelical
+	father=1861318
+	2546.1.1={birth=yes}
+	2591.1.1={death=yes}
+}
+1861320={
+	name="Antoine"
+	dynasty=1785032 #Backus 
+	culture=tuskegean
+	religion=evangelical
+	father=1861319
+	2570.1.1={birth=yes}
+	2620.1.1={death=yes}
+}
+1861321={
+	name="Silas"
+	dynasty=1785032 #Backus 
+	culture=tuskegean
+	religion=evangelical
+	father=1861320
+	2596.1.1={birth=yes}
+	2647.1.1={death=yes}
+}
+1861322={
+	name="Tanya"
+	female=yes
+	dynasty=1785032 #Backus 
+	culture=tuskegean
+	religion=evangelical
+	father=1861059
+	trait=patient
+	trait=content
+	trait=misguided_warrior
+	2648.8.8={birth=yes}
+	2700.1.1={death=yes}
+}
+1861337={
+	name="Damian"
+	dynasty=1785032 #Backus 
+	culture=tuskegean
+	religion=evangelical
+	father=1861059
+	2651.9.6={birth=yes}
+	2700.1.1={death=yes}
+}
+1861338={
+	name="Sherman"
+	dynasty=1785032 #Backus 
+	culture=tuskegean
+	religion=evangelical
+	father=1861059
+	2654.11.14={birth=yes}
+	2700.1.1={death=yes}
+}
+1861323={
+	name="Hendrick"
+	dynasty=1785000 # Latimer
+	religion=evangelical
+	culture=tuskegean
+	trait=skilled_tactician
+	trait=zealous
+	trait=brave
+	trait=peasant_leader
+	2590.1.1={birth=yes}
+	2646.11.14={death=yes}
+}
+1861324={
+	name="Terrell"
+	dynasty=1785000 # Latimer
+	religion=evangelical
+	culture=tuskegean
+	father=1861323
+	trait=skilled_tactician
+	2615.1.1={birth=yes}
+	2657.1.1={death=yes}
+}
+1861325={
+	name="Delmar"
+	dynasty=1787017 # Candler
+	culture=dixie
+	religion=evangelical
+	father=1861326
+	2613.11.9={birth=yes}
+	2658.9.11={death=yes}
+}
+1861326={
+	name="Raymond"
+	dynasty=1787017 # Candler
+	culture=dixie
+	religion=evangelical
+	2580.1.1={birth=yes}
+	2641.1.1={death=yes}
+}
+1861327={
+	name="Nopkehee"
+	dynasty=1763004 # Blue
+	culture=catawba
+	religion=evangelical
+	father=1861074
+	2653.4.2={birth=yes}
+	2700.12.10={death=yes}
+}
+1861328={
+	name="James"
+	dynasty=1763004 # Blue
+	culture=catawba
+	religion=evangelical
+	father=1861074
+	trait=strong
+	2655.5.2={birth=yes}
+	2700.9.10={death=yes}
+}
+1861329={
+	name="Cadwallader"
+	dynasty=1763004 # Blue
+	culture=catawba
+	religion=evangelical
+	2584.2.20={birth=yes}
+	2647.6.23={death=yes}
+}
+1861330={
+	name="Yanabe"
+	dynasty=1763004 # Blue
+	culture=catawba
+	religion=evangelical
+	father=1861329
+	2609.10.26={birth=yes}
+	2657.9.1={death=yes}
+}
+1861331={
+	name="Cabell"
+	dynasty=1782032 # Seddon
+	culture=southron
+	religion=evangelical
+	father=1861057
+	mother=1861384
+	trait=shy
+	trait=wroth
+	trait=cruel
+	trait=tough_soldier
+	2635.2.12={birth=yes}
+	2655.2.4={add_spouse=1861333}
+	2700.11.27={death=yes}
+}
+1861332={
+	name="Aretas"
+	dynasty=1782032 # Seddon
+	culture=southron
+	religion=evangelical
+	father=1861331
+	mother=1861333
+	2658.1.1={birth=yes}
+	2700.1.1={death=yes}
+}
+1861333={
+	name="Gwen"
+	female=yes
+	dynasty=1787078 #Pratchet
+	culture=southron
+	religion=evangelical
+	father=1861346
+	2636.12.9={birth=yes}
+	2655.2.4={add_spouse=1861331}
+	2700.5.22={death=yes}
+}
+1861334={
+	name="Crassus"
+	dynasty=1782032 # Seddon
+	culture=southron
+	religion=evangelical
+	2560.1.1={birth=yes}
+	2611.1.1={death=yes}
+}
+1861335={
+	name="Elkanah"
+	dynasty=1782032 # Seddon
+	culture=southron
+	religion=evangelical
+	father=1861334
+	2583.1.1={birth=yes}
+	2637.1.1={death=yes}
+}
+1861336={
+	name="Spartacus"
+	dynasty=1782032 # Seddon
+	culture=southron
+	religion=evangelical
+	father=1861057
+	mother=1861384
+	trait=homosexual
+	trait=honest
+	trait=gregarious
+	trait=brave
+	trait=diligent
+	trait=gamer
+	trait=charismatic_negotiator
+	2636.1.1={birth=yes}
+	2700.1.1={death=yes}
+}
+1861339={
+	name="Terry"
+	dynasty=1787078 #Pratchet
+	culture=dixie
+	religion=evangelical
+	trait=genius
+	trait=scholar
+	trait=erudite
+	trait=kind
+	2434.1.1={birth=yes}
+	2486.1.1={death=yes}
+}
+1861340={
+	name="Elrod"
+	dynasty=1787078 #Pratchet
+	culture=dixie
+	religion=evangelical
+	father=1861339
+	2455.1.1={birth=yes}
+	2509.1.1={death=yes}
+}
+1861341={
+	name="Rufus"
+	dynasty=1787078 #Pratchet
+	culture=dixie
+	religion=evangelical
+	father=1861340
+	2480.1.1={birth=yes}
+	2544.1.1={death=yes}
+}
+1861342={
+	name="Archelaus"
+	dynasty=1787078 #Pratchet
+	culture=dixie
+	religion=evangelical
+	father=1861341
+	2508.1.1={birth=yes}
+	2561.1.1={death=yes}
+}
+1861343={
+	name="Baldwin"
+	dynasty=1787078 #Pratchet
+	culture=dixie
+	religion=evangelical
+	father=1861342
+	2530.1.1={birth=yes}
+	2590.1.1={death=yes}
+}
+1861344={
+	name="Rufus"
+	dynasty=1787078 #Pratchet
+	culture=dixie
+	religion=evangelical
+	father=1861343
+	2559.1.1={birth=yes}
+	2611.1.1={death=yes}
+}
+1861345={
+	name="Burris"
+	dynasty=1787078 #Pratchet
+	culture=dixie
+	religion=evangelical
+	father=1861344
+	2585.1.1={birth=yes}
+	2641.1.1={death=yes}
+}
+1861346={
+	name="Joseph"
+	dynasty=1787078 #Pratchet
+	culture=dixie
+	religion=evangelical
+	father=1861345
+	2602.1.1={birth=yes}
+	2656.1.1={death=yes}
+}
+1861347={
+	name="Orton" 
+	dynasty=1782002 # Littlepage
+	culture=southron
+	religion=evangelical
+	2561.1.1={birth=yes}
+	2624.1.1={death=yes}
+}
+1861348={
+	name="Eurylaus" 
+	dynasty=1782002 # Littlepage
+	culture=southron
+	religion=evangelical
+	father=1861347
+	2585.1.1={birth=yes}
+	2640.1.1={death=yes}
+}
+1861349={
+	name="Martin" # First Council President
+	dynasty=0
+	culture=dixie
+	religion=evangelical
+	trait=brave
+	trait=zealous
+	trait=humble
+	trait=theologian
+	trait=quick
+	trait=mastermind_theologian
+	trait=diligent
+	2315.1.1={birth=yes}
+	2395.1.1={death=yes}
+}
+1861350={
+	name="John" 
+	dynasty=0
+	culture=southron
+	religion=evangelical
+	2357.1.1={birth=yes}
+	2415.1.1={death=yes}
+}
+1861351={
+	name="Calvin" 
+	dynasty=0
+	culture=dixie
+	religion=evangelical
+	2370.1.1={birth=yes}
+	2425.1.1={death=yes}
+}
+1861352={
+	name="Solomon" 
+	dynasty=0
+	culture=dixie
+	religion=evangelical
+	2375.1.1={birth=yes}
+	2440.1.1={death=yes}
+}
+1861353={
+	name="Luther" 
+	dynasty=0
+	culture=dixie
+	religion=evangelical
+	2390.1.1={birth=yes}
+	2450.1.1={death=yes}
+}
+1861354={
+	name="James" 
+	dynasty=0
+	culture=southron
+	religion=evangelical
+	trait=ambitious
+	trait=diligent
+	2400.1.1={birth=yes}
+	2465.1.1={death=yes}
+}
+1861355={
+	name="Edward" 
+	dynasty=0
+	culture=southron
+	religion=evangelical
+	2410.1.1={birth=yes}
+	2475.1.1={death=yes}
+}
+1861356={
+	name="Stephanus" 
+	dynasty=0
+	culture=southron
+	religion=evangelical
+	2420.1.1={birth=yes}
+	2490.1.1={death=yes}
+}
+1861357={
+	name="Knox" 
+	dynasty=0
+	culture=tuskegean
+	religion=evangelical
+	2430.1.1={birth=yes}
+	2499.1.1={death=yes}
+}
+1861358={
+	name="Jonathan" 
+	dynasty=0
+	culture=southron
+	religion=evangelical
+	trait=fortune_builder
+	trait=ambitious
+	trait=shrewd
+	trait=patient
+	2445.1.1={birth=yes}
+	2512.1.1={death=yes}
+}
+1861359={
+	name="James" 
+	dynasty=0
+	culture=southron
+	religion=evangelical
+	2460.1.1={birth=yes}
+	2520.1.1={death=yes}
+}
+1861360={
+	name="Marcus" 
+	dynasty=0
+	culture=dixie
+	religion=evangelical
+	2470.1.1={birth=yes}
+	2530.1.1={death=yes}
+}
+1861361={
+	name="Lee" 
+	dynasty=0
+	culture=appalachian
+	religion=evangelical
+	2480.1.1={birth=yes}
+	2540.1.1={death=yes}
+}
+1861362={
+	name="Absalom" 
+	dynasty=0
+	culture=southron
+	religion=evangelical
+	2490.1.1={birth=yes}
+	2550.1.1={death=yes}
+}
+1861363={
+	name="Martin" 
+	dynasty=0
+	culture=southron
+	religion=evangelical
+	2500.1.1={birth=yes}
+	2580.1.1={death=yes}
+}
+1861364={
+	name="Aaron" 
+	dynasty=0
+	culture=southron
+	religion=evangelical
+	2530.1.1={birth=yes}
+	2590.1.1={death=yes}
+}
+1861365={
+	name="Stephanus" 
+	dynasty=0
+	culture=southron
+	religion=evangelical
+	2540.1.1={birth=yes}
+	2600.1.1={death=yes}
+}
+1861366={
+	name="Jefferson" 
+	dynasty=0
+	culture=southron
+	religion=evangelical
+	2550.1.1={birth=yes}
+	2615.1.1={death=yes}
+}
+1861367={
+	name="Tiberius" 
+	dynasty=0
+	culture=gulfard
+	religion=evangelical
+	2570.1.1={birth=yes}
+	2630.1.1={death=yes}
+}
+1861368={
+	name="Jonathan" 
+	dynasty=0
+	culture=dixie
+	religion=evangelical
+	2580.1.1={birth=yes}
+	2640.1.1={death=yes}
+}
+1861369={
+	name="John" 
+	dynasty=0
+	culture=southron
+	religion=evangelical
+	2590.1.1={birth=yes}
+	2650.1.1={death=yes}
+}
+1861370={
+	name="Nathaniel" 
+	dynasty=0
+	culture=southron
+	religion=evangelical
+	2601.1.1={birth=yes}
+	2656.11.2={death=yes}
+}
+1861371={
+	name="Robert-Lee"
+	dynasty=1782038 # Pixane
+	culture=southron
+	religion=evangelical
+	father=1861372
+	2603.1.1={birth=yes}
+	2656.1.1={death=yes}
+}
+1861372={
+	name="Roland"
+	dynasty=1782038 # Pixane
+	culture=southron
+	religion=evangelical
+	2579.1.1={birth=yes}
+	2638.1.1={death=yes}
+}
+1861373={
+	name="Astolpho"
+	dynasty=1782038 # Pixane
+	culture=southron
+	religion=evangelical
+	father=1861372
+	2606.1.1={birth=yes}
+	2700.1.1={death=yes}
+}
+1861374={
+	name="Superbus"
+	dynasty=1782038 # Pixane
+	culture=southron
+	religion=evangelical
+	father=1861373
+	trait=proud
+	trait=fair
+	trait=duelist
+	trait=tough_soldier
+	trait=brave
+	2626.1.1={birth=yes}
+	2649.1.1={death={death_reason=death_duel
+		killer=1861041
+		}
+	}
+}
+1861375={
+	name="Livinia"
+	female=yes
+	dynasty=1782038 # Pixane
+	culture=southron
+	religion=evangelical
+	father=1861373
+	trait=fair
+	trait=cynical
+	trait=kind
+	2628.1.1={birth=yes}
+	2700.1.1={death=yes}
+}
+1861376={
+	name="Charlotte"
+	female=yes
+	dynasty=1787043 # Hampton
+	culture=dixie
+	religion=evangelical
+	father=1861170
+	trait=intricate_webweaver
+	trait=ambitious
+	trait=kind
+	trait=brave
+	trait=diligent
+	trait=charitable
+	2615.5.21={birth=yes}
+	2635.3.3={add_spouse=1861073}
+	2688.6.26={death=yes}
+}
+1861377={
+	name="Juliana"
+	female=yes
+	dynasty=1785019 # Gee
+	culture=tuskegean
+	religion=evangelical
+	father=1861188
+	trait=lustful
+	trait=envious
+	trait=proud
+	trait=charismatic_negotiator
+	2638.1.1={birth=yes}
+	2700.1.1={death=yes}
+}
+1861378={
+	name="Maurice"
+	dynasty=1785019 # Gee
+	culture=tuskegean
+	religion=evangelical
+	father=1861047
+	mother=1861385
+	trait=patient
+	trait=gregarious
+	2652.1.1={birth=yes}
+	2700.1.1={death=yes}
+}
+1861379={
+	name="Martin"
+	dynasty=1785019 # Gee
+	culture=tuskegean
+	religion=evangelical
+	father=1861047
+	mother=1861385
+	trait=trusting
+	trait=gregarious
+	trait=content
+	2654.1.1={birth=yes}
+	2700.1.1={death=yes}
+}
+1861380={
+	name="Gloria"
+	female=yes
+	dynasty=1785019 # Gee
+	culture=tuskegean
+	religion=evangelical
+	father=1861047
+	mother=1861385
+	trait=fair
+	trait=gregarious
+	trait=proud
+	trait=gluttonous
+	2656.1.1={birth=yes}
+	2700.1.1={death=yes}
+}
+1861381={
+	name="Locusta"
+	female=yes
+	dynasty=1785019 # Gee
+	culture=tuskegean
+	religion=evangelical
+	father=1861047
+	mother=1861385
+	trait=cruel
+	trait=deceitful
+	2659.1.1={birth=yes}
+	2700.1.1={death=yes}
+}
+1861382={
+	name="Alexius"
+	dynasty=1785019 # Gee
+	culture=tuskegean
+	religion=evangelical
+	father=1861047
+	mother=1861385
+	2661.1.1={birth=yes}
+	2700.1.1={death=yes}
+}
+1861383={
+	name="Melvin"
+	dynasty=1787078 #Pratchet
+	culture=tuskegean
+	religion=evangelical
+	father=1861112
+	mother=1861377
+	2659.8.4={birth=yes culture=dixie}
+	2700.1.1={death=yes}
+}
+1861384={
+	name="Calpurnia"
+	female=yes
+	culture=southron
+	religion=evangelical
+	trait=falconer
+	2618.1.1={birth=yes}
+	2700.1.1={death=yes}
+}
+1861385={
+	name="Samantha"
+	female=yes
+	culture=tuskegean
+	religion=evangelical
+	2632.1.1={birth=yes}
+	2700.1.1={death=yes}
+}
+1861386={
+	name="Scarlett"
+	female=yes
+	dynasty=1782046 # Johnston
+	culture=southron
+	religion=evangelical
+	father=1861276
+	trait=ambitious
+	trait=diligent
+	trait=deceitful
+	trait=cynical
+	trait=grey_eminence
+	2612.1.1={birth=yes}
+	2700.1.1={death=yes}
+}
+1861387={
+	name="Jason" 
+	dynasty=1782000 # Royall
+	culture=tuskegean
+	religion=evangelical
+	father=1861004 # Leonidas II Royall
+	2375.1.1={birth=yes
+		culture=southron
+	}
+	2425.1.1={death=yes}
+}
+1861388={
+	name="Menelaus" 
+	dynasty=1782000 # Royall
+	culture=tuskegean
+	religion=evangelical
+	father=1861387
+	2411.1.1={birth=yes
+		culture=southron
+	}
+	2465.1.1={death=yes}
+}
+1861389={
+	name="Charles"
+	dynasty=1792019 # Duvol
+	culture=gulfard
+	religion=voodoo 
+	father=1861390
+	2565.1.1={birth=yes}
+	2625.1.1={death=yes}
+}
+1861390={
+	name="Eugene"
+	dynasty=1792019 # Duvol
+	culture=gulfard
+	religion=voodoo 
+	trait=misguided_warrior
+	trait=deceitful
+	trait=ambitious
+	trait=brave
+	trait=arbitrary
+	2540.1.1={birth=yes}
+	2571.8.8={death={
+			death_reason=death_battle
+			killer=3000035
+		}
+	}
+}
+1861391={
+	name="Kennon"
+	dynasty=1787064 # McGillin
+	culture=dixie
+	religion=evangelical
+	father=1861200
+	trait=cruel
+	trait=proud
+	trait=hedonist
+	2485.1.1={birth=yes}
+	2507.11.24={death={
+			death_reason=death_battle
+			killer=1861133
+		}
+	}
+}
+1861392={
+	name="Ptolemy"
+	dynasty=1785019 # Gee
+	culture=tuskegean
+	religion=evangelical
+	father=1861182
+	trait=skilled_tactician
+	trait=scarred
+	trait=brave
+	2476.1.1={birth=yes}
+	2504.3.18={death={
+			death_reason=death_battle
+			killer=1861011
+		}
+	}
+}
+1861393={
+	name="Newton"
+	dynasty=1787062 # Sheats
+	culture=dixie
+	religion=evangelical
+	trait=just
+	trait=brave
+	trait=ambitious
+	trait=patient
+	trait=charitable
+	trait=tough_soldier
+	2474.1.1={birth=yes}
+	2507.11.24={death={
+			death_reason=death_battle
+			killer=1861133
+		}
+	}
+}
+1861394={
+	name="Jasper"
+	dynasty=1787062 # Sheats
+	culture=dixie
+	religion=evangelical
+	father=1861393
+	2496.1.1={birth=yes}
+	2557.1.1={death=yes}
+}
+1861395={
+	name="Newton"
+	dynasty=1787062 # Sheats
+	culture=dixie
+	religion=evangelical
+	father=1861394
+	2520.1.1={birth=yes}
+	2578.1.1={death=yes}
+}
+1861396={
+	name="Newton"
+	dynasty=1787062 # Sheats
+	culture=dixie
+	religion=evangelical
+	father=1861395
+	2542.1.1={birth=yes}
+	2602.1.1={death=yes}
+}
+1861397={
+	name="Wyatt"
+	dynasty=1787062 # Sheats
+	culture=dixie
+	religion=evangelical
+	father=1861396
+	2570.1.1={birth=yes}
+	2639.1.1={death=yes}
+}
+1861398={
+	name="Willis"
+	dynasty=1787062 # Sheats
+	culture=dixie
+	religion=evangelical
+	father=1861397
+	2595.1.1={birth=yes}
+	2657.1.1={death=yes}
+}
+1861399={
+	name="Serena"
+	female=yes
+	dynasty=1787062 # Sheats
+	culture=dixie
+	religion=evangelical
+	father=1861066
+	trait=quick
+	2659.1.1={birth=yes}
+	2700.1.1={death=yes}
+}
+1861400={
+	name="Newton"
+	dynasty=1787062 # Sheats
+	culture=dixie
+	religion=evangelical
+	father=1861066
+	trait=quick
+	2662.1.1={birth=yes}
+	2700.1.1={death=yes}
+}
+1861401={
+	name="Rachel"
+	female=yes
+	dynasty=1787062 # Sheats
+	culture=dixie
+	religion=evangelical
+	father=1861066
+	trait=quick
+	2664.1.1={birth=yes}
+	2700.1.1={death=yes}
+}
+1861402={
+	name="Caroline" 
+	female=yes
+	dynasty=1782004 # Yelverton
+	culture=dixie
+	religion=evangelical
+	father=1861135 # Atticus Yelverton
+	2498.1.1={birth=yes}
+	2505.1.1={death={
+			death_reason=death_execution_beheading
+			killer=1861200
+		}
+	}
+}
+1861403={
+	name="Laura" 
+	female=yes
+	dynasty=1782004 # Yelverton
+	culture=dixie
+	religion=evangelical
+	father=1861134 # Robbie Yelverton
+	2486.1.1={birth=yes}
+	2505.1.1={death={
+			death_reason=death_execution_beheading
+			killer=1861200
+		}
+	}
+}
+1861404={
+	name="Patty" 
+	female=yes
+	dynasty=1782004 # Yelverton
+	culture=dixie
+	religion=evangelical
+	father=1861134 # Robbie Yelverton
+	2492.1.1={birth=yes}
+	2505.1.1={death={
+			death_reason=death_execution_beheading
+			killer=1861200
+		}
+	}
+}
+1861405={
+	name="Halleck"
+	dynasty=1826020
+	culture=gullah
+	religion=evangelical
+	2585.1.1={birth=yes}
+	2646.1.1={death=yes}
+}
+1861406={
+	name="Raheel"
+	dynasty=1826020
+	culture=gullah
+	religion=charismatic
+	father=1861405
+	trait=mystic
+	trait=zealous
+	2609.1.1={birth=yes}
+	2630.2.11={add_spouse=1861092}
+	2660.1.1={death=yes}
+}
+1861407={
+	name="Saladin"
+	dynasty=1826020
+	culture=gullah
+	religion=evangelical
+	father=1861406
+	mother=1861092
+	trait=charitable
+	trait=content
+	trait=thrifty_clerk
+	trait=cynical
+	trait=patient
+	2631.1.1={birth=yes}
+	2700.1.1={death=yes}
+}
+1861408={
+	name="Pervis"
+	dynasty=1826020
+	culture=gullah
+	religion=evangelical
+	father=1861407
+	2655.1.1={birth=yes}
+	2700.1.1={death=yes}
+}
+1861409={
+	name="Estelle"
+	female=yes
+	dynasty=1826020
+	culture=gullah
+	religion=charismatic
+	father=1861406
+	mother=1861092
+	2634.1.1={birth=yes}
+	2700.1.1={death=yes}
+}
+1861410={
+	name="Jarrett"
+	dynasty=1826020
+	culture=gullah
+	religion=revelationist
+	father=1861406
+	mother=1861092
+	trait=strong
+	trait=tough_soldier
+	2636.1.1={birth=yes}
+	2700.1.1={death=yes}
+}
+1861411={
+	name="Idris"
+	dynasty=1826020
+	culture=gullah
+	religion=charismatic
+	father=1861406
+	mother=1861092
+	trait=zealous
+	trait=theologian
+	trait=martial_cleric
+	trait=diligent
+	trait=erudite
+	2639.1.1={birth=yes}
+	2700.1.1={death=yes}
+}
+1861412={
+	name="Abner"
+	dynasty=1836025
+	martial=6
+	diplomacy=6
+	intrigue=6
+	stewardship=6
+	learning=6
+	culture=ozark
+	religion=catholic
+	father=1861084
+	mother=1861414
+	trait=cynical
+	trait=shy
+	trait=diligent
+	trait=craven
+	trait=content
+	trait=fortune_builder
+	2659.3.3={birth=yes}
+	2700.1.1={death=yes}
+}
+1861413={
+	name="Floral"
+	female=yes
+	dynasty=1836025
+	martial=6
+	diplomacy=6
+	intrigue=6
+	stewardship=6
+	learning=6
+	culture=ozark
+	religion=catholic
+	father=1861084
+	mother=1861414
+	trait=ugly
+	trait=kind
+	trait=brave
+	trait=trusting
+	trait=charitable
+	trait=martial_cleric
+	2661.8.4={birth=yes}
+	2700.1.1={death=yes}
+}
+1861414={#Count of Dardanelle
+	name="Matilda"
+	female=yes
+	dynasty=1836024 #Digger
+	culture=ozark
+	religion=catholic
+	trait=tough_soldier
+	trait=brave
+	trait=fair
+	trait=proud
+	trait=honest
+	trait=lustful
+	trait=wroth
+	father=1821090
+	2641.8.29={birth=yes}
+	2658.1.1={add_spouse=1861084}
+}
+1861415={
+	name="Walter"
+	dynasty=1782060 # Josias
+	culture=southron
+	religion=postadventist
+	father=1861530
+	mother=1861531
+	trait=midas_touched
+	trait=patient
+	trait=cynical
+	trait=diligent
+	trait=humble
+	trait=temperate
+	2306.3.23={birth=yes}
+	2370.7.5={religion=evangelical}
+	2375.1.14={death=yes}
+}
+1861416={
+	name="Benjamin"
+	dynasty=1782060 # Josias
+	culture=southron
+	religion=evangelical
+	father=1861415
+	2330.1.1={birth=yes}
+	2390.1.1={death=yes}
+}
+1861417={
+	name="Walter"
+	dynasty=1782060 # Josias
+	culture=southron
+	religion=evangelical
+	father=1861416
+	2351.1.1={birth=yes}
+	2405.1.1={death=yes}
+}
+1861418={
+	name="Henry"
+	dynasty=1782060 # Josias
+	culture=southron
+	religion=evangelical
+	father=1861417
+	2375.1.1={birth=yes}
+	2439.1.1={death=yes}
+}
+1861419={
+	name="Cooper"
+	dynasty=1782060 # Josias
+	culture=southron
+	religion=evangelical
+	father=1861418
+	2400.1.1={birth=yes}
+	2468.1.1={death=yes}
+}
+1861420={
+	name="Fairleigh"
+	dynasty=1782060 # Josias
+	culture=southron
+	religion=evangelical
+	father=1861419
+	2430.1.1={birth=yes}
+	2486.1.1={death=yes}
+}
+1861421={
+	name="Ezzard"
+	dynasty=1787027 # Hillyer
+	culture=tuskegean 
+	religion=charismatic
+	trait=strong
+	trait=wroth	
+	trait=proud
+	trait=zealous
+	trait=stubborn
+	trait=brilliant_strategist
+	2334.1.1={birth=yes}
+	2358.1.1={death={
+			death_reason=death_battle
+			killer=1861002
+		}
+	}
+}
+1861422={
+	name="Ahmed"
+	dynasty=1787027 # Hillyer
+	culture=tuskegean 
+	religion=evangelical
+	father=1861421
+	2351.1.1={birth=yes}
+	2404.1.1={death=yes}
+}
+1861423={
+	name="Maxwell"
+	dynasty=1787027 # Hillyer
+	culture=tuskegean 
+	religion=evangelical
+	father=1861422
+	2380.1.1={birth=yes}
+	2444.1.1={death=yes}
+}
+1861424={
+	name="Yolton"
+	dynasty=1787027 # Hillyer
+	culture=tuskegean 
+	religion=evangelical
+	father=1861423
+	2399.1.1={birth=yes}
+	2460.1.1={death=yes}
+}
+1861425={
+	name="Dolester"
+	dynasty=1787027 # Hillyer
+	culture=tuskegean 
+	religion=evangelical
+	father=1861424
+	2430.1.1={birth=yes}
+	2485.1.1={death=yes}
+}
+1861426={
+	name="John-Henry"
+	dynasty=1785022 #Driver
+	culture=tuskegean
+	religion=revelationist
+	trait=strong
+	trait=brave
+	trait=proud
+	trait=ambitious
+	trait=diligent
+	trait=tough_soldier
+	2340.1.1={birth=yes
+		culture=appalachian
+	}
+	2361.1.1={death={
+			death_reason=death_battle
+			killer=1861002
+		}
+	}
+}
+1861427={
+	name="Louis"
+	dynasty=1785001 #Turner
+	culture=tuskegean
+	religion=postadventist
+	trait=grey_eminence
+	trait=proud
+	trait=fair
+	trait=brave
+	trait=cynical
+	trait=deceitful
+	trait=arbitrary
+	trait=ambitious
+	2330.1.1={birth=yes}
+	2369.1.1={death={
+			death_reason=death_battle
+			killer=1861002
+		}
+	}
+}
+1861428={
+	name="Laura"
+	female=yes
+	dynasty=1787005 #Dowdell
+	culture=dixie
+	religion=postadventist
+	trait=skilled_tactician
+	trait=quick
+	trait=proud
+	trait=zealous
+	trait=brave
+	trait=stubborn
+	2334.1.1={birth=yes}
+	2353.1.1={death={
+			death_reason=death_battle
+			killer=1861002
+		}
+	}
+}
+1861429={
+	name="Lorena"
+	female=yes
+	dynasty=1782018 #Buckroe
+	culture=southron
+	religion=postadventist
+	trait=charismatic_negotiator
+	trait=fair
+	trait=gregarious
+	trait=brave
+	2336.1.1={birth=yes}
+	2370.1.1={religion=evangelical}
+	2390.1.1={death=yes}
+}
+1861430={
+	name="Henry"
+	dynasty=1787019 #Du Bose
+	culture=dixie
+	religion=postadventist
+	trait=cruel
+	trait=brave
+	trait=honest
+	trait=proud
+	trait=zealous
+	trait=tough_soldier
+	2295.1.1={birth=yes}
+	2363.1.1={death={
+			death_reason=death_battle
+			killer=1861002
+		}
+	}
+}
+
+1861431={
+	name="Reginald"
+	dynasty=1785001
+	culture=tuskegean
+	religion=revelationist
+	mother=1861432
+	2601.12.24={birth=yes}
+	2653.12.13={death=yes}
+}
+1861432={
+	name="Exerlena"
+	female=yes
+	dynasty=1785001
+	culture=tuskegean
+	religion=revelationist
+	father=1861433
+	2574.2.3={birth=yes}
+	2618.8.24={death=yes}
+}
+1861433={
+	name="Virgil"
+	dynasty=1785001
+	culture=tuskegean
+	religion=revelationist
+	father=1861434
+	2537.5.21={birth=yes}
+	2592.1.3={death=yes}
+}
+1861434={
+	name="Reginald"
+	dynasty=1785001
+	culture=tuskegean
+	religion=revelationist
+	father=1861435
+	2501.2.11={birth=yes}
+	2552.8.17={death=yes}
+}
+1861435={
+	name="Virgil"
+	dynasty=1785001
+	culture=tuskegean
+	religion=revelationist
+	father=1861436
+	2475.5.29={birth=yes}
+	2521.2.15={death=yes}
+}
+1861436={
+	name="Jarius"
+	dynasty=1785001
+	culture=tuskegean
+	religion=revelationist
+	mother=1861437
+	2435.6.22={birth=yes}
+	2506.2.7={death=yes}
+}
+1861437={
+	name="Diamond"
+	female=yes
+	dynasty=1785001
+	culture=tuskegean
+	religion=revelationist
+	father=1861438
+	2401.2.24={birth=yes}
+	2461.8.6={death=yes}
+}
+1861438={
+	name="Emmett"
+	dynasty=1785001
+	culture=tuskegean
+	religion=revelationist
+	father=1861439
+	2379.4.20={birth=yes}
+	2407.8.25={death=yes}
+}
+1861439={
+	name="Emmett"
+	dynasty=1785001
+	culture=tuskegean
+	religion=revelationist
+	father=1861427
+	2354.6.23={birth=yes}
+	2413.3.11={death=yes}
+}
+
+1861440={
+	name="Cynthia"
+	dynasty=1785122
+	occluded=yes
+	female=yes
+	culture=tuskegean
+	religion=pagan
+	trait=mastermind_theologian
+	trait=legendary
+	trait=mystic
+	trait=fair
+	trait=chaste
+	trait=celibate
+	trait=devout
+	trait=peasant_leader
+	give_nickname=nick_the_vestal
+	disallow_random_traits=yes
+	2032.5.11={birth=yes}
+	2055.11.26={death={death_reason=death_missing}}
+}
+
+1861441={
+	name="Jackson"
+	occluded=yes
+	dynasty=1782162 #conner
+	culture=southron
+	religion=pagan
+	trait=legendary
+	trait=fortune_builder
+	trait=dull
+	trait=content
+	trait=hunchback
+	trait=kind
+	trait=patient
+	trait=gluttonous
+	trait=is_fat
+	disallow_random_traits=yes
+	2048.5.3={birth=yes}
+	2108.3.17={death=yes}
+}
+1861442={
+	name="Max"
+	occluded=yes
+	dynasty=1782163 #seddon
+	culture=southron
+	religion=pagan
+	trait=legendary
+	trait=fortune_builder
+	trait=uncouth
+	trait=feeble
+	trait=fair
+	trait=diligent
+	disallow_random_traits=yes
+	2056.8.23={birth=yes}
+	2112.2.14={death=yes}
+}
+1861443={
+	name="Braxton"
+	occluded=yes
+	dynasty=1782164 #petty
+	culture=southron
+	religion=pagan
+	trait=legendary
+	trait=midas_touched
+	trait=quick
+	trait=robust
+	trait=groomed
+	trait=greedy
+	trait=gluttonous
+	trait=shrewd
+	trait=proud
+	disallow_random_traits=yes
+	2039.9.1={birth=yes}
+	2122.12.28={death={death_reason=death_battle killer=1861444}}
+}
+
+1861444={
+	name="Charles"
+	dynasty=1782165 #Hanover
+	culture=southron
+	religion=evangelical
+	dna="cbgijsacaaa"
+	properties="wb0adc00000000000000000000000000000000"
+	trait=dead_dogwood_crown
+	trait=skilled_tactician
+	trait=ambitious
+	trait=just
+	trait=charitable
+	trait=kind
+	trait=experimenter
+	trait=peasant_leader
+	trait=cancer
+	give_nickname=nick_the_liberator
+	disallow_random_traits=yes
+	2080.1.10={birth=yes}
+	2122.12.28={
+		create_bloodline={
+			type=hanovers_bloodline
+			has_dlc="Holy Fury"
+		}
+	}
+	2128.9.5={death={death_reason=death_trait}}
+}
+1861445={
+	name="Charles" #II
+	dynasty=1782165 #Hanover
+	culture=southron
+	religion=evangelical
+	dna="ccefemjbaac"
+	properties="ah0bac00000000000000000000000000000000"
+	father=1861444
+	trait=dead_dogwood_crown
+	trait=grey_eminence
+	trait=lefthanded
+	trait=ambitious
+	trait=administrator	
+	trait=temperate
+	trait=diligent
+	trait=inspiring_leader
+	disallow_random_traits=yes
+	2099.11.29={birth=yes}
+	2133.7.27={add_spouse=1861446}
+	2154.2.19={death=yes}
+}
+1861446={ 
+	name="Agnes"
+	female=yes
+	culture=southron
+	religion=evangelical
+	trait=elusive_shadow
+	trait=quick
+	trait=gardener
+	trait=patient
+	trait=kind
+	disallow_random_traits=yes
+	2102.2.28={birth=yes}
+	2133.7.27={add_spouse=1861445}
+	2154.1.2={death=yes}
+}
+1861447={
+	name="Charles" #III
+	dynasty=1782165 #Hanover
+	culture=southron
+	religion=evangelical
+	father=1861445
+	mother=1861446
+	trait=dead_dogwood_crown
+	trait=tough_soldier
+	trait=trusting
+	trait=brave
+	trait=diligent
+	trait=proud
+	disallow_random_traits=yes
+	2136.8.23={birth=yes}
+	2152.11.27={add_spouse=1861451}
+	2183.1.11={death=yes}
+}
+1861448={
+	name="Oliver"
+	dynasty=1782165 #Hanover
+	culture=southron
+	religion=evangelical
+	father=1861445
+	mother=1861446
+	trait=naive_appeaser
+	trait=quick
+	trait=erudite
+	trait=twin
+	trait=shy
+	trait=envious
+	disallow_random_traits=yes
+	2139.4.24={birth=yes}
+	2166.2.24={add_spouse=1861450}
+	2199.10.12={death=yes}
+}
+1861449={
+	name="Virginia"
+	female=yes
+	dynasty=1782165 #Hanover
+	culture=southron
+	religion=evangelical
+	father=1861445
+	mother=1861446
+	trait=amateurish_plotter
+	trait=lefthanded
+	trait=poet
+	trait=twin
+	trait=lustful
+	trait=charitable
+	disallow_random_traits=yes
+	2139.4.24={birth=yes}
+	2166.6.21={
+		effect={
+			set_character_flag=recieved_royal_marriage_aid_duty
+			spouse={
+				set_character_flag=recieved_royal_marriage_aid_duty
+				remove_spouse=spouse
+				add_spouse_matrilineal=ROOT
+				clr_character_flag=recieved_royal_marriage_aid_duty
+			}
+			clr_character_flag=recieved_royal_marriage_aid_duty
+		}
+	}
+	2202.1.31={death=yes}
+}
+1861450={
+	name="Abigail"
+	female=yes
+	dynasty=1778082 #Kinmaker
+	father=1861454
+	mother=1861455
+	culture=delawarean
+	religion=catholic
+	trait=grey_eminence
+	trait=genius
+	trait=shrewd
+	trait=proud
+	trait=ambitious
+	disallow_random_traits=yes
+	2137.6.18={birth=yes}
+	2146.2.24={add_spouse=1861448}
+	2203.3.29={death=yes}
+}
+1861451={
+	name="Scarlett"
+	female=yes
+	culture=southron
+	religion=evangelical
+	trait=charismatic_negotiator
+	trait=trusting
+	trait=chaste
+	trait=kind
+	disallow_random_traits=yes
+	2121.4.1={birth=yes}
+	2152.11.27={add_spouse=1861447}
+	2191.1.1={death=yes}
+}
+1861452={
+	name="Phoebe" # III's lover
+	occluded=yes
+	female=yes
+	culture=southron
+	religion=evangelical
+	trait=intricate_webweaver
+	trait=fair
+	trait=lustful
+	trait=seductress
+	disallow_random_traits=yes
+	2128.12.19={birth=yes}
+	2193.9.9={death=yes}
+}
+1861453={
+	name="Edward"
+	dynasty=0
+	culture=southron
+	religion=evangelical
+	trait=thrifty_clerk
+	trait=sturdy
+	trait=patient
+	trait=brave
+	disallow_random_traits=yes
+	2125.9.27={birth=yes}
+	2146.6.21={add_spouse=1861449}
+	2184.8.2={death=yes}
+}
+1861454={
+	name="Danrick"
+	occluded=yes
+	dynasty=1778082 #Kingmaker
+	culture=delawarean
+	religion=catholic
+	trait=legendary
+	trait=grey_eminence
+	trait=quick
+	trait=shrewd
+	trait=hunter
+	trait=falconer
+	trait=diligent
+	trait=proud
+	disallow_random_traits=yes
+	2101.1.11={birth=yes}
+	2120.7.10={add_spouse=1861455}
+	2180.12.27={death=yes}
+}
+1861455={
+	name="Hilary"
+	occluded=yes
+	female=yes
+	culture=delawarean
+	religion=catholic
+	trait=legendary
+	trait=grey_eminence
+	trait=content
+	trait=groomed
+	trait=envious
+	trait=chaste
+	disallow_random_traits=yes
+	2105.5.3={birth=yes}
+	2120.7.10={add_spouse=1861454}
+	2159.6.30={death=yes}
+}
+1861456={
+	name="Jasper"
+	occluded=yes
+	dynasty=1778082 #Kingmaker
+	father=1861454
+	mother=1861455
+	culture=delawarean
+	religion=catholic
+	trait=legendary
+	trait=haughty
+	trait=conscientious	
+	trait=willful
+	disallow_random_traits=yes
+	2127.1.29={birth=yes}
+	2141.6.18={death={death_reason=death_murder_unknown}}
+}
+1861457={
+	name="Henriette"
+	female=yes
+	dynasty=1778082 #Kingmaker
+	father=1861454
+	mother=1861455
+	culture=delawarean
+	religion=catholic
+	trait=charismatic_negotiator
+	trait=temperate
+	trait=cynical
+	trait=honest
+	trait=slothful
+	disallow_random_traits=yes
+	2129.3.13={birth=yes}
+	2207.5.20={death=yes}
+}
+1861458={
+	name="Thomas"
+	dynasty=1782165 #Hanover
+	culture=southron
+	religion=evangelical
+	father=1861447
+	mother=1861451
+	trait=fortune_builder
+	trait=dead_dogwood_crown
+	trait=greedy
+	trait=duelist
+	trait=groomed
+	trait=patient
+	trait=content
+	disallow_random_traits=yes
+	2159.10.16={birth=yes}
+	2180.7.6={add_spouse=1861461}
+	2203.4.5={death={death_reason=death_suicide_poison}}
+}
+1861459={
+	name="Charles"
+	dynasty=1782165 #Hanover
+	culture=southron
+	religion=evangelical
+	father=1861447
+	mother=1861452
+	trait=indulgent_wastrel
+	trait=sympathy_oldworld
+	trait=envious
+	trait=bastard
+	trait=cynical
+	trait=drunkard
+	trait=wroth
+	disallow_random_traits=yes
+	2156.7.11={birth=yes}
+	2192.12.1={add_spouse=1861462}
+	2184.5.1={death=yes}
+}
+1861460={
+	name="Anastasia"
+	female=yes
+	dynasty=1782165 #Hanover
+	culture=southron
+	religion=evangelical
+	father=1861447
+	mother=1861452
+	trait=detached_priest
+	trait=bastard
+	trait=feeble
+	trait=devout
+	trait=celibate
+	trait=chaste
+	trait=charitable
+	disallow_random_traits=yes
+	2158.10.7={birth=yes}
+	2218.2.7={death=yes}
+}
+1861461={
+	name="Belle" #Thomas' wife
+	female=yes
+	culture=southron
+	religion=evangelical
+	trait=underhanded_rogue
+	trait=scarred
+	trait=charitable
+	trait=gluttonous
+	trait=craven
+	trait=troubled_pregnancy
+	disallow_random_traits=yes
+	2154.5.29={birth=yes}
+	2180.7.6={add_spouse=1861458}
+	2182.11.17={death={death_reason=death_childbirth}}
+}
+1861462={
+	name="Alyssa" #Charles the bastard's wife
+	female=yes
+	culture=southron
+	religion=americanist
+	trait=naive_appeaser
+	trait=cynical
+	trait=gregarious
+	trait=lustful
+	trait=seductress
+	trait=fair
+	disallow_random_traits=yes
+	2174.12.31={birth=yes}
+	2192.12.1={add_spouse=1861459}
+	2216.1.15={death=yes}
+}
+1861464={
+	name="Susanna"
+	female=yes
+	dynasty=1782165 #Hanover
+	culture=southron
+	religion=evangelical
+	father=1861448
+	mother=1861450
+	trait=grey_eminence
+	trait=dead_dogwood_crown
+	trait=quick
+	trait=shrewd
+	trait=groomed
+	trait=temperate
+	trait=cruel
+	trait=cynical
+	trait=honest
+	trait=legit_bastard
+	disallow_random_traits=yes
+	2162.6.19={birth=yes}
+	2183.3.10={add_spouse=1861466}
+	2228.4.16={death=yes}
+}
+1861465={
+	name="Daisy"
+	female=yes
+	occluded=yes
+	dynasty=1782166 # Northam - Hanover
+	culture=southron
+	religion=evangelical
+	father=1861453
+	mother=1861449
+	trait=legendary
+	trait=misguided_warrior
+	trait=ambitious
+	trait=charitable
+	trait=diligent
+	trait=slow
+	trait=kind
+	disallow_random_traits=yes
+	2160.11.1={birth=yes}
+	2168.8.17={
+		effect={
+			set_character_flag=recieved_royal_marriage_aid_duty
+			spouse={
+				set_character_flag=recieved_royal_marriage_aid_duty
+				remove_spouse=spouse
+				add_spouse_matrilineal=ROOT
+				clr_character_flag=recieved_royal_marriage_aid_duty
+			}
+			clr_character_flag=recieved_royal_marriage_aid_duty
+		}
+	}
+	2231.1.30={death=yes}
+}
+1861466={
+	name="Octavian"
+	culture=southron
+	religion=evangelical
+	trait=flamboyant_schemer
+	trait=fair
+	trait=groomed
+	trait=lustful
+	trait=trusting
+	trait=content
+	disallow_random_traits=yes
+	2157.5.14={birth=yes}
+	2173.3.10={add_spouse=1861464}
+	2226.2.3={death=yes}
+	
+}
+1861467={
+	name="Elaine"
+	female=yes
+	dynasty=1782165 #Hanover
+	culture=southron
+	religion=evangelical
+	father=1861466
+	mother=1861464
+	trait=thrifty_clerk
+	trait=humble
+	trait=slothful
+	trait=stubborn
+	trait=flu
+	2184.2.15={birth=yes}
+	2200.9.17={death={death_reason=death_trait}}
+}
+1861468={
+	name="Christina"
+	female=yes
+	dynasty=1782165 #Hanover
+	culture=southron
+	religion=evangelical
+	father=1861466
+	mother=1861464
+	trait=mastermind_theologian
+	trait=dead_dogwood_crown
+	trait=genius
+	trait=shrewd
+	trait=erudite
+	trait=patient
+	trait=diligent
+	trait=scholar
+	disallow_random_traits=yes
+	2186.6.6={birth=yes}
+	2192.2.8={add_spouse=1861470}
+	2237.8.28={death=yes}
+}
+1861469={
+	name="April"
+	female=yes
+	dynasty=1782165 #Hanover
+	culture=southron
+	religion=evangelical
+	father=1861466
+	mother=1861464
+	trait=scholarly_theologian
+	trait=diligent
+	trait=arbitrary
+	trait=stubborn
+	trait=zealous
+	disallow_random_traits=yes
+	2187.2.15={birth=yes}
+	2241.9.17={death=yes}
+}
+1861470={
+	name="Samuel"
+	culture=southron
+	religion=evangelical
+	trait=underhanded_rogue
+	trait=stutter
+	trait=patient
+	trait=envious
+	trait=erudite
+	disallow_random_traits=yes
+	2177.7.12={birth=yes}
+	2192.2.8={add_spouse=1861468}
+	2236.12.18={death=yes}
+}
+1861471={
+	name="Atalanta"
+	female=yes
+	dynasty=1782165 #Hanover
+	culture=southron
+	religion=evangelical
+	father=1861470
+	mother=1861468
+	trait=midas_touched
+	trait=dead_dogwood_crown
+	trait=one_legged
+	trait=fair
+	trait=quick
+	trait=groomed
+	trait=gregarious
+	trait=devout
+	trait=lefthanded
+	trait=freckles
+	trait=socializer
+	disallow_random_traits=yes
+	2209.5.24={birth=yes}
+	2228.6.7={add_spouse=1861472}
+	2253.2.28={death=yes}
+}
+1861472={
+	name="Winfield"
+	culture=southron
+	religion=evangelical
+	trait=underhanded_rogue
+	trait=sturdy
+	trait=charitable
+	trait=gregarious
+	trait=stubborn
+	disallow_random_traits=yes
+	2197.4.19={birth=yes}
+	2218.6.7={add_spouse=1861471}
+	2257.2.25={death=yes}
+}
+1861473={
+	name="Virginia"
+	female=yes
+	dynasty=1782165 #Hanover
+	culture=southron
+	religion=evangelical
+	father=1861472
+	mother=1861471
+	trait=martial_cleric
+	trait=stutter
+	trait=diligent
+	trait=wroth
+	trait=zealous
+	disallow_random_traits=yes
+	2226.10.1={birth=yes}
+	2241.10.12={death={death_reason=death_americanist_rabble}}
+}
+1861474={
+	name="Olivia"
+	female=yes
+	dynasty=1782165 #Hanover
+	culture=southron
+	religion=evangelical
+	father=1861472
+	mother=1861471
+	trait=naive_appeaser
+	trait=drunkard
+	trait=feeble
+	trait=envious
+	disallow_random_traits=yes
+	2228.12.15={birth=yes}
+	2244.2.19={add_spouse=1861511}
+	2299.9.9={death=yes}
+}
+1861475={
+	name="Abigail"
+	female=yes
+	dynasty=1782165 #Hanover
+	culture=southron
+	religion=evangelical
+	father=1861472
+	mother=1861471
+	trait=fortune_builder
+	trait=greedy
+	trait=gluttonous
+	trait=kind
+	trait=content
+	trait=has_tuberculosis
+	disallow_random_traits=yes
+	2229.3.20={birth=yes}
+	2277.10.6={death={death_reason=death_trait}}
+}
+1861476={
+	name="Catherine"
+	female=yes
+	dynasty=1782165 #Hanover
+	culture=southron
+	religion=evangelical
+	father=1861472
+	mother=1861471
+	trait=thrifty_clerk
+	trait=paranoid
+	trait=shy
+	trait=deceitful
+	trait=craven
+	disallow_random_traits=yes
+	2230.5.10={birth=yes}
+	2255.1.26={add_spouse=1861516}
+	2292.4.20={death=yes}
+}
+1861477={
+	name="Anna"
+	female=yes
+	dynasty=1782165 #Hanover
+	culture=southron
+	religion=evangelical
+	father=1861472
+	mother=1861471
+	trait=tough_soldier
+	trait=fair
+	trait=lefthanded
+	trait=lustful
+	trait=giant
+	trait=socializer
+	trait=poet
+	trait=twin
+	disallow_random_traits=yes
+	2233.5.10={birth=yes}
+	2238.11.4={add_spouse=1861518}
+	2294.11.11={death=yes}
+}
+1861478={
+	name="Charles" #IV
+	dynasty=1782165 #Hanover
+	culture=southron
+	religion=evangelical
+	father=1861472
+	mother=1861471
+	diplomacy=10
+	martial=20
+	stewardship=10
+	intrigue=5
+	learning=5
+	trait=brilliant_strategist
+	trait=dead_dogwood_crown
+	trait=strong
+	trait=giant
+	trait=robust
+	trait=duelist
+	trait=strategist
+	trait=kind
+	trait=diligent
+	trait=proud
+	trait=ambitious
+	trait=zealous
+	trait=brave
+	trait=twin
+	trait=scarred
+	trait=scarred_type_2
+	trait=inspiring_leader
+	trait=experimenter
+	give_nickname=nick_the_devil_dog
+	disallow_random_traits=yes
+	2233.5.10={birth=yes}
+	2247.9.24={add_spouse=1861480}
+	2258.4.17={death={death_reason=death_humbled killer=1861479}}
+}
+1861479={
+	name=""
+	occluded=yes
+	dynasty=0
+	culture=riverlander
+	religion=revelationist
+	diplomacy=2
+	martial=1
+	stewardship=3
+	intrigue=4
+	learning=1
+	trait=legendary
+	give_nickname=nick_faceless_archer
+	disallow_random_traits=yes
+	2240.4.17={birth=yes}
+	2258.4.17={death={death_reason=death_missing}}
+}
+1861480={
+	name="Tayanita"
+	female=yes
+	culture=cherokee
+	religion=evangelical
+	trait=charismatic_negotiator
+	trait=charitable
+	trait=lustful
+	trait=devout
+	trait=gregarious
+	disallow_random_traits=yes
+	2230.7.16={birth=yes}
+	2247.9.24={add_spouse=1861478}
+	2272.5.25={death=yes}
+}
+1861481={
+	name="Victor"
+	dynasty=1782165 #Hanover
+	culture=southron
+	religion=evangelical
+	father=1861478
+	mother=1861480
+	trait=naive_appeaser
+	trait=stressed
+	trait=humble
+	trait=craven
+	trait=honest
+	trait=paranoid	
+	disallow_random_traits=yes
+	2251.2.7={birth=yes}
+	2263.8.29={add_spouse=1861483}
+	2293.1.14={death=yes}
+}
+1861482={
+	name="Primrose" #Nanye-hi
+	female=yes
+	dynasty=1782165 #Hanover
+	culture=southron
+	religion=evangelical
+	father=1861478
+	mother=1861480
+	trait=indulgent_wastrel
+	trait=feeble
+	trait=uncouth
+	trait=wroth
+	trait=chaste
+	trait=stubborn
+	disallow_random_traits=yes
+	2253.2.13={birth=yes}
+	2312.12.21={death=yes}
+}
+1861483={
+	name="Anna"
+	female=yes
+	culture=southron
+	religion=evangelical
+	trait=grey_eminence
+	trait=strong
+	trait=shrewd
+	trait=ambitious
+	trait=diligent
+	disallow_random_traits=yes
+	2247.9.7={birth=yes}
+	2263.8.29={add_spouse=1861481}
+	2305.7.6={death=yes}
+}
+1861484={
+	name="Charles" #V
+	dynasty=1782165 #Hanover
+	culture=southron
+	religion=evangelical
+	father=1861481
+	mother=1861483
+	trait=misguided_warrior
+	trait=weak
+	trait=envious
+	trait=humble
+	trait=uncouth
+	trait=socializer
+	trait=ill
+	disallow_random_traits=yes
+	give_nickname=nick_the_sickly
+	2273.9.7={birth=yes}
+	2293.11.20={add_spouse=1861485}
+	2322.7.6={death=yes}
+}
+1861485={
+	name="Helen"
+	female=yes
+	culture=southron
+	religion=evangelical
+	trait=underhanded_rogue
+	trait=charitable
+	trait=arbitrary
+	trait=stubborn
+	trait=gluttonous
+	trait=chest_pain
+	trait=socializer
+	disallow_random_traits=yes
+	give_nickname=nick_the_regent
+	2276.11.20={birth=yes}
+	2293.11.20={add_spouse=1861484}
+	2330.3.17={death={death_reason=death_trait}}
+}
+1861486={
+	name="Charles" #VI
+	dynasty=1782165 #Hanover
+	culture=southron
+	religion=evangelical
+	father=1861484
+	mother=1861485
+	trait=fortune_builder
+	trait=wounded
+	trait=patient
+	trait=greedy
+	trait=slothful
+	trait=craven
+	trait=legit_bastard
+	disallow_random_traits=yes
+	2283.11.18={birth=yes}
+	2300.1.3={add_spouse=1861487}
+	2330.6.27={death={death_reason=death_battle killer=1861614}}
+}
+1861487={
+	name="Blanchet"
+	female=yes
+	culture=southron
+	religion=evangelical #americanist convert
+	trait=skilled_tactician
+	trait=sympathy_oldworld
+	trait=feeble
+	trait=gluttonous
+	trait=wroth
+	trait=brave
+	disallow_random_traits=yes
+	2282.8.31={birth=yes}
+	2300.1.3={add_spouse=1861486}
+	2330.1.30={death=yes}
+}
+1861488={
+	name="Charles"
+	dynasty=1782165 #Hanover
+	culture=southron
+	religion=evangelical
+	father=1861486
+	mother=1861487
+	trait=tough_soldier
+	trait=chaste
+	trait=patient
+	trait=zealous
+	trait=proud
+	trait=stubborn
+	disallow_random_traits=yes
+	2301.2.17={birth=yes}
+	2321.5.8={death={death_reason=death_battle_duel killer=1861614}}
+}
+1861489={
+	name="Margaret"
+	female=yes
+	dynasty=1782165 #Hanover
+	culture=southron
+	religion=evangelical
+	father=1861486
+	mother=1861487
+	trait=elusive_shadow
+	trait=lefthanded
+	trait=kind
+	trait=charitable
+	trait=just
+	trait=paranoid
+	disallow_random_traits=yes
+	2302.11.3={birth=yes}
+	2319.2.21={add_spouse=1861533}
+	2367.2.26={death=yes}
+}
+1861490={
+	name="John"
+	dynasty=1782165 #Hanover
+	culture=southron
+	religion=evangelical
+	father=1861486
+	mother=1861487
+	trait=martial_cleric
+	trait=clubfooted
+	trait=shy
+	trait=patient
+	trait=temperate
+	trait=slothful
+	disallow_random_traits=yes
+	2304.4.2={birth=yes}
+	2320.7.8={add_spouse=1861538}
+	2371.6.25={death=yes}
+}
+1861491={
+	name="Zachary"
+	occluded=yes
+	dynasty=0 #low born
+	culture=southron
+	religion=evangelical
+	trait=legendary
+	trait=grey_eminence
+	trait=quick
+	trait=proud
+	trait=wroth
+	disallow_random_traits=yes
+	2148.10.25={birth=yes}
+	2168.8.17={add_spouse=1861465}
+	2232.9.9={death=yes}
+}
+1861492={
+	name="Nicholas"
+	dynasty=1782166 # Northam - Hanover
+	culture=beltway
+	religion=evangelical
+	father=1861491
+	mother=1861465
+	trait=grey_eminence
+	trait=quick
+	trait=stutter
+	trait=socializer
+	trait=proud
+	trait=charitable
+	trait=lustful
+	disallow_random_traits=yes
+	2168.10.21={birth=yes}
+	2187.3.14={add_spouse=1861494}
+	2232.4.30={death=yes}
+}
+1861493={
+	name="James"
+	dynasty=1782166 # Northam - Hanover
+	culture=beltway
+	religion=evangelical
+	father=1861491
+	mother=1861465
+	trait=charismatic_negotiator
+	trait=gamer
+	trait=envious
+	trait=craven
+	trait=cynical
+	trait=honest
+	disallow_random_traits=yes
+	2170.8.22={birth=yes}
+	2186.12.9={add_spouse=1861495}
+	2229.6.16={death=yes}
+}
+1861494={
+	name="Gloriana"
+	female=yes
+	culture=beltway
+	religion=evangelical
+	trait=misguided_warrior
+	trait=fair
+	trait=groomed
+	trait=slow
+	trait=kind
+	trait=humble
+	disallow_random_traits=yes
+	2165.8.7={birth=yes}
+	2187.3.14={add_spouse=1861492}
+	2245.2.6={death=yes}
+}
+1861495={
+	name="Brooke"
+	female=yes
+	culture=beltway
+	religion=catholic
+	trait=underhanded_rogue
+	trait=drunkard
+	trait=shrewd
+	trait=poet
+	trait=chaste
+	trait=temperate
+	trait=greedy
+	disallow_random_traits=yes
+	2171.5.27={birth=yes}
+	2186.12.9={add_spouse=1861493}
+	2222.9.10={death=yes}
+}
+1861496={
+	name="Divina"
+	female=yes
+	dynasty=1782166 # Northam - Hanover
+	culture=beltway
+	religion=evangelical
+	father=1861493
+	mother=1861495
+	trait=scholarly_theologian
+	trait=nun
+	trait=celibate
+	trait=zealous
+	trait=theologian
+	trait=homosexual
+	trait=temperate
+	trait=envious
+	disallow_random_traits=yes
+	2188.8.14={birth=yes}
+	2255.5.8={death=yes}
+}
+1861497={
+	name="Zachary"
+	dynasty=1782166 # Northam - Hanover
+	culture=beltway
+	religion=evangelical
+	father=1861492
+	mother=1861494
+	trait=underhanded_rogue
+	trait=falconer
+	trait=feeble
+	trait=diligent
+	trait=is_malnourished
+	trait=shrewd
+	trait=wroth
+	disallow_random_traits=yes
+	2187.4.13={birth=yes}
+	2200.11.4={add_spouse=1861500}
+	2235.4.4={death=yes}
+}
+1861498={
+	name="Justice"
+	female=yes
+	dynasty=1782166 # Northam - Hanover
+	culture=beltway
+	religion=evangelical
+	father=1861492
+	mother=1861494
+	trait=charismatic_negotiator
+	trait=sympathy_oldworld
+	trait=erudite
+	trait=just
+	trait=craven
+	trait=proud
+	trait=lustful
+	trait=charitable
+	trait=twin
+	disallow_random_traits=yes
+	2188.6.2={birth=yes}
+	2208.9.18={add_spouse=1861504}
+	2248.10.22={death=yes}
+}
+1861499={
+	name="Virginia"
+	female=yes
+	dynasty=1782166 # Northam - Hanover
+	culture=beltway
+	religion=evangelical
+	father=1861492
+	mother=1861494
+	trait=amateurish_plotter
+	trait=gregarious
+	trait=slow
+	trait=lustful
+	trait=content
+	trait=patient
+	trait=twin
+	disallow_random_traits=yes
+	2188.6.2={birth=yes}
+	2249.8.7={death=yes}
+}
+1861500={
+	name="Georgia"
+	female=yes
+	culture=tuskegean
+	religion=evangelical
+	trait=thrifty_clerk
+	trait=just
+	trait=trusting
+	trait=devout
+	trait=patient
+	trait=envious
+	trait=slothful
+	disallow_random_traits=yes
+	2185.5.10={birth=yes}
+	2200.11.4={add_spouse=1861497}
+	2242.7.30={death=yes}
+}
+1861501={
+	name="Walter"
+	dynasty=1782166 # Northam - Hanover
+	culture=beltway
+	religion=evangelical
+	father=1861497
+	mother=1861500
+	trait=naive_appeaser
+	trait=sturdy
+	trait=greedy
+	trait=wroth
+	trait=paranoid
+	trait=wounded
+	disallow_random_traits=yes
+	2202.7.15={birth=yes}
+	2219.10.18={add_spouse=1861502}
+	2238.9.5={death={death_reason=death_americanist_rabble}}
+}
+1861502={
+	name="Martha"
+	female=yes
+	dynasty=1778082 # Kingmaker
+	culture=delawarean
+	religion=catholic
+	father=1861582
+	trait=grey_eminence
+	trait=scarred
+	trait=shrewd
+	trait=feeble
+	trait=socializer
+	trait=diligent
+	trait=proud
+	trait=gregarious
+	disallow_random_traits=yes
+	2202.3.24={birth=yes}
+	2219.10.18={add_spouse=1861501}
+	2262.1.13={death=yes}
+}
+1861503={
+	name="Maxwell"
+	dynasty=1782166 # Northam - Hanover
+	culture=beltway
+	religion=evangelical
+	father=1861501
+	mother=1861502
+	trait=affectionate
+	trait=timid
+	trait=wounded
+	disallow_random_traits=yes
+	2228.4.8={birth=yes}
+	2238.9.5={death={death_reason=death_americanist_rabble}}
+}
+1861504={
+	name="Rexford"
+	culture=delawarean
+	religion=americanist
+	trait=detached_priest
+	trait=sympathy_oldworld
+	trait=strong
+	trait=chaste
+	trait=gluttonous
+	trait=slothful
+	trait=is_fat
+	trait=depressed
+	disallow_random_traits=yes
+	2186.7.12={birth=yes}
+	2208.9.18={religion=evangelical}
+	2208.9.18={add_spouse=1861498}
+	2250.3.4={death=yes}
+}
+1861505={
+	name="Randolph"
+	dynasty=1782166 # Northam - Hanover
+	culture=beltway
+	religion=evangelical
+	father=1861504
+	mother=1861498
+	trait=underhanded_rogue
+	trait=sympathy_oldworld
+	trait=content
+	trait=kind
+	trait=dull
+	trait=weak
+	trait=slothful
+	disallow_random_traits=yes
+	2209.8.24={birth=yes}
+	2222.1.6={add_spouse=1861506}
+	2267.12.7={death=yes}
+}
+1861506={
+	name="Olympia"
+	female=yes
+	culture=delawarean
+	religion=evangelical
+	trait=elusive_shadow
+	trait=seductress
+	trait=fair
+	trait=lustful
+	trait=deceitful
+	trait=ambitious
+	disallow_random_traits=yes
+	2204.9.21={birth=yes}
+	2222.1.6={add_spouse=1861505}
+	2260.4.10={death=yes}
+}
+1861507={
+	name="Randolph"
+	dynasty=1782166 # Northam - Hanover
+	culture=beltway
+	religion=evangelical
+	father=1861505
+	mother=1861506
+	trait=naive_appeaser
+	trait=shy
+	trait=erudite
+	trait=honest
+	trait=kind
+	trait=patient
+	trait=poet
+	disallow_random_traits=yes
+	2223.5.6={birth=yes}
+	2241.11.19={add_spouse=1861509}
+	2279.6.16={death=yes}
+}
+1861508={
+	name="Victor"
+	dynasty=1782166 # Northam - Hanover
+	culture=beltway
+	religion=evangelical
+	father=1861505
+	mother=1861506
+	trait=naive_appeaser
+	trait=sympathy_christendom
+	trait=mystic
+	trait=uncouth
+	trait=charitable
+	trait=arbitrary
+	trait=devout
+	trait=stubborn
+	give_nickname=nick_the_apostate
+	disallow_random_traits=yes
+	2222.6.5={birth=yes}
+	2239.4.1={religion=americanist}
+	2271.5.21={death=yes}
+}
+1861509={
+	name="Petra"
+	female=yes
+	culture=beltway
+	religion=catholic
+	trait=mastermind_theologian
+	trait=sympathy_oldworld
+	trait=theologian
+	trait=fair
+	trait=lustful
+	trait=diligent
+	trait=patient
+	disallow_random_traits=yes
+	2221.8.15={birth=yes}
+	2241.11.19={add_spouse=1861507}
+	2284.2.8={death=yes}
+}
+1861510={
+	name="Lee"
+	dynasty=1782166 # Northam - Hanover
+	culture=beltway
+	religion=evangelical
+	father=1861507
+	mother=1861509
+	2242.7.4={birth=yes}
+	2280.10.9={death=yes} #murdered by a Kingmaker
+}
+1861511={
+	name="Achilles"
+	dynasty=0 
+	culture=southron
+	religion=evangelical
+	2216.1.14={birth=yes}
+	2234.2.19={add_spouse=1861474}
+	2278.11.24={death=yes}
+}
+1861512={
+	name="Jocasta"
+	female=yes
+	dynasty=1782165 #Hanover
+	culture=southron
+	religion=evangelical
+	father=1861511
+	mother=1861474
+	2235.4.6={birth=yes}
+	2252.3.29={add_spouse=1861514}
+	2293.12.20={death=yes}
+}
+1861513={
+	name="Lucia"
+	female=yes
+	dynasty=1782165 #Hanover
+	culture=southron
+	religion=evangelical
+	father=1861511
+	mother=1861474
+	2242.5.7={birth=yes}
+	2294.8.14={death=yes}
+}
+1861514={
+	name="William"
+	dynasty=0
+	culture=southron
+	religion=evangelical
+	2232.11.30={birth=yes}
+	2252.3.29={add_spouse=1861512}
+	2292.4.22={death=yes}
+}
+1861515={
+	name="Virginius"
+	dynasty=1782165 #Hanover
+	culture=southron
+	religion=evangelical
+	father=1861514
+	mother=1861512
+	2252.12.17={birth=yes}
+	2341.5.22={death=yes}
+}
+1861516={
+	name="George-Lee"
+	dynasty=0
+	culture=southron
+	religion=evangelical
+	2221.11.11={birth=yes}
+	2235.1.26={add_spouse=1861476}
+	2282.1.5={death=yes}
+}
+1861517={
+	name="James"
+	dynasty=1782165 #Hanover
+	culture=southron
+	religion=evangelical
+	father=1861516
+	mother=1861476
+	2237.7.19={birth=yes}
+	2307.12.23={death=yes}
+}
+1861518={
+	name="Nathanael"
+	dynasty=0
+	culture=tuskegean
+	religion=evangelical
+	2223.4.15={birth=yes
+	effect={set_character_flag=diversity}
+	}
+	2238.11.4={add_spouse=1861477}
+	2280.9.23={death=yes}
+}
+1861519={
+	name="Raphael"
+	dynasty=1782165 #Hanover
+	culture=tuskegean
+	religion=evangelical
+	father=1861518
+	mother=1861477
+	2240.9.4={birth=yes
+	culture=southron
+	effect={set_character_flag=diversity}
+	}
+	2258.5.12={add_spouse=1861520}
+	2309.12.5={death=yes}
+}
+1861520={
+	name="Dahlia"
+	female=yes
+	dynasty=0
+	culture=southron
+	religion=evangelical
+	2241.1.19={birth=yes}
+	2258.5.12={add_spouse=1861519}
+	2311.7.12={death=yes}
+}
+1861521={
+	name="Autumn"
+	female=yes
+	dynasty=1782165 #Hanover
+	culture=southron
+	religion=evangelical
+	father=1861519
+	mother=1861520
+	2258.11.28={birth=yes}
+	2316.5.12={death=yes}
+}
+
+1861522={
+	name="Tiberius"
+	dynasty=1782165 #Hanover
+	culture=tuskegean
+	religion=evangelical
+	father=1861518
+	mother=1861477
+	2241.9.18={birth=yes
+	culture=southron
+	effect={set_character_flag=diversity}
+	}
+	2258.3.29={add_spouse=1861523}
+	2301.7.7={death=yes}
+}
+1861523={
+	name="Clover"
+	female=yes
+	dynasty=0
+	culture=southron
+	religion=evangelical
+	2239.10.14={birth=yes}
+	2258.3.29={add_spouse=1861522}
+	2302.1.20={death=yes}
+}
+1861529={
+	name="Ambrosia"
+	female=yes
+	dynasty=1782165 #Hanover
+	culture=southron
+	religion=evangelical
+	father=1861522
+	mother=1861523
+	2258.6.14={birth=yes}
+	2320.9.3={death=yes}
+}
+1861524={
+	name="Saunder"
+	dynasty=1782165 #Hanover
+	culture=tuskegean
+	religion=evangelical
+	father=1861522
+	mother=1861523
+	2260.12.7={birth=yes
+	culture=southron
+	effect={set_character_flag=diversity}
+	}
+	2274.4.30={add_spouse=1861525}
+	2327.10.1={death=yes}
+}
+1861525={
+	name="Elizabeth"
+	female=yes
+	culture=southron
+	religion=evangelical
+	2263.2.4={birth=yes}
+	2274.4.30={add_spouse=1861524}
+	2312.5.15={death=yes}
+}
+1861526={
+	name="Carolina"
+	female=yes
+	dynasty=1782165 #Hanover
+	culture=southron
+	religion=evangelical
+	father=1861524
+	mother=1861525
+	2274.9.10={birth=yes}
+	2338.1.9={death=yes}
+}
+1861527={
+	name="Walter"
+	dynasty=1782165 #Hanover
+	culture=southron
+	religion=evangelical
+	father=1861481
+	mother=1861483
+	2274.8.30={birth=yes}
+	2281.6.11={add_spouse=1861528}
+	2321.4.24={death=yes}
+}
+1861528={
+	name="Gwendolyn"
+	female=yes
+	culture=southron
+	religion=postadventist
+	2265.3.17={birth=yes}
+	2281.6.11={add_spouse=1861527}
+	2324.4.24={death=yes}
+}
+
+1861530={
+	name="Marmaduke"
+	dynasty=1782165 #Hanover
+	culture=southron
+	religion=postadventist
+	father=1861527
+	mother=1861528
+	2290.8.1={birth=yes}
+	2305.6.18={add_spouse=1861531}
+	2340.9.23={death=yes}
+}
+1861531={
+	name="Otelia"
+	female=yes
+	culture=southron
+	religion=postadventist
+	2284.10.9={birth=yes}
+	2305.6.18={add_spouse=1861530}
+	2379.5.25={death=yes}
+}
+1861532={
+	name="Riley"
+	female=yes
+	dynasty=1782165 #Hanover
+	culture=southron
+	religion=postadventist
+	father=1861530
+	mother=1861531
+	2307.7.17={birth=yes}
+	2370.4.24={death=yes}
+}
+1861533={
+	name="Samuel"
+	culture=southron
+	religion=evangelical
+	2300.5.25={birth=yes}
+	2319.2.21={add_spouse=1861489}
+	2369.11.23={death=yes}
+}
+1861534={
+	name="Olympia"
+	female=yes
+	dynasty=1782165 #Hanover
+	culture=southron
+	religion=evangelical
+	father=1861533
+	mother=1861489
+	2319.6.17={birth=yes}
+	2377.8.24={death=yes}
+}
+1861535={
+	name="Mary-Anna"
+	female=yes
+	dynasty=1782165 #Hanover
+	culture=southron
+	religion=evangelical
+	father=1861533
+	mother=1861489
+	2321.7.7={birth=yes}
+	2392.11.14={death=yes}
+}
+1861536={
+	name="Octavian"
+	dynasty=1782165 #Hanover
+	culture=southron
+	religion=evangelical
+	father=1861533
+	mother=1861489
+	2322.10.4={birth=yes}
+	2387.2.9={death=yes}
+}
+1861537={
+	name="Lilly"
+	female=yes
+	dynasty=1782165 #Hanover
+	culture=southron
+	religion=evangelical
+	father=1861533
+	mother=1861489
+	2323.7.25={birth=yes}
+	2407.3.26={death=yes}
+}
+1861538={
+	name="Henrietta"
+	female=yes
+	culture=southron
+	religion=evangelical
+	2305.5.30={birth=yes}
+	2320.7.8={add_spouse=1861490}
+	2377.6.27={death=yes}
+}
+1861539={
+	name="Marcus"
+	dynasty=1782165 #Hanover
+	culture=southron
+	religion=evangelical
+	father=1861490
+	mother=1861538
+	trait=thrifty_clerk
+	trait=temperate
+	trait=humble
+	trait=slothful
+	trait=content
+	trait=homosexual
+	disallow_random_traits=yes
+	2320.10.22={birth=yes}
+	2336.4.11={add_spouse=1861540}
+	2389.9.4={death=yes}
+}
+1861540={
+	name="Augusta"
+	female=yes
+	culture=southron
+	religion=evangelical
+	2319.2.27={birth=yes}
+	2336.4.11={add_spouse=1861539}
+	2376.11.16={death=yes}
+}
+1861541={
+	name="Aphrodite"
+	female=yes
+	dynasty=1782165 #Hanover
+	culture=southron
+	religion=evangelical
+	father=1861539
+	mother=1861540
+	trait=midas_touched
+	trait=fair
+	trait=groomed
+	trait=lustful
+	trait=gregarious
+	trait=arbitrary
+	trait=kind
+	trait=proud
+	disallow_random_traits=yes
+	2337.9.10={birth=yes}
+	2353.3.6={add_spouse=1861546}
+	2401.6.12={death=yes}
+}
+1861542={
+	name="Athena"
+	female=yes
+	dynasty=1782165 #Hanover
+	culture=southron
+	religion=evangelical
+	father=1861539
+	mother=1861540
+	2339.8.9={birth=yes}
+	2358.11.2={add_spouse=1861543}
+	2392.5.7={death=yes}
+}
+1861543={
+	name="Vitalian"
+	culture=southron
+	religion=evangelical
+	disallow_random_traits=yes
+	2337.3.22={birth=yes}
+	2358.11.2={add_spouse=1861542}
+	2386.12.9={death=yes}
+}
+1861544={
+	name="Dionysia"
+	female=yes
+	dynasty=1782165 #Hanover
+	culture=southron
+	religion=evangelical
+	father=1861543
+	mother=1861542
+	2358.11.8={birth=yes}
+	2426.4.28={death=yes}
+}
+1861545={
+	name="Guinevere"
+	female=yes
+	dynasty=1782165 #Hanover
+	culture=southron
+	religion=evangelical
+	father=1861543
+	mother=1861542
+	2359.7.26={birth=yes}
+	2430.2.28={death=yes}
+}
+1861546={
+	name="Raynault"
+	culture=dixie
+	religion=evangelical
+	2335.6.8={birth=yes}
+	2353.3.6={add_spouse=1861541}
+	2403.6.8={death=yes}
+}
+1861547={
+	name="Virginia"
+	female=yes
+	dynasty=1782165 #Hanover
+	culture=southron
+	religion=evangelical
+	father=1861546
+	mother=1861541
+	2353.12.26={birth=yes}
+	2371.2.8={add_spouse=1861548}
+	2406.11.10={death=yes}
+}
+1861548={
+	name="Watling"
+	culture=southron
+	religion=evangelical
+	2354.9.24={birth=yes}
+	2371.2.8={add_spouse=1861547}
+	2414.3.6={death=yes}
+}
+1861549={
+	name="Libertas"
+	female=yes
+	dynasty=1782165 #Hanover
+	culture=southron
+	religion=evangelical
+	father=1861548
+	mother=1861547
+	trait=twin
+	2373.6.12={birth=yes}
+	2426.10.8={death=yes}
+}
+1861550={
+	name="Ceres"
+	female=yes
+	dynasty=1782165 #Hanover
+	culture=southron
+	religion=evangelical
+	father=1861548
+	mother=1861547
+	trait=twin
+	2373.6.12={birth=yes}
+	2432.7.3={death=yes}
+}
+1861551={
+	name="Aeternitas"
+	female=yes
+	dynasty=1782165 #Hanover
+	culture=southron
+	religion=evangelical
+	father=1861548
+	mother=1861547
+	trait=twin
+	2373.6.12={birth=yes}
+	2418.4.4={death=yes}
+}
+1861552={
+	name="Charles" #VII
+	dynasty=1782165 #Hanover
+	culture=southron
+	religion=evangelical
+	father=1861546
+	mother=1861541
+	2354.5.23={birth=yes}
+	2371.2.23={add_spouse=1861553}
+	2416.11.5={death=yes}
+}
+1861553={
+	name="Silvana"
+	female=yes
+	culture=southron
+	religion=evangelical
+	2356.1.2={birth=yes}
+	2371.2.23={add_spouse=1861552}
+	2425.6.3={death=yes}
+}
+1861554={
+	name="Valentinian"
+	dynasty=1782165 #Hanover
+	culture=southron
+	religion=evangelical
+	father=1861546
+	mother=1861541
+	2356.7.16={birth=yes}
+	2419.4.25={death=yes}
+}
+1861555={
+	name="Joanna"
+	female=yes
+	dynasty=1782165 #Hanover
+	culture=southron
+	religion=evangelical
+	father=1861546
+	mother=1861541
+	2358.3.21={birth=yes}
+	2379.12.27={add_spouse=1861556}
+	2432.4.30={death=yes}
+}
+1861556={
+	name="Mosby"
+	culture=southron
+	religion=evangelical
+	2355.12.5={birth=yes}
+	2379.12.27={add_spouse=1861555}
+	2408.9.2={death=yes}
+}
+1861557={
+	name="Rhett"
+	dynasty=1782165 #Hanover
+	culture=southron
+	religion=evangelical
+	father=1861556
+	mother=1861555
+	2380.2.1={birth=yes}
+	2448.8.25={death=yes}
+}
+1861558={
+	name="Charles" #VIII
+	dynasty=1782165 #Hanover
+	culture=southron
+	religion=evangelical
+	father=1861552
+	mother=1861553
+	2372.6.9={birth=yes}
+	2411.4.18={add_spouse=1861559}
+	2440.3.7={death=yes}
+}
+1861559={
+	name="Pamilia"
+	female=yes
+	culture=southron
+	religion=evangelical
+	2373.4.4={birth=yes}
+	2411.4.18={add_spouse=1861558}
+	2430.10.7={death=yes}
+}
+1861560={
+	name="Charles" #IX
+	dynasty=1782165 #Hanover
+	culture=southron
+	religion=evangelical
+	father=1861558
+	mother=1861559
+	2411.6.15={birth=yes}
+	2427.11.22={add_spouse=1861561}
+	2469.3.24={death=yes}
+}
+1861561={
+	name="Joanna"
+	female=yes
+	culture=dixie
+	religion=evangelical
+	2411.2.7={birth=yes}
+	2427.2.22={add_spouse=1861560}
+	2474.9.22={death=yes}
+}
+1861562={
+	name="Charles" #X
+	dynasty=1782165 #Hanover
+	culture=southron
+	religion=evangelical
+	father=1861560
+	mother=1861561
+	2427.7.27={birth=yes}
+	2445.5.14={add_spouse=1861565}
+	2485.6.12={death={death_reason=death_battle killer=666107}}
+}
+1861563={
+	name="Hera"
+	female=yes
+	dynasty=1782165 #Hanover
+	culture=southron
+	religion=evangelical
+	father=1861560
+	mother=1861561
+	2429.1.26={birth=yes}
+	2485.6.13={death={death_reason=death_firing_squad killer=666107}}
+}
+1861564={
+	name="India"
+	female=yes
+	dynasty=1782165 #Hanover
+	culture=southron
+	religion=evangelical
+	father=1861560
+	mother=1861561
+	2430.7.28={birth=yes}
+	2485.6.13={death={death_reason=death_firing_squad killer=666107}}
+}
+1861565={
+	name="Peach"
+	female=yes
+	culture=southron
+	religion=evangelical
+	2425.11.6={birth=yes}
+	2445.5.14={add_spouse=1861562}
+	2485.6.13={death={death_reason=death_firing_squad killer=666107}}
+}
+1861566={
+	name="Charles" # XI
+	dynasty=1782165 #Hanover
+	culture=southron
+	religion=evangelical
+	father=1861562
+	mother=1861565
+	2445.10.10={birth=yes}
+	2512.8.17={death=yes}
+}
+1861567={
+	name="Jackson"
+	dynasty=1782165 #Hanover
+	culture=southron
+	religion=evangelical
+	father=1861566
+	2463.1.16={birth=yes}
+	2532.5.26={death=yes}
+}
+1861568={
+	name="Walter"
+	dynasty=1782165 #Hanover
+	culture=southron
+	religion=evangelical
+	father=1861567
+	2483.11.30={birth=yes}
+	2542.8.2={death=yes}
+}
+1861569={
+	name="Oliver"
+	dynasty=1782165 #Hanover
+	culture=southron
+	religion=evangelical
+	father=1861568
+	2503.3.11={birth=yes}
+	2565.1.2={death=yes}
+}
+1861570={
+	name="June"
+	female=yes
+	dynasty=1782165 #Hanover
+	culture=southron
+	religion=evangelical
+	father=1861569
+	2522.7.5={birth=yes}
+	2576.12.9={death=yes}
+}
+1861571={
+	name="Charles"
+	dynasty=1782165 #Hanover
+	culture=southron
+	religion=evangelical
+	mother=1861570
+	2540.2.17={birth=yes}
+	2607.7.4={death=yes}
+}
+1861572={
+	name="Linda"
+	female=yes
+	dynasty=1782165 #Hanover
+	culture=southron
+	religion=evangelical
+	father=1861571
+	2557.9.9={birth=yes}
+	2617.12.14={death=yes}
+}
+1861573={
+	name="Nathanael"
+	dynasty=1782165 #Hanover
+	culture=southron
+	religion=evangelical
+	mother=1861572
+	2575.1.14={birth=yes}
+	2633.7.15={death=yes}
+}
+1861574={
+	name="Mary-Lee"
+	female=yes
+	dynasty=1782165 #Hanover
+	culture=southron
+	religion=evangelical
+	father=1861573
+	2608.4.12={birth=yes}
+	2653.6.20={death=yes}
+}
+1861575={
+	name="Virginia"
+	female=yes
+	dynasty=1782165 #Hanover
+	culture=southron
+	religion=evangelical
+	mother=1861574
+	2628.10.16={birth=yes}
+	2642.5.31={add_spouse=1861576}
+	2665.10.21={death=yes}
+}
+1861576={
+	name="Saunder"
+	culture=southron
+	religion=evangelical
+	2628.6.24={birth=yes}
+	2642.5.31={add_spouse=1861575}
+	2667.1.1={death=yes}
+}
+1861577={
+	name="Charles"
+	dynasty=1782165 #Hanover
+	culture=southron
+	religion=evangelical
+	father=1861576
+	mother=1861575
+	2648.3.21={birth=yes}
+	2667.1.1={death=yes}
+}
+1861578={
+	name="Justice"
+	female=yes
+	dynasty=1782165 #Hanover
+	culture=southron
+	religion=evangelical
+	father=1861576
+	mother=1861575
+	2652.12.28={birth=yes}
+	2667.1.1={death=yes}
+}
+1861579={
+	name="Anastasia"
+	female=yes
+	dynasty=1782060 #Josias
+	culture=southron
+	religion=evangelical
+	dna="bbeddnedkcf"
+	properties="wd0dgd00000000000000000000000000000000"
+	father=1861307
+	mother=1861316
+	trait=elusive_shadow
+	trait=groomed
+	trait=quick
+	trait=chaste
+	trait=diligent
+	trait=proud
+	trait=bulldog_hcc
+	trait=flowered
+	disallow_random_traits=yes
+	2647.5.1={birth=yes}
+	2656.1.1={
+		effect={
+			set_character_flag=anastasia
+			set_character_flag=diversity
+			set_character_flag=physique
+		}
+	}
+	2667.1.1={death=yes}
+}
+1861580={
+	name="Theodore"
+	dynasty=1778082 #Kingmaker
+	mother=1861457
+	culture=delawarean
+	religion=catholic
+	2147.1.1={birth=yes}
+	2208.1.1={death=yes}
+}
+1861581={
+	name="Seymour"
+	dynasty=1778082 #Kingmaker
+	father=1861580
+	culture=delawarean
+	religion=catholic
+	2165.1.1={birth=yes}
+	2223.1.1={death=yes}
+}
+1861582={
+	name="Eugene"
+	dynasty=1778082 #Kingmaker
+	father=1861581
+	culture=delawarean
+	religion=catholic
+	2182.1.1={birth=yes}
+	2242.1.1={death=yes}
+}
+1861583={
+	name="Ethan"
+	dynasty=1778082 #Kingmaker
+	father=1861582
+	culture=delawarean
+	religion=americanist
+	2203.1.1={birth=yes}
+	2253.5.3={death={death_reason=death_battle killer=1861478}}
+}
+1861584={
+	name="Adrienne"
+	female=yes
+	dynasty=1778082 #Kingmaker
+	father=1861583
+	culture=delawarean
+	religion=catholic
+	2219.1.1={birth=yes}
+	2278.1.1={death=yes}
+}
+1861585={
+	name="Simon"
+	dynasty=1778082 #Kingmaker
+	mother=1861584
+	culture=delawarean
+	religion=catholic
+	2237.1.1={birth=yes}
+	2285.1.1={death=yes}
+}
+1861586={
+	name="Simon"
+	dynasty=1778082 #Kingmaker
+	father=1861585
+	culture=delawarean
+	religion=americanist
+	2255.1.1={birth=yes}
+	2310.1.1={death=yes}
+}
+1861587={
+	name="Preston"
+	dynasty=1778082 #Kingmaker
+	father=1861586
+	culture=delawarean
+	religion=americanist
+	2273.1.1={birth=yes}
+	2334.1.1={death=yes}
+}
+1861588={
+	name="Jerome"
+	dynasty=1778082 #Kingmaker
+	father=1861587
+	culture=delawarean
+	religion=americanist
+	2291.1.1={birth=yes}
+	2350.1.1={death=yes}
+}
+1861589={
+	name="Howard"
+	dynasty=1778082 #Kingmaker
+	father=1861588
+	culture=delawarean
+	religion=americanist
+	2309.1.1={birth=yes}
+	2369.1.1={death=yes}
+}
+1861590={
+	name="Grant"
+	dynasty=1778082 #Kingmaker
+	father=1861589
+	culture=delawarean
+	religion=americanist
+	2327.1.1={birth=yes}
+	2372.1.1={death=yes}
+}
+1861591={
+	name="Philip"
+	dynasty=1778082 #Kingmaker
+	father=1861590
+	culture=delawarean
+	religion=americanist
+	2345.1.1={birth=yes}
+	2398.1.1={death=yes}
+}
+1861592={
+	name="Grant"
+	dynasty=1778082 #Kingmaker
+	father=1861591
+	culture=delawarean
+	religion=americanist
+	2362.1.1={birth=yes}
+	2420.1.1={death=yes}
+}
+1861593={
+	name="Richard"
+	dynasty=1778082 #Kingmaker
+	father=1861592
+	culture=delawarean
+	religion=americanist
+	2379.1.1={birth=yes}
+	2441.1.1={death=yes}
+}
+1861594={
+	name="Jasper"
+	dynasty=1778082 #Kingmaker
+	father=1861593
+	culture=delawarean
+	religion=americanist
+	2397.1.1={birth=yes}
+	2457.1.1={death=yes}
+}
+1861595={
+	name="Stephen"
+	dynasty=1778082 #Kingmaker
+	father=1861594
+	culture=delawarean
+	religion=americanist
+	2415.1.1={birth=yes}
+	2465.1.1={death=yes}
+}
+1861596={
+	name="Abigail"
+	female=yes
+	dynasty=1778082 #Kingmaker
+	father=1861595
+	culture=delawarean
+	religion=americanist
+	2433.1.1={birth=yes}
+	2490.1.1={death=yes}
+}
+1861597={
+	name="Montell"
+	dynasty=1778082 #Kingmaker
+	mother=1861596
+	culture=delawarean
+	religion=americanist
+	2451.1.1={birth=yes}
+	2509.1.1={death=yes}
+}
+1861598={
+	name="Frederick"
+	dynasty=1778082 #Kingmaker
+	father=1861597
+	culture=delawarean
+	religion=americanist
+	2469.1.1={birth=yes}
+	2529.1.1={death=yes}
+}
+1861599={
+	name="Franklin"
+	dynasty=1778082 #Kingmaker
+	father=1861598
+	culture=delawarean
+	religion=americanist
+	2487.1.1={birth=yes}
+	2543.1.1={death=yes}
+}
+1861600={
+	name="Peter"
+	dynasty=1778082 #Kingmaker
+	father=1861599
+	culture=delawarean
+	religion=americanist
+	2505.1.1={birth=yes}
+	2568.1.1={death=yes}
+}
+1861601={
+	name="Herbert"
+	dynasty=1778082 #Kingmaker
+	father=1861600
+	culture=delawarean
+	religion=americanist
+	2523.1.1={birth=yes}
+	2581.1.1={death=yes}
+}
+1861602={
+	name="Clark"
+	dynasty=1778082 #Kingmaker
+	father=1861601
+	culture=delawarean
+	religion=americanist
+	2541.1.1={birth=yes}
+	2601.1.1={death=yes}
+}
+1861603={
+	name="John"
+	dynasty=1778082 #Kingmaker
+	father=1861602
+	culture=delawarean
+	religion=americanist
+	2559.1.1={birth=yes}
+	2618.1.1={death=yes}
+}
+1861604={
+	name="Donald"
+	dynasty=1778082 #Kingmaker
+	father=1861603
+	culture=delawarean
+	religion=americanist
+	2579.1.1={birth=yes}
+	2633.1.1={death=yes}
+}
+1861605={
+	name="Francis"
+	dynasty=1778082 #Kingmaker
+	father=1861604
+	culture=delawarean
+	religion=americanist
+	2598.1.1={birth=yes}
+	2658.1.1={death=yes}
+}
+1861606={
+	name="Michael"
+	dynasty=1778082 #Kingmaker
+	father=1861605
+	culture=delawarean
+	religion=americanist
+	2616.4.30={birth=yes}
+	2633.11.4={add_spouse=1861608}
+	2665.2.11={death=yes}
+}
+1861607={
+	name="Michael"
+	dynasty=1778082 #Kingmaker
+	father=1861606
+	mother=1861608
+	culture=delawarean
+	religion=americanist
+	2634.6.17={birth=yes}
+	2667.1.1={death=yes}
+}
+1861608={
+	name="Alexa"
+	female=yes
+	culture=delawarean
+	religion=americanist
+	2611.8.9={birth=yes}
+	2633.11.4={add_spouse=1861606}
+	2667.1.1={death=yes}
+}
+1861609={
+	name="Alfred"
+	dynasty=1782167
+	culture=southron
+	religion=americanist
+	2157.1.1={birth=yes}
+	2217.1.1={death=yes}
+}
+1861610={
+	name="Alfred"
+	dynasty=1782167
+	father=1861609
+	culture=southron
+	religion=americanist
+	2191.1.1={birth=yes}
+	2244.1.1={death=yes}
+}
+1861611={
+	name="Mosby"
+	dynasty=1782167
+	father=1861610
+	culture=southron
+	religion=americanist
+	2224.1.1={birth=yes}
+	2255.5.6={death={death_reason=death_battle_duel killer=1861478}}
+}
+1861612={
+	name="Mercury"
+	dynasty=1782168
+	culture=southron
+	religion=americanist
+	2254.1.1={birth=yes}
+	2317.1.1={death=yes}
+}
+1861613={
+	name="Lionel"
+	dynasty=1782168
+	father=1861612
+	culture=southron
+	religion=americanist
+	2296.1.1={birth=yes}
+	2355.1.1={death=yes}
+}
+1861614={
+	name="Claudius"
+	dynasty=1782168
+	father=1861613
+	culture=southron
+	religion=americanist
+	2330.1.1={birth=yes}
+	2364.1.21={death={death_reason=death_battle_duel killer=1861002}}
+}
+
+1861615={
+	name="John"
+	occluded=yes
+	dynasty=1812226 # White
+	culture=anglish
+	religion=high_church
+	trait=legendary
+	trait=administrator
+	disallow_random_traits=yes
+	1539.2.22={birth=yes}
+	1593.1.1={death=yes}
+}
+1863000={
+	name="Antoninus"
+	dynasty=1787146 # Monmouth
+	culture=dixie
+	religion=evangelical
+	martial=5
+	diplomacy=2
+	stewardship=4
+	intrigue=4
+	learning=3
+	trait=misguided_warrior
+	trait=bisexual
+	trait=strong
+	trait=giant
+	trait=lustful
+	trait=wroth
+	trait=arbitrary
+	trait=stubborn
+	trait=charitable
+	trait=kind
+	give_nickname=nick_tank
+	2482.1.1={birth=yes}
+	2507.11.24={death={death_reason=death_duel killer=1861183}}
+}
+1863001={
+	name="Damion"
+	dynasty=1763020 # Harrison
+	culture=tuskegean
+	religion=evangelical
+	martial=5
+	diplomacy=2
+	stewardship=5
+	intrigue=8
+	learning=4
+	trait=brilliant_strategist
+	trait=quick
+	trait=diligent
+	trait=ambitious
+	trait=cruel
+	trait=cynical
+	trait=deceitful
+	trait=proud
+	give_nickname=nick_delta_devil
+	2481.1.1={birth=yes}
+	2522.1.1={death=yes}
+}
+1863002={
+	name="Son"
+	dynasty=1863029 # Hunter
+	culture=tuskegean
+	religion=charismatic
+	martial=3
+	diplomacy=9
+	stewardship=3
+	intrigue=3
+	learning=5
+	trait=underhanded_rogue
+	trait=musician
+	trait=trusting
+	trait=feeble
+	trait=humble
+	trait=gregarious
+	trait=gluttonous
+	give_nickname=nick_the_cyclops
+	2459.1.1={birth=yes}
+	2506.3.1={death={death_reason=death_execution_flaying killer=1863001}}
+}
+1863003={
+	name="Nehemiah"
+	dynasty=1785001 # Turner, placeholder until we extend the Latimer title history back
+	culture=tuskegean
+	religion=evangelical
+	martial=5
+	diplomacy=6
+	stewardship=5
+	intrigue=3
+	learning=7
+	trait=scholarly_theologian
+	trait=shrewd
+	trait=zealous
+	trait=temperate
+	trait=patient
+	trait=celibate
+	2463.1.1={birth=yes}
+	2535.1.1={death=yes}
+}
+1863004={
+	name="Horus"
+	dynasty=1785123 # Turnipseed
+	culture=tuskegean
+	religion=misrist
+	martial=8
+	diplomacy=4
+	stewardship=8
+	intrigue=6
+	learning=8
+	trait=martial_cleric
+	trait=scholar
+	trait=uncouth
+	trait=slothful
+	trait=temperate
+	trait=content
+	trait=possessed
+	2479.1.1={birth=yes}
+	2530.1.1={death=yes}
+}
+1863005={
+	name="Charles"
+	dynasty=1787147 # Vance
+	culture=dixie
+	religion=revelationist
+	martial=7
+	diplomacy=1
+	stewardship=3
+	intrigue=3
+	learning=4
+	trait=skilled_tactician
+	trait=duelist
+	trait=trickster
+	trait=cruel
+	trait=cynical
+	trait=wroth
+	trait=humble
+	give_nickname=nick_scalawag
+	2481.1.1={birth=yes}
+	2508.6.1={death={death_reason=death_battle_duel killer=1863003}}
+}
+1863006={
+	name="Dan"
+	dynasty=1787148 # Reeves
+	culture=dixie
+	religion=evangelical
+	martial=6
+	diplomacy=9
+	stewardship=2
+	intrigue=3
+	learning=4
+	trait=charismatic_negotiator
+	trait=gamer
+	trait=shrewd
+	trait=diligent
+	trait=patient
+	trait=greedy
+	give_nickname=nick_the_gator
+	2475.1.1={birth=yes}
+	2530.1.1={death=yes}
+}
+1863007={
+	name="Mohamed"
+	dynasty=1666098 # ibn Sori
+	culture=liberian
+	religion=traditionalist
+	martial=5
+	diplomacy=6
+	stewardship=4
+	intrigue=2
+	learning=5
+	trait=tough_soldier
+	trait=hafiz
+	trait=adventurer
+	trait=administrator
+	trait=scarred_high
+	trait=just
+	trait=kind
+	trait=temperate
+	trait=wroth
+	trait=brave
+	2479.1.1={birth=yes}
+	2508.6.14={death={death_reason=death_battle killer=1861301}}
+}

@@ -34,6 +34,7 @@
 }
 6900002={ #Rey de Cristo
 	name="Nicolás"
+	#dynasty=5001114
 	culture=abajeno
 	religion=cristo_rey
 	martial=10
@@ -508,6 +509,13 @@
 	trait=brilliant_strategist
 	trait=legendary
 	2431.3.15={birth=yes}
+	2461.10.10={
+		give_nickname=nick_the_crusader
+		create_bloodline={
+			type=cervantes
+			has_dlc="Holy Fury"
+		}
+	}
 	2496.10.23={death=yes}
 }
 
@@ -941,8 +949,8 @@
 	trait=ambitious
 	trait=slothful
 	trait=charismatic_negotiator
-	2638.2.13={birth=yes}
-	2700.12.12={death=yes}
+	2602.2.13={birth=yes}
+	2680.12.12={death=yes}
 }
 
 6900049={

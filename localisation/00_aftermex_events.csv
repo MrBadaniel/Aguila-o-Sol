@@ -1,10 +1,9 @@
 ######E_MEXICO######
+#vassalize_dorados;Vassalize the Dorados;;;;;;;;;;;;;x
+#vassalize_dorados_desc;With the Mexican Empire revived, the Dorados would willingly serve a sufficiently wealthy and pious Emperor - granted their ancient rights be respected...;;;;;;;;;;;;;x
 
-vassalize_dorados;Vassalize the Dorados;;;;;;;;;;;;;x
-vassalize_dorados_desc;With the Mexican Empire revived, the Dorados would willingly serve a sufficiently wealthy and pious Emperor - granted their ancient rights be respected...;;;;;;;;;;;;;x
-
-restore_mexico;Restore Mexico;;;;;;;;;;;;;x
-restore_mexico_desc;If key regions of the Empire and their the caudillos be brought to heel, the world must then recognize the Mexican Empire as a dominant force and the rightful continuation of the old, antidiluvian empire.;;;;;;;;;;;;;x
+restore_mexican_empire;Restore the Mexican Empire to Glory;;;;;;;;;;;;;x
+restore_mexican_empire_desc;If key regions of the Empire and their the caudillos be brought to heel, the world must then truly recognize the Mexican Empire as a dominant force and the rightful continuation of the old, antidiluvian empire.;;;;;;;;;;;;;x
 
 EVTNAME_restore_mexican_empire;The Mexican Miracle!;;;;;;;;;;;;;x
 EVTDESC_restore_mexican_empire_desc;A true relic of the past, the Mexican Empire has long claimed continuity with the ancient republic. However, centuries of mismanagement and religious strife led to the fracturing of the Empire. Many had believed that Mexico's time had finally come to an end. \n[Root.GetTitledFirstName] has proven them wrong. [Root.GetSubjectPronounCap] has brought the rogue realms of the caudillos back into the fold of the Empire and has brought a stability to the region not seen since Julián the Great. \nAlthough there is still territory left to be reclaimed and wars that have not yet been won, one thing is certain - Mexico is back.;;;;;;;;;;;;;x
@@ -18,6 +17,37 @@ make_cdmx_capital_desc;Mexico City, the "Place in the Navel of the Moon", is the
 cdmx_capital;Mexico City once more becomes the seat of imperial power.;Rome est une fois de plus la capitale du pouvoir impérial.;Rom wird einmal mehr der Sitz der kaiserlichen Macht.;;Roma vuelve a ser la sede del poder imperial.;;;;;;;;;x
 
 ######RECONQUISTA######
+
+CB_NAME_RECONQUISTA_JALISCO;Reconquest of Jalisco;;;;;;;;;;;;;x
+WAR_NAME_RECONQUISTA_JALISCO;$ORDER$Reconquest War for Jalisco;;;;;;;;;;;;;x
+reconquista_jalisco_desc;§Y[Root.GetTitledName]§! can start a war to oust the infidels from the region of §Y[k_jalisco.GetBaseName]§!, and retake all provinces in the area held by §Y$TARGET$§!.;;;;;;;;;;;;;x
+CB_NAME_RECONQUISTA_COLIMA;Reconquest of Colima;;;;;;;;;;;;;x
+WAR_NAME_RECONQUISTA_COLIMA;$ORDER$Reconquest War for Colima;;;;;;;;;;;;;x
+reconquista_colima_desc;§Y[Root.GetTitledName]§! can start a war to oust the infidels from the region of §Y[k_colima.GetBaseName]§!, and retake all provinces in the area held by §Y$TARGET$§!.;;;;;;;;;;;;;x
+CB_NAME_RECONQUISTA_MICHOACAN;Reconquest of Michoacan;;;;;;;;;;;;;x
+WAR_NAME_RECONQUISTA_MICHOACAN;$ORDER$Reconquest War for Michoacan;;;;;;;;;;;;;x
+reconquista_michoacan_desc;§Y[Root.GetTitledName]§! can start a war to oust the infidels from the region of §Y[k_michoacan.GetBaseName]§!, and retake all provinces in the area held by §Y$TARGET$§!.;;;;;;;;;;;;;x
+CB_NAME_RECONQUISTA_MIXTECA;Reconquest of Mixteca;;;;;;;;;;;;;x
+WAR_NAME_RECONQUISTA_MIXTECA;$ORDER$Reconquest War for Mixteca;;;;;;;;;;;;;x
+reconquista_mixteca_desc;§Y[Root.GetTitledName]§! can start a war to oust the infidels from the region of §Y[k_mixteca.GetBaseName]§!, and retake all provinces in the area held by §Y$TARGET$§!.;;;;;;;;;;;;;x
+CB_NAME_RECONQUISTA_OAXACA;Reconquest of Oaxaca;;;;;;;;;;;;;x
+WAR_NAME_RECONQUISTA_OAXACA;$ORDER$Reconquest War for Oaxaca;;;;;;;;;;;;;x
+reconquista_oaxaca_desc;§Y[Root.GetTitledName]§! can start a war to oust the infidels from the region of §Y[k_oaxaca.GetBaseName]§!, and retake all provinces in the area held by §Y$TARGET$§!.;;;;;;;;;;;;;x
+CB_NAME_RECONQUISTA_MEXICOAST;Reconquest of Mexican Coast;;;;;;;;;;;;;x
+WAR_NAME_RECONQUISTA_MEXICOAST;$ORDER$Reconquest War for Mexican Coast;;;;;;;;;;;;;x
+reconquista_mexicoast_desc;§Y[Root.GetTitledName]§! can start a war to oust the infidels from the region of §Y[d_veracruz.GetBaseName]§!, and retake all provinces in the area held by §Y$TARGET$§!.;;;;;;;;;;;;;x
+CB_NAME_RECONQUISTA_MEXICO;Reconquest of Valley of Mexico;;;;;;;;;;;;;x
+WAR_NAME_RECONQUISTA_MEXICO;$ORDER$Reconquest War for Valley of Mexico;;;;;;;;;;;;;x
+reconquista_mexico_desc;§Y[Root.GetTitledName]§! can start a war to oust the infidels from the region of §Y[d_mexico.GetBaseName]§!, and retake all provinces in the area held by §Y$TARGET$§!.;;;;;;;;;;;;;x
+CB_NAME_RECONQUISTA_BAJIO;Reconquest of Bajio;;;;;;;;;;;;;x
+WAR_NAME_RECONQUISTA_BAJIO;$ORDER$Reconquest War for Bajio;;;;;;;;;;;;;x
+reconquista_bajio_desc;§Y[Root.GetTitledName]§! can start a war to oust the infidels from the region of §Y[k_bajio.GetBaseName]§!, and retake all provinces in the area held by §Y$TARGET$§!.;;;;;;;;;;;;;x
+CB_NAME_RECONQUISTA_CHICHIMECA;Reconquest of Gran Chichimeca;;;;;;;;;;;;;x
+WAR_NAME_RECONQUISTA_CHICHIMECA;$ORDER$Reconquest War for Gran Chichimeca;;;;;;;;;;;;;x
+reconquista_chichimeca_desc;§Y[Root.GetTitledName]§! can start a war to oust the infidels from the region of §Y[k_gran_chichimeca.GetBaseName]§!, and retake all provinces in the area held by §Y$TARGET$§!.;;;;;;;;;;;;;x
+CB_NAME_RECONQUISTA_HUASTECA;Reconquest of Huasteca and Puebla;;;;;;;;;;;;;x
+WAR_NAME_RECONQUISTA_HUASTECA;$ORDER$Reconquest War for Huasteca and Puebla;;;;;;;;;;;;;x
+reconquista_huasteca_desc;§Y[Root.GetTitledName]§! can start a war to oust the infidels from the region of §Y[d_huasteca.GetBaseName]§! and §Y[d_peubla.GetBaseName]§!, and retake all provinces in the area held by §Y$TARGET$§!.;;;;;;;;;;;;;x
 
 RECONQUISTAS_STARTED;The Cristero Wars have Begun\n;;;;;;;;;;;;;x
 EVTNAME_masked_knights_creation;La Orden de la Máscara;;;;;;;;;;;;;x
@@ -138,34 +168,17 @@ EVTOPT_fide_incarnate_lifestyle;I feel my lifestyle changing.;;;;;;;;;;;;x
 EVTOPT_fide_incarnate_traits;I feel my habits changing.;;;;;;;;;;;;x
 EVTOPT_fide_incarnate_aligned;I truly embody the Saint.;;;;;;;;;;;;x
 
-######INDIGENOUS######
+######SACRED BALL GAME######
 
 EVTDESC_ulama_game_start;The preparations have been made and the players have been selected. It is time for the sacred ballgame to begin!;;;;;;;;;;;;;x
 EVTDESC_ulama_game_conclusion;The game and its associated rituals have finally concluded, and the attendees begin to return home. The people must surely be pleased, and it is thanks in large part to my own wealth and diligence.;;;;;;;;;;;;;x
 recent_ritual_ballgame;Recent Ballgame Match;;;;;;;;;;;;;x
 recent_ritual_ballgame_desc;This character has recently held a ritual game of "Fut", the sacred ballgame.;;;;;;;;;;;;;x
 
-EVTDESC_fallingstar_8;San Salvador, what a fascinating place! A holy place for many religions, the city and surrounding area are full of monuments giving tribute to both the Saints of Jesucristo and indigenous gods. Somehow when you look closer, they don't seem all that different. It really makes you think, doesn't it?;;;;;;;;;;;;;x
-EVTOPTA_fallingstar_8;The indigenous religions are most fascinating.;;;;;;;;;;;;;x
+
+#######TONALTECAS########
 
 EVTDESC_SSI_060;The Tonaltecs have sacrificed [From.GetTitledName] to their demon gods! After bringing [From.GetHerHim] to one of their new temple pyramids, their wicked priests placed [From.GetFirstName] on an altar and sliced [From.GetHerHim] open with a ceremonial dagger. They then tore out [From.GetHerHis] still beating heart to the cheers of their assembled warriors.;;;;;;;;;;;;;x
-
-
-######SOL_INVICTO######
-
-EVTDESC_amexsol1;You've been thrown into a pit dug out in the middle of the desert. The guards explain to you that you are to be judged by the almighty Sun. If you are guilty, the Sun will punish you for your crimes.;;;;;;;;;x
-EVTDESC_amexsol9;Word reaches you that [From.GetBestName], who you ordered to be judged by the Sun, has been found guilty.;;;;;;;;;;;;;x
-EVTDESC_amexsol10;Word reaches you that [From.GetBestName], who you ordered to be judged by the Sun, has been found innocent.;;;;;;;;;;;;;x
-
-hold_zun_feast;Hold Festival of the Sun;;;;;;;;;x
-hold_zun_feast_desc;Hold a Festival of the Sun with your vassals and courtiers, celebrating the summer solstice and paying homage to the the almighty God the Sun, the Giver of Light and Justice.;;;;;;;;;x
-EVTOPTA_CM_4100;Come all to celebrate his Light!;;;;;;;;;x
-EVTDESC_CM_4196;The Festival of the Sun is over for this time. [Root.Religion.GetRandomGodName] has been properly honored and the realm is looking forward to a bright future under His blinding gaze.;;;;;;;;;x
-EVTDESC_CM_4130;The time has come for one of the main events of the Festival of the Sun - the ceremony known as Sol de Justicia. A sunny day is chosen, and on it God's faithful walk barefoot around the circumference of the temple ninety-nine times, all the while chanting pious rhymes. It is a ritual of physical and spiritual cleansing, as well as a tribute to the Radiant Mistress Eréndira.\n\nIt is known both for inspiring great piety and for causing great physical and mental exertion.;;;;;;;;;x
-EVTOPTA_CM_4130;Together we shall walk in His light!;;;;;;;;;x
-EVTOPTA_CM_4137;Praise His sacred light!;;;;;;;;;x
-EVTDESC_CM_4143;You walk for hours in the sun to honor [Root.Religion.GetRandomGodName]. As your limbs grow more tired and the heat pulses through your brain, you turn your face upwards towards the Sun. As you feel His strong warmth and presence embrace you, you open your eyes and stare into Her face to embrace the divine mysteries to be seen therein. You stare for a long while...;;;;;;;;;x
-EVTDESC_CM_4190;The ceremony of thanksgiving to the Sun, the Giver of Justice is held in courtyard of the temple. All the attendants bare their heads and kneel to give thanks for the light, warmth, justice, wisdom and fertility that He gives His faithful worshipers. Bread spiced with holy saffron is passed around and consumed by the worshipers.;;;;;;;;;x
 
 
 #####PELAYO#####
@@ -183,7 +196,7 @@ designate_tapado_TOOLTIP_1;Must be a powerful vassal, be on the imperial §Ycounc
 designate_tapado_TOOLTIP_2;Must NOT have been disgraced as the Tapado\n;;;;;;;;;x
 relieve_tapado_TOOLTIP_1;Relieve the Tapado so that a new one may be selected.;;;;;;;;;x
 
-EVTDESC_destape_1;With the Tapado selected, the utmost discretion must be taken to maintain the secrecy of their identity. Should one learn of who he or she may be, the devious minds of the court of Mexico may seek to extort or plan their downfall. Instead, each must believe themselves to be the true Tapado up until the moment that the true heir is unveiled. Now you may begin to plan your succession, but be aware, if you call the "Destape" ceremony too early before your reign is ended, the powerful and the connected may try to place a selection of their own in the great Silla Presidencial as the next [From.GetTitle].;;;;;;;;;x
+EVTDESC_destape_1;With the Tapado selected, the utmost discretion must be taken to maintain the secrecy of their identity. Should one learn of who he or she may be, the devious minds of the court of Mexico may seek to extort or plan their downfall. Instead, each must believe themselves to be the true Tapado up until the moment that the true heir is unveiled. Now you may begin to plan your succession, but be aware, if you call the "Destape" ceremony too early before your reign is ended, the powerful and the connected may try to place a selection of their own in the great Silla Presidencial as the next [FromFrom.GetTitle].;;;;;;;;;x
 EVTOPTA_destape_1;He who rushes ahead won't get his portrait in the mural...;;;;;;;;;x  
 EVTDESC_destape_2;La República and its stability are at stake and if I have doubts about the one who shall succeed me that means I hadn't chosen wisely before.;;;;;;;;;;;;;x
 EVTOPTA_destape_2;I must reconsider my successor...;;;;;;;;;;;;;x
@@ -192,21 +205,23 @@ TITLE_DESTAPE;Destape Ceremony;;;;;;;;;;;;;x
 EVTDESC_destape_4;The time has come for the great unveiling of El Tapado. The most powerful and influential figures of La República must now be gathered in the main hall of Chapultepec Castle to witness the ceremony, they must stand with [From.GetTitle]'s choice or plot and scheme to place one of their own as the true successor to La Silla Presidencial.;;;;;;;;;;;;;x
 EVTOPTA_destape_4;I should warm up my choosing finger.;;;;;;;;;;;;;x
 EVTOPTB_destape_4;No, this is premature...;;;;;;;;;;;;;x
-EVTDESC_destape_5;The [From.GetTitle] is planning to reveal [From.GetHerHis] successor in a grand unveiling. The most powerful figures of the realm will now be gathered in the main hall of Chapultepec Castle to witness the ceremony. Everyone must now either stand with the [From.GetTitle]'s choice as tradition dictates or plot and scheme to try placing one of their own on that ancient and powerful Silla Presidencial.;;;;;;;;;;;;;x
-EVTOPTA_destape_5;Let us see who the [From.GetTitle] has named as [From.GetHerHis] successor;;;;;;;;;;;;;x
-EVTDESC_destape_6;The most powerful of the political class gather into the chamber awaiting the great unveiling of the next heir to the Silla Presidencial. The crowd falls silent as the [From.GetTitle] enters the room, with bated breath all await the "Dedazo" - when the [From.GetTitle] will point to the one [From.GetSheHe] deems worthy to wear the Imperial Band. The [From.GetTitle] gives a brief rehearsed speech and then points to [From.GetHerHis] chosen candidate, shaping the future of Mexico...;;;;;;;;;;;;;x
+EVTDESC_destape_5;The [FromFrom.GetTitle] is planning to reveal [FromFrom.GetHerHis] successor in a grand unveiling. The most powerful figures of the realm will now be gathered in the main hall of Chapultepec Castle to witness the ceremony. Everyone must now either stand with the [FromFrom.GetTitle]'s choice as tradition dictates or plot and scheme to try to place one of their own on the ancient and powerful Silla Presidencial.;;;;;;;;;;;;;x
+EVTOPTA_destape_5;Let us see who the [FromFrom.GetTitle] has named as [FromFrom.GetHerHis] successor;;;;;;;;;;;;;x
+EVTDESC_destape_6;The most powerful of the political class gather into the chamber awaiting the great unveiling of the next heir to the Silla Presidencial. The crowd falls silent as the [FromFrom.GetTitle] enters the room, with bated breath all await the "Dedazo" - when the [FromFrom.GetTitle] will point to the one [FromFrom.GetSheHe] deems worthy to wear the Imperial Band. The [FromFrom.GetTitle] gives a brief, rehearsed speech and then points to [FromFrom.GetHerHis] chosen candidate, shaping the future of Mexico...;;;;;;;;;;;;;x
 EVTOPTA_destape_6;I wonder who it will be!;;;;;;;;;;;;;x
-EVTDESC_destape_7;The grand Destape Ceremony has been cancelled due to war.;;;;;;;;;;;;;x
-EVTOPTA_destape_7;I guess we must wait and see who will be the next to lead...;;;;;;;;;;;;;x
-EVTDESC_destape_8;The [From.GetTitle]'s finger is directly pointing toward you. You have been chosen to be the next in line to be the [From.GetTitle]!;;;;;;;;;;;;;x
+EVTDESC_destape_7;The most powerful of the political class gather into the chamber awaiting the great unveiling of the next heir to the Silla Presidencial. The crowd falls silent as the you enter the room, with bated breath all await the "Dedazo" - when you will point to the one you deem worthy to wear the Imperial Band. You give a brief, rehearsed speech and then point to your chosen candidate, to shape the future of Mexico...;;;;;;;;;;;;;x
+EVTOPTA_destape_7;El que quiera silla que se forme.;;;;;;;;;;;;;x
+EVTDESC_destape_8;The [FromFrom.GetTitle]'s finger is directly pointing toward you. You have been chosen to be the next in line to be the [FromFrom.GetTitle]!;;;;;;;;;;;;;x
 EVTOPTA_destape_8;I am at the service of La República.;;;;;;;;;;;;;x
-EVTDESC_destape_9;The [Root.GetTitle]'s finger comes to rest in front of [Root.GetHerHis] chosen successor, , [From.GetBestName]. Thus, the veil is lifted and all can see who has been chosen to rule after the current [Root.GetTitle]. The lines will quickly be drawn. Should this "Destapado" be supported as the ancient tradition dictates? or is another more worthy to lead?;;;;;;;;;;;;;x
+EVTDESC_destape_9;The [FromFrom.GetTitle]'s finger comes to rest in front of [FromFrom.GetHerHis] chosen successor, [From.GetBestName]. Thus, the veil is lifted and all can see who has been chosen to rule after the current [FromFrom.GetTitle]. The lines will quickly be drawn. Should this "Destapado" be supported as the ancient tradition dictates? Or is another more worthy to lead?;;;;;;;;;;;;;x
 EVTOPTA_destape_9;The ancient tradition must be upheld;;;;;;;;;;;;;x
 EVTOPTB_destape_9;I will not suffer this fool on the Silla Presidencial;;;;;;;;;;;;;x
-EVTDESC_destape_10;My finger comes to rest in front of my chosen successor, [From.GetBestName]. Thus, the veil is lifted and all can see who has been chosen to rule after the current [From.GetTitle]. The lines will quickly be drawn. Should this "Destapado" be supported as the ancient tradition dictates? or is another more worthy to lead? The chamber is emptied after the usual mingling and political schmoozing, yet the dust has yet to settle. Will my choice persevere as has according to tradition? or will it fall prey to political machinations?;;;;;;;;;;;;;x 
+EVTDESC_destape_10;My finger comes to rest in front of my chosen successor, [From.GetBestName]. Thus, the veil is lifted and all can see who has been chosen to rule after the current [Root.GetTitle]. The lines will quickly be drawn. Should this "Destapado" be supported as the ancient tradition dictates? or is another more worthy to lead? The chamber is emptied after the usual mingling and political schmoozing, yet the dust has yet to settle. Will my choice persevere as has according to tradition? or will it fall prey to political machinations?;;;;;;;;;;;;;x 
 EVTOPTA_destape_10;Let us wait and see what becomes of this...;;;;;;;;;;;;;x
 EVTDESC_destape_11;The chamber is emptied after the usual mingling and political schmoozing, yet the dust has yet to settle. Will this choice persevere as has according to tradition? or will it fall prey to political machinations?;;;;;;;;;;;;;x 
 EVTOPTA_destape_11;Let us wait and see what becomes of this...;;;;;;;;;;;;;x
+EVTDESC_destape_12;The grand Destape Ceremony has been cancelled due to war.;;;;;;;;;;;;;x
+EVTOPTA_destape_12;I guess we must wait and see who will be the next to lead...;;;;;;;;;;;;;x
 
 #####PILGRIMAGE EVENTS#####
 CHRONICLE_PILGRIMAGE_TO_MEXICO;[Root.GetTitledName] made a pilgrimage to the city of Mexico.;;;;;;;;;x
@@ -321,7 +336,9 @@ EVTDESC_flagellation_7;You practiced mortification through the use of the Penanc
 EVTDESC_flagellation_8;You asked to be publically crucified for a few minutes, a form of mortification considered by the Penitentes to be both the most pious and risky. Although it was painful, you did not sustain any serious injuries and it left you with new insight over the Passion of Christ.;;;;;;;;;;;;;x
 EVTDESC_flagellation_9;You asked to be publically crucified for a few minutes, a form of mortification considered by the Penitentes to be both the most pious and risky. It was a very painful experience as it left you severely injured, but it also gave you new insight over the Passion of Christ.;;;;;;;;;;;;;x
 EVTOPTA_flagellation_9;He underwent all that pain, only to give us a second chance...;;;;;;;;;;;;;x
-EVTDESC_flagellation_10;You asked to be publically crucified for a few minutes, a form of mortification considered by the Penitentes to be both the most pious and risky. It was a very painful experience as staying in such a painful position lead to you breaking your ribs, but it also gave you new insight over the Passion of Christ.;;;;;;;;;;;;;x
+EVTDESC_flagellation_10;You asked to be publically crucified for a few minutes, a form of mortification considered by the Penitentes to be both the most pious and risky. It was a very painful experience as staying in such a position lead to you breaking your ribs, but it also gave you new insight over the Passion of Christ.;;;;;;;;;;;;;x
+EVTDESC_flagellation_13;You asked to be publically crucified for a few minutes, a form of mortification considered by the Penitentes to be both the most pious and risky. During the re-enactment, you started suffering from severe bleeding. At first everyone thought it to be part of the play only to later realise the bleeding was real and rushing you to a doctor. However it was already too late at that point...;;;;;;;;;;;;;x
+EVTOPTA_flagellation_13;Pecador contempla el dia final.;;;;;;;;;;;;;x
 
 EVTDESC_flagellation_15;Your recent mortification of the flesh was a transforming experience for you. Your discipline toughened in response to your physical trauma and you learned to better resist the temptations of the flesh.;;;;;;;;;;;;;x
 EVTOPTA_flagellation_15;I am becoming a better Christian;;;;;;;;;;;;;x
@@ -354,7 +371,7 @@ EVTOPTD_justo5;Is that not the envoy that was at my court a while ago?;;;;;;;;;;
 EVTOPTE_justo5;So he has gone absolutely mad, right?;;;;;;;;;;;;;x
 
 justo.6.name;An Offer You Can Refuse.;;;;;;;;;;;;;x
-justo.6.desc;This morning the people of (fetch capital) rose to the sound of bells as the tricolor banner of the Prelado of Cristo Rey could be seen in the outskirts of town. Me and my soldiers quickly armored up and rode into what we thought had to surely be an attack force, what we found instead was a large ornate tent and a bunch of unarmed and unarmoured priest-soldiers. Commander-bishop Nepomuceno Miramón was the first in bowing to me. He led me inside the tent where I was received by Prelado (fetch name) himself. I asked what the reason of their presence within my realm was, and the Prelado simply answered "You, Su Alteza Imperial". He took out a wig and a fake beard and put them on me and once more compared me to the sketch in possession of Nepomuceno Miramón. It was confirmed, I am the last descendant of the last Emperor of México before the restoration of La República in the ancient times before the Event. "Our Lady of Guadalupe sent me to find you, Su Alteza Imperial, she wants you to reclaim your throne and restore México to its holy place", said the Prelado, he continued: "all she's asking for is that you restore Cristo Rey as the official religion of the realm after you conquer it. I will help with the men of my order and make independent Cristero lords swear fealty to you and fight at your side. Commander-bishop Nepomuceno Miramón will stay here with you and help you organize for the invasion, which should begin by September 2670. So, what say you? Will you answer the call of Dios and Our Lady of Guadalupe?";;;;;;;;;;;;;x
+justo.6.desc;Nepomuceno Miramón was the first in bowing to me, then the Prelado followed suit. I asked the reason for their presence and the Prelado simply answered "You, Su Alteza Imperial”. It was confirmed, I am of the blood of the last Emperor of México before the restoration of La República in ancient times before the Event.\n"Our Lady of Guadalupe sent me to find you, she wants you to reclaim your throne and restore México to its holy place", said the Prelado, he continued: "all she's asking for is that you restore Cristo Rey to the realm after you conquer it. I will assist with my order and recruit independent Cristero lords to swear fealty to you. Miramón will stay here and will help you organize for the invasion, which should begin in around two years. So, will you answer the call of Dios and Our Lady of Guadalupe?"\n;;;;;;;;;;;;;x
 EVTOPTA_justo6;¡Por Dios, que sí! ¡Viva México!;;;;;;;;;;;;;x
 EVTOPTA_justo6_TT;You shall abandon your realm and embark on an adventure to the §GMexican Empire§!;;;;;;;;;;;;;x
 EVTOPTB_justo6;I am honored, but I will decline this offer.;;;;;;;;;;;;;x
@@ -371,14 +388,14 @@ EVTOPTC_justo7;Did they really call me out as a coward? I was nice to them!;;;;;
 EVTOPTD_justo7;So… who is this Justo Armas and why is he a coward?;;;;;;;;;;;;;x
 
 justo.10.name;A Monarchist Conspiracy Foiled!;;;;;;;;;;;;;x
-justo.10.desc;It has come to my attention, thanks to the foreign [el_justo.GetTitle] Justo Armas that the Prelado of Cristo Rey and one of his commander-bishops had been planning a meticulous attack on La República by attempting to recruit him, Justo Armas, and organizing independent Cristero lords inop order to oust me from power and reestablish Cristero control over México. Today the two imprisoned conspirators have been delivered to me and their fates are squarely on my hands, what should their punishment be for attempting to wage war on La República?;;;;;;;;;;;;;x
+justo.10.desc;It has come to my attention, thanks to the foreign [el_justo.GetTitle] Justo Armas that the Prelado of Cristo Rey and one of his commander-bishops had been planning a meticulous attack on La República by attempting to recruit him, Justo Armas, and organizing independent Cristero lords in order to oust me from power and reestablish Cristero control over México. Today the two imprisoned conspirators have been delivered to me and their fates are squarely on my hands, what should their punishment be for attempting to wage war on La República?;;;;;;;;;;;;;x
 EVTOPTA_justo10;They shall die! And the Cristeros shall pay for this treachery!;;;;;;;;;;;;;x
 EVTOPTA_justo10_TT;Will start a §Rwar§! over El Bajío;;;;;;;;;;;;;x
 EVTOPTB_justo10;I can ransom the religious leader, but the soldier shall die.;;;;;;;;;;;;;x
 EVTOPTC_justo10;Más vale mal conocido que bueno por conocer, release them.;;;;;;;;;;;;;x
 
 justo.11.name;The Eagle's Vengeance;;;;;;;;;;;;;x
-justo.11.desc;The ruler of México, Benemérito [e_mexico.holder.GetFirstName] has announced that Prelado [the_prelate.GetFirstName] and his commander-bishop Nepomuceno Miramón were both found guilty of conspiring to make war on La República by attempting to recruit a foreign [el_justo.GetTitle] by the name of Justo Armas and install him as Emperor. After the sentencing, both men were fusilladed with crossbows and their naked bodies dumped in the Texcoco lake. The Benemérito also claims that the neighboring Cristero realms in El Bajío knew about this conspiracy and therefore will pay in time.\n Meanwhile the Prelature of Cristo Rey has condemned the execution of their leader and an important commander, claiming their deaths as martyrdom. The outrage generated by the Benemérito’s actions has increased the fervor of the Cristeros and eclipsed the failure of Prelado [the_prelate.GetFirstName] in the mission given to the Prelature by the Virgen de Guadalupe. The conflict between Sagrado Corazón and Cristo Rey for the soul of Mexico is just beginning.;;;;;;;;;;;;;x
+justo.11.desc;The Benemérito of México, has announced that the Prelado of Cristo Rey and his accomplice, Nepomuceno Miramón, were both found guilty of conspiring to make war on La República by attempting to recruit a foreigner by the name of Justo Armas and install him as Emperor. After the sentencing, both men were fusilladed with crossbowsThe Benemérito also claims that the neighboring Cristero realms in El Bajío new about this conspiracy and therefore will pay in time.\nMeanwhile the Cristeros condemned the executions, claiming their deaths as martyrdom. The outrage generated by the Benemérito’s actions has increased the fervor of the Cristeros and eclipsed the failure of the Prelature in their sacred mission. The conflict between Sagrado Corazón and Cristo Rey for the soul of Mexico is just beginning.;;;;;;;;;;;;;x
 EVTOPTA_justo11;We shall never submit! ¡Viva Cristo Rey!;;;;;;;;;;;;;x
 EVTOPTA_justo11_TT;Cristo Rey gets §G+10 Moral Authority§! for 30 years;;;;;;;;;;;;;x
 EVTOPTB_justo11;Damn those Cristeros, they bring nothing but chaos!;;;;;;;;;;;;;x
@@ -392,3 +409,178 @@ justo.12.desc;The ruler of Mexico, Benemérito [e_mexico.Holder.GetFirstName] has
 EVTOPTC_justo12;It is time to focus on more pressing matters.;;;;;;;;;;;;;x
 EVTOPTD_justo12;Surely everything will work out in the end, right?;;;;;;;;;;;;;x
 EVTOPTE_justo12;Wait, they still fusillade people over there? In what year do they live?;;;;;;;;;;;;;x
+
+justo.13.name;Mercy for the Humiliated;;;;;;;;;;;;;x
+justo.13.desc;The Benemérito of Mexico, has announced that the Prelado and his commander-bishop Nepomuceno Miramón were both pardoned for the crime of attempting to wage war on La República on the grounds that the testimony of the man who turned them in, a foreign noble by the name of Justo Armas, cannot be trusted for he is a treacherous coward.\n Now free, the Prelado and the Commander-bishop revealed that, due to the cowardice of Justo Armas, they have failed in their divine mission entrusted to the Prelature by Dios and the Virgen de Guadalupe herself and will therefore step down from their posts. The new Prelado of the Cristeros assigned them both to do missionary work to Brazil, while he attempts to soften the damage this humiliation has done to the Prelature of Cristo Rey.;;;;;;;;;;;;;x
+EVTOPTD_justo13;Great! Now no one will ever trust me again!;;;;;;;;;;;;;x
+EVTOPTE_justo13;Boo! Where’s the violence?;;;;;;;;;;;;;x
+
+justo.31.name;The Pope’s Man;;;;;;;;;;;;;x
+justo.31.desc;A strange man requested an audience with me regarding the impending invasion of Mexico. The meeting was had in a secluded space away from my courtiers, and only Miramón and myself were in there alongside the exiled nobleman from the Lousiane, Henri Ledonnant.\nHe was sent by the St. Louis Pope to offer assistance in my expedition. Nepomuceno Miramón questioned their interest, and Ledonnant answered that for centuries St. Louis had known of my lineage, and now they wished to see the rightful Emperor on the Mexican throne. His only request was that during the invasion I sieged down a coastal county in the Gulf of Mexico so that his troops could safely land.\nI asked Miramón what for his thoughts, he did not fully trust envoys of the heretic Gringo Pope, but ultimately said it was my call.;;;;;;;;;;;;;x
+EVTOPTA_justo31;We welcome you and your men into our cause.;;;;;;;;;;;;;x
+EVTOPTA_justo31_TT;Henri Ledonnant becomes the ruler of a mercenary band called §GCatholic Friends of Mexico§!;;;;;;;;;;;;;x
+EVTOPTB_justo31;I neither want, nor need, the help of some distant heretical “Pope”.;;;;;;;;;;;;;x
+
+justo.32.name_A;Echoes of an Old Name;;;;;;;;;;;;;x
+justo.32.name_B;Whispers of an Old Name;;;;;;;;;;;;;x
+justo.32.desc_A;After two months away on a voyage, the Prelado has finally returned with his entourage. He was seen extremely happy and saying that his divine mission has gone well according to plan, and that now they only needed to prepare for when the time came.\n Curiously enough, in St. Louis, the Pope has also been seen in quite a joyful mood, he even held a grand banquet for some exiled Creole noble by the name of Henri Ledonnant who has been recruiting adventurers for an unknown reason ever since he returned from abroad.\n Amidst all the secrecy and confusion only one rumour is consistent, September 2670. No one is sure why the date is significant, but everyone has begun making plans for whatever ends up happening when the time comes.;;;;;;;;;;;;;x
+justo.32.desc_B;: After two months away on a voyage, the Prelado has finally returned with his entourage. He was seen extremely happy and saying that his divine mission has gone well according to plan, and that now they only needed to prepare for when the time came.\n Curiously enough, in St. Louis, the mood of the Pope was quite the opposite, publicly berating an exiled Creole noble by the name of Henri Ledonnant for what he could only call a failure and a massive loss for Catholicism. No one is really sure what he meant, but it must have been important to bring about such an emotional response from the leader of the Catholic faithful.\n Amidst all the secrecy and confusion only one rumor is consistent, September 2670. No one is sure why the date is significant, but everyone has begun making plans for whatever ends up happening when the time comes.;;;;;;;;;;;;;x
+EVTOPTA_justo32;We should prepare, in any moment the Prelado may ask for our assistance.;;;;;;;;;;;;;x
+EVTOPTB_justo32;We should prepare for Cristero aggression.;;;;;;;;;;;;;x
+EVTOPTC_justo32;Summon my commanders, it is time to prepare for our defense.;;;;;;;;;;;;;x
+EVTOPTD_justo32;I will be ready to seize my rightful throne!;;;;;;;;;;;;;x
+EVTOPTE_justo32;We should prepare, in any moment the Pope may ask for a donation.;;;;;;;;;;;;;x
+EVTOPTF_justo32;Whatever it is, it seems we will not be a part of it. Maybe for the best.;;;;;;;;;;;;x
+EVTOPTG_justo32;Are the Cristeros and Catholics working together? That cannot be good.;;;;;;;;;;;;;x
+EVTOPTH_justo32;We do live indeed in some interesting times.;;;;;;;;;;;;;x
+
+justo.34.name;The Prelate Asks for your Support;;;;;;;;;;;;;x
+justo.34.desc;I have received a letter from Prelado [the_prelate.GetFirstName] in which he requests my assistance for the fulfillment of his divine mission given to the Prelature of Cristo Rey by La Virgen de Guadalupe herself. He says that he still cannot tell me what that mission is until the time is right, but that Dios will reward me in this life or the next.\n He accepts donations in coin, soldiers, or oaths of fealty.;;;;;;;;;;;;;x
+EVTOPTA_justo34;I shall donate to the Prelate’s coffers.;;;;;;;;;;;;;x
+EVTOPT_justo34_TT;The [Root.RelHead.GetTitle] shall §Glift your excommunication§! by virtue of your aid.;;;;;;;;;;;;;x
+EVTOPTB_justo34;I shall send a company of volunteers to serve the Prelature.;;;;;;;;;;;;;x
+EVTOPTB_justo34_TT;We shall send some troops to aid the §Y[Root.RelHead.GetTitle]§!;;;;;;;;;;;;;x
+EVTOPTC_justo34;I shall send a small army led by my best commander.;;;;;;;;;;;;;x
+EVTOPTD_justo34;I swear I will be forever loyal to… whatever the Prelate says I must be loyal to.;;;;;;;;;;;;;x
+EVTOPTD_justo34_TT;You shall join Justo Armas as an ally in the war when the invasion starts and if he wins you shall be vassalized by him;;;;;;;;;;;;;x
+EVTOPTE_justo34;Maybe later, I have more urgent things to do than to help the Prelate in his mission…;;;;;;;;;;;;;x
+EVTOPTE_justo34_TT;You will have the possibility of helping the Prelate later.;;;;;;;;;;;;;x
+
+justo.35.name;The Need for More Dorados;;;;;;;;;;;;;x
+justo.35.desc;It has become clear that La República is in danger of being attacked from both old traitors and yet undiscovered enemies.  And while our armies may be large enough to defeat anyone that may attack us, it would not be a waste to recruit some more men to bolster the ranks. I have ordered my advisors and El Congreso to provide me with options for our defense.;;;;;;;;;;;;;x
+EVTOPT_justo35;Now, what do we need the most?;;;;;;;;;;;;;x
+EVTOPT_justo35_TT;New decisions to §Gaid in the defense§! will be available to you;;;;;;;;;;;;;x
+
+justo.36.name;Catholic Friends of Mexico Ask for a Donation;;;;;;;;;;;;;x
+justo.36.desc;I have given Henri Ledonnant an audience in my court, he requests in the name of Pope [Root.RelHead.GetFirstName] my assistance in a most daring expedition to expand the faith. He assures me that I will be in good grace with Our Lord if I help, but says that he still cannot tell me where his mission to God will take him… I think the name of his company might be a hint, though.\n He accepts donations in coin or soldiers.;;;;;;;;;;;;;x
+EVTOPTA_justo36;I shall donate to their coffers.;;;;;;;;;;;;;x
+EVTOPTB_justo36;I shall send a company of volunteers to serve the faith.;;;;;;;;;;;;;x
+EVTOPTC_justo36;I shall send a small army led by my best commander.;;;;;;;;;;;;;x
+EVTOPTD_justo36;Maybe later, I have more urgent things to do...;;;;;;;;;;;;;x
+EVTOPTD_justo36_TT;You will have the possibility of helping the Friends of Mexico later.;;;;;;;;;;;;;x
+
+justo.40.name;Justo Armas!;;;;;;;;;;;;;x
+justo.40.desc_A;After years of careful secret planning, Justo Armas has launched his expedition to make war on Mexico and its Benemérito in order to seize the throne that rightfully belongs to him, the blood of the last Emperor of Mexico before the restoration of La República centuries before the Event.\n The head of the Prelature of Cristo Rey has joined Justo Armas’ call to arms, claiming that winning this war was the mission given to his church by La Virgen de Guadalupe years back. The St. Louis Pope has also joined in supporting Justo Armas’ claim via the authorization of the expedition of the Catholic Friends of Mexico to those ancient lands.\n The war will most probably be bloody and extremely difficult for Justo Armas and his valiant commanders, Nepomuceno Miramón and Henri Ledonnant, but the prize of the Mexican throne is most definitely worth the risk.;;;;;;;;;;;;;x
+justo.40.desc_B;After years of careful secret planning, Justo Armas has launched his expedition to make war on Mexico and its Benemérito in order to seize the throne that rightfully belongs to him, the blood of the last Emperor of Mexico before the restoration of La República centuries before the Event.\n The head of the Prelature of Cristo Rey has joined Justo Armas’ call to arms, claiming that winning this war was the mission given to his church by La Virgen de Guadalupe years back.\n The war will most probably be bloody and extremely difficult for Justo Armas and his valiant commanders, like Nepomuceno Miramón, but the prize of the Mexican throne is most definitely worth the risk.;;;;;;;;;;;;;x
+EVTOPTA_justo40;¡Viva Cristo Rey!;;;;;;;;;;;;;x
+EVTOPTB_justo40;¡Justo Armas y su banda serán hechos justos por las armas!;;;;;;;;;;;;;x
+EVTOPTC_justo40;I am no longer the owner of my life, it belongs to the people of Mexico!;;;;;;;;;;;;;x
+EVTOPTC_justo40_TT;§RYOU MUST SIEGE DOWN A COASTAL PROVINCE IN ORDER TO RECEIVE THE AID OF THE FRIENDS OF MEXICO§!;;;;;;;;;;;;;x
+EVTOPTD_justo40;Deus Vult!;;;;;;;;;;;;;x
+EVTOPTE_justo40;How can this be? Are the history books wrong?;;;;;;;;;;;;;x
+
+justo.42.name;Death of a Commander-Bishop;;;;;;;;;;;;;x
+justo.42.desc;Justo Armas, the foreign pretender fighting to seize to the Mexican Throne, has suffered a huge setback. Benemérito [e_mexico.Holder.GetFirstName] has announced that the Commander-Bishop Nepomuceno Miramón is now dead, thus depriving Justo Armas and his Cristero allies of one of their most trusted commanders in the war.;;;;;;;;;;;;;x
+EVTOPTA_justo42;He died a martyr as he died fighting for his faith!;;;;;;;;;;;;;x
+EVTOPTB_justo42;Good riddance.;;;;;;;;;;;;;x
+EVTOPTC_justo42;So long my friend, you will be sorely missed.;;;;;;;;;;;;;x
+EVTOPTD_justo42;Surely this will turn the tide of the war.;;;;;;;;;;;;;x
+
+justo.43.name;Death of a Prelate;;;;;;;;;;;;;x
+justo.43.desc;Justo Armas, the foreign pretender fighting to seize to the Mexican Throne, has suffered a huge setback. Benemérito [e_mexico.Holder.GetFirstName] has announced that the head of the Cristero Church is dead thus depriving Justo Armas one of his most powerful allies and costing the Prelature of Cristo Rey its leader.;;;;;;;;;;;;;x
+
+justo.45.name;Death of a Benemérito;;;;;;;;;;;;;x
+justo.45.desc;La República has been dealt a massive blow to its defense against the foreign pretender Justo Armas, as El Congreso has confirmed the death of Benemérito [dead_benemerito.GetFirstName], thus, at least until the new Mexican ruler becomes accustomed to the office in Chapultepec Castle, will deprive the Mexican armies of crucial leadership in these times of war.;;;;;;;;;;;;;x
+EVTOPTA_justo45;Good riddance.;;;;;;;;;;;;;x
+EVTOPTB_justo45;No time to mourn, we have a war to win.;;;;;;;;;;;;;x
+EVTOPTC_justo45;I inch ever closer to victory!;;;;;;;;;;;;;x
+EVTOPTD_justo45;Surely this will turn the tide of the war.;;;;;;;;;;;;;x
+
+justo.47.name;The Friends Arrive;;;;;;;;;;;;;x
+justo.47.desc;A beach alongside the Gulf of Mexico has now become a military camp as a few hundred merchant ships and fishing boats have Henri Ledonnant’s volunteer Catholic Company, The Catholic Friends of Mexico. The improvised fleet has now sailed, now the volunteers and their captain must join Justo Armas’ fight for the throne and face the armies of the Mexican Benemérito.;;;;;;;;;;;;;x
+EVTOPTA_justo47;My friend and his army will prove decisive in this war.;;;;;;;;;;;;;x
+EVTOPTB_justo47;Excellent, some much needed reinforcements.;;;;;;;;;;;;;x
+EVTOPTC_justo47;These men have just sealed their death sentences.;;;;;;;;;;;;;x
+EVTOPTD_justo47;Great, even more foreign invaders to prolong this unnecessary war…;;;;;;;;;;;;;x
+
+justo.48.name;Death of a Friend;;;;;;;;;;;;;x
+justo.48.desc;Justo Armas, the foreign pretender fighting to seize to the Mexican Throne, has suffered a huge setback. Benemérito [e_mexico.GetFullName] has announced that the captain of The Catholic Friends of Mexico, Henri Ledonnant, is dead thus depriving Justo Armas one of his most powerful allies and costing the volunteer Catholic military company of its leader.;;;;;;;;;;;;;x
+EVTOPTA_justo48;So long my friend, you will be sorely missed.;;;;;;;;;;;;;x
+EVTOPTB_justo48;We have lost a commander, but not yet the war.;;;;;;;;;;;;;x
+EVTOPTC_justo48;Good riddance.;;;;;;;;;;;;;x
+EVTOPTD_justo48;Excellent, one less foreign invader to kill.;;;;;;;;;;;;;x
+
+justo.49.name;Death of a Pretender;;;;;;;;;;;;;x
+justo.49.desc;It is over, he failed. All across Old Mexico the words of the ruler of La República, Benemérito [e_mexico.Holder.GetFirstName] have been heard loud and clear. Justo Armas has been made just by the arms, he is dead, his ill-conceived expedition to conquer the Mexican Throne being his last folly. His armies have melted away after the death of their leader, and his allies have since returned to their homes, there is nothing left to do. \nIt seems that the blood of the Last Emperor of Mexico could not defeat that same restored republic that defeated and ousted it from Chapultepec Castle in ancient times.;;;;;;;;;;;;;x
+EVTOPTA_justo49;We have been defeated, retreat!;;;;;;;;;;;;;x
+EVTOPTB_justo49;La República was once restored in ancient times, now I have strengthened it with this victory!;;;;;;;;;;;;;x
+EVTOPTC_justo49;Justo Armas may be dead, but his blood and dream of empire yet live.;;;;;;;;;;;;;x
+EVTOPTD_justo49;Another war that the ancient empire survives…;;;;;;;;;;;;;x
+
+justo.50.name_A;Su Alteza Imperial;;;;;;;;;;;;;x
+justo.50.desc_A;Justo Armas has managed what seemed to be impossible, victory over the Mexican Benemérito and complete control of La República has been achieved. The now ousted Benemérito has gone into exile with his parting words being: “Justo Armas has let out a tiger, let’s see if he can control it”.\nThe Prelado was seen joyfully entering the Basílica de Guadalupe, alongside Cristero rulers, and crying in front of the image of the Virgin of the Tepeyac, claiming his divine mission is almost done. Meanwhile The Catholic Friends of Mexico were also seen taking leisurely strolls in the Chapultepec woods, but curiously still clad in armor, with unconfirmed reports that they are occupying several port towns in Veracruz.\nFor now the victorious Justo Armas and his allies will convene in Chapultepec Castle to settle some minor issues before organizing a victory parade.;;;;;;;;;;;;;x
+justo.50.name_B;Justo Armas Victorious;;;;;;;;;;;;;x
+justo.50.desc_B;After years of careful planning and through victory in the battlefield Justo Armas has managed what seemed to be impossible, victory over the Mexican Benemérito and complete control of La República has been achieved. The now ousted Benemérito has gone into exile with his parting words being: “Justo Armas has let out a tiger, let’s see if he can control it”.\nPrelado [d_cristo_rey.Holder.GetFullName] was seen joyfully entering the Basílica de Guadalupe, alongside Cristero rulers, and crying in front of the image of the Virgin of the Tepeyac, claiming his divine mission is almost done. \nFor now the victorious Justo Armas and his allies will convene in Chapultepec Castle to settle some minor issues before organizing a victory parade.
+EVTOPTA_justo50;¡Viva Cristo Rey!;;;;;;;;;;;;;x
+EVTOPTB_justo50;Let us see if this Justo Armas resists the pressure of that most ancient chair and sash…;;;;;;;;;;;;;x
+EVTOPTC_justo50;Just one more meeting with my friends and allies, then we party!;;;;;;;;;;;;;x
+EVTOPTD_justo50;Deus Vult!;;;;;;;;;;;;;x
+EVTOPTE_justo50;Justo Armas won? A surprise to be sure but I do not know if it is a welcome one.;;;;;;;;;;;;;x
+
+justo.51.name_A;With Friends Like These…;;;;;;;;;;;;;x
+justo.51.desc_A;In the gardens of Chapultepec my Cristero allies, as well as the leaders of The Catholic Friends of Mexico, have gathered here with me for a small conference regarding religious matters. \nThe Prelado politely asked if it was not already time for me to be baptized in the name of Cristo Rey. The leader of the Catholics interrupted, saying that the only reason the Pope authorized his expedition was that there was an understanding I would convert to St. Louis Catholicism after my victory, or at least pay them a good amount of gold for their effort, or else they would seize Mexico for themselves. \nI said nothing. Quickly the tranquil scene turned into utter chaos, both Cristeros and Catholics drew swords and demanded I chose a side. I raise my voice to demand silence. Everyone is still, waiting for what will come out of my mouth…;;;;;;;;;;;;;x
+justo.51.name_B;A Promise to Keep;;;;;;;;;;;;;x
+justo.51.desc_B;It is a beautiful morning in Mexico City and in the gardens of Chapultepec my Cristero allies have gathered here with me for a small conference regarding religious matters. Everyone in attendance, specially Prelado (fetch name) are pretty keen to finally herar me speak about my conversion, matter that was left in the backburner while we pursued the war.\nThe Prelado politely asked for me to be baptized in the name of Cristo Rey. Then the Cristero lords claimed they were prepared to launch a rebellion if I went back on my conversion promise. My personal guard became outraged which such threat and quickly the tranquil scene turned into utter chaos, both the Cristeros and my guards drew swords. \nI raise my voice to demand silence.
+EVTOPTA_justo51;¡Viva México! ¡Viva Cristo Rey!;;;;;;;;;;;;;x
+EVTOPTA_justo51_TT;The §MFriends of Mexico§! §Roccupy§! Veracruz! This looks like trouble...;;;;;;;;;;;;;x
+EVTOPTB_justo51;Ave Mexicum! Deus Vult!;;;;;;;;;;;;;x
+EVTOPTB_justo51_TT;The Friends of Mexico will be turned into the §Gelite guard§! of [Root.PrimaryTitle.GetFOA];;;;;;;;;;;;;x
+EVTOPTB_justo51_B_TT;The Prelate §Rwill not be pleased§!...;;;;;;;;;;;;;x
+EVTOPTC_justo51_A;I bow to none of you! Hail Justo Armas!;;;;;;;;;;;;;x
+EVTOPTC_justo51_B;I do not bow to you! Hail Justo Armas!;;;;;;;;;;;;;x
+
+justo.53.name;El Justo Cristero;;;;;;;;;;;;;x
+justo.53.desc;All across the Valley of Mexico, and spreading into the greater realm, the echo of the words of the Mexican Benemérito, Justo Armas echo: “¡Viva México! ¡Viva Cristo Rey!”\nIn the spot, the attending Cristero lords and members of the Prelature of Cristo Rey, took out the Tricolor band and the Prelado, with tears in his eyes, placed it across Justo Armas’ torso. “We have fulfilled our mission to Nuestra Señora de Guadalupe”, said the Prelate afterwards, when hugging the newly installed Benemérito.;;;;;;;;;;;;;x
+EVTOPTA_justo53;Maybe we should reconsider our allegiance and rejoin Mexico.;;;;;;;;;;;;;x
+EVTOPTB_justo53;¡Viva Cristo Rey! ¡Viva Justo Armas!;;;;;;;;;;;;;x
+EVTOPTC_justo53;This is not good, if Mexico can fall so can everyone else.;;;;;;;;;;;;;x
+EVTOPTD_JUSTO53;We should begin to organize a resistance to possible oppression.;;;;;;;;;;;;;x
+EVTOPTE_justo53;¡Un laurel para mí de victoria! ¡Un sepulcro para ellos de honor!;;;;;;;;;;;;;x
+EVTOPTF_justo53;vi.	An interesting development…;;;;;;;;;;;;;x
+
+justo.54.name;¡Viva Cristo Rey!;;;;;;;;;;;;;x
+justo.54.desc;The blood of the Last Emperor of Old Mexico, the blood of Justo Armas, has once more fled from Mexico southwards towards El Salvador after having his loyalist forces destroyed by the combined might of the armies of the Prelado and his allied Cristero vassals.\nThe head of the Cristero faithful has now taken the role of kingmaker, choosing the most powerful and pious Cristero in the entirety of Old Mexico to be the new Benemérito and restore Cristo Rey to his rightful place. Whomever he chooses, he is certain he has now fulfilled his mission to La Virgen de Guadalupe.;;;;;;;;;;;;x
+EVTOPTA_justo54;I waited 800 years for this opportunity… ¡Carajo!;;;;;;;;;;;;x
+EVTOPTB_justo54;Maybe we should reconsider our allegiance to Mexico City…;;;;;;;;;;;;x
+EVTOPTC_justo54;¡Viva el Benemérito! ¡Viva Cristo Rey!;;;;;;;;;;;;;x
+EVTOPTD_justo54;We should prepare for any sort of Cristero repression.;;;;;;;;;;;;;x
+EVTOPTE_justo54;So it was all just a coup with extra steps, no?;;;;;;;;;;;;;x
+
+justo.55.name;The Foreign Benemérito;;;;;;;;;;;;;x
+justo.55.desc;After a string of victories against the combined forces of the Prelature of Cristo Rey and rebellious vassals, Justo Armas has now emerged fully victorious and as the sole ruler of La República, with no one else left to oppose him or attempt to control him.\nIt is the second time the Prelature has been forced to flee Mexico, but this is the first time they are so soundly defeated in a war. Cristero pride is at an all time low, they failed the mission La Virgen de Guadalupe gave her faithful all those years ago.;;;;;;;;;;;;;x
+EVTOPTA_justo55;Why has Dios forsaken us?;;;;;;;;;;;;;x
+EVTOPTB_justo55;Yo encarno a la patria y al pueblo bueno.;;;;;;;;;;;;;x
+EVTOPTC_justo55;If he can survive THAT much adversity, there is nothing we can do against him…;;;;;;;;;;;;;x
+EVTOPTD_justo55;Justo Armas truly is a force to be reckoned with…;;;;;;;;;;;;;x
+
+justo.56.name;A Man of His Word;;;;;;;;;;;;;x
+justo.56.desc;From the halls of Chapultepec Castle, Justo Armas has announced that the treachery of the Catholic Friends of Mexico is over and that La República can now finally have the peace the people crave so much. Spontaneous parties have erupted on all major cities, especially in the liberated Sotavento, which has re-established its republic.\nThis contrasted with the mood inside Lecumberri, the ancient prison of La República, as Justo Armas is now overseeing the execution of the men he once called allies and friends.\nJusto Armas had given his word to the Prelate that he would convert both himself and his realm to Cristo Rey, and the Benemérito of La República is a man of his word.;;;;;;;;;;;;x
+EVTOPTA_justo56;¡Viva México!;;;;;;;;;;;;;x
+EVTOPTB_justo56;Long have we waited for this day!;;;;;;;;;;;;;x
+EVTOPTC_justo56;Such a waste of good men! God will not be pleased…;;;;;;;;;;;;;x
+EVTOPTD_justo56;Does this mean we will finally have peace?;;;;;;;;;;;;;x
+EVTOPTE_justo56;A ruler than can keep his word? I thought they were a myth!;;;;;;;;;;;;;x
+
+justo.57.name;Benemérito Prelado;;;;;;;;;;;;;x
+justo.57.desc;The blood of the Last Emperor of Old Mexico, the blood of Justo Armas, has once more fled from Mexico southwards towards El Salvador after having his loyalist forces destroyed by the combined might of the armies of the Prelado and his allied Cristero vassals. \nAt the same time, seeing no further way to achieve their victory, the Catholic Friends of Mexico have completely withdrawn from the ancient realm.\nIn order to ensure a swift and peaceful transition, the Prelado of Cristo Rey will take over the rulership of La República until his death, he will attempt to reestablish Cristero control of the realm as it once was and ensure the fulfilment of the sacred mission entrusted to Cristeros by La Virgen de Guadalupe.;;;;;;;;;;;;;x
+EVTOPTC_justo57;¡Viva el Benemérito Prelado! ¡Viva Cristo Rey!;;;;;;;;;;;;;x
+EVTOPTD_justo57;The Church controlling La República? It should be the other way around!;;;;;;;;;;;;;x
+EVTOPTE_justo57;It seems Deus did not Vult… ;;;;;;;;;;;;;x
+EVTOPTE_justo57;A Pope-like figure as a king? Now that is a ridiculous idea!;;;;;;;;;;;;;x
+
+justo.58.name;The Conqueror of Mexico;;;;;;;;;;;;;x
+justo.58.desc;The roads on the Mexican frontier and the ports in the Mexican coasts are filled to the brim by fleeing soldiers in battered armor. Cristeros and Catholics alike have been soundly defeated by the foreign conqueror of La República, Justo Armas.;;;;;;;;;;;;;x
+EVTOPTB_justo58;It seems our endeavours were not favoured by God…;;;;;;;;;;;;;x
+
+justo.59.name;The Latino Emperor;;;;;;;;;;;;;x
+justo.59.desc;Not since the times from before the Event had a Catholic Pope come to Mexico, but this was for a special event, the proper coronation of Justo Armas.\nWhen the Cristeros were defeated, the Prelate of Cristo Rey once more fled and the lands of all rebelling Cristero vassals have been distributed to the commanders that initially invaded with Henri Ledonnant, now that the army was reorganised into the Emperor’s personal guard, El Santo Oficio.\nLa República that survived the Event is over, from now on the new Catholic Mexico will be a proper feudal realm known as the Latino Empire with Justo Armas as its head. “Such is God’s will”, said the Pope while crowning the new Latino Emperor.;;;;;;;;;;;;;x
+EVTOPTA_justo59;No! How could things have gone so wrong?;;;;;;;;;;;;;x
+EVTOPTB_justo59;The throne of the Empress of the Americas is reclaimed. Deus Vult!;;;;;;;;;;;;;x
+EVTOPTC_justo59;La República will be reorganised into the §GFirst Latino Empire§!!;;;;;;;;;;;;;x
+EVTOPTC_justo59_TT;The Mexican Empire will be replaced by the Latino Empire.;;;;;;;;;;;;;x
+EVTOPTD_justo59;¡Ay, México! ¡Tan lejos de Dios y tan cerca de gringos!;;;;;;;;;;;;;x
+EVTOPTE_justo59;Is that it? Is that how Mexico dies?;;;;;;;;;;;;;x
+
+justo.60.name;Not Latino but indeed an Empire;;;;;;;;;;;;;x
+justo.60.desc;The blood of the Last Emperor of Old Mexico, the blood of Justo Armas, has once more fled from Mexico southwards towards El Salvador after having his loyalist forces destroyed by the cunning adventurers that make up the Catholic Friends of Mexico.\nThe Prelature of Cristo Rey was forced to flee as Catholics have seized all Cristero lands and redistributed them to their now infighting commanders. The chaos was such the Pope was forced to come down south and decreeing the abolition of La República to establish a feudal Latino Empire, and the disbandment of the Catholic Friends of Mexico to create of El Santo Oficio in its place, a special body under the control of the Emperor. \nThe foreigners now ruling what used to be Mexico are happy with the Pope’s decrees, but the native Mexicans are not too pleased. More wars may yet come…;;;;;;;;;;;;;x
+EVTOPTC_justo60;Mexico is not yet dead, it lives in every single one of us!;;;;;;;;;;;;;x

@@ -1,4 +1,4 @@
-###ÄNSI
+###ANSI
 
 k_papal_state = {
 	color={ 255 249 198 }
@@ -1595,7 +1595,7 @@ d_cristo_rey = {
 	color = { 240 240 10 }
 	color2 = { 250 250 250 }
 	
-	capital = 1767 # Mexico City
+	capital = 1787 # León, GTO
 	
 	title = "PRELATE"
 	foa = "PRELATE_FOA"
@@ -1693,6 +1693,7 @@ d_navegante = {
 	capital = 2000 # c_la_paz 
 	
 	title = "FISHER_OF_MEN"
+	title_female = "FISHER_OF_WOMEN"
 	foa = "SECULAR_FOA"
 	creation_requires_capital = yes
 	short_name = yes
@@ -1709,15 +1710,36 @@ d_navegante = {
 	
 	assimilate = no # Nothing drifts in or out
 	caliphate = yes	
-	allow = {
+	allow = { 
 		religion = navegante
+	OR = {
+		AND = {
+			ai = no
 		OR = {
 				AND = {
 				trait = born_in_the_caul
 				prestige = 500
-			}	
+				piety = 500
+				}	
 				AND = {
+				trait = levita
 				prestige = 1000
+				piety = 1000
+				}
+				AND = {
+				trait = aaronita
+				prestige = 500
+				piety = 500
+				}
+				AND = {
+				trait = melquisedequita
+				prestige = 250
+				piety = 250
+				}
+				AND = {
+				prestige = 1500
+				piety = 1500
+				}
 			}
 			completely_controls = d_baja_sur
 			title = k_baja_california
@@ -1726,6 +1748,38 @@ d_navegante = {
 				title = d_sonora
 				title = d_sinaloa
 			}
+		}
+		AND = {
+			ai = yes
+		OR = {
+				AND = {
+				trait = born_in_the_caul
+				prestige = 225
+				piety = 225
+				}	
+				AND = {
+				trait = levita
+				prestige = 500
+				piety = 500
+				}
+				AND = {
+				trait = aaronita
+				prestige = 225
+				piety = 225
+				}
+				AND = {
+				trait = melquisedequita
+				prestige = 125
+				piety = 125
+				}
+				AND = {
+				prestige = 750
+				piety = 750
+				}
+			}
+			completely_controls = d_baja_sur
+			#title = k_baja_california
+			}	
 		}
 	}
 	dynasty_title_names = no 	# Will not be named "Seljuk", etc.
@@ -1784,32 +1838,6 @@ d_quorum_of_the_lamanites = {
 
 	#caliphate = yes
 	dynasty_title_names = no
-}
-
-d_penitente = {
-	color = { 160, 0, 73 }
-	
-	capital = 1845 # Esquipulas 
-	
-	title = "HERMANO_MAYOR"
-	foa = "POPE_FOA"
-	
-	short_name = yes
-	
-	# Always exists
-	landless = yes
-	
-	# Controls a religion
-	controls_religion = penitente
-	
-	religion = penitente
-	
-	# Cannot be held as a secondary title
-	primary = yes
-	
-	assimilate = no # Nothing drifts in or out
-	
-	dynasty_title_names = no 	# Will not be named "Seljuk", etc.
 }
 
 d_latinate = { 

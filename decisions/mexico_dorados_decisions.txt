@@ -1,0 +1,140 @@
+decisions = {
+
+	vassalize_arzobispo = {
+		only_playable = yes
+		is_high_prio = yes
+		ai_check_interval = 120
+		
+		potential = {
+			NOT = {
+				has_alternate_start_parameter = { key = religion_names value = random }
+			}
+			religion = sacred_heart
+			has_landed_title = e_mexico
+			d_sagrado_corazon = {
+				holder_scope = {
+					independent = yes
+				}
+			}
+		}
+		
+		allow = {
+			piety = 1000
+			is_heretic = no
+
+			conditional_tooltip = {
+				trigger = {
+					NOT = {
+						d_sagrado_corazon = {
+							owner = {
+								opinion = {
+									who = ROOT
+									value = 50
+								}
+							}
+						}
+					}
+				}
+
+				custom_tooltip = {
+					text = vassalize_arzobispo_opinion_TT
+
+					d_sagrado_corazon = {
+						owner = {
+							opinion = {
+								who = ROOT
+								value = 50
+							}
+						}
+					}
+				}
+			}
+			NOT = {
+				trait = excommunicated
+			}
+		}
+		
+		effect = {
+			piety = -1000
+			custom_tooltip = { text = TXT_vassalize_arzobispo }
+			hidden_tooltip = {
+				d_sagrado_corazon = {
+					holder_scope = {
+						set_defacto_liege = e_mexico
+					}
+				}
+			}
+		}
+		
+		revoke_allowed = {
+			always = no
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	vassalize_dorados = {
+		is_high_prio = yes
+		only_playable = yes
+		ai_check_interval = 3
+		
+		potential = {
+			is_alternate_start = no
+
+			has_landed_title = e_mexico
+			OR = {
+				culture_group = mexicano
+				culture_group = norteno
+			}
+			OR = {
+				religion_group = christian
+				religion_group = cult_of_saints
+			}
+			is_title_active = d_dorados
+			d_dorados = {
+				holder_scope = {
+					NOT = { has_truce = ROOT }
+					ROOT = { NOT = { has_truce = PREV } }
+					liege = {
+						NOT = { character = ROOT }
+					}
+					NOT = { num_of_count_titles = 3 }
+					independent = yes
+					primary_title = { title = d_dorados }
+				}
+			}
+		}
+		
+		allow = {
+			wealth = 700
+			piety = 2200
+			completely_controls = c_mexico
+			completely_controls = c_chihuahua
+			completely_controls = c_monterrey
+			completely_controls = c_durango
+			completely_controls = c_zacatecas
+		}
+		
+		effect = {
+			wealth = -700
+			d_dorados = {
+				holder_scope = {
+					wealth = 700
+					ROOT = {
+						set_defacto_vassal = PREV
+					}
+				}
+			}
+		}
+		
+		revoke_allowed = {
+			always = no
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

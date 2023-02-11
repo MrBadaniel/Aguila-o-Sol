@@ -1,0 +1,365 @@
+### By SKY
+
+## Historical bloodlines
+
+hokwoju = { # Sioux king of Lakotah
+	monthly_character_prestige = 0.1
+	monthly_character_piety = 0.1
+	sioux_opinion = 5
+	amero_syncretic_opinion = 5
+	catholic_opinion = -8
+	americanist_opinion = -8
+	inheritance = patrilineal
+	allow_bastards = yes
+	active = {
+		religion_group = amero_syncretic
+	}
+	picture = GFX_bloodlines_symbol_horse
+	flags = { historical_bloodline }
+}
+
+kirkpatrick = { # Coleman the Liberator of Detroit
+	monthly_character_prestige = 0.1
+	plot_power_modifier = 0.05
+	intrigue = 1
+	rust_cultist_opinion = 8
+	quebecois_opinion = -5
+	ursuline_opinion = -5
+	inheritance = patrilineal
+	allow_bastards = yes
+	active = {
+		religion = rust_cultist
+	}
+	picture = GFX_bloodlines_symbol_technology
+	flags = { historical_bloodline }
+}
+
+creaux = { # Roi John Creaux, the Conqueror of Louisiana
+	monthly_character_prestige = 0.1
+	monthly_character_piety = 0.1
+	combat_rating = 5
+	cajun_opinion = 5
+	voodoo_opinion = 5
+	inheritance = patrilineal
+	allow_bastards = yes
+	picture = GFX_bloodlines_symbol_fleur_de_lis
+	flags = { historical_bloodline }
+	active = {
+		OR = {
+			culture_group = louisianais
+			religion_group = afro_syncretic
+		}
+	}
+}
+
+laurier = { # King of Ontario
+	monthly_character_prestige = 0.1
+	global_revolt_risk = -0.01
+	high_church_opinion = 5
+	ontarian_opinion = 5
+	inheritance = patrilineal
+	allow_bastards = yes
+	picture = GFX_bloodlines_placeholder_symbol_2
+	flags = { historical_bloodline }
+}
+
+anthophile = { # King of Deseret
+	monthly_character_piety = 0.1
+	utahn_opinion = 5
+	mormon_opinion = 5
+	inheritance = patrilineal
+	allow_bastards = no
+	active = {
+		religion = mormon
+	}
+	picture = GFX_bloodlines_symbol_cross_crusader
+	flags = { historical_bloodline }
+}
+
+bolvariana = { # King of Los Llanero and Bolivar
+	monthly_character_prestige = 0.15
+	command_modifier = {
+		morale_offence = 0.10
+	}
+	martial = 2
+	orinocense_opinion = 8
+	inheritance = patrilineal
+	allow_bastards = yes
+	active = {
+		culture_group = orinocense
+	}
+	picture = GFX_bloodlines_symbol_horse
+	flags = { historical_bloodline }
+}
+
+khan = { # King and former dynasty of Guyana
+	monthly_character_piety = 0.1
+	guyanese_opinion = 5
+	sranan_opinion = 5
+	traditionalist_opinion = 5
+	inheritance = patrilineal
+	allow_bastards = yes
+	active = {
+		religion_group = muslim
+	}
+	picture = GFX_bloodlines_symbol_sunni
+	flags = { historical_bloodline }
+}
+
+bruce_wayne = { # Bruce the Bat
+	monthly_character_prestige = 0.15
+	combat_rating = 15
+	plot_defence_modifier = 0.15
+	brave_opinion = 15
+	just_opinion = 15
+	inheritance = patrilineal
+	allow_bastards = yes
+	picture = GFX_bloodlines_placeholder_symbol
+	flags = { historical_bloodline }
+}
+
+tagotoka = { # Tavibo Tagötöka, the paiute Mad Prophet
+	command_modifier = {
+		religious_enemy = 0.15
+	}
+	paiute_opinion = 5
+	californian_opinion = -5
+	learning = 1
+	monthly_character_prestige = 0.1
+	inheritance = patrilineal
+	allow_bastards = yes
+	picture = GFX_bloodlines_symbol_stoics
+	flags = { historical_bloodline }
+}
+
+iurhuri = { # The first Sol Invicto Tata
+	command_modifier = {
+		religious_enemy = 0.10
+	}
+	monthly_character_piety = 0.2
+	sol_invicta_opinion = 8
+	bloodline_effect_great_heroes_appear = 1
+	inheritance = patrilineal
+	allow_bastards = yes
+	active = {
+		religion = sol_invicta
+	}
+	picture = GFX_bloodlines_symbol_zun_sun
+	flags = { historical_bloodline bloodline_heroes }
+}
+
+cervantes = { # Rey of Bajio
+	monthly_character_piety = 0.1
+	command_modifier = {
+		religious_enemy = 0.05
+	}
+	cristo_rey_opinion = 5
+	saintly_defender_bloodline = 1
+	inheritance = patrilineal
+	allow_bastards = no
+	active = {
+		religion_group = christian
+	}
+	picture = GFX_bloodlines_symbol_cross_crusader
+	flags = { historical_bloodline defender_of_the_faith }
+}
+
+braganca = { # Pedro the Restorer
+	monthly_character_prestige = 0.15
+	portuguese_opinion = 3
+	apostolic_opinion = 3
+	bloodline_effect_peace_prosperity = 1
+	picture = GFX_bloodlines_symbol_generic_hero
+	inheritance = patrilineal
+	allow_bastards = yes
+	flags = { historical_bloodline bloodline_peace_prosperity }
+}
+
+## Created bloodlines
+
+adam = { #The Consumerist Prophet
+	command_modifier = {
+		religious_enemy = 0.15
+	}
+	monthly_character_piety = 0.2
+	global_tax_modifier = 0.08
+	greedy_opinion = 20
+	inheritance = patrilineal
+	allow_bastards = yes
+	active = {
+		OR = {
+			religion = consumerist
+			religion = monetarist
+		}
+	}
+	picture = GFX_bloodlines_symbol_stoics
+	flags = { historical_bloodline }
+}
+
+high_king_texan_bloodline = {# Texian High king of Texas
+	texan_opinion = 10
+	monthly_character_prestige = 0.4
+	bloodline_effect_texas_building = 1 
+	command_modifier = {
+		morale_defence = 0.10
+		morale_offence = 0.10
+	}
+	inheritance = patrilineal
+	allow_bastards = yes
+	picture = GFX_bloodlines_symbol_texas
+	flags = { created_bloodlines bloodline_texas_building }
+	active = {
+		culture = texan
+		NOR = {
+			is_nomadic = yes
+			is_tribal = yes
+		}
+	}
+}
+
+high_king_tejano_bloodline = {# Tejano High king of Texas
+	tejano_opinion = 10
+	monthly_character_prestige = 0.4
+	bloodline_effect_texas_building = 1 
+	command_modifier = {
+		morale_defence = 0.10
+		morale_offence = 0.10
+	}
+	inheritance = patrilineal
+	allow_bastards = yes
+	picture = GFX_bloodlines_symbol_texas
+	flags = { created_bloodlines bloodline_texas_building }
+	active = {
+		culture = tejano
+		NOR = {
+			is_nomadic = yes
+			is_tribal = yes
+		}
+	}
+}
+
+high_king_texaner_bloodline = {# Texaner High king of Texas
+	texaner_opinion = 10
+	monthly_character_prestige = 0.4
+	bloodline_effect_texas_building = 1 
+	command_modifier = {
+		morale_defence = 0.10
+		morale_offence = 0.10
+	}
+	inheritance = patrilineal
+	allow_bastards = yes
+	picture = GFX_bloodlines_symbol_texas
+	flags = { created_bloodlines bloodline_texas_building }
+	active = {
+		culture = texaner
+		NOR = {
+			is_nomadic = yes
+			is_tribal = yes
+		}
+	}
+}
+
+high_king_czexan_bloodline = {# Czexan High king of Texas
+	czexan_opinion = 10
+	monthly_character_prestige = 0.4
+	bloodline_effect_texas_building = 1 
+	command_modifier = {
+		morale_defence = 0.10
+		morale_offence = 0.10
+	}
+	inheritance = patrilineal
+	allow_bastards = yes
+	picture = GFX_bloodlines_symbol_texas
+	flags = { created_bloodlines bloodline_texas_building }
+	active = {
+		culture = czexan
+		NOR = {
+			is_nomadic = yes
+			is_tribal = yes
+		}
+	}
+}
+
+high_queen_texan_bloodline = {# Texian High queen of Texas
+	texan_opinion = 10
+	monthly_character_prestige = 0.4
+	bloodline_effect_texas_building = 1 
+	command_modifier = {
+		morale_defence = 0.10
+		morale_offence = 0.10
+	}
+	inheritance = matrilineal
+	allow_bastards = yes
+	picture = GFX_bloodlines_symbol_texas
+	flags = { created_bloodline bloodline_texas_building }
+	active = {
+		culture = texan
+		NOR = {
+			is_nomadic = yes
+			is_tribal = yes
+		}
+	}
+}
+
+high_queen_tejano_bloodline = {# Tejano High queen of Texas
+	tejano_opinion = 10
+	monthly_character_prestige = 0.4
+	bloodline_effect_texas_building = 1 
+	command_modifier = {
+		morale_defence = 0.10
+		morale_offence = 0.10
+	}
+	inheritance = matrilineal
+	allow_bastards = yes
+	picture = GFX_bloodlines_symbol_texas
+	flags = { created_bloodline bloodline_texas_building }
+	active = {
+		culture = tejano
+		NOR = {
+			is_nomadic = yes
+			is_tribal = yes
+		}
+	}
+}
+
+high_queen_texaner_bloodline = {# Texaner High queen of Texas
+	texaner_opinion = 10
+	monthly_character_prestige = 0.4
+	bloodline_effect_texas_building = 1 
+	command_modifier = {
+		morale_defence = 0.10
+		morale_offence = 0.10
+	}
+	inheritance = matrilineal
+	allow_bastards = yes
+	picture = GFX_bloodlines_symbol_texas
+	flags = { created_bloodline bloodline_texas_building }
+	active = {
+		culture = texaner
+		NOR = {
+			is_nomadic = yes
+			is_tribal = yes
+		}
+	}
+}
+
+high_queen_czexan_bloodline = {# Czexan High queen of Texas
+	czexan_opinion = 10
+	monthly_character_prestige = 0.4
+	bloodline_effect_texas_building = 1 
+	command_modifier = {
+		morale_defence = 0.10
+		morale_offence = 0.10
+	}
+	inheritance = matrilineal
+	allow_bastards = yes
+	picture = GFX_bloodlines_symbol_texas
+	flags = { created_bloodline bloodline_texas_building }
+	active = {
+		culture = czexan
+		NOR = {
+			is_nomadic = yes
+			is_tribal = yes
+		}
+	}
+}

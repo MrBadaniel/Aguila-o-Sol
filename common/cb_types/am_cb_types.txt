@@ -732,6 +732,7 @@ reconquista_jalisco = {
 			custom_tooltip = {
 				text = RECONQUISTAS_STARTED
 				has_global_flag = mexican_reconquistas_unlocked
+				NOT = { has_global_flag = no_more_cristiadas } #Cristiadas have been forcefully ended through decision
 			}
 		}
 	}
@@ -911,7 +912,7 @@ reconquista_jalisco = {
 			save_event_target_as = first_duchy_title
 		}
 
-		d_colima = {
+		d_nayarit = {
 			save_event_target_as = second_duchy_title
 		}
 		
@@ -982,6 +983,7 @@ reconquista_michoacan = {
 			custom_tooltip = {
 				text = RECONQUISTAS_STARTED
 				has_global_flag = mexican_reconquistas_unlocked
+				NOT = { has_global_flag = no_more_cristiadas } #Cristiadas have been forcefully ended through decision
 			}
 		}
 	}
@@ -1165,7 +1167,7 @@ reconquista_michoacan = {
 			save_event_target_as = second_duchy_title
 		}
 		
-		d_costa_grande = {
+		d_colima = {
 			save_event_target_as = third_duchy_title
 		}
 		
@@ -1232,6 +1234,7 @@ reconquista_mixteca = {
 			custom_tooltip = {
 				text = RECONQUISTAS_STARTED
 				has_global_flag = mexican_reconquistas_unlocked
+				NOT = { has_global_flag = no_more_cristiadas } #Cristiadas have been forcefully ended through decision
 			}
 		}
 	}
@@ -1408,11 +1411,7 @@ reconquista_mixteca = {
 
 	on_success = {
 
-		d_mixteca = {
-			save_event_target_as = first_duchy_title
-		}
-
-		d_costa_chica = {
+		d_triangulo_del_sol = {
 			save_event_target_as = second_duchy_title
 		}
 		
@@ -1420,7 +1419,7 @@ reconquista_mixteca = {
 			save_event_target_as = third_duchy_title
 		}
 		
-		k_mixteca = {
+		k_guerrero = {
 			save_event_target_as = reconquista_kingdom_title
 		}
 
@@ -1483,6 +1482,7 @@ reconquista_oaxaca = {
 			custom_tooltip = {
 				text = RECONQUISTAS_STARTED
 				has_global_flag = mexican_reconquistas_unlocked
+				NOT = { has_global_flag = no_more_cristiadas } #Cristiadas have been forcefully ended through decision
 			}
 		}
 	}
@@ -1665,6 +1665,12 @@ reconquista_oaxaca = {
 		d_istmo = {
 			save_event_target_as = second_duchy_title
 		}
+		d_mixteca = {
+			save_event_target_as = second_duchy_title
+		}
+		d_costa_chica = {
+			save_event_target_as = second_duchy_title
+		}
 		k_oaxaca = {
 			save_event_target_as = reconquista_kingdom_title
 		}
@@ -1728,6 +1734,7 @@ reconquista_mexicoast = {
 			custom_tooltip = {
 				text = RECONQUISTAS_STARTED
 				has_global_flag = mexican_reconquistas_unlocked
+				NOT = { has_global_flag = no_more_cristiadas } #Cristiadas have been forcefully ended through decision
 			}
 		}
 	}
@@ -1971,6 +1978,7 @@ reconquista_mexico = {
 			custom_tooltip = {
 				text = RECONQUISTAS_STARTED
 				has_global_flag = mexican_reconquistas_unlocked
+				NOT = { has_global_flag = no_more_cristiadas } #Cristiadas have been forcefully ended through decision
 			}
 		}
 	}
@@ -2219,6 +2227,7 @@ reconquista_bajio = {
 			custom_tooltip = {
 				text = RECONQUISTAS_STARTED
 				has_global_flag = mexican_reconquistas_unlocked
+				NOT = { has_global_flag = no_more_cristiadas } #Cristiadas have been forcefully ended through decision
 			}
 		}
 	}
@@ -2470,6 +2479,7 @@ reconquista_chichimeca = {
 			custom_tooltip = {
 				text = RECONQUISTAS_STARTED
 				has_global_flag = mexican_reconquistas_unlocked
+				NOT = { has_global_flag = no_more_cristiadas } #Cristiadas have been forcefully ended through decision
 			}
 		}
 	}
@@ -2718,6 +2728,7 @@ reconquista_huasteca = {
 			custom_tooltip = {
 				text = RECONQUISTAS_STARTED
 				has_global_flag = mexican_reconquistas_unlocked
+				NOT = { has_global_flag = no_more_cristiadas } #Cristiadas have been forcefully ended through decision
 			}
 		}
 	}

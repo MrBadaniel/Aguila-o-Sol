@@ -18,15 +18,15 @@ aos_justo_evtchain = {
 	name = "RULE_JUSTO_EVETCHAIN"
 	group = "RULE_GROUP_RAILROADING"
 	
-	alt_start_default = off
+	alt_start_default = early
 	option = {
 		name = off
 		text = "RULE_OPTION_OFF"
 		desc = "RULE_JUSTO_EVETCHAIN_OFF_DESC"
 	}
 	option = {
-		name = historical
-		text = "RULE_OPTION_HISTORICAL"
-		desc = "RULE_JUSTO_EVETCHAIN_HISTORICAL_DESC"
+		name = early
+		text = "RULE_OPTION_EARLY"
+		desc = "RULE_JUSTO_EVETCHAIN_EARLY_DESC"
 	}
 }

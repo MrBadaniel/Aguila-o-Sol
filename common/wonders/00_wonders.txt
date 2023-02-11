@@ -939,7 +939,8 @@ wonder_statue_horse = {
 			culture = horse
 			culture = comanche
 			culture_group = west_anglo
-			culture_group = starfolk
+			culture = texaner
+			culture = czexan
 			culture_group = norteno
 			government = nomadic_government
 		}
@@ -957,7 +958,8 @@ wonder_statue_horse = {
 				culture = horse
 				culture = comanche
 				culture_group = west_anglo
-				culture_group = starfolk
+				culture = texaner
+				culture = czexan
 				culture_group = norteno
 				government = nomadic_government
 			}
@@ -5004,7 +5006,12 @@ wonder_alamo = {
 									
 	}
 	active = {
-	culture_group = starfolk
+		OR = {
+			culture = texan
+			culture = tejano
+			culture = texaner
+			culture = czexan
+		}
 	}
 	flags = {
 		defensive

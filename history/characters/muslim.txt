@@ -344,7 +344,7 @@
 			add_friend=2200040
 			add_friend=1384010
 			add_friend=1384011
-			add_friend=1911151
+			 # add_friend=1911151
 		}
 	}
 	2660.1.2={
@@ -551,7 +551,7 @@
 }
 
 2200028={
-	name="Christina" #Princess of Baja
+	name="Cristina" #Princess of Baja
 	dynasty=1912065 #Caballero
 	female=yes
 	father=1910001
@@ -1400,7 +1400,7 @@
 			set_character_flag=diversity
 			set_character_flag=physique
 			add_friend=1384011
-			add_friend=1911151
+			 # add_friend=1911151
 			add_friend=2200016
 		}
 	}
@@ -1441,7 +1441,7 @@
 	2660.1.1={
 		effect={
 			add_friend=1384010
-			add_friend=1911151
+			 # add_friend=1911151
 			add_friend=2200016
 		}
 	}
@@ -1608,7 +1608,13 @@
 	trait=zealous
 	trait=just
 	trait=sayyid2
-	2590.1.1={birth=yes}
+	2590.1.1={
+		birth=yes
+		create_bloodline={
+			type=khan
+			has_dlc="Holy Fury"
+		}
+	}
 	2640.1.1={death=yes}
 }
 
@@ -2733,7 +2739,7 @@
 	trait=hafiz
 	trait=shrewd
 	father=1384080
-	2339.3.14={birth=yes}
+	2338.3.14={birth=yes}
 	2360.1.1={add_spouse=1384083}
 	2403.4.12={death=yes}
 }
@@ -3097,7 +3103,7 @@
 	name="Sarah"
 	culture=greek
 	female=yes
-	dynasty=1851041 #Yudkow
+	dynasty=1697095 #Collier
 	religion=imamite
 	trait=grey_eminence
 	trait=ambitious
@@ -3128,7 +3134,7 @@
 	name="Dinah"
 	culture=greek
 	female=yes
-	dynasty=1851041 #Yudkow
+	dynasty=1697095 #Collier
 	religion=gaian
 	secret_religion=imamite
 	trait=peasant_leader
@@ -3151,7 +3157,7 @@
 	name="Hannah"
 	culture=greek
 	female=yes
-	dynasty=1851041 #Yudkow
+	dynasty=1697095 #Collier
 	religion=gaian
 	trait=sympathy_christendom
 	trait=kind
@@ -3171,7 +3177,7 @@
 	name="Leah"
 	culture=greek
 	female=yes
-	dynasty=1851041 #Yudkow
+	dynasty=1697095 #Collier
 	religion=gaian
 	trait=kind
 	trait=ambitious
@@ -3419,7 +3425,7 @@ name="Don"
 	trait=sympathy_judaism
 	father=2500119
 	mother=2500113
-	2348.7.5={birth=yes}
+	2356.7.5={birth=yes} #2348.7.5 previous date
 	2415.9.2={death=yes}
 }
 2500124={
@@ -3778,7 +3784,7 @@ name="Don"
 	culture=californiano
 	dynasty=1700041 #infante
 	religion=cetic
-	father=2500174
+	#father=2500174
 	give_nickname=nick_the_soldier
 	trait=tough_soldier
 	trait=strong
@@ -4019,7 +4025,7 @@ name="Don"
 	trait=fortune_builder
 	father=2500167
 	2460.2.18={birth=yes}
-	2488.12.20={add_spouse=2500169}
+	2479.12.20={add_spouse=2500169}
 	2525.4.25={death=yes}
 }
 

@@ -1,0 +1,1163 @@
+######REGIOLANDIA
+
+####NEW CHARACTERS FOR THE NEW NORTE—O PROVINCES
+
+181171 = { #2nd wife of eugenio_garza_1
+	name="Luisa"
+	dynasty= 1810072 #Ugalde
+	female=yes
+	religion=sacred_heart
+	culture=bravo
+	trait=intricate_webweaver
+	trait=patient
+	trait=ambitious
+	trait=diligent
+	trait=schemer	
+	2579.10.31 = { birth =yes }
+	2599.12.1 = { add_spouse=181230 }
+}
+
+181172 = { #1st wife of eugenio_garza_1
+	name="Consuelo"
+	dynasty= 1810071 #Rubio
+	female=yes
+	religion=sacred_heart
+	culture=bravo
+	trait=charismatic_negotiator
+	trait=charitable
+	trait=paranoid
+	trait=brave
+	trait=cancer
+	2544.1.20 = { birth =yes }
+	2560.5.15 = { add_spouse=181230 }
+	2598.3.26 = { 
+		death = { 
+			death_reason=death_trait
+		}
+	}
+}
+181173 = {
+ 	name="Consuelo"
+	dynasty= 1810070 #Adùs
+	female=yes
+	culture=bravo
+	religion=sacred_heart
+	trait=grey_eminence
+	trait=gregarious
+	trait=humble
+	trait=paranoid
+	trait=pilgrim
+	2510.1.20 = { birth =yes }
+	2527.5.15 = { add_spouse=181234 }
+	2611.3.17 = { death = yes }
+}
+181174 = { #second wife of Mariano the Old 181207
+ 	name="Antonietta"
+	female=yes
+	culture=gothamite
+	religion=catholic
+	trait=fair
+	trait=kind
+	trait=devout
+	trait=adventurer
+	trait=pilgrim
+	2605.9.26 = { birth=yes }
+	2621.12.15 = { add_spouse=181207 }
+	2632.9.26 = { death= { death_reason=death_pilgrimage} }
+}
+
+	
+181175 = {
+ 	name="Margarita"
+	female=yes
+	culture=bravo
+	religion=sacred_heart
+	trait=charismatic_negotiator
+	trait=paranoid
+	trait=kind
+	trait=gregarious
+	2553.9.26 = { birth=yes }
+	2573.4.15 = { add_spouse=181181 }
+	2615.9.26 = { death=yes }
+}
+181176 = {
+	name="Juana"
+	female=yes
+	culture=tejano
+	religion=catholic
+	trait=brilliant_strategist
+	trait=brave
+	trait=wroth
+	trait=diligent
+	2600.7.4 = { birth=yes }
+	2620.6.15 = { add_spouse=181182 }
+}
+181177 = {
+	name="Aldonza"
+	female=yes
+	culture=bravo
+	religion=sacred_heart
+	trait=brilliant_strategist
+	trait=brave
+	trait=wroth
+	trait=diligent
+	2588.7.4 = { birth=yes }
+	2608.7.10 = { add_spouse = 181187 }
+	2620.7.10 = { 
+		death= {
+			death_reason = death_suicide 
+		}
+	}
+}
+181178 =	{
+	name="Josefina"
+	female=yes
+	culture=jarocho
+	religion=sacred_heart
+	trait=martial_cleric
+	trait=shy
+	trait=brave
+	trait=ambitious
+	trait=mystic
+	trait=bisexual
+	2626.9.24 = { birth=yes }
+	2647.11.20 = { add_spouse = 181188 }
+}
+####181180-181189 de Arcas y Rojos
+181180 = {
+	name="Argos"
+	dynasty=1810058 #de Arca
+	culture=tejano
+	religion=sacred_heart
+	father=181182
+	mother=181176
+	trait=thrifty_clerk
+	trait=greedy
+	trait=wroth
+	2638.1.1={birth=yes}
+}
+181181= { #arnulfo_de_arca
+	name="Arnulfo"
+	dynasty=1810058 #de Arca
+	culture=bravo
+	religion=sacred_heart
+	trait=tough_soldier
+	trait=diligent
+	trait=shy
+	trait=charitable
+	2547.5.15={ birth=yes }
+	2607.4.9={ death=yes }
+}
+181182= { #arnulfo_de_arca_1
+	name="Arnulfo"
+	dynasty=1810058 #de Arca
+	culture=bravo
+	religion=sacred_heart
+	father=181181
+	mother=181175
+	trait=fortune_builder
+	trait=brave
+	trait=cruel
+	trait=paranoid
+	2579.5.15={ birth=yes }
+	2652.11.12={ death=yes }
+}
+181186 = {
+	name="Blanca"
+	female=yes
+	dynasty=1810059 #Rojo 
+	culture=bravo
+	religion=sacred_heart
+	father=181188
+	mother=181178
+	trait=thrifty_clerk
+	trait=kind
+	trait=charitable
+	trait=mystic
+	2649.1.1 = { birth=yes }
+}	
+181187={
+	name="MatÌas"
+	female=no
+	dynasty=1810059 #Rojo 
+	culture=bravo
+	religion=sacred_heart
+	father=181181
+	mother=181175
+	trait=tough_soldier
+	trait=brave
+	trait=kind
+	trait=gregarious
+	trait=drunkard
+	2587.1.1 = {birth=yes}
+	2619.9.10 = { 
+		death = {
+			death_reason = death_soldier_rabble
+		}
+	}
+}
+181188={
+	name="Jaime"
+	female=no
+	dynasty=1810059 #Rojo 
+	culture=bravo
+	religion=sacred_heart
+	father=181187
+	mother=181177
+	trait=intricate_webweaver
+	trait=craven
+	trait=wroth
+	trait=impaler
+	trait=cruel
+	trait=mystic
+	trait=bisexual
+	2609.1.1 = {birth=yes}
+}
+181189={ 
+	name="MarÌa" #Wife of Don Pepe
+	female=yes
+	dynasty=1810059 #Rojo 
+	culture=bravo
+	religion=sacred_heart
+	trait=underhanded_rogue
+	trait=lustful
+	trait=wroth
+	trait=deceitful
+	trait=fair
+	trait=seductress
+	father=181187
+	mother=181177
+	give_nickname=nick_dona_mari
+	#mother=1810201
+	#father=1810200
+	2620.5.8={birth=yes}
+	2645.9.13={add_spouse=1810008}
+	2664.1.1 = {effect={add_lover=1810059}}
+}
+#Garza Montemayor
+181190 = {
+	name="Abraham"
+	dynasty=1810057 #Garza Montemayor
+	culture=bravo
+	father=181238
+	mother=181239
+	religion=reformista
+	trait=thrifty_clerk	
+	trait=content
+	trait=humble
+	trait=patient
+	trait=bisexual
+	2612.1.1={birth=yes}
+	2627.1.1={add_spouse=181191}
+	#2630.3.2={capital=c_nuevo_laredo}
+}
+181191 = { 
+	name="Abigail"
+	female = yes
+	culture=tejano
+	religion=reformista
+	trait=intricate_webweaver
+	trait=ambitious
+	trait=deceitful
+	trait=temperate
+	2609.1.1={birth=yes}
+}
+181192 = {
+	name="Abraham"
+	dynasty=1810057 #Garza Montemayor
+	culture=bravo
+	religion=reformista
+	father=181190
+	mother=181191
+	trait=tough_soldier
+	trait=wroth
+	trait=deceitful
+	trait=zealous
+	trait=lustful
+	2634.1.1={birth=yes}
+	2648.1.1={
+		effect = {
+			add_lover = 181193
+		}
+	}
+}
+181193 = {
+	name="Joanna"
+	female = yes
+	culture=texan
+	religion=reformista
+	trait=elusive_shadow
+	trait=ambitious
+	trait=deceitful
+	trait=lustful
+	2648.1.1={birth=yes}
+	2666.1.1={
+		effect = {
+			add_lover = 181192
+		}
+	}
+}
+181194 = {
+	name="Abraham"
+	dynasty=1810057 #Garza Montemayor
+	culture=bravo
+	religion=reformista
+	father=181192
+	mother=181193
+	trait=legit_bastard
+	2665.4.1={birth=yes}
+}
+181195 = {
+	name="Ismael"
+	dynasty=1810057 #Garza Montemayor
+	culture=bravo
+	religion=reformista
+	father=181190
+	mother=181191
+	trait=skilled_tactician
+	trait=brave
+	trait=patient
+	trait=temperate
+	trait=administrator
+	trait=organizer
+	2635.1.1={birth=yes}
+	2662.1.1={add_spouse=181196}
+}
+181196 = {
+	name="Consuelo"
+	female=yes
+	culture=bravo
+	religion=reformista
+	trait=charismatic_negotiator
+	trait=charitable
+	trait=gregarious
+	trait=just
+	trait=administrator
+	trait=organizer
+	2641.1.1={birth=yes}
+	2662.1.1={add_spouse=181195}
+}
+181197 = {
+	name="Eugenio"
+	dynasty=1810057 #Garza Montemayor
+	culture=bravo
+	religion=reformista
+	father=181195
+	mother=181196
+	trait=affectionate
+	2664.1.1={birth=yes}
+}
+181198 = {
+	name="David"
+	dynasty=1810057 #Garza Montemayor
+	culture=bravo
+	religion=reformista
+	father=181190
+	mother=181191
+	trait=thrifty_clerk
+	trait=greedy
+	trait=wroth
+	trait=gregarious
+	2638.1.1={birth=yes}
+}
+181199 = {
+	name="Israel"
+	dynasty=1810057 #Garza Montemayor
+	culture=bravo
+	religion=reformista
+	father=181190
+	mother=181191
+	trait=mastermind_theologian
+	trait=shy
+	trait=patient
+	trait=devout
+	trait=homosexual
+	2642.1.1={birth=yes}
+}
+
+181200 = {
+	name="Mariana"
+	female=yes
+	dynasty=1810056 #Garza Garcùa
+	culture=italian
+	religion=reformista
+	dna="ahbd00hbb00"
+	properties="ad0b0d0000000000000000000000000000000"
+	father=181202	
+	mother=181203
+	trait=intricate_webweaver
+	trait=fair
+	trait=zealous
+	trait=wroth
+	trait=lustful
+	trait=deceitful
+	trait=bisexual
+	2642.1.1 = {
+		birth=yes
+		culture=bravo
+	}
+}
+181201 = {
+	name="Laura"
+	female=yes
+	dynasty=1810056 #Garza Garcùa
+	culture=bravo
+	religion=reformista
+	father=181202
+	mother=181203
+	trait=martial_cleric
+	trait=trusting
+	trait=arbitrary
+	trait=wroth
+	trait=lustful
+	trait=weak
+	2646.1.1 = { birth=yes }
+	2666.7.10 = { 
+		death = {
+			death_reason=death_suicide
+		}
+	}
+}
+181202 = {
+	name="Laureano"
+	dynasty=1810056 #Garza Garcùa
+	culture=bravo
+	religion=reformista
+	father=181204
+	trait=fortune_builder
+	trait=content
+	trait=stubborn
+	trait=gregarious
+	trait=chest_pain
+	2620.1.1 = { birth=yes }
+	2638.1.1 = { add_spouse = 181203 }
+	2645.4.12 = { 
+			death = {
+				death_reason = death_trait
+			}
+	}
+}
+181203 = {
+	name="Angelina"
+	female=yes
+	dynasty= 1810062 #Garcùa Huerta
+	culture=italian
+	religion=reformista
+	trait=charismatic_negotiator
+	trait=fair
+	father=181207
+	mother=181174
+	2622.1.1 = { 
+		birth=yes 
+		culture=bravo
+	}
+	2640.1.1 = { add_spouse = 181202 }
+}
+181204 = {
+	name="Luis"
+	dynasty=1810056 #Garza Garcùa
+	culture=bravo
+	religion=reformista
+	father=181230
+	mother=181171
+	trait=underhanded_rogue
+	trait=stubborn
+	trait=wroth
+	trait=charitable
+	trait=ill
+	2600.11.29 = { birth=yes }
+	2640.6.30 = { add_spouse = 181203 }
+	2662.12.12 = { 
+		death = {
+			death_reason = death_trait
+		}
+	}
+}
+181205 = {
+	name="Pedro"
+	female=no
+	dynasty= 1810062 #Garcùa Huerta
+	culture=bravo
+	religion=sacred_heart
+	martial=10
+	trait=tough_soldier
+	trait=strong
+	trait=wroth
+	trait=lustful
+	trait=cynical
+	trait=seducer
+	trait=bastard
+	give_nickname = nick_el_diablo
+	father=181207	
+	employer=1810008
+	2642.1.1 = { birth=yes }
+	2664.1.1 = {effect={add_lover=1810059}}
+	2664.10.15 = { 
+		death = {	
+			death_reason = death_murder_unknown
+			killer=1810008
+		}
+	}
+}
+181206 = {
+	name="Benjamin"
+	female=no
+	dynasty= 1810062 #Garcùa Huerta
+	culture=bravo
+	religion=sacred_heart
+	martial=10
+	trait=skilled_tactician
+	trait=just
+	trait=kind
+	trait=marian_san_juditas
+	# trait=tengri_leader
+	trait=stubborn
+	trait=bastard
+	give_nickname = nick_el_benny
+	father=181207
+	employer=1810008
+	2633.1.1 = { birth=yes }
+}
+181207 = {
+	name="Mariano"
+	female=no
+	dynasty= 1810062 #Garcùa Huerta
+	culture=bravo
+	religion=sacred_heart
+	health=9
+	diplomacy=8
+	learning=8
+	trait=strong
+	trait=tough_soldier
+	trait=erudite
+	trait=gregarious
+	give_nickname=nick_the_old
+	2570.3.22 = { birth=yes }
+}
+181208= {
+	name="Pablo"
+	female=no
+	dynasty= 1810062 #Garcùa Huerta
+	culture=bravo
+	religion=sacred_heart
+	trait=tough_soldier
+	trait=strong
+	trait=gregarious
+	trait=falconer
+	father=181207
+	mother=181237
+	2596.11.11 = { birth=yes }
+	2619.7.19 = {
+		death = {
+			death_reason = death_battle
+		}
+	}
+}
+181209= {
+	name="SimÛn"
+	female=no
+	dynasty= 1810062 #Garcùa Huerta
+	culture=bravo
+	religion=sacred_heart
+	father=181207
+	mother=181237
+	trait=misguided_warrior
+	trait=brave
+	trait=strong
+	trait=trusting
+	trait=hunter
+	2599.5.29 = { birth=yes }
+	2619.7.19 = {
+		death = {
+			death_reason = death_battle
+		}
+	}
+}
+181217 = {
+	name="Juan"
+	female=no
+	dynasty= 1810062 #Garcùa Huerta
+	culture=italian
+	religion=cristo_rey
+	father=181207
+	martial=9
+	learning=10
+	health=10
+	trait=martial_cleric
+	trait=theologian
+	trait=holy_warrior
+	trait=zealous
+	trait=monk
+	trait=celibate
+	trait=strong
+	trait=bastard
+	employer=6900002
+	2625.5.29 = { 
+		birth=yes
+		culture=bravo
+	}
+}		
+
+181210 = {
+	name="Marcos"
+	dynasty=1810061 #Cobarrubias
+	culture=bravo
+	religion=sacred_heart
+	trait=thrifty_clerk
+	trait=proud
+	trait=diligent
+	trait=wroth
+	father=181213
+	2603.1.1 = { birth=yes }
+	2627.1.1 = { add_spouse = 181212 }
+	2645.3.5 = { 
+		death= {
+			death_reason=death_execution_guillotine
+			killer=1810003
+		}
+	}
+}
+181211 = {
+	name="Tulio"
+	dynasty=1810061 #Cobarrubias
+	culture=bravo
+	religion=sacred_heart
+	father=181210
+	mother=181212
+	trait=mastermind_theologian
+	trait=charitable
+	trait=poet
+	trait=kind
+	2641.1.1 = { birth=yes }
+	2647.1.1 = {
+		effect = {add_friend=6900511}
+	}
+}
+181212 = {
+	name="Andrea"
+	female=yes
+	culture=bravo
+	dynasty=1810069 #Garcùa Flores
+	religion=sacred_heart
+	trait=temperate
+	trait=shy
+	trait=diligent
+	trait=intricate_webweaver
+	2604.1.1 = { birth=yes }
+	2627.1.1 = { add_spouse = 181210 }
+}
+181213 = {
+	name="Tulio"
+	dynasty=1810061 #Cobarrubias
+	culture=bravo
+	religion=sacred_heart
+	trait=robust
+	trait=misguided_warrior
+	trait=aggressive_leader
+	father=181214
+	2580.1.1 = { birth=yes }
+	2619.7.19 = { 
+		death= { 
+			death_reason = death_battle
+		}
+	}	
+}
+181214 = {
+	name="Marco"
+	dynasty=1810061 #Cobarrubias
+	culture=bravo
+	religion=sacred_heart
+	trait=craven
+	trait=content
+	trait=detached_priest
+	trait=infirm
+	give_nickname=nick_the_weak
+	father=181215
+	2547.1.1 = { birth=yes }
+	2609.3.5 = { 
+		death = {
+			death_reason = death_trait
+		}
+	}	
+}
+181215 = {
+	name="Marco" #Marco the hunter
+	dynasty=1810061 #Cobarrubias 
+	culture=bravo
+	religion=sacred_heart
+    trait=hunter
+	give_nickname=nick_the_hunter
+	2517.1.1 = { birth=yes }
+	2580.3.5 = { 
+		death = {
+			death_reason = death_accident
+		}
+	}	
+}
+181216 = {
+	name="Marcia" #wife of josefrancisco el dorado
+	female=yes
+	dynasty=1810061 #Cobarrubias 
+	culture=bravo
+	religion=sacred_heart
+    trait=troubled_pregnancy
+	give_nickname=nick_the_usurper
+	father=181215
+	2565.1.1 = { birth=yes }
+	2610.11.2 = { 
+		death = {
+			death_reason = death_troubled_pregnancy
+		}
+	}
+}		
+	
+
+###GARZAS; son muchos
+181229 = {
+	name="Eugenio"
+	dynasty=1810063 #Garza
+	culture=bravo
+	religion=sacred_heart
+	trait=grey_eminence
+	trait=charitable
+	trait=diligent
+	trait=socializer
+	trait=inspiring_leader
+	2465.1.1 = { birth=yes }
+	2541.7.11 = { death = yes }
+}
+181230 = { #eugenio_garza_1
+	name="Eugenio"
+	dynasty=1810063 #Garza
+	culture=bravo
+	religion=sacred_heart
+	father=181234
+	mother=181173
+	trait=midas_touched
+	trait=humble
+	trait=charitable
+	trait=diligent
+	2539.1.1 = { birth=yes }
+	2560.5.15 = { add_spouse=181172 }
+	# 2599.12.1 = { add_spouse=181171 }
+	# 2599.12.2 = {remove_spouse=181172}
+	2619.7.10 = { 
+		death = {
+			death_reason = death_battle
+		}
+	}
+}
+
+181231 = {  #eugenio_garza_3
+	name="Eugenio"
+	dynasty=1810063 #Garza
+	culture=bravo
+	religion=sacred_heart
+	father=181232
+	trait=mastermind_theologian
+	trait=charitable
+	trait=poet
+	trait=kind
+	2583.1.1 = { birth=yes }
+	2619.7.10 = { 
+		death = {
+			death_reason = death_battle
+		}
+	}
+}
+181232 = { #eugenio_garza_2
+	name="Eugenio"
+	dynasty=1810063 #Garza
+	culture=bravo
+	religion=sacred_heart
+	father=181230
+	mother=181172
+	trait=mastermind_theologian
+	trait=charitable
+	trait=poet
+	trait=kind
+	2562.1.1 = { birth=yes }
+	2619.7.10 = { 
+		death = {
+			death_reason = death_battle
+		}
+	}
+}
+181233 = { #eugenio_garza_4
+	name="Eugenio"
+	dynasty=1810063 #Garza
+	culture=bravo
+	religion=sacred_heart
+	father=181231
+	trait=tough_soldier
+	trait=strong
+	trait=wroth
+	trait=aggressive_leader
+	trait=brave
+	2603.1.1 = { birth=yes }
+	2619.7.10 = { 
+		death = {
+			death_reason = death_battle
+		}
+	}
+}
+181234 =	{ #eugenio_garza
+	name="Eugenio"
+	dynasty=1810063 #Garza
+	culture=bravo
+	religion=sacred_heart
+	trait=midas_touched
+	trait=ambitious
+	trait=charitable
+	trait=diligent
+	trait=pneumonic
+	father=181229
+	2502.1.1 = { birth=yes }
+	2558.8.6 = {
+		death= {
+			death_reason = death_trait
+		}
+	}
+}
+181235 =	{ #eugenia_garza
+	name="Eugenia"
+	female=yes
+	dynasty=1810063 #Garza
+	culture=bravo
+	religion=sacred_heart
+	father=181234
+	mother=181173
+	trait=scholarly_theologian
+	trait=humble
+	trait=stubborn
+	trait=shy
+	trait=bisexual
+	2530.1.1 = { birth=yes }
+	2558.8.6 = {
+		death= {
+			death_reason = death_childbirth
+		}
+	}
+}
+181236 =	{ #eufrosina_garza #1st wife of Mariano the Old
+	name="Eufrosina"
+	female=yes
+	dynasty=1810063 #Garza
+	culture=bravo
+	religion=sacred_heart
+	father=181234
+	mother=181173
+	trait=underhanded_rogue
+	trait=proud
+	trait=arbitrary
+	trait=cruel
+	2534.1.1 = { birth=yes }
+	2558.8.6 = {
+		death= {
+			death_reason = death_childbirth
+		}
+	}
+}
+181237 = { #consuelo_garza_1 ; 1st wife of Mariano the Old 181207
+	name="Consuelo"
+	female=yes
+	dynasty=1810063 #Garza
+	culture=bravo
+	religion=sacred_heart
+	father=181232
+	trait=martial_cleric
+	trait=shy
+	trait=wroth
+	trait=arbitrary
+	2579.11.25 = { birth=yes }
+	2596.1.30 = {add_spouse = 181207 }
+	2609.11.20 = {
+		death= {
+			death_reason = death_childbirth
+		}
+	}
+}
+181238= { #abraham_g_m
+	name="Abraham"
+	female=no
+	dynasty= 1810057 #founder of Garza Montemayor?  id=1810057 #Garza
+	culture=bravo
+	religion=sacred_heart
+	father=181230
+	mother=181172
+	trait=martial_cleric
+	trait=shy
+	trait=wroth
+	trait=arbitrary
+	2576.7.17= {birth=yes}
+	2630.3.2= {death=yes}
+}
+181239= { 
+	name="Stacy"
+	female=yes
+	dynasty= 1810068 #montemayor
+	culture=tejano
+	religion=hamiltonian
+	trait=martial_cleric
+	trait=shy
+	trait=wroth
+	trait=arbitrary
+	2592.5.6= {birth=yes}
+	2610.1.15= {add_spouse=181238}
+	2680.3.2= {death=yes}
+}
+
+#Sotos, dukes of Tamaulipas
+181250 = {
+	name="Alfonsina"
+	female=yes
+	dynasty=1810064 #Soto
+	culture=bravo
+	religion=sacred_heart
+	father=181252
+	trait=intricate_webweaver
+	trait=deceitful
+	trait=proud
+	trait=paranoid
+	trait=cancer
+	2622.1.1 = { birth=yes }
+	2664.4.4 = {
+		death= {
+			death_reason = death_trait
+		}
+	}
+}
+181251 = {
+	name="Alfonso"
+	female=no
+	dynasty=1810064 #Soto
+	culture=bravo
+	religion=sacred_heart
+	mother=181250
+	trait=tough_soldier
+	trait=charitable
+	trait=deceitful
+	trait=proud
+	trait=paranoid
+	trait=legit_bastard
+	2642.5.15 = { birth=yes }
+}
+181252 = {
+	name="Alfonso"
+	female=no
+	dynasty=1810064 #Soto
+	culture=bravo
+	religion=sacred_heart
+	diplomacy=10
+	intrigue=1
+	trait=flamboyant_schemer
+	trait=charitable
+	trait=honest
+	trait=kind
+	trait=trusting
+	trait=gregarious
+	trait=socializer
+	trait=flu
+	2595.5.15 = { birth=yes }
+	2650.12.24 = { 
+		death ={
+			death_reason=death_trait
+		}
+	}
+}
+181253 = {
+	name="Aldonza"
+	female=yes
+	dynasty=1810064 #Soto
+	culture=bravo
+	religion=sacred_heart
+	father=181252
+	trait=flamboyant_schemer
+	trait=ambitious
+	2616.1.28 = { birth=yes }
+	2633.1.1={add_spouse=1810004}
+}
+181254 = {
+	name="Eugenio"
+	female=no
+	dynasty=1810073 # Garza Soto
+	culture=bravo
+	religion=sacred_heart
+	father=1810004
+	mother=181253
+	trait=intricate_webweaver
+	trait=ambitious
+	trait=deceitful
+	trait=patient
+	trait=trickster
+	2644.6.15 = { birth=yes }
+}
+
+#Reyes
+181260 = {
+	name="Jes˙s"
+	female=no
+	dynasty=1810016 #Reyes
+	culture=bravo
+	religion=sacred_heart
+	mother=181189
+	father=1810008
+	trait=tough_soldier
+	trait=cynical
+	trait=trusting
+	trait=proud
+	trait=groomed
+	trait=homosexual
+	2646.4.5 = { birth=yes }
+	2660.1.1 = {
+		effect = {add_rival=6900511 }
+	}	
+	2663.1.1 = {
+		effect= {
+			add_lover=181262
+		}
+	}	
+}
+181261 = {
+	name="Eufemio"
+	female=no
+	dynasty=1810065 #Mata
+	culture=bravo
+	religion=sacred_heart
+	#mother=
+	#father=
+	trait=skilled_tactician
+	trait=lustful
+	trait=trusting
+	trait=gluttonous
+	trait=brave
+	trait=strong
+	trait=aggressive_leader
+	trait=marian_santa_muerte
+	give_nickname=nick_el_cochiloco
+	2632.10.20 = { birth=yes }
+	2661.9.12 = {
+		employer=1810008
+	}
+}	
+181262 = {
+	name="Alfonso"
+	female=no
+	dynasty=1810066 #Figueroa
+	culture=bravo
+	religion=sacred_heart
+	#mother=
+	#father=
+	trait=tough_soldier
+	trait=robust
+	trait=lustful
+	trait=patient
+	trait=arbitrary
+	trait=homosexual
+	2648.2.21 = { birth=yes }
+	2663.1.1 = {
+		employer=1810008
+		effect= {
+			add_lover=181260
+		}
+	}
+}
+181264 = {
+	name="Heliodoro"
+	female=no
+	dynasty=1810067 #de la Peùa
+	culture=bravo
+	religion=sacred_heart
+	#mother=
+	#father=
+	trait=underhanded_rogue
+	trait=erudite
+	trait=patient
+	trait=chaste
+	trait=poet
+	trait=robust
+	trait=duelist
+	2570.2.21 = { birth=yes }
+	2590.1.21 = {employer=1810001}
+	2619.7.19 = {
+		death= {
+			death_reason=death_battle
+		}
+	}
+}
+181263 = {
+	name="Susana"
+	female=yes
+	dynasty=1810067 #de la Peùa
+	culture=bravo
+	religion=sacred_heart
+	#mother=
+	#father=
+	trait=midas_touched
+	trait=kind
+	trait=honest
+	trait=humble
+	trait=cancer
+	trait=depressed
+	father=181264
+	2595.5.1 = { birth=yes }
+	2612.1.1 = { 
+		add_spouse=1810001
+		employer=1810001
+	}
+	2640.12.6 = { 
+		death = {
+			death_reason=death_trait
+		}
+	}
+}
+181265 = {
+	name="JosÈ Francisco"
+	female=no
+	dynasty=1810016 #Reyes
+	culture=bravo
+	religion=fidencista
+	#mother=
+	#father=
+	2540.1.1 = { birth=yes }
+	2590.1.1 = { death = yes }
+}
+181266 = {
+	name="JosÈ Francisco"
+	female=no
+	dynasty=1810016 #Reyes
+	culture=bravo
+	religion=fidencista
+	trait=dorado
+	trait=skilled_tactician
+	trait=diligent
+	trait=cavalry_leader	
+	#mother=
+	father=181265
+	give_nickname=nick_el_dorado
+	2568.1.1 = { birth=yes }
+	2588.1.1 = { add_spouse=181216 } 
+	2619.7.19 = {
+		death= {
+			death_reason=death_battle
+		}
+	}
+}
+181267 = {
+	name="Marco"
+	female=no
+	dynasty=1810016 #Reyes
+	culture=bravo
+	religion=fidencista
+	trait=sickly
+	trait=vomiting
+	trait=cramps
+	mother=181216
+	father=181266
+	2610.11.1 = { birth=yes }
+	2610.12.1 = {
+		death= {
+			death_reason=death_trait
+		}
+	}
+}		

@@ -3947,7 +3947,8 @@ tribal = {
 		potential = {
 			OR = {
 				culture_group = west_anglo
-				culture_group = starfolk
+				culture = texaner
+				culture = czexan
 				culture = llanero
 				culture_group = norteno
 				culture = neomexicano
@@ -3959,7 +3960,8 @@ tribal = {
 			ROOT = {
 				OR = {
 					culture_group = west_anglo
-					culture_group = starfolk
+					culture = texaner
+					culture = czexan
 					culture = llanero
 					culture_group = norteno
 					culture = neomexicano
@@ -3972,7 +3974,8 @@ tribal = {
 			ROOT = {
 				OR = {
 					culture_group = west_anglo
-					culture_group = starfolk
+					culture = texaner
+					culture = czexan
 					culture = llanero
 					culture_group = norteno
 					culture = neomexicano
@@ -3995,7 +3998,8 @@ tribal = {
 		potential = {
 			OR = {
 				culture_group = west_anglo
-				culture_group = starfolk
+				culture = texaner
+				culture = czexan
 				culture = llanero
 				culture_group = norteno
 				culture = neomexicano
@@ -4008,7 +4012,8 @@ tribal = {
 			ROOT = {
 				OR = {
 					culture_group = west_anglo
-					culture_group = starfolk
+					culture = texaner
+					culture = czexan
 					culture = llanero
 					culture_group = norteno
 					culture = neomexicano
@@ -4021,7 +4026,8 @@ tribal = {
 			ROOT = {
 				OR = {
 					culture_group = west_anglo
-					culture_group = starfolk
+					culture = texaner
+					culture = czexan
 					culture = llanero
 					culture_group = norteno
 					culture = neomexicano
@@ -4047,7 +4053,8 @@ tribal = {
 		potential = {
 			OR = {
 				culture_group = west_anglo
-				culture_group = starfolk
+				culture = texaner
+				culture = czexan
 				culture = llanero
 				culture_group = norteno
 				culture = neomexicano
@@ -4061,7 +4068,8 @@ tribal = {
 			ROOT = {
 				OR = {
 					culture_group = west_anglo
-					culture_group = starfolk
+					culture = texaner
+					culture = czexan
 					culture = llanero
 					culture_group = norteno
 					culture = neomexicano
@@ -4074,7 +4082,8 @@ tribal = {
 			ROOT = {
 				OR = {
 					culture_group = west_anglo
-					culture_group = starfolk
+					culture = texaner
+					culture = czexan
 					culture = llanero
 					culture_group = norteno
 					culture = neomexicano
@@ -4098,7 +4107,8 @@ tribal = {
 		potential = {
 			OR = {
 				culture_group = west_anglo
-				culture_group = starfolk
+				culture = texaner
+				culture = czexan
 				culture = llanero
 				culture_group = norteno
 				culture = neomexicano
@@ -4113,7 +4123,8 @@ tribal = {
 			ROOT = {
 				OR = {
 					culture_group = west_anglo
-					culture_group = starfolk
+					culture = texaner
+					culture = czexan
 					culture = llanero
 					culture_group = norteno
 					culture = neomexicano
@@ -4126,7 +4137,8 @@ tribal = {
 			ROOT = {
 				OR = {
 					culture_group = west_anglo
-					culture_group = starfolk
+					culture = texaner
+					culture = czexan
 					culture = llanero
 					culture_group = norteno
 					culture = neomexicano
@@ -11022,6 +11034,275 @@ tribal = {
 
 		extra_tech_building_start = 0.8
 	}
+	
+	#Khoakineren Ayrudzi Stables
+	tb_culture_khoakineren_1 = {
+		desc = tb_culture_khoakineren_1_desc
+		potential = {
+			OR = {
+				culture = khoakineren
+				has_building = tb_culture_khoakineren_1
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				culture = khoakineren
+			}
+		} 
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 0
+			ROOT = {
+				culture = khoakineren
+			}
+		}
+		prerequisites = { ca_wall_2 }
+		prestige_cost = 200
+		build_time = 730
+		horse_archers = 15
+		light_cavalry = 10
+		knights = 5
+		light_cavalry_defensive = 0.05
+		light_cavalry_offensive = 0.05
+		knights_defensive = 0.05
+		knights_morale = 0.05
+		ai_creation_factor = 101
+		
+		extra_tech_building_start = 0.8
+	}
+	tb_culture_khoakineren_2 = {
+		desc = tb_culture_khoakineren_1_desc
+		potential = {
+			OR = {
+				culture = khoakineren
+				has_building = tb_culture_khoakineren_1
+				has_building = tb_culture_khoakineren_2
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				culture = khoakineren
+			}
+		} 
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 1
+			ROOT = {
+				culture = khoakineren
+			}
+		}
+		upgrades_from = tb_culture_khoakineren_1
+		prestige_cost = 300
+		build_time = 1095
+		horse_archers = 18
+		light_cavalry = 14
+		knights = 8
+		light_cavalry_defensive = 0.05
+		light_cavalry_offensive = 0.05
+		knights_defensive = 0.05
+		knights_morale = 0.05		
+		ai_creation_factor = 101
+		
+		extra_tech_building_start = 0.8
+	}
+	tb_culture_khoakineren_3 = {
+		desc = tb_culture_khoakineren_1_desc
+		potential = {
+			OR = {
+				culture = khoakineren
+				has_building = tb_culture_khoakineren_1
+				has_building = tb_culture_khoakineren_2
+				has_building = tb_culture_khoakineren_3
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				culture = khoakineren
+			}
+		} 
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 2
+			ROOT = {
+				culture = khoakineren
+			}
+		}
+		upgrades_from = tb_culture_khoakineren_2
+		prestige_cost = 400
+		build_time = 2190
+		horse_archers = 25
+		light_cavalry = 15
+		knights = 10
+		light_cavalry_defensive = 0.05
+		light_cavalry_offensive = 0.05
+		knights_defensive = 0.05
+		knights_morale = 0.05	
+		ai_creation_factor = 101
+		
+		extra_tech_building_start = 0.8
+	}
+	tb_culture_khoakineren_4 = {
+		desc = tb_culture_khoakineren_1_desc
+		potential = {
+			OR = {
+				culture = khoakineren
+				has_building = tb_culture_khoakineren_1
+				has_building = tb_culture_khoakineren_2
+				has_building = tb_culture_khoakineren_3
+				has_building = tb_culture_khoakineren_4
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				culture = khoakineren
+			}
+		} 
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 4
+			ROOT = {
+				culture = khoakineren
+			}
+		}
+		upgrades_from = tb_culture_khoakineren_3
+		prestige_cost = 500
+		build_time = 2190
+		horse_archers = 30
+		light_cavalry = 20
+		knights = 10
+		light_cavalry_defensive = 0.05
+		light_cavalry_offensive = 0.05
+		knights_defensive = 0.05
+		knights_morale = 0.05	
+		ai_creation_factor = 101
+		
+		extra_tech_building_start = 0.8
+	}	
+	
+	#Bolo Regiment Barracks
+	tb_culture_pinoy_1 = {
+		desc = tb_culture_pinoy_1_desc
+		potential = {
+			OR = {
+				culture = pinoy
+				has_building = tb_culture_pinoy_1
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				culture = pinoy
+			}
+		} 
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 0
+			ROOT = {
+				culture = pinoy
+			}
+		}
+		prerequisites = { ca_wall_2 }
+		prestige_cost = 200
+		build_time = 730
+		light_infantry = 30
+		heavy_infantry = 15
+		light_infantry_defensive = 0.075
+		heavy_infantry_offensive = 0.075
+		ai_creation_factor = 101
+		
+		extra_tech_building_start = 0.8
+	}
+	tb_culture_pinoy_2 = {
+		desc = tb_culture_pinoy_1_desc
+		potential = {
+			OR = {
+				culture = pinoy
+				has_building = tb_culture_pinoy_1
+				has_building = tb_culture_pinoy_2
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				culture = pinoy
+			}
+		} 
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 1
+			ROOT = {
+				culture = pinoy
+			}
+		}
+		upgrades_from = tb_culture_pinoy_1
+		prestige_cost = 300
+		build_time = 1095
+		light_infantry = 40
+		heavy_infantry = 20
+		light_infantry_defensive = 0.075
+		heavy_infantry_offensive = 0.075
+		ai_creation_factor = 101
+		
+		extra_tech_building_start = 0.8
+	}
+	tb_culture_pinoy_3 = {
+		desc = tb_culture_pinoy_1_desc
+		potential = {
+			OR = {
+				culture = pinoy
+				has_building = tb_culture_pinoy_1
+				has_building = tb_culture_pinoy_2
+				has_building = tb_culture_pinoy_3
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				culture = pinoy
+			}
+		} 
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 2
+			ROOT = {
+				culture = pinoy
+			}
+		}
+		upgrades_from = tb_culture_pinoy_2
+		prestige_cost = 400
+		build_time = 2190
+		light_infantry = 50
+		heavy_infantry = 25
+		light_infantry_defensive = 0.075
+		heavy_infantry_offensive = 0.075
+		ai_creation_factor = 101
+		
+		extra_tech_building_start = 0.8
+	}
+	tb_culture_pinoy_4 = {
+		desc = tb_culture_pinoy_1_desc
+		potential = {
+			OR = {
+				culture = pinoy
+				has_building = tb_culture_pinoy_1
+				has_building = tb_culture_pinoy_2
+				has_building = tb_culture_pinoy_3
+				has_building = tb_culture_pinoy_4
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				culture = pinoy
+			}
+		} 
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 4
+			ROOT = {
+				culture = pinoy
+			}
+		}
+		upgrades_from = tb_culture_pinoy_3
+		prestige_cost = 500
+		build_time = 2190
+		light_infantry = 60
+		heavy_infantry = 30
+		light_infantry_defensive = 0.075
+		heavy_infantry_offensive = 0.075
+		ai_creation_factor = 101
+		
+		extra_tech_building_start = 0.8
+	}	
+	
 }
 
 

@@ -8,13 +8,10 @@ crown_mexico = {
 	church_opinion = 10
 	active = { 
 		is_feudal = yes
-		OR = {
-			has_landed_title = e_mexico
-			has_landed_title = k_mexico
-		}
+		has_landed_title = e_mexico
 	}
 	flags = { unique crown jewelry crown_jewel }
-	picture = "GFX_veil_of_veronica"
+	picture = "GFX_pres_band_mex"
 	slot = crown
 	indestructible = yes
 	allowed_gift = {
@@ -25,18 +22,14 @@ crown_mexico = {
 crown_pickelhaube = { 
 	monthly_character_prestige = 1.0
 	monthly_character_piety = 1.0
-	intrigue = 4
-	quality = 5
-	church_opinion = 10
+	martial = 3
+	quality = 4
 	active = { 
 		is_feudal = yes
-		OR = {
-			has_landed_title = e_mexico
-			has_landed_title = k_mexico
-		}
+		has_landed_title = e_mexico
 	}
 	flags = { unique crown jewelry crown_jewel }
-	picture = "GFX_veil_of_veronica"
+	picture = "GFX_pickelaube_helmet"
 	slot = crown
 	indestructible = yes
 	allowed_gift = {
@@ -64,7 +57,7 @@ image_of_virgin = {
 	flags = { religious cult_of_saints christian mexicano unique }
 	indestructible = yes
 	stacking = no
-	picture = "GFX_seamless_robe_of_jesus"
+	picture = "GFX_image_of_virgin"
 }
 
 golden_lance = {
@@ -80,34 +73,67 @@ golden_lance = {
 	active = {
 		age = 14
 	}
-	flags = { combat_weapon sword }
+	flags = { combat_weapon sword unique }
 	stacking = no
 	picture = "GFX_golden_lance"
 	slot = weapon
 }
 
+campana_de_dolores = {
+	monthly_character_prestige = 0.5
+	monthly_character_piety = 0.2
+	same_religion_opinion = 10
+	church_opinion = 10
+	intrigue = 3
+	active = {
+		OR = {
+			culture_group = mexicano
+			culture_group = norteno
+			culture_group = mesoamerican
+			culture_group = taracahita
+			culture = yucateco
+		}
+	}
+	allowed_gift = {
+		OR = {
+			culture_group = mexicano
+			culture_group = norteno
+			culture_group = mesoamerican
+			culture_group = taracahita
+			culture = yucateco
+		}
+	}
+	allowed_gift = {
+		always = no
+	}
+	quality = 4
+	flags = { religious cult_of_saints christian mexicano bell unique }
+	
+	picture = "GFX_bell_of_batoche"  # TODO: replace with bell of dolores gfx
+}
+
 ###################MICTLANTECA#####################
 
-corazon_del_pueblo = {
-	quality = 4
-	monthly_character_prestige = 0.25
-	monthly_character_piety = 0.25
-	active = { 
-		OR = {
-			religion_group = mesoamerican_gods
-			culture_group = mesoamerican
-		}
-	}
-	allowed_gift = { 
-		OR = {
-			religion_group = mesoamerican_gods
-			culture_group = mesoamerican
-		}
-	}
-	flags = { unique religious mesoamerican_gods jewelry }
-	stacking = no
-	picture = "GFX_pouch" #placeholder
-}
+# corazon_del_pueblo = {
+	# quality = 4
+	# monthly_character_prestige = 0.25
+	# monthly_character_piety = 0.25
+	# active = { 
+		# OR = {
+			# religion_group = mesoamerican_gods
+			# culture_group = mesoamerican
+		# }
+	# }
+	# allowed_gift = { 
+		# OR = {
+			# religion_group = mesoamerican_gods
+			# culture_group = mesoamerican
+		# }
+	# }
+	# flags = { unique religious mesoamerican_gods jewelry }
+	# stacking = no
+	# picture = "GFX_pouch" #placeholder
+# }
 
 ###################MISCELLANEOUS#####################
 
@@ -127,4 +153,40 @@ bullet_crown = {
 		always = no
 	}
 }
+
+sword_of_ichthys = {
+	monthly_character_piety = 0.5
+	combat_rating = 15
+	martial = 2
+	vassal_opinion = 10
+	quality = 4
+	command_modifier = {
+		morale_defence = 0.2
+		religious_enemy = 0.15
+	}
+	active = {
+		AND = {
+			age = 14
+			religion = navegante
+		}
+		
+	}
+	flags = { combat_weapon sword }
+	stacking = no
+	picture = "GFX_ichthys_sword"
+	slot = weapon
+}
+
+santa_ana_leg = {
+	quality = 3
+	monthly_character_prestige = 0.3
+	tribal_opinion = 6
+	castle_opinion = 3
+	town_opinion = 2
+	flags = { sword jewelry unique }
+	stacking = no
+	picture = "GFX_prosthetic_leg"
+	slot = ceremonial_weapon
+}
+
 
