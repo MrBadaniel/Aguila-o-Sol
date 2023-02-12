@@ -2291,6 +2291,7 @@ character_event = {
 		OR = {
 			religion = gaian
 			religion = neomayan
+			religion = edenite
 			has_religion_feature = religion_feature_occultist 
 			has_religion_feature = religion_astrology
 			AND = {
@@ -2501,6 +2502,8 @@ character_event = {
 			NOR = {
 				religion = gaian
 				religion = neomayan
+				religion = edenite 
+				#religion = forester
 				has_religion_feature = religion_feature_occultist 
 				has_religion_feature = religion_astrology
 				AND = {
@@ -2611,6 +2614,8 @@ character_event = {
 			OR = {
 				religion = gaian
 				religion = neomayan
+				religion = edenite 
+				#religion = forester
 				has_religion_feature = religion_feature_occultist 
 				has_religion_feature = religion_astrology
 				AND = {
@@ -2738,6 +2743,8 @@ character_event = {
 			OR = {
 				religion = gaian
 				religion = neomayan
+				religion = edenite
+				#religion = forester
 				has_religion_feature = religion_feature_occultist 
 				has_religion_feature = religion_astrology
 				AND = {
@@ -7191,6 +7198,8 @@ narrative_event = {
 		}
 		OR = {
 			religion = neomayan
+			religion = edenite
+			#religion = forester
 			has_religion_feature = religion_feature_occultist
 			AND = {
 				has_religion_feature = religion_haruspicy
@@ -7645,6 +7654,14 @@ narrative_event = {
 				religion = neomayan
 				is_alternate_start = no
 			}
+			AND = {
+				religion = edenite
+				is_alternate_start = no
+			}
+			#AND = {
+			#	religion = forester
+			#	is_alternate_start = no
+			#}
 		}
 	}
 	immediate = { 
@@ -14317,6 +14334,7 @@ character_event = {
 				has_religion_feature = religion_feature_midewiwin
 				has_religion_feature = religion_feature_celtic
 				religion = peyotist
+				#religion = forester
 			}
 		} 
 		picture = GFX_evt_magic_ritual
@@ -14330,6 +14348,7 @@ character_event = {
 				has_religion_feature = religion_feature_midewiwin 
 				has_religion_feature = religion_feature_celtic
 				religion = peyotist
+				#religion = forester
 			}
 		} 
 		picture = GFX_evt_tribal_shrine
@@ -14351,6 +14370,7 @@ character_event = {
 			has_religion_feature = religion_feature_midewiwin
 			has_religion_feature = religion_feature_celtic
 			religion = peyotist
+			#religion = forester
 		}
 	}
 	
@@ -14515,6 +14535,7 @@ character_event = {
 				has_religion_feature = religion_feature_midewiwin
 				has_religion_feature = religion_feature_celtic
 				religion = peyotist
+				#religion = forester
 			}
 		} 
 		picture = GFX_evt_magic_ritual
@@ -14528,6 +14549,7 @@ character_event = {
 				has_religion_feature = religion_feature_midewiwin
 				has_religion_feature = religion_feature_celtic
 				religion = peyotist
+				#religion = forester
 			}
 		} 
 		picture = GFX_evt_tribal_shrine
@@ -14849,6 +14871,7 @@ character_event = {
 			has_religion_feature = religion_feature_midewiwin
 			has_religion_feature = religion_feature_celtic
 			religion = peyotist
+			#religion = forester
 		}
 	}
 	
@@ -14878,6 +14901,7 @@ character_event = {
 			has_religion_feature = religion_feature_midewiwin
 			has_religion_feature = religion_feature_celtic
 			religion = peyotist
+			#religion = forester
 		}
 	}
 	immediate = { 

@@ -167,7 +167,7 @@ bustamante = { #Caribbean Empress
 
 sulley = { #Miskito Kings
 	miskito_opinion = 5
-	falling_star_opinion = 5
+	moravian_opinion = 5
 	monthly_character_prestige = 0.1
 	inheritance = patrilineal
 	allow_bastards = yes
@@ -176,7 +176,7 @@ sulley = { #Miskito Kings
 	active = {
 		OR = {
 			culture = miskito
-			religion = falling_star
+			religion = moravian
 		}
 	}
 }
@@ -978,45 +978,49 @@ rodman = { #Dukes of the Quad Cities
 	}
 }
 
-
-#male emperor of texarkana
-tex_texarkana_male = { 
+tex_texarkana_male = {# Emperor of Texarkana
 	christian_opinion = 5
-	monthly_character_prestige = 0.5
+	monthly_character_prestige = 0.2
+	monthly_character_piety = 0.2
 	church_opinion = 10
+	bloodline_effect_great_heroes_appear = 1
 	command_modifier = {
-		religious_enemy = 0.3
+		religious_enemy = 0.2
 	}
 	inheritance = patrilineal
 	allow_bastards = yes
 	picture = GFX_bloodlines_symbol_cross_crusader
-	flags = { bloodline_heroes }
+	flags = { created_bloodline bloodline_heroes }
 	active = {
-		religion = catholic
+		religion_group = christian
 	}
 }
 
-#female empress of texarkana
-tex_texarkana_female = { 
+tex_texarkana_female = {# Empress of Texarkana
 	christian_opinion = 5
-	monthly_character_prestige = 0.5
+	monthly_character_prestige = 0.2
+	monthly_character_piety = 0.2
 	church_opinion = 10
+	bloodline_effect_great_heroes_appear = 1
 	command_modifier = {
-		religious_enemy = 0.3
+		religious_enemy = 0.2
 	}
 	inheritance = matrilineal
 	allow_bastards = yes
 	picture = GFX_bloodlines_symbol_cross_crusader
-	flags = { bloodline_heroes }
+	flags = { created_bloodline bloodline_heroes }
 	active = {
-		religion = catholic
+		religion_group = christian
 	}
 }
 
 
 #male texan king
 high_king_bloodline = { 
-	starfolk_opinion = 10
+	texan_opinion = 10
+	tejano_opinion = 10
+	texaner_opinion = 10
+	czexan_opinion = 10
 	monthly_character_prestige = 0.5
 	bloodline_effect_one_invasion = 1
 	command_modifier = {
@@ -1027,13 +1031,21 @@ high_king_bloodline = {
 	picture = GFX_bloodlines_symbol_texas
 	flags = { bloodline_heroes }
 	active = {
-		culture_group = starfolk
+		OR = {
+			culture = texan
+			culture = tejano
+			culture = texaner
+			culture = czexan
+		}
 	}
 }
 
 #female texan king
 high_queen_bloodline = { 
-	starfolk_opinion = 10
+	texan_opinion = 10
+	tejano_opinion = 10
+	texaner_opinion = 10
+	czexan_opinion = 10
 	monthly_character_prestige = 0.5
 	bloodline_effect_one_invasion = 1
 	command_modifier = {
@@ -1044,7 +1056,12 @@ high_queen_bloodline = {
 	picture = GFX_bloodlines_symbol_rexas
 	flags = { bloodline_heroes }
 	active = {
-		culture_group = starfolk
+		OR = {
+			culture = texan
+			culture = tejano
+			culture = texaner
+			culture = czexan
+		}
 	}
 }
 

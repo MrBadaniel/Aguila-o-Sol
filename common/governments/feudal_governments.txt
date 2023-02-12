@@ -586,7 +586,6 @@ feudal_governments = {
 		}
 		accepts_liege_governments = {
 			mex_imperial_government
-						  
 			feudal_government
 			bureaucratic_government
 			theocracy_government
@@ -725,7 +724,7 @@ feudal_governments = {
 			NOT = { is_government_potential = military_governorate }
 		}
 		
-		color = { 143 12 125 }
+		color = { 149 150 163 }
 
 		barons_need_dynasty = yes
 
@@ -779,6 +778,10 @@ feudal_governments = {
 					culture = comanche
 					culture = sioux
 					culture = crow
+					culture = texaner
+					culture = czexan
+					culture = tejano
+					culture = texan
 				}
 				AND = {
 					has_game_started = no
@@ -870,19 +873,18 @@ feudal_governments = {
 			}
 			OR = {
 				primary_title = {
-					title = e_mexico				
+					title = e_mexico			
 				}
 				top_liege = {
-					title = e_mexico
 					government = mex_imperial_government
 				}
-					liege_before_war = {
+				liege_before_war = {
 						has_landed_title = e_mexico
-						}
+					}
 				}
 			is_patrician = no
 			is_theocracy = no
-			}
+		}
 		
 		color = { 0 104 71 }
 		

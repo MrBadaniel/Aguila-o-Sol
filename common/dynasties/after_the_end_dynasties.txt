@@ -842,11 +842,35 @@
 1402020 = { name="Lillie" culture=arixan }
 1402021 = { name="Bascom" culture=arixan }
 1402022 = { name="Canutt" culture=arixan }
-1402023 = { name="Buntline" culture=battleborn }
+1402023 = { name="Buntline" culture=battleborn  
+		coat_of_arms = {
+		religion = atomicist
+		template = 0
+		layer = {
+			texture = 2
+			texture_internal = 1
+			emblem = 0
+			color = 0
+			color = 0
+			color = 0
+		}
+	}}
 1402024 = { name="Opengroves" culture=arixan }
 1402025 = { name="Bullpine" culture=arixan }
 1402026 = { name="Kino" culture=arixan }
-1402027 = { name="Kaiser" culture=arixan }
+1402027 = { name="Kaiser" culture=arixan  
+		coat_of_arms = {
+		religion = atomicist
+		template = 0
+		layer = {
+			texture = 2
+			texture_internal = 0
+			emblem = 0
+			color = 0
+			color = 0
+			color = 0
+		}
+	}}
 1402028 = { name="Hidebark" culture=arixan }
 1402029 = { name="Maíz" culture=arixan }
 1402030 = { name="Nyukem" culture=battleborn }
@@ -2226,6 +2250,7 @@ coat_of_arms = {
 1519078 = { name="Valiño" culture=chilango }
 1519079 = { name="Viveros" culture=chilango }
 1519080 = { name="Cortázar" culture=chilango }
+1519081 = { name="de Tepito" culture=chilango }
 
 #This is a cheat so that the Mexican dynasties work.
 1519999 = { name="de Iturbide" #culture=chilango
@@ -3510,7 +3535,20 @@ coat_of_arms = {
 1546037 = { name="Kaminaljuyu" culture=yucateco }
 1546038 = { name="Bor" culture=yucateco }
 1546039 = { name="Ceel" culture=yucateco }
-1546040 = { name="Louisville" culture=yucateco }
+1546040 = { name="Louisville" culture=yucateco
+	coat_of_arms = {
+		religion = americanist
+		template = 0
+		layer = {
+			texture = 3
+			texture_internal = 21
+			emblem = 0
+			color = 0
+			color = 0
+			color = 0
+		}
+	}
+}
 1546041 = { name="Sanabria" culture=yucateco }
 1546042 = { name="Salcedo" culture=yucateco }
 1546043 = { name="Marin" culture=yucateco }
@@ -4841,12 +4879,11 @@ coat_of_arms = {
 
 
 1650100 = { name="Marquise" culture=garinagu 
-	coat_of_arms = {
-		religion = mictlantec
+		coat_of_arms = {
 		template = 0
 		layer = {
-			texture = 1
-			texture_internal = 8
+			texture = 11
+			texture_internal = 39
 			emblem = 0
 			color = 0
 			color = 0
@@ -5312,7 +5349,19 @@ coat_of_arms = {
 1700005 = { name="Zuñiga" culture=yaqui }
 1700006 = { name="Ávila" culture=yaqui }
 1700007 = { name="Nebuay" culture=yaqui }
-1700008 = { name="Yáñez" culture=yaqui }
+1700008 = { name="Yáñez" culture=yaqui 
+		coat_of_arms = {
+		template = 0
+		layer = {
+			texture = 11
+			texture_internal = 36
+			emblem = 0
+			color = 0
+			color = 0
+			color = 0
+		}
+	}
+}
 1700009 = { name="Aki" culture=yaqui }
 1700010 = { name="Cmiique" culture=yaqui 
 	coat_of_arms = {
@@ -5342,7 +5391,20 @@ coat_of_arms = {
 1700023 = { name="Betemea" culture=yaqui }
 1700024 = { name="Arenas" culture=yaqui }
 1700025 = { name="Buichileme" culture=yaqui }
-1700026 = { name="Moroyoqui" culture=yaqui }
+1700026 = { name="Moroyoqui" culture=yaqui 
+        coat_of_arms = {
+		religion = mictlantec
+        template = 0
+        layer = {
+            texture = 2
+            texture_internal = 1
+            emblem = 0
+            color = 0
+            color = 0
+            color = 0
+        }
+    }
+}
 1700027 = { name="Chuumujji" culture=yaqui }
 1700028 = { name="Elesuqui" culture=yaqui }
 1700029 = { name="Granillo" culture=yaqui }
@@ -8407,7 +8469,19 @@ coat_of_arms = {
 		}
 	}
 }
-1791019 = { name="Roysoleale" culture=riverlander }
+1791019 = { name="Roysoleale" culture=riverlander 
+		coat_of_arms = {
+		template = 0
+		layer = {
+			texture = 11
+			texture_internal = 31
+			emblem = 0
+			color = 0
+			color = 0
+			color = 0
+		}
+	}
+}
 1791020 = { name="Cottonclad" culture=riverlander }
 1791021 = { name="Plumbum" culture=riverlander }
 1791022 = { name="Bertelsmeyer" culture=riverlander }
@@ -9482,7 +9556,7 @@ coat_of_arms = {
 1797018 = { name="Crossing" culture=grangelander }
 1797019 = { name="Dedale" culture=grangelander }
 1797020 = { name="Oto" culture=grangelander }
-1797021 = { name="Masterson" culture=grangelander }
+1797021 = { name="Bluebell" culture=grangelander }
 1797022 = { name="Helianthus" culture=grangelander 
 	coat_of_arms = {
 		template = 0
@@ -9496,7 +9570,20 @@ coat_of_arms = {
 		}
 	}}
 1797023 = { name="Triticum" culture=grangelander }
-1797024 = { name="Aestivum" culture=grangelander }
+1797024 = { name="Klaus" culture=grangelander 
+	coat_of_arms = {
+		religion = voodoo
+		template = 0
+		layer = {
+			texture = 2
+			texture_internal = 4
+			emblem = 0
+			color = 0
+			color = 0
+			color = 0
+		}
+	}
+}
 1797025 = { name="Einkorn" culture=grangelander }
 1797026 = { name="Zeamays" culture=grangelander }
 1797027 = { name="Sedgwick" culture=grangelander }
@@ -9699,11 +9786,10 @@ coat_of_arms = {
 1810015 = { name="Garza" culture=bravo }
 1810016 = { name="Reyes" culture=bravo 
 		coat_of_arms = {
-				religion = sacred_heart
 		template = 0
 		layer = {
-			texture = 9
-			texture_internal = 16
+			texture = 12
+			texture_internal = 0
 			emblem = 0
 			color = 0
 			color = 0
@@ -9714,7 +9800,18 @@ coat_of_arms = {
 1810018 = { name="Luna" culture=bravo }
 1810019 = { name="Cortina" culture=bravo }
 1810020 = { name="Arteaga" culture=bravo }
-1810021 = { name="Reyna Niño" culture=bravo }
+1810021 = { name="Hermilo" culture=bravo 
+		coat_of_arms = {
+		template = 0
+		layer = {
+			texture = 12
+			texture_internal = 3
+			emblem = 0
+			color = 0
+			color = 0
+			color = 0
+		}
+	}}
 1810022 = { name="Treviño" culture=bravo }
 1810023 = { name="Mata" culture=bravo }
 1810024 = { name="Cantoral" culture=bravo }
@@ -9745,7 +9842,8 @@ coat_of_arms = {
 1810049 = { name="Sierras" culture=bravo }
 1810050 = { name="Regio" culture=bravo }
 1810051 = { name="Man Parado" culture=bravo }
-
+1810052 = { name="de la Garza y Garza" culture=bravo }
+######GO TO aftermex_dynasties.txt
 
 1812000 = { name="Abdallah" culture=anglish }
 1812001 = { name="Agyeman" culture=anglish }
@@ -10269,6 +10367,8 @@ coat_of_arms = {
 1813138 = { name="Raddall" culture=maritimer }
 1813139 = { name="Creed" culture=maritimer }
 1813140 = { name="Shaffelburg" culture=maritimer }
+1813141 = { name="Dufresne" culture=maritimer }
+1813142 = { name="Redding" culture=maritimer }
 
 
 1814000 = { name="Pfardentrott" culture=texan }
@@ -10437,9 +10537,9 @@ coat_of_arms = {
 		template = 0
 		layer = {
 			texture = 0
-			texture_internal = 7
+			texture_internal = 8
 			emblem = 0
-			color = 5
+			color = 1
 			color = 2
 			color = 0
 		}
@@ -10471,7 +10571,19 @@ coat_of_arms = {
 1815010 = { name="Quintanilla" culture=tejano }
 1815011 = { name="Tenayuca" culture=tejano }
 1815012 = { name="Cisneros" culture=tejano }
-1815013 = { name="Correcaminito" culture=tejano }
+1815013 = { name="Correcaminito" culture=tejano 
+		coat_of_arms = {
+		template = 0
+		layer = {
+			texture = 11
+			texture_internal = 30
+			emblem = 0
+			color = 0
+			color = 0
+			color = 0
+		}
+	}
+}
 1815014 = { name="Cortina" culture=tejano }
 1815015 = { name="Goseacochea" culture=tejano }
 1815016 = { name="Ocotillo" culture=tejano }
@@ -10556,6 +10668,7 @@ coat_of_arms = {
 		}
 	}}
 1815063 = { name="Polo" culture=tejano }
+1815064 = { name="Castillo" culture=tejano }
 
 
 1818000 = {	name = "Contreras"	culture = chileno }
@@ -11835,7 +11948,20 @@ coat_of_arms = {
 1849007 = { name="Huichica" culture=bayfolk }
 1849008 = { name="Mallacomes" culture=bayfolk }
 1849009 = { name="Vandegriff" culture=bayfolk }
-1849010 = { name="Brannan" culture=bayfolk }
+1849010 = { name="Brannan" culture=bayfolk 
+		coat_of_arms = {
+		religion = cetic
+		template = 0
+		layer = {
+			texture = 1
+			texture_internal = 24
+			emblem = 0
+			color = 0
+			color = 0
+			color = 0
+		}
+	}
+}
 1849011 = { name="Chardonnay" culture=bayfolk }
 1849012 = { name="Barryessa" culture=bayfolk }
 1849013 = { name="Nortgustus" culture=bayfolk }
@@ -11877,7 +12003,19 @@ coat_of_arms = {
 1849049 = { name="Rinconill" culture=bayfolk }
 1849050 = { name="Rusill" culture=bayfolk }
 1849051 = { name="Seckliff" culture=bayfolk }
-1849052 = { name="Silverter" culture=bayfolk }
+1849052 = { name="Silverter" culture=bayfolk 
+		coat_of_arms = {
+		religion = cetic
+		template = 0
+		layer = {
+			texture = 1
+			texture_internal = 8
+			emblem = 0
+			color = 0
+			color = 0
+			color = 0
+		}
+	}}
 1849053 = { name="Suffend" culture=bayfolk }
 1849054 = { name="Suncidd" culture=bayfolk }
 1849055 = { name="Delmar" culture=bayfolk }
@@ -11948,7 +12086,20 @@ coat_of_arms = {
 		}
 	}
 }
-1849074 = { name="Bravante" culture=bayfolk }
+1849074 = { name="Crosby" culture=bayfolk 
+		coat_of_arms = {
+		religion = cetic
+		template = 0
+		layer = {
+			texture = 1
+			texture_internal = 25
+			emblem = 0
+			color = 0
+			color = 0
+			color = 0
+		}
+	}
+}
 1849075 = { name="Artesa" culture=bayfolk }
 1849076 = { name="Nihomachi" culture=bayfolk }
 1849077 = { name="Tongyangai" culture=bayfolk }
@@ -12043,7 +12194,20 @@ coat_of_arms = {
 	}}
 1850013 = { name="Colbert" culture=angeleno }
 1850014 = { name="Olivier" culture=angeleno }
-1850015 = { name="Douglas" culture=angeleno }
+1850015 = { name="Douglas" culture=angeleno 
+		coat_of_arms = {
+		religion = cetic
+		template = 0
+		layer = {
+			texture = 1
+			texture_internal = 27
+			emblem = 0
+			color = 0
+			color = 0
+			color = 0
+		}
+	}
+}
 1850016 = { name="Dean" culture=angeleno }
 1850017 = { name="Hayworth" culture=angeleno }
 1850018 = { name="Marx" culture=angeleno }
@@ -12073,7 +12237,20 @@ coat_of_arms = {
 1850042 = { name="Altman" culture=angeleno }
 1850043 = { name="Coen" culture=angeleno }
 1850044 = { name="Ramis" culture=angeleno }
-1850045 = { name="Hughes" culture=angeleno }
+1850045 = { name="Hughes" culture=angeleno 
+	coat_of_arms = {
+		religion = cetic
+		template = 0
+		layer = {
+			texture = 1
+			texture_internal = 6
+			emblem = 0
+			color = 0
+			color = 0
+			color = 0
+		}
+	}
+}
 1850046 = { name="Toro" culture=angeleno }
 1850047 = { name="Norton" culture=angeleno }
 1850048 = { name="Cohen" culture=angeleno }
@@ -12097,9 +12274,33 @@ coat_of_arms = {
 1850054 = { name="Sanchez" culture=angeleno }
 1850055 = { name="Perez" culture=angeleno }
 1850056 = { name="Lee" culture=angeleno }
-1850057 = { name="Warner" culture=angeleno }
+1850057 = { name="Warner" culture=angeleno 
+		coat_of_arms = {
+		template = 0
+		layer = {
+			texture = 11
+			texture_internal = 32
+			emblem = 0
+			color = 0
+			color = 0
+			color = 0
+		}
+	}
+}
 1850058 = { name="Lasky" culture=angeleno }
-1850059 = { name="Zukor" culture=angeleno }
+1850059 = { name="Samuels" culture=angeleno 
+		coat_of_arms = {
+		template = 0
+		layer = {
+			texture = 11
+			texture_internal = 33
+			emblem = 0
+			color = 0
+			color = 0
+			color = 0
+		}
+	}
+}
 1850060 = { name="Cohn" culture=angeleno }
 1850061 = { name="Chen" culture=angeleno }
 1850062 = { name="Wang" culture=angeleno }
@@ -12501,7 +12702,20 @@ coat_of_arms = {
 		}
 	}
 }
-1851165 = { name="Ngoy" culture=towner }
+1851165 = { name="Ngoy" culture=towner 
+		coat_of_arms = {
+		religion = cetic
+		template = 0
+		layer = {
+			texture = 1
+			texture_internal = 28
+			emblem = 0
+			color = 0
+			color = 0
+			color = 0
+		}
+	}
+}
 1851166 = { name="Bute" culture=angeleno 
 	coat_of_arms = {
 		religion = americanist
@@ -12826,7 +13040,7 @@ coat_of_arms = {
 		template = 0
 		layer = {
 			texture = 2
-			texture_internal = 
+			# texture_internal = 0 
 			emblem = 0
 			color = 0
 			color = 0
@@ -12873,7 +13087,20 @@ coat_of_arms = {
 1864023 = { name="McBride" culture=battleborn }
 1864024 = { name="Briscoe" culture=battleborn }
 1864025 = { name="Boone" culture=battleborn }
-1864026 = { name="Vargas" culture=battleborn }
+1864026 = { name="Vargas" culture=battleborn 
+	coat_of_arms = {
+		religion = gaian
+		template = 0
+		layer = {
+			texture = 3
+			texture_internal = 8
+			emblem = 0
+			color = 0
+			color = 0
+			color = 0
+		}
+	}
+}
 1864027 = { name="Noonan" culture=battleborn }
 1864028 = { name="Beagle" culture=battleborn }
 1864029 = { name="Nash" culture=battleborn }
@@ -12998,7 +13225,20 @@ coat_of_arms = {
 		}
 	}}
 1864103 = { name="Groom" culture=arixan }
-1864104 = { name="Preston" culture=battleborn }
+1864104 = { name="Preston" culture=battleborn 
+		coat_of_arms = {
+		religion = atomicist
+		template = 0
+		layer = {
+			texture = 2
+			texture_internal = 2
+			emblem = 0
+			color = 0
+			color = 0
+			color = 0
+		}
+	}
+}
 
 1867000 = { name="Grune" culture=ontarian }
 1867001 = { name="Movenpick" culture=ontarian }
@@ -13602,7 +13842,7 @@ coat_of_arms = {
 		}
 	}
 }
-1876019 = { name="Haggott" culture=coloradan }
+1876019 = { name="Gessler" culture=coloradan }
 1876020 = { name="Bronck" culture=coloradan }
 1876021 = { name="Howsam" culture=coloradan }
 1876022 = { name="Cheesman" culture=coloradan }
@@ -13623,14 +13863,28 @@ coat_of_arms = {
 1876025 = { name="Kepner" culture=coloradan }
 1876026 = { name="Wyateson" culture=coloradan }
 1876027 = { name="Swigert" culture=coloradan }
-1876028 = { name="Gessler" culture=coloradan }
+1876028 = { name="Heuer" culture=coloradan 
+		coat_of_arms = {
+		religion = edenite
+		template = 0
+		layer = {
+			texture = 4
+			texture_internal = 7
+			emblem = 0
+			color = 0
+			color = 0
+			color = 0
+		}
+	}
+}
 1876029 = { name="Renfoe" culture=coloradan }
 1876030 = { name="Stotch" culture=coloradan 
 		coat_of_arms = {
+		religion = edenite
 		template = 0
 		layer = {
-			texture = 11
-			texture_internal = 27
+			texture = 4
+			texture_internal = 5
 			emblem = 0
 			color = 0
 			color = 0
@@ -13639,16 +13893,42 @@ coat_of_arms = {
 	}
 }
 1876031 = { name="Packer" culture=coloradan }
-1876032 = { name="Bent" culture=coloradan }
+1876032 = { name="Tweak" culture=coloradan }
 1876033 = { name="Poudre" culture=coloradan }
-1876034 = { name="Flatiron" culture=coloradan }
-1876035 = { name="Valmer" culture=coloradan }
-1876036 = { name="Evans" culture=coloradan 
+1876034 = { name="Flatiron" culture=coloradan 
+		coat_of_arms = {
+		religion = edenite
+		template = 0
+		layer = {
+			texture = 4
+			texture_internal = 6
+			emblem = 0
+			color = 0
+			color = 0
+			color = 0
+		}
+	}
+}
+1876035 = { name="Valmer" culture=coloradan 
 	coat_of_arms = {
 		template = 0
 		layer = {
 			texture = 11
-			texture_internal = 24
+			texture_internal = 23
+			emblem = 0
+			color = 0
+			color = 0
+			color = 0
+		}
+	}
+}
+1876036 = { name="Evans" culture=coloradan 
+		coat_of_arms = {
+		religion = edenite
+		template = 0
+		layer = {
+			texture = 4
+			texture_internal = 3
 			emblem = 0
 			color = 0
 			color = 0
@@ -14020,11 +14300,12 @@ coat_of_arms = {
 	}
 }
 1889029 = { name="Gilbert" culture=mountainer 
-	coat_of_arms = {
+		coat_of_arms = {
+		religion = edenite
 		template = 0
 		layer = {
-			texture = 11
-			texture_internal = 23
+			texture = 4
+			texture_internal = 4
 			emblem = 0
 			color = 0
 			color = 0
@@ -14032,7 +14313,20 @@ coat_of_arms = {
 		}
 	}
 }
-1889030 = { name="Vailas" culture=mountainer }
+1889030 = { name="Vailas" culture=mountainer 
+		coat_of_arms = {
+		religion = edenite
+		template = 0
+		layer = {
+			texture = 4
+			texture_internal = 9
+			emblem = 0
+			color = 0
+			color = 0
+			color = 0
+		}
+	}
+}
 1889031 = { name="Biggs" culture=snakelander }
 1889032 = { name="Ashley" culture=mountainer }
 1889033 = { name="Peck" culture=mountainer }
@@ -14334,7 +14628,20 @@ coat_of_arms = {
 1912047 = { name="Arrillaga" culture=californiano }
 1912048 = { name="Rosado" culture=californiano }
 1912049 = { name="Ortega" culture=californiano }
-1912050 = { name="Allende" culture=californiano }
+1912050 = { name="Allende" culture=californiano 
+	coat_of_arms = {
+		religion = cetic
+		template = 0
+		layer = {
+			texture = 2
+			texture_internal = 0
+			emblem = 0
+			color = 0
+			color = 0
+			color = 0
+		}
+	}
+}
 1912051 = { name="Jaramillo" culture=californiano }
 1912052 = { name="Escobedo" culture=californiano }
 1912053 = { name="Xicano" culture=californiano }
@@ -16026,8 +16333,8 @@ coat_of_arms = {
 2006095 = { name="Sasso" culture=neoladino }
 2006096 = { name="Lobo" culture=neoladino }
 2006097 = { name="Caceres" culture=neoladino }
-2006097 = { name="Sheinbaum" culture=neoladino }
-2006097 = { name="Caceres" culture=neoladino }
+2006098 = { name="Sheinbaum" culture=neoladino }
+2006099 = { name="Caceres" culture=neoladino }
 
 2007001 = { name="Awegen" culture=iroquois }
 2007002 = { name="Ahaouet" culture=iroquois }
@@ -17710,7 +18017,20 @@ coat_of_arms = {
 
 
 2034000 = { name="Resvani" culture=tehrangeleno }
-2034001 = { name="Sadafi" culture=tehrangeleno }
+2034001 = { name="Sadafi" culture=tehrangeleno 
+	coat_of_arms = {
+		religion = imamite
+		template = 0
+		layer = {
+			texture = 3
+			texture_internal = 8
+			emblem = 0
+			color = 0
+			color = 0
+			color = 0
+		}
+	}
+}
 2034002 = { name="Ahmadi" culture=tehrangeleno }
 2034003 = { name="Ansari" culture=tehrangeleno }
 2034004 = { name="Aramian" culture=tehrangeleno }

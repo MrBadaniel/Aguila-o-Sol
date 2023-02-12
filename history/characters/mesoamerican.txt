@@ -20,7 +20,13 @@
 	trait=zealous
 	trait=holy_warrior
 	give_nickname=nick_sword_of_curicaueri 
-	2578.11.28={birth=yes}
+	2578.11.28={
+		birth=yes
+		create_bloodline={
+			type=iurhuri
+			has_dlc="Holy Fury"
+		}
+	}
 	2628.6.3={death=yes}
 }
 
@@ -274,8 +280,8 @@
 	name="Pinopiaa"
 	dynasty=1115031
 	female=yes
-	dna="0fgbk0dd0c0" 
-	culture=zapotec
+	dna="a0bil0ggba0"
+	culture=cherokee
 	religion=mictlantec
 	martial=7
 	diplomacy=7
@@ -289,7 +295,10 @@
 	trait=proud
 	trait=zealous
 	father=1325021
-	2645.11.28={birth=yes}
+	2645.11.28={
+		birth=yes
+		culture=zapotec
+	}
 	2662.1.2={effect={add_lover=1325051}}
 	2664.11.2={add_spouse=1325051}
 	2706.6.3={death=yes}

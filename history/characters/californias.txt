@@ -27,6 +27,11 @@
 	2642.4.17={birth=yes
 		culture=californiano
 	}
+	2666.3.5={
+	effect={
+	add_artifact=sword_of_ichthys
+	}
+	}
 	2724.3.1={death=yes}
 }
 
@@ -1669,9 +1674,10 @@
 1910114={
 	name="Galen"
 	female=no
-	dynasty=1851041
+	dynasty=1697096
 	culture=valleyan
 	religion=cetic
+	secret_religion = true_cross
 	trait=intricate_webweaver
 	trait=way_cowl
 	trait=bastard
@@ -1780,7 +1786,7 @@
 	culture=angeleno
 	religion=nazarene
 	trait=nz_presbyter
-	2604.12.16={birth=yes}
+	2581.12.16={birth=yes}
 	2659.12.1={death=yes}
 }
 
@@ -1944,16 +1950,17 @@
 }
 
 1910145={
-	name="Aaron"
+	name="Lawrence"
 	female=no
 	dynasty=1850059
 	culture=angeleno
 	religion=reform
 	trait=fortune_builder
-	trait=way_book
-	trait=hedonist
-	trait=diligent
-	trait=gregarious
+	trait=socializer
+	trait=uncouth
+	trait=temperate
+	trait=humble
+	trait=wroth
 	2638.12.16={birth=yes}
 	2690.12.1={death=yes}
 }
@@ -1966,7 +1973,7 @@
 	mother=1910141
 	culture=khoakineren
 	religion=nazarene
-	trait=nz_seraph
+	trait=nz_oriental
 	trait=quick
 	trait=kind
 	trait=gluttonous
@@ -1989,7 +1996,7 @@
 	trait=wroth
 	trait=paranoid
 	trait=ambitious
-	2638.12.16={birth=yes}
+	2612.12.16={birth=yes}
 	2690.12.1={death=yes}
 }
 
@@ -2236,11 +2243,13 @@
 	name="Stone"
 	female=no
 	dynasty=1850015
-	culture=angeleno
+	culture=ugric
 	religion=cetic
 	trait=zealous
 	trait=way_fist
-	2600.3.1={birth=yes}
+	2600.3.1={birth=yes
+	culture=battleborn
+	}
 	2655.12.1={death=yes}
 }
 
@@ -2248,7 +2257,7 @@
 	name="Rock"
 	female=no
 	dynasty=1850015
-	culture=angeleno
+	culture=ugric
 	religion=cetic
 	martial=7
 	trait=devout
@@ -2258,7 +2267,10 @@
 	trait=chaste
 	trait=humble
 	father=1910184
-	2639.3.12={birth=yes}
+	mother=1802242
+	2639.3.12={birth=yes
+	culture=angeleno
+	}
 	2690.12.1={death=yes}
 }
 
@@ -2564,25 +2576,6 @@ trait=nz_seraph
 2468.12.26={death=yes}
 }
 
-
-
-1910213={
-	name="Stanley"
-	female=yes
-	dynasty=1851016
-	father=2500023
-	culture=valleyan
-	religion=cetic
-	trait=fortune_builder
-	trait=way_book
-	trait=patient
-	trait=diligent
-	trait=ill
-	father=1910135
-	2637.12.16={birth=yes}
-	2690.12.1={death=yes}
-}
-
 1910213={
 	name="Eleanor"
 	female=yes
@@ -2616,7 +2609,6 @@ trait=nz_seraph
 	trait=envious
 	trait=wroth
 	trait=patient
-	trait=envious
 	2617.4.14={birth=yes}
 }
 
@@ -2638,6 +2630,7 @@ trait=nz_seraph
 
 1910216={
 	name="Inés"
+	dynasty=1851178
 	culture=pinoy
 	female=yes
 	religion=nazarene
@@ -2647,6 +2640,7 @@ trait=nz_seraph
 	trait=way_dove
 	trait=gregarious
 	trait=kind
+	father=1802219
 	2615.4.27={birth=yes}
 	2643.7.4={death={death_reason=death_murder
 		killer=1910214}}

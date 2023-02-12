@@ -382,10 +382,11 @@ character_event = {
 					NOR = {
 						trait = w_heel
 						trait = w_face
-					}
-					NOT = {
 						has_character_flag = choosing_persona
 					}
+					# NOT = {
+					# 	has_character_flag = choosing_persona
+					# }
 				}
 				event_target:lodge_hero = {
 					society_quest_event = { id = WR.100 } #Pick Persona

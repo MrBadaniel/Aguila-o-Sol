@@ -68,7 +68,12 @@ narrative_event = {
 		name = EVTOPTA_texas_1_other
 		trigger = {
 			AND = {
-				NOT = { culture_group = starfolk }
+				NOR = { 
+					culture = texan
+					culture = tejano
+					culture = texaner
+					culture = czexan
+				}
 				NOR = {
 					has_landed_title = d_aggies
 					has_landed_title = d_longhorns
@@ -80,7 +85,12 @@ narrative_event = {
 	option = {
 		name = EVTOPTA_texas_1_starfolk
 		trigger = {
-			culture_group = starfolk
+			OR = {
+				culture = texan
+				culture = tejano
+				culture = texaner
+				culture = czexan
+			}
 			NOR = {
 				has_landed_title = d_aggies
 				has_landed_title = d_longhorns
@@ -559,7 +569,12 @@ narrative_event={
 		name = EVTOPT_texas_starfolk_tributary_accept
 		trigger = {
 			NOT = { has_landed_title = e_texas }
-			culture_group = starfolk
+			OR = {
+				culture = texan
+				culture = tejano
+				culture = texaner
+				culture = czexan
+			}
 			is_tributary = {
 				SUZERAIN = FROM
 			}
@@ -595,7 +610,12 @@ narrative_event={
 		name = EVTOPT_texas_starfolk_tributary_refuse
 		trigger = {
 			NOT = { has_landed_title = e_texas }
-			culture_group = starfolk
+			OR = {
+				culture = texan
+				culture = tejano
+				culture = texaner
+				culture = czexan
+			}
 			is_tributary = {
 				SUZERAIN = FROM
 			}
@@ -620,7 +640,12 @@ narrative_event={
 		name = EVTOPT_texas_starfolk_tributary_emperor
 		trigger = {
 			NOT = { has_landed_title = e_texas }
-			culture_group = starfolk
+			OR = {
+				culture = texan
+				culture = tejano
+				culture = texaner
+				culture = czexan
+			}
 			is_tributary = {
 				SUZERAIN = FROM
 			}
@@ -680,7 +705,12 @@ narrative_event={
 			capital_scope = {
 				region = custom_texas
 			}
-			culture_group = starfolk
+			OR = {
+				culture = texan
+				culture = tejano
+				culture = texaner
+				culture = czexan
+			}
 			ROOT = { religion = catholic }
 			religion = ROOT
 		}
@@ -697,7 +727,12 @@ narrative_event={
 		trigger = {
 			NOT = { has_landed_title = e_texas }
 			NOT = { religion = ROOT }
-			NOT = { culture_group = starfolk }
+			NOR = { 
+				culture = texan
+				culture = tejano
+				culture = texaner
+				culture = czexan
+			}
 		}
 	}
 	
@@ -706,7 +741,12 @@ narrative_event={
 		trigger = {
 			NOT = { has_landed_title = e_texas }
 			NOT = { religion = ROOT }
-			culture_group = starfolk
+			OR = {
+				culture = texan
+				culture = tejano
+				culture = texaner
+				culture = czexan
+			}
 			NOT = {
 				is_tributary = {
 					SUZERAIN = FROM

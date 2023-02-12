@@ -4238,6 +4238,26 @@ e_latino = {
 	
 	capital = 1767 # c_mexico
 	
+	short_name = yes
+	
+			chilango = "Imperio Latino"
+			tejano = "Imperio Latino"
+			#trifinio = "Imperio Latino"
+			bravo = "Imperio Latino"
+			tapatio = "Imperio Latino"
+			jarocho = "Imperio Latino"
+			neomexicano = "Imperio Latino"
+			meseteno = "Imperio Latino"
+			joaquino = "Imperio Latino"
+			californiano = "Imperio Latino"
+			altiplanense = "Imperio Latino"
+			menomex = "Imperio Latino"
+			occidental = "Imperio Latino"
+			abajeno = "Imperio Latino"
+			yucatanense = "Imperio Latino"
+			choco = "Imperio Latino"
+			calentano = "Imperio Latino"
+	
 	allow = {
 		conditional_tooltip = {
 			trigger = {
@@ -4379,7 +4399,40 @@ k_s_mart = {
 	}
 }
 
-k_justo = {
+### titular duchies
+
+d_friends = { #The Catholic Friends of Mexico
+	color={ 255 240 240 }
+	color2 = { 220 220 0 }
+
+	capital = 1779 # Heroica Veracruz
+
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+
+	#allow = { 
+	#	OR = {
+	#		#has_character_flag = the_justo_armas
+	#		has_landed_title = e_latino
+	#		has_landed_title = k_justo
+	#	}
+	#}
+
+	# Always exists
+	landless = yes
+
+	#mercenary = yes
+
+	religion = catholic
+	
+	culture = cajun
+
+	#mercenary_type = d_friends_composition
+
+	#strength_growth_per_century = 1.00
+}	
+
+d_justo = {
 	color = { 79 112 155 }
 	color2= { 255 255 255 }
 
@@ -4396,8 +4449,6 @@ k_justo = {
 		always = no
 	}
 }
-
-### titular duchies
 
 k_northern_protectorate = {
 	color={ 112 219 112 }
@@ -4797,12 +4848,7 @@ k_dominionist = {
 	
 	#religion = dominionist
 	
-	allow = {
-		OR = {
-			dynasty = 2066000 #Tannerite
-			wealth = 500
-		}
-	}
+	allow = { always = no }
 	
 	dignity = 1000
 	assimilate = no

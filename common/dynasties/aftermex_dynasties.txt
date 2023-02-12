@@ -194,7 +194,20 @@
 4401163 = { name="Téllez" culture=occidental }   # basically clones from californiano. Needs work
 4401164 = { name="Rosales" culture=occidental }
 4401165 = { name="el Toro" culture=occidental }
-4401166 = { name="Estrada" culture=occidental }
+4401166 = { name="Estrada" culture=occidental 
+	coat_of_arms = {
+		religion = voodoo
+		template = 0
+		layer = {
+			texture = 2
+			texture_internal = 9
+			emblem = 0
+			color = 0
+			color = 0
+			color = 0
+		}
+	}
+}
 4401167 = { name="Moreno" culture=occidental }
 4401168 = { name="Arce" culture=occidental }
 4401169 = { name="Romero" culture=occidental }
@@ -223,7 +236,8 @@
 4401192 = { name="Vasco" culture=occidental }
 4401193 = { name="Miranda" culture=occidental }
 4401194 = { name="Mendoza" culture=occidental }
-4401195 = { name="Estrada" culture=occidental }
+4401195 = { name="Estrada" culture=occidental 
+}
 4401196 = { name="Dominguez" culture=occidental }
 4401197 = { name="Calderón" culture=occidental }
 4401198 = { name="Meza" culture=occidental }
@@ -448,6 +462,21 @@
 4600132={name="Irtra" culture=trifinio used_for_random=no}
 4600133={name="Argovia" culture=trifinio used_for_random=no}
 4600134={name="Albamar" culture=trifinio used_for_random=no}
+4600135={name="Neptuno" culture=trifinio used_for_random=no}
+4600136={name="Vejol" culture=trifinio used_for_random=no} #Reference to the military school Adolfo V. Hall
+4600137={name="Serpentino" culture=trifinio used_for_random=no
+coat_of_arms = {
+		template = 0
+		layer = {
+			texture = 11
+			texture_internal = 37
+			emblem = 0
+			color = 0
+			color = 0
+			color = 0
+		}
+	}
+}
 
 4700001 = { name="Acosta" culture=altiplanense }
 4700002 = { name="Martínez" culture=altiplanense }
@@ -835,7 +864,20 @@
 5001177 = { name="Tostado" culture=abajeno }
 5001178 = { name="Arias" culture=abajeno }
 5001179 = { name="Suárez" culture=chilango }
-5001180 = { name="Güerera" culture=abajeno }
+5001180 = { name="Melendez" culture=abajeno 
+	coat_of_arms = {
+			religion = cetic
+			template = 0
+			layer = {
+				texture = 2
+				texture_internal = 3
+				emblem = 0
+				color = 0
+				color = 0
+				color = 0
+		}
+	}
+}
 5001181 = { name="Hernandez" culture=abajeno }
 5001182 = { name="Gomez" culture=abajeno }
 5001183 = { name="Medina" culture=abajeno }
@@ -852,20 +894,20 @@
 		}
 	}
 }
-#5001185 = { name="Nilsen" culture=coloradan 
-#		coat_of_arms = {
-#		religion = sacred_heart
-#		template = 0
-#		layer = {
-#			texture = 10
-#			texture_internal = 1
-#			emblem = 0
-#			color = 0
-#			color = 0
-#			color = 0
-#		}
-#	}
-#}
+5001185 = { name="Nilsen" culture=coloradan 
+		coat_of_arms = {
+		religion = nazarene
+		template = 0
+		layer = {
+			texture = 11
+			texture_internal = 1
+			emblem = 0
+			color = 0
+			color = 0
+			color = 0
+		}
+	}
+}
 5001186 = { name="Nemechek" culture=czexan }
 5001187 = { name="Holekamp" culture=texaner }
 5001188 = { name="Eberly" culture=texan }
@@ -886,7 +928,20 @@
 			color = 0
 		}
 	}}
-5001193 = { name="Roday" culture=angeleno }
+5001193 = { name="Roday" culture=angeleno 
+		coat_of_arms = {
+		religion = cetic
+		template = 0
+		layer = {
+			texture = 1
+			texture_internal = 26
+			emblem = 0
+			color = 0
+			color = 0
+			color = 0
+		}
+	}
+}
 5001194 = { name="Lawson" culture=angeleno }
 5001195 = { name="Montana" culture=angeleno 
 	coat_of_arms = {
@@ -994,7 +1049,7 @@
 	}}
 5001211 = { name="Phoenix" culture=angeleno }
 5001212 = { name="Li" culture=towner }
-5001213 = { name="Heuer" culture=coloradan }
+5001213 = { name="Bent" culture=coloradan }
 
 5001214 = { name="Carranza" culture=joaquino 
 	coat_of_arms = {
@@ -1063,7 +1118,7 @@
 		template = 0
 		layer = {
 			texture = 11
-			texture_internal = 3
+			texture_internal = 0
 			emblem = 0
 			color = 0
 			color = 0
@@ -1098,6 +1153,7 @@
 		}
 	}}
 5001231 = { name="of Kern" culture=valleyan }
+
 6000000 = { name="Micanopy" culture=muscogee } #at some point the culture= line should have Seminole in it
 
 5100001 = { name="Acosta" culture=californiano }
@@ -1142,20 +1198,20 @@
 5100040 = { name="Anaya" culture=californiano }
 5100041 = { name="Trejo" culture=californiano }
 5100042 = { name="Villalobos" culture=californiano }
-5100043 = { name="Rayón" culture=californiano }
-5100044 = { name="Córdova" culture=californiano }
-5100045 = { name="Aguirre" culture=californiano }
-5100046 = { name="Nájera" culture=californiano }
-5100047 = { name="Durán" culture=californiano }
-5100048 = { name="Solís" culture=californiano }
-5100049 = { name="Medina" culture=californiano }
-5100050 = { name="Garay" culture=californiano }
-5100051 = { name="Orozco" culture=californiano }
-5100052 = { name="Portillo" culture=californiano }
-5100053 = { name="Guerrero" culture=californiano }
-5100054 = { name="Lazcano" culture=californiano }
-5100055 = { name="Grijalva" culture=californiano }
-5100056 = { name="Flores" culture=californiano }
+5100043 = { name="Rayón" culture=joaquino }
+5100044 = { name="Córdova" culture=joaquino }
+5100045 = { name="Aguirre" culture=joaquino }
+5100046 = { name="Nájera" culture=joaquino }
+5100047 = { name="Durán" culture=joaquino }
+5100048 = { name="Solís" culture=joaquino }
+5100049 = { name="Medina" culture=joaquino }
+5100050 = { name="Garay" culture=joaquino }
+5100051 = { name="Orozco" culture=joaquino }
+5100052 = { name="Portillo" culture=joaquino }
+5100053 = { name="Guerrero" culture=joaquino }
+5100054 = { name="Lazcano" culture=joaquino }
+5100055 = { name="Grijalva" culture=joaquino }
+5100056 = { name="Flores" culture=joaquino }
 
 5100101 = { name="Acosta" culture=meseteno }
 5100102 = { name="Martínez" culture=meseteno }
@@ -1208,7 +1264,19 @@
 5100149 = { name="Medina" culture=meseteno }
 5100150 = { name="Garay" culture=meseteno }
 5100151 = { name="Orozco" culture=meseteno }
-5100152 = { name="Portillo" culture=meseteno }
+5100152 = { name="Campesino" culture=meseteno 
+	coat_of_arms = {
+		template = 0
+		layer = {
+			texture = 11
+			texture_internal = 24
+			emblem = 0
+			color = 0
+			color = 0
+			color = 0
+		}
+	}
+}
 5100153 = { name="Guerrero" culture=meseteno }
 5100154 = { name="Lazcano" culture=meseteno }
 5100155 = { name="Grijalva" culture=meseteno }
@@ -1225,7 +1293,21 @@
 5200006 = { name="Bacal" culture=yucatanense }
 5200007 = { name="Bak" culture=yucatanense } #Human Flesh
 5200008 = { name="Baz" culture=yucatanense }
-5200009 = { name="Balán" culture=yucatanense } #Balam (jaguar)
+5200009 = { name="Balán" culture=yucatanense
+         coat_of_arms = {
+		religion = mictlantec
+        template = 0
+        layer = {
+            texture = 2
+            texture_internal = 3
+            emblem = 0
+            color = 0
+            color = 0
+            color = 0
+        }
+    }
+}
+ #Balam (jaguar)
 5200010 = { name="Balché" culture=yucatanense }
 5200011 = { name="Batún" culture=yucatanense }
 5200012 = { name="Bé" culture=yucatanense }
@@ -1255,7 +1337,20 @@
 
 #COLONIAS DE MÉRIDA
 5200036 = { name="García Ginerés" culture=yucatanense }
-5200037 = { name="de Montejo" culture=yucatanense }
+5200037 = { name="de Montejo" culture=yucatanense 
+		coat_of_arms = {
+				religion = sacred_heart
+        template = 0
+		layer = {
+			texture = 9
+			texture_internal = 35
+			emblem = 0
+			color = 0
+			color = 0
+			color = 0
+		}
+	}
+}
 5200039 = { name="Montejo" culture=yucatanense }
 5200040 = { name="Alcalá Martín" culture=yucatanense }
 5200041 = { name="Amalia Solórzano" culture=yucatanense }
@@ -1270,7 +1365,6 @@
 5200050 = { name="Cortés Sarmiento" culture=yucatanense }
 5200051 = { name="Moreno Cantón" culture=yucatanense }
 5200052 = { name="Dolores Otero" culture=yucatanense }
-5200052 = { name="Dolores Patrón" culture=yucatanense }
 5200053 = { name="Carrillo Puerto" culture=yucatanense }
 5200054 = { name="Fidel Velázquez" culture=yucatanense }
 5200055 = { name="Ricalde" culture=yucatanense }
@@ -1294,10 +1388,36 @@
 5200070 = { name="Ponce" culture=yucatanense }
 5200071 = { name="Ponce de León" culture=yucatanense }
 5200072 = { name="León" culture=yucatanense }
-5200073 = { name="Barbachano" culture=yucatanense } #Probably needs a custom COA. Chichen Castle
+5200073 = { name="Barbachano" culture=yucatanense 
+		coat_of_arms = {
+				religion = sacred_heart
+        template = 0
+		layer = {
+			texture = 9
+			texture_internal = 37
+			emblem = 0
+			color = 0
+			color = 0
+			color = 0
+		}
+	}
+} #Probably needs a custom COA. Chichen Castle
 5200074 = { name="Pacheco" culture=yucatanense }
 5200075 = { name="Granja Ricalde" culture=yucatanense }
-5200076 = { name="Cervera" culture=yucatanense }
+5200076 = { name="Cervera" culture=yucatanense 
+		coat_of_arms = {
+				religion = sacred_heart
+        template = 0
+		layer = {
+			texture = 9
+			texture_internal = 38
+			emblem = 0
+			color = 0
+			color = 0
+			color = 0
+		}
+	}
+}
 5200077 = { name="Sauri" culture=yucatanense }
 5200078 = { name="Alpuche" culture=yucatanense }
 5200079 = { name="Mena" culture=yucatanense }
@@ -1309,7 +1429,19 @@
 5200085 = { name="Iturralde" culture=yucatanense }
 5200086 = { name="Traconis" culture=yucatanense }
 5200087 = { name="O'Horan" culture=yucatanense }
-5200088 = { name="Albertos" culture=yucatanense }
+5200088 = { name="Albertos" culture=yucatanense 
+	coat_of_arms = {
+		template = 0
+		layer = {
+			texture = 11
+			texture_internal = 35
+			emblem = 0
+			color = 0
+			color = 0
+			color = 0
+		}
+	}
+}
 5200089 = { name="Garrido" culture=yucatanense }
 5200090 = { name="Solís" culture=yucatanense }
 5200091 = { name="Berzunza" culture=yucatanense }
@@ -1321,7 +1453,143 @@
 5200097 = { name="Cepeda Peraza" culture=yucatanense }
 5200098 = { name="Rosado" culture=yucatanense }
 5200099 = { name="Cicerol" culture=yucatanense }
+5200100 = { name="León Marín" culture=yucatanense }
+5200101 = { name="Zoreda" culture=yucatanense }
+5200102 = { name="Triay" culture=yucatanense 		
+			coat_of_arms = {
+				religion = sacred_heart
+			template = 0
+			layer = {
+			texture = 9
+			texture_internal = 39
+			emblem = 0
+			color = 0
+			color = 0
+			color = 0
+			}
+		}
+}
+5200103 = { name="Pinto" culture=yucatanense }
+5200104 = { name="Peniche" culture=yucatanense }
+5200105 = { name="Luna" culture=yucatanense}
+5200106 = { name="Leonmarí" culture=yucatanense 
+		coat_of_arms = {
+				religion = sacred_heart
+        template = 0
+		layer = {
+			texture = 9
+			texture_internal = 36
+			emblem = 0
+			color = 0
+			color = 0
+			color = 0
+		}
+	}
+}
+5200107 = {name="Marín" culture =yucatanense
+    coat_of_arms = {
+        template = 0
+        layer = {
+            texture = 0
+            texture_internal = 13
+            emblem = 0
+            color = 1
+            color = 2
+            color = 0
+        }
+    }
+}
+5200108 = {name="Castillo" culture=yucatanense
+    coat_of_arms = {
+        template = 2
+        layer = {
+            texture = 0
+            texture_internal = 1
+            emblem = 13
+            color = 4
+            color = 4
+            color = 1
+        }
+        layer = {
+            texture = 0
+            texture_internal = 8
+            emblem = 0
+            color = 3
+            color = 1
+            color = 0
+        }
+    }
+}
+5200109 = {name="Luna Kan" culture=yucatanense} #CoA Moon and Snake
+5200110 = {name="Piña" culture=yucatanense}
+5200111 = {name="Chan Piña" culture=yucatanense
+	coat_of_arms = {
+		template = 0
+		layer = {
+			texture = 11
+			texture_internal = 34
+			emblem = 0
+			color = 0
+			color = 0
+			color = 0
+		}
+	}
+}
+5200112 = {name="Blanco" culture =yucatanense
+	coat_of_arms = {
+	religion="catholic"
+		template = 0
+		layer = {
+			texture = 11
+			texture_internal = 12
+			emblem = 0
+			color = 13
+			color = 1
+			color = 1
+		}
+	}
+}
+5200113 = {name="Correa" culture=yucatanense}
+5200114 = {name="Rosado" culture=yucatanense}
 
+5200200 = {name="Chanona" culture=choco}
+5200201 = {name="Garrido" culture=choco}
+5200202 = {name="Canabal" culture=choco}
+5200203 = {name="Caraveo" culture=choco}
+5200204 = {name="Mendoza" culture=choco}
+5200205 = {name="Riverol" culture=choco}
+5200206 = {name="León" culture=choco}
+5200207 = {name="Matos" culture=choco}
+5200208 = {name="Padrón" culture=choco}
+5200209 = {name="Pérez" culture=choco}
+5200210 = {name="López" culture=choco}
+5200211 = {name="Obrador" culture=choco}
+5200212 = {name="López Obrador" culture=choco}
+5200213 = {name="de la Cruz" culture=choco}
+5200214 = {name="Cordova" culture=choco}
+5200215 = {name="Cruz" culture=choco}
+5200216 = {name="Pérez Hernández" culture=choco}
+5200217 = {name="Merino" culture=choco}
+5200218 = {name="Núñez" culture=choco}
+5200219 = {name="López Hernández" culture=choco}
+5200220 = {name="Granier" culture=choco}
+5200221 = {name="Lastra" culture=choco}
+5200222 = {name="Mújica" culture=choco}
+5200223 = {name="Ferrer" culture=choco}
+5200224 = {name="Brito" culture=choco}
+5200225 = {name="Zubieta" culture=choco}
+5200226 = {name="Lemarroy" culture=choco}
+5200227 = {name="Bracamonte" culture=choco}
+5200228 = {name="Cabrales" culture=choco}
+5200229 = {name="Selván" culture=choco}
+5200230 = {name="Cerino" culture=choco}
+5200231 = {name="Álvarez" culture=choco}
+5200232 = {name="Jiménez" culture=choco}
+5200233 = {name="Vélez" culture=choco}
+5200234 = {name="Sánchez" culture=choco}
+
+# moved here to fix duplicate id issue
+5200235 = { name="Dolores Patrón" culture=yucatanense }
 
 2111001 = { name="Silverio" culture=pinoy }
 2111002 = { name="Tobera" culture=pinoy }
@@ -1370,107 +1638,87 @@
 1802017 = { name="Margaryan" culture=khoakineren }
 1802018 = { name="Arakelyan" culture=khoakineren }
 1802019 = { name="Davtyan" culture=khoakineren }
-1802010 = { name="Mkrtchyan" culture=khoakineren }
-1802011 = { name="Manukyan" culture=khoakineren }
-1802012 = { name="Ghazaryan" culture=khoakineren }
-1802013 = { name="Avestisyan" culture=khoakineren }
-1802014 = { name="Martirosyan" culture=khoakineren }
-1802015 = { name="Poghosyan" culture=khoakineren }
-1802016 = { name="Sahakyan" culture=khoakineren }
-1802017 = { name="Margaryan" culture=khoakineren }
-1802018 = { name="Arakelyan" culture=khoakineren }
-1802019 = { name="Davtyan" culture=khoakineren }
-1802010 = { name="Mkrtchyan" culture=khoakineren }
-1802011 = { name="Manukyan" culture=khoakineren }
-1802012 = { name="Ghazaryan" culture=khoakineren }
-1802013 = { name="Avestisyan" culture=khoakineren }
-1802014 = { name="Martirosyan" culture=khoakineren }
-1802015 = { name="Poghosyan" culture=khoakineren }
-1802016 = { name="Sahakyan" culture=khoakineren }
-1802017 = { name="Margaryan" culture=khoakineren }
-1802018 = { name="Arakelyan" culture=khoakineren }
-1802019 = { name="Davtyan" culture=khoakineren }
-1802020 = { name="Simonyan" culture=khoakineren }
-1802021 = { name="Stepanyan" culture=khoakineren }
-1802022 = { name="Galstyan" culture=khoakineren }
-1802023 = { name="Hayrapetyan" culture=khoakineren }
-1802024 = { name="Muradyan" culture=khoakineren }
-1802025 = { name="Gasparyan" culture=khoakineren }
-1802026 = { name="Avagyan" culture=khoakineren }
-1802027 = { name="Baghdasaryan" culture=khoakineren }
-1802028 = { name="Abrahamyan" culture=khoakineren }
-1802029 = { name="Asatryan" culture=khoakineren }
-1802030 = { name="Hovsepyan" culture=khoakineren }
-1802031 = { name="Melkonyan" culture=khoakineren }
-1802032 = { name="Minasyan" culture=khoakineren }
-1802033 = { name="Kirakosyan" culture=khoakineren }
-1802034 = { name="Mkhitaryan" culture=khoakineren }
-1802035 = { name="Babayan" culture=khoakineren }
-1802036 = { name="Alexsanyan" culture=khoakineren }
-1802037 = { name="Barseghyan" culture=khoakineren }
-1802038 = { name="Tadevosyan" culture=khoakineren }
-1802039 = { name="Yeghiazaryan" culture=khoakineren }
-1802040 = { name="Zakaryan" culture=khoakineren }
-1802041 = { name="Ohanyan" culture=khoakineren }
-1802042 = { name="Mnacakanyan" culture=khoakineren }
-1802043 = { name="Movsisyan" culture=khoakineren }
-1802044 = { name="Hambardzumyan" culture=khoakineren }
-1802045 = { name="Danielyan" culture=khoakineren }
-1802046 = { name="Badalyan" culture=khoakineren }
-1802047 = { name="Ayvazyan" culture=khoakineren }
-1802048 = { name="Torosyan" culture=khoakineren }
-1802049 = { name="Tovmasyan" culture=khoakineren }
-1802050 = { name="Nersisyan" culture=khoakineren }
-1802051 = { name="Nazaryan" culture=khoakineren }
-1802052 = { name="Mirzoyan" culture=khoakineren }
-1802053 = { name="Antonyan" culture=khoakineren }
-1802054 = { name="Gabrielyan" culture=khoakineren }
-1802055 = { name="Safaryan" culture=khoakineren }
-1802056 = { name="Matevosyan" culture=khoakineren }
-1802057 = { name="Kocharyan" culture=khoakineren }
-1802058 = { name="Ghukasyan" culture=khoakineren }
-1802059 = { name="Melikyan" culture=khoakineren }
-1802060 = { name="Adamyan" culture=khoakineren }
-1802061 = { name="Mikayelyan" culture=khoakineren }
-1802062 = { name="Aslanyan" culture=khoakineren }
-1802063 = { name="Oskanyan" culture=khoakineren }
-1802064 = { name="Gharibyan" culture=khoakineren }
-1802065 = { name="Hovakimyan" culture=khoakineren }
-1802066 = { name="Sukiasyan" culture=khoakineren }
-1802067 = { name="Aghajanyan" culture=khoakineren }
-1802068 = { name="Tonoyan" culture=khoakineren }
-1802069 = { name="Arzumanyan" culture=khoakineren }
-1802070 = { name="Nikoghosyan" culture=khoakineren }
-1802071 = { name="Markosyan" culture=khoakineren }
-1802072 = { name="Shahbazyan" culture=khoakineren }
-1802073 = { name="Arshakyan" culture=khoakineren }
-1802074 = { name="Shahinyan" culture=khoakineren }
-1802075 = { name="Soghomonyan" culture=khoakineren }
-1802076 = { name="Yesayan" culture=khoakineren }
-1802077 = { name="Abgaryan" culture=khoakineren }
-1802078 = { name="Hunanyan" culture=khoakineren }
-1802079 = { name="Saribekyan" culture=khoakineren }
-1802080 = { name="Darbinyan" culture=khoakineren }
-1802081 = { name="Aloyan" culture=khoakineren }
-1802082 = { name="Makaryan" culture=khoakineren }
-1802083 = { name="Alaverdyan" culture=khoakineren }
-1802084 = { name="Tumanyan" culture=khoakineren }
-1802085 = { name="Nahapetyan" culture=khoakineren }
-1802086 = { name="Shahnazaryan" culture=khoakineren }
-1802087 = { name="Nalbandyan" culture=khoakineren }
-1802088 = { name="Manucharyan" culture=khoakineren }
-1802089 = { name="Navasardyan" culture=khoakineren }
-1802090 = { name="Dallakyan" culture=khoakineren }
-1802091 = { name="Andreasyan" culture=khoakineren }
-1802092 = { name="Malkhasyan" culture=khoakineren }
-1802093 = { name="Avdalyan" culture=khoakineren }
-1802094 = { name="Serobyan" culture=khoakineren }
-1802095 = { name="Beglaryan" culture=khoakineren }
-1802096 = { name="Avanesyan" culture=khoakineren }
-1802097 = { name="Amirkhanyan" culture=khoakineren }
-1802098 = { name="Movsesyan" culture=khoakineren }
-1802099 = { name="Melkumyan" culture=khoakineren }
-1802100 = { name="Atoyan" culture=khoakineren }
+1802020 = { name="Mkrtchyan" culture=khoakineren }
+1802021 = { name="Manukyan" culture=khoakineren }
+1802022 = { name="Ghazaryan" culture=khoakineren }
+1802023 = { name="Avestisyan" culture=khoakineren }
+1802024 = { name="Martirosyan" culture=khoakineren }
+1802025 = { name="Poghosyan" culture=khoakineren }
+1802026 = { name="Sahakyan" culture=khoakineren }
+1802027 = { name="Margaryan" culture=khoakineren }
+1802028 = { name="Arakelyan" culture=khoakineren }
+1802029 = { name="Davtyan" culture=khoakineren }
+1802030 = { name="Mkrtchyan" culture=khoakineren }
+1802031 = { name="Manukyan" culture=khoakineren }
+1802032 = { name="Ghazaryan" culture=khoakineren }
+1802033 = { name="Avestisyan" culture=khoakineren }
+1802034 = { name="Martirosyan" culture=khoakineren }
+1802035 = { name="Poghosyan" culture=khoakineren }
+1802036 = { name="Sahakyan" culture=khoakineren }
+1802037 = { name="Margaryan" culture=khoakineren }
+1802038 = { name="Arakelyan" culture=khoakineren }
+1802039 = { name="Davtyan" culture=khoakineren }
+1802040 = { name="Simonyan" culture=khoakineren }
+1802041 = { name="Stepanyan" culture=khoakineren }
+1802042 = { name="Galstyan" culture=khoakineren }
+1802043 = { name="Hayrapetyan" culture=khoakineren }
+1802044 = { name="Muradyan" culture=khoakineren }
+1802045 = { name="Gasparyan" culture=khoakineren }
+1802046 = { name="Avagyan" culture=khoakineren }
+1802047 = { name="Baghdasaryan" culture=khoakineren }
+1802048 = { name="Abrahamyan" culture=khoakineren }
+1802049 = { name="Asatryan" culture=khoakineren }
+1802050 = { name="Hovsepyan" culture=khoakineren }
+1802051 = { name="Melkonyan" culture=khoakineren }
+1802052 = { name="Minasyan" culture=khoakineren }
+1802053 = { name="Kirakosyan" culture=khoakineren }
+1802054 = { name="Mkhitaryan" culture=khoakineren }
+1802055 = { name="Babayan" culture=khoakineren }
+1802056 = { name="Alexsanyan" culture=khoakineren }
+1802057 = { name="Barseghyan" culture=khoakineren }
+1802058 = { name="Tadevosyan" culture=khoakineren }
+1802059 = { name="Yeghiazaryan" culture=khoakineren }
+1802060 = { name="Zakaryan" culture=khoakineren }
+1802061 = { name="Ohanyan" culture=khoakineren }
+1802062 = { name="Mnacakanyan" culture=khoakineren }
+1802063 = { name="Movsisyan" culture=khoakineren }
+1802064 = { name="Hambardzumyan" culture=khoakineren }
+1802065 = { name="Danielyan" culture=khoakineren }
+1802066 = { name="Badalyan" culture=khoakineren }
+1802067 = { name="Ayvazyan" culture=khoakineren }
+1802068 = { name="Torosyan" culture=khoakineren }
+1802069 = { name="Tovmasyan" culture=khoakineren }
+1802070 = { name="Nersisyan" culture=khoakineren }
+1802071 = { name="Nazaryan" culture=khoakineren }
+1802072 = { name="Mirzoyan" culture=khoakineren }
+1802073 = { name="Antonyan" culture=khoakineren }
+1802074 = { name="Gabrielyan" culture=khoakineren }
+1802075 = { name="Safaryan" culture=khoakineren }
+1802076 = { name="Matevosyan" culture=khoakineren }
+1802077 = { name="Kocharyan" culture=khoakineren }
+1802078 = { name="Ghukasyan" culture=khoakineren }
+1802079 = { name="Melikyan" culture=khoakineren }
+1802080 = { name="Adamyan" culture=khoakineren }
+1802081 = { name="Mikayelyan" culture=khoakineren }
+1802082 = { name="Aslanyan" culture=khoakineren }
+1802083 = { name="Oskanyan" culture=khoakineren }
+1802084 = { name="Gharibyan" culture=khoakineren }
+1802085 = { name="Hovakimyan" culture=khoakineren }
+1802086 = { name="Sukiasyan" culture=khoakineren }
+1802087 = { name="Aghajanyan" culture=khoakineren }
+1802088 = { name="Tonoyan" culture=khoakineren }
+1802089 = { name="Arzumanyan" culture=khoakineren }
+1802090 = { name="Nikoghosyan" culture=khoakineren }
+1802091 = { name="Markosyan" culture=khoakineren }
+1802092 = { name="Shahbazyan" culture=khoakineren }
+1802093 = { name="Arshakyan" culture=khoakineren }
+1802094 = { name="Shahinyan" culture=khoakineren }
+1802095 = { name="Soghomonyan" culture=khoakineren }
+1802096 = { name="Yesayan" culture=khoakineren }
+1802097 = { name="Abgaryan" culture=khoakineren }
+1802098 = { name="Hunanyan" culture=khoakineren }
+1802099 = { name="Saribekyan" culture=khoakineren }
+1802100 = { name="Darbinyan" culture=khoakineren }
 
 #####Putting rest of Dorados aqui
 1802101 = { name="Sonorense" culture=occidental }
@@ -1631,3 +1879,291 @@
 		}
 	}
 }
+14090001 = { name="Ledonnant" culture=cajun used_for_random=no }
+
+14091000 = { name="Barnett" culture=seri }
+14090002 = { name="Insecticida" culture=meseteno } 
+14090003 = { name="Unificación" culture=meseteno }
+14090004 = { name="Liberado" culture=meseteno }
+14090005 = { name="Silvicultor" culture=meseteno }
+14090006 = { name="Portillo" culture=meseteno }
+14090007 = { name="Activista" culture=meseteno }
+14090008 = { name="San Chávez" culture=meseteno }
+14090009 = { name="Santa Huerta" culture=meseteno }
+140900010 = { name="Thorbourne" culture=meseteno }
+140900011 = { name="Velasquez" culture=meseteno }
+140900012 = { name="Padilla" culture=meseteno }
+140900013 = { name="Gutiérrez" culture=meseteno }
+140900014 = { name="Noroeste" culture=meseteno }
+140900015 = { name="Coyote" culture=meseteno }
+140900016 = { name="Molinero" culture=meseteno }
+140900017 = { name="Mecha" culture=meseteno }
+140900018 = { name="Vinedo" culture=meseteno }
+140900019 = { name="Macuahuitl" culture=meseteno }
+140900020 = { name="Aerostático" culture=meseteno }
+140900021 = { name="Cosechadora" culture=meseteno }
+140900022 = { name="Retroexcavadora" culture=meseteno }
+140900023 = { name="Barrena" culture=meseteno }
+140900024 = { name="Ortiz-Compost" culture=meseteno }
+140900025 = { name="Sembradora" culture=meseteno }
+140900026 = { name="Trilladora" culture=meseteno }
+140900027 = { name="Alpinista" culture=meseteno }
+
+140900028 = { name="Bingen" culture=valleyan 
+		coat_of_arms = {
+		religion = cetic
+		template = 0
+		layer = {
+			texture = 1
+			texture_internal = 29
+			emblem = 0
+			color = 0
+			color = 0
+			color = 0
+		}
+	}
+}
+140900029 = { name="Barbera" culture=mountainer 
+		coat_of_arms = {
+		religion = edenite
+		template = 0
+		layer = {
+			texture = 4
+			texture_internal = 8
+			emblem = 0
+			color = 0
+			color = 0
+			color = 0
+		}
+	}
+}
+140900030 = { name="Murgatroyd" culture=mountainer 
+		coat_of_arms = {
+		religion = edenite
+		template = 0
+		layer = {
+			texture = 4
+			texture_internal = 2
+			emblem = 0
+			color = 0
+			color = 0
+			color = 0
+		}
+	}
+}
+
+####YUCATECO/LACANDON/CHOLANO 154095 was the last one used in after_the_end_dynasties
+154096 ={ name= "Mopán" culture=yucateco
+        coat_of_arms = {
+		religion = mictlantec
+        template = 0
+        layer = {
+            texture = 2
+            texture_internal = 5
+            emblem = 0
+            color = 0
+            color = 0
+            color = 0
+        }
+    }
+}
+154097 ={ name= "Ixkán" culture=lacandon}
+154098 ={ name= "Lakamha" culture=lacandon}
+154099 ={ name= "Jooyok'" culture=yucateco
+     coat_of_arms = {
+		religion = mictlantec
+        template = 0
+        layer = {
+            texture = 2
+            texture_internal = 4
+            emblem = 0
+            color = 0
+            color = 0
+            color = 0
+        }
+    }
+}
+
+#Tsotsil-Tseltal dynasties
+154100 = { name= "Bolom"	culture = tsotsil }
+154101 = { name= "Chamo'" culture = tsotsil }
+154102 = { name= "Ch'am o'" culture = tsotsil }
+154103 = { name= "Chij" culture = tsotsil}
+154104 = { name= "Ch'ixna"  culture = tsotsil }
+154105 = { name= "Moshan"  culture = tsotsil}
+154106 = { name= "Ok'il"  culture = tsotsil}
+154107 = { name= "Pech'"  culture = tsotsil}
+154108 = { name="Pale"  culture = tsotsil}
+154109 = { name="Iko'"  culture = tsotsil}
+154110 = { name="J-ik' O'"  culture = tsotsil}
+154111 = { name="K'ox"  culture = tsotsil}
+154112 = { name="K'ulej"  culture = tsotsil}
+154113 = { name="Ton"  culture = tsotsil}
+154114 = { name="Tsemen" culture = tsotsil}
+154115 = { name="Vet"  culture = tsotsil}
+154116 = { name="Vakax"  culture = tsotsil}
+154117 = { name="Vaskis"  culture = tsotsil}
+154118 = { name="J-Alis Bolom"  culture = tsotsil}
+154119 = { name="J-Alis K'ox Bolom"  culture = tsotsil}
+154120 = { name="J-Alis Me'el"  culture = tsotsil}
+154121 = { name="J-Alis Ok'il"  culture = tsotsil}
+154122 = { name="J-Alis Vet"  culture = tsotsil}
+154123 = { name="J-Alis Saben"  culture = tsotsil}
+154124 = { name="J-Alis A'al"  culture = tsotsil}
+154152 = { name="J-Alis Poypoy" culture = tsotsil}
+154127 = { name="J-Alis Ib mail chon" culture = tsotsil}
+154128 = { name="J-Alis Chuchetik" culture = tsotsil}
+154129 = { name="J-Alis Yaxalchuch" culture = tsotsil}
+154130 = { name="J-Alis Pepenchuch" culture = tsotsil}
+154131 = { name="J-Alis Jolov"  culture = tsotsil}
+154132 = { name="J-Alis Chij"  culture = tsotsil}
+154133 = { name="J-Alis Yaxalchij"  culture = tsotsil}
+154134 = { name="J-Alis Lak Akan"  culture = tsotsil}
+154135 = { name="J-Alis Tsajalchij"  culture = tsotsil}
+154136 = { name="J-Alis Te'tikal"  culture = tsotsil}
+154137 = { name="J-Alis Chitom"  culture = tsotsil}
+154138 = { name="J-Alis Max" culture = tsotsil}
+154139 = { name="J-Alis T'ul"  culture = tsotsil}
+154140 = { name="J-Alis Xch'oalsots'"  culture = tsotsil}
+154141 = { name="J-Alis Sots'"  culture = tsotsil}
+154142 = { name="J-Alis Sots'etik"  culture = tsotsil}
+
+
+154150 = { name= "Sots'etik" culture= tsotsil
+        coat_of_arms = {
+		religion = mictlantec
+        template = 0
+        layer = {
+            texture = 2
+            texture_internal = 6
+            emblem = 0
+            color = 0
+            color = 0
+            color = 0
+        }
+    }
+}
+#QUICHEAN 1697091 was the last one used in after_the_end_dynasties
+1697092 = { name= "Itzá" culture=quichean
+        coat_of_arms = {
+		religion = mictlantec
+        template = 0
+        layer = {
+            texture = 2
+            texture_internal = 2
+            emblem = 0
+            color = 0
+            color = 0
+            color = 0
+        }
+    }
+}
+1697093 = { name= "Kaibé" culture=quichean}
+1697094 = { name= "Mendoza" culture=joaquino}
+1697095 = { name= "Collier" culture=valleyan
+	coat_of_arms = {
+		religion = gaian
+		template = 0
+		layer = {
+			texture = 3
+			texture_internal = 3
+			emblem = 0
+			color = 0
+			color = 0
+			color = 0
+		}
+	}
+}
+1697096 = { name= "Heartwell" culture=valleyan
+	coat_of_arms = {
+		religion = cetic
+		template = 0
+		layer = {
+			texture = 2
+			texture_internal = 1
+			emblem = 0
+			color = 0
+			color = 0
+			color = 0
+		}
+	}
+}
+
+
+###### 1810052 go to after_the_end_dynasties
+1810053 = { name = "Cobarrubias" culture = bravo } 
+1810054 = { name = "Guerra" culture = bravo } 
+1810055 = { name = "Mora" culture = bravo } 
+1810056 = { name = "Garza García" culture = bravo 
+		coat_of_arms = {
+		template = 0
+		layer = {
+			texture = 12
+			texture_internal = 5
+			emblem = 0
+			color = 0
+			color = 0
+			color = 0
+		}
+	}}
+1810057 = { name = "Garza Montemayor" culture = bravo 
+		coat_of_arms = {
+		template = 0
+		layer = {
+			texture = 12
+			texture_internal = 6
+			emblem = 0
+			color = 0
+			color = 0
+			color = 0
+		}
+	}}
+1810058 = { name = "de Arca" culture = bravo 
+		coat_of_arms = {
+		template = 0
+		layer = {
+			texture = 12
+			texture_internal = 1
+			emblem = 0
+			color = 0
+			color = 0
+			color = 0
+		}
+	}}
+1810059 = { name = "Rojo" culture = bravo 
+		coat_of_arms = {
+		template = 0
+		layer = {
+			texture = 12
+			texture_internal = 2
+			emblem = 0
+			color = 0
+			color = 0
+			color = 0
+		}
+	}}
+1810060 = { name = "Soto" culture = bravo } 
+1810061 = { name="Cobarrubias" culture=bravo }
+1810062 = { name="García Huerta" culture=bravo }
+1810063 = { name="Garza" culture=bravo 
+		coat_of_arms = {
+		template = 0
+		layer = {
+			texture = 12
+			texture_internal = 4
+			emblem = 0
+			color = 0
+			color = 0
+			color = 0
+		}
+	}}
+1810064 = { name= "Soto" culture=bravo }
+1810065 = { name= "Mata" culture=bravo }
+1810066 = { name= "Figueroa" culture=bravo }
+1810067 = { name= "de la Peña" culture=bravo }
+1810068 = { name= "Montemayor" culture=bravo }
+1810069 = { name= "García Flores" culture=bravo }
+1810070 = { name= "Adás" culture=bravo }
+1810071 = { name= "Rubio" culture=bravo }
+1810072 = { name= "Ugalde" culture=bravo }
+1810073 = { name= "Garza Soto" culture=bravo }

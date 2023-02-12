@@ -275,7 +275,17 @@ letter_event = {
 							name = recently_force_converted
 							duration = 90
 							hidden = no
-					}  
+					}
 				}
+				if = { 
+					limit = { 
+						OR = {
+						trait = zealous
+						trait = devout
+						}
+					}
+					remove_trait = zealous
+					remove_trait = devout
+			}
 	}
 }

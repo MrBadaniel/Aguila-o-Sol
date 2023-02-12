@@ -32,15 +32,18 @@ decisions = {
 	}
 	
 	sagrado_mystic = {
+		ai = no
 		
 		potential = {
 			religion = sacred_heart
+			trait = marian_santo_nino_fidencio
 			age = 16
 			learning = 14
 		}
 		
 		allow = { 
 			religion = sacred_heart
+			trait = marian_santo_nino_fidencio
 			age = 16
 			learning = 14
 			NOT = {trait = mystic}
@@ -48,7 +51,7 @@ decisions = {
 		
 		effect = { 
 			hidden_tooltip = {
-				character_event = sacred_heart.210
+				character_event = sacredheart.210
 			}
 		}
 			

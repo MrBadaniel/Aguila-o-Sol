@@ -1,6 +1,6 @@
 ###ÄNSI
 taracahita = {
-	graphical_cultures = { mesoamericangfx mexicangfx muslimgfx }
+	graphical_cultures = { mexicangfx muslimgfx }
 
 	raramuri = {
 		graphical_cultures = { aridogfx navajogfx nativeamericangfx }
@@ -30,7 +30,7 @@ taracahita = {
 		}
 		
 		female_names = {
-			Abé Abi Ana_Anna Adela_Adele Adelita_Adele Acá Ahuí Amígohua Anayáhuari Arí Ariché Arihuá Arihué Arihuiá Atíscanara Awáscina Ata
+			Abé Abi Ana_Anna Adela_Adele Adelita_Adele Acá Ahuí Amígohua Anayáhuari Arí Ariché Arihué Arihuiá Atíscanara Awáscina Ata
 			Bacá Bají Basaseachi Bimorí Binori Biquiyá Biré Birétari Biriná Bité Bitebá Bóisi Bucurí Burito Busí Bacahuá
 			Cabí Capi Caraba Caré Cérami Cerewáka Chabé Cháti Coi Churichi Cohuata
 			Gamé Guada_Guadalupe
@@ -67,6 +67,68 @@ taracahita = {
 		graphical_cultures = { aridogfx navajogfx nativeamericangfx }
 
 		color = { 0.6 0.8 0.9 } 
+
+		male_names = {
+			Ábai Alejandro_Alexander Álvaro_Oliver Antonio_Anthony Anastasio
+			Ba'am Baawe Bachi Beojko Bonifacio_Boniface
+			Cho'awe Cajeme_Kaje'eme Chucho_Jesus Calixto_Calixtus Calisto_Calixtus Cazíim
+			David_David
+			Esteban_Stephen Emiliano Elías_Elijah
+			Félix_Felix Francisco_Francis
+			Germán_Herman
+			Heeka Hitebi "Huya ania"
+			Lilíchi Luis_Louis Loreto Lucero Lucio_Lucius
+			Ingnacio_Ignatius Isaac_Isaac
+			Jakia Jiapsi José_Joseph Jesús_Jesus "José María" Juan_John Julio_Julius "Juan Calixto"
+			Kawi Kaje'eme Kookam
+			Maaso Machia Maukaa Mario Miguel_Michael Marcelo Muni 
+			Nacho_Ignatius "Naamu jurués"
+			Óscar_Oscar Octaviano_Octavian
+			Pa'aria Pancho_Francisco Próspero Paco_Francisco
+			Ramón_Raymon 
+			Sawa Semalulukut Siari Sikiri Suawaka Sulá'amay Surem Simón_Simon Sotero
+			Teca Teejam Temastian Tosali "Tuka ania" Tutu'uli Teófilo Tomás_Thomas Tetaviecti Tetabiate_Tetaviecti Tewei Tehueli Tósari
+			Ute'a Uriel
+			Yaitowi Yaut Yazicue Yoania Yooko
+		}
+		
+		female_names = {
+			Ana_Anna "Ana Gabriela" Alejandra_Alexandra Antonia Anastasia Adela_Adele Adelita_Adele
+			Bachia Beojko Bianca Baiseeboli
+			Choki Chúnahka Chelsi
+			Dolores Diana Dorita Daniela_Danielle
+			Emilia Ely_Elizabeth Elena Estela
+			Flor
+			Gabriela_Gabrielle
+			Josefina_Josephine
+			Kawi
+			Lilíchi Luz Lucera Lucha_Luz Luchita_Luz
+			Machia "Mecha Bemela" Mechabili María_Mary Mariana_Marianne "María Jesús" Micaela_Michaela Margarita_Margaret Moa Machiria
+			Naamu Naawa
+			Paola_Paula Paulina
+			Rumuí
+			Sawa Seahaumut Seakarakte
+			Teejam Tosali Tukáaria Tutu'uli Teresa_Theresa Tosalisewa
+			Victoria_Victoria Virgen Valentina
+		}
+
+		founder_named_dynasties = yes
+
+		pat_grf_name_chance = 50
+		mat_grf_name_chance = 0
+		father_name_chance = 0
+
+		pat_grm_name_chance = 25
+		mat_grm_name_chance = 25
+		mother_name_chance = 0
+
+		modifier = default_culture_modifier
+	}
+
+	seri = {
+		graphical_cultures = { aridogfx navajogfx nativeamericangfx }
+
+		color = { 0.5 0.9 0.2 } 
 
 		male_names = {
 			Ábai Alejandro_Alexander Álvaro_Oliver Antonio_Anthony Anastasio

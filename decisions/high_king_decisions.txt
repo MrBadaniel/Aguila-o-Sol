@@ -1,0 +1,740 @@
+decisions = {
+
+	form_tex_k_yellowrose = {
+		potential = {
+			OR = {
+				culture = texan
+				culture = tejano
+				culture = texaner
+				culture = czexan
+			}
+			is_playable = yes
+			independent = yes
+			capital_scope = {
+				region = custom_texas
+			}
+			#has_landed_title = c_bexar 
+			k_yellowrose = {
+				has_holder = no
+			}
+			e_texas = {
+				has_holder = no
+			}
+			
+			any_realm_province = {
+				de_jure_liege = d_alamo
+			}
+			NOT = {
+				has_character_flag = tex_yellowrose
+			}
+		}	
+		allow = {
+			is_adult = yes
+			prisoner = no
+			NOT = { trait = incapable }
+			prestige = 750
+			completely_controls = d_alamo
+		}
+	
+		effect = {
+			k_yellowrose = {
+				grant_title = ROOT
+				copy_title_laws = PREV
+			}
+			hidden_tooltip = {
+			set_character_flag = tex_yellowrose
+			}
+			narrative_event = { id = tex_king.7 }
+		}
+	}
+
+
+	form_tex_k_westex = {
+		potential = {
+			OR = {
+				culture = texan
+				culture = tejano
+				culture = texaner
+				culture = czexan
+			}
+			is_playable = yes
+			independent = yes
+			capital_scope = {
+				region = custom_texas
+			}
+			e_texas = {
+				has_holder = no
+			}
+			k_westex = {
+				has_holder = no
+			}
+			#has_landed_title = c_el_paso
+			
+			any_realm_province = {
+				de_jure_liege = d_transpecos
+			}
+			NOT = {
+				has_character_flag = tex_westex
+			}
+		}	
+		allow = {
+			is_adult = yes
+			prisoner = no
+			NOT = { trait = incapable }
+			prestige = 750
+			completely_controls = d_transpecos
+		}
+	
+		effect = {
+			k_westex = {
+				grant_title = ROOT
+				copy_title_laws = PREV
+			}
+			hidden_tooltip = {
+			set_character_flag = tex_westex
+			}
+			narrative_event = { id = tex_king.12 }
+		}
+	}
+
+
+	form_tex_k_highlands = {
+		potential = {
+			OR = {
+				culture = texan
+				culture = tejano
+				culture = texaner
+				culture = czexan
+			}
+			is_playable = yes
+			independent = yes
+			capital_scope = {
+				region = custom_texas
+			}
+			k_highlands = {
+				has_holder = no
+			}
+			e_texas = {
+				has_holder = no
+			}
+			any_realm_province = {
+				de_jure_liege = d_estacado
+			}
+			NOT = {
+				has_character_flag = tex_highlands
+			}
+		}	
+		allow = {
+			is_adult = yes
+			prisoner = no
+			NOT = { trait = incapable }
+			prestige = 750
+			completely_controls = d_estacado
+		}
+	
+		effect = {
+			k_highlands = {
+				grant_title = ROOT
+				copy_title_laws = PREV
+			}
+			hidden_tooltip = {
+			set_character_flag = tex_highlands
+			}
+			narrative_event = { id = tex_king.11 }
+		}
+	}
+
+	form_tex_k_texarkana = {
+		potential = {
+			OR = {
+				culture = texan
+				culture = tejano
+				culture = texaner
+				culture = czexan
+			}
+			is_playable = yes
+			independent = yes
+			capital_scope = {
+				region = custom_texas
+			}
+			k_texarkana = {
+				has_holder = no
+			}
+			e_texas = {
+				has_holder = no
+			}
+			any_realm_province = {
+				de_jure_liege = d_arklatex
+			}
+			NOT = {
+				has_character_flag = tex_texarkana
+			}
+		}	
+		allow = {
+			is_adult = yes
+			prisoner = no
+			NOT = { trait = incapable }
+			prestige = 750
+			completely_controls = d_arklatex
+		}
+	
+		effect = {
+			k_texarkana = {
+				grant_title = ROOT
+				copy_title_laws = PREV
+			}
+			hidden_tooltip = {
+			set_character_flag = tex_texarkana
+			}
+			narrative_event = { id = tex_king.10 }
+		}
+	}
+
+	form_tex_k_silvercrown = {
+		potential = {
+			OR = {
+				culture = texan
+				culture = tejano
+				culture = texaner
+				culture = czexan
+			}
+			is_playable = yes
+			independent = yes
+			capital_scope = {
+				region = custom_texas
+			}
+			k_silvercrown = {
+				has_holder = no
+			}
+			e_texas = {
+				has_holder = no
+			}
+			any_realm_province = {
+				de_jure_liege = d_violet_crown
+			}
+			#has_landed_title = c_travis
+			NOT = {
+				has_character_flag = tex_silvercrown
+			}
+		}	
+		allow = {
+			is_adult = yes
+			prisoner = no
+			NOT = { trait = incapable }
+			prestige = 750
+			completely_controls = d_violet_crown
+		}
+	
+		effect = {
+			k_silvercrown = {
+				grant_title = ROOT
+				copy_title_laws = PREV
+			}
+			hidden_tooltip = {
+			set_character_flag = tex_silvercrown
+			}
+			narrative_event = { id = tex_king.8 }
+		}
+	}
+
+	form_tex_k_star_coast = {
+		potential = {
+			OR = {
+				culture = texan
+				culture = tejano
+				culture = texaner
+				culture = czexan
+			}
+			is_playable = yes
+			independent = yes
+			capital_scope = {
+				region = custom_texas
+			}
+			k_star_coast = {
+				has_holder = no
+			}
+			OR = {
+				any_realm_province = {
+					de_jure_liege = d_houston
+				}
+				any_realm_province = {
+					de_jure_liege = d_galveston
+				}
+			}
+			#has_landed_title = c_harris
+			NOT = {
+				has_character_flag = tex_starcoast
+			}
+		}	
+		allow = {
+			is_adult = yes
+			prisoner = no
+			NOT = { trait = incapable }
+			prestige = 750
+			OR = {
+			completely_controls = d_houston
+			completely_controls = d_galveston
+			}
+		}
+	
+		effect = {
+			k_star_coast = {
+				grant_title = ROOT
+				copy_title_laws = PREV
+			}
+			hidden_tooltip = {
+			set_character_flag = tex_starcoast
+			}
+			narrative_event = { id = tex_king.9 }
+		}
+	}
+
+	form_e_texas = {
+		is_high_prio = yes
+		potential = {
+			OR = {
+				culture = texan
+				culture = tejano
+				culture = texaner
+				culture = czexan
+			}
+			is_playable = yes
+			independent = yes
+			capital_scope = {
+				region = custom_texas
+			}
+			e_texas = {
+				has_holder = no
+			}
+			NOT = { has_global_flag = longhorns_decimated }
+			NOT = { has_global_flag = aggies_decimated }
+		}	
+		allow = {
+			independent = yes
+			OR = {
+				has_landed_title = k_borderland
+				has_landed_title = k_old_star
+				has_landed_title = k_comancheria
+				custom_tooltip = {
+					text = HOLD_TEXAN_KINGDOM_TITULAR
+					hidden_tooltip = {
+						OR = {
+							has_landed_title = k_westex
+							has_landed_title = k_highlands
+							has_landed_title = k_yellowrose
+							has_landed_title = k_texarkana
+							has_landed_title = k_silvercrown
+							has_landed_title = k_new_mexico
+						}
+					}
+				}
+			}
+			AND = {
+				custom_tooltip = {
+					text = CONTROL_AIRMEN
+					hidden_tooltip = {
+						OR = {
+							any_tributary = {
+								has_landed_title = d_airmen
+							}
+
+							any_vassal = {
+								has_landed_title = d_airmen
+							}
+
+							ROOT = {
+								has_landed_title = d_airmen
+							}
+						}
+					}
+				}
+				custom_tooltip = {
+					text = CONTROL_FIRST_CAV
+					hidden_tooltip = {
+						OR = {
+							any_tributary = {
+								has_landed_title = d_first_cav
+							}
+
+							any_vassal = {
+								has_landed_title = d_first_cav
+							}
+
+							ROOT = {
+								has_landed_title = d_first_cav
+							}
+						}
+					}
+				}
+	
+				custom_tooltip = {
+					text = CONTROL_LONGHORNS
+					hidden_tooltip = {
+						OR = {
+							any_tributary = {
+								has_landed_title = d_longhorns
+							}
+
+							any_vassal = {
+								has_landed_title = d_longhorns
+							}
+
+							ROOT = {
+								has_landed_title = d_longhorns
+							}
+						}
+					}
+				}
+	
+				custom_tooltip = {
+					text = CONTROL_AGGIES
+					hidden_tooltip = {
+						OR = {
+							any_tributary = {
+								has_landed_title = d_aggies
+							}
+
+							any_vassal = {
+								has_landed_title = d_aggies
+							}
+
+							ROOT = {
+								has_landed_title = d_aggies
+							}
+						}
+					}
+				}
+	
+				custom_tooltip = {
+					text = CONTROL_MINERS
+					hidden_tooltip = {
+						OR = {
+							any_tributary = {
+								has_landed_title = d_miners
+							}
+
+							any_vassal = {
+								has_landed_title = d_miners
+							}
+
+							ROOT = {
+								has_landed_title = d_miners
+							}
+						}
+					}
+				}
+	
+				custom_tooltip = {
+					text = CONTROL_RED_RAIDER
+					hidden_tooltip = {
+						OR = {
+							any_tributary = {
+								has_landed_title = d_red_raider
+							}
+
+							any_vassal = {
+								has_landed_title = d_red_raider
+							}
+
+							ROOT = {
+								has_landed_title = d_red_raider
+							}
+						}
+					}
+				}
+	
+			}
+			OR = {
+				culture = texan
+				culture = tejano
+				culture = texaner
+				culture = czexan
+			}
+			is_adult = yes
+			prisoner = no
+			NOT = { trait = incapable }
+			prestige = 750
+		}
+	
+		effect = {
+			e_texas = {
+				grant_title = ROOT
+				copy_title_laws = PREV
+				add_law = succ_hre_elective
+				add_law = range_senate_size_3
+				add_law = orf_senate_type_law_1
+			}
+			add_artifact = crown_texas
+			if = { #New Imperial Bloodline. (Texan male)
+				limit = { 
+					has_dlc = "Holy Fury" 
+					is_female = no
+					culture = texan
+				}
+				create_bloodline = {
+					type = high_king_texan_bloodline
+				}
+				new_bloodline = {
+					set_description = "texas_bloodline_desc"
+				}	
+				sound_effect = bloodline_added
+			}
+			else_if = { #New Imperial Bloodline. (Texan female)
+				limit = { 
+					has_dlc = "Holy Fury" 
+					is_female = yes
+					culture = texan
+				}
+				create_bloodline = {
+					type = high_queen_texan_bloodline
+				}
+				new_bloodline = {
+					set_description = "texas_bloodline_desc"
+				}	
+				sound_effect = bloodline_added
+			}
+			else_if = { #New Imperial Bloodline. (Tejano male)
+				limit = { 
+					has_dlc = "Holy Fury" 
+					is_female = no
+					culture = tejano
+				}
+				create_bloodline = {
+					type = high_king_tejano_bloodline
+				}
+				new_bloodline = {
+					set_description = "texas_bloodline_desc"
+				}	
+				sound_effect = bloodline_added
+			}
+			else_if = { #New Imperial Bloodline. (Tejano female)
+				limit = { 
+					has_dlc = "Holy Fury" 
+					is_female = yes
+					culture = tejano
+				}
+				create_bloodline = {
+					type = high_queen_tejano_bloodline
+				}
+				new_bloodline = {
+					set_description = "texas_bloodline_desc"
+				}	
+				sound_effect = bloodline_added
+			}
+			else_if = { #New Imperial Bloodline. (Texaner male)
+				limit = { 
+					has_dlc = "Holy Fury" 
+					is_female = no
+					culture = texaner
+				}
+				create_bloodline = {
+					type = high_king_texaner_bloodline
+				}
+				new_bloodline = {
+					set_description = "texas_bloodline_desc"
+				}	
+				sound_effect = bloodline_added
+			}
+			else_if = { #New Imperial Bloodline. (Texaner female)
+				limit = { 
+					has_dlc = "Holy Fury" 
+					is_female = yes
+					culture = texaner
+				}
+				create_bloodline = {
+					type = high_queen_texaner_bloodline
+				}
+				new_bloodline = {
+					set_description = "texas_bloodline_desc"
+				}	
+				sound_effect = bloodline_added
+			}
+			else_if = { #New Imperial Bloodline. (Czexan male)
+				limit = { 
+					has_dlc = "Holy Fury" 
+					is_female = no
+					culture = czexan
+				}
+				create_bloodline = {
+					type = high_king_czexan_bloodline
+				}
+				new_bloodline = {
+					set_description = "texas_bloodline_desc"
+				}	
+				sound_effect = bloodline_added
+			}
+			else_if = { #New Imperial Bloodline. (Czexan female)
+				limit = { 
+					has_dlc = "Holy Fury" 
+					is_female = yes
+					culture = czexan
+				}
+				create_bloodline = {
+					type = high_queen_czexan_bloodline
+				}
+				new_bloodline = {
+					set_description = "texas_bloodline_desc"
+				}	
+				sound_effect = bloodline_added
+			}
+
+			set_global_flag = texas_restored
+			narrative_event = {id = texas.3}
+			
+			hidden_effect = {
+				k_westex = {
+					de_jure_liege = e_texas
+				}
+				k_highlands = {
+					de_jure_liege = e_texas
+				}
+				k_panhandle = {
+					de_jure_liege = e_texas
+				}
+				k_yellowrose = {
+					de_jure_liege = e_texas
+				}
+				k_texarkana = {
+					de_jure_liege = e_texas
+				}
+				k_silvercrown = {
+					de_jure_liege = e_texas
+				}
+				k_star_coast = {
+					de_jure_liege = e_texas
+				}
+			}
+			if = {
+				limit = { 
+					AND = {
+						NOT = { culture = comanche } 
+						has_landed_title = k_highlands
+					}
+				}
+	
+				#if comanche right to texas is invalidated, new mexico would be by extension 
+				d_new_mexico = {
+					de_jure_liege = k_highlands
+				}
+				d_mesilla = {
+					de_jure_liege = k_highlands
+				}
+				k_comancheria = {
+					de_jure_liege = e_heartland
+				}
+				#dejures highlands out of Texan Comancheria
+				d_estacado = {
+					de_jure_liege = k_highlands
+				}
+				d_abilene = {
+					de_jure_liege = k_highlands
+				}
+				d_amarillo = {
+					de_jure_liege = k_highlands
+				}
+				c_caddo = {
+					de_jure_liege = d_ouachita
+				}
+	
+				k_highlands = {
+					de_jure_liege = e_texas
+				}
+				k_borderland = {
+					de_jure_liege = e_texas
+				}
+				k_old_star = {
+					de_jure_liege = e_texas
+				}
+			}
+			if = {
+				limit = { 
+					AND = {
+						NOT = { culture = comanche } 
+						NOT = { has_landed_title = k_highlands } 
+					}
+				}
+	
+				set_global_flag = panhandle_liberated
+				activate_title = { title = k_panhandle status = yes }
+				primary_title = {
+					k_panhandle = {
+						grant_title = ROOT
+						copy_title_laws = PREV
+					}
+				}
+				k_comancheria = {
+					de_jure_liege = e_heartland
+				}
+	
+				#if comanche right to texas is invalidated, new mexico would be by extension 
+				d_new_mexico = {
+					de_jure_liege = k_new_mexico
+				}
+				d_mesilla = {
+					de_jure_liege = k_new_mexico
+				}
+				k_new_mexico = {
+					de_jure_liege = e_the_rockies
+				}
+				#creates the kingdom of panhandle out of Texan Comancheria
+				d_estacado = {
+					de_jure_liege = k_panhandle
+				}
+				d_abilene = {
+					de_jure_liege = k_panhandle
+				}
+				d_amarillo = {
+					de_jure_liege = k_panhandle
+				}
+				c_caddo = {
+					de_jure_liege = d_ouachita
+				}
+	
+				k_panhandle = {
+					de_jure_liege = e_texas
+				}
+				k_borderland = {
+					de_jure_liege = e_texas
+				}
+				k_old_star = {
+					de_jure_liege = e_texas
+				}
+			}
+			if = {
+				limit = { culture = comanche }
+	
+				k_comancheria = {
+					de_jure_liege = e_texas
+				}
+				k_borderland = {
+					de_jure_liege = e_texas
+				}
+				k_old_star = {
+					de_jure_liege = e_texas
+				}
+			}
+			if = {
+				limit = {
+					AND = {
+						NOT = { culture = comanche }
+						k_comancheria = { has_holder = no }
+						k_redland = { has_holder = no }
+					}
+				}
+				
+				activate_title = { title = k_redland status = yes }
+				k_comancheria = {
+					any_direct_de_jure_vassal_title = {
+						de_jure_liege = k_redland
+					}
+				}
+				k_redland = {
+					de_jure_liege = e_heartland
+				}
+			}
+		}
+	}
+
+
+}
+

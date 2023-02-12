@@ -1,0 +1,106 @@
+max_provinces = 3000
+definitions = "definition.csv"
+provinces = "provinces.bmp"
+positions = "positions.txt"
+terrain = "terrain.bmp"
+rivers = "rivers.bmp"
+terrain_definition = "terrain.txt"
+heightmap = "topology.bmp"
+tree_definition = "trees.bmp"
+continent = "continent.txt"
+adjacencies = "adjacencies.csv"
+climate = "climate.txt"
+region = "island_region.txt"
+geographical_region = "geographical_region.txt"
+static = "statics"
+seasons = "seasons.txt"
+
+# Atlantic 1
+sea_zones = { 870 915 }
+# Atlantic 2
+sea_zones = { 1443 1588 }
+# Pacific 3
+sea_zones = { 1589 1627 }
+# Lakes 4
+sea_zones = { 1301 1442 }
+# Lakes 5
+sea_zones = { 1627 1729 } #1627 is now a Sea of Cortes region
+# Atlantic 6
+sea_zones = { 923 963 }
+# Atlantic 7
+sea_zones = { 2153 2187 } #added rio grijalva-usumacinta-mezcalapa and laguna de términos
+# Pacific 8
+sea_zones = { 2207 2222 }
+# Lakes 9
+sea_zones = { 2230 2242 }#2242
+# Bravo 10
+sea_zones = { 2285 2286 }
+#Lakes 11
+sea_zones = { 2322 2328 }
+#Lakes 12 
+sea_zones = { 2341 2360 }
+ocean_region = {	
+	sea_zones = { 1 2 6 7 10 } # Atlantic Ocean
+}
+
+ocean_region = {	
+	sea_zones = { 3 8 } # Pacific Ocean
+}
+
+ocean_region = {	
+	sea_zones = { 4 5 9 11 12 } # Lakes
+}
+
+
+# Define which indices in trees.bmp palette which should count as trees for automatic terrain assignment
+tree = { 3 4 7 10 }
+
+major_rivers = {
+	898 1488 1450 1487 1560 1486 #Champlain to Hudson River
+	939 954 1497 1498 1448 2170 #Ohio River
+	950 1449 1549 1563 2165 #Mississippi River
+	932 1550 1551 1561 1562 2162 2163 2164 2181 #Missouri River
+	1553 1555 2166 #Illinois River/Chicago Canal
+	948 962 1546 2161 # Red River
+	959 960 1559 1586 #Rio Grande
+	947 961 1556 1557 #Arkansas River
+	1612 1613 #Colorado River
+	914 915 #Brazos River
+	1618 1619 2214 #Sacramento River
+	1615 1616 1617 1626 2213 2220 2221 2222 #Columbia River
+	1443 1460 1461 1462 2180 #Rio Magdalena
+	956 957 1445 1446 1463 1464 2153 2154 2155 2157 2178 2179 #Rio Orinoco
+	935 936 1558 2158 2159 2172 #Tombigbee/Mobile River
+	933 934 952 1496 #Tennessee River
+	1444 2167 2168 #Guyana Rivers
+	913 #Saguenay River
+	899 #Delaware Canal
+	937 938#Cumberland River
+	940 #Altamaha River
+	941 943 #Apalachicola
+	942 #Connecticut
+	2215 #Willamette River
+	945 951 #White River
+	953 #Kentucky River
+	885 886 887 #Nelson River
+	875 876 877 878 879 880 881 882 883 884 #Lake Winnipeg
+	870 871 872 873 874 923 924 925 926 #Saskatechewan Rivers
+	927 928 929 930 931 #Churchill River
+	955 #Atchafalaya River
+	958 #Wabash River
+	963 2171 #Old Pearl River
+	2160 #St Johns River
+	2173 #Savannah River
+	2174 #Santee River
+	2216 #Taku
+	2219 #Fraser
+	2217 #Stikine
+	2175 #Susquehanna River
+	2176 #Delaware River
+	2177 #St. John River
+	2182 2183 #Ottawa River
+	2184 2185 2186  #Rio Usumacinta-Grijalva-Mezcalapa
+	
+}
+
+externals = { 637 638 2131 2132 2133 }

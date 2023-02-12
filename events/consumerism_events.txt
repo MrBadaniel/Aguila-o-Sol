@@ -1,0 +1,1344 @@
+namespace = consumer
+
+# RISE OF CONSUMERISM
+narrative_event = {
+	id = consumer.1
+	title = EVTNAMECONSUMER1
+	desc = EVTDESCCONSUMER1
+	picture = GFX_evt_consumerist_uprising
+	border = GFX_event_narrative_frame_religion
+	
+	major = yes
+	
+	only_independent = yes
+	only_playable = yes
+	
+	trigger = {
+		controls_religion = no
+		is_landed = yes
+		is_tribal = no
+		realm_size = 15
+		NOT = { has_global_flag = consumerist_revolt_successful }
+		capital_scope = { region = custom_usa } #what the hell was with those old requirements 
+		#I'll tell you what was up with those old requirements, they included all this important stuff. Pay attention!
+		NOT = { religion = consumerist }
+		higher_tier_than = COUNT #DUKE
+		d_consumerist = {
+			has_holder = no
+		}
+		NOT = { has_global_flag = consumerist_revolt_ongoing }
+		any_realm_province = {
+			kingdom = {
+				OR = {
+					has_holder = no
+					holder_scope = {
+						character = ROOT
+					}
+				}
+				# num_title_realm_provs = { # doesn't work
+					# who = ROOT
+					# num = 6
+				# }
+			}
+		}
+		NOT = { #immersion-breaking
+			has_alternate_start_parameter = { key = religion_names value = random }
+		}
+	}
+	
+	mean_time_to_happen = {
+		years = 500
+		modifier = {
+			factor = 0.25
+			OR = {
+				c_manhattan = {
+					holder_scope = {
+						same_realm = ROOT
+					}
+				}
+				c_chicago = {
+					holder_scope = {
+						same_realm = ROOT
+					}
+				}
+				c_twin_cities = {
+					holder_scope = {
+						same_realm = ROOT
+					}
+				}
+				c_los_angeles = {
+					holder_scope = {
+						same_realm = ROOT
+					}
+				}
+				c_las_vegas = {
+					holder_scope = {
+						same_realm = ROOT
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			year = 2700
+		}
+		modifier = {
+			factor = 0.75
+			year = 2800
+		}
+		modifier = {
+			factor = 10.0
+			ai = no
+		}
+	}
+	
+	immediate = {
+		set_character_flag = consumerist_revolt
+		set_global_flag = consumerist_revolt_ongoing
+		clr_global_event_target = consumerist_prophet
+		
+		activate_title = { title = d_consumerist status = yes }
+		
+		random_realm_province = {
+			limit = {
+				kingdom = {
+					OR = {
+						has_holder = no
+						holder_scope = {
+							character = ROOT
+						}
+					}
+					# num_title_realm_provs = { # doesn't work
+						# who = ROOT
+						# num = 6
+					# }
+				}
+			}
+			ROOT = {
+				create_character = {
+					name="Adam" #as in Smith
+					dynasty = culture
+					religion = consumerist
+					culture = ROOT
+					female = no
+					age = 35
+					health = 6.5
+					fertility = 0.6
+					trait = genius
+					trait = mastermind_theologian
+					trait = wroth #patient
+					trait = greedy
+					trait = zealous
+					trait = gregarious
+					trait = holy_warrior
+					trait = siege_leader
+					trait = ambitious
+					trait = brave
+					trait = diligent
+					trait = sayyid
+					attributes = {
+						learning = 8
+						diplomacy = 6
+						martial = 8
+						stewardship = 6
+						intrigue = 6
+					}
+				}
+	
+				new_character = {
+					random_list = { # Random chance to be given a fitting name
+						10 = {
+							set_dynasty_name = "Accounts-Receivable"
+						}
+						10 = {
+							set_dynasty_name = "Capital-Gains"
+						}
+						10 = {
+							set_dynasty_name = "Free-Enterprise"
+						}
+						10 = {
+							set_dynasty_name = "Free-Trade"
+						}
+						10 = {
+							set_dynasty_name = "Gold-Standard"
+						}
+						10 = {
+							set_dynasty_name = "Greenback"
+						}
+						10 = {
+							set_dynasty_name = "Monopoly"
+						}
+						10 = {
+							set_dynasty_name = "Profit-Margin"
+						}
+						10 = {
+							set_dynasty_name = "Trickle-Down"
+						}
+						10 = {
+							set_dynasty_name = "Venture-Capital"
+						}
+					}
+					create_bloodline={
+						type=adam
+					}
+					set_character_flag = consumerist_prophet
+					set_character_flag = the_prophet # for conversion events
+					save_global_event_target_as = consumerist_prophet
+					give_nickname = nick_the_prophet
+					character_event = { id = misc.3 } # Diversity
+					#Prophet will always be in good shape
+					wealth = 5000
+					prestige = 500
+					add_artifact = old_world_money
+					create_title = {
+						tier = DUKE
+						landless = yes
+						temporary = yes
+						culture = ROOT
+						name = CONSUMERIST_REVOLT
+						holder = THIS
+					}
+					create_random_steward = {
+						random_traits = yes
+						female = yes
+						dynasty = random
+						religion = consumerist
+						culture = PREV
+						age = 18
+						trait = zealous
+						trait = greedy
+					}
+					new_character = {
+						character_event = { id = misc.3 } # Diversity
+						character_event = { id = misc.4 } # Physique
+						add_spouse = PREV
+						impregnate = PREV
+					}
+					create_character = {
+						name="Carnegie"
+						female = no
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						age = 30
+						trait = brilliant_strategist
+						trait = investor
+					}
+					new_character = {
+						spawn_unit = {
+							province = PREVPREVPREV
+							home = PREVPREVPREV
+							owner = PREV
+							leader = THIS
+							#match_character = PREVPREV
+							#match_mult = 0.1 #0.058
+							troops = {
+								light_cavalry = { 200 200 }
+								light_infantry = { 600 600 }
+								heavy_infantry = { 300 300 }
+								knights = { 100 100 }
+								pikemen = { 200 200 }
+							}
+							attrition = 0.5
+							maintenance_multiplier = 0.3
+							cannot_inherit = yes
+						}
+						character_event = { id = misc.3 } # Diversity
+						character_event = { id = misc.4 } # Physique
+						create_random_steward = {
+							random_traits = yes
+							female = yes
+							dynasty = random
+							religion = consumerist
+							culture = PREV
+							age = 16
+						}
+						new_character = {
+							character_event = { id = misc.3 } # Diversity
+							character_event = { id = misc.4 } # Physique
+							add_spouse = PREV
+							impregnate = PREV
+						}
+					}
+					create_character = {
+						name="Keynes"
+						female = no
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						age = 27
+						trait = brilliant_strategist
+						trait = investor
+					}
+					new_character = {
+						spawn_unit = {
+							province = PREVPREVPREV
+							home = PREVPREVPREV
+							owner = PREV
+							leader = THIS
+							#match_character = PREVPREV
+							#match_mult = 0.1 #0.058
+							troops = {
+								light_cavalry = { 200 200 }
+								light_infantry = { 600 600 }
+								heavy_infantry = { 300 300 }
+								knights = { 100 100 }
+								pikemen = { 200 200 }
+							}
+							attrition = 0.5
+							maintenance_multiplier = 0.3
+							cannot_inherit = yes
+						}
+						character_event = { id = misc.3 } # Diversity
+						character_event = { id = misc.4 } # Physique
+						create_random_steward = {
+							random_traits = yes
+							female = yes
+							dynasty = random
+							religion = consumerist
+							culture = PREV
+							age = 16
+						}
+						new_character = {
+							character_event = { id = misc.3 } # Diversity
+							character_event = { id = misc.4 } # Physique
+							add_spouse = PREV
+							impregnate = PREV
+						}
+					}
+					create_character = {
+						name="Friedman"
+						female = no
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						age = 25
+						trait = skilled_tactician
+						trait = investor
+					}
+					new_character = {
+						spawn_unit = {
+							province = PREVPREVPREV
+							home = PREVPREVPREV
+							owner = PREV
+							leader = THIS
+							#match_character = PREVPREV
+							#match_mult = 0.1 #0.058
+							troops = {
+								light_cavalry = { 200 200 }
+								light_infantry = { 600 600 }
+								heavy_infantry = { 300 300 }
+								knights = { 100 100 }
+								pikemen = { 200 200 }
+							}
+							attrition = 0.5
+							maintenance_multiplier = 0.3
+							cannot_inherit = yes
+						}
+						character_event = { id = misc.3 } # Diversity
+						character_event = { id = misc.4 } # Physique
+						create_random_steward = {
+							random_traits = yes
+							female = yes
+							dynasty = random
+							religion = consumerist
+							culture = PREV
+							age = 16
+						}
+						new_character = {
+							character_event = { id = misc.3 } # Diversity
+							character_event = { id = misc.4 } # Physique
+							add_spouse = PREV
+							impregnate = PREV
+						}
+					}
+					create_character = {
+						name="Laffer"
+						female = no
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						age = 23
+						trait = skilled_tactician
+						trait = investor
+					}
+					new_character = {
+						spawn_unit = {
+							province = PREVPREVPREV
+							home = PREVPREVPREV
+							owner = PREV
+							leader = THIS
+							#match_character = PREVPREV
+							#match_mult = 0.1 #0.058
+							troops = {
+								light_cavalry = { 200 200 }
+								light_infantry = { 600 600 }
+								heavy_infantry = { 300 300 }
+								knights = { 100 100 }
+								pikemen = { 200 200 }
+							}
+							attrition = 0.5
+							maintenance_multiplier = 0.3
+							cannot_inherit = yes
+						}
+						character_event = { id = misc.3 } # Diversity
+						character_event = { id = misc.4 } # Physique
+						create_random_steward = {
+							random_traits = yes
+							female = yes
+							dynasty = random
+							religion = consumerist
+							culture = PREV
+							age = 16
+						}
+						new_character = {
+							character_event = { id = misc.3 } # Diversity
+							character_event = { id = misc.4 } # Physique
+							add_spouse = PREV
+							impregnate = PREV
+						}
+					}
+					create_character = {
+						name="Nash"
+						female = no
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						age = 27
+						trait = skilled_tactician
+						trait = investor
+					}
+					new_character = {
+						spawn_unit = {
+							province = PREVPREVPREV
+							home = PREVPREVPREV
+							owner = PREV
+							leader = THIS
+							#match_character = PREVPREV
+							#match_mult = 0.1 #0.058
+							troops = {
+								light_cavalry = { 200 200 }
+								light_infantry = { 600 600 }
+								heavy_infantry = { 300 300 }
+								knights = { 100 100 }
+								pikemen = { 200 200 }
+							}
+							attrition = 0.5
+							maintenance_multiplier = 0.3
+							cannot_inherit = yes
+						}
+						character_event = { id = misc.3 } # Diversity
+						character_event = { id = misc.4 } # Physique
+						create_random_steward = {
+							random_traits = yes
+							female = yes
+							dynasty = random
+							religion = consumerist
+							culture = PREV
+							age = 16
+						}
+						new_character = {
+							character_event = { id = misc.3 } # Diversity
+							character_event = { id = misc.4 } # Physique
+							add_spouse = PREV
+							impregnate = PREV
+						}
+					}
+					create_character = {
+						name="Meade"
+						female = no
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						age = 24
+						trait = skilled_tactician
+						trait = investor
+					}
+					new_character = {
+						spawn_unit = {
+							province = PREVPREVPREV
+							home = PREVPREVPREV
+							owner = PREV
+							leader = THIS
+							#match_character = PREVPREV
+							#match_mult = 0.1 #0.058
+							troops = {
+								light_cavalry = { 200 200 }
+								light_infantry = { 600 600 }
+								heavy_infantry = { 300 300 }
+								knights = { 100 100 }
+								pikemen = { 200 200 }
+							}
+							attrition = 0.5
+							maintenance_multiplier = 0.3
+							cannot_inherit = yes
+						}
+						character_event = { id = misc.3 } # Diversity
+						character_event = { id = misc.4 } # Physique
+						create_random_steward = {
+							random_traits = yes
+							female = yes
+							dynasty = random
+							religion = consumerist
+							culture = PREV
+							age = 16
+						}
+						new_character = {
+							character_event = { id = misc.3 } # Diversity
+							character_event = { id = misc.4 } # Physique
+							add_spouse = PREV
+							impregnate = PREV
+						}
+					}
+					create_character = {
+						name="Morgan"
+						female = no
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						age = 32
+						trait = brilliant_strategist
+						trait = investor
+					}
+					new_character = {
+						spawn_unit = {
+							province = PREVPREVPREV
+							home = PREVPREVPREV
+							owner = PREV
+							leader = THIS
+							#match_character = PREVPREV
+							#match_mult = 0.3 #0.15
+							troops = {
+								light_cavalry = { 100 100 }
+								light_infantry = { 300 300 }
+								heavy_infantry = { 200 200 }
+								knights = { 50 50 }
+								pikemen = { 200 200 }
+							}
+							attrition = 0.0
+							maintenance_multiplier = 0.3
+							cannot_inherit = yes
+							disband_on_peace = yes
+						}
+						character_event = { id = misc.3 } # Diversity
+						character_event = { id = misc.4 } # Physique
+						create_random_steward = {
+							random_traits = yes
+							female = yes
+							dynasty = random
+							religion = consumerist
+							culture = PREV
+							age = 16
+						}
+						new_character = {
+							character_event = { id = misc.3 } # Diversity
+							character_event = { id = misc.4 } # Physique
+							add_spouse = PREV
+							impregnate = PREV
+						}
+					}
+					create_character = {
+						name="Vanderbilt"
+						female = no
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						age = 25
+						trait = skilled_tactician
+						trait = investor
+					}
+					new_character = {
+						spawn_unit = {
+							province = PREVPREVPREV
+							home = PREVPREVPREV
+							owner = PREV
+							leader = THIS
+							#match_character = PREVPREV
+							#match_mult = 0.3 #0.15
+							troops = {
+								light_cavalry = { 100 100 }
+								light_infantry = { 300 300 }
+								heavy_infantry = { 200 200 }
+								knights = { 50 50 }
+								pikemen = { 200 200 }
+							}
+							attrition = 0.0
+							maintenance_multiplier = 0.3
+							cannot_inherit = yes
+							disband_on_peace = yes
+						}
+						character_event = { id = misc.3 } # Diversity
+						character_event = { id = misc.4 } # Physique
+						create_random_steward = {
+							random_traits = yes
+							female = yes
+							dynasty = random
+							religion = consumerist
+							culture = PREV
+							age = 16
+						}
+						new_character = {
+							character_event = { id = misc.3 } # Diversity
+							character_event = { id = misc.4 } # Physique
+							add_spouse = PREV
+							impregnate = PREV
+						}
+					}
+					create_character = {
+						name="Mellon"
+						female = no
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						age = 28
+						trait = skilled_tactician
+						trait = investor
+					}
+					new_character = {
+						spawn_unit = {
+							province = PREVPREVPREV
+							home = PREVPREVPREV
+							owner = PREV
+							leader = THIS
+							#match_character = PREVPREV
+							#match_mult = 0.3 #0.15
+							troops = {
+								light_cavalry = { 100 100 }
+								light_infantry = { 300 300 }
+								heavy_infantry = { 200 200 }
+								knights = { 50 50 }
+								pikemen = { 200 200 }
+							}
+							attrition = 0.0
+							maintenance_multiplier = 0.3
+							cannot_inherit = yes
+							disband_on_peace = yes
+						}
+						character_event = { id = misc.3 } # Diversity
+						character_event = { id = misc.4 } # Physique
+						create_random_steward = {
+							random_traits = yes
+							female = yes
+							dynasty = random
+							religion = consumerist
+							culture = PREV
+							age = 16
+						}
+						new_character = {
+							character_event = { id = misc.3 } # Diversity
+							character_event = { id = misc.4 } # Physique
+							add_spouse = PREV
+							impregnate = PREV
+						}
+					}
+					war = {
+						target = ROOT
+						casus_belli = consumerist_rising
+						thirdparty_title = PREVPREV
+						tier = KING
+					}
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "EVTOPTACONSUMER1"
+		trigger = {
+			has_character_flag = consumerist_revolt 
+		}
+		clr_character_flag = consumerist_revolt
+	}
+	
+	option = {
+		name = "EVTOPTBCONSUMER1"
+		trigger = {
+			NOT = { has_character_flag = consumerist_revolt } 
+		}
+	}
+}
+
+# Prophet converts province to Consumerism
+province_event = {
+	id = consumer.2
+	desc = consumer.2.desc
+	picture = GFX_evt_bishop
+	border = GFX_event_normal_frame_religion
+	
+	trigger = {
+		NOT = { religion = consumerist }
+		d_consumerist = { has_holder = yes }		
+		holder_scope = {
+			OR = {
+				any_liege = {
+					trait = sayyid
+					has_nickname = nick_the_prophet
+				}
+				AND = {
+					trait = sayyid
+					has_nickname = nick_the_prophet
+				}
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 12
+	}
+	
+	option = {
+		name = consumer.2.optA
+		trigger = { holder_scope = { religion = consumerist } }
+		religion = consumerist
+	}
+	
+	option = {
+		name = consumer.2.optB
+		trigger = { holder_scope = { NOT = { religion = consumerist } } }
+		religion = consumerist
+	}
+}
+
+# Prophet gives title to investor
+character_event = {
+	id = consumer.3
+	desc = EVTDESC_consumer_give_title
+	picture = GFX_evt_council
+	border = GFX_event_normal_frame_religion
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		random_demesne_title = {
+			limit = {
+				tier = count
+				can_be_given_away = yes
+				NOT = {
+					location = {
+						is_capital = yes
+					}
+				}
+			}
+			save_event_target_as = saved_title
+		}
+	}
+	
+	option = {
+		name = EVTOPT_consumer_give_county
+		piety = 25
+		event_target:saved_title = {
+			grant_title = FROM
+			location = {
+				any_province_holding = {
+					limit = {
+						holder_scope = { character = ROOT }
+					}
+					grant_title = FROM
+				}
+			}
+		}
+		ai_chance = {
+			factor = 30
+			modifier = {
+				factor = 0.1
+				event_target:saved_title = { port = yes }
+			}
+			modifier = {
+				factor = 0.2
+				event_target:saved_title = { num_of_settlements = 3 }
+			}
+			modifier = {
+				factor = 0.2
+				event_target:saved_title = { num_of_settlements = 4 }
+			}
+			modifier = {
+				factor = 0
+				event_target:saved_title = { num_of_settlements = 5 }
+			}
+		}
+	}
+	
+	option = {
+		name = EVTOPT_consumer_give_nothing
+		ai_chance = {
+			factor = 10
+		}
+	}
+}
+
+# CONSUMERIST HOSTILE TAKEOVER
+# Called from 'on_crusade_creation'
+# new_character is the targetted enemy
+# ROOT is the religious head
+# FROM is the attacked kingdom title
+narrative_event = {
+	id = consumer.4
+	title = EVTNAME200
+	picture = GFX_evt_battle
+	border = GFX_event_narrative_frame_war
+	
+	desc = {
+		text = EVTDESC_marketing_campaign
+		trigger = {
+			OR = {
+				new_character = {
+					NOT = { religion_group = christian }
+					NOT = { religion_group = pagan_group }
+				}
+				has_alternate_start_parameter = { key = religion_names value = random }
+			}
+		}
+	}
+	desc = {
+		text = EVTDESC_marketing_campaign_pagan
+		trigger = {
+			new_character = {
+				religion_group = pagan_group
+			}
+			NOT = {
+				has_alternate_start_parameter = { key = religion_names value = random }
+			}
+		}
+	}
+	desc = {
+		text = EVTDESC_marketing_campaign_christ
+		trigger = {
+			new_character = {
+				religion_group = christian
+			}
+			NOT = {
+				has_alternate_start_parameter = { key = religion_names value = random }
+			}
+		}
+	}
+	
+	is_triggered_only = yes
+	major = yes
+	show_ROOT = yes
+	hide_new = yes
+	
+	trigger = {
+		can_call_crusade = yes
+		ROOT = { religion = consumerist }
+	}
+	
+	option = {
+		name = EVTOPTA324 # For [God Name]!
+		trigger = { religion = ROOT }
+	}
+	option = {
+		name = EVTOPTB200 # No concern of ours
+		trigger = {
+			NOT = { religion = ROOT }
+			new_character = {
+				NOT = { religion = PREV }
+				NOT = { character = PREV }
+			}
+		}
+	}
+	option = {
+		name = EVTOPTD200 # To Arms!
+		trigger = {
+			new_character = {
+				character = PREV
+			}
+		}
+	}
+	option = {
+		name = EVTOPTE200 # Terrible News!
+		trigger = {
+			new_character = {
+				religion = PREV
+				NOT = { character = PREV }
+			}
+		}
+	}
+}
+
+# Death of the Prophet
+narrative_event = {
+	id = consumer.5 # He's dead
+	title = EVTNAMECONSUMER5
+	picture = GFX_evt_death
+	border = GFX_event_narrative_frame_religion
+	desc = {
+		trigger = { religion = consumerist }
+		text = EVTDESC_PROPHET_DIES_FAITHFUL_A # "Our Holy Prophet has died! /sad noises"
+	}
+	desc = {
+		trigger = {
+			religion_group = oldworld
+			NOT = { religion = consumerist }
+		}
+		text = EVTDESC_PROPHET_DIES_FAITHFUL_B # "Their Prophet has died. Will the Dollar Protect them?"
+	}
+	desc = {
+		trigger = {
+			NOT = { religion_group = oldworld }
+		}
+		text = EVTDESC_PROPHET_DIES_INFIDEL # "The demonic infidel false prophet has died! /happy noises"
+	}
+	
+	major = yes
+	show_root = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		has_landed_title = d_consumerist
+		NOT = { has_global_flag = consumerist_prophet_dead } # this should do it
+	}
+	major_trigger = {
+		capital_scope = { region = custom_usa }
+	}
+	
+	immediate = {
+		set_global_flag = consumerist_prophet_dead
+	}
+	
+	option = {
+		name = EVTOPT_PROPHET_DIES_FAITHFUL_A # "He left no instructions, just a legacy to protect."
+		trigger = { religion = consumerist }
+	}
+	option = {
+		name = EVTOPT_PROPHET_DIES_FAITHFUL_B # "Will the Dollar protect them? Or will the join the true fold?"
+		trigger = {
+			religion_group = oldworld
+			NOT = { religion = consumerist }
+		}
+	}
+	option = {
+		name = EVTOPTC_PROPHET_DIES_INFIDEL # "Who cares what those heathens do next?"
+		trigger = {
+			NOT = { religion_group = oldworld }
+		}
+	}
+	
+	after = {
+		set_global_flag = monetarist_grumbles
+	}
+}
+
+narrative_event = {
+	id = consumer.6 # Monetarist heresy appears, given to an Investor
+	title = EVTNAMECONSUMER6
+	picture = GFX_evt_rival_rulers
+	border = GFX_event_narrative_frame_religion
+	desc = EVTDESC_MONETARIST_6 # "An Investor, one of the companions to the Prophet of Profit, has declared what they claim is truthful doctrine: save, don't spend."
+	major = yes
+	major_trigger = {
+		capital_scope = { region = custom_usa }
+	}
+	
+	trigger = {
+		has_global_flag = monetarist_grumbles
+		NOT = { has_global_flag = monetarist_heresy }
+		trait = investor
+		is_playable = yes
+		prisoner = no
+		NOT = { is_incapable = yes }
+		NOT = { has_landed_title = d_consumerist }
+	}
+	
+	mean_time_to_happen = {
+		months = 12
+	}
+	
+	immediate = {
+		religion = monetarist
+		hidden_tooltip = {
+			activate_title = { title = d_monetarist status = yes }
+			d_monetarist = { grant_title = ROOT }
+			clr_global_flag = monetarist_grumbles
+			set_global_flag = monetarist_heresy
+		}
+	}
+	
+	option = {
+		trigger = {
+			religion_group = oldworld
+			NOT = { religion = consumerist }
+		}
+		name = EVTOPT_MONETARIST_A # Are his words true?
+		ai_chance = {
+			factor = 100
+		}
+	}
+	option = {
+		trigger = { religion_group = oldworld }
+		name = EVTOPT_MONETARIST_B # I wonder what this means ...
+		ai_chance = {
+			factor = 100
+		}
+	}
+	option = {
+		trigger = { 
+			NOT = { religion_group = oldworld }
+		}
+		name = EVTOPT_MONETARIST_C # So the infidels fight among themselves?
+		ai_chance = {
+			factor = 100
+		}
+	}
+	
+	after = {
+		hidden_tooltip = {
+			if = {
+				limit = { religion = monetarist }
+				character_event = { id = consumer.7 } # ROOT Investor rivalry with the holder of d_consumerist
+			}
+		}
+	}
+}
+
+character_event = {
+	id = consumer.7 # ping event so FROM in rivalry event is holder of d_monetarist
+	hide_window = yes
+	is_triggered_only = yes
+	option = {
+		d_monetarist = {
+			holder_scope = {
+				character_event = { id = consumer.8 }
+			}
+		}
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+character_event = { # rivalry event. I think I coded this right. FROM should be the holder of d_monetarist because of ping event 006
+	id = consumer.8
+	is_triggered_only = yes
+	desc = EVTDESC_MONETARIST_8
+	picture = GFX_evt_imam
+	border = GFX_event_normal_frame_diplomacy
+	option = {
+		name = EVTOPTA_consumer_8
+		add_rival = FROM
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+	
+	
+# Convert or Not?
+character_event = {
+	id = consumer.9
+	desc = EVTDESC_MONETARIST_9
+	picture = GFX_evt_imam
+	only_playable = yes
+	only_capable = yes
+	prisoner = no
+	
+	trigger = {
+		religion = consumerist
+		has_global_flag = monetarist_heresy
+		NOT = {
+			has_character_flag = monetarist_chosen_side
+		}
+	}
+	
+	immediate = {
+		character_event = { id = consumer.10 years = 2 }
+	}
+	
+	mean_time_to_happen = { days = 90 }
+	
+	option = { # Yes
+		name = EVTOPTA_consumer_9
+		religion = monetarist
+		any_courtier = {
+			limit = {
+				religion = consumerist
+				liege = { character = ROOT }
+			}
+			religion = monetarist
+		}
+		capital_scope = {
+			religion = monetarist
+		}
+		hidden_tooltip = {
+			set_character_flag = monetarist_chosen_side
+		}
+		ai_chance = {
+			factor = 25
+			modifier = { #Cynical characters more likely to flip
+				factor = 50
+				trait = cynical
+			}
+			modifier = { #Zealous characters will never flip
+				factor = 0
+				trait = zealous
+			}
+		}
+	}
+	option = { # No
+		name = EVTOPTB_consumer_9
+		hidden_tooltip = {
+			set_character_flag = monetarist_chosen_side
+		}
+		ai_chance = {
+			factor = 75
+			modifier = {
+				factor = 50
+				trait = cynical
+			}
+			modifier = {
+				factor = 100
+				trait = zealous
+			}
+		}
+	}
+}
+
+character_event = { # clean up and remove monetarist_heresy flag
+	id = consumer.10
+	hide_window = yes
+	only_playable = yes
+	only_capable = yes
+	prisoner = no
+	is_triggered_only = yes
+	
+	trigger = {
+		has_global_flag = monetarist_heresy
+	}
+
+	option = {
+		clr_global_flag = monetarist_heresy
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+# Player Controlled Uprising
+narrative_event = {
+	id = consumer.20
+	title = EVTNAMECONSUMER1
+	desc = EVTDESCCONSUMER1
+	picture = GFX_evt_consumerist_uprising
+	
+	trigger = {
+		ai = no
+		tier = duke
+		religion = consumerist
+		capital_scope = {
+			region = custom_usa
+		}
+		is_feudal = yes
+		OR = {
+			is_feudal = yes
+			is_merchant_republic = yes
+		}
+		NOT = { is_title_active = d_consumerist }
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = EVTOPTACONSUMER1
+		activate_title = { title = d_consumerist status = yes }
+		wealth = 5000
+		d_consumerist = {
+			grant_title = ROOT
+		}
+		add_trait = sayyid
+		usurp_title = { target = PREV type = invasion }
+		give_nickname = nick_the_prophet
+		set_character_flag = the_prophet
+		create_bloodline={
+			type=adam
+		}
+		capital_scope = {
+			religion = ROOT
+			create_character = {
+				name="Nash"
+				random_traits = yes
+				dynasty = random
+				religion = consumerist
+				culture = ROOT
+				female = no
+				age = 30
+				trait = brilliant_strategist
+				trait = investor
+			}
+			new_character = {
+				character_event = { id = misc.3 } # Diversity
+				character_event = { id = misc.4 } # Physique
+				spawn_unit = {
+					province = PREV
+						troops = {
+							light_cavalry = { 300 300 }
+							light_infantry = { 900 900 }
+							heavy_infantry = { 600 600 }
+							knights = { 150 150 }
+							pikemen = { 600 600 }
+						}
+						attrition = 0.0
+						maintenance_multiplier = 0.3
+						cannot_inherit = yes
+				}
+			}
+			create_character = {
+				random_traits = yes
+				dynasty = random
+				religion = consumerist
+				culture = ROOT
+				female = no
+				age = 30
+				trait = grey_eminence
+				trait = investor
+			}
+			new_character = {
+				character_event = { id = misc.3 } # Diversity
+				character_event = { id = misc.4 } # Physique
+			}
+			create_character = {
+				random_traits = yes
+				dynasty = random
+				religion = consumerist
+				culture = ROOT
+				female = no
+				age = 30
+				trait = midas_touched
+				trait = investor
+			}
+			new_character = {
+				character_event = { id = misc.3 } # Diversity
+				character_event = { id = misc.4 } # Physique
+			}
+			create_character = {
+				random_traits = yes
+				dynasty = random
+				religion = consumerist
+				culture = ROOT
+				female = no
+				age = 30
+				trait = elusive_shadow
+				trait = investor
+			}
+			new_character = {
+				character_event = { id = misc.3 } # Diversity
+				character_event = { id = misc.4 } # Physique
+			}
+			create_character = {
+				random_traits = yes
+				dynasty = random
+				religion = consumerist
+				culture = ROOT
+				female = no
+				age = 30
+				trait = mastermind_theologian
+				trait = investor
+			}
+			new_character = {
+				character_event = { id = misc.3 } # Diversity
+				character_event = { id = misc.4 } # Physique
+			}
+			create_character = {
+				random_traits = yes
+				dynasty = random
+				religion = consumerist
+				culture = ROOT
+				female = no
+				age = 30
+				trait = charismatic_negotiator
+				trait = investor
+			}
+			new_character = {
+				character_event = { id = misc.3 } # Diversity
+				character_event = { id = misc.4 } # Physique
+			}
+			create_character = {
+				random_traits = yes
+				dynasty = random
+				religion = consumerist
+				culture = ROOT
+				female = no
+				age = 30
+				trait = skilled_tactician
+				trait = investor
+			}
+			new_character = {
+				character_event = { id = misc.3 } # Diversity
+				character_event = { id = misc.4 } # Physique
+			}
+			create_character = {
+				random_traits = yes
+				dynasty = random
+				religion = consumerist
+				culture = ROOT
+				female = no
+				age = 30
+				trait = fortune_builder
+				trait = investor
+			}
+			new_character = {
+				character_event = { id = misc.3 } # Diversity
+				character_event = { id = misc.4 } # Physique
+			}
+			create_character = {
+				random_traits = yes
+				dynasty = random
+				religion = consumerist
+				culture = ROOT
+				female = no
+				age = 30
+				trait = intricate_webweaver
+				trait = investor
+			}
+			new_character = {
+				character_event = { id = misc.3 } # Diversity
+				character_event = { id = misc.4 } # Physique
+			}
+		}
+		random_realm_province = {
+			limit = {
+				de_jure_liege_or_above = PREVPREV
+				NOT = { religion = ROOT }
+			}
+			religion = ROOT
+		}
+		random_realm_province = {
+			limit = {
+				de_jure_liege_or_above = PREVPREV
+				NOT = { religion = ROOT }
+			}
+			religion = ROOT
+		}
+		random_realm_province = {
+			limit = {
+				de_jure_liege_or_above = PREVPREV
+				NOT = { religion = ROOT }
+			}
+			religion = ROOT
+		}
+		random_realm_province = {
+			limit = {
+				de_jure_liege_or_above = PREVPREV
+				NOT = { religion = ROOT }
+			}
+			religion = ROOT
+		}
+		random_realm_province = {
+			limit = {
+				de_jure_liege_or_above = PREVPREV
+				NOT = { religion = ROOT }
+			}
+			religion = ROOT
+		}
+		set_global_flag = consumerist_revolt_successful
+	}
+}
