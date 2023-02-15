@@ -1,0 +1,68 @@
+crown_ontario = {
+	max_amount = 1
+	spawn_date = 2299.12.25
+
+	artifacts = {
+		crown_ontario = {
+			value = 1
+		}
+	}
+
+	spawn_chance = {
+		value = 100
+
+		trigger = {
+			has_dlc = "Holy Fury"
+		}
+	}
+
+	weight = {
+		value = 0
+
+		additive_modifier = {
+			value = 100
+			primary_title = {
+				title = k_ontario
+			}
+		}
+	}
+}
+
+scimitar_canada = {
+	max_amount = 1
+	spawn_date = 1867.7.1
+
+	artifacts = {
+		scimitar_canada = {
+			value = 1
+		}
+	}
+
+	spawn_chance = {
+		value = 100
+
+		trigger = {
+			has_dlc = "Mystics"
+			is_alternate_start = no
+		}
+	}
+
+	weight = {
+		value = 0
+
+		additive_modifier = {
+			value = 100
+			primary_title = {
+				title = e_canada
+			}
+			year < 2299.12.25
+		}
+		additive_modifier = {
+			value = 100
+			primary_title = {
+				title = k_ontario
+			}
+			year >= 2299.12.25
+		}
+	}
+}

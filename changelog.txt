@@ -1,0 +1,86 @@
+---------------------------- After the End Fan Fork - Águila o Sol
+
+Current Version: 0.8.3.4.1 (quickfix 15/02/2023)
+
+Fixed adjacencies and positions bugs in Campeche and Tabasco areas.
+
+-----0.8.3.4 Changelog
+Fixed
+--CTD added in the 0.8.3.3 version
+--many vanilla ATEFF character history bugs that were never addressed
+
+-----0.8.3.3 Changelog (not public)
+Added
+--New character and title history to the k_rio_bravo
+--Decision to create new de jure kingdoms of k_coahuila and k_tamaulipas (carved out from k_rio_bravo)
+--new physique gfx for whitelatins, Mayans and mesoamericans cultures.
+
+-----0.8.3.2 Changelog (not public)
+Fixed
+--bug in the create k_belize decision that didn't allow some duchy titles to become dejure part of that formable new kingdom
+--Centralmexican and Southmexican graphical cultures show physique attributes properly.
+
+-----0.8.3.1 Changelog
+
+Added
+--South Mexico region revamped - added the Grijalva river system as a major river, and changed the ATEFF's Grijalva to the Usumacinta, since it's actually placed in the navigable part of that river.
+--3 new regions in the duchy of Tabasco, and 1 new region in the duchy of Carmen.
+--Alacranes islands in the coast of Yucatan, as part of the Empire of the Seven Seas.
+--Channel crossing in from the new province of Frontera to Isla del Carmen.
+--Land connection between two islands of the Mar de Cortes (Tiburon and San Esteban) and a land connection between Tiubron and Bahía Kino.
+--major river crossings in the new major rivers in the region, and also for the previously added Rio Grande, which went unnoticed.
+--Custom loc for garinagu and yucateco characters.
+
+Changed
+--Made Barnett, the holder of the Mar de Cortes' islands, tribal.
+--Cecilio Balán no longers holds Solferino, which is held by his previous liege. Cecilio is now the duke of Puuc, the region of southern Yucatán. He's Yucateco now (previously Yucatanense).
+--New Qabantajik holy sites: Maní (place where the ancient mayan codex were burn and one the last independent mayan capitals) and Chamula (if you have been there, you'll know why)
+
+Fixed Bugs
+--Prelado armor clipping
+--Fixed the CTD when using ruler designer on characters with centralmexican gfx such as chilango, californiano and angeleno cultures. This also means that you can change between facial hairstyles for these cultures.
+--Updated the ATEFF's vanilla special crowns since we were using an earlier version which looked jagged and poorly cut (ATEFF's vanilla crowns will look like its 1.2's counterparts).
+--Remove duplicate holdings of b_dolores_PT b_el_chal_PT b_nuevo_horizonte_PT b_melchor_de_mencos_PT b_machaquila_PT b_la_reinita_PT b_santa_amelia_PT b_benemerito_de_las_americas_CP b_huay_pix_QR b_x_canha_CM b_muxupip_YU b_ticul_YU and b_mayapan_YU.
+--CTD when clicking on the religion tab as a Qabantajik ruler
+--Several found in Justo Armas event chain
+
+-----0.8.3 Changelog
+
+Added
+--New Map Additions
+-11 new provinces, 5 new duchies under k_rio_bravo. This meant splitting up d_nuevo_leon in 2 duchies (d_nuevo_leon now loc'd as Andalucia and d_valle_del_pilon loc'd as El Pilon);
+-c_galeana was split in 2 (c_galeana and c_arroyo) and was made its own duchy (d_rio_blanco); formerly a part of d_tamaulipas.
+-d_rio_bravo_del_norte which encompass the Mexican border on the Rio Grande, made up by c_reynosa, c_matamoros and c_brazo_del_benemerito. loc'd as "Brazo del Benemerito".
+-d_la_punta, made up by c_nuevo_laredo, c_punta_de_lampazos and c_falcon.
+-d_desertica, made up by former d_coahuila's counties of c_cuatrocienegas and c_ocampo.
+-d_coahuila is now made up by c_saltillo, c_alto_de_norias and c_parras, which were basically carved off c_saltillo province
+-New loc for American holdings held by Mexican rulers
+-New loc for Mexican holdings held by Arixan, Texan, Czexan, Texaner, Bayfolk and Valleyan rulers
+
+Decision to form the Kingdom of Belize for an independent ruler whose main title is either d_belmopan or d_belize, and also completely holds d_belize (if d_belmopan) or d_belmopan (if d_belize); additionally, if they also hold d_corozal, d_toledo and/or d_orange_walk, all held duchies will become dejure part of the new kingdom.-New characters in the newly created provinces in North of Mexico.-New characters and new character history in Yucatán.
+
+-----0.8.2 (Not Public) Changelog
+
+---Fixed Bugs:
+-"Restore the Mexican Empire to Glory" decision; no longer forcers you to minimum centralization and feudal administration and it also no longer wipes title history (it gets transfered)
+-"Integrate Cristo Rey" and "Integrate Fidencistas" decision for Sagrado Corazon is no longer behind the "Restore the Mexican Empire to Glory Decision", which was previously impossible to take since the Mexican Empire was a already an empire tier title.
+
+-"Complete a Training Regimen" decision icon
+-"Chooose a Lucha Libre Style" decision icon
+
+-"Lucha de Apuestas" decision loc
+-"Create the Rite of Cristo Rey" decision loc
+
+-"A Monarchist Conspiracy Foiled" event loc
+-"Lucha de Apuestas" event loc (removed el Santo reference)
+-"Catholic Friends of Mexico ask for.." event loc
+
+-Removed holding duplicates in c_dolores, c_poptun and c_tikal.
+
+Added loc for
+-Santa Muerte
+-EVTDESC_HFP_16014_C_W
+-All the new provinces and holdings (please report if you find broken loc)
+
+-Coding issue with several loc entries (they had a blank space after the code entry so that's why some holdings had broken loc)
+-Coding issue with several loc entries in Belize as they were wrongly copypasted from our internal docs. (They were listed as CZ [Corozal] instead BL [Belize] as they currently are in code).
