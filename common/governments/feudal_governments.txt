@@ -1266,4 +1266,73 @@ feudal_governments = {
 		court_size_modifier = 10
 	}	
 	
+    reserve_government = {
+        preferred_holdings = { CASTLE TRIBAL }
+        allowed_holdings = { 
+            CASTLE 
+            TRIBAL
+            FORT
+            HOSPITAL
+        }
+        accepts_liege_governments = { # Gets the wrong religion modifier instead
+            bureaucratic_government
+            theocratic_feudal_government
+            theocracy_government
+            feudal_government
+            ghazi_government
+            montane_government
+        }
+        free_revoke_on_governments_culture = { 
+            tribal_government​
+        }
+        free_revoke_on_tiers = { baron }	
+        frame_suffix = "_reserve"
+        title_prefix = "reserve_"
+
+        potential = {
+        OR= {
+        #religion = forester
+        religion = edenite
+            }
+                NOR = {
+                character = 1890087
+                character = 1890095
+                character = 1890096
+                character = 1890097
+                character = 1890098
+                }
+             NOT = { is_government_potential = colonial_government }
+             NOT = { is_government_potential = roman_imperial_government }
+             NOT = { is_government_potential = mex_imperial_government }
+             NOT = { is_government_potential = order_government }
+             NOT = { is_government_potential = military_governorate }
+        is_patrician = no        
+        }
+        
+        color = { 0 88 38 }
+    
+        uses_piety_for_law_change = yes
+        dukes_called_kings = yes
+        barons_need_dynasty = yes
+        ignores_de_jure_laws = yes
+        can_imprison_without_reason = yes 
+
+        can_build_tribal = yes
+    
+        character_modifier = {
+            short_reign_length = 2
+        }    
+        
+         builds_with_prestige = {
+             CASTLE TRIBAL
+         }
+    
+        ignore_in_vassal_limit_calculation = {
+            tribal_government
+        }
+        capital_move_delay = 200
+        ## Modifiers
+        court_size_modifier = 10
+        min_vassal_tax = 0.1
+    }	
 }
