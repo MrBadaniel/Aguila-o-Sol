@@ -9556,7 +9556,19 @@ coat_of_arms = {
 1797018 = { name="Crossing" culture=grangelander }
 1797019 = { name="Dedale" culture=grangelander }
 1797020 = { name="Oto" culture=grangelander }
-1797021 = { name="Bluebell" culture=grangelander }
+1797021 = { name="Bluebell" culture=grangelander 
+		coat_of_arms = {
+		template = 0
+		layer = {
+			texture = 11
+			texture_internal = 37
+			emblem = 0
+			color = 0
+			color = 0
+			color = 0
+		}
+	}
+}
 1797022 = { name="Helianthus" culture=grangelander 
 	coat_of_arms = {
 		template = 0
@@ -10480,7 +10492,20 @@ coat_of_arms = {
 			color = 0
 		}
 }}
-1814043 = { name="Grey" culture=texan }
+1814043 = { name="Grey" culture=texan 
+		coat_of_arms = {
+		religion = atomicist
+		template = 0
+		layer = {
+			texture = 2
+			texture_internal = 3
+			emblem = 0
+			color = 0
+			color = 0
+			color = 0
+		}
+	}
+}
 1814044 = { name="Fountain" culture=texan }
 1814045 = { name="Bullock" culture=texan }
 1814046 = { name="Greer" culture=texan }

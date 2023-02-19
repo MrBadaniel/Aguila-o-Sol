@@ -1119,7 +1119,7 @@
 1890082={
 	name="David"
 	culture=coloradan
-	religion=trailwalker
+	religion=edenite
 	dynasty=5001213
 	trait=tough_soldier
 	trait=gluttonous
@@ -1220,7 +1220,7 @@
 
 1890089={
 	name="Sloan"
-	dynasty=1797024
+	dynasty=1876034
 	culture=coloradan
 	religion=trailwalker
 	trait=zealous
@@ -1233,9 +1233,8 @@
 1890090={
 	name="Jesse"
 	dynasty=1797024
-	culture=coloradan
+	culture=grangelander
 	religion=trailwalker
-	father=1890089
 	2545.8.6={birth=yes}
 	2612.2.21={death=yes}
 }
@@ -1252,6 +1251,7 @@
 	trait=one_eyed
 	trait=robust
 	father=1890090
+	mother=18902000
 	2581.8.6={birth=yes}
 	2653.1.21={death=yes}
 }
@@ -1281,6 +1281,7 @@
 	culture=grangelander
 	religion=trailwalker
 	father=1890090
+	mother=18902000
 	trait=trailwalker_leader
 	trait=aggressive_leader
 	trait=adventurer
@@ -2839,3 +2840,30 @@
 	religion=gaian#forester
 	2662.12.12={birth=yes}
 } 
+
+18902000={
+	name="Aventurine"
+	dynasty=1876034
+	culture=coloradan
+	religion=trailwalker
+	female=yes
+	trait=fair
+	trait=stubborn
+	trait=zealous
+	father=1890089
+	2548.1.16={birth=yes}
+	2576.4.14={add_spouse=1890090}
+	2619.1.11={death=yes}
+}
+
+18902001={
+	name="Silveranos"
+	dynasty=1876034
+	culture=coloradan
+	religion=trailwalker
+	2541.1.1={birth=yes}
+	2571.1.1={death={
+			death_reason=death_battle
+		}
+	}
+}
