@@ -1,0 +1,29 @@
+crown_colorado= {
+	max_amount = 1
+	spawn_date = 2666.1.1
+
+	artifacts = {
+		crown_colorado = {
+			value = 1
+		}
+	}
+
+	spawn_chance = {
+		value = 100
+
+		trigger = {
+			has_dlc = "Holy Fury"
+		}
+	}
+
+	weight = {
+		value = 0
+
+		additive_modifier = {
+			value = 100
+			primary_title = {
+				title = d_pueblo
+			}
+		}
+	}
+}
