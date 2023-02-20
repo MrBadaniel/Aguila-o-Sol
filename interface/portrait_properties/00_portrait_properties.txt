@@ -4464,7 +4464,7 @@
 }
 
 # p18 Special crowns_behind
-18 = {
+20 = {
 	0 = { # blank
 		factor = 100
 		modifier = {
@@ -4505,6 +4505,7 @@
 				trait = dead_restored_dogwood_crown
 				trait = dead_brazilian_beret
 				trait = dead_crown_texas
+				trait = dead_crown_ontario
 			}
 		}
 		modifier = {
@@ -4536,6 +4537,8 @@
 					artifact_type = brazilian_beret
 					artifact_type = crown_texas
 					artifact_type = crown_mexico
+					artifact_type = crown_ontario
+					artifact_type = crown_colorado
 				}
 				is_artifact_equipped = yes 
 			}
@@ -4546,7 +4549,7 @@
 		factor = 1
 		modifier = { # Makes it so the two layers are always matched (if conditions for p19/frame1 are true, use p18/frame1).
 			factor = 0
-			NOT = { has_portrait_property = { layer = 19 index = 1 } }
+			NOT = { has_portrait_property = { layer = 18 index = 1 } }
 		}
 	}
 	
@@ -4554,7 +4557,7 @@
 		factor = 1
 		modifier = {
 			factor = 0
-			NOT = { has_portrait_property = { layer = 19 index = 2 } }
+			NOT = { has_portrait_property = { layer = 18 index = 2 } }
 		}
 	}
 	
@@ -4562,91 +4565,105 @@
 		factor = 1
 		modifier = {
 			factor = 0
-			NOT = { has_portrait_property = { layer = 19 index = 3 } }
+			NOT = { has_portrait_property = { layer = 18 index = 3 } }
 		}
 	}
 	4 = { 
 		factor = 1
 		modifier = {
 			factor = 0
-			NOT = { has_portrait_property = { layer = 19 index = 4 } }
+			NOT = { has_portrait_property = { layer = 18 index = 4 } }
 		}
 	}
 	5 = { 
 		factor = 1
 		modifier = {
 			factor = 0
-			NOT = { has_portrait_property = { layer = 19 index = 5 } }
+			NOT = { has_portrait_property = { layer = 18 index = 5 } }
 		}
 	}
 	6 = { 
 		factor = 1
 		modifier = {
 			factor = 0
-			NOT = { has_portrait_property = { layer = 19 index = 6 } }
+			NOT = { has_portrait_property = { layer = 18 index = 6 } }
 		}
 	}
 	7 = { 
 		factor = 1
 		modifier = {
 			factor = 0
-			NOT = { has_portrait_property = { layer = 19 index = 7 } }
+			NOT = { has_portrait_property = { layer = 18 index = 7 } }
 		}
 	}
 	8 = { 
 		factor = 1
 		modifier = {
 			factor = 0
-			NOT = { has_portrait_property = { layer = 19 index = 8 } }
+			NOT = { has_portrait_property = { layer = 18 index = 8 } }
 		}
 	}
 	9 = { 
 		factor = 1
 		modifier = {
 			factor = 0
-			NOT = { has_portrait_property = { layer = 19 index = 9 } }
+			NOT = { has_portrait_property = { layer = 18 index = 9 } }
 		}
 	}
 	10 = { 
 		factor = 1
 		modifier = {
 			factor = 0
-			NOT = { has_portrait_property = { layer = 19 index = 10 } }
+			NOT = { has_portrait_property = { layer = 18 index = 10 } }
 		}
 	}
 	11 = { 
 		factor = 1
 		modifier = {
 			factor = 0
-			NOT = { has_portrait_property = { layer = 19 index = 11 } }
+			NOT = { has_portrait_property = { layer = 18 index = 11 } }
 		}
 	}
 	12 = { 
 		factor = 1
 		modifier = {
 			factor = 0
-			NOT = { has_portrait_property = { layer = 19 index = 12 } }
+			NOT = { has_portrait_property = { layer = 18 index = 12 } }
 		}
 	}
 	13 = { 
 		factor = 1
 		modifier = {
 			factor = 0
-			NOT = { has_portrait_property = { layer = 19 index = 13 } }
+			NOT = { has_portrait_property = { layer = 18 index = 13 } }
 		}
 	}
 	14 = { 
 		factor = 1
 		modifier = {
 			factor = 0
-			NOT = { has_portrait_property = { layer = 19 index = 14 } }
+			NOT = { has_portrait_property = { layer = 18 index = 14 } }
 		}
 	}
 	15 = { 
 		factor = 1
 		modifier = {
 			factor = 0
-			NOT = { has_portrait_property = { layer = 19 index = 15 } }
+			NOT = { has_portrait_property = { layer = 18 index = 15 } }
+		}
+	}
+	18 = { 
+		factor = 1
+		modifier = {
+			factor = 0
+			NOT = { has_portrait_property = { layer = 18 index = 19 } }
+		}
+	}
+	19 = { 
+		factor = 1
+		modifier = {
+			factor = 0
+			NOT = { has_portrait_property = { layer = 18 index = 20 } }
 		}
 	}
 }
@@ -4693,6 +4710,7 @@
 				trait = dead_restored_dogwood_crown
 				trait = dead_brazilian_beret
 				trait = dead_crown_texas
+				trait = dead_crown_ontario
 			}
 		}
 		modifier = {
@@ -4723,6 +4741,8 @@
 					artifact_type = restored_dogwood_crown
 					artifact_type = brazilian_beret
 					artifact_type = crown_texas
+					artifact_type = crown_ontario
+					artifact_type = crown_colorado
 				}
 				is_artifact_equipped = yes 
 			}
@@ -5075,6 +5095,50 @@
 					is_artifact_equipped = yes 
 				}
 				trait = dead_crown_mexico
+			}
+		}
+	}
+	18 = {
+		factor = 100
+		hide_layers = { 5 = { } } #Hide layer 5 (headgear) when this frame is picked.
+		modifier = {
+			factor = 0
+			in_command = yes
+			has_game_rule = {
+				name = martial_headgear
+				value = on
+			}
+		}
+		modifier = { # Ontario Royal Crown
+			factor = 0
+			NOR = { 
+				any_artifact = {
+					artifact_type = crown_ontario
+					is_artifact_equipped = yes 
+				}
+				trait = dead_crown_ontario
+			}
+		}
+	}
+	19 = {
+		factor = 100
+		hide_layers = { 5 = { } } #Hide layer 5 (headgear) when this frame is picked.
+		modifier = {
+			factor = 0
+			in_command = yes
+			has_game_rule = {
+				name = martial_headgear
+				value = on
+			}
+		}
+		modifier = { # montane Royal Crown
+			factor = 0
+			NOR = { 
+				any_artifact = {
+					artifact_type = crown_colorado
+					is_artifact_equipped = yes 
+				}
+				#trait = dead_crown_ontario
 			}
 		}
 	}
