@@ -221,7 +221,7 @@
 	name="Michael"
 	dynasty=1867027
 	culture=ontarian
-	religion=norse_pagan
+	religion=nonconformist
 	father=1667011
 	martial=6
 	diplomacy=6
@@ -229,9 +229,10 @@
 	trait=flamboyant_schemer
 	trait=gregarious
 	trait=brave
-	trait=sympathy_american_native
+	add_claim=c_lakehead
 	2644.1.1={birth=yes}
 	2660.1.1={add_spouse=1667044}
+	2665.1.1={capital=c_aguasabon}
 	2700.1.1={death=yes}
 }
 
@@ -565,16 +566,16 @@
 1667044={
 	name="Janice"
 	female=yes
-	dynasty=1491500
+				
 	culture=ojibwe
-	religion=norse_pagan
+	religion=nonconformist
 	trait=fair
 	trait=honest
 	trait=kind
 	trait=patient
 	trait=charismatic_negotiator
-	father=1920010
-	mother=1920011
+			   
+			   
 	2643.2.10={birth=yes}
 	2700.1.1={death=yes}
 }
@@ -583,7 +584,7 @@
 	name="Lindsay"
 	dynasty=1867027
 	culture=ontarian
-	religion=norse_pagan
+	religion=nonconformist
 	father=1667019
 	mother=1667044
 	trait=fair
@@ -988,6 +989,7 @@
 1667074={
 	name="Ferris"
 	dynasty=1867027
+	father=4000202
 	culture=ontarian
 	religion=nonconformist
 	trait=zealous

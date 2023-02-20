@@ -1,0 +1,22 @@
+name = "The Great War, Central Front"
+
+casus_belli={
+	casus_belli=cad_civil_war
+	actor=1867007
+	recipient=1857082
+	landed_title=k_ontario
+	date=2665.8.20
+}
+
+# In civil wars defender MUST be added before attacker!
+2665.8.20 = {
+	add_defender = 1857082
+	add_attacker = 1867007
+	add_attacker = 1867043
+	add_attacker = 1763030
+	start_war = yes
+	vassal_liege = {
+		vassal = 1867007
+		liege = 1857082
+	}
+}

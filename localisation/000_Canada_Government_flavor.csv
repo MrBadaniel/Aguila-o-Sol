@@ -1,0 +1,54 @@
+canadian_imperial_government;Dominion;;;;;;;;;;;;;x
+canadian_imperial_government_desc;The Dominion was developed over centuries by the Kings of Ontario, with its origins in the early days after the Deluge and the Remembrant Church. The realm relies on the strength of its monarch and his army to maintain power, marginalizing feudal nobles. The ruling dynasty and its commanders work hand in hand to keep the landed aristocracy in line and their power at a minimum. Dominion government users become feudal upon conversion to a different faith.;;;;;;;;;;;;;x
+canadian_imperial_government_FEATURES;�Y*�! Kings have access to Vice Royalties.;;;;;;;;;;x
+
+mountie_desc;This character has served with the Royal Mounted Legion.;;;;;;;;;;;;;x
+
+title_parliamentarian_king;Parliamentarian;;;;;;;;;;;;;x
+
+KING_CANADA_FOA;To the August, Majestic, Imperial Dominus, Protector of Civilization;;;;;;;;;;;;;x
+ERA_CHAR_NAME_TYRRELL;Tyrrell Cornwallis;;;;;;;;;;;;;x
+BM_GHOSTS_OF_THE_NORTH_DESC;The northern regions of Old America and Canada are a hotbed of turmoil and conflict. Christian and pagan faiths alike vie for control of the region, with Quebecois schismatics and the descendants of the Pennsylvania Amish vying for control alongside New English practitioners of the occult and Rust Belt denizens who worship the long-abandoned auto factories and steel mills of the Old World. In the center of all this turmoil lies the Dominion of Ontario, an old realm in turmoil beset on all sides by enemies, it has earned the fury of the Sons of Soady, who now marshall a great heathen army to bring low this kingdom.;;;;;;;;;;;;;x;;
+BM_GHOSTS_OF_THE_NORTH_ERA_INFO;The northern regions of Old America and Canada are a hotbed of turmoil and conflict. Christian and pagan faiths alike vie for control of the region, with Quebecois schismatics and the descendants of the Pennsylvania Amish vying for control alongside New English practitioners of the occult and Rust Belt denizens who worship the long-abandoned auto factories and steel mills of the Old World. In the center of all this turmoil lies the Dominion of Ontario, an old realm in turmoil beset on all sides by enemies, it has earned the fury of the Sons of Soady, who now marshall a great heathen army to bring low this kingdom.;;;;;;;;;;;;;x;;
+
+ERA_CHAR_INFO_1857082;Canada is long gone, but under the House of Cornouailles, Ontario had built itself anew, braving the many storms that have beset the North. Its golden age, was brought crashing down by Veronique Castel at the battle on the plains of Abraham, where she slaughtered much of the Royal family. In the power struggles afterwards the old royal family was forced into exile, and the throne was up for grabs. After decades of chaos, it seems now is the time for Clan Cornwallis descendents of the mighty Cornouailles dynasty to retake the Throne. Ontario, however, is beset on all sides - Pagans, Quebecois warlords, civil war and worst of them all the Sons of Soady. They are coming with fire and blood to avenge their father. Can Tyrrell repel this storm of furry, or is this the end for Ontario?;;;;;;;;;;;;;x
+
+
+succ_royal_tanistry;Parliamentary Succession;;;;;;;;;;;;;x
+royal_tanistry;Parliamentary Succession;;;;;;;;;;;;;x
+succ_royal_tanistry_desc;Insituted by King Theodore the 1st, The Parliament is the assembly of the nobles of Ontario. These Nobles gather to elect the Kings of Ontario, Normally close Relatives of the King are favored but Distant relatives if ambitious enough could make a play for the Throne...;;;;;;;;;;;;;x
+military_tanistry;Military Tanistry;;;;;;;;;;;;;x
+Military_District_Rule;Earldom;;;;;;;;;;;;;x
+Royal_Stratocracy;Imperial Dominion;;;;;;;;;;;;;x
+Military_Marquis;Commissioned Marquisate;;;;;;;;;;;;;x
+Military_Governor;Provincial Governorship
+Military_King;Royal Dominion;;;;;;;;;;;;;x
+d_home;Ontario;;;;;;;;;;;;;x
+CAD_TITLE_PREFIX;Military;;;;;;;;;;;;;x
+canadien;Canadien;;;;;;;;;;;;;x
+c_toronto;Tarano;;;;;;;;;;;;;x
+b_toronto_ON;Taranoville;;;;;;;;;;;;;x
+b_york_ON;Tarano;;;;;;;;;;;;;x
+b_scarborough_ON;Citadel de Saint Michael's;;;;;;;;;;;;;x
+
+
+d_mounties;Royal Mounted Legion;;;;;;;;;;;;;x
+
+# only defined for character scopes at the moment, titles could be added later
+defined_text = {
+	name = CAD_GetDebugName
+	text = {
+		localisation_key = CAD_String_DebugNameRuler
+		trigger = { is_ruler = yes }
+	}
+	text = {
+		localisation_key = CAD_String_DebugNameChar
+		trigger = { is_ruler = no }
+	}
+}
+
+
+crown_ontario;The Crimson Crown;;;;;;;;;;;;;x
+crown_ontario_desc;This crown was forged by King Theodore Cornouailles in celebration after his victory against Vincent Mahonic, securing an independent Ontario;;;;;;;;;;;;;x
+scimitar_canada;Caliburn;;;;;;;;;;;;;x
+scimitar_canada_desc;Said to be forged in the last days of the ancient Dominion of Canada by Arthur Garneau, this blade is unlike any modern one crafted of a metal no Smith can replicate.;;;;;;;;;;;;;x

@@ -1,0 +1,47 @@
+government_flavor = {
+	name = Royal_Stratocracy
+	graphics = GFX_evt_victory_arch_byzantine
+	priority = 4
+	trigger = {
+		has_law = succ_byzantine_elective
+		is_landed = yes
+		has_landed_title = e_canada #placeholder
+	}	
+}
+government_flavor = {
+	name = Military_District_Rule
+	graphics = GFX_evt_bloodlines
+	priority = 4
+	trigger = {
+		government = canadian_imperial_government
+		tier = COUNT
+	}	
+}
+government_flavor = {
+	name = Military_Marquis
+	graphics = GFX_evt_bloodlines
+	priority = 4
+	trigger = {
+		government = canadian_imperial_government
+		tier = DUKE
+	}	
+}
+government_flavor = {
+	name = Military_Governor
+	graphics = GFX_evt_bloodlines
+	priority = 4
+	trigger = {
+		government = canadian_imperial_government
+		tier = DUKE
+		is_vice_royalty = yes
+	}	
+}
+government_flavor = {
+	name = Military_King
+	graphics = GFX_evt_bloodlines
+	priority = 4
+	trigger = {
+		government = canadian_imperial_government
+		tier = KING
+	}	
+}

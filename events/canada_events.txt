@@ -1,0 +1,1666 @@
+# Ursuline, High Church, and other Canadian events
+namespace = canada
+
+# The Schism Mended (Catholics v Ursulines)
+narrative_event = {
+	id = canada.1
+	title = EVTNAME_canada_1
+	desc = EVTDESC_canada_1
+	
+	picture = GFX_evt_icon
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_canada_1
+
+		if = {
+			limit = { religion = catholic }
+			set_parent_religion = { religion = ursuline parent = catholic }
+		}
+		if = {
+			limit = { religion = neognostic }
+			set_parent_religion = { religion = ursuline parent = neognostic }
+		}
+		if = {
+			limit = { religion = sedevacantist }
+			set_parent_religion = { religion = ursuline parent = sedevacantist }
+		}
+		if = {
+			limit = { religion = nestorian }
+			set_parent_religion = { religion = ursuline parent = nestorian }
+		}
+
+		give_nickname = nick_the_saint
+		hidden_tooltip = {
+			any_playable_ruler = {
+				limit = {
+					religion = ursuline
+					controls_religion = no
+				}
+				narrative_event = { id = canada.2 }
+			}
+		}
+	}
+}
+
+# Convert or Not?
+narrative_event = {
+	id = canada.2
+	title = EVTNAME_canada_1
+	desc = EVTDESC_canada_1
+	
+	picture = GFX_evt_icon
+	
+	is_triggered_only = yes
+	
+	option = { # Yes
+		name = EVTOPTALoR.211
+		ai_chance = { factor = 75 }
+		religion = FROM
+		any_courtier = {
+			limit = {
+				religion = ursuline
+				liege = { character = ROOT }
+			}
+			religion = FROM
+		}
+		capital_scope = {
+			religion = FROM
+		}
+	}
+	option = { # No
+		name = EVTOPTBLoR.211
+		ai_chance = { factor = 25 }
+	}
+}
+
+
+# Triggered on death of Abbess
+character_event = {
+	id = canada.3
+	desc = "Replace Abbess"
+	is_triggered_only = yes
+	picture = GFX_evt_canada_confederation
+	religion = ursuline
+	lacks_dlc = "Sons of Abraham"
+
+	trigger = {
+		NOT = { #immersion-breaking
+			has_alternate_start_parameter = { key = religion_names value = random }
+		}
+		has_landed_title = k_ursuline
+	}
+	
+	option = {
+		# Make sure they're a good age
+		random_list = {
+			10 = { create_random_priest = {
+				random_traits = yes
+				religion = ursuline
+				culture = quebecois
+				female = yes
+				age = 30
+			} }
+			10 = { create_random_priest = {
+				random_traits = yes
+				religion = ursuline
+				culture = quebecois
+				female = yes
+				age = 35
+			} }
+			10 = { create_random_priest = {
+				random_traits = yes
+				religion = ursuline
+				culture = quebecois
+				female = yes
+				age = 40
+			} }
+			20 = { create_random_priest = {
+				random_traits = yes
+				religion = ursuline
+				culture = quebecois
+				female = yes
+				age = 45
+			} }
+			20 = { create_random_priest = {
+				random_traits = yes
+				religion = ursuline
+				culture = quebecois
+				female = yes
+				age = 50
+			} }
+			20 = { create_random_priest = {
+				random_traits = yes
+				religion = ursuline
+				culture = quebecois
+				female = yes
+				age = 55
+			} }
+			10 = { create_random_priest = {
+				random_traits = yes
+				religion = ursuline
+				culture = quebecois
+				female = yes
+				age = 60
+			} }
+		}
+		new_character = { 
+			character_event = { id = misc.3 } # Diversity
+			character_event = { id = misc.4 } # Physique 
+			ROOT = { 
+				any_demesne_title = { 
+					gain_title = PREVPREV 
+				}
+			}
+		} 
+	}
+}
+
+character_event = {
+	id = canada.4	
+	desc = EVTDESC_canada_4
+	picture = GFX_evt_bishop
+	religion = high_church
+	is_triggered_only = yes
+
+	trigger = {
+		NOT = {
+			has_alternate_start_parameter = { key = religion_names value = random }
+		}
+	}
+	
+	option = {
+		name = EVTOPTA_canada_4
+		hidden_tooltip = {
+			remove_trait = broad_anglican
+			remove_trait = low_anglican
+		}
+		add_trait = high_anglican
+		ai_chance = {
+			factor = 10
+			modifier = { factor = 2	learning = 10 }
+		}
+	}
+
+	option = {
+		name = EVTOPTB_canada_4
+		hidden_tooltip = {
+			remove_trait = high_anglican
+			remove_trait = low_anglican
+		}
+		add_trait = broad_anglican
+		ai_chance = {
+			factor = 10
+			modifier = { factor = 2	learning = 5 }
+			modifier = { factor = 2	diplomacy = 5 }
+		}
+	}
+	
+	option = {
+		name = EVTOPTC_canada_4
+		hidden_tooltip = {
+			remove_trait = broad_anglican
+			remove_trait = high_anglican
+		}
+		add_trait = low_anglican
+		ai_chance = {
+			factor = 10
+			modifier = { factor = 1.5 diplomacy = 10 }
+		}
+	}
+}
+
+character_event = {
+	id = canada.5	
+	hide_window = yes
+	religion = high_church
+	ai = yes
+	is_triggered_only = yes
+
+	trigger = {
+		NOT = {
+			has_alternate_start_parameter = { key = religion_names value = random }
+		}
+		NOR = {
+			trait = high_anglican
+			trait = broad_anglican
+			trait = low_anglican
+		}
+	}
+	
+	immediate = {
+		random_list = {
+			33 = {
+				add_trait = high_anglican
+			}
+			33 = {
+				add_trait = broad_anglican
+			}
+			33 = {
+				add_trait = low_anglican
+			}
+		}
+	}
+}
+
+# The Schism Mended (Ursulines v Catholics)
+narrative_event = {
+	id = canada.6
+	title = EVTNAME_canada_6
+	desc = EVTDESC_canada_6
+	
+	picture = GFX_evt_icon
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_canada_1
+
+		if = {
+			limit = { religion = ursuline }
+			set_parent_religion = { religion = catholic parent = ursuline }
+		}
+		if = {
+			limit = { religion = angeline }
+			set_parent_religion = { religion = catholic parent = angeline }
+		}
+
+		give_nickname = nick_the_saint
+		hidden_tooltip = {
+			any_playable_ruler = {
+				limit = {
+					religion = catholic
+					controls_religion = no
+				}
+				narrative_event = { id = canada.7 }
+			}
+		}
+	}
+}
+
+# Convert or Not?
+narrative_event = {
+	id = canada.7
+	title = EVTNAME_canada_6
+	desc = EVTDESC_canada_6
+	
+	picture = GFX_evt_icon
+	
+	is_triggered_only = yes
+	
+	option = { # Yes
+		name = EVTOPTALoR.211
+		ai_chance = { factor = 75 }
+		religion = FROM
+		any_courtier = {
+			limit = {
+				religion = catholic
+				liege = { character = ROOT }
+			}
+			religion = FROM
+		}
+		capital_scope = {
+			religion = FROM
+		}
+	}
+	option = { # No
+		name = EVTOPTBLoR.211
+		ai_chance = { factor = 25 }
+	}
+}
+
+# THE START OF THE URSULINE CRUSADES - 1090 AND JERUSALEM NOT CHRISTIAN
+narrative_event = {
+	id = canada.10
+	title = canada.10.title
+	desc = canada.10.desc
+	picture = GFX_evt_ursuline_crusade
+	border = GFX_event_narrative_frame_religion
+	
+	major = yes
+	
+	show_ROOT = yes
+	hide_new = yes
+	religion = ursuline
+	only_playable = yes
+	min_age = 16
+	
+	trigger = {
+		NOT = { #immersion-breaking
+			has_alternate_start_parameter = { key = religion_names value = random }
+		}
+		controls_religion = yes
+		year = 2690
+		
+		OR = {
+			1010 = { # Sault
+				NOT = { owner = { religion_group = christian } }
+			}
+			118 = { # Detroit
+				NOT = { owner = { religion_group = christian } }
+			}
+		}
+		
+		NOT = { has_global_flag = ursuline_crusades_unlocked }
+	}
+	
+	mean_time_to_happen = {
+		months = 120
+	}
+	
+	immediate = {
+		set_global_flag = ursuline_crusades_unlocked
+	}
+	
+	option = {
+		name = canada.10.optA
+		trigger = {
+			religion_group = christian
+		}
+	}
+	
+	option = {
+		name = EVTOPTB39660
+		trigger = {
+			NOT = { religion_group = christian }
+		}
+	}
+}
+
+# THE START OF THE URSULINE CRUSADES - MARITIMES FAILING
+narrative_event = {
+	id = canada.11
+	title = canada.10.title
+	desc = canada.11.desc
+	picture = GFX_evt_ursuline_crusade
+	border = GFX_event_narrative_frame_religion
+	
+	major = yes
+	
+	show_ROOT = yes
+	hide_new = yes
+	religion = ursuline
+	only_playable = yes
+	min_age = 16
+	
+	trigger = {
+		NOT = { #immersion-breaking
+			has_alternate_start_parameter = { key = religion_names value = random }
+		}
+		controls_religion = yes
+		year = 2690
+		NOT = { has_global_flag = ursuline_crusades_unlocked }
+		
+		OR = {
+			k_maritimes = {
+				holder_scope = {
+					NOT = { religion_group = christian }
+				}
+			}
+			1260 = { # Chebucto (Halifax)
+				NOT = { owner = { religion_group = christian } }
+			}
+			1163 = { # Meduxnekeag (Canterbury)
+				NOT = { owner = { religion_group = christian } }
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 3
+	}
+	
+	immediate = {
+		set_global_flag = ursuline_crusades_unlocked
+	}
+	
+	option = {
+		name = canada.10.optA
+		trigger = {
+			religion_group = christian
+		}
+	}
+	
+	option = {
+		name = EVTOPTB39660
+		trigger = {
+			NOT = { religion_group = christian }
+		}
+	}
+}
+
+# THE START OF THE URSULINE CRUSADES - QUEBEC CITY HAS FALLEN
+narrative_event = {
+	id = canada.12
+	title = canada.10.title
+	desc = canada.12.desc
+	picture = GFX_evt_ursuline_crusade
+	border = GFX_event_narrative_frame_religion
+	
+	major = yes
+	
+	show_ROOT = yes
+	hide_new = yes
+	religion = ursuline
+	only_playable = yes
+	min_age = 16
+	
+	trigger = {
+		NOT = { #immersion-breaking
+			has_alternate_start_parameter = { key = religion_names value = random }
+		}
+		controls_religion = yes
+		year = 2500
+		NOT = { has_global_flag = ursuline_crusades_unlocked }
+		
+		1199 = { # Cap Diamant
+			owner = {
+				OR = {
+					NOT = { religion_group = christian }
+					is_heretic = yes
+				}
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 3
+	}
+	
+	immediate = {
+		set_global_flag = ursuline_crusades_unlocked
+	}
+	
+	option = {
+		name = canada.10.optA
+		trigger = {
+			religion_group = christian
+		}
+	}
+	
+	option = {
+		name = EVTOPTB39660
+		trigger = {
+			NOT = { religion_group = christian }
+		}
+	}
+}
+
+# THE START OF THE URSULINE CRUSADES - MISC CHRISTENDOM
+narrative_event = {
+	id = canada.13
+	title = canada.10.title
+	desc = canada.13.desc
+	picture = GFX_evt_ursuline_crusade
+	border = GFX_event_narrative_frame_religion
+	
+	major = yes
+	
+	show_ROOT = yes
+	hide_new = yes
+	religion = ursuline
+	only_playable = yes
+	min_age = 16
+	
+	trigger = {
+		NOT = { #immersion-breaking
+			has_alternate_start_parameter = { key = religion_names value = random }
+		}
+		controls_religion = yes
+		year = 2690
+		NOT = { has_global_flag = ursuline_crusades_unlocked }
+		
+		OR = {
+			1271 = { # Toronto
+				NOT = { owner = { religion_group = christian } }
+			}
+			1217 = { # Hochelaga (Montreal)
+				NOT = { owner = { religion_group = christian } }
+			}
+			1297 = { # Ottawa
+				NOT = { owner = { religion_group = christian } }
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 3
+	}
+	
+	immediate = {
+		set_global_flag = ursuline_crusades_unlocked
+	}
+	
+	option = {
+		name = canada.10.optA
+		trigger = {
+			religion_group = christian
+		}
+	}
+	
+	option = {
+		name = EVTOPTB39660
+		trigger = {
+			NOT = { religion_group = christian }
+		}
+	}
+}
+
+#Fixes Agnatic succession thing
+#character_event = {
+#	id = canada.14
+#	desc = EVTDESC_gaian_laws
+#	picture = GFX_evt_courtiers_talking
+#	religion = ursuline
+#	
+#	mean_time_to_happen = {
+#		months = 1
+#	}
+#
+#	trigger = {
+#		is_theocracy = yes
+#		is_landed = yes
+#		primary_title = {
+#			OR = {
+#				has_law = agnatic_succession
+#				has_law = cognatic_succession
+#			}
+#		}
+#	}
+#	
+#	option = {
+#		name = EVTOPT_gaian_law_enat
+#		trigger = { is_female = yes }
+#		primary_title = { add_law = enatic_succession }
+#		piety = 20
+#		ai_chance = {
+#			factor = 1
+#		}
+#	}
+#}
+
+##Canadian Pilgrimage events##
+
+#Choose destination as Canadian
+character_event = {
+	id = canada.15
+	desc = EVTDESC_SoA_5011
+	picture = GFX_evt_icon
+	border = GFX_event_normal_frame_religion
+	
+	is_triggered_only = yes
+
+	option = {
+		name = EVTOPTA_canada_15
+		trigger = {
+			NOT = { capital_scope = { province_id = 1297 } } #Ottawa
+			NOT = { religion = ursuline }
+			NOT = { religion = angeline }
+		}
+		set_character_flag = pilgrimage_to_ottawa
+		hidden_tooltip = {
+			character_event = { id = canada.16 days = 15 }
+		}
+		if = {
+			limit = { ai = no }
+			chronicle = {
+				entry = CHRONICLE_PILGRIMAGE_TO_OTTAWA
+				picture = GFX_evt_pilgrims_epic_journey
+			}
+		}
+	}
+
+	option = {
+		name = EVTOPTB_canada_15
+		trigger = {
+			NOT = { capital_scope = { province_id = 1163 } } #Canterbury
+			NOT = { religion = ursuline }
+			NOT = { religion = angeline }
+		}
+		set_character_flag = pilgrimage_to_new_canterbury
+		hidden_tooltip = {
+			character_event = { id = canada.17 days = 15 }
+		}
+		if = {
+			limit = { ai = no }
+			chronicle = {
+				entry = CHRONICLE_PILGRIMAGE_TO_NEW_CANTERBURY
+				picture = GFX_evt_pilgrims_epic_journey
+			}
+		}
+	}
+	option = {
+		name = EVTOPTC_canada_15
+		trigger = {
+			NOT = { capital_scope = { province_id = 1199 } } #Quebec
+			NOT = { religion = high_church }
+			NOT = { religion = nonconformist }
+		}
+		set_character_flag = pilgrimage_to_quebec
+		hidden_tooltip = {
+			character_event = { id = canada.18 days = 15 }
+		}
+		if = {
+			limit = { ai = no }
+			chronicle = {
+				entry = CHRONICLE_PILGRIMAGE_TO_QUEBEC
+				picture = GFX_evt_pilgrims_epic_journey
+			}
+		}
+	}
+	option = {
+		name = EVTOPTD_canada_15
+		trigger = {
+			OR = {
+				religion = ursuline
+				religion = angeline
+			}
+			NOT = { capital_scope = { province_id = 118 } } #Detroit
+		}
+		set_character_flag = pilgrimage_to_detroit
+		hidden_tooltip = {
+			character_event = { id = canada.19 days = 15 }
+		}
+		if = {
+			limit = { ai = no }
+			chronicle = {
+				entry = CHRONICLE_PILGRIMAGE_TO_DETROIT
+				picture = GFX_evt_pilgrims_epic_journey
+			}
+		}
+	}
+	option = {
+		name = EVTOPTE_canada_15
+		trigger = {
+			OR = {
+				religion = ursuline
+				religion = angeline
+			}
+			NOT = { capital_scope = { province_id = 1124 } } #New Orleans
+		}
+		set_character_flag = pilgrimage_to_new_orleans
+		hidden_tooltip = {
+			character_event = { id = canada.20 days = 15 }
+		}
+		if = {
+			limit = { ai = no }
+			chronicle = {
+				entry = CHRONICLE_PILGRIMAGE_TO_NEW_ORLEANS
+				picture = GFX_evt_pilgrims_epic_journey
+			}
+		}
+	}
+	option = {
+		name = EVTOPTF_canada_15
+		trigger = {
+			OR = {
+				religion = high_church
+				religion = nonconformist
+			}
+			NOT = { capital_scope = { province_id = 63 } } #Washington
+		}
+		set_character_flag = pilgrimage_to_jerusalem
+		hidden_tooltip = {
+			character_event = { id = SoA.5022 days = 15 }
+		}
+		if = {
+			limit = { ai = no }
+			chronicle = {
+				entry = CHRONICLE_PILGRIMAGE_TO_JERUSALEM
+				picture = GFX_evt_pilgrims_epic_journey
+			}
+		}
+	}
+}
+
+# Setting out for Ottawa (also selects events for road)
+character_event = {
+	id = canada.16
+	desc = EVTDESC_canada_16
+	picture = GFX_evt_pilgrims_epic_journey
+	border = GFX_event_normal_frame_religion
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_SoA_5021
+		clr_character_flag = preparing_pilgrimage
+		hidden_tooltip = {
+			add_trait = on_pilgrimage
+			set_character_flag = good_pilgrimage
+			narrative_event = { id = canada.21 days = 30 }
+		}
+		hidden_tooltip = {
+			if = {
+				limit = {
+					location = {
+						distance = {
+							where = 1297 # Ottawa
+							value = 400	# Longer journey
+						}
+					}
+				}
+				random_list = {
+					10 = { character_event = { id = SoA.5026 days = 5 random = 9 } } # List for longer journeys only
+					10 = { character_event = { id = SoA.5027 days = 5 random = 9 } }
+					10 = { narrative_event = { id = SoA.5028 days = 5 random = 9 } }
+					10 = { character_event = { id = SoA.5029 days = 5 random = 9 } }
+					10 = { character_event = { id = SoA.5030 days = 5 random = 9 } }
+				}
+			}
+	
+			random_list = {
+				10 = { character_event = { id = SoA.5031 days = 15 random = 7 } } # List that is always checked
+				10 = { character_event = { id = SoA.5032 days = 15 random = 7 } }
+				10 = { narrative_event = { id = SoA.5033 days = 15 random = 7 } }
+				10 = { character_event = { id = SoA.5034 days = 15 random = 7 } }
+				10 = { character_event = { id = SoA.5035 days = 15 random = 7 } }
+				10 = { character_event = { id = SoA.5036 days = 15 random = 7 } }
+				10 = { character_event = { id = SoA.5037 days = 15 random = 7 } }
+				10 = { character_event = { id = SoA.5038 days = 15 random = 7 } }
+				10 = { character_event = { id = SoA.5039 days = 15 random = 7 } }
+			}
+			if = {
+				limit = {
+					is_title_active = d_st_pats
+				}
+				random_list = {
+					10 = { narrative_event = { id = SoA.5045 days = 23 random = 4 } } # Holy orders events, close to destination
+					10 = { character_event = { id = SoA.5046 days = 23 random = 4 } }
+					10 = { character_event = { id = SoA.5047 days = 23 random = 4 } }
+				}
+			}
+		}
+	}
+}
+
+# Setting out for Canterbury (also selects events for road)
+character_event = {
+	id = canada.17
+	desc = EVTDESC_canada_17
+	picture = GFX_evt_pilgrims_epic_journey
+	border = GFX_event_normal_frame_religion
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_SoA_5021
+		clr_character_flag = preparing_pilgrimage
+		hidden_tooltip = {
+			add_trait = on_pilgrimage
+			set_character_flag = good_pilgrimage
+			narrative_event = { id = canada.22 days = 30 }
+		}
+		hidden_tooltip = {
+			if = {
+				limit = {
+					location = {
+						distance = {
+							where = 1163 # Canterbury
+							value = 400	# Longer journey
+						}
+					}
+				}
+				random_list = {
+					10 = { character_event = { id = SoA.5026 days = 5 random = 9 } } # List for longer journeys only
+					10 = { character_event = { id = SoA.5027 days = 5 random = 9 } }
+					10 = { narrative_event = { id = SoA.5028 days = 5 random = 9 } }
+					10 = { character_event = { id = SoA.5029 days = 5 random = 9 } }
+					10 = { character_event = { id = SoA.5030 days = 5 random = 9 } }
+				}
+			}
+	
+			random_list = {
+				10 = { character_event = { id = SoA.5031 days = 15 random = 7 } } # List that is always checked
+				10 = { character_event = { id = SoA.5032 days = 15 random = 7 } }
+				10 = { narrative_event = { id = SoA.5033 days = 15 random = 7 } }
+				10 = { character_event = { id = SoA.5034 days = 15 random = 7 } }
+				10 = { character_event = { id = SoA.5035 days = 15 random = 7 } }
+				10 = { character_event = { id = SoA.5036 days = 15 random = 7 } }
+				10 = { character_event = { id = SoA.5037 days = 15 random = 7 } }
+				10 = { character_event = { id = SoA.5038 days = 15 random = 7 } }
+				10 = { character_event = { id = SoA.5039 days = 15 random = 7 } }
+			}
+			if = {
+				limit = {
+					is_title_active = d_st_pats
+				}
+				random_list = {
+					10 = { narrative_event = { id = SoA.5045 days = 23 random = 4 } } # Holy orders events, close to destination
+					10 = { character_event = { id = SoA.5046 days = 23 random = 4 } }
+					10 = { character_event = { id = SoA.5047 days = 23 random = 4 } }
+				}
+			}
+		}
+	}
+}
+
+# Setting out for Quebec (also selects events for road)
+character_event = {
+	id = canada.18
+	desc = EVTDESC_canada_18
+	picture = GFX_evt_pilgrims_epic_journey
+	border = GFX_event_normal_frame_religion
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_SoA_5021
+		clr_character_flag = preparing_pilgrimage
+		hidden_tooltip = {
+			add_trait = on_pilgrimage
+			set_character_flag = good_pilgrimage
+			narrative_event = { id = canada.23 days = 30 }
+		}
+		hidden_tooltip = {
+			if = {
+				limit = {
+					location = {
+						distance = {
+							where = 1199 # Quebec
+							value = 400	# Longer journey
+						}
+					}
+				}
+				random_list = {
+					10 = { character_event = { id = SoA.5026 days = 5 random = 9 } } # List for longer journeys only
+					10 = { character_event = { id = SoA.5027 days = 5 random = 9 } }
+					10 = { narrative_event = { id = SoA.5028 days = 5 random = 9 } }
+					10 = { character_event = { id = SoA.5029 days = 5 random = 9 } }
+					10 = { character_event = { id = SoA.5030 days = 5 random = 9 } }
+				}
+			}
+	
+			random_list = {
+				10 = { character_event = { id = SoA.5031 days = 15 random = 7 } } # List that is always checked
+				10 = { character_event = { id = SoA.5032 days = 15 random = 7 } }
+				10 = { narrative_event = { id = SoA.5033 days = 15 random = 7 } }
+				10 = { character_event = { id = SoA.5034 days = 15 random = 7 } }
+				10 = { character_event = { id = SoA.5035 days = 15 random = 7 } }
+				10 = { character_event = { id = SoA.5036 days = 15 random = 7 } }
+				10 = { character_event = { id = SoA.5037 days = 15 random = 7 } }
+				10 = { character_event = { id = SoA.5038 days = 15 random = 7 } }
+				10 = { character_event = { id = SoA.5039 days = 15 random = 7 } }
+			}
+			if = {
+				limit = {
+					is_title_active = d_st_ursulas_chosen
+				}
+				random_list = {
+					10 = { narrative_event = { id = SoA.5045 days = 23 random = 4 } } # Holy orders events, close to destination
+					10 = { character_event = { id = SoA.5046 days = 23 random = 4 } }
+					10 = { character_event = { id = SoA.5047 days = 23 random = 4 } }
+				}
+			}
+		}
+	}
+}
+
+# Setting out for Detroit (also selects events for road)
+character_event = {
+	id = canada.19
+	desc = EVTDESC_canada_19
+	picture = GFX_evt_pilgrims_epic_journey
+	border = GFX_event_normal_frame_religion
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_SoA_5021
+		clr_character_flag = preparing_pilgrimage
+		hidden_tooltip = {
+			add_trait = on_pilgrimage
+			set_character_flag = good_pilgrimage
+			narrative_event = { id = canada.24 days = 30 }
+		}
+		hidden_tooltip = {
+			if = {
+				limit = {
+					location = {
+						distance = {
+							where = 118 # Detroit
+							value = 400	# Longer journey
+						}
+					}
+				}
+				random_list = {
+					10 = { character_event = { id = SoA.5026 days = 5 random = 9 } } # List for longer journeys only
+					10 = { character_event = { id = SoA.5027 days = 5 random = 9 } }
+					10 = { narrative_event = { id = SoA.5028 days = 5 random = 9 } }
+					10 = { character_event = { id = SoA.5029 days = 5 random = 9 } }
+					10 = { character_event = { id = SoA.5030 days = 5 random = 9 } }
+				}
+			}
+	
+			random_list = {
+				10 = { character_event = { id = SoA.5031 days = 15 random = 7 } } # List that is always checked
+				10 = { character_event = { id = SoA.5032 days = 15 random = 7 } }
+				10 = { narrative_event = { id = SoA.5033 days = 15 random = 7 } }
+				10 = { character_event = { id = SoA.5034 days = 15 random = 7 } }
+				10 = { character_event = { id = SoA.5035 days = 15 random = 7 } }
+				10 = { character_event = { id = SoA.5036 days = 15 random = 7 } }
+				10 = { character_event = { id = SoA.5037 days = 15 random = 7 } }
+				10 = { character_event = { id = SoA.5038 days = 15 random = 7 } }
+				10 = { character_event = { id = SoA.5039 days = 15 random = 7 } }
+			}
+			if = {
+				limit = {
+						is_title_active = d_st_ursulas_chosen
+				}
+				random_list = {
+					10 = { narrative_event = { id = SoA.5045 days = 23 random = 4 } } # Holy orders events, close to destination
+					10 = { character_event = { id = SoA.5046 days = 23 random = 4 } }
+					10 = { character_event = { id = SoA.5047 days = 23 random = 4 } }
+				}
+			}
+		}
+	}
+}
+
+# Setting out for New Orleans (also selects events for road)
+character_event = {
+	id = canada.20
+	desc = EVTDESC_canada_20
+	picture = GFX_evt_pilgrims_epic_journey
+	border = GFX_event_normal_frame_religion
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_SoA_5021
+		clr_character_flag = preparing_pilgrimage
+		hidden_tooltip = {
+			add_trait = on_pilgrimage
+			set_character_flag = good_pilgrimage
+			narrative_event = { id = canada.25 days = 30 }
+		}
+		hidden_tooltip = {
+			if = {
+				limit = {
+					location = {
+						distance = {
+							where = 1124 # New Orleans
+							value = 400	# Longer journey
+						}
+					}
+				}
+				random_list = {
+					10 = { character_event = { id = SoA.5026 days = 5 random = 9 } } # List for longer journeys only
+					10 = { character_event = { id = SoA.5027 days = 5 random = 9 } }
+					10 = { narrative_event = { id = SoA.5028 days = 5 random = 9 } }
+					10 = { character_event = { id = SoA.5029 days = 5 random = 9 } }
+					10 = { character_event = { id = SoA.5030 days = 5 random = 9 } }
+				}
+			}
+	
+			random_list = {
+				10 = { character_event = { id = SoA.5031 days = 15 random = 7 } } # List that is always checked
+				10 = { character_event = { id = SoA.5032 days = 15 random = 7 } }
+				10 = { narrative_event = { id = SoA.5033 days = 15 random = 7 } }
+				10 = { character_event = { id = SoA.5034 days = 15 random = 7 } }
+				10 = { character_event = { id = SoA.5035 days = 15 random = 7 } }
+				10 = { character_event = { id = SoA.5036 days = 15 random = 7 } }
+				10 = { character_event = { id = SoA.5037 days = 15 random = 7 } }
+				10 = { character_event = { id = SoA.5038 days = 15 random = 7 } }
+				10 = { character_event = { id = SoA.5039 days = 15 random = 7 } }
+			}
+			if = {
+				limit = {
+					is_title_active = d_st_ursulas_chosen
+				}
+				random_list = {
+					10 = { narrative_event = { id = SoA.5045 days = 23 random = 4 } } # Holy orders events, close to destination
+					10 = { character_event = { id = SoA.5046 days = 23 random = 4 } }
+					10 = { character_event = { id = SoA.5047 days = 23 random = 4 } }
+				}
+			}
+		}
+	}
+}
+
+#weird errors begin here for no reason
+
+# Arrived at Ottawa
+narrative_event = {
+	id = canada.21
+	title = EVTNAME_canada_21
+	desc = EVTDESC_canada_21
+	picture = GFX_evt_cathedral
+	border = GFX_event_narrative_frame_religion
+	
+	is_triggered_only = yes
+
+	option = {
+		name = EVTOPTA_canada_21
+		hidden_tooltip = { character_event = { id = SoA.5055 days = 5 } }
+	}
+}
+
+# Arrived at Canterbury
+narrative_event = {
+	id = canada.22
+	title = EVTNAME_canada_22
+	desc = EVTDESC_canada_22
+	picture = GFX_evt_cathedral
+	border = GFX_event_narrative_frame_religion
+	
+	is_triggered_only = yes
+
+	option = {
+		name = EVTOPTA_canada_22
+		hidden_tooltip = { character_event = { id = SoA.5055 days = 5 } }
+	}
+}
+
+# Arrived at Quebec
+narrative_event = {
+	id = canada.23
+	title = EVTNAME_canada_23
+	desc = EVTDESC_canada_23
+	picture = GFX_evt_cathedral
+	border = GFX_event_narrative_frame_religion
+	
+	is_triggered_only = yes
+
+	option = {
+		name = EVTOPTA_canada_23
+		hidden_tooltip = { character_event = { id = SoA.5055 days = 5 } }
+	}
+}
+
+# Arrived at Detroit
+narrative_event = {
+	id = canada.24
+	title = EVTNAME_canada_24
+	desc = EVTDESC_canada_24
+	picture = GFX_evt_cathedral
+	border = GFX_event_narrative_frame_religion
+	
+	is_triggered_only = yes
+
+	option = {
+		name = EVTOPTA_canada_24
+		hidden_tooltip = { character_event = { id = SoA.5055 days = 5 } }
+	}
+}
+
+# Arrived at New Orleans
+narrative_event = {
+	id = canada.25
+	title = EVTNAME_canada_25
+	desc = EVTDESC_canada_25
+	picture = GFX_evt_cathedral
+	border = GFX_event_narrative_frame_religion
+	
+	is_triggered_only = yes
+
+	option = {
+		name = EVTOPTA_canada_25
+		hidden_tooltip = { character_event = { id = SoA.5055 days = 5 } }
+	}
+}
+
+# Clean up Abbey Guards 
+character_event = {
+	id = canada.28
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+	
+	}
+
+	immediate = {
+		activate_title = {
+			title = d_abbey_guards
+			status = no
+		}
+	}
+}
+
+#I'm putting St. Patrick's Day here and you can't stop me.
+character_event = {
+	id = canada.30
+	desc = EVTDESC_st_patricks_1
+	picture = GFX_evt_stone_church
+	border = GFX_event_normal_frame_religion
+	is_triggered_only = yes
+	
+	trigger = {
+		has_character_flag = st_patricks_day
+	}
+	
+	immediate = {
+		character_event = { id = canada.31 days = 1 }
+	}
+	
+	option = {
+		name = EVTOPTA_st_patricks_1
+		piety = 30
+	}
+}
+
+character_event = {
+	id = canada.31
+	desc = EVTDESC_st_patricks_2
+	picture = GFX_evt_jugglers
+	border = GFX_event_normal_frame_religion
+	is_triggered_only = yes
+	
+	trigger = {
+		has_character_flag = st_patricks_day
+	}
+	
+	immediate = {
+		character_event = { id = canada.32 days = 1 }
+	}
+	
+	option = {
+		name = EVTOPTA_st_patricks_2
+		prestige = 50
+	}
+}
+
+character_event = {
+	id = canada.32
+	desc = EVTDESC_st_patricks_3
+	picture = GFX_evt_feast_hf
+	border = GFX_event_normal_frame_diplomacy
+	is_triggered_only = yes
+	
+	trigger = {
+		has_character_flag = st_patricks_day
+	}
+	
+	option = {
+		name = EVTOPTA_st_patricks_3
+		prestige = 30
+		piety = -30
+		custom_tooltip = { text = TXT_st_patricks_drunk }
+		hidden_tooltip = {
+			random_list = {
+				50 = { #wake up hungover with a random negative effect
+					character_event = { id = canada.33 days = 1 }
+				}
+				20 = { #wake up injured from a barfight
+					character_event = { id = canada.34 days = 1 }
+				}
+				20 = { #wake up remembering that you were the life of the party
+					character_event = { id = canada.35 days = 1 }
+				}
+				10 = { #wake up in bed next to someone else...
+					character_event = { id = canada.36 days = 1 }
+				}
+			}
+		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				trait = temperate
+				factor = 0
+			}
+			modifier = {
+				trait = zealous
+				factor = 0
+			}
+		}
+	}
+
+	
+	option = {
+		name = EVTOPTB_st_patricks_3
+		trigger = { NOT = { trait = drunkard } }
+		prestige = -30
+		piety = 30
+		custom_tooltip = { text = TXT_st_patricks_end }
+		hidden_tooltip = { clr_character_flag = st_patricks_day }
+		hidden_tooltip = { clr_character_flag = recent_minor_decision }
+		hidden_tooltip = { clr_character_flag = do_not_disturb }
+		hidden_tooltip = { add_character_modifier = { name = st_patricks_timer years = 3 } }
+		ai_chance = {
+			factor = 50
+		}
+	}
+}
+
+character_event = {
+	id = canada.33
+	desc = EVTDESC_st_patricks_4
+	picture = GFX_evt_outside_tavern_hf
+	border = GFX_event_normal_frame_diplomacy
+	is_triggered_only = yes
+	
+	trigger = {
+		has_character_flag = st_patricks_day
+	}
+	
+	immediate = {
+		clr_character_flag = st_patricks_day
+		clr_character_flag = do_not_disturb
+		clr_character_flag = recent_minor_decision
+		add_character_modifier = { name = st_patricks_timer years = 3 }
+	}
+	
+	option = {
+		name = EVTOPTA_st_patricks_4
+		trigger = { NOT = { trait = drunkard } }
+		prestige = -15
+		custom_tooltip = { text = TXT_st_patricks_end }
+		hidden_tooltip = {
+			random_list = {
+				10 = {
+					add_trait = drunkard
+					gain_weight_small_effect = yes
+				}
+				30 = {
+					if = {
+						limit = {
+							NOT = {
+								has_dlc = "Reapers"
+							}
+						}
+						add_trait = ill
+					}
+					if = {
+						limit = {
+							has_dlc = "Reapers"
+						}
+						add_symptom_effect = yes
+					}
+				}
+				10 = {
+					add_trait = gluttonous
+					gain_weight_small_effect = yes
+				}
+				20 = {
+					wealth = -20
+				}
+				30 = { }
+			}
+		}	
+	}
+	
+	option = {
+		name = EVTOPTB_st_patricks_4
+		trigger = { trait = drunkard }
+		prestige = 10
+	}
+}
+
+character_event = {
+	id = canada.34
+	desc = EVTDESC_st_patricks_5
+	picture = GFX_evt_bad_news
+	border = GFX_event_normal_frame_diplomacy
+	is_triggered_only = yes
+	
+	trigger = {
+		has_character_flag = st_patricks_day
+	}
+	
+	immediate = {
+		clr_character_flag = st_patricks_day
+		clr_character_flag = do_not_disturb
+		clr_character_flag = recent_minor_decision
+		add_character_modifier = { name = st_patricks_timer years = 3 }
+	}
+	
+	option = {
+		name = EVTOPTA_st_patricks_5
+		if = {
+			limit = {
+				trait = patient
+			}
+			remove_trait = patient
+			prestige = -10
+		}
+		else_if = {
+			limit = {
+				NOT = { trait = patient }
+				NOT = { trait = wroth }
+			}
+			add_trait = wroth
+			prestige = -10
+		}
+		else_if = {
+			limit = {
+				trait = wroth
+			}
+			prestige = 5
+		}
+		random_list = {
+			30 = { }
+			60 = { add_trait = wounded }
+			10 = { add_severely_injured_effect = yes }
+		}
+		custom_tooltip = { text = TXT_st_patricks_end }
+	}
+}
+
+character_event = {
+	id = canada.35
+	desc = EVTDESC_st_patricks_6
+	picture = GFX_evt_feast_hf
+	border = GFX_event_normal_frame_diplomacy
+	is_triggered_only = yes
+	
+	trigger = {
+		has_character_flag = st_patricks_day
+	}
+	
+	immediate = {
+		clr_character_flag = st_patricks_day
+		clr_character_flag = do_not_disturb
+		clr_character_flag = recent_minor_decision
+		add_character_modifier = { name = st_patricks_timer years = 3 }
+	}
+	
+	option = {
+		name = EVTOPTA_st_patricks_6
+		prestige = 30
+		if = {
+			limit = {
+				trait = shy
+			}
+			remove_trait = shy
+		}
+		else_if = {
+			limit = {
+				NOT = { trait = gregarious }
+			}
+			add_trait = gregarious
+		}
+		custom_tooltip = { text = TXT_st_patricks_end }
+	}
+}
+
+character_event = {
+	id = canada.36
+	desc = EVTDESC_st_patricks_7
+	picture = GFX_evt_lovers
+	border = GFX_event_normal_frame_diplomacy
+	is_triggered_only = yes
+	
+	trigger = {
+		has_character_flag = st_patricks_day
+	}
+	
+	immediate = {
+		clr_character_flag = st_patricks_day
+		clr_character_flag = do_not_disturb
+		clr_character_flag = recent_minor_decision
+		add_character_modifier = { name = st_patricks_timer years = 3 }
+	}
+	
+	option = {
+		name = EVTOPTA_st_patricks_7
+		trigger = {
+			is_female = no
+			NOT = { trait = homosexual }
+		}
+		piety = -10
+		prestige = 10
+		if = {
+			limit = {
+				trait = chaste
+			}
+			remove_trait = chaste
+		}
+		create_character = {
+			random_traits = no
+			dynasty = NONE
+			religion = ROOT
+			culture = ROOT
+			female = yes
+			age = 17
+			trait = intricate_webweaver
+			trait = fair
+			trait = uncouth
+			trait = quick
+			trait = lustful
+			trait = proud
+			trait = gluttonous
+			attributes = {
+				diplomacy = 3
+				intrigue = 10
+			}
+		}
+		new_character = {
+			character_event = { id = misc.3 } # Diversity
+			gain_weight_medium_effect = yes
+			add_lover = ROOT
+			remove_trait = genius
+			remove_trait = imbecile
+			remove_trait = distractible
+			remove_trait = ugly
+			remove_trait = slow
+			remove_trait = chaste
+			set_character_flag = patrick_mother
+		}
+		set_character_flag = patrick_father
+		custom_tooltip = { text = TXT_st_patricks_end }
+	}
+	
+	option = {
+		name = EVTOPTB_st_patricks_7
+		trigger = {
+			is_female = yes
+			NOT = { trait = homosexual }
+		}
+		piety = -10
+		prestige = 10
+		if = {
+			limit = {
+				trait = chaste
+			}
+			remove_trait = chaste
+		}
+		create_character = {
+			random_traits = no
+			dynasty = NONE
+			religion = ROOT
+			culture = ROOT
+			female = no
+			age = 17
+			trait = intricate_webweaver
+			trait = fair
+			trait = uncouth
+			trait = quick
+			trait = lustful
+			trait = proud
+			trait = drunkard
+			attributes = {
+				diplomacy = 3
+				intrigue = 10
+			}
+		}
+		new_character = {
+			character_event = { id = misc.3 } # Diversity
+			gain_weight_medium_effect = yes
+			add_lover = ROOT
+			remove_trait = genius
+			remove_trait = imbecile
+			remove_trait = ugly
+			remove_trait = slow
+			remove_trait = chaste
+			set_character_flag = patrick_father
+		}
+		set_character_flag = patrick_mother
+		custom_tooltip = { text = TXT_st_patricks_end }
+	}
+	
+	option = {
+		name = EVTOPTC_st_patricks_7
+		trigger = {
+			is_female = no
+			trait = homosexual
+		}
+		piety = -15
+		prestige = 10
+		if = {
+			limit = {
+				trait = chaste
+			}
+			remove_trait = chaste
+		}
+		create_character = {
+			random_traits = no
+			dynasty = NONE
+			religion = ROOT
+			culture = ROOT
+			female = no
+			age = 17
+			trait = intricate_webweaver
+			trait = fair
+			trait = uncouth
+			trait = quick
+			trait = lustful
+			trait = drunkard
+			trait = proud
+			trait = homosexual
+			attributes = {
+				diplomacy = 3
+				intrigue = 10
+			}
+		}
+		new_character = {
+			character_event = { id = misc.3 } # Diversity
+			gain_weight_medium_effect = yes
+			add_lover = ROOT
+			remove_trait = genius
+			remove_trait = imbecile
+			remove_trait = ugly
+			remove_trait = slow
+			remove_trait = chaste
+		}
+		custom_tooltip = { text = TXT_st_patricks_end }
+	}
+	
+	option = {
+		name = EVTOPTD_st_patricks_7
+		trigger = {
+			is_female = yes
+			trait = homosexual
+		}
+		piety = -15
+		prestige = 10
+		if = {
+			limit = {
+				trait = chaste
+			}
+			remove_trait = chaste
+		}
+		create_character = {
+			random_traits = no
+			dynasty = NONE
+			religion = ROOT
+			culture = ROOT
+			female = yes
+			age = 17
+			trait = intricate_webweaver
+			trait = fair
+			trait = uncouth
+			trait = quick
+			trait = lustful
+			trait = gluttonous
+			trait = proud
+			trait = homosexual
+			attributes = {
+				diplomacy = 3
+				intrigue = 10
+			}
+		}
+		new_character = {
+			character_event = { id = misc.3 } # Diversity
+			gain_weight_medium_effect = yes
+			add_lover = ROOT
+			remove_trait = genius
+			remove_trait = imbecile
+			remove_trait = ugly
+			remove_trait = slow
+			remove_trait = chaste
+		}
+		custom_tooltip = { text = TXT_st_patricks_end }
+	}
+}
+
+character_event = { #Give birth to St. Patrick's Child
+	id = canada.37
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = { 
+		mother = {
+			has_character_flag = patrick_mother
+			NOT = { has_character_flag = was_patrick_mother }
+		} 
+		true_father = {
+			has_character_flag = patrick_father
+			NOT = { has_character_flag = was_patrick_father }
+		}
+	}
+	
+	immediate = {
+		add_trait = strong
+		add_trait = quick
+		remove_trait = weak
+		remove_trait = clubfooted
+		remove_trait = harelip
+		remove_trait = hunchback
+		remove_trait = imbecile
+		remove_trait = inbred
+		remove_trait = lisp
+		remove_trait = slow
+		remove_trait = stutter
+		remove_trait = ugly
+		remove_trait = giant
+		if = {
+			limit = {
+				is_female = no
+			}
+			set_name = "Patrick"
+		}
+		else_if = {
+			limit = {
+				is_female = yes
+			}
+			set_name = "Patricia"
+		}
+		mother = {
+			clr_character_flag = patrick_mother
+			set_character_flag = was_patrick_mother
+			character_event = { id = canada.38 days = 1 }
+		}
+		true_father = {
+			clr_character_flag = patrick_father
+			set_character_flag = was_patrick_father
+			character_event = { id = canada.38 days = 1 }
+		}
+	}
+}
+
+character_event = { #Give birth to St. Patrick's Child
+	id = canada.38
+	desc = EVTDESC_st_patricks_8
+	picture = GFX_evt_birth
+	border = GFX_event_normal_frame_religion
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_st_patricks_8
+		prestige = 20
+	}
+}
+
+character_event = {
+	id = canada.39
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		clr_character_flag = st_patricks_day
+		clr_character_flag = do_not_disturb
+		clr_character_flag = recent_minor_decision
+	}
+}
+
+#deleted

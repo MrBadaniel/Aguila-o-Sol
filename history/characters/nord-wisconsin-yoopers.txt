@@ -23,7 +23,12 @@
 			has_dlc="Holy Fury"
 		}
 	}
-	2656.10.24={death=yes}
+	2656.10.24={
+        death = {
+            death_reason = death_execution_snake_pit
+            killer = 1857078
+        }
+    }
 }
 1919001={
 	name="Melis"
@@ -519,6 +524,7 @@
 	dna="oadcjohaied"
 	culture=yooper
 	religion=norse_pagan
+	father=4000122
 	martial=0
 	diplomacy=5
 	stewardship=8
@@ -1321,7 +1327,11 @@
 	mother=1919050
 	2629.1.27={birth=yes}
 	2649.3.21={add_spouse=1919062}
-	2670.9.17={death=yes}
+	2670.9.17={death={
+			death_reason=death_battle
+			killer=4000140
+		}
+	}
 }
 
 1919062={
@@ -1402,7 +1412,11 @@
 	mother=1919050
 	2633.7.21={birth=yes}
 	2654.5.5={add_spouse=1919066}
-	2688.2.12={death=yes}
+	2688.2.12={death={
+			death_reason=death_battle
+			killer=4000140
+		}
+	}
 }
 
 1919066={
@@ -1444,7 +1458,11 @@
 	father=1919051
 	mother=1919050
 	2636.11.3={birth=yes}
-	2719.1.19={death=yes}
+	2719.1.19={death={
+			death_reason=death_battle
+			killer=4000140
+		}
+	}
 }
 
 1919068={

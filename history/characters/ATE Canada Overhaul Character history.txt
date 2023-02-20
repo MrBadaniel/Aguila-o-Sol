@@ -1,0 +1,1981 @@
+#START OF NEW HISTORY BEGINS WITH ARTHUR AND HIS FAMILY
+4000045={
+    name="Arthur"
+    dynasty=90000034 # Garneau
+    culture=acadien
+	disallow_random_traits = yes
+    religion=sedevacantist
+	trait=legendary
+	add_trait=saint
+	occluded=yes
+    add_trait=ambitious
+    add_trait=brilliant_strategist
+    add_trait=kind
+    give_nickname = nick_the_pendragon
+    2030.1.1={birth=yes}
+    2070.1.1={
+		create_bloodline={
+			type=bloodline_arthur
+			has_dlc="Holy Fury"
+		}
+	}
+    2120.1.1={
+			add_trait = maimed
+		death = {		
+			death_reason = death_missing
+		}
+	}
+}
+4000046={
+    name="Gretzky"
+    dynasty=90000034 # Garneau
+    culture=acadien
+	disallow_random_traits = yes
+    religion=sedevacantist	
+	trait=legendary
+	occluded=yes
+    father=4000045
+    add_trait=kind
+    2070.1.1={birth=yes}
+    2120.1.1={
+		death = {		
+			death_reason = death_missing
+		}
+	}
+}	
+4000047={
+    name="Tomais"
+    dynasty=90000034 # Garneau
+    culture=acadien
+    religion=sedevacantist
+	trait=legendary
+	occluded=yes
+    father=4000045
+    add_trait=brilliant_strategist
+    2060.1.1={birth=yes}
+    2120.1.1={
+		death = {		
+			death_reason = death_missing
+		}
+	}
+}
+4000048={
+    name="Terry"
+    dynasty=90000034 # Garneau
+    culture=acadien
+    religion=sedevacantist
+	trait=legendary
+	disallow_random_traits = yes
+	occluded=yes
+	give_nickname = nick_the_fox
+    father=4000046
+    add_trait=kind
+	add_trait=saint
+	add_trait=one_legged
+    add_trait=brilliant_strategist
+	add_trait=wounded
+    2090.1.1={birth=yes}
+    2120.1.1={
+		death = {		
+			death_reason = death_battle
+			killer = 4000049
+		}
+	}
+}
+4000049={
+    name="Mordeau"
+    dynasty=90000034 # Garneau
+    culture=acadien
+    religion=sedevacantist
+	trait=legendary
+	disallow_random_traits = yes
+	occluded=yes
+    father=4000045
+	add_trait=bastard
+	add_trait=excommunicated
+    add_trait=cruel
+	add_trait=schemer
+    add_trait=tough_solider
+    2069.1.1={birth=yes}
+    2120.1.1={
+		death = {		
+			death_reason = death_battle
+			killer = 4000045
+		}
+	}
+}
+######################################################################################
+#                BEGINING OF NORMAL HISTORY                                          #
+######################################################################################
+4000000={
+	name="Robert"
+	dynasty=90000075 # Cornouailles
+	culture=ontarian
+	religion=Gregorian
+	trait=brave
+	trait=ambitious
+	trait=legendary
+	disallow_random_traits = yes
+	2165.1.1={birth=yes}
+	2235.1.1={death=yes}
+	
+}
+4000001={
+	name="Richard"
+	dynasty=90000075 # Cornouailles
+	father=4000000
+	culture=ontarian
+	religion=Gregorian
+	disallow_random_traits = yes
+	trait=brilliant_strategist
+	trait=adventurer
+	trait=brave
+	trait=ambitious
+	trait=inspiring_leader
+	give_nickname =  nick_the_ironside
+	2186.1.1={birth=yes}
+	2265.1.1={death=yes}
+	
+}
+4000002={
+	name="John"
+	dynasty=90000075 # Cornouailles
+	father=4000001
+	disallow_random_traits = yes
+	culture=ontarian
+	religion=Gregorian
+	trait=skilled_tactician
+	trait=just
+	trait=kind
+	trait=content
+	trait=weak
+	give_nickname =  nick_the_ill_ruler
+	2230.1.1={birth=yes}
+    2296.1.1={
+		death = {		
+			death_reason = death_battle
+				killer=1620073
+		}
+	}
+}
+4000003={
+	name="Theodore"
+	dynasty=90000075 # Cornouailles
+	culture=ontarian
+	religion=Gregorian
+	father=4000002
+	trait=ambitious
+	trait=brave
+	trait=dead_crown_ontario
+	trait=just
+	trait=brilliant_strategist
+	disallow_random_traits = yes
+	give_nickname =  nick_the_great
+	2276.1.1={birth=yes}
+	2299.12.25={
+			create_bloodline={
+			type=bloodline_theodore
+			has_dlc="Holy Fury"
+		}
+	}
+	2350.1.1={death=yes}
+	
+}
+4000004={
+	name="Arthur"
+	dynasty=90000075 # Cornouailles
+	culture=ontarian
+	religion=Gregorian
+	father=4000003
+	trait=just
+	trait=dead_crown_ontario
+	#trait=born_in_the_purple
+	2301.1.1={birth=yes}
+	2375.1.1={death=yes}
+	
+}
+4000005={
+	name="Wilfrid"
+	dynasty=90000075 # Cornouailles
+	culture=ontarian
+	religion=Gregorian
+	father=4000004
+	trait=genius
+	trait=just
+	trait=shrewd
+	trait=erudite
+	trait=dead_crown_ontario
+	trait=scholar
+	#trait=born_in_the_purple
+	give_nickname = nick_the_wise
+	2328.1.1={birth=yes}
+	2400.1.1={death=yes}
+	
+}
+4000006={
+	name="Robert"
+	dynasty=90000075 # Cornouailles
+	culture=ontarian
+	religion=Gregorian
+	father=4000005
+	trait=dead_crown_ontario
+	#trait=born_in_the_purple
+	2370.1.1={birth=yes}
+	2405.1.1={	death = {		
+			death_reason = death_murder
+				killer=4000007
+		}
+	}
+}
+	
+4000007={
+	name="Justin"
+	dynasty=90000075 # Cornouailles
+	culture=ontarian
+	religion=Gregorian
+	trait=kinslayer
+	trait=schemer
+	trait=dead_crown_ontario
+	give_nickname = nick_the_usurper
+	father=4000005
+	#trait=born_in_the_purple
+	2375.1.1={birth=yes}
+    2425.1.1={
+		death = {		
+			death_reason = death_battle
+				killer=4000008
+		}
+	}
+}
+4000008={
+	name="Robert"
+	dynasty=90000075 # Cornouailles
+	culture=ontarian
+	religion=Gregorian
+	trait=adventurer
+	father=4000006
+	trait=dead_crown_ontario
+	#trait=born_in_the_purple
+	trait=tough_soldier
+	give_nickname=nick_the_avenger
+	2400.1.1={birth=yes}
+	2475.1.1={death=yes}
+	
+}
+#4000009={
+#	name="John"
+#	dynasty=90000075 # Cornouailles
+#	culture=ontarian
+#	religion=Gregorian
+#	father=4000007
+#	trait=born_in_the_purple
+#	2400.1.1={birth=yes}
+#    2425.1.1={
+#		death = {		
+#			death_reason = death_battle
+#				killer=4000008
+#		}
+#	}
+#}
+4000010={
+	name="Robert"
+	dynasty=90000075 # Cornouailles
+	culture=ontarian
+	religion=Gregorian
+	father=4000008
+	#trait=born_in_the_purple
+	trait=dead_crown_ontario
+	2416.1.1={birth=yes}
+	2478.1.1={death=yes}
+	
+}
+4000011={
+	name="Joseph"
+	dynasty=90000075 # Cornouailles
+	culture=ontarian
+	religion=Gregorian
+	father=4000010
+	trait=dead_crown_ontario
+	#trait=born_in_the_purple
+	2433.1.1={birth=yes}
+	2485.1.1={death=yes}
+	
+}
+#4000012={
+#	name="Theodore"
+#	dynasty=90000075 # Cornouailles
+#	culture=ontarian
+#	religion=Gregorian
+#	father=4000008
+#	trait=born_in_the_purple
+#	2432.1.1={birth=yes}
+#	2486.1.1={death=yes}
+#	
+#}
+#4000013={
+#	name="Theodore"
+#	dynasty=90000075 # Cornouailles
+#	culture=ontarian
+#	religion=Gregorian
+#	father=4000010
+#	trait=legitimized_bastard
+#	give_nickname=nick_the_bastard
+#	2450.1.1={birth=yes}
+#    2501.1.1={death=yes}
+#}
+4000014={
+	name="Arthur"
+	dynasty=90000075 # Cornouailles
+	culture=ontarian
+	religion=Gregorian
+	father=4000011
+	trait=dead_crown_ontario
+	#trait=born_in_the_purple
+	2460.1.1={birth=yes}
+	2500.1.1={add_spouse=4000099}
+    2510.1.1={
+		death = {		
+			death_reason = death_battle
+				killer=4000100
+		}
+	}
+}
+#4000015={
+#	name="John"
+#	dynasty=90000075 # Cornouailles
+#	culture=ontarian
+#	religion=Gregorian
+#	father=4000012
+#	trait=born_in_the_purple
+#	2463.1.1={birth=yes}
+#	2517.1.1={death={
+#			death_reason=death_battle
+#		}
+#	}
+#}
+4000016={
+	name="Thomas"
+	dynasty=90000075 # Cornouailles
+	culture=ontarian
+	religion=Gregorian
+	father=4000011
+	#trait=born_in_the_purple
+	trait=ill
+	2470.1.1={birth=yes}
+	2519.1.1={death={
+		death_reason=death_trait
+		}
+	} # illness
+}
+#4000017={
+#	name="Roger"
+#	dynasty=90000075 # Cornouailles
+#	culture=ontarian
+#	religion=norse
+#	father=4000013
+#	trait=legitimized_bastard
+#	give_nickname=nick_the_heathen
+#	2473.1.1={birth=yes}
+#	2523.1.1={death={
+#			death_reason=death_battle
+#			killer = 4000019
+#		}
+#	}
+#}
+#4000018={
+#	name="Charles"
+#	dynasty=90000075 # Cornouailles
+#	culture=ontarian
+#	religion=Gregorian
+#	father=4000016
+#	trait=born_in_the_purple
+#	trait=ill
+#	2491.1.1={birth=yes}
+#	2555.1.1={death={
+#		death_reason=death_trait
+#		}
+#	} # illness
+#}
+4000019={
+	name="Edward"
+	dynasty=90000075 # Cornouailles
+	culture=ontarian
+	religion=Gregorian
+	father=4000011
+	#trait=born_in_the_purple
+	trait=brilliant_strategist
+	trait=quick
+	trait=humble
+	trait=beatified
+	trait=dead_crown_ontario
+	trait=ambitious
+	trait=scholar
+	trait=brave
+	trait=celibate
+	give_nickname=nick_the_overlord_of_north
+	2470.1.1={birth=yes}
+	2547.3.7={death=yes}
+}
+4000020={
+	name="Charles"
+	dynasty=90000075 # Cornouailles
+	culture=ontarian
+	religion=Gregorian
+	father=4000016
+	#trait=born_in_the_purple
+	trait=tough_soldier
+	trait=dead_crown_ontario
+	give_nickname=nick_the_unlucky
+	2490.1.1={birth=yes}
+	2553.1.1={death={
+			death_reason=death_battle
+			killer=1788007
+		}
+	}
+}
+4000021={
+	name="Theodore"
+	dynasty=90000000 # Cornwallis
+	culture=ontarian
+	religion=Gregorian
+	father=4000020
+	trait=dead_crown_ontario
+	#trait=born_in_the_purple
+	2514.1.1={birth=yes}
+	2561.1.1={death=yes}
+}
+#4000022={
+#	name="Wilfrid"
+#	dynasty=90000000 # Cornwallis
+#	culture=ontarian
+#	religion=Gregorian
+#	father=4000017
+#	2519.1.1={birth=yes}
+#	2561.2.1={death={
+#			death_reason=death_battle
+#			killer=4000023
+#		}
+#	}
+#}
+4000023={
+	name="Arthur"
+	dynasty=90000000 # Cornwallis
+	culture=ontarian
+	religion=Gregorian
+	father=4000021
+	#trait=born_in_the_purple
+	trait=dead_crown_ontario
+	2534.1.1={birth=yes}
+	2568.3.7={death={
+			death_reason=death_battle
+			killer=1763040
+		}
+	}
+}
+4000024={
+	name="Jacob"
+	dynasty=90000000 # Cornwallis
+	culture=ontarian
+	religion=Gregorian
+	father=4000021
+	#trait=born_in_the_purple
+	2548.1.1={birth=yes}
+	2568.3.7={death={
+			death_reason=death_battle
+			killer=1763040
+		}
+	}
+}
+4000025={
+	name="Constantine"
+	dynasty=90000000 # Cornwallis
+	culture=ontarian
+	religion=Gregorian
+	father=4000021
+	#trait=born_in_the_purple
+	2550.1.1={birth=yes}
+	2568.3.7={death={
+			death_reason=death_battle
+			killer=1763040
+		}
+	}
+}
+4000026={
+	name="Connor"
+	dynasty=90000075 # Cornouailles
+	culture=ontarian
+	religion=Gregorian
+	father=4000014
+	#trait=born_in_the_purple
+	trait=hedonist
+	trait=dead_crown_ontario
+	give_nickname=nick_the_depraved
+	2508.1.1={birth=yes}
+	2549.1.1={death={
+			death_reason=death_poor_health
+		}
+	}
+}
+4000027={
+	name="Thomas"
+	dynasty=90000000 # Cornwallis
+	culture=ontarian
+	religion=Gregorian
+	father=4000023
+	#trait=born_in_the_purple
+	trait=dead_crown_ontario
+	2553.1.1={birth=yes}
+	2572.1.1={death={
+			death_reason=death_murder
+			killer=4000028
+		}
+	}
+}
+4000028={
+	name="Raymond"
+	dynasty=90000022 # Lanthier
+	culture=ontarian
+	religion=Gregorian
+	trait=dead_crown_ontario
+	2540.1.1={birth=yes}
+	2572.3.10={death={
+			death_reason=death_rabble
+		}
+	}
+}
+4000029={
+	name="Philip"
+	dynasty=90000000 # Cornwallis
+	culture=ontarian
+	religion=Gregorian
+	father=4000023
+	#trait=born_in_the_purple
+	2554.1.1={birth=yes}
+	2572.1.1={death={
+			death_reason=death_murder
+			killer=4000028
+		}
+	}
+}
+4000030={
+	name="Edward"
+	dynasty=90000000 # Cornwallis
+	culture=ontarian
+	religion=Gregorian
+	father=4000023
+	trait=adventurer
+	trait=trickster
+	#trait=born_in_the_purple
+	trait=skilled_tactician
+	give_nickname = nick_the_survivor
+	2556.3.5={birth=yes}
+	2590.1.14={death=yes}
+}
+4000031={
+	name="Raymond"
+	dynasty=90000002 # Thompson
+	culture=ontarian
+	religion=Gregorian
+	trait=dead_crown_ontario
+	2566.1.1={birth=yes}
+	2597.1.1={death={
+		death_reason=death_execution
+			killer=4000032
+		}
+	} 
+}
+4000032={
+	name="Issac"
+	culture=ontarian
+	religion=Gregorian
+	trait=severely_injured
+	trait=one_eyed
+	trait=dead_crown_ontario
+	2546.1.1={birth=yes}
+	2599.1.1={death={
+			death_reason=death_battle
+			killer=1857086
+		}
+	}
+}
+4000033={
+	name="Manuel"
+	dynasty=1867003
+	culture=west_indian
+	religion=Gregorian
+	2553.1.1={birth=yes culture=ontarian}
+	2604.1.1={death={
+			death_reason=death_battle
+			killer=1919000
+		}
+	}
+}
+4000034={
+	name="Romain"
+	dynasty=90000032
+	culture=iroquois
+	religion=Gregorian
+	trait=dead_crown_ontario
+	trait=severely_injured
+	2542.1.1={birth=yes culture=ontarian}
+	2609.1.1={death={
+		death_reason=death_trait
+		}
+	} # severely_injured
+}
+4000035={
+	name="Philip"
+	dynasty=1867003
+	culture=west_indian
+	religion=Gregorian
+	father=4000033
+	trait=dead_crown_ontario
+	2570.1.1={birth=yes culture=ontarian}
+	2615.1.1={death={
+			death_reason=death_execution
+			killer=1867151
+		}
+	}
+}
+
+
+
+
+4000094={
+    name="Joseph"
+    dynasty=2007055
+    culture=iroquois
+    religion=Gregorian
+    add_trait=strategist
+    add_trait=brilliant_strategist
+    add_trait=cavalry_leader
+    add_trait=genius
+    add_trait=diligent
+	add_trait=saint
+    add_trait=just
+    add_trait=organizer
+	father=4000190
+    give_nickname = nick_the_scarlet_eagle
+    2422.1.1={birth=yes}
+    2500.1.1={
+		create_bloodline={
+			type=bloodline_aurelian
+			has_dlc="Holy Fury"
+		}
+	}
+    2510.1.1={death={
+			death_reason=death_murder
+			killer=4000100
+		}
+	}
+}
+4000095={
+    name="Connor"
+    dynasty=2007055 #
+    culture=iroquois
+    religion=Gregorian
+    father=4000094
+    2440.1.1={birth=yes}
+    2510.1.1={death={
+			death_reason=death_murder
+			killer=4000100
+		}
+	}
+}
+4000096={
+    name="Tier"
+    dynasty=2007055 # 	Shepard
+    culture=iroquois
+    religion=Gregorian
+    father=4000094
+    2444.1.1={birth=yes}
+    2510.1.1={death={
+			death_reason=death_murder
+			killer=4000100
+		}
+	}
+}
+4000097={
+    name="James"
+    dynasty=2007055 # 	Shepard
+    culture=iroquois
+    religion=Gregorian
+    father=4000094
+    2430.1.1={birth=yes}
+    2510.1.1={death={
+			death_reason=death_murder
+			killer=4000100
+		}
+	}
+}
+4000098={
+    name="August"
+    dynasty=2007055 # 	Shepard
+    culture=iroquois
+    religion=Gregorian
+    father=4000095
+    2470.1.1={birth=yes}
+    2510.1.1={death={
+			death_reason=death_murder
+			killer=4000100
+		}
+	}
+}
+4000099={
+    name="Marie"
+    dynasty=2007055 # 	Shepard
+    culture=iroquois
+    religion=Gregorian
+    female = yes
+    father=4000095
+    2477.1.1={birth=yes}
+    2510.1.1={death={
+			death_reason=death_murder
+			killer=4000100
+		}
+	}
+}
+4000100={
+    name="Adam"
+    dynasty=1796044 # Turcot
+    culture=quebecois
+    religion=ursuline
+    add_trait=schemer
+    2469.1.1={birth=yes}
+    2520.1.1={death=yes}
+}
+4000101={
+    name="Joseph"
+    dynasty=90000057 # Ruger
+    culture=ontarian
+    religion=high_church
+    2460.1.1={birth=yes}
+    2510.6.1={death=yes}
+}
+4000102={
+    name="Robert"
+    dynasty=90000057 # Ruger
+    culture=ontarian
+    religion=high_church
+    father=4000101
+    2490.1.1={birth=yes}
+    2512.1.1={death={
+			death_reason=death_murder
+			killer=4000103
+		}
+	}
+}
+4000103={
+    name="Philip"
+    dynasty=90000058 # Morris
+    culture=ontarian
+    religion=high_church
+    2440.1.1={birth=yes}
+    2513.1.1={death={
+			death_reason=death_battle
+			killer=4000104
+		}
+	}
+}
+4000104={
+    name="Bishop"
+    dynasty=90000059 # Valens
+    culture=ontarian
+    religion=high_church
+    2470.1.1={birth=yes}
+    2515.1.1={death={
+			death_reason=death_murder
+			killer=4000105
+		}
+	}
+}
+4000105={
+    name="Steven"
+    dynasty=90000060 # MacCormick
+    culture=ontarian
+    religion=high_church
+    2450.1.1={birth=yes}
+    2515.8.1={death={
+			death_reason=death_murder
+		}
+	}
+}
+4000106={
+    name="Romain"
+    dynasty=90000059 # Valens
+    culture=ontarois
+    religion=high_church
+    father=4000104
+    2490.1.1={birth=yes}
+    2517.6.1={death={
+			death_reason=death_battle
+			killer=4000107
+		}
+	}
+}
+4000107={
+    name="Rogan"
+    dynasty=90000057 # Ruger
+    culture=ontarian
+    religion=high_church
+    father=4000104
+    2490.1.1={birth=yes}
+    2520.1.1={death={
+			death_reason=death_poor_health
+		}
+	}
+}
+4000108={
+    name="Issac"
+    dynasty=90000060 # MacCormick
+    culture=ontarian
+    religion=high_church
+    father=4000105
+    2470.1.1={birth=yes}
+    2521.8.1={death={
+			death_reason=death_battle
+			killer=4000109
+		}
+	}
+}
+4000109={
+    name="Henry"
+    dynasty=90000060 # MacCormick
+    culture=ontarian
+    religion=high_church
+    father=4000108
+    add_trait=kinslayer
+    give_nickname = nick_the_usurper
+    2490.1.1={birth=yes}
+    2522.1.1={death={
+			death_reason=death_battle
+			killer=4000110
+		}
+	}
+}
+4000110={
+    name="Alexander"
+    dynasty=90000058 # Morris
+    culture=ontarian
+    religion=high_church
+    father=4000103
+    give_nickname = nick_the_peacemaker
+    2460.1.1={birth=yes}
+    2527.1.1={death={
+			death_reason=death_poor_health
+		}
+	}
+}
+4000111={
+    name="Edmund"
+    dynasty=90000058 # Morris
+    culture=ontarian
+    religion=high_church
+    father=4000110
+    add_trait=incapable
+    add_trait=imbecile
+    give_nickname = nick_the_ill_ruler
+    2480.1.1={birth=yes}
+    2566.1.1={death={
+			death_reason=death_poor_health
+		}
+	}
+}
+4000112={
+    name="George"
+    dynasty=90000058 # Morris
+    culture=ontarian
+    religion=high_church
+    father=4000111
+    add_trait=wroth
+    add_trait=slow
+    give_nickname = nick_the_rash
+    2550.1.1={birth=yes}
+    2569.2.13={death={
+			death_reason=death_battle
+			killer=1763040
+		}
+	}
+}
+4000113={
+    name="Macron"
+    dynasty=90000058 # Morris
+    culture=ontarian
+    religion=high_church
+    father=4000111
+    2500.1.1={birth=yes}
+    2570.1.1={death={
+			death_reason=death_murder
+			killer=4000114
+		}
+	}
+}
+4000114={
+    name="Sergios"
+    dynasty=90000059 # Valens
+    culture=ontarian
+    religion=high_church
+    father=4000106
+    2516.1.1={birth=yes}
+    2572.1.1={death={
+			death_reason=death_battle
+			killer=4000115
+		}
+	}
+}
+4000115={
+    name="Richard"
+    dynasty=90000060 # MacCormick
+    culture=ontarian
+    religion=high_church
+    father=4000106
+    2516.1.1={birth=yes}
+    2573.1.1={death={
+			death_reason=death_battle
+			killer=4000116
+		}
+	}
+}
+4000116={
+    name="Romain"
+    dynasty=90000059 # Valens
+    culture=ontarian
+    religion=high_church
+    father=4000114
+    2540.1.1={birth=yes}
+    2574.1.1={death={
+			death_reason=death_battle
+			killer=4000117
+		}
+	}
+}
+4000117={
+    name="Henry"
+    dynasty=90000060 # MacCormick
+    culture=ontarian
+    religion=high_church
+    father=4000109
+    give_nickname = nick_the_survivor
+    2520.1.1={birth=yes}
+    2590.1.1={death=yes}
+}
+4000118={
+    name="Henry"
+    dynasty=90000061 # de Gatineau
+    culture=ontarois
+    religion=high_church
+    2540.1.1={birth=yes}
+    2600.1.1={death={
+			death_reason=death_battle
+			killer=4000122
+		}
+	}
+}
+4000119={
+    name="Jaime"
+    dynasty=90000061 # de Gatineau
+    culture=ontarois
+    religion=high_church
+    father=4000118
+    2560.1.1={birth=yes}
+    2606.1.1={death={
+			death_reason=death_battle
+			killer=4000122
+		}
+	}
+}
+4000120={
+    name="Lancel"
+    dynasty=90000061 # de Gatineau
+    culture=ontarois
+    religion=high_church
+    father=4000118
+    2582.1.1={birth=yes}
+    2608.1.1={death={
+			death_reason=death_battle
+			killer=4000122
+		}
+	}
+}
+4000121={
+    name="Matthew"
+    dynasty=90000061 # de Gatineau
+    culture=ontarois
+    religion=high_church
+    father=4000119
+    2582.1.1={birth=yes}
+    2615.1.1={death={
+			death_reason=death_dungeon
+			killer=1867151
+		}
+	}
+}
+4000122={
+	name="Ragnar"
+	dynasty=1790000
+	culture=yooper
+	religion=norse_pagan
+	martial=22
+	diplomacy=5
+	stewardship=8
+	intrigue=4
+	learning=1
+	trait=skilled_tactician
+	trait=viking
+    give_nickname = nick_the_world_burner
+	2560.7.1={birth=yes}
+        2630.7.1={death={
+			death_reason=death_battle
+			killer=1867151
+		}
+	}
+}
+4000123={
+    name="Erwin"
+	dynasty=90000062 # Smith
+	culture=ontarois
+	religion=Gregorian
+    martial=5
+	disallow_random_traits = yes
+    trait=brilliant_strategist
+    trait=organizer
+    trait=shrewd
+    trait=inspiring_leader
+    trait=one_handed
+	trait=brave
+	effect = {add_friend=1867007}
+    2626.1.1={birth=yes
+		culture=ontarois}
+    2700.1.1={death=yes}
+}
+4000124={
+	name="Constantine"
+	dynasty=1790001
+	culture=yooper
+	religion=norse_pagan
+        father=1919000
+	martial=11
+	diplomacy=9
+	stewardship=10
+	intrigue=4
+	learning=1
+        trait=brilliant_strategist
+        trait=experimenter
+        trait=holy_warrior
+        trait=norse_leader
+	trait=viking
+	trait=ambitious
+	2630.1.1={birth=yes}
+    2700.1.1={death=yes}
+}
+4000125={
+	name="Gregory"
+	dynasty=90000063
+    culture=ontarois
+    religion=Gregorian
+	martial=8
+	diplomacy=15
+	stewardship=14
+	intrigue=9
+	learning=22
+        trait=zealous
+        trait=kind
+        trait=charitable
+        trait=honest
+        trait=chaste
+        trait=theologian
+        trait=erudite
+        trait=humble
+        trait=temperate
+	trait=ambitious
+	2590.1.1={birth=yes}
+        2680.1.1={death=yes}
+}
+4000126={
+	name="Peter"
+	dynasty=90000064
+    culture=ojibwe
+    religion=nonconformist
+	2630.1.1={birth=yes}
+        2700.1.1={death=yes}
+}
+4000127={
+	name="Mikom"
+	dynasty=90000065
+    culture=ojibwe
+    religion=ursuline
+	2640.1.1={birth=yes}
+        2700.1.1={death=yes}
+}
+4000128={
+	name="Mukwoh"
+	dynasty=90000066
+    culture=ojibwe
+    religion=midewiwin
+	2640.1.1={birth=yes}
+        2700.1.1={death=yes}
+}
+4000129={
+	name="Ahmik"
+	dynasty=90000067
+    culture=ojibwe
+    religion=midewiwin
+	2640.1.1={birth=yes}
+        2700.1.1={death=yes}
+}
+4000130={
+	name="William"
+	dynasty=90000068
+    culture=ontarian
+    religion=nonconformist
+	2640.1.1={birth=yes}
+        2700.1.1={death=yes}
+}
+4000131={
+	name="Philip"
+	dynasty=90000069
+    culture=ontarian
+    religion=high_church
+	2628.1.1={birth=yes}
+        2700.1.1={death=yes}
+}
+4000132={
+	name="Jean"
+	dynasty=90000070
+    culture=ontarois
+    religion=ursuline
+	2636.1.1={birth=yes}
+        2700.1.1={death=yes}
+}
+4000133={
+	name="Joseph"
+	dynasty=90000071
+    culture=ojibwe
+    religion=midewiwin
+	2642.1.1={birth=yes}
+        2700.1.1={death=yes}
+}
+4000134={
+	name="Issac"
+	dynasty=90000072
+    culture=ontarois
+    religion=ursuline
+	2639.1.1={birth=yes}
+        2700.1.1={death=yes}
+}
+4000135={
+	name="Thayendanegea"
+	dynasty=2007055
+    culture=iroquois
+    religion=Gregorian
+	trait=tough_soldier
+	father=4000098
+	2509.1.1={birth=yes}
+    2570.1.1={death=yes}
+}
+4000136={
+	name="Crowfoot"
+	dynasty=2007055
+    culture=iroquois
+    religion=Gregorian
+	father=4000135
+	2559.1.1={birth=yes}
+    2607.1.1={death=yes}
+}
+4000137={
+	name="Emily"
+	dynasty=90000061 # de Gatineau
+    	culture=ontarois
+   	religion=ursuline
+	trait=bastard
+	female = yes
+	father=4000121
+	2609.1.1={birth=yes}
+    	2670.1.1={death=yes}
+}
+4000138={
+	name="Lydia"
+	dynasty=90000062 # Smith
+    	culture=ontarian
+   	religion=Gregorian
+	female = yes
+	father=4000123
+	2644.10.2={birth=yes}
+    2720.1.1={death=yes}
+}
+4000139={
+	name="Thayendanegea"
+	dynasty=90000052 # Baptiste
+	disallow_random_traits = yes
+	give_nickname = nick_the_founder
+	trait=zealous
+	trait=honest
+	trait=grey_eminence
+	trait=scholar
+	trait=theologian
+	trait=strategist
+	trait=monk
+	trait=crusader
+	trait=just
+	trait=saint
+	trait=brave
+	trait=genius
+	trait=strong
+    	culture=iroquois
+   	religion=Gregorian
+	2100.1.1={birth=yes}
+    	2180.1.1={death=yes}
+	    2180.1.2={
+		create_bloodline={
+			type=bloodline_grand_patron
+			has_dlc="Holy Fury"
+		}
+	}
+}
+
+4000140={
+	name="Fredoric"
+	dynasty=1790001
+	culture=yooper
+	religion=norse_pagan
+	disallow_random_traits = yes
+    father=1919000
+	martial=4
+	diplomacy=1
+	stewardship=1
+	intrigue=1
+	learning=1
+		trait=one_eyed
+        trait=brilliant_strategist
+        trait=experimenter
+        trait=holy_warrior
+        trait=norse_leader
+		trait=paranoid
+		trait=impaler
+		trait=cruel
+		trait=brave
+		trait=greedy
+		trait=proud
+	trait=viking
+	trait=seaking
+	trait=ambitious
+	add_claim = k_ontario
+	add_claim = d_home
+	add_claim = c_toronto
+	add_claim = d_huronia
+	add_claim = d_talbot
+	2620.1.1={birth=yes}
+		2666.1.1 = {
+    effect = {
+        spawn_unit = {
+            owner = ROOT
+            province = capital_scope
+            home = capital_scope
+            
+            troops = {
+                heavy_infantry = { 1000 }
+            }
+            
+            attrition = 1.0
+            disband_on_peace = no
+            maintenance_multiplier = 0.1
+			}
+		}
+	}
+    2700.1.1={death=yes}
+}
+4000141={
+	name="Theodore"
+	dynasty=90000000 #Cornwallis
+	father=1857082
+	mother=1867057
+	martial=3
+	diplomacy=11
+	stewardship=10
+	intrigue=10
+	learning=10
+	disallow_random_traits = yes
+	trait=honest
+	add_trait=knight
+	trait=skilled_tactician
+	trait=zealous
+	trait=just
+	trait=brave
+	trait=strong
+    culture=ontarian
+   	religion=Gregorian
+	2645.1.1={birth=yes}
+	2666.6.15={
+		add_spouse=1763128
+		effect = { 
+		give_minor_title = title_governor_general 
+		give_minor_title = title_senator  
+		give_minor_title = title_speaker
+		}
+	}
+    2740.1.1={death=yes}
+}
+4000142={
+	name="Arthur"
+	dynasty=90000074 #du Marie
+	father=1857082
+	mother=4000179
+	martial=7
+	diplomacy=1
+	stewardship=1
+	intrigue=1
+	learning=1
+	disallow_random_traits = yes
+	give_nickname=nick_the_black
+	trait=bastard
+	add_trait=knight
+	trait=skilled_tactician
+	trait=wroth
+	trait=just
+	trait=brave
+    culture=chilango
+   	religion=Gregorian
+	2644.9.3={birth=yes culture=ontarian}
+    2700.1.1={death=yes}
+}
+4000143={
+	name="Cathrine"
+	dynasty=90000000 #Cornwallis
+	father=1857082
+	mother=1867057
+	female=yes
+	martial=7
+	diplomacy=16
+	stewardship=14
+	intrigue=10
+	learning=10
+	disallow_random_traits = yes
+	trait=honest
+	trait=grey_eminence
+	trait=proud
+	trait=just
+	trait=brave
+    culture=ontarian
+   	religion=Gregorian
+	2647.1.1={birth=yes}
+	2665.4.10={
+		add_spouse=1867160
+	}
+    2740.1.1={death=yes}
+}
+
+
+
+####GRAND PATRON LEADERS BESIDES FOUNDER AND CURRENT AT GAMESTART#####
+
+4000144={
+	name="Conrad"
+    culture=ontarian
+   	religion=Gregorian
+	2152.10.2={birth=yes}
+    2202.1.1={death=yes}
+}
+4000145={
+	name="Gregory"
+    culture=ontarian
+   	religion=Gregorian
+	2168.1.2={birth=yes}
+    2220.1.1={death=yes}
+}
+4000146={
+	name="Peter"
+    culture=ontarian
+   	religion=Gregorian
+	give_nickname = nick_the_great
+	add_trait=genius
+	add_trait=brilliant_strategist
+	add_trait=zealous
+	2200.1.1={birth=yes}
+	2257.5.1={death={
+			death_reason=death_battle
+		}
+	}
+}
+4000147={
+	name="Arthur"
+    culture=ontarian
+   	religion=Gregorian
+	give_nickname = nick_the_brave
+	add_trait=brilliant_strategist
+	add_trait=zealous
+	2234.1.1={birth=yes}
+	2276.1.1={death={
+			death_reason=death_battle
+		}
+	}
+}
+4000148={
+	name="Constantine"
+    culture=ontarian
+   	religion=Gregorian
+	2236.1.1={birth=yes}
+    2288.1.1={death=yes}
+}
+4000149={
+	name="Thomas"
+    culture=ontarian
+   	religion=Gregorian
+	give_nickname = nick_the_saint
+	disallow_random_traits = yes
+	add_trait=brilliant_strategist
+	add_trait=zealous
+	add_trait=just
+	add_trait=brave
+	add_trait=saint
+	2236.1.1={birth=yes}
+	2289.8.1={death={
+			death_reason=death_battle
+			killer = 1620073
+		}
+	}
+}
+4000150={
+	name="George"
+    culture=ontarian
+   	religion=Gregorian
+	give_nickname = nick_the_fearless
+	disallow_random_traits = yes
+	add_trait=brilliant_strategist
+	add_trait=zealous
+	add_trait=just
+	add_trait=brave
+	add_trait=saint
+	2239.1.1={birth=yes}
+	2291.1.1={death={
+			death_reason=death_battle
+			killer = 1620073
+		}
+	}
+}
+4000151={
+	name="Arthur"
+    culture=ontarian
+   	religion=Gregorian
+	give_nickname = nick_the_holy
+	disallow_random_traits = yes
+	add_trait=brilliant_strategist
+	add_trait=zealous
+	add_trait=just
+	add_trait=brave
+	add_trait=saint
+	2256.1.1={birth=yes}
+	2296.1.1={death={
+			death_reason=death_battle
+			killer = 1620073
+		}
+	}
+}
+4000152={
+	name="Constantine"
+    culture=ontarian
+   	religion=Gregorian
+	give_nickname = nick_the_restorer
+	disallow_random_traits = yes
+	add_trait=brilliant_strategist
+	add_trait=zealous
+	add_trait=just
+	add_trait=brave
+	2276.1.1={birth=yes}
+    2323.1.1={death=yes}
+}
+4000153={
+	name="Conrad"
+    culture=ontarian
+   	religion=Gregorian
+	2293.1.1={birth=yes}
+    2365.1.1={death=yes}
+}
+4000154={
+	name="Thayendanegea"
+    culture=iroquois
+   	religion=Gregorian
+	2330.1.1={birth=yes}
+    2382.1.1={death=yes}
+}
+4000155={
+	name="Michael"
+    culture=ontarian
+   	religion=Gregorian
+	2336.1.1={birth=yes}
+    2390.1.1={death=yes}
+}
+4000156={
+	name="Thomas"
+    culture=ontarian
+   	religion=Gregorian
+	2341.1.1={birth=yes}
+    2401.1.1={death=yes}
+}
+4000157={
+	name="Peter"
+    culture=ontarian
+   	religion=Gregorian
+	2356.1.1={birth=yes}
+    2423.1.1={death=yes}
+}
+4000158={
+	name="Constantine"
+    culture=ontarian
+   	religion=Gregorian
+	2354.1.1={birth=yes}
+    2440.1.1={death=yes}
+}
+4000159={
+	name="Richard"
+    culture=ontarian
+   	religion=Gregorian
+	2367.1.1={birth=yes}
+    2450.1.1={death=yes}
+}
+4000160={
+	name="Thomas"
+    culture=ontarian
+   	religion=Gregorian
+	2390.1.1={birth=yes}
+    2475.1.1={death=yes}
+}
+4000161={
+	name="Theodore"
+    culture=ontarian
+   	religion=Gregorian
+	2422.1.1={birth=yes}
+    2493.1.1={death=yes}
+}
+4000162={
+	name="Thomas"
+    culture=ontarian
+   	religion=Gregorian
+	2432.1.1={birth=yes}
+    2501.1.1={death=yes}
+}
+4000163={
+	name="Joseph"
+    culture=ontarian
+   	religion=Gregorian
+	2449.1.1={birth=yes}
+    2517.1.1={death=yes}
+}
+4000164={
+	name="Matthew"
+    culture=ontarian
+   	religion=Gregorian
+	2452.1.1={birth=yes}
+    2535.1.1={death=yes}
+}
+4000165={
+	name="Raymond"
+    culture=ontarian
+   	religion=Gregorian
+	2494.1.1={birth=yes}
+    2547.1.1={death=yes}
+}
+4000166={
+	name="Michael"
+    culture=ontarian
+   	religion=Gregorian
+	disallow_random_traits = yes
+	add_trait=brilliant_strategist
+	add_trait=zealous
+	add_trait=adventurer
+	add_trait=just
+	2509.1.1={birth=yes}
+	2568.3.7={death={
+			death_reason=death_execution
+			killer=1763040
+		}
+	}
+}
+4000167={
+	name="Edward"
+    culture=ontarian
+   	religion=Gregorian
+	2516.1.1={birth=yes}
+    2573.1.1={death={
+			death_reason=death_murder
+		}
+	}
+}
+4000168={
+	name="Roger"
+    culture=ontarian
+   	religion=Gregorian
+	2512.1.1={birth=yes}
+    2581.1.1={death={
+			death_reason=death_murder
+		}
+	}
+}
+4000169={
+	name="Joseph"
+    culture=iroquois
+   	religion=Gregorian
+	2552.1.1={birth=yes}
+    2596.1.1={death=yes}
+}
+4000170={
+	name="Jacob"
+    culture=ontarian
+   	religion=Gregorian
+	2572.1.1={birth=yes}
+    2611.1.1={death={
+			death_reason=death_missing
+		}
+	}
+}
+4000171={
+	name="Erwin"
+    culture=ontarian
+   	religion=Gregorian
+	2580.1.1={birth=yes}
+    2628.1.1={death=yes}
+}
+4000172={
+	name="Constantine"
+    culture=ontarian
+   	religion=Gregorian
+	2593.1.1={birth=yes}
+    2640.1.1={death=yes}
+}
+
+####### NEW IRVING KINGS OF MARITIMES #####
+
+
+4000173={
+	name="Conan"
+	dynasty=1813047
+	culture=maritimer
+	religion=high_church
+	give_nickname=nick_the_wise
+	trait=grey_eminence
+	trait=brave
+	trait=strategist
+	trait=erudite
+	trait=quick
+	trait=poet
+	2470.1.1={birth=yes}
+	2517.7.4={death={
+			death_reason=death_battle
+			killer=1620106
+		}
+	}
+}
+
+4000174={
+	name="Conrad"
+	dynasty=1813047
+	culture=maritimer
+	religion=high_church
+	trait=skilled_tactician
+	give_nickname=nick_the_strong
+	trait=brave
+	trait=strong
+	father=4000173
+	2510.1.1={birth=yes}
+	2577.1.1={death=yes}
+}
+4000175={
+	name="Kenneth"
+	dynasty=1813047
+	culture=maritimer
+	religion=high_church
+	father=4000174
+	2540.1.1={birth=yes}
+	2600.1.1={death=yes}
+}
+4000176={
+	name="Thomas"
+	culture=maritimer
+	religion=high_church
+	give_nickname=nick_the_holy
+	trait=grey_eminence
+	trait=devout
+	trait=poet
+	2370.1.1={birth=yes}
+	2452.1.1={death=yes}
+}
+4000177={
+	name="James"
+	#dynasty=1813076 # Irving
+	culture=maritimer
+	religion=high_church
+	father=4000174
+	give_nickname=nick_the_martyr
+	trait=devout
+	2379.1.1={birth=yes}
+	2470.1.1={death={
+			death_reason=death_battle
+			killer=1899059
+		}
+	}
+}
+##########NEW MOUNTIE LEADER############
+4000178={
+	name="Jose"
+    culture=southron
+   	religion=Gregorian
+	add_trait=brilliant_strategist
+	add_trait=shrewd
+	add_trait=just
+	add_trait=brave
+	add_trait=knight
+	2627.5.21={birth=yes}
+	effect = {add_friend=1857082}
+    2700.1.1={death=yes}
+}
+###ARTHUR THE BLACK'S MOTHER####
+4000179={
+	name="Marie"
+	dynasty=90000074 # du Marie
+	female=yes
+    culture=tuskegean
+   	religion=evangelical
+	add_trait=genius
+	add_trait=charitable
+	add_trait=just
+	add_trait=brave
+	add_trait=fair
+	2621.5.21={birth=yes}
+    2662.6.1={death=yes}
+}
+
+#### ENEMIES KILLED BY THE CORNWALLIS CLAN WHILE IN EXILE ######
+4000180={
+	name="Madison"
+	culture=delawarean
+	religion=americanist
+	trait=brilliant_strategist
+	trait=brave
+	trait=strategist
+	2590.1.1={birth=yes}
+	2634.1.1={death={
+			death_reason=death_battle
+			killer=1857082
+		}
+	}
+}
+4000181={
+	name="Abram"
+	culture=yankee
+	religion=occultist
+	dynasty=1780001
+	father=1620011
+	trait=brilliant_strategist
+	trait=wroth
+	trait=duelist
+	trait=child_of_consort
+	2625.1.1={birth=yes}
+	2653.1.1={death={
+			death_reason=death_battle
+			killer=1857082
+		}
+	}
+}
+####LIST OF JOSEPH BRANT AND DESCENDENTS####
+4000182={
+	name="Joseph Thayendanegea"
+	dynasty=2007055
+	culture=iroquois
+	religion=high_church
+	trait=brilliant_strategist
+	trait=brave
+	trait=strategist
+	1743.3.1={birth=yes}
+	1807.11.24={death=yes}
+}
+4000183={
+	name="John"
+	dynasty=2007055
+	culture=iroquois
+	religion=high_church
+	father=4000182
+	1794.9.27={birth=yes}
+	1832.8.27={death=yes}
+}
+4000184={
+	name="Peter"
+	dynasty=2007055
+	culture=iroquois
+	religion=high_church
+	father=4000183
+	1830.1.1={birth=yes}
+	1901.1.1={death=yes}
+}
+4000185={
+	name="Henry"
+	dynasty=2007055
+	culture=iroquois
+	religion=high_church
+	father=4000184
+	1900.1.1={birth=yes}
+	2000.1.1={death=yes}
+}
+4000186={
+	name="Connor"
+	dynasty=2007055
+	culture=iroquois
+	religion=high_church
+	trait=duelist
+	trait=schemer
+	father=4000185
+	2000.1.1={birth=yes}
+	2100.1.1={death=yes}
+}
+4000187={
+	name="Henry"
+	dynasty=2007055
+	culture=iroquois
+	religion=Gregorian
+	father=4000186
+	2100.1.1={birth=yes}
+	2200.1.1={death=yes}
+}
+4000188={
+	name="Thayendanegea"
+	dynasty=2007055
+	culture=iroquois
+	religion=Gregorian
+	father=4000187
+	2200.1.1={birth=yes}
+	2300.1.1={death=yes}
+}
+4000189={
+	name="Jacob"
+	dynasty=2007055
+	culture=iroquois
+	religion=Gregorian
+	father=4000188
+	2300.1.1={birth=yes}
+	2400.1.1={death=yes}
+}
+4000190={
+	name="John"
+	dynasty=2007055
+	culture=iroquois
+	religion=Gregorian
+	father=4000189
+	2400.1.1={birth=yes}
+	2467.1.1={death=yes}
+}
+##### PETER BRANT'S Family####
+4000191={
+	name="John"
+	dynasty=2007055
+	culture=iroquois
+	religion=Gregorian
+	father=1867159
+	trait=tough_soldier
+	trait=ambitious
+	trait=zealous
+	2649.2.18={birth=yes}
+	2700.1.1={death=yes}
+}
+4000192={
+	name="Tier"
+	dynasty=2007055
+	culture=iroquois
+	religion=Gregorian
+	father=1867160
+	mother=4000143
+	2666.5.18={birth=yes}
+	2750.1.1={death=yes}
+}
+### Independent Heads Of Remembrant Legion ###
+4000193={
+	name="Rohahes"
+    culture=iroquois
+   	religion=Gregorian
+	2468.1.1={birth=yes}
+    2536.1.1={death=yes}
+}
+4000194={
+	name="John"
+    culture=ontarian
+   	religion=Gregorian
+	2500.1.1={birth=yes}
+	2568.3.7={death={
+			death_reason=death_battle
+			killer=1763040
+		}
+	}
+}
+4000195={
+	name="William"
+    culture=ontarian
+   	religion=Gregorian
+	2530.1.1={birth=yes}
+	2580.1.1={death=yes}
+}
+4000196={
+	name="Raymond"
+    culture=ontarian
+   	religion=Gregorian
+	2570.1.1={birth=yes}
+	2600.6.20={death=yes}
+}
+4000197={
+	name="Jackson"
+    culture=ontarian
+   	religion=Gregorian
+	2570.1.1={birth=yes}
+	2630.1.1={death=yes}
+}
+4000198={
+	name="Michael"
+    culture=ontarian
+   	religion=Gregorian
+	2570.1.1={birth=yes}
+	2650.12.25={death=yes}
+}
+######THUNDER BAY DUKES#####
+4000199={
+	name="Bishop"
+    culture=ontarian
+   	religion=Gregorian
+	add_trait=cruel
+	give_nickname=nick_the_cruel
+	2480.1.1={birth=yes}
+	2530.1.1={death=yes}
+}
+4000200={
+	name="Conan"
+    culture=ontarian
+   	religion=Gregorian
+	add_trait=administrator
+	2510.1.1={birth=yes}
+	2553.1.1={death={
+			death_reason=death_battle
+			killer = 4000200
+		}
+	}
+}
+4000201={
+	name="Aurelian"
+    culture=ontarian
+   	religion=nonconformist
+	dynasty=1867027
+	add_trait=brilliant_strategist
+	add_trait=holy_warrior
+	add_trait=just
+	add_trait=brave
+	give_nickname=nick_the_liberator
+	2499.1.1={birth=yes}
+	2582.1.1={death=yes}
+}
+4000202={
+	name="Edwin"
+    culture=ontarian
+   	religion=nonconformist
+	dynasty=1867027
+	father=4000201
+	add_trait=skilled_tactician
+	add_trait=brave
+	add_trait=ambitious
+	2555.1.1={birth=yes}
+	2620.1.1={death=yes}
+}
+

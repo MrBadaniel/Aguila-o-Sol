@@ -1,0 +1,54 @@
+# 1217 - Hochelaga
+
+# County Title
+title=c_hochelaga
+
+# Settlements
+max_settlements=7
+b_montreal_QC=city
+b_maisonneuve_QC=castle
+b_laval_QC=temple
+b_outremont_QC=city
+b_westmount_QC=temple
+
+# Misc
+culture=quebecois
+religion=ursuline
+terrain=farmlands
+
+
+# History
+1904.7.1={
+	build_wonder=wonder_cathedral_saint_joseph
+	set_wonder_stage=3
+	build_wonder_upgrade=upgrade_grand_basilica
+	build_wonder_upgrade=upgrade_stained_glass_window
+	build_wonder_upgrade=upgrade_relic_tomb
+}
+2100.1.1 = { 
+	b_maisonneuve_QC = ca_keep_1
+	b_maisonneuve_QC = ca_training_grounds_1
+	b_maisonneuve_QC = ca_stable_1
+	b_maisonneuve_QC = ca_barracks_1
+	b_maisonneuve_QC = ca_barracks_2
+	b_maisonneuve_QC = ca_militia_barracks_1
+	b_maisonneuve_QC = ca_militia_barracks_2
+	b_maisonneuve_QC = ca_wall_1
+	b_maisonneuve_QC = ca_wall_2
+	b_maisonneuve_QC = ca_town_1
+	b_maisonneuve_QC = ca_town_2
+	b_montreal_QC = ct_wall_1
+	b_montreal_QC = ct_wall_2
+	b_montreal_QC = ct_barracks_1
+	b_montreal_QC = ct_barracks_2
+	b_montreal_QC = ct_barracks_1
+	b_montreal_QC = ct_wall_q_1
+	b_montreal_QC = ct_wall_q_2
+	b_montreal_QC = ct_university_1
+	b_laval_QC = tp_monastery_1
+	b_laval_QC = tp_monastery_2
+	b_laval_QC = tp_monastery_3
+	b_laval_QC = tp_wall_1
+	b_laval_QC = tp_wall_2
+	b_laval_QC = tp_barracks_1
+}
