@@ -291,17 +291,20 @@
 	trait=ambitious
 	trait=gregarious
 	2623.4.3={birth=yes}
-	2649.1.1={add_spouse=1846018}
+	2649.1.1={add_spouse=1876008}
 	2659.2.11={add_claim=c_santa_fe}
 	2700.1.1={death=yes}
 }
 
 1846018={
 	name="Mary"
+	dynasty=1797022 # Helianthus
 	female=yes
 	culture=grangelander
 	religion=catholic
-	2630.1.1={birth=yes}
+	father=1846017
+	mother=1876008
+	2655.1.1={birth=yes}
 	2700.1.1={death=yes}
 }
 
@@ -312,7 +315,7 @@
 	culture=grangelander
 	religion=catholic
 	father=1846017
-	mother=1846018
+	mother=1876008
 	2650.1.1={birth=yes}
 	2700.1.1={death=yes}
 }
@@ -323,7 +326,7 @@
 	culture=grangelander
 	religion=catholic
 	father=1846017
-	mother=1846018
+	mother=1876008
 	2652.1.1={birth=yes}
 	2700.1.1={death=yes}
 }
