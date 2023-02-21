@@ -7406,7 +7406,10 @@
 		factor = 100
 		modifier = {
 			factor = 0
-			trait = dead_scepter_midewiwin_fylkir
+			OR = {
+				trait = dead_scepter_midewiwin_fylkir
+				trait = dead_baston_del_pueblo
+			}
 		}
 		modifier = {
 			factor = 0
@@ -7418,7 +7421,10 @@
 				}
 			}
 			any_artifact = {
-				artifact_type = scepter_midewiwin_fylkir
+				OR = {
+					artifact_type = scepter_midewiwin_fylkir
+					artifact_type = baston_del_pueblo
+				}
 				is_artifact_equipped = yes 
 			}
 		}
@@ -7445,7 +7451,7 @@
 			}
 		}
 	}
-	2 = {	#UNUSED
+	2 = {	#Baston del Pueblo
 		factor = 100
 		#hide_layers = { 5 = { } } #Hide layer 5 (headgear) when this frame is picked.
 		modifier = {
@@ -7456,7 +7462,7 @@
 				value = on
 			}
 		}
-		modifier = { #Baston del Pueblo
+		modifier = { 
 			factor = 0
 			NOR = { 
 				any_artifact = {
