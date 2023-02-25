@@ -5092,7 +5092,7 @@
 			}
 		}
 	}
-	16 = {  # Mexican Presidential band
+	16 = {  # Mexican Presidential band and crown
 		factor = 100
 		hide_layers = { 5 = { } } #Hide layer 5 (headgear) when this frame is picked.
 		modifier = {
@@ -5161,7 +5161,23 @@
 			}
 		}
 	}
+	20 = {  # Nohoch Tata clothes
+		factor = 100
+		hide_layers = { 5 = { } } #Hide layer 5 (headgear) when this frame is picked.
+		hide_layers = { 3 = { } } #Hide Clothes.
+		#modifier = {
+		#	factor = 0
+		#	year = 1245
+		#}
+		modifier = {
+			factor = 0
+			NOT = {
+				has_landed_title = d_qabantajik
+			}
+		}
+	}	
 }
+
 
 # p20 freckles
 #Freckles traits from thinnest to thickest:
