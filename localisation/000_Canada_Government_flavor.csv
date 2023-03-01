@@ -6,7 +6,7 @@ mountie_desc;This character has served with the Royal Mounted Legion.;;;;;;;;;;;
 
 title_parliamentarian_king;Parliamentarian;;;;;;;;;;;;;x
 
-KING_CANADA_FOA;To the August, Majestic, Imperial Dominus, Protector of Civilization;;;;;;;;;;;;;x
+
 ERA_CHAR_NAME_TYRRELL;Tyrrell Cornwallis;;;;;;;;;;;;;x
 BM_GHOSTS_OF_THE_NORTH_DESC;The northern regions of Old America and Canada are a hotbed of turmoil and conflict. Christian and pagan faiths alike vie for control of the region, with Quebecois schismatics and the descendants of the Pennsylvania Amish vying for control alongside New English practitioners of the occult and Rust Belt denizens who worship the long-abandoned auto factories and steel mills of the Old World. In the center of all this turmoil lies the Dominion of Ontario, an old realm in turmoil beset on all sides by enemies, it has earned the fury of the Sons of Soady, who now marshall a great heathen army to bring low this kingdom.;;;;;;;;;;;;;x;;
 BM_GHOSTS_OF_THE_NORTH_ERA_INFO;The northern regions of Old America and Canada are a hotbed of turmoil and conflict. Christian and pagan faiths alike vie for control of the region, with Quebecois schismatics and the descendants of the Pennsylvania Amish vying for control alongside New English practitioners of the occult and Rust Belt denizens who worship the long-abandoned auto factories and steel mills of the Old World. In the center of all this turmoil lies the Dominion of Ontario, an old realm in turmoil beset on all sides by enemies, it has earned the fury of the Sons of Soady, who now marshall a great heathen army to bring low this kingdom.;;;;;;;;;;;;;x;;
@@ -34,18 +34,7 @@ b_scarborough_ON;Citadel de Saint Michael's;;;;;;;;;;;;;x
 
 d_mounties;Royal Mounted Legion;;;;;;;;;;;;;x
 
-# only defined for character scopes at the moment, titles could be added later
-defined_text = {
-	name = CAD_GetDebugName
-	text = {
-		localisation_key = CAD_String_DebugNameRuler
-		trigger = { is_ruler = yes }
-	}
-	text = {
-		localisation_key = CAD_String_DebugNameChar
-		trigger = { is_ruler = no }
-	}
-}
+
 
 
 crown_ontario;The Crimson Crown;;;;;;;;;;;;;x
