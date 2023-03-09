@@ -6,15 +6,21 @@ title=c_elgin
 # Settlements
 max_settlements=5
 b_london_ON=tribal
-b_st_thomas_ON=temple
-b_port_stanley_ON=city
+#b_st_thomas_ON=temple
+#b_port_stanley_ON=city
 
 # Misc
 culture=ontarian
 religion=Gregorian
 
 # History
-2100.1.1 = { 
+2300.1.1={
+b_london_ON=castle
+b_st_thomas_ON=temple
+b_port_stanley_ON=city
+}
+
+2400.1.1 = { 
 	b_london_ON= ca_keep_1
 	b_london_ON= ca_keep_2
 	b_london_ON= ca_training_grounds_1
@@ -28,7 +34,4 @@ religion=Gregorian
 	b_london_ON= ca_wall_3
 	b_london_ON= ca_town_1
 	b_london_ON= ca_town_2
-}
-2300.1.1={
-b_london_ON=castle
 }
