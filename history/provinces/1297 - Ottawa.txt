@@ -5,16 +5,16 @@ title=c_ottawa
 
 # Settlements
 max_settlements=7
-b_parliament_hill_ON=castle
+b_parliament_hill_ON=tribal
 b_ottawa_ON=temple
 b_kanata_ON=city
-b_nepean_ON=castle
+b_nepean_ON=tribal
 b_goulbourn_ON=temple
-b_gloucester_ON=castle
-b_vanier_ON=castle
+b_gloucester_ON=tribal
+
 
 # Misc
-culture=ontarois
+culture=ontarian
 religion=ursuline
 terrain=farmlands
 
@@ -27,4 +27,9 @@ terrain=farmlands
 	build_wonder_upgrade=upgrade_peace_tower
 	b_parliament_hill_ON = ca_town_3
 
+}
+2300.1.1={
+	b_parliament_hill_ON = castle
+	b_nepean_ON=castle
+	b_gloucester_ON=castle
 }
