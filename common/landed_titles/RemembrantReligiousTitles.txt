@@ -1,0 +1,45 @@
+d_gregorian = {
+	#color = { 150 90 30 }
+	color = { 183 60 155 }
+	color2 = { 220 220 0 }
+	capital = 1271 # Toronto
+	title = GRAND_PATRON
+	foa = ECUMENICAL_PATRIARCH_FOA
+	landless = yes
+	#holy_order = yes
+	short_name = yes
+	
+	
+	monthly_income = 2
+
+	# Controls a religion
+	controls_religion = Gregorian
+	religion = Gregorian
+	# Cannot be held as a secondary title
+	assimilate = no
+	primary = yes
+	dynasty_title_names = no # Will not be named "Seljuk", etc.
+}
+d_remembrant_legion
+	color = { 137 191 244 } #
+	color2= { 255 255 255 }
+	
+	#graphical_culture = holygfx
+	religion = Gregorian
+	culture = ontarian
+	
+	capital = 1271 # Toronto
+
+	title = "GRANDMASTER"
+	foa = "GRANDMASTER_FOA"
+
+	culture = ontarian		
+	religion = Gregorian
+	
+	landless = yes
+	holy_order = yes
+	primary = yes
+	monthly_income = 1
+
+	mercenary_type = d_gregorian_composition
+}

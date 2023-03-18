@@ -1,0 +1,68 @@
+#bloodline_arthur = {
+#	combat_rating = 8
+#	catholic_opinion = 5
+#	monthly_character_prestige = 1
+#	bloodline_effect_great_heroes_appear = 1
+#	inheritance = patrilineal
+#	allow_bastards = yes
+#	picture = GFX_bloodlines_symbol_carolingian
+#	flags = { historical_bloodline bloodline_heroes }
+#	}
+	
+	
+bloodline_aurelian = {
+	anglican_opinion = 5
+	ontarian_opinion = 5
+	iroquois_opinion = 5
+	monthly_character_prestige = 0.5
+	monthly_character_piety = 0.5
+	inheritance = patrilineal
+	allow_bastards = yes
+	picture = GFX_bloodlines_symbol_blessed_child
+	flags = { historical_bloodline bloodline_heroes }
+	}
+
+bloodline_wolfe = {
+	ontarian_opinion = 5
+	monthly_character_prestige = 0.5
+	inheritance = patrilineal
+	strategist_opinion = 5
+	bloodline_effect_inspire_commanders = 1
+	combat_rating = 5
+	allow_bastards = yes
+	picture = GFX_bloodlines_symbol_norse_wolf
+	flags = { bloodline_inspire_commanders  }
+	}
+
+bloodline_theodore = {
+	combat_rating = 8
+	Gregorian_opinion = 5
+	ontarian_opinion = 10
+	monthly_character_prestige = 0.2
+	bloodline_effect_great_heroes_appear = 1
+	inheritance = patrilineal
+	allow_bastards = yes
+	picture = GFX_bloodlines_symbol_cross_1
+	flags = { historical_bloodline bloodline_heroes bloodline_theodore }
+	}
+
+bloodline_grand_patron = {
+	Gregorian_opinion_opinion = 20
+	monthly_character_prestige = 1
+	monthly_character_piety = 1
+	inheritance = patrilineal
+	allow_bastards = no
+	picture = GFX_bloodlines_symbol_cross_crusader
+	flags = { historical_bloodline bloodline_heroes }
+	}
+	
+	
+bloodline_montrose = {
+	monthly_character_prestige = 0.5
+	inheritance = patrilineal
+	combat_rating = 5
+	allow_bastards = yes
+	bloodline_effect_great_heroes_appear = 1
+	picture = GFX_bloodlines_symbol_cross_crusader_wicked
+	flags = { bloodline_inspire_commanders  }
+	}

@@ -2204,10 +2204,9 @@ castle = {
 		potential = {
 			NOT = {
 				OR = {
-					terrain = mountain
-					terrain = arctic
+					terrain = farmlands
 					terrain = steppe
-					terrain = taiga
+					terrain = plains
 				}
 			}
 			OR = {
@@ -2286,10 +2285,9 @@ castle = {
 		potential = {
 			NOT = {
 				OR = {
-					terrain = mountain
-					terrain = arctic
+					terrain = farmlands
 					terrain = steppe
-					terrain = taiga
+					terrain = plains
 				}
 			}
 			OR = {
@@ -2369,10 +2367,9 @@ castle = {
 		potential = {
 			NOT = {
 				OR = {
-					terrain = mountain
-					terrain = arctic
+					terrain = farmlands
 					terrain = steppe
-					terrain = taiga
+					terrain = plains
 				}
 			}
 			OR = {
@@ -2453,10 +2450,9 @@ castle = {
 		potential = {
 			NOT = {
 				OR = {
-					terrain = mountain
-					terrain = arctic
+					terrain = farmlands
 					terrain = steppe
-					terrain = taiga
+					terrain = plains
 				}
 			}
 			OR = {
@@ -2534,23 +2530,23 @@ castle = {
 		extra_tech_building_start = 0.8
 	}
 	
-	# Northern Ski Troops
-	ca_culture_ski_troops_1 = {
-		desc = ca_culture_ski_troops_1_desc
+	
+		# Mounties, NO NATIVES SHOULD HAVE ACCESS TO IT
+	ca_culture_mountie_troops_1 = {
+		desc = ca_culture_mountie_troops_1_desc
 		potential = {
 			OR = {
-				terrain = mountain
-				terrain = arctic
-				terrain = taiga
+					terrain = farmlands
+					terrain = steppe
+					terrain = plains
 			}
 			OR = {
 				culture_group = gallomerican
 				culture = prairielander
 				culture = ontarian
 				culture = canuck
-				culture = mikmaq
-				culture = inuit	
-				has_building = ca_culture_ski_troops_1
+				culture = yukoner
+				has_building = ca_culture_mountie_troops_1
 			}
 		}
 		is_active_trigger = {
@@ -2560,8 +2556,7 @@ castle = {
 					culture = prairielander
 					culture = ontarian
 					culture = canuck
-					culture = mikmaq
-					culture = inuit	
+					culture = yukoner
 				}
 			}
 		} 
@@ -2572,6 +2567,220 @@ castle = {
 					culture_group = gallomerican
 					culture = prairielander
 					culture = ontarian
+					culture = canuck
+					culture = yukoner
+				}
+			}
+		}
+		prerequisites = { ca_stable_2 }
+		gold_cost = 200
+		build_time = 730
+		horse_archers = 10
+		light_cavalry = 30
+		light_cavalry_defensive = 0.075
+		horse_archers_defensive = 0.075
+		ai_creation_factor = 101
+		
+		extra_tech_building_start = 0.8
+	}
+	ca_culture_mountie_troops_2 = {
+		desc = ca_culture_mountie_troops_1_desc
+		potential = {
+			OR = {
+					terrain = farmlands
+					terrain = steppe
+					terrain = plains
+			}
+			OR = {
+				culture_group = gallomerican
+				culture = prairielander
+				culture = ontarian
+				culture = canuck
+				culture = yukoner
+				has_building = ca_culture_mountie_troops_1
+				has_building = ca_culture_mountie_troops_2
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+					culture_group = gallomerican
+					culture = prairielander
+					culture = ontarian
+					culture = canuck
+					culture = yukoner
+				}
+			}
+		} 
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 1
+			ROOT = {
+				OR = {
+					culture_group = gallomerican
+					culture = prairielander
+					culture = ontarian
+					culture = canuck
+					culture = yukoner
+				}
+			}
+		}
+		upgrades_from = ca_culture_mountie_troops_1
+		gold_cost = 300
+		build_time = 1095
+		horse_archers = 20
+		light_cavalry_archers = 40
+		light_cavalry_defensive = 0.075
+		horse_archers_defensive = 0.075
+		ai_creation_factor = 101
+		
+		extra_tech_building_start = 0.8
+	}
+	ca_culture_mountie_troops_3 = {
+		desc = ca_culture_mountie_troops_1_desc
+		potential = {
+			OR = {
+					terrain = farmlands
+					terrain = steppe
+					terrain = plains
+			}
+			OR = {
+				culture_group = gallomerican
+				culture = prairielander
+				culture = ontarian
+				culture = canuck
+				culture = yukoner
+				has_building = ca_culture_mountie_troops_1
+				has_building = ca_culture_mountie_troops_2
+				has_building = ca_culture_mountie_troops_3
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+					culture_group = gallomerican
+					culture = prairielander
+					culture = ontarian
+					culture = canuck
+					culture = yukoner
+				}
+			}
+		} 
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 2
+			ROOT = {
+				OR = {
+					culture_group = gallomerican
+					culture = prairielander
+					culture = ontarian
+					culture = canuck
+					culture = yukoner
+				}
+			}
+		}
+		upgrades_from = ca_culture_mountie_troops_2
+		gold_cost = 400
+		build_time = 2190
+		horse_archers = 25
+		light_cavalry = 50
+		horse_archers_defensive = 0.075
+		light_cavalry_defensive = 0.075
+		ai_creation_factor = 101
+		
+		extra_tech_building_start = 0.8
+	}
+	ca_culture_mountie_troops_4 = {
+		desc = ca_culture_mountie_troops_1_desc
+		potential = {
+			OR = {
+					terrain = farmlands
+					terrain = steppe
+					terrain = plains
+			}
+			OR = {
+				culture_group = gallomerican
+				culture = prairielander
+				culture = ontarian
+				culture = canuck
+				culture = yukoner
+				has_building = ca_culture_mountie_troops_1
+				has_building = ca_culture_mountie_troops_2
+				has_building = ca_culture_mountie_troops_3
+				has_building = ca_culture_mountie_troops_4
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+					culture_group = gallomerican
+					culture = prairielander
+					culture = ontarian
+					culture = canuck
+					culture = yukoner
+				}
+			}
+		} 
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 4
+			ROOT = {
+				OR = {
+					culture_group = gallomerican
+					culture = prairielander
+					culture = ontarian
+					culture = canuck
+					culture = yukoner
+				}
+			}
+		}
+		upgrades_from = ca_culture_mountie_troops_3
+		gold_cost = 500
+		build_time = 2190
+		heavy_infantry = 35
+		light_infantry = 60
+		light_cavalry_defensive = 0.075
+		horse_archers_defensive = 0.075
+		ai_creation_factor = 101
+		
+		extra_tech_building_start = 0.8
+	}
+	
+	# Northern Ski Troops
+	ca_culture_ski_troops_1 = {
+		desc = ca_culture_ski_troops_1_desc
+		potential = {
+			OR = {
+				terrain = mountain
+				terrain = arctic
+				terrain = taiga
+			}
+			OR = {
+				#culture_group = gallomerican
+				culture = prairielander
+				#culture = ontarian
+				culture = canuck
+				culture = mikmaq
+				culture = inuit	
+				has_building = ca_culture_ski_troops_1
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = {
+					#culture_group = gallomerican
+					culture = prairielander
+					#culture = ontarian
+					culture = canuck
+					culture = mikmaq
+					culture = inuit	
+				}
+			}
+		} 
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 0
+			ROOT = {
+				OR = {
+					#culture_group = gallomerican
+					culture = prairielander
+					#culture = ontarian
 					culture = canuck
 					culture = mikmaq
 					culture = inuit	
@@ -2598,9 +2807,9 @@ castle = {
 				terrain = taiga
 			}
 			OR = {
-				culture_group = gallomerican
+				#culture_group = gallomerican
 				culture = prairielander
-				culture = ontarian
+				#culture = ontarian
 				culture = canuck
 				culture = mikmaq
 				culture = inuit	
@@ -2611,9 +2820,9 @@ castle = {
 		is_active_trigger = {
 			ROOT = {
 				OR = {
-					culture_group = gallomerican
+					#culture_group = gallomerican
 					culture = prairielander
-					culture = ontarian
+					#culture = ontarian
 					culture = canuck
 					culture = mikmaq
 					culture = inuit	
@@ -2624,9 +2833,9 @@ castle = {
 			TECH_CASTLE_CONSTRUCTION = 1
 			ROOT = {
 				OR = {
-					culture_group = gallomerican
+					#culture_group = gallomerican
 					culture = prairielander
-					culture = ontarian
+					#culture = ontarian
 					culture = canuck
 					culture = mikmaq
 					culture = inuit	
@@ -2653,10 +2862,10 @@ castle = {
 				terrain = taiga
 			}
 			OR = {
-				culture_group = gallomerican
+				#culture_group = gallomerican
 				culture = prairielander
 				culture = ontarian
-				culture = canuck
+				#culture = canuck
 				culture = mikmaq
 				culture = inuit	
 				has_building = ca_culture_ski_troops_1
@@ -2667,9 +2876,9 @@ castle = {
 		is_active_trigger = {
 			ROOT = {
 				OR = {
-					culture_group = gallomerican
+					#culture_group = gallomerican
 					culture = prairielander
-					culture = ontarian
+					#culture = ontarian
 					culture = canuck
 					culture = mikmaq
 					culture = inuit	
@@ -2680,9 +2889,9 @@ castle = {
 			TECH_CASTLE_CONSTRUCTION = 2
 			ROOT = {
 				OR = {
-					culture_group = gallomerican
+					#culture_group = gallomerican
 					culture = prairielander
-					culture = ontarian
+					#culture = ontarian
 					culture = canuck
 					culture = mikmaq
 					culture = inuit	
@@ -2709,9 +2918,9 @@ castle = {
 				terrain = taiga
 			}
 			OR = {
-				culture_group = gallomerican
+				#culture_group = gallomerican
 				culture = prairielander
-				culture = ontarian
+				#culture = ontarian
 				culture = canuck
 				culture = mikmaq
 				culture = inuit	
@@ -2724,9 +2933,9 @@ castle = {
 		is_active_trigger = {
 			ROOT = {
 				OR = {
-					culture_group = gallomerican
+					#culture_group = gallomerican
 					culture = prairielander
-					culture = ontarian
+					#culture = ontarian
 					culture = canuck
 					culture = mikmaq
 					culture = inuit	
@@ -2737,9 +2946,9 @@ castle = {
 			TECH_CASTLE_CONSTRUCTION = 4
 			ROOT = {
 				OR = {
-					culture_group = gallomerican
+					#culture_group = gallomerican
 					culture = prairielander
-					culture = ontarian
+					#culture = ontarian
 					culture = canuck
 					culture = mikmaq
 					culture = inuit	

@@ -4,17 +4,20 @@
 title=c_ottawa
 
 # Settlements
-max_settlements=6
-b_parliament_hill_ON=castle
-b_the_glebe_ON=temple
-b_ottawa_ON=city
-b_nepean_ON=castle
-b_goulbourn_ON=temple
+max_settlements=7
+b_parliament_hill_ON=tribal
+#b_ottawa_ON=temple
+#b_kanata_ON=city
+#b_nepean_ON=tribal
+#b_goulbourn_ON=temple
+#b_gloucester_ON=tribal
+
 
 # Misc
 culture=ontarian
-religion=high_church
+religion=ursuline
 terrain=farmlands
+
 # History
 1878.7.1={
 	build_wonder=wonder_parliament_hill
@@ -22,4 +25,16 @@ terrain=farmlands
 	build_wonder_upgrade=upgrade_century_flame
 	build_wonder_upgrade=upgrade_library_parliament
 	build_wonder_upgrade=upgrade_peace_tower
+	#b_parliament_hill_ON = ca_town_3
+
+}
+2400.1.1={
+	b_parliament_hill_ON = castle
+	}
+2450.1.1={	
+	b_kanata_ON = city
+	b_nepean_ON = castle
+	b_goulbourn_ON = temple
+	b_gloucester_ON = castle
+	b_parliament_hill_ON = ca_town_3
 }

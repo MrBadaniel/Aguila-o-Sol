@@ -1,0 +1,214 @@
+namespace = ATECAD
+### Varangian Hippodrome Riots
+
+# Hippodrome Riots
+character_event = {
+	id = ATECAD.000
+	desc = EVTDESCATECAD.000
+	picture = GFX_evt_riots_byzantine
+	
+	ai = no
+	capable_only = yes
+	prisoner = no
+	only_playable = yes
+	min_age = 16
+	
+	trigger = {
+		has_dlc = "Legacy of Rome"
+		in_command = no
+		OR = {
+			has_landed_title = e_canada
+		}
+		capital_scope = { province_id = 1297 }
+		any_vassal = {
+			has_landed_title = d_mounties
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 420
+	}
+	
+	option = {
+		name = EVTOPTAATECAD.000
+		character_event = { id = ATECAD.001 days = 3 tooltip = EVTTOOLTIPATECAD.001 }
+	}
+	option = {
+		name = EVTOPTBATECAD.000
+		character_event = { id = ATECAD.002 days = 3 tooltip = EVTTOOLTIPATECAD.002 }
+	}
+}
+
+# Varangian Guard unleashed
+character_event = {
+	id = ATECAD.001
+	desc = EVTDESCATECAD.001
+	picture = GFX_evt_battle_byzantine
+	
+	hide_from = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTAATECAD.002
+		scaled_wealth = -0.25
+		prestige = -100
+	}
+}
+
+# City Guard handles it
+character_event = {
+	id = ATECAD.002
+	desc = EVTDESCATECAD.002
+	picture = GFX_evt_riots_byzantine
+	
+	hide_from = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTAATECAD.002
+		scaled_wealth = -0.1
+	}
+}
+
+# Player is Challenged to Hockey
+character_event = {
+	id = ATECAD.101
+	desc = EVTDESCATECAD.101
+	picture = GFX_evt_hippodrome_byzantine
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTAATECAD.101
+		custom_tooltip = {
+			text = Game_accepted
+			hidden_tooltip = {
+				if = {
+					limit = {
+						NOT = { trait = wroth }
+					}
+					random_list = {
+						50 = {
+							character_event = { id = ATECAD.102 }
+						}
+						50 = {
+							character_event = { id = ATECAD.103 }
+						}
+					}
+				}
+				if = {
+					limit = { trait = wroth }
+					character_event = { id = ATECAD.104 }
+				}
+			}
+		}
+	}
+	option = {
+		name = EVTOPTBATECAD.101
+		custom_tooltip = { text = Game_declined }
+	}
+}
+
+# Player Wins
+character_event = {
+	id = ATECAD.102
+	desc = EVTDESCATECAD.102
+	picture = GFX_evt_hippodrome_byzantine
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTAATECAD.102
+		prestige = 25
+
+		event_target:tzykanion = {
+			opinion = {
+				modifier = opinion_tzykanion_pos
+				who = ROOT
+			}
+		}
+	}
+}
+
+# Player Loses
+character_event = {
+	id = ATECAD.103
+	desc = EVTDESCATECAD.103
+	picture = GFX_evt_hippodrome_byzantine
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTAATECAD.103
+		
+		event_target:tzykanion = {
+			opinion = {
+				modifier = opinion_tzykanion_pos
+				who = ROOT
+			}
+		}
+	}
+}
+
+# Player Goes Bananas
+character_event = {
+	id = ATECAD.104
+	desc = EVTDESCATECAD.104
+	picture = GFX_evt_hippodrome_byzantine
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTAATECAD.104
+		prestige = -25
+		set_character_flag = no_more_tzykanion
+		
+		event_target:tzykanion = {
+			opinion = {
+				modifier = opinion_tzykanion_neg
+				who = ROOT
+			}
+		}
+	}
+}
+
+####NORSE INVASION EVENT #####
+narrative_event = {
+	id = ATECAD.300
+	title = ATECADTITLE.300
+	desc = EVTDESCATECAD.300
+	picture = GFX_evt_burning_castle_hf
+	major = yes
+	is_triggered_only = yes
+
+	immediate = {
+		d_superior = { holder_scope = { grant_title = k_superior } }
+		destroy_landed_title = k_ontario
+		d_iroquois = { holder_scope = { set_defacto_liege = THIS } }
+		d_quinte = { holder_scope = { set_defacto_liege = THIS } }
+		c_elgin = { holder_scope = { set_defacto_liege = d_iroquois } }
+		c_bruce = { holder_scope = { grant_title = d_huronia } }
+		c_bruce = { holder_scope = { set_defacto_liege = THIS } }
+		d_gregorian = { holder_scope = { set_defacto_liege = THIS } }
+		d_remembrant_legion = { holder_scope = { set_defacto_liege = THIS } }
+	}
+	option = {
+		name = EVTOPTAATECAD.301
+		trigger = { religion = Gregorian }
+		}
+	option = {
+		name = EVTOPTAATECAD.302
+		trigger = { religion = norse }
+		}
+	option = {
+		name = EVTOPTAATECAD.303
+		trigger = { 
+				NOT = {
+					religion = norse 
+					religion = Gregorian
+				}	
+		}
+	}
+}

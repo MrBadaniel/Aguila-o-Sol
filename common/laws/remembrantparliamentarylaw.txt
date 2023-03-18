@@ -1,0 +1,112 @@
+succession_laws = {
+	succ_royal_tanistry = {
+		oldest_child_opinion = -20
+		child_opinion = -10
+		dynasty_opinion = 5
+		vassal_opinion = 5
+		potential = {
+
+			trigger_if = {
+				limit = { is_primary_type_title = yes }
+				NOT = { is_law_potential = succ_open_elective }
+			}
+
+			trigger_if = {
+				limit = {
+					is_landless_type_title = yes
+					temporary = no
+				}
+
+				NOT = { is_law_potential = succ_open_elective }
+			}
+
+			holder_scope = {
+				OR = {
+					is_feudal = yes
+					is_tribal = yes
+					government = canadian_imperial_government
+					
+				}
+
+				OR = {
+					culture_group = laurentian
+				
+					any_owned_bloodline = {
+						has_bloodline_flag = bloodline_tanistry
+					}
+				}
+
+				NOR = {
+					is_vice_royalty = yes
+					religion_group = muslim
+					government = chinese_imperial_government
+					government = confucian_bureaucracy
+					government = order_government
+					government = roman_imperial_government
+					lower_real_tier_than = KING
+				}
+			}
+		}
+		allow = {
+			OR = {
+				holder_scope = { is_feudal = yes }
+				holder_scope = { government = canadian_imperial_government }
+				holder_scope = { is_tribal = yes }
+			}
+			custom_tooltip = {
+				text = not_forced_tt
+				hidden_tooltip = {
+					holder_scope = { NOT = { has_character_flag = liege_forced_succ_law } }
+				}
+			}
+			conditional_tooltip = {
+				trigger = {
+					has_dlc = "Conclave"
+				}
+				custom_tooltip = {
+					text = forced_elective_tt
+					hidden_tooltip = {
+						NAND = { 
+							has_law = succession_voting_power_1
+							OR = { 
+								has_law = succ_feudal_elective 
+								has_law = succ_hre_elective
+							}
+						}
+					}
+				}
+			}
+			conditional_tooltip = {
+				trigger = {
+					has_law = succ_hre_elective
+					has_dlc = "Conclave"
+				}
+				has_law = law_voting_power_0
+			}
+			conditional_tooltip = {
+				trigger = {
+					has_law = succ_hre_elective
+					NOT = { has_dlc = "Conclave" }
+				}
+				has_law = crown_authority_4
+			}
+			conditional_tooltip = {
+				trigger = {
+					has_law = succ_hre_elective
+				}
+				has_law = centralization_4
+			}
+		}
+		effect = {
+			succession = {
+				base_type = feudal_elective
+				voting_rules = royal_tanistry
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+	}
+		
+}
+	

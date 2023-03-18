@@ -1,0 +1,210 @@
+namespace = newGregorian
+
+#Choose patron saint
+character_event = {
+	id = newGregorian.1
+	desc = "EVTDESC_newGregorian_1"
+	picture = GFX_evt_virgin_mary_icon
+	
+	religion = Gregorian
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVOTPA_newGregorian_1
+		trigger = {
+		}
+		custom_tooltip = { text = TXT_Gregorian_Saint_Michael }
+
+			add_character_modifier = { name = Gregorian_Saint_Michael duration = -1 }
+
+		ai_chance = {
+			factor = 10
+		}
+	}
+	
+	option = {
+		name = EVOTPB_newGregorian_1
+		custom_tooltip = { text = TXT_Gregorian_Saint_John }
+
+			add_character_modifier = { name = Gregorian_Saint_John duration = -1 }
+
+		ai_chance = {
+			factor = 10
+		}
+	}
+		option = {
+		name = EVOTPD_newGregorian_1
+		custom_tooltip = { text = TXT_Gregorian_Saint_Kateri }
+		
+		add_character_modifier = { name = Gregorian_Saint_Kateri duration = -1 }
+		
+		ai_chance = {
+			factor = 10
+		}
+	}
+	option = {
+		name = EVOTPC_newGregorian_1
+		custom_tooltip = { text = TXT_Gregorian_Saint_Unknown }
+
+			add_character_modifier = { name = Gregorian_Saint_Unknown duration = -1 }
+
+		ai_chance = {
+			factor = 10
+		}
+	}
+	
+	after = {
+		clr_character_flag = Gregorian_select
+	}
+}
+
+#Become more like Saint_Michael - become strong
+character_event = {
+	id = newGregorian.2
+	desc = "EVTDESC_newGregorian.2"
+	picture = GFX_evt_virgin_mary_icon
+	
+	religion = Gregorian
+	
+	trigger = {
+		has_character_modifier = Gregorian_Saint_Joseph
+		#NOT = { trait = zealous }
+		#NOT = { trait = mystic }
+	}
+	
+	mean_time_to_happen = {
+		months = 40
+	}
+	
+	option = {
+		name = EVTOPTA_newGregorian.2
+
+			remove_trait = frail
+			add_trait = robust
+			add_trait = zealous
+		
+	}
+}
+
+#Become more like Saint_John the baptist - become mystic
+character_event = {
+	id = newGregorian.3
+	desc = "EVTDESC_newGregorian.3"
+	picture = GFX_evt_virgin_mary_icon
+	
+	religion = Gregorian
+	
+	trigger = {
+		has_character_modifier = Gregorian_Saint_Peter
+		NOT = { trait = mystic }
+	}
+	
+	mean_time_to_happen = {
+		months = 40
+	}
+	
+	option = {
+		name = EVTOPTA_newGregorian.2
+
+			remove_trait = cynical
+			add_trait = mystic
+		
+	}
+}
+
+#Become more like unknown saints - get better marital
+character_event = {
+	id = newGregorian.4
+	desc = "EVTDESC_newGregorian.4"
+	picture = GFX_evt_virgin_mary_icon
+	
+	religion = Gregorian
+	
+	trigger = {
+		has_character_modifier = Gregorian_Saint_Newman
+		#NOT = { trait = erudite }
+		NOT = { has_character_flag = imbecileGregorian }
+	}
+	
+	mean_time_to_happen = {
+		months = 40
+	}
+	
+	option = {
+		name = EVTOPTA_newGregorian.2
+		trigger = {
+			NOR = {
+				trait = imbecile
+				trait = slow
+			}
+		}
+
+			add_trait = brave
+			add_trait =zealous
+			add_martial = 1
+		
+	}
+	
+	option = {
+		name = EVTOPTB_newGregorian.2
+		piety = 100
+		trigger = {
+			OR = {
+				trait = imbecile
+				trait = slow
+			}
+		}
+		set_character_flag = imbecileGregorian
+	}
+}
+
+#Become more like Saint_Kateri - become just
+character_event = {
+	id = newGregorian.5
+	desc = "EVTDESC_newGregorian.5"
+	picture = GFX_evt_virgin_mary_icon
+	
+	religion = Gregorian
+	
+	trigger = {
+		has_character_modifier = Gregorian_Saint_Kateri
+		NOT = { trait = just }
+	}
+	
+	mean_time_to_happen = {
+		months = 40
+	}
+	
+	option = {
+		name = EVTOPTA_newGregorian.2
+
+			add_trait = just
+			remove_trait = arbitrary
+		
+	}
+}
+
+#Remove patron saint if you stop being Gregorian
+character_event = {
+	id = newGregorian.6
+	desc = "EVTDESC_newGregorian_6"
+	picture = GFX_evt_virgin_mary_icon
+	is_triggered_only = yes
+	
+	trigger = {
+		NOT = { religion = Gregorian }
+		has_Gregorian_patron_saint_trigger = yes
+	}
+	
+	weight_multiplier = {
+		days = 5
+	}
+	
+	option = {
+		name = EVTOPTC_newGregorian.2
+
+			remove_Gregorian_patron_saint_effect = yes
+		
+	}
+}

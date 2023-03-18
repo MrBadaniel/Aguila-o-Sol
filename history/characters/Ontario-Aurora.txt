@@ -1,4 +1,4 @@
-###ÄNSI
+###ï¿½NSI
 1867000={
 	name="Winston"
 	dynasty=1867010 # Beasley
@@ -10,11 +10,10 @@
 	stewardship=4
 	learning=5
 	culture=ontarian
-	religion=high_church
+	religion=Gregorian
 	trait=brave
 	trait=trusting
 	trait=tough_soldier
-	trait=broad_anglican
 	2634.5.6={birth=yes}
 	2652.1.1={add_spouse=1867001}
 	2700.1.1={death=yes}
@@ -22,7 +21,7 @@
 
 1867001={
 	name="Juthwara"
-	dynasty=1867101
+	dynasty=90000000
 	father=1857083
 	mother=1867181
 	female=yes
@@ -32,7 +31,7 @@
 	stewardship=5
 	learning=5
 	culture=ontarian
-	religion=high_church
+	religion=Gregorian
 	2633.1.1={birth=yes}
 	2700.1.1={death=yes}
 }
@@ -44,8 +43,7 @@
 	father=1867000
 	mother=1867001
 	culture=ontarian
-	religion=high_church
-	trait=broad_anglican
+	religion=Gregorian
 	2654.1.1={birth=yes}
 	2700.1.1={death=yes}
 }
@@ -56,8 +54,7 @@
 	father=1867000
 	mother=1867001
 	culture=ontarian
-	religion=high_church
-	trait=broad_anglican
+	religion=Gregorian
 	2655.7.1={birth=yes}
 	2700.1.1={death=yes}
 }
@@ -69,8 +66,7 @@
 	father=1867000
 	mother=1867001
 	culture=ontarian
-	religion=high_church
-	trait=broad_anglican
+	religion=Gregorian
 	2658.1.1={birth=yes}
 	2700.1.1={death=yes}
 }
@@ -85,7 +81,7 @@
 	stewardship=6
 	learning=5
 	culture=ontarian
-	religion=high_church
+	religion=Gregorian
 	trait=kind
 	trait=paranoid
 	trait=naive_appeaser
@@ -104,7 +100,7 @@
 	stewardship=3
 	learning=4
 	culture=ontarian
-	religion=high_church
+	religion=Gregorian
 	trait=tough_soldier
 	trait=duelist
 	trait=musician
@@ -118,37 +114,85 @@
 }
 
 1867007={
-	name="By"
+	name="Arthur"
 	dynasty=1867015 # Laurier
 	dna="fdujmhpdcgl"
 	properties="adf0aa0a0000"
-	martial=6
+	disallow_random_traits = yes
+	martial=10
 	diplomacy=5
 	intrigue=6
 	stewardship=6
-	learning=5
-	culture=ontarian
-	religion=high_church
+	learning=8
+	culture=ontarois
+	religion=Gregorian
 	trait=proud
-	trait=cruel
+	trait=shrewd
 	trait=just
 	trait=chaste
 	trait=scarred
-	trait=intricate_webweaver
-	trait=high_anglican
+	#add_trait=born_in_the_purple
+	add_trait=skilled_tactician
+	add_claim=k_ontario
 	father=1857078
 	mother=1763050
-	2645.7.1={birth=yes}
-	2665.10.1={add_spouse=1867057}
+	effect = {add_lover=4000138}
+	effect = {add_friend=4000123}
+	effect = {add_rival=1857082}
+	effect = {add_alliance = {
+				who = 1867043
+					days/months/years = 1.1.2666
+				}
+			}
+	effect = {add_alliance = {
+				who = 1763030
+					days/months/years = 1.1.2666
+				}
+			}
+	2645.7.1={birth=yes
+		culture=ontarian}
+	2660.10.1={add_spouse=1867148}
 	2665.10.2={capital=c_ottawa}
+	2665.1.1 = {
+    effect = {
+        spawn_unit = {
+            owner = ROOT
+            province = capital_scope
+            home = capital_scope
+            
+            troops = {
+				horse_archers = { 200 }
+            }
+            
+            attrition = 1.0
+            disband_on_peace = yes
+            maintenance_multiplier = 0.1
+			}
+		}
+	}
+	   effect = {
+        spawn_unit = {
+            owner = ROOT
+            province = capital_scope
+            home = capital_scope
+            
+            troops = {
+                knights = { 300 }
+            }
+            
+            attrition = 1.0
+            disband_on_peace = yes
+            maintenance_multiplier = 0.1
+			}
+		}
 	2700.1.1={death=yes}
 }
 
 1867008={
 	name="Horton"
 	dynasty=1867017
-	culture=ontarian
-	religion=high_church
+	culture=ontarois
+	religion=Gregorian
 	2630.1.1={birth=yes}
 	2654.1.1={add_spouse=1867013}
 	2700.1.1={death=yes}
@@ -164,11 +208,10 @@
 	intrigue=4
 	stewardship=5
 	learning=5
-	culture=ontarian
-	religion=high_church
+	culture=ontarois
+	religion=Gregorian
 	trait=ambitious
 	trait=trusting
-	trait=high_anglican
 	2628.1.1={birth=yes}
 	2646.1.1={add_spouse=1867140}
 	2700.1.1={death=yes}
@@ -182,7 +225,7 @@
 	intrigue=8
 	stewardship=7
 	culture=west_indian
-	religion=high_church
+	religion=Gregorian
 	trait=fortune_builder
 	2608.1.1={birth=yes
 		culture=ontarian}
@@ -199,14 +242,13 @@
 	intrigue=5
 	stewardship=6
 	culture=west_indian
-	religion=high_church
+	religion=Gregorian
 	trait=arbitrary
 	trait=proud
 	trait=brave
 	trait=ambitious
 	trait=strong
 	trait=skilled_tactician
-	trait=high_anglican
 	father=1867010
 	2633.1.1={birth=yes
 		culture=ontarian}
@@ -223,8 +265,8 @@
 	diplomacy=4
 	intrigue=4
 	stewardship=7
-	culture=ontarian
-	religion=high_church
+	culture=ontarois
+	religion=Gregorian
 	trait=broad_anglican
 	2616.1.1={birth=yes}
 	2634.1.1={add_spouse=1867165}
@@ -237,8 +279,8 @@
 	dynasty=1867020
 	father=1867012
 	mother=1867165
-	culture=ontarian
-	religion=high_church
+	culture=ontarois
+	religion=Gregorian
 	2635.1.1={birth=yes}
 	2700.1.1={death=yes}
 }
@@ -252,8 +294,8 @@
 	diplomacy=4
 	intrigue=6
 	stewardship=7
-	culture=ontarian
-	religion=high_church
+	culture=ontarois
+	religion=Gregorian
 	trait=quick
 	trait=arbitrary
 	trait=indulgent_wastrel
@@ -266,7 +308,7 @@
 	name="York"
 	dynasty=1867021
 	culture=ontarian
-	religion=high_church
+	religion=Gregorian
 	trait=patient
 	trait=craven
 	trait=content
@@ -281,7 +323,7 @@
 	name="Thomas"
 	dynasty=1867022
 	culture=ontarian
-	religion=high_church
+	religion=Gregorian
 	father=1867153
 	2612.2.1={birth=yes}
 	2630.1.1={add_spouse=1867174}
@@ -295,7 +337,7 @@
 	father=1867016
 	mother=1867175
 	culture=ontarian
-	religion=high_church
+	religion=Gregorian
 	2661.1.1={birth=yes}
 	2700.1.1={death=yes}
 }
@@ -364,6 +406,7 @@
 	culture=ontarois
 	religion=ursuline
 	trait=flamboyant_schemer
+	add_claim=d_shield
 	2641.1.1={birth=yes}
 	2666.1.1={add_spouse=1867022}
 	2666.1.1={
@@ -405,7 +448,7 @@
 	dynasty=1867001
 	dna="aiiocipcfad"
 	culture=ontarian
-	religion=rust_cultist
+	religion=Gregorian
 	father=1867034
 	martial=2
 	diplomacy=8
@@ -414,8 +457,10 @@
 	learning=5
 	trait=fortune_builder
 	trait=cruel
+	trait=sympathy_oldworld
 	trait=trusting
 	trait=temperate
+	trait=cynical
 	2639.2.21={birth=yes}
 	2658.4.20={
 		effect={
@@ -437,7 +482,7 @@
 	dynasty=1867000
 	dna="cojphlbmlgp"
 	culture=ontarian
-	religion=rust_cultist
+	religion=Gregorian
 	martial=4
 	diplomacy=3
 	stewardship=2
@@ -447,6 +492,7 @@
 	trait=trusting
 	trait=craven
 	trait=proud
+	trait=cynical
 	trait=arbitrary
 	trait=cruel
 	2640.3.9={birth=yes}
@@ -459,7 +505,7 @@
 	dna="gojpclpmfad"
 	dynasty=1867001
 	culture=ontarian
-	religion=rust_cultist
+	religion=Gregorian
 	martial=5
 	diplomacy=1
 	stewardship=0
@@ -482,7 +528,7 @@
 	dynasty=1867001
 	dna="cimpcipcfad"
 	culture=ontarian
-	religion=rust_cultist
+	religion=Gregorian
 	martial=8
 	diplomacy=6
 	stewardship=6
@@ -512,13 +558,15 @@
 	stewardship=5
 	intrigue=6
 	learning=7
+	trait=adventurer
 	trait=thrifty_clerk
 	trait=hedonist
 	trait=ambitious
 	trait=zealous
 	trait=shy
+	give_nickname = nick_the_conqueror
 	2619.1.24={birth=yes}
-	2654.7.1={death={
+	2666.5.1={death={
 			death_reason=death_battle
 			killer=1857083
 		}
@@ -530,7 +578,7 @@
 	female=yes
 	dna="iljgekiljpi"
 	culture=west_indian
-	religion=nonconformist
+	religion=Gregorian
 	martial=1
 	diplomacy=3
 	stewardship=8
@@ -549,20 +597,27 @@
 	dynasty=1867003
 	dna="bdlmcbpekfn"
 	culture=west_indian
-	religion=nonconformist
-	martial=5
-	diplomacy=5
-	stewardship=5
+	religion=Gregorian
+	father=4000033
+	martial=16
+	diplomacy=20
+	stewardship=8
 	intrigue=5
 	learning=6
 	trait=charismatic_negotiator
-	trait=arbitrary
+	trait=ambitious
 	trait=gregarious
-	trait=slothful
-	trait=craven
+	trait=diligent
+	trait=adventurer
 	2571.3.6={birth=yes culture=ontarian}
 	2590.8.13={add_spouse=1867035}
-	2615.12.23={death=yes}
+	2615.3.7={
+			create_bloodline={
+			type=bloodline_montrose
+			has_dlc="Holy Fury"
+		}
+	}
+	2624.12.31={death=yes}
 }
 
 1867037={
@@ -570,8 +625,8 @@
 	dynasty=1867003
 	dna="nllmcbpljfi"
 	culture=west_indian
-	religion=nonconformist
-	martial=3
+	religion=Gregorian
+	martial=18
 	diplomacy=7
 	stewardship=3
 	intrigue=4
@@ -584,7 +639,7 @@
 	mother=1867035
 	2595.10.8={birth=yes culture=ontarian}
 	2612.8.13={add_spouse=1867040}
-	2669.8.23={death=yes}
+	2662.8.23={death=yes}
 }
 
 1867038={
@@ -592,7 +647,7 @@
 	dynasty=1867003
 	dna="illgekpekcn"
 	culture=west_indian
-	religion=nonconformist
+	religion=Gregorian
 	martial=8
 	diplomacy=2
 	stewardship=7
@@ -614,7 +669,7 @@
 	dynasty=1867003
 	dna="bljmcbiljpi"
 	culture=west_indian
-	religion=high_church
+	religion=Gregorian
 	martial=4
 	diplomacy=2
 	stewardship=3
@@ -642,7 +697,7 @@
 	female=yes
 	dna="dlefmhimlfp"
 	culture=west_indian
-	religion=nonconformist
+	religion=Gregorian
 	martial=1
 	diplomacy=5
 	stewardship=3
@@ -661,7 +716,7 @@
 	dynasty=1867003
 	dna="nllfhhidlfi"
 	culture=west_indian
-	religion=nonconformist
+	religion=Gregorian
 	martial=4
 	diplomacy=3
 	stewardship=3
@@ -687,7 +742,7 @@
 	dynasty=1867003
 	dna="nlemmhpmlfi"
 	culture=west_indian
-	religion=nonconformist
+	religion=Gregorian
 	martial=3
 	diplomacy=2
 	stewardship=6
@@ -709,18 +764,24 @@
 	dynasty=1867003
 	dna="dleimbpljfi"
 	culture=west_indian
-	religion=nonconformist
-	martial=6
-	diplomacy=4
-	stewardship=0
-	intrigue=2
-	learning=1
+	religion=Gregorian
+	martial=16
+	diplomacy=8
+	stewardship=10
+	intrigue=12
+	learning=17
 	trait=tough_soldier
 	trait=mystic
 	trait=zealous
 	trait=trusting
+	trait=ambitious
 	father=1867037
 	mother=1867040
+	effect = {add_alliance = {
+				who = 1867043
+					days/months/years = 1.1.2666
+				}
+			}
 	2619.10.22={birth=yes culture=ontarian}
 	2636.3.21={add_spouse=1867044}
 	2696.9.16={death=yes}
@@ -731,7 +792,7 @@
 	female=yes
 	dna="mkapefhcobd"
 	culture=edokko
-	religion=nonconformist
+	religion=Gregorian
 	martial=6
 	diplomacy=5
 	stewardship=5
@@ -753,7 +814,7 @@
 	dynasty=1867003
 	dna="mleimbhljbi"
 	culture=west_indian
-	religion=nonconformist
+	religion=Gregorian
 	martial=1
 	diplomacy=3
 	stewardship=3
@@ -775,7 +836,7 @@
 	dynasty=1867003
 	dna="dkepmbhcjbd"
 	culture=west_indian
-	religion=nonconformist
+	religion=Gregorian
 	martial=5
 	diplomacy=4
 	stewardship=5
@@ -817,8 +878,8 @@
 	dynasty=1867003
 	dna="ommgckkelcc"
 	culture=west_indian
-	religion=ursuline
-	martial=3
+	religion=Gregorian
+	martial=15
 	diplomacy=5
 	stewardship=2
 	intrigue=0
@@ -826,10 +887,17 @@
 	trait=underhanded_rogue
 	trait=gregarious
 	trait=trusting
+	trait=ambitious
 	father=1867038
 	mother=1867047
 	2623.7.22={birth=yes culture=ontarois}
 	2642.3.5={add_spouse=1867049}
+	1066.9.14 = {
+  		raise_levies = {
+     		   location = 278 # Algonquin
+       			 force_mult = 1.5
+			    }
+			}
 	2670.12.22={death=yes}
 }
 
@@ -879,7 +947,7 @@
 	female=yes
 	dna="olfajgdhkfi"
 	culture=west_indian
-	religion=high_church
+	religion=Gregorian
 	martial=6
 	diplomacy=7
 	stewardship=4
@@ -901,7 +969,7 @@
 	dynasty=1867003
 	dna="olfacgilkfi"
 	culture=west_indian
-	religion=high_church
+	religion=Gregorian
 	martial=8
 	diplomacy=4
 	stewardship=5
@@ -934,7 +1002,7 @@
 	name="Banting"
 	dna="henbchnicdf"
 	culture=west_indian
-	religion=high_church
+	religion=Gregorian
 	martial=5
 	diplomacy=4
 	stewardship=1
@@ -956,7 +1024,7 @@
 	dynasty=1867003
 	dna="oenbcgngkdi"
 	culture=west_indian
-	religion=high_church
+	religion=Gregorian
 	martial=4
 	diplomacy=0
 	stewardship=7
@@ -993,7 +1061,7 @@
 	stewardship=3
 	learning=3
 	culture=ontarian
-	religion=high_church
+	religion=Gregorian
 	trait=poet
 	trait=proud
 	trait=cruel
@@ -1027,7 +1095,7 @@
 	stewardship=6
 	learning=8
 	culture=hudsonian
-	religion=high_church
+	religion=Gregorian
 	father=1788003
 	trait=grey_eminence
 	trait=gregarious
@@ -1038,8 +1106,7 @@
 	trait=patient
 	trait=kind
 	trait=just
-	2638.9.11={birth=yes}
-	2665.10.1={add_spouse=1867007}
+	2623.9.11={birth=yes}
 	2710.4.30={death=yes}
 }
 
@@ -1122,8 +1189,9 @@
 
 1867062={#Count of The United Counties (all of them?)
 	name="Macdonald"
-	culture=ontarian
-	religion=high_church
+	dynasty=90000073
+	culture=ontarois
+	religion=Gregorian
 	martial=9
 	diplomacy=9
 	stewardship=8
@@ -1137,11 +1205,11 @@
 	2640.9.29={birth=yes}
 }
 
-1867063={#Count of Parry Sound
+1867063={#Count of Simcoe
 	name="Hudson"
 	dynasty=2014005
 	culture=ontarois
-	religion=ursuline
+	religion=Gregorian
 	father=1867188
 	martial=5
 	diplomacy=3
@@ -1162,7 +1230,7 @@
 	female=yes
 	dynasty=1491511
 	culture=ojibwe
-	religion=midewiwin
+	religion=ursuline
 	martial=3
 	diplomacy=7
 	stewardship=5
@@ -1198,7 +1266,7 @@
 #######
 
 1857068={#Countess of Nagagamisis
-	name="Angèle"
+	name="Angï¿½le"
 	female=yes
 	dynasty=2014042
 	culture=ontarois
@@ -1247,7 +1315,7 @@
 	dna=accacyeahab
 	properties=ch0eag
 	culture=ontarian
-	religion=high_church
+	religion=Gregorian
 	martial=3
 	diplomacy=6
 	stewardship=8
@@ -1275,7 +1343,7 @@
 	dynasty=1867029 #Mackenzie
 	culture=ontarian
 	occluded=yes
-	religion=nonconformist
+	religion=Gregorian
 	trait=legendary
 	trait=grey_eminence
 	trait=sympathy_pagans
@@ -1294,7 +1362,7 @@
 	name="Wallace"
 	dynasty=1001001 #Wells
 	culture=ontarian
-	religion=high_church
+	religion=Gregorian
 	martial=3
 	diplomacy=8
 	stewardship=5
@@ -1319,7 +1387,7 @@
 	name="Stephen"
 	dynasty=1867030 #Stills
 	culture=ontarian
-	religion=high_church
+	religion=Gregorian
 	martial=4
 	diplomacy=6
 	stewardship=7
@@ -1345,7 +1413,7 @@
 	female=yes
 	dynasty=1867031
 	culture=ontarian
-	religion=high_church
+	religion=Gregorian
 	martial=6
 	diplomacy=6
 	stewardship=6
@@ -1368,7 +1436,7 @@
 	name="Neil"
 	dynasty=1867032
 	culture=ontarian
-	religion=high_church
+	religion=Gregorian
 	martial=4
 	diplomacy=5
 	stewardship=4
@@ -1418,7 +1486,8 @@
 	name="Lyon"
 	dynasty=1867015 # Laurier
 	culture=ontarian
-	religion=high_church
+	religion=Gregorian
+	give_nickname=nick_the_ill_ruler
 	father=1867151
 	mother=1867156
 	martial=4
@@ -1429,24 +1498,23 @@
 	trait=grey_eminence
 	trait=cruel
 	trait=paranoid
-	trait=temperate
-	trait=ambitious
-	trait=diligent
-	2612.12.5={birth=yes}
-	2640.12.5={
-		create_bloodline={
-			type=laurier
-			has_dlc="Holy Fury"
+	trait=dead_crown_ontario
+	trait=craven
+	trait=content
+	trait=slothful
+	2603.12.5={birth=yes}
+	2643.5.12={add_spouse=1763050}
+	2666.6.27={death={
+			death_reason=death_execution
+			killer=1857082
 		}
 	}
-	2643.5.12={add_spouse=1763050}
-	2657.7.1={death=yes}
 }
 1857079={
 	name="Theyanoguin"
 	dynasty=2007054
 	culture=iroquois
-	religion=high_church
+	religion=Gregorian
 	father=1867161
 	mother=1867163
 	trait=quick
@@ -1464,7 +1532,7 @@
 	name="Odeserundiye"
 	dynasty=2007054
 	culture=iroquois
-	religion=high_church
+	religion=Gregorian
 	trait=genius
 	father=1857079
 	2665.1.1={birth=yes}
@@ -1475,9 +1543,11 @@
 	name="Emmett"
 	dna=deehfjjcbaj
 	properties=ch0e0k00000000000
-	dynasty=1867201
+	dynasty=90000000 # Faber
 	culture=ontarian
-	religion=high_church
+	religion=Gregorian
+	father=1857097
+	mother=1867183
 	martial=7
 	diplomacy=4
 	intrigue=4
@@ -1491,7 +1561,7 @@
 	trait=temperate
 	trait=patient
 	trait=erudite
-	2647.11.22={birth=yes}
+	2647.11.22={birth=yes effect={set_character_flag=no_historical_family}}
 	2660.1.1={
 		employer=1867007
 	}
@@ -1500,22 +1570,48 @@
 
 1857082={
 	name="Tyrrell"
-	dynasty=1867101
+	dynasty=90000000
+	disallow_random_traits = yes
 	culture=ontarian
-	religion=high_church
+	religion=Gregorian
+	dna=jdkbscsxlxp
+	properties=ab00dc000000000000rr0000000000000000000
+	martial=1
+	diplomacy=1
+	intrigue=10
+	stewardship=1
+	learning=1
 	father=1857085
 	trait=honest
-	trait=content
-	trait=just
-	trait=underhanded_rogue
+	trait=zealous
+	trait=ambitious
+	trait=brave
+	#trait=born_in_the_purple
+	trait=knight
+	trait=impaler
+	trait=strong
+	trait=giant
+	trait=holy_warrior
+	trait=brilliant_strategist
+	trait=adventurer
+	health = 7
 	2600.3.14={birth=yes}
+	2643.4.6={
+		add_spouse=1867057
+				create_hospital = 1271
+	}
+	2666.6.15={
+		effect = { 
+		create_hospital = 1271
+		}
+	}
 	2682.11.11={death=yes}
 }
 1857083={
 	name="Grafton"
-	dynasty=1867101
+	dynasty=90000000
 	culture=ontarian
-	religion=high_church
+	religion=Gregorian
 	father=1857085
 	martial=8
 	diplomacy=6
@@ -1524,25 +1620,32 @@
 	learning=8
 	trait=brilliant_strategist
 	trait=brave
+	trait=knight
 	trait=strategist
 	trait=ambitious
 	trait=cynical
+	trait=adventurer
 	trait=paranoid
 	trait=quick
 	2602.7.6={birth=yes}
 	2629.1.1={add_spouse=1867181}
-	2665.12.10={death=yes}
+	2665.12.10={death={
+			death_reason=death_battle
+		}
+	}
 }
 1857084={
 	name="Darwin"
-	dynasty=1867101
+	dynasty=90000000
 	culture=ontarian
-	religion=high_church
+	religion=Gregorian
 	father=1857095
 	mother=1867149
 	trait=indulgent_wastrel
 	trait=greedy
 	trait=envious
+	trait=knight
+	trait=adventurer
 	trait=lefthanded
 	trait=weak
 	2624.8.7={birth=yes}
@@ -1550,31 +1653,42 @@
 	2700.1.1={death=yes}
 }
 1857085={
-	name="Rumbold"
-	dynasty=1867101
+	name="Constantine"
+	dynasty=90000000
 	culture=ontarian
-	religion=high_church
-	father=1857086
+	religion=Gregorian
+	father=4000030
 	trait=ambitious
 	trait=diligent
 	trait=gregarious
-	trait=charismatic_negotiator
-	trait=weak
-	2580.11.22={birth=yes}
+	trait=brilliant_strategist
+	trait=quick
+	trait=dead_crown_ontario
+	trait=adventurer
+	2576.11.22={birth=yes}
 	2601.1.1={add_spouse=1867180}
-	2640.1.1={death=yes}
+	2609.1.1={death={
+			death_reason=death_execution
+			killer=4000034
+		}
+	}
 }
 1857086={
-	name="Grumman"
-	dynasty=1867101
-	culture=deitsch
-	religion=high_church
+	name="Theodoric"
+	dynasty=90000000
+	culture=ontarian
+	religion=Gregorian
 	trait=tough_soldier
 	trait=zealous
 	trait=brave
 	trait=scarred_mid
-	2540.11.22={birth=yes}
-	2600.1.1={death=yes}
+	father=4000030
+	2570.11.22={birth=yes}
+	2609.1.1={death={
+			death_reason=death_battle
+			killer=4000034
+		}
+	}
 }
 
 1857087={
@@ -1583,7 +1697,7 @@
 	father=1857089
 	mother=1867176
 	culture=ontarian
-	religion=high_church
+	religion=Gregorian
 	trait=lunatic
 	trait=wroth
 	trait=strong
@@ -1592,15 +1706,17 @@
 	trait=stubborn
 	trait=proud
 	trait=brilliant_strategist
+	add_claim=c_gore
 	2638.11.25={birth=yes}
 	2661.10.4={add_spouse=1857093}
+	2666.6.27={employer=1867007}
 	2700.4.12={death=yes}
 }
 1857088={
 	name="Jackson"
 	dynasty=1867103 # Hammer
 	culture=ontarian
-	religion=high_church
+	religion=Gregorian
 	father=1857087
 	mother=1857093
 	trait=ugly
@@ -1637,7 +1753,7 @@
 	name="Lucian"
 	dynasty=1867102 # Obrowatz
 	culture=prodnanici
-	religion=high_church
+	religion=Gregorian
 	trait=drunkard
 	trait=cynical
 	trait=gamer
@@ -1655,7 +1771,7 @@
 	name="Sunderland"
 	dynasty=1867010 # Beasley
 	culture=ontarian
-	religion=high_church
+	religion=Gregorian
 	trait=strong
 	trait=scarred
 	trait=cruel
@@ -1684,32 +1800,41 @@
 }
 1857094={
 	name="Errol"
-	dynasty=1867101
+	dynasty=90000000
 	culture=ontarian
-	religion=high_church
+	religion=Gregorian
 	father=1857085
 	trait=paranoid
 	trait=cynical
 	trait=envious
-	trait=shy
+	trait=duelist
 	trait=stubborn
+	trait=knight
+	trait=adventurer
 	trait=craven
-	trait=flamboyant_schemer
+	trait=tough_soldier
 	trait=scarred
 	2605.10.10={birth=yes}
 	2622.1.1={add_spouse=1867182}
-	2656.1.1={death=yes}
+	2666.6.25={death={
+			death_reason=death_battle
+		}
+	}
 }
 1857095={
 	name="Yorwick"
-	dynasty=1867101
+	dynasty=90000000
 	culture=ontarian
-	religion=high_church
+	religion=Gregorian
 	father=1857085
-	trait=grey_eminence
-	trait=kind
+	trait=tough_soldier
+	trait=hedonist
+	trait=master_seducer
+	trait=lustful
 	trait=gregarious
 	trait=musician
+	trait=knight
+	trait=adventurer
 	trait=lunatic
 	trait=trusting
 	2606.12.20={birth=yes}
@@ -1730,18 +1855,21 @@
 }
 1857097={
 	name="Ockham"
-	dynasty=1867101
+	dynasty=90000000
 	culture=ontarian
-	religion=high_church
+	religion=Gregorian
 	father=1857094
 	mother=1867182
+	trait=tough_soldier
 	trait=kind
+	trait=knight
+	trait=adventurer
 	trait=gregarious
 	trait=diligent
 	trait=has_tuberculosis
 	2623.11.12={birth=yes}
 	2644.1.1={add_spouse=1867183}
-	2661.1.1={death={
+	2666.1.1={death={
 			death_reason=death_trait
 		}
 	}
@@ -1749,8 +1877,8 @@
 1857098={
 	name="Randolph"
 	dynasty=1867020
-	culture=ontarian
-	religion=high_church
+	culture=ontarois
+	religion=Gregorian
 	2590.1.1={birth=yes}
 	2610.1.1={add_spouse=1867164}
 	2639.1.1={death=yes}
@@ -1758,8 +1886,8 @@
 1857099={
 	name="Wendell"
 	dynasty=1867018
-	culture=ontarian
-	religion=high_church
+	culture=ontarois
+	religion=ursuline
 	father=1857100
 	2603.1.1={birth=yes}
 	2627.1.1={add_spouse=1867166}
@@ -1769,16 +1897,20 @@
 	name="Reginald"
 	dynasty=1867018
 	culture=ontarian
-	religion=high_church
+	religion=Gregorian
 	father=1857101
 	2576.1.1={birth=yes}
-	2630.1.1={death=yes}
+	2614.12.31={death={
+			death_reason=death_execution
+			killer=1867151
+		}
+	}
 }
 1857101={
 	name="Eddison"
 	dynasty=1867018
 	culture=ontarian
-	religion=high_church
+	religion=Gregorian
 	father=1857102
 	2547.1.1={birth=yes}
 	2610.1.1={death=yes}
@@ -1787,7 +1919,7 @@
 	name="Laswell"
 	dynasty=1867018
 	culture=ontarian
-	religion=high_church
+	religion=Gregorian
 	father=1867121
 	2524.2.4={birth=yes}
 	2588.1.1={death=yes}
@@ -1798,7 +1930,7 @@
 	father=1857098
 	mother=1867164
 	culture=ontarian
-	religion=high_church
+	religion=Gregorian
 	2620.1.1={birth=yes}
 	2700.1.1={death=yes}
 }
@@ -1836,11 +1968,10 @@
 	name="Morcar"
 	dynasty=1867019
 	culture=west_indian
-	religion=high_church
+	religion=Gregorian
 	trait=brave
 	trait=ambitious
 	trait=strong
-	trait=high_anglican
 	father=1867011
 	mother=1867111
 	2654.10.3={birth=yes culture=ontarian}
@@ -1850,11 +1981,10 @@
 	name="Bosham"
 	dynasty=1867019
 	culture=ontarian
-	religion=high_church
+	religion=Gregorian
 	trait=brave
 	trait=ambitious
 	trait=quick
-	trait=high_anglican
 	father=1867011
 	mother=1867111
 	2656.11.3={birth=yes}
@@ -1864,7 +1994,7 @@
 	name="Edward"
 	dynasty=1867019
 	culture=west_indian
-	religion=high_church
+	religion=Gregorian
 	trait=craven
 	trait=ambitious
 	trait=cruel
@@ -1872,7 +2002,6 @@
 	trait=deceitful
 	trait=elusive_shadow
 	trait=quick
-	trait=high_anglican
 	father=1867010
 	2640.1.1={birth=yes culture=ontarian}
 	2660.1.1={employer=1867007}
@@ -1885,7 +2014,7 @@
 	father=1867016
 	mother=1867174
 	culture=ontarian
-	religion=high_church
+	religion=Gregorian
 	2631.5.3={birth=yes}
 	2673.3.10={death=yes}
 }
@@ -1893,7 +2022,7 @@
 	name="John"
 	dynasty=1867074
 	culture=ontarian
-	religion=high_church
+	religion=Gregorian
 	martial=8
 	stewardship=10
 	learning=8
@@ -1903,6 +2032,7 @@
 	trait=humble
 	trait=thrifty_clerk
 	trait=diligent
+	add_claim = c_bruce
 	2629.1.1={birth=yes}
 	2700.1.1={death=yes}
 }
@@ -1911,7 +2041,7 @@
 	dynasty=1867074
 	father=1867112
 	culture=ontarian
-	religion=high_church
+	religion=Gregorian
 	2651.1.1={birth=yes}
 	2700.1.1={death=yes}
 }
@@ -1920,7 +2050,7 @@
 	dynasty=1867074
 	father=1867112
 	culture=ontarian
-	religion=high_church
+	religion=Gregorian
 	trait=musician
 	2656.1.1={birth=yes}
 	2700.1.1={death=yes}
@@ -1929,7 +2059,7 @@
 	name="Biddulph"
 	dynasty=1867126
 	culture=ontarian
-	religion=high_church
+	religion=Gregorian
 	2598.1.1={birth=yes}
 	2619.1.1={add_spouse=1867177}
 	2645.1.1={death=yes}
@@ -1940,7 +2070,7 @@
 	father=1867114
 	mother=1867177
 	culture=ontarian
-	religion=high_church
+	religion=Gregorian
 	trait=cruel
 	trait=slothful
 	trait=envious
@@ -1957,7 +2087,7 @@
 	father=1867115
 	mother=1867120
 	culture=ontarian
-	religion=high_church
+	religion=Gregorian
 	trait=clubfooted
 	trait=just
 	trait=diligent
@@ -1973,7 +2103,7 @@
 	father=1867115
 	mother=1867120
 	culture=ontarian
-	religion=high_church
+	religion=Gregorian
 	trait=poet
 	trait=deceitful
 	trait=arbitrary
@@ -1990,7 +2120,7 @@
 	father=1867115
 	mother=1867120
 	culture=ontarian
-	religion=high_church
+	religion=Gregorian
 	trait=shy
 	trait=paranoid
 	trait=patient
@@ -2006,7 +2136,7 @@
 	father=1867115
 	mother=1867120
 	culture=ontarian
-	religion=high_church
+	religion=Gregorian
 	trait=fair
 	trait=arbitrary
 	trait=charismatic_negotiator
@@ -2017,7 +2147,7 @@
 	name="Johannah"
 	female=yes
 	culture=ontarian
-	religion=high_church
+	religion=Gregorian
 	trait=greedy
 	trait=envious
 	trait=ambitious
@@ -2029,7 +2159,7 @@
 	name="Henry"
 	dynasty=1867018
 	culture=ontarian
-	religion=high_church
+	religion=Gregorian
 	father=1867122
 	2500.1.1={birth=yes}
 	2570.1.1={death=yes}
@@ -2038,7 +2168,7 @@
 	name="Eddison"
 	dynasty=1867018
 	culture=ontarian
-	religion=high_church
+	religion=Gregorian
 	father=1867123
 	2480.1.1={birth=yes}
 	2550.1.1={death=yes}
@@ -2047,7 +2177,7 @@
 	name="Eddison"
 	dynasty=1867018
 	culture=ontarian
-	religion=high_church
+	religion=Gregorian
 	father=1867124
 	2460.1.1={birth=yes}
 	2530.1.1={death=yes}
@@ -2056,7 +2186,7 @@
 	name="Seymour"
 	dynasty=1867018
 	culture=ontarian
-	religion=high_church
+	religion=Gregorian
 	father=1867125
 	2441.1.1={birth=yes}
 	2510.1.1={death=yes}
@@ -2065,9 +2195,10 @@
 	name="Henry"
 	dynasty=1867018
 	culture=ontarian
-	religion=high_church
+	religion=Gregorian
 	trait=zealous
 	trait=brave
+	trait=saint
 	2410.1.1={birth=yes}
 	2459.10.31={death={
 			death_reason=death_battle
@@ -2080,9 +2211,8 @@
 	dynasty=1867018
 	father=1867009
 	mother=1867140
-	culture=ontarian
-	religion=high_church
-	trait=high_anglican
+	culture=ontarois
+	religion=Gregorian
 	2651.1.1={birth=yes}
 	2700.1.1={death=yes}
 }
@@ -2091,10 +2221,9 @@
 	dynasty=1867018
 	father=1867009
 	mother=1867140
-	culture=ontarian
-	religion=high_church
+	culture=ontarois
+	religion=Gregorian
 	female=yes
-	trait=high_anglican
 	trait=quick
 	trait=kind
 	trait=humble
@@ -2108,10 +2237,9 @@
 	dynasty=1867018
 	father=1867009
 	mother=1867140
-	culture=ontarian
-	religion=high_church
+	culture=ontarois
+	religion=Gregorian
 	female=yes
-	trait=high_anglican
 	2653.1.1={birth=yes}
 	2700.1.1={death=yes}
 }
@@ -2121,9 +2249,8 @@
 	father=1857099
 	mother=1867166
 	female=yes
-	culture=ontarian
-	religion=high_church
-	trait=high_anglican
+	culture=ontarois
+	religion=Gregorian
 	trait=strong
 	trait=cruel
 	trait=wroth
@@ -2136,7 +2263,7 @@
 	name="Reginald"
 	dynasty=1867018
 	culture=ontarian
-	religion=high_church
+	religion=Gregorian
 	father=1867122
 	2510.1.1={birth=yes}
 	2570.1.1={death=yes}
@@ -2145,7 +2272,7 @@
 	name="Ambrose"
 	dynasty=1867018
 	culture=ontarian
-	religion=high_church
+	religion=Gregorian
 	father=1867130
 	2530.1.1={birth=yes}
 	2590.1.1={death=yes}
@@ -2154,16 +2281,20 @@
 	name="Henry"
 	dynasty=1867018
 	culture=ontarian
-	religion=high_church
+	religion=Gregorian
 	father=1867131
 	2550.1.1={birth=yes}
-	2610.1.1={death=yes}
+	2614.12.31={death={
+            death_reason=death_execution
+            killer=1867151
+        }
+    }
 }
 1867133={
 	name="Eddison"
 	dynasty=1867018
 	culture=ontarian
-	religion=high_church
+	religion=Gregorian
 	father=1867132
 	2570.1.1={birth=yes}
 	2630.1.1={death=yes}
@@ -2172,7 +2303,7 @@
 	name="Henry"
 	dynasty=1867018
 	culture=ontarian
-	religion=high_church
+	religion=Gregorian
 	father=1867133
 	2590.1.1={birth=yes}
 	2609.1.1={add_spouse=1867168}
@@ -2182,7 +2313,7 @@
 	name="Holcroft"
 	dynasty=1867018
 	culture=ontarian
-	religion=high_church
+	religion=Gregorian
 	father=1867134
 	mother=1867168
 	2610.1.1={birth=yes}
@@ -2193,7 +2324,7 @@
 	name="Aberhart"
 	dynasty=1867018
 	culture=ontarian
-	religion=high_church
+	religion=Gregorian
 	father=1867135
 	mother=1867167
 	2630.1.1={birth=yes}
@@ -2203,7 +2334,7 @@
 	name="Laswell"
 	dynasty=1867018
 	culture=ontarian
-	religion=high_church
+	religion=Gregorian
 	father=1867135
 	mother=1867167
 	2634.1.1={birth=yes}
@@ -2214,7 +2345,7 @@
 	name="Claude"
 	dynasty=1867018
 	culture=ontarian
-	religion=high_church
+	religion=Gregorian
 	father=1867137
 	mother=1867129
 	2652.1.1={birth=yes}
@@ -2225,7 +2356,7 @@
 	dynasty=1784028
 	female=yes
 	culture=rostmann
-	religion=high_church
+	religion=Gregorian
 	2626.1.1={birth=yes}
 	2700.1.1={death=yes}
 }
@@ -2233,7 +2364,7 @@
 	name="Laswell"
 	dynasty=1867018
 	culture=ontarian
-	religion=high_church
+	religion=Gregorian
 	father=1857100
 	2607.1.1={birth=yes}
 	2700.1.1={death=yes}
@@ -2244,8 +2375,7 @@
 	father=1857099
 	mother=1867166
 	culture=ontarian
-	religion=high_church
-	trait=high_anglican
+	religion=Gregorian
 	trait=lustful
 	trait=hedonist
 	trait=socializer
@@ -2264,8 +2394,7 @@
 	mother=1867166
 	female=yes
 	culture=ontarian
-	religion=high_church
-	trait=high_anglican
+	religion=Gregorian
 	2639.1.1={birth=yes}
 	2700.1.1={death=yes}
 }
@@ -2274,7 +2403,7 @@
 	dynasty=1867018
 	father=1867142
 	culture=ontarian
-	religion=high_church
+	religion=Gregorian
 	trait=high_anglican
 	trait=bastard
 	2655.1.1={birth=yes}
@@ -2282,9 +2411,9 @@
 }
 1867145={
 	name="Wrexley"
-	dynasty=1867101
-	culture=sranan
-	religion=high_church
+	dynasty=90000000
+	culture=chilango
+	religion=Gregorian
 	father=1857084
 	mother=1867150
 	trait=tough_soldier
@@ -2300,7 +2429,7 @@
 	name="Sampson"
 	dynasty=1867003
 	culture=west_indian
-	religion=nonconformist
+	religion=Gregorian
 	trait=patient
 	trait=craven
 	trait=trusting
@@ -2314,7 +2443,7 @@
 	name="Reynard"
 	dynasty=1867003
 	culture=west_indian
-	religion=nonconformist
+	religion=Gregorian
 	trait=tough_soldier
 	trait=duelist
 	trait=strong
@@ -2331,7 +2460,7 @@
 	female=yes
 	dynasty=1867003
 	culture=west_indian
-	religion=nonconformist
+	religion=Gregorian
 	trait=underhanded_rogue
 	trait=fair
 	trait=temperate
@@ -2348,7 +2477,7 @@
 	female=yes
 	dynasty=1867018
 	culture=ontarian
-	religion=high_church
+	religion=Gregorian
 	father=1867134
 	2607.4.20={birth=yes}
 	2700.1.1={death=yes}
@@ -2356,12 +2485,12 @@
 1867150={
 	name="Sarah"
 	female=yes
-	culture=sranan
-	religion=high_church
+	culture=southron
+	religion=Gregorian
 	trait=cynical
 	trait=honest
 	trait=gluttonous
-	2630.5.15={birth=yes culture=ontarian}
+	2630.5.15={birth=yes}
 	2700.1.1={death=yes}
 }
 1867151={#Father of the first King of Ontario
@@ -2370,22 +2499,30 @@
 	properties="if0fkk000000000000"
 	dynasty=1867015 # Laurier
 	culture=ontarian
-	religion=high_church
-	trait=thrifty_clerk
+	religion=Gregorian
+	trait=brilliant_strategist
 	trait=diligent
-	trait=kind
+	trait=celibate
 	trait=charitable
+	trait=dead_crown_ontario
 	trait=just
-	trait=erudite
-	trait=gardener
-	2586.6.12={birth=yes}
-	2610.6.20={add_spouse=1867156}
-	2631.1.4={death=yes}
+	trait=peasant_leader
+	trait=strategist
+	give_nickname=nick_the_restorer
+	2580.6.12={birth=yes}
+	2600.6.20={add_spouse=1867156}
+        #2640.1.1={
+		#create_bloodline={
+		#	type=bloodline_wolfe
+		#	has_dlc="Holy Fury"
+		#}
+	#}
+	2650.12.5={death=yes}
 }
 1867152={
 	name="Kinsley"
 	culture=ontarian
-	religion=high_church
+	religion=Gregorian
 	trait=genius
 	trait=proud
 	trait=martial_cleric
@@ -2403,7 +2540,7 @@
 	name="Quentin"
 	dynasty=1867022
 	culture=ontarian
-	religion=high_church
+	religion=Gregorian
 	father=1867154
 	2590.10.6={birth=yes}
 	2654.9.2={death=yes}
@@ -2412,7 +2549,7 @@
 	name="Guy"
 	dynasty=1867022
 	culture=ontarian
-	religion=high_church
+	religion=Gregorian
 	father=1867155
 	2567.7.7={birth=yes}
 	2633.3.3={death=yes}
@@ -2421,7 +2558,7 @@
 	name="Harwin"
 	dynasty=1867022
 	culture=ontarian
-	religion=high_church
+	religion=Gregorian
 	2545.5.15={birth=yes}
 	2595.9.5={death=yes}
 }
@@ -2430,19 +2567,19 @@
 	female=yes
 	dynasty=1867022
 	culture=ontarian
-	religion=high_church
+	religion=Gregorian
 	father=1867154
 	trait=cynical
 	trait=content
 	trait=charitable
-	2593.8.8={birth=yes}
-	2644.4.10={death=yes}
+	2585.8.8={birth=yes}
+	2604.4.10={death=yes}
 }
 1867157={
 	name="Oliver"
 	dynasty=2018006
 	culture=ontarian
-	religion=high_church
+	religion=Gregorian
 	trait=midas_touched
 	trait=lunatic
 	trait=ambitious
@@ -2455,20 +2592,21 @@
 1867158={
 	name="Joseph"
 	culture=iroquois
-	religion=high_church
+	religion=Gregorian
 	dynasty=2007055
 	trait=zealous
 	trait=strong
 	trait=ambitious
 	trait=brave
 	trait=tough_soldier
-	2599.9.9={birth=yes}
+	father=4000136
+	2589.9.9={birth=yes}
 	2650.1.1={death=yes}
 }
 1867159={
 	name="John"
 	culture=iroquois
-	religion=high_church
+	religion=Gregorian
 	dynasty=2007055
 	father=1867158
 	trait=zealous
@@ -2482,7 +2620,7 @@
 1867160={
 	name="Peter"
 	culture=iroquois
-	religion=high_church
+	religion=Gregorian
 	dynasty=2007055
 	father=1867159
 	trait=weak
@@ -2492,14 +2630,17 @@
 	trait=gregarious
 	trait=humble
 	trait=thrifty_clerk
-	2641.12.17={birth=yes effect={set_character_flag=no_historical_family}}
+	2641.12.17={birth=yes}
+	2665.4.10={
+		add_spouse=4000143
+	}
 	2700.1.1={death=yes}
 }
 1867161={
 	name="Oronhyatekha"
 	dynasty=2007054
 	culture=iroquois
-	religion=high_church
+	religion=Gregorian
 	trait=martial_cleric
 	trait=zealous
 	trait=humble
@@ -2518,7 +2659,7 @@
 	name="Tenskwatawa"
 	dynasty=2007054
 	culture=iroquois
-	religion=high_church
+	religion=Gregorian
 	father=1867161
 	mother=1867163
 	trait=brave
@@ -2538,7 +2679,7 @@
 	female=yes
 	dynasty=2007054
 	culture=iroquois
-	religion=high_church
+	religion=Gregorian
 	trait=martial_cleric
 	trait=zealous
 	trait=humble
@@ -2558,7 +2699,7 @@
 	female=yes
 	dynasty=0
 	culture=ontarian
-	religion=high_church
+	religion=Gregorian
 	2585.1.1={birth=yes}
 	2664.1.1={death=yes}
 }
@@ -2570,7 +2711,7 @@
 	intrigue=4
 	stewardship=7
 	culture=ontarian
-	religion=high_church
+	religion=Gregorian
 	trait=broad_anglican
 	trait=quick
 	trait=fortune_builder
@@ -2582,7 +2723,7 @@
 	female=yes
 	dynasty=0
 	culture=ontarian
-	religion=high_church
+	religion=Gregorian
 	2609.1.1={birth=yes}
 	2700.1.1={death=yes}
 }
@@ -2591,7 +2732,7 @@
 	female=yes
 	dynasty=1867022
 	culture=ontarian
-	religion=high_church
+	religion=Gregorian
 	father=1867153
 	2611.2.3={birth=yes}
 	2700.1.1={death=yes}
@@ -2600,7 +2741,7 @@
 	name="Sybil"
 	female=yes
 	culture=ontarian
-	religion=high_church
+	religion=Gregorian
 	2590.1.1={birth=yes}
 	2650.1.1={death=yes}
 }
@@ -2608,7 +2749,7 @@
 	name="Bethany"
 	female=yes
 	culture=ontarian
-	religion=high_church
+	religion=Gregorian
 	2629.1.1={birth=yes}
 	2700.1.1={death=yes}
 }
@@ -2616,7 +2757,7 @@
 	name="Galbart"
 	dynasty=1867021
 	culture=ontarian
-	religion=high_church
+	religion=Gregorian
 	father=1867015
 	mother=1867169
 	trait=strong
@@ -2627,7 +2768,7 @@
 	name="Benfred"
 	dynasty=1867021
 	culture=ontarian
-	religion=high_church
+	religion=Gregorian
 	father=1867015
 	mother=1867169
 	trait=strong
@@ -2638,7 +2779,7 @@
 	name="William"
 	dynasty=1867021
 	culture=ontarian
-	religion=high_church
+	religion=Gregorian
 	father=1867015
 	mother=1867169
 	trait=strong
@@ -2649,7 +2790,7 @@
 	name="Roderick"
 	dynasty=1867021
 	culture=ontarian
-	religion=high_church
+	religion=Gregorian
 	father=1867015
 	mother=1867169
 	trait=strong
@@ -2660,7 +2801,7 @@
 	name="Winifred"
 	female=yes
 	culture=ontarian
-	religion=high_church
+	religion=Gregorian
 	trait=ill
 	2611.2.4={birth=yes}
 	2650.8.8={death=yes}
@@ -2669,7 +2810,7 @@
 	name="Lisa"
 	female=yes
 	culture=ontarian
-	religion=high_church
+	religion=Gregorian
 	2633.1.6={birth=yes}
 	2700.1.1={death=yes}
 }
@@ -2677,7 +2818,7 @@
 	name="Mary"
 	female=yes
 	culture=ontarian
-	religion=high_church
+	religion=Gregorian
 	2604.7.3={birth=yes}
 	2658.3.13={death=yes}
 }
@@ -2685,7 +2826,7 @@
 	name="Barbara"
 	female=yes
 	culture=ontarian
-	religion=high_church
+	religion=Gregorian
 	2599.1.1={birth=yes}
 	2661.1.1={death=yes}
 }
@@ -2696,7 +2837,7 @@
 	father=1867114
 	mother=1867177
 	culture=ontarian
-	religion=high_church
+	religion=Gregorian
 	trait=temperate
 	trait=gregarious
 	trait=lustful
@@ -2707,7 +2848,7 @@
 	name="Jennie"
 	female=yes
 	culture=yankee
-	religion=high_church
+	religion=Gregorian
 	trait=fair
 	2610.5.8={birth=yes}
 	2660.7.8={death=yes}
@@ -2716,7 +2857,7 @@
 	name="Myra"
 	female=yes
 	culture=chinese
-	religion=high_church
+	religion=Gregorian
 	trait=gluttonous
 	trait=diligent
 	trait=gregarious
@@ -2727,26 +2868,26 @@
 	2645.7.8={death=yes}
 }
 1867181={
-	name="Salma"
+	name="Delilah"
 	female=yes
-	culture=sranan
-	religion=high_church
-	2604.1.3={birth=yes culture=ontarian}
+	culture=southron
+	religion=Gregorian
+	2604.1.3={birth=yes}
 	2663.1.1={death=yes}
 }
 1867182={
 	name="Eileen"
 	female=yes
-	culture=brown
-	religion=high_church
-	2602.6.15={birth=yes culture=ontarian}
+	culture=southron
+	religion=Gregorian
+	2602.6.15={birth=yes}
 	2665.1.15={death=yes}
 }
 1867183={
 	name="Grace"
 	female=yes
-	culture=ontarian
-	religion=high_church
+	culture=southron
+	religion=Gregorian
 	trait=kind
 	trait=gregarious
 	trait=diligent
@@ -2762,7 +2903,7 @@
 	name="Sharlene"
 	female=yes
 	culture=ontarian
-	religion=ursuline
+	religion=Gregorian
 	2640.6.19={birth=yes}
 	2700.1.1={death=yes}
 }
@@ -2770,7 +2911,7 @@
 	name="Lloyd"
 	dynasty=2014005
 	culture=ontarois
-	religion=ursuline
+	religion=Gregorian
 	father=1867063
 	mother=1867184
 	2659.10.16={birth=yes}
@@ -2780,7 +2921,7 @@
 	name="Ernest"
 	dynasty=2014005
 	culture=ontarois
-	religion=ursuline
+	religion=Gregorian
 	father=1867063
 	mother=1867184
 	2662.6.15={birth=yes}
@@ -2788,7 +2929,7 @@
 }
 1867187={
 	name="Warrick"
-	dynasty=1867101
+	dynasty=90000000
 	father=1857083
 	mother=1867181
 	martial=5
@@ -2797,12 +2938,14 @@
 	stewardship=5
 	learning=5
 	culture=ontarian
-	religion=high_church
+	religion=Gregorian
+	trait=knight
+	trait=adventurer
 	trait=tough_soldier
 	trait=zealous
 	trait=brave
 	2635.1.1={birth=yes}
-	2653.9.7={death={
+	2665.4.27={death={
 			death_reason=death_battle
 			killer=1867034
 		}
@@ -2812,7 +2955,7 @@
 	name="Jacques"
 	dynasty=2014005
 	culture=ontarois
-	religion=ursuline
+	religion=Gregorian
 	martial=5
 	diplomacy=3
 	stewardship=1
@@ -2835,7 +2978,7 @@
 	stewardship=4
 	learning=5
 	culture=ontarian
-	religion=high_church
+	religion=Gregorian
 	trait=brave
 	trait=ambitious
 	trait=intricate_webweaver
@@ -2849,23 +2992,23 @@
 }
 1867190={
     name="Elizabeth"
-	female=yes
-	dynasty=1867015
-	father=1867151
-	mother=1867156
-	martial=3
-	diplomacy=6
-	stewardship=8
-	intrigue=0
-	learning=1
-	culture=ontarian
-	religion=high_church
-	trait=indulgent_wastrel
-	trait=kind
-	trait=charitable
-	trait=slothful
-	trait=trusting
-	trait=dull
-	2617.2.27={birth=yes}
-	2670.1.1={death=yes}
+    female=yes
+    dynasty=1867015
+    father=1867151
+    mother=1867156
+    martial=3
+    diplomacy=6
+    stewardship=8
+    intrigue=0
+    learning=1
+    culture=ontarian
+    religion=Gregorian
+    trait=indulgent_wastrel
+    trait=kind
+    trait=charitable
+    trait=slothful
+    trait=trusting
+    trait=dull
+    2617.2.27={birth=yes}
+    2670.1.1={death=yes}
 }

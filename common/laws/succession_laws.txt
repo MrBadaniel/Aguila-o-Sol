@@ -433,10 +433,18 @@ succession_laws = {
 				NOT = { religion = la_hermandad }
 				NOT = { religion = artiga }
 				NOT = { religion = alurista }
+				NAND = {
+                        higher_real_tier_than = DUKE
+                        government = canadian_imperial_government
+                }
 				NOR = {
 					has_religion_feature = religion_matriarchal
 					has_religion_feature = religion_patriarchal
 				}
+				NAND = {
+                        lower_tier_than = DUKE
+                        government = canadian_imperial_government
+                }
 			}
 			holder_scope = {
 				has_dlc = "Holy Fury"
@@ -617,6 +625,14 @@ succession_laws = {
 						}
 					}
 				}
+				#NAND = {
+                #        lower_tier_than = DUKE
+                #        government = canadian_imperial_government
+                #}
+				NAND = {
+                        higher_real_tier_than = DUKE
+                        government = canadian_imperial_government
+                }
 			}
 			OR = {
 				NAND = {
@@ -788,6 +804,14 @@ succession_laws = {
 			holder_scope = {
 				is_merchant_republic = no
 				is_patrician = no
+				NAND = {
+                        higher_real_tier_than = DUKE
+                        government = canadian_imperial_government
+                }
+				#NAND = {
+                #        lower_tier_than = DUKE
+                #       government = canadian_imperial_government
+                #}
 			}
 			OR = {
 				holder_scope = { # Viceroyalties can always have primogeniture
@@ -1050,6 +1074,10 @@ succession_laws = {
 						}
 					}
 				}
+				NAND = {
+                        lower_tier_than = DUKE
+                        government = canadian_imperial_government
+                }
 			}
 			OR = {
 				NAND = {
@@ -1410,6 +1438,14 @@ succession_laws = {
 						}
 					}
 				}
+				#NAND = {
+                #        higher_real_tier_than = DUKE
+                #        government = canadian_imperial_government
+                #}
+				#NAND = {
+                #        lower_tier_than = DUKE
+                #        government = canadian_imperial_government
+                #}
 			}
 			OR = {
 				is_landless_type_title = no
@@ -1555,6 +1591,14 @@ succession_laws = {
 						}
 					}
 				}
+				NAND = {
+                        higher_real_tier_than = DUKE
+                        government = canadian_imperial_government
+                }
+				#NAND = {
+                #        lower_tier_than = DUKE
+                #        government = canadian_imperial_government
+                #}
 			}
 			OR = {
 				NAND = {
@@ -1724,6 +1768,14 @@ succession_laws = {
 				is_republic = no
 				is_merchant_republic = no
 				is_nomadic = no
+				NAND = {
+                        higher_real_tier_than = DUKE
+                        government = canadian_imperial_government
+                }
+				NAND = {
+                        lower_tier_than = DUKE
+                        government = canadian_imperial_government
+                }
 			}
 			OR = {
 				holder_scope = { # Viceroyalties can always have turkish succession if muslim
@@ -1892,6 +1944,14 @@ succession_laws = {
 						}
 					}
 				}
+				NAND = {
+                        higher_real_tier_than = DUKE
+                        government = canadian_imperial_government
+                }
+				NAND = {
+                        lower_tier_than = DUKE
+                        government = canadian_imperial_government
+                }
 			}
 			NAND = { 
 				has_law = succession_voting_power_1

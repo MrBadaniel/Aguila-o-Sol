@@ -1,4 +1,4 @@
-###ÄNSI
+###ï¿½NSI
 1899000={
 	name="Doughal"
 	dynasty=1813047
@@ -98,8 +98,8 @@
 1899004={
 	name="David"
 	dynasty=1813041
-	culture=maritimer
-	religion=high_church
+	culture=acadien
+	religion=angeline
 	diplomacy=4
 	martial=5
 	stewardship=6
@@ -123,8 +123,8 @@
 	stewardship=5
 	intrigue=8
 	learning=8
-	culture=maritimer
-	religion=high_church
+	culture=acadien
+	religion=angeline
 	trait=kind
 	trait=fair
 	trait=charitable
@@ -139,7 +139,7 @@
 	name="Lorcan"
 	dynasty=1813043
 	culture=maritimer
-	religion=high_church
+	religion=celtic_pagan
 	diplomacy=8
 	martial=6
 	stewardship=8
@@ -780,6 +780,7 @@
 	name="Anne"
 	female=yes
 	dynasty=1813030
+	father=1899171
 	martial=4
 	diplomacy=6
 	stewardship=6
@@ -842,6 +843,8 @@
 	dynasty=1001051 #Fay
 	culture=newfie
 	religion=celtic_pagan
+	father=1899164
+	mother=1899165
 	diplomacy=5
 	martial=6
 	stewardship=4
@@ -849,6 +852,7 @@
 	learning=8
 	trait=scholarly_theologian
 	trait=mystic
+	trait=child_of_consort
 	trait=lustful
 	trait=fair
 	trait=proud
@@ -1127,7 +1131,7 @@
 	trait=zealous 
 	trait=charitable
 	trait=temperate
-	give_nickname=nick_the_just
+	give_nickname=nick_the_liberator
 	2461.1.1={birth=yes}
 	2512.11.26={death=yes}
 }
@@ -1519,9 +1523,14 @@
 	religion=celtic_pagan
 	trait=genius
 	trait=midas_touched
+	trait=cynical
+	trait=scholar
+	trait=erudite
 	trait=diligent
+	trait=sympathy_christendom
 	trait=legendary
 	occluded=yes
+	give_nickname=nick_the_heathen
 	2099.3.14={birth=yes}
 	2199.1.1={death=yes}
 }
@@ -1536,6 +1545,8 @@
 	trait=kind
 	trait=charitable
 	trait=poet
+	trait=sympathy_christendom
+	trait=cynical
 	trait=legendary
 	occluded=yes
 	2180.1.1={birth=yes}
@@ -1754,6 +1765,7 @@
 	dynasty=1813047
 	culture=maritimer
 	religion=high_church
+	father=4000175
 	trait=zealous
 	2570.1.1={birth=yes}
 	2617.1.1={death=yes}
@@ -1997,7 +2009,7 @@
 1899133={
 	name="Benoît"
 	culture=acadien
-	religion=ursuline
+	religion=angeline
 	dynasty=1755053
 	father=1899139
 	trait=midas_touched
@@ -2013,7 +2025,7 @@
 	name="Édith"
 	female=yes
 	culture=acadien
-	religion=ursuline
+	religion=angeline
 	dynasty=0
 	trait=fair
 	trait=diligent
@@ -2030,7 +2042,7 @@
 	name="Aldéa"
 	female=yes
 	culture=acadien
-	religion=ursuline
+	religion=angeline
 	dynasty=1755053
 	father=1899133
 	mother=1899134
@@ -2046,9 +2058,9 @@
 1899136={
 	name="Eymard"
 	culture=acadien
-	religion=ursuline
+	religion=angeline
 	dynasty=1755053
-	father=1899133
+	father=angeline
 	mother=1899134
 	trait=tough_soldier
 	trait=strong
@@ -2064,7 +2076,7 @@
 1899137={
 	name="Eudes"
 	culture=acadien
-	religion=ursuline
+	religion=angeline
 	dynasty=1755053
 	father=1899133
 	mother=1899134
@@ -2082,7 +2094,7 @@
 1899138={
 	name="Evée"
 	culture=acadien
-	religion=ursuline
+	religion=angeline
 	dynasty=1755053
 	father=1899133
 	mother=1899134
@@ -2100,7 +2112,7 @@
 1899139={
 	name="Réginald"
 	culture=acadien
-	religion=ursuline
+	religion=angeline
 	dynasty=1755053
 	trait=charismatic_negotiator
 	trait=diligent
@@ -2114,7 +2126,7 @@
 	name="Philomène"
 	female=yes
 	culture=acadien
-	religion=ursuline
+	religion=angeline
 	dynasty=0
 	2592.6.4={birth=yes}
 	2615.1.1={add_spouse=1899139}
@@ -2197,7 +2209,7 @@
 	female=yes
 	dynasty=1813041
 	culture=maritimer
-	religion=high_church
+	religion=angeline
 	father=1899004
 	mother=1899005
 	2666.2.4={birth=yes}
@@ -2377,4 +2389,167 @@
 		employer=1899123
 	}
 	2688.8.14={death=yes}
+}
+
+### NEWFIE HISTORY ###
+
+1899163={
+	name="Uther"
+    culture=newfie
+   	religion=celtic_pagan
+	dynasty=90000100
+	add_trait=skilled_tactician
+	add_trait=just
+	add_trait=cynical
+	add_trait=ambitious
+	2510.1.1={birth=yes}
+	2590.1.1={death=yes}
+}
+1899164={
+	name="Arthur"
+    culture=newfie
+   	religion=celtic_pagan
+	dynasty=90000100
+	father=1899163
+	add_trait=brilliant_strategist
+	add_trait=just
+	add_trait=strategist
+	add_trait=sympathy_christendom
+	add_trait=ambitious
+	2570.1.1={birth=yes}
+	2643.1.1={death={
+			death_reason=death_battle
+			killer= 1899166
+		}
+	}
+}
+1899165={
+	name="Nimue"
+    culture=newfie
+   	religion=celtic_pagan
+	dynasty=90000100
+	father=1899163
+	female=yes
+	add_trait=scholarly_theologian
+	add_trait=zealous
+	add_trait=mystic
+	add_trait=ambitious
+	2580.1.1={birth=yes}
+	2659.1.1={death=yes}
+}
+1899166={
+	name="Medrawt"
+    culture=newfie
+   	religion=celtic_pagan
+	dynasty=1001033
+	father=1899164
+	add_trait=skilled_tactician
+	add_trait=zealous
+	add_trait=mystic
+	add_trait=ambitious
+	add_trait=cruel
+	add_trait=bastard
+	add_trait=impaler
+	2601.1.1={birth=yes}
+	2643.1.1={death={
+			death_reason=death_battle
+			killer= 1899164
+		}
+	}
+}
+1899167={
+	name="Guinevere"
+    culture=newfie
+   	religion=celtic_pagan
+	female=yes
+	add_trait=sympathy_christendom
+	add_trait=mystic
+	add_trait=ambitious
+	2576.1.1={birth=yes}
+	2599.1.1={add_spouse=1899164}
+	2659.1.1={death=yes}
+}
+1899168={
+	name="Derfel Cadarn"
+    culture=newfie
+   	religion=celtic_pagan
+	dynasty=90000100
+	father=1899164
+	mother=1899167
+	add_trait=tough_soldier
+	add_trait=sympathy_christendom
+	add_trait=kind
+	add_trait=brave
+	2612.1.1={birth=yes}
+	2643.1.1={death={
+			death_reason=death_battle
+			killer= 1899166
+		}
+	}
+}
+1899169={
+	name="Corey"
+    culture=newfie
+	dynasty=1520058
+	culture=mikmaq
+	give_nickname=nick_the_liberator
+	add_trait=brilliant_strategist
+	add_trait=zealous
+	add_trait=mystic
+	add_trait=peasant_leader
+	add_trait=ambitious
+	2610.1.1={birth=yes}
+	2658.1.1={death=yes}
+}
+1899170={
+	name="Galahad"
+    culture=newfie
+   	religion=high_church
+	dynasty=90000100
+	father=1899164
+	mother=1899167
+	add_trait=tough_soldier
+	add_trait=sympathy_pagan
+	add_trait=kind
+	add_trait=brave
+	add_trait=one_eyed
+	give_nickname=nick_the_survivor
+	2601.1.1={birth=yes}
+	2654.1.1={death=yes}
+}
+1899171={
+	name="Alban"
+    culture=maritimer
+   	religion=high_church
+	dynasty=1813030
+	father=1899170
+	add_trait=tough_soldier
+	add_trait=sympathy_pagan
+	add_trait=kind
+	add_trait=brave
+	2618.1.1={birth=yes}
+	2663.1.1={death=yes}
+}
+1899172={
+	name="Augustin"
+    culture=maritimer
+   	religion=high_church
+	dynasty=1813030
+	father=1899171
+	add_trait=sympathy_pagan
+	add_trait=kind
+	add_trait=blind
+	add_trait=poet
+	2630.1.1={birth=yes}
+	2700.1.1={death=yes}
+}
+1899173={
+	name="Brian"
+    culture=maritimer
+   	religion=high_church
+	dynasty=1813030
+	father=1899172
+	add_trait=quick
+	2660.1.1={birth=yes}
+	2730.1.1={death=yes}
 }
