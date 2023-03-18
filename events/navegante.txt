@@ -42,16 +42,6 @@ character_event = { #forced baptism counter
 	
 	religion_group = cult_of_saints
 	
-	trigger = {
-			OR = {  
-				religion = navegante
-					AND = {
-					trait = marian_stella_maris
-					religion = sacred_heart
-				}
-			}
-	}
-	
 	immediate = {
 		change_variable = { which = forced_conversions value = 1 }
 		character_event = { id = navigant.3 }
@@ -60,6 +50,40 @@ character_event = { #forced baptism counter
 
 character_event = { #event that gives the traits
 	id = navigant.3
+	
+	trigger = {
+			OR = {  
+				religion = navegante
+					AND = {
+					trait = marian_stella_maris
+					religion = sacred_heart
+				}
+			}
+		OR = {
+			AND = {
+				NOR = {
+					trait = levita
+					trait = aaronita
+					trait = melquisedequita
+				}
+				check_variable = { which = forced_conversions value = 5 }
+			}
+			AND = {
+				trait = levita
+				check_variable = { which = forced_conversions value = 10 }
+			}
+			AND = {
+				trait = aaronita
+				check_variable = { which = forced_conversions value = 15 }
+			}
+			AND = {
+				trait = melquisedequita
+				NOT = { has_character_flag = baptismus_ultimus }
+				check_variable = { which = forced_conversions value = 25 }
+			}
+		}
+	}	
+	
 	desc = { 
 		trigger = { 
 			NOR = {
@@ -84,7 +108,7 @@ character_event = { #event that gives the traits
 	}
 	desc = { 
 		trigger = { 
-			trait = aaronita
+			trait = melquisedequita
 		}
 		text = EVTDESC_navigant_3D
 	}
@@ -97,35 +121,6 @@ character_event = { #event that gives the traits
 	min_age = 16
 	religion_group = cult_of_saints
 	
-	
-	trigger = {
-			OR = {  
-				religion = navegante
-					AND = {
-					trait = marian_stella_maris
-					religion = sacred_heart
-				}
-			}
-		OR = {
-			AND = {
-				NOR = {
-					trait = levita
-					trait = aaronita
-					trait = melquisedequita
-				}
-				check_variable = { which = forced_conversions value = 10 }
-			}
-			AND = {
-				trait = levita
-				check_variable = { which = forced_conversions value = 25 }
-			}
-			AND = {
-				trait = aaronita
-				check_variable = { which = forced_conversions value = 75 }
-			}
-		}
-	}
-	
 	option = {
         name = EVTOPTA_navigant_3
 		trigger = {
@@ -134,7 +129,7 @@ character_event = { #event that gives the traits
 				trait = aaronita
 				trait = melquisedequita
 			}
-			check_variable = { which = forced_conversions value = 10 }
+			check_variable = { which = forced_conversions value = 5 }
 		}
 		add_trait = levita
 	}
@@ -143,7 +138,7 @@ character_event = { #event that gives the traits
         name = EVTOPTB_navigant_3
 		trigger = {
 			trait = levita
-			check_variable = { which = forced_conversions value = 30 }
+			check_variable = { which = forced_conversions value = 10 }
 		}
 		remove_trait = levita
 		add_trait = aaronita
@@ -153,7 +148,7 @@ character_event = { #event that gives the traits
         name = EVTOPTC_navigant_3
 		trigger = {
 			trait = aaronita
-			check_variable = { which = forced_conversions value = 50 }
+			check_variable = { which = forced_conversions value = 15 }
 		}
 		remove_trait = aaronita
 		add_trait = melquisedequita
@@ -163,7 +158,11 @@ character_event = { #event that gives the traits
         name = EVTOPTD_navigant_3
 		trigger = {
 			trait = melquisedequita
-			check_variable = { which = forced_conversions value = 100 }
+			check_variable = { which = forced_conversions value = 25 }
+			NOT = { has_character_flag = baptismus_ultimus }
+		}
+		effect = {
+			set_character_flag = baptismus_ultimus
 		}
 		hidden_tooltip = { 
 			if = { 

@@ -1695,7 +1695,6 @@ d_navegante = {
 	title = "FISHER_OF_MEN"
 	title_female = "FISHER_OF_WOMEN"
 	foa = "SECULAR_FOA"
-	creation_requires_capital = yes
 	short_name = yes
 	
 	dignity = 100 # Counted as having this many more counties than it does
@@ -1710,78 +1709,6 @@ d_navegante = {
 	
 	assimilate = no # Nothing drifts in or out
 	caliphate = yes	
-	allow = { 
-		religion = navegante
-	OR = {
-		AND = {
-			ai = no
-		OR = {
-				AND = {
-				trait = born_in_the_caul
-				prestige = 500
-				piety = 500
-				}	
-				AND = {
-				trait = levita
-				prestige = 1000
-				piety = 1000
-				}
-				AND = {
-				trait = aaronita
-				prestige = 500
-				piety = 500
-				}
-				AND = {
-				trait = melquisedequita
-				prestige = 250
-				piety = 250
-				}
-				AND = {
-				prestige = 1500
-				piety = 1500
-				}
-			}
-			completely_controls = d_baja_sur
-			title = k_baja_california
-			OR = {
-				title = d_nayarit
-				title = d_sonora
-				title = d_sinaloa
-			}
-		}
-		AND = {
-			ai = yes
-		OR = {
-				AND = {
-				trait = born_in_the_caul
-				prestige = 225
-				piety = 225
-				}	
-				AND = {
-				trait = levita
-				prestige = 500
-				piety = 500
-				}
-				AND = {
-				trait = aaronita
-				prestige = 225
-				piety = 225
-				}
-				AND = {
-				trait = melquisedequita
-				prestige = 125
-				piety = 125
-				}
-				AND = {
-				prestige = 750
-				piety = 750
-				}
-			}
-			completely_controls = d_baja_sur
-			#title = k_baja_california
-			}	
-		}
-	}
 	dynasty_title_names = no 	# Will not be named "Seljuk", etc.
 }
 
