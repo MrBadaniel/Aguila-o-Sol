@@ -73,9 +73,9 @@ character_event = {
 		if = { 
 			limit = { 
 				is_ruler = no
-				NOT { religion = la_hermandad }
-				NOT { religion = alurista }
-				NOT { religion = artiga }
+				NOT = { religion = la_hermandad }
+				NOT = { religion = alurista }
+				NOT = { religion = artiga }
 			}
 			give_nickname = nick_the_elder 
 		}

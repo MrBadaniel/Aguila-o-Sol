@@ -859,7 +859,7 @@
 		modifier = {
 			factor = 0
 			is_female = no
-			higher_real_tier_than = unlanded
+			is_ruler = yes
 		}
 		modifier = {
 			factor = 0
@@ -4494,6 +4494,8 @@
 				trait = dead_crown_celtic_fylkir
 				trait = dead_crown_aztec_fylkir #used for Aztec emperors of Mexico
 				trait = dead_crown_mexico
+				trait = dead_crown_ontario
+				trait = dead_crown_colorado
 				trait = dead_crown_raven_tales_fylkir
 				trait = dead_crown_judah
 				trait = dead_crown_aria_de_machete_fylkir
@@ -4666,6 +4668,34 @@
 			NOT = { has_portrait_property = { layer = 18 index = 20 } }
 		}
 	}
+	16 = { 
+		factor = 1
+		modifier = {
+			factor = 0
+			NOT = { has_portrait_property = { layer = 19 index = 16 } }
+		}
+	}
+	17 = { 
+		factor = 1
+		modifier = {
+			factor = 0
+			NOT = { has_portrait_property = { layer = 19 index = 17 } }
+		}
+	}
+	18 = { 
+		factor = 1
+		modifier = {
+			factor = 0
+			NOT = { has_portrait_property = { layer = 19 index = 18 } }
+		}
+	}
+	19 = { 
+		factor = 1
+		modifier = {
+			factor = 0
+			NOT = { has_portrait_property = { layer = 19 index = 19 } }
+		}
+	}
 }
 
 # p19 Special crowns 
@@ -4705,6 +4735,8 @@
 				trait = dead_scepter_midewiwin_fylkir
 				trait = dead_baston_del_pueblo
 				trait = dead_crown_mexico
+				trait = dead_crown_ontario
+				trait = dead_crown_colorado
 				trait = dead_cursed_diamond_crown
 				trait = dead_dogwood_crown
 				trait = dead_restored_dogwood_crown
@@ -5076,7 +5108,7 @@
 			}
 		}
 	}
-	16 = {
+	16 = {  # Mexican Presidential band and crown
 		factor = 100
 		hide_layers = { 5 = { } } #Hide layer 5 (headgear) when this frame is picked.
 		modifier = {
@@ -5087,7 +5119,7 @@
 				value = on
 			}
 		}
-		modifier = { # Mexican Presidential band
+		modifier = { 
 			factor = 0
 			NOR = { 
 				any_artifact = {
@@ -5098,6 +5130,9 @@
 			}
 		}
 	}
+	
+	# Pickelhaube is at index 17
+
 	18 = {
 		factor = 100
 		hide_layers = { 5 = { } } #Hide layer 5 (headgear) when this frame is picked.
@@ -5120,7 +5155,7 @@
 			}
 		}
 	}
-	19 = {
+	19 = {  # Baseball helmet crown
 		factor = 100
 		hide_layers = { 5 = { } } #Hide layer 5 (headgear) when this frame is picked.
 		modifier = {
@@ -5131,18 +5166,34 @@
 				value = on
 			}
 		}
-		modifier = { # montane Royal Crown
+		modifier = { # Mexican Presidential band
 			factor = 0
 			NOR = { 
 				any_artifact = {
 					artifact_type = crown_colorado
 					is_artifact_equipped = yes 
 				}
-				#trait = dead_crown_ontario
+				trait = dead_crown_colorado
 			}
 		}
 	}
+	20 = {  # Nohoch Tata clothes
+		factor = 100
+		hide_layers = { 5 = { } } #Hide layer 5 (headgear) when this frame is picked.
+		hide_layers = { 3 = { } } #Hide Clothes.
+		#modifier = {
+		#	factor = 0
+		#	year = 1245
+		#}
+		modifier = {
+			factor = 0
+			NOT = {
+				has_landed_title = d_qabantajik
+			}
+		}
+	}	
 }
+
 
 # p20 freckles
 #Freckles traits from thinnest to thickest:
@@ -7387,7 +7438,10 @@
 		factor = 100
 		modifier = {
 			factor = 0
-			trait = dead_scepter_midewiwin_fylkir
+			OR = {
+				trait = dead_scepter_midewiwin_fylkir
+				trait = dead_baston_del_pueblo
+			}
 		}
 		modifier = {
 			factor = 0
@@ -7399,7 +7453,10 @@
 				}
 			}
 			any_artifact = {
-				artifact_type = scepter_midewiwin_fylkir
+				OR = {
+					artifact_type = scepter_midewiwin_fylkir
+					artifact_type = baston_del_pueblo
+				}
 				is_artifact_equipped = yes 
 			}
 		}
@@ -7426,28 +7483,28 @@
 			}
 		}
 	}
-	# 2 = {	#UNUSED
-		# factor = 100
-		# #hide_layers = { 5 = { } } #Hide layer 5 (headgear) when this frame is picked.
-		# modifier = {
-			# factor = 0
-			# in_command = yes
-			# has_game_rule = {
-				# name = martial_headgear
-				# value = on
-			# }
-		# }
-		# modifier = { #Baston del Pueblo
-			# factor = 0
-			# NOR = { 
-				# any_artifact = {
-					# artifact_type = baston_del_pueblo
-					# is_artifact_equipped = yes 
-				# }
-				# trait = dead_baston_del_pueblo
-			# }
-		# }
-	# }
+	2 = {	#Baston del Pueblo
+		factor = 100
+		#hide_layers = { 5 = { } } #Hide layer 5 (headgear) when this frame is picked.
+		modifier = {
+			factor = 0
+			in_command = yes
+			has_game_rule = {
+				name = martial_headgear
+				value = on
+			}
+		}
+		modifier = { 
+			factor = 0
+			NOR = { 
+				any_artifact = {
+					artifact_type = baston_del_pueblo
+					is_artifact_equipped = yes 
+				}
+				trait = dead_baston_del_pueblo
+			}
+		}
+	}
 }
 
 # p37 Special Relations (lover/rival) #TODO_CD: update once we have proper scopes

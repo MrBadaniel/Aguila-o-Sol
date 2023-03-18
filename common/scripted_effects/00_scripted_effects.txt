@@ -25046,6 +25046,34 @@ transfer_crown_on_abdication_effect = {
 	}
 	if = {
 		limit = { 
+			has_landed_title = e_mexico
+			any_artifact = { artifact_type = crown_mexico }
+		}
+			current_heir = { save_event_target_as = crown_mexico_heir }
+			any_artifact = { 
+				limit = { artifact_type = crown_mexico }
+				transfer_artifact = {
+					from = PREV
+					to = event_target:crown_mexico_heir
+				} 
+			}
+	}
+	if = {
+		limit = { 
+			has_landed_title = k_ontario
+			any_artifact = { artifact_type = crown_ontario }
+		}
+			current_heir = { save_event_target_as = crown_ontario_heir }
+			any_artifact = { 
+				limit = { artifact_type = crown_ontario }
+				transfer_artifact = {
+					from = PREV
+					to = event_target:crown_ontario_heir
+				} 
+			}
+	}
+	if = {
+		limit = { 
 			has_landed_title = d_norse_pagan_reformed
 			any_artifact = { artifact_type = crown_fylkir }
 		}
@@ -25206,6 +25234,8 @@ transfer_crown_on_abdication_effect = {
 				artifact_type = crown_hcc
 				artifact_type = crown_lion_judah
 				artifact_type = crown_california
+				artifact_type = crown_mexico
+				artifact_type = crown_ontario
 				artifact_type = crown_fylkir
 				artifact_type = crown_celtic_fylkir
 				artifact_type = crown_aria_de_machete_fylkir

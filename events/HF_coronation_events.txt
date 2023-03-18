@@ -13122,6 +13122,15 @@ character_event = {
 					} 
 				} 
 			}
+			AND = { 
+				has_landed_title = k_ontario
+				any_artifact = { artifact_type = crown_ontario }
+				e_mexico = { 
+					current_heir = { 
+						NOT = { dynasty = ROOT }
+					} 
+				} 
+			}
 		}
 	}
 
@@ -13338,6 +13347,21 @@ character_event = {
 		}
 		if = { 
 			limit = { 
+				has_landed_title = k_ontario
+				any_artifact = { artifact_type = crown_ontario }
+			}
+			e_mexico = { 
+				current_heir = { save_event_target_as = worthy_ontario_crown }
+			}
+			player_heir = { save_event_target_as = unworthy_ontario_crown }
+			any_artifact = { 
+				limit = { artifact_type = crown_ontario }
+				save_event_target_as = inheriting_artifact_4
+			}
+			current_heir = { character_event = { id = HF.20407 days = 1 } }
+		}
+		if = { 
+			limit = { 
 				has_landed_title = k_dominionist
 				any_artifact = { artifact_type = bullet_crown }
 			}
@@ -13439,13 +13463,13 @@ character_event = {
 				to = event_target:worthy_california_crown
  			} 
  		}
-		 event_target:inheriting_artifact_4 = {
+		event_target:inheriting_artifact_4 = {
 			transfer_artifact = {
 				from = event_target:unworthy_mexico_crown
 				to = event_target:worthy_mexico_crown
  			} 
  		}
-		 event_target:inheriting_artifact_4 = {
+		event_target:inheriting_artifact_4 = {
 			transfer_artifact = {
 				from = event_target:unworthy_campana_de_dolores
 				to = event_target:worthy_campana_de_dolores
@@ -13455,6 +13479,12 @@ character_event = {
 			transfer_artifact = {
 				from = event_target:unworthy_bullet_crown
 				to = event_target:worthy_bullet_crown
+ 			} 
+ 		}
+		 event_target:inheriting_artifact_4 = {
+			transfer_artifact = {
+				from = event_target:unworthy_ontario_crown
+				to = event_target:worthy_ontario_crown
  			} 
  		}
 	}
@@ -14441,7 +14471,15 @@ character_event = {
 			AND = {
 				FROM = { title = e_california } 
 				FROMFROM = { any_artifact = { artifact_type = crown_california } } 
+			}
+			AND = {
+				FROM = { title = e_mexico } 
+				FROMFROM = { any_artifact = { artifact_type = crown_mexico } } 
 			} 
+			AND = {
+				FROM = { title = k_ontario } 
+				FROMFROM = { any_artifact = { artifact_type = crown_ontario } } 
+			}  
 			AND = {
 				FROM = { title = k_dominionist } 
 				FROMFROM = { any_artifact = { artifact_type = bullet_crown } } 
@@ -14545,7 +14583,31 @@ character_event = {
 			FROMFROM = { 
 				any_artifact = { 
 					limit = { artifact_type = bullet_crown }
-					save_event_target_as = inheriting_artifact_4
+					save_event_target_as = inheriting_artifact_bullet_crown
+				}
+			}
+		}
+		if = {
+			limit = {
+				FROM = { title = e_mexico } 
+				FROMFROM = { any_artifact = { artifact_type = crown_mexico } } 
+			} 
+			FROMFROM = { 
+				any_artifact = { 
+					limit = { artifact_type = crown_mexico }
+					save_event_target_as = inheriting_artifact_crown_mexico
+				}
+			}
+		}
+		if = {
+			limit = {
+				FROM = { title = k_ontario } 
+				FROMFROM = { any_artifact = { artifact_type = crown_ontario } } 
+			} 
+			FROMFROM = { 
+				any_artifact = { 
+					limit = { artifact_type = crown_ontario }
+					save_event_target_as = inheriting_artifact_crown_ontario
 				}
 			}
 		}
@@ -14735,6 +14797,18 @@ character_event = {
 				to = ROOT
  			} 
  		}
+		 event_target:inheriting_artifact_crown_mexico = {
+			transfer_artifact = {
+				from = FROMFROM
+				to = ROOT
+ 			} 
+ 		}
+		 event_target:inheriting_artifact_crown_ontario = {
+			transfer_artifact = {
+				from = FROMFROM
+				to = ROOT
+ 			} 
+ 		}
 		event_target:inheriting_artifact_bullet_crown = {
 			transfer_artifact = {
 				from = FROMFROM
@@ -14849,7 +14923,16 @@ character_event = {
 				has_landed_title = e_mexico
 				any_artifact = { artifact_type = crown_mexico }
 			}
-			any_artifact = { artifact_type = baston_del_pueblo }
+			AND = {
+				any_artifact = { artifact_type = baston_del_pueblo }
+			}
+			AND = {
+				has_landed_title = k_ontario
+				any_artifact = { artifact_type = crown_ontario }
+			}
+			AND = {
+				any_artifact = { artifact_type = crown_colorado }
+			}
 
 		#	AND = { 
 		#		has_landed_title = k_italy 
@@ -14979,6 +15062,12 @@ character_event = {
 				any_artifact = { artifact_type = crown_ontario }
 			}
 			add_trait = dead_crown_ontario
+		}
+		if = { 
+			limit = { 
+				any_artifact = { artifact_type = crown_colorado }
+			}
+			add_trait = dead_crown_colorado
 		}
 	}
 }

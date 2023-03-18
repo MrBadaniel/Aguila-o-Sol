@@ -365,6 +365,30 @@ spriteTypes = {
 		noOfFrames = 12
 		norefcount = yes
 	}
+	spriteType = {
+		name = "GFX_yucatanense_male_clothes"
+		texturefile = "gfx\\characters\\yucatanense_male\\yucatanense_male_clothes.dds"
+		noOfFrames = 12
+		norefcount = yes
+	}	
+	spriteType = {
+		name = "GFX_yucatanense_male_clothes_behind"
+		texturefile = "gfx\\characters\\yucatanense_male\\yucatanense_male_clothes_behind.dds"
+		noOfFrames = 12
+		norefcount = yes
+	}
+	spriteType = {
+		name = "GFX_yucatanense_male_headgear"
+		texturefile = "gfx\\characters\\yucatanense_male\\yucatanense_male_headgear.dds"
+		noOfFrames = 12
+		norefcount = yes
+	}
+	spriteType = {
+		name = "GFX_yucatanense_male_headgear_behind"
+		texturefile = "gfx\\characters\\yucatanense_male\\yucatanense_male_headgear_behind.dds"
+		noOfFrames = 12
+		norefcount = yes
+	}
 	
 ###CHILDREN
 
@@ -979,8 +1003,8 @@ spriteTypes = {
 		effectFile = "gfx/FX/portrait.lua"
 		layer = {
 			"GFX_character_background:p0"
-			"GFX_serbsouthslavic_male_clothes_behind:p3:c0"
-			"GFX_byzantine_male_headgear_behind_early:p5:c1"
+			"GFX_yucatanense_male_clothes_behind:p3:c0"
+			"GFX_yucatanense_male_headgear_behind:p5:c1"
 			"GFX_frankish_male_overlayer_behind:p31"
 			"GFX_character_special_crowns_behind:p18"
             	"GFX_byzantine_male_hair_behind:p1:h:y"
@@ -1011,7 +1035,7 @@ spriteTypes = {
 			"GFX_character_black_eye:p23:y"
 			"GFX_character_eyepatch:p13:y:o32x63"
 			"GFX_character_mask:p12:y:o40x45"
-			"GFX_serbsouthslavic_male_clothes:p3:c2"
+			"GFX_yucatanense_male_clothes:p3:c2"
 			"GFX_byzantine_male_headgear_mid_early:p5:c3"
 			"GFX_character_special_crowns_mid:p19"
 			"GFX_frankish_male_overlayer_mid:p31"
@@ -1020,7 +1044,7 @@ spriteTypes = {
 			"GFX_byzantine_male_hair:p1:h:y"
 			#"GFX_turkish_male_hair:p1:h:y:o-5x0"
 			"GFX_empty:p5:c7:h"
-			"GFX_byzantine_male_headgear_early:p5:c5"
+			"GFX_yucatanense_male_headgear:p5:c5"
 			"GFX_frankish_male_overlayer:p31"
 			"GFX_character_special_crowns:p19"
 			"GFX_character_special_helmets:p34"
@@ -1076,8 +1100,8 @@ spriteTypes = {
 			#"GFX_background_frames:p38"
 			#"GFX_background_furniture:p42"
 			#"GFX_background_items:p2"
-			"GFX_serbsouthslavic_male_clothes_behind:p3:c0"
-			"GFX_byzantine_male_headgear_behind_early:p5:c1"
+			"GFX_yucatanense_male_clothes_behind:p3:c0"
+			"GFX_yucatanense_male_headgear_behind:p5:c1"
 			"GFX_frankish_male_overlayer_behind:p31"
 			"GFX_character_special_crowns_behind:p19"
 			#"GFX_turkish_male_hair_behind_midage:p1:h:y:o-5x0"
@@ -1108,7 +1132,7 @@ spriteTypes = {
 			"GFX_character_possessed:p30:o1x-1"
 			"GFX_character_eyepatch:p13:y:o32x63"
 			"GFX_character_mask:p12:y:o40x45"
-			"GFX_serbsouthslavic_male_clothes:p3:c2"
+			"GFX_yucatanense_male_clothes:p3:c2"
 			"GFX_byzantine_male_headgear_mid_early:p5:c3"
 			"GFX_character_special_crowns_mid:p19"
 			"GFX_frankish_male_overlayer_mid:p31"
@@ -1117,7 +1141,7 @@ spriteTypes = {
 			"GFX_byzantine_male_hair_midage:p1:h:y"
 			#"GFX_turkish_male_hair_midage:p1:h:y:o-5x0"
 			"GFX_empty:p5:c7:h"
-			"GFX_byzantine_male_headgear_early:p5:c5"
+			"GFX_yucatanense_male_headgear:p5:c5"
 			"GFX_frankish_male_overlayer:p31"
 			"GFX_character_special_crowns:p19"
 			"GFX_character_special_helmets:p34"
@@ -1172,8 +1196,8 @@ spriteTypes = {
 		effectFile = "gfx/FX/portrait.lua"
 		layer = {
 			"GFX_character_background:p0"							
-			"GFX_serbsouthslavic_male_clothes_behind:p3:c0"
-			"GFX_byzantine_male_headgear_behind_early:p5:c1"
+			"GFX_yucatanense_male_clothes_behind:p3:c0"
+			"GFX_yucatanense_male_headgear_behind:p5:c1"
 			"GFX_frankish_male_overlayer_behind:p31"
 			"GFX_character_special_crowns_behind:p19"
 			#"GFX_turkish_male_hair_behind_oldage:p1:h:y:o-5x0"
@@ -1208,14 +1232,14 @@ spriteTypes = {
 			"GFX_character_possessed:p30:o1x-1"
 			"GFX_character_eyepatch:p13:y:o32x63"
 			"GFX_character_mask:p12:y:o40x45"
-			"GFX_serbsouthslavic_male_clothes:p3:c2"
+			"GFX_yucatanense_male_clothes:p3:c2"
 			"GFX_byzantine_male_headgear_mid_early:p5:c3"
 			"GFX_character_special_crowns_mid:p19"
 			"GFX_frankish_male_overlayer_mid:p31"
 			"GFX_byzantine_male_hair_oldage:p1:h:y"
 			"GFX_southindian_male_beard_oldage:p4:h:y"
 			"GFX_empty:p5:c7:h"
-			"GFX_byzantine_male_headgear_early:p5:c5"
+			"GFX_yucatanense_male_headgear:p5:c5"
 			"GFX_frankish_male_overlayer:p31"
 			"GFX_character_special_crowns:p19"
 			"GFX_character_special_helmets:p34"
