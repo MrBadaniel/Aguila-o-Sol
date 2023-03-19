@@ -4696,6 +4696,13 @@
 			NOT = { has_portrait_property = { layer = 19 index = 19 } }
 		}
 	}
+	20 = { 
+		factor = 1
+		modifier = {
+			factor = 0
+			NOT = { has_portrait_property = { layer = 20 index = 20 } }
+		}
+	}
 }
 
 # p19 Special crowns 
@@ -5189,6 +5196,7 @@
 			factor = 0
 			NOT = {
 				has_landed_title = d_qabantajik
+				is_theocracy = yes
 			}
 		}
 	}	
