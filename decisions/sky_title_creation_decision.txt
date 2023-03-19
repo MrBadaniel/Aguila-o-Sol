@@ -283,4 +283,47 @@ decisions = {
 			factor = 1
 		}
 	}
+	
+	reform_the_interior = {
+		is_high_prio = no
+		only_playable = yes
+
+
+		potential = {
+			is_playable = yes
+			independent = yes
+			OR = { 
+				religion = edenite
+				religion = forester
+				religion = primevalist
+			}
+			d_nps = {
+				has_holder = no
+			}
+		}
+	
+		allow = {
+			is_adult = yes
+			prisoner = no
+			NOT = { is_incapable = yes }
+			prestige = 500
+			has_landed_title = c_yellowstone
+		}
+		effect = {
+			prestige = -500
+			#narrative_event = { id = woodrunner.7 }
+			activate_title = { title = d_nps status = yes }
+			primary_title = {
+				d_nps = {
+					grant_title = ROOT
+					copy_title_laws = PREV
+				}
+			}		
+		
+		}
+		ai_will_do = {
+			factor = 1
+		} 
+	}
+	
 }

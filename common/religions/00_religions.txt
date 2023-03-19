@@ -491,7 +491,7 @@ amero_syncretic = {
 		intermarry = orthodox
 		####intermarry = insular
 		########intermarry = la_hermandad
-		####intermarry = forester
+		intermarry = forester
 	}
 	orthodox = {
 		graphical_culture = westerngfx
@@ -538,7 +538,7 @@ amero_syncretic = {
 		intermarry = nazarene
 		intermarry = true_cross
 
-		####intermarry = forester
+		intermarry = forester
 	}
 
 	exovedate = {
@@ -594,7 +594,7 @@ amero_syncretic = {
 		intermarry = raven_tales_reformed
 		intermarry = orthodox
 
-		####intermarry = forester
+		intermarry = forester
 	}
 }
 
@@ -751,7 +751,7 @@ christian = {
 		intermarry = cetic
 		intermarry = gaian
 		intermarry = shinto
-		####intermarry = forester
+		intermarry = forester
 		intermarry = alurista
 	}
 	sedevacantist = {
@@ -2128,7 +2128,7 @@ christian = {
 		intermarry = patria_grande
 		intermarry = orthodox
 		intermarry = nazarene
-		####intermarry = forester
+		intermarry = forester
 		####intermarry = la_hermandad
 	}
 
@@ -2452,7 +2452,7 @@ christian = {
 		intermarry = qingzhen
 		intermarry = nazarene
 		intermarry = Gregorian
-		####intermarry = forester
+		intermarry = forester
 		intermarry = cetic
 	
 		religious_clothing_head = 0
@@ -2839,7 +2839,7 @@ pacific = {
 		intermarry = qingzhen
 		intermarry = nazarene
 		intermarry = navegante
-		####intermarry = forester
+		intermarry = forester
 		intermarry = alurista
 	}
 
@@ -2883,7 +2883,7 @@ pacific = {
 		intermarry = shinto
 		intermarry = nousthreskeia
 		intermarry = neognostic
-		####intermarry = forester
+		intermarry = forester
 		intermarry = alurista
 	}
 
@@ -2925,7 +2925,7 @@ pacific = {
 		intermarry = gaian
 		intermarry = cetic
 		intermarry = nousthreskeia
-		####intermarry = forester
+		intermarry = forester
 		intermarry = alurista
 	}
 
@@ -2970,9 +2970,64 @@ pacific = {
 		intermarry = gaian
 		intermarry = cetic
 		intermarry = shinto
-		####intermarry = forester
+		intermarry = forester
 		intermarry = alurista	
 	}
+	
+	forester = {
+		graphical_culture = buddhistgfx
+
+		icon = 107
+		heresy_icon = 107
+		
+		color = { 0 88 38 }
+		
+		interface_skin = { gaian_interface indian_interface muslim_interface }
+		
+		high_god_name = GOD_THE_WILD
+		
+		god_names = {
+			 GOD_JOHN_MOUNTAIN GOD_OLD_FAITHFUL GOD_MOTHER_EARTH GOD_WOHELO GOD_SMOKEY
+		}
+		evil_god_names = {
+			GOD_FELLERS GOD_THE_GREAT_FIRE GOD_TERMITES GOD_THE_DARK_CICADA
+		}
+		
+		men_can_take_consorts = yes
+		women_can_take_consorts = yes
+		max_consorts = 3
+		pacifist = yes # I think this is what disables holy wars
+		crusade_name = GREAT_HOLY_WAR
+		scripture_name = SCOUTS_GUIDE
+		priest_title = FIRE_TENDER
+			
+		priests_can_marry = yes
+		allow_rivermovement = yes
+		female_temple_holders = yes
+		defensive_attrition = yes
+		hard_to_convert = yes
+
+		religious_clothing_head = 15
+		religious_clothing_priest = 15
+		
+		intermarry = cetic
+		intermarry = gaian
+		intermarry = shinto
+		intermarry = nousthreskeia
+		
+		intermarry = neognostic
+		intermarry = edenite
+		intermarry = aphite
+		intermarry = qingzhen
+		intermarry = xenoclast
+		intermarry = falling_star
+		intermarry = alurista
+		
+		intermarry = peyotist
+		intermarry = orthodox
+		intermarry = exovedate
+	}	
+	
 }
 
 latter_day_saints = {
@@ -3973,7 +4028,7 @@ oldworld = {
 		intermarry = cetic
 		intermarry = rust_cultist
 		intermarry = chrome_cultist
-		####intermarry = forester
+		intermarry = forester
 		intermarry = alurista
 		intermarry = falling_star
 		intermarry = xenoclast
@@ -4201,6 +4256,7 @@ oldworld = {
 		intermarry = atomicist
 		intermarry = aphite
 		intermarry = xenoclast
+		intermarry = forester
 	}
 	
 	xenoclast = { #offshoot of falling star
@@ -4247,6 +4303,7 @@ oldworld = {
 		intermarry = atomicist
 		intermarry = aphite
 		intermarry = falling_star
+		intermarry = forester
 	}
 	
     phantasmic = {
@@ -5631,7 +5688,7 @@ muslim = {
 		intermarry = misrist
 		intermarry = imamite
 		intermarry = cetic
-		####intermarry = forester
+		intermarry = forester
 		intermarry = nazarene
 		intermarry = alurista
 		intermarry = navegante

@@ -6,7 +6,7 @@ character_event = {
 	picture = GFX_evt_mysterious_forest
 
 	trigger = {
-		religion = woodrunner
+		religion = forester
 		is_ruler = yes
 	}
 	mean_time_to_happen = {
@@ -149,7 +149,7 @@ character_event = {
 	picture = GFX_evt_mysterious_forest
 
 	trigger = {
-		religion = woodrunner
+		religion = forester
 		is_ruler = yes
 	}
 	mean_time_to_happen = {
@@ -195,7 +195,7 @@ long_character_event = {
 	picture = GFX_evt_Artist
 	
 	trigger = {
-		religion = woodrunner
+		religion = forester
 		is_ruler = yes
 		NOT = {has_dynasty_flag = woodrunner_artist}
 	}
@@ -228,7 +228,7 @@ long_character_event = {
 	picture = GFX_evt_child_talking
 	
 	trigger = {
-		religion = woodrunner
+		religion = forester
 		NOT = {has_dynasty_flag = woodrunner_electric_scout}
 		is_ruler = yes
 	}
@@ -362,7 +362,7 @@ long_character_event = {
 	picture = gfx_evt_mysterious_forest
 	
 	trigger = {
-				religion = woodrunner
+				religion = forester
 				NOT = {has_dynasty_flag = woodrunner_wild_man}
 				is_ruler = yes
 	}
