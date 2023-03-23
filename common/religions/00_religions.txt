@@ -2129,7 +2129,8 @@ christian = {
 		intermarry = orthodox
 		intermarry = nazarene
 		intermarry = forester
-		####intermarry = la_hermandad
+		intermarry = primevalist
+		intermarry = primevalist_reformed
 	}
 
 	cristo_rey = {
@@ -3012,6 +3013,11 @@ pacific = {
 		intermarry = gaian
 		intermarry = shinto
 		intermarry = nousthreskeia
+		
+		intermarry = primevalist
+		intermarry = primevalist_reformed
+		intermarry = trailwalker
+		intermarry = trailwalker_reformed
 		
 		intermarry = neognostic
 		intermarry = edenite
@@ -4597,6 +4603,9 @@ pagan_group = {
 		intermarry = hamiltonian
 		intermarry = jeffersonian
 		intermarry = libertarian
+		intermarry = primevalist
+		intermarry = primevalist_reformed
+		intermarry = forester
 	}
 
 	trailwalker = {
@@ -4653,10 +4662,13 @@ pagan_group = {
 		intermarry = revelationist
 		intermarry = revelationist_reformed
 		intermarry = trailwalker_reformed
+		intermarry = primevalist
+		intermarry = primevalist_reformed
 		intermarry = americanist
 		intermarry = hamiltonian
 		intermarry = jeffersonian
 		intermarry = libertarian
+		intermarry = forester
 	}
 
 	occultist_reformed = {
@@ -5118,6 +5130,101 @@ pagan_group = {
 		intermarry = aria_de_machete_reformed
 		can_demand_religious_conversion = no
 	}
+	
+	primevalist_reformed = {
+		graphical_culture = norsegfx
+
+		icon = 109
+		heresy_icon = 110
+
+		color = { 1.0 0.55 0.0 }
+
+		interface_skin = { trailwalker_interface }
+
+		crusade_name = MASS_EXTINCTION
+		scripture_name = THE_FOSSILIZED_SLATES
+		priest_title = PALEOTHIST
+		piety_name = EVOLUTION
+
+		high_god_name = GOD_IMMORTALIS_REX
+		
+		god_names = {
+			GOD_IMMORTALIS_REX GOD_THE_EXCAVATOR GOD_ANNING
+		}
+
+		evil_god_names = {
+			CHICXULUB THE_DEMON_OF_TAR THE_EXTINCTION
+		}
+
+		priests_can_marry = yes
+		allow_looting = yes
+		allow_rivermovement = yes
+		can_call_crusade = yes
+		join_crusade_if_bordering_hostile = yes
+		allow_in_ruler_designer = no
+		hard_to_convert = yes
+		attacking_same_religion_piety_loss = yes
+		max_consorts = 3
+		raised_vassal_opinion_loss = no
+		peace_prestige_loss = yes
+
+		religious_clothing_head = 13
+		religious_clothing_priest = 13
+
+		intermarry = edenite
+		intermarry = forester
+		intermarry = trailwalker
+		intermarry = trailwalker_reformed
+		
+		alternate_start = { always = no }
+	}
+
+	primevalist = {
+		graphical_culture = norsegfx
+
+		icon = 108
+
+		color = { 1.0 0.55 0.0 }
+
+		interface_skin = { trailwalker_interface }
+
+		crusade_name = MASS_EXTINCTION
+		scripture_name = THE_FOSSILIZED_SLATES
+		priest_title = PALEOTHIST
+		piety_name = EVOLUTION
+
+		high_god_name = GOD_IMMORTALIS_REX
+		
+		god_names = {
+			GOD_IMMORTALIS_REX GOD_THE_EXCAVATOR GOD_ANNING
+		}
+
+		evil_god_names = {
+			CHICXULUB THE_DEMON_OF_TAR THE_EXTINCTION
+		}
+
+		priests_can_marry = yes
+		allow_looting = yes
+		peace_prestige_loss = yes # Lose Prestige while at peace
+		raised_vassal_opinion_loss = no
+		allow_rivermovement = yes
+		max_consorts = 3
+		hard_to_convert = yes
+		independence_war_score_bonus = 30 # Overrides define CONTESTED_TITLE_OCCUPIED_WARSCORE_BONUS_INDEP
+		reformed = primevalist_reformed
+		ignores_defensive_attrition = yes
+
+		religious_clothing_head = 13
+		religious_clothing_priest = 13
+
+		intermarry = edenite
+		intermarry = forester
+		intermarry = trailwalker
+		intermarry = trailwalker_reformed
+
+	}	
+	
+	
 }
 
 nautical = {
