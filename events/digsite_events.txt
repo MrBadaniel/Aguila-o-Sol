@@ -1,0 +1,1165 @@
+namespace = digsite
+
+# ************************* Salvage Expedition ************************
+
+narrative_event = {
+	id = digsite.1
+	title = EVTNAME_digsite_describe
+	desc = EVTDESC_digsite_describe
+	picture = GFX_evt_pilgrims_epic_journey
+
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPT_digsite_describe
+		trigger = {
+			num_of_count_titles = 1
+		}
+		hidden_tooltip = {
+			random_realm_province = {
+				random_neighbor_province = {
+					province_event = { id = digsite.2 days = 3 random = 5 }
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = EVTOPT_digsite_describe
+		trigger = {
+			NOT = { num_of_count_titles = 1 }
+		}
+		hidden_tooltip = {
+			liege = {
+				random_realm_province = {
+					random_neighbor_province = {
+						province_event = { id = salvage.2 days = 3 random = 5 }
+					}
+				}
+			}
+		}
+	}
+}
+
+province_event = {
+	id = digsite.2
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = { FROM = { narrative_event = { id = digsite.3 } } }
+	option = { }
+}
+
+narrative_event = {
+	id = digsite.3
+	title = EVTNAME_digsite_describe
+	desc = EVTDESC_digsite_choosesite
+	picture = GFX_evt_pilgrims_epic_journey
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTDESC_digsite_choosesite_accept
+		FROM = { province_event = { id = digsite.4 days = 3 random = 5 } }
+	}
+	
+	option = {
+		name = EVTDESC_digsite_choosesite_reject
+		random = { chance = 10 }
+		random_realm_province = {
+			random_neighbor_province = {
+				province_event = { id = digsite.2 days = 3 random = 5 }
+			}
+		}
+	}
+}
+
+province_event = {
+	id = digsite.4
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = { FROM = { narrative_event = { id = digsite.5 } } }
+	option = { }
+}
+
+narrative_event = {
+	id = digsite.5
+	title = EVTNAME_digsite_describe
+	desc = EVTDESC_digsite_prepare
+	picture = GFX_evt_pilgrims_epic_journey
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPT_digsite_prepare_start
+		add_trait = on_pilgrimage
+		remove_character_modifier = preparing_expedition
+		hidden_tooltip = {
+			FROM = {
+				province_event = {
+					id = digsite.10 days = 5 random = 5
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = EVTOPT_digsite_prepare_research
+		trigger = {
+			NOT = { has_character_flag = digsite_research }
+			learning = 8
+			wealth = 5
+		}
+		tooltip_info = learning
+		set_character_flag = digsite_research
+		wealth = -5
+		piety = 5
+		hidden_tooltip = { FROM = { province_event = { id = digsite.4 days = 15 random = 5 } } }
+		ai_chance = { factor = 5 }
+	}
+	
+	option = {
+		name = EVTOPT_digsite_prepare_warband
+		trigger = {
+			NOT = { has_character_flag = digsite_warband }
+			martial = 8
+			wealth = 10
+		}
+		tooltip_info = martial
+		set_character_flag = digsite_warband
+		wealth = -10
+		hidden_tooltip = { FROM = { province_event = { id = digsite.4 days = 10 random = 5 } } }
+		ai_chance = { factor = 5 }
+	}
+	
+	option = {
+		name = EVTOPT_digsite_prepare_envoys
+		trigger = {
+			NOT = { has_character_flag = digsite_envoys }
+			diplomacy = 8
+			wealth = 10
+		}
+		tooltip_info = diplomacy
+		set_character_flag = digsite_envoys
+		wealth = -10
+		prestige = 5
+		hidden_tooltip = { FROM = { province_event = { id = digsite.4 days = 10 random = 5 } } }
+		ai_chance = { factor = 5 }
+	}
+}
+
+province_event = {
+	id = digsite.10
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		random = { chance = 40 FROM = { narrative_event = { id = digsite.24 days = 3 random = 5 } } }
+	
+		if = {			# same realm, same religion
+			limit = {
+				holder_scope = { same_realm = FROM }
+				religion = primevalist
+			}
+			FROM = { character_event = { id = digsite.11 days = 5 } }
+		}
+		
+		if = {			# same realm, different religion
+			limit = {
+				holder_scope = { same_realm = FROM }
+				NOT = {
+					religion = primevalist
+				}
+			}
+			random_list = {
+				70 = { FROM = { character_event = { id = digsite.11 days = 5 } } }
+				30 = { FROM = { narrative_event = { id = digsite.12 days = 5 } } }
+			}
+		}
+		
+		if = {			# different realm, same religion
+			limit = {
+				holder_scope = { NOT = { same_realm = FROM } }
+				religion = primevalist
+			}
+			random_list = {
+				50 = { FROM = { character_event = { id = digsite.11 days = 5 } } }
+				50 = { FROM = { narrative_event = { id = digsite.12 days = 5 } } }
+			}
+		}
+	
+		if = {			# different realm, different religion
+			limit = {
+				holder_scope = { NOT = { same_realm = FROM } }
+				NOT = {
+					religion = rust_cultist
+				}
+			}
+			random_list = {
+				25 = { FROM = { character_event = { id = digsite.11 days = 5 } } }
+				75 = { FROM = { narrative_event = { id = digsite.12 days = 5 } } }
+			}
+		}
+	}
+	option = { }
+}
+
+character_event = {
+	id = digsite.11
+	hide_window = yes
+	is_triggered_only = yes
+	desc = EVTNAME_bounce
+	immediate = {
+		FROM = { province_event = { id = digsite.20 days = 5 } }
+	}
+	option = { }
+}
+
+narrative_event = {
+	id = digsite.12
+	is_triggered_only = yes
+	title = EVTNAME_digsite_unfriendly
+	desc = EVTDESC_digsite_unfriendly
+	picture = GFX_evt_peasants
+
+	option = {
+		name = EVTOPT_digsite_unfriendly_ignore
+		hidden_tooltip = { FROM = { province_event = { id = digsite.13 days = 3 } } }
+	}
+	
+	option = {
+		name = EVTOPT_digsite_unfriendly_warband
+		trigger = {
+			has_character_flag = digsite_warband
+		}
+		hidden_tooltip = { random_list = {
+			25 = { FROM = { province_event = { id = digsite.20 days = 5 } } }
+			75 = { FROM = { province_event = { id = digsite.13 days = 3 } } }
+		} }
+	}
+	
+	option = {
+		name = EVTOPT_digsite_unfriendly_envoys
+		trigger = {
+			has_character_flag = digsite_envoys
+		}
+		hidden_tooltip = { FROM = { province_event = { id = digsite.20 days = 5 } } }
+	}
+	
+	option = {
+		name = EVTOPT_digsite_unfriendly_intrigue
+		trigger = {
+			intrigue = 8
+		}
+		tooltip_info = intrigue
+		hidden_tooltip = { random_list = {
+			75 = { FROM = { province_event = { id = digsite.20 days = 5 } } }
+			25 = { FROM = { province_event = { id = digsite.13 days = 3 } } }
+		} }
+	}
+}
+
+province_event = {
+	id = digsite.13
+	desc = EVTDESC_digsite_provowner
+	picture = GFX_evt_peasants
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPT_digsite_provowner_violence
+		FROM = { narrative_event = { id = digsite.15 days = 3 } }
+	}
+	
+	option = {
+		name = EVTOPT_digsite_provowner_peaceful
+		FROM = { narrative_event = { id = digsite.14 days = 3 } }
+	}
+}
+
+narrative_event = {
+	id = digsite.14
+	is_triggered_only = yes
+	title = EVTNAME_digsite_unfriendly
+	desc = EVTDESC_digsite_peaceful
+	picture = GFX_evt_carriage
+
+	option = {
+		name = OK
+		hidden_tooltip = { FROM = { province_event = { id = digsite.20 days = 5 } } }
+	}
+}
+
+narrative_event = {
+	id = digsite.15
+	is_triggered_only = yes
+	title = EVTNAME_digsite_violence
+	desc = EVTDESC_digsite_violence
+	picture = GFX_evt_peasants
+
+	option = {
+		name = EVTOPT_digsite_violence_flee
+		custom_tooltip = { text = TXT_digsite_flee }
+		hidden_tooltip = { narrative_event = { id = digsite.16 days = 3 } }
+		hidden_tooltip = { narrative_event = { id = digsite.90 days = 6 } }
+	}
+	
+	option = {
+		name = EVTOPT_digsite_violence_fight
+		trigger = {
+			NOT = { has_character_flag = digsite_warband }
+		}
+		random_list = {
+			10 = {
+				add_maimed_trait_effect = yes
+				custom_tooltip = { text = TXT_digsite_flee }
+				hidden_tooltip = { narrative_event = { id = digsite.16 days = 3 } }
+				hidden_tooltip = { narrative_event = { id = digsite.90 days = 6 } }
+			}
+			30 = {
+				add_trait = wounded
+				custom_tooltip = { text = TXT_digsite_flee }
+				hidden_tooltip = { narrative_event = { id = digsite.16 days = 3 } }
+				hidden_tooltip = { narrative_event = { id = digsite.90 days = 6 } }
+			}
+			20 = {
+				add_trait = wounded
+				custom_tooltip = { text = TXT_digsite_continue }
+				hidden_tooltip = { FROM = { province_event = { id = digsite.20 days = 5 } } }
+			}
+			40 = {
+				custom_tooltip = { text = TXT_digsite_continue }
+				hidden_tooltip = { FROM = { province_event = { id = digsite.20 days = 5 } } }
+			}
+		}
+	}
+	
+	option = {
+		name = EVTOPT_digsite_violence_fightwarband
+		trigger = {
+			has_character_flag = digsite_warband
+		}
+		random_list = {
+			20 = { add_trait = wroth }
+			20 = { add_trait = cruel }
+			10 = { add_trait = wounded }
+			50 = { }
+		}
+		custom_tooltip = { text = TXT_digsite_continue }
+		hidden_tooltip = { FROM = { province_event = { id = digsite.20 days = 5 } } }
+	}
+	
+	option = {
+		name = EVTOPT_digsite_violence_bribe
+		trigger = {
+			stewardship = 8
+			wealth = 25
+		}
+		tooltip_info = stewardship
+		wealth = -25
+		custom_tooltip = { text = TXT_digsite_continue }
+		hidden_tooltip = { FROM = { province_event = { id = digsite.20 days = 5 } } }
+	}
+}
+
+
+narrative_event = {
+	id = digsite.16
+	is_triggered_only = yes
+	title = EVTNAME_digsite_drivenout
+	desc = EVTDESC_digsite_drivenout
+	picture = GFX_evt_pilgrims_epic_journey
+	option = { name = OK }
+}
+
+# ************************* Determine the Province Salvage ************************
+
+province_event = {
+	id = digsite.20
+	is_triggered_only = yes
+	hide_window = yes
+	
+	immediate = {
+		if = {
+			limit = { FROM = { has_character_flag = digsite_compete } }
+			random_list = {
+				50 = { FROM = { narrative_event = { id = digsite.21 days = 20 random = 10 } } }
+				45 = { FROM = { narrative_event = { id = digsite.22 days = 15 random = 10 } } }
+				5 = { FROM = { narrative_event = { id = digsite.23 days = 15 random = 10 } } }
+			}
+		}
+		
+		if = {
+			limit = { FROM = { NOT = { has_character_flag = digsite_compete } } }
+			random_list = {
+				30 = { FROM = { narrative_event = { id = digsite.21 days = 20 random = 10 } } }
+				60 = { FROM = { narrative_event = { id = digsite.22 days = 15 random = 10 } } }
+				10 = { FROM = { narrative_event = { id = digsite.23 days = 15 random = 10 } } }
+			}
+		}
+		
+		random = { chance = 30 FROM = { narrative_event = { id = digsite.26 days = 8 } } }
+	}
+	
+	option = { }
+}
+
+narrative_event = {
+	id = digsite.21
+	title = EVTNAME_digsite_value
+	desc = EVTDESC_digsite_worthless
+	picture = GFX_evt_carriage
+	
+	is_triggered_only = yes
+	trigger = { trait = on_pilgrimage }
+
+	option = {
+		name = EVTOPT_digsite_worthless
+		trigger = { NOT = { has_character_flag = digsite_compete } }
+		hidden_tooltip = { narrative_event = { id = digsite.90 days = 5 } }
+		ai_chance = { factor = 10 }
+	}
+	
+	option = {
+		name = EVTOPT_digsite_worthless_compete
+		trigger = { has_character_flag = digsite_compete }
+		hidden_tooltip = { narrative_event = { id = digsite.90 days = 5 } }
+		ai_chance = { factor = 10 }
+	}
+	
+	option = {
+		name = EVTOPT_digsite_worthless_research
+		trigger = { has_character_flag = digsite_research }
+		custom_tooltip = { text = TXT_digsite_continue }
+		hidden_tooltip = { FROM = { province_event = { id = digsite.20 days = 5 } } }
+		clr_character_flag = digsite_research
+		ai_chance = { factor = 500 }
+	}
+}
+
+narrative_event = {
+	id = digsite.22
+	title = EVTNAME_digsite_value
+	desc = EVTDESC_digsite_moderate
+	picture = GFX_evt_carriage
+	
+	is_triggered_only = yes
+	trigger = { trait = on_pilgrimage }
+
+	option = {
+		name = EVTOPT_digsite_moderate
+		hidden_tooltip = {
+			random_list = {
+				10 = {
+					narrative_event = { id = digsite.40 days = 5 }
+					narrative_event = { id = digsite.91 days = 12 }
+				}
+				10 = {
+					narrative_event = { id = digsite.41 days = 5 }
+					narrative_event = { id = digsite.91 days = 12 }
+				}
+				10 = {
+					narrative_event = { id = digsite.42 days = 5 }
+					narrative_event = { id = digsite.92 days = 12 }
+				}
+				10 = {
+					narrative_event = { id = digsite.43 days = 5 }
+					narrative_event = { id = digsite.92 days = 12 }
+				}
+			}
+		}
+		ai_chance = { factor = 10 }
+	}
+	
+	option = {
+		name = EVTOPT_digsite_moderate_research
+		trigger = { has_character_flag = digsite_research }
+		wealth = 25
+		custom_tooltip = { text = TXT_digsite_continue }
+		hidden_tooltip = { FROM = { province_event = { id = digsite.20 days = 5 } } }
+		clr_character_flag = digsite_research
+		ai_chance = { factor = 20 }
+	}
+}
+
+narrative_event = {
+	id = digsite.23
+	title = EVTNAME_digsite_value
+	desc = EVTDESC_digsite_safe
+	picture = GFX_evt_carriage
+	
+	is_triggered_only = yes
+	trigger = {
+		OR = {
+			AND = {
+				trait = on_pilgrimage
+				religion = primevalist
+			}
+			has_character_flag = discover_digsite
+		}
+		NAND = {
+			trait = on_pilgrimage
+			religion = primevalist
+		}
+		NOT = { trait = kow_tow_travels }
+		NOT = { trait = travelling }
+	}
+	
+	immediate = { clr_character_flag = discover_digsite }
+
+	option = {
+		name = EVTOPT_digsite_safe
+		hidden_tooltip = {
+			random_list = {
+				20 = {
+					narrative_event = { id = digsite.50 days = 3 }
+					narrative_event = { id = digsite.90 days = 6 }
+				}
+				10 = {
+					narrative_event = { id = digsite.51 days = 3 }
+					narrative_event = { id = digsite.92 days = 6 }
+				}
+				5 = {
+					narrative_event = { id = digsite.52 days = 3 }
+					narrative_event = { id = digsite.91 days = 6 }
+				}
+				10 = {
+					narrative_event = { id = digsite.54 days = 3 }
+					narrative_event = { id = digsite.92 days = 6 }
+				}
+				10 = {
+					narrative_event = { id = digsite.55 days = 3 }
+					narrative_event = { id = digsite.94 days = 6 }
+				}
+				#10 = {
+				#	narrative_event = { id = digsite.5 days = 3 }
+				#	narrative_event = { id = digsite.94 days = 6 }
+				#}
+				5 = {
+					narrative_event = { id = digsite.56 days = 3 }
+					narrative_event = { id = digsite.94 days = 6 }
+				}
+				10 = {
+					narrative_event = { id = digsite.60 days = 3 }
+					narrative_event = { id = digsite.94 days = 6 }
+				}
+				10 = {
+					narrative_event = { id = digsite.61 days = 3 }
+					narrative_event = { id = digsite.94 days = 6 }
+				}
+				10 = {
+					narrative_event = { id = digsite.62 days = 3 }
+					narrative_event = { id = digsite.94 days = 6 }
+				}
+				10 = {
+					narrative_event = { id = digsite.63 days = 3 }
+					narrative_event = { id = digsite.94 days = 6 }
+				}
+				5 = {
+					narrative_event = { id = digsite.64 days = 3 }
+					narrative_event = { id = digsite.94 days = 6 }
+				}
+			}
+		}
+		ai_chance = { factor = 10 }
+	}
+	
+	option = {
+		name = EVTOPT_digsite_safe_patient
+		hidden_tooltip = {
+			random_list = {
+				10 = {
+					narrative_event = { id = digsite.51 days = 15 random = 8 }
+					narrative_event = { id = digsite.92 days = 25 }
+				}
+				10 = {
+					narrative_event = { id = digsite.52 days = 15 random = 8 }
+					narrative_event = { id = digsite.91 days = 25 }
+				}
+				10 = {
+					narrative_event = { id = digsite.53 days = 15 random = 8 }
+					narrative_event = { id = digsite.91 days = 25 }
+				}
+				10 = {
+					narrative_event = { id = digsite.54 days = 15 random = 8 }
+					narrative_event = { id = digsite.92 days = 25 }
+				}
+				10 = {
+					narrative_event = { id = digsite.55 days = 15 random = 8 }
+					narrative_event = { id = digsite.94 days = 25 }
+				}
+				10 = {
+					narrative_event = { id = digsite.56 days = 15 random = 8 }
+					narrative_event = { id = digsite.94 days = 25 }
+				}
+				10 = {
+					narrative_event = { id = digsite.60 days = 15 random = 8 }
+					narrative_event = { id = digsite.94 days = 25 }
+				}
+				10 = {
+					narrative_event = { id = digsite.61 days = 15 random = 8 }
+					narrative_event = { id = digsite.94 days = 25 }
+				}
+				10 = {
+					narrative_event = { id = digsite.62 days = 15 random = 8 }
+					narrative_event = { id = digsite.94 days = 25 }
+				}
+				10 = {
+					narrative_event = { id = digsite.63 days = 15 random = 8 }
+					narrative_event = { id = digsite.94 days = 25 }
+				}
+				10 = {
+					narrative_event = { id = digsite.64 days = 15 random = 8 }
+					narrative_event = { id = digsite.94 days = 25 }
+				}
+				10 = {
+					narrative_event = { id = digsite.65 days = 15 random = 8 }
+					narrative_event = { id = digsite.94 days = 25 }
+				}
+			}
+		}
+		ai_chance = { factor = 50 }
+	}
+}
+
+narrative_event = {
+	id = digsite.24
+	is_triggered_only = yes
+	title = EVTNAME_digsite_agent
+	desc = EVTDESC_digsite_agent
+	picture = GFX_evt_pilgrims_epic_journey
+
+	option = {
+		name = EVTOPT_digsite_agent
+		prestige = 5
+		set_character_flag = digsite_compete
+	}
+	
+	option = {
+		name = EVTOPT_digsite_agent_research
+		trigger = { has_character_flag = digsite_research }
+		piety = 10
+		random = { chance = 25 add_trait = charitable }
+		clr_character_flag = digsite_research
+	}
+	
+	option = {
+		name = EVTOPT_digsite_agent_intrigue
+		trigger = { intrigue = 8 }
+		tooltip_info = intrigue
+		random_list = {
+			10 = { add_trait = paranoid }
+			10 = { add_trait = wroth }
+			10 = { add_trait = greedy }
+			10 = { add_trait = cruel }
+			10 = { add_trait = cynical }
+			50 = { }
+		}
+	}
+}
+
+narrative_event = {
+	id = digsite.26
+	is_triggered_only = yes
+	title = EVTNAME_digsite_collapse
+	desc = EVTDESC_digsite_collapse
+	picture = GFX_evt_pilgrims_epic_journey
+
+	option = {
+		name = EVTOPT_digsite_collapse_flee
+		custom_tooltip = { text = TXT_digsite_flee }
+		hidden_tooltip = { narrative_event = { id = digsite.90 days = 3 } }
+	}
+	
+	option = {
+		name = EVTOPT_digsite_collapse_brave
+		add_trait = brave
+		random_list = {
+			50 = {	
+				custom_tooltip = { text = TXT_digsite_continue }
+			}
+			50 = {
+				add_trait = wounded
+				custom_tooltip = { text = TXT_digsite_flee }
+				hidden_tooltip = { narrative_event = { id = digsite.90 days = 3 } }
+			}
+		}
+	}
+	
+	option = {
+		name = EVTOPT_digsite_collapse_plan
+		trigger = {
+			OR = {
+				trait = genius
+				trait = quick
+				trait = diligent
+				trait = paranoid
+			}
+		}
+		prestige = 5
+	}
+}
+
+
+# ************************* All the different salvaged artifacts ************************
+
+narrative_event = {
+	id = digsite.40
+	is_triggered_only = yes
+	title = EVTNAME_digsite_item
+	desc = EVTDESC_digsite_scraps
+	picture = GFX_evt_pilgrims_epic_journey
+	option = { name = OK }
+}
+
+narrative_event = {
+	id = digsite.41
+	is_triggered_only = yes
+	title = EVTNAME_digsite_item
+	desc = EVTDESC_digsite_coins
+	picture = GFX_evt_pilgrims_epic_journey
+	option = { name = OK }
+}
+
+narrative_event = {
+	id = digsite.42
+	is_triggered_only = yes
+	title = EVTNAME_digsite_item
+	desc = EVTDESC_digsite_glassware
+	picture = GFX_evt_pilgrims_epic_journey
+	option = {
+		name = OK
+		add_artifact = old_world_glass
+		new_artifact = { set_creation_date = 1.1.1 }
+		set_character_flag = found_glass
+	}
+}
+
+narrative_event = {
+	id = digsite.43
+	is_triggered_only = yes
+	title = EVTNAME_digsite_item
+	desc = EVTDESC_digsite_shades
+	picture = GFX_evt_pilgrims_epic_journey
+	option = {
+		name = OK
+		add_artifact = old_world_shades
+		new_artifact = { set_creation_date = 1.1.1 }
+		set_character_flag = found_shades
+	}
+}
+
+narrative_event = {
+	id = digsite.50
+	is_triggered_only = yes
+	title = EVTNAME_digsite_item
+	desc = EVTDESC_digsite_safe_smash
+	picture = GFX_evt_carriage
+	option = { name = OK }
+}
+
+narrative_event = {
+	id = digsite.51
+	is_triggered_only = yes
+	title = EVTNAME_digsite_safe_jewellery
+	desc = EVTDESC_digsite_safe_jewellery
+	picture = GFX_evt_carriage
+	option = { 
+		name = OK
+		#wealth = 25
+		add_artifact = old_world_jewelry
+		new_artifact = { set_creation_date = 1.1.1 }
+		set_character_flag = found_jewelry
+	}
+}
+
+narrative_event = {
+	id = digsite.52
+	is_triggered_only = yes
+	title = EVTNAME_digsite_trex_skeleton
+	desc = EVTDESC_digsite_trex_skeleton
+	picture = GFX_event_carriage
+	option = {
+		name = OK
+		add_artifact = trex_skeleton
+		new_artifact = { set_creation_date = 1.1.1 }
+		set_character_flag = found_trex_skeleton
+	}
+}
+
+narrative_event = {
+	id = digsite.54
+	is_triggered_only = yes
+	title = EVTNAME_digsite_dinosaur_small_bone
+	desc = EVTDESC_digsite_dinosaur_small_bone
+	picture = GFX_event_carriage
+	option = {
+		name = OK
+		add_artifact = dinosaur_small_bone
+		new_artifact = { set_creation_date = 1.1.1 }
+		set_character_flag = found_dinosaur_small_bone
+	}
+}
+
+narrative_event = {
+	id = digsite.55
+	is_triggered_only = yes
+	title = EVTNAME_digsite_dinosaur_teeth
+	desc = EVTDESC_digsite_dinosaur_teeth
+	picture = GFX_event_carriage
+	option = {
+		name = OK
+		add_artifact = dinosaur_teeth
+		new_artifact = { set_creation_date = 1.1.1 }
+		set_character_flag = found_dinosaur_teeth
+	}
+}
+
+narrative_event = {
+	id = digsite.56
+	is_triggered_only = yes
+	title = EVTNAME_digsite_brontosaurus_skeleton
+	desc = EVTDESC_digsite_brontosaurus_skeleton
+	picture = GFX_event_carriage
+	option = {
+		name = OK
+		add_artifact = brontosaurus_skeleton
+		new_artifact = { set_creation_date = 1.1.1 }
+		set_character_flag = found_brontosaurus_skeleton
+	}
+}
+
+narrative_event = {
+	id = digsite.60
+	is_triggered_only = yes
+	title = EVTNAME_digsite_dinosaur_jawbone
+	desc = EVTDESC_digsite_dinosaur_jawbone
+	picture = GFX_event_carriage
+	option = {
+		name = OK
+		add_artifact = dinosaur_jawbone
+		new_artifact = { set_creation_date = 1.1.1 }
+		set_character_flag = found_dinosaur_jawbone
+	}
+}
+
+narrative_event = {
+	id = digsite.61
+	is_triggered_only = yes
+	title = EVTNAME_digsite_dinosaur_claw
+	desc = EVTDESC_digsite_dinosaur_claw
+	picture = GFX_event_carriage
+	option = {
+		name = OK
+		add_artifact = dinosaur_claw
+		new_artifact = { set_creation_date = 1.1.1 }
+		set_character_flag = found_dinosaur_claw
+	}
+}
+
+narrative_event = {
+	id = digsite.62
+	is_triggered_only = yes
+	title = EVTNAME_digsite_dinosaur_tailbone
+	desc = EVTDESC_digsite_dinosaur_tailbone
+	picture = GFX_event_carriage
+	option = {
+		name = OK
+		add_artifact = dinosaur_tailbone
+		new_artifact = { set_creation_date = 1.1.1 }
+		set_character_flag = found_dinosaur_tailbone
+	}
+}
+
+narrative_event = {
+	id = digsite.63
+	is_triggered_only = yes
+	title = EVTNAME_digsite_mammoth_tusk
+	desc = EVTDESC_digsite_mammoth_tusk
+	picture = GFX_event_carriage
+	option = {
+		name = OK
+		add_artifact = mammoth_tusk
+		new_artifact = { set_creation_date = 1.1.1 }
+		set_character_flag = found_mammoth_tusk
+	}
+}
+
+narrative_event = {
+	id = digsite.64
+	is_triggered_only = yes
+	title = EVTNAME_digsite_triceratops_skeleton
+	desc = EVTDESC_digsite_triceratops_skeleton
+	picture = GFX_event_carriage
+	option = {
+		name = OK
+		add_artifact = triceratops_skeleton
+		new_artifact = { set_creation_date = 1.1.1 }
+		set_character_flag = found_triceratops_skeleton
+	}
+}
+
+narrative_event = {
+	id = digsite.65
+	is_triggered_only = yes
+	title = EVTNAME_digsite_safe_ledger
+	desc = EVTDESC_digsite_safe_textbooks
+	picture = GFX_evt_carriage
+	option = { 
+		name = OK
+		hidden_tooltip = { random_list = {
+			80 = { narrative_event = { id = digsite.75 days = 15 random = 30 } }
+			20 = { narrative_event = { id = digsite.79 days = 15 random = 30 } }
+		} }
+	}
+}
+
+# ************************* Attempts to restore prizes ************************
+
+narrative_event = {
+	id = digsite.75
+	is_triggered_only = yes
+	title = EVTNAME_digsite_repair_prize
+	desc = EVTDESC_digsite_study_textbooks
+	picture = GFX_evt_library
+	option = {
+		name = OK
+		prestige = 50
+		add_artifact = ate_textbooks
+	}
+}
+
+narrative_event = {
+	id = digsite.79
+	is_triggered_only = yes
+	title = EVTNAME_digsite_fail_prize
+	desc = EVTDESC_digsite_study_fail
+	picture = GFX_evt_library
+	
+	option = {
+		name = EVTOPT_digsite_study_keep
+		prestige = 100
+		random = { chance = 10 add_trait = proud }
+		hidden_tooltip = { character_event = { id = digsite.95 } }
+	}
+	
+	option = {
+		name = EVTOPT_digsite_study_sell
+		wealth = 75
+		random = { chance = 15 add_trait = greedy }
+		hidden_tooltip = { character_event = { id = digsite.95 } }
+	}
+	
+	option = {
+		name = EVTOPT_digsite_study_learn
+		random_list = {
+			10 = { culture_techpoints = 25 }
+			10 = { military_techpoints = 25 }
+			10 = { economy_techpoints = 25 }
+			10 = { change_learning = 1 }
+			10 = { add_trait = patient }
+			50 = { }
+		}
+		hidden_tooltip = { character_event = { id = digsite.95 } }
+	}
+	
+	option = {
+		name = EVTOPT_digsite_study_donate
+		trigger = {
+			religion = primevalist
+		}
+		piety = 50
+		religion_authority = { modifier = donated_digsite_prize }
+		random_list = {
+			10 = { add_trait = zealous }
+			10 = { add_trait = charitable }
+			10 = { add_trait = humble }
+		}
+		hidden_tooltip = { character_event = { id = digsite.95 } }
+	}
+}
+
+# ************************* Expedition results and cleanup ************************
+
+narrative_event = {
+	id = digsite.90
+	is_triggered_only = yes
+	title = EVTNAME_digsite_result
+	desc = EVTDESC_digsite_result_poor
+	picture = GFX_evt_pilgrims_epic_journey
+	
+	religion = primevalist
+	
+	trigger = {
+		trait = on_pilgrimage
+	}
+
+	option = {
+		name = EVTOPT_digsite_result_poor
+		hidden_tooltip = { character_event = { id = digsite.95 } }
+	}
+}
+
+narrative_event = {
+	id = digsite.91
+	is_triggered_only = yes
+	title = EVTNAME_digsite_result
+	desc = EVTDESC_digsite_result_medium
+	picture = GFX_evt_pilgrims_epic_journey
+	religion = primevalist
+	
+	trigger = {
+		trait = on_pilgrimage
+	}
+	
+	option = {
+		name = EVTOPT_digsite_result_medium_keep
+		prestige = 20
+		hidden_tooltip = { character_event = { id = digsite.95 } }
+	}
+	
+	option = {
+		name = EVTOPT_digsite_result_medium_sell
+		wealth = 20
+		if = {
+			limit = { has_character_flag = found_money }
+			destroy_artifact = old_world_money
+		}
+		hidden_tooltip = { character_event = { id = digsite.95 } }
+	}
+	
+	option = {
+		name = EVTOPT_digsite_result_medium_donate
+		piety = 10
+		if = {
+			limit = { has_character_flag = found_money }
+			destroy_artifact = old_world_money
+		}
+		hidden_tooltip = { character_event = { id = digsite.95 } }
+	}
+}
+
+narrative_event = {
+	id = digsite.92
+	is_triggered_only = yes
+	title = EVTNAME_digsite_result
+	desc = EVTDESC_digsite_result_medium
+	picture = GFX_evt_pilgrims_epic_journey
+	religion = primevalist
+	
+	trigger = {
+		trait = on_pilgrimage
+	}
+	
+	option = {
+		name = EVTOPT_digsite_result_medium_keep
+		prestige = 40
+		hidden_tooltip = { character_event = { id = digsite.95 } }
+	}
+	
+	option = {
+		name = EVTOPT_digsite_result_medium_sell
+		wealth = 40
+		if = {
+			limit = { has_character_flag = found_glass }
+			destroy_artifact = old_world_glass
+		}
+		if = {
+			limit = { has_character_flag = found_jewelry }
+			destroy_artifact = old_world_jewelry
+		}
+		if = {
+			limit = { has_character_flag = found_shades }
+			destroy_artifact = old_world_shades
+		}
+		hidden_tooltip = { character_event = { id = digsite.95 } }
+	}
+	
+	option = {
+		name = EVTOPT_digsite_result_medium_donate
+		piety = 20
+		if = {
+			limit = { has_character_flag = found_glass }
+			destroy_artifact = old_world_glass
+		}
+		if = {
+			limit = { has_character_flag = found_jewelry }
+			destroy_artifact = old_world_jewelry
+		}
+		if = {
+			limit = { has_character_flag = found_shades }
+			destroy_artifact = old_world_shades
+		}
+		religion_authority = { modifier = donated_tech_prize }
+		hidden_tooltip = { character_event = { id = digsite.95 } }
+	}
+}
+
+narrative_event = {
+	id = digsite.94
+	is_triggered_only = yes
+	title = EVTNAME_digsite_result
+	desc = EVTDESC_digsite_result_good
+	picture = GFX_evt_pilgrims_epic_journey
+	religion = primevalist
+	
+	trigger = {
+		trait = on_pilgrimage
+	}
+	
+	option = {
+		name = EVTOPT_digsite_result_study
+		piety = 50
+		prestige = 50
+		trait = paleontologist
+		hidden_tooltip = { character_event = { id = digsite.95 } }
+	}
+}
+
+character_event = {
+	id = digsite.95
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		clr_character_flag = digsite_warband
+		clr_character_flag = digsite_research
+		clr_character_flag = digsite_envoys
+		clr_character_flag = digsite_compete
+		clr_character_flag = found_glass
+		clr_character_flag = found_jewelry
+		clr_character_flag = found_shades
+		clr_character_flag = found_trex_skeleton
+		clr_character_flag = found_dinosaur_small_bone
+		clr_character_flag = found_dinosaur_teeth
+		clr_character_flag = found_brontosaurus_skeleton
+		clr_character_flag = found_dinosaur_jawbone
+		clr_character_flag = found_dinosaur_claw
+		clr_character_flag = found_dinosaur_tailbone
+		clr_character_flag = found_mammoth_tusk
+		clr_character_flag = found_triceratops_skeleton
+		remove_trait = on_pilgrimage
+		add_character_modifier = { name = recent_salvage duration = 720 }
+	}
+	option = { # just in case
+		name = DEBUG
+	
+		clr_character_flag = digsite_warband
+		clr_character_flag = digsite_research
+		clr_character_flag = digsite_envoys
+		clr_character_flag = digsite_compete
+		clr_character_flag = found_glass
+		clr_character_flag = found_jewelry
+		clr_character_flag = found_shades
+		clr_character_flag = found_trex_skeleton
+		clr_character_flag = found_dinosaur_small_bone
+		clr_character_flag = found_dinosaur_teeth
+		clr_character_flag = found_brontosaurus_skeleton
+		clr_character_flag = found_dinosaur_jawbone
+		clr_character_flag = found_dinosaur_claw
+		clr_character_flag = found_dinosaur_tailbone
+		clr_character_flag = found_mammoth_tusk
+		clr_character_flag = found_triceratops_skeleton
+		remove_trait = on_pilgrimage
+		add_character_modifier = { name = recent_salvage duration = 720 }
+		
+		ai_chance = {
+			factor = 100
+		}
+	}
+}

@@ -122,3 +122,33 @@ just_armas = {
 	picture = GFX_bloodlines_symbol_justoarmas
 	flags = { created_bloodline }
 }
+
+pangaea_emperor_male = {
+	monthly_character_prestige = 0.25
+	primevalist_opinion = 10
+	scientific_opinion = 5
+	inheritance = patrilineal
+	allow_bastards = yes
+	flags = { created_bloodline pangaea_emperor }
+	picture = GFX_bloodlines_symbol_bull
+	active = {
+		OR = {
+			religion = primevalist
+		}
+	}
+}
+
+pangaea_emperor_female = {
+	monthly_character_prestige = 0.25
+	primevalist_opinion = 10
+	scientific_opinion = 5
+	inheritance = matrilineal
+	allow_bastards = yes
+	flags = { created_bloodline pangaea_emperor }
+	picture = GFX_bloodlines_symbol_bull
+	active = {
+		OR = {
+			religion = primevalist
+		}
+	}
+}
