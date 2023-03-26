@@ -8,7 +8,10 @@ settlement_decisions = {
 		
 		from_potential = {
 			is_playable = yes
-			government = open_range_feudalism_government
+			OR = {
+			government = reserve_government	
+			government = open_range_feudalism_government			
+			}
 		}
 		
 		potential = {
@@ -155,7 +158,10 @@ settlement_decisions = {
 		
 		from_potential = {
 			is_playable = yes
-			government = open_range_feudalism_government
+			OR = {
+			government = reserve_government	
+			government = open_range_feudalism_government			
+			}
 		}
 		
 		potential = {
