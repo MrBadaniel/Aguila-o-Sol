@@ -1,7 +1,7 @@
 silbern = {
 	coloradan_opinion = 10
 	neomexicano_opinion = 10
-	#montanist_opinion = 5
+	montane_opinion = 5
 	edenite_opinion = 5
 	monthly_character_piety = 1.5
 	inheritance = patrilineal
@@ -10,12 +10,9 @@ silbern = {
 	bloodline_effect_dynastic_meddling = 1
 	flags = { historical_bloodline bloodline_dynastic_meddling }
 	active = {
-		OR = {
-			religion = evangelical 
-			#religion = montanist
+		OR = { 
+			religion = montane
 			religion = edenite
-			#religion = gran_comision
-			#religion = misional
 		}
 	}
 }
@@ -23,7 +20,7 @@ silbern = {
 pale_rider = {
 	trailwalker_opinion = 5
 	edenite_opinion = -5
-	#montanist_opinion = -5
+	montane_opinion = -5
 	monthly_character_piety = 0.5
 	command_modifier = {
 		morale_offence = 0.1
@@ -121,4 +118,34 @@ just_armas = {
 	allow_bastards = yes
 	picture = GFX_bloodlines_symbol_justoarmas
 	flags = { created_bloodline }
+}
+
+pangaea_emperor_male = {
+	monthly_character_prestige = 0.25
+	primevalist_opinion = 10
+	scientific_opinion = 5
+	inheritance = patrilineal
+	allow_bastards = yes
+	flags = { created_bloodline pangaea_emperor }
+	picture = GFX_bloodlines_symbol_bull
+	active = {
+		OR = {
+			religion = primevalist
+		}
+	}
+}
+
+pangaea_emperor_female = {
+	monthly_character_prestige = 0.25
+	primevalist_opinion = 10
+	scientific_opinion = 5
+	inheritance = matrilineal
+	allow_bastards = yes
+	flags = { created_bloodline pangaea_emperor }
+	picture = GFX_bloodlines_symbol_bull
+	active = {
+		OR = {
+			religion = primevalist
+		}
+	}
 }

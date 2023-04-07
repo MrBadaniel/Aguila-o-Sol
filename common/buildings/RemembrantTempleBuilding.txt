@@ -1,0 +1,51 @@
+temple = {
+	tp_crypt_1= {
+		desc = tp_crypt_1_desc
+		potential = {
+		religion = Gregorian
+		}
+		trigger = { TECH_FORTIFICATIONS_CONSTRUCTION >= 0 }
+		#prerequisites = { tp_crypt_1 }
+		gold_cost = 50
+		build_time = 182
+		siege_defence = 0.05
+		liege_piety = 0.05
+		ai_creation_factor = 82
+
+		extra_tech_building_start = 0.4
+	}
+	tp_crypt_2= {
+		desc = tp_crypt_2_desc
+		potential = {
+		religion = Gregorian
+		}
+		trigger = { TECH_FORTIFICATIONS_CONSTRUCTION = 3 }
+		prerequisites = { tp_crypt_1 }
+		upgrades_from = tp_crypt_1
+		gold_cost = 100
+		build_time = 200
+		siege_defence = 0.05
+		liege_piety = 0.07
+		liege_prestige = 0.05
+		ai_creation_factor = 82
+
+		extra_tech_building_start = 0.5
+	}
+	tp_crypt_3= {
+		desc = tp_crypt_3_desc
+		potential = {
+		religion = Gregorian
+		}
+		trigger = { TECH_FORTIFICATIONS_CONSTRUCTION = 5 }
+		prerequisites = { tp_crypt_2 }
+		upgrades_from = tp_crypt_2
+		gold_cost = 200
+		build_time = 300
+		siege_defence = 0.05
+		liege_piety = 0.1
+		liege_prestige = 0.1
+		ai_creation_factor = 82
+
+		extra_tech_building_start = 0.6
+	}
+}

@@ -49,7 +49,7 @@ RANGER_CHILIKOOT;Chilikoot;;;;;;;;;;;;x
 RANGER_GRANDFATHER;Grandfather;;;;;;;;;;;;x
 RANGER_HAR_HAR;Har Har;;;;;;;;;;;;x
 RANGER_PRETTY_PENNY;Pretty;;;;;;;;;;;;x
-RANGER_QUICK_DRAW;Custodian Quick Draw;;;;;;;;;;;;x
+RANGER_QUICK_DRAW;Ranger Quick Draw;;;;;;;;;;;;x
 RANGER_HEFTY;Hefty;;;;;;;;;;;;x
 RANGER_BRAINY;Brainy;;;;;;;;;;;;x
 RANGER_GROUCHY;Grouchy;;;;;;;;;;;;x
@@ -103,13 +103,33 @@ reform_the_interior;Interior;;;;;;;;;;;;;x
 reform_the_interior_desc;Since the ancient days of John of the Mountains the Department of the Interior existed to protect the flora and fauna of the Americas. Since the fall of Ranger Elroy Krakeuer the title has remained vacant. Now as new Ranger of the Interior has been appointed.;;;;;;;;;;;;;x
 DEPARTMENT_TITLE;Department;;;;;;;;;;;;;x
 
-##Cenobitic Traits lifted from Eurasia###
-canon;Canon;;;;;;;;;x
-canoness;Canoness;;;;;;;;;x
-canon_desc;This man has made a vow of sanctity and celibacy.;;;;;;;;;x			
-canoness_desc;This woman has made a vow of sanctity and celibacy.;;;;;;;;;x
-deacon;Deacon;;;;;;;;;x
-deaconess;Deaconess;;;;;;;;;x
-deacon_desc;This man has been distinguished with devout sanctity and purity.;;;;;;;;;x	
-deaconess_desc;This woman has been distinguished with devout sanctity and purity.;;;;;;;;;x
+
+###########
+CLEAR_BUILDINGS;Returning this land to nature will result in buildings being destroyed! Those currently living in those lands will not be happy.;;;;;;;;;x
+clear_land_for_nature;Return to Nature;;;;;;;;;x
+clear_land_for_nature_desc;Return the land to its natural state.;;;;;;;;;x
+recently_forested_the_land;Natural Preserve.;;;;;;;;;x
+desc_recently_forested_the_land;The sovereign has recently returned this land to its natural state. The evicted inhabitants are arming themselves, hell-bent on reversing this decision.;;;;;;;;;x
+rampaging_ranger;Preservation Rangers;;;;;;;;;x
+rampaging_ranger_desc;Groups of rangers are returning the land of this county to a state of nature. If this county is conquered by a character who is not Preserve, the rangers will cease their activities.;;;;;;;;;x
+recently_forested_the_land_not_owner;Returned to Nature by Rangers;;;;;;;;;x
+recently_forested_the_land_not_owner_desc;This county has been returned to nature recently by ranger. For as long as this modifier remains, the county cannot be plundered or raided.;;;;;;;;;x
+liberated_lands_past_tense;Preserve Land;;;;;;;;;x
+desc_liberated_lands_past_tense;Preservation by nobles has left this land in a depopulated state.;;;;;;;;;x
+
+
+ranger_rites;Newly Consecrated;;;;;;;;;x
+desc_ranger_rites;The Rangers of this county have newly consecrated it after returning it to nature.;;;;;;;;;x
+throne_of_leafs;Painful Transition;;;;;;;;;x
+desc_throne_of_leafs;The transition from settled land to preserve was not easy on the people of this county.;;;;;;;;;x
+stop_freeing_settlement;Stop Preservation;;;;;;;;;;x
+stop_freeing_settlement_desc;You can choose to stop the preservation of this Holding.\n\nYou will not be able to resume preservation for one year;;;;;;;;;;x
+
+EVTDESC_woodrunner_4814;Your rangers have returned [target_location.GetName] to a state of nature and a holding in the county has been completely transformed into a preserve.;;;;;;;;;x
+EVTOPTA_woodrunner_4814;We will use controlled burns to return the land to nature!;;;;;;;;;x
+EVTOPTB_woodrunner_4814;The transition into preserve has not been comfortable for the peasantry.;;;;;;;;;x
+EVTOPTC_woodrunner_4814;We shall feast in the name of [Root.Religion.GetHighGodNameCap] to celebrate!
+EVTDESC_woodrunner_4814_NON_NOMAD;Your nobles have returned [target_location.GetName] to nature and a holding in the county has been completely transformed into a preserve.;;;;;;;;;x
+
+
 

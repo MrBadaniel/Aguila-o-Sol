@@ -4862,8 +4862,20 @@ d_nps = {
 		color = { 0 88 38 }
 
 			capital = 448 #yellowstone
-			#short_name = yes
+			short_name = yes
 			title_prefix = "DEPARTMENT_TITLE"
 	
 	allow = { always = no }
+}
+
+e_pangaea = {
+	color = { 136 190 255 }
+	color2= { 255 255 255 }
+	capital = 296 # Dinosaur
+	short_name = yes
+	creation_requires_capital = no
+	
+	allow = {
+		always = no
+	}
 }

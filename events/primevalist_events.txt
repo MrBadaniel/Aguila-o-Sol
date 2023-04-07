@@ -1,0 +1,213 @@
+namespace = primevalist
+character_event = {
+	id = primevalist.1
+	title = EVTTITLE_primevalist_1
+	desc = EVTDESC_primevalist_1
+	
+	picture = GFX_evt_book_carolingian_script
+	border = GFX_event_normal_frame_religion
+	religion = primevalist
+	is_triggered_only = yes
+
+	option = {
+		name = carnivore
+		add_character_modifier = { name = carnivore_hunter_aspect duration = -1 }
+	}
+	option = {
+		name = herbivore
+		add_character_modifier = { name = herbivore_gatherer_aspect duration = -1 }
+	}
+}
+
+narrative_event = {
+	id = primevalist.2
+	title = EVTTITLE_primevalist_2
+	desc = EVTDESC_primevalist_2
+	picture = GFX_evt_comet
+	border = GFX_event_narrative_frame_religion
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		NOT = { has_global_flag = primevalist_head_formed }
+	}
+	
+	immediate = {
+		set_global_flag = primevalist_head_formed
+		d_primevalist = { grant_title = ROOT }
+		set_global_flag = primevalist_mass_extinctions_unlocked
+	}
+	
+	option = {
+		name = EVTOPTA_primevalist_2
+		trigger = {
+			religion = primevalist
+			NOT = { has_landed_title = d_primevalist }
+		}
+	}
+	
+	option = {
+		name = EVTOPTB_primevalist_2
+		trigger = {
+			NOT = { religion_group = pacific }
+		}
+	}
+	
+	option = {
+		name = EVTOPTC_primevalist_2
+		trigger = {
+			religion_group = pacific
+			NOT = { religion = primevalist }
+		}
+	}
+	
+	option = {
+		name = EVTOPTD_primevalist_2
+		trigger = {
+			religion = primevalist
+			has_landed_title = d_primevalist
+		}
+	}
+}
+
+# PRIMEVALIST MASS EXTINCTION
+# Called from 'on_crusade_creation'
+# new_character is the targetted enemy
+# ROOT is the religious head
+# FROM is the attacked kingdom title
+narrative_event = {
+	id = primevalist.3
+	title = "EVTNAME200"
+	picture = GFX_evt_comet
+	border = GFX_event_narrative_battle
+
+	desc = {
+		text = EVTDESC_mass_extinction
+		trigger = {
+			OR = {
+				new_character = {
+					NOT = { religion_group = christian }
+					NOT = { religion_group = pagan_group }
+				}
+				has_alternate_start_parameter = { key = religion_names value = random }
+			}
+		}
+	}
+	desc = {
+		text = EVTDESC_mass_extinction_pagan
+		trigger = {
+			new_character = {
+				religion_group = pagan_group
+			}
+			NOT = {
+				has_alternate_start_parameter = { key = religion_names value = random }
+			}
+		}
+	}
+	desc = {
+		text = EVTDESC_mass_extinction_christ
+		trigger = {
+			new_character = {
+				religion_group = christian
+			}
+			NOT = {
+				has_alternate_start_parameter = { key = religion_names value = random }
+			}
+		}
+	}
+	
+	is_triggered_only = yes
+	major = yes
+	show_ROOT = yes
+	hide_new = yes
+	
+	trigger = {
+		can_call_crusade = yes
+		ROOT = { religion = primevalist }
+	}
+	
+	option = {
+		name = EVTOPTA324 # For [God Name]!
+		trigger = { religion = ROOT }
+	}
+	option = {
+		name = EVTOPTB200 # No concern of ours
+		trigger = {
+			NOT = { religion = ROOT }
+			new_character = {
+				NOT = { religion = PREV }
+				NOT = { character = PREV }
+			}
+		}
+	}
+	option = {
+		name = EVTOPTD200 # To Arms!
+		trigger = {
+			new_character = {
+				character = PREV
+			}
+		}
+	}
+	option = {
+		name = EVTOPTE200 # Terrible News!
+		trigger = {
+			new_character = {
+				religion = PREV
+				NOT = { character = PREV }
+			}
+		}
+	}
+}
+
+narrative_event = { #Founding Pangaea
+	id = primevalist.4
+	title = EVTTITLE_pangaea
+	desc = EVTDESC_pangaea
+	picture = GFX_evt_steptoe_winter
+	border = GFX_event_narrative_frame_religion
+	
+	is_triggered_only = yes
+	
+	religion = primevalist
+	
+	trigger = {
+		has_landed_title = e_pangaea
+		NOT = { has_global_flag = pangaea_formed }
+	}
+
+	immediate = {
+		set_global_flag = pangaea_formed
+	}
+	
+	option = {
+		name = EVTOPTA_pangaea
+		prestige = 3000
+		give_nickname = nick_the_restorer
+		if = { #New Imperial Bloodline. (male)
+			limit = { 
+				has_dlc = "Holy Fury" 
+				is_female = no
+			}
+			create_bloodline = {
+				type = pangaea_emperor_male
+			}
+			new_bloodline = {
+				set_description = "bloodline_desc_pangaea"
+			}	
+			sound_effect = bloodline_added
+		}
+		else_if = { #New Imperial Bloodline. (female)
+			limit = { 
+				has_dlc = "Holy Fury" 
+				is_female = yes
+			}
+			create_bloodline = {
+				type = pangaea_emperor_female
+			}
+			new_bloodline = {
+				set_description = "bloodline_desc_pangaea"
+			}	
+			sound_effect = bloodline_added
+		}
+	}
+}

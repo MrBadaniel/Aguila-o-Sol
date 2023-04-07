@@ -1249,7 +1249,7 @@ feudal_governments = {
 			is_patrician = no
 		}
 		
-        color = { 0.4 0.4 0.4 }
+        color = { 0.44 0.82 0.96 }
 		
 		have_gender_laws = yes
 		allows_matrilineal_marriage = yes
@@ -1270,7 +1270,6 @@ feudal_governments = {
         preferred_holdings = { CASTLE }
         allowed_holdings = {
             CASTLE
-            CITY
             FORT
             HOSPITAL
         }
@@ -1325,7 +1324,7 @@ feudal_governments = {
         free_retract_vassalage = yes
         ## Modifiers
         court_size_modifier = 15
-        commander_limit = 6
+        commander_limit = 2
     }
 	
     reserve_government = {
@@ -1355,6 +1354,7 @@ feudal_governments = {
         OR= {
         religion = forester
         religion = edenite
+		religion = primevalist
             }
                 NOR = {
                 character = 1890087

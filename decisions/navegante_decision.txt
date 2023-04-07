@@ -5,7 +5,6 @@ decisions = {
 		
 		potential = {
 			religion = navegante
-			ai = yes
 			d_navegante = { has_holder = no }
 			NOT = {
 				has_alternate_start_parameter = { key = religion_names value = random }
@@ -18,32 +17,11 @@ decisions = {
 	OR = {
 		AND = {
 			ai = no
-		OR = {
-				AND = {
-				trait = born_in_the_caul
-				prestige = 500
-				piety = 500
-				}	
-				AND = {
-				trait = levita
-				prestige = 1000
-				piety = 1000
-				}
-				AND = {
-				trait = aaronita
-				prestige = 500
-				piety = 500
-				}
 				AND = {
 				trait = melquisedequita
 				prestige = 250
 				piety = 250
 				}
-				AND = {
-				prestige = 1500
-				piety = 1500
-				}
-			}
 			completely_controls = d_baja_sur
 		}
 		AND = {

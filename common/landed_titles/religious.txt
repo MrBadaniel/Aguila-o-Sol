@@ -1836,3 +1836,40 @@ d_artiga = {
 	
 	dynasty_title_names = no 	# Will not be named "Seljuk", etc.
 }
+
+d_primevalist = {
+	color={ 100 40 100 }
+	color2={ 60 40 60 }
+
+	capital = 1531 # Bozeman
+
+	title = "TYRANNUS_REX"
+	title_female = "TYRANNUX_REX"
+	foa = "FYLKIR_FOA"
+	
+	dignity = 100
+	
+	short_name = yes
+	creation_requires_capital = no
+
+	# Always exists
+	landless = no
+	caliphate = yes
+	
+	controls_religion = primevalist
+	
+	religion = primevalist
+
+	primary = no
+
+	allow = {
+		num_of_holy_sites = 3
+		religion = primevalist
+		piety = 500
+	}
+	
+	assimilate = no # Nothing drifts in or out
+
+	dynasty_title_names = no
+
+}
