@@ -2306,22 +2306,27 @@
 
 1810151={
 	name="Manuela"
-	dynasty=1823024 #Madrina
+	dynasty=154155 #Madrina in Ch'ol
 	dna="bkkkdknjhmg"
 	female=yes
 	culture=cholano
-	religion=neomayan
+	religion=mictlantec #neomayan doesn't make sense. Perhaps qabantajik but it's way too blobby right now
 	martial=5
 	diplomacy=3
 	stewardship=3
 	intrigue=7
 	learning=1
-	trait=tough_soldier
+	trait=elusive_shadow 
 	trait=gardener
+	trait=just
+	trait=gregarious
+	trait=peasant_leader
+	trait=cruel #I wanted impaler but she already has gardener
 	trait=cynical
-	trait=craven
+	trait=craven 
 	trait=patient
 	2629.6.17={birth=yes}
+	2640.1.1 = { give_nickname=nick_la_madrina}
 	2648.3.13={add_matrilineal_spouse=1810152}
 	2680.1.20={death=yes}
 }
@@ -2329,29 +2334,31 @@
 1810152={
 	name="Rafael"
 	dna="obenailmdfm"
+	dynasty=5200236 #former governors of Tabasco. A long time ago.
 	culture=choco
-	religion=neomayan
+	religion=sacred_heart
 	martial=0
-	diplomacy=2
+	diplomacy=5
 	stewardship=3
-	intrigue=1
+	intrigue=4
 	learning=6
-	trait=skilled_tactician
+	trait=intricate_webweaver
 	trait=poet
 	trait=cruel
-	trait=paranoid
+	trait=gregarious
 	trait=charitable
-	2631.10.25={
+	father=1438113
+	2611.10.25={
 		birth=yes
 		}
 	2648.3.13={add_matrilineal_spouse=1810151}
-	2682.4.19={death=yes}
+	2672.4.19={death=yes}
 }
 
 1810153={
 	name="Cintia"
 	female=yes
-	dynasty=1823024
+	dynasty=154155
 	dna="bbendklahmg"
 	culture=cholano
 	religion=neomayan
@@ -2378,7 +2385,7 @@
 
 1810154={
 	name="Julián"
-	dynasty=1823024
+	dynasty=154155
 	dna="kkkndinmdmm"
 	culture=cholano
 	religion=neomayan

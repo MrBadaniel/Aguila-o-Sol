@@ -10551,7 +10551,20 @@ coat_of_arms = {
 	}}
 1814075 = { name="O'Niell" culture=texan }
 1814076 = { name="West" culture=texan }
-1814077 = { name="Ironhorse" culture=texan }
+1814077 = { name="Ironhorse" culture=texan 
+	coat_of_arms = {
+		religion = americanist
+		template = 0
+		layer = {
+			texture = 3
+			texture_internal = 21
+			emblem = 0
+			color = 0
+			color = 0
+			color = 0
+		}
+	}
+}
 1814078 = { name="Greywolf" culture=texan }
 1814079 = { name="Black Jack" culture=texan }
 1814080 = { name="Shoemaker" culture=texan }
@@ -19188,7 +19201,19 @@ coat_of_arms = {
 2055158 = { name="Zboril" culture=czexan }
 2055159 = { name="Zgabay" culture=czexan }
 2055160 = { name="Zrubek" culture=czexan }
-2055161 = { name="Premyslovci" culture=czexan }
+2055161 = { name="Premyslovci" culture=czexan
+		coat_of_arms = {
+		template = 0
+		layer = {
+			texture = 12
+			texture_internal = 15
+			emblem = 0
+			color = 0
+			color = 0
+			color = 0
+			}
+		}
+ }
 
 2056001 = { name="Abadiano" culture=basque }
 2056002 = { name="Abasolo" culture=basque }

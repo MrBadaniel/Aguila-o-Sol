@@ -1390,7 +1390,7 @@
 			has_dlc="Holy Fury"
 		}
 	}
-	2600.1.1={death=yes}
+	2625.1.1={death=yes}
 }
 
 1650071={
@@ -1411,7 +1411,7 @@
 	father=1650070
 	mother=1431215
 	2569.4.22={birth=yes
-		culture=yucatanense
+	#	culture=yucatanense
 	}
 	2631.1.1={death=yes}
 }
@@ -1434,6 +1434,7 @@
 	trait=cruel
 	give_nickname=nick_the_proud
 	father=1650071
+	mother=1431226
 	2603.2.13={birth=yes}
 	2648.1.1={add_spouse=1650073}
 	2680.1.1={death=yes}
@@ -1504,6 +1505,7 @@
 1650077={
 	name="Juan"
 	culture=yucateco
+	dynasty=154161 #Kan
 	religion=qabantajik
 	martial=6
 	diplomacy=7
@@ -1596,11 +1598,11 @@
 1650086={
 	name="Ileana"
 	female=yes
-	culture=yucatanense
+	culture=yucateco
 	religion=neomayan
 	2617.2.10={birth=yes}
 	2637.1.1={add_spouse=1650085}
-	2657.1.1={death=yes}
+	2697.1.1={death=yes}
 }
 
 1650089={
@@ -1793,7 +1795,7 @@
 	trait=twin
 	father=1650105
 	mother=1650106
-	2661.1.1={birth=yes}
+	2651.1.1={birth=yes}
 	2715.1.1={death=yes}
 }
 
@@ -1806,7 +1808,7 @@
 	trait=twin
 	father=1650105
 	mother=1650106
-	2661.1.1={birth=yes}
+	2651.1.1={birth=yes}
 	2715.1.1={death=yes}
 }
 
@@ -1929,6 +1931,7 @@
 	trait=greedy
 	trait=just
 	mother=1650065
+	father=1438107
 	2415.8.19={birth=yes}
 	2467.5.22={death=yes}
 }
@@ -2004,10 +2007,10 @@
 }
 
 1650125={
-	name="Damil"
+	name="Daniel" #Formerly "Damil"
 	dynasty=1546095	#Vivero
-	culture=cholano
-	religion=qabantajik
+	culture=choco
+	religion=sacred_heart
 	trait=tough_soldier
 	trait=impaler
 	trait=strong
@@ -2656,10 +2659,10 @@
 }
 
 1650167={
-	name="Vucub"
+	name= "Juan" #Formerly "Vucub"
 	dynasty=1546095	#Vivero
-	culture=cholano
-	religion=qabantajik
+	culture=choco
+	religion=sacred_heart
 	father=1650166
 	2619.3.17={birth=yes}
 	2665.2.16={death=yes}
@@ -3393,16 +3396,21 @@
 }
 
 1670049={
-	name="Laura"
-	female=yes
+	name="William"
 	dynasty=1546040
 	culture=gulfard
 	religion=neomayan
 	trait=twin
 	father=1650085
 	mother=1650086
-	2641.8.16={birth=yes
-				culture=yucatanense}
+	trait = tough_soldier
+	trait = brave
+	trait = wroth
+	trait = aggressive_leader
+	trait = scarred
+	trait = robust
+	trait = lustful
+	2641.8.16={birth=yes}
 	2705.1.1={death=yes}
 }
 
@@ -3419,3 +3427,4 @@
 			culture=yucatanense}
 	2705.1.1={death=yes}
 }
+######END OF CENTRAL_AMERICAN GO TO MAYAWORLD INSTEAD

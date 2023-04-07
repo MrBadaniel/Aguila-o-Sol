@@ -193,7 +193,19 @@
 
 4401163 = { name="Téllez" culture=occidental }   # basically clones from californiano. Needs work
 4401164 = { name="Rosales" culture=occidental }
-4401165 = { name="el Toro" culture=occidental }
+4401165 = { name="Ismael" culture=occidental 
+		coat_of_arms = {
+		template = 0
+		layer = {
+			texture = 12
+			texture_internal = 16
+			emblem = 0
+			color = 0
+			color = 0
+			color = 0
+			}
+		}
+} #formerly el Toro, which is now a nickname
 4401166 = { name="Estrada" culture=occidental 
 	coat_of_arms = {
 		religion = voodoo
@@ -536,7 +548,20 @@ coat_of_arms = {
 4700056 = { name="Flores" culture=altiplanense }
 
 ##################New Characters#####################
-
+5001111 = { name="León" culture=chilango
+    coat_of_arms = {
+        religion = sacred_heart
+		template = 0
+        layer = {
+            texture = 2
+            texture_internal = 3
+            emblem = 0
+            color = 0
+            color = 1
+            color = 4
+        }
+    }
+}
 5001112 = { name="Audam" culture=raramuri }
 5001113 = { name="Maseual" culture=nahua } #Makedon
 5001114 = { name="Camarena" culture=abajeno 
@@ -1320,7 +1345,20 @@ coat_of_arms = {
 5200020 = { name="Cutz" culture=yucatanense }
 5200021 = { name="Chablé" culture=yucatanense }
 5200022 = { name="Chan" culture=yucatanense }
-5200023 = { name="Chi" culture=yucatanense }
+5200023 = {name= "Dzul" culture = yucatanense
+            coat_of_arms = {
+		religion = mictlantec
+        template = 0
+        layer = {
+            texture = 3
+            texture_internal = 0
+            emblem = 0
+            color = 0
+            color = 0
+            color = 0
+        }
+	}
+ }
 5200024 = { name="Hoil" culture=yucatanense }
 5200025 = { name="Huchín" culture=yucatanense }
 5200026 = { name="May" culture=yucatanense }
@@ -1449,7 +1487,7 @@ coat_of_arms = {
 5200093 = { name="Castro Morales" culture=yucatanense }
 5200094 = { name="Morales" culture=yucatanense }
 5200095 = { name="Marín" culture=yucatanense }
-5200096 = { name="Abad" culture=yucatanense }
+5200096 = { name="Abad" culture=yucatanense } #Church CoA
 5200097 = { name="Cepeda Peraza" culture=yucatanense }
 5200098 = { name="Rosado" culture=yucatanense }
 5200099 = { name="Cicerol" culture=yucatanense }
@@ -1470,7 +1508,19 @@ coat_of_arms = {
 		}
 }
 5200103 = { name="Pinto" culture=yucatanense }
-5200104 = { name="Peniche" culture=yucatanense }
+5200104 = { name="Peniche" culture=yucatanense
+		coat_of_arms = {
+		template = 0
+		layer = {
+			texture = 12
+			texture_internal = 11
+			emblem = 0
+			color = 0
+			color = 0
+			color = 0
+			}
+		}
+}
 5200105 = { name="Luna" culture=yucatanense}
 5200106 = { name="Leomarín" culture=yucatanense 
 		coat_of_arms = {
@@ -1536,21 +1586,50 @@ coat_of_arms = {
 	}
 }
 5200112 = {name="Blanco" culture =yucatanense
-	coat_of_arms = {
-	religion="catholic"
+		coat_of_arms = {
 		template = 0
 		layer = {
-			texture = 11
-			texture_internal = 12
+			texture = 12
+			texture_internal = 13
 			emblem = 0
-			color = 13
-			color = 1
-			color = 1
+			color = 0
+			color = 0
+			color = 0
+			}
 		}
 	}
-}
 5200113 = {name="Correa" culture=yucatanense}
 5200114 = {name="Rosado" culture=yucatanense}
+5200115 = {name="Rojo" culture=yucatanense
+		coat_of_arms = {
+		template = 0
+		layer = {
+			texture = 12
+			texture_internal = 12
+			emblem = 0
+			color = 0
+			color = 0
+			color = 0
+			}
+		}
+	}
+5200116 = {name="de Cancún" culture=yucatanense} #For the mythical goddess founder of the republic
+5200117 = {name="de Mérida" culture=yucatanense} #For the mythical goddess founder of the republic
+5200118 = {name="de Chetumal" culture = yucatanense} #For the mythical goddess founder of the republic
+5200119 = {name="Imán" culture = yucatanense
+		coat_of_arms = {
+		template = 0
+		layer = {
+			texture = 12
+			texture_internal = 10
+			emblem = 0
+			color = 0
+			color = 0
+			color = 0
+			}
+		}
+}
+
 
 5200200 = {name="Chanona" culture=choco}
 5200201 = {name="Garrido" culture=choco}
@@ -1579,7 +1658,19 @@ coat_of_arms = {
 5200224 = {name="Brito" culture=choco}
 5200225 = {name="Zubieta" culture=choco}
 5200226 = {name="Lemarroy" culture=choco}
-5200227 = {name="Bracamonte" culture=choco}
+5200227 = {name="Bracamonte" culture=choco
+		coat_of_arms = {
+		template = 0
+		layer = {
+			texture = 12
+			texture_internal = 8
+			emblem = 0
+			color = 0
+			color = 0
+			color = 0
+		}
+	}
+}
 5200228 = {name="Cabrales" culture=choco}
 5200229 = {name="Selván" culture=choco}
 5200230 = {name="Cerino" culture=choco}
@@ -1590,6 +1681,19 @@ coat_of_arms = {
 
 # moved here to fix duplicate id issue
 5200235 = { name="Dolores Patrón" culture=yucatanense }
+5200236 = { name="Ruiz de la Peña" culture=choco
+		coat_of_arms = {
+		template = 0
+		layer = {
+			texture = 12
+			texture_internal = 7
+			emblem = 0
+			color = 0
+			color = 0
+			color = 0
+		}
+	}
+}
 
 2111001 = { name="Silverio" culture=pinoy }
 2111002 = { name="Tobera" culture=pinoy }
@@ -1723,7 +1827,19 @@ coat_of_arms = {
 #####Putting rest of Dorados aqui
 1802101 = { name="Sonorense" culture=occidental }
 1802102 = { name="Garza y Garza" culture=occidental }
-1802103 = { name="de Paula Cangussu" culture=brazilian }
+1802103 = { name="Peres Cangussu" culture=brazilian
+		coat_of_arms = {
+		template = 0
+		layer = {
+			texture = 12
+			texture_internal = 14
+			emblem = 0
+			color = 0
+			color = 0
+			color = 0
+			}
+		}
+ }
 1802104 = { name="Tepekouatl" culture=nahua }
 
 1802105 = { name="Rowley" culture=valleyan 
@@ -1983,9 +2099,22 @@ coat_of_arms = {
         }
     }
 }
-
+154100 ={ name= "Ye'el'" culture=yucateco
+     coat_of_arms = {
+		religion = mictlantec
+        template = 0
+        layer = {
+            texture = 2
+            texture_internal = 4
+            emblem = 0
+            color = 0
+            color = 0
+            color = 0
+        }
+    }
+}
 #Tsotsil-Tseltal dynasties
-154100 = { name= "Bolom"	culture = tsotsil }
+#154100 = { name= "Bolom"	culture = tsotsil }
 154101 = { name= "Chamo'" culture = tsotsil }
 154102 = { name= "Ch'am o'" culture = tsotsil }
 154103 = { name= "Chij" culture = tsotsil}
@@ -2042,6 +2171,64 @@ coat_of_arms = {
             color = 0
         }
     }
+}
+
+154155 = { name = "Jalaña'" # means Madrina in Ch'ol
+	culture=cholano
+	        coat_of_arms = {
+		religion = mictlantec
+        template = 0
+        layer = {
+            texture = 2
+            texture_internal = 7
+            emblem = 0
+            color = 0
+            color = 0
+            color = 0
+        }
+    }
+}
+154160 ={ name= "Xíú'" culture=yucateco
+     coat_of_arms = {
+		religion = mictlantec
+        template = 0
+        layer = {
+            texture = 2
+            texture_internal = 9
+            emblem = 0
+            color = 0
+            color = 0
+            color = 0
+        }
+    } #Alleged descendants of the Xiú dynasty of Mayapán and Uxmal
+}
+154161 ={ name= "Kan" culture=yucateco
+     coat_of_arms = {
+		religion = mictlantec
+        template = 0
+        layer = {
+            texture = 2
+            texture_internal = 8
+            emblem = 0
+            color = 0
+            color = 0
+            color = 0
+        }
+    } 
+}
+154162 ={ name= "Mulix Áayin" culture=yucateco
+            coat_of_arms = {
+		religion = mictlantec
+        template = 0
+        layer = {
+            texture = 3
+            texture_internal = 0
+            emblem = 0
+            color = 0
+            color = 0
+            color = 0
+        }
+	} 
 }
 #QUICHEAN 1697091 was the last one used in after_the_end_dynasties
 1697092 = { name= "Itzá" culture=quichean
@@ -2181,3 +2368,17 @@ coat_of_arms = {
 		}
 	}
 }
+
+1650151 = { name = "Casabe" culture = garinagu 
+		coat_of_arms = {
+		template = 0
+		layer = {
+			texture = 12
+			texture_internal = 9
+			emblem = 0
+			color = 0
+			color = 0
+			color = 0
+		}
+	}
+} #Tapioca CoA or smth. It comes from a supposed garinagu legend.

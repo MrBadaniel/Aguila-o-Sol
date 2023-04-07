@@ -939,7 +939,9 @@
 	name="Lilia"
 	female=yes
 	culture=chilango
+	dynasty=5001134 #Gabsol
 	religion=sacred_heart
+	father=6900094 #Alejo III Gabsol
 	martial=5
 	diplomacy=7
 	stewardship=7
@@ -957,6 +959,23 @@
 		death={
 		death_reason=death_childbirth
 		}
+	}
+}
+#Aldo Paleolagos
+6900480={
+	name="Aldo"
+	dynasty=5001126
+	culture=chilango
+	religion=sacred_heart
+	trait=attractive
+	trait=feeble
+	trait=sickly
+	trait=fair
+	father=6900061
+	mother=6900479
+	2649.12.1={birth=yes}
+	2654.2.9={death= {
+		death_reason=death_trait}
 	}
 }
 
@@ -2345,19 +2364,22 @@
 	culture=neomexicano
 	religion=cristo_rey
 	martial=6
-	diplomacy=5
-	stewardship=2
+	diplomacy=8
+	stewardship=1
 	intrigue=6
-	learning=15
+	learning=7
 	trait= proud
 	trait= slothful
 	trait= drunkard
 	trait= arbitrary
-	trait= scholar
+	trait= craven
+	trait= indulgent_wastrel
+	trait= sympathy_mesoamerican_gods
 	father= 6900650
 	2600.12.12={birth=yes
 		culture=yucatanense	
 	}
+	2661.1.1={effect = { add_rival = 1431100}}
 	2624.1.1={add_spouse=1431234}		
 }
 	
@@ -2419,9 +2441,11 @@
 }
 6900655 = {
 	name="Camilo"
-	dynasty=5200065
+	dynasty=1546023
 	culture=yucatanense
 	religion=neomayan
+	father=1431087
+	mother=1431242
 	martial=3
 	diplomacy=8
 	stewardship=12
@@ -2430,6 +2454,7 @@
 	trait= greedy
 	trait= cynical
 	trait= diligent
+	trait= ambitious
 	2635.05.22={birth=yes}
 }
 
@@ -2453,7 +2478,8 @@
 	2570.11.20={birth=yes}
 	2637.6.30={
 			death= {
-			death_reason=death_accident_drowning 
+			death_reason=death_battle_duel
+				killer=1431132
 			}
 	}
 	father= 6900657
@@ -2506,27 +2532,7 @@
 
 ###Louisville FAMILY ENDS HERE
 
-6900658 = {
-	name="Santiago"
-	dynasty=5200104
-	culture=yucatanense
-	religion=cristo_rey
-	martial=15
-	diplomacy=6
-	stewardship=3
-	intrigue=8
-	learning=5
-	trait= peasant_leader
-	trait= gregarious
-	trait= zealous
-	trait= inspiring_leader
-	2579.1.2={birth=yes}
-	2645.1.1={death= {
-		death_reason=death_battle
-		killer= 1650072	
-		}
-	}
-}
+####6900658 is used in mayaworld
 
 #####Shawshank reference########
 
@@ -2885,3 +2891,11 @@
 	2662.2.12={add_spouse=6900674}
 }
 
+6900676 = {
+	name= "Prosperino" #test
+	dynasty = 5001111 #León
+	religion=sacred_heart
+	culture=chilango
+	2590.1.1 = {birth=yes}
+}
+	
