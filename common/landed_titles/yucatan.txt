@@ -1883,6 +1883,28 @@ e_yucatan = {
 					tseltal = "Balún Canán"
 					tsotsil = "Balún Canán"
 				}
+				b_las_margaritas_CP = {}
+				b_tzimol_CP = {}
+				b_el_triunfo_CP = {}
+				b_jusnajab_CP = {}
+				b_yasha_CP = {}
+				b_francisco_sarabia_CP = {}
+				b_chincultik_CP = {}
+
+			}
+			c_la_trinitaria = { #2376
+				color = { 69 85 224 }
+				color2 = {	255 255 255 }
+				
+				yucateco = "Chincultik"
+				lacandon = "Chincultik"
+				quichean = "Chincultik"
+				cholano = "Chincultik"
+				tseltal = "Chincultik"
+				tsotsil = "Chincultik"
+				nahua = "Zapalutlan"
+				
+				
 				b_la_trinitaria_CP = {
 					yucateco = "Chincultik"
 					lacandon = "Chincultik"
@@ -1891,12 +1913,16 @@ e_yucatan = {
 					tseltal = "Chincultik"
 					tsotsil = "Chincultik"
 					nahua = "Zapalutlan"
-				}
-				b_las_margaritas_CP = {}
-				b_altamirano_CP = {}
-				b_chincultik_CP = {} 
+				}	
+				b_lazaro_cardenas_CP = {}
+				b_el_paraiso_CP = {}
+				b_tzicao_CP = {}
+				b_carmen_xhan_CP = {}
+				b_la_cieneguilla_CP = {}
+				b_nuevo_san_carlos_CP = {}
+				b_san_caralampio_CP = {}
 			}
-			
+
 			c_comalapa = { #2318 #Chiapas
 				color = { 205 255 81 }
 				color2 = { 255 255 255 }
@@ -1976,6 +2002,18 @@ e_yucatan = {
 				b_maravilla_tenejapa_CP = {}
 				b_nuevo_marzam_CP = {}
 			}
+			c_lacatun = {
+				color={ 218 255 127 } 
+				color2={ 255 255 255 }				
+			
+				b_ixcan_GT = {}
+				b_benemerito_de_las_americas_CP = {}
+				b_pico_de_oro_CP = {}
+				b_tlatizapan_CP	= {}
+				b_tres_rios_CP	= {}
+				b_chatul_CP	= {}
+				b_pirul_CP	= {}
+			}
 		}
 		d_chiapas = {
 			color={ 137 39 32 }
@@ -2044,19 +2082,6 @@ e_yucatan = {
 					tsotsil = "Ta'akun Ja'"
 					tseltal = "Ta'akun Ja'"
 					}
-			}
-			c_tonala = {
-				color={ 151 71 20 }
-				color2={ 255 255 255 }
-	
-				b_tonala_CP = {}
-				b_pijijiapan_CP = {}
-				b_tres_picos_CP = {}
-				b_puerto_arista_CP = {}
-				b_arriaga_CP = {}
-				b_joaquin_amaro_CP = {}
-				b_boca_del_cielo_CP = {}
-				b_paredon_CP = {}
 			}
 
 			c_la_fraylesca = { # 1840
@@ -2199,7 +2224,74 @@ e_yucatan = {
 				b_san_francisco_pujiltic_CP = {}
 				b_aguacatenango_CP = {}
 			}
-		}	
+		}
+		d_soconusco = {
+			color = { 90 52 255 }
+			color2 = { 255 255 255 }
+			
+			capital = 781 #tapachula (soconusco)
+			short_name=yes
+			
+			c_tonala = { 
+				color={ 151 71 20 }
+				color2={ 255 255 255 }
+	
+				b_tonala_CP = {}
+				b_paredon_CP = {}
+				b_boca_del_cielo_CP = {}
+				b_cabeza_de_toro_CP = {}
+				b_puerto_arista_CP = {}
+				b_joaquin_amaro_CP = {}
+				b_tres_picos_CP = {}
+				b_san_isidro_CP = {}
+
+			}
+			c_soconusco = { #tapachula
+				color={ 135 57 72 }
+				color2={ 255 255 255 }
+				
+				b_tapachula_CP  = {}
+				b_mazatan_CP = {}
+				b_puerto_chiapas_CP = {}
+				b_tuxtla_chico_CP = {}
+				b_huehuetan_CP = {}
+				b_metapa_de_dominguez_CP = {}
+				b_motozintla_de_mendoza_CP = {}
+				b_villa_comatitlan_CP = {}
+
+			}
+			c_pijijiapan = { #2372
+			
+				color = {62 20 255 }
+				color2 = { 255 255 255 }
+				
+				b_pijijiapan_CP = {}
+				b_mapastepec_CP = {}
+				b_escuintla_CP = {}
+				b_huixtla_CP = {}
+				b_acapetahua_CP = {}
+				b_acacoguaya_CP = {}
+				b_la_esperanza_CP = {}
+				b_soconusco_CP = {}
+
+			}
+			c_arriaga = { #2373
+			
+				color = { 58 78 232 }
+				color2 = { 255 255 255 }
+					
+					b_arriaga_CP = {}
+					b_chahuites_CP = {}
+					b_san_francisco_el_ojatal_CP = {}
+					b_lazaro_cardenas_CP = {}
+					b_villa_del_mar_CP = {}
+					b_ignacio_ramirez_CP = {}
+					b_azteca_CP = {}
+					b_durango_CP = {}
+
+			}
+				 
+		}
 	}
 	k_peten = {
 		color={ 254 206 2 }
@@ -2473,18 +2565,6 @@ e_yucatan = {
 
 			capital = 1827 # sayaxche
 
-			c_lacatun = {
-				color={ 218 255 127 } 
-				color2={ 255 255 255 }				
-			
-				b_ixcan_GT = {}
-				b_benemerito_de_las_americas_CP = {}
-				b_pico_de_oro_CP = {}
-				b_tlatizapan_CP	= {}
-				b_tres_rios_CP	= {}
-				b_chatul_CP	= {}
-				b_pirul_CP	= {}
-			}
 			c_las_cruces = {
 				color={ 99 127 21 } 
 				color2={ 255 255 255 }		
@@ -2509,6 +2589,21 @@ e_yucatan = {
 				b_lacanja_chansayab_PT = {}
 				b_la_reinita_PT = {}
 			}
+			c_comillas = { #2374
+				color	= {	65 113 145 }
+				color2	= { 255 255 255 }
+				
+				#title= MARQUESS
+				#title_female= MARQUESS_FEMALE
+				
+				b_pico_de_oro_CP = {}
+				b_benemerito_de_las_americas_CP  = {}
+				b_san_jacobo_GT  = {}
+				b_quiringuicharo_CP  = {}
+				b_nuevo_orizaba_CP  = {}
+				b_flor_de_cacao_CP  = {}
+				b_america_libre_CP  = {}
+				b_tierra_y_libertad_CP  = {}
 		}
 		
 		d_belmopan = {
