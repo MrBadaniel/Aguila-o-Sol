@@ -152,6 +152,7 @@
 	trait=kind
 	trait=content
 	trait=weak
+	trait=fallen_saint
 	give_nickname =  nick_the_martyr
 	2230.1.1={birth=yes}
     2296.1.1={
@@ -169,6 +170,7 @@
 	father=4000002
 	trait=ambitious
 	trait=brave
+	trait=saint
 	trait=dead_crown_ontario
 	trait=just
 	trait=brilliant_strategist
@@ -237,6 +239,7 @@
 	culture=ontarian
 	religion=Gregorian
 	trait=kinslayer
+	trait=fallen_saint
 	trait=schemer
 	trait=dead_crown_ontario
 	give_nickname = nick_the_usurper
@@ -332,6 +335,7 @@
 	culture=ontarian
 	religion=Gregorian
 	father=4000011
+	trait=fallen_saint
 	trait=dead_crown_ontario
 	#trait=born_in_the_purple
 	2460.1.1={birth=yes}
@@ -402,6 +406,7 @@
 4000019={
 	name="Edward"
 	dynasty=1867101 # Cornouailles
+	disallow_random_traits = yes
 	culture=ontarian
 	religion=Gregorian
 	father=4000011
@@ -409,12 +414,15 @@
 	trait=brilliant_strategist
 	trait=quick
 	trait=humble
-	trait=beatified
+	#rait=beatified
 	trait=dead_crown_ontario
 	trait=ambitious
 	trait=scholar
+	trait=just
+	trait-=strategist
 	trait=brave
 	trait=celibate
+	trait=saint
 	give_nickname=nick_the_overlord_of_north
 	2470.1.1={birth=yes}
 	2547.3.7={death=yes}
@@ -428,6 +436,7 @@
 	#trait=born_in_the_purple
 	trait=tough_soldier
 	trait=dead_crown_ontario
+	trait=fallen_saint
 	give_nickname=nick_the_unlucky
 	2490.1.1={birth=yes}
 	2553.1.1={death={
@@ -466,6 +475,7 @@
 	culture=ontarian
 	religion=Gregorian
 	father=4000021
+	trait=fallen_saint
 	#trait=born_in_the_purple
 	trait=dead_crown_ontario
 	2534.1.1={birth=yes}
@@ -481,6 +491,7 @@
 	culture=ontarian
 	religion=Gregorian
 	father=4000021
+	trait=fallen_saint
 	#trait=born_in_the_purple
 	2548.1.1={birth=yes}
 	2568.3.7={death={
@@ -495,6 +506,7 @@
 	culture=ontarian
 	religion=Gregorian
 	father=4000021
+	trait=fallen_saint
 	#trait=born_in_the_purple
 	2550.1.1={birth=yes}
 	2568.3.7={death={
@@ -594,6 +606,7 @@
 	trait=severely_injured
 	trait=one_eyed
 	trait=dead_crown_ontario
+	trait=fallen_saint
 	2546.1.1={birth=yes}
 	2599.1.1={death={
 			death_reason=death_battle
@@ -606,6 +619,7 @@
 	dynasty=1867003
 	culture=west_indian
 	religion=Gregorian
+	trait=fallen_saint
 	2553.1.1={birth=yes culture=ontarian}
 	2604.1.1={death={
 			death_reason=death_battle
@@ -657,6 +671,7 @@
 	add_trait=saint
     add_trait=just
     add_trait=organizer
+	trait=fallen_saint
 	father=4000190
     give_nickname = nick_the_scarlet_eagle
     2422.1.1={birth=yes}
@@ -919,6 +934,7 @@
     culture=ontarian
     religion=high_church
     father=4000106
+	trait=fallen_saint
     2516.1.1={birth=yes}
     2572.1.1={death={
 			death_reason=death_battle
@@ -932,6 +948,7 @@
     culture=ontarian
     religion=high_church
     father=4000106
+
     2516.1.1={birth=yes}
     2573.1.1={death={
 			death_reason=death_battle
@@ -1395,6 +1412,7 @@
 	add_trait=genius
 	add_trait=brilliant_strategist
 	add_trait=zealous
+	trait=fallen_saint
 	2200.1.1={birth=yes}
 	2257.5.1={death={
 			death_reason=death_battle
@@ -1408,6 +1426,7 @@
 	give_nickname = nick_the_brave
 	add_trait=brilliant_strategist
 	add_trait=zealous
+	trait=fallen_saint
 	2234.1.1={birth=yes}
 	2276.1.1={death={
 			death_reason=death_battle
@@ -1432,6 +1451,7 @@
 	add_trait=just
 	add_trait=brave
 	add_trait=saint
+	trait=fallen_saint
 	2236.1.1={birth=yes}
 	2289.8.1={death={
 			death_reason=death_battle
@@ -1450,6 +1470,7 @@
 	add_trait=just
 	add_trait=brave
 	add_trait=saint
+	trait=fallen_saint
 	2239.1.1={birth=yes}
 	2291.1.1={death={
 			death_reason=death_battle
@@ -1468,6 +1489,7 @@
 	add_trait=just
 	add_trait=brave
 	add_trait=saint
+	trait=fallen_saint
 	2256.1.1={birth=yes}
 	2296.1.1={death={
 			death_reason=death_battle
@@ -1916,6 +1938,7 @@
 	name="John"
     culture=ontarian
    	religion=Gregorian
+	trait=fallen_saint
 	2500.1.1={birth=yes}
 	2568.3.7={death={
 			death_reason=death_battle
@@ -1966,6 +1989,7 @@
     culture=ontarian
    	religion=Gregorian
 	add_trait=administrator
+	trait=fallen_saint
 	2510.1.1={birth=yes}
 	2553.1.1={death={
 			death_reason=death_battle
@@ -2009,7 +2033,8 @@
 	add_trait=skilled_tactician
 	add_trait=brave
 	add_trait=ambitious
-	2170.1.1={birth=yes}
+	give_nickname=nick_the_strong
+	2156.1.1={birth=yes}
 	2236.1.1={death=yes}
 }
 4000204={
@@ -2033,6 +2058,7 @@
 	add_trait=skilled_tactician
 	add_trait=brave
 	add_trait=wounded
+	trait=fallen_saint
 	father=4000203
 	2250.1.1={birth=yes}
 	2299.12.25={death={
@@ -2090,6 +2116,7 @@
 	dynasty=90000022
 	add_trait=skilled_tactician
 	add_trait=brave
+	trait=fallen_saint
 	add_trait=wounded
 	father=4000208
 	2262.1.1={birth=yes}
@@ -2130,6 +2157,7 @@
 	dynasty=90000023
 	add_trait=wounded
 	father=4000211
+	trait=fallen_saint
 	2260.1.1={birth=yes}
 	2299.12.25={death={
 			death_reason=death_battle
@@ -2169,6 +2197,7 @@
 	add_trait=skilled_tactician
 	add_trait=brave
 	add_trait=wounded
+	trait=fallen_saint
 	father=4000214
 	2242.1.1={birth=yes}
 	2299.12.25={death={
@@ -2207,6 +2236,7 @@
 	dynasty=90000024
 	add_trait=wounded
 	father=4000211
+	trait=fallen_saint
 	2260.1.1={birth=yes}
 	2299.12.25={death={
 			death_reason=death_battle
@@ -2246,6 +2276,7 @@
 	add_trait=tough_soldier
 	add_trait=brave
 	add_trait=wounded
+	trait=fallen_saint
 	father=4000220
 	2242.1.1={birth=yes}
 	2299.12.25={death={
@@ -2285,6 +2316,7 @@
 	dynasty=90000026
 	add_trait=tough_soldier
 	father=4000223
+	trait=fallen_saint
 	2242.1.1={birth=yes}
 	2299.12.25={death={
 			death_reason=death_battle
@@ -2325,5 +2357,31 @@
 	2646.1.1={birth=yes}
 	2665.1.1={add_spouse=4000225}
 	2666.1.1={employer=6900061}
+	2750.1.1={death=yes}
+}
+##### NEW CASTELS ###
+4000227={
+	name="Rebecca"
+	dynasty=1796003
+	father=1763059
+    culture=quebecois
+   	religion=ursuline
+	female=yes
+	add_trait=fortune_builder
+	add_trait=just
+	add_trait=fair
+	2641.1.1={birth=yes}
+	2750.1.1={death=yes}
+}
+4000228={
+	name="Issac"
+	dynasty=1796003
+	father=1763059
+    culture=quebecois
+   	religion=ursuline
+	add_trait=tough_soldier
+	add_trait=just
+	add_trait=strong
+	2643.1.1={birth=yes}
 	2750.1.1={death=yes}
 }
