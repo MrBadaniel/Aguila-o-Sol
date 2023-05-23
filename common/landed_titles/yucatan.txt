@@ -1874,6 +1874,12 @@ e_yucatan = {
 				cholano = "Balún Canán"
 				tseltal = "Balún Canán"
 				tsotsil = "Balún Canán"
+				chilango = "Comitán"
+				yucatanense = "Comitán"
+				abajeno = "Comitán"
+				choco = "Comitán"
+				jarocho = "Comitán"
+				tapatio = "Comitán"
 				
 				b_comitan_CP = {
 					yucateco = "Balún Canán"
@@ -1882,6 +1888,12 @@ e_yucatan = {
 					cholano = "Balún Canán"
 					tseltal = "Balún Canán"
 					tsotsil = "Balún Canán"
+					chilango = "Comitán de Domínguez"
+					yucatanense = "Comitán de las Flores"
+					abajeno = "Comitán de las Flores"
+					choco = "Comitán de Domínguez"
+					jarocho = "Comitán de las Flores"
+					tapatio = "Comitán de las Flores"
 				}
 				b_las_margaritas_CP = {}
 				b_tzimol_CP = {}
@@ -1914,7 +1926,7 @@ e_yucatan = {
 					tsotsil = "Chincultik"
 					nahua = "Zapalutlan"
 				}	
-				b_lazaro_cardenas_CP = {}
+				b_lazaro_cardenas_LT_CP = {}
 				b_el_paraiso_CP = {}
 				b_tzicao_CP = {}
 				b_carmen_xhan_CP = {}
@@ -1993,26 +2005,44 @@ e_yucatan = {
 				color={ 191 118 6 }
 				color2={ 255 255 255 }	
 				
-				b_ocosingo_CP = {}
-				b_nueva_palestina_CP = {}
-				b_plan_de_ayutla_CP = {}
-				
-				b_yajalon_CP = {}
-				b_tila_CP = {}
-				b_maravilla_tenejapa_CP = {}
-				b_nuevo_marzam_CP = {}
+					b_ocosingo_CP	 = {} #	(c_ocosingo)
+					b_oxchuc_CP = {}
+					b_santa_rosita_CP = {}
+					b_altamirano_CP	 = {
+					nahua = Nacaxtlán
+					zapotec = Nacaxtlán
+					}	#(c_comitan)	Nacaxtlan	
+					b_corazon_de_maria_CP = {}
+					b_jotola_CP	 = {}
+					b_santiago_CP = {}
+					b_plan_de_ayutla_CP = {}
 			}
 			c_lacatun = {
 				color={ 218 255 127 } 
 				color2={ 255 255 255 }				
 			
-				b_ixcan_GT = {}
-				b_benemerito_de_las_americas_CP = {}
-				b_pico_de_oro_CP = {}
-				b_tlatizapan_CP	= {}
-				b_tres_rios_CP	= {}
-				b_chatul_CP	= {}
-				b_pirul_CP	= {}
+					b_zacualtipan_CP = {}
+					b_maravilla_tenejapa_CP	= {} #(c_ocosingo) 
+					b_chajul_CP = {}
+					b_san_mateo_zapotal_CP = {}
+					b_nuevo_tenejapa_CP = {}
+					b_santo_domingo_de_las_palmas = {}
+					b_amatitlan_CP = {}
+					b_nuevo_marzam_CP	= {} #(c_ocosingo)
+			}
+			
+			c_tulija = {
+				color = { 47 81 104 }
+				color2 = { 255 255 255 }
+				
+					b_yajalon_CP	= {} #		(ocosingo)
+					b_tila_CP		= {} #	(c_ocosingo)
+					b_chilon_CP	= {}
+					b_tumbala_CP	= {}
+					b_sabanilla_CP	= {}
+					b_sitala_CP	= {}
+					b_petalcingo_CP	= {}
+					b_bachajon_CP	= {}
 			}
 		}
 		d_chiapas = {
@@ -2252,7 +2282,7 @@ e_yucatan = {
 				
 				b_tapachula_CP  = {}
 				b_mazatan_CP = {}
-				b_puerto_chiapas_CP = {}
+				b_puerto_chiapas_CP = { short_name = yes}
 				b_tuxtla_chico_CP = {}
 				b_huehuetan_CP = {}
 				b_metapa_de_dominguez_CP = {}
