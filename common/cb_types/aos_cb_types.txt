@@ -15,10 +15,14 @@ cb_liberate_wilds = {
 	
 	can_use_gui = {
 		ROOT = {
-			NOT = { has_character_modifier = liberate_wilds_cooldown }
+			top_liege = {NOT = { has_law = religion_tolerance_0 }}
+			OR = {
+				NOT = { has_character_modifier = liberate_wilds_cooldown }
+				has_game_rule = { name = holy_war_cooldown_rule value = off }
+			}
 			prestige = 100
 		}
-	}
+	}	
 
 	can_use = {
 		FROM = {
@@ -111,17 +115,36 @@ cb_liberate_wilds = {
 
 	
 	on_add = {
-		ROOT = { 
+		ROOT = {
+			if = {
+				limit = {
+					has_game_rule = { name = holy_war_cooldown_rule value = on }
+				}
 				custom_tooltip = {
-					text = holy_war_cooldown_ctt
+					text = liberate_wilds_cooldown_ctt
+					hidden_tooltip = {
 						add_character_modifier = {
 							name = liberate_wilds_cooldown
 							duration = 1825
 						}
-					
+					}
 				}
-			
-			prestige = -100 
+			}
+			if = {
+				limit = {
+					has_game_rule = { name = holy_war_cooldown_rule value = short }
+				}
+				custom_tooltip = {
+					text = liberate_wilds_cooldown_ctt
+					hidden_tooltip = {
+						add_character_modifier = {
+							name = liberate_wilds_cooldown
+							duration = 730
+						}
+					}
+				}
+			}
+			prestige = -100
 		}
 		hidden_tooltip = { fire_haruspicy_event_effect = yes }
 		if = {
@@ -1013,10 +1036,6 @@ major_liberation = {
 	infamy_modifier = 0.75
 	
 	sort_priority = 810
-	
-	can_use_gui = {
-		check_if_crusader_trigger = yes
-	}
 
 	can_use_gui = {
 		ROOT = {
@@ -1025,7 +1044,10 @@ major_liberation = {
 			religion = artiga
 			religion = alurista
 			}
-			NOT = { has_character_modifier = major_liberation_cooldown }
+			OR = {
+				NOT = { has_character_modifier = major_liberation_cooldown }
+				has_game_rule = { name = holy_war_cooldown_rule value = off }
+			}
 			OR = {
 			AND = {
 			NOR = {
@@ -1061,17 +1083,36 @@ major_liberation = {
 	}
 	
 	on_add = {
-		ROOT = { 
+		ROOT = {
+			if = {
+				limit = {
+					has_game_rule = { name = holy_war_cooldown_rule value = on }
+				}
 				custom_tooltip = {
-					text = holy_war_cooldown_ctt
+					text = major_liberation_cooldown_ctt
+					hidden_tooltip = {
 						add_character_modifier = {
 							name = major_liberation_cooldown
 							duration = 1825
 						}
-					
+					}
 				}
-			
-			piety = -100 
+			}
+			if = {
+				limit = {
+					has_game_rule = { name = holy_war_cooldown_rule value = short }
+				}
+				custom_tooltip = {
+					text = major_liberation_cooldown_ctt
+					hidden_tooltip = {
+						add_character_modifier = {
+							name = major_liberation_cooldown
+							duration = 730
+						}
+					}
+				}
+			}
+			piety = -100
 		}
 		hidden_tooltip = { fire_haruspicy_event_effect = yes }
 		if = {
