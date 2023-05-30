@@ -75,19 +75,23 @@ e_yucatan = {
 					cholano = "Ah-Kin-Pech"
 				}
 				b_lerma_CM = {}
-				b_edzna_CM = {}
 				b_jaina_CM = {}
-				b_tenabo_CM = {}
 				b_kankí_CM = {}
 				b_china_CM = {}
 				b_san_lorenzo_CM = {}
+				b_balatanche_CM = {}
+
 
 			}
 			c_camino_real = { 
 				color={ 67 107 149 }
 				color2={ 255 255 255 }
 				
-				b_calkini_CM = {}
+				yucateco = Kal Kiiní
+				
+				b_calkini_CM = {
+					yucateco = Kal Kiiní}
+				b_tenabo_CM = {}
 				b_pomuch_CM = {}
 				b_dzitbalche_CM = {
 					yucateco = "Hun Dzit Balché" 
@@ -105,7 +109,13 @@ e_yucatan = {
 				color={ 0 127 127 }
 				color2={ 255 255 255 }
 				
+				yucateco = "Itsja' Naaj"
+				
 				b_dzibalchen_CM = {}
+				b_edzna_CM = {
+					yucateco = "Itsja' Naaj"
+					short_name=yes #ruin
+				}
 				b_pich_CM = {}
 				b_pakchen_CM = {}
 				b_hochob_CM ={}
@@ -143,15 +153,30 @@ e_yucatan = {
 					cholano = "Chakán Putum"
 					quichean = "Chakán Putum"
 				}
-				b_sihochac_CM = {}
-				b_xbacab_CM = {}
 				b_seybaplaya_CM = {}
 				b_villa_madero_CM = {}
 				b_santo_domingo_keste_CM = {}
-				b_felipe_carillo_puerto_CM = {}
-				b_chenkan_CM = {}
-				b_yohaltun_CM = {}
+				b_sihochac_CM = {}
+				b_xbacab_CM = {}
+				b_ciudad_sol_CM = {
+				short_name=yes
+				}
+				#b_chenkan_CM = {}
 			}
+			c_yohaltun = {
+				color = { 90 180 150 }
+				color2= { 255 255 255 }
+				
+				b_yohaltun_CM = {}
+				b_felipe_carillo_puerto_CM = {}
+				b_maya_tecun_CM = {}
+				b_chilam_balam_CM = {}
+				b_pustunich_CM = {}
+				b_melchor_ocampo_CM = {}
+				b_nayarit_castellot_CM = {}
+				b_kikab_CM = {}
+			}
+
 		}
 		d_laguna_de_terminos = {
 			color={ 80 100 240 }
@@ -168,7 +193,8 @@ e_yucatan = {
 				color2={ 255 255 255 }
 			
 				b_ciudad_del_carmen_CM = { short_name=yes}
-				b_isla_aguada_CM = {
+				b_isla_aguada_CM = { 
+				short_name=yes
 				cholano = "Hol tun"
 				yucateco = "Hol tun"
 				lacandon = "Hol tun"
@@ -187,20 +213,13 @@ e_yucatan = {
 	
 				holy_site = neomayan
 
-				b_candelaria_CM = {
-					cholano = "Itzamkanac"
-					yucateco = "Itzamkanac"
-					lacandon = "Itzamkanac"
-					quichean = "Itzamkanac"
-					nahua = "Acallan"
-				}
-				b_escarcega_CM = {}
+
 				b_sabancuy_CM = {}
-				b_division_del_norte_CM = {}
+				b_santa_maria_xbacab_CM = {}
 				b_chekubul_CM = {}
 				b_mamantel_CM = {}
 				b_chicbul_CM = {}
-				b_santa_maria_xbacab_CM = {}
+
 			}
 			c_palizada = { #2367
 				color={ 55 81 185 }
@@ -226,8 +245,29 @@ e_yucatan = {
 				b_el_playaso_CM = {}
 				b_xicalango_CM = {}
 			}
+		
+			c_escarcega = {
+				color = { 29 119 71 }
+				color2 = { 255 255 255 }
+				
+				b_candelaria_CM = {
+					cholano = "Itzamkanac"
+					yucateco = "Itzamkanac"
+					lacandon = "Itzamkanac"
+					quichean = "Itzamkanac"
+					nahua = "Acallan"
+				}
+				b_escarcega_CM = {}
+				b_division_del_norte_CM = {}
+				b_haro_CM = {}
+				b_venustiano_carranza_CM = {}
+				b_matamoros_CM = {}
+				b_don_samuel_CM = {}
+				b_francisco_i_madero_CM = {}
+
+			}
+
 		}	
-			
 		d_tabasco = {
 			color={ 89 128 120 }
 			color2={ 255 255 255 }
@@ -332,7 +372,7 @@ e_yucatan = {
 			title = PRIMICE #Primicio
 			title_female = PRIMICE_FEMALE #Primicia		
 			short_name = yes
-			allow = { title_duke_basic_allow = yes }
+			#allow = { title_duke_basic_allow = yes }
 		}
 		
 		d_tizimin_republic = {
@@ -341,7 +381,7 @@ e_yucatan = {
 			title = PRIMICE #Primicio
 			title_female = PRIMICE_FEMALE #Primicia		
 			short_name = yes
-			allow = { title_duke_basic_allow = yes }
+			#allow = { title_duke_basic_allow = yes }
 		}
 
 		
@@ -858,7 +898,7 @@ e_yucatan = {
 			color={ 27	134	182 }
 			color2={ 255 255 255 }
 
-			capital = 1816 # c_valladolid
+			capital = 773 # c_valladolid
 
 			yucateco = "Kupul"
 			lacandon = "Kupul"
@@ -1856,12 +1896,13 @@ e_yucatan = {
 		
 		capital = 1837 # c_tuxtla_gutierrez
 		
-		d_zapata = {
-			color={ 188 57 50 }
-			color2={ 255 255 255 }
-
-			capital = 1834 # c_comitan
-
+		d_comiteca = { #Meseta Comiteca
+			color = { 108 47 5 }
+			color2 = { 255 255 255 }
+			
+			capital = 18434 # comitan
+			short_name=yes
+		
 			c_comitan = { # 1834
 				color={ 128 67 25 }
 				color2={ 255 255 255 }
@@ -1934,7 +1975,7 @@ e_yucatan = {
 				b_nuevo_san_carlos_CP = {}
 				b_san_caralampio_CP = {}
 			}
-
+			
 			c_comalapa = { #2318 #Chiapas
 				color = { 205 255 81 }
 				color2 = { 255 255 255 }
@@ -1976,31 +2017,21 @@ e_yucatan = {
 					tsotsil = "Pacayal"
 					nahua = "Zapote"
 				}
-			}
-
-			c_la_concordia = { #2319 #Chiapas
-				color = { 148 175 77 }
-				color2 = { 255 255 255 }
-				
-				yucateco = "Sam Tulum"
-				lacandon = "Sa'am Ji'che'"
-				quichean = "Sanib' Ko"
-				cholano = "Ji Salulmal"
-				tseltal = "I' Salul"
-				tsotsil = "I' Salul"
-				nahua = "Jaltenango"
-			
-				b_la_concordia_CP = {
-				yucateco = "Sam Tulum"
-				lacandon = "Sa'am Ji'che'"
-				quichean = "Sanib' Ko"
-				cholano = "Ji Salulmal"
-				tseltal = "I' Salul"
-				tsotsil = "I' Salul"
-				}
-				b_jaltenango_de_la_paz_CP = {}
-
 			}	
+		}
+	#		d_la_fraylesca = { 
+	#		color = { 120 80 50 }
+	#		color2 = { 255 255 255 }
+	#		
+	#
+	#	}
+		d_zapata = { #ocosingo
+			color={ 188 57 50 }
+			color2={ 255 255 255 }
+
+			capital = 2307 # c_ocosingo
+
+			
 			c_ocosingo = { # 2307
 				color={ 191 118 6 }
 				color2={ 255 255 255 }	
@@ -2045,6 +2076,7 @@ e_yucatan = {
 					b_bachajon_CP	= {}
 			}
 		}
+		
 		d_chiapas = {
 			color={ 137 39 32 }
 			color2={ 255 255 255 }
@@ -2111,9 +2143,8 @@ e_yucatan = {
 					cholano = "Ta'akun Ja'"
 					tsotsil = "Ta'akun Ja'"
 					tseltal = "Ta'akun Ja'"
-					}
+				}
 			}
-
 			c_la_fraylesca = { # 1840
 				color={ 159 109 79 }
 				color2={ 255 255 255 }
@@ -2127,6 +2158,54 @@ e_yucatan = {
 				b_jesus_maria_garza_CP = {}
 				b_la_simpatia_CP = {}
 			}
+			c_la_concordia = { #2319
+				color = { 148 175 77 }
+				color2 = { 255 255 255 }
+				
+				yucateco = "Sam Tulum"
+				lacandon = "Sa'am Ji'che'"
+				quichean = "Sanib' Ko"
+				cholano = "Ji Salulmal"
+				tseltal = "I' Salul"
+				tsotsil = "I' Salul"
+				nahua = "Jaltenango"
+			
+				b_la_concordia_CP = {
+				yucateco = "Sam Tulum"
+				lacandon = "Sa'am Ji'che'"
+				quichean = "Sanib' Ko"
+				cholano = "Ji Salulmal"
+				tseltal = "I' Salul"
+				tsotsil = "I' Salul"
+				}
+				b_jaltenango_de_la_paz_CP = {}
+
+			}	
+		
+
+			c_arriaga = { #2373
+			
+				color = { 58 78 232 }
+				color2 = { 255 255 255 }
+					
+					b_arriaga_CP = {}
+					b_chahuites_CP = {}
+					b_san_francisco_el_ojatal_CP = {}
+					b_lazaro_cardenas_CP = {}
+					b_villa_del_mar_CP = {}
+					b_ignacio_ramirez_CP = {}
+					b_azteca_CP = {}
+					b_durango_CP = {}
+
+			}
+		}
+		
+		d_pichucalco = {
+			color= { 200 0 50 } 
+			color2= { 255 255 255 }
+			
+			capital = 1836
+			
 			c_nezahualcoyatl = { # 1836
 				color={ 218 11 79 }
 				color2={ 255 255 255 }
@@ -2208,7 +2287,6 @@ e_yucatan = {
 				b_chiapilla_CP = {
 					lacandon = "Tséementuun"
 					quichean = "Tséementuun"
-					cholano = "Tséementuun"
 					yucateco = "Tséementuun"
 					cholano = "Tséementuun"
 					tseltal = "Tséementuun" 
@@ -2262,20 +2340,7 @@ e_yucatan = {
 			capital = 781 #tapachula (soconusco)
 			short_name=yes
 			
-			c_tonala = { 
-				color={ 151 71 20 }
-				color2={ 255 255 255 }
-	
-				b_tonala_CP = {}
-				b_paredon_CP = {}
-				b_boca_del_cielo_CP = {}
-				b_cabeza_de_toro_CP = {}
-				b_puerto_arista_CP = {}
-				b_joaquin_amaro_CP = {}
-				b_tres_picos_CP = {}
-				b_san_isidro_CP = {}
 
-			}
 			c_soconusco = { #tapachula
 				color={ 135 57 72 }
 				color2={ 255 255 255 }
@@ -2305,22 +2370,20 @@ e_yucatan = {
 				b_soconusco_CP = {}
 
 			}
-			c_arriaga = { #2373
-			
-				color = { 58 78 232 }
-				color2 = { 255 255 255 }
-					
-					b_arriaga_CP = {}
-					b_chahuites_CP = {}
-					b_san_francisco_el_ojatal_CP = {}
-					b_lazaro_cardenas_CP = {}
-					b_villa_del_mar_CP = {}
-					b_ignacio_ramirez_CP = {}
-					b_azteca_CP = {}
-					b_durango_CP = {}
+			c_tonala = { 
+				color={ 151 71 20 }
+				color2={ 255 255 255 }
+	
+				b_tonala_CP = {}
+				b_paredon_CP = {}
+				b_boca_del_cielo_CP = {}
+				b_cabeza_de_toro_CP = {}
+				b_puerto_arista_CP = {}
+				b_joaquin_amaro_CP = {}
+				b_tres_picos_CP = {}
+				b_san_isidro_CP = {}
 
-			}
-				 
+			}			
 		}
 	}
 	k_peten = {
@@ -2539,7 +2602,7 @@ e_yucatan = {
 					cholano = "Poptún"
 					yucatanense = "Poptún"
 					trifinio = "Poptún"
-					centrolatino = "Dolores"
+					nicoyano = "Dolores"
 					mexicano = "Dolores"
 					
 			c_poptun = { # 1826
@@ -2634,6 +2697,7 @@ e_yucatan = {
 				b_flor_de_cacao_CP  = {}
 				b_america_libre_CP  = {}
 				b_tierra_y_libertad_CP  = {}
+			}
 		}
 		
 		d_belmopan = {
@@ -2649,9 +2713,9 @@ e_yucatan = {
 			yucatanense = "Belmopán"
 			chilango = "Belmopán"
 			choco = "Belmopán"
-			norteño = "Belmopán"
+			bravo = "Belmopán"
 			altiplanense = "Belmopán"
-			abajeño = "Belmopán"
+			abajeno = "Belmopán"
 			tapatio = "Belmopán"
 			trifinio = "Belmopán"
 			
@@ -2666,9 +2730,9 @@ e_yucatan = {
 				yucatanense = "Belmopán"
 				chilango = "Belmopán"
 				choco = "Belmopán"
-				norteño = "Belmopán"
+				bravo = "Belmopán"
 				altiplanense = "Belmopán"
-				abajeño = "Belmopán"
+				abajeno = "Belmopán"
 				tapatio = "Belmopán"
 				trifinio = "Belmopán"
 	
@@ -2680,9 +2744,9 @@ e_yucatan = {
 					yucatanense = "Belmopán"
 					chilango = "Belmopán"
 					choco = "Belmopán"
-					norteño = "Belmopán"
+					bravo = "Belmopán"
 					altiplanense = "Belmopán"
-					abajeño = "Belmopán"
+					abajeno = "Belmopán"
 					tapatio = "Belmopán"
 					trifinio = "Belmopán"
 				}
@@ -2702,9 +2766,9 @@ e_yucatan = {
 					yucatanense = "Chakanchí"
 					chilango = "Bancosabana"
 					choco = "Bancosabana"
-					norteño = "Bancosabana"
+					bravo = "Bancosabana"
 					altiplanense = "Bancosabana"
-					abajeño = "Bancosabana"
+					abajeno = "Bancosabana"
 					tapatio = "Bancosabana"
 					trifinio = "Bancosabana"
 				}
@@ -2716,9 +2780,9 @@ e_yucatan = {
 					yucatanense = "Tikinchí"
 					chilango = "Ríoseco"
 					choco = "Ríoseco"
-					norteño = "Ríoseco"
+					bravo = "Ríoseco"
 					altiplanense = "Ríoseco"
-					abajeño = "Ríoseco"
+					abajeno = "Ríoseco"
 					tapatio = "Ríoseco"
 					trifinio = "Ríoseco"
 				}
@@ -2752,9 +2816,9 @@ e_yucatan = {
 					cholano = "Kajal Pech"	
 					chilango = "El Cayo"
 					choco = "El Cayo"
-					norteño = "El Cayo"
+					bravo = "El Cayo"
 					altiplanense = "El Cayo"
-					abajeño = "El Cayo"
+					abajeno = "El Cayo"
 					tapatio = "El Cayo"
 					trifinio = "El Cayo"
 					anglish = "Caye"
@@ -2767,9 +2831,9 @@ e_yucatan = {
 					chilango = "Valle de Paz"
 					yucatanense = "Valle de Paz"
 					choco = "Valle de Paz"
-					norteño = "Valle de Paz"
+					bravo = "Valle de Paz"
 					altiplanense = "Valle de Paz"
-					abajeño = "Valle de Paz"
+					abajeno = "Valle de Paz"
 					tapatio = "Valle de Paz"
 				}
 				b_esperanza_BL = {}
@@ -2976,7 +3040,7 @@ e_yucatan = {
 					yucatanense = "Xunanká"
 					chilango = "Villadama"
 					trifinio = "Villadama"
-					abajeño = "Villadama"
+					abajeno = "Villadama"
 					bravo = "Villadama"
 					altiplanense = "Villadama"
 					choco = "Villadama" 
@@ -2992,7 +3056,7 @@ e_yucatan = {
 					yucatanense = "Hatiká"
 					chilango = "Villalta"
 					trifinio = "Villalta"
-					abajeño = "Villalta"
+					abajeno = "Villalta"
 					bravo = "Villalta"
 					altiplanense = "Villalta"
 					choco = "Villalta" 
@@ -3008,7 +3072,7 @@ e_yucatan = {
 					yucatanense = "Tunká"
 					chilango = "Villarroca"
 					trifinio = "Villarroca"
-					abajeño = "Villarroca"
+					abajeno = "Villarroca"
 					bravo = "Villarroca"
 					altiplanense = "Villarroca"
 					choco = "Villarroca" 
@@ -3024,7 +3088,7 @@ e_yucatan = {
 					yucatanense = "Samkax"
 					chilango = "Montearena"
 					trifinio = "Montearena"
-					abajeño = "Montearena"
+					abajeno = "Montearena"
 					bravo = "Montearena"
 					altiplanense = "Montearena"
 					choco = "Montearena" 
@@ -3040,7 +3104,7 @@ e_yucatan = {
 					yucatanense = "Aguafresca"
 					chilango = "Aguafresca"
 					trifinio = "Aguafresca"
-					abajeño = "Aguafresca"
+					abajeno = "Aguafresca"
 					bravo = "Aguafresca"
 					altiplanense = "Aguafresca"
 					choco = "Aguafresca" 
@@ -3054,7 +3118,7 @@ e_yucatan = {
 					yucatanense = "Jokob"
 					chilango = "El Aguilón"
 					trifinio = "Burrell"
-					abajeño = "El Aguilón"
+					abajeno = "El Aguilón"
 					bravo = "El Aguilón"
 					altiplanense = "El Aguilón"
 					choco = "El Aguilón"
@@ -3260,7 +3324,7 @@ e_yucatan = {
 					chilango = "Ríomono"
 					trifinio  = "Ríomono"
 					yucatanense = "Badzhá"
-					abajeño  = "Ríomono"
+					abajeno  = "Ríomono"
 					nicoyano  = "Ríomono"
 					bravo  = "Ríomono"
 					altiplanense  = "Ríomono"
@@ -3275,7 +3339,7 @@ e_yucatan = {
 					chilango = "Boscasa"
 					trifinio  = "Boscasa"
 					yucatanense = "Káaxotoch"
-					abajeño  = "Boscasa"
+					abajeno  = "Boscasa"
 					nicoyano  = "Boscasa"
 					bravo  = "Boscasa"
 					altiplanense  = "Boscasa"
@@ -3290,7 +3354,7 @@ e_yucatan = {
 					chilango = "Independencia"
 					trifinio  = "Independencia"
 					yucatanense = "Independencia"
-					abajeño  = "Independencia"
+					abajeno  = "Independencia"
 					nicoyano  = "Independencia"
 					bravo  = "Independencia"
 					altiplanense  = "Independencia"
@@ -3316,7 +3380,7 @@ e_yucatan = {
 					chilango = "Esperanzavilla"
 					trifinio  = "Esperanzavilla"
 					yucatanense = "Alabolká"
-					abajeño  = "Esperanzavilla"
+					abajeno  = "Esperanzavilla"
 					nicoyano  = "Esperanzavilla"
 					bravo  = "Esperanzavilla"
 					altiplanense  = "Esperanzavilla"
@@ -3331,7 +3395,7 @@ e_yucatan = {
 					chilango = "Jacinto Villa"
 					trifinio  = "Jacinto Villa"
 					yucatanense = "Jacinto Villa"
-					abajeño  = "Jacinto Villa"
+					abajeno  = "Jacinto Villa"
 					nicoyano  = "Jacinto Villa"
 					bravo  = "Jacinto Villa"
 					altiplanense  = "Jacinto Villa"				
@@ -3349,7 +3413,7 @@ e_yucatan = {
 					chilango = "San Pedro Colombia"
 					trifinio  = "San Pedro Colombia"
 					yucatanense = "San Pedro Manché"
-					abajeño  = "San Pedro Colombia"
+					abajeno  = "San Pedro Colombia"
 					nicoyano  = "San Pedro Colombia"
 					bravo  = "San Pedro Colombia"
 					altiplanense  = "San Pedro Colombia"
@@ -3368,7 +3432,7 @@ e_yucatan = {
 					chilango = "Cataratas"
 					trifinio  = "Cataratas"
 					yucatanense = "Nukluubanhá"
-					abajeño  = "Cataratas"
+					abajeno  = "Cataratas"
 					nicoyano  = "Cataratas"
 					bravo  = "Cataratas"
 					altiplanense  = "Cataratas"
@@ -3383,7 +3447,7 @@ e_yucatan = {
 					chilango = "Pueblo Viejo"
 					trifinio  = "Pueblo Viejo"
 					yucatanense = "Pueblo Viejo"
-					abajeño  = "Pueblo Viejo"
+					abajeno  = "Pueblo Viejo"
 					nicoyano  = "Pueblo Viejo"
 					bravo  = "Pueblo Viejo"
 					altiplanense  = "Pueblo Viejo"
