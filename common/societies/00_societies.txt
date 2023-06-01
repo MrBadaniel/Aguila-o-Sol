@@ -29,6 +29,7 @@ monastic_order_benedictine = {
 		age = 16
 		OR = {
 			religion = high_church
+			religion = Gregorian
 			AND = {
 				is_heretic = no
 				religion = nonconformist
@@ -48,6 +49,7 @@ monastic_order_benedictine = {
 	show_society = {
 		OR = {
 			religion = high_church
+			religion = Gregorian
 			AND = {
 				is_heretic = no
 				religion = nonconformist
@@ -59,11 +61,13 @@ monastic_order_benedictine = {
 	potential = {
 		OR = {
 			religion = high_church
+			religion = Gregorian
 			AND = {
 				is_heretic = no
 				religion = nonconformist
 			}
 		}
+
 	}
 	
 	society_rank = {
