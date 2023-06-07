@@ -2,14 +2,21 @@
 title=c_escuintla
 
 # Settlements
-max_settlements=5
+max_settlements=4
 
-b_cuilapa_GT=castle
-b_escuintla_GT=city
-b_cotzumalguapa_GT=temple
-b_puero_san_jose_GT=city
+b_escuintla_GT=castle
+b_cotzumalguapa_GT=castle
+
+#b_puero_san_jose_GT=city
+#b_cuilapa_GT=castle
 
 # Misc
 culture=trifinio
-religion=purificador
-terrain=plains
+religion=penitente
+terrain=hills
+
+2600.1.1 = {
+	b_escuintla_GT = ca_town_1
+	b_escuintla_GT = ca_wall_1
+	b_escuintla_GT = ca_barracks_1
+}

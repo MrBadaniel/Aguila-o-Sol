@@ -3393,3 +3393,228 @@ trait= chest_pain
 	2640.1.1={birth=yes}
 }
 
+####New Guatemalans
+1438200 = {	
+name="Virgilio" #Lord of Escuintla
+culture=trifinio
+religion=penitente
+2634.1.1={birth=yes}
+2720.1.1={death= yes} 
+}
+
+1438205 = {
+name="José" #Lord of Achiguate
+culture=trifinio
+religion=purificador
+2627.1.1={birth=yes}
+2720.1.1={death= yes}
+}
+1438206 = {
+name="Olegario" #Lord of Chiquimulilla
+culture=trifinio
+religion=purificador
+2605.1.1={birth=yes}
+2680.1.1={death= yes}
+}
+1438207 = {
+name="Justo" #Lord of Retalhuleu & Pacaya
+culture=trifinio
+religion=purificador
+2640.1.1={birth=yes}
+2680.1.1={death= yes}
+}
+1438210 = {
+name="Pedro"  #Lord of Jutiapa
+culture=trifinio
+religion=purificador
+2620.1.1={birth=yes}
+2675.1.1={death= yes}
+}
+1438215 = {
+name="Martín"  #Archbishop of Esquipulas
+culture=trifinio
+religion=penitente
+learning = 8
+trait = zealous
+trait = mastermind_theologian
+2613.10.5={birth=yes}
+2675.1.1={death= yes}
+}
+1438216 = {
+name="Baldomero"  #Lord of Zacapa
+culture=trifinio
+religion=moravian
+2624.12.15={birth=yes}
+2689.1.1={death= yes}
+}
+1438217 = {
+name="Ramón"  #Lord of Morales amd El Estor
+culture=trifinio
+religion=lamanita
+2634.8.21={birth=yes}
+2699.1.1={death= yes}
+}
+1438218 = {
+name="Primitivo"  #Lord of Quiche
+culture=quichean
+religion=qabantajik
+2644.12.29={birth=yes}
+2713.1.1={death= yes}
+}
+1438219 = {
+name="Lisandro"  #Lord of Huehuetango
+culture=quichean
+religion=qabantajik
+2644.12.29={birth=yes}
+2713.1.1={death= yes}
+}
+#Republic of Izabal
+1438220 = {
+name="Justo"
+dynasty=4600138 #Rufino
+culture=trifinio
+religion=moravian
+2614.8.21={birth=yes}
+2686.1.1={death= yes}
+}
+1438225 = {
+name="Franck"
+culture=garinagu
+religion=moravian
+2632.8.21={birth=yes}
+2705.1.1={death= yes}
+}
+####El Salvador
+1438250 = {
+name="Hasan"
+culture=filastino
+religion=moravian
+2610.8.30={birth=yes}
+2705.1.1={death= yes}
+}
+1438260 = {
+name="Elías" #Lord of San Vicente
+culture=neomexicano
+religion=purificador
+2635.5.20={birth=yes
+			culture = trifinio
+		}
+2735.1.1={death= yes}
+}
+1438265 = {
+name="Osvaldo" #Lord of La Paz
+culture=trifinio
+religion=moravian
+2623.10.31={birth=yes}
+2711.1.1={death= yes}
+}
+1438266 = {
+name="Ernesto" #Lord of La Paz
+culture=trifinio
+religion=purificador
+2643.1.31={birth=yes}
+2711.1.1={death= yes}
+}
+1438267 = {
+name="Salvador" #Lord of Cuscatlán
+culture=nahua
+dynasty=154163
+religion=moravian
+martial = 8
+trait = martial_cleric
+trait = holy_warrior
+trait = stubborn
+trait = zealous
+trait = deceitful
+trait = gregarious
+trait = charitable
+trait = ambitious
+trait = pastoral
+2622.1.31={birth=yes}
+2644.7.20 ={add_spouse=1438269}
+2660.10.14={
+          raise_levies = {
+               dismiss = yes
+               location = 2411 # Sonsonate
+               force_mult = 2.5
+          }
+	}
+2700.1.1={death= yes}
+}
+
+1438268 = {
+name="Farabundo" #Heir of Cuscatlan
+culture=nahua
+dynasty=154163
+father = 1438267
+mother = 1438269
+religion=moravian
+secret_religion = mictlantlec
+martial = 6
+trait = mastermind_theologian
+trait = ambitious
+trait = shy
+trait = envious
+trait = wroth
+trait = sympathy_mesoamerican_gods
+trait = parroquial
+2649.7.7={birth=yes}
+2730.1.1={death= yes}
+}
+
+1438269 = {
+name="María" #Queen Consort of Cuscatlan
+female = yes
+culture=nahua
+religion=purificador
+secret_religion = mictlantlec
+trait = sympathy_mesoamerican_gods
+2629.3.31={birth=yes}
+2720.1.1={death= yes}
+}
+1438280 = {
+name="Henry" 
+female = no
+dynasty = 4600139
+culture=neomexicano
+religion=moravian
+2635.3.31={birth=yes
+	culture = kriol}
+2720.1.1={death= yes}
+}
+1438290 = { 
+name="Milton" 
+female = no
+culture=garinagu
+religion=moravian
+2630.5.20={birth=yes}
+2720.1.1={death= yes}
+}
+1438295 = {
+name="Policarpo" 
+female = no
+trait = elusive_shadow
+trait = zealous
+trait = deceitful
+trait = inspiring_leader
+culture=trifinio
+religion=penitente
+2613.5.20={birth=yes}
+2669.1.1={death= yes}
+}
+1438296 = {
+name="Ezequiel" 
+female = no
+culture= trifinio
+religion=lamanita
+2593.4.3={birth=yes}
+2675.1.1={death= yes}
+}
+1438299 = {
+name="José" 
+female = no
+culture= pech
+religion=lamanita
+2593.4.3={birth=yes}
+2675.1.1={death= yes}
+}

@@ -20,11 +20,11 @@ sea_zones = { 870 915 }
 # Atlantic 2
 sea_zones = { 1443 1588 }
 # Pacific 3
-sea_zones = { 1589 1627 }
+sea_zones = { 1589 1628 }
 # Lakes 4
 sea_zones = { 1301 1442 }
 # Lakes 5
-sea_zones = { 1627 1729 } #1627 is now a Sea of Cortes region
+sea_zones = { 1629 1729 } #1627 is now a Sea of Cortes region
 # Atlantic 6
 sea_zones = { 923 963 }
 # Atlantic 7
@@ -39,16 +39,22 @@ sea_zones = { 2285 2286 }
 sea_zones = { 2322 2328 }
 #Lakes 12 
 sea_zones = { 2341 2360 }
+#Pacific 13 
+sea_zones = { 2428 2430 }
+#Atlantic 14 
+sea_zones = { 2459 2472 }
+#Lakes 15
+sea_zones = { 2439 2458 }
 ocean_region = {	
-	sea_zones = { 1 2 6 7 10 } # Atlantic Ocean
+	sea_zones = { 1 2 6 7 10 14 } # Atlantic Ocean
 }
 
 ocean_region = {	
-	sea_zones = { 3 8 } # Pacific Ocean
+	sea_zones = { 3 8 13 } # Pacific Ocean
 }
 
 ocean_region = {	
-	sea_zones = { 4 5 9 11 12 } # Lakes
+	sea_zones = { 4 5 9 11 12 15 } # Lakes
 }
 
 
@@ -100,6 +106,11 @@ major_rivers = {
 	2177 #St. John River
 	2182 2183 #Ottawa River
 	2184 2185 2186  #Rio Usumacinta-Grijalva-Mezcalapa
+	2429 2430 #Rio Lempa
+	2432 # Sarstun
+	2433 2434 2435 # Motagua
+	2436 2437 #Ulloa
+	2459 #San Juan
 	
 }
 

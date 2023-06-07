@@ -6,13 +6,20 @@ title=c_quetzaltenango
 # Settlements
 max_settlements=5
 
-b_san_marcos_GT=castle
-b_quetzaltenango_GT=city
-b_takalik_abaj_GT=temple
-b_coatepeque_GT=castle
+
+b_quetzaltenango_GT = castle
+b_san_juan_ostuncalco_GT = city
+b_san_martin_chili_verde_GT = temple
+
 
 # Misc
-culture=quichean
-religion=qabantajik
+culture=trifinio
+religion=moravian
 
 #History
+2600.1.1 = {
+	b_quetzaltenango_GT = ca_town_1
+	b_quetzaltenango_GT = ca_wall_1
+	b_quetzaltenango_GT = ca_barracks_1
+	b_quetzaltenango_GT = ca_keep_1
+}

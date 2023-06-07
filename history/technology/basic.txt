@@ -3,7 +3,6 @@ technology={
 	titles={
 		d_new_york
 		d_orleans
-		d_triangulo_del_sol
 		d_long_island
 		d_los_angeles
 		d_cook
@@ -512,10 +511,8 @@ technology={
 		d_tamaulipas
 		d_rio_bravo_del_norte
 		d_huasteca
-		d_veracruz
 		d_galveston
 		d_golden_crescent
-		d_yucatan
 		d_quintana_roo
 	}
 
@@ -555,6 +552,7 @@ technology={
 		d_trinidad_and_tobago
 		d_tortuga
 		d_gitmo
+		d_islas_de_la_bahia
 	}
 
 	768={
@@ -608,7 +606,6 @@ technology={
 		d_coahuila
 		d_comarca_lagunera
 		d_nueva_extremadura
-		d_nuevo_leon
 		d_altar
 		d_sinaloa
 		d_sonora
@@ -620,13 +617,12 @@ technology={
 		d_salado
 		d_san_luis_potosi
 		d_zacatecas
-		d_jalisco
 		d_costalegre
 		d_nayarit
 		d_hidalgo
 		d_edomex
 		d_olmeca
-		d_puebla
+		d_chiapas
 		d_michoacan
 		d_colima
 		d_tierra_caliente
@@ -638,6 +634,8 @@ technology={
 		d_durango
 		d_oaxaca
 		d_istmo
+		d_soconusco
+		d_pichucalco
 		d_baja
 		d_baja_sur
 		d_ensenada
@@ -651,8 +649,8 @@ technology={
 		d_valle_del_pilon
 		d_rio_blanco
 		d_brazo_del_benemerito
-		d_mar_de_cortes
-		d_soconusco
+		d_mar_de_cortes	
+		d_leon		
 	}
 
 	768={
@@ -710,10 +708,8 @@ technology={
 technology={
 	titles={
 		d_verapazes
-		d_guatemala
 		d_pacifico
 		d_nicaragua
-		d_salvador
 		d_atlantida
 		d_altas_honduras
 		d_colon
@@ -724,7 +720,6 @@ technology={
 		d_chan_santa_cruz
 		d_mayapan
 		d_zapata
-		d_chiapas
 		d_peten
 		d_belize
 		d_lacandon
@@ -739,6 +734,20 @@ technology={
 		d_orange_walk
 		d_toledo
 		d_altos_chiapas
+		d_escuintla
+		d_jutiapa
+		d_esquipulas
+		d_izabal
+		d_quiche
+		d_comiteca
+		d_huehuetenango
+		d_sian_kaan
+		d_sonsonate
+		d_san_vicente
+		d_san_miguel
+		d_olancho
+		d_el_paraiso
+
 	}
 
 	768={
@@ -1035,5 +1044,60 @@ technology={
 		military=1.1
 		economy=1.4
 		culture=1.4
+	}
+}
+#Mexican & Centroamerican capitals
+#Coastal capitals
+technology={
+	titles={
+		d_triangulo_del_sol
+		d_veracruz
+		d_yucatan
+		d_salvador
+		d_cortes
+	}
+
+	768={
+		military=1.0
+		economy=1.5
+		culture=2.0
+		TECH_TRADE_PRACTICES=2.0
+		TECH_NAVAL=1.8
+	}
+
+	2666={
+		military=1.8
+		economy=2.2
+		culture=1.8
+		TECH_TRADE_PRACTICES=2.5
+		TECH_NOBLE_CUSTOMS=2.3
+		TECH_CONSTRUCTION=2.3
+		TECH_RECRUITMENT=2.5
+	}
+}
+#Inland capitals
+technology={
+	titles={
+		d_nuevo_leon
+		d_jalisco
+		d_puebla
+		d_guatemala
+	}
+
+	768={
+		military=1.0
+		economy=1.5
+		culture=2.0
+	}
+
+	2666={
+		military=2.2
+		economy=1.8
+		culture=1.8
+		TECH_RECRUITMENT=2.5
+		TECH_SIEGE_EQUIPMENT=2.5
+		TECH_NOBLE_CUSTOMS=2.3
+		TECH_CONSTRUCTION=2.3
+		TECH_NAVAL=0.8
 	}
 }
