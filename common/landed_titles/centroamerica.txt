@@ -2251,35 +2251,10 @@ e_centroamerica = {
 			color={ 199 50 66 }
 			color2={ 255 255 255 }
 			
-			capital = 1869 # c_bluefields
+			capital = 1868 #Karata
 			
 			
-			c_bluefields = { # 1869
-				color={ 170 60 73 }
-				color2={ 255 255 255 }
-				
-				b_bluefields_NI = {}
-				b_laguna_de_perlas_NI = {}
-				b_rama_NI = {}
-				b_nueva_guinea_NIC = {}
-				b_kukrahill_NI = {}
-				b_muelle_de_los_bueyes_NIC = {}
-				b_wappy_NI = {}
-				b_la_esperanza_NIC = {}
-			}
-			c_wawashang = {
-				color={ 188 51 99 }
-				color2={ 255 255 255 }
-				
-				b_tortuguero_NI = {}
-				b_la_cruz_NIC = {}
-				b_tasbapauni_NIC = {}
-				b_el_ayote_NIC = {}
-				b_orinoco_NI = {}
-				b_bratara_NI = {}
-				b_krukru_NI = {}
-				b_tumarin_NI = {}
-			}
+
 			c_siuna = {
 				color={ 154 46 66 }
 				color2={ 255 255 255 }
@@ -2318,56 +2293,76 @@ e_centroamerica = {
 				b_awastara_NI = {}
 				b_prinzapolka_NI = {}
 				b_krukira_NIC = {}
-				b_karawala_NI = {}
+			#	b_karawala_NI = {}
 				b_tuapi_NIC = {}
 				b_yulu_NI = {}
 				b_santa_marta_NI = {}
 			}
-			c_el_desaguadero = { # 1867
-				color={ 139 80 161 }
+		}
+		d_bluefields = {
+			color = { 40 70 180 }
+			color2 = { 255 255 255 }
+			
+			capital = 1869 # Bluefields
+			
+			c_bluefields = { # 1869
+				color={ 170 60 73 }
 				color2={ 255 255 255 }
 				
-				brazilian = "O Dreno"
-				amazonense = "O Dreno"
-				baiano = "O Dreno"
-				gaucho = "O Dreno"
-				ribeirinho = "O Dreno"
-				
-				b_san_carlos_NIC = {}
-				b_el_almendro_NIC = {}
-				b_el_castillo_NIC = {}
-				b_greytown_NIC = {
-					trifinio = "San Juan de Nicaragua"
-					nicoyano = "San Juan de Nicaragua"
-					pech = "San Juan de Nicaragua"
-					quichean = "San Juan de Nicaragua"
-					yucateco = "San Juan de Nicaragua"
-					yucatanense = "San Juan de Nicaragua"
-					choco = "San Juan de Nicaragua"
-					calentano = "San Juan de Nicaragua"
-					abajeno = "San Juan de Nicaragua"
-					chilango = "San Juan de Nicaragua"
-					jarocho = "San Juan de Nicaragua"
-					tapatio = "San Juan de Nicaragua"
-					bravo = "San Juan de Nicaragua"
-					altiplanense = "San Juan de Nicaragua"
-					californiano = "San Juan de Nicaragua"
-					brazilian = "São João da Nicarágua"
-					amazonense = "São João da Nicarágua"
-					baiano = "São João da Nicarágua"
-					gaucho = "São João da Nicarágua"
-					ribeirinho = "São João da Nicarágua"
-					}
-				b_san_miguelito_NIC = {
-					brazilian = "São Miguelinho"
-					amazonense = "São Miguelinho"
-					baiano = "São Miguelinho"
-					gaucho = "São Miguelinho"
-					ribeirinho = "São Miguelinho"
-					}
-				b_morrito_NIC = {}
-				b_mancarron_NIC = {}
+				b_el_bluff_NIC = {}
+				b_bluefields_NI = {} 
+				b_san_francisco_BF_NIC = {}
+				b_la_esperanza_NIC  = {}
+				b_el_corali_NIC = {}
+				b_san_nicolas_NIC = {}
+				b_cano_azul_NIC = {}
+				b_la_dona_NIC = {}
 			}
+
+			c_kukra_hill = { #2517
+				color = { 128 100 173 }
+				color2 = { 255 255 255 }
+				
+				b_kukrahill_NI = {}
+				b_flor_de_pino_NIC = {}
+				b_bratara_NI  = {}
+				b_tierra_dorada_NIC = {}
+				b_big_lagoon_NIC = {}
+				b_mi_finquita_NIC = {}
+				b_carlos_fonseca_NIC = {}
+				b_el_panchon_NIC = {}
+			}
+			
+			c_perlas = { #2518
+				color = { 190 100 109 }
+				color2 = { 255 255 255 }
+				
+				b_kulbia_NIC = {}
+				b_laguna_de_perlas_NI  = {}
+				b_orinoco_NI  = {}
+				b_cocabilla_NIC = {}
+				b_tasbapauni_NIC = {}
+				b_haulover_BF_NIC = {}
+				b_trikulang_NIC = {}
+				b_brown_bank = {}
+			}
+			
+			c_karawala = { #2519
+				color = { 97 85 28 }
+				color2 = { 255 255 255 }
+				
+				b_karawala_NIC = {}
+				b_sandy_bay_sirpi_NIC = {}
+				b_la_cruz_de_rio_grande_NIC = {}
+				b_barra_de_rio_grande_NIC = {}
+				b_walpa_NIC = {}
+				b_kara_NIC = {}
+				b_wawalatigni_NIC = {}
+				b_angloamerica_NIC = {}
+			}
+
+
+			
 		}
 		d_mosquito_norte = {
 			color={ 225 87 51 }
@@ -2418,19 +2413,7 @@ e_centroamerica = {
 			
 			capital = 1851 # c_matagalpa
 			
-			c_chontales = { # 1870
-				color={ 230 161 121 }
-				color2={ 255 255 255 }
-				
-				b_juigalpa_NIC = {}
-				b_cuapa_NIC = {}
-				b_acoyapa_NIC = {}
-				b_la_libertad_NIC = {}
-				b_el_coral_NIC = {}
-				b_santo_tomas_NIC = {}
-				b_comalapa_NIC = {}
-				b_san_francisco_NIC = {}
-			}
+
 			c_matagalpa = { # 1851
 				color={ 19 155 176 }
 				color2={ 255 255 255 }
@@ -2491,6 +2474,64 @@ e_centroamerica = {
 				b_manzanillo_CO = {}
 			}
 		}
+		
+		d_zelaya = { #Caribisis
+			color = { 34 119 28 }
+			color2 = { 255 255 255 }
+			
+			capital = 739 # Rama
+			
+			miskito = "Karibisis"
+			west_indian = "Carib"
+			calypsonian = "Carib"
+			garinagu = "Caribe"
+			
+		
+			c_wawashang = { # 739
+					color={ 188 51 99 }
+					color2={ 255 255 255 }
+					
+				#Rama
+				
+				b_rama_NI ={}
+				b_wappy_NI ={} 
+				b_la_esperanza_NIC  ={}
+				b_la_cruz_NIC  ={}
+				b_tortuguero_NI  ={}
+				b_el_ayote_NIC  ={}
+				b_krukru_NI  ={}
+				b_tumarin_NI  ={}
+
+			}
+			
+			c_nueva_guinea = { #2515
+				color = { 175 72 170 }
+				color2 = { 255 255 255 }
+				
+				b_nueva_guinea_NIC ={}
+				b_la_delicia_NIC ={}
+				b_la_esperanza_NG_NIC ={}
+				b_los_angeles_NIC ={}
+				b_san_antonio_NIC ={}
+				b_el_coral_NG_NIC ={}
+				b_rio_rama_NIC ={}
+				b_la_union_NIC ={}
+			}
+			
+			c_muelle_de_los_bueyes = { #2516
+				color = { 170 100 173 }
+				color2= { 255 255 255 }
+				
+				b_muelle_de_los_bueyes_NIC  = {}
+				b_villa_sandino_NIC  = {}
+				b_la_batea_NIC  = {}
+				b_cara_de_mono_NIC  = {}
+				b_el_espavel_NIC  = {}
+				b_el_recreo_NIC  = {}
+				b_el_cacao_NIC  = {}
+				b_la_esperanza_MB_NIC  = {}
+			}
+
 	}
 	k_gran_nicoya = {
 		color={ 140 194 221 }
@@ -2592,13 +2633,28 @@ e_centroamerica = {
 			
 			capital = 1882 # c_managua
 			
+			brazilian= "Manágua"
+			ribeirinho= "Manágua"
+			baiano = "Manágua"
+			gaucho = "Manágua"	
+			
 			c_managua = { # 1882
 				color={ 161 167 182 }
 				color2={ 255 255 255 }
 				
+				brazilian= "Manágua"
+				ribeirinho= "Manágua"
+				baiano = "Manágua"
+				gaucho = "Manágua"
+				
 				b_mateare_NIC = {}
 				b_managua_NIC = {}
-				b_san_rafael_del_sur_NIC = {		}
+				b_san_rafael_del_sur_NIC = {	
+					brazilian= "São Rafael do Sul"
+					ribeirinho= "São Rafael do Sul"
+					baiano = "São Rafael do Sul"
+					gaucho = "São Rafael do Sul"
+				}
 				b_ticuantepe_NIC = {}
 				b_ciudad_sandino_NIC = {
 					brazilian= "Cidade Sandino"
@@ -2611,12 +2667,17 @@ e_centroamerica = {
 				}
 				b_masachapa_NIC = {}
 				b_el_crucero_NIC = {
-					brazilian= "O Cruzeiro"
-					ribeirinho= "O Cruzeiro"
-					baiano = "O Cruzeiro"
-					gaucho = "O Cruzeiro"			
+					brazilian= "Cruzeiro"
+					ribeirinho= "Cruzeiro"
+					baiano = "Cruzeiro"
+					gaucho = "Cruzeiro"			
 				}
-				b_el_carmen_NIC = {}
+				b_el_carmen_NIC = {
+					brazilian= "O Carmen"
+					ribeirinho= "O Carmen"
+					baiano = "O Carmen"
+					gaucho = "O Carmen"					
+				}
 
 			}
 			c_masaya = {
@@ -2627,9 +2688,19 @@ e_centroamerica = {
 				b_diriamba_NIC = {}
 				b_jinotepe_NIC = {}
 				b_masatepe_NIC = {}
-				b_la_concepcion_NIC = {}
+				b_la_concepcion_NIC = {
+					brazilian= "Concepção"
+					ribeirinho= "Concepção"
+					baiano = "Concepção"
+					gaucho = "Concepção"					
+				}
 				b_niquinohomo_NIC = {}
-				b_san_marcos_NIC = {}
+				b_san_marcos_NIC = {
+					brazilian= "São Marcos"
+					ribeirinho= "São Marcos"
+					baiano = "São Marcos"
+					gaucho = "São Marcos"					
+				}
 				b_santa_teresa_NIC = {}
 			}
 			c_tipitapa = { #2503
@@ -2639,10 +2710,10 @@ e_centroamerica = {
 				b_tipitapa_NIC = {}
 				b_ciudadela_san_martin_NIC = {
 					short_name = yes
-					brazilian= "Cidadela de São Martin"
-					ribeirinho= "Cidadela de São Martin"
-					baiano = "Cidadela de São Martin"
-					gaucho = "Cidadela de São Martin"					
+					brazilian= "Cidadela de São Martim"
+					ribeirinho= "Cidadela de São Martim"
+					baiano = "Cidadela de São Martim"
+					gaucho = "Cidadela de São Martim"					
 				}
 				b_san_francisco_libre_NIC = {
 					brazilian= "São Francisco Livre"
@@ -2656,10 +2727,30 @@ e_centroamerica = {
 					baiano = "Vitória de Julho"
 					gaucho = "Vitória de Julho"
 				}
-				b_san_benito_NIC = {}
-				b_las_banderas_NIC = {}
-				b_las_maderas_NIC = {}
-				b_la_carbonera_NIC = {}
+				b_san_benito_NIC = {
+					brazilian= "São Bento"
+					ribeirinho= "São Bento"
+					baiano = "São Bento"
+					gaucho = "São Bento"				
+				}
+				b_las_banderas_NIC = {
+					brazilian= "Bandeiras"
+					ribeirinho= "Bandeiras"
+					baiano = "Bandeiras"
+					gaucho = "Bandeiras"				
+				}
+				b_las_maderas_NIC = {
+					brazilian= "Madeiras"
+					ribeirinho= "Madeiras"
+					baiano = "Madeiras"
+					gaucho = "Madeiras"				
+				}
+				b_la_carbonera_NIC = {
+					brazilian= "Carboneira"
+					ribeirinho= "Carboneira"
+					baiano = "Carboneira"
+					gaucho = "Carboneira"				
+				}
 			}
 
 		}
@@ -2704,7 +2795,12 @@ e_centroamerica = {
 				b_popoyo_NIC = {}
 				b_tola_NIC = {}
 				b_potosi_NIC = {}
-				b_salinas_de_nagualpa_NIC = {}
+				b_salinas_de_nagualpa_NIC = {
+					brazilian= "Salar de Naguálpa"
+					ribeirinho= "Salar de Naguálpa"
+					baiano = "Salar de Naguálpa"
+					gaucho = "Salar de Naguálpa"				
+				}
 				b_manzanillo_NIC = {}
 			}	
 			c_moyogalpa = {
@@ -2714,14 +2810,24 @@ e_centroamerica = {
 				b_moyogalpa_NIC = {}
 				b_balgue_NIC = {}
 				b_merida_NIC = {}
-				b_altagracia_NIC = {}
+				b_altagracia_NIC = {
+					brazilian= "Altagraça"
+					ribeirinho= "Altagraça"
+					baiano = "Altagraça"
+					gaucho = "Altagraça"				
+				}
 				b_san_jose_del_sur_NIC = {
 					brazilian= " São José do Sul"
 					ribeirinho= " São José do Sul"
 					baiano = "São José do Sul"
 					gaucho = "São José do Sul"
 				}
-				b_san_ramon_NIC = {}
+				b_san_ramon_NIC = {
+					brazilian= "São Ramón"
+					ribeirinho= "São Ramón"
+					baiano = "São Ramón"
+					gaucho = "São Ramón"				
+				}
 				b_urbaite_NIC = {}
 				b_tilgue_NIC = {}
 			}
@@ -2747,7 +2853,12 @@ e_centroamerica = {
 				b_diria_NIC = {}
 				b_malatacoya_NIC = {}
 				b_asese_NIC = {}
-				b_la_virgen_NIC = {}
+				b_la_virgen_NIC = {
+					brazilian= "A Virgem"
+					ribeirinho= "A Virgem"
+					baiano = "A Virgem"
+					gaucho = "A Virgem"				
+				}
 				b_zapatera_NIC = {}
 			}
 			
@@ -2757,13 +2868,33 @@ e_centroamerica = {
 				
 				short_name = yes
 				
-					b_mancarron_NIC = {}
-					b_buenavista_NIC = {}
-					b_san_fernando_NIC = {}
-					b_la_envidia_NIC = {}
-					b_felipe_pena_NIC = {}
-					b_catalanica_NIC = {}
-					b_celentiname_NIC = {}
+				b_mancarron_NIC = {}
+				b_buenavista_NIC = {
+					brazilian= "Boavista"
+					ribeirinho= "Boavista"
+					baiano = "Boavista"
+					gaucho = "Boavista"						
+				}
+				b_san_fernando_NIC = {
+					brazilian= "São Fernando"
+					ribeirinho= "São Fernando"
+					baiano = "São Fernando"
+					gaucho = "São Fernando"					
+				}
+				b_la_envidia_NIC = {
+					brazilian= "A Inveja"
+					ribeirinho= "A Inveja"
+					baiano = "A Inveja"
+					gaucho = "A Inveja"					
+				}
+				b_felipe_pena_NIC = {
+					brazilian= "Filipe Penha"
+					ribeirinho= "Filipe Penha"
+					baiano = "Filipe Penha"
+					gaucho = "Filipe Penha"					
+				}
+				b_catalanica_NIC = {}
+				b_celentiname_NIC = {}
 			}
 		}		
 		
@@ -2864,7 +2995,12 @@ e_centroamerica = {
 				b_chinandega_NI = {}
 				b_corinto_NI = {}
 				b_chichigalpa_NI = {}
-				b_el_realejo_NI = {}
+				b_el_realejo_NI = {
+					brazilian= "O Realejo"
+					ribeirinho= "O Realejo"
+					baiano = "O Realejo"
+					gaucho = "O Realejo"
+				}
 				b_el_viejo_NI = {
 					brazilian= "O Velho"
 					ribeirinho= "O Velho"
@@ -2911,12 +3047,210 @@ e_centroamerica = {
 					baiano = "São Tomás do Norte"
 					gaucho = "São Tomás do Norte"
 				}
-				b_cinco_pinos_NIC = {				}
+				b_cinco_pinos_NIC = {
+					brazilian= "Cinco Pinheiros"
+					ribeirinho= "Cinco Pinheiros"
+					baiano = "Cinco Pinheiros"
+					gaucho = "Cinco Pinheiros"
+				}
 				b_guasule_NIC = {}
 				b_palo_grande_NIC = {}
 				b_gaspar_garcia_laviana_NIC = {}
 			}
 
+		}
+		
+		d_chontales = {
+			color = { 8 86 89 }
+			color2 = { 255 255 255 }
+			
+			capital = 1870 # Chontales
+			
+			c_el_desaguadero = { # 1867
+				color={ 139 80 161 }
+				color2={ 255 255 255 }
+				
+				#San Juan	Español		São João	Portugues	Greytown	English
+
+				miskito = "Greytown"
+				kriol = "Greytown"
+				west_indian = "Greytown"
+				calypsonian= "Greytown"
+				garinagu = "Greytown"				
+				yucatanense = "San Juan Río"
+				choco = "San Juan Río"
+				calentano = "San Juan Río"
+				abajeno = "San Juan Río"
+				chilango = "San Juan Río"
+				jarocho = "San Juan Río"
+				tapatio = "San Juan Río"
+				bravo = "San Juan Río"
+				altiplanense = "San Juan Río"
+				californiano = "San Juan Río"				
+				brazilian = "São João Rio"
+				amazonense = "São João Rio"
+				baiano = "São João Rio"
+				gaucho = "São João Rio"
+				ribeirinho = "São João Rio"
+				
+				#b_el_almendro_NIC = {}
+				b_greytown_NIC = {
+					miskito = "Greytown"
+					kriol = "Greytown"
+					west_indian = "Greytown"
+					calypsonian= "Greytown"
+					garinagu = "Greytown"
+					trifinio = "San Juan de Nicaragua"
+					nicoyano = "San Juan de Nicaragua"
+					pech = "San Juan de Nicaragua"
+					quichean = "San Juan de Nicaragua"
+					yucateco = "San Juan de Nicaragua"
+					yucatanense = "San Juan de Nicaragua"
+					choco = "San Juan de Nicaragua"
+					calentano = "San Juan de Nicaragua"
+					abajeno = "San Juan de Nicaragua"
+					chilango = "San Juan de Nicaragua"
+					jarocho = "San Juan de Nicaragua"
+					tapatio = "San Juan de Nicaragua"
+					bravo = "San Juan de Nicaragua"
+					altiplanense = "San Juan de Nicaragua"
+					californiano = "San Juan de Nicaragua"
+					brazilian = "São João da Nicarágua"
+					amazonense = "São João da Nicarágua"
+					baiano = "São João da Nicarágua"
+					gaucho = "São João da Nicarágua"
+					ribeirinho = "São João da Nicarágua"
+				}
+				b_haulover_NIC = {}
+				b_santa_isabel_RSJ_NIC = {}
+				b_el_cocal_NIC = {}
+				b_buena_vista_NIC = {}
+				b_cangrejera_NIC = {}
+			}
+
+			c_castillo = {
+				color = { 39 47 161 }
+				color2 = { 255 255 255 }
+				
+				brazilian = "Castelo"
+				amazonense = "Castelo"
+				baiano = "Castelo"
+				gaucho = "Castelo"
+				ribeirinho = "Castelo"					
+				
+				b_el_castillo_NIC ={
+					trifinio = "Castillo de la Inmaculada Concepción"
+					nicoyano = "Castillo de la Inmaculada Concepción"				
+					brazilian = "O Castelo"
+					amazonense = "O Castelo"
+					baiano = "O Castelo"
+					gaucho = "O Castelo"
+					ribeirinho = "O Castelo"
+				}
+				b_boca_de_sabalos_NIC = {
+					brazilian = "Boca do Sável"
+					amazonense = "Boca do Sável"
+					baiano = "Boca do Sável"
+					gaucho = "Boca do Sável"
+					ribeirinho = "Boca do Sável"
+					miskito = "Tarpon Mouth"
+					kriol = "Boca de Sabalos"
+				}
+				b_cruz_verde_NIC = {}
+				b_la_azucena_NIC = {}
+				b_morrillo_NIC = {}
+				b_los_chiles_NIC = {}
+				b_santa_isabel_NIC = {}
+				b_laurel_galan_NIC = {}
+			}
+			
+			c_san_miguelito = {
+				color = { 39 70 161 }
+				color2 = { 255 255 255 }
+				
+				b_san_miguelito_NIC = {
+					brazilian = "São Miguelinho"
+					amazonense = "São Miguelinho"
+					baiano = "São Miguelinho"
+					gaucho = "São Miguelinho"
+					ribeirinho = "São Miguelinho"
+				}
+				b_morrito_NIC = {}
+				b_el_almendro_NIC = {
+					brazilian = "Amêndoa"
+					amazonense = "Amêndoa"
+					baiano = "Amêndoa"
+					gaucho = "Amêndoa"
+					ribeirinho = "Amêndoa"
+				}
+				b_san_bartolo_NIC = {
+					brazilian = " São Bartolo"
+					amazonense = " São Bartolo"
+					baiano = " São Bartolo"
+					gaucho = " São Bartolo"
+					ribeirinho = " São Bartolo"
+				}
+				b_paso_de_lajas_NIC = {
+					brazilian = "Passo das Lajes"
+					amazonense = "Passo das Lajes"
+					baiano = "Passo das Lajes"
+					gaucho = "Passo das Lajes"
+					ribeirinho = "Passo das Lajes"
+				}
+				b_espino_blanco_NIC = {
+					brazilian = "Espinheiro Branco"
+					amazonense = "Espinheiro Branco"
+					baiano = "Espinheiro Branco"
+					gaucho = "Espinheiro Branco"
+					ribeirinho = "Espinheiro Branco"
+				}
+				b_el_tule_NIC = {
+					brazilian = "O Tule"
+					amazonense = "O Tule"
+					baiano = "O Tule"
+					gaucho = "O Tule"
+					ribeirinho = "O Tule"
+				}
+				b_paso_la_fortaleza_NIC = {
+					brazilian = "Passe de Fortaleza"
+					amazonense = "Passe de Fortaleza"
+					baiano = "Passe de Fortaleza"
+					gaucho = "Passe de Fortaleza"
+					ribeirinho = "Passe de Fortaleza"
+				}
+			}
+			
+			c_chontales = { # 1870
+				color={ 230 161 121 }
+				color2={ 255 255 255 }
+				
+				b_juigalpa_NIC = {}
+				b_acoyapa_NIC = {}
+				b_santo_tomas_NIC = {
+					brazilian = "São Tomás"
+					baiano = "São Tomás"
+					amazonense = "São Tomás"
+					gaucho = "São Tomás"
+					ribeirinho = "São Tomás"
+				}
+				b_comalapa_NIC = {}
+				b_la_libertad_NIC = {
+					brazilian = "A Liberdade"
+					baiano = "A Liberdade"
+					amazonense = "A Liberdade"
+					gaucho = "A Liberdade"
+					ribeirinho = "A Liberdade"				
+				}	
+				b_cuapa_NIC = {}
+				b_el_coral_NIC = {}
+				b_san_francisco_NIC = {
+					brazilian = "São Francisco"
+					baiano = "São Francisco"
+					amazonense = "São Francisco"
+					gaucho = "São Francisco"
+					ribeirinho = "São Francisco"				
+				}
+			}
 		}
 	}
 }
