@@ -1,11 +1,13 @@
 Gregorian_DESC;The Remembrant faith Places special importance in the reverence of the dead and martyrdom through holy war, regarding the wardead as holy saints who gather in the halls of Heaven forming the Heavenly Host. Remembrants hold a cyclical worldview, where a great cataclysm puts the world on the verge of destruction in which mankind is spared of total annihilation by the intervention of the Unknown Solider, until the Second Coming. The Remembrants believe The Lord's Host will come to deliver their faithful at the end of the War to End All Wars.;;;;;;;;;;;;;x
-d_gregorian;The Remembrant Church;;;;;;;;;;;;;x
+d_gregorian;The Church of Remembrance;;;;;;;;;;;;;x
 religion_patron_saint_stub_feature;Devout and zealous Remembrants may choose to venerate a Saint as their patron.;;;;;;;;;;;;;x
 REL_PENTARCHS_NON_ORTHODOX_DESC;The Ecumenical Council Seats were for the original five most important sees within the $RELIGION$ faith, be it due to being considered a holy or historically important site. Their authority as Patriarchs over their respective ancient sees is still recognized within the $RELIGION$ church.;;;;;;;;;x;;;;;;;;;x
 
+fallen_saint;Fallen Saint;;;;;;;;;;;;;x
+fallen_saint_desc;This valiant holy warrior has fallen in battle. He surely has joined The Lord's Host!;;;;;;;;;;;;;x
 
-
-GRAND_PATRON;Grand Patron;;;;;;;;;;;;;x
+GRAND_PATRON;Dominus;;;;;;;;;;;;;x
+GRAND_PATRON_REAL;Grand Patron;;;;;;;;;;;;;x
 temple_barony_of_Gregorian;Bishopric of;;;;;;;;;;;;;x
 temple_baron_Gregorian;Bishop;;;;;;;;;;;;;x
 temple_county_of_Gregorian;Archbishopric of;;;;;;;;;;;;;x
@@ -25,7 +27,7 @@ vassalize_grand_patron_opinion_TT;Requires Grand Patron's opinion to be 50 or ab
 TXT_vassalize_grand_patron;Vassalize the Grand Patron...;;;;;;;;;;;;;x
 
 GOD_THE_UNKNOWN_SOLDIER;The Unknown Soldier;;;;;;;;;;;;;x
-GOD_SAINT_MICHAEL_THE_ARCH_ANGEL;Saint Micheal The Arch-Angel;;;;;;;;;;;;;x
+GOD_SAVIOR;The Savior;;;;;;;;;;;;;x
 GOD_LADY_VICTORY;Our Lady of Victory;;;;;;;;;;;;;x
 GOD_FALLEN_SAINTS;The Fallen Saints;;;;;;;;;;;;;x
 GOD_HOST;The Lord's Host;;;;;;;;;;;;;x
@@ -94,3 +96,16 @@ EVTDESC_remembrance_day_6;I walk among the tombs of saints, I look upon their gr
 EVTOPTA_remembrance_day_6;I must strive to do my best...;;;;;;;;;;;;;x
 EVTDESC_remembrance_day_7;Seeing the dead around you, it weighs you down as you think about your mortality, your unable to shake it off... this sorrow at realizing death comes for all...;;;;;;;;;;;;;x
 EVTOPTA_remembrance_day_7;Oh Blessed Virgin of Victory help Me!;;;;;;;;;;;;;x
+
+
+
+
+claim_dominion;Claim Dominion from sea to sea;;;;;;;;;;;;;x
+
+AoMTITLE.50;Acclaimed Dominus;;;;;;;;;;;;;x
+EVTDESAoM.50;I've been Acclaimed Dominus [Root.GetFirstName]!;;;;;;;;;;;;;x
+EVTOPTA_become_dominus;Wonderful;;;;;;;;;;;;;x
+
+AoMTITLE.51;Claiming The Dominion;;;;;;;;;;;;;x
+EVTDESAoM.51;[From.GetTitledName] has claimed that he should be Dominus how shall [d_gregorian.Holder.GetTitledName] respond!;;;;;;;;;;;;;x
+EVTOPTA_dominus_claim;I will become Dominus [Root.GetName];;;;;;;;;;;;;x

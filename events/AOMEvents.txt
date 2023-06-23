@@ -831,3 +831,45 @@ character_event = {
 		clr_character_flag = recent_minor_decision
 	}
 }
+
+
+#Become Dominius
+character_event = {
+	id = AoM.50
+	title = AoMTITLE.50
+	desc = EVTDESAoM.50
+	picture = GFX_evt_mass_crusade
+	border = GFX_event_normal_frame_diplomacy
+	is_triggered_only = yes
+	
+	immediate = {
+		#prestige = -1000
+		#piety = -1000
+		#grant_title = d_gregorian
+	}
+	option = {
+		name = EVTOPTA_become_dominus
+		#prestige = -1000
+		#piety = -1000
+	}
+}
+#get claim on Dominion
+character_event = {
+	id = AoM.51
+	title = AoMTITLE.51
+	desc = EVTDESAoM.51
+	picture = GFX_evt_mass_crusade
+	border = GFX_event_normal_frame_diplomacy
+	is_triggered_only = yes
+	
+	immediate = {
+	#prestige = -1000
+	#piety = -1000
+	#add_claim = d_gregorian
+	}
+	option = {
+		name = EVTOPTA_dominus_claim
+		#prestige = -1000
+		#piety = -1000
+	}
+}

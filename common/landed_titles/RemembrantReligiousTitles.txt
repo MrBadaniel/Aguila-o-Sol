@@ -4,20 +4,23 @@ d_gregorian = {
 	color2 = { 220 220 0 }
 	capital = 1271 # Toronto
 	title = GRAND_PATRON
-	foa = ECUMENICAL_PATRIARCH_FOA
-	landless = yes
+	#foa = ECUMENICAL_PATRIARCH_FOA
+	#landless = yes
 	#holy_order = yes
 	short_name = yes
 	
 	
-	monthly_income = 2
+	#monthly_income = 2
 
 	# Controls a religion
 	controls_religion = Gregorian
 	religion = Gregorian
 	# Cannot be held as a secondary title
 	assimilate = no
-	primary = yes
+	primary = no
+	#dignity = -1000
+	#caliphate = yes
+	
 	dynasty_title_names = no # Will not be named "Seljuk", etc.
 }
 d_remembrant_legion = {
@@ -30,7 +33,7 @@ d_remembrant_legion = {
 	
 	capital = 1271 # Toronto
 
-	title = "GRANDMASTER"
+	title = "GRAND_PATRON_REAL"
 	foa = "GRANDMASTER_FOA"
 
 	culture = ontarian		

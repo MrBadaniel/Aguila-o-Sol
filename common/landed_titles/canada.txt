@@ -1423,9 +1423,9 @@ e_canada = {
 				color = { 255 203 21 }
 				color2= { 220 220 0 }
 				holy_site = high_church
-
+				holy_site = Gregorian
 				b_woodstock_NB = {acadien = "Medotec"}
-				b_canterbury_NB = {}
+				b_canterbury_NB = {pentarchy = Gregorian}
 				b_houlton_ME = {}
 				b_grafton_NB = {}
 				b_greenville_NB = {}
@@ -1785,9 +1785,7 @@ e_canada = {
 					acadien = "Chebucto"
 					maritimer = "Halafacs"
 				}
-				b_dartmouth_NS = {
-					pentarchy = Gregorian
-				}
+				b_dartmouth_NS = {}
 				b_cole_harbour_NS = {}
 				b_lower_sackville_NS = {}
 				b_bedford_NS = {}
@@ -2045,6 +2043,7 @@ e_canada = {
 				ojibwe = "Wahnapitae"
 				algonquin = "Wahnapitae"
 				saulteaux = "Wahnapitae"
+				holy_site = Gregorian
 
 				b_sudbury_ON = {}
 				b_chelmsford_ON = {
@@ -2194,7 +2193,6 @@ e_canada = {
 				color2= { 255 255 255 }
 
 				iroquois = "Wahta"
-				holy_site = Gregorian
 
 				b_bracebridge_ON = {}
 				b_utterson_ON = {}
