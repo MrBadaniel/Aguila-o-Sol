@@ -2920,7 +2920,19 @@ coat_of_arms = {
 1538003 = { name="Cedeño" culture=istmeno }
 1538004 = { name="Tcherassi" culture=istmeno }
 1538005 = { name="Vives" culture=istmeno }
-1538006 = { name="Bosé" culture=istmeno }
+1538006 = { name="Bosé" culture=istmeno
+			coat_of_arms = {
+		template = 0
+		layer = {
+			texture = 12
+			texture_internal = 22
+			emblem = 0
+			color = 0
+			color = 0
+			color = 0
+		}
+	}
+ }
 1538007 = { name="Rey" culture=istmeno }
 1538008 = { name="Riascos" culture=istmeno }
 1538009 = { name="Soliz" culture=istmeno }

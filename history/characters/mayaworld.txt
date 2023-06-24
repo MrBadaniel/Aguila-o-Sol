@@ -3484,6 +3484,15 @@ religion=moravian
 2632.8.21={birth=yes}
 2705.1.1={death= yes}
 }
+
+##
+1438245 ={
+name="Dorian"
+culture=garinagu
+religion=moravian
+2641.8.21={birth=yes}
+2705.1.1={death= yes}
+}
 ####El Salvador
 1438250 = {
 name="Hasan"
@@ -3617,4 +3626,261 @@ culture= pech
 religion=lamanita
 2593.4.3={birth=yes}
 2675.1.1={death= yes}
+}
+#Moskito Chiefs
+1438300 = {
+name="Adam" 
+dynasty = 4600140 #Kiikna
+female = no
+culture= miskito
+religion=penitente
+trait = content
+trait = devout
+trait = diligent
+trait = envious
+2569.4.3={birth=yes}
+2660.5.1={death= yes}
+}
+1438301 = {
+name="Abil" #Abel
+dynasty = 4600140 #Kiikna
+female = no
+father = 1438300
+mother = 1438305
+culture= miskito
+religion=penitente
+trait = diligent
+trait = zealous
+trait = content
+2587.9.2={birth=yes}
+2621.5.1={death= { 
+		death_reason = death_murder 
+			killer = 1438302
+			}
+		}
+}
+1438302 = {
+name="Kain" #Cain
+dynasty = 4600141 #Batingi
+female = no
+father = 1438300
+mother = 1438305
+culture= miskito
+religion=penitente
+trait = tribal_kinslayer
+trait = cruel
+trait = deceitful
+trait = wroth
+2585.1.1={birth=yes}
+2621.5.1={
+	remove_claim = c_muelle_de_los_bueyes
+	remove_claim = c_nueva_guinea
+	remove_claim = c_rama
+	remove_claim = d_zelaya
+}
+2645.1.1={religion=lamanita}
+2721.5.10={death= {
+	death_reason = death_vanished
+				}
+		}
+}
+1438303 = {
+name="Sit"  #Seth
+dynasty = 4600140 #Kiikna
+female = no
+father = 1438300
+mother = 1438305
+culture= miskito
+religion=penitente
+2625.1.9={birth=yes}
+2690.5.1= { death = yes}
+}
+1438304 = {
+name="Inush" #Enosh
+dynasty = 4600140 #Kiikna
+female = no
+father = 1438303
+mother = 1438306
+culture= miskito
+religion=penitente
+2655.11.5={birth=yes}
+2705.7.3= { death = yes}
+}
+1438305 = {
+name="Ibi" #Eva
+female = yes
+culture= miskito
+religion=penitente
+trait = devout
+trait = trusting
+trait = lustful
+2569.12.24={birth=yes}
+2580.1.1 = { add_spouse = 1438300}
+2662.12.30= { death = yes}
+}
+1438306 = {
+name="Asura" #Azura 
+female = yes
+culture= miskito
+religion=penitente
+2629.5.25={birth=yes}
+2653.10.31 = { add_spouse = 1438303}
+2699.12.30= { death = yes}
+}
+1438307 = {
+name="Awan" #Aclima 
+female = yes
+culture= miskito
+religion=penitente
+2619.5.25={birth=yes}
+2622.1.31 = { add_spouse = 1438302}
+2699.12.30= { death = yes}
+}
+1438308 = {
+name="Inush" #Enosh
+dynasty = 4600141 #Batingi
+female = no
+father = 1438302
+mother = 1438307
+culture= miskito
+religion=penitente
+2622.11.5={birth=yes}
+2715.7.3= { death = yes}
+}
+1438309 = {
+name="Irad" 
+dynasty = 4600141 #Batingi
+female = no
+father = 1438308
+culture= miskito
+religion=penitente
+2657.3.15={birth=yes}
+2736.9.3= { death = yes}
+}
+#
+1438310 = {
+name="Auriliu" #Aurelio
+female = no
+culture= mayangna
+religion=lamanita
+2624.5.25={birth=yes}
+2719.12.30= { death = yes}
+}
+
+####Nicoyan dukes
+1438311 = {
+name="Lotario" #Lot
+female = no
+#father=1438311 
+dynasty = 4600142 
+culture= nicoyano
+religion=penitente
+2600.1.25={birth=yes}
+2675.12.30= { death = yes}
+}
+1438312 = {
+name="Edith" #Lot's wife
+female = yes
+culture= nicoyano
+religion=penitente
+2613.1.25={birth=yes}
+2630.1.1 = { add_spouse = 1438311 }
+#2665.12.30= { death = yes}
+}
+1438313 = {
+name="Virginia" #Lot's older daughter
+female = yes
+father=1438311
+mother=1438312
+dynasty = 4600142 
+culture= nicoyano
+religion=penitente
+2635.1.25={birth=yes}
+2764.12.30= { death = yes}
+}
+1438314 = {
+name="Amina" #Lot's younger daughter
+female = yes
+father=1438311
+mother=1438312
+dynasty = 4600142 
+culture= nicoyano
+religion=penitente
+2640.1.25={birth=yes}
+2765.12.30= { death = yes}
+}
+1438315 = {
+name="Moab" #Moabites
+female = no
+father=1438311 
+mother=1438313
+dynasty = 4600142 
+trait=legit_bastard
+culture= nicoyano
+religion=penitente
+2665.10.20={birth=yes}
+2705.12.30= { death = yes}
+}
+1438316 = {
+name="Amón" #Ammonites
+female = no
+father=1438311
+mother=1438314 
+dynasty = 4600142 
+culture= nicoyano
+religion=penitente
+trait=legit_bastard
+2665.12.10={birth=yes}
+2731.12.30= { death = yes}
+}
+
+#Bosé Dynasty
+1438320={
+	name="Lucía"
+	dynasty=1538006
+	female = yes
+	culture=italian
+	religion=patria_grande
+	martial=5
+	diplomacy=7
+	stewardship=3
+	intrigue=7
+	learning=5
+	trait=patria_manuelita
+	trait=brave
+	trait=gregarious
+	trait=honest
+	trait=ambitious
+	trait=fair
+	trait=tough_soldier
+	trait=charismatic_negotiator
+	2623.2.7={birth=yes
+		culture= istmeno
+	}
+	2638.1.1 = { add_spouse = 1811020 }
+	2700.1.1={death=yes}
+}
+1438321={
+	name="Lucía"
+	dynasty=4600143
+	female = yes
+	culture=istmeno
+	religion=patria_grande
+	father=1811020
+	mother=1438320
+	2643.3.31={birth=yes
+	}
+	2700.1.1={death=yes}
+}
+1438322={
+	name="Paola"
+	dynasty=4600143
+	female = yes
+	culture=istmeno
+	religion=patria_grande
+	father=1811020
+	mother=1438320
+	2643.3.31={birth=yes
+	}
+	2700.1.1={death=yes}
 }
