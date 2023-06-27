@@ -43,11 +43,51 @@ decisions = {
 	claim_dominion = {
 		is_high_prio = yes
 		only_rulers = yes
+		is_permanent = yes
 		ai_check_interval = 6
 		potential = {
 		religion = Gregorian
 			NOT = {
 				has_landed_title = d_gregorian
+				d_gregorian = { has_holder = no }
+				has_claim = d_gregorian
+			}
+		}
+		allow = {
+			NOT = { trait = slow }
+			NOT = { trait = dwarf }
+			NOT = { trait = leper }
+			NOT = { trait = blinded }
+			NOT = { trait = imbecile }
+			NOT = { trait = eunuch }
+			NOT = { trait = incapable }
+			NOT = { trait = content }
+			prestige = 1000
+			piety = 1000
+			higher_real_tier_than = DUKE
+			independent = yes
+				OR = {
+					martial = 15
+					trait = skilled_tactician
+					trait = brilliant_strategist
+					}
+		}
+		effect = {
+            prestige = -1000
+            piety = -1000
+            add_claim = d_gregorian
+            narrative_event = { id = AoM.51    days = 3 }
+        }	
+	}	
+	create_dominion = {
+		is_high_prio = yes
+		only_rulers = yes
+		is_permanent = yes
+		ai_check_interval = 6
+		potential = {
+		religion = Gregorian
+			NOT = {
+				 d_gregorian = { has_holder = yes } 
 			}
 		}
 		allow = {
@@ -73,41 +113,38 @@ decisions = {
             prestige = -1000
             piety = -1000
             
-                if = {
                     limit = {
                 d_gregorian = { has_holder = no } 
                     }
                 grant_title = d_gregorian
-                
-                #any_playable_ruler = {
-                #limit = { religion = Gregorian }
-                        narrative_event = { id = AoM.50    days = 3 }
-                        #}
-                }
-            #    else_if = {
-            #        limit = { 
-            #             has_landed_title = d_gregorian 
-            #        }
-            #        narrative_event = { id = AoM.52    days = 3 }
-            #    }
-                
-                
+                narrative_event = { id = AoM.50    days = 3 }
 
-                else = {
-                add_claim = d_gregorian
-                    #any_playable_ruler = {
-                        #limit = { religion = Gregorian }
-                        #limit = { d_gregorian = { has_holder = yes } narrative_event = { id = AoM.52    days = 3 } }
-
-                        
-                        
-                            narrative_event = { id = AoM.51    days = 3 }
-                            #}
-                }
-        
         }
 		
 	}	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 }
 
 
