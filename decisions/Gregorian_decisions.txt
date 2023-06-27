@@ -70,29 +70,45 @@ decisions = {
 					}
 		}
 		effect = {
-			prestige = -1000
-			piety = -1000
-			
-				if = {
-					limit = {
-				d_gregorian = { has_holder = no } 
-					}
-				grant_title = d_gregorian
-				
-				#any_playable_ruler = {
-				#limit = { religion = Gregorian }
-						character_event = { id = AoM.50	days = 3 }
-						#}
-				}
-				else = {
-				add_claim = d_gregorian
-					#any_playable_ruler = {
-						#limit = { religion = Gregorian }
-							character_event = { id = AoM.51	days = 3 }
-							#}
-				}
-		
-		}
+            prestige = -1000
+            piety = -1000
+            
+                if = {
+                    limit = {
+                d_gregorian = { has_holder = no } 
+                    }
+                grant_title = d_gregorian
+                
+                #any_playable_ruler = {
+                #limit = { religion = Gregorian }
+                        narrative_event = { id = AoM.50    days = 3 }
+                        #}
+                }
+            #    else_if = {
+            #        limit = { 
+            #             has_landed_title = d_gregorian 
+            #        }
+            #        narrative_event = { id = AoM.52    days = 3 }
+            #    }
+                
+                
+
+                else = {
+                add_claim = d_gregorian
+                    #any_playable_ruler = {
+                        #limit = { religion = Gregorian }
+                        #limit = { d_gregorian = { has_holder = yes } narrative_event = { id = AoM.52    days = 3 } }
+
+                        
+                        
+                            narrative_event = { id = AoM.51    days = 3 }
+                            #}
+                }
+        
+        }
 		
 	}	
 }
+
+
+

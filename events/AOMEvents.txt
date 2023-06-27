@@ -834,12 +834,13 @@ character_event = {
 
 
 #Become Dominius
-character_event = {
+narrative_event = {
 	id = AoM.50
 	title = AoMTITLE.50
 	desc = EVTDESAoM.50
 	picture = GFX_evt_mass_crusade
-	border = GFX_event_normal_frame_diplomacy
+	border = GFX_event_narrative_frame_war
+	major = yes
 	is_triggered_only = yes
 	
 	immediate = {
@@ -854,12 +855,13 @@ character_event = {
 	}
 }
 #get claim on Dominion
-character_event = {
+narrative_event = {
 	id = AoM.51
 	title = AoMTITLE.51
 	desc = EVTDESAoM.51
 	picture = GFX_evt_mass_crusade
-	border = GFX_event_normal_frame_diplomacy
+	border = GFX_event_narrative_frame_war
+	major = yes
 	is_triggered_only = yes
 	
 	immediate = {
@@ -868,8 +870,46 @@ character_event = {
 	#add_claim = d_gregorian
 	}
 	option = {
-		name = EVTOPTA_dominus_claim
-		#prestige = -1000
-		#piety = -1000
+		name = EVTOPTA_dominus_claim_react
+		trigger = { 
+		NOT = {
+		has_landed_title = d_gregorian
+		has_claim = d_gregorian
+			}
+		}
+	}
+	option = {
+		name = EVTOPTA_dominus_claim_incumbent
+		trigger = { 
+		AND = { has_landed_title = d_gregorian }
+		}
+	}
+	option = {
+		name = EVTOPTA_dominus_claim_claimant
+		trigger = { 
+		AND = { has_claim = d_gregorian }
+		}
+	}
+	
+	
+	
+}
+narrative_event = {
+	id = AoM.52
+	title = AoMTITLE.52
+	desc = EVTDESAoM.52
+	picture = GFX_evt_mass_crusade
+	border = GFX_event_narrative_frame_war
+	major = yes
+	is_triggered_only = yes
+	
+	immediate = {
+	#prestige = -1000
+	#piety = -1000
+	#add_claim = d_gregorian
+	}
+	option = {
+		name = EVTOPTA_dominus_claim_dominus_react
+		
 	}
 }
