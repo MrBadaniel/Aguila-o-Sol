@@ -50,7 +50,7 @@ decisions = {
 			NOT = {
 				has_landed_title = d_gregorian
 				d_gregorian = { has_holder = no }
-				has_claim = d_gregorian
+				has_character_flag = claimed_dominion
 			}
 		}
 		allow = {
@@ -76,6 +76,7 @@ decisions = {
             prestige = -1000
             piety = -1000
             add_claim = d_gregorian
+			set_character_flag = claimed_dominion
             narrative_event = { id = AoM.51    days = 3 }
         }	
 	}	
