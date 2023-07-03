@@ -403,21 +403,28 @@ character_event = {
 	
 	trigger = {
 		has_landed_title = e_mexico
-		OR = {
-			trait = tapado
-			trait = destapado
-		}
 	}
 	
 	immediate = {
-		remove_trait = tapado
-		remove_trait = destapado
+		if = {
+			limit = { has_trait = destapado }
+			add_trait = chosen_benemerito
+		}
+		else = {
+			if = {
+				limit = { has_trait = tapado }
+				remove_trait = tapado
+			}
+			add_trait = outsider_benemerito
+		}
 	}
 	
 	option = {
 		name = DEBUG
 	}
 }
+
+### Reminder Event to Select Tapado
 
 # #Clear variables on first start for the Emperor.
 # character_event = {
