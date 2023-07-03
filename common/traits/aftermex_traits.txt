@@ -576,3 +576,25 @@ marian_cristo_rey = {
 	female_compliment_adj = COMPL_BRAVE
 	child_compliment_adj = COMPL_STRONG
 }
+
+chosen_benemerito = {
+	opposites = {
+		outsider_benemerito
+	}
+	intrigue = 2
+	vassal_opinion = 15
+	monthly_character_prestige = 0.2
+	ai_ambition = 50
+	customizer = no
+	random = no
+}
+
+outsider_benemerito = {
+	opposites = {
+		chosen_benemerito
+	}
+	vassal_opinion = -5
+	monthly_character_prestige = 0.05
+	customizer = no
+	random = no
+}

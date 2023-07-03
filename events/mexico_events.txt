@@ -210,67 +210,109 @@ narrative_event = {
 
 ###Mexican Schism mended
 
-	narrative_event = {
-		id = MXR.210
-		name = EVTNAMEMXR.210
-		desc = EVTDESCMXR.210
-		
-		picture = GFX_evt_icon
-		
-		is_triggered_only = yes
-		
-		option = {
-			name = EVTOPTAMXR.200
+narrative_event = {
+	id = MXR.210
+	name = EVTNAMEMXR.210
+	desc = EVTDESCMXR.210
+	
+	picture = GFX_evt_icon
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTAMXR.200
 
-			if = {
-				limit = { religion = cristo_rey }
-				set_parent_religion = { religion = sacred_heart parent = cristo_rey }
-			}
-			if = {
-				limit = { religion = reformista }
-				set_parent_religion = { religion = sacred_heart parent = reformista }
-			}
-
-			give_nickname = nick_the_saint
-			hidden_tooltip = {
-				any_playable_ruler = {
-					limit = {
-						religion = sacred_heart
-						controls_religion = no
-					}
-					narrative_event = { id = MXR.211}
-				}
-			}
+		if = {
+			limit = { religion = cristo_rey }
+			set_parent_religion = { religion = sacred_heart parent = cristo_rey }
 		}
-	}
+		if = {
+			limit = { religion = reformista }
+			set_parent_religion = { religion = sacred_heart parent = reformista }
+		}
 
-	# Convert or Not?
-	narrative_event = {
-		id = MXR.211
-		title = EVTNAMEMXR.211
-		desc = EVTDESCMXR.211
-		
-		picture = GFX_evt_icon
-		
-		is_triggered_only = yes
-		
-		option = { # Yes
-			name = EVTOPTBMXR.211
-			ai_chance = { factor = 75 }
-			religion = FROM
-			any_courtier = {
+		give_nickname = nick_the_saint
+		hidden_tooltip = {
+			any_playable_ruler = {
 				limit = {
 					religion = sacred_heart
-					liege = { character = ROOT }
+					controls_religion = no
 				}
-				religion = FROM
+				narrative_event = { id = MXR.211}
 			}
-			capital_scope = {
-				religion = FROM
-			}
-		}
-		option = { # No
-			name = EVTOPTAMXR.211
-			ai_chance = { factor = 25 }
 		}
 	}
+}
+
+# Convert or Not?
+narrative_event = {
+	id = MXR.211
+	title = EVTNAMEMXR.211
+	desc = EVTDESCMXR.211
+	
+	picture = GFX_evt_icon
+	
+	is_triggered_only = yes
+	
+	option = { # Yes
+		name = EVTOPTBMXR.211
+		ai_chance = { factor = 75 }
+		religion = FROM
+		any_courtier = {
+			limit = {
+				religion = sacred_heart
+				liege = { character = ROOT }
+			}
+			religion = FROM
+		}
+		capital_scope = {
+			religion = FROM
+		}
+	}
+	option = { # No
+		name = EVTOPTAMXR.211
+		ai_chance = { factor = 25 }
+	}
+}
+
+########################## Outsider/Chosen Benemerito Events ####################################
+
+# Benemerito becomes strong
+narrative_event = {
+	id = MXR.215
+	title = EVTNAMEMXR.215
+	desc = EVTDESCMXR.215
+	picture = GFX_evt_byzantine_throne
+
+	is_triggered_only = yes
+
+	major = yes
+	hide_from = yes
+	show_ROOT = yes
+
+	major_trigger = {
+		OR = {
+			character = ROOT
+			same_realm = ROOT
+			ai = no
+		}
+	}
+
+	option = {
+		name = EVTOPTAMXR.215
+		trigger = { character = ROOT }
+	}
+	option = {
+		name = EVTOPTBMXR.215
+		trigger = {
+			NOT = { character = ROOT }
+			same_realm = ROOT
+		}
+	}
+	option = {
+		name = EVTOPTCMXR.215
+		trigger = {
+			NOT = { same_realm = ROOT }
+		}
+	}
+}

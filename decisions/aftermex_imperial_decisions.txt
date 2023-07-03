@@ -216,6 +216,52 @@ decisions = {
 			}
 		}
 	}
+
+	prove_benemerito_strength = {
+		is_high_prio = yes
+		only_independent = yes
+
+		potential = {
+			independent = yes
+			trait = outsider_benemerito
+		}
+		allow = {
+			war = no
+			prisoner = no
+			is_incapable = no
+			is_adult = yes
+			completely_controls = c_mexico
+			ruled_years = 5
+			prestige = 2500
+			piety = 1000
+			custom_tooltip = {
+				text = NO_VASSALS_DISLIKE
+				hidden_tooltip = {
+					NOT = {
+						any_vassal = {
+							higher_tier_than = COUNT
+							NOT = { opinion = { who = ROOT value = 0 } }
+						}
+					}
+				}
+			}
+			# custom_tooltip = {
+			# 	text = IMPERIAL_DECAY_UNDER_10
+			# 	hidden_tooltip = {
+			# 		primary_title = { NOT = { check_variable = { which = "imperial_decay" value = 10 } } }
+			# 	}
+			# }
+		}
+		effect = {
+			add_trait = chosen_benemerito
+			hidden_tooltip = {
+				narrative_event = { id = emf_coronation.1338 }
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
 	
 	reform_lamanita = {
 		only_independent = yes
