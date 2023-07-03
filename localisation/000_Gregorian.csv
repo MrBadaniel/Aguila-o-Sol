@@ -101,13 +101,14 @@ EVTOPTA_remembrance_day_7;Oh Blessed Virgin of Victory help Me!;;;;;;;;;;;;;x
 
 
 claim_dominion;Claim Dominion from sea to sea;;;;;;;;;;;;;x
-
-AoMTITLE.50;Acclaimed Dominus;;;;;;;;;;;;;x
-EVTDESAoM.50;I've been Acclaimed Dominus [Root.GetFirstName]!;;;;;;;;;;;;;x
-EVTOPTA_become_dominus;Wonderful;;;;;;;;;;;;;x
+create_dominion;Restore Dominion from sea to sea;;;;;;;;;;;;;x
+AoMTITLE.50;The Acclamation of [From.GetDynName];;;;;;;;;;;;;x
+EVTDESAoM.50;Within the hallowed halls of the sacred church in [FromFrom.Capital.GetName], a momentous event unfolds in the presence of the solemn clergy and under the watchful eyes of the faithful: [From.GetFirstName] of House [From.GetOnlyDynastyName] stands before the altar, while the [From.GetLordSpiritualName], embodiment of spiritual authority, raises his hands in benediction, signaling the commencement of the ceremony.\n With resolute voices, the army men, soul of the realm’s might, speak as one, proclaiming [From.GetDynName] as their chosen [d_gregorian.Title.GetRulerTitle]. The hallowed walls reverberate with the fervent acclamations as the [From.GetLordSpiritualName] steps forward, and bestows his blessing upon [From.GetTitledFirstName], recognizing [From.GetHerHis] piety, valor, and unwavering commitment to the faith. The sanctified affirmation of the [From.GetLordSpiritualName] lends an indelible mark of divine sanction to [d_gregorian.Title.GetRulerTitle]'s ascent.;;;;;;;;;;;;;x
+EVTOPTA_become_dominus_react;May [Gregorian.GetRandomGodName] bless our [d_gregorian.Title.GetRulerTitle]!;;;;;;;;;;;;;x
+EVTOPTA_dominus_dominus;With [Gregorian.GetRandomGodName] by my side, I will protect the [d_gregorian.Title.GetFullName]!;;;;;;;;;;;;;x
 
 AoMTITLE.51;The Rise of a Claimant;;;;;;;;;;;;;x
-EVTDESAoM.51;Trouble is brewing once more in the north, as [From.GetTitledFirstName] of [From.GetBaseName] has come forward on the back of military support and the blessing of [From.GetHerHis] [From.GetLordSpiritualName] that [From.GetSheHe] should be acclaimed and acknowledged as rightful [d_gregorian.Holder.GetTitle]. With enough men backing [From.GetHerHis] claim, [From.GetTitledName] is now seen as both pious and strong enough to be a possible candidate to become [d_gregorian.Holder.GetTitle]  and thus may challenge [d_gregorian.Holder.GetTitledFirstName] for it. Murmurs ring across the [Gregorian.GetName] world as men wonder how shall [d_gregorian.Holder.GetBestName] respond to these aspirations? \n The rise of [From.GetTitledName] heralds a turning point, as the [Gregorian.GetName] order teeters on the precipice of transformation and the possibility of a new order.;;;;;;;;;;;;;x
+EVTDESAoM.51;Trouble is brewing once more in the north, as [From.GetTitledName] has come forward on the back of military support and the blessing of [From.GetHerHis] [From.GetLordSpiritualName] that [From.GetSheHe] should be acclaimed and acknowledged as rightful [d_gregorian.Holder.GetTitle]. With enough men backing [From.GetHerHis] claim, [From.GetTitledFirstName] is now seen as both pious and strong enough to be a possible candidate to become [d_gregorian.Holder.GetTitle]  and thus may challenge [d_gregorian.Holder.GetTitledFirstName] for it. Murmurs ring across the [Gregorian.GetName] world as men wonder how shall [d_gregorian.Holder.GetBestName] respond to these aspirations?\nThe rise of [From.GetTitledName] heralds a turning point, as the [Gregorian.GetName] world teeters on the precipice of transformation and the possibility of a new order.;;;;;;;;;;;;;x
 EVTOPTA_dominus_claim_react;God help us...;;;;;;;;;;;;;x
 EVTOPTA_dominus_claim_claimant;I will become Dominus;;;;;;;;;;;;;x
 EVTOPTA_dominus_claim_incumbent;Men to Arms!;;;;;;;;;;;;;x

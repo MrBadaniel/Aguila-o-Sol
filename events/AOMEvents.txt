@@ -838,7 +838,7 @@ narrative_event = {
 	id = AoM.50
 	title = AoMTITLE.50
 	desc = EVTDESAoM.50
-	picture = GFX_evt_mass_crusade
+	picture = GFX_evt_coronation
 	border = GFX_event_narrative_frame_war
 	major = yes
 	is_triggered_only = yes
@@ -849,9 +849,16 @@ narrative_event = {
 		#grant_title = d_gregorian
 	}
 	option = {
-		name = EVTOPTA_become_dominus
-		#prestige = -1000
-		#piety = -1000
+		name = EVTOPTA_dominus_dominus
+		trigger = { 
+		AND = { has_landed_title = d_gregorian }
+		}
+	}
+	option = {
+		name = EVTOPTA_become_dominus_react
+		trigger = { 
+			NOT = { has_landed_title = d_gregorian }
+		}
 	}
 }
 #get claim on Dominion
