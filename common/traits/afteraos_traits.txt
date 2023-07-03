@@ -195,6 +195,9 @@ melquisedequita = { #100 burned_hearts_points
 }
 
 adult_baptized = {
+	opposites =  {
+		adult_converted
+	}
 	same_opinion = 5
 	church_opinion = 15
 	monthly_character_piety = 0.05
@@ -204,6 +207,9 @@ adult_baptized = {
 }
 
 adult_converted = {
+	opposites =  {
+		adult_baptized
+	}
 	same_religion_opinion = -5
 	church_opinion = -15
 	monthly_character_piety = -0.05
