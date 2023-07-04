@@ -424,6 +424,69 @@ character_event = {
 	}
 }
 
+### Character becomes Benemérito once again
+character_event = {
+	id = destape.14
+
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		has_landed_title = e_mexico
+		OR = {
+			has_flag = was_outsider_benemerito
+			has_flag = was_chosen_benemerito
+		}
+	}
+
+	immediate = {
+		if = {
+			limit = { has_flag = was_outsider_benemerito }
+			add_trait = outsider_benemerito
+			clr_flag = was_outsider_benemerito
+		}
+		if = {
+			limit = { has_flag = was_chosen_benemerito }
+			add_trait = chosen_benemerito
+			clr_flag = was_chosen_benemerito
+		}
+	}
+}
+
+### New Benemérito. If old Benemérito still alive, set flag in case of return
+character_event = {
+	id = destape.15
+
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		has_landed_title = e_mexico
+		FROMFROM = {
+			is_alive = yes
+			OR = {
+				trait = outsider_benemerito
+				trait = chosen_benemertio
+			}
+		}
+	}
+
+	immediate = {
+		FROMFROM = {
+			if = {
+				limit = { trait = chosen_benemertio }
+				set_flag = was_chosen_benemertio
+				remove_trait = chosen_benemertio
+			}
+			if = {
+				limit = { trait = outsider_benemerito }
+				set_flag = was_outsider_benemerito
+				remove_trait = outsider_benemerito
+			}
+		}
+	}
+}
+
 ### Reminder Event to Select Tapado
 
 # #Clear variables on first start for the Emperor.
