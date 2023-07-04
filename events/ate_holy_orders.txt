@@ -1875,7 +1875,7 @@ narrative_event = {
 narrative_event = {
 	id = holyorder.27
 	title = "EVTNAME_san_patricios_creation"
-	desc = "EVTDESC_san_patricios_creation"
+	desc = EVTDESC_san_patricios_creation
 	picture = "GFX_evt_crusaders"
 	border = "GFX_event_narrative_frame_religion"
 	
@@ -1896,10 +1896,12 @@ narrative_event = {
 		68 = { # Plymouth
 			owner = { religion = glorian }
 		}
+
+		has_global_flag = mexican_reconquistas_unlocked
 	}
 	
 	mean_time_to_happen = {
-		months = 4
+		months = 12
 	}
 	
 	immediate = {
@@ -2004,22 +2006,25 @@ narrative_event = {
 		}
 	}
 	option = {
-		name = "EVTOPTA_san_patricio_creation"
+		name = EVTOPTA_san_patricio_creation
 		trigger = {
 			religion = cristo_rey
 		}
 	}
 	option = {
-		name = "EVTOPTB_san_patricio_creation"
+		name = EVTOPTB_san_patricio_creation
 		trigger = {
-			OR = { 
-				religion_group = christian 
+			OR = {
+				AND = {
+					religion_group = christian 
+					NOT = { religion = cristo_rey }
+				} 
 				religion_group = cult_of_saints
 			}
 		}
 	}
 	option = {
-		name = "EVTOPTC_san_patricios_creation"
+		name = EVTOPTC_san_patricios_creation
 		trigger = {
 			religion_group = mesoamerican_gods
 			NOT = { religion = cristo_rey }

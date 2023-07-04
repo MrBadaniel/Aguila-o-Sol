@@ -229,6 +229,7 @@ targetted_decisions = {
 						has_minor_title = title_regent
 						has_claim = e_mexico
 						has_claim = k_mexico
+						family = FROM
 					}
 					FROM = { is_liege_of = ROOT	}
 					is_republic = no
@@ -307,10 +308,7 @@ targetted_decisions = {
 
 		from_potential = {
 			is_playable = yes
-			OR = {
-				has_landed_title = k_mexico
-				has_landed_title = e_mexico
-			}
+			has_law = succ_mex_elective
 			has_regent = no
 			prisoner = no
 			is_adult = yes
