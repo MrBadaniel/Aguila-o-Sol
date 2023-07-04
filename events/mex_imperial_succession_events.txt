@@ -488,6 +488,273 @@ character_event = {
 }
 
 ### Reminder Event to Select Tapado
+character_event = {
+	id = destape.16
+	title = "TITLE_SELECT_DESTAPADO"
+	desc = EVTDESC_destape_16
+	picture = GFX_evt_shadowy_cabal
+
+	capable_only = yes
+	prisoner = no
+	is_playable = yes
+
+	trigger = {
+		has_law = succ_mex_elective 
+		has_regent = no
+		is_adult = yes
+		NOT = { trait = incapable }
+		NOT = {any_realm_character = {trait = tapado}}
+		NOT = {any_realm_character = {trait = destapado}}
+	}
+
+	mean_time_to_happen = {
+		months = 48
+		modifier = {
+			factor = 0.25
+			trait = infirm
+		}
+		modifier = {
+			factor = 0.75
+			trait = has_typhus
+		}
+		modifier = {
+			factor = 0.75
+			trait = cancer
+		}
+		modifier = {
+			factor = 0.75
+			trait = has_tuberculosis
+		}
+		modifier = {
+			factor = 0.75
+			trait = syphilitic
+		}
+		modifier = {
+			factor = 0.75
+			trait = has_typhoid_fever
+		}
+		modifier = {
+			factor = 0.25
+			trait = leper
+		}
+		modifier = {
+			factor = 0.75
+			trait = has_measles
+		}
+		modifier = {
+			factor = 0.75
+			trait = pneumonic
+		}
+		modifier = {
+			factor = 0.25
+			trait = has_small_pox
+		}
+		modifier = {
+			factor = 0.25
+			trait = has_bubonic_plague
+		}
+		modifier = {
+			factor = 1.4
+			health = 2
+		}
+		modifier = {
+			factor = 0.5
+			health = 1
+		}
+		modifier = {
+			factor = 0.25
+			trait = mangled
+		}
+		modifier = {
+			factor = 1.5
+			ruled_years = 6
+		}
+		modifier = {
+			factor = 0.5
+			ruled_years = 8
+		}
+		modifier = {
+			factor = 0.4
+			ruled_years = 10
+		}
+		modifier = {
+			factor = 0.3
+			ruled_years = 12
+		}
+		modifier = {
+			factor = 0.25
+			ruled_years = 14
+		}
+		modifier = {
+			factor = 0.25
+			ruled_years = 16
+		}
+		modifier = {
+			factor = 0.20
+			ruled_years = 18
+		}
+		modifier = {
+			factor = 0.20
+			ruled_years = 20
+		}
+		modifier = {
+			factor = 0.15
+			ruled_years = 25
+		}
+		modifier = {
+			factor = 0.10
+			ruled_years = 30
+		}
+	}
+
+	option = {
+        name = EVTOPTA_DESTAPE_16
+        ai_chance = { factor = 0.5 }
+		# best_fit_character_for_title = {
+		# 	title = PREV 
+		# 	perspective = ROOT
+		# 	index = 1 
+		# 	character_event = { id = destape.17 }
+		# }
+		most_popular_vassal = {
+			limit = {
+				AND = {
+					is_ruler = yes
+					is_landed = yes
+					is_republic = no
+					is_merchant_republic = no
+					is_theocracy = no
+				}
+				NOR = {
+					any_heir_title = {
+						is_republic = yes
+					}
+					any_heir_title = {
+						is_merchant_republic = yes
+					}
+					any_heir_title = {
+						is_theocracy = yes
+					}
+				}
+			}
+			preferred_limit = {
+				age >= 25
+			}
+			character_event = { id = destape.17 }
+		}
+    }
+
+    option = {
+        name = EVTOPTB_DESTAPE_16
+        ai_chance = { factor = 0.5 }
+		random_vassal = {
+			limit = {
+				AND = {
+					is_ruler = yes
+					is_landed = yes
+					is_republic = no
+					is_merchant_republic = no
+					is_theocracy = no
+				}
+				NOR = {
+					any_heir_title = {
+						is_republic = yes
+					}
+					any_heir_title = {
+						is_merchant_republic = yes
+					}
+					any_heir_title = {
+						is_theocracy = yes
+					}
+					family = ROOT
+				}
+			}
+			preferred_limit = {
+				is_powerful_vassal = yes
+			}
+			preferred_limit = {
+				has_claim = e_mexico
+			}
+			preferred_limit = {
+				has_job_title = job_marshal
+			}
+			preferred_limit = {
+				has_job_title = job_spymaster
+			}
+			preferred_limit = {
+				has_job_title = job_chancellor
+			}
+			preferred_limit = {
+				age >= 30
+			}
+			preferred_limit = {
+				has_minor_title = commander
+			}
+			preferred_limit = {
+				OR = { 
+					tier = KING
+					tier = DUKE 
+				}
+			}
+			preferred_limit = {
+				tier = COUNT
+			}
+			character_event = { id = destape.17 }
+		}
+    }
+
+    option = {
+        name = EVTOPTC_DESTAPE_16
+        ai_chance = { factor = 1 }
+		random_realm_character = {
+			limit = {
+				family = ROOT
+				age >= 25
+				is_merchant_republic = no
+			}
+			preferred_limit = {
+				is_female = no
+			}
+			preferred_limit = {
+				is_powerful_vassal = yes
+			}
+			preferred_limit = {
+				OR = { 
+					tier = KING
+					tier = DUKE 
+				}
+			}
+			preferred_limit = {
+				tier = COUNT
+			}
+			character_event = { id = destape.17 }
+		}
+	}
+
+	option = {
+        name = EVTOPTD_DESTAPE_16
+        ai_chance = { factor = 0.0 }
+		tooltip_info_custom  = TT_TAPADO_CHOOSE_ANOTHER_DAY
+    }
+}
+
+### Give tapado trait to option char from destape.16 
+character_event = {
+	id = destape.17
+
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+
+	}
+
+	immediate = {
+		add_trait = tapado
+		ROOT = { character_event = { id = destape.1 } }
+	}
+}
+
 
 # #Clear variables on first start for the Emperor.
 # character_event = {

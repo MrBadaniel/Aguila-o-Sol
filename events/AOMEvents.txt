@@ -196,7 +196,7 @@ character_event = { #become zealous holy warrior
 		else_if = {
 			limit = {
 				martial > 10
-				}
+			}
 			add_trait = zealous
 			add_trait = holy_warrior
 			piety = 100
@@ -251,11 +251,11 @@ character_event = {
 			}
 			add_trait = depressed
 		}
-		else_if = {
-			limit = {
-				add_trait = stressed
-				}
-		}
+		# else_if = {
+		# 	limit = {
+		# 		add_trait = stressed
+		# 		}
+		# }
 		custom_tooltip = { text = TXT_remembrance_day_end }
 	}
 	

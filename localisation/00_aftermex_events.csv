@@ -192,7 +192,7 @@ EVTOPT_PL1;Viva Cristo Rey!;;;;;;;;;;;;;x
 
 designate_tapado;Designate Tapado;;;;;;;;;x
 designate_tapado_desc;The §YTapado§! - or the "covered one" - is the hidden heir apparent of the Mexican Empire. The Tapado must first be selected from a list of potential candidates and then revealed in the §Y"Destape"§! ceremony when the [ROOT.GetTitle] feels [ROOT.GetHerHis] end draws near.;;;;;;;;;x
-designate_tapado_TOOLTIP_1;Must be a powerful vassal, be on the imperial §Ycouncil§!, be a landed §Ycommander§!, or have a §Yclaim§! on the Empire;;;;;;;;;x
+designate_tapado_TOOLTIP_1;Must be a powerful vassal, be on the imperial §Ycouncil§!, be a landed §Ycommander§!, have a §Yclaim§! on the Empire, or a §Yrelative§! of the current ruler;;;;;;;;;x
 designate_tapado_TOOLTIP_2;Must NOT have been disgraced as the Tapado\n;;;;;;;;;x
 relieve_tapado_TOOLTIP_1;Relieve the Tapado so that a new one may be selected.;;;;;;;;;x
 
@@ -204,6 +204,7 @@ EVTOPTA_destape_2;I must reconsider my successor...;;;;;;;;;;;;;x
 TITLE_DESTAPE;Destape Ceremony;;;;;;;;;;;;;x
 TITLE_DESTAPE_BEGINS;The Unveiling Ceremony Begins;;;;;;;;;;;;;x
 TITLE_DESTAPADO;The Grand Unveiling;;;;;;;;;;;;;x
+TITLE_SELECT_DESTAPADO;Choosing an Heir;;;;;;;;;;;;;x
 EVTDESC_destape_4;The time has come for the great unveiling of El Tapado. The most powerful and influential figures of La República must now be gathered in the main hall of Chapultepec Castle to witness the ceremony, they must stand with [From.GetTitle]'s choice or plot and scheme to place one of their own as the true successor to La Silla Presidencial.;;;;;;;;;;;;;x
 EVTOPTA_destape_4;I should warm up my choosing finger.;;;;;;;;;;;;;x
 EVTOPTB_destape_4;No, this is premature...;;;;;;;;;;;;;x
@@ -222,6 +223,12 @@ EVTDESC_destape_10;The chamber is emptied after the usual mingling and political
 EVTOPTA_destape_10;Let us wait and see what becomes of this...;;;;;;;;;;;;;x
 EVTDESC_destape_11;The grand Destape Ceremony has been cancelled due to war.;;;;;;;;;;;;;x
 EVTOPTA_destape_11;I guess we must wait and see who will be the next to lead...;;;;;;;;;;;;;x
+EVTDESC_destape_16;The §YTapado§! - or the "covered one" - is the hidden heir apparent of the Mexican Empire. The Tapado must first be selected from a list of potential candidates and then revealed in the §Y"Destape"§! ceremony when the [ROOT.GetTitle] feels [ROOT.GetHerHis] end draws near. A truly worthy heir must be a powerful vassal, be on the imperial §Ycouncil§!, be a landed §Ycommander§!, have a §Yclaim§! on the Empire, or a cunning Benemérito might try to put a §Yrelative§! on La Silla Presidencial;;;;;;;;;x
+EVTOPTA_DESTAPE_16;It should be the most popular vassal.;;;;;;;;;;;;;x
+EVTOPTB_DESTAPE_16;It should be someone with strength to lead.;;;;;;;;;;;;;x
+EVTOPTC_DESTAPE_16;It should be someone of my own family.;;;;;;;;;;;;;x
+EVTOPTD_DESTAPE_16;I still need more time to decide...;;;;;;;;;;;;;x
+TT_TAPADO_CHOOSE_ANOTHER_DAY;You may select or relieve a Tapado of your choice with a targeted decision on the desired character at any time.;;;;;;;;;;;;;x
 
 #####PILGRIMAGE EVENTS#####
 CHRONICLE_PILGRIMAGE_TO_MEXICO;[Root.GetTitledName] made a pilgrimage to the city of Mexico.;;;;;;;;;x

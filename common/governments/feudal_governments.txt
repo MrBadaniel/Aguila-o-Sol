@@ -1100,15 +1100,15 @@ feudal_governments = {
 		 frame_suffix = "_montane"
 		 title_prefix = "montane_"
 		potential = {
-			NAND {
+			NAND = {
 				religion = montane
 				controls_religion = yes
 			}
-			 NOT = { is_government_potential = colonial_government }
-			 NOT = { is_government_potential = roman_imperial_government }
-			 NOT = { is_government_potential = mex_imperial_government }
-			 #NOT = { is_government_potential = usos_y_costumbres_government }
-			 religion = montane
+			NOT = { is_government_potential = colonial_government }
+			NOT = { is_government_potential = roman_imperial_government }
+			NOT = { is_government_potential = mex_imperial_government }
+			#NOT = { is_government_potential = usos_y_costumbres_government }
+			religion = montane
 			is_patrician = no
 		}
 		
