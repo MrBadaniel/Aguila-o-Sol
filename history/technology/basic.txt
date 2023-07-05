@@ -38,7 +38,7 @@ technology={
 		d_capital
 		d_mexico
 		d_gateway
-		d_jamaica
+		c_surrey #d_jamaica
 		d_victoria
 	}
 
@@ -513,7 +513,6 @@ technology={
 		d_huasteca
 		d_galveston
 		d_golden_crescent
-		d_quintana_roo
 	}
 
 	768={
@@ -553,13 +552,16 @@ technology={
 		d_tortuga
 		d_gitmo
 		d_islas_de_la_bahia
+		d_cornwall
+		d_middlesex
+		d_surrey
 	}
 
 	768={
 		military=1.8
 		economy=1.8
 		culture=1.5
-		TECH_NAVAL=2.5
+		TECH_NAVAL=2.2
 	}
 
 	2666={
@@ -604,8 +606,6 @@ technology={
 	titles={
 		d_transpecos
 		d_coahuila
-		d_comarca_lagunera
-		d_nueva_extremadura
 		d_altar
 		d_sinaloa
 		d_sonora
@@ -629,28 +629,19 @@ technology={
 		d_mixteca
 		d_costa_chica
 		d_guerrero
-		d_chihuahua
-		d_casas_altas
-		d_durango
 		d_oaxaca
 		d_istmo
-		d_soconusco
 		d_pichucalco
 		d_baja
 		d_baja_sur
 		d_ensenada
-		d_valladolid
 		d_dzilam
-		d_campeche
-		d_tabasco
-		d_la_punta
-		d_laguna_de_terminos
-		d_desertica
 		d_valle_del_pilon
 		d_rio_blanco
+		d_jalisco
+		d_puebla
+		d_triangulo_del_sol
 		d_brazo_del_benemerito
-		d_mar_de_cortes	
-		d_leon		
 	}
 
 	768={
@@ -665,6 +656,7 @@ technology={
 		economy=1.5
 		culture=1.5
 		TECH_NAVAL=0.8
+		TECH_SKIRMISH=2.3
 	}
 }
 
@@ -707,47 +699,19 @@ technology={
 # central america
 technology={
 	titles={
-		d_verapazes
-		d_pacifico
-		d_nicaragua
-		d_atlantida
-		d_altas_honduras
-		d_colon
-		d_mosquito_norte
-		d_las_brumas
-		d_isla_de_san_andres
-		d_mosquito
-		d_chan_santa_cruz
-		d_mayapan
-		d_zapata
-		d_peten
-		d_belize
-		d_lacandon
-		d_los_altos
+		d_las_brumas		
 		d_morazan
-		d_nojpeten
-		d_poptun
-		d_sayaxche
-		d_belmopan
-		d_bacalar
-		d_corozal
-		d_orange_walk
-		d_toledo
-		d_altos_chiapas
-		d_escuintla
-		d_jutiapa
 		d_esquipulas
-		d_izabal
-		d_quiche
-		d_comiteca
-		d_huehuetenango
-		d_sian_kaan
-		d_sonsonate
 		d_san_vicente
-		d_san_miguel
 		d_olancho
 		d_el_paraiso
-
+		d_bosawa
+		d_septentrion
+		d_chontales
+		d_alajuela
+		d_heredia
+		d_guatemala
+		d_mayapan
 	}
 
 	768={
@@ -758,9 +722,9 @@ technology={
 
 	2666={
 		military=1.7
-		economy=1.2
-		culture=1.2
-		TECH_TOLERANCE=2.8
+		economy=1.4
+		culture=1.6
+		TECH_CULTURE_FLEX=2.8
 	}
 }
 
@@ -1046,15 +1010,156 @@ technology={
 		culture=1.4
 	}
 }
-#Mexican & Centroamerican capitals
+
+#####NEW GROUPS BY AOS
+# Mayan Zone
+technology={
+	titles={
+		d_comiteca
+		d_verapazes
+		d_altas_honduras
+		d_zapata
+		d_peten
+		d_lacandon
+		d_los_altos
+		d_nojpeten
+		d_poptun
+		d_sayaxche
+		d_belmopan
+		d_orange_walk
+		d_altos_chiapas
+		d_quiche
+		d_huehuetenango
+		d_valladolid
+}
+	768={
+		military=1.7
+		economy=1.2
+		culture=1.2
+	}
+
+	2666={
+		military=2.0
+		economy=1.0
+		culture=1.2
+		TECH_CULTURE_FLEX=0.8
+		TECH_NAVAL=0.8
+		TECH_RELIGIOUS_CUSTOMS=2.5
+	}
+}	
+# central america  - Caribbean & Pacific
+#Caribbean
+technology={
+	titles={
+		d_colon
+		d_mosquito_norte
+		d_isla_de_san_andres
+		d_mosquito
+		d_chan_santa_cruz
+		d_belize
+		d_bacalar
+		d_corozal
+		d_toledo
+		d_izabal
+		d_sian_kaan
+		d_bluefields
+		d_limon
+		d_quintana_roo
+		d_campeche
+		d_tabasco
+		d_laguna_de_terminos
+		c_celestun
+		c_sisal
+		c_chicxulub #d_yucatan
+		c_progreso #d_yucatan
+		d_cortes
+	}
+
+	768={
+		military=1.7
+		economy=1.2
+		culture=1.2
+	}
+
+	2666={
+		military=1.8
+		economy=1.7
+		culture=1.4
+		TECH_CULTURE_FLEX=2.8
+		TECH_NAVAL=2.3		
+	}
+}
+#Pacific
+technology={
+	titles={
+		d_brunca
+		d_nicoya
+		d_guanacaste
+		d_cocibolca
+		d_leon
+		d_choluteca
+		d_san_miguel
+		d_mar_de_cortes
+		d_sonsonate
+		d_escuintla
+		d_retalhuleu
+		d_soconusco
+		d_nicaragua
+	}
+
+	768={
+		military=1.7
+		economy=1.2
+		culture=1.2
+	}
+
+	2666={
+		military=1.9
+		economy=1.6
+		culture=1.4
+		TECH_CULTURE_FLEX=2.8
+		TECH_NAVAL=2.3		
+	}
+}
+## Mexican Norte
+technology={
+	titles={
+	d_nuevo_leon
+	d_la_punta
+	d_nueva_extremadura
+	d_desertica
+	d_chihuahua
+	d_comarca_lagunera
+	d_durango
+	d_casas_altas
+	}
+
+	768={
+		military=1.7
+		economy=1.2
+		culture=1.2
+	}
+
+	2666={
+		military=2.0
+		economy=1.6
+		culture=1.6
+		TECH_CAVALRY=2.2
+		TECH_NAVAL=0.8		
+	}
+}
+
+#######Mexican & Centroamerican capitals
 #Coastal capitals
 technology={
 	titles={
-		d_triangulo_del_sol
 		d_veracruz
-		d_yucatan
 		d_salvador
-		d_cortes
+		c_san_pedro_sula #d_cortes
+		c_managua #d_nicaragua
+		c_acapulco #d_triangulo_del_sol
+		c_tecpan_de_galeana #d_triangulo_del_sol
+		c_azueta #d_triangulo_del_sol
 	}
 
 	768={
@@ -1066,9 +1171,9 @@ technology={
 	}
 
 	2666={
-		military=1.8
+		military=2.0
 		economy=2.2
-		culture=1.8
+		culture=2.0
 		TECH_TRADE_PRACTICES=2.5
 		TECH_NOBLE_CUSTOMS=2.3
 		TECH_CONSTRUCTION=2.3
@@ -1078,22 +1183,29 @@ technology={
 #Inland capitals
 technology={
 	titles={
-		d_nuevo_leon
-		d_jalisco
-		d_puebla
-		d_guatemala
+		c_merida #d_yucatan
+		c_monterrey #d_nuevo_leon
+		c_guadalajara #d_jalisco
+		c_puebla #d_puebla
+		c_guatemala #d_guatemala
+###Costa Rican Central Valley
+		c_san_jose_CR
+		c_alajuela
+		c_heredia
+		c_cartago
+###End of Costa Rican Central Valley
 	}
 
 	768={
 		military=1.0
 		economy=1.5
-		culture=2.0
+		culture=1.0
 	}
 
 	2666={
 		military=2.2
-		economy=1.8
-		culture=1.8
+		economy=2.0
+		culture=2.0
 		TECH_RECRUITMENT=2.5
 		TECH_SIEGE_EQUIPMENT=2.5
 		TECH_NOBLE_CUSTOMS=2.3
