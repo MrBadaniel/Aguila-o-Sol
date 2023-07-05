@@ -920,3 +920,90 @@ narrative_event = {
 		
 	}
 }
+
+character_event = {
+	id = AoM.60
+	title = AoMTITLE.60
+	desc = EVTDESAoM.60
+	picture = GFX_evt_battle_byzantine
+	border = GFX_event_normal_frame_religion
+	#major = yes
+	#major_trigger= yes
+	is_triggered_only = yes
+		trigger = {
+				religion = Gregorian
+			OR = {
+				death_reason = death_legendary_win_duel
+				death_reason = death_duel
+				death_reason = death_battle_duel
+				death_reason = death_wrestle
+				death_reason = death_mission_wrestle
+				death_reason = death_mission_duel
+				death_reason = death_claim_duel_attacker
+				death_reason = death_claim_duel_defender
+				death_reason = death_battle
+				}
+			}
+	#	major_trigger = {
+    #    is_close_relative = ROOT
+	#	}
+	immediate = {
+		prestige = 1000
+		piety = 1000
+		add_trait = fallen_saint
+		any_close_relative = { limit = { is_close_relative = ROOT } 
+		character_event = { id = AoM.61 days = 1 }
+			}
+		}
+	
+	#option = {
+	#	name = EVTOPTA_fallen_saint
+	#			trigger = {
+	#			NOT = {
+	#			is_close_relative = ROOT
+	#			character = ROOT
+	#				}
+	#			}
+	#}
+	option = {
+		name = EVTOPTA_fallen_saint_relative
+		trigger = {
+		is_close_relative = ROOT
+		NOT = { character = ROOT }
+			}
+		piety = 100
+		prestige = 100
+	}
+	option = {
+		name = EVTOPTA_new_fallen_saint
+		trigger = {
+		character = ROOT
+		}
+		piety = 1000
+		prestige = 1000
+	}
+}
+character_event = {
+	id = AoM.61
+	title = AoMTITLE.61
+	desc = EVTDESAoM.61
+	picture = GFX_evt_battle_byzantine
+	border = GFX_event_normal_frame_religion
+	is_triggered_only = yes
+	
+	
+	immediate = {
+		#prestige = 100
+		#piety = 100
+			}
+	option = {
+		name = EVTOPTA_fallen_saint_relative_1
+		#trigger = {
+		#is_close_relative = ROOT
+		#NOT = { character = ROOT }
+		#	}
+		piety = 100
+		prestige = 100
+	}
+}
+
