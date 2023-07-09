@@ -3915,3 +3915,71 @@ trait=legit_bastard
 	}
 	2700.1.1={death=yes}
 }
+
+
+######PANAMA RULERS
+1438330 = {
+	name="Carlos"	
+	female = no
+	dynasty = 4601218 #Fuentes
+	culture = chilango
+	religion=patria_grande
+	trait = grey_eminence
+	trait = poet
+	trait = erudite
+	trait = scholar
+	trait = lustful
+	2583.12.12={birth=yes
+		culture=istmeno
+	}
+	2652.5.15={death=yes}
+}
+1438331 = {
+	name="Cecilio"	
+	female = no
+	dynasty = 4601218 #Fuentes
+	father =1438330
+	culture=chilango
+	religion=patria_grande
+	trait = poet
+	2608.1.15={birth=yes
+		culture=istmeno
+	}
+	2690.1.1={death=  yes }
+}
+1438332 = {
+	name="Carlos"	
+	female = no
+	dynasty = 4601218 #Fuentes
+	father = 1438330
+	culture=chilango
+	religion=patria_grande
+	trait = dutiful_cleric
+	trait = diligent
+	trait = poet
+	trait = chest_pain
+	2618.9.12={birth=yes
+		culture=istmeno
+	}
+	2650.1.1 = {add_matrilineal_spouse=1811018}
+	2662.5.7={death= {
+		death_reason = death_trait}
+	}
+}
+1438333 = {
+	name="Natalicio"	
+	female = no
+	dynasty = 4601218 #Fuentes
+	father = 1438330
+	culture=chilango
+	religion=patria_grande
+	trait = misguided_warrior
+	trait = brave
+	trait = hedonist
+	2628.4.22={birth=yes
+		culture=istmeno
+	}
+	2649.1.1={death= {
+		death_reason = death_battle}
+	}
+}
