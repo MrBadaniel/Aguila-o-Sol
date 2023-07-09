@@ -935,6 +935,7 @@ e_centroamerica = {
 			baiano = "Salvador do Norte"
 			gaucho = "Salvador do Norte"
 			ribeirinho = "Salvador do Norte"
+			nahua = "Kuskatan"
 			
 			capital = 1848 # c_san_salvador
 			
@@ -1069,7 +1070,54 @@ e_centroamerica = {
 				b_san_luis_la_herradura_SV = {} #formerly c_jiboa
 				b_san_jose_las_isletas_SV = {} #formerly c_jiboa
 			}			
-		}
+			c_sonsonate = { #2411 
+				color = { 229 112 66 }
+				color2 = { 255 255 255 }
+				
+				b_sonsonate_SV = {}
+				b_izcalco_SV = {}
+				b_santa_catarina_masahuat_SV = {}
+				b_sonzacate_SV = {}
+				b_armenia_SV = {}
+				b_san_isidro_SV = {}
+			#	b_caluco_SV = {}
+			#	b_simitepec_SV = {}
+				b_acajutla_SV = {
+					nahua = "Acaxutla"
+				}
+				b_cara_sucia_SV = {}
+			}
+			
+			c_ahuachapan = { #2407
+				color = { 211 23 45 }
+				color2 = { 255 255 255 }
+				
+				b_ahuachapan_SV = {}
+				b_atiquizaya_SV = {}
+				b_concepcion_de_ataco_SV = {}
+				b_turin_SV = {}
+				b_san_lorenzo_SV = {}
+				b_el_refugio_SV = {}
+				b_ashapuco_SV = {}
+				b_apaneca_SV = {}
+			}
+			c_santa_ana = { #2410
+				color = { 226 119 113 }
+				color2 = { 255 255 255 }
+				
+				b_ranchador_SV = {}
+				b_santa_ana_SV = {}
+				b_coatepeque_SV = {}
+				b_texistepeque_SV = {}
+				b_el_congo_SV = {}
+			#	b_san_antonio_pajonal_SV = {}
+			#	b_san_jacinto_SV = {}
+			#	b_guarnecia_SV = {}
+				b_chalchuapa_SV = {}
+				b_ciudad_real_SV = {}
+				b_candelaria_de_la_frontera_SV = {}
+			}			
+		} #End of d_salvador
 		
 		d_san_miguel = {
 			color = { 100 100 100 }
@@ -1212,38 +1260,7 @@ e_centroamerica = {
 			
 			capital = 2410 #Santa Ana
 			
-			c_sonsonate = { #2411 
-				color = { 229 112 66 }
-				color2 = { 255 255 255 }
-				
-				b_sonsonate_SV = {}
-				b_izcalco_SV = {}
-				b_santa_catarina_masahuat_SV = {}
-				b_sonzacate_SV = {}
-				b_armenia_SV = {}
-				b_san_isidro_SV = {}
-			#	b_caluco_SV = {}
-			#	b_simitepec_SV = {}
-				b_acajutla_SV = {
-					nahua = "Acaxutla"
-				}
-				b_cara_sucia_SV = {}
-			}
-			
-			c_ahuachapan = { #2407
-				color = { 211 23 45 }
-				color2 = { 255 255 255 }
-				
-				b_ahuachapan_SV = {}
-				b_atiquizaya_SV = {}
-				b_concepcion_de_ataco_SV = {}
-				b_turin_SV = {}
-				b_san_lorenzo_SV = {}
-				b_el_refugio_SV = {}
-				b_ashapuco_SV = {}
-				b_apaneca_SV = {}
-			}
-			
+
 			#c_acajutla = { #2412
 			#	color = { 211 74 90 }
 			#	color2 = { 255 255 255 }
@@ -1261,21 +1278,29 @@ e_centroamerica = {
 			#	b_chiquihuat_SV = {}
 			#	b_apancoyo_SV = {}
 			#}
-			c_santa_ana = { #2410
-				color = { 226 119 113 }
+		} #End of d_sonsonate
+
+		d_san_vicente = {
+			color = { 104 80 180 }
+			color2 = { 255 255 255 }
+			
+			capital = 2419 #San Vicente
+			
+			garinagu = "Lempa"
+			nahua = "Océlotlán"
+			
+			c_cuscatlan = { #2421
+				color = { 150 124 48 }
 				color2 = { 255 255 255 }
 				
-				b_ranchador_SV = {}
-				b_santa_ana_SV = {}
-				b_coatepeque_SV = {}
-				b_texistepeque_SV = {}
-				b_el_congo_SV = {}
-			#	b_san_antonio_pajonal_SV = {}
-			#	b_san_jacinto_SV = {}
-			#	b_guarnecia_SV = {}
-				b_chalchuapa_SV = {}
-				b_ciudad_real_SV = {}
-				b_candelaria_de_la_frontera_SV = {}
+				b_cojutepeque_SV = {}
+				b_suchitoto_SV = {}
+				b_san_pedro_perulapan_SV = {}
+				b_el_carmen_SV = {}
+				b_san_rafael_cedros_SV = {}
+				b_santa_cruz_michapa_SV = {}
+				b_san_jose_guayabal_SV = {}
+				b_colima_SV = {}
 			}
 			c_metapan = { #2409 
 				color = { 209 102 147 }
@@ -1291,32 +1316,7 @@ e_centroamerica = {
 				b_guajoyo_SV = {}
 				b_frontera_anguiatu_SV = {}
 				b_tecomapa_SV = {}
-			}
-		}
-
-		d_san_vicente = {
-			color = { 104 80 180 }
-			color2 = { 255 255 255 }
-			
-			capital = 2419 #San Vicente
-			
-			garinagu = "Lempa"
-			nahua = "Kuskatan"
-			
-			c_cuscatlan = { #2421
-				color = { 150 124 48 }
-				color2 = { 255 255 255 }
-				
-				b_cojutepeque_SV = {}
-				b_suchitoto_SV = {}
-				b_san_pedro_perulapan_SV = {}
-				b_el_carmen_SV = {}
-				b_san_rafael_cedros_SV = {}
-				b_santa_cruz_michapa_SV = {}
-				b_san_jose_guayabal_SV = {}
-				b_colima_SV = {}
-			}
-			
+			}			
 			#c_jiboa = { #2416
 			#	color = { 113 77 145 }
 			#	color2 = { 255 255 255 }

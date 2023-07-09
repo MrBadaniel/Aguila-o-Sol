@@ -457,7 +457,7 @@ e_colombia = {
 			c_panama = { # 1889
 				color={ 67 185 206 }
 				color2={ 255 255 255 }
-				holy_site = falling_star
+
 				holy_site = apostolic
 				holy_site = patria_grande
 	
@@ -475,36 +475,9 @@ e_colombia = {
 				b_la_alegria_PAN = {}
 				b_las_cumbres_PAN = {}
 			}
-			c_las_puertas = { # 1891
-				color={ 62 96 151 }
-				color2={ 255 255 255 }
-	
-				brazilian = "As Portas"
-				amazonense = "As Portas"
-				baiano = "As Portas"
-				gaucho = "As Portas"
-				ribeirinho = "As Portas"
-	
-				b_gatun_PAN = {}
-				b_colon_PAN = {}
-				b_miraflores_PAN = {}
-				b_pedro_miguel_PAN = {}
-				b_cativa_PAN = {}
-				b_gamboa_PAN = {}
-				b_culebra_PAN = {}
-			}
-			c_cocle = { # 1988
-				color={ 76 124 231 }
-				color2={ 255 255 255 }
-	
-				b_penonome_PAN = {}
-				b_rio_hato_PAN = {}
-				b_la_pintada_PAN = {}
-				b_ola_PAN = {}
-				b_nata_PAN = {}
-				b_el_chiru_PAN = {}
-				b_pocri_PAN = {}
-			}
+			
+			
+
 
 			c_las_perlas = {
 				color={ 150 195 251 }
@@ -673,8 +646,8 @@ e_colombia = {
 				b_coetupo_PAN = {}
 				b_ustupo_PAN = {}
 				b_puerto_escoces_PAN = {}
-				b_nombre_de_dios_PAN = {}
-				b_portobelo_PAN = {}
+			#	b_nombre_de_dios_PAN = {}
+			#	b_portobelo_PAN = {}
 			}
 		} #End of d_darien
 		
@@ -708,6 +681,126 @@ e_colombia = {
 			}
 
 		} #End of d_coiba
+		
+		d_cocle = {
+			color = { 77 151 255 }
+			color2 = { 255 255 255 }
+	
+			capital = 1988 #Penonome
+		
+			c_cocle = { # 1988 Penonome
+				color={ 76 124 231 }
+				color2={ 255 255 255 }
+	
+				b_penonome_PAN = {}
+				b_pajonal_PAN = {}
+				b_canaveral_COC_PAN = {}
+				b_ola_PAN  = {}
+				b_la_pintada_PAN  = {}
+				b_chirigui_arriba_PAN = {}
+				b_cocle_PAN = {}
+				b_molejon_PAN = {}
+			}
+			
+			c_aguadulce = { #2588
+				color = { 76 150 91 }
+				color2 = { 255 255 255 }
+				
+				b_nata_PAN = {}
+				b_pocri_PAN  = {}
+				b_aguadulce_PAN = {}
+				b_guzman_PAN = {}
+				b_salao_PAN = {}
+				b_el_roble_PAN = {}
+				b_capellania_PAN = {}
+				b_el_cristo_PAN = {}
+			}
+			
+			c_anton = { #2589
+				color = { 35 63 190 }
+				color2 = { 255 255 255 }
+				
+				b_anton_PAN = {}
+				b_chame_PAN = {}
+				b_san_carlos_PNO_PAN = {}
+				b_bejuco_PAN = {}
+				b_rio_hato_PAN  = {}
+				b_el_chiru_PAN  = {}
+				b_cabuya_PAN = {}
+				b_punta_chame_PAN = {}
+			}
+		} #End of d_cocle
+		
+		d_colon_PAN = {
+			color={ 65 101 137 }
+			color2={ 255 255 255 }
+			
+			capital = 1992 #Colon
+		
+			c_las_puertas = { # 1992 #Colon
+				color={ 62 96 151 }
+				color2={ 255 255 255 }
+	
+				brazilian = "As Portas"
+				amazonense = "As Portas"
+				baiano = "As Portas"
+				gaucho = "As Portas"
+				ribeirinho = "As Portas"
+	
+				b_cativa_PAN = {}
+				b_colon_PAN = {}
+				b_santa_rita_PAN = {}
+				b_gatun_PAN = {}
+				b_puerto_pilon_PAN = {}
+				b_sabanitas_PAN = {}
+				b_buenavista_PAN = {}
+				b_fuerte_sherman_PAN = {}
+			}
+			
+			c_donoso = {
+				color = { 9 68 64 }
+				color2 = { 255 255 255 }
+				
+				b_cocle_del_norte_PAN = {}
+				b_miguel_de_la_borda_PAN = {}
+				b_el_guasimo_PAN = {}
+				b_san_jose_del_general_PAN = {}
+				b_nuevo_sinai_PAN = {}
+				b_rio_indio_PAN = {}
+				b_san_juan_de_turbe_PAN = {}
+				b_gobea_PAN = {}
+			}
+
+			
+			c_chagres = {
+				color = { 30 219 206 }
+				color2 = { 255 255 255 }
+				
+				b_chagres_PAN = {}
+				b_nuevo_chagres_PAN = {}
+				b_salud_PAN = {}
+				b_escobal_PAN = {}
+				b_pina_PAN = {}
+				b_la_ensenada_PAN = {}
+			}
+
+			
+			c_portobelo = {
+				color = { 77 158 152 }
+				color2 = { 255 255 255 }
+				
+				b_cacique_PAN = {}
+				b_portobelo_PAN = {}
+				b_santa_isabel_PAN = {}
+				b_palenque_PAN = {}
+				b_nombre_de_dios_PAN = {}
+				b_cuango_PAN = {}
+				b_miramar_PAN = {}
+				b_garrote_PAN = {}
+			}
+				
+		} #End of d_colon_PAN
+			
 	} #End of k_puente_grande
 	
 	k_antioquia = {
