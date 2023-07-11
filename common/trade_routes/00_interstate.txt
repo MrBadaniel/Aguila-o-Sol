@@ -53,6 +53,9 @@ interstate_trade = { # The Interstate
 			province_id = 121
 			province_id = 88
 			province_id = 1252
+			province_id = 817
+			province_id = 816
+			province_id = 231
 		}
 	}
 
@@ -114,9 +117,19 @@ interstate_trade = { # The Interstate
 	path = {
 		2074 436 435 431 430
 	}
-	# El Camino Real de Tierra Adentro (US - Mexico) Sandia - Mexico City
+	# El Camino Real de Tierra Adentro (US - Mexico) Sandia - Chihuahua (Stop)
 	path = {
-		1767 1766 1764 1791 1788 1787 1785 1784 1736 1735 1731 745 807 809 744 801 799 800 313 755 337 338
+	799 800 313 755 337 338
+	}
+	# El Camino Real de Tierra Adentro (US - Mexico) Sandia - Chihuahua	- Mexico City 
+	path = {
+		1767 1766 1764 1791 1788 1787 1785 1784 1736 1735 1731 745 807 809 801 799 
+	}
+
+	# Chihahua - Monterrey - Corpus Christi  (Bifuracion)
+	path = {
+	#	1224 1227 231 2331 230 2334 817 815 2338 816 744 801 799 #Corpus to Chihuaha
+		799 801 744 816 2338 815 817 2334 230 2331 231 1227 1224 #Chihuhua to Corpus
 	}
 	# Southern route (I-10) Flagstaff - New Orleans
 	path = {

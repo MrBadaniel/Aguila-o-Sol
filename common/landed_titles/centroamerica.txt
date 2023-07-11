@@ -1039,7 +1039,7 @@ e_centroamerica = {
 				b_sitio_del_nino_SV = {}
 			#	b_tepecoyo_SV = {}
 			#	b_nuevo_cuscatlan_SV = {}
-				b_la_libertad_SV = {}
+			#	b_la_libertad_SV = {}
 				b_zaragoza_SV = {}
 			#	b_san_jose_villanueva_SV = {}
 			#	b_huizucar_SV = {}
@@ -2488,7 +2488,7 @@ e_centroamerica = {
 				b_raya_HN = {}
 				b_iralaya_HN = {} 
 				b_calpo_HN  = {
-					miskitu = "Kalpu"
+					miskito = "Kalpu"
 					mayangna = "Kalpu"
 					rama = "Kalpu"
 				}
@@ -2517,7 +2517,7 @@ e_centroamerica = {
 				
 				b_wampusirpi_HN ={}
 				b_mocoron_HN ={
-					miskitu = "Mukurûn"
+					miskito = "Mukurûn"
 					mayangna = "Mukurûn"
 					rama = "Mukurûn"
 				}
@@ -2526,9 +2526,8 @@ e_centroamerica = {
 				b_kurhpa_HN ={}
 				b_tukrun_HN ={}
 				#b_raya_HN ={}
-
-
-		}
+			}
+		} #End of d_mosquito_norte
 		
 		d_las_brumas = {
 			color={ 150 91 146 }
@@ -2539,7 +2538,7 @@ e_centroamerica = {
 			baiano = "As Névoas"
 			gaucho = "As Névoas"
 			ribeirinho = "As Névoas"
-			miskitu = "Pispis"
+			miskito = "Pispis"
 			mayangna = "Pispis"
 			rama = "Pispis"
 			
@@ -2600,7 +2599,7 @@ e_centroamerica = {
 				b_palmera_NIC = {}
 				b_wani_NIC = {}
 			}
-		}
+		} #End of d_las_brumas
 		
 		d_bosawa = {
 			color = { 105 173 145 }
@@ -2741,16 +2740,17 @@ e_centroamerica = {
 				b_el_cacao_NIC  = {}
 				b_la_esperanza_MB_NIC  = {}
 			}
-		}
-			d_gracias_a_dios = {
+		} #End of d_zelaya
+		
+		d_gracias_a_dios = {
 				color = { 0 150 181 }
 				color2 = { 255 255 255 }
 			
 			capital = c_coco
 		
-		} #End of d_zelaya
+		} #End of d_gracias_a_dios
 
-		} 
+	 
 	} #End of k_mosquito
 	
 	k_costa_rica = {
@@ -3501,7 +3501,7 @@ e_centroamerica = {
 			color = { 0 34 85 }
 			color2 = { 255 255 255 }
 			
-			holy_site = penitente
+
 			
 			capital = 2502 # Leon
 			
@@ -3513,6 +3513,8 @@ e_centroamerica = {
 			c_leon_NIC = { #2502
 				color = { 22 48 86 }
 				color2 = { 255 255 255 }
+				
+				holy_site = penitente	
 				
 				brazilian= "Leão"
 				ribeirinho= "Leão"
