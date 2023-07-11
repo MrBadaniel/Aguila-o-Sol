@@ -884,17 +884,27 @@ e_yucatan = {
 					quichean = "Kan Sak Kaab"
 					cholano = "Kan Sak Kaab"	
 				}
-				b_tekanto_YU = {
-					yucateco = "Te' K'an Tok'"
-					lacandon = "Te' K'an Tok'"
-					quichean = "Te' K'an Tok'"
-					cholano = "Te' K'an Tok'"
-					yucatanense = "Tekantó"					
-				}
+
 				b_muxupip_YU = {}
 
 			}
-		}				
+			
+			c_acanceh = {
+				color = { 30 104 78 }
+				color2 = { 255 255 255 }
+				
+				b_acanceh_YU = {}
+				b_seye_YU = {}
+				b_tecoh_YU = {}
+				b_tekit_YU = {}
+				b_homun_YU = {}
+				b_telchaquillo_YU = {}
+				b_timucuy_YU = {}
+				b_lepan_YU = {}
+				
+			}
+				
+		}	#End of d_yucatan			
 		d_valladolid = {
 			color={ 27	134	182 }
 			color2={ 255 255 255 }
@@ -913,12 +923,12 @@ e_yucatan = {
 				holy_site = lamanita
 				holy_site = neomayan
 	
-				yucatanense = "Izamal"
 				yucateco = "Chi' ch'e'en Itsja'"
 				lacandon = "Chi' ch'e'en Itsja'"
 				quichean = "Chi' ch'e'en Itsja'"
 				cholano = "Chi' ch'e'en Itsja'"
-	
+		
+				b_kaua_YU = {}
 				b_chichen_itza_YU = { #archeological site
 					short_name = yes
 					
@@ -927,30 +937,16 @@ e_yucatan = {
 					quichean = "Chi' ch'e'en Itsja'"
 					cholano = "Chi' ch'e'en Itsja'"
 				}
+				b_piste_YU = {
+					yucatanense = "Pisté"
+				}	
 				b_yaxunah_YU = {#archeological site
 					short_name = yes
 				}
-				b_izamal_YU = {
-					yucateco = "Its Sáansamal"
-					lacandon = "Its Sáansamal"
-					quichean = "Its Sáansamal"
-					cholano = "Its Sáansamal"
-				}
-				b_sotuta_YU = {
-					yucateco = "Zutut Ha"
-					lacandon = "Zutut Ha"
-					quichean = "Zutut Ha"
-					cholano = "Zutut Ha"
-				}
-				b_kantunil_YU = {}
-				b_tunkas_YU = {
-					yucatanense = "Tunkás"
-				}
-				b_piste_YU = {
-					yucatanense = "Pisté"
-				}
-				b_kaua_YU = {}
-
+				b_xcalakoop_YU = {}
+				b_xkatun_YU = {}
+				b_chankom_YU = {}
+				b_ticimul_YU = {}
 			}
 
 			c_valladolid = { 
@@ -987,7 +983,63 @@ e_yucatan = {
 				b_tekom_YU = {}
 
 			}
-		}
+			
+			c_izamal = { #2598
+				color = { 30 46 68 }
+				color2 = { 255 255 255 }
+				
+				b_izamal_YU = {
+					yucateco = "Its Sáansamal"
+					lacandon = "Its Sáansamal"
+					quichean = "Its Sáansamal"
+					cholano = "Its Sáansamal"
+				}
+				
+				b_holca_YU = {
+					yucateco = "Jo'ol Kaab"
+					lacandon = "Jo'ol Kaab"
+					quichean = "Jo'ol Kaab"
+					cholano = "Jo'ol Kaab"
+					yucatanense = "Holcá"
+				}
+				b_kantunil_YU = {}
+				b_kimbila_YU = {}
+				b_tekanto_YU = {
+					yucateco = "Te' K'an Tok'"
+					lacandon = "Te' K'an Tok'"
+					quichean = "Te' K'an Tok'"
+					cholano = "Te' K'an Tok'"
+					yucatanense = "Tekantó"					
+				}
+				b_teya_YU = {}
+				b_hoctun_YU = {}
+				b_tunkas_YU = {
+					yucatanense = "Tunkás"
+				}
+				
+
+			}
+			c_sotuta ={ #2599
+				color = { 30 46 155 }
+				color2 = { 255 255 255 }
+				
+				b_sotuta_YU = {
+					yucateco = "Tsutut Ja'"
+					lacandon = "Zutut Ha"
+					quichean = "Zutut Ha"
+					cholano = "Zutut Ha"
+				}
+				b_cantamayec_YU = {}
+				b_mayapan_YU = {} #not the ruin			
+				b_tixcacaltuyub_YU = {}
+				b_tibolon_YU = {}
+				b_yaxcaba_YU = {}
+				b_tiholop_YU = {}
+				b_huhi_YU = {}
+			
+			}
+				
+		} # End of d_valladolid
 		
 		d_dzilam = {
 			color={ 30 80 120 }
@@ -1074,13 +1126,6 @@ e_yucatan = {
 					yucatanense = "Sucilá"
 				}
 				b_tuzik_YU = {				}
-				b_holca_YU = {
-					yucateco = "Jo'ol Kaab"
-					lacandon = "Jo'ol Kaab"
-					quichean = "Jo'ol Kaab"
-					cholano = "Jo'ol Kaab"
-					yucatanense = "Holcá"
-				}
 				b_yasilhon_YU = {
 					yucatanense = "Yasilhón"
 				}
@@ -1154,6 +1199,7 @@ e_yucatan = {
 			c_mayapan = { # 1815
 				color={ 12 140 195 }
 				color2={ 255 255 255 }
+				
 				holy_site = qabantajik
 				
 				yucateco = "Màayapáan"
@@ -1178,9 +1224,10 @@ e_yucatan = {
 				b_mani_YU = {} #Qab Holy Site
 				b_oxkutzcab_YU = {}
 				b_tzucacab_YU = {}
-				b_mayapan_YU = {} #not the ruin	
+				b_akil_YU = {}
 				b_chumayel_YU = {}
-				b_cantamayec_YU = {}
+				b_tixmehuac = {}
+
 			}
 
 			c_uxmal = {
@@ -1233,12 +1280,17 @@ e_yucatan = {
 			
 			}
 			c_ticul = { # 2278
-					color={ 78 155 128 }
-					color2={ 255 255 255 }
+				color={ 78 155 128 }
+				color2={ 255 255 255 }
+				
 				b_ticul_YU ={}
 				b_abala_YU ={}
-				b_chapab_YU ={}
 				b_mama_YU ={}
+				b_sacalum_YU = {}
+				b_chapab_YU ={}
+				b_dzan_YU = {}
+				b_pustunich_YU = {}
+				b_yaxcopoil_YU = {}
 				#b_mayapan_YU ={
 				#		short_name=yes
 				#		yucateco = "Màayapáan"
@@ -1246,10 +1298,8 @@ e_yucatan = {
 				#		quichean = "Màayapáan"
 				#		cholano = "Màayapáan"
 				#}
-				b_telchaquillo_YU ={}
-				b_tecoh_YU ={}
-				b_tekit_YU = {}
-				b_sacalum_YU = {}
+				#b_telchaquillo_YU ={}
+
 			}
 		}
 		d_chan_santa_cruz = {
