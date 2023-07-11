@@ -1,0 +1,112 @@
+#CODE;ENGLISH;FRENCH;GERMAN;;SPANISH;;;;;;;;;x,,,,,,
+primevalist_fossil_search;Dig For Saurian Bones;;;;;;;;;;;;;x,,,,,,
+primevalist_fossil_search_desc;Primevalists practice the sacred science of paleontology, and can search for dig sites to uncover the remains of their Saurian demigods.;;;;;;;;;;;;;x,,,,,,
+EVTNAME_digsite_describe;Unearthing the Saurians;;;;;;;;;;;;;x,,,,,,
+EVTDESC_digsite_describe;Primevalism's predecessors once unearthed the remains of the Saurian titans through the sacred art of Paleontology, and this practice has been passed down through generations. You shall embark on a journey to a digsite and hopefully unearth a worthy fossil, so that you may learn more about the divine prehistoric age.;;;;;;;;;;;;;x,,,,,,
+EVTOPT_digsite_describe;Now where to start digging for Saurian bones?;;;;;;;;;;;;;x,,,,,,
+EVTDESC_digsite_choosesite;You have located several potential Saurian resting places in the province of [From.GetName]. The people of [From.GetName] follow the [From.Religion.GetName] faith, and are culturally [From.Culture.GetName].\n\nProvinces populated by infidels are more likely to contain Saurian remains, since they do not follow paleontological tradition.;;;;;;;;;;;;x
+EVTDESC_digsite_choosesite_accept;That will be my destination.;;;;;;;;;;;;x
+EVTDESC_digsite_choosesite_reject;That province is unacceptable.;;;;;;;;;;;;x
+EVTDESC_digsite_prepare;Before leaving on your Paleontology Dig to [From.GetName], it would be wise to make preparations.;;;;;;;;;;;;x
+EVTOPT_digsite_prepare_start;Set out with your men.;;;;;;;;;;;;x
+EVTOPT_digsite_prepare_research;Consult the Paleothists for good digsite locations.;;;;;;;;;;;;x
+EVTOPT_digsite_prepare_warband;Assemble a battle-hardened warband to accompany you.;;;;;;;;;;;;x
+EVTOPT_digsite_prepare_envoys;Send envoys ahead to smooth your travels.;;;;;;;;;;;;x
+EVTNAME_digsite_unfriendly;Unfriendly Locals;;;;;;;;;;;;;x
+EVTDESC_digsite_unfriendly;You arrive in [From.GetName], and many of the local residents are distrustful or outright hostile towards you and your men. You notice them watching you surreptitiously and talking amongst themselves, and have a difficult time finding a place to rest.;;;;;;;;;;;;x
+EVTOPT_digsite_unfriendly_ignore;Ignore them.;;;;;;;;;;;;x
+EVTOPT_digsite_unfriendly_warband;We're well armed, they won't risk attacking us.;;;;;;;;;;;;x
+EVTOPT_digsite_unfriendly_envoys;My envoys have arranged for safe passage.;;;;;;;;;;;;x
+EVTOPT_digsite_unfriendly_intrigue;Try to keep a low profile.;;;;;;;;;;;;x
+EVTDESC_digsite_provowner;Primevalists from a nearby realm are attempting to excavate Saurian remains from your lands in [Root.GetName]. Their presence seems to be drawing the ire of the local [Root.Religion.GetName] population, who are preparing for a confrontation with them.;;;;;;;;;;;;x
+EVTOPT_digsite_provowner_violence;Let the locals drive them away.;;;;;;;;;;;;x
+EVTOPT_digsite_provowner_peaceful;We must avoid bloodshed.;;;;;;;;;;;;x
+EVTDESC_digsite_peaceful;Mixed among the local residents in [From.GetName], you see the occasional soldier wearing the colors of [From.Holder.GetTitledFirstName]. Fortunately, the soldiers seem to be ensuring that order is maintained and the locals allow you to pass without conflict.;;;;;;;;;;;;x
+EVTNAME_digsite_violence;Hostile Locals;;;;;;;;;;;;;x
+EVTDESC_digsite_violence;Your continued presence in [From.GetName] has drawn the ire of the local peasantry, and you are now confronted by a disorganized mob of angry villagers. They may not be well armed, and they're certainly not well trained...\n\n...but there are a lot of them.;;;;;;;;;;;;x
+EVTOPT_digsite_violence_flee;We should turn back.;;;;;;;;;;;;x
+TXT_digsite_flee;Your Saurian Dig is over.;;;;;;;;;;;;x
+TXT_digsite_continue;Your Saurian Dig continues.;;;;;;;;;;;;x
+EVTOPT_digsite_violence_fight;We can fight our way through!;;;;;;;;;;;;x
+EVTOPT_digsite_violence_fightwarband;They'll back down from a vulgar display of power!;;;;;;;;;;;;x
+EVTOPT_digsite_violence_bribe;Peasants like silver, right?;;;;;;;;;;;;x
+EVTNAME_digsite_drivenout;Driven from [From.From.GetName];;;;;;;;;;;;x
+EVTDESC_digsite_drivenout;Hordes of angry local villagers have driven you from their lands, ending your Paleontological Dig. If it makes you feel better, tell yourself you left to avoid shedding THEIR blood.;;;;;;;;;;;;x
+EVTNAME_digsite_agent;Competing Excavator;;;;;;;;;;;;;x
+EVTDESC_digsite_agent;During your expedition to [From.GetName], you encounter an agent of an unknown lord who shares your faith. He appears to be scouting new Saurian sites for his master, in direct competition with you!;;;;;;;;;;;;x
+EVTOPT_digsite_agent;May the best paleontologist win!;;;;;;;;;;;;x
+EVTOPT_digsite_agent_research;Direct him to a promising site nearby.;;;;;;;;;;;;x
+EVTOPT_digsite_agent_intrigue;Make him disappear.;;;;;;;;;;;;x
+EVTNAME_digsite_collapse;Collapse!;;;;;;;;;;;;x
+EVTDESC_digsite_collapse;You hoped the wooden reinforcement beams would be enough, but one of them slipped. The centuries have not been kind to the crumbling concrete and rusty iron, and the whole unstable mess is coming down around you!;;;;;;;;;;;;x
+EVTOPT_digsite_collapse_flee;Run for it!;;;;;;;;;;;;x
+EVTOPT_digsite_collapse_brave;I won't let debris stand in my way!;;;;;;;;;;;;x
+EVTOPT_digsite_collapse_plan;I planned for this risk.;;;;;;;;;;;;x
+recent_digsite;Recent Saurian Dig;;;;;;;;;;;;;x
+recent_digsite_desc;This character has recently gone on a Saurian Dig.;;;;;;;;;;;;x
+preparing_saurian_dig;Preparing Saurian Dig;;;;;;;;;;;;;x
+preparing_expedition_desc;This character is preparing to go on a Saurian Dig.;;;;;;;;;;;;x
+EVTNAME_digsite_value;Discovery in [From.GetName];;;;;;;;;;;;x
+EVTDESC_digsite_worthless;Your expedition has turned up very little valuable salvage. You have explored many ruined excavations, and everywhere you look you find the ruins picked clean.;;;;;;;;;;;;x
+EVTOPT_digsite_worthless;Disappointing.;;;;;;;;;;;;x
+EVTOPT_digsite_worthless_compete;Someone has been here before me...;;;;;;;;;;;;x
+EVTOPT_digsite_worthless_research;There is another site nearby we could check.;;;;;;;;;;;;x
+EVTDESC_digsite_moderate;Your expedition has turned up a few items of useful salvage. In the ruined buildings and tunnels you have uncovered several Saurian artifacts, though you have not yet found the kind of major prize you were hoping for.;;;;;;;;;;;;x
+EVTOPT_digsite_moderate;At least I found something.;;;;;;;;;;;;x
+EVTOPT_digsite_moderate_research;Hawk these trinkets, I know of another site.;;;;;;;;;;;;x
+EVTDESC_digsite_safe;Your men have discovered a large metal box beneath the ruins of a long-forgotten structure in [From.GetName]. The strongbox is corroded but still intact. Who knows what mysteries or treasures of the Old World are sealed within it?;;;;;;;;;;;;x
+EVTOPT_digsite_safe;I'll know soon, crack it open!;;;;;;;;;;;;x
+EVTOPT_digsite_safe_patient;Have your tinker open it carefully.;;;;;;;;;;;;x
+EVTNAME_digsite_item;Salvage;;;;;;;;;;;;;x
+EVTDESC_digsite_scraps;You have found scraps of Old World artifacts, but none of them are especially well preserved. There are objects that may have once been used for cooking or as craftsmen's tools, but it's hard to tell with the corrosion and decay of the centuries. They might be worth a few gold pieces to the right buyer.;;;;;;;;;;;;x
+EVTDESC_digsite_coins;Your men have discovered a cache of corroded coins from the Old World. Their coins were inexplicably made out of base metals rather than gold or silver, dramatically reducing their value as working currency. Still, they might be worth a few gold pieces.;;;;;;;;;;;;x
+EVTDESC_digsite_glassware;You have discovered a long-hidden supply of Old World glassware. Unlike iron objects which have mostly been consumed by rust, many glass objects have survived. You need but wipe off the centuries and you'll have finely polished Old World artifacts that artisans today cannot replicate.;;;;;;;;;;;;x
+EVTDESC_digsite_shades;You have found a long-abandoned pair of old-world glasses. Although they at first appear to be coated in dust, further inspection reveals that the glasses are tinted. Although the frame is somewhat rusted, the lenses themselves are in good condition. With some work, they could be used to create fully-functional and stylish shades.;;;;;;;;;;;;x
+EVTDESC_digsite_safe_smash;Your men take to the box with hammers, and succeed in ripping the door off after a few hours. Whether it was the rough handling of the box, the ravages of time and moisture, or simple bad luck, you find nothing of value within.;;;;;;;;;;;;x
+EVTNAME_digsite_safe_jewellery;Treasures!;;;;;;;;;;;;x
+EVTDESC_digsite_safe_jewellery;The safe door finally opens, and you can see the contents: a variety of Old World jewelery, glittering with gold, silver, and precious stones. The craftsmanship is finer and more intricate than what modern goldsmiths can produce.;;;;;;;;;;;;x
+EVTNAME_digsite_trex_skeleton;Tyrannosaurus Skeleton!;;;;;;;;;;;;x
+EVTDESC_digsite_trex_skeleton;The last of the dirt is cleared away after much work, and you find that you have come into possession of none other than the Saurian skeleton of Tyrannosaurus Rex! Often considered the King of the dinosaurs, its skeleton will bring great honor to any Primevalist who owns it!;;;;;;;;;;;;x
+trex_skeleton;Tyrannosaur Skeleton;;;;;;;;;;;;x
+EVTNAME_digsite_dinosaur_small_bone;Saurian Bones;;;;;;;;;;;;x
+EVTDESC_digsite_dinosaur_small_bone;You and your team were able to recover various Saurian bones, though are unable to tell what Saurian they belonged to or where on the body they belong. Nonetheless, it's an admirable find and can still be brought back home.;;;;;;;;;;;;x
+dinosaur_small_bone;Dinosaur Bone;;;;;;;;;;;;x
+EVTNAME_digsite_dinosaur_teeth;Saurian Teeth;;;;;;;;;;;;x
+EVTDESC_digsite_dinosaur_teeth;You and your team uncover the sharp teeth of a carnivorous Saurian, though the sizes range from Velociraptor to Tyrannosaur. Saurian teeth are prized accessories among Primevalists, and you certainly wouldn't mind bringing some back.;;;;;;;;;;;;x
+dinosaur_teeth;Carnivore Teeth;;;;;;;;;;;;x
+EVTNAME_digsite_brontosaurus_skeleton;Brontosaur Skeleton!;;;;;;;;;;;;x
+EVTDESC_digsite_brontosaurus_skeleton;The last of the dirt is cleared away after much work, and you find that you have come into possession of the Saurian skeleton of the colossal Brontosaurus! The largest and most enduring of the Saurians, its skeleton will open many eyes at its enormous size.;;;;;;;;;;;;x
+brontosaurus_skeleton;Brontosaur Skeleton;;;;;;;;;;;;x
+EVTNAME_digsite_dinosaur_jawbone;Saurian Jawbone;;;;;;;;;;;;x
+EVTDESC_digsite_dinosaur_jawbone;You and your team uncover a sizeable jawbone from the dig site, likely belonging to a larger dinosaur. Jawbones are said to bring good fortune for Primevalists, and some smaller jawbones are even known to be made into crude weapons.;;;;;;;;;;;;x
+dinosaur_jawbone;Saurian Jawbone;;;;;;;;;;;;x
+EVTNAME_digsite_dinosaur_claw;Saurian Claw;;;;;;;;;;;;x
+EVTDESC_digsite_dinosaur_claw;You and your team uncover pairs of sharp claw bones, likely belonging to a faster predator such as Velociraptor. These are often fashioned into daggers or small blades, and it might be good to have one on hand.;;;;;;;;;;;;x
+dinosaur_claw;Saurian Claw;;;;;;;;;;;;x
+EVTNAME_digsite_dinosaur_tailbone;Saurian Tailbone;;;;;;;;;;;;x
+EVTDESC_digsite_dinosaur_tailbone;You and your team uncover a decently sized tailbone, though its exact origins are difficult to determine. Primevalists often hang Saurian tailbones above their main hall to represent its balancing properties.;;;;;;;;;;;;x
+dinosaur_tailbone;Saurian Tailbone;;;;;;;;;;;;x
+EVTNAME_digsite_mammoth_tusk;Mammoth Tusk;;;;;;;;;;;;x
+EVTDESC_digsite_mammoth_tusk;You and your team uncover what is indisputably the tusk of the Saurian known as a Mammoth, whose descendants include the modern elephant. Mammoth tusks are often fashioned into various weapons or used as a mantlepiece center to envoke the power of this elephantine Saurian.;;;;;;;;;;;;x
+mammoth_tusk;Mammoth Tusk;;;;;;;;;;;;x
+EVTNAME_digsite_triceratops_skeleton;Triceratops Skeleton!;;;;;;;;;;;;x
+EVTDESC_digsite_triceratops_skeleton;The last of the dirt clears away after much work, and you find that you have uncovered the skeleton of the stout and hardy Triceratops. Its head was said to contain a bone shield to defend against enemies, and three horns with which to retaliate.;;;;;;;;;;;;x
+triceratops_skeleton;Triceratops Skeleton;;;;;;;;;;;;x
+EVTDESC_digsite_safe_textbooks;The safe door finally opens, and you can see the contents: several stacks of thick books. They have been sealed away from the ravages of the weather, but the centuries have still taken their toll on their brittle brown pages.\n\nWith luck, a scholar fluent in Old World languages will be able to extract useful information from the books before they crumble into dust.;;;;;;;;;;;;x
+EVTNAME_digsite_result;Saurian Dig ends;;;;;;;;;;;;;x
+EVTDESC_digsite_result_poor;Not all Saurian Digs end in success. Sometimes the recovered artifacts are badly damaged, sometimes they are worthless, sometimes there isn't anything to salvage because the area has been picked clean, and sometimes dangerous circumstances interrupt the expedition.\n\nThis is one of those times.;;;;;;;;;;;;x
+EVTOPT_digsite_result_poor;Until next time.;;;;;;;;;;;;x
+EVTDESC_digsite_result_medium;You have returned from your Saurian Dig with baubles and artifacts of the Old World. Although you did not find a tech prize truly worthy of [Root.Religion.GetRandomGodName]'s favor, at least you didn't return empty handed.;;;;;;;;;;;;x
+EVTOPT_digsite_result_medium_keep;I'll keep the salvage for myself.;;;;;;;;;;;;x
+EVTOPT_digsite_result_medium_sell;Someone will buy these trinkets.;;;;;;;;;;;;x
+EVTOPT_digsite_result_medium_donate;I will donate these artifacts to the paleothists for study.;;;;;;;;;;;;x
+EVTDESC_digsite_result_good;You have returned from your Saurian Dig with an exciting prehistoric prize, worthy of [Root.Religion.GetRandomGodName]'s favor. Your court is buzzing with word of your success, and the paleothists are already coming to you with requests to examine your prize. It remains to be seen whether you can return the artifact to a functional state.\n\nThis will surely bring you fame, power, and understanding of the old world.;;;;;;;;;;;;x
+EVTOPT_digsite_result_study;I must study and repair my prize.;;;;;;;;;;;;x
+EVTNAME_digsite_repair_prize;The Past Restored;;;;;;;;;;;;;x
+EVTDESC_digsite_study_textbooks;After weeks of study, your scholars have learned many things about your collection of pre-calamity books. Several of the books have fallen to pieces during transport or study, but those that survived are providing valuable insight into medicine, engineering, and other topics.\n\nMore study will reveal additional secrets of the old world!;;;;;;;;;;;;x
+EVTNAME_digsite_fail_prize;Unsolved Mysteries;;;;;;;;;;;;;x
+EVTDESC_digsite_study_fail;Despite weeks of effort you have failed to restore your salvaged prize to a useful state. Your assistants don't possess the knowledge or the tools to help you accomplish this task, and your efforts only seem to be causing additional damage. Major portions of the prize are damaged or missing, and there may be some mystical component required to make the device function that is not available to you.;;;;;;;;;;;;x
+EVTOPT_digsite_study_keep;I can still display it as art.;;;;;;;;;;;;x
+EVTOPT_digsite_study_sell;Someone will buy it from me.;;;;;;;;;;;;x
+EVTOPT_digsite_study_learn;The real prize is the knowledge I've gained.;;;;;;;;;;;;x
+EVTOPT_digsite_study_donate;The paleothists will find a use for it.;;;;;;;;;;;;x

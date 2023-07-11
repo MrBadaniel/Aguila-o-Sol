@@ -6,20 +6,23 @@ character_event = {
 	
 	picture = GFX_evt_book_carolingian_script
 	border = GFX_event_normal_frame_religion
-	religion = primevalist
+	OR = {
+				religion = primevalist
+				religion = primevalist_reformed
+	}
 	is_triggered_only = yes
 
 	option = {
-		name = carnivore
+		name = carnivore_hunter_aspect
 		add_character_modifier = { name = carnivore_hunter_aspect duration = -1 }
 	}
 	option = {
-		name = herbivore
+		name = herbivore_gatherer_aspect
 		add_character_modifier = { name = herbivore_gatherer_aspect duration = -1 }
 	}
 }
 
-narrative_event = {
+narrative_event = { #Dead Event 
 	id = primevalist.2
 	title = EVTTITLE_primevalist_2
 	desc = EVTDESC_primevalist_2
@@ -123,7 +126,7 @@ narrative_event = {
 	
 	trigger = {
 		can_call_crusade = yes
-		ROOT = { religion = primevalist }
+		ROOT = { religion = primevalist_reformed }
 	}
 	
 	option = {
@@ -168,7 +171,10 @@ narrative_event = { #Founding Pangaea
 	
 	is_triggered_only = yes
 	
-	religion = primevalist
+	OR = {
+				religion = primevalist
+				religion = primevalist_reformed
+	}
 	
 	trigger = {
 		has_landed_title = e_pangaea
