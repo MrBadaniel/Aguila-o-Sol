@@ -79,7 +79,7 @@ world_gulf_coast = {
 
 world_caribbean = {
 	duchies = {
-		d_havana d_las_villas d_camaguey d_oriente d_gitmo d_jamaica d_bahama d_french_antilles d_windward_isles d_leeward_isles d_haiti d_santo_domingo d_el_cibao d_puerto_rico d_grand_cayman d_leeward_antilles d_trinidad_and_tobago d_isla_de_san_andres d_tortuga
+		d_havana d_las_villas d_camaguey d_oriente d_gitmo d_bahama d_french_antilles d_windward_isles d_leeward_isles d_haiti d_santo_domingo d_el_cibao d_puerto_rico d_grand_cayman d_leeward_antilles d_trinidad_and_tobago d_isla_de_san_andres d_tortuga d_cornwall d_middlesex d_surrey
 	}
 }
 
@@ -97,34 +97,40 @@ world_west_coast = {
 
 world_central_america_pacific = {
 	duchies = {
-		d_guatemala d_pacifico d_nicaragua d_salvador d_zapata d_chiapas d_colima d_altar d_sinaloa d_sonora d_yaqui d_salado d_zacatecas d_jalisco d_costalegre d_nayarit d_michoacan d_triangulo_del_sol d_tierra_caliente d_mixteca d_costa_chica d_guerrero d_casas_altas d_chihuahua d_durango d_comarca_lagunera d_oaxaca d_istmo d_baja d_baja_sur d_ensenada d_equinox_isles d_los_altos d_mazatlan
+		d_guatemala d_pacifico d_nicaragua d_salvador d_zapata d_chiapas d_colima d_altar d_sinaloa d_sonora d_yaqui d_salado d_zacatecas d_jalisco d_costalegre d_nayarit d_michoacan d_triangulo_del_sol d_tierra_caliente d_mixteca d_costa_chica d_guerrero d_casas_altas d_chihuahua d_durango d_comarca_lagunera d_oaxaca d_istmo d_baja d_baja_sur d_ensenada d_equinox_isles d_los_altos d_mazatlan d_pichucalco d_altos_chiapas d_comiteca d_soconusco d_huehuetenango d_quiche d_retalhuleu d_escuintla d_san_vicente d_san_miguel d_choluteca d_leon d_septentrion d_cocibolca d_guanacaste d_nicoya d_alajuela d_brunca d_mar_de_cortes
 	}
-	provinces = {
-		1884 1886 1887
+	counties = {
+		c_san_jose c_los_santos c_puntarenas c_heredia c_cartago c_puriscal
 	}
+#	provinces = {
+#		1884 1886 1887
+#	}
 }
 
 world_central_america_caribbean = {
 	duchies = {
-		d_peten d_belize d_lacandon d_atlantida d_altas_honduras d_colon d_mosquito_norte d_las_brumas d_mosquito d_quintana_roo d_campeche d_tabasco d_yucatan d_chan_santa_cruz d_laguna_de_terminos d_mayapan d_tamaulipas d_rio_bravo_del_norte d_huasteca d_veracruz d_coahuila d_nueva_extremadura d_nuevo_leon d_bajio_occidente d_guanajuato d_queretaro d_san_luis_potosi d_hidalgo d_mexico d_edomex d_olmeca d_puebla d_verapazes 
+		d_peten d_belize d_lacandon d_atlantida d_altas_honduras d_colon d_mosquito_norte d_las_brumas d_mosquito d_quintana_roo d_campeche d_tabasco d_yucatan d_chan_santa_cruz d_laguna_de_terminos d_mayapan d_tamaulipas d_rio_bravo_del_norte d_huasteca d_veracruz d_coahuila d_nueva_extremadura d_nuevo_leon d_bajio_occidente d_guanajuato d_queretaro d_san_luis_potosi d_hidalgo d_mexico d_edomex d_olmeca d_puebla d_verapazes d_puuc d_valladolid d_dzilam d_sian_kaan d_bacalar d_corozal d_orange_walk d_belmopan d_toledo d_poptun d_sayaxche d_nojpeten d_izabal d_cortes d_olancho d_bosawa d_zelaya d_bluefields d_chontales d_limon d_rio_blanco d_desertica d_la_punta d_esquipulas d_morazan d_alacranes
 	}
-	provinces = {
-		1885 1981
+	counties = {
+		c_sarapiqui c_paraiso c_turrialba
 	}
+#	provinces = {
+#		1885 1981
+#	}
 }
 
 world_south_america_pacific = {
 	duchies = {
-		d_choco d_cauca
+		d_choco d_cauca d_chiriqui d_veraguas d_azuero d_coiba d_cocle d_panama d_darien
 	}
-	provinces = {
-		1890 1889 1888 1994 1993 1988 1987 1893
-	}
+#	provinces = {
+#		1890 1889 1888 1994 1993 1988 1987 1893
+#	}
 }
 
 world_south_america_caribbean = {
 	duchies = {
-		d_guainia d_angostura d_caroni d_delta_amacuro d_barinas d_portuguesa d_meta d_guarico d_casanare d_anzoategui d_gran_caracas d_falcon d_lara d_monagas d_sucre d_aguas d_guajira d_los_andes d_zulia d_cayenne d_georgetown d_abak d_suriname d_cundinamarca d_santander d_gran_cafetal d_antioquia d_macondo d_cordoba d_cesar d_magdalena d_roraima d_gran_sabana d_apure d_vichada d_magdalena_medio d_cojedes d_sipaliwini d_calcoene d_viejo_caldas
+		d_guainia d_angostura d_caroni d_delta_amacuro d_barinas d_portuguesa d_meta d_guarico d_casanare d_anzoategui d_gran_caracas d_falcon d_lara d_monagas d_sucre d_aguas d_guajira d_los_andes d_zulia d_cayenne d_georgetown d_abak d_suriname d_cundinamarca d_santander d_gran_cafetal d_antioquia d_macondo d_cordoba d_cesar d_magdalena d_roraima d_gran_sabana d_apure d_vichada d_magdalena_medio d_cojedes d_sipaliwini d_calcoene d_viejo_caldas d_bocas_del_toro d_ngabe_bugle d_colon_PAN
 	}
 	provinces = {
 		1892 1992 1891 743
@@ -244,7 +250,7 @@ custom_brazilian_invasion_target_region = {
 
 custom_pirate_invasion_target_region = {
 	duchies = {
-		d_atlantida d_colon d_mosquito_norte d_mosquito d_costa_rica d_coiba d_chiriqui d_panama d_darien d_cordoba d_macondo d_magdalena d_guajira d_zulia d_aguas d_falcon d_lara d_gran_caracas d_anzoategui d_sucre d_monagas d_delta_amacuro d_georgetown d_suriname d_cayenne
+		d_atlantida d_colon d_mosquito_norte d_mosquito d_costa_rica d_coiba d_chiriqui d_panama d_darien d_cordoba d_macondo d_magdalena d_guajira d_zulia d_aguas d_falcon d_lara d_gran_caracas d_anzoategui d_sucre d_monagas d_delta_amacuro d_georgetown d_suriname d_cayenne d_bluefields d_limon d_bocas_del_toro d_ngabe_bugle d_colon_PAN d_cocle d_veraguas d_cortes d_izabal 
 	}
 }
 
@@ -310,13 +316,19 @@ custom_empire_mexico = {
 
 custom_oldworld_mexico = {
 	duchies = {
-		d_jalisco d_costalegre d_nayarit d_colima d_michoacan d_tierra_caliente d_triangulo_del_sol d_mixteca d_costa_chica d_guerrero d_oaxaca d_istmo d_olmeca d_veracruz d_mexico d_edomex d_hidalgo d_bajio_occidente d_guanajuato d_queretaro d_zacatecas d_salado d_san_luis_potosi d_huasteca d_puebla d_baja d_ensenada d_baja_sur d_altar d_sonora d_yaqui d_mazatlan d_sinaloa d_casas_altas d_chihuahua d_durango d_comarca_lagunera d_coahuila d_nuevo_leon d_rio_bravo_del_norte d_tamaulipas d_tabasco d_campeche d_yucatan d_mayapan d_laguna_de_terminos d_chan_santa_cruz d_quintana_roo d_belize d_peten d_lacandon d_zapata d_chiapas d_nueva_extremadura
+		d_jalisco d_costalegre d_nayarit d_colima d_michoacan d_tierra_caliente d_triangulo_del_sol d_mixteca d_costa_chica d_guerrero d_oaxaca d_istmo d_olmeca d_veracruz d_mexico d_edomex d_hidalgo d_bajio_occidente d_guanajuato d_queretaro d_zacatecas d_salado d_san_luis_potosi d_huasteca d_puebla d_baja d_ensenada d_baja_sur d_altar d_sonora d_yaqui d_mazatlan d_sinaloa d_casas_altas d_chihuahua d_durango d_comarca_lagunera d_coahuila d_nuevo_leon d_rio_bravo_del_norte d_tamaulipas d_tabasco d_campeche d_yucatan d_mayapan d_laguna_de_terminos d_chan_santa_cruz d_quintana_roo d_peten d_lacandon d_zapata d_chiapas d_nueva_extremadura d_dzilam d_valladolid d_sian_kaan d_bacalar d_pichucalco d_comitca d_soconusco d_valle_del_pilon d_la_punta d_rio_blanco d_mar_de_cortes d_altos_chiapas d_comiteca
+	}
+	counties = { 
+		c_isla_socorro c_isla_guadalupe c_alacranes
 	}
 }
 
 custom_greater_mexico = {
 	duchies = {
-		d_jalisco d_costalegre d_nayarit d_colima d_michoacan d_tierra_caliente d_triangulo_del_sol d_mixteca d_costa_chica d_guerrero d_oaxaca d_istmo d_olmeca d_veracruz d_mexico d_edomex d_hidalgo d_bajio_occidente d_guanajuato d_queretaro d_zacatecas d_salado d_san_luis_potosi d_huasteca d_puebla d_baja d_ensenada d_baja_sur d_altar d_sonora d_yaqui d_mazatlan d_sinaloa d_casas_altas d_chihuahua d_durango d_comarca_lagunera d_coahuila d_nuevo_leon d_rio_bravo_del_norte d_tamaulipas d_tabasco d_campeche d_yucatan d_mayapan d_laguna_de_terminos d_chan_santa_cruz d_quintana_roo d_belize d_peten d_lacandon d_zapata d_chiapas d_nueva_extremadura d_new_mexico d_navajoland d_hopi d_apacheria d_gadsden d_arizona d_colorado_river d_mesilla d_mogollon  d_nevada d_shasta_cascade d_redwoods d_goldengate d_east_bay d_salinas d_wineland d_central_valley d_kern d_motherlode d_north_valley d_sacramento d_death_valley d_los_angeles d_berdoo d_salton d_los_padres d_mojave d_basin d_northern_basin d_wasatch d_south_wasatch d_sevier d_green_river d_amarillo d_estacado d_transpecos d_torian d_abilene d_metroplex d_violet_crown d_alamo d_rio_grande d_golden_crescent d_galveston d_houston d_neches d_arklatex d_middle_rio d_colorado_brazos
+		d_jalisco d_costalegre d_nayarit d_colima d_michoacan d_tierra_caliente d_triangulo_del_sol d_mixteca d_costa_chica d_guerrero d_oaxaca d_istmo d_olmeca d_veracruz d_mexico d_edomex d_hidalgo d_bajio_occidente d_guanajuato d_queretaro d_zacatecas d_salado d_san_luis_potosi d_huasteca d_puebla d_baja d_ensenada d_baja_sur d_altar d_sonora d_yaqui d_mazatlan d_sinaloa d_casas_altas d_chihuahua d_durango d_comarca_lagunera d_coahuila d_nuevo_leon d_rio_bravo_del_norte d_tamaulipas d_tabasco d_campeche d_yucatan d_mayapan d_laguna_de_terminos d_chan_santa_cruz d_quintana_roo d_belize d_peten d_lacandon d_zapata d_chiapas d_nueva_extremadura d_new_mexico d_navajoland d_hopi d_apacheria d_gadsden d_arizona d_colorado_river d_mesilla d_mogollon  d_nevada d_shasta_cascade d_redwoods d_goldengate d_east_bay d_salinas d_wineland d_central_valley d_kern d_motherlode d_north_valley d_sacramento d_death_valley d_los_angeles d_berdoo d_salton d_los_padres d_mojave d_basin d_northern_basin d_wasatch d_south_wasatch d_sevier d_green_river d_amarillo d_estacado d_transpecos d_torian d_abilene d_metroplex d_violet_crown d_alamo d_rio_grande d_golden_crescent d_galveston d_houston d_neches d_arklatex d_middle_rio d_colorado_brazos d_dzilam d_valladolid d_sian_kaan d_bacalar d_corozal d_orange_walk d_belmopan d_mar_de_cortes
+	}
+	counties = { 
+		c_isla_socorro c_isla_guadalupe c_alacranes
 	}
 }
 
@@ -398,7 +410,7 @@ custom_mississippi_river = {
 
 custom_gran_colombia = {
 	duchies = {
-		d_cundinamarca d_santander d_gran_cafetal d_panama d_darien d_chiriqui d_coiba d_antioquia d_cauca d_choco d_macondo d_cesar d_magdalena d_barinas d_guarico d_casanare d_gran_caracas d_anzoategui d_falcon d_lara d_monagas d_sucre d_zulia d_aguas d_guajira d_los_andes d_cordoba d_portuguesa d_apure d_magdalena_medio d_meta d_vichada d_guainia
+		d_cundinamarca d_santander d_gran_cafetal d_panama d_darien d_chiriqui d_coiba d_antioquia d_cauca d_choco d_macondo d_cesar d_magdalena d_barinas d_guarico d_casanare d_gran_caracas d_anzoategui d_falcon d_lara d_monagas d_sucre d_zulia d_aguas d_guajira d_los_andes d_cordoba d_portuguesa d_apure d_magdalena_medio d_meta d_vichada d_guainia d_ngabe_bugle d_bocas_del_toro d_veraguas d_azuero d_cocle d_coiba d_colon_PAN
 	}
 }
 
@@ -425,7 +437,7 @@ custom_weather_region = {
 
 custom_earthquake_region = {
 	duchies = {
-		d_redwoods d_wineland d_goldengate d_east_bay d_salinas d_los_padres d_los_angeles d_salton d_baja d_olympus d_great_river d_jalisco d_mexico d_edomex d_puebla d_michoacan d_veracruz d_costalegre d_colima d_tierra_caliente d_triangulo_del_sol d_mixteca d_costa_chica d_guerrero d_oaxaca d_istmo d_chiapas d_guatemala d_salvador d_nicaragua d_costa_rica d_coiba d_trinidad_and_tobago d_french_antilles d_leeward_isles d_puerto_rico d_santo_domingo d_el_cibao d_tortuga d_haiti d_oriente d_gitmo d_jamaica d_grand_cayman d_atlantida d_chiriqui d_panama d_darien d_choco d_cundinamarca d_santander d_los_andes d_lara d_gran_caracas d_sucre d_gran_cafetal d_cauca d_viejo_caldas d_magdalena_medio d_berdoo
+		d_redwoods d_wineland d_goldengate d_east_bay d_salinas d_los_padres d_los_angeles d_salton d_baja d_olympus d_great_river d_jalisco d_mexico d_edomex d_puebla d_michoacan d_veracruz d_costalegre d_colima d_tierra_caliente d_triangulo_del_sol d_mixteca d_costa_chica d_guerrero d_oaxaca d_istmo d_chiapas d_guatemala d_salvador d_nicaragua d_costa_rica d_coiba d_trinidad_and_tobago d_french_antilles d_leeward_isles d_puerto_rico d_santo_domingo d_el_cibao d_tortuga d_haiti d_oriente d_gitmo d_cornwall d_middlesex d_surrey d_grand_cayman d_atlantida d_chiriqui d_panama d_darien d_choco d_cundinamarca d_santander d_los_andes d_lara d_gran_caracas d_sucre d_gran_cafetal d_cauca d_viejo_caldas d_magdalena_medio d_berdoo d_comiteca d_huehuetenango d_quiche d_brunca d_limon d_bocas_del_toro d_ngabe_bugle d_veraguas d_cocle d_colon_PAN d_azuero d_cocibolca d_guanacaste d_nicoya d_alajuela d_heredia d_leon d_san_vicente d_san_miguel d_choluteca
 	}
 	provinces = {
 		2027 238 1018 1023 164

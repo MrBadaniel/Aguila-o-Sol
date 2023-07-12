@@ -31,7 +31,8 @@ region_isle_royale = {
 }
 
 region_jamaica = {
-	provinces = { 1172 1173 1174 }
+	duchies = { d_cornwall d_middlesex d_surrey }
+	#provinces = { 1172 1173 1174 }
 }
 
 region_trinidad_tobago = {
@@ -72,7 +73,10 @@ region_cozumel = {
 }
 
 region_islas_de_la_bahia = {
-	provinces = { 1860 }
+	#provinces = { 1860 }
+	duchies = { 
+		d_islas_de_la_bahia 
+	}
 }
 
 region_san_andres = {
@@ -97,6 +101,9 @@ region_newfoundland = {
 
 region_coiba = {
 	provinces = { 1994 }
+	counties = {
+		c_cebaco
+	}
 }
 
 region_las_perlas = {
@@ -129,4 +136,47 @@ region_east_nunavik = {
 
 region_west_nunavik = {
 	provinces = { 860 861 }
+}
+
+region_isla_del_carmen = {
+	counties = { c_isla_del_carmen}
+}
+region_alacranes = {
+	counties = { c_alacranes }
+}
+
+region_isla_mujeres = {
+	counties = { c_isla_mujeres }
+}
+region_holbox = {
+	counties = { c_holbox }
+}
+
+region_belize_cayes = {
+	counties = { c_cayos }
+}
+region_mosquito_cayes = {
+	counties = { c_cayo_miskitu }
+}
+region_bluefields_bay_islands = {
+	counties = {
+		c_corn_islands c_rama_cay
+	}
+}
+region_nicaragua_lake_islands = {
+	counties = { 
+		c_moyogalpa c_islas_zapateras
+	}
+}
+
+region_bocas_del_toro = {
+	counties = { c_bocas_del_toro}
+}
+
+region_gulf_of_fonseca_islands = {
+	counties = { c_amapala}
+}
+
+region_mar_de_cortes_islands = {
+	duchies = { d_mar_de_cortes }
 }
