@@ -1036,6 +1036,16 @@ major_liberation = {
 	infamy_modifier = 0.75
 	
 	sort_priority = 810
+	
+	can_use = {
+		ROOT = {
+			OR = {
+				religion = la_hermandad
+				religion = artiga
+				religion = alurista
+			}
+		}
+	}
 
 	can_use_gui = {
 		ROOT = {
@@ -1208,12 +1218,12 @@ major_liberation = {
 	}	
 
 	is_valid = {
-		FROM = {
-			is_nomadic = no
-		}
 		ROOT = {
-			NOT = { same_realm = FROM }
-			mercenary = no
+			OR = {
+				religion = la_hermandad
+				religion = artiga
+				religion = alurista
+			}
 		}
 	}
 	
