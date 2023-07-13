@@ -34,7 +34,11 @@ e_yucatan = {
 	k_golfo = {
 		color= { 128 0 0 }
 		color2= { 255 255 255 }
-
+		
+		allow = {
+			NOT = { has_landed_title = k_yucatan }
+		}
+		
 		capital =  1817 #c_campeche
 		
 		yucateco = "Ah-Kin-Pech"
@@ -46,7 +50,7 @@ e_yucatan = {
 		yucatanense = "Campeche"
 		choco = "Tabasco"
 		
-	d_campeche = {
+		d_campeche = {
 			color={ 83 195 243 }
 			color2={ 255 255 255 }
 
@@ -356,13 +360,13 @@ e_yucatan = {
 				b_payacatengo_TB = {}
 			}
 		}
-	}
+	} #End of k_golfo
 	
 	k_yucatan = {
 		color={ 224 219 209 }
 		color2={ 255 255 255 }
 
-#TITULAR TITLES IN THE YUCATAN PENINSULA
+		#TITULAR TITLES IN THE YUCATAN PENINSULA
 
 		d_chetumal_republic = {
 			color = { 203 19 54 }
@@ -1927,7 +1931,8 @@ e_yucatan = {
 
 			}
 		}			
-	}
+	} #End of k_yucatan
+	
 	k_chiapas = {
 		color={ 188 47 40 }
 		color2={ 255 255 255 }
