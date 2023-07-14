@@ -558,6 +558,7 @@ e_colombia = {
 			
 		} #End of d_panama
 		
+	
 		d_azuero = { 
 			color = { 30 85 255 }	
 			color2 = { 255 255 255 }
@@ -668,41 +669,6 @@ e_colombia = {
 
 		
 		} #End of d_veraguas
-		
-		d_darien = {
-			color={ 23 104 164 }
-			color2={ 255 255 255 }
-
-			capital = 1888 # c_darien
-
-			c_darien = { # 1888
-				color={ 164 46 46 }
-				color2={ 255 255 255 }
-	
-				b_yaviza_PAN = {}
-				b_la_palma_PAN = {}
-				b_puerto_pina_PAN = {}
-				b_garachine_PAN = {}
-				b_josefa_PAN = {}
-				b_corredo_PAN = {}
-				b_arreti_PAN = {}
-				b_la_plaza_PAN = {}
-			}
-			c_guna_yala = { # 1891
-				color={ 152 61 128 }
-				color2={ 255 255 255 }
-	
-				b_el_porvenir_PAN = {}
-				b_tupile_PAN = {}
-				b_coetupo_PAN = {}
-				b_ustupo_PAN = {}
-				b_puerto_escoces_PAN = {}
-			#	b_nombre_de_dios_PAN = {}
-			#	b_portobelo_PAN = {}
-			}
-		} #End of d_darien
-		
-
 		
 		d_coiba = {
 			color={ 67 57 227 }
@@ -853,6 +819,219 @@ e_colombia = {
 		} #End of d_colon_PAN
 			
 	} #End of k_puente_grande
+	
+	k_guna_yala = {
+		color = { 163 93 24 }
+		color2 = { 255 255 255 }
+		
+		d_darien = {
+			color={ 23 104 164 }
+			color2={ 255 255 255 }
+
+			capital = 1888 # c_darien
+
+			c_darien = { # 1888
+				color={ 164 46 46 }
+				color2={ 255 255 255 }
+	
+				b_san_carlos_boca_chica_PAN = {}
+				b_la_palma_PAN = {}
+				b_arreti_PAN = {}
+				b_corredo_PAN = {}
+				b_rio_congo_PAN = {}
+				b_josefa_PAN = {}
+				b_sebolleta_PAN = {}
+				b_cahoba_negra_PAN = {}
+			}
+			
+			c_pinogama = {
+				color = { 163 24 24 }
+				color2 = { 255 255 255 }
+				
+				b_yaviza_PAN = {}
+				b_puerto_quimba_PAN = {}
+				b_boca_de_lara_PAN = {}
+				b_el_real_PAN = {}
+				b_la_plaza_PAN = {}
+			}
+			
+			c_cemaco = {
+				color = { 91 26 26 }
+				color2 = { 255 255 255 }
+				
+				b_union_choco_PAN = {}
+				b_lajas_blancas_PAN = {}
+				b_cirilo_guaynora_PAN = {}
+				b_manuel_ortega_PAN = {}
+			}
+			
+			c_matusagarati = {
+				color = { 255 25 0 }
+				color2 = { 255 255 255 }
+				
+				b_boca_de_cupe_PAN = {}
+				b_paca_PAN = {}
+				b_pucro_PAN = {}
+				b_limon_PAN = {}
+				b_paya_PAN = {}
+			}
+			
+			c_sambu = {
+				color = { 136 45 34 }
+				color2 = { 255 255 255 }
+				
+				b_tucuti_PAN = {}
+				b_bayamon_PAN = {}
+				b_jigurundo_PAN = {}
+				b_paravando_PAN = {}
+				b_churuco_PAN = {}
+				b_venado_PAN = {}
+
+			}
+			
+			c_jaque = {
+				color = { 204 59 59 }
+				color2 = { 255 255 255 }
+				
+				b_jaque_PAN = {}
+				b_puerto_pina_PAN = {}
+				b_cocalita_PAN = {}
+				b_llano_bonito_PAN = {}
+				b_caracol_PAN = {}
+			}
+
+			c_chepigana = {
+				color = { 163 24 24 }
+				color2 = { 255 255 255 }
+				
+				b_chepigana_PAN = {}
+				b_garachine_PAN = {}
+				b_seteganti_PAN = {}
+				b_taimati_PAN = {}
+				b_camoganti_PAN = {}
+			}
+		} #End of d_darien
+		
+		d_guna_yala = {
+			color = { 125 70 100 }
+			color2 = { 255 255 255 }
+			
+			capital = 1891
+			
+			c_guna_yala = { # 1891
+				color={ 152 61 128 }
+				color2={ 255 255 255 }
+	
+				b_el_porvenir_PAN = {}
+				b_nalunega_PAN = {}
+				b_wichub_wala_PAN = {}
+				b_dubbir_PAN = {}
+				b_akuadub_PAN = {}
+				b_ailidub_PAN = {}
+				b_mandi_ubigandub_PAN = {}
+				b_aridub_PAN = {}
+			
+			}
+			
+			c_nargana = {
+				color = { 120 61 128 }
+				color2 = { 255 255 255 }
+				
+				b_corazon_de_jesus_PAN = {}
+				b_nargana_PAN = {}
+				b_ticantiki_PAN = {}
+				b_rio_tigre_PAN = {}
+				b_tupile_PAN  = {}
+				b_rio_azucar_PAN = {}
+				b_isla_maquina_PAN = {}
+				b_soledad_miria_PAN = {}
+			}
+			
+			c_aligandi = {
+				color = { 158 88 137 }
+				color2 = { 255 255 255 }
+				
+				b_aligandi_PAN = {}
+				b_playon_chico_PAN = {}
+				b_san_ignacio_de_tupile_PAN = {}
+				b_achutupu_PAN = {}
+				b_mamitupu_PAN = {}
+				b_playon_grande_PAN = {}
+				b_irgandi_PAN = {}
+				b_aigirgandi_PAN = {}
+			}
+			
+			c_dubwala = {
+				color = { 158 88 170 }
+				color2 = { 255 255 255 }
+				
+				b_dubwala_PAN = {}
+				b_coetupo_PAN = {}
+				b_mulatupu_PAN = {}
+				b_ustupo_PAN  = {}
+				b_puerto_obaldia_PAN = {}
+				b_nabagandi_PAN = {}
+				b_ursucun_PAN = {}
+				b_puerto_escoces_PAN = {}
+			}
+		} #End of d_guna_yala
+		
+		d_magudandi = {
+			color = { 150 35 32 }
+			color2 = { 255 255 255 }
+			
+			capital = 2605 # Akua Yala
+
+			c_akua_yala = {
+				color = { 168 0 151 }
+				color2 = { 255 255 255 }
+				
+				b_akua_yala_PAN = {}
+				b_icanti_PAN = {}
+				b_pintupo_PAN = {}
+				b_buenos_aires_GUN_PAN = {}
+				b_ibedi_PAN = {}
+			}
+
+			c_wargandi = {
+				color = { 198 0 177 }
+				color2 =  { 255 255 255 }
+				
+				b_wargandi_PAN = {}
+				b_esloganti_PAN = {}
+				b_morti_PAN = {}
+				b_arquiti_PAN = {}
+				b_wala_PAN = {}
+				b_membrillo_PAN = {}
+				b_rio_clarito_PAN = {}
+			}
+
+			c_piria = {
+				color = { 168 0 82 }
+				color2 = { 255 255 255 }
+				
+				b_piria_PAN = {}
+				b_capandi_PAN = {}
+				b_tiguarsicua_PAN = {}
+				b_canazas_GUN_PAN = {}
+				b_cuinupdi_PAN = {}
+				b_ogobnawila_PAN = {}
+				b_nargandi_PAN = {}
+				b_tabardi_PAN = {}
+			}
+			
+			c_torti = {
+				color = { 112 0 32 }
+				color2 = { 255 255 255 }
+				
+				b_torti_PAN = {}
+				b_ipeti_PAN = {}
+				b_higueronal_PAN = {}
+				b_maje_PAN = {}
+			}
+		} #End of d_magudandi
+
+	} #End of k_guna_yala
 	
 	k_antioquia = {
 		color={ 229 223 53 }
