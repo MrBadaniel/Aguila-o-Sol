@@ -523,7 +523,7 @@ mesanglo = {
 		graphical_cultures = { mesindiogfx southindiangfx africangfx }
 		unit_graphical_cultures = { westafricangfx africangfx }
 
-
+		dukes_called_kings = yes
 
 
 		color = { 0.100 0.7438 0.4556 }
@@ -598,49 +598,37 @@ mesanglo = {
 		graphical_cultures = { mesindiogfx southindiangfx africangfx }
 		unit_graphical_cultures = { westafricangfx africangfx }
 
-
-
+		dukes_called_kings = yes
+		seafarer=yes
 
 		color = { 0.6941, 0.3490, 0.5569 }
 		
 	
 
 		male_names = {
-			Aiban
-			Alejandro_Alexander
-			Baglibe Balibeler Biler Binagdi Binagdiginya Bugasu Bugsu Burnaggiler 
-			Bedro_Peter Benito_Benedict Bernardo_Bernard
+			Aiban Alejandro_Alexander
+			Baglibe Balibeler Biler Binagdi Binagdiginya Bugasu Bugsu Burnaggiler Bedro_Peter Benito_Benedict Bernardo_Bernard
 			Carlos_Charles
-			Debiliginya Diebiginya Diegi Dieli Dilla Dillagun Dinabaler Dinigibaler Dinselibbi Dogia Doginyaler Duali Dualgibbi Dubiginya Dugibler Dugge Dummi Dunagalib
-			David Domás_Thomas
-			Ebiginya Edibbiler Edinibbiler Eliginya
-			Emilio_Aemilius Eduardo_Edward
+			Debiliginya Diebiginya Diegi Dieli Dilla Dillagun Dinabaler Dinigibaler Dinselibbi Dogia Doginyaler Duali Dualgibbi Dubiginya Dugibler Dugge Dummi Dunagalib David Domás_Thomas
+			Ebiginya Edibbiler Edinibbiler Eliginya Emilio_Aemilius Eduardo_Edward
 			Fernando_Ferdinand Francisco_Francis Felipe_Philip
-			Gaglibbiler Galib Galibe Galub Gana Garban Garman Gibdeginya Ginya Giwiggaler Giwigun Gubiler Gugni Gunabaler Gunaliler Gungi Gungiler Gwani
-			Gabriel_Gabriel
+			Gaglibbiler Galib Galibe Galub Gana Garban Garman Gibdeginya Ginya Giwiggaler Giwigun Gubiler Gugni Gunabaler Gunaliler Gungi Gungiler Gwani Gabriel_Gabriel
 			Hernán_Hernan
-			Ibaggiler Ibe Ibler Igoliginya Iguanape Iguaiginape Iguayokiler Igwa Inadikilele Inaidur Inweliler Iwinabbi
-			Ismael	Ikari Ikalü
+			Ibaggiler Ibe Ibler Igoliginya Iguanape Iguaiginape Iguayokiler Igwa Inadikilele Inaidur Inweliler Iwinabbi Ismael
 			Julián_Julian José_Joseph Javier_Xavier
 			Kevin
 			Leandro_Leander Luis_Louis
-			Maili Masar
-			Manuel_Emmanuel
-			Nadduliler Naggigunabbiler Naggiler Nagia Nagibler Nagiler Naiggabaler Naiggaler Nideli Nigdi Niew Nugna Nugnabbiler Nusamaggaler
-			Nelson Nibaldo Nükwana
-			Odelibbi Ogan Ogebib Oginyabbi Oginyabbiler Oller Onibbiler Orgun
-			Octavio_Octavius Omar
+			Maili Masar Manuel_Emmanuel
+			Nadduliler Naggigunabbiler Naggiler Nagia Nagibler Nagiler Naiggabaler Naiggaler Nideli Nigdi Niew Nugna Nugnabbiler Nusamaggaler Nelson Nibaldo 
+			Odelibbi Ogan Ogebib Oginyabbi Oginyabbiler Oller Onibbiler Orgun Octavio_Octavius Omar
 			Rafael_Raphael Roberto_Robert Raúl_Ralph Ricardo_Richard
-			Salubib Sugge Sunnibe Sunnibeler
-			Sergio_Sergius
-			Urguna Urgunabaler Ugunaliler Uudur
-			Ulises_Ulysses
+			Salubib Sugge Sunnibe Sunnibeler Sergio_Sergius
+			Urguna Urgunabaler Ugunaliler Uudur	Ulises_Ulysses
 			Wagibler Wagun Waibbiler Wiga Wigabibbiler Wigaler Wigaliler Wigibaler Wiginabbiler Wigun	
 		
 		}
 
 		female_names = {
-			
 			
 			Amalia Ana_Anna Adriana 
 			Bëlika Bäkwiwala Bäka Beatriz 
@@ -673,6 +661,7 @@ mesanglo = {
 		pat_grm_name_chance = 40
 		mat_grm_name_chance = 10
 		mother_name_chance = 40
+		
 
 		modifier = default_culture_modifier
 	}
