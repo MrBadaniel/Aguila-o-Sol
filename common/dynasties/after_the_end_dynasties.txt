@@ -6937,7 +6937,19 @@ coat_of_arms = {
 1780048 = { name="Tyndal" culture=yankee }
 1780049 = { name="Greenhill" culture=yankee }
 1780050 = { name="Williams" culture=yankee used_for_random=no }
-1780051 = { name="Rogers" culture=yankee }
+1780051 = { name="Rogers" culture=yankee used_for_random=no
+	coat_of_arms = {
+		template = 0
+		layer = {
+			texture = 12
+			texture_internal = 26
+			emblem = 0
+			color = 0
+			color = 0
+			color = 0
+		}
+	}
+ }
 1780052 = { name="Jones" culture=yankee }
 1780053 = { name="Blake" culture=yankee }
 1780054 = { name="Dinkley" culture=yankee }
