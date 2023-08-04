@@ -2196,27 +2196,86 @@ e_mexico = {
 				b_coaquimixco_GR = {}
 				b_tlacoaxtla_GR = {}
 			}
+		} #End of d_guerrero			
+
+		d_iguala = {
+			color = { 224  38 62 }
+			color2 = { 255 255 255 }
 			
-
-
-
-
+			capital = 1762 #Iguala
 			
-	
+			nahua = Mezcalan
+
+			c_iguala = { # 1762
+				color={ 85 79 109 }
+				color2={ 255 255 255 }
+				
+				holy_site = mictlantec
+				
+				b_iguala_GR = {}
+				b_tepecoacuilco_de_trujano_GR = {}
+				b_cocula_GR = {}
+				b_san_miguel_tecuixlapan_GR = {}
+				b_san_juan_tetelcingo_GR = {}
+				b_metlapa_GR = {}
+				b_san_agustin_oapan_GR = {}
+				b_apipiculco_GR = {}
+
+			}
+			c_teloloapan = {  #2654
+				color = { 60 49 107 }
+				color2 = { 255 255 255 }
+				
+				b_teloloapan_GR = {}
+				b_acatempan_GR = {}
+				b_apaxtla_de_castrejon_GR = {}
+				b_acapetlahuaya_GR = {}
+				b_ixcapuzalco_GR = {}
+				b_coatepec_costales_GR = {}
+				b_tlalchapa_GR = {}
+				b_otlatepec_GR = {}
+			}
 			
+			c_taxco	= { #2653
+				color = { 96 96 175 }
+				color2 = { 255 255 255 }
+				
+				b_taxco_GR = {}
+				b_ixcateopan_de_cuauhtemoc_GR	 = {}
+				b_pilcaya_GR = {}	
+				b_tetipac_GR	 = {}
+				b_acamixtla_GR = {}	
+				b_acuitlapan_GR	 = {}
+				b_san_gregorio_GR	 = {}
+				b_noxtepec_GR	 = {}
+			}
+
 			c_atenango_del_rio = {
 				color={ 112 67 134 }
 				color2={ 255 255 255 }
 				
+				b_huitzuco_GR = {}
 				b_atenango_del_rio_GR = {}
+				b_buenavista_de_cuellar_GR = {}
 				b_copalillo_GR = {}
+				b_pololcingo_GR = {}
 				b_tlalcozotitlan_GR = {}
-				b_olinala_GR = {}
-				b_xixila_GR = {}
-				b_cocan_GR = {}
-				b_temalac_GR = {}
+				b_san_miguel_de_las_palmas_GR = {}
+				b_santiago_tlamazacapa_GR = {}
 				b_zicapa_GR = {}
 			}
+		} #End of d_iguala
+
+		d_sierra_mixteca = {
+			color = { 140 32 9 }
+			color2 = { 255 255 255 }
+			
+			capital = 1802
+			
+			short_name= yes
+			
+			nahua = "Zempoaltépetl"
+			mixtec = "Ñuñume"
 			
 			c_tlapa = { # 1802
 				color={ 158 106 179 }
@@ -2229,34 +2288,69 @@ e_mexico = {
 					mixtec = "Tinda'i"
 					nahua = "Tlappan"
 				}
-				b_chilapa_de_alvarez_GR = {}
-				b_ixcateopan_de_la_montana_GR = {}
+				b_atlamancingo_del_monte_GR = {}
+				b_atlixtac_GR = {}
+				b_xalpatlahuac_GR = {}
+				b_zapotitlan_tablas_GR = {}
+				b_san_juan_bautista_coapala_GR = {}
+				b_ixtlahuazaca_GR = {}
+
+			}
+			
+			c_olinala = { # 2652
+				color = { 213 74 178 }
+				color2 = { 255 255 255 }
+				
+			
+				b_olinala_GR = {}
 				b_huamuxtitlan_GR = {}
+				b_xixila_GR = {}
+				b_cualac_GR	= {}
+				b_temalacatzingo_GR = {}
+				b_xochihuehuetlan_GR	 = {}
+				b_san_miguel_tlaltepexi	= {}
+			}
+			c_alcozauca = { #2651
+				color = { 211 101 158 }
+				color2 = { 255 255 255 }
+				
+				b_alcozauca_de_guerrero_GR = {}
+				b_ixcateopan_de_la_montana_GR = {}
+				b_alpoyeca_GR = {}
+				b_tlalixtaquilla_GR = {}
+				b_tecoyame_de_guadalupe_GR = {}
+				b_xonacatlan_GR = {}
+			}
+			c_acatepec = { #2649
+				color = { 206 64 111 }
+				color2 = { 255 255 255 }
+				
+				b_acatepec_montana_GR ={}
+				b_tlacoapa_GR ={}
+				b_san_lucas_teocuitlapa_GR ={}
+				b_barranca_dulce_GR ={}
+				b_zilacayota_GR ={}
+				b_zoquitlan_GR ={}
+				b_zontecomapa_GR ={}
+			}
+			
+			c_cochoapa = { #2650
+				color = { 209 124 117 }
+				color2 ={ 255 255 255 }
+				
+				b_cochoapa_el_grande_GR = {}
 				b_metlatonoc_GR = {
 					mixtec = "Tiata'nu"
 				}
-				b_temalacatzingo_GR = {}
-				b_olinala_GR = {}
-				b_alpoyeca_GR = {}
+				b_malinaltepec_GR = {}
+				b_lomayozatl_GR = {}
+				b_huexoapa_GR = {}
+				b_petlakalansingo_GR = {}
+				b_san_rafael_MONTANA_GR = {}
+				b_iliatenco_GR = {}
+				b_cuatzoquitengo_GR = {}
 			}
-
-			
-			c_iguala = { # 1762
-				color={ 85 79 109 }
-				color2={ 255 255 255 }
-				
-				holy_site = mictlantec
-				
-				b_iguala_GR = {}
-				b_ixcateopan_de_cuauhtemoc_GR = {}
-				b_acatempan_GR = {}
-				b_taxco_GR = {}
-				b_huitzuco_GR = {}
-				b_buenavista_de_cuellar_GR = {}
-				b_cocula_GR = {}
-				b_teloloapan_GR = {}
-			}
-		} #End of d_guerrero
+		} #End of d_sierra_mixteca
 
 		d_tierra_caliente_guerrero = {
 			color = { 135 96 70 }
