@@ -326,4 +326,222 @@ decisions = {
 		} 
 	}
 	
+
+	create_tierra_caliente = {
+		only_playable = yes
+		is_high_prio = yes
+		ai_check_interval = 1
+		potential = {
+			independent = yes
+			NOT = {
+				trait = incapable
+			}
+			OR = {
+				culture = calentano
+			}
+			OR = {
+				has_landed_title = d_tierra_caliente
+				has_landed_title = d_tierra_caliente_guerrero
+			}			
+			k_tierra_caliente = {
+				has_holder = no
+			}
+			k_tierra_caliente = {
+				is_titular = yes
+			}
+			NOT = {
+				higher_tier_than = DUKE
+			}
+			NOR = {
+				has_alternate_start_setting = {
+					setting = dejure
+					value = random
+				}
+				has_alternate_start_setting = {
+					setting = title_names
+					value = random
+				}
+				has_alternate_start_setting = {
+					setting = title_names
+					value = random_including_duchies
+				}
+			}
+		}
+
+		allow = {
+			war = no
+			AND = {
+				OR = {
+					has_landed_title = d_tierra_caliente
+					completely_controls = d_tierra_caliente
+				}
+				OR = { 	
+					has_landed_title = d_tierra_caliente_guerrero
+					completely_controls = d_tierra_caliente_guerrero
+				}
+			}
+
+			prestige = 800
+			piety = 500
+			wealth = 600
+		}
+
+		effect = {
+			prestige = 500
+			piety = -500
+			wealth = -600
+			give_nickname = nick_the_great
+			activate_title = { title = k_tierra_caliente status = yes }
+ 			k_tierra_caliente = {
+				grant_title = ROOT
+				copy_title_laws = PREV
+				insert_title_history = d_tierra_caliente
+			}
+			d_tierra_caliente = {
+				show_scope_change = no
+				de_jure_liege = k_tierra_caliente
+			}
+			d_tierra_caliente_guerrero = {
+				show_scope_change = no
+				de_jure_liege = k_tierra_caliente
+			}
+			if = {
+				limit = {
+					completely_controls = d_tejupilco
+				}
+				d_tejupilco = {
+					show_scope_change = no
+					de_jure_liege = k_tierra_caliente
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	create_mixteca = {
+		only_playable = yes
+		is_high_prio = yes
+		ai_check_interval = 1
+		potential = {
+			independent = yes
+			NOT = {
+				trait = incapable
+			}
+			OR = {
+				culture = mixtec
+				culture = nahua
+			}
+			OR = {
+				has_landed_title = d_mixteca
+				has_landed_title = d_sierra_mixteca
+				has_landed_title = d_costa_chica_guerrero
+				has_landed_title = d_costa_chica
+				has_landed_title = d_sierra_sur
+			}			
+			k_mixteca = {
+				has_holder = no
+			}
+			k_mixteca = {
+				is_titular = yes
+			}
+			NOT = {
+				higher_tier_than = DUKE
+			}
+			NOR = {
+				has_alternate_start_setting = {
+					setting = dejure
+					value = random
+				}
+				has_alternate_start_setting = {
+					setting = title_names
+					value = random
+				}
+				has_alternate_start_setting = {
+					setting = title_names
+					value = random_including_duchies
+				}
+			}
+		}
+
+		allow = {
+			war = no
+			AND = {
+				OR = {
+					has_landed_title = d_mixteca
+					completely_controls = d_mixteca
+				}
+				OR = { 	
+					has_landed_title = d_sierra_mixteca
+					completely_controls = d_sierra_mixteca
+				}
+			}
+
+			prestige = 800
+			piety = 500
+			wealth = 600
+		}
+
+		effect = {
+			prestige = 500
+			piety = -500
+			wealth = -600
+			give_nickname = nick_the_great
+			activate_title = { title = k_tierra_caliente status = yes }
+ 			k_mixteca = {
+				grant_title = ROOT
+				copy_title_laws = PREV
+				insert_title_history = d_mixteca
+			}
+			d_mixteca = {
+				show_scope_change = no
+				de_jure_liege = k_mixteca
+			}
+			d_sierra_mixteca = {
+				show_scope_change = no
+				de_jure_liege = k_tierra_caliente
+			}
+			if = {
+				limit = {
+					completely_controls = d_costa_chica
+				}
+				d_costa_chica = {
+					show_scope_change = no
+					de_jure_liege = k_mixteca
+				}
+			}
+			if = {
+				limit = {
+					completely_controls = d_costa_chica_guerrero
+				}
+				d_costa_chica_guerrero = {
+					show_scope_change = no
+					de_jure_liege = k_mixteca
+				}
+			}	
+			if = {
+				limit = {
+					completely_controls = d_costa_chica_guerrero
+				}
+				d_costa_chica_guerrero = {
+					show_scope_change = no
+					de_jure_liege = k_mixteca
+				}
+			} 
+			if = {
+				limit = {
+					completely_controls = d_sierra_sur
+				}
+				d_sierra_sur = {
+					show_scope_change = no
+					de_jure_liege = k_mixteca
+				}
+			} 			
+			
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
 }

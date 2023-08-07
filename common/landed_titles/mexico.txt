@@ -1380,6 +1380,25 @@ e_mexico = {
 			}
 		}
 	}
+	
+	k_mixteca = {
+		
+		color={ 165 56 24 }
+		color2={ 255 255 255 }
+
+		allow = {
+			NOT = { has_landed_title = k_guerrero }
+			NOT = { has_landed_title = k_oaxaca }
+		}
+		
+		short_name = yes
+		
+		mixtec = "Ñuu Savi"
+		nahua = " Mixtecah"
+		
+		
+		capital = 1803 #Acatlán
+	}	
 	k_oaxaca = {
 		color={ 91 61 155 } 
 		color2={ 255 255 255 }
@@ -1767,9 +1786,9 @@ e_mexico = {
 			
 			capital = 1797 #Tlaxiaco
 			
-			short_name = yes
+			#short_name = yes
 			
-			mixtec = "Ñuu Savi"
+			mixtec = "Ñuu Davi" #
 			
 			c_nochixtlan = { # 1796
 				color={ 128 91 167 }
@@ -1943,6 +1962,9 @@ e_mexico = {
 			
 			capital = 1807 # c_jamiltepec
 			
+			mixtec = "Ñuu Andivi"
+		
+			
 			c_jamiltepec = { # 1807
 				color={ 64 115 149 }
 				color2={ 255 255 255 }
@@ -2101,6 +2123,22 @@ e_mexico = {
 			}
 		} #End of d_sierra_mixe	
 	} #End of k_oaxaca
+	
+	k_tierra_caliente = {
+		
+		color={ 165 56 24 }
+		color2={ 255 255 255 }
+
+		allow = {
+			NOT = { has_landed_title = k_guerrero }
+			NOT = { has_landed_title = k_oaxaca }
+		}
+		
+		short_name = yes
+		
+		capital = 1758 #Apatzingan should be
+	}
+		
 	k_guerrero = {
 		color={ 150 0 0 }
 		color2={ 255 255 255 }
