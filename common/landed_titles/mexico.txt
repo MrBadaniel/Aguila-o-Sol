@@ -629,7 +629,8 @@ e_mexico = {
 				b_roca_blanca_JA = {}
 			}
 		}
-	}
+	} #End of k_jalisco
+	
 	k_mexico = {
 		color = { 0 104 71 }
 		color2= { 220 220 0 }
@@ -706,16 +707,59 @@ e_mexico = {
 					nahua = "Tollohcan"
 				}
 				b_metepec_MX = {}
-				b_valle_de_bravo_MX = {}
+				b_san_mateo_atenco_MX = {}
+				b_villa_de_almoloya_de_juarez_MX = {}
 				b_tenango_de_arista_MX = {
 					nahua = "Teotenanco"
 				}
-				b_ixtapan_de_la_sal_MX = {}
+				b_san_miguel_zinacantepec_MX = {}
+				b_villa_cuauhtemoc_MX = {}
+				b_santa_maria_atarasquillo_MX = {}
 				b_calimaya_de_diaz_gonzalez_MX = {}
+			}
+			c_ixtlahuaca = {
+				color = { 211 87 65 }
+				color2 = { 255 255 255 }
+				
+				b_ixtlahuaca_de_rayon_MX = {}
+				b_los_banos_MX = {}
+				b_san_felipe_del_progreso_MX = {}
+				b_jocotitlan_MX = {}
+				b_villa_victoria_MX = {}
+				b_santa_cruz_tepexpan_MX = {}
+				b_san_lorenzo_toxico_MX = {}
+				b_san_jeronimo_ixtapantongo_MX = {}
+			}
+			c_tenancingo = {
+				color = { 190 85 45 }
+				color2 = { 255 255 255 }
+				
+				b_tenancingo_de_degollado_MX = {}
+				b_coatepec_harinas_MX	= {}
+				b_santa_ana_ixtlahuatzingo_MX = {}	
+				b_ixtapan_de_la_sal_MX = {}
+				b_malinalco_MX	 = {}
+				b_villa_de_guerrero_MX = {}	
+				b_zumpahuacan_MX = {}
 				b_chalma_MX = {
 					nahua = "Teotenanco"
 				}
+				
 			}
+			c_valle_de_bravo = {
+				color = { 190 119 106 }
+				color2 = { 255 255 255 }
+				
+				b_valle_de_bravo_MX = {}
+				b_colorines_MX = {}
+				b_san_jeronimo_totoltepec_villa_de_allende_MX = {}
+				b_zacazonapan_MX = {}
+				b_amanalco_de_becerra_MX = {}
+				b_nuevo_santo_tomas_de_los_platanos_MX = {}
+				b_santa_maria_pipioltepec_MX = {}
+				b_otzoloapan_MX = {}
+			}
+
 			
 			c_morelos = { # 1769
 				color={ 13 118 137 }
@@ -748,24 +792,52 @@ e_mexico = {
 				b_soyaniquilpan_de_juarez_MX = {}
 				b_timilpan_MX = {}
 			}
+		} #End of d_edomex
+		
+		d_tejupilco = {
+			color = { 147 183 69 }
+			color2 = { 255 255 255 }
+			
+			capital = 1759 # c_oriente
+			
+			name_tier = count
+		
 			c_oriente = { # 1759
 				color={ 158 185 100 }
 				color2={ 255 255 255 }
 				
+				name_tier = baron
+				
 				b_tejupilco_de_hidalgo_MX = {
 					nahua = "Texopilco"
 				}
+				b_zacatepec_MX = {}
 				b_luvianos_MX = {
 					nahua = "Etlan"
 				}
-				b_sultepec_MX = {}
 				b_palmar_chico_MX = {}
-				b_san_antonio_del_rosario_MX = {}
 				b_amatepec_MX = {}
 				b_temascaltepec_MX = {}
-				b_tlatlaya_MX = {}
+				b_san_juan_acatitlan_MX	 = {}
+				b_bejucos_MX = {}
 			}
-		}
+			
+			c_tlataya = {
+				color = { 83 96 53 }
+				color2 = { 255 255 255 }
+				
+				name_tier = baron
+				
+				b_tlatlaya_MX = {}
+				b_sultepec_MX = {}
+				b_san_antonio_del_rosario_MX = {}
+				b_amatepec_MX	 = {}
+				b_san_pedro_limon_MX = {}	
+				b_almoloya_de_alquisiras_MX = {}	
+				b_zacualpan_MX	 = {}
+				b_ancon_de_los_curieles_MX	 = {}
+			}
+		} #End of d_tejupilco
 		
 		d_mexico = {
 			color={ 239 215 58 }
@@ -785,6 +857,7 @@ e_mexico = {
 				purepecha = "Méjiku"
 				tejano = "Méjico"
 				raramuri = "Mésiko"
+				yucateco = "Meehiko'e"
 				
 				holy_site = sacred_heart
 				holy_site = cristo_rey
@@ -831,13 +904,27 @@ e_mexico = {
 				holy_site = neomayan
 				
 				b_texcoco_MX = {}
-				b_chimalhuacan_MX = {}
-				b_chalco_MX = {}
+				b_chiconcuac_TX_MX = {}
 				b_acolman_MX = {}
 				b_zumpango_MX = {}
 				b_teotihuacan_MX = {}
+				b_tepetlaoxtoc_de_hidalgo_MX = {}
+				b_san_miguel_tlaixpan_MX = {}
+				b_chapingo_MX = {}
+			}
+			
+			c_chimalhuacan = {
+				color = { 206 172 35 }
+				color2 = { 255 255 255 }
+				
+				b_chimalhuacan_MX = {}
+				b_chalco_MX = {}
 				b_ixtapaluca_MX = {}
 				b_amecameca_MX = {}
+				b_san_francisco_acuautla_MX = {}
+				b_coatepec_MX = {}
+				b_cocotitlan_MX = {}
+				b_santa_catarina_ayotzingo_MX = {}
 			}
 			
 			c_teoloyucan = { # 1766
@@ -857,7 +944,33 @@ e_mexico = {
 				b_cuautitlan_MX = {}
 				b_huehuetoca_MX = {}
 			}
-		}
+			c_ecatepec = {
+				color = { 175 159 93 }
+				color2 = { 255 255 255 }
+				
+				b_ecatepec_MX = {
+					chilango = "San Cristóbal Ecatepec"
+					nahua = "Ehecatépec"
+				}
+				b_chiconautla_MX = {
+					nahua = "Chiconautla"
+				}
+				b_santa_clara_coatitla_MX = {}
+				b_guadalupe_cuautlalpan_MX = {
+					chilango = "Guadalupe Victoria"
+					nahua = "Cuautlalpan"
+				}
+				b_san_pedro_xalostoc_MX = {
+					nahua = "Xalostoc"
+				}
+				b_san_isidro_atlautenco_MX = {
+					nahua = "Atlautenco"
+				}
+				b_san_andres_de_la_canada_MX = {}
+			}
+			
+		} #End of d_mexico
+		
 		d_puebla = {
 			color={ 180 145 13 }
 			color2={ 255 255 255 }
@@ -931,7 +1044,7 @@ e_mexico = {
 				b_ocotlan_TL = {}
 			}
 		}
-	}
+	} #End of k_mexico
 	k_veracruz = {
 		color={ 0.65 0.5 0.05 }
 		color2={ 255 255 255 }
