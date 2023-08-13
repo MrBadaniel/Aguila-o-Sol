@@ -44,4 +44,84 @@ decisions = {
 			}
 		}
 	}
+	vassalize_d_montane = {
+		only_playable = yes
+		is_high_prio = yes
+		ai_check_interval = 120
+		
+		potential = {
+			NOT = {
+				has_alternate_start_parameter = { key = religion_names value = random }
+			}
+			religion = montane
+			higher_tier_than = DUKE
+			has_landed_title = c_denver
+			d_montane = {
+				holder_scope = {
+					independent = yes
+				}
+			}
+		}
+		
+		allow = {
+			piety = 1000
+			is_heretic = no
+
+			conditional_tooltip = {
+				trigger = {
+					NOT = {
+						d_montane = {
+							owner = {
+								opinion = {
+									who = ROOT
+									value = 50
+								}
+							}
+						}
+					}
+				}
+
+				custom_tooltip = {
+					text = vassalize_shepherd_opinion_TT
+
+					d_montane = {
+						owner = {
+							opinion = {
+								who = ROOT
+								value = 50
+							}
+						}
+					}
+				}
+			}
+			NOT = {
+				trait = excommunicated
+			}
+		}
+		
+		effect = {
+			piety = -1000
+			custom_tooltip = { text = TXT_vassalize_shepherd }
+			hidden_tooltip = {
+				d_montane = {
+					holder_scope = {
+						set_defacto_liege = ROOT
+					}
+				}
+			}
+		}
+		
+		revoke_allowed = {
+			always = no
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	
+	
+	
+	
 }
