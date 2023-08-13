@@ -1006,4 +1006,56 @@ character_event = {
 		prestige = 100
 	}
 }
+#Building an Irminsul
+character_event = {
+	id = AoM.70
+	title = EVTTITLEoM.70
+	desc = { 
+		trigger = { 
+			religion = Gregorian
+		} 
+		text = EVTDESCAoM.70
+	}
+	picture = GFX_evt_irminsul_shrine
+	border = GFX_event_normal_frame_religion
+	
+	is_triggered_only = yes
 
+	option = { 
+		name = EVTOPTAoM.70
+		tiered_prestige_reward_effect = yes
+		religion_authority = {
+			modifier = built_cenotaph
+			years = 50
+		}
+		add_character_modifier = {
+			name = recently_built_cenotaph
+			years = 5
+		}
+		hidden_tooltip = { any_vassal = { character_event = { id = AoM.71 } } }
+	}
+}
+
+#Vassals notified
+character_event = {
+	id = AoM.71
+	title = EVTTITLEAoM.71
+	desc = EVTDESCAoM.71
+	picture = GFX_evt_irminsul_shrine
+	border = GFX_event_normal_frame_religion
+	
+	is_triggered_only = yes
+
+	option = { 
+		name = EVTOPTAAoM.71
+		trigger = { religion = FROM }
+		add_character_modifier = {
+			name = recently_built_cenotaph
+			years = 1
+		}
+	}
+	option = { 
+		name = EVTOPTBAoM.71
+		trigger = { NOT = { religion = FROM } }
+	}
+}

@@ -17,7 +17,7 @@ e_canada = {
 		ursuline = 5
 		rust_cultist = 50
 		occultist_reformed = 50
-		thelemic_reformed = 100
+		thelema_reformed = 100
 		norse_pagan_reformed = 50
 		midewiwin_reformed = 100
 
@@ -29,7 +29,10 @@ e_canada = {
 	#foa = "KING_CANADA_FOA"
 
 		
-		british = "Upper Canada"
+		anglish = "Upper Canada"
+		northumbrian = "Upper Canada"
+		irish = "Upper Canada"
+		scottish = "Upper Canada"
 		iroquois = "Kanata"
 		canadien = "Kanada"
 
@@ -38,7 +41,10 @@ e_canada = {
 
 			capital = 1275 #Elgin
 			
-			british = "Hesse"
+			anglish = "Hesse"
+			northumbrian =  "Hesse"
+			scottish =  "Hesse"
+			irish =  "Hesse"
 			deitsch = "Hesse"
 			plautdietsch = "Hesse"
 			rostmann = "Hesse"
@@ -232,6 +238,8 @@ e_canada = {
 			hudsonian = "Nassau" #dutch
 			ojibwe = "Mississagua"
 			maritimer = "Dachaigh"
+			ontarian = "Grand Tarano"
+			ontarois = "Grand Toronto"
 			
 			c_welland = {
 				color = { 252 174 12 }
@@ -280,17 +288,21 @@ e_canada = {
 			}
 			c_toronto = {
 				color = { 237 162 3 }
-				canadien = "Tarontha "
+				
+				canadien = "Tarontha"
 				ontarian = "Tarano"
 				iroquois = "Tkaronto"
+				
 				holy_site = high_church
 				holy_site = Gregorian
-				holy_site = thelemic
-				holy_site = thelemic_reformed
+				holy_site = thelema
+				
 
-				iroquois = "Tkaronto"
-
-				b_toronto_ON = {}
+				b_toronto_ON = {
+					canadien = "Tarontha"
+					ontarian = "Tarano"
+					iroquois = "Tkaronto"
+				}
 				b_mississauga_ON = {}
 				b_brampton_ON = {}
 				b_scarborough_ON = {
@@ -426,7 +438,10 @@ e_canada = {
 
 			capital = 1297 # Ottawa
 			
-			british = "Lunenburg"
+			anglish = "Lunenburg"
+			northumbrian = "Lunenburg"
+			scottish = "Lunenburg"
+			irish = "Lunenburg"
 			deitsch = "Lüneburg"
 			plautdietsch = "Lüneburg"
 			rostmann = "Lüneburg"
@@ -437,8 +452,8 @@ e_canada = {
 				color = { 140 155 121 }
 				color2= { 255 255 20 }
 				holy_site = high_church
-				holy_site = thelemic
-				holy_site = thelemic_reformed
+				holy_site = thelema
+				
 				holy_site = Gregorian
 				
 				b_parliament_hill_ON = { used_for_dynasty_names = no }
@@ -447,7 +462,6 @@ e_canada = {
 				b_ottawa_ON = {}
 				b_cumberland_ON = {}
 				b_gloucester_ON = {}
-				b_kanata_ON = {}
 				b_greenbelt_ON = {}
 				b_goulbourn_ON = {}
 			}
@@ -473,7 +487,10 @@ e_canada = {
 				color2= { 255 255 20 }
 
 				b_brockville_ON = {
-					british = "Elizabethtown"
+					anglish = "Elizabethtown"
+					northumbrian = "Elizabethtown"
+					scottish = "Elizabethtown"
+					irish = "Elizabethtown"
 				}
 				b_morrisburg_ON = {}
 				b_prescott_ON = {}
@@ -491,7 +508,10 @@ e_canada = {
 			color2= { 255 255 255 }
 
 		
-			british = "Mecklenburg"
+			anglish = "Mecklenburg"
+			northumbrian = "Mecklenburg"
+			scottish = "Mecklenburg"
+			irish = "Mecklenburg"
 			deitsch = "Mecklenburg"
 			plautdietsch = "Mecklenburg"
 			rostmann = "Mecklenburg"
@@ -595,7 +615,10 @@ e_canada = {
 		ontarois = "Québec"
 		haitian = "Québec"
 		yiddish = "Kvebec"
-		british = "Lower Canada"
+		anglish = "Lower Canada"
+		northumbrian =  "Lower Canada"
+		scottish =  "Lower Canada"
+		irish =  "Lower Canada"
 		algonquin = "Kébec"
 		ojibwe = "Kébec"
 		saulteaux = "Kébec"
@@ -608,7 +631,7 @@ e_canada = {
 		exovedate = 100
 		rust_cultist = 5
 		occultist_reformed = 50
-		thelemic_reformed = 50
+		thelema_reformed = 50
 		norse_pagan_reformed = 50
 		midewiwin_reformed = 50
 		#jewish_group = 100
@@ -637,7 +660,10 @@ e_canada = {
 			ontarois = "Québec"
 			haitian = "Québec"
 			yiddish = "Kvebec"
-			british = "Lower Canada"
+			anglish = "Lower Canada"
+			northumbrian = "Lower Canada"
+			scottish = "Lower Canada"
+			irish = "Lower Canada"
 			algonquin = "Kébec"
 			ojibwe = "Kébec"
 			saulteaux = "Kébec"
@@ -907,7 +933,10 @@ e_canada = {
 			
 			ontarian = "Lower-St-Lawrence"
 			yankee = "Lower-St-Lawrence"
-			british = "Lower-St-Lawrence"
+			anglish = "Lower-St-Lawrence"
+			northumbrian = "Lower-St-Lawrence"
+			scottish = "Lower-St-Lawrence"
+			irish = "Lower-St-Lawrence"
 			maritimer = "Lower-St-Lawrence"
 
 			capital = 1207 #Rivière-du-Loup
@@ -931,10 +960,21 @@ e_canada = {
 
 				ontarian = "Fraserville"
 				yankee = "Fraserville"
-				british = "Fraserville"
+				anglish = "Fraserville"
+				northumbrian = "Fraserville"
+				irish = "Fraserville"
+				scottish = "Fraserville"
 				maritimer = "Fraserville"
 
-				b_riviere_du_loup_QC = {}
+				b_riviere_du_loup_QC = {
+					ontarian = "Fraserville"
+					yankee = "Fraserville"
+					anglish = "Fraserville"
+					northumbrian = "Fraserville"
+					irish = "Fraserville"
+					scottish = "Fraserville"
+					maritimer = "Fraserville"
+				}
 				b_trois_pistoles_QC = {}
 				b_notre_dame_du_lac_QC = {}
 				b_pohenegamook_QC = {}
@@ -1061,7 +1101,10 @@ e_canada = {
 				mikmaq = "Arsigantegok"
 				ontarian = "Eastern Townships"
 				yankee = "Eastern Townships"
-				british = "Eastern Townships"
+				anglish = "Eastern Townships"
+				northumbrian = "Eastern Townships"
+				scottish = "Eastern Townships"
+				irish = "Eastern Townships"
 				maritimer = "Eastern Townships"
 
 			c_sherbrooke = {
@@ -1084,7 +1127,10 @@ e_canada = {
 				color2= { 255 255 20 }
 
 					yankee = "Spaulding-Ditchfield"
-					british = "Spaulding-Ditchfield"
+					anglish = "Spaulding-Ditchfield"
+					northumbrian = "Spaulding-Ditchfield"
+					scottish = "Spaulding-Ditchfield"
+					irish = "Spaulding-Ditchfield"
 					ontarian = "Spaulding-Ditchfield"
 					maritimer = "Spaulding-Ditchfield"
 
@@ -1323,7 +1369,7 @@ e_canada = {
 		# Crusade target weight
 		ursuline = 50
 		occultist_reformed = 50
-		thelemic_reformed = 5
+		thelema_reformed = 5
 		norse_pagan_reformed = 5
 		celtic_pagan_reformed = 1000
 		
@@ -2016,7 +2062,10 @@ e_canada = {
 				color2= { 255 255 255 }
 
 				b_hornepayne_ON = {
-					british = "Fitzback"
+					anglish = "Fitzback"
+					northumbrian = "Fitzback"
+					scottish = "Fitzback"
+					irish = 			"Fitzback"			
 				}
 				b_hearst_ON = {}
 				b_jogues_ON = {}

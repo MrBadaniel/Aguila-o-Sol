@@ -629,7 +629,8 @@ e_mexico = {
 				b_roca_blanca_JA = {}
 			}
 		}
-	}
+	} #End of k_jalisco
+	
 	k_mexico = {
 		color = { 0 104 71 }
 		color2= { 220 220 0 }
@@ -706,16 +707,59 @@ e_mexico = {
 					nahua = "Tollohcan"
 				}
 				b_metepec_MX = {}
-				b_valle_de_bravo_MX = {}
+				b_san_mateo_atenco_MX = {}
+				b_villa_de_almoloya_de_juarez_MX = {}
 				b_tenango_de_arista_MX = {
 					nahua = "Teotenanco"
 				}
-				b_ixtapan_de_la_sal_MX = {}
+				b_san_miguel_zinacantepec_MX = {}
+				b_villa_cuauhtemoc_MX = {}
+				b_santa_maria_atarasquillo_MX = {}
 				b_calimaya_de_diaz_gonzalez_MX = {}
+			}
+			c_ixtlahuaca = {
+				color = { 211 87 65 }
+				color2 = { 255 255 255 }
+				
+				b_ixtlahuaca_de_rayon_MX = {}
+				b_los_banos_MX = {}
+				b_san_felipe_del_progreso_MX = {}
+				b_jocotitlan_MX = {}
+				b_villa_victoria_MX = {}
+				b_santa_cruz_tepexpan_MX = {}
+				b_san_lorenzo_toxico_MX = {}
+				b_san_jeronimo_ixtapantongo_MX = {}
+			}
+			c_tenancingo = {
+				color = { 190 85 45 }
+				color2 = { 255 255 255 }
+				
+				b_tenancingo_de_degollado_MX = {}
+				b_coatepec_harinas_MX	= {}
+				b_santa_ana_ixtlahuatzingo_MX = {}	
+				b_ixtapan_de_la_sal_MX = {}
+				b_malinalco_MX	 = {}
+				b_villa_de_guerrero_MX = {}	
+				b_zumpahuacan_MX = {}
 				b_chalma_MX = {
 					nahua = "Teotenanco"
 				}
+				
 			}
+			c_valle_de_bravo = {
+				color = { 190 119 106 }
+				color2 = { 255 255 255 }
+				
+				b_valle_de_bravo_MX = {}
+				b_colorines_MX = {}
+				b_san_jeronimo_totoltepec_villa_de_allende_MX = {}
+				b_zacazonapan_MX = {}
+				b_amanalco_de_becerra_MX = {}
+				b_nuevo_santo_tomas_de_los_platanos_MX = {}
+				b_santa_maria_pipioltepec_MX = {}
+				b_otzoloapan_MX = {}
+			}
+
 			
 			c_morelos = { # 1769
 				color={ 13 118 137 }
@@ -748,24 +792,52 @@ e_mexico = {
 				b_soyaniquilpan_de_juarez_MX = {}
 				b_timilpan_MX = {}
 			}
+		} #End of d_edomex
+		
+		d_tejupilco = {
+			color = { 147 183 69 }
+			color2 = { 255 255 255 }
+			
+			capital = 1759 # c_oriente
+			
+			name_tier = count
+		
 			c_oriente = { # 1759
 				color={ 158 185 100 }
 				color2={ 255 255 255 }
 				
+				name_tier = baron
+				
 				b_tejupilco_de_hidalgo_MX = {
 					nahua = "Texopilco"
 				}
+				b_zacatepec_MX = {}
 				b_luvianos_MX = {
 					nahua = "Etlan"
 				}
-				b_sultepec_MX = {}
 				b_palmar_chico_MX = {}
-				b_san_antonio_del_rosario_MX = {}
 				b_amatepec_MX = {}
 				b_temascaltepec_MX = {}
-				b_tlatlaya_MX = {}
+				b_san_juan_acatitlan_MX	 = {}
+				b_bejucos_MX = {}
 			}
-		}
+			
+			c_tlataya = {
+				color = { 83 96 53 }
+				color2 = { 255 255 255 }
+				
+				name_tier = baron
+				
+				b_tlatlaya_MX = {}
+				b_sultepec_MX = {}
+				b_san_antonio_del_rosario_MX = {}
+				b_amatepec_MX	 = {}
+				b_san_pedro_limon_MX = {}	
+				b_almoloya_de_alquisiras_MX = {}	
+				b_zacualpan_MX	 = {}
+				b_ancon_de_los_curieles_MX	 = {}
+			}
+		} #End of d_tejupilco
 		
 		d_mexico = {
 			color={ 239 215 58 }
@@ -785,6 +857,7 @@ e_mexico = {
 				purepecha = "Méjiku"
 				tejano = "Méjico"
 				raramuri = "Mésiko"
+				yucateco = "Meehiko'e"
 				
 				holy_site = sacred_heart
 				holy_site = cristo_rey
@@ -831,13 +904,27 @@ e_mexico = {
 				holy_site = neomayan
 				
 				b_texcoco_MX = {}
-				b_chimalhuacan_MX = {}
-				b_chalco_MX = {}
+				b_chiconcuac_TX_MX = {}
 				b_acolman_MX = {}
 				b_zumpango_MX = {}
 				b_teotihuacan_MX = {}
+				b_tepetlaoxtoc_de_hidalgo_MX = {}
+				b_san_miguel_tlaixpan_MX = {}
+				b_chapingo_MX = {}
+			}
+			
+			c_chimalhuacan = {
+				color = { 206 172 35 }
+				color2 = { 255 255 255 }
+				
+				b_chimalhuacan_MX = {}
+				b_chalco_MX = {}
 				b_ixtapaluca_MX = {}
 				b_amecameca_MX = {}
+				b_san_francisco_acuautla_MX = {}
+				b_coatepec_MX = {}
+				b_cocotitlan_MX = {}
+				b_santa_catarina_ayotzingo_MX = {}
 			}
 			
 			c_teoloyucan = { # 1766
@@ -857,7 +944,33 @@ e_mexico = {
 				b_cuautitlan_MX = {}
 				b_huehuetoca_MX = {}
 			}
-		}
+			c_ecatepec = {
+				color = { 175 159 93 }
+				color2 = { 255 255 255 }
+				
+				b_ecatepec_MX = {
+					chilango = "San Cristóbal Ecatepec"
+					nahua = "Ehecatépec"
+				}
+				b_chiconautla_MX = {
+					nahua = "Chiconautla"
+				}
+				b_santa_clara_coatitla_MX = {}
+				b_guadalupe_cuautlalpan_MX = {
+					chilango = "Guadalupe Victoria"
+					nahua = "Cuautlalpan"
+				}
+				b_san_pedro_xalostoc_MX = {
+					nahua = "Xalostoc"
+				}
+				b_san_isidro_atlautenco_MX = {
+					nahua = "Atlautenco"
+				}
+				b_san_andres_de_la_canada_MX = {}
+			}
+			
+		} #End of d_mexico
+		
 		d_puebla = {
 			color={ 180 145 13 }
 			color2={ 255 255 255 }
@@ -931,7 +1044,7 @@ e_mexico = {
 				b_ocotlan_TL = {}
 			}
 		}
-	}
+	} #End of k_mexico
 	k_veracruz = {
 		color={ 0.65 0.5 0.05 }
 		color2={ 255 255 255 }
@@ -1380,6 +1493,25 @@ e_mexico = {
 			}
 		}
 	}
+	
+	k_mixteca = {
+		
+		color={ 165 56 24 }
+		color2={ 255 255 255 }
+
+		allow = {
+			NOT = { has_landed_title = k_guerrero }
+			NOT = { has_landed_title = k_oaxaca }
+		}
+		
+		short_name = yes
+		
+		mixtec = "Ñuu Savi"
+		nahua = " Mixtecah"
+		
+		
+		capital = 1803 #Acatlán
+	}	
 	k_oaxaca = {
 		color={ 91 61 155 } 
 		color2={ 255 255 255 }
@@ -1393,6 +1525,14 @@ e_mexico = {
 		
 		capital = 1793 # c_oaxaca
 		
+		d_chimalapa = {
+			color = { 90 69 109 }
+			color2 = { 255 255 255 }
+			
+			zoque = "Angpøn"
+				
+			capital = 1800
+		}
 		d_oaxaca = {
 			color={ 87 125 171 }
 			color2={ 255 255 255 }
@@ -1424,34 +1564,20 @@ e_mexico = {
 				b_santa_cruz_xoxocotlan_OA = {
 					mixtec = "Nuunitatnohoyoo"
 				}
-				b_villa_de_zaachila_OA = {
-					zapotec = "Zaadxil"
-					mixtec = "Tocuisi"
-					nahua = "Teotzapotlan"
-				}
+
 				b_santa_maria_atzompa_OA = {}
-				b_san_pablo_etla_OA = {}
+			#	b_san_pablo_etla_OA = {}
 				b_cuilapan_de_guerrero_OA = {
 					mixtec = "Sahayuca"
 				}
-				b_fraccionamiento_el_rosario_OA = {}
+				b_tlalixtac_de_cabrera_OA = {}
+				b_santa_maria_del_tule_OA = {}
+				b_santo_domingo_tomaltepec_OA = {}
+
+			#	b_fraccionamiento_el_rosario_OA = {} #deprecated
 			}
-			c_canada = { # 1796
-				color={ 66 151 27 }
-				color2={ 255 255 255 }
-				
-				b_mazatlan_villa_de_flores_OA = {}
-				b_san_bautista_cuicatlan_OA = {}
-				b_huautla_de_jimenez_OA = {}
-				b_ayautla_OA = {
-					zapotec = "Ngui yufí"
-					mixtec = "Ngui yufí"
-				}
-				b_teotitlan_de_flores_magon_OA = {}
-				b_san_juan_tepeuxila_OA = {}
-				b_santiago_comaltepec_OA = {}
-				b_santa_maria_ixcatlan_OA = {}
-			}
+			
+
 			c_tlacolula = { # 1794
 				color={ 124 161 185 }
 				color2={ 255 255 255 }
@@ -1472,10 +1598,87 @@ e_mexico = {
 				}
 				b_santiago_matatlan_OA = {}
 				b_guelavia_OA = {}
-				b_san_pedro_quiatoni_OA = {}
+
 				b_ayutla_OA = {}
 				b_santo_domingo_albarradas_OA = {}
+				b_teotitlan_del_valle_OA = {}
+				b_san_francisco_lachigolo_OA = {}
+
 			}
+			
+			c_ocotlan = { #2627
+				color = { 64 137 183 }
+				color2 = { 255 255 255 }
+				
+				b_san_antonino_castillo_velasco_OA = {}
+				b_ocotlan_de_morelos_OA = {}
+				b_santa_catarina_minas_OA = {}
+				b_san_juan_chilateca_OA = {}
+				b_santa_ana_zegache_OA = {}
+				b_san_miguel_tilquiapam_OA = {}
+				b_asuncion_ocotlan_OA = {}
+				b_san_pedro_martir_OA = {}
+			}
+			
+			c_zaachila = { #2628
+				color = { 64 76 151 }
+				color2 = { 255 255 255 }
+				
+				zapotec = "Zaadxil"
+				mixtec = "Tocuisi"
+				nahua = "Teotzapotlan"
+				
+				b_zimatlan_de_alvarez_OA = {}
+				b_vicente_guerrero_OA = {}
+				b_villa_de_zaachila_OA = {
+					zapotec = "Zaadxil"
+					mixtec = "Tocuisi"
+					nahua = "Teotzapotlan"
+				}
+				b_jardines_de_zaachila_OA = {}
+				b_san_pablo_huixtepec_OA = {}
+				b_san_bernardo_mixtepec_OA = {}
+				b_santa_ines_del_monte_OA = {}
+				b_ayoquezco_de_aldama_OA = {}
+			}
+
+			c_ejutla = { #2626
+				color = { 25 123 183 }
+				color2 = { 255 255 255 }
+				
+				b_taniche_OA = {}
+				b_ejutla_de_crespo_OA = {}
+				b_san_miguel_ejutla_OA = {}	
+				b_san_martin_de_los_cansecos_OA	 = {}
+				b_coatecas_altas_OA	= {}
+				b_ayoquezco_de_aldama_OA	 = {}
+				b_santa_marta_chichihualtepec_OA = {}	
+				b_san_andres_zabache_OA	 = {}
+			}
+			
+			c_etla = { #2629
+				color = { 59 90 122 }
+				color2 = { 255 255 255 }
+				
+				b_san_pablo_etla_OA = {}
+				b_villa_de_etla_OA = {}
+				b_guadalupe_etla_OA = {}
+				b_san_andres_zautla_OA = {}
+				b_san_francisco_telixtlahuaca_OA = {}
+				b_san_juan_bautista_guelache_OA = {}
+				b_san_lorenzo_cacaotepec_OA = {}
+			#	b_magdalena_apasco_OA = {}
+				b_hacienda_blanca_OA = {}
+				b_las_sedas_OA = {}
+			}
+		} #End of d_oaxaca
+		
+		d_sierra_sur = {
+			color = { 47 114 42 }
+			color2 = { 255 255 255 }
+			
+			capital = 1795 
+			
 			c_miahuatlan = { # 1795
 				color={ 49 85 149 }
 				color2={ 255 255 255 }
@@ -1486,9 +1689,9 @@ e_mexico = {
 					zapotec = "Guiesdoo"
 				}
 				b_xitla_OA = {}
-				b_ejutla_de_crespo_OA = {}
+			#	b_ejutla_de_crespo_OA = {}
 				b_san_luis_amatlan_OA = {}
-				b_coatecas_altas_OA = {}
+			#	b_coatecas_altas_OA = {}
 				b_santa_lucia_miahuatlan_OA = {}
 				b_monjas_OA = {}
 				b_san_andres_paxtlan_OA = {}
@@ -1501,18 +1704,63 @@ e_mexico = {
 				zapotec = "Huash"
 			
 				b_villa_sola_de_vega_OA = {}
+				b_san_vicente_coatlan_OA = {}
+				b_santa_maria_sola_OA = {}
 				b_ayoquezco_de_aldama_OA = {}
 				b_san_lorenzo_texmelucan_OA = {}
-				b_mesones_hidalgo_OA = {}
-				b_santa_maria_zacatepec_OA = {}
-				b_santa_maria_sola_OA = {}
-				b_santa_cruz_itundujia_OA = {}
+				b_san_francisco_cahuacua_OA = {}
+				b_zapotlan_de_rio_OA = {
+					zapotec = Yucutindoo
+				}
+				b_santa_rosa_matagallinas_OA = {}
+				b_san_francisco_yocucundo_OA = {
+					zapotec = Yocucundoo
+				}
+			}
+		
+			
+			
+			c_putla = { #2623
+				color = { 50 90 150 }	
+				color2 = { 255 255 255 }
+				
+				nahua = "Poctlan" 
+				mixtec = "Ñuu Kaa"
+				amuzgo = "Tzjon Non"
+				
 				b_putla_villa_de_guerrero_OA = { 
 					nahua = "Poctlan" 
 					mixtec = "Ñuu Kaa"
 				}
+				b_mesones_hidalgo_OA = {}
+				b_santa_maria_zacatepec_OA = {}
+				b_santa_cruz_itundujia_OA = {}
+				b_san_andres_chicahuaxtla_OA = {}
+				b_san_pedro_amuzgos_OA = {
+					amuzgo = "Tzjon Non"
+				}
+				b_santa_maria_ipalapa_OA = {
+					amuzgo = "Tzo'tyio"
+				}
+				b_zocoteaca_de_leon_OA = {}
+
 			}
-		}
+			
+			c_yautepec = { #2622
+				color =  { 32 55 160 }
+				color2 = { 255 255 255 }
+				
+				b_san_carlos_yautepec_COA = {}
+				b_san_pedro_quiatoni_OA = {}
+				b_nejapa_de_madero_OA = {}
+				b_san_juan_lajarcia_OA = {}
+				b_san_jose_de_gracia_OA = {}
+				b_san_isidro_chihuiro_OA = {}
+				b_santiago_quiavigolo_OA = {}
+				b_santa_ana_tavela_OA = {}
+			}
+
+		} #End of d_sierra_sur
 		d_istmo = {
 			color={ 198 234 239 }
 			color2={ 255 255 255 }
@@ -1529,30 +1777,35 @@ e_mexico = {
 				b_tehuantepec_OA = {
 					zapotec = "Guissi"
 					nahua = "Tecuantepec"
+					zoque = "Anepaan"
 				}
-				b_salina_cruz_OA = {}
+
 				b_santa_maria_jalapa_del_marques_OA = {
 					zapotec = "Guiigu yudxi"
 				}
 				b_san_blas_atempa_OA = {}
-				b_santiago_astata_OA = {}
-				b_san_pedro_huamelula_OA = {}
+
 				b_magdalena_tequisistlan_OA = {}
 				b_guiengola_OA = {}
+				b_santa_maria_mixtequilla_OA = {}
+				b_santa_teresa_de_jesus_OA = {}
+				b_santiago_lachiguiri_OA = {}
 			}
+			
 			c_chimalapas = { # 1800
 				color={ 128 106 206 }
 				color2={ 255 255 255 }
 				
-				b_matias_romero_OA = {}
-				b_jaltepec_de_candayoc_OA = {}
 				b_santa_maria_chimalapa_OA = {}
-				b_santo_domingo_petapa_OA = {}
-				b_san_juan_guichicovi_OA = {}
-				b_lagunas_OA = {}
-				b_san_juan_mazatlan_OA = {}
-				b_nuevo_santiago_tutla_OA = {}
+				b_san_miguel_chimalapa_OA = {}
+				b_las_conchas_OA = {}
+				b_cuauhtemoc_OA = {}
+				b_francisco_javier_jasso_OA = {}
+				b_san_francisco_la_paz_OA = {}
+				b_escolapa_OA = {}
+				b_tierra_blanca_OA = {}
 			}
+			
 			c_juchitan = { # 1799
 				color={ 115 134 200 }
 				color2={ 255 255 255 }
@@ -1564,28 +1817,91 @@ e_mexico = {
 					zapotec = "Xabizende"
 					nahua = "Xochitlan"
 				}
-				b_chahuites_OA = {}
+
 				b_union_hidalgo_OA = {
 					zapotec = "Ranchu Gubiña"
 				}
 				b_ixtepec_OA = {
 					zapotec = "Danigueza"
 				}
-				b_san_francisco_ixhuatan_OA = {}
+
 				b_el_espinal_OA = {}
+				b_san_dionisio_del_mar_OA = {}
+				b_santa_maria_xadani_OA = {}
+				b_chicapa_de_castro_OA = {}
+				b_huamuchil_OA = {}
+
+			}
+			
+			c_salina_cruz = { #2617
+				color = { 43 66 99 }
+				color2 = { 255 255 255 }
+				
+				
+				b_salinas_del_marques_OA = {}
+				b_salina_cruz_OA = {}
+				b_san_pedro_huilotepec_OA = {}
+				b_guelaguechi_OA = {}
+				b_santa_maria_del_mar_OA = {}
+				b_huazantlan_del_rio_OA = {}
+				b_san_jose_del_palmar_OA = {}
+				b_alvaro_obregon_OA = {}
+			}
+			
+			c_chahuites	= { #2615
+				color = { 85 111 198 }
+				color2 = { 255 255 255 }
+				
+				b_chahuites_OA = {}
+				b_san_francisco_ixhuatan_OA = {}
 				b_san_pedro_tapanatepec_OA = {}
 				b_santo_domingo_zanatepec_OA = {}
+				b_san_francisco_viejo_OA = {}	
+				b_san_francisco_del_mar_OA	 = {}
+				b_los_corazones_OA	 = {}
+				b_cerro_grande_OA	 = {}
 			}
-		}
+			
+			c_matias_romero	= { #2616
+
+				color = { 95 59 204 }
+				color2 = { 255 255 255 }
+				
+				b_matias_romero_OA = {}	
+				b_lagunas_OA = {}	
+				b_santo_domingo_petapa_OA	 = {}
+				b_san_juan_guichicovi_OA	 = {}
+				b_jaltepec_de_candayoc_OA	 = {}
+				b_lachigolo_OA	 = {}
+				b_chocolate_OA	 = {}
+				b_santa_maria_petapa_OA	 = {}
+			}
+			
+			c_huamelula = { #2618
+				color = { 121 152 198 }
+				color2 = { 255 255 255 }
+				
+				b_san_pedro_huamelula_OA = {}
+				b_santiago_astata_OA = {}
+				b_san_isidro_chacalapa_OA = {}
+				b_tapanala_OA = {}
+				b_rio_seco_OA = {}
+				b_santa_gertrudis_miramar_OA = {}
+				b_santa_maria_OA = {}
+				b_san_vicente_mazatan_OA = {}
+			}
+
+		} #End of d_istmo
+
 		d_mixteca = {
 			color={ 157 83 153 }
 			color2={ 255 255 255 }
 			
 			capital = 1797 #Tlaxiaco
 			
-			short_name = yes
+			#short_name = yes
 			
-			mixtec = "Ñuu Savi"
+			mixtec = "Ñuu Davi" #
 			
 			c_nochixtlan = { # 1796
 				color={ 128 91 167 }
@@ -1596,20 +1912,36 @@ e_mexico = {
 				b_asuncion_nochixtlan_OA = {
 					mixtec = "Nuanduco"
 				}
+				b_san_mateo_sindihui_OA = {
+					mixtec = "Xaa Andehui"
+				}
+				
 				b_santiago_tilantongo_OA = {
 					mixtec = "Tnuu"
+				#	nahua = "Xaltepetongo"
 				}
 				b_santiago_apoala_OA = {
 					mixtec = "Yuta Tnoho"
 				}
-				b_monte_verde_OA = {}
-				b_coixtlahuaca_OA = {
-					mixtec = "Yodzocoo"
-					nahua = "Coaixtlahuacan"
+				b_san_juan_tamazola_OA = {}
+				b_san_juan_diuxi_OA = {
+					mixtec = "Ñuhu Diuxiaa"
+					nahua = "Cuautlan"
 				}
-				b_tamazulapam_OA = {}
-				b_las_sedas_OA = {}
-				b_hacienda_blanca_OA = {}
+				b_san_andres_nuxino_OA = {
+					mixtec = "Nuxiñoo"
+				}
+				b_san_francisco_jaltepetongo_OA = {
+					mixtec = "Xaltepetongo"
+				}
+				b_magdalena_jaltepec_OA = {
+					nahua = "Xallitepetl"
+				}
+				b_san_francisco_chindua_OA = {
+					mixtec = "Nuchindua"
+				}
+
+
 			}
 			c_huajuapan = { # 1804
 				color={ 158 146 219 }
@@ -1657,10 +1989,49 @@ e_mexico = {
 				b_san_juan_numi_OA = {
 					mixtec = "Ñumi"
 				}
+			#	b_santiago_juxtlahuaca_OA = {
+			#		mixtec = "Yosocuiya"
+			#	}
+			}
+			
+			c_juxtlahuaca = { #2630
+				color = { 125 101 196 }
+				color2 = { 255 255 255 }
+				
 				b_santiago_juxtlahuaca_OA = {
 					mixtec = "Yosocuiya"
 				}
+				b_san_sebastian_tecomaxtlahuaca_OA = {}
+				b_silacayoapam_OA = {}
+				b_san_martin_peras_OA = {}
+				b_coicoyan_de_las_flores_OA = {}
+				b_san_miguel_tlacotepec_OA = {}
+				b_san_miguel_ahuehuetitlan_OA = {}
+				b_calihuala_OA = {}
 			}
+
+			c_teposcolula = { #2631
+				color = { 97 74 122 }
+				color2 = { 255 255 255 }
+			
+				mixtec = "Yodzocoo"
+				nahua = "Teposcololan"
+				
+				b_san_juan_teposcolula_OA = {
+					nahua = "Teposcololan"
+				}
+				b_san_pedro_y_san_pablo_teposcolula_OA	= {}
+				b_coixtlahuaca_OA = {
+					mixtec = "Yodzocoo"
+					nahua = "Coaixtlahuacan"
+				}
+				b_san_pedro_nopala_OA = {}
+				b_tamazulapam_OA = {}
+				b_villa_de_chilapa_de_diaz_OA = {}
+				b_monte_verde_OA = {}
+				b_san_cristobal_suchixtlahuaca_OA = {}
+			}			
+	
 			c_acatlan = { # 1803
 				color={ 176 176 200 }
 				color2={ 255 255 255 }
@@ -1670,20 +2041,42 @@ e_mexico = {
 				b_acatlan_PU = {
 					mixtec = "Tèsa'à"
 				}
-				b_chiautla_de_tapia_PU = {}
-				b_izucar_de_matamoros_PU = {}
-				b_jolalpan_PU = {}
+			#	b_izucar_de_matamoros_PU = {}
+				b_tepexi_de_rodriguez_PU = {}	
 				b_piaxtla_PU = {}
-				b_huehuetlan_PU = {}
 				b_tecomatlan_PU = {}
 				b_tehuitzingo_PU = {}
-			}	
-		}
+				b_san_juan_ixcaquixtla_PU		= {}
+				b_santa_clara_huitziltepec_PU	= {}
+				b_chila_PU	= {}			
+			}
+			
+			c_chiautla = { #2632
+				color = { 176 176 255 }
+				color2 = { 255 255 255 }
+				
+				b_chiautla_de_tapia_PU = {}
+				b_huehuetlan_PU = {}
+				b_jolalpan_PU = {}
+				b_tulcingo_PU = {}
+				b_acaxtlahucan_de_albino_zertuche_PU = {}
+				b_ixcamilpa_de_guerrero_PU = {}
+				b_tecomatlan_PU = {}
+				b_xicotlan_PU = {}
+				b_santa_maria_cohetzala_PU = {}
+			}
+
+			
+		} #End of d_mixteca
+		
 		d_costa_chica = {  # Sierra Sur
 			color={ 154 131 171 }
 			color2={ 255 255 255 }
 			
 			capital = 1807 # c_jamiltepec
+			
+			mixtec = "Ñuu Andivi"
+		
 			
 			c_jamiltepec = { # 1807
 				color={ 64 115 149 }
@@ -1691,9 +2084,8 @@ e_mexico = {
 				holy_site = sacred_heart
 				holy_site = cristo_rey
 				
-				nahua = "Xoquillan "
-				zapotec = "Escuhué"
-				mixtec = "Escuhué"
+				mixtec = "Casandó"
+				nahua = "Xamiltepec" 
 				
 				b_pinotepa_OA = {
 					mixtec = "Ñuu Oko"
@@ -1702,22 +2094,45 @@ e_mexico = {
 					mixtec = "Casandó"
 					nahua = "Xamiltepec" 
 				}
+		#		b_san_andres_huaxpaltepec_OA = {} #creo que es el mismo que b_huaxpaltepec_OA	
+
+				b_huaxpaltepec_OA = {
+					mixtec = "Xiñi Tityi"
+				}
+				b_santa_maria_jicaltepec_OA = {}
+				b_santo_domingo_armenta_OA = {}
+				b_santa_maria_huzololitlan_OA = {}
+				b_san_sebastian_ixcapa_OA = {}
+				b_san_antonio_tepetlapa_OA = {}
+
+			}
+			
+			c_juquila = { #2625
+				color = { 67 137 183 }
+				color2 = { 255 255 255 }
+				
+				nahua = "Xoquillan "
+				zapotec = "Escuhué"
+				mixtec = "Escuhué"
+				
+				b_villa_de_tututepec_OA = {
+					mixtec = "Yucu Saa"
+					nahua = "Tototepec"
+				}					
 				b_santa_catarina_juquila_OA = {
 					nahua = "Xoquillan "
 					zapotec = "Escuhué"
 					mixtec = "Escuhué"
-				}
-				b_villa_de_tututepec_OA = {
-					mixtec = "Yucu Saa"
-					nahua = "Tototepec"
-				}
-				b_huaxpaltepec_OA = {
-					mixtec = "Xiñi Tityi"
-				}
+				}	
 				b_san_miguel_panixtlahuaca_OA = {}
 				b_santos_reyes_nopala_OA = {}
 				b_san_pedro_juchatengo_OA = {}
+				b_brisas_de_zicatela_OA = {}
+				b_puerto_escondido_OA = {
+					nahua = "Zicatela"
+				}
 			}
+
 			c_pochutla = { # 1808
 				color={ 82 100 185 }
 				color2={ 255 255 255 }
@@ -1727,18 +2142,116 @@ e_mexico = {
 				b_pochutla_OA = {
 					nahua = "Pochotlah"
 				}
-				b_puerto_escondido_OA = {
-					nahua = "Zicatela"
-				}
 				b_puerto_angel_OA = {}
-				b_santa_maria_huatulco_OA = {}
-				b_brisas_de_zicatela_OA = {}
 				b_candelaria_loxicha_OA = {}
 				b_san_bartolome_loxicha_OA = {}
 				b_santa_maria_tonameca_OA = {}
+				b_san_jose_chacalapa_OA = {}
+				b_reyes_OA = {}
+				b_guzman_OA = {}
 			}
+					
+			c_huatulco = { #2624
+				color = { 57 70 105 }
+				color2 = { 255 255 255 }
+				
+				b_santa_maria_huatulco_OA = {}
+				b_crucecitas_OA = {}
+				b_san_miguel_del_puerto_OA = {}
+				b_barra_copalita_OA = {}
+				b_san_isidro_apango_OA = {}
+				b_piedra_de_moros_OA = {}
+				b_arroyo_gonzalez_OA = {}
+				b_bahia_san_agustin_OA = {}
+			}
+
+			
+		} #End of d_costa_chica
+		
+		d_sierra_mixe = {
+			color = { 205 155 62 }
+			color2 = { 255 255 255 } 
+			
+			capital = 2621 #c_ixtlan
+			
+
+			c_mixe = { #2619
+				color = { 188 147 0 }
+				color2 = { 255 255 255 }
+				
+				b_san_juan_mazatlan_OA = {}
+				b_nuevo_santiago_tutla_OA = {}
+				b_san_antonio_tutla_OA = {}
+				b_san_jose_chinantequilla_OA = {}
+				b_santiago_ixtuintepec_OA = {}
+				b_santiago_malacatepec_OA = {}
+				b_san_juan_lachixila_OA = {}
+				b_santiago_lachivia_OA = {}
+			}
+			
+			c_ixtlan = { #2621
+				color = {  204 102 0 }
+				color2 = { 255 255 255 }
+				
+				b_ixtlan_de_juarez_OA = {}
+				b_capulalpam_de_mendez_OA = {}
+				b_san_juan_xicomezuchil_OA = {}
+				b_san_miguel_amatlan_OA = {}
+				b_santa_catarina_lachatao_OA = {}
+				b_santa_maria_jaltianguis_OA = {}
+				b_san_pablo_guelatao_OA = {}
+				b_santiago_xiacui_OA = {}
+			}
+			
+			c_mixistlan = { #2620
+				color = {  232 147 0 }
+				color2 = { 255 255 255 }
+				
+				b_santa_maria_tlahuitoltepec_OA = {}
+				b_mixistlan_de_la_reforma_OA = {}
+				b_san_isidro_huayapam_mixe_OA = {}
+				b_tamazulapam_del_espiritu_santo_OA = {}
+				b_santo_domingo_tepuxtepec_OA = {}
+				b_asuncion_cacalotepec_OA = {}
+				b_san_pedro_y_san_pablo_ayutla_OA = {}
+				b_chuxnaban_quetzaltepec_OA = {}
+			}
+			
+			
+			c_canada = { # 1796
+				color={ 66 151 27 }
+				color2={ 255 255 255 }
+				
+				b_mazatlan_villa_de_flores_OA = {}
+				b_san_bautista_cuicatlan_OA = {}
+				b_huautla_de_jimenez_OA = {}
+				b_ayautla_OA = {
+					zapotec = "Ngui yufí"
+					mixtec = "Ngui yufí"
+				}
+				b_teotitlan_de_flores_magon_OA = {}
+				b_san_juan_tepeuxila_OA = {}
+				b_santiago_comaltepec_OA = {}
+				b_santa_maria_ixcatlan_OA = {}
+			}
+		} #End of d_sierra_mixe	
+	} #End of k_oaxaca
+	
+	k_tierra_caliente = {
+		
+		color={ 165 56 24 }
+		color2={ 255 255 255 }
+
+		allow = {
+			NOT = { has_landed_title = k_guerrero }
+			NOT = { has_landed_title = k_oaxaca }
 		}
-	}	
+		
+		short_name = yes
+		
+		capital = 1758 #Apatzingan should be
+	}
+		
 	k_guerrero = {
 		color={ 150 0 0 }
 		color2={ 255 255 255 }
@@ -1767,44 +2280,153 @@ e_mexico = {
 				b_chilpancingo_GR = {
 					nahua = "Chilpantsinko"
 				}
-				b_tixtla_GR = {}
-				b_zumpango_del_rio_GR = {}
+				b_mochitlan_GR = {}
 				b_chichihualco_GR = {}
-				b_apango_GR = {}
 				b_el_ocotito_GR = {}
-				b_xochipala_GR = {}
-				b_huitziltepec_GR = {}
+				b_yextla_GR = {}
+				b_mazatlan_GR = {}
+				b_petaquillas_GR = {}
+				b_amojileca_GR = {}
+				b_acahuizotla_GR = {}
+
 			}
 			
-			c_ometepec = { # 1806
-				color={ 118 88 197 }
+			c_tlacotepec = { #2645
+				color = { 188 49 151 }
+				color2 = { 255 255 255 }
+				
+				b_tlacotepec_GR = {}
+				b_acatlan_del_rio_GR = {}
+				b_tlacotenco_GR = {}
+				b_chichiltepec_GR = {}
+				b_ixtayotla_GR = {}
+				b_el_caracol_GR = {}
+				b_puerto_del_varal_GR = {}
+				b_chilpancinguito_GR = {}
+			}
+			
+			c_zumpango = { #2646
+				color = { 197 73 105 }
+				color2 = { 255 255 255 }
+				
+				b_zumpango_del_rio_GR = {}
+				b_xochipala_GR = {}
+				b_mezcala_GR = {}
+				b_huitziltepec_GR = {}
+				b_axaxacualco_GR = {}
+				b_la_organera_GR = { #Z.A.
+					short_name = yes
+					used_for_dynasty_names=no
+				}
+				b_tlanipatla_GR = {}
+				b_el_palmar_GR = {}
+			}
+			
+			c_tixtla = { #2647
+				color = { 224 49 96 }
+				color2 = { 255 255 255 }
+				
+				b_tixtla_GR = {}
+				b_apango_GR = {}
+				b_tula_del_rio_GR = {}
+				b_san_juan_totocintla_GR = {}
+				b_zotoltilan_GR = {}
+				b_hueyitlalpan_GR = {}
+				b_san_agustin_ostotipan_GR = {}
+			}
+			
+			c_chilapa = { #2648
+				color = { 167 49 96 }
+				color2 = { 255 255 255 }
+				
+				b_chilapa_de_alvarez_GR = {}
+				b_quechultenango_GR = {}
+				b_mochitlan_GR = {}
+				b_ayahualulco_GR = {}
+				b_pantitlan_GR = {}
+				b_coaquimixco_GR = {}
+				b_tlacoaxtla_GR = {}
+			}
+		} #End of d_guerrero			
+
+		d_iguala = {
+			color = { 224  38 62 }
+			color2 = { 255 255 255 }
+			
+			capital = 1762 #Iguala
+			
+			nahua = Mezcalan
+
+			c_iguala = { # 1762
+				color={ 85 79 109 }
 				color2={ 255 255 255 }
 				
-				b_ometepec_GR = {}
-				b_cuajinicuilapa_GR = {}
-				b_acatepec_GR = {}
-				b_cruz_grande_GR = {}
-				b_copala_GR = {}
-				b_xochistlahuaca_GR = {}
-				b_marquelia_GR = {}
-				b_ayutla_GR = {
-					mixtec = "Tatioo"
-				}
-			}			
+				holy_site = mictlantec
+				
+				b_iguala_GR = {}
+				b_tepecoacuilco_de_trujano_GR = {}
+				b_cocula_GR = {}
+				b_san_miguel_tecuixlapan_GR = {}
+				b_san_juan_tetelcingo_GR = {}
+				b_metlapa_GR = {}
+				b_san_agustin_oapan_GR = {}
+				b_apipiculco_GR = {}
+
+			}
+			c_teloloapan = {  #2654
+				color = { 60 49 107 }
+				color2 = { 255 255 255 }
+				
+				b_teloloapan_GR = {}
+				b_acatempan_GR = {}
+				b_apaxtla_de_castrejon_GR = {}
+				b_acapetlahuaya_GR = {}
+				b_ixcapuzalco_GR = {}
+				b_coatepec_costales_GR = {}
+				b_tlalchapa_GR = {}
+				b_otlatepec_GR = {}
+			}
 			
+			c_taxco	= { #2653
+				color = { 96 96 175 }
+				color2 = { 255 255 255 }
+				
+				b_taxco_GR = {}
+				b_ixcateopan_de_cuauhtemoc_GR	 = {}
+				b_pilcaya_GR = {}	
+				b_tetipac_GR	 = {}
+				b_acamixtla_GR = {}	
+				b_acuitlapan_GR	 = {}
+				b_san_gregorio_GR	 = {}
+				b_noxtepec_GR	 = {}
+			}
+
 			c_atenango_del_rio = {
 				color={ 112 67 134 }
 				color2={ 255 255 255 }
 				
+				b_huitzuco_GR = {}
 				b_atenango_del_rio_GR = {}
+				b_buenavista_de_cuellar_GR = {}
 				b_copalillo_GR = {}
+				b_pololcingo_GR = {}
 				b_tlalcozotitlan_GR = {}
-				b_olinala_GR = {}
-				b_xixila_GR = {}
-				b_cocan_GR = {}
-				b_temalac_GR = {}
+				b_san_miguel_de_las_palmas_GR = {}
+				b_santiago_tlamazacapa_GR = {}
 				b_zicapa_GR = {}
 			}
+		} #End of d_iguala
+
+		d_sierra_mixteca = {
+			color = { 140 32 9 }
+			color2 = { 255 255 255 }
+			
+			capital = 1802
+			
+			short_name= yes
+			
+			nahua = "Zempoaltépetl"
+			mixtec = "Ñuñume"
 			
 			c_tlapa = { # 1802
 				color={ 158 106 179 }
@@ -1817,17 +2439,169 @@ e_mexico = {
 					mixtec = "Tinda'i"
 					nahua = "Tlappan"
 				}
-				b_chilapa_de_alvarez_GR = {}
-				b_ixcateopan_de_la_montana_GR = {}
+				b_atlamancingo_del_monte_GR = {}
+				b_atlixtac_GR = {}
+				b_xalpatlahuac_GR = {}
+				b_zapotitlan_tablas_GR = {}
+				b_san_juan_bautista_coapala_GR = {}
+				b_ixtlahuazaca_GR = {}
+
+			}
+			
+			c_olinala = { # 2652
+				color = { 213 74 178 }
+				color2 = { 255 255 255 }
+				
+			
+				b_olinala_GR = {}
 				b_huamuxtitlan_GR = {}
+				b_xixila_GR = {}
+				b_cualac_GR	= {}
+				b_temalacatzingo_GR = {}
+				b_xochihuehuetlan_GR	 = {}
+				b_san_miguel_tlaltepexi	= {}
+			}
+			c_alcozauca = { #2651
+				color = { 211 101 158 }
+				color2 = { 255 255 255 }
+				
+				b_alcozauca_de_guerrero_GR = {}
+				b_ixcateopan_de_la_montana_GR = {}
+				b_alpoyeca_GR = {}
+				b_tlalixtaquilla_GR = {}
+				b_tecoyame_de_guadalupe_GR = {}
+				b_xonacatlan_GR = {}
+			}
+			c_acatepec = { #2649
+				color = { 206 64 111 }
+				color2 = { 255 255 255 }
+				
+				b_acatepec_montana_GR ={}
+				b_tlacoapa_GR ={}
+				b_san_lucas_teocuitlapa_GR ={}
+				b_barranca_dulce_GR ={}
+				b_zilacayota_GR ={}
+				b_zoquitlan_GR ={}
+				b_zontecomapa_GR ={}
+			}
+			
+			c_cochoapa = { #2650
+				color = { 209 124 117 }
+				color2 ={ 255 255 255 }
+				
+				b_cochoapa_el_grande_GR = {}
 				b_metlatonoc_GR = {
 					mixtec = "Tiata'nu"
 				}
-				b_temalacatzingo_GR = {}
-				b_olinala_GR = {}
-				b_alpoyeca_GR = {}
+				b_malinaltepec_GR = {}
+				b_lomayozatl_GR = {}
+				b_huexoapa_GR = {}
+				b_petlakalansingo_GR = {}
+				b_san_rafael_MONTANA_GR = {}
+				b_iliatenco_GR = {}
+				b_cuatzoquitengo_GR = {}
 			}
-		}
+		} #End of d_sierra_mixteca
+
+		d_tierra_caliente_guerrero = {
+			color = { 135 96 70 }
+			color2 = { 255 255 255 }
+			
+			capital = 1761 #Coyuca ; should it be Pungarabato?
+			
+			nahua = Mezcalan
+
+			c_coyuca_de_catalan = { # 1761
+				color={ 94 167 143 }
+				color2={ 255 255 255 }
+				
+				purepecha = "Pungarihoato"
+			
+				b_coyuca_de_catalan_GR = {
+					nahua = "Coyucan"
+				}
+				b_amuco_de_la_reforma_GR = {}
+				b_san_juan_chamacua_GR	= {}
+				b_paso_de_arena_GR		= {}
+				b_patambo_GR		= {}
+				b_taretaro_GR		= {}
+				b_santa_teresa_GR		= {}
+				b_pineda_GR		= {}
+			}
+			c_zirandaro	= { #2641
+				color = { 9 136 113 }
+				color2 = { 255 255 255 }
+				
+				purepecha = "Phoré-Siranda"
+			
+				b_zirandaro_de_los_chavez_GR	= {
+					purepecha = "Phoré-Siranda"
+				}
+				b_guayameo_GR = {}
+				b_aratichanguio_GR	 = {}
+				b_la_calera_GR	 = {}
+				b_san_rafael_GR	 = {}
+				b_hacienda_vieja_GR	 = {}
+			}
+			c_ajuchitlan = { #2642
+				color = { 85 151 147 }
+				color2 = { 255 255 255 }
+				
+				nahua = "Xochitlan"
+				
+				b_ajuchitlan_GR = {
+					nahua = "Xochitlan"
+				}
+				b_changata_GR = {}
+				b_totolapan_GR = {}
+				b_corral_falso_GR = {}
+				b_villa_nicolas_bravo_GR = {}
+				b_san_cristobal_GR = {}
+				b_san_jeronimo_el_grande_GR = {}
+				b_canton_de_guerrero_GR = {}
+			}
+			c_pungarabato	= { #2643
+				color = { 83 119 107 }
+				color2 = { 255 255 255 }
+				
+				purepecha = "Pungarihoato"
+				nahua = "Tlapehualan"
+				
+				b_tlapehuala_GR = {
+					nahua = "Tlapehualan" #Tlapeuali?
+					purepecha = "Acatzécuaro"
+				}
+				b_ciudad_altamirano_GR = {
+					purepecha = "Pungarihoato"
+					#nahua = "Chuperio" #Dunno
+					short_name = yes
+					used_for_dynasty_names = no
+				}
+				b_arcelia_GR = {}
+				b_tlachapa_GR = {}	
+				b_tanganhuato_GR = {}	
+				b_san_jose_poliutla_GR = {}	
+				b_san_antonio_de_las_huertas_GR	 = {}
+				b_nueva_guerrero_GR	 = {}
+			}
+			
+			c_cutzamala = { #2644
+				color = { 129 226 194 }
+				color2 = { 255 255 255 }
+				
+
+				b_cutzamala_de_pinzon_GR = {
+					purepecha = "Apatzingani"
+					nahua = "Cotzamálotl"
+				}
+				b_zacapuato_GR = {}
+				b_tamacuaro_GR = {}
+				b_arroyo_grande_GR = {}
+				b_nuevo_galeana_GR = {}
+			}
+
+		} #End of d_tierra_caliente_guerrero
+
 		
 		# d_triangulo_del_sol = {
 			# color={ 186 28 57 }
@@ -1850,7 +2624,7 @@ e_mexico = {
 			# }
 		# }
 		
-		d_triangulo_del_sol = {
+		d_triangulo_del_sol = { #Acapulco
 			color={ 107 0 0 }
 			color2={ 255 255 255 }
 			
@@ -1862,83 +2636,190 @@ e_mexico = {
 				
 				holy_site = navegante
 				
+				b_lomas_de_san_juan_GR = {}
 				b_acapulco_GR = {}
-				b_coyuca_de_benitez_GR = {}
-				b_san_marcos_GR = {}
+				b_san_pedro_las_playas_GR = {}
 				b_kilometro_treinta_GR = {}
-				b_xaltianguis_GR = {}
-				b_tierra_colorada_GR = {}
 				b_tres_palos_GR = {}
-				b_san_diego_GR = {}
+				b_la_roqueta_GR	= {}
+				b_puerto_marques_GR	= {}	
+				b_tixtlancingo_GR = {}
+				b_san_diego_GR = {} #couldn't find it on map		
 			}
+		} #End of d_triangulo_del_sol	
+		
+		d_costa_grande = { 
+		
+			color = { 167 64 62 }
+			color2 = { 255 255 255 }
 			
 			c_zihuatanejo = {
 				color={ 112 151 123 }
 				color2={ 255 255 255 }
 				
+				b_ixtapa_zihuatanejo_GR = {}
 				b_zihuatanejo_GR = {}
 				b_san_jose_ixtapa_GR = {}
 				b_la_union_GR = {}
 				b_zacatula_GR = {}
 				b_trocones_GR = {}
-				b_vallecitos_de_zaragoza_GR = {}
-				b_coahuayana_de_guerrero_GR = {}
 				b_barra_de_potosi_GR = {}
+				b_la_pintada_GR = {}
 			}
 			c_tecpan_de_galeana = { # 1757
 				color={ 91 76 152 }
 				color2={ 255 255 255 }
 
 				b_tecpan_de_galeana_GR = {}
-				b_atoyac_de_alvarez_GR = {}
+				b_papanoa_GR = {}
 				b_san_luis_de_la_loma_GR = {}
 				b_puerto_vicente_guerrero_GR = {}
+				b_san_luis_san_pedro_GR	= {}
+				b_nuxco_GR		= {}
 				b_tenexpa_GR = {}
+				b_tetitlan_GR = {}
+			}
+			
+			c_petatlan = { #2639
+				color = { 128 42 193 }
+				color2 = { 255 255 255 }
+				
 				b_petatlan_GR = {}
-				b_la_pintada_GR = {}
-				b_papanoa_GR = {}
+				b_palos_blancos_GR = {}
+				b_san_jeronimito_GR = {}
+				b_coyuquita_norte_GR = {}
+				b_coyuquita_sur_GR = {}
+				b_potrerillos_GR = {}
+				b_ocote_de_peregrino_GR = {}
+				b_arroyo_seco_GR = {}
 			}
-			c_iguala = { # 1762
-				color={ 85 79 109 }
-				color2={ 255 255 255 }
+
+			c_coyuca = { #2637
+				color = { 73 64 150 }
+				color2 = { 255 255 255 }
 				
-				holy_site = mictlantec
+				b_coyuca_de_benitez_GR = {}
+				b_san_nicolas_de_las_playas_GR	 = {}
+				b_san_isidro_GR	 = {}
+				b_tixlancingo_GR	 = {}
+				b_bajos_del_ejido_GR	 = {}
+				b_san_salvador_de_las_pozas_GR = {}	
+				b_aguas_blancas_GR	 = {}
+			}
+			c_atoyac = { #2638
+				color = { 113 58 205 }
+				color2 = { 255 255 255 }
 				
-				b_iguala_GR = {}
-				b_ixcateopan_de_cuauhtemoc_GR = {}
-				b_acatempan_GR = {}
-				b_taxco_GR = {}
-				b_huitzuco_GR = {}
-				b_buenavista_de_cuellar_GR = {}
-				b_cocula_GR = {}
-				b_teloloapan_GR = {}
+				b_atoyac_de_alvarez_GR = {}
+				b_zacualpan_GR = {}
+				b_san_jeronimo_de_juarez_GR = {}
+				b_santiago_ATY_GR = {}
+				b_san_andres_de_la_cruz_GR = {}
+				b_san_vicente_de_benitez_GR = {}
+				b_la_y_griega_GR = {}
+				b_arenal_de_alvarez_GR = {}
 			}
 			
-			c_coyuca_de_catalan = { # 1761
-				color={ 94 167 143 }
-				color2={ 255 255 255 }
+			c_coahuayutla = { #2640
+				color = { 129 196 177 }
+				color2 = { 255 255 255 }
 				
-				purepecha = "Pungarihoato"
-			
-				b_coyuca_de_catalan_GR = {
-					nahua = "Coyucan"
-				}
-				b_cutzamala_de_pinzon_GR = {
-					purepecha = "Apatzingani"
-					nahua = "Cotzamálotl"
-				}
-				b_ajuchitlan_GR = {}
-				b_arcelia_GR = {}
-				b_tlapehuala_GR = {}
-				b_guayameo_GR = {}
-				b_ciudad_altamirano_GR = {
-					purepecha = "Pungarihoato"
-					short_name = yes
-					used_for_dynasty_names = no
-				}
-				b_totolapan_GR = {}
-			}
+				b_coahuayutla_de_jose_maria_izazaga_GR = {}
+				b_cuauhtemoc_GR = {}
+				b_zitlala_GR = {}
+				b_vallecitos_de_zaragoza_GR = {}
+				b_olivares_GR = {}
+				b_zopilote_GR = {}
+				b_platanillo_GR = {}
+				b_guadaluo = {}
+				b_coahuayana_de_guerrero_GR = {}
 		}
-	}	
-}
+
+		} #End of costa_grande
+		
+		
+
+
+	
+		d_costa_chica_guerrero = { #Los Libres?
+			color = { 178 56 106  }
+			color2 = { 255 255 255 }
+			
+			capital = 1806
+			
+			c_ometepec = { # 1806
+				color={ 118 88 197 }
+				color2={ 255 255 255 }
+				
+				b_ometepec_GR = {}
+				b_xochistlahuaca_GR = {}
+
+				b_igualapa_GR = {}
+				b_tlacoachistlahuaca_GR	= {}
+				b_huajintepec_GR	= {}	
+				b_huixtepec_GR		= {}
+				b_cochoapa_GR		= {}
+				b_quetzalapa_GR		= {}
+			}
+
+			c_cuajinicuilapa	= { #2633
+				color = { 112 56 106 }
+				color2 = { 255 255 255 }
+				
+				b_cuajinicuilapa_GR	= {}
+				b_copala_GR	= {}
+				b_cruz_grande_GR	= {}
+				b_cuautepec_GR		= {}
+				b_marquelia_GR		= {}
+				b_alto_de_ventura_GR		= {}
+				b_san_nicolas_CCH_GR		= {}
+				b_punta_maldonado_GR		= {}
+			}
+			
+			c_ayutla = { #2634
+				color = { 174 56 105 }
+				color2 = { 255 255 255 }
+				
+				b_ayutla_GR = {
+					mixtec = "Tatioo"
+				}
+				b_acatepec_GR = {}
+				b_san_luis_acatlan_GR	 = {}
+				b_azoyu_GR	 = {}
+				b_arcelia_del_progreso_GR	 = {}
+				b_jolotichan_GR	 = {}
+				b_tlaxcalixtlahuaca_GR = {}
+			}
+			
+			c_san_marcos_GR = { #2635
+				color = { 186 89 113 }
+				color2 = { 255 255 255 }
+				
+				b_san_marcos_GR = {}
+				b_santo_domingo_SM_GR = {}
+				b_llano_de_la_puerta_GR = {}
+				b_bella_vista_papagayo_GR = {}
+				b_tecomate_nanchal_GR = {}
+				b_el_cocoyult_GR = {}
+				b_el_tejoruco_GR = {}
+				b_agua_zarca_de_la_pena_GR = {}
+			}
+			
+			c_tierra_colorada = {
+				color = { 127 63 63 }
+				color2 = { 255 255 255 }
+				
+				b_tierra_colorada_GR = {}
+				b_xaltianguis_GR = {}
+				b_tecoanapa_GR = {}
+				b_chacoanapa_de_los_bravos_GR = {}
+				b_amatepec_GR = {}
+				b_san_juan_del_reparo_GR = {}
+				b_alto_del_camaron_GR = {}
+				b_dos_arroyos_GR = {}
+			}
+		}	#End of d_costa_chica_guerrero
+	} #End of k_guerrero	
+	
+} #End of e_mexico
 

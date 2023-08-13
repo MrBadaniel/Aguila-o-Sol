@@ -123,30 +123,148 @@ decisions = {
         }
 		
 	}	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 }
+
+
+	settlement_decisions = {
+		Gregorian_build_great_pillar = {
+		ai_check_interval = 200 #check only once every 200 months.
+		filter = owned
+		ai_target_filter = owned
+		is_high_prio = yes
+		
+		from_potential = {
+			has_dlc = "Holy Fury"
+			is_playable = yes
+		#	is_tribal = yes
+			higher_tier_than = COUNT 
+			independent = yes
+			OR = { 
+				religion = Gregorian
+
+			}
+			NOR = { #Only one Pillar of your own religion per realm. So, the more neighbors you subjugate, the less pillars are going to be built.
+				AND = { 
+					religion = Gregorian
+					any_realm_province = { has_province_flag = flag_great_pillar_Gregorian } 
+				}
+			}
+		}
+		
+		potential = {
+			holder_scope = {
+				character = FROM
+			}
+			holding_type = castle
+			is_capital = yes
+			capital_scope = { location = { province = ROOT } }
+			dejure_liege_title = {
+				holder_scope = {
+					character = FROM
+				}
+			}
+			location = {
+				FROM = {
+					capital_scope = {
+						province = PREVPREV
+					}
+				}
+			}
+		}
+		allow = { 
+			FROM = { 
+				wealth = 350
+				piety = 150 
+			}
+			location = { religion = FROM } #Locals must already worship your gods.
+			custom_tooltip = { 
+				text = tooltip_province_already_has_great_pillar
+				hidden_tooltip = { 
+					location = { 
+						NOR = { 
+							has_province_flag = flag_great_pillar_Gregorian
+						}
+					}
+				}
+			}
+			custom_tooltip = { 
+				text = tooltip_ruler_recently_had_pillar_destroyed
+				hidden_tooltip = { 
+					NOT = { 
+						FROM = { 
+							has_character_modifier = recently_destroyed_great_pillar_cooldown
+						}
+					}
+				}
+			}
+		}
+		effect = {
+			FROM = { 
+				show_scope_change = no
+				wealth = -350
+				piety = -150
+				custom_tooltip = { 
+					text = tooltip_celebrate_new_great_pillar
+				}
+				hidden_tooltip = {
+					character_event = { id = AoM.70 }
+				}
+			}
+			hidden_tooltip = {  
+				if = {  
+					limit = { FROM = { religion = Gregorian } }
+					hidden_tooltip = {
+						location = {
+							set_province_flag = flag_great_pillar_Gregorian
+						}
+					}
+				}
+			}
+		}
+		
+		revoke_allowed = {
+			always = no
+		}
+		
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 2
+				FROM = {
+					trait = zealous
+				}
+			}
+			modifier = {
+				factor = 0
+				FROM = {
+					trait = cynical
+				}
+			}
+			modifier = {
+				factor = 0.25
+				FROM = {
+					trait = greedy
+				}
+			}
+			modifier = {
+				factor = 0.5
+				FROM = {
+					lower_tier_than = KING
+				}
+			}
+		}
+	}
+}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 
 
 
