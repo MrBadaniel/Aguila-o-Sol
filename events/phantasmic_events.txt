@@ -1,0 +1,121 @@
+namespace = phantasmic
+
+character_event = { #Getting on the ride
+	id = phantasmic.1
+	desc = EVTDESC_park_ride_1
+	picture = GFX_evt_hades_forest
+	border = GFX_event_normal_frame_religion
+
+	is_triggered_only = yes
+
+	trigger = {
+		has_character_flag = going_on_ride
+	}
+
+	option = { #Going through with it
+		name = EVTOPTA_park_ride_1
+		hidden_tooltip = {
+			narrative_event = { id = phantasmic.2 days = 1 }
+		}
+	}
+	option = { #Backing out
+		name = EVTOPTB_park_ride_1
+		trait = craven
+		piety = -10
+		hidden_tooltip = {
+			clr_character_flag = going_on_ride
+			add_character_modifier = { name = wimped_out years = 3 }
+		}
+	}
+}
+
+narrative_event = { #Going up the big hill
+	id = phantasmic.2
+	title = EVTNAME_park_ride_2
+	desc = EVTDESC_park_ride_2
+	picture = GFX_evt_hades_forest
+	border = GFX_event_narrative_frame_religion
+
+	is_triggered_only = yes
+
+	trigger = {
+		has_character_flag = going_on_ride
+	}
+
+	immediate = {
+		character_event = { id = phantasmic.3 days = 1 }
+	}
+
+	option = { #Anticipation
+		name = EVTOPT_park_ride_2
+	}
+}
+
+character_event = { #Going down the hill and other stuff
+	id = phantasmic.3
+	desc = EVTDESC_park_ride_3
+	picture = GFX_evt_hades_forest
+	border = GFX_event_normal_frame_religion
+
+	is_triggered_only = yes
+
+	trigger = {
+		has_character_flag = going_on_ride
+	}
+
+	immediate = {
+		narrative_event = { id = phantasmic.4 days = 1 }
+	}
+
+	option = {
+		name = EVTOPT_park_ride_3
+	}
+}
+
+narrative_event = { #End of the ride
+	id = phantasmic.4
+	title = EVTNAME_park_ride_4
+	desc = EVTDESC_park_ride_4
+	picture = GFX_evt_hades_forest
+	border = GFX_event_narrative_frame_religion
+
+	is_triggered_only = yes
+
+	trigger = {
+		has_character_flag = going_on_ride
+	}
+
+	immediate = {
+		clr_character_flag = going_on_ride
+		clr_character_flag = do_not_disturb
+		add_character_modifier = { name = went_on_park_ride years = 3 }
+	}
+
+	option = {
+		name = EVTOPT_park_ride_4
+		piety = 50
+		prestige = 25
+		custom_tooltip = { text = TXT_park_ride_end }
+		random_list = {
+			25 = {
+				trait = brave
+			}
+			25 = {
+				trait = stressed
+			}
+			50 = {
+			}
+		}
+	}
+}
+
+character_event = { #flag clearing
+	id = phantasmic.5
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		clr_character_flag = going_on_ride
+		clr_character_flag = do_not_disturb
+	}
+}
