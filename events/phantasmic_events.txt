@@ -1,0 +1,266 @@
+namespace = phantasmic
+
+character_event = { #Getting on the ride
+	id = phantasmic.1
+	desc = EVTDESC_park_ride_1
+	picture = GFX_evt_hades_forest
+	border = GFX_event_normal_frame_religion
+
+	is_triggered_only = yes
+
+	trigger = {
+		has_character_flag = going_on_ride
+	}
+
+	option = { #Going through with it
+		name = EVTOPTA_park_ride_1
+		hidden_tooltip = {
+			random_list = {
+				25 = {
+					add_character_flag = haunted_mansion_ride
+				}
+				25 = {
+					add_character_flag = pirate_ride
+				}
+				25 = {
+					add_character_flag = splash_mountain_ride
+				}
+				25 = {
+					add_character_flag = small_world_ride
+				}
+			}
+			narrative_event = { id = phantasmic.2 days = 1 }
+		}
+	}
+	option = { #Backing out
+		name = EVTOPTB_park_ride_1
+		trait = craven
+		piety = -10
+		hidden_tooltip = {
+			clr_character_flag = going_on_ride
+			add_character_modifier = { name = wimped_out years = 3 }
+		}
+	}
+}
+
+narrative_event = { #Going through the first part
+	id = phantasmic.2
+	title = EVTNAME_park_ride_2
+	picture = GFX_evt_hades_forest
+	border = GFX_event_narrative_frame_religion
+
+	desc = {
+		trigger = {
+			has_character_flag = haunted_mansion_ride
+		}
+		text = EVTDESC_park_ride_2_haunted_mansion
+	}
+
+	desc = {
+		trigger = {
+			has_character_flag = pirate_ride
+		}
+		text = EVTDESC_park_ride_2_pirates
+	}
+
+	desc = {
+		trigger = {
+			has_character_flag = splash_mountain_ride
+		}
+		text = EVTDESC_park_ride_2_splash_mountain
+	}
+
+	desc = {
+		trigger = {
+			has_character_flag = small_world_ride
+		}
+		text = EVTDESC_park_ride_2_small_world
+	}
+
+	is_triggered_only = yes
+
+	trigger = {
+		has_character_flag = going_on_ride
+	}
+
+	immediate = {
+		character_event = { id = phantasmic.3 days = 1 }
+	}
+
+	option = { #Anticipation
+		name = EVTOPT_park_ride_2_haunted_mansion
+		trigger = {
+			has_character_flag = haunted_mansion_ride
+		}
+	}
+	option = { #Anticipation
+		name = EVTOPT_park_ride_2_pirates
+		trigger = {
+			has_character_flag = pirate_ride
+		}
+	}
+	option = { #Anticipation
+		name = EVTOPT_park_ride_2_splash_mountain
+		trigger = {
+			has_character_flag = splash_mountain_ride
+		}
+	}
+	option = { #Anticipation
+		name = EVTOPT_park_ride_2_small_world
+		trigger = {
+			has_character_flag = small_world_ride
+		}
+	}
+}
+
+character_event = { #Second part of ride
+	id = phantasmic.3
+	picture = GFX_evt_hades_forest
+	border = GFX_event_normal_frame_religion
+
+	desc = {
+		trigger = {
+			has_character_flag = haunted_mansion_ride
+		}
+		text = EVTDESC_park_ride_3_haunted_mansion
+	}
+
+	desc = {
+		trigger = {
+			has_character_flag = pirate_ride
+		}
+		text = EVTDESC_park_ride_3_pirates
+	}
+
+	desc = {
+		trigger = {
+			has_character_flag = splash_mountain_ride
+		}
+		text = EVTDESC_park_ride_3_splash_mountain
+	}
+
+	desc = {
+		trigger = {
+			has_character_flag = small_world_ride
+		}
+		text = EVTDESC_park_ride_3_small_world
+	}
+
+	is_triggered_only = yes
+
+	trigger = {
+		has_character_flag = going_on_ride
+	}
+
+	immediate = {
+		narrative_event = { id = phantasmic.4 days = 1 }
+	}
+
+	option = {
+		name = EVTOPT_park_ride_3_haunted_mansion
+		trigger = {
+			has_character_flag = haunted_mansion_ride
+		}
+	}
+	option = {
+		name = EVTOPT_park_ride_3_pirates
+		trigger = {
+			has_character_flag = pirate_ride
+		}
+	}
+	option = {
+		name = EVTOPT_park_ride_3_splash_mountain
+		trigger = {
+			has_character_flag = splash_mountain_ride
+		}
+	}
+	option = {
+		name = EVTOPT_park_ride_3_small_world
+		trigger = {
+			has_character_flag = small_world_ride
+		}
+	}
+}
+
+narrative_event = { #End of the ride
+	id = phantasmic.4
+	title = EVTNAME_park_ride_4
+	picture = GFX_evt_hades_forest
+	border = GFX_event_narrative_frame_religion
+
+	desc = {
+		trigger = {
+			has_character_flag = haunted_mansion_ride
+		}
+		text = EVTDESC_park_ride_4_haunted_mansion
+	}
+
+	desc = {
+		trigger = {
+			has_character_flag = pirate_ride
+		}
+		text = EVTDESC_park_ride_4_pirates
+	}
+
+	desc = {
+		trigger = {
+			has_character_flag = splash_mountain_ride
+		}
+		text = EVTDESC_park_ride_4_splash_mountain
+	}
+
+	desc = {
+		trigger = {
+			has_character_flag = small_world_ride
+		}
+		text = EVTDESC_park_ride_4_small_world
+	}
+
+	is_triggered_only = yes
+
+	trigger = {
+		has_character_flag = going_on_ride
+	}
+
+	immediate = {
+		clr_character_flag = going_on_ride
+		clr_character_flag = haunted_mansion_ride
+		clr_character_flag = pirates_ride
+		clr_character_flag = splash_mountain_ride
+		clr_character_flag = small_world_ride
+		clr_character_flag = do_not_disturb
+		add_character_modifier = { name = went_on_park_ride years = 3 }
+	}
+
+	option = {
+		name = EVTOPT_park_ride_4
+		piety = 50
+		prestige = 25
+		custom_tooltip = { text = TXT_park_ride_end }
+		random_list = {
+			25 = {
+				trait = brave
+			}
+			25 = {
+				trait = stressed
+			}
+			50 = {
+			}
+		}
+	}
+}
+
+character_event = { #flag clearing
+	id = phantasmic.5
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		clr_character_flag = going_on_ride
+		clr_character_flag = haunted_mansion_ride
+		clr_character_flag = pirates_ride
+		clr_character_flag = splash_mountain_ride
+		clr_character_flag = small_world_ride
+		clr_character_flag = do_not_disturb
+	}
+}

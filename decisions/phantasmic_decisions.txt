@@ -1,0 +1,49 @@
+decisions = {
+	experience_park_ride = {
+		only_playable = yes
+		is_high_prio = yes
+		ai_check_interval = 6
+
+		potential = {
+			is_playable = yes
+			is_adult = yes
+			NOR = {
+				has_character_modifier = went_on_park_ride
+				has_character_modifier = wimped_out
+			}
+			OR = {
+				religion = phantasmic
+				religion = renaissancist
+			}
+			prisoner = no
+			in_seclusion = no
+			NOT = { is_incapable = yes }
+			NOT = { #immersion-breaking
+				has_alternate_start_parameter = { key = religion_names value = random }
+			}
+		}
+		allow = {
+			OR = {
+				religion = phantasmic
+				religion = renaissancist
+			}
+		}
+		effect = {
+			set_character_flag = going_on_ride
+			set_character_flag = do_not_disturb
+			hidden_tooltip = { character_event = { id = phantasmic.5 days = 30 } } # Safety catch flag clearing
+			custom_tooltip = {
+				text = TXT_go_to_ride
+				hidden_tooltip = { 
+					character_event = { id = phantasmic.1 } 
+				}
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}
