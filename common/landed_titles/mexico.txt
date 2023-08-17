@@ -677,16 +677,55 @@ e_mexico = {
 					nahua = "Pachohuahcan"
 				}
 				b_real_del_monte_HI = {}
-				b_huasca_de_ocampo_HI = {}
+			#	b_huasca_de_ocampo_HI = {}
+				b_tizayuca_HI = {}
 				b_actopan_HI = {
 					nahua = "Atocpan"
 				}
-				b_tulancingo_HI = {}
+			#	b_tulancingo_HI = {}
 				b_san_agustin_tlaxiaca_HI = {}
-				b_tepatepec_HI = {}
+			#	b_tepatepec_HI = {}
 				b_pachuquilla_HI = {}
+				b_tezontepec_HI = {}
+				b_zapotlan_de_juarez_HI = {}
+
 			}
-		}
+			
+			c_tulancingo = {
+				color = { 93 160 122 }
+				color2 = { 255 255 255 }
+				
+				nahua = "Tollantzinco"
+				
+				b_tulancingo_HI = {
+					nahua = "Tollantzinco"
+				}
+				b_cuautepec_de_hinojosa_HI = {}
+				b_santiago_tulantepec_HI = {}
+				b_huasca_de_ocampo_HI = {}
+				b_metepec_HI = {}
+				b_santa_ana_hueytlalpan_HI = {}
+				b_singuilucan_HI = {}
+				b_ciudad_sahagun_HI = {
+					short_name = yes
+					used_for_dynasty_names = no
+				}
+			}
+			c_valle_del_mezquital	= {
+				color = { 90 132 108 }
+				color2 = { 255 255 255 }
+				
+				b_tula_de_allende_HI = {}
+				b_tepeji_del_rio_de_ocampo_HI = {}
+				b_mixquiahuala_de_juarez_HI = {}
+				b_tlahuelilpan_HI = {}
+				b_tepatepec_HI = {}
+				b_tlaxcoapan_HI = {}
+				b_tetepango_HI = {}
+				b_huichapan_HI = {}
+			}
+				
+		} #End of d_hidalgo
 		
 		d_edomex = {
 			color={ 221 126 25 }
@@ -760,25 +799,6 @@ e_mexico = {
 				b_otzoloapan_MX = {}
 			}
 
-			
-			c_morelos = { # 1769
-				color={ 13 118 137 }
-				color2={ 255 255 255 }
-								
-				nahua = "Cuauhnahuac"
-				
-				b_cuernavaca_MX = {
-					nahua = "Cuauhnahuac"
-				}
-				b_cuautla_MX = {}
-				b_jiutepec_MX = {}
-				b_temixco_MX = {}
-				b_chiconcuac_MX = {}
-				b_zacatepec_de_hidalgo_MX = {}
-				b_yautepec_de_zaragoza_MX = {}
-				b_tepoztlan_MX = {}
-			}
-			
 			c_temascalcingo = { # 1765
 				color={ 209 155 43 }
 				color2={ 255 255 255 }
@@ -794,6 +814,62 @@ e_mexico = {
 			}
 		} #End of d_edomex
 		
+		d_morelos = { 
+			color = { 10 125 145 }
+			color2 = { 255 255 255 }
+			
+			capital = 1769 # c_morelos
+			
+			c_morelos = { # 1769
+				color={ 13 118 137 }
+				color2={ 255 255 255 }
+								
+				nahua = "Cuauhnahuac"
+				
+				b_cuernavaca_MX = {
+					nahua = "Cuauhnahuac"
+				}
+				b_jiutepec_MX = {}
+				b_temixco_MX = {}
+				b_chiconcuac_MX = {}
+				b_huitzilac_MRS = {}
+				b_tres_marias_MRS = {}
+				b_coajomulco_MRS = {}
+				b_xochitepec_MRS = {}
+			}
+			c_cuautla = {
+				color = { 109 148 196 }
+				color2 = { 255 255 255 }
+				
+				b_cuautla_MX = {}
+				b_ciudad_ayala_MRS = {
+					short_name = yes
+					used_for_dynasty_names = no
+				}
+				b_yautepec_de_zaragoza_MX = {}
+				b_tepoztlan_MX = {}
+				b_atlatlahucan_MRS = {}
+				b_axochiapan_MRS = {}
+				b_oacacalco_MRS = {}
+				b_yecapixtla_MRS = {}
+				b_tetela_del_volcan_MRS = {}
+			}
+			
+			c_jojutla = {
+				color = { 75 102 135 }
+				color2 = { 255 255 255 }
+				
+				b_jojutla_de_juarez_MRS = {}
+				b_puente_de_ixtla_MRS = {}
+				b_zacatepec_de_hidalgo_MX = {}
+				b_tlaquiltenango_MRS = {}
+				b_tequesquitengo_MRS = {}
+				b_alpuyeca_MRS = {}
+				b_amacuzac_MRS = {}
+				b_coatlan_del_rio_MRS = {}
+			}
+
+		} # End of d_morelos
 		d_tejupilco = {
 			color = { 147 183 69 }
 			color2 = { 255 255 255 }
