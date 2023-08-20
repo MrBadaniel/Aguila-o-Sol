@@ -1163,14 +1163,16 @@ feudal_governments = {
 		free_revoke_on_tiers = { count }
 
 		potential = {
-			NAND = {
-				controls_religion = yes
-				religion = la_hermandad
-			}
-			NAND = {
-				controls_religion = yes
-				religion = artiga
-			}
+			OR = {
+					NAND = {
+					controls_religion = yes
+					religion = la_hermandad
+					}
+					NAND = {
+					controls_religion = yes
+					religion = artiga
+					}
+				}
 			OR = {
 				religion = la_hermandad
 				religion = artiga
