@@ -877,6 +877,11 @@ e_mexico = {
 			capital = 1759 # c_oriente
 			
 			name_tier = count
+			
+			allow = {
+				NOT = { has_landed_title = d_edomex }
+				NOT = { has_landed_title = e_mexico }
+			}
 		
 			c_oriente = { # 1759
 				color={ 158 185 100 }
@@ -1066,15 +1071,79 @@ e_mexico = {
 					chilango = "Angelópolis"
 					mixtec = "Yute Ncho'o"
 				}
+				b_cuatlazingo_PU = {}
+				b_amozoc_PU	= {}
+				b_tepeaca_PU = {}
+				b_acajete_PU = {}
+				b_cuautinchan_PU = {}
+				b_san_baltazar_tetela_PU = {}
+				b_san_pedro_zacachimalpa_PU = {}
+
+
+			}
+		#	c_texmelucan = { #2667
+		#		color = { 91 75 114 }
+		#		color2 = { 255 255 255 }
+		#		
+		#		b_san_martin_texmelucan_PU = {}
+		#		b_san_rafael_tlanalalpan_PU = {}
+		#		b_san_salvador_el_verde_PU = {}
+		#		b_huejotzingo_PU = {}
+		#		b_santa_ana_xalmimimulco_PU = {}
+		#		b_san_matias_tlalancaleca_PU = {}
+		#		b_santa_rita_tlahuapan_PU = {}
+		#		b_santa_maria_texmelucan_PU = {}
+		#	}
+			c_cholula = { #2667
+				color = { 91 75 114 }
+				color2 = { 255 255 255 }
+				
 				b_cholula_PU ={
 					nahua = "Cholollan"
 				}
-				b_atlixco_PU = {}
-				b_tepeaca_PU = {}
 				b_san_martin_texmelucan_PU = {}
+				b_santa_maria_zacatepec_PU = {}
 				b_huejotzingo_PU = {}
-				b_san_gregorio_atzompa_PU = {}
+				b_santa_maria_coronango_PU = {}
+				b_san_salvador_el_verde_PU = {}
+				b_santa_ana_xalmimimulco_PU = {}
+				b_san_nicolas_de_los_ranchos_PU	= {}
 			}
+			c_atlixco = {
+				color = { 81 57 117 }
+				color2 = { 255 255 255 }
+				
+				b_chipilo_PU = {}
+				b_atlixco_PU = {}
+				b_san_pablo_ahuatempa_PU = {}
+				b_tochimilco_PU = {}
+				b_san_gregorio_atzompa_PU = {}
+				b_tepeojuma_PU = {}
+				b_san_pedro_benito_juarez_PU = {}
+				b_acteopan_PU = {}
+			}
+			c_serdan = {
+				color = { 111 78 160 }
+				color2 = { 255 255 255 }
+				
+				nahua = "Hueytlalli"
+				
+				b_libres_PU = {
+					nahua = "Hueytlalli"
+				}
+				b_ciudad_serdan_PU = {
+					short_name = yes
+					used_for_dynasty_names = no
+				}
+				b_acatzingo_de_hidalgo_PU = {}
+				b_tecamachalco_PU = {
+					nahua = "Tetlcamachalli"
+				}
+				b_san_salvador_el_seco_PU = {}
+				b_soltepec_PU = {}
+				b_san_andres_payuca_PU = {}
+			}
+			
 			c_tehuacan = { # 1772
 				color={ 152 215 161 }
 				color2={ 255 255 255 }
@@ -1088,20 +1157,7 @@ e_mexico = {
 				b_cuabcapula_PU = {}
 				b_ajalpan_PU = {}
 			}
-			c_totonacapan = { # 1773
-				color={ 206 124 149 }
-				color2={ 255 255 255 }
-				
-				b_zacatlan_PU = {}
-				b_tetela_de_ocampo_PU = {}
-				b_xicotepec_de_juarez_PU = {}
-				b_zacapoaxtla_PU = {}
-				b_chignahuapan_PU = {}
-				b_cuetzalan_PU = {}
-				b_zaragoza_PU = {}
-				b_libres_PU = {}
-				b_teziutlan_PU = {}
-			}
+
 			c_tlaxcala = { # 1770
 				color={ 158 167 11 }
 				color2={ 255 255 255 }
@@ -1119,7 +1175,125 @@ e_mexico = {
 				b_tlaxco_TL = {}
 				b_ocotlan_TL = {}
 			}
-		}
+			
+		} #End of d_puebla
+		
+		d_sierra_norte = {
+			color = { 117 103 137 }
+			color2 = { 255 255 255 }
+			
+			capital = 2669 
+						
+			nahua = "Totonacapan"
+			
+			allow = {
+				NOT = { has_landed_title = d_puebla }
+				NOT = { has_landed_title = e_mexico }
+			}
+			c_totonacapan = { # 1773
+				color={ 206 124 149 }
+				color2={ 255 255 255 }
+				
+				
+				b_zacatlan_PU = {}
+				b_tetela_de_ocampo_PU = {}
+				b_chignahuapan_PU = {}
+				b_ahuazotepec_PU = {}
+				b_tepango_de_rodriguez_PU = {}
+				b_zapotitlan_de_mendez_PU = {}
+				b_aquixtla_PU = {}
+			}
+			
+			c_tlatlauquitepec = { #2665
+				color = { 68 102 147 }
+				color2 = { 255 255 255 }
+				
+				b_tlatlauquitepec_PU = {}
+				b_zacapoaxtla_PU = {}
+				b_cuetzalan_PU = {}
+				b_zaragoza_PU = {}
+				b_teziutlan_PU = {}
+				b_atempan_PU = {}
+				b_hueyapan_PU = {}
+			}
+			
+			c_huachinango = { #2669
+				color = { 143 124 149 }
+				color2 = { 255 255 255 }
+				
+				b_huachinango_PU = {}
+				b_nuevo_necaxa_PU = {}
+				b_xicotepec_de_juarez_PU = {}
+				b_tenango_de_las_flores_PU = {}
+				b_villa_avila_camacho_PU = {}
+				b_pahuatlan_PU = {}
+				b_tlacuilotepec_PU = {}
+			}	
+		} #End of d_sierra_norte
+		
+		d_mixteca_poblana = {
+			color = { 206 109 187 }
+			color2 = { 255 255 255 }
+			
+			capital = 1803
+			
+			chilango = "Izúcar"
+			mixtec = "I'ni"
+			
+			allow = {
+				NOT = { has_landed_title = d_puebla }
+				NOT = { has_landed_title = e_mexico }
+			}
+			
+			c_acatlan = { # 1803
+				color={ 176 176 200 }
+				color2={ 255 255 255 }
+				
+				mixtec = "I'ni"
+				
+				b_acatlan_PU = {
+					mixtec = "Tèsa'à"
+				}
+			#	b_izucar_de_matamoros_PU = {}
+				b_tepexi_de_rodriguez_PU = {}	
+				b_piaxtla_PU = {}
+				b_tecomatlan_PU = {}
+				b_tehuitzingo_PU = {}
+				b_san_juan_ixcaquixtla_PU		= {}
+				b_santa_clara_huitziltepec_PU	= {}
+				b_chila_PU	= {}			
+			}
+			
+			c_chiautla = { #2632
+				color = { 176 176 255 }
+				color2 = { 255 255 255 }
+				
+				b_chiautla_de_tapia_PU = {}
+				b_huehuetlan_PU = {}
+				b_jolalpan_PU = {}
+				b_tulcingo_PU = {}
+				b_acaxtlahucan_de_albino_zertuche_PU = {}
+				b_ixcamilpa_de_guerrero_PU = {}
+				b_tecomatlan_PU = {}
+				b_xicotlan_PU = {}
+				b_santa_maria_cohetzala_PU = {}
+			}
+			
+			c_izucar = {
+				color = { 178 155 198 }
+				color2 = { 255 255 255 }
+				
+				b_izucar_de_matamoros_PU = {}
+				b_chietla_PU = {}
+				b_tepexco_PU = {}
+				b_tlapanala_PU = {}
+				b_tilapa_PU = {}
+				b_atzala_PU = {}
+				b_epatlan_PU = {}
+				b_ahuatlan_PU = {}
+			}
+			
+		} #End of d_mixteca_poblana
 	} #End of k_mexico
 	k_veracruz = {
 		color={ 0.65 0.5 0.05 }
@@ -2107,41 +2281,6 @@ e_mexico = {
 				b_monte_verde_OA = {}
 				b_san_cristobal_suchixtlahuaca_OA = {}
 			}			
-	
-			c_acatlan = { # 1803
-				color={ 176 176 200 }
-				color2={ 255 255 255 }
-				
-				mixtec = "I'ni"
-				
-				b_acatlan_PU = {
-					mixtec = "Tèsa'à"
-				}
-			#	b_izucar_de_matamoros_PU = {}
-				b_tepexi_de_rodriguez_PU = {}	
-				b_piaxtla_PU = {}
-				b_tecomatlan_PU = {}
-				b_tehuitzingo_PU = {}
-				b_san_juan_ixcaquixtla_PU		= {}
-				b_santa_clara_huitziltepec_PU	= {}
-				b_chila_PU	= {}			
-			}
-			
-			c_chiautla = { #2632
-				color = { 176 176 255 }
-				color2 = { 255 255 255 }
-				
-				b_chiautla_de_tapia_PU = {}
-				b_huehuetlan_PU = {}
-				b_jolalpan_PU = {}
-				b_tulcingo_PU = {}
-				b_acaxtlahucan_de_albino_zertuche_PU = {}
-				b_ixcamilpa_de_guerrero_PU = {}
-				b_tecomatlan_PU = {}
-				b_xicotlan_PU = {}
-				b_santa_maria_cohetzala_PU = {}
-			}
-
 			
 		} #End of d_mixteca
 		
