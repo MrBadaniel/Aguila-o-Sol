@@ -884,7 +884,17 @@ minor_liberation = {
 				set_defacto_liege = ROOT
 			}
 		}
-
+		if = {
+			limit = {
+				NOT = { FROM = { religion = ROOT } }
+			}
+			ROOT = {
+				show_scope_change = no
+				religion_authority = {
+					modifier = won_county_conquest
+				}
+			}
+		}
 		if = {
 			limit = {
 				holder_scope = {
@@ -1244,7 +1254,41 @@ major_liberation = {
 				}
 			}
 		}
-		
+				ROOT = { 
+			participation_scaled_piety = 100
+			participation_scaled_prestige = 50
+			if = {
+				limit = {
+					uses_decadence = yes
+				}
+				participation_scaled_decadence = -10
+			}
+			religion_authority = {
+				modifier = won_holy_war
+				years = 20
+			}
+			hidden_tooltip = {
+				if = {
+					limit = {
+						has_ambition = obj_strengthen_religion
+					}
+					change_variable = { which = strengthen_religion value = 1 }
+				}
+			}
+		}
+		FROM = { 
+			if = {
+				limit = {
+					NOT = {
+						has_character_modifier = known_satanist
+					}
+				}
+				religion_authority = {
+					modifier = lost_holy_war
+					years = 20
+				}		
+			}		
+		}
 		FROM = { show_scope_change = no prestige = -200 }
 	}
 
