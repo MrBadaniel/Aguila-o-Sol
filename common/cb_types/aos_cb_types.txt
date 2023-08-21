@@ -166,6 +166,31 @@ cb_liberate_wilds = {
 				}
 				participation_scaled_decadence = -10
 			}
+			religion_authority = {
+				modifier = won_holy_war
+				years = 20
+			}
+			hidden_tooltip = {
+				if = {
+					limit = {
+						has_ambition = obj_strengthen_religion
+					}
+					change_variable = { which = strengthen_religion value = 1 }
+				}
+			}
+		}
+		FROM = { 
+			if = {
+				limit = {
+					NOT = {
+						has_character_modifier = known_satanist
+					}
+				}
+				religion_authority = {
+					modifier = lost_holy_war
+					years = 20
+				}		
+			}		
 		}
 		any_attacker = {
 			limit = { NOT = { character = ROOT } }
@@ -1254,7 +1279,7 @@ major_liberation = {
 				}
 			}
 		}
-				ROOT = { 
+		ROOT = { 
 			participation_scaled_piety = 100
 			participation_scaled_prestige = 50
 			if = {
