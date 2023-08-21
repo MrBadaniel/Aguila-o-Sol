@@ -767,6 +767,62 @@ feudal_governments = {
 		frame_suffix = "_orf"
 		potential = {
 			OR = {
+				controls_religion = no
+				religion = americanist
+				religion = cetic
+				religion = consumerist
+				religion = monetarist
+				religion = rust_cultist
+				religion = imamite
+				religion = revivalist
+				religion = alawiyya
+				religion = qingzhen
+				religion = nazarene
+				religion = exovedate
+				religion = nousthreskeia
+				religion = reformista
+				religion = patria_grande
+				religion = atomicist
+				religion = celeste
+				religion = true_cross
+				religion = glorian
+				religion = navegante
+				religion = latinate
+				#religion_group = pagan_group
+				has_religion_feature = religion_temporal_head
+				AND = {
+					OR = {
+						religion = norse_pagan_reformed
+						religion = rust_cultist
+						religion = americanist
+						religion = consumerist
+						religion = monetarist
+						religion = imamite
+						religion = revivalist
+						religion = alawiyya
+						religion = qingzhen
+						religion = nazarene
+						religion = exovedate
+						religion = nousthreskeia
+						religion = reformista
+						religion = patria_grande
+						religion = atomicist
+						religion = celeste
+						religion = true_cross
+						religion = glorian
+						religion = navegante
+						religion = latinate
+					}
+					has_religion_features = no # Old saves, and campaigns without HF, need the Fylkirate to continue working
+				}
+				OR = {
+				character = 2500070
+				character = 2500071
+				character = 1836128
+				character = 2500072
+				}
+			}
+			OR = {
 				has_character_flag = ORF_embrace
 				OR = {
 					capital_scope = {
@@ -1163,16 +1219,7 @@ feudal_governments = {
 		free_revoke_on_tiers = { count }
 
 		potential = {
-			OR = {
-					NAND = {
-					controls_religion = yes
-					religion = la_hermandad
-					}
-					NAND = {
-					controls_religion = yes
-					religion = artiga
-					}
-				}
+			controls_religion = no
 			OR = {
 				religion = la_hermandad
 				religion = artiga
