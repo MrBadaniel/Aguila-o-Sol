@@ -230,6 +230,7 @@ e_colombia = {
 			baiano = "Bocas do Touro"
 			gaucho = "Bocas do Touro"
 			ribeirinho = "Bocas do Touro"
+			guaymi = "Carabaro"
 			
 			c_bocas_del_toro = { # 1892
 				color={ 67 158 55 }
@@ -373,29 +374,56 @@ e_colombia = {
 				
 			capital = 743 #ngabe bugle
 			
+			
 			c_ngabe_bugle = {
 				color = { 228 109 0 }
 				color2 = { 255 255 255 }
+				
+				guaymi = "Kankintú"
 
-				b_kankintu_PAN = {}
-				b_bisira_PAN = {}
+				b_kankintu_PAN = {
+					guaymi = "Kankintubotdä"
+				}
+				b_bisira_PAN = {
+					guaymi = "Bisiragätde"
+				}
 				b_samboa_PAN = {}
-				b_buri_PAN = {}
-				b_guoroni_PAN = {}
-				b_piedra_roja_PAN = {}
-				b_tuwai_PAN = {}
-				b_tolote_PAN = {}
+				b_buri_PAN = {
+					guaymi = "Bürí"
+				}
+				b_guoroni_PAN = {
+					guaymi = "Gwaranibotdä"
+				}
+				b_piedra_roja_PAN = {
+					guaymi = "Jätainde"
+				}
+				b_tuwai_PAN = {
+					guaymi = "Tu Gwai"
+				}
+				b_tolote_PAN = {
+					guaymi = "Ñö Tolentde"
+				}
 			}
 			
 			c_kusapin = { #2575
 				color = { 140 109 0 }
 				color2 = { 255 255 255 }
 				
-				b_kusapin_PAN = {}
-				b_tobobe_PAN = {}
-				b_bahia_azul_PAN = {}
-				b_rio_chiriqui_PAN = {}
-				b_canaveral_PAN = {}
+				b_kusapin_PAN = {
+					guaymi = "Saborikäte"
+				}
+				b_tobobe_PAN = {
+					guaymi = "Orikötde"
+				}
+				b_bahia_azul_PAN = {
+					guaymi = "Konurebätdä"
+				}
+				b_rio_chiriqui_PAN = {
+					guaymi = "Dririkötde"
+				}
+				b_canaveral_PAN = {
+					guaymi = "Muina"
+				}
 				b_manglares_PAN = {}
 			}
 			
@@ -404,9 +432,12 @@ e_colombia = {
 				color2 = { 255 255 255 }
 				
 				b_soloy_PAN = {}
-				b_hato_pilon_PAN = {}
-				b_boca_de_balsa_PAN  = {}
-				b_camaron_arriba_PAN = {}
+				b_boca_de_balsa_PAN  = { #Holy Site of Mama Tatda. Here was where Besiko experienced her vision
+					guaymi = "Krunbiti"
+				}
+				b_camaron_arriba_PAN = {
+					guaymi = "Keberidetde"
+				}
 				b_cerro_banco_PAN = {}
 				b_cerro_patena_PAN = {}
 			}
@@ -414,13 +445,25 @@ e_colombia = {
 			c_calovebora = { #2576
 				color = { 127 58 0 }
 				color2 = { 255 255 255 }
-									
-				b_calovebora = {}
+				
+				guaymi = "Bledeshia"
+				
+				b_calovebora = {
+					guaymi = "Bledeshia"
+				}
 				b_rio_luis_PAN = {}
-				b_san_pedrito_PAN = {}
-				b_alto_bilingue_PAN = {}
-				b_valle_bonito_PAN = {}
-				b_loma_yuca_PAN = {}
+				b_san_pedrito_PAN = {
+					guaymi = "Jiküi"
+				}
+				b_alto_bilingue_PAN = {
+					guaymi = "Gdogüeshia"
+				}
+				b_valle_bonito_PAN = {
+					guaymi = "Dogata"
+				}
+				b_loma_yuca_PAN = {
+					guaymi = "Ijuicho"
+				}
 			}
 
 			c_muna_nurun = { #2578
@@ -436,9 +479,51 @@ e_colombia = {
 				b_alto_de_jesus_PAN = {}
 				b_cerro_tolica_PAN = {}
 			}
+			
+			c_mirono = { #2671
+				
+				b_hato_pilon_PAN = {
+					guaymi = "Kaninbotdä"
+				}
+				b_salto_dupi_PAN = {
+					guaymi = "Kruningäde"
+				}
+				b_cascabel_PAN = {}
+				b_hato_corotu_PAN = {}
+				b_hato_culantro_PAN = {}
+				b_hato_jobo_PAN = {}
+				b_hato_juli_PAN = {}
+				b_quebrada_de_loro_PAN = {}
+			}
 
 
 		} #End of d_ngabe_bugle
+		
+#### Titular Titles
+
+		d_nedrini = {
+			color = { 10 119 133 }
+			color2 = { 255 255 255 }
+			
+			tribe = yes
+			
+			capital = 2577
+		}
+		
+		d_kadriri = {
+			color = { 10 119 133 }
+			color2 = { 255 255 255 }
+			
+			tribe = yes
+			capital = 2578
+		}
+		
+		d_no_kribo = {
+			color = { 200 119 133 }
+			color2 = { 255 255 255 }
+		tribe = yes
+		capital = 743
+		}
 			
 	} #End of k_guaymi
 	
