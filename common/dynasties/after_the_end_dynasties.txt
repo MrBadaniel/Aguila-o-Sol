@@ -17060,7 +17060,20 @@ coat_of_arms = {
 2017032 = { name="Getzlaf" culture=prairielander }
 2017033 = { name="Wickenheiser" culture=prairielander }
 2017034 = { name="Romanow" culture=prairielander }
-2017035 = { name="Rowsdower" culture=prairielander }
+2017035 = { name="Rowsdower" culture=prairielander 
+		coat_of_arms = {
+		religion = norse_pagan
+		template = 0
+		layer = {
+			texture = 3
+			texture_internal = 0
+			emblem = 0
+			color = 0
+			color = 0
+			color = 0
+		}
+	}
+}
 2017036 = { name="Nesbitt" culture=prairielander }
 2017037 = { name="Kunitz" culture=prairielander }
 2017038 = { name="Everett" culture=prairielander }
