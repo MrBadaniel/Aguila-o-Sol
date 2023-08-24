@@ -549,12 +549,12 @@ neomayan_FEATURES;§Y*§! Women are capable of fighting as warriors. \n§Y*§! Are a
 qabantajik;Qab'antajik;;;;;;;;;;;;;x
 qabantajik_DESC;The Qab'antajik faith blends aspects of both Christianity and the traditional Mayan faith. Qab'antajik believe that the Event was the end of the 5th world cycle, which was caused by both a lack of sacrifices and the conversion of Mayan believers to monotheism. Gods in the Qab'antajik pantheon are referred to as 'angels', but most of these 'angels' are simply pre-Christian Maya deities under a different name.;;;;;;;;;;;;;x
 qabantajik_FEATURES;§Y*§! Rulers may choose to conduct a bloodletting ritual to honor the gods.\n§Y*§! Qab'antajik rulers may sacrifice animals to Hunab Ku.;;;;;;;;;;;;;x
-celtic_pagan;Druidic;;;;;;;;;;;;;x
-celtic_pagan_DESC;Followers of Druidism believe in a diverse and eclectic pantheon of gods, drawn from both classical paganism and native beliefs. The core tenet of Druidism is animism ? the belief that all of nature is inhabited by divine spirits. Although Druidism was once commonly practiced throughout the North Atlantic, it has been mostly supplanted by other religions and is today only practiced on the fringes of its old territory.;;;;;;;;;;;;;x
-celtic_pagan_FEATURES;§Y*§! Only characters with the Druid trait can be appointed as Chancellor for a Druidic realm.\n;;;;;;;;;;;;;x
-celtic_pagan_reformed;Druidic;;;;;;;;;;;;;x
-celtic_pagan_reformed_DESC;Followers of Druidism believe in a diverse and eclectic pantheon of gods, drawn from both classical paganism and native beliefs. The core tenet of Druidism is animism ? the belief that all of nature is inhabited by divine spirits. Although Druidism was once only practiced in the far North, it has since reclaimed much of its lost territory in the North Atlantic. Druidism has also restructured itself, giving its followers full access to mainstream succession laws and the option to wage grand holy wars.;;;;;;;;;;;;;x
-celtic_pagan_reformed_FEATURES;§Y*§! Only characters with the Druid trait can be appointed as Chancellor for a Druidic realm.\n;;;;;;;;;;;;;x
+celtic_pagan;Fogsinger;;;;;;;;;;;;;x
+celtic_pagan_DESC;The Fogsongs tell of Brother Jack, the defender of humanity and his sacrifice long ago. During the Moratorium, when the seas were empty and the fishermen starved, Jack sought a resolution. He was told by Father Patrick what he must do, and jumped into the ocean. There he transformed into a great Whale, and from his maw flowed all the life of the seas. The seas were rejuvenated - but humanity, no longer under the protection of Brother Jack, fell into chaos. The Fairies and Spirits returned to the lands of man, wreaked magical havoc and trickery upon them. The Fogsingers still remember the sacrifice of Jack to sustain them, but now they must contend against those from the Otherworld.;;;;;;;;;;;;;x
+celtic_pagan_FEATURES;§Y*§! Only characters with the Druid trait can be appointed as Chancellor for a Fogsinger realm.\n;;;;;;;;;;;;;x
+celtic_pagan_reformed;Fogsinger;;;;;;;;;;;;;x
+celtic_pagan_reformed_DESC;The Fogsongs tell of Brother Jack, the defender of humanity and his sacrifice long ago. During the Moratorium, when the seas were empty and the fishermen starved, Jack sought a resolution. He was told by Father Patrick what he must do, and jumped into the ocean. There he transformed into a great Whale, and from his maw flowed all the life of the seas. The seas were rejuvenated - but humanity, no longer under the protection of Brother Jack, fell into chaos. The Fairies and Spirits returned to the lands of man, wreaked magical havoc and trickery upon them. The Fogsingers still remember the sacrifice of Jack to sustain them, but now they must contend against those from the Otherworld.;;;;;;;;;;;;;x
+celtic_pagan_reformed_FEATURES;§Y*§! Only characters with the Druid trait can be appointed as Chancellor for a Fogsinger realm.\n;;;;;;;;;;;;;x
 #celtic_pagan_reformed_FEATURES;§Y*§! The Arch Druid is elected by, and from, the members of the Circle;;;;;;;;;;;;;x
 patria_grande;Patria Grande;;;;;;;;;;;;;x
 patria_grande_DESC;The term Patria Grande, or Great Fatherland, is to its followers both a political ideal and a divine mandate. The adherents of the faith worship the heroes of the past who liberated and ruled the original Patria Grande, bringing what they consider a golden age. As a result the faithful aspire to see the legendary homeland unified once more. Their pantheon is made up of "próceres", deities originated from the syncretism between the founders of Gran Colombia and several Catholic saints.;;;;;;;;;;;;;x
@@ -926,7 +926,7 @@ tlgunghung_desc;Yahl Gwaawaas fulfilled the dreams of his legendary father and u
 freeland;Freelander Blood;;;;;;;;;;;;;x
 freeland_desc;Jonathan Freeland established the Ecoregion of Cascadia in the Northwest, although it did not stand the test of time.;;;;;;;;;;;;;x
 irving;Irving Blood;;;;;;;;;;;;;x
-irving_desc;Claiming descent from a legendary pre-Event family, Tarleton Irving was the last great Druidic conqueror, uniting the Maritimes and ruling them with an iron fist.;;;;;;;;;;;;;x
+irving_desc;Claiming descent from a legendary pre-Event family, Tarleton Irving was the last great Fogsinger conqueror, uniting the Maritimes and ruling them with an iron fist.;;;;;;;;;;;;;x
 destroyer_of_maritimes;Destroyer of the Maritimes;;;;;;;;;;;;;x
 destroyer_of_maritimes;Known for shattering the old Kingdom of the Maritimes, and rebirthing Acadia from its ashes.;;;;;;;;;;;;;x
 usa_emperor_male;Blood of [This.GetFirstNameWithNick];;;;;;;;;;;;;x
@@ -936,9 +936,9 @@ grand_louisiana_emperor_male;Blood of [This.GetFirstNameWithNick];;;;;;;;;;;;;x
 grand_louisiana_emperor_female;Blood of [This.GetFirstNameWithNick];;;;;;;;;;;;;x
 bloodline_desc_grand_louisiana;The glorious restorer of Grande Louisiane, who united the Mississippi Basin in the name of the ancient empire.;;;;;;;;;;;;;x
 pendragon;Blood of [This.GetFirstNameWithNick];;;;;;;;;;;;;x
-pendragon_desc;The uniter of the North Atlantic, rumored to be the reincarnation of a legendary Druidic king of yore.;;;;;;;;;;;;;x
+pendragon_desc;The uniter of the North Atlantic, rumored to be the reincarnation of a legendary Fogsinger king of yore.;;;;;;;;;;;;;x
 boudica;Blood of [This.GetFirstNameWithNick];;;;;;;;;;;;;x
-boudica_desc;The uniter of the North Atlantic, rumored to be the reincarnation of a legendary Druidic queen of yore.;;;;;;;;;;;;;x
+boudica_desc;The uniter of the North Atlantic, rumored to be the reincarnation of a legendary Fogsinger queen of yore.;;;;;;;;;;;;;x
 libertador_male;Blood of [This.GetFirstNameWithNick];;;;;;;;;;;;;x
 libertador_female;Blood of [This.GetFirstNameWithNick];;;;;;;;;;;;;x
 bloodline_desc_libertador;The glorious second Libertador of Gran Colombia, who united the Great Fatherland under a single banner..;;;;;;;;;;;;;x
@@ -1216,7 +1216,8 @@ GOD_FATHER_BESSEMER;Father Bessemer;;;;;;;;;;;;;x
 GOD_FATHER_FORD;Father Ford;;;;;;;;;;;;;x
 GOD_GAIA;Gaia;;;;;;;;;;;;;x
 GOD_GITCHE_MANITOU;Gitche Manitou;;;;;;;;;;;;;x
-GOD_GLOOSCAP;Glooscap;;;;;;;;;;;;;x
+GOD_AYASHE;Ayashe;;;;;;;;;;;;;x
+THE_FOGSONGS;The Fogsongs;;;;;;;;;;;;;x
 GOD_GUAICAIPURO;Guaicaipuro;;;;;;;;;;;;;x
 GOD_GUATAVITA;Guatavita;;;;;;;;;;;;;x
 GOD_GYHLDEPTIS;Gyhldeptis;;;;;;;;;;;;;x
@@ -1256,7 +1257,14 @@ GOD_LITTLE_BOY;Little Boy;;;;;;;;;;;;;x
 GOD_MADISON;Madison;;;;;;;;;;;;;x
 GOD_MALINTZIN;Malintzin;;;;;;;;;;;;;x
 GOD_MAMMON;Mammon;;;;;;;;;;;;;x
-GOD_MANANNAN;Manannán;;;;;;;;;;;;;x
+GOD_FATHER_PATRICK;Father Patrick;;;;;;;;;;;;;x
+GOD_TSAKAPESH;Tsakapesh;;;;;;;;;;;;;x
+GOD_FINGAL_AND_GLOOSCAP;Fingal and Glooscap;;;;;;;;;;;;;x
+GOD_BRENDAN;Brendan the Navigator;;;;;;;;;;;;;x
+GOD_THE_MORATORIUM;The Moratorium;;;;;;;;;;;;;x
+GOD_THE_HOLLIES;The Hollies;;;;;;;;;;;;;x
+GOD_TOM_AND_BILL;Tom and Bill;;;;;;;;;;;;;x
+GOD_MOBY_DICK;Moby Dick;;;;;;;;;;;;;x
 GOD_MARIA_LIONZA;María Lionza;;;;;;;;;;;;;x
 GOD_MARTI;José Martí;;;;;;;;;;;;;x
 GOD_MAXIMON;Maximón;;;;;;;;;;;;;x
@@ -1267,7 +1275,6 @@ GOD_NEGRO_FELIPE;Negro Felipe;;;;;;;;;;;;;x
 GOD_NEM_CATACOA;Nem-catacoa;;;;;;;;;;;;;x
 GOD_NANABOZHO;Nanabozho;;;;;;;;;;;;;x
 GOD_NEPTUNE;Neptune;;;;;;;;;;;;;x
-GOD_NOKOMIS;Nokomis;;;;;;;;;;;;;x
 GOD_NUIT;Nuit;;;;;;;;;;;;;x
 GOD_OBATALA;Obatalá;;;;;;;;;;;;;x
 GOD_OCHUN;Ochún;;;;;;;;;;;;;x
@@ -1323,7 +1330,6 @@ GOD_THE_INVISIBLE_HAND;The Invisible Hand;;;;;;;;;;;;;x
 GOD_THE_LIGHT;The Light;;;;;;;;;;;;;x
 GOD_THE_LIGHTBRINGER;The Lightbringer;;;;;;;;;;;;;x
 GOD_THE_MACHINE_SPIRITS;The Machine Spirits;;;;;;;;;;;;;x
-GOD_THE_MORRIGAN;The Morrigan;;;;;;;;;;;;;x
 GOD_THE_NAMELESS;The Nameless;;;;;;;;;;;;;x
 GOD_THE_NOOSPHERE;The Noosphere;;;;;;;;;;;;;x
 GOD_THE_OLD_ONES;The Old Ones;;;;;;;;;;;;;x
@@ -1576,8 +1582,7 @@ GOD_THE_ELDER_GODS_2;The Elder Gods;;;;;;;;;;;;;x
 GOD_RA_HOOR_KHUIT_2;Ra-Hoor-Khuit;;;;;;;;;;;;;x
 GOD_THE_QUEEN_2;The Queen;;;;;;;;;;;;;x
 GOD_THE_KING_2;The King;;;;;;;;;;;;;x
-GOD_THE_DAGDA_2;The Dagda;;;;;;;;;;;;;x
-GOD_BRIGID_2;Brigid;;;;;;;;;;;;;x
+GOD_STELLA_MARIS;Stella Maris;;;;;;;;;;;;;x
 GOD_GITCHE_MANITOU_2;Gitche Manitou;;;;;;;;;;;;;x
 GOD_XHUUYEE_2;Xhúuyee;;;;;;;;;;;;;x
 GOD_GYHLDEPTIS_2;Gyhldeptis;;;;;;;;;;;;;x
@@ -1639,7 +1644,7 @@ String_Maam_Lowercase;ma'am;;;;;;;;;;;;;x
 GOD_THE_TITANS;The Titans;;;;;;;;;;;;;x
 GOD_FATHER_CARNEGIE;Father Carnegie;;;;;;;;;;;;;x
 THE_KELPIES;The Kelpies;;;;;;;;;;;;;x
-GOD_THE_DAGDA;The Dagda;;;;;;;;;;;;;x
+GOD_BROTHER_JACK;Brother Jack;;;;;;;;;;;;;x
 GOD_VICTORIA_GLORIANA;Victoria Gloriana;;;;;;;;;;;;;x
 GOD_THE_QUEEN;The Queen;;;;;;;;;;;;;x
 GOD_ALBION;Albion;;;;;;;;;;;;;x
