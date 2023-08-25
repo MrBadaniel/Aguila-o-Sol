@@ -1,20 +1,414 @@
-+namespace = imbibe
+namespace = montane
 
-character_event = { #Weed
-	id = imbibe.1
-	desc = EVTDESC_imbibe_1
-	picture = GFX_evt_feast
-	border = GFX_evt_normal_frame_religion
+# Sky Burial trigger event
+character_event = {
+	id = montane.1
+
+	is_triggered_only = yes # on_death
+	hide_window = yes
+
+	only_playable = yes
+
+	trigger = {
+		OR = {
+			any_owned_bloodline = {
+				has_bloodline_flag = bloodline_frozen_burial
+				bloodline_is_active_for = PREV
+			}
+
+			trigger_if = {
+				limit = { has_dlc = "Horse Lords" }
+
+				OR = {
+					religion = montane
+					religion_openly_montane_or_reformed_trigger = yes
+
+				#	trigger_if = {
+				#		limit = { is_nomadic = yes }
+				#
+				#		OR = {
+				#			religion_openly_tengri_or_reformed_trigger = yes
+				#			has_dharmic_religion_trigger = yes
+				#		}
+				#	}
+				}
+			}
+		}
+
+		death_in_china_trigger = no
+		death_no_trace_trigger = no
+
+	}
+
+	immediate = {
+		if = {
+			limit = { prestige >= 20000 }
+
+			current_heir = {
+				set_character_flag = frozen_burial_tomb
+			}
+		}
+
+		if = {
+			limit = { is_parent_of = current_heir }
+
+			if = {
+				limit = { is_female = yes }
+
+				current_heir = {
+					set_character_flag = frozen_burial_mother
+				}
+			}
+			else = {
+				current_heir = {
+					set_character_flag = frozen_burial_father
+				}
+			}
+		}
+		else_if = {
+			limit = { sibling = current_heir }
+
+			if = {
+				limit = { is_female = yes }
+
+				current_heir = {
+					set_character_flag = frozen_burial_sister
+				}
+			}
+			else = {
+				current_heir = {
+					set_character_flag = frozen_burial_brother
+				}
+			}
+		}
+
+		current_heir = {
+			set_character_flag = frozen_burial
+
+			character_event = {
+				id = montane.2
+				days = 60
+			}
+		}
+	}
+}
+
+# Clear event
+character_event = {
+	id = montane.2
+
+	is_triggered_only = yes
+	hide_window = yes
+
+	immediate = {
+		clr_character_flag = frozen_burial
+		clr_character_flag = frozen_burial_tomb
+		clr_character_flag = frozen_burial_father
+		clr_character_flag = frozen_burial_brother
+		clr_character_flag = frozen_burial_mother
+		clr_character_flag = frozen_burial_sister
+	}
+}
+
+# Decide on Burial
+character_event = {
+	id = montane.5
+	title = EVTNAME_montane_5
+	picture = GFX_evt_shaman
+
+	desc = { # Father
+		text = EVTDESC_montane_5_father
+		trigger = { has_character_flag = frozen_burial_father }
+	}
+	desc = { # Mother
+		text = EVTDESC_montane_5_mother
+		trigger = { has_character_flag = frozen_burial_mother }
+	}
+	desc = { # Brother
+		text = EVTDESC_montane_5_brother
+		trigger = { has_character_flag = frozen_burial_brother }
+	}
+	desc = { # Sister
+		text = EVTDESC_montane_5_sister
+		trigger = { has_character_flag = frozen_burial_sister }
+	}
+	desc = { # Any other predecessor
+		text = EVTDESC_montane_5_other
+		trigger = {
+			NOR = {
+				has_character_flag = frozen_burial_father
+				has_character_flag = frozen_burial_brother
+				has_character_flag = frozen_burial_mother
+				has_character_flag = frozen_burial_sister
+			}
+		}
+	}
 
 	is_triggered_only = yes
 
-	immediate = {
-		add_character_modifier = { name = recently_imbibed years = 2 }
+	option = { # Sky Burial
+		name = EVTOPTA_montane_5
+
+		custom_tooltip = {
+			text = EVTOPTC_montane_5_custom_tooltip_a
+
+			random_list = {
+				25 = { character_event = { id = montane.6 days = 10 } }
+				25 = { character_event = { id = montane.8 days = 10 } }
+				50 = { character_event = { id = montane.10 days = 10 } }
+			}
+		}
 	}
 
-	option = { #Imbibing
-		name = EVTOPT_grove_play_1
-		remove_trait = stressed
-		
+	option = { # Raise a Golden Tomb instead
+		name = EVTOPTB_montane_5
+
+		trigger = { has_character_flag = frozen_burial_tomb }
+
+		wealth = -250
+
+		custom_tooltip = {
+			text = EVTOPTC_montane_5_custom_tooltip_b
+
+			character_event = {
+				id = montane.20
+				days = 10
+			}
+		}
+	}
+
+	option = { # Lunatic option
+		name = EVTOPTC_montane_5
+		tooltip_info = lunatic
+
+		trigger = {
+			trait = lunatic
+
+			c_anxi = {
+				holder_scope = {
+					OR = {
+						character = ROOT
+						is_vassal_or_below_of = ROOT
+					}
+				}
+			}
+		}
+
+		custom_tooltip = {
+			text = EVTOPTC_montane_5_custom_tooltip_c
+
+			character_event = {
+				id = montane.30
+				days = 20
+			}
+		}
+	}
+
+	option = { # Also for possessed
+		name = EVTOPTC_montane_8005
+		tooltip_info = possessed
+
+		trigger = {
+			trait = possessed
+
+			c_anxi = {
+				holder_scope = {
+					OR = {
+						character = ROOT
+						is_vassal_or_below_of = ROOT
+					}
+				}
+			}
+		}
+
+		custom_tooltip = {
+			text = EVTOPTC_montane_5_custom_tooltip_c
+
+			character_event = {
+				id = montane.30
+				days = 20
+			}
+		}
+	}
+}
+
+# Sky Burial - Bad weather
+character_event = {
+	id = montane.6
+	title = EVTNAME_montane_6
+	desc = EVTDESC_montane_6
+	picture = GFX_evt_nomad_camp
+
+	is_triggered_only = yes
+
+	option = { # Find shelter
+		name = EVTOPTA_montane_6
+
+		if = {
+			limit = { trait = patient }
+			prestige = 30
+		}
+		else = {
+			random = {
+				chance = 30
+				add_trait_fully_patient_effect = yes
+			}
+		}
+	}
+
+	option = { # Continue
+		name = EVTOPTB_montane_6
+
+		if = {
+			limit = { trait = craven }
+
+			random_list = {
+				50 = { remove_trait_craven_effect = yes }
+
+				30 = {
+					if = {
+						limit = { has_dlc = "Reapers" }
+						add_symptom_effect = yes
+					}
+					else = {
+						add_trait_ill_effect = yes
+					}
+				}
+
+				20 = { }
+			}
+		}
+
+		else_if = {
+			limit = { trait = brave }
+
+			random_list = {
+				30 = { add_trait_fully_ambitious_effect = yes }
+
+				30 = {
+					if = {
+						limit = { has_dlc = "Reapers" }
+						add_symptom_effect = yes
+					}
+					else = {
+						add_trait_ill_effect = yes
+					}
+				}
+
+				40 = { }
+			}
+		}
+
+		else = {
+			random_list = {
+				30 = { add_trait_brave_effect = yes }
+
+				30 = {
+					if = {
+						limit = { has_dlc = "Reapers" }
+						add_symptom_effect = yes
+					}
+					else = {
+						add_trait_ill_effect = yes
+					}
+				}
+
+				40 = { }
+			}
+		}
+	}
+
+	after = {
+		character_event = {
+			id = montane.10
+			days = 5
+		}
+	}
+}
+
+# Sky Burial - Hermit encountered
+character_event = {
+	id = montane.8
+	title = EVTNAME_montane_8
+	desc = EVTDESC_montane_8
+	picture = GFX_evt_lunatic
+
+	is_triggered_only = yes
+
+	option = { # Give gift
+		name = EVTOPTA_montane_8
+
+		trigger = {
+			NOT = { trait = greedy }
+		}
+
+		wealth = -10
+
+		if = {
+			limit = { trait = charitable }
+			prestige = 20
+		}
+		else = {
+			random = {
+				chance = 50
+				add_trait_charitable_effect = yes
+			}
+		}
+	}
+
+	option = { # Ask to join
+		name = EVTOPTB_montane_8
+
+		ai_chance = { factor = 0 }
+
+		create_character = {
+			random_traits = yes
+			dynasty = none
+			female = no
+			age = 40
+			religion = ROOT
+			culture = ROOT
+			add_trait = brilliant_strategist
+
+			attributes = {
+				martial = 10
+			}
+		}
+	}
+
+	option = { # Leave the hermit
+		name = EVTOPTC_montane_8
+	}
+
+	after = {
+		character_event = {
+			id = montane.10
+			days = 5
+		}
+	}
+}
+
+# Perform Sky Burial
+character_event = {
+	id = montane.10
+	title = EVTNAME_montane_10
+	desc = EVTDESC_montane_10
+	picture = GFX_evt_shaman
+
+	is_triggered_only = yes
+
+	option = {
+		name = EVTOPTA_montane_10
+
+		prestige = 100
+
+		random = {
+			chance = 10
+
+			character_event = {
+				id = montane.11
+				days = 10
+			}
+		}
 	}
 }
