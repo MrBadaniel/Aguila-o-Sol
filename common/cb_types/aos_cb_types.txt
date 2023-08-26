@@ -368,7 +368,7 @@ purification = {
 			is_nomadic = no
 			NOT = { same_realm = FROM }
 			if = {
-				limit = { religion = purificador }
+				limit = { ROOT = { religion = purificador }}
 				FROM = {
 					religion_group = ROOT
 					NOR = { # raiding other protestants won't count
