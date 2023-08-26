@@ -362,34 +362,33 @@ purification = {
 	can_use = {
 		ROOT = {
 			OR = {
-				religion = purificador
-				religion = postadventist
+				AND = {
+					religion = purificador
+					FROM = {
+						religion_group = ROOT
+						NOR = { # raiding other protestants won't count
+							religion = purificador
+							religion = postadventist
+							religion = charismatic
+							religion = evangelical
+							religion = nonconformist
+							religion = batenburger
+							religion = anabaptist
+							religion = antinomian
+							#religion = dominionist
+							#religion = reconstructionist
+						}
+					}
+				}
+				AND = {
+					religion = postadventist
+					FROM = {
+						religion_group = ROOT
+					}
+				}
 			}	
 			is_nomadic = no
 			NOT = { same_realm = FROM }
-			if = {
-				limit = { ROOT = { religion = purificador }}
-				FROM = {
-					religion_group = ROOT
-					NOR = { # raiding other protestants won't count
-						religion = purificador
-						religion = postadventist
-						religion = charismatic
-						religion = evangelical
-						religion = nonconformist
-						religion = batenburger
-						religion = anabaptist
-						religion = antinomian
-						#religion = dominionist
-						#religion = reconstructionist
-					}
-				}
-			}
-			else = {
-				FROM = {
-					religion_group = ROOT
-				}
-			}
 			top_liege = {
 				religion = ROOT
 			}
