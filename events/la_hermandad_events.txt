@@ -167,63 +167,720 @@ character_event = {
     }
 }
 
-character_event = {
+## La Hermandad Huelgas ##
+
+# THE START OF THE HUELGAS - SAN ANTONIO HAS FALLEN
+narrative_event = {
 	id = LHE.3
-	desc = EVTDESC_LHE_3
+	title = EVTNAME_yakima_fallen
+	desc = EVTDESC_yakima_fallen
 	picture = GFX_evt_la_hermandad_cookout
-	border = GFX_event_normal_frame_religion
+	border = GFX_event_narrative_frame_religion
 	
-	is_triggered_only = yes
+	major = yes
+	
+	show_ROOT = no
+	hide_new = yes
+	hide_from = yes
+	
+	only_playable = yes
+	min_age = 16
+	
+	trigger = {
+		NOT = { #immersion-breaking
+			has_alternate_start_parameter = { key = religion_names value = random }
+		}
+		has_landed_title = k_la_hermandad #fires for the Viejo Roble
+		NOT = { has_global_flag = la_hermandad_huelgas_unlocked }
+		
+		1231 = { # SAN ANTONIO
+			NOT = { owner = { religion_group = christian } }
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 3
+	}
+	
+	immediate = {
+		set_global_flag = la_hermandad_huelgas_unlocked
+	}
 	
 	option = {
-		name = EVTOPTA_LHE_3
-		add_trait = school_giver
-		ai_chance = {
-			factor = 1
-			
-			modifier = {
-				factor = 0
-				trait = greedy
-			}
-			modifier = {
-				factor = 1.2
-				trait = charitable
-			}
-			modifier = {
-				factor = 1.2
-				liege = { trait = school_giver }
-			}
-			modifier = {
-				factor = 0.5
+		name = EVTOPTA_yakima_fallen
+		trigger = {
+			religion = la_hermandad
+		}
+	}
+	
+	option = {
+		name = EVTOPTB_yakima_fallen
+		trigger = {
+			OR = {
+			religion_group = christian
+			religion_group = cult_of_saints
 			}
 		}
-
 	}
+	
 	option = {
-		name = EVTOPTB_LHE_3
-		add_trait = school_leader
-		ai_chance = {
-			factor = 1
-			
-			modifier = {
-				factor = 0
-				trait = content
-			}
-			modifier = {
-				factor = 1.2
-				trait = ambitious
-			}
-			modifier = {
-				factor = 1.2
-				liege = { trait = school_leader }
-			}
-			modifier = {
-				factor = 1.2
-				trait = inspiring_leader
-			}
-			modifier = {
-				factor = 0.5
+		name = EVTOPTC_yakima_fallen
+		trigger = {
+			NOR = {
+				religion_group = cult_of_saints
+				religion_group = christian
+				religion = la_hermandad
 			}
 		}
 	}
 }
+
+# LA HERMANDAD HUELGAS
+# Called from 'on_crusade_creation'
+# new_character is the targetted enemy
+# ROOT is the religious head
+# FROM is the attacked kingdom title
+narrative_event = {
+	id = LHE.4
+	title = EVTNAME200
+	picture = GFX_evt_la_hermandad_cookout
+	border = GFX_event_narrative_frame_war
+	
+	desc = {
+		text = EVTDESC_huelga
+		trigger = {
+			OR = {
+				new_character = {
+					NOT = { religion_group = christian }
+					NOT = { religion_group = pagan_group }
+				}
+				has_alternate_start_parameter = { key = religion_names value = random }
+			}
+		}
+	}
+	desc = {
+		text = EVTDESC_huelga_pagan
+		trigger = {
+			new_character = {
+				religion_group = pagan_group
+			}
+			NOT = {
+				has_alternate_start_parameter = { key = religion_names value = random }
+			}
+		}
+	}
+	desc = {
+		text = EVTDESC_huelga_christ
+		trigger = {
+			new_character = {
+				religion_group = christian
+			}
+			NOT = {
+				has_alternate_start_parameter = { key = religion_names value = random }
+			}
+		}
+	}
+
+	is_triggered_only = yes
+	major = yes
+	show_ROOT = yes
+	hide_new = yes
+	
+	trigger = {
+		can_call_crusade = yes
+		ROOT = { 
+			religion = la_hermandad
+		}
+	}
+	
+	immediate = {
+		ROOT = {
+			character_event = { id = LHE.5 days = 3 } #ping event for call to arms
+		}
+	}
+
+	option = {
+		name = EVTOPTA324 # For [God Name]!
+		trigger = {
+			religion = ROOT
+			NOT = { trait = sapo }
+		}
+	}
+	option = {
+		name = EVTOPTB200 # No concern of ours
+		trigger = {
+			NOT = { religion = ROOT }
+			new_character = {
+				NOT = { religion = PREV }
+				NOT = { character = PREV }
+			}
+		}
+	}
+	option = {
+		name = EVTOPTD200 # To Arms!
+		trigger = {
+			new_character = {
+				character = PREV
+			}
+		}
+	}
+	option = {
+		name = EVTOPTE200 # Terrible News!
+		trigger = {
+			new_character = {
+				religion = PREV
+				NOT = { character = PREV }
+			}
+		}
+	}
+	option = {
+		name = EVTOPTF_la_hermandad_huelga_1
+		trigger = {
+			religion = ROOT
+			NOT = { has_landed_title = k_la_hermandad }
+		}
+	}
+}
+
+character_event = {
+	id = LHE.5
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		any_independent_ruler = {
+			limit = {
+				religion = ROOT
+				war = no
+			}
+			letter_event = { id = LHE.6 }
+		}
+	}
+}
+
+letter_event = {
+	id = LHE.6
+	desc = EVTDESC_huelga_2
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		war = no
+	}
+	
+	option = {
+		name = EVTOPTA_huelga_2
+		custom_tooltip = { text = TXT_EVTOPTA_huelga_2 }
+		ROOT = { join_attacker_wars = FROM }
+		
+		ai_chance = {
+			factor = 100
+			modifier = {
+				factor = 2
+				trait = brave
+			}
+			modifier = {
+				factor = 2
+				trait = zealous
+			}
+			modifier = {
+				factor = 1.5
+				trait = wroth
+			}
+			modifier = {
+				factor = 0.1
+				trait = craven
+			}
+			modifier = {
+				factor = 0.5
+				has_any_sympathy_trait_trigger = yes
+			}
+			modifier = {
+				factor = 0.6
+				trait = cynical
+			}
+			modifier = {
+				factor = 0.8
+				trait = kind
+			}
+		}
+	}
+	
+	option = {
+		name = EVTOPTB_huelga_2
+		trigger = {
+			NOR = {
+				has_disability_trigger = yes
+				trait = imbecile
+			}
+		}
+		custom_tooltip = { text = TXT_EVTOPTB_huelga_2 }
+		prestige = -25
+		piety = -50
+		add_trait = sapo #Draft Dodger
+		
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 0
+				trait = brave
+			}
+			modifier = {
+				factor = 0
+				trait = zealous
+			}
+			modifier = {
+				factor = 3
+				trait = craven
+			}
+			modifier = {
+				factor = 2
+				has_any_sympathy_trait_trigger = yes
+			}
+			modifier = {
+				factor = 2
+				trait = cynical
+			}
+			modifier = {
+				factor = 1.5
+				trait = kind
+			}
+		}
+	}
+	
+	option = {
+		name = EVTOPTC_huelga_2
+		trigger = {
+			OR = {
+				has_disability_trigger = yes
+				trait = imbecile
+			}
+		}
+		custom_tooltip = { text = TXT_EVTOPTC_huelga_2 }
+		prestige = -15
+		add_character_modifier = {
+			name = disability_exemption
+			years = 5
+		}
+		
+		ai_chance = {
+			factor = 25
+			modifier = {
+				factor = 0
+				trait = brave
+			}
+			modifier = {
+				factor = 0
+				trait = zealous
+			}
+			modifier = {
+				factor = 3
+				trait = craven
+			}
+			modifier = {
+				factor = 3
+				has_any_sympathy_trait_trigger = yes
+			}
+			modifier = {
+				factor = 5
+				trait = cynical
+			}
+			modifier = {
+				factor = 2
+				trait = kind
+			}
+		}
+	}
+}
+
+# Arriving for the great holy war - removal of Sapo trait
+character_event = {
+	id = LHE.7
+	desc = EVTDESC_huelga_3
+	picture = "GFX_evt_battle"
+	border = GFX_event_normal_frame_war
+	
+	min_age = 16
+	capable_only = yes
+	prisoner = no
+	in_command = yes
+	religion = la_hermandad
+	is_triggered_only = yes
+	
+	trigger = {
+		OR = {
+			AND = {
+				any_war = {
+					OR = {
+						using_cb = crusade
+						using_cb = new_crusade
+					}
+				}
+				crusade_target = {
+					is_located_in = ROOT
+				}
+			}
+			any_liege = {
+				religion = ROOT
+				any_war = {
+					OR = {
+						using_cb = crusade
+						using_cb = new_crusade
+					}
+				}
+				crusade_target = {
+					is_located_in = ROOT
+				}
+			}
+		}
+		trait = sapo
+	}
+
+	immediate = {
+		abdicate_holy_order_if_religion_changes_effect = yes
+	}
+	
+	option = {
+		name = EVTOPTA_huelga_3
+		remove_trait = sapo
+	}
+}
+
+character_event = {
+	id = LHE.8
+	desc = EVTDESC_lh_harvest_1
+	picture = GFX_evt_la_hermandad_cookout
+	border = GFX_event_normal_frame_religion
+	is_triggered_only = yes
+
+	trigger = {
+			OR = {
+			religion = la_hermandad
+			religion = artiga
+			religion = alurista
+			}
+	}
+
+	option = { #Work hard as possible
+		name = EVTOPTA_lh_harvest_1
+		hidden_toolip = {
+			random_list = {
+				10 = {
+					character_event = { id = LHE.9 days = 1 }
+				}
+				10 = {
+					character_event = { id = LHE.10 days = 1 }
+					trigger = {
+						NOT = { trait = robust }
+					}
+				}
+				80 = {
+					character_event = { id = LHE.12 days = 1 }
+				}
+			}
+		}
+	}
+	option = { #Do only what is necessary
+		name = EVTOPTB_lh_harvest_1
+		hidden_toolip = {
+			random_list = {
+				5 = {
+					character_event = { id = LHE.9 days = 1 }
+				}
+				10 = {
+					character_event = { id = LHE.10 days = 1 }
+					trigger = {
+						NOT = { trait = robust }
+					}
+				}
+				20 = {
+					character_event = { id = LHE.11 days = 1 }
+				}
+				65 = {
+					character_event = { id = LHE.12 days = 1 }
+				}
+			}
+		}
+	}
+}
+
+character_event = { #Getting injured
+	id = LHE.9
+	desc = EVTDESC_lh_harvest_2
+	picture = GFX_evt_la_hermandad_cookout
+	border = GFC_event_normal_frame_religion
+	is_triggered_only = yes
+
+	trigger = {
+			OR = {
+			religion = la_hermandad
+			religion = artiga
+			religion = alurista
+			}
+	}
+
+	option = {
+		name = EVTOPT_lh_harvest_2
+		hidden_tooltip = {
+			random_list = {
+				50 = {
+					trait = wounded
+				}
+				15 = {
+					trait = severely_injured
+				}
+				5 = {
+					trait = mangled
+				}
+				1 = {
+					death = { death_reason = death_accident }
+				}
+			}
+		}
+	}
+}
+
+character_event = { #Becoming Brawny
+	id = LHE.10
+	desc = EVTDESC_lh_harvest_3
+	picture = GFX_evt_la_hermandad_cookout
+	border = GFC_event_normal_frame_religion
+	is_triggered_only = yes
+
+	trigger = {
+		religion = la_hermandad
+	}
+
+	option = {
+		name = EVTOPT_lh_harvest_3
+		trait = robust
+		add_character_modifier = { name = aided_lh_harvest days = 180 }
+	}
+}
+					
+character_event = { #Gaining a lover
+	id = LHE.11
+	desc = EVTDESC_lh_harvest_4
+	picture = GFX_evt_lovers
+	border = GFC_event_normal_frame_religion
+	is_triggered_only = yes
+
+	trigger = {
+			OR = {
+			religion = la_hermandad
+			religion = artiga
+			religion = alurista
+			}
+	}
+
+	option = {
+		name = EVTOPTA_lh_harvest_4
+		trigger = {
+			is_female = no
+			NOT = { trait = homosexual }
+		}
+		piety = -10
+		prestige = 10
+		if = {
+			limit = {
+				trait = chaste
+			}
+			remove_trait = chaste
+		}
+		create_character = {
+			random_traits = no
+			dynasty = NONE
+			religion = ROOT
+			culture = ROOT
+			female = yes
+			age = 17
+			trait = intricate_webweaver
+			trait = fair
+			trait = uncouth
+			trait = quick
+			trait = lustful
+			trait = proud
+			trait = gluttonous
+			attributes = {
+				diplomacy = 3
+				intrigue = 10
+			}
+		}
+		new_character = {
+			character_event = { id = misc.3 } # Diversity
+			gain_weight_medium_effect = yes
+			add_lover = ROOT
+			remove_trait = genius
+			remove_trait = imbecile
+			remove_trait = distractible
+			remove_trait = ugly
+			remove_trait = slow
+			remove_trait = chaste
+		}
+	}
+	
+	option = {
+		name = EVTOPTB_lh_harvest_4
+		trigger = {
+			is_female = yes
+			NOT = { trait = homosexual }
+		}
+		piety = -10
+		prestige = 10
+		if = {
+			limit = {
+				trait = chaste
+			}
+			remove_trait = chaste
+		}
+		create_character = {
+			random_traits = no
+			dynasty = NONE
+			religion = ROOT
+			culture = ROOT
+			female = no
+			age = 17
+			trait = intricate_webweaver
+			trait = fair
+			trait = uncouth
+			trait = quick
+			trait = lustful
+			trait = proud
+			trait = drunkard
+			attributes = {
+				diplomacy = 3
+				intrigue = 10
+			}
+		}
+		new_character = {
+			character_event = { id = misc.3 } # Diversity
+			gain_weight_medium_effect = yes
+			add_lover = ROOT
+			remove_trait = genius
+			remove_trait = imbecile
+			remove_trait = ugly
+			remove_trait = slow
+			remove_trait = chaste
+		}
+	}
+	
+	option = {
+		name = EVTOPTC_lh_harvest_4
+		trigger = {
+			is_female = no
+			trait = homosexual
+		}
+		piety = -15
+		prestige = 10
+		if = {
+			limit = {
+				trait = chaste
+			}
+			remove_trait = chaste
+		}
+		create_character = {
+			random_traits = no
+			dynasty = NONE
+			religion = ROOT
+			culture = ROOT
+			female = no
+			age = 17
+			trait = intricate_webweaver
+			trait = fair
+			trait = uncouth
+			trait = quick
+			trait = lustful
+			trait = drunkard
+			trait = proud
+			trait = homosexual
+			attributes = {
+				diplomacy = 3
+				intrigue = 10
+			}
+		}
+		new_character = {
+			character_event = { id = misc.3 } # Diversity
+			gain_weight_medium_effect = yes
+			add_lover = ROOT
+			remove_trait = genius
+			remove_trait = imbecile
+			remove_trait = ugly
+			remove_trait = slow
+			remove_trait = chaste
+		}
+	}
+	
+	option = {
+		name = EVTOPTD_lh_harvest_4
+		trigger = {
+			is_female = yes
+			trait = homosexual
+		}
+		piety = -15
+		prestige = 10
+		if = {
+			limit = {
+				trait = chaste
+			}
+			remove_trait = chaste
+		}
+		create_character = {
+			random_traits = no
+			dynasty = NONE
+			religion = ROOT
+			culture = ROOT
+			female = yes
+			age = 17
+			trait = intricate_webweaver
+			trait = fair
+			trait = uncouth
+			trait = quick
+			trait = lustful
+			trait = gluttonous
+			trait = proud
+			trait = homosexual
+			attributes = {
+				diplomacy = 3
+				intrigue = 10
+			}
+		}
+		new_character = {
+			character_event = { id = misc.3 } # Diversity
+			gain_weight_medium_effect = yes
+			add_lover = ROOT
+			remove_trait = genius
+			remove_trait = imbecile
+			remove_trait = ugly
+			remove_trait = slow
+			remove_trait = chaste
+		}
+	}
+	option = { #I have better things to do
+		name = EVTOPTE_lh_harvest_4
+		piety = 10
+		add_character_modifier = { name = aided_lh_harvest days = 180 }
+	}
+}
+
+character_event = { #Average successful harvest
+	id = LHE.12
+	desc = EVTDESC_lh_harvest_5
+	picture = GFX_evt_la_hermandad_cookout
+	border = GFX_event_normal_frame_religion
+	is_triggered_only = yes
+
+	trigger = {
+			OR = {
+			religion = la_hermandad
+			religion = artiga
+			religion = alurista
+			}
+	}
+
+	option = {
+		name = EVTOPT_lh_harvest_5
+		piety = 25
+		prestige = 25
+		add_character_modifier = { name = aided_lh_harvest days = 180 }
+	}
+}		

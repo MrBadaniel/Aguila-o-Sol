@@ -4746,6 +4746,7 @@ new_crusade = {
 							has_landed_title = k_papal_state
 							has_landed_title = k_ursuline
 							has_landed_title = k_hijo_del_sol
+							has_landed_title = k_la_hermandad
 						}
 						OR = {
 							AND = {
@@ -5664,6 +5665,53 @@ new_crusade = {
 					}
 				}
 			}
+			
+			# Special bloodline for the recipient of the first Bracero Crusade
+			if = {
+				limit = {
+					NOT = {
+						has_global_flag = first_la_hermandad_crusade_complete
+					}
+					most_participating_crusader = {
+						religion = la_hermandad
+						NOT = {
+							crusader_king = {
+								character = PREV
+							}
+						}
+					}
+				}
+				if = {
+					limit = {
+						has_dlc = "Holy Fury"
+					}
+					if = {
+						limit = {
+							crusader_king = {
+								is_female = yes
+							}
+						}
+						crusader_king = {
+							create_bloodline = {
+								type = crusade_lord
+								religion = THIS
+								inheritance = matrilineal
+							}
+							set_bloodline_founder_religion_flag_effect = yes
+						}
+					}
+					else = {
+						crusader_king = {
+							create_bloodline = {
+								type = crusade_lord
+								religion = THIS
+								inheritance = patrilineal
+							}
+							set_bloodline_founder_religion_flag_effect = yes
+						}
+					}
+				}
+			}			
 
 			# Special bloodline for the recipient of the first Sol Ilumination
 			if = {
@@ -5742,6 +5790,17 @@ new_crusade = {
 					}
 				}
 				set_global_flag = first_sol_ilumination_complete
+			}
+			
+			# Checks if First Crusade (Bracero)
+			if = {
+				limit = {
+					most_participating_crusader = { religion = ursuline }
+					NOT = {
+						has_global_flag = first_la_hermandad_crusade_complete
+					}
+				}
+				set_global_flag = first_la_hermandad_crusade_complete
 			}
 
 			# Adds a negative opinion modifier for selfish Crusaders
