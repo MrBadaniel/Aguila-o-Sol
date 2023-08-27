@@ -3729,6 +3729,7 @@ crusade = {
 					has_global_flag = pagan_ghws_unlocked
 					has_global_flag = christian_crusades_unlocked
 					has_global_flag = rust_cultist_industrial_actions_unlocked
+					has_global_flag = la_hermandad_huelgas_unlocked
 					has_global_flag = patria_grande_liberation_wars_unlocked
 					has_global_flag = fallingstar_outer_invasions_unlocked
 				}
@@ -3768,6 +3769,7 @@ crusade = {
 						religion_group = christian
 						NOT = { religion = ursuline }
 						NOT = { religion = angeline }
+						NOT = { religion = la_hermandad }
 						custom_tooltip = {
 							text = CTT_CHRISTIAN_CRUSADES_UNLOCKED
 							has_global_flag = christian_crusades_unlocked
@@ -3781,6 +3783,13 @@ crusade = {
 						custom_tooltip = {
 							text = CTT_URSULINE_CRUSADES_UNLOCKED
 							has_global_flag = ursuline_crusades_unlocked
+						}
+					}
+					AND = {
+						religion = la_hermandad
+						custom_tooltip = {
+							text = CTT_HUELGAS_UNLOCKED
+							has_global_flag = la_hermandad_huelgas_unlocked
 						}
 					}
 					AND = {
@@ -3850,7 +3859,13 @@ crusade = {
 							has_global_flag = fallingstar_outer_invasions_unlocked
 						}
 					}
-
+					AND = {
+						religion = la_hermandad
+						custom_tooltip = {
+							text = CTT_HUELGAS_UNLOCKED
+							has_global_flag = la_hermandad_huelgas_unlocked
+						}
+					}
 					religion = revivalist # doesn't need no fancy event to begin declaring jihads
 
 					religion = glorian
@@ -4462,6 +4477,7 @@ new_crusade = {
 					text = ALT_GHW_STARTED
 					has_global_flag = ursuline_crusades_unlocked
 					has_global_flag = rust_cultist_industrial_actions_unlocked
+					has_global_flag = la_hermandad_huelgas_unlocked
 					has_global_flag = mormon_expeditions_unlocked
 					has_global_flag = pagan_ghws_unlocked
 					has_global_flag = christian_crusades_unlocked
@@ -4481,6 +4497,7 @@ new_crusade = {
 					AND = {
 						religion_group = christian
 						NOT = { religion = ursuline }
+						NOT = { religion = la_hermandad }
 						custom_tooltip = {
 							text = CTT_CHRISTIAN_CRUSADES_UNLOCKED
 							has_global_flag = christian_crusades_unlocked
@@ -4491,6 +4508,13 @@ new_crusade = {
 						custom_tooltip = {
 							text = CTT_URSULINE_CRUSADES_UNLOCKED
 							has_global_flag = ursuline_crusades_unlocked
+						}
+					}
+					AND = {
+						religion = la_hermandad
+						custom_tooltip = {
+							text = CTT_HUELGAS_UNLOCKED
+							has_global_flag = la_hermandad_huelgas_unlocked
 						}
 					}
 					AND = {
@@ -6315,6 +6339,7 @@ religious = {
 												NOR = {
 													religion = ursuline
 													religion = angeline
+													religion = la_hermandad
 												}
 											}
 										}
@@ -6328,6 +6353,10 @@ religious = {
 											}
 										}
 										has_global_flag = ursuline_crusades_unlocked
+									}
+									AND = {
+										ROOT = { religion = la_hermandad }
+										has_global_flag = la_hermandad_huelgas_unlocked
 									}
 									AND = {
 										ROOT = { religion_group = latter_day_saints }
