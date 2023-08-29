@@ -1,92 +1,4 @@
 targeted_decisions = {
-	cenobitic_order_to_take_vows = {
-		only_playable = yes
-		filter = court
-		ai_target_filter = court
-		ai_check_interval = 120 #Check every 120 months
-		
-		from_potential = {
-			is_playable = yes
-			has_regent = no
-			prisoner = no
-			is_adult = yes
-			religion = montane
-		}
-		
-		potential = {
-			age >= 14
-			is_ruler = no
-			religion = FROM
-			is_married = no
-			NOT = { has_character_flag = ordainedinthechurch }
-			NOR = {  
-				trait = monk
-				trait = nun
-				trait = canon
-				trait = canoness
-				trait = deacon
-				trait = deaconess
-				trait = mountain_father
-				trait = mountain_mother
-				trait = incapable				
-				trait = seducer
-				trait = seductress
-				trait = hedonist
-				trait = excommunicated
-			}
-			host = { character = FROM }
-		}		
-
-		allow = {
-			FROM = { piety = 150 }
-		}
-
-		effect = {
-			FROM = { piety = -50 }
-			add_cenobitic_trait_effect = yes
-			set_character_flag = ordainedinthechurch
-			#Once socities for Apostolics and Insulars are added comment this out
-			#if = {
-				#limit = { 
-					#is_in_society = no
-					#OR = {
-						#religion = religion = montane
-					#}
-				#}
-				#custom_tooltip = { text = cenobitic_tooltip_vows_monk_joins_society }
-				#hidden_tooltip = { 
-					#join_society = monastic_order_miaphysite
-				#}
-			#}
-			}
-	
-		ai_will_do = {
-			factor = 1
-			modifier = { #Like him too much not to do it.
-				factor = 0.25
-				opinion = {
-					who = FROM
-					value = 50
-				}
-			}
-			modifier = { #I'm a great ruler and he is a dynastic heir.
-				num_of_dynasty_members >= 4
-				factor = 0.15
-				is_child_of = FROM
-				dynasty = FROM
-				FROM = { is_benevolent_trigger = yes }
-				opinion = {
-					who = FROM
-					value = 0
-				}
-			}
-			modifier = { #I love you.
-				factor = 0.15
-				is_child_of = FROM
-				is_friend = FROM
-			}
-		}
-	}
 	
 	cenobitic_order_to_take_vows_married = {
 		only_playable = yes
@@ -174,8 +86,96 @@ targeted_decisions = {
 				is_friend = FROM
 			}
 		}
-	}	
+	}
 	
+	cenobitic_order_to_take_vows = {
+		only_playable = yes
+		filter = court
+		ai_target_filter = court
+		ai_check_interval = 120 #Check every 120 months
+		
+		from_potential = {
+			is_playable = yes
+			has_regent = no
+			prisoner = no
+			is_adult = yes
+			religion = montane
+		}
+		
+		potential = {
+			age >= 14
+			is_ruler = no
+			religion = FROM
+			is_married = no
+			NOT = { has_character_flag = ordainedinthechurch }
+			NOR = {  
+				trait = monk
+				trait = nun
+				trait = canon
+				trait = canoness
+				trait = deacon
+				trait = deaconess
+				trait = mountain_father
+				trait = mountain_mother
+				trait = incapable				
+				trait = seducer
+				trait = seductress
+				trait = hedonist
+				trait = excommunicated
+			}
+			host = { character = FROM }
+		}		
+
+		allow = {
+			FROM = { piety = 150 }
+		}
+
+		effect = {
+			FROM = { piety = -50 }
+			add_cenobitic_trait_effect = yes
+			set_character_flag = ordainedinthechurch
+			#Once socities for Apostolics and Insulars are added comment this out
+			#if = {
+				#limit = { 
+					#is_in_society = no
+					#OR = {
+						#religion = religion = montane
+					#}
+				#}
+				#custom_tooltip = { text = cenobitic_tooltip_vows_monk_joins_society }
+				#hidden_tooltip = { 
+					#join_society = monastic_order_miaphysite
+				#}
+			#}
+			}
+	
+		ai_will_do = {
+			factor = 1
+			modifier = { #Like him too much not to do it.
+				factor = 0.25
+				opinion = {
+					who = FROM
+					value = 50
+				}
+			}
+			modifier = { #I'm a great ruler and he is a dynastic heir.
+				num_of_dynasty_members >= 4
+				factor = 0.15
+				is_child_of = FROM
+				dynasty = FROM
+				FROM = { is_benevolent_trigger = yes }
+				opinion = {
+					who = FROM
+					value = 0
+				}
+			}
+			modifier = { #I love you.
+				factor = 0.15
+				is_child_of = FROM
+				is_friend = FROM
+			}
+		}
+	}	
 }
 
 decisions = {
