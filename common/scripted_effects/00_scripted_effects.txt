@@ -4036,9 +4036,22 @@ add_crusade_trait_effect = {
 	}
 	if = {
 		limit = {
+			AND = {
 			religion_group = christian
+			NOT = { religion = la_hermandad }
+			}
 		}
 		add_trait = crusader
+		break = yes
+	}
+	if = {
+		limit = {
+			AND = {
+			religion_group = christian
+			religion = la_hermandad 
+			}
+		}
+		add_trait = companero
 		break = yes
 	}
 	if = {
@@ -15770,10 +15783,10 @@ spawn_fantastic_diplomat_effect = {
 						has_global_flag = ursuline_crusades_unlocked
 						religion = ursuline
 					}
-					AND = {
-						has_global_flag = la_hermandad_huelgas_unlocked
-						religion = la_hermandad
-					}
+					#AND = {
+						#has_global_flag = la_hermandad_huelgas_unlocked
+						#religion = la_hermandad
+					#}
 				}
 			}
 			random = { 
