@@ -2781,6 +2781,17 @@ agrarian_rules = {
 				holder_scope = { character = ROOT } 
 			}
 		}
+		additive_modifier = { #Praised for being Bracero
+			value = 25
+			localisation_key = tooltip_feudal_elector_vote_berserker_positive
+			NOT = { character = FROM } #Do not judge yourself.
+			FROM = { 
+				trait = companero
+			}
+			FROMFROM = { 
+				holder_scope = { character = ROOT } 
+			}
+		}
 		additive_modifier = { #Shunned for being Berserker
 			value = -20
 			localisation_key = tooltip_feudal_elector_vote_berserker_negative
@@ -6249,6 +6260,16 @@ agrarian_rules = {
 					trait = is_fat
 					trait = is_malnourished
 				}
+			}
+			has_elector_stance = { stance = elder_pleased title = FROMFROM }
+		}
+		additive_modifier = { #Really Shunned for being a sapo
+			value = -50
+			localisation_key = tooltip_feudal_elector_vote_shape_negative
+			NOT = { character = FROM } #Do not judge yourself.
+			this_is_warrior_culture_trigger = yes
+			FROM = { 
+				trait = sapo
 			}
 			has_elector_stance = { stance = elder_pleased title = FROMFROM }
 		}
