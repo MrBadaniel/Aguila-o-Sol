@@ -152,79 +152,76 @@ decisions = {
 		}
 	}		
 	
-	aid_the_harvest = {
+	aid_lh_harvest = {
+		only_playable = yes
 		is_high_prio = yes
-		only_rulers = yes
-		
+		ai_check_interval = 6
+
 		potential = {
-			NOT = {
-				has_alternate_start_parameter = { key = religion_names value = random }
-			}
+			is_adult = yes
 			prisoner = no
 			OR = {
 			religion = la_hermandad
 			religion = artiga
 			religion = alurista
 			}
-			trait = saint
-			is_adult = yes
-			NOT = { has_character_modifier = held_dominionist_thanksgiving }
-			has_character_modifier = placeholder_sugma
+			NOT = { has_character_modifier = aided_lh_harvest }
 		}
 		allow = {
-			war = no
+			is_adult = yes
+			prisoner = no
+			OR = {
+			religion = la_hermandad
+			religion = artiga
+			religion = alurista
+			}
 			custom_tooltip = {
-				text = UNOCCUPIED_DEMESNE_TITLE
+				text = TXT_not_sick_or_wounded_or_lazy
 				hidden_tooltip = {
-					any_demesne_title = {
-						NOT = { higher_tier_than = count }
-						is_occupied = no
+					NOR = {
+						trait = wounded
+						trait = maimed
+						trait = slothful
+						trait = mangled
+						trait = one_legged
+						trait = severely_injured
+						trait = has_aztec_disease
+						trait = has_typhus
+						trait = cancer
+						trait = has_tuberculosis
+						trait = dancing_plague
+						trait = dysentery
+						trait = flu
+						trait = food_poisoning
+						trait = gout
+						trait = syphilitic
+						trait = has_typhoid_fever
+						trait = ill
+						trait = leper
+						trait = has_measles
+						trait = rabies
+						trait = scurvy
+						trait = has_small_pox
+						trait = has_bubonic_plague
 					}
 				}
 			}
-			NOR = {
-			trait = slothful
-			trait = maimed
-			trait = infirm
-			trait = incapable
-			trait = mangled
-			trait = severely_injured
-			trait = has_small_pox
-			trait = has_bubonic_plague
-			trait = measles
-			trait = leper
-			trait = syphilitic
-			trait = gout
-			trait = ill
-			trait = has_tuberculosis
+			OR = {
+				month = 6
+				NOT = { month = 5 }
 			}
-			piety = 250
-			month = 6
-			NOT = { month = 10 }
-			wealth = 50
-			prisoner = no
-				custom_tooltip = {
-				text = is_not_busy_trigger_tooltip
-				hidden_tooltip = { NOT = { has_character_flag = do_not_disturb } }
-			}
-			NOT = { has_character_flag = dominionist_thanksgiving }
-			NOT = { has_character_flag = celebrating_dominionist_thanksgiving }
-			NOT = { has_character_flag = holding_dominionist_thanksgiving }
 		}
 		effect = {
-			character_event = { id = dominionist.1 }
-			piety = -250
-			set_character_flag = celebrating_dominionist_thanksgiving
-			set_character_flag = do_not_disturb
-			set_character_flag = holding_dominionist_thanksgiving
-		}
-		revoke_allowed = {
-			always = no
+			character_event = { id = LHE.8 }
 		}
 		ai_will_do = {
 			factor = 1
+
 			modifier = {
-				factor = 0.3 # Slow it down a little
+				factor = 0
+				NOT = {
+					trait = cynical
+				}
 			}
 		}
 	}	

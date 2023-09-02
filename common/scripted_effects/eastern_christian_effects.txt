@@ -13,32 +13,21 @@ add_cenobitic_trait_effect = {
 add_cenobitic_trait_effect_married = {
 	if = {
 		limit = { is_female = yes }
-			add_trait = regulara
+			add_trait = deaconess
 	}
 	if = {
 		limit = { is_female = no }
-			add_trait = regularis
+			add_trait = deacon
 	}
 }
 
 set_desert_name_effect = {
 	if = {
 		limit = { is_female = yes }
-		set_special_character_title = DESERT_MOTHER_TITLE
+		set_special_character_title = MOUNTAIN_MOTHER_TITLE
 	}
 	if = {
 		limit = { is_female = no }
-		set_special_character_title = DESERT_FATHER_TITLE
+		set_special_character_title = MOUNTAIN_FATHER_TITLE
 	}
 }
-
-set_desert_father_historical = {
-set_special_character_title = DESERT_FATHER_TITLE
-}
-
-# remove_nestorian_patron_saint_effect = {
-	# remove_character_modifier = nestorian_mar_zaya
-	# remove_character_modifier = nestorian_mar_maroun
-	# remove_character_modifier = nestorian_mar_nestor
-	# remove_character_modifier = nestorian_mar_abba
-# }

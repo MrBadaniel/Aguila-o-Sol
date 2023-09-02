@@ -539,8 +539,10 @@
 	trait=erudite
 	trait=humble
 	father=1875034
-	2284.5.21= {birth=yes
-	set_special_character_title = MOUNTAIN_FATHER_TITLE
+	2284.5.21={
+		effect_even_if_dead={
+			set_special_character_title=MOUNTAIN_FATHER_TITLE
+		}
 	}
 	2307.1.1= {death=yes}
 }

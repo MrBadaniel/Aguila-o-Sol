@@ -322,6 +322,7 @@ targetted_decisions = {
 				}
 				has_religion_feature = religion_monastic
 				has_religion_feature = religion_feature_revelationist
+				NOT = { religion = montane }
 			}
 		}
 		
@@ -346,7 +347,7 @@ targetted_decisions = {
 				trait = deaconess
 				trait = mountain_father
 				trait = mountain_mother
-				religion = edenite
+				religion = montane
 				religion = angeline
 			}
 			host = { character = FROM }
