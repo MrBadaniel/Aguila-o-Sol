@@ -174,8 +174,224 @@ decisions = {
 			factor = 0.5
 		}
 	}
-	
-	
-	
+	montane_mountain_father = {
+		ai_check_interval = 24
+		potential = {
+			is_adult = yes
+			religion = montane
+			NOR = {
+				rightful_religious_head = ROOT
+				is_ascetic_trigger = yes
+			}
+			controls_religion = no
+			is_nomadic = no
+		}
+		allow = {
+			war = no
+			is_ill = no
+			prisoner = no
+			is_pregnant = no
+			NOR = {
+				ai_ambition >= 40
+				trait = proud
+				trait = cynical
+				is_incapable = yes
+				trait = infirm
+				any_liege = { war = yes }
+			}
+		}
+effect = {
+            any_spouse = { remove_spouse = ROOT }
+            any_consort = { remove_consort = ROOT }
+            any_lover = { remove_lover = ROOT }
+            any_ward = { remove_guardian = yes }
+            set_flag = is_mountain_mother_father
+            FROM = {
+                        save_event_target_as = current_heir
+            }
+            transfer_scaled_wealth = {
+                to = event_target:current_heir
+                value = all
+            }
+            any_artifact = {
+                    transfer_artifact = {
+                        from = ROOT
+                        to = event_target:current_heir
+                    }
+            }
+            if = {
+                limit = { is_ruler = yes }
+                abdicate = yes
+            }
+            add_trait = chaste
+            change_learning = 1
+            if = {
+                limit = { is_female = no }
+                add_trait = mountain_father
+                set_flag = title_mountain_father
+                set_special_character_title = MOUNTAIN_FATHER_TITLE
+            }
+            else = {
+                add_trait = mountain_mother
+                set_flag = title_mountain_mother
+                set_special_character_title = MOUNTAIN_MOTHER_TITLE
+            }
+        }
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 10
+				has_character_modifier = voice_of_jesus
+			}
+			modifier = {
+				factor = 3
+				trait = zealous
+			}
+			modifier = {
+				factor = 0.5
+				trait = detached_priest
+			}
+			modifier = {
+				factor = 2
+				trait = scholarly_theologian
+			}
+			modifier = {
+				factor = 3
+				trait = mastermind_theologian
+			}
+			modifier = {
+				factor = 0.5
+				trait = proud
+			}
+			modifier = {
+				factor = 0.5
+				trait = slothful
+			}
+			modifier = {
+				factor = 1.5
+				trait = humble
+			}
+			modifier = {
+				factor = 1.5
+				ai_ambition <= -40
+			}
+			modifier = {
+				factor = 0.25
+				OR = {
+					father_even_if_dead = { higher_tier_than = COUNT }
+					mother_even_if_dead = { higher_tier_than = COUNT }
+				}
+			}
+			
+			modifier = {
+				factor = 0
+				OR = {
+					is_theocracy = yes
+					is_councillor = yes
+					trait = stressed
+					trait = depressed
+					trait = hedonist
+					trait = sympathy_afro_syncretic
+					trait = sympathy_american_native
+					trait = sympathy_christendom
+					trait = sympathy_cult_of_saints
+					trait = sympathy_pacific
+					trait = sympathy_latter_day_saints
+					trait = sympathy_mesoamerican_gods
+					trait = sympathy_oldworld
+					trait = sympathy_nautical
+					trait = sympathy_islam
+					trait = sympathy_pagans
+					trait = sympathy_zoroastrianism
+					trait = sympathy_judaism
+					trait = sympathy_indian
+					any_liege = { holy_order = yes }
+					any_liege = { mercenary = yes }
+					any_spouse = {
+						trait = pregnant
+						father_of_unborn = { character = ROOT }
+					}
+					liege = {
+						ai = no
+						OR = {
+							dynasty = ROOT
+							is_close_relative = ROOT
+						}
+					}
+					has_character_modifier = voice_of_satan
+					has_character_modifier = planning_claimant_adventure
+					has_flag = claimant_adventurer
+				}
+			}
+			modifier = {
+				factor = 0
+				NOR = {
+					trait = detached_priest
+					trait = martial_cleric
+					trait = scholarly_theologian
+					trait = mastermind_theologian
+					AND = {
+						trait = zealous
+						trait = humble
+					}
+				}
+			}
+			modifier = {
+				factor = 0.5
+				NOR = {
+					trait = detached_priest
+					trait = martial_cleric
+					trait = scholarly_theologian
+					trait = mastermind_theologian
+				}
+			}
+			modifier = {
+				factor = 0
+				any_heir_title = { always = yes }
+				NAND = {
+					calc_true_if = {
+						amount = 2
+						trait = zealous
+						trait = humble
+						NOT = { ai_ambition = -39 }
+						trait = possessed
+						has_character_modifier = voice_of_jesus
+					}
+					NOR = {
+						trait = envious
+						trait = greedy
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				any_pretender_title = { always = yes }
+				NAND = {
+					OR = {
+						trait = zealous
+						trait = humble
+						NOT = { ai_ambition = -39 }
+						trait = possessed
+					}
+					NOR = {
+						trait = envious
+						trait = greedy
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				is_married = yes
+				NOR = {
+					trait = zealous
+					trait = lunatic
+					trait = possessed
+					has_called_crusade = yes
+					NOT = { any_spouse = { reverse_opinion = { who = ROOT value = 0 } } }
+				}
+			}
+		}
+	}
+
 	
 }
