@@ -5,7 +5,7 @@ cad_civil_war = {
 	sprite = 3
 	truce_days = 3650
 	hostile_against_others = yes
-
+	allow_whitepeace = no
 	press_claim = yes
 	major_revolt = yes
 	attacker_can_call_allies = no
@@ -173,8 +173,10 @@ cad_civil_war = {
 		ROOT = {
 			prestige = -200
 			imprison = FROM
+			set_defacto_liege = ROOT
 		}
 		FROM = {
+			make_tributary = { who = ROOT percentage = 0.4 }
 			participation_scaled_prestige = 100
 			hidden_tooltip = {
 				disband_event_forces = faction_revolters

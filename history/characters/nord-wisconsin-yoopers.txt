@@ -1024,9 +1024,10 @@
 	trait=cruel
 	trait=shy
 	trait=ambitious
+	add_claim = d_copperland
 	father=1919000
 	mother=1919038
-	2630.12.26={birth=yes}
+	2640.12.26={birth=yes}
 	2649.2.23={add_spouse=1919048}
 	2714.3.31={death=yes}
 }
@@ -1147,6 +1148,7 @@
 	trait=thrifty_clerk
 	father=1919051
 	mother=1919050
+	add_claim = d_copperland
 	2621.11.7={birth=yes}
 	2638.1.1={add_spouse=1919054}
 	2701.1.6={death=yes}
@@ -1519,7 +1521,8 @@
 	trait=humble
 	trait=deceitful
 	trait=brave
-	2632.2.19={birth=yes}
+	add_claim = d_marquette
+	2642.2.19={birth=yes}
 	2650.1.1={add_spouse=1919073}
 	2700.1.1={death=yes}
 }
@@ -2436,4 +2439,28 @@
 	2642.5.4={add_spouse=1920010}
 	2675.1.1={death=yes}
 }
-	
+1920012={
+    name="Svak"
+	dynasty=1790001
+	    father=1919000
+	culture=yooper
+	religion=norse_pagan
+	martial=0
+	diplomacy=1
+	stewardship=1
+	intrigue=3
+	learning=5
+	trait=naive_appeaser
+	trait=cruel
+	trait=weak
+	trait=incapable
+	trait=erudite
+	trait=scarred
+	trait=one_handed
+	2618.8.28={birth=yes}
+	2660.5.11={death={
+			death_reason=death_battle
+			killer=4000140
+		}
+	}
+}
