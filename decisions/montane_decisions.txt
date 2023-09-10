@@ -200,25 +200,25 @@ decisions = {
 				any_liege = { war = yes }
 			}
 		}
-effect = {
+		effect = {
             any_spouse = { remove_spouse = ROOT }
             any_consort = { remove_consort = ROOT }
             any_lover = { remove_lover = ROOT }
             any_ward = { remove_guardian = yes }
             set_flag = is_mountain_mother_father
-            FROM = {
-                        save_event_target_as = current_heir
-            }
             transfer_scaled_wealth = {
-                to = event_target:current_heir
+                to = current_heir
                 value = all
             }
-            any_artifact = {
-                    transfer_artifact = {
-                        from = ROOT
-                        to = event_target:current_heir
-                    }
-            }
+			current_heir = {
+				save_event_target_as = my_current_heir
+			}
+			any_artifact = {
+				transfer_artifact = {
+					from = ROOT
+					to = event_target:my_current_heir
+				}
+			}
             if = {
                 limit = { is_ruler = yes }
                 abdicate = yes
