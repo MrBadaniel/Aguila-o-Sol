@@ -1,0 +1,572 @@
+#1-determine which pilgrimage
+#2-Portland
+#3-Boise
+#4-Salt Lake City
+#5-Bridger
+#6-Natrona
+#7-Chimney Rock
+#8-Independence, MO
+#9-Nauvoo
+#10-River Crossing
+#20-Hunting
+#30-Broken Wheel
+#40-Dysentery
+#50-remove flags
+#51-return to trail
+
+namespace = montane_hike
+
+narrative_event = {
+	id = montane_hike.1
+	title = EVTNAME_montane_hike_prep
+	desc = EVTDESC_montane_hike_prep
+	picture = GFX_evt_pilgrims_epic_journey
+
+	is_triggered_only = yes
+
+	option = {
+		name = EVTOPT_montane_hike_prep_cancel
+		piety = -10
+		remove_trait = travelling
+		ai_chance = { factor = 0 }
+	}
+	option = {
+		name = EVTOPT_montane_hike_prep_humble
+		trigger = { 
+			NOT = { religion_group = latter_day_saints }
+		}
+		piety = 20
+		random_list = {
+			20 = { add_trait = humble }
+			10 = { add_trait = trusting }
+			70 = { }
+		}	
+		hidden_tooltip = { narrative_event = { id = montane_hike.2 days = 7 random = 5 } }
+		ai_chance = { factor = 5 }
+	}
+	option = {
+		name = EVTOPT_montane_hike_prep_carivan
+		trigger = { 
+			wealth = 25
+			NOT = { religion_group = latter_day_saints }
+		}
+		set_character_flag = extra_wheel
+		prestige = 20
+		wealth = -25
+		random_list = {
+			20 = { add_trait = paranoid }
+			10 = { add_trait = diligent }
+			70 = { }
+		}
+		hidden_tooltip = { narrative_event = { id = montane_hike.2 days = 10 random = 5 } }
+		ai_chance = { factor = 20 }
+	}
+	#option = {
+	#	name = EVTOPT_montane_hike_prep_humble
+	#	#trigger = { 
+	#	#	religion_group = latter_day_saints
+	#	#}
+	#	piety = 20
+	#	random_list = {
+	#		20 = { add_trait = humble }
+	#		10 = { add_trait = trusting }
+	#		70 = { }
+	#	}	
+	#	hidden_tooltip = { narrative_event = { id = montane_hike.4 days = 7 random = 5 } }
+	#	ai_chance = { factor = 5 }
+	#}
+	#option = {
+	#	name = EVTOPT_montane_hike_prep_carivan
+	#	trigger = { 
+	#		wealth = 25
+	#		#religion_group = latter_day_saints
+	#	}
+	#	set_character_flag = extra_wheel
+	#	prestige = 20
+	#	wealth = -25
+	#	random_list = {
+	#		20 = { add_trait = paranoid }
+	#		10 = { add_trait = diligent }
+	#		70 = { }
+	#	}
+	#	hidden_tooltip = { narrative_event = { id = montane_hike.4 days = 10 random = 5 } }
+	#	ai_chance = { factor = 20 }
+	#}
+}
+
+narrative_event = {
+	id = montane_hike.2
+	title = EVTNAME_montane_hike_trail_yellowstone
+	desc = EVTDESC_montane_hike_trail_yellowstone
+	picture = GFX_evt_pilgrims_epic_journey
+
+	is_triggered_only = yes
+	trigger = { trait = travelling }
+	immediate = {
+		set_character_flag = travelling_yellowstone
+	}
+	
+	option = {
+		name = EVTOPT_montane_hike_trail_yellowstone
+		hidden_tooltip = { 
+			random_list = {
+				25 = { narrative_event = { id = montane_hike.10 days = 20 random = 7 } } #river crossing
+				25 = { narrative_event = { id = montane_hike.20 days = 20 random = 7 } } #hunting
+				20 = { narrative_event = { id = montane_hike.30 days = 20 random = 7 } } #broken wheel
+				10 = {	narrative_event = { id = montane_hike.40 days = 20 random = 7 } } #dysentery
+				20 = {	narrative_event = { id = montane_hike.3 days = 20 random = 7 } } #no event
+			}
+		}
+	}
+}
+
+narrative_event = {
+	id = montane_hike.3
+	title = EVTNAME_montane_hike_trail_banff
+	desc = EVTDESC_montane_hike_trail_banff
+	picture = GFX_evt_pilgrims_epic_journey
+
+	is_triggered_only = yes
+	trigger = { trait = travelling }
+	immediate = {
+		set_character_flag = travelling_banff
+		clr_character_flag = travelling_yellowstone
+	}
+	
+	option = {
+		name = EVTOPT_montane_trail_banff
+		hidden_tooltip = {
+			random_list = {
+				25 = { narrative_event = { id = montane_hike.10 days = 20 random = 7 } } #river crossing
+				25 = { narrative_event = { id = montane_hike.20 days = 20 random = 7 } } #hunting
+				20 = { narrative_event = { id = montane_hike.30 days = 20 random = 7 } } #broken wheel
+				5 = {	narrative_event = { id = montane_hike.40 days = 20 random = 7 } } #dysentery
+				25 = {	narrative_event = { id = montane_hike.5 days = 20 random = 7 } } #no event
+			}
+		}		
+	}
+}
+
+narrative_event = {
+	id = montane_hike.4
+	title = EVTNAME_montane_trail_zion
+	desc = EVTDESC_montane_trail_zion
+	picture = GFX_evt_cathedral
+
+	is_triggered_only = yes
+	trigger = { trait = travelling }
+	immediate = {
+		set_character_flag = travelling_zion
+	}
+	
+	option = {
+		name = EVTOPT_montane_trail_zion
+		hidden_tooltip = {
+			random_list = {
+				25 = { narrative_event = { id = montane_hike.10 days = 20 random = 7 } } #river crossing
+				25 = { narrative_event = { id = montane_hike.20 days = 20 random = 7 } } #hunting
+				20 = { narrative_event = { id = montane_hike.30 days = 20 random = 7 } } #broken wheel
+				5 = {	narrative_event = { id = montane_hike.40 days = 20 random = 7 } } #dysentery
+				25 = {	narrative_event = { id = montane_hike.5 days = 20 random = 7 } } #no event
+			}
+		}
+	}
+}
+
+narrative_event = {
+	id = montane_hike.5
+	title = EVTNAME_montane_trail_frozen
+	desc = EVTDESC_montane_trail_frozen
+	picture = GFX_evt_pilgrims_epic_journey
+
+	is_triggered_only = yes
+	trigger = { trait = travelling }
+	immediate = {
+		set_character_flag = travelling_frozen
+		clr_character_flag = travelling_banff
+		clr_character_flag = travelling_zion
+	}
+	
+	option = {
+		name = EVTOPT_montane_trail_frozen
+		hidden_tooltip = {
+			random_list = {
+				25 = { narrative_event = { id = montane_hike.10 days = 20 random = 7 } } #river crossing
+				25 = { narrative_event = { id = montane_hike.20 days = 20 random = 7 } } #hunting
+				20 = { narrative_event = { id = montane_hike.30 days = 20 random = 7 } } #broken wheel
+				5 = {	narrative_event = { id = montane_hike.40 days = 20 random = 7 } } #dysentery
+				25 = {	narrative_event = { id = montane_hike.6 days = 20 random = 7 } } #no event
+			}	
+		}
+	}
+}
+
+narrative_event = {
+	id = montane_hike.6
+	title = EVTNAME_montane_trail_dunes
+	desc = EVTDESC_montane_trail_dunes
+	picture = GFX_evt_dunes
+
+	is_triggered_only = yes
+	trigger = { trait = travelling }
+	immediate = {
+		set_character_flag = travelling_dunes
+		clr_character_flag = travelling_frozen
+	}
+	
+	option = {
+		name = EVTOPT_montane_trail_dunes
+		hidden_tooltip = {
+			random_list = {
+				25 = { narrative_event = { id = montane_hike.10 days = 20 random = 7 } } #river crossing
+				25 = { narrative_event = { id = montane_hike.20 days = 20 random = 7 } } #hunting
+				20 = { narrative_event = { id = montane_hike.30 days = 20 random = 7 } } #broken wheel
+				5 = {	narrative_event = { id = montane_hike.40 days = 20 random = 7 } } #dysentery
+				25 = {	narrative_event = { id = montane_hike.7 days = 20 random = 7 } } #no event
+			}
+		}
+	}
+}
+
+narrative_event = {
+	id = montane_hike.7
+	title = EVTNAME_montane_trail_garden
+	desc = EVTDESC_montane_trail_garden
+	picture = GFX_evt_chimney
+
+	is_triggered_only = yes
+	trigger = { trait = travelling }
+	immediate = {
+		set_character_flag = travelling_garden
+		clr_character_flag = travelling_dunes
+	}
+	
+	option = {
+		name = EVTOPT_montane_trail_garden
+		hidden_tooltip = {
+			random_list = {
+				25 = { narrative_event = { id = montane_hike.10 days = 20 random = 7 } } #river crossing
+				25 = { narrative_event = { id = montane_hike.20 days = 20 random = 7 } } #hunting
+				20 = { narrative_event = { id = montane_hike.30 days = 20 random = 7 } } #broken wheel
+				5 = {	narrative_event = { id = montane_hike.40 days = 20 random = 7 } } #dysentery
+				25 = {	narrative_event = { id = montane_hike.8 days = 20 random = 7 } } #no event
+			}		
+		}
+	}
+}
+
+narrative_event = {
+	id = montane_hike.8
+	title = EVTNAME_montane_trail_rocky
+	desc = EVTDESC_montane_trail_rocky
+	picture = GFX_evt_moks
+
+	is_triggered_only = yes
+	trigger = { trait = travelling }
+	immediate = {
+		set_character_flag = travelling_rocky
+		clr_character_flag = travelling_garden
+	}
+	
+	option = {
+		name = EVTOPT_montane_trail_rocky
+		trigger = { 
+			religion_group = latter_day_saints
+		}
+		hidden_tooltip = {
+			random_list = {
+				25 = { narrative_event = { id = montane_hike.10 days = 20 random = 7 } } #river crossing
+				25 = { narrative_event = { id = montane_hike.20 days = 20 random = 7 } } #hunting
+				20 = { narrative_event = { id = montane_hike.30 days = 20 random = 7 } } #broken wheel
+				5 = {	narrative_event = { id = montane_hike.40 days = 20 random = 7 } } #dysentery
+				25 = {	narrative_event = { id = montane_hike.9 days = 20 random = 7 } } #no event
+			}		
+		}
+	}
+	option = {
+		name = EVTOPT_montane_success
+		trigger = { 
+			NOT = { religion_group = latter_day_saints }
+		}
+		piety = 100
+		prestige = 100
+		remove_trait = travelling
+		set_character_flag = went_on_montane_pilgrimage
+		hidden_tooltip = { character_event = { id = montane_hike.50 days = 2 } }
+	}	
+}
+
+narrative_event = {
+	id = montane_hike.9
+	title = EVTNAME_montane_trail_evans
+	desc = EVTDESC_montane_trail_evans
+	picture = GFX_evt_nauvoo
+
+	is_triggered_only = yes
+	trigger = { trait = travelling }
+	immediate = {
+		clr_character_flag = travelling_rocky
+	}
+	
+	option = {
+		name = EVTOPT_montane_success
+		piety = 100
+		prestige = 100
+		remove_trait = travelling
+		set_character_flag = went_on_montane_pilgrimage
+		if = {
+			limit = { higher_tier_than = BARON }
+			religion_authority = { modifier = ruler_pilgrimage }
+		}
+		hidden_tooltip = { character_event = { id = montane_hike.50 days = 2 } }
+	}	
+}
+
+## River Crossing
+narrative_event = {
+	id = montane_hike.10
+	title = EVTNAME_montane_river
+	desc = EVTDESC_montane_river
+	picture = GFX_evt_ot_river
+
+	is_triggered_only = yes
+
+	option = {
+		name = EVTOPT_montane_river_ferry
+		trigger = { 
+			wealth = 10
+		}
+		wealth = -10
+		hidden_tooltip = { character_event = { id = montane_hike.51 } }
+		
+	}
+	option = {
+		name = EVTOPT_montane_river_raft
+		trigger = {
+			wealth = 5
+		}
+		wealth = -5
+		hidden_tooltip = {
+			random_list = {
+				80 = { character_event = { id = montane_hike.51 } } 
+				20 = { character_event = { id = montane_hike.30 } } 
+			}	
+		}
+	}	
+	option = {
+		name = EVTOPT_montane_river_ford
+		hidden_tooltip = {
+			random_list = {
+				60 = { character_event = { id = montane_hike.51 } }
+				40 = { narrative_event = { id = montane_hike.30 days = 1 } }
+			}	
+		}
+	}
+}
+
+## Hunting
+narrative_event = {
+	id = montane_hike.20
+	title = EVTNAME_montane_hunt
+	desc = EVTDESC_montane_hunt
+	picture = GFX_evt_hunt
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPT_montane_hunt
+		trigger = {
+			NOT = { health_traits = 1 }
+			NOT = { trait = craven }
+		}
+		prestige = 10
+		random_list = {
+			80 = { hidden_tooltip = { character_event = { id = montane_hike.51 } } }
+			15 = { 
+				change_martial = 1
+				hidden_tooltip = { character_event = { id = montane_hike.51 } }
+			}
+			2 = {
+				add_trait = wounded
+				hidden_tooltip = { character_event = { id = montane_hike.51 } }
+			}
+			2 = {
+				add_maimed_trait_effect = yes
+				hidden_tooltip = { character_event = { id = montane_hike.51 } }
+			}
+			1 = {
+				death = { death_reason = death_accident }
+			}
+		}
+	}
+	option = {
+		name = EVTOPT_montane_hunt_buy
+		trigger = {
+			wealth = 10
+		}
+		wealth = -10
+		hidden_tooltip = { character_event = { id = montane_hike.51 } }
+	}
+	option = {
+		name = EVTOPT_montane_hunt_hunger
+		prestige = -10
+		hidden_tooltip = {
+			random_list = {
+				85 = { character_event = { id = montane_hike.51 } } 
+				15 = { character_event = { id = montane_hike.40 } } 
+			}
+		}
+	}		
+}
+
+## Broken Wheel
+narrative_event = {
+	id = montane_hike.30
+	title = EVTNAME_montane_wagon
+	desc = EVTDESC_montane_wagon
+	picture = GFX_evt_bad_news
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPT_montane_wagon_spare
+		trigger = {
+			has_character_flag = extra_wheel
+		}
+		prestige = 10
+		hidden_tooltip = { 
+			clr_character_flag = extra_wheel
+			character_event = { id = montane_hike.51 } 
+		}
+	}	
+	option = {
+		name = EVTOPT_montane_wagon_repair
+		trigger = {
+			NOT = { health_traits = 1 }
+			NOT = { trait = craven }
+		}
+		prestige = 15
+		random_list = {
+			80 = { hidden_tooltip = { character_event = { id = montane_hike.51 } } }
+			15 = { 
+				change_stewardship = 1
+				hidden_tooltip = { character_event = { id = montane_hike.51 } }
+			}
+			2 = {
+				add_trait = wounded
+				hidden_tooltip = { character_event = { id = montane_hike.51 } }
+			}
+			2 = {
+				add_maimed_trait_effect = yes
+				hidden_tooltip = { character_event = { id = montane_hike.51 } }
+			}
+			1 = {
+				death = { death_reason = death_accident }
+			}
+		}
+	}
+	option = {
+		name = EVTOPT_montane_wagon_buy
+		trigger = {
+			wealth = 10
+		}
+		wealth = -10
+		hidden_tooltip = { character_event = { id = montane_hike.51 } }
+	}
+	option = {
+		name = EVTOPT_montane_wagon_wait
+		prestige = -10
+		wealth = -1
+		hidden_tooltip = { character_event = { id = montane_hike.51 days = 20 random = 7 } }	
+	}		
+}
+
+narrative_event = {
+	id = montane_hike.40
+	title = EVTNAME_montane_trail_failure
+	desc = EVTDESC_montane_trail_failure
+	picture = GFX_evt_illness
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		set_character_flag = failed_pilgrim
+		character_event = { id = montane_hike.50 days = 2 }
+	}
+	
+	option = {
+		name = EVTOPT_montane_failure
+		trigger = {
+			NOT = { has_dlc = "Reapers" }
+		}
+		piety = -50
+		prestige = -50
+		random_list = {
+			40 = { add_trait = cynical }
+			10 = { add_trait = depressed }
+			50 = { }
+		}
+		remove_trait = travelling
+		add_character_modifier = { name = dysentery duration = 30 }
+	}
+	
+	option = {
+		name = EVTOPT_montane_failure
+		trigger = {
+			has_dlc = "Reapers"
+		}
+		piety = -50
+		prestige = -50
+		random_list = {
+			40 = { add_trait = cynical }
+			10 = { add_trait = depressed }
+			50 = { }
+		}
+		remove_trait = travelling
+		give_dysentery_effect = yes
+	}
+}
+
+character_event = {
+	id = montane_hike.50
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		clr_character_flag = extra_wheel
+		clr_character_flag = travelling_portland
+		clr_character_flag = travelling_boise
+		clr_character_flag = travelling_slc
+		clr_character_flag = travelling_bridger
+		clr_character_flag = travelling_natrona
+		clr_character_flag = travelling_chimney
+		clr_character_flag = travelling_moks
+		if = {
+			limit = {
+				has_quest = quest_monastic_order_pilgrimage_mormon
+			}
+			character_event = { id = MNM.40200 days = 1}
+		}
+	}
+}
+
+character_event = {
+	id = montane_hike.51
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		if = { limit = { has_character_flag = travelling_yellowstone }
+			character_event = { id = montane_hike.3 days = 3 } }	
+		if = { limit = { has_character_flag = travelling_banff }
+			character_event = { id = montane_hike.5 days = 3 } }	
+		if = { limit = { has_character_flag = travelling_zion }
+			character_event = { id = montane_hike.5 days = 3 } }	
+		if = { limit = { has_character_flag = travelling_frozen }
+			character_event = { id = montane_hike.6 days = 3 } }	
+		if = { limit = { has_character_flag = travelling_dunes }
+			character_event = { id = montane_hike.7 days = 3 } }
+		if = { limit = { has_character_flag = travelling_garden }
+			character_event = { id = montane_hike.8 days = 3 } }
+		if = { limit = { has_character_flag = travelling_rocky}
+			character_event = { id = montane_hike.9 days = 3 } }
+	}
+}
