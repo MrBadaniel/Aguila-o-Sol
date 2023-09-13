@@ -458,8 +458,18 @@ living_thyrsus = {
 	monthly_character_piety = 0.5
 	fertility = 0.1
 	stewardship = 1
-	active = { religion = gaian }
-	allowed_gift = { religion = gaian }
+	active = { 
+		OR = {
+			religion = gaian
+			religion = forester
+		}
+	}
+	allowed_gift = { 
+		OR = {
+			religion = gaian
+			religion = forester
+		}
+	}
 	quality = 2
 	flags = { religious staff gaian plant rare }
 	picture = "GFX_haoma_sapling"
@@ -497,6 +507,9 @@ ancient_bonsai = {
 			religion = cetic
 			religion = gaian
 			religion = shinto
+			religion = alurista
+			religion = forester
+			religion = edenite
 		}
 	}
 	allowed_gift = {
@@ -504,6 +517,9 @@ ancient_bonsai = {
 			religion = cetic
 			religion = gaian
 			religion = shinto
+			religion = alurista
+			religion = forester
+			religion = edenite
 		}
 	}
 	quality = 1
@@ -1889,10 +1905,16 @@ redwood_core = {
 	monthly_character_piety = 0.25
 	learning = 1
 	active = {
-		religion = gaian
+		OR = {
+			religion = gaian
+			religion = forester
+		}
 	}
 	allowed_gift = {
-		religion = gaian
+		OR = {
+			religion = gaian
+			religion = forester
+		}
 	}
 	flags = { religious gaian tree rare }
 	stacking = no
@@ -1911,6 +1933,9 @@ healing_crystal = {
 			religion = cetic
 			religion = nousthreskeia
 			religion = neomayan
+			religion = alurista
+			religion = edenite
+			religion = forester
 			trait = mystic
 		}
 	}
@@ -1918,6 +1943,9 @@ healing_crystal = {
 		OR = {
 			religion = gaian
 			religion = neomayan
+			religion = alurista
+			religion = edenite
+			religion = forester
 			trait = mystic
 		}
 	}
@@ -1932,10 +1960,16 @@ everlasting_flower_wreath = {
 	monthly_character_prestige = 0.3
 	learning = 1
 	active = {
-		religion = gaian
+		OR = {
+			religion = gaian
+			religion = forester
+		}
 	}
 	allowed_gift = {
-		religion = gaian
+		OR = {
+			religion = gaian
+			religion = forester
+		}
 	}
 	flags = { religious gaian very_rare }
 	stacking = no
@@ -1950,10 +1984,16 @@ core_of_methuselah = {
 	stewardship = 2
 	same_religion_opinion = 10
 	active = {
-		religion = gaian
+		OR = {
+			religion = gaian
+			religion = forester
+		}
 	}
 	allowed_gift = {
-		religion = gaian
+		OR = {
+			religion = gaian
+			religion = forester
+		}
 	}
 	flags = { religious gaian tree unique }
 	picture = "GFX_haoma_sapling"
@@ -1970,12 +2010,18 @@ heart_of_the_oasis = { #get out of here STALKER
 		OR = {
 			religion = gaian
 			religion = nousthreskeia
+			religion = primevalist
+			religion = primevalist_reformed
+			religion = forester
 		}
 	}
 	allowed_gift = {
 		OR = {
 			religion = gaian
 			religion = nousthreskeia
+			religion = primevalist
+			religion = primevalist_reformed
+			religion = forester
 		}
 	}
 	flags = { religious gaian oldworld artifact unique }
@@ -3080,6 +3126,9 @@ vandals_axe= {
 			religion = gaian
 			religion = trailwalker
 			religion = trailwalker_reformed
+			religion = forester
+			religion = primevalist
+			religion = primevalist_reformed
 		}
 	}
 	flags = { combat_weapon weapon axe }
@@ -3227,6 +3276,9 @@ pulaskis_axe = {
 			religion = trailwalker
 			religion = trailwalker_reformed
 			religion = gaian
+			religion = forester
+			religion = primevalist
+			religion = primevalist_reformed
 		}
 	}
 	quality = 3

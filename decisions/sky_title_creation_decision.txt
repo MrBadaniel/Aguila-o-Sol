@@ -544,4 +544,200 @@ decisions = {
 			factor = 1
 		}
 	}
+	
+	reform_the_interior = {
+		#decision_reform_the_interior
+		only_independent = yes
+		ai_check_interval = 24
+		
+		is_high_prio = yes
+		potential = {
+			is_playable = yes
+			religion = forester
+			d_nps = {
+				has_holder = no
+			}
+			NOT = { has_global_flag = interior_yellostone_established }
+			NOT = { has_global_flag = interior_rockies_established }
+			NOT = {
+				has_alternate_start_parameter = { key = religion_names value = random }
+			}
+		}
+		allow = {
+			independent = yes
+			is_adult = yes
+			prisoner = no
+			NOT = {	trait = incapable }
+			war = no
+			religion = forester
+			prestige = 1000
+			wealth = 500
+			AND = {
+				has_landed_title = c_sublette
+				has_landed_title = c_teton
+				has_landed_title = c_yellowstone
+				has_landed_title = c_fremont
+			}
+		}
+		effect = {
+			wealth = -500
+			prestige = 500
+			activate_title = { title = d_nps status = yes }
+			#primary_title = {
+			#	d_nps = {
+			#		grant_title = ROOT
+			#		copy_title_laws = PREV
+			#		copy_title_history = d_nps
+			#	}
+			#}
+			hidden_tooltip = { d_nps = { make_primary_title = yes } }
+			if = {
+				limit = {
+					OR = {
+						has_landed_title = d_highland_springs
+						d_highland_springs = { has_holder = no }
+					}
+				}
+				d_highland_springs = { destroy_landed_title = THIS }
+				activate_title = { title = d_highland_springs status = no }
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	reform_the_interior_yellowstone = {
+		#decision_reform_the_interior_yellowstone
+		only_independent = yes
+		ai_check_interval = 24
+		
+		is_high_prio = yes
+		potential = {
+			is_playable = yes
+			religion = forester
+			has_landed_title = k_yellowstone
+			NOT = { has_global_flag = interior_yellostone_established }
+			NOT = {
+				has_alternate_start_parameter = { key = religion_names value = random }
+			}
+		}
+		allow = {
+			independent = yes
+			is_adult = yes
+			prisoner = no
+			NOT = {	trait = incapable }
+			war = no
+			religion = forester
+			prestige = 1000
+			wealth = 1000
+			AND = {
+				completely_controls = c_yellowstone
+				completely_controls = d_beartooth
+				completely_controls = d_wyoming
+				completely_controls = d_east_snake
+			}
+		}
+		effect = {
+			wealth = -500
+			prestige = 1000
+			set_global_flag = interior_yellostone_established
+			primary_title = {
+				k_yellowstone = {
+					copy_title_history = d_nps
+				}
+			}
+			if = {
+				limit = {
+					is_female = yes
+					has_dlc = "Holy Fury"
+				}
+				create_bloodline = {
+					type = forester_female
+				}
+				new_bloodline = {
+					set_description = "bloodline_desc_reforesting"
+				}
+			}
+			if = {
+				limit = {
+					is_female = no
+					has_dlc = "Holy Fury"
+				}
+				create_bloodline = {
+					type = forester_male
+				}
+				new_bloodline = {
+					set_description = "bloodline_desc_reforesting"
+				}
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	reform_the_interior_rockies = {
+		#decision_reform_the_interior_rockies
+		only_independent = yes
+		ai_check_interval = 24
+		
+		is_high_prio = yes
+		potential = {
+			is_playable = yes
+			religion = forester
+			has_landed_title = e_the_rockies
+			NOT = { has_global_flag = interior_rockies_established }
+			#has_global_flag = mountain_king_crowned
+			NOT = {
+				has_alternate_start_parameter = { key = religion_names value = random }
+			}
+		}
+		allow = {
+			independent = yes
+			is_adult = yes
+			prisoner = no
+			NOT = {	trait = incapable }
+			war = no
+			religion = forester
+			prestige = 1000
+			wealth = 1500
+			AND = {
+				completely_controls = k_yellowstone
+				#completely_controls = k_idaho
+				completely_controls = d_wyoming
+				completely_controls = d_highland_springs
+			}
+		}
+		effect = {
+			wealth = -1000
+			prestige = 3000
+			if = {
+				limit = { NOT = { has_artifact = ate_firearm } }
+				add_artifact = ate_firearm
+			}
+			if = {
+				limit = { NOT = { has_artifact = hope_diamond } }
+				add_artifact = hope_diamond
+			}
+			set_global_flag = interior_rockies_established
+			primary_title = {
+				e_the_rockies = {
+					copy_title_history = k_yellowstone
+				}
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
 }
