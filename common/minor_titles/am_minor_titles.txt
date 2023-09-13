@@ -1239,3 +1239,43 @@ title_squire = {
 
 	message = yes
 }
+title_montane_ascetic = {
+	dignity = 0.050
+	grant_limit = 1
+	opinion_effect = 10
+	monthly_salary = 0.02
+	monthly_prestige = 0.75
+
+	revoke_allowed = no
+	
+	allowed_to_hold = {
+		NOT = { 
+			primary_title = { temporary = yes } 
+		}
+		OR = {
+			has_character_flag = montane_ascetic
+			has_character_flag = montane_ascetic
+		}
+		is_adult = yes
+		OR = {
+			religion = montane
+			religion = edenite
+			#has_dharmic_religion_trigger = yes
+		}
+	}
+	
+	allowed_to_grant = { 
+		OR = {
+			religion = montane
+			religion = edenite
+			#has_dharmic_religion_trigger = yes
+		}
+	}
+	
+	gain_effect = {
+	}
+	lose_effect = {
+	}
+
+	message = yes
+}
