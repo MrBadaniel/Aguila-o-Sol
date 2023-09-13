@@ -472,4 +472,57 @@ decisions = {
 			modifier = { factor = 0 NOT = { wealth = 250 } }
 		}
 	}
+	
+	find_montane_ascetic = {
+		only_playable = yes
+		ai_check_interval = 36
+		potential = {
+			OR = {
+				#has_dharmic_religion_trigger = yes
+				religion = montane
+				religion = edenite
+			}
+			is_playable = yes
+			is_adult = yes
+			OR = {
+				is_feudal = yes
+				is_tribal = yes
+				is_nomadic = yes
+			}
+			prisoner = no
+			NOT = { has_character_flag = looking_for_montane_ascetic }
+			NOT = { has_character_flag = found_montane_ascetic }
+			NOT = {
+				any_courtier = {
+					has_minor_title = title_montane_ascetic
+				}
+			}
+		}
+		allow = {
+			prisoner = no
+			wealth = 50
+			prestige = 300
+		}
+		effect = {
+			wealth = -50
+			set_character_flag = looking_for_montane_ascetic
+			character_event = { id = montane_ascetic.3000 }
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+
+			modifier = {
+				factor = 0
+				trait = cynical
+			}
+			modifier = {
+				factor = 0
+				NOT = { wealth = 200 }
+			}
+		}
+	}
+	
 }
