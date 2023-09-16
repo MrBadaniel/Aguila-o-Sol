@@ -1456,3 +1456,186 @@ d_first_cav_royal_guard = {
 	mercenary_type = texas_royal_guard_composition
 }
 
+##########AOS HOLY ORDERS########
+
+#DOMINIONIST
+
+#d_knights_of_the_commandments = {
+#	color = {243 206 24}
+#	color2 = {255 255 255}
+	
+#	graphical_culture = holygfx
+	
+#NOT ACTUALLY RIGHT CAPITAL YET	capital = 701 # Spokane
+
+#	title = "GRANDMASTER"
+#	foa = "GRANDMASTER"
+	
+	# Always exists
+#	landless = yes
+	
+#	holy_order = yes
+	
+	# Parent Religion 
+#	religion = dominionist	
+	
+#	culture = snakelander
+	
+	# Cannot be held as a secondary title
+#	primary = yes
+	
+	# Extra income due to donations, etc
+#	monthly_income = 3 # (Must be an integer between 1 and 512)
+
+#	mercenary_type = d_knights_of_the_commandments_composition
+#}
+
+d_sea_org = {
+	color = {21 35 125}
+	color2 = {255 255 255}
+	
+	graphical_culture = holygfx
+	
+	capital = 2321 #Roswell
+
+	title = "ADMIRAL"
+	foa = "ADMIRAL_FOA"
+	
+	# Always exists
+	landless = yes
+	
+	holy_order = yes
+	
+	# Parent Religion 
+	religion = falling_star	
+	
+	culture = arixan
+	
+	# Cannot be held as a secondary title
+	primary = yes
+	
+	# Extra income due to donations, etc
+	monthly_income = 4 # (Must be an integer between 1 and 512)
+
+	mercenary_type = d_sea_org_composition
+}
+
+d_brown_berets = {
+	color = { 216 162 109 }
+	color2 = {255 255 255}
+	
+	graphical_culture = holygfx
+	
+	capital = 800 #El PAso
+
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+	
+	# Always exists
+	landless = yes
+	
+	holy_order = yes
+	
+	# Parent Religion 
+	religion = la_hermandad	
+	
+	culture = tejano
+	
+	# Cannot be held as a secondary title
+	primary = yes
+	
+	# Extra income due to donations, etc
+	monthly_income = 4 # (Must be an integer between 1 and 512)
+
+	mercenary_type = d_brown_berets_composition
+}
+
+d_teatro_campesino = {
+	color={ 233 188 154 }
+	color2={ 255 255 255 }
+	
+	graphical_culture = holygfx
+	
+	capital = 2028 #San Benito
+
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+	
+	# Always exists
+	landless = yes
+	
+	holy_order = yes
+	
+	# Parent Religion 
+	religion = la_hermandad	
+	
+	culture = joaquino
+	
+	# Cannot be held as a secondary title
+	primary = yes
+	
+	# Extra income due to donations, etc
+	monthly_income = 4 # (Must be an integer between 1 and 512)
+
+	mercenary_type = d_teatro_campesino_composition
+}
+
+d_mammoth_stampede = {
+	color = { 113 25 37 }
+	color2 = { 165 154 152 }
+	
+	graphical_culture = holygfx
+	
+	capital = 476 #Wheatland
+
+	title = "ZOOKEEPER"
+	foa = "ZOOKEEPER_FOA"
+	
+	# Always exists
+	landless = yes
+	
+	holy_order = yes
+	
+	# Parent Religion 
+	religion = primevalist_reformed	
+	
+	culture = joaquino
+	
+	# Cannot be held as a secondary title
+	primary = yes
+	
+	# Extra income due to donations, etc
+	monthly_income = 4 # (Must be an integer between 1 and 512)
+
+	mercenary_type = d_mammoth_stampede_composition
+}
+
+d_mousketeers = {
+	color={ 255 190 25 }
+	color2={ 220 220 0 }
+	
+	graphical_culture = holygfx
+	
+	capital = 2600 #Disneyworld
+
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+	
+	# Always exists
+	landless = yes
+	
+	holy_order = yes
+	
+	# Parent Religion 
+	religion = phanstasmic	
+	
+	culture = gulfard
+	
+	# Cannot be held as a secondary title
+	primary = yes
+	
+	# Extra income due to donations, etc
+	monthly_income = 4 # (Must be an integer between 1 and 512)
+
+	mercenary_type = d_mousketeers_composition
+}
