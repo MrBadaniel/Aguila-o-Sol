@@ -452,3 +452,47 @@ companero = {
 	male_compliment = COMPL_COMPANERO
 	female_compliment = COMPL_COMPANERO
 }
+
+mammoth_rider = {
+	opposites = {
+		crusader_king
+		crusader_queen
+		companero
+		mujahid
+		valhalla_bound
+		jaguar_warrior
+		fords_striker
+		sword_of_the_lamb
+		knight_templar
+		order_of_the_garter
+		danite
+		shaddai
+		lughs_own
+		thunderbird_warrior
+		raven_warrior
+		dragon_soldier
+		hivernant
+		cavalier
+		joropo_cantor
+		medal_of_honor
+		patriota
+		crusader
+		sapo
+	}
+	
+	martial = 2
+	learning = 2
+	combat_rating = 10 #old value: 1
+	
+	church_opinion = 15
+	same_opinion_if_same_religion = 15
+	
+	ai_zeal = 10
+	
+	male_insult = INSULT_FANATIC
+	female_insult = INSULT_FANATIC
+	male_insult_adj = INSULT_NARROWMINDED
+	female_insult_adj = INSULT_NARROWMINDED
+	male_compliment_adj = COMPL_RIGHTEOUS
+	female_compliment_adj = COMPL_RIGHTEOUS
+}
