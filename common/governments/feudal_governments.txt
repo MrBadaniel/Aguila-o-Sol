@@ -1164,8 +1164,10 @@ feudal_governments = {
 			NOT = { is_government_potential = roman_imperial_government }
 			NOT = { is_government_potential = mex_imperial_government }
 			#NOT = { is_government_potential = usos_y_costumbres_government }
-			religion = montane
-			religion = celeste
+			OR ={
+				religion = montane
+				religion = celeste
+			}
 			is_patrician = no
 		}
 		
