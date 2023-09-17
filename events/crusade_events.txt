@@ -77,7 +77,7 @@ character_event = {
 	
 	option = {
 		trigger = {
-			religion = primevalist
+			religion = primevalist_reformed
 		}
 		name = "GLORY"
 		add_trait = mammoth_rider
@@ -86,7 +86,7 @@ character_event = {
 	option = {
 		trigger = {
 			NOT = { religion_group = christian }
-			NOT = { religion = primevalist }
+			NOT = { religion = primevalist_reformed }
 		}
 		name = "GLORY"
 		add_trait = crusader
