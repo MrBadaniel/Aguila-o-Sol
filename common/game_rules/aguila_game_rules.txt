@@ -30,3 +30,40 @@ aos_justo_evtchain = {
 		desc = "RULE_JUSTO_EVETCHAIN_EARLY_DESC"
 	}
 }
+
+consumerist_prophet = {
+	name = "RULE_CONSUMER"
+	group = "RULE_GROUP_RAILROADING"
+	
+	alt_start_default = off
+	option = {
+		name = off
+		text = "RULE_OPTION_OFF"
+		desc = "RULE_CONSUMER_OFF_DESC"
+	}
+	option = {
+		name = on
+		text = "RULE_OPTION_ON"
+		desc = "RULE_CONSUMER_EARLY_DESC"
+	}
+	option = {
+		name = newyork
+		text = "RULE_OPTION_NY"
+		desc = "RULE_OPTION_NY_DESC"
+	}
+	option = {
+		name = chicago
+		text = "RULE_OPTION_CHICAGO"
+		desc = "RULE_OPTION_CHICAGO_DESC"
+	}
+	option = {
+		name = losangeles
+		text = "RULE_OPTION_LOS_ANGELES"
+		desc = "RULE_OPTION_LOS_ANGELES_DESC"
+	}
+	option = {
+		name = lasvegas
+		text = "RULE_OPTION_LAS_VEGAS"
+		desc = "RULE_OPTION_LAS_VEGAS_DESC"
+	}
+}

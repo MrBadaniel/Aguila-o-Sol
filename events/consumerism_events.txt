@@ -26,6 +26,12 @@ narrative_event = {
 		d_consumerist = {
 			has_holder = no
 		}
+		NOT = { 
+			has_game_rule = {
+				name = consumerist_prophet
+				value = off
+			}
+		}
 		NOT = { has_global_flag = consumerist_revolt_ongoing }
 		any_realm_province = {
 			kingdom = {
@@ -76,6 +82,66 @@ narrative_event = {
 						same_realm = ROOT
 					}
 				}
+			}
+			has_game_rule = {
+				name = consumerist_prophet
+				value = on
+			}
+		}
+		modifier = {
+			factor = 0
+			NOT = {
+				c_manhattan = {
+					holder_scope = {
+						same_realm = ROOT
+					}
+				}
+			}
+			has_game_rule = {
+				name = consumerist_prophet
+				value = newyork
+			}
+		}
+		modifier = {
+			factor = 0
+			NOT = {
+				c_chicago = {
+					holder_scope = {
+						same_realm = ROOT
+					}
+				}
+			}
+			has_game_rule = {
+				name = consumerist_prophet
+				value = chicago
+			}
+		}
+		modifier = {
+			factor = 0
+			NOT = {
+				c_los_angeles = {
+					holder_scope = {
+						same_realm = ROOT
+					}
+				}
+			}
+			has_game_rule = {
+				name = consumerist_prophet
+				value = losangeles
+			}
+		}
+		modifier = {
+			factor = 0
+			NOT = {
+				c_las_vegas = {
+					holder_scope = {
+						same_realm = ROOT
+					}
+				}
+			}
+			has_game_rule = {
+				name = consumerist_prophet
+				value = lasvegas
 			}
 		}
 		modifier = {
