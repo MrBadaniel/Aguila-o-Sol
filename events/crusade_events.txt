@@ -59,7 +59,9 @@ character_event = {
 	option = {
 		trigger = {
 			religion_group = christian
-			NOT = { religion = la_hermandad }
+			NOR = { 
+				religion = la_hermandad 
+			}
 		}
 		name = "EVTOPTA8300"
 		add_trait = crusader
@@ -73,10 +75,18 @@ character_event = {
 		add_trait = companero
 	}
 	
+	option = {
+		trigger = {
+			religion = primevalist
+		}
+		name = "GLORY"
+		add_trait = mammoth_rider
+	}
 	
 	option = {
 		trigger = {
 			NOT = { religion_group = christian }
+			NOT = { religion = primevalist }
 		}
 		name = "GLORY"
 		add_trait = crusader
