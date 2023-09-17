@@ -364,14 +364,15 @@ character_event = {
 		create_character = {
 			random_traits = yes
 			dynasty = none
-			female = no
+			female = yes
 			age = 40
 			religion = ROOT
 			culture = ROOT
-			add_trait = brilliant_strategist
+			add_trait = mastermind_theologian
+			add_trait = fair
 
 			attributes = {
-				martial = 10
+				learning = 10
 			}
 		}
 	}
