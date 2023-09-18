@@ -24,6 +24,166 @@ castle = {
 
 	#Montane Building was it supposed to be a Lodge?
 
+
+
+
+
+	# Northern Montane Ski Troops
+	ca_montane_ski_troops_1 = {
+		desc = ca_montane_ski_troops_1_desc
+		potential = {
+			OR = {
+				FROM = { government = montane_government }
+				#FROMFROM = { has_building = ca_government_monastery_1 }
+			}
+			OR = {
+					terrain = mountain
+					terrain = hills
+			}
+		}
+		is_active_trigger = {
+			owner = { government = montane_government }
+		}
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 0
+		}
+		prerequisites = { ca_wall_2 }
+		gold_cost = 200
+		build_time = 730
+		heavy_infantry = 15
+		light_infantry = 30
+		heavy_infantry_defensive = 0.075
+		light_infantry_defensive = 0.075
+		ai_creation_factor = 101
+		
+		extra_tech_building_start = 0.8
+	}
+	ca_montane_ski_troops_2 = {
+		desc = ca_montane_ski_troops_1_desc
+		potential = {
+			OR = {
+				FROM = { government = montane_government }
+				FROMFROM = { has_building = ca_montane_ski_troops_1 }
+				#has_building = ca_culture_ski_troops_1
+			}
+			OR = {
+					terrain = mountain
+					terrain = hills
+			}
+		}
+
+		is_active_trigger = {
+			owner = { government = montane_government }
+		}
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 1
+			#FROM = { government = montane_government }
+		}
+		prerequisites = { ca_montane_ski_troops_1 }
+		upgrades_from = ca_montane_ski_troops_1
+		gold_cost = 300
+		build_time = 1095
+		heavy_infantry = 20
+		light_infantry = 40
+		heavy_infantry_defensive = 0.075
+		light_infantry_defensive = 0.075
+		ai_creation_factor = 101
+		
+		extra_tech_building_start = 0.8
+	}
+	ca_montane_ski_troops_3 = {
+		desc = ca_montane_ski_troops_1_desc
+		potential = {
+			OR = {
+				FROM = { government = montane_government }
+				FROMFROM = { has_building = ca_montane_ski_troops_2 }
+			}
+			OR = {
+					terrain = mountain
+					terrain = hills
+			}
+			#OR = {
+			#				has_building = ca_culture_ski_troops_1
+			#	has_building = ca_culture_ski_troops_2
+			#
+			#}
+		}
+				#has_building = ca_culture_ski_troops_1
+				#has_building = ca_culture_ski_troops_2
+		is_active_trigger = {
+			owner = { government = montane_government }
+		}
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 1
+			#ROOT = {
+				#OR = {
+				#	#culture_group = gallomerican
+				#	culture = prairielander
+				#	#culture = ontarian
+				#	culture = canuck
+				#	culture = mikmaq
+				#	culture = inuit	
+				#}
+			#}
+		}
+		upgrades_from = ca_montane_ski_troops_2
+		gold_cost = 400
+		build_time = 2190
+		heavy_infantry = 25
+		light_infantry = 50
+		heavy_infantry_defensive = 0.075
+		light_infantry_defensive = 0.075
+		ai_creation_factor = 101
+		
+		extra_tech_building_start = 0.8
+	}
+	ca_montane_ski_troops_4 = {
+		desc = ca_montane_ski_troops_1_desc
+				potential = {
+			OR = {
+				FROM = { government = montane_government }
+				FROMFROM = { has_building = ca_montane_ski_troops_3 }
+			}
+			OR = {
+					terrain = mountain
+					terrain = hills
+			}
+			#OR = {
+			#	has_building = ca_culture_ski_troops_1
+			#	has_building = ca_culture_ski_troops_2
+			#	has_building = ca_culture_ski_troops_3
+			#
+			#}
+		}
+				#has_building = ca_culture_ski_troops_1
+				#has_building = ca_culture_ski_troops_2
+		is_active_trigger = {
+			owner = { government = montane_government }
+		}
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 1
+			#ROOT = {
+				#OR = {
+				#	#culture_group = gallomerican
+				#	culture = prairielander
+				#	#culture = ontarian
+				#	culture = canuck
+				#	culture = mikmaq
+				#	culture = inuit	
+				#}
+			#}
+		}
+		upgrades_from = ca_montane_ski_troops_3
+		gold_cost = 500
+		build_time = 2190
+		heavy_infantry = 30
+		light_infantry = 60
+		heavy_infantry_defensive = 0.075
+		light_infantry_defensive = 0.075
+		ai_creation_factor = 101
+		
+		extra_tech_building_start = 0.8
+	}
 	ca_government_montane_monastery_1 = {
 		desc = ca_government_montane_monastery_1_desc
 		potential = {
