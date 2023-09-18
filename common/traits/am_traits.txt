@@ -2853,7 +2853,12 @@ arminian = {
 }
 on_hike = {
 	potential = {
+		OR ={
 		religion = gaian
+		religion = montane
+		religion = forester
+		religion = edenite
+		}
 	}
 	
 	same_religion_opinion = 5
