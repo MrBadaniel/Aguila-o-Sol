@@ -238,7 +238,7 @@ e_canada = {
 			hudsonian = "Nassau" #dutch
 			ojibwe = "Mississagua"
 			maritimer = "Dachaigh"
-			ontarian = "Grand Tarano"
+			ontarian = "Grand Tarono"
 			ontarois = "Grand Toronto"
 			
 			c_welland = {
@@ -290,7 +290,7 @@ e_canada = {
 				color = { 237 162 3 }
 				
 				canadien = "Tarontha"
-				ontarian = "Tarano"
+				ontarian = "Torono"
 				iroquois = "Tkaronto"
 				
 				holy_site = high_church
@@ -300,15 +300,15 @@ e_canada = {
 
 				b_toronto_ON = {
 					canadien = "Tarontha"
-					ontarian = "Tarano"
+					ontarian = "Torono"
 					iroquois = "Tkaronto"
 				}
 				b_mississauga_ON = {}
 				b_brampton_ON = {}
 				b_scarborough_ON = {
-					short_name = yes
-					used_for_dynasty_names = no
+					ontarian = "Torono"
 					pentarchy = Gregorian
+					pentarchy = high_church
 				}
 				b_etobicoke_ON = {}
 				b_york_ON = {}
@@ -788,6 +788,7 @@ e_canada = {
 				b_outremont_QC = {}
 				b_laval_QC = {
 					pentarchy = Gregorian
+					pentarchy = high_church
 					}
 				b_westmount_QC = {}
 				b_st_laurent_QC = {}
@@ -1471,7 +1472,10 @@ e_canada = {
 				holy_site = high_church
 				holy_site = Gregorian
 				b_woodstock_NB = {acadien = "Medotec"}
-				b_canterbury_NB = {pentarchy = Gregorian}
+				b_canterbury_NB = {
+				pentarchy = high_church
+				pentarchy = Gregorian
+				}
 				b_houlton_ME = {}
 				b_grafton_NB = {}
 				b_greenville_NB = {}
