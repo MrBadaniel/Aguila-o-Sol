@@ -224,6 +224,50 @@ decisions = {
 				}
 			}
 		}
-	}	
+	}
+	select_anglican_patron_saint = {
+		is_high_prio = yes
+		only_rulers = yes
+		
+		potential = {
+			NOT = {
+				has_alternate_start_parameter = { key = religion_names value = random }
+			}
+			religion = high_church
+			is_adult = yes
+			#has_anglican_select_trigger = no
+			#NOT = {has_character_flag = anglican_select}
+			NOT = {has_character_modifier = high_anglican_saint_joseph}
+			NOT = {has_character_modifier = high_anglican_saint_newman}
+			NOT = {has_character_modifier = high_anglican_saint_cranmer}
+			NOT = {has_character_modifier = high_anglican_saint_charles}
+		}
+		allow = {
+			block_general_event_trigger = no
+			piety = 250
+			OR = {
+				trait = devout
+				trait = zealous
+			}
+			AND = {
+				trait = high_anglican
+			}
+		}
+		effect = {
+			character_event = { id = AoM.101 }
+			piety = -250
+			set_character_flag = anglican_select
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.3 # Slow it down a little
+			}
+		}
+	}
+
 	
 }

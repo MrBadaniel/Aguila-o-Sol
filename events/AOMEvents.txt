@@ -1059,3 +1059,214 @@ character_event = {
 		trigger = { NOT = { religion = FROM } }
 	}
 }
+#Choose patron saint
+character_event = {
+	id = AoM.101
+	desc = "EVTDESC_anglican__patron_saints_1"
+	picture = GFX_evt_virgin_mary_icon
+	
+	religion = high_church
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVOTPA_high_anglican_1
+		trigger = {
+		}
+		custom_tooltip = { text = TXT_high_anglican_saint_joseph }
+		hidden_effect = {
+			add_character_modifier = { name = high_anglican_saint_joseph duration = -1 }
+		}
+		ai_chance = {
+			factor = 10
+		}
+	}
+	
+	option = {
+		name = EVOTPB_high_anglican_1
+		custom_tooltip = { text = TXT_high_anglican_saint_newman }
+		hidden_effect = {
+			add_character_modifier = { name = high_anglican_saint_newman duration = -1 }
+		}
+		ai_chance = {
+			factor = 10
+		}
+	}
+	
+	option = {
+		name = EVOTPC_high_anglican_1
+		custom_tooltip = { text = TXT_high_anglican_saint_cranmer }
+		hidden_effect = {
+			add_character_modifier = { name = high_anglican_saint_cranmer duration = -1 }
+		}
+		ai_chance = {
+			factor = 10
+		}
+	}
+	
+	option = {
+		name = EVOTPD_high_anglican_1
+		custom_tooltip = { text = TXT_high_anglican_saint_charles }
+		hidden_effect = {
+			add_character_modifier = { name = high_anglican_saint_charles duration = -1 }
+		}
+		ai_chance = {
+			factor = 10
+		}
+	}
+	
+	after = {
+		clr_character_flag = anglican_select
+	}
+}
+
+#Become more like Saint Joseph - become mystic
+character_event = {
+	id = AoM.102
+	desc = "EVTDESC_AoM.102"
+	picture = GFX_evt_virgin_mary_icon
+	
+	religion = high_church
+	
+	trigger = {
+		has_character_modifier = high_anglican_saint_joseph
+		NOT = { trait = zealous }
+		NOT = { trait = mystic }
+	}
+	
+	mean_time_to_happen = {
+		months = 40
+	}
+	
+	option = {
+		name = EVTOPTA_AoM.102
+		hidden_effect = {
+			remove_trait = cynical
+			add_trait = mystic
+		}
+	}
+}
+
+#Become more like Saint Newman - become humble
+character_event = {
+	id = AoM.103
+	desc = "EVTDESC_AoM.103"
+	picture = GFX_evt_virgin_mary_icon
+	
+	religion = high_church
+	
+	trigger = {
+		has_character_modifier = high_anglican_saint_newman
+		NOT = { trait = humble }
+	}
+	
+	mean_time_to_happen = {
+		months = 40
+	}
+	
+	option = {
+		name = EVTOPTA_AoM.102
+		hidden_effect = {
+			remove_trait = proud
+			add_trait = humble
+		}
+	}
+}
+
+#Become more like Saint Cranmer - become erudite
+character_event = {
+	id = AoM.104
+	desc = "EVTDESC_AoM.104"
+	picture = GFX_evt_virgin_mary_icon
+	
+	religion = nestorian
+	
+	trigger = {
+		has_character_modifier = high_anglican_saint_cranmer
+		NOT = { trait = erudite }
+		NOT = { has_character_flag = imbecilehighchurch }
+	}
+	
+	mean_time_to_happen = {
+		months = 40
+	}
+	
+	option = {
+		name = EVTOPTA_AoM.102
+		trigger = {
+			NOR = {
+				trait = imbecile
+				trait = slow
+			}
+		}
+		hidden_effect = {
+			add_trait = erudite
+		}
+	}
+	
+	option = {
+		name = EVTOPTB_AoM.102
+		piety = 100
+		trigger = {
+			OR = {
+				trait = imbecile
+				trait = slow
+			}
+		}
+		set_character_flag = imbecilehighchurch
+	}
+}
+
+#Become more like Saint King Charles - become just
+character_event = {
+	id = AoM.105
+	desc = "EVTDESC_AoM.105"
+	picture = GFX_evt_virgin_mary_icon
+	
+	religion = high_church
+	
+	trigger = {
+		has_character_modifier = high_anglican_saint_charles
+		NOT = { trait = just }
+	}
+	
+	mean_time_to_happen = {
+		months = 40
+	}
+	
+	option = {
+		name = EVTOPTA_AoM.102
+		hidden_effect = {
+			add_trait = just
+			remove_trait = arbitrary
+		}
+	}
+}
+
+#Remove patron saint if you stop being high anglican
+character_event = {
+	id = AoM.106
+	desc = "EVTDESC_AoM.106"
+	picture = GFX_evt_virgin_mary_icon
+	is_triggered_only = yes
+	
+	trigger = {
+	
+		NOT = { religion = high_church }
+		#NOT = { trait = high_anglican }
+		#trait = broad_anglican
+		#trait = low_anglican
+		has_anglican_select_trigger = yes
+	}
+	
+	weight_multiplier = {
+		days = 5
+	}
+	
+	option = {
+		name = EVTOPTC_AoM.102
+		hidden_effect = {
+			remove_anglican_patron_saint_effect = yes
+		}
+	}
+}
