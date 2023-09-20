@@ -1566,12 +1566,14 @@
 1200095={
 	name="Mayuk"
 	dynasty=2027041
+	father=1200124
 	culture=ktunaxa
 	religion=montane
 	trait=indulgent_wastrel
 	trait=hedonist
 	trait=slothful
 	2629.1.15={birth=yes}
+	2649.11.7={add_spouse=1886132}
 	2650.1.1={capital=c_koocanusa}
 	2710.10.10={death=yes}
 }
@@ -1606,7 +1608,8 @@
 	dynasty=2027040
 	female=yes
 	culture=ktunaxa
-	religion=gaian
+	religion=montane
+	father=1200133
 	trait=fortune_builder
 	trait=fair
 	trait=gregarious
@@ -1621,7 +1624,7 @@
 	name="Hluuwee"
 	dynasty=2027040
 	culture=ktunaxa
-	religion=gaian
+	religion=montane
 	trait=legit_bastard
 	mother=1200100
 	2659.1.15={birth=yes}
@@ -1960,4 +1963,229 @@
 			killer=1200112 #walter
 		}
 	}
+}
+1200124={
+	name="Akam"
+	dynasty=2027041
+	culture=ktunaxa
+	religion=montane
+	father=1200125
+	trait=administrator
+	trait=brilliant_strategist
+	trait=erudite
+	trait=humble
+	trait=mountain_father
+	trait=zealous
+	give_nickname=nick_the_glorious
+	2601.5.21={birth=yes}
+	2655.12.1={death=yes}
+}
+1200125={
+	name="Nitlksaq'"
+	dynasty=2027041
+	culture=ktunaxa
+	religion=montane
+	father=1200126
+	give_nickname=nick_the_lawgiver
+	trait=scholar
+	trait=erudite
+	learning=10
+	trait=mastermind_theologian
+	2597.8.23={birth=yes}
+	2623.6.14={death=yes}
+}
+1200126{
+	name="Ray Watak"
+	dynasty=2027041
+	culture=ktunaxa
+	religion=montane
+	father=1200127
+	mother=1200140
+	give_nickname=nick_the_shrewd
+	trait=scholar
+	trait=erudite
+	learning=10
+	trait=mastermind_theologian
+	2564.5.3={birth=yes}
+	2601.5.1={death=yes}
+}
+1200127={
+	name="Akam"
+	dynasty=2027041
+	culture=ktunaxa
+	religion=montane
+	father=1200128
+	give_nickname=nick_the_great
+	trait=scholar
+	trait=quick
+	trait=brave
+	trait=honest
+	trait=just
+	trait=deacon
+	martial=10
+	learning=10
+	trait=brilliant_strategist
+	2525.8.23={birth=yes}
+	2560.12.25={add_spouse=1200140}
+	2591.2.13={death=yes}
+}
+1200128={
+	name="Qukin"
+	dynasty=2027041
+	culture=ktunaxa
+	religion=montane
+	father=1200129
+	2505.4.21={birth=yes}
+	2550.3.10={death=yes}
+}
+1200129={
+	name="Upat'"
+	dynasty=2027041
+	culture=ktunaxa
+	religion=montane
+	trait=deacon
+	trait=mystic
+	trait=zealous
+	trait=mountain_father
+	trait=erudite
+	2461.12.25={birth=yes}
+	2521.2.13={death=yes}
+}
+1200130={
+	name="Upat'"
+	culture=ktunaxa
+	religion=peyotist
+	2521.12.25={birth=yes}
+	2553.1.23={death={
+			death_reason=death_battle_duel
+			killer=1200127 #chad
+		}
+	}
+}
+1200131={
+	name="Namqatku"
+	culture=ktunaxa
+	religion=peyotist
+	2521.12.25={birth=yes}
+	2553.1.23={death={
+			death_reason=death_battle_duel
+			killer=1200127 #chad
+		}
+	}
+}
+1200132={
+	name="Tsu Tsu"
+	culture=ktunaxa
+	religion=peyotist
+	2521.12.25={birth=yes}
+	2556.1.23={death={
+			death_reason=death_battle_duel
+			killer=1200127 #chad
+		}
+	}
+}
+1200133={
+	name="Upat'"
+	dynasty=2027040
+	culture=ktunaxa
+	religion=montane
+	father = 1200126
+	2591.12.25={birth=yes}
+	2660.12.1={death=yes}
+}
+1200134={
+	name="Qatku"
+	culture=ktunaxa
+	religion=peyotist
+	2521.12.25={birth=yes}
+	2582.12.13={death={
+			death_reason=death_battle_duel
+			killer=1200127 #chad
+		}
+	}
+}
+1200135={
+	name="Initswum"
+	culture=ktunaxa
+	religion=gaian
+	2531.2.25={birth=yes}
+	2560.3.10={death={
+			death_reason=death_battle_duel
+			killer=1200127 #chad
+		}
+	}
+}
+1200136={
+	name="Himu"
+	culture=ktunaxa
+	religion=gaian
+	2545.1.5={birth=yes}
+	2581.5.7={death={
+			death_reason=death_battle_duel
+			killer=1200127 #chad
+		}
+	}
+}
+1200137={
+	name="Akam"
+	dynasty=2027041
+	father=1200095
+	mother=1886132
+	culture=ktunaxa
+	religion=montane
+	trait=tough_soldier
+	trait=honest
+	trait=ambitious
+	2650.1.15={birth=yes}
+	2740.10.10={death=yes}
+}
+1200138={
+	name="Kyaqkatluk"
+	dynasty=2027041
+	father=1200095
+	mother=1886132
+	culture=ktunaxa
+	religion=montane
+	trait=kind
+	trait=honest
+	trait=quick
+	2653.12.15={birth=yes}
+	2740.10.10={death=yes}
+}
+1200139={
+	name="Naxni"
+	dynasty=2027041
+	father=1200095
+	mother=1886132
+	female=yes
+	culture=ktunaxa
+	religion=montane
+	trait=fair
+	2663.5.7={birth=yes}
+	2740.10.10={death=yes}
+}
+1200140={
+	name="Anna"
+	dynasty=5001184
+	female=yes
+	culture=coloradan
+	religion=montane
+	father=1875048
+	female=yes
+	trait=fair
+	2528.3.17={birth=yes}
+	2560.12.25={add_spouse=1200127}
+	2600.12.11={death=yes}
+}
+1200141={
+	name="Namqatku"
+	dynasty=2027041
+	father=1200095
+	mother=1886132
+	culture=ktunaxa
+	religion=montane
+	trait=honest
+	trait=erudite
+	2657.1.15={birth=yes}
+	2740.10.10={death=yes}
 }
