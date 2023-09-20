@@ -27050,12 +27050,13 @@ character_event = {
 	max_age = 45
 	only_capable = yes
 	prisoner = no
-	religion_group = oldworld
+	religion_group = christian
 	
 	trigger = {	
 		OR = {
-			religion = rust_cultist
-			religion = chrome_cultist
+			religion = la_hermandad
+			religion = artiga
+			religion = alurista
 		}
 		
 		is_heretic = no
@@ -27079,8 +27080,9 @@ character_event = {
 			holy_order = no
 			is_heretic = no
 			OR = {
-				religion = rust_cultist
-				religion = chrome_cultist
+			religion = la_hermandad
+			religion = artiga
+			religion = alurista
 			}
 			liege = {
 				holy_order = no
@@ -27326,12 +27328,13 @@ character_event = {
 	has_dlc = "Sons of Abraham"
 	min_age = 16
 	only_playable = yes
-	religion_group = oldworld
+	religion_group = christian
 	
 	trigger = {
 		OR = {
-			religion = rust_cultist
-			religion = chrome_cultist
+			religion = la_hermandad
+			religion = artiga
+			religion = alurista
 		}
 	
 		is_heretic = no
@@ -27348,8 +27351,8 @@ character_event = {
 		any_demesne_province = {
 			has_empty_holding = yes
 			OR = {
-				region = custom_great_lakes
-				region = world_northeast
+				region = world_southwest
+				region = custom_texas
 			}
 		}
 
@@ -27402,8 +27405,8 @@ character_event = {
 			limit = {
 				has_empty_holding = yes
 				OR = {
-					region = custom_great_lakes
-					region = world_northeast
+				region = world_southwest
+				region = custom_texas
 				}
 			}
 			province_event = {
@@ -27585,7 +27588,7 @@ character_event = {
 		
 		martial = 5
 		
-		is_title_active = d_iatse
+		is_title_active = d_iron_workers
 		
 		OR = {
 			father_even_if_dead = {
