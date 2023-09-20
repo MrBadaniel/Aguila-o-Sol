@@ -1252,11 +1252,13 @@ character_event = {
 	
 	trigger = {
 	
-		NOT = { religion = high_church }
+		NOT = { religion = high_church 
+				#trait = high_anglican
+		}
 		#NOT = { trait = high_anglican }
 		#trait = broad_anglican
 		#trait = low_anglican
-		has_anglican_select_trigger = yes
+		has_anglican_patron_saint_trigger = yes
 	}
 	
 	weight_multiplier = {
