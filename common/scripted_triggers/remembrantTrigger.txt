@@ -6,3 +6,12 @@ has_Gregorian_patron_saint_trigger = {
 		has_character_modifier = Gregorian_Saint_Kateri
 	}
 }
+
+has_anglican_patron_saint_trigger = {
+	OR = {
+		has_character_modifier = high_anglican_saint_joseph
+		has_character_modifier = high_anglican_saint_newman
+		has_character_modifier = high_anglican_saint_cranmer
+		has_character_modifier = high_anglican_saint_charles
+	}
+}
