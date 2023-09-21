@@ -1,0 +1,866 @@
+# 1 - Becoming the High Fabricator (DEPRECATED)
+# 2 - Industrial Action
+# 3 - Form the UAW
+# 10-13 - Crusade timers
+# 15-x - Labor Day
+# 30-x - Forge Saint
+namespace = rustcultist
+
+# RUST CULTIST INDUSTRIAL ACTION
+# Called from 'on_crusade_creation'
+# new_character is the targetted enemy
+# ROOT is the religious head
+# FROM is the attacked kingdom title
+narrative_event = {
+	id = rustcultist.2
+	title = EVTNAME200
+	picture = GFX_evt_battle
+	border = GFX_event_narrative_frame_war
+	
+	desc = {
+		text = EVTDESC_industrial_action
+		trigger = {
+			OR = {
+				new_character = {
+					NOT = { religion_group = christian }
+					NOT = { religion_group = pagan_group }
+				}
+				has_alternate_start_parameter = { key = religion_names value = random }
+			}
+		}
+	}
+	desc = {
+		text = EVTDESC_industrial_action_pagan
+		trigger = {
+			new_character = {
+				religion_group = pagan_group
+			}
+			NOT = {
+				has_alternate_start_parameter = { key = religion_names value = random }
+			}
+		}
+	}
+	desc = {
+		text = EVTDESC_industrial_action_christ
+		trigger = {
+			new_character = {
+				religion_group = christian
+			}
+			NOT = {
+				has_alternate_start_parameter = { key = religion_names value = random }
+			}
+		}
+	}
+	
+	is_triggered_only = yes
+	major = yes
+	show_ROOT = yes
+	hide_new = yes
+	
+	trigger = {
+		can_call_crusade = yes
+		ROOT = { religion = rust_cultist }
+	}
+	
+	option = {
+		name = EVTOPTA324 # For [God Name]!
+		trigger = { religion = ROOT }
+	}
+	option = {
+		name = EVTOPTB200 # No concern of ours
+		trigger = {
+			NOT = { religion = ROOT }
+			new_character = {
+				NOT = { religion = PREV }
+				NOT = { character = PREV }
+			}
+		}
+	}
+	option = {
+		name = EVTOPTD200 # To Arms!
+		trigger = {
+			new_character = {
+				character = PREV
+			}
+		}
+	}
+	option = {
+		name = EVTOPTE200 # Terrible News!
+		trigger = {
+			new_character = {
+				religion = PREV
+				NOT = { character = PREV }
+			}
+		}
+	}
+}
+narrative_event = {
+	id = rustcultist.3
+	title = EVTNAME_uaw_formed
+	desc = EVTDESC_uaw_formed
+	picture = GFX_evt_rust_cultist
+	border = GFX_event_narrative_frame_religion
+
+	major = yes
+
+	is_triggered_only = yes
+	
+	trigger = {
+		NOT = { has_global_flag = high_fabricator }
+	}
+	
+	immediate = {
+		activate_title = { title = d_uaw status = yes }
+		create_random_soldier = {
+			dynasty = none
+			random_traits = yes
+			unsafe_religion = ROOT
+		}
+		new_character = {
+			character_event = { id = misc.3 } # Diversity
+			character_event = { id = misc.4 } # Physique
+			d_uaw = {
+				grant_title = PREV
+			}
+			set_defacto_liege = THIS
+			add_friend = THIS
+			wealth = 500
+		}
+		d_uaw = {
+			set_defacto_liege = ROOT
+		}
+	}
+	
+	option = {
+		name = EVTOPTA_rust_cult_holy_order
+		trigger = {
+			religion = rust_cultist
+		}
+	}
+	
+	option = {
+		name = EVTOPTB_rust_cult_holy_order
+		trigger = {
+			NOT = { religion_group = oldworld }
+		}
+	}
+	
+	option = {
+		name = EVTOPTC_rust_cult_holy_order
+		trigger = {
+			religion_group = oldworld
+			NOT = { religion = rust_cultist }
+		}
+	}
+}
+narrative_event = {
+	id = rustcultist.4
+	title = EVTNAME_iatse_formed
+	desc = EVTDESC_iatse_formed
+	picture = GFX_evt_rust_cultist
+	border = GFX_event_narrative_frame_religion
+
+	major = yes
+
+	is_triggered_only = yes
+	
+	trigger = {
+		NOT = { has_global_flag = high_fabricator }
+	}
+	
+	immediate = {
+		activate_title = { title = d_iatse status = yes }
+		create_random_soldier = {
+			dynasty = none
+			random_traits = yes
+			unsafe_religion = ROOT
+		}
+		new_character = {
+			character_event = { id = misc.3 } # Diversity
+			character_event = { id = misc.4 } # Physique
+			d_iatse = {
+				grant_title = PREV
+			}
+			set_defacto_liege = THIS
+			add_friend = THIS
+			wealth = 500
+		}
+		d_iatse = {
+			set_defacto_liege = ROOT
+		}
+	}
+	
+	option = {
+		name = EVTOPTA_rust_cult_holy_order
+		trigger = {
+			religion = la_hermandad
+		}
+	}
+	
+	option = {
+		name = EVTOPTB_rust_cult_holy_order
+		trigger = {
+			NOT = { religion_group = christian }
+		}
+	}
+	
+	option = {
+		name = EVTOPTC_rust_cult_holy_order
+		trigger = {
+			religion_group = christian
+			NOT = { religion = la_hermandad }
+		}
+	}
+}
+
+narrative_event = {
+	id = rustcultist.5
+	title = EVTNAME_teamsters_formed
+	desc = EVTDESC_teamsters_formed
+	picture = GFX_evt_rust_cultist
+	border = GFX_event_narrative_frame_religion
+
+	major = yes
+
+	is_triggered_only = yes
+	
+	trigger = {
+		NOT = { has_global_flag = high_fabricator }
+	}
+	
+	immediate = {
+		activate_title = { title = d_teamsters status = yes }
+		create_random_soldier = {
+			dynasty = none
+			random_traits = yes
+			unsafe_religion = ROOT
+		}
+		new_character = {
+			character_event = { id = misc.3 } # Diversity
+			character_event = { id = misc.4 } # Physique
+			d_teamsters = {
+				grant_title = PREV
+			}
+			set_defacto_liege = THIS
+			add_friend = THIS
+			wealth = 500
+		}
+		d_teamsters = {
+			set_defacto_liege = ROOT
+		}
+	}
+	
+	option = {
+		name = EVTOPTA_rust_cult_holy_order
+		trigger = {
+			religion = rust_cultist
+		}
+	}
+	
+	option = {
+		name = EVTOPTB_rust_cult_holy_order
+		trigger = {
+			NOT = { religion_group = oldworld }
+		}
+	}
+	
+	option = {
+		name = EVTOPTC_rust_cult_holy_order
+		trigger = {
+			religion_group = oldworld
+			NOT = { religion = rust_cultist }
+		}
+	}
+}
+
+narrative_event = {
+	id = rustcultist.6
+	title = EVTNAME_afl_formed
+	desc = EVTDESC_afl_formed
+	picture = GFX_evt_rust_cultist
+	border = GFX_event_narrative_frame_religion
+
+	major = yes
+
+	is_triggered_only = yes
+	
+	trigger = {
+		NOT = { has_global_flag = high_fabricator }
+	}
+	
+	immediate = {
+		activate_title = { title = d_afl status = yes }
+		create_random_soldier = {
+			dynasty = none
+			random_traits = yes
+			unsafe_religion = ROOT
+		}
+		new_character = {
+			character_event = { id = misc.3 } # Diversity
+			character_event = { id = misc.4 } # Physique
+			d_afl = {
+				grant_title = PREV
+			}
+			set_defacto_liege = THIS
+			add_friend = THIS
+			wealth = 500
+		}
+		d_afl = {
+			set_defacto_liege = ROOT
+		}
+	}
+	
+	option = {
+		name = EVTOPTA_rust_cult_holy_order
+		trigger = {
+			religion = rust_cultist
+		}
+	}
+	
+	option = {
+		name = EVTOPTB_rust_cult_holy_order
+		trigger = {
+			NOT = { religion_group = oldworld }
+		}
+	}
+	
+	option = {
+		name = EVTOPTC_rust_cult_holy_order
+		trigger = {
+			religion_group = oldworld
+			NOT = { religion = rust_cultist }
+		}
+	}
+}
+
+# THE START OF THE INDUSTRIAL ACTIONS
+narrative_event = {
+	id = rustcultist.10
+	title = EVTNAME_rustcultist_10
+	desc = EVTDESC_rustcultist_10
+	picture = GFX_evt_rust_cultist
+	border = GFX_event_narrative_frame_religion
+	
+	major = yes
+	
+	show_ROOT = yes
+	hide_new = yes
+	religion = rust_cultist
+	only_playable = yes
+	min_age = 16
+	
+	trigger = {
+		NOT = { #immersion-breaking
+			has_alternate_start_parameter = { key = religion_names value = random }
+		}
+		controls_religion = yes
+		year = 2690
+		
+		OR = {
+			992 = { # Calumet
+				NOT = { owner = { religion = rust_cultist } }
+			}
+			4 = { # Palisades
+				NOT = { owner = { religion = rust_cultist } }
+			}
+		}
+		
+		NOT = { has_global_flag = rust_cultist_industrial_actions_unlocked }
+	}
+	
+	mean_time_to_happen = {
+		months = 120
+	}
+	
+	immediate = {
+		set_global_flag = rust_cultist_industrial_actions_unlocked
+	}
+	
+	option = {
+		name = EVTOPTA_rustcultist_10
+		trigger = {
+			religion = rust_cultist
+		}
+	}
+	
+	option = {
+		name = EVTOPTB_rustcultist_10
+		trigger = {
+			religion_group = oldworld
+			NOT = { religion = rust_cultist }
+		}
+	}
+	
+	option = {
+		name = EVTOPTC_rustcultist_10
+		trigger = {
+			NOT = { religion_group = oldworld }
+		}
+	}
+}
+
+# THE START OF THE INDUSTRIAL ACTIONS - PITTSBURGH FAILING
+narrative_event = {
+	id = rustcultist.11
+	title = EVTNAME_rustcultist_10
+	desc = EVTDESC_rustcultist_11
+	picture = GFX_evt_rust_cultist
+	border = GFX_event_narrative_frame_religion
+	
+	major = yes
+	
+	show_ROOT = yes
+	hide_new = yes
+	religion = rust_cultist
+	only_playable = yes
+	min_age = 16
+	
+	trigger = {
+		NOT = { #immersion-breaking
+			has_alternate_start_parameter = { key = religion_names value = random }
+		}
+		controls_religion = yes
+		year = 2690
+		NOT = { has_global_flag = rust_cultist_industrial_actions_unlocked }
+		
+		OR = {
+			k_allegheny = {
+				holder_scope = {
+					NOT = { religion = rust_cultist }
+				}
+			}
+			88 = { # Yohogania
+				NOT = { owner = { religion = rust_cultist } }
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 3
+	}
+	
+	immediate = {
+		set_global_flag = rust_cultist_industrial_actions_unlocked
+	}
+	
+	option = {
+		name = EVTOPTA_rustcultist_10
+		trigger = {
+			religion = rust_cultist
+		}
+	}
+	
+	option = {
+		name = EVTOPTB_rustcultist_10
+		trigger = {
+			religion_group = oldworld
+			NOT = { religion = rust_cultist }
+		}
+	}
+	
+	option = {
+		name = EVTOPTC_rustcultist_10
+		trigger = {
+			NOT = { religion_group = oldworld }
+		}
+	}
+}
+
+# THE START OF THE INDUSTRIAL ACTIONS - DETROIT HAS FALLEN
+narrative_event = {
+	id = rustcultist.12
+	title = EVTNAME_rustcultist_10
+	desc = EVTDESC_rustcultist_12
+	picture = GFX_evt_rust_cultist
+	border = GFX_event_narrative_frame_religion
+	
+	major = yes
+	
+	show_ROOT = yes
+	hide_new = yes
+	religion = rust_cultist
+	only_playable = yes
+	min_age = 16
+	
+	trigger = {
+		NOT = { #immersion-breaking
+			has_alternate_start_parameter = { key = religion_names value = random }
+		}
+		controls_religion = yes
+		year = 2500
+		NOT = { has_global_flag = rust_cultist_industrial_actions_unlocked }
+		
+		118 = { # Detroit
+			owner = {
+				NOT = { religion = rust_cultist }
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 3
+	}
+	
+	immediate = {
+		set_global_flag = rust_cultist_industrial_actions_unlocked
+	}
+	
+	option = {
+		name = EVTOPTA_rustcultist_10
+		trigger = {
+			religion = rust_cultist
+		}
+	}
+	
+	option = {
+		name = EVTOPTB_rustcultist_10
+		trigger = {
+			religion_group = oldworld
+			NOT = { religion = rust_cultist }
+		}
+	}
+	
+	option = {
+		name = EVTOPTC_rustcultist_10
+		trigger = {
+			NOT = { religion_group = oldworld }
+		}
+	}
+}
+
+# THE START OF THE INDUSTRIAL ACTIONS - CLEVELAND
+narrative_event = {
+	id = rustcultist.13
+	title = EVTNAME_rustcultist_10
+	desc = EVTDESC_rustcultist_13
+	picture = GFX_evt_rust_cultist
+	border = GFX_event_narrative_frame_religion
+	
+	major = yes
+	
+	show_ROOT = yes
+	hide_new = yes
+	religion = rust_cultist
+	only_playable = yes
+	min_age = 16
+	
+	trigger = {
+		NOT = { #immersion-breaking
+			has_alternate_start_parameter = { key = religion_names value = random }
+		}
+		controls_religion = yes
+		year = 2690
+		NOT = { has_global_flag = rust_cultist_industrial_actions_unlocked }
+		
+		102 = { # Cuyahoga
+			NOT = { owner = { religion = rust_cultist } }
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 3
+	}
+	
+	immediate = {
+		set_global_flag = rust_cultist_industrial_actions_unlocked
+	}
+	
+	option = {
+		name = EVTOPTA_rustcultist_10
+		trigger = {
+			religion = rust_cultist
+		}
+	}
+	
+	option = {
+		name = EVTOPTB_rustcultist_10
+		trigger = {
+			religion_group = oldworld
+			NOT = { religion = rust_cultist }
+		}
+	}
+	
+	option = {
+		name = EVTOPTC_rustcultist_10
+		trigger = {
+			NOT = { religion_group = oldworld }
+		}
+	}
+}
+
+narrative_event = {
+	id = rustcultist.15
+	title = EVTTITLE_rustcultist_15
+	desc = EVTDESC_rustcultist_15
+	picture = GFX_evt_market_hf
+	border = GFX_event_narrative_frame_religion
+	is_triggered_only = yes
+	
+	trigger = {
+		has_character_flag = celebrating_labor_day
+	}
+	
+	option = {
+		name = EVTOPTA_rustcultist_15
+		hidden_tooltip = { narrative_event = { id = rustcultist.16 days = 1 } }
+	}
+}
+
+narrative_event = {
+	id = rustcultist.16
+	title = EVTTITLE_rustcultist_15
+	desc = EVTDESC_rustcultist_16
+	picture = GFX_evt_jugglers
+	border = GFX_event_narrative_frame_religion
+	is_triggered_only = yes
+	
+	trigger = {
+		has_character_flag = celebrating_labor_day
+	}
+	
+	option = {
+		name = EVTOPTA_rustcultist_16
+		prestige = -30
+		piety = 50
+		custom_tooltip = { text = TXT_EVTOPTA_rustcultist_16 }
+		hidden_tooltip = { narrative_event = { id = rustcultist.17 days = 1 } }
+	}
+	
+	option = {
+		name = EVTOPTB_rustcultist_16
+		custom_tooltip = { text = TXT_EVTOPTB_rustcultist_16 }
+		hidden_tooltip = { narrative_event = { id = rustcultist.18 days = 1 } }
+	}
+}
+
+narrative_event = {
+	id = rustcultist.17
+	title = EVTTITLE_rustcultist_15
+	desc = EVTDESC_rustcultist_17
+	picture = GFX_evt_outside_tavern_hf
+	border = GFX_event_narrative_frame_religion
+	is_triggered_only = yes
+	
+	trigger = {
+		has_character_flag = celebrating_labor_day
+	}
+	
+	option = {
+		name = EVTOPTA_rustcultist_17
+		add_character_modifier = { name = labor_day_commoners years = 1 }
+		if = {
+			limit = {
+				has_dlc = "Reapers"
+			}
+			custom_tooltip = {
+				text = capital_prospers_custom_tooltip
+				hidden_tooltip = {
+					capital_scope = {
+						change_variable = { which = prosperity_value value = 4 }
+					}
+				}
+			}
+		}
+		custom_tooltip = { text = TXT_EVTOPTA_rustcultist_17 }
+		hidden_tooltip = { narrative_event = { id = rustcultist.19 days = 1 } }
+	}
+}
+
+narrative_event = {
+	id = rustcultist.18
+	title = EVTTITLE_rustcultist_15
+	desc = EVTDESC_rustcultist_18
+	picture = GFX_evt_noble_in_castle
+	border = GFX_event_narrative_frame_religion
+	is_triggered_only = yes
+	
+	trigger = {
+		has_character_flag = celebrating_labor_day
+	}
+	
+	option = {
+		name = EVTOPTA_rustcultist_18
+		add_character_modifier = { name = labor_day_noble years = 1 }
+		custom_tooltip = { text = TXT_EVTOPTA_rustcultist_17 }
+		hidden_tooltip = { narrative_event = { id = rustcultist.19 days = 1 } }
+	}
+}
+
+narrative_event = {
+	id = rustcultist.19
+	title = EVTTITLE_rustcultist_15
+	desc = EVTDESC_rustcultist_19
+	picture = GFX_evt_market_hf
+	border = GFX_event_narrative_frame_religion
+	is_triggered_only = yes
+	
+	trigger = {
+		has_character_flag = celebrating_labor_day
+	}
+	
+	option = {
+		name = EVTOPTA_rustcultist_19
+		custom_tooltip = { text = TXT_EVTOPTA_rustcultist_19 }
+	}
+	
+	after = {
+		add_character_modifier = {
+			name = labor_day_timer
+			hidden = yes
+			years = 3
+		}
+		clr_character_flag = celebrating_labor_day
+		clr_character_flag = recent_minor_decision
+		clr_character_flag = do_not_disturb
+	}
+}
+
+character_event = {
+	id = rustcultist.20
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		clr_character_flag = celebrating_labor_day
+		clr_character_flag = recent_minor_decision
+		clr_character_flag = do_not_disturb
+	}
+}
+
+narrative_event = {
+	id = rustcultist.30
+	title = EVTNAME_forge_saint
+	desc = EVTDESC_forge_saint
+	picture = GFX_evt_diplomat_hf
+	border = GFX_event_narrative_frame_religion
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		ROOT = {
+			add_claim = k_rust_cultist
+		}
+	}
+	
+	option = { #starts war immediately
+		name = EVTOPTA_forge_saint
+		trigger = { character = ROOT }
+		custom_tooltip = { text = TXT_EVTOPTA_forge_saint }
+		k_rust_cultist = {
+			holder_scope = {
+				reverse_war = {
+					target = ROOT
+					thirdparty_title = PREV
+					casus_belli = claim
+				}
+				character_event = { id = rustcultist.31 }
+			}
+		}
+	}
+	
+	option = {
+		name = EVTOPTB_forge_saint
+		trigger = {
+			has_landed_title = k_rust_cultist
+		}
+		custom_tooltip = { text = TXT_EVTOPTB_forge_saint }
+	}
+	
+	option = {
+		name = EVTOPTC_forge_saint
+		trigger = {
+			religion_group = oldworld
+			NOR = {
+				character = ROOT
+				has_landed_title = k_rust_cultist
+			}
+		}
+	}
+	
+	option = {
+		name = EVTOPTD_forge_saint
+		trigger = {
+			NOT = { religion_group = oldworld }
+		}
+	}
+}
+
+character_event = {
+	id = rustcultist.31
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_tooltip = {
+			any_independent_ruler = {
+				limit = {
+					religion = ROOT
+					war = no
+				}
+				letter_event = { id = rustcultist.32 }
+			}
+		}
+	}
+}
+
+letter_event = {
+	id = rustcultist.32
+	desc = EVTDESC_forge_saint_3
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		war = no
+	}
+	
+	option = {
+		name = EVTOPTA_forge_saint_3
+		custom_tooltip = { text = TXT_EVTOPTA_forge_saint_3 }
+		ROOT = { join_defender_wars = FROM }
+		
+		ai_chance = {
+			factor = 100
+			modifier = {
+				factor = 2
+				trait = brave
+			}
+			modifier = {
+				factor = 3
+				trait = zealous
+			}
+			modifier = {
+				factor = 0
+				is_allied_with = FROM
+			}
+		}
+	}
+	
+	option = {
+		name = EVTOPTB_forge_saint_3
+		custom_tooltip = { text = TXT_EVTOPTB_forge_saint_3 }
+		prestige = -50
+		piety = -100
+		
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 0
+				trait = brave
+			}
+			modifier = {
+				factor = 0
+				trait = zealous
+			}
+			modifier = {
+				factor = 2
+				trait = cynical
+			}
+			modifier = {
+				factor = 0
+				is_allied_with = FROMFROM
+			}
+		}
+	}
+}
