@@ -115,6 +115,7 @@
 	occluded=yes
 	trait=brave
 	trait=ambitious
+	trait=mountie
 	trait=legendary
 	disallow_random_traits = yes
 	2165.1.1={birth=yes}
@@ -132,6 +133,7 @@
 	trait=brilliant_strategist
 	trait=adventurer
 	trait=brave
+	trait=mountie
 	trait=ambitious
 	trait=inspiring_leader
 	give_nickname =  nick_the_ironside
@@ -149,6 +151,7 @@
 	religion=high_church
 	trait=skilled_tactician
 	trait=just
+	trait=mountie
 	trait=kind
 	trait=content
 	trait=weak
@@ -174,6 +177,7 @@
 	trait=dead_crown_ontario
 	trait=just
 	trait=brilliant_strategist
+	trait=mountie
 	disallow_random_traits = yes
 	give_nickname =  nick_the_great
 	2276.1.1={birth=yes}
@@ -200,7 +204,7 @@
 	
 }
 4000005={
-	name="Wilfrid"
+	name="Augustus"
 	dynasty=1867101 # Cornouailles
 	culture=ontarian
 	religion=high_church
@@ -548,9 +552,11 @@
 }
 4000028={
 	name="Raymond"
-	dynasty=90000022 # Lanthier
+	dynasty=90000031 # ryerson
 	culture=ontarian
 	religion=high_church
+	father=4000240
+	trait=mountie
 	trait=dead_crown_ontario
 	2540.1.1={birth=yes}
 	2572.3.10={death={
@@ -587,12 +593,13 @@
 	2590.1.14={death=yes}
 }
 4000031={
-	name="Raymond"
+	name="Augustus"
 	dynasty=90000002 # Thompson
 	culture=ontarian
 	religion=high_church
+	father=4000241
 	trait=dead_crown_ontario
-	2566.1.1={birth=yes}
+	2546.1.1={birth=yes}
 	2597.1.1={death={
 		death_reason=death_execution
 			killer=4000032
@@ -601,6 +608,7 @@
 }
 4000032={
 	name="Issac"
+	dynasty=90000035
 	culture=ontarian
 	religion=high_church
 	trait=severely_injured
@@ -608,6 +616,7 @@
 	trait=dead_crown_ontario
 	#trait=high_church
 	2546.1.1={birth=yes}
+	2596.1.1={add_spouse=4000243}
 	2599.1.1={death={
 			death_reason=death_battle
 			killer=1857086
@@ -621,6 +630,7 @@
 	religion=high_church
 	#trait=high_church
 	2553.1.1={birth=yes culture=ontarian}
+	2567.1.1={add_spouse=4000244}
 	2604.1.1={death={
 			death_reason=death_battle
 			killer=1919000
@@ -628,13 +638,15 @@
 	}
 }
 4000034={
-	name="Romain"
+	name="John"
 	dynasty=90000032
 	culture=iroquois
 	religion=high_church
+	father=4000027
 	trait=dead_crown_ontario
+	trait=bastard
 	trait=severely_injured
-	2542.1.1={birth=yes culture=ontarian}
+	2571.5.12={birth=yes culture=ontarian}
 	2609.1.1={death={
 		death_reason=death_trait
 		}
@@ -646,6 +658,7 @@
 	culture=west_indian
 	religion=high_church
 	father=4000033
+	mother=4000244
 	trait=dead_crown_ontario
 	2570.1.1={birth=yes culture=ontarian}
 	2615.1.1={death={
@@ -2389,4 +2402,66 @@
 	add_trait=strong
 	2643.1.1={birth=yes}
 	2750.1.1={death=yes}
+}
+
+
+
+
+
+4000240={
+	name="Joseph"
+	dynasty=90000031 # ryerson
+	culture=ontarian
+	religion=high_church
+	father=4000020
+	trait=child_of_consort
+	2520.5.1={birth=yes}
+	2562.12.20={death=yes} 
+}
+4000241={
+	name="Julius"
+	dynasty=90000002 # Corvo
+	culture=ontarian
+	religion=high_church
+	father=4000242
+	2520.1.1={birth=yes}
+	2563.1.1={death=yes} 
+}
+4000242={
+	name="Alexander"
+	dynasty=90000002 # Corvo
+	culture=ontarian
+	religion=high_church
+	father=4000016
+	2497.1.1={birth=yes}
+	2552.1.1={death=yes} 
+}
+4000243={
+	name="Maria"
+	dynasty=1867101 # Cornouailles
+	culture=ontarian
+	religion=high_church
+	female=yes
+	father=4000021
+	2560.1.1={birth=yes}
+	2596.1.1={add_spouse=4000032}
+	2602.1.1={death={
+		death_reason=death_execution
+		}
+	} # murder
+}
+4000244={
+	name="Anna"
+	dynasty=1867101 # Cornouailles
+	culture=ontarian
+	religion=high_church
+	female=yes
+	father=4000020
+	2551.1.1={birth=yes}
+	2567.1.1={add_spouse=4000033}
+	2615.1.1={death={
+			death_reason=death_execution
+			killer=1867151
+		}
+	}
 }
