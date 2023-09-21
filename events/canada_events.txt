@@ -189,6 +189,9 @@ character_event = {
 			remove_trait = high_anglican
 			remove_trait = low_anglican
 		}
+		hidden_effect = {
+			remove_anglican_patron_saint_effect = yes
+		}
 		add_trait = broad_anglican
 		ai_chance = {
 			factor = 10
@@ -202,6 +205,9 @@ character_event = {
 		hidden_tooltip = {
 			remove_trait = broad_anglican
 			remove_trait = high_anglican
+		}
+		hidden_effect = {
+			remove_anglican_patron_saint_effect = yes
 		}
 		add_trait = low_anglican
 		ai_chance = {
