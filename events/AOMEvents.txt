@@ -1120,7 +1120,7 @@ character_event = {
 	}
 }
 
-#Become more like Saint Joseph - become mystic
+#Become more like Saint Joseph - become diligent
 character_event = {
 	id = AoM.102
 	desc = "EVTDESC_AoM.102"
@@ -1130,8 +1130,7 @@ character_event = {
 	
 	trigger = {
 		has_character_modifier = high_anglican_saint_joseph
-		NOT = { trait = zealous }
-		NOT = { trait = mystic }
+		NOT = { trait = diligent }
 	}
 	
 	mean_time_to_happen = {
@@ -1141,13 +1140,13 @@ character_event = {
 	option = {
 		name = EVTOPTA_AoM.102
 		hidden_effect = {
-			remove_trait = cynical
-			add_trait = mystic
+			remove_trait = slothful
+			add_trait = diligent
 		}
 	}
 }
 
-#Become more like Saint Newman - become humble
+#Become more like Saint Newman - get higher diplomacy
 character_event = {
 	id = AoM.103
 	desc = "EVTDESC_AoM.103"
@@ -1157,7 +1156,7 @@ character_event = {
 	
 	trigger = {
 		has_character_modifier = high_anglican_saint_newman
-		NOT = { trait = humble }
+		NOT = { trait = charitable }
 	}
 	
 	mean_time_to_happen = {
@@ -1167,8 +1166,8 @@ character_event = {
 	option = {
 		name = EVTOPTA_AoM.102
 		hidden_effect = {
-			remove_trait = proud
-			add_trait = humble
+			remove_trait = greedy
+			add_trait = charitable
 		}
 	}
 }
@@ -1201,6 +1200,7 @@ character_event = {
 		}
 		hidden_effect = {
 			add_trait = erudite
+			add_triat = patient
 		}
 	}
 	
@@ -1272,5 +1272,113 @@ character_event = {
 		hidden_effect = {
 			remove_anglican_patron_saint_effect = yes
 		}
+	}
+}
+##### Bible Study ####
+character_event = {
+	id = AoM.200
+	desc = EVTDESC_bible_study_1
+	picture = GFX_evt_rider_adventure
+	border = GFX_event_normal_frame_religion
+	is_triggered_only = yes
+	
+	trigger = {
+		has_character_flag = studying_bible
+	}
+	
+	immediate = {
+		character_event = { id = AoM.201 days = 3 }
+	}
+	
+	option = {
+		name = EVTOPTA_bible_study_1
+		piety = 1
+	}
+}
+character_event = {# studied bible and get piety and maybe a positive trait
+	id = AoM.201
+	desc = EVTDESC_bible_study_2
+	picture = GFX_evt_garden
+	border = GFX_event_normal_frame_diplomacy
+	is_triggered_only = yes
+	
+	trigger = {
+		has_character_flag = studying_bible
+	}
+	
+	immediate = {
+		clr_character_flag = studying_bible
+		clr_character_flag = do_not_disturb
+		clr_character_flag = recent_minor_decision
+		add_character_modifier = { name = studied_bible_timer years = 1 }
+	}
+	
+	option = {
+		name = EVTOPTA_bible_study_2
+		#trigger = { NOT = { trait = cynical } }
+		piety = 50
+		custom_tooltip = { text = TXT_bible_study_end }
+		is_hidden = {
+			random_list = {
+				20 = {
+					piety = 25
+				}
+				20 = {
+					piety = 50
+				}
+				20 = {
+					piety = 100
+				}
+				5 = {
+					add_trait = devout
+					piety = 100
+					#gain_weight_small_effect = yes
+				}
+				5 = {
+					add_trait = humble
+					piety = 100
+					#gain_weight_small_effect = yes
+				}
+				5 = {
+					add_trait = patient
+					piety = 100
+					#gain_weight_small_effect = yes
+				}
+				5 = {
+					piety = 100
+					add_trait = erudite
+				}				
+				5 = {
+					piety = 100
+					add_trait = zealous
+					#gain_weight_small_effect = yes
+				}
+				5 = {
+					add_trait = kind
+					piety = 100
+					#gain_weight_small_effect = yes
+				}
+				5 = {
+					add_trait = chaste
+					piety = 100
+					#gain_weight_small_effect = yes
+				}
+				5 = {
+					piety = 100
+					add_trait = charitable
+				}
+			}	
+		}
+	}
+}
+character_event = {
+	id = AoM.202
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		clr_character_flag = studying_bible
+		clr_character_flag = do_not_disturb
+		clr_character_flag = recent_minor_decision
 	}
 }

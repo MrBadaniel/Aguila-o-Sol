@@ -23,25 +23,24 @@ Gregorian_Saint_Kateri = {
 
 high_anglican_saint_joseph = {
 	icon = 17
-	diplomacy = 1
-	high_church_opinion = 5
-	ursuline_opinion = 5
+	stewardship = 1
+	dynasty_opinion = 5
 }
 high_anglican_saint_newman = {
 	icon = 17
-	learning = 1
+	diplomacy = 1
 	catholic_opinion = 5
 }
 high_anglican_saint_cranmer = {
 	icon = 17
-	stewardship = 1
-	high_church_opinion = 10
-	high_anglican_saint_newman_opinion = -10
+	learning = 1
+	piety = 1
 }
 high_anglican_saint_charles = {
 	icon = 17
-	diplomacy = 1
-	high_church_opinion = 5
+	martial = 1
+	vassal_opinion = 5
+	liege_opinion = 5
 }
 st_john_baptiste_timer = {
 	icon = 3
@@ -51,6 +50,11 @@ st_john_baptiste_timer = {
 remembrance_day_timer = {
 	icon = 3
 	Gregorian_opinion = 10
+
+}
+studied_bible_timer = {
+	icon = 3
+	christian_opinion = 5
 
 }
 
