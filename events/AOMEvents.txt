@@ -1427,31 +1427,37 @@ character_event = {
 	}
 }
 character_event = {
-	id = AoM.301
+    id = AoM.301
     hide_window = yes
     is_triggered_only = yes
     
-    immediate = { any_realm_character = {
-
-		# top_liege = FROM 
-
-        if = {
-        top_liege = {
-            trait = high_anglican
-            }
-            add_trait = high_anglican
-        }
-        if = {
-        top_liege = {
-            trait = broad_anglican
-            }
-            add_trait = broad_anglican
-        }
-        if = {
-        top_liege = {
-            trait = low_anglican
+    immediate = { 
+        any_realm_character = {
+            limit = { religion = ROOT }
+            
+            if = {
+                limit = {
+                    top_liege = {
+                        trait = high_anglican
+                    }
                 }
-            add_trait = low_anglican
+                add_trait = high_anglican
+            }
+            else_if = {
+                limit = {
+                    top_liege = {
+                        trait = broad_anglican
+                    }
+                }
+                add_trait = broad_anglican
+            }
+            else_if = {
+                limit = {
+                    top_liege = {
+                        trait = low_anglican
+                    }
+                }
+                add_trait = low_anglican
             }
         } 
     }
