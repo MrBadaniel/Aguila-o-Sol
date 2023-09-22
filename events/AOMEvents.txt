@@ -1382,3 +1382,89 @@ character_event = {
 		clr_character_flag = recent_minor_decision
 	}
 }
+### Anglican King/Emperor issues Edict with tacit approval of their Patriarch, forcing every church in the realm to become his branch of anglicanism, mainly for RP, but gives piety and prestige at cost of vassal Opinion
+character_event = {
+	id = AoM.300	
+	desc = EVTDESC_AoM.300
+	picture = GFX_evt_bishop
+	religion = high_church
+	is_triggered_only = yes
+
+	trigger = {
+		NOT = {
+			has_alternate_start_parameter = { key = religion_names value = random }
+		}
+	}
+	
+	option = {
+		name = EVTOPTA_AoM.300 ## Follow the King/Emperor's branch ##
+
+		immediate = {
+		character_event = { id = AoM.301 days = 0 }
+		}
+		set_character_flag = enforced_branch
+		ai_chance = {
+			factor = 10
+			modifier = { factor = 2	learning = 10 }
+		}
+	}
+
+	option = {
+		name = EVTOPTB_AoM.300 ## Toleration ##
+		#hidden_tooltip = {
+		#	remove_trait = high_anglican
+		#	remove_trait = low_anglican
+		#}
+		add_character_modifier = { name = high_anglican_toleration = -1 }
+		set_character_flag = toleration_branch
+		ai_chance = {
+			factor = 10
+			modifier = { factor = 2	learning = 5 }
+			modifier = { factor = 2	diplomacy = 5 }
+		}
+	}
+	option = {
+		name = EVTOPTC_AoM.300 ## Nevermind, not picking ##
+		#hidden_tooltip = {
+		#	remove_trait = broad_anglican
+		#	remove_trait = high_anglican
+		#}
+		#hidden_effect = {
+		#	remove_anglican_patron_saint_effect = yes
+		#}
+		#add_trait = low_anglican
+		ai_chance = {
+			factor = 10
+			modifier = { factor = 1.5 diplomacy = 10 }
+		}
+	}
+}
+AoM.301 = {
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		limit = {
+			any_courtier_or_vassal = ROOT
+		}
+		if = {
+		top_liege = {
+			trait = high_anglican
+			}
+			add_trait = high_anglican
+		}
+		if = {
+		top_liege = {
+			trait = broad_anglican
+			}
+			add_trait = broad_anglican
+		}
+		if = {
+		top_liege = {
+			trait = low_anglican
+			}
+			add_trait = low_anglican
+		}
+		
+	}
+}

@@ -1,4 +1,41 @@
 decisions = {
+	
+	enforce_branch = { ### Anglican King/Emperor issues Edict with tacit approval of their Patriarch, forcing every church in the realm to become his branch of anglicanism, mainly for RP, but gives piety and prestige at cost of vassal Opinion
+		only_playable = yes
+		is_high_prio = yes
+		potential = {
+			religion = high_church
+			is_playable = yes
+			independent = yes
+			higher_tier_than = DUKE
+			NOT = {
+				has_alternate_start_parameter = { key = religion_names value = random }
+			}
+			NOT = { has_character_flag = enforce_branch }
+			NOT = { has_character_flag = enforced_branch }
+			NOT = { has_character_flag = toleration_branch }
+		}
+	
+	
+	
+	
+		allow = {
+			religion = high_church
+			is_playable = yes
+		
+		}
+		
+		effect = {
+			hidden_tooltip = {
+				character_event = { id = AoM.300 }	
+			}
+			custom_tooltip = { text = TXT_enforce_branch }
+			set_character_flag = enforce_branch
+		}
+
+	
+	}
+
 	bible_study = {
 		only_playable = yes
 		is_high_prio = yes
