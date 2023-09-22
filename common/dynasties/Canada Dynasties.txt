@@ -1,15 +1,14 @@
 90000000 = {
 	name="Cornwallis"
-	culture=ontarian
-	religion="catholic"
+	culture=ontarian 
 	coat_of_arms = {
 		template = 0
 		layer = {
-			texture = 10
-			texture_internal = 27
+			texture = 8
+			texture_internal = 84
 			emblem = 0
-			color = 3
-			color = 1
+			color = 0
+			color = 0
 			color = 0
 		}
 	}
@@ -90,22 +89,33 @@
 90000071 = { name="Animikii" culture=ojibwe }
 90000072 = { name="Lyon" culture=ontarian }
 90000073 = { name="de Cornwall" culture=ontarian }
-90000074 = { name="de Marie" culture=ontarian }
-
-
+90000074 = { name="de Cornwall" 
+			culture=ontarian
+			religion="catholic"
+			coat_of_arms = {
+					template = 0
+					layer = {
+					texture = 10
+					texture_internal = 27
+					emblem = 0
+					color = 3
+					color = 1
+					color = 0
+		}
+	}
+}
 90000076 = {
 	name="Cornouailles" 
-	culture=ontarian
-	religion="catholic"
+	culture=ontarian 
 	coat_of_arms = {
 		template = 0
 		layer = {
-			texture = 18
-			texture_internal = 2
+			texture = 8
+			texture_internal = 84
 			emblem = 0
-			color = 4
-			color = 1
-			color = 3
+			color = 0
+			color = 0
+			color = 0
 		}
 	}
 }

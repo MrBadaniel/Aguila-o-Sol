@@ -1979,9 +1979,13 @@
 	trait=gregarious
 	trait=ambitious
 	trait=just
+	trait=adventurer
 	trait=quick
+	trait=sympathy_christendom
+	trait=mountie
 	trait=brilliant_strategist
 	trait=brave
+	give_nickname=nick_the_sky_rider
 	2607.6.22={birth=yes}
 	2629.1.1={add_spouse=1890045}
 	2664.2.1={death=yes}
@@ -3354,4 +3358,52 @@
 			killer=1890047 #Charbonneau Silvermount
 		}
 	}
+}
+1845189={
+	name="Prester John"
+	occluded=yes
+	culture=prairielander
+	religion=evangelical
+	trait=skilled_tactician
+	trait=ambitious
+	trait=legendary
+	trait=strategist
+	trait=mountie
+	trait=strong
+	give_nickname=nick_the_strong
+	2030.6.19={birth=yes}
+	2104.4.7={death={
+			death_reason=death_battle
+		}
+	}
+}
+1845190={
+	name="Alexander"
+	occluded=yes
+	culture=prairielander
+	religion=nonconformist
+	trait=brilliant_strategist
+	trait=brave
+	trait=legendary
+	trait=strategist
+	trait=strong
+	trait=sympathy_pagans
+	give_nickname=nick_the_sword_of_god
+	2210.8.5={birth=yes}
+	2280.11.17={death={
+			death_reason=death_battle
+		}
+	}
+}
+1845191={
+	name="Hokama"
+	culture=cree
+	religion=peyotist
+	trait=brilliant_strategist
+	trait=brave
+	trait=strategist
+	trait=strong
+	give_nickname=nick_the_lucky
+	2370.8.5={birth=yes}
+	2432.11.1={death=yes}
 }
