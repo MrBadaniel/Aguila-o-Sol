@@ -1399,16 +1399,15 @@ character_event = {
 	option = {
 		name = EVTOPTA_AoM.300 ## Follow the King/Emperor's branch ##
 
-		immediate = {
 		character_event = { id = AoM.301 days = 0 }
-		}
+		
 		set_character_flag = enforced_branch
 		ai_chance = {
 			factor = 10
 			modifier = { factor = 2	learning = 10 }
-		}
+			}
+		
 	}
-
 	option = {
 		name = EVTOPTB_AoM.300 ## Toleration ##
 		add_character_modifier = { name = high_anglican_toleration = -1 }
@@ -1427,11 +1426,14 @@ character_event = {
 		}
 	}
 }
-AoM.301 = {
+character_event = {
+	id = AoM.301
     hide_window = yes
     is_triggered_only = yes
     
-    immediate= {any_courtier_or_vassal = { limit = { top_liege = ROOT } 
+    immediate = { any_realm_character = {
+
+		# top_liege = FROM 
 
         if = {
         top_liege = {
