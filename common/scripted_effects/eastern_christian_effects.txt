@@ -43,7 +43,7 @@ remove_Gregorian_patron_saint_effect = {
     remove_character_modifier = Gregorian_Saint_Newman
     remove_character_modifier = Gregorian_Saint_Kateri
 }
-enforce_branch_effect = {
+enforce_branch_effect = { ### Goal of this effect is to check for what branch type the vassal has, if they are of the prefered branch they get an opinion boost modifier, if not but they agreed to change over, they are given the enforced branch and a small negative opinion modifier
             if = {
                 limit = {
                     top_liege = {
@@ -126,5 +126,32 @@ enforce_branch_effect = {
 					}
                 add_trait = low_anglican
 				#add_character_modifier = { name = dislike_enforced_branch duration = years = 10 }
+            }
+}
+enforce_branch_on_birth_effect = { ### Goal of this effect is the same as before but without the opinion modifiers and is meant for Newborns and others who wouldnt be able to form an opinion, so more so a modifier for down the road years after a decree
+
+            if = {
+                limit = {
+                    top_liege = {
+                        trait = high_anglican
+                    }
+                }
+                add_trait = high_anglican
+            }
+            else_if = {
+                limit = {
+                    top_liege = {
+                        trait = broad_anglican
+                    }
+                }
+                add_trait = broad_anglican
+            }
+            else_if = {
+                limit = {
+                    top_liege = {
+                        trait = low_anglican
+                    }
+                }
+                add_trait = low_anglican
             }
 }

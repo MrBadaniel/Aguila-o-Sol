@@ -1429,7 +1429,7 @@ character_event = {
 		}
 	}
 }
-character_event = {
+character_event = { #event to vassals to give them the option to accept or reject the decree, need to make it so vassals of the right branch simply accept it
     id = AoM.301
     #hide_window = yes
 	desc = EVTDESC_AoM.301
@@ -1470,7 +1470,7 @@ character_event = {
 				}
 			}	 
 }
-character_event = { #on birth event to maintain 
+character_event = { #on birth event to maintain for newborns
     id = AoM.302
     hide_window = yes
 	religion = high_church

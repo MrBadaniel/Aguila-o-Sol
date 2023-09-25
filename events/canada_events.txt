@@ -168,7 +168,7 @@ character_event = {
 		NOT = {
 			has_alternate_start_parameter = { key = religion_names value = random }
 		}
-		NOT = {
+		NOT = { ### Goal is a check against kids who come to adulthood in an anglican realm with an enforced_branch
 			top_liege = {
 			has_character_flag = enforced_branch
 			}
