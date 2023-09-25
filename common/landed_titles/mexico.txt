@@ -1308,54 +1308,12 @@ e_mexico = {
 		
 		capital = 1778 # c_xalapa
 		
-		d_veracruz = {
-			color={ 216 208 129 }
-			color2={ 255 255 255 }
+		d_xalapa = { 
+			color = { 213 128 58 }
+			color2 = { 255 255 255 }
 			
-			capital = 1779 # c_heroica_veracruz
-			
-			c_tononaca = { # 1777
-				color={ 106 118 124 }
-				color2={ 255 255 255 }
-				
-				b_poza_rica_de_hidalgo_VE = {}
-				b_coatzintla_VE = {}
-				b_tecolutla_VE = {}
-				b_coyutla_VE = {}
-				b_papantla_VE = {}
-				b_cazones_VE = {}
-				b_tihuatlan_VE = {}
-				b_pueblillo_VE = {}
-			}
-			c_heroica_veracruz = { # 1779
-				color={ 218 209 137 }
-				color2={ 255 255 255 }
-				
-				b_heroica_veracruz_VE = {}
-				b_tierra_blanca_VE = {}
-				b_boca_del_rio_VE = {}
-				b_soledad_de_doblado_VE = {}
-				b_anton_lizardo_VE = {}
-				b_tlacotalpan_VE = {}
-				b_valente_diaz_VE = {}
-				b_otatitlan = {}
-			}
-			c_las_montanas = { # 1780
-				color={ 149 40 149 }
-				color2={ 255 255 255 }
-				
-				b_cordoba_VE = {}
-				b_zongolica_VE = {}
-				b_amatlan_de_los_reyes_VE = {}
-				b_orizaba_VE = {}
-				b_ixtaczoquitlan_VE = {}
-				b_ciudad_mendoza_VE = {
-					short_name = yes
-					used_for_dynasty_names = no
-				}
-				b_cuitlahuac_VE = {}
-				b_yanga_VE = {}
-			}
+			capital = 1778 # Xalapa
+
 			c_xalapa = { # 1778
 				color={ 176 82 94 }
 				color2={ 255 255 255 }
@@ -1366,20 +1324,145 @@ e_mexico = {
 					nahua = "Xalapan"
 				}
 				b_coatepec_VE = {}
+				b_huatusco_de_chicuellar_VE = {}
+				b_xico_VE = {}
+				b_naolinco_de_victoria_VE = {}
+				b_cosautlan_de_carvajal_VE = {}
+				b_teocelo_VE = {}
+				b_tuzamapan_VE = {}
+				b_el_lencero_VE = {}
+				b_san_marcos_de_leon_VE = {}
+			}
+			
+			c_la_antigua = { #2683
+				color = { 211 124 159 }
+				color2 = { 255 255 255 }
+				
+				b_ursulo_galvan_VE = {}
+				b_jose_cardel_VE = {}
+				b_zempoala_VE = {}
+				b_chichicaxtle_VE = {}
+				b_rinconada_VE = {}
+				b_puente_nacional_VE = {}
+				b_la_antigua_VE = {}
+			}
+			
+			c_perote = { #2684
+				color = { 211 158 179 }
+				color2 = { 255 255 255 }
+			
+				b_perote_VE = {}
+				b_las_vigas_de_ramirez_VE = {}
+				b_altotonga_VE = {}
+				b_jalacingo_VE = {}
+				b_villa_aldama_VE = {}
+				b_san_antonio_limon_VE = {}
+				b_orilla_del_monte_VE = {}
+				b_cruz_blanca_VE = {}
+
+			}
+			
+			c_nautla = { #2685
+				color = { 211 93 140 }
+				color2 = { 255 255 255 }
+				
 				b_misantla_VE = {}
 				b_martinez_de_la_torre_VE = {}
-				b_el_lencero_VE = {}
+				b_tlapacoyan_VE = {}
 				b_laguna_verde_VE = {}
-				b_perote_VE = {}
-				b_huatusco_de_chicuellar_VE = {}
+				b_vega_de_alatorre_VE = {}
+				b_casitas_VE = {}
+				b_nautla_VE = {}
+				b_ayotoxco_de_guerrero_VE = {}
+
 			}
-		}
-		d_olmeca = {
-			color={ 184 141 79 }
+		
+		} #End of d_xalapa
+
+		d_las_montanas = {
+			color = { 221 151 85 }
+			color2 = { 255 255 255 }
+			
+			capital = 2682 #Cordoba 
+			
+			c_las_montanas = { # 1780 #Orizaba
+				color={ 149 40 149 }
+				color2={ 255 255 255 }
+				
+				b_orizaba_VE = {}
+				b_ixtaczoquitlan_VE = {}
+				b_ciudad_mendoza_VE = {
+					short_name = yes
+					used_for_dynasty_names = no
+				}
+				b_zongolica_VE = {}
+				b_santa_cruz_muyuapan_VE = {}
+				b_acultzingo_VE = {}
+				b_tlachichiscapa_VE = {}
+			}
+			
+			c_cordoba = { #2682
+				color = { 147 94 147 }
+				color2 = { 255 255 255 }
+				
+				b_cordoba_VE = {}
+				b_amatlan_de_los_reyes_VE = {}
+				b_cuitlahuac_VE = {}
+				b_yanga_VE = {} 
+				b_monte_blanco_VE = {}
+				b_general_miguel_aleman_VE = {}
+				b_coscomatepec_VE = {}
+				b_fortin_de_las_flores_VE = {}
+			}			
+			
+		} #End of d_las_montanas
+		
+		d_veracruz = {
+			color={ 216 208 129 }
 			color2={ 255 255 255 }
 			
-			capital = 1781 # c_coatzacoalcos
+			capital = 1779 # c_heroica_veracruz
 			
+			c_heroica_veracruz = { # 1779
+				color={ 218 209 137 }
+				color2={ 255 255 255 }
+				
+				b_heroica_veracruz_VE = {}
+				b_boca_del_rio_VE = {}
+				b_anton_lizardo_VE = {}
+				b_valente_diaz_VE = {}
+				b_medellin_VE = {
+					nahua = "Temachales"
+				}
+				b_jamapa_VE = {}
+				b_vargas_VE = {}
+			}
+			
+			c_alvarado = { #2680
+				color = { 54 72 132 }
+				color2={ 255 255 255 }
+			
+				b_piedras_negras_VE = {}
+				b_alvarado_VE = {}
+				b_tlacotalpan_VE = {}
+				b_ignacio_de_la_llave_VE = {}
+				b_tlalixcoyan_VE = {}
+				b_paso_de_la_boca_VE = {}
+				b_salinas_VE = {}
+				b_isla_de_enmedio_VE = {}
+			}
+			c_tierra_colorada_VE = { #2681
+				color = { 94 103 130 }
+				color2 = { 255 255 255 }
+				
+				b_soledad_de_doblado_VE = {}
+				b_paso_de_ovejas_VE = {}
+				b_tolome_VE = {}
+				b_tierra_colorada_VE = {}
+				b_manlio_fabio_altamirano_VE = {}
+				b_villa_emiliano_zapata_VE = {}
+			}
+
 			c_coatzacoalcos = { # 1781
 				color={ 134 131 14 }
 				color2={ 255 255 255 }
@@ -1392,27 +1475,62 @@ e_mexico = {
 				b_coatzacoalcos_VE = {
 					zapotec = "Ninias"
 				}
-				b_minatitlan_VE = {}
-				b_catemaco_VE = {}
-				b_las_choapas_VE = {}
+				b_allende_VE = {}
 				b_nanchital_VE = {}
-				b_santiago_tuxtla_VE = {}
-				b_cosoleacaque_VE = {}
-				b_hueyapan_VE = {}
+				b_agua_dulce_VE = {}
+				b_ixhuatlan_del_sureste_VE = {}
+				b_ciudad_olmeca_VE = {
+					short_name = yes
+					used_for_dynasty_names = no
+				}
+				b_tonala_VE = {}
+				b_estero_del_pantano_VE = {}
 			}
+			c_catemaco = { #2675
+				color = { 70 140 253 }
+				color2 = { 255 255 255 }
+				
+				b_pajapan_VE = {}
+				b_zapotitlan_VE = {}
+				b_catemaco_VE = {}
+				b_sontecomapan_VE = {}
+				b_soteapan_VE = {}
+				b_mecayapan_VE = {}
+				b_huazuntlan_VE = {}
+			}
+			c_tuxtla_VE = { #2676
+				color = { 61 52 163 }
+				color2 = { 255 255 256 }
+				
+				b_santiago_tuxtla_VE = {}
+				b_san_andres_tuxtla_VE = {}
+				b_lerdo_de_tejada_VE = {}
+				b_hueyapan_VE = {}
+				b_sihuapan_VE = {}
+				b_comoapan_VE = {}
+				b_tilapan_VE = {}
+				b_tlapacoyan_VE = {}
+			}
+		
+		} #End of d_veracruz
+		
+		d_olmeca = {
+			color={ 184 141 79 }
+			color2={ 255 255 255 }
+			
+			capital = 2672 # c_minatitlan
+				
 			c_olmeca = { # 1782
 				color={ 164 188 134 }
 				color2={ 255 255 255 }
 
-				b_acayucan_VE = {}
-				b_sayula_de_aleman_VE = {}
-				b_la_chinantla_VE = {}
-				b_jesus_carranza_VE = {}
-				b_el_escundido_VE = {}
-				b_texistepec_VE = {}
-				b_aguilera_VE = {}
-				b_rio_coatzacoalcos_VE = {}
+				b_las_choapas_VE = {}
+				b_independencia_VE = {}
+				b_villa_cuichapa_VE = {}
+				b_chichigapa_VE = {}
+				b_san_pedro_mezcalapa_VE = {}
 			}
+			
 			c_malpaso = { #2369
 				color = { 51 147 205 }
 				color2 = { 255 255 255 }
@@ -1426,10 +1544,74 @@ e_mexico = {
 				b_nuevo_xoteapan_VE = {}
 				b_nuevo_mexico_CP = {}
 			}
-	
+			c_minatitlan = { #2672
+				color = { 38 71 132 }
+				color2 = { 255 255 255 }
+				
+				b_minatitlan_VE = {}
+				b_cosoleacaque_VE = {}
+				b_jaltipan_de_morelos_VE = {}
+				b_oteapan_VE = {}
+				b_zaragoza_VE = {}
+				b_coacotla_VE = {}
+				b_lomas_de_tacamichapan_VE = {}
+				b_chinameca_VE = {}
+			}
+			c_acayucan = { #2673
+				color = { 34 99 98 }
+				color2 = { 255 255 255 }
+				
+				b_acayucan_VE = {}
+				b_sayula_de_aleman_VE = {}
+				b_texistepec_VE = {}
+				b_aguilera_VE = {}
+				b_oluta_VE = {}
+				b_san_juan_evangelista_VE = {}
+				b_cruz_del_milagro_VE = {}
+				b_rio_coatzacoalcos_VE = {}
+			}
+
+			c_uxpanapa = { #2674
+				color = { 66 129 158 }
+				color2 = { 255 255 255 }
+				
+				b_la_horqueta_VE = {}
+				b_la_chinantla_VE = {}
+				b_el_escundido_VE = {}
+				b_suchilapan_del_rio_VE = {}
+				b_la_laguna_VE = {}
+				b_colonia_nuevo_morelos_VE = {}
+				b_jesus_carranza_VE = {}
+			
+			}	
+			
+		} # End of d_olmeca
+		
+		d_papaloapam = {
+				color = { 229 167 91 }
+				color2 = { 255 255 255 }
+			
+				capital = 2678 #Tuxtepec
+				
 			c_papaloapam = { # 1783
 				color={ 234 158 176 }
 				color2={ 255 255 255 }
+
+				b_cosamaloapan_VE = {}
+				b_isla_VE = {}
+				b_chacaltianguis_VE = {}
+				b_villa_azueta_VE = {}
+				b_linda_vista_VE = {}
+				b_la_nueva_esperanza_VE = {}
+				b_abasolo_del_valle_VE = {}
+				b_juan_rodriguez_clara_VE = {}
+			}
+						
+			c_tuxtepec = { #2678
+				color = { 49 123 175 }
+				color2 = { 255 255 255 }
+				
+				nahua = "Tochtepec"
 				
 				b_tuxtepec_OA = {
 					nahua = "Tochtepec"
@@ -1444,75 +1626,192 @@ e_mexico = {
 				b_ayotzintepec_OA = {}
 				b_san_jose_chiltepec_OA = {}
 				b_san_lucas_ojitlan_OA = {}
+				b_papaloapan_OA = {}
 			}
-		}
+				
+			c_choapam = { #2677
+				color = { 95 142 173 }
+				color2 = { 255 255 255 }
+				
+				b_santiago_choapam_OA = {}
+				b_maria_lombardo_de_caso_OA = {}
+				b_san_juan_comaltepec_OA = {}
+				b_santiago_yaveo_OA = {}
+				b_totontepec_villa_de_morelos_OA = {}
+				b_santa_cruz_tierra_negra_OA = {}
+				b_santiago_amatepec_OA = {}
+			}
+			
+			c_tierra_blanca = { #2679
+				color = { 132 132 132 }
+				color2 = { 255 255 255 }
+				
+				b_tierra_blanca_VE = {}
+				b_otatitlan = {}
+				b_cotaxtla_VE = {}
+				b_nopaltepec_VE = {}
+				b_tres_valles_VE = {}
+				b_gabino_barrera_VE = {}
+			}
+		} #End of d_papaloapam
+		
 		d_huasteca = {
 			color={ 228 220 39 }
 			color2={ 255 255 255 }
 			
-			capital = 1774 # c_tampico
+			capital = 1775 # Tuxpan
 			
-			c_tampico = { # 1774
-				color={ 188 220 134 }
+			short_name = yes
+			
+			huastec = "Akank" #South in tének #Otselk west in tének #north = Tsaylél
+			totonac = "Tutunakapan"
+			
+			c_tononaca = { # 1777
+				color={ 106 118 124 }
 				color2={ 255 255 255 }
 				
-				b_tampico_TM = {}
-				b_nuevo_apolonia_TM = {}
-				b_altamira_TM = {}
-				b_ciudad_madero_TM = {
-					short_name = yes
-					used_for_dynasty_names = no
-				}
-				b_aldama_TM = {}
-				b_gonzalez_TM = {}
-				b_villa_manuel_TM = {}
-				b_agua_de_castilla_TM = {}
-			}
-			c_panuco = { # 1774
-				color={ 188 220 134 }
-				color2={ 255 255 255 }
+				totonac = "Tutunakapan"
 				
-				b_panuco_VE = {}
-				b_naranjos_VE = {}
-				b_tamiahua_VE = {}
-				b_ozuluama_de_mascarenas_VE = {}
-				b_tantima_VE = {}
-				b_tempoal_VE = {}
-				b_tantoyuca_VE = {}
-				b_platon_sanchez_VE = {}
+				b_poza_rica_de_hidalgo_VE = {}
+				b_coatzintla_VE = {}
+				b_tecolutla_VE = {}
+				b_coyutla_VE = {}
+				b_papantla_VE = {}
+				b_cazones_VE = {}
+				b_tihuatlan_VE = {}
+				b_pueblillo_VE = {}
 			}
+			
 			c_huayacocotla = { # 1776
 				color={ 164 85 97 }
 				color2={ 255 255 255 }
 				
+				b_chicontepec_de_tejeda_VE = {}
 				b_huayacocotla_VE = {}
-				b_huejutla_de_reyes_HI = {}
-				b_chicontepec_VE = {}
+				b_palo_bendito_VE = {}
+				b_texcatepec_VE = {}
+				b_cuatecomaco_VE = {}
 				b_ixhuatlan_de_madero_VE = {}
 				b_benito_juarez_VE = {}
+				b_colatlan_VE = {}
+				b_rio_pantepec_VE = {}
+
+			}
+			c_huejutla = { #2687
+				color = { 123 158 158 }
+				color2 = { 255 255 255 }
+				
+				b_huejutla_de_reyes_HI = {}
+				b_orizatlan_HI = {}
+				b_huitzitzilingo_HI = {}
+				b_ahuatitla_HI = {}
+				b_coacuilco_HI = {}
 				b_lolotla_HI = {}
 				b_calnali_HI = {}
 				b_tlanchinol_HI = {}
 			}
+
 			c_tuxpan = { # 1775
 				color={ 161 179 79 }
 				color2={ 255 255 255 }
 				
 				jarocho = "Túxpam"
+				huastec = "Tambuc"
 				
 				b_tuxpan_VE = {
 					jarocho = "Túxpam"
+					huastec = "Tambuc"
 				}
-				b_castillo_de_teayo_VE = {}
-				b_alamo_VE = {}
-				b_la_pena_VE = {}
-				b_rio_pantepec_VE = {}
-				b_tampamachoco_VE = {}
+				b_santiago_de_la_pena_VE = {}
 				b_juana_moza_VE = {}
-				b_temapache_VE = {}
+				b_tampamachoco_VE = {}
+				b_boca_del_monte_VE = {}
+				b_alto_lucero_VE = {}
+				b_paises_bajos_VE = {}
 			}
-		}
-	}
+			c_temapache = { #2686
+				color = { 110 178 178 }
+				color2 = { 255 255 255 }
+				
+				b_castillo_de_teayo_VE = {
+					short_name = yes
+					used_for_dynasty_names = no
+				}
+				b_alamo_VE = {}
+				b_temapache_VE = {}
+				b_tepetzintla_VE = {}
+				b_potrero_del_llano_VE = {}
+				b_cerro_azul_VE = {}
+				b_tihuatlan_VE = {}
+				b_la_pena_VE = {}
+			}
+
+			
+
+		} # End of d_huasteca
+		
+		d_huasteca_alta = { 
+			color = { 198 132 35 }
+			color2 = { 255 255 255 }
+			
+			capital =  2688 #Tantoyuca
+			
+			short_name = yes
+			
+			huastec = "Kinal" #Kinal, center in Tének
+					
+			c_tantoyuca = { #2688
+				color = { 137 173 181 }
+				color2 = { 255 255 255 }
+				
+				b_tantoyuca_VE = {}
+				b_tempoal_VE = {}
+				b_tantima_VE = {}
+				b_platon_sanchez_VE = {}
+				b_el_higo_VE = {}
+				b_chalma_VE = {}
+				b_ixcatepec_VE = {}			
+			}
+
+			c_panuco = { # 1774
+				color={ 188 220 134 }
+				color2={ 255 255 255 }
+				
+				b_panuco_VE = {}
+				b_tampico_alto_VE = {}
+				b_ciudad_cuauhtemoc_VE = {
+					short_name = yes
+					used_for_dynasty_names = no
+				}
+				b_pueblo_viejo_VE = {}
+				b_tamos_VE = {}
+				b_la_rivera_VE = {}
+				b_mata_de_tampico_VE = {}
+
+			}			
+			c_tamiahua = { #2689
+				
+				jarocho = "Amatlán"
+				nahua = "Tlamiahuac"
+				huastec = "Tam Yan Ja'"
+				
+				b_naranjos_VE = {
+					nahua = "Amatlán"
+				}
+				b_tamiahua_VE = {
+					nahua = "Tlamiahuac"
+					huastec = "Tam Yan Ja'"
+				}
+				b_ozuluama_de_mascarenas_VE = {}
+				b_chinampa_de_gorostiza_VE = {}
+				b_belisario_dominguez_VE = {}
+				b_kilometro_veintidos_VE = {}
+				b_isla_de_juan_ramirez_VE = {}
+				b_palo_blanco_VE = {}
+			}
+		} #End of d_huasteca_alta
+
+	} #End of k_veracruz
 		
 	k_michoacan = {
 		color={ 84 50 90 }
