@@ -43,3 +43,88 @@ remove_Gregorian_patron_saint_effect = {
     remove_character_modifier = Gregorian_Saint_Newman
     remove_character_modifier = Gregorian_Saint_Kateri
 }
+enforce_branch_effect = {
+            if = {
+                limit = {
+                    top_liege = {
+                        trait = high_anglican
+                    }
+					trait = high_anglican
+                }
+				opinion = {
+						modifier = supported_anglican_branch
+						who = top_liege
+						years = 20
+					}
+            }
+            else_if = {
+                limit = {
+                    top_liege = {
+                        trait = broad_anglican
+                    }
+					trait = broad_anglican
+                }
+				opinion = {
+						modifier = supported_anglican_branch
+						who = top_liege
+						years = 20
+					}
+				#add_character_modifier = { name = supported_broad_anglican_branch duration = -1 }
+            }
+            else_if = {
+                limit = {
+                    top_liege = {
+                        trait = low_anglican
+                    }
+					trait = low_anglican
+                }
+				opinion = {
+						modifier = supported_anglican_branch
+						who = top_liege
+						years = 20
+					}
+				#add_character_modifier = { name = supported_low_anglican_branch duration = -1 }
+            }
+            else_if = {
+                limit = {
+                    top_liege = {
+                        trait = high_anglican
+                    }
+                }
+                add_trait = high_anglican
+				#add_character_modifier = { name = dislike_enforced_branch duration = years = 10 }
+				opinion = {
+						modifier = accepted_anglican_branch
+						who = top_liege
+						years = 20
+					}
+            }
+            else_if = {
+                limit = {
+                    top_liege = {
+                        trait = broad_anglican
+                    }
+                }
+				opinion = {
+						modifier = accepted_anglican_branch
+						who = top_liege
+						years = 20
+					}
+                add_trait = broad_anglican
+				#add_character_modifier = { name = dislike_enforced_branch duration = years = 10 }
+            }
+            else_if = {
+                limit = {
+                    top_liege = {
+                        trait = low_anglican
+                    }
+                }
+				opinion = {
+						modifier = accepted_anglican_branch
+						who = top_liege
+						years = 20
+					}
+                add_trait = low_anglican
+				#add_character_modifier = { name = dislike_enforced_branch duration = years = 10 }
+            }
+}

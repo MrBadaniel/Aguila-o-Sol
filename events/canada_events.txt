@@ -168,6 +168,11 @@ character_event = {
 		NOT = {
 			has_alternate_start_parameter = { key = religion_names value = random }
 		}
+		NOT = {
+			top_liege = {
+			has_character_flag = enforced_branch
+			}
+		}
 	}
 	
 	option = {
@@ -181,6 +186,7 @@ character_event = {
 			factor = 10
 			modifier = { factor = 2	learning = 10 }
 		}
+		
 	}
 
 	option = {

@@ -1399,9 +1399,12 @@ character_event = {
 	option = {
 		name = EVTOPTA_AoM.300 ## Follow the King/Emperor's branch ##
 
-		character_event = { id = AoM.301 days = 0 }
-		
+		any_realm_character = { 
+			limit = { religion = high_church }
+			character_event = { id = AoM.301 days = 3 } 
+			}
 		set_character_flag = enforced_branch
+		add_character_modifier = { name = enforced_branch_modifier = -1 }
 		ai_chance = {
 			factor = 10
 			modifier = { factor = 2	learning = 10 }
@@ -1428,37 +1431,55 @@ character_event = {
 }
 character_event = {
     id = AoM.301
-    hide_window = yes
+    #hide_window = yes
+	desc = EVTDESC_AoM.301
+	picture = GFX_evt_bishop
+	religion = high_church
     is_triggered_only = yes
-    
-    immediate = { 
-        any_realm_character = {
-            limit = { religion = ROOT }
-            
-            if = {
-                limit = {
-                    top_liege = {
-                        trait = high_anglican
-                    }
-                }
-                add_trait = high_anglican
+    		
+			option = {
+				name = EVTOPTA_AoM.301 ## Follow the King/Emperor's branch Happyily ##
+				enforce_branch_effect = yes
+					ai_chance = {
+						trigger = {
+						#	NOT = { trait = zealous }
+						}    
+					factor = 75
+					#modifier = { factor = 1.5 diplomacy = 10 }
+					}
+		#		opinion = {
+		#				modifier = supported_high_anglican_branch
+		#				who = top_liege
+		#				years = 20
+		#			}
+			} 
+			option = {
+				name = EVTOPTB_AoM.301 ## DONT Follow the King/Emperor's branch ##
+				#add_character_modifier = { name = hate_anglican_branch duration = -1 }
+				opinion = {
+						modifier = hate_anglican_branch
+						who = top_liege
+						years = 20
+					}
+				ai_chance = {
+					trigger = {
+						#NOT = { trait = cynical }
+					}     
+					factor = 25
+					#modifier = { factor = 1.5 diplomacy = 10 }
+				}
+			}	 
+}
+character_event = { #on birth event to maintain 
+    id = AoM.302
+    hide_window = yes
+	religion = high_church
+    is_triggered_only = yes	
+	
+	trigger = {
+			top_liege = {
+                has_character_flag = { enforce_branch }
             }
-            else_if = {
-                limit = {
-                    top_liege = {
-                        trait = broad_anglican
-                    }
-                }
-                add_trait = broad_anglican
-            }
-            else_if = {
-                limit = {
-                    top_liege = {
-                        trait = low_anglican
-                    }
-                }
-                add_trait = low_anglican
-            }
-        } 
-    }
+	}
+	enforce_branch_on_birth_effect = yes
 }
