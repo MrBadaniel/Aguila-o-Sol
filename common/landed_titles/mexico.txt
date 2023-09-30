@@ -298,13 +298,15 @@ e_mexico = {
 				holy_site = sacred_heart
 				
 				b_sombrerete_ZA = {}
-				b_sain_alto_ZA = {}
-				b_rio_grande_ZA = {}
-				b_chalchihuites_ZA = {}
 				b_juan_aldama_ZA = {}
-				b_ojitos_de_santa_lucia_ZA = {}
+				b_chalchihuites_ZA = {}
 				b_miguel_auza_ZA = {}
-				b_nora_de_san_pantaleon_ZA = {}
+				b_jimenez_de_teul_ZA = {}
+				b_nora_de_san_pantaleon_ZA = {} #holy site
+				b_colonia_gonzalez_ortega_ZA = {}
+				b_emiliano_zapata_ZA = {}
+			
+
 			}
 			c_mazapil = { # 1732
 				color={ 250 91 82 }
@@ -312,33 +314,108 @@ e_mexico = {
 				
 				b_mazapil_ZA = {}
 				b_concepcion_del_oro_ZA = {}
+				b_el_salvador_ZA = {}
+				b_melchor_ocampo_ZA = {}
 				b_avalos_ZA = {}
 				b_la_pardita_ZA = {}
 				b_pozo_colorado_ZA = {}
-				b_allende_ZA = {}
-				b_benito_juarez_ZA = {}
-				b_san_andres_ZA = {}
+			
+
+
 			}
-		}
+			c_cos = { #2706
+				color = { 198 82 51 }
+				color2 = { 255 255 255 }
+			
+				b_villa_de_cos_ZA = {}
+				b_allende_ZA = {}
+				b_san_andres_ZA = {}
+				b_gonzalez_ortega_ZA = {}
+				b_chupaderos_ZA = {}
+				b_tierra_y_libertad_ZA = {}
+				b_canas_ZA = {}
+			}
+			c_rio_grande = { #2707
+				color = { 119 44 40 }
+				color2 = { 255 255 255 }
+				
+				b_rio_grande_ZA = {}
+				b_sain_alto_ZA = {}
+				b_nieves_ZA = {}
+				b_canitas_de_felipe_pescador_ZA = {}
+				b_progreso_de_alfonso_medina_ZA = {}
+				b_ojitos_de_santa_lucia_ZA = {}
+				b_el_fuerte_ZA = {}
+				b_cienega_y_manzanilla_ZA = {}
+			}
+
+
+		} #End of d_salado
 		d_san_luis_potosi = {
 			color={ 224 52 116 }
 			color2={ 255 255 255 }
 			
 			capital = 1738 # c_san_luis_potosi
+			dignity = 6 #so lesser departments in SLP (Matehuala, Rioverde) don't override it
 			
 			c_matehuala = { # 1737
 				color={ 194 22 21 }
 				color2={ 255 255 255 }
 				
+				b_villa_de_la_paz_SL = {}
 				b_matehuala_SL = {}
-				b_salinas_SL = {}
-				b_charcas_SL = {}
-				b_villa_de_ramos_SL = {}
 				b_cedral_SL = {}
-				b_vanegas_SL = {}
-				b_la_paz_SL = {}
-				b_real_de_catorce_SL = {}
+				b_refugio_de_las_monjas_SL = {}
+				b_tanque_colorado_SL = {}
+				b_santa_rita_del_sotol_SL = {}
+				b_san_isidro_SL = {}
+				b_sacramento_SL = {}
+
 			}
+ 
+			c_charcas = { #2699
+				color = { 193 73 79 }
+				color2 = { 255 255 255 }
+				
+				b_charcas_SL = {}
+				b_moctezuma_SL = {}
+				b_villa_de_guadalupe_SL = {}
+				b_venado_SL = {}
+				b_cruces_SL = {}
+				b_san_felipe_y_la_luz_SL = {}
+				b_santa_rita_de_los_hernandez_SL = {}
+				b_irapuato_SL = {}
+			}
+			
+			c_vanegas = { #2700
+				color = { 135 9 15 }
+				color2 = { 255 255 255 }
+				
+				b_vanegas_SL = {}
+				b_real_de_catorce_SL = {}
+				b_san_juan_matanzas_SL = {}
+				b_la_noria_de_jesus_SL = {}
+				b_guadalupe_del_carnicero_SL = {}
+				b_vanegas_de_abajo_SL = {}
+				b_estacion_catorce_SL = {}
+				b_la_cardoncita_SL = {}
+			}
+			
+			c_salinas_de_hidalgo = { #2701
+				color = { 145 62 68 }
+				color2 = { 255 255 255 }
+				
+				b_salinas_SL = {}
+				b_villa_de_ramos_SL = {}
+				b_santo_domingo_SLP = {}
+				b_salitral_de_carrera_SL = {}
+				b_el_zacaton_SL = {}
+				b_illescas_SL = {}
+				b_jesus_maria_SD_SL = {}
+				b_el_estribo_SL = {}
+			}
+
+			
 			c_ciudad_valles = { # 1739
 				color={ 134 79 36 }
 				color2={ 255 255 255 }
@@ -349,49 +426,183 @@ e_mexico = {
 					short_name = yes
 					used_for_dynasty_names = no
 				}
-				b_rioverde_SL = {}
-				b_matlapa_SL = {}
-				b_rayon_SL = {}
-				b_cardenas_SL = {}
-				b_xilitla_SL = {}
-				b_ebano_SL = {}
-				b_san_vicente_tancuayalab_SL = {}
+				b_villa_fierro_SL = {}
+				b_aquismon_SL = {}
+				b_rascon_SL = {}
+				b_laguna_del_mante_SL = {}
+				b_la_estribera_SL = {}
+				b_el_ojite_SL = {}
+
 			}
+			c_ebano = { #2690
+				color = { 194 79 36 }
+				color2 = { 255 255 255 }
+				
+				b_tamuin_SL = {}
+				b_ebano_SL = {}
+				b_santa_martha_SL = {}
+				b_nuevo_tampaon_SL = {}
+				b_ponciano_arriaga_SL = {}
+				b_pujal_coy_SL = {}
+				b_aurelio_manrique_SL = {}
+				b_nuevo_aquismon_SL = {}
+			}
+
+			c_tancanhuitz = { #2691
+				color = { 160 106 65 }
+				color2 = { 255 255 255 }
+				
+			
+				b_tanquian_de_escobedo_SL = {}
+				b_tancanhuitz_SL = {}
+				b_san_vicente_tancuayalab_SL = {}
+				b_tampolon_corona_SL = {}
+				b_tanlajas_SL = {}
+				b_san_antonio_SL = {}
+				b_monec_SL = {}
+				b_tantobal_SL = {}
+			}
+			
+			c_tamanzunchale = { #2692
+				color = { 198 101 46 }
+				color2 = { 255 255 255 }
+				
+				b_tamanzunchale_SL = {}
+				b_xilitla_SL = {}
+				b_matlapa_SL = {}
+				b_axtla_de_terrazas_SL = {}
+				b_san_martin_chalchicuautla_SL = {}
+				b_huehuetlan_SL = {}
+				b_tampacan_SL = {}
+				b_huichihuayan_SL = {}
+			}
+			
+			c_mesas_del_durazno = { #2693
+ 				color = { 51 61 28 }
+				color2 = { 255 255 255 }
+				
+				b_cardenas_SL = {}
+				b_tamasopo_SL = {}
+				b_santa_catarina_SL = {}
+				b_rayon_SL = {}
+				b_alaquines_SL = {}
+				b_lagunillas_SL = {}
+				b_tambaca_SL = {}
+				b_martinez_SL = {}
+			}
+			
+			c_valle_del_maiz = { #2694
+				color = { 87 96 65 }
+				color2 = { 255 255 255 }
+				
+				b_el_naranjo_SL = {}
+				b_ciudad_del_maiz_SL = {
+					short_name = yes
+					used_for_dynasty_names = no
+				}
+				b_san_rafael_SL = {}
+				b_zamachihue_SL = {}
+				b_palomas_SL = {}
+				b_sartenejo_SL = {}
+				b_puerto_de_san_juan_de_dios_SL = {}
+				b_el_sabinito_SL = {}
+			}
+			c_rioverde = { #2695
+				color = { 82 99 45 }
+				color2 = { 255 255 255 }
+				
+				b_rioverde_SL = {}
+				b_ciudad_fernandez_SL = {
+					short_name = yes
+					used_for_dynasty_names = no
+				}
+				b_san_ciro_de_acosta_SL = {}
+				b_el_jabali_SL = {}
+				b_san_diego_SL = {}
+				b_ojo_de_agua_de_solano_SL = {}
+				b_las_magdalenas_SL = {}
+				b_progreso_SL = {}
+			}
+			c_cerritos = { #2696
+				color = { 96 114 52 }
+				color2 = { 255 255 255 }
+				
+				b_cerritos_SL = {}
+				b_villa_juarez_SL = {}
+				b_san_nicolas_tolentino_SL = {}
+				b_derramaderos_SL = {}
+				b_gangrenal_SL = {}
+				b_san_jose_turrubiates_SL = {}
+				b_mezquites_SL = {}
+				b_pozo_del_carmen_SL = {}
+			}
+			
+
+
+			
+
 			c_san_luis_potosi = { # 1738
 				color={ 173 185 56 }
 				color2={ 255 255 255 }
 				
 				b_san_luis_potosi_SL = {}
 				b_soledad_SL = {}
-				b_villa_de_reyes_SL = {}
-				b_mexquitic_de_carmona_SL = {}
-				b_sonido_trece_SL = {}
-				b_villa_de_arriaga_SL = {}
-				b_villa_hidalgo_SL = {}
+				b_cerro_de_san_pedro_SL = {}
 				b_villa_de_zaragoza_SL = {}
+				b_armadillo_de_los_infante_SL = {}
+				b_cerro_gordo_SL = {}
+				b_san_nicolas_de_jassos_SL = {}
+				b_escalerillas_SL = {}
+
 			}
 			c_guadalcazar = {
 				color={ 145 157 59 }
 				color2={ 255 255 255 }
 				
+				b_villa_hidalgo_SL = {}
 				b_guadalcazar_SL = {}
-				b_sartenejo_SL = {}
+				b_villa_de_arista_SL = {}
+				b_la_hincada_SL = {}
+				b_el_leon_SL = {}
 				b_santo_domingo_SL = {}
-				b_ciudad_fernandez_SL = {
-					short_name = yes
-					used_for_dynasty_names = no
-				}
-				b_cerritos_SL = {}
-				b_el_sabinito_SL = {}
-				b_ciudad_del_maiz_SL = {
-					short_name = yes
-					used_for_dynasty_names = no
-				}
+				b_entronque_de_matehuala_SL = {}
+				b_los_amoles_SL = {}
 			}
-		}
+			c_mexquitic = { #2697
+				color = { 173 58 6 }
+				color2 = { 255 255 255 }
+				
+				b_mexquitic_de_carmona_SL = {}
+				b_sonido_trece_SL = {}
+				b_corte_SL = {}
+				b_rincon_del_porvenir_SL = {}
+				b_ojo_zarco_SL = {}
+				b_el_palmar_primero_SL = {}
+				b_paso_bonito_SL = {}
+				b_el_mezquital_SL = {}
+			}
+			
+			c_gorrogon = { #2698
+				color = { 168 74 6 }
+				color2 = { 255 255 255 }
+				
+				b_villa_de_reyes_SL = {}
+				b_villa_de_arriaga_SL = {}
+				b_santa_maria_del_rio_SL = {}
+				b_tierra_nueva_SL = {}
+				b_jesus_maria_SL = {}
+				b_ojo_caliente_SL = {}
+				b_carranco_SL = {}
+			}
+
+			
+		} #End of d_san_luis_potosi
+		
 		d_zacatecas = {
 			color={ 159 20 25 }
 			color2={ 255 255 255 }
+			
+			dignity = 5
 			
 			capital = 1736 # c_zacatecas
 			
@@ -419,12 +630,15 @@ e_mexico = {
 				
 				b_victor_rosales_ZA = {}
 				b_fresnillo_ZA = {}
+				b_general_enrique_estrada_ZA = {}
 				b_altamira_ZA = {}
-				b_rafael_yanez_sosa_ZA = {}
-				b_villa_de_cos_ZA = {}
-				b_centro_ZA = {}
-				b_jerez_de_garcia_salinas_ZA = {}
+				b_san_jose_de_lourdes_ZA = {}
 				b_plateros_ZA = {}
+				b_rafael_yanez_sosa_ZA = {}
+				b_san_jose_del_alamito_ZA = {}
+				b_chichimequillas_ZA = {}
+				b_centro_ZA = {}
+
 			}
 			c_mixton = { # 1734
 				color={ 216 64 15 }
@@ -437,7 +651,7 @@ e_mexico = {
 				b_jalpa_ZA = {}
 				b_mixton_ZA = {}
 				b_nochistlan_ZA = {}
-				b_tabasco_ZA = {}
+					
 			}
 			c_zacatecas = { # 1736
 				color={ 118 55 67 }
@@ -445,18 +659,75 @@ e_mexico = {
 				
 				nahua = "Zacatecapan"
 				
-				b_panfilo_natera_ZA = {}
-				b_ojocaliente_ZA = {}
 				b_zacatecas_ZA = {
 					nahua = "Zacatecapan"
 				}
-				b_loreto_ZA = {}
-				b_trancoso_ZA = {}
-				b_villa_gonzalez_ortega_ZA = {}
-				b_pinos_ZA = {}
 				b_guadalupe_ZA = {}
+				b_morelos_ZA = {}
+				b_trancoso_ZA = {}
+				b_vetagrande_ZA = {}
+				b_sauceda_de_la_borda_ZA = {}
+				b_panuco = {}
+				b_benito_juarez_ZA = {}
+
 			}
-		}
+			c_loreto_zacatecas	= { # 2703
+				color = { 196 58 7 }
+				color2 = { 255 255 255 }
+				
+				b_loreto_ZA	= {}
+				b_villa_gonzalez_ortega_ZA		= {}
+				b_noria_de_los_angeles_ZA		= {}
+			#	b_pinos_ZA	= {}
+			#	b_villa_hidalgo_ZA		= {}
+				b_villa_garcia_ZA		= {}
+				b_tierra_blanca_ZA		= {}
+			#	b_las_jaulas_ZA		= {}
+				b_estancia_de_animas_ZA		= {}
+				b_maravillas_ZA		= {}
+				b_general_lauro_g_caloca_ZA	= {}	
+			}
+			
+			c_ojocaliente = { #2704	
+				color = { 193 104 71 }
+				color2 = { 255 255 255 }
+				
+				b_ojocaliente_ZA		= {}
+				b_panfilo_natera_ZA		= {}
+				b_san_pedro_piedra_gorda_ZA		= {}
+				b_el_salto_prieto_ZA		= {}
+				b_luis_moya_ZA		= {}
+				b_genaro_codina_ZA		= {}
+				b_san_jose_el_saladillo_ZA		= {}
+			}
+					
+			c_pinos	= { #2702
+				color = { 255 78 10 }
+				color2 = { 255 255 255 }
+				
+				b_pinos_ZA	= {}
+				b_villa_hidalgo_ZA		= {}
+				b_las_jaulas_ZA		= {}
+				b_la_victoria_ZA		= {}
+				b_agua_gorda_de_los_patos_ZA	= {}	
+				b_santa_elena_ZA		= {}
+				b_san_jose_de_castellanos_ZA	= {}
+			}
+			c_jerez = { #2705
+				color = { 155 21 30 }
+				color2 = { 255 255 255 }
+				
+				b_jerez_de_garcia_salinas_ZA = {}
+				b_villanueva_ZA = {}
+				b_tepetongo_ZA = {}
+				b_malpaso_ZA = {}
+				b_ermita_de_guadalupe_ZA = {}
+				b_san_juan_del_centro_ZA = {}
+				b_jomulquillo_ZA = {}
+				b_la_garita_ZA = {}
+			}
+						
+		} #End of d_zacatecas
 	}
 	k_jalisco = {
 		color={ 67 145 161 }
@@ -925,6 +1196,7 @@ e_mexico = {
 			color2={ 255 255 255 }
 			
 			capital = 1767 # c_mexico
+			dignity = 8
 			
 			c_mexico = { # 1767
 				color={ 173 219 79 }
