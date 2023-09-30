@@ -121,7 +121,7 @@ decisions = {
 	create_coahuila = {
 		only_playable = yes
 		is_high_prio = yes
-		ai_check_interval = 1
+		ai_check_interval = 12
 		potential = {
 			independent = yes
 			NOT = {
@@ -155,19 +155,27 @@ decisions = {
 
 		allow = {
 			war = no
-			has_landed_title = d_coahuila
-			completely_controls = d_coahuila
-			has_landed_title = d_desertica
-			completely_controls = d_desertica
+			independent = yes
+			NOT = {
+				higher_tier_than = DUKE
+			}
 			OR = {
-				AND = {
-					has_landed_title = d_comarga_lagunera
-					completely_controls = d_comarga_lagunera
+				culture_group = norteno
+				capital_scope = {
+					any_de_jure_liege_title = k_rio_bravo
 				}
-				AND = {
-					has_landed_title = d_nueva_extremadura
-					completely_controls = d_nueva_extremadura
-				}
+			}
+			OR = {
+				has_landed_title = d_coahuila
+				completely_controls = d_coahuila
+			}
+			OR = {
+				has_landed_title = d_desertica
+				completely_controls = d_desertica
+			}
+			OR = {
+				completely_controls = d_comarga_lagunera
+				completely_controls = d_nueva_extremadura
 			}
 			prestige = 600
 			piety = 500
