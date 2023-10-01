@@ -351,13 +351,14 @@ e_mexico = {
 
 
 		} #End of d_salado
-		d_san_luis_potosi = {
-			color={ 224 52 116 }
-			color2={ 255 255 255 }
+
+
+		d_matehuala = { 
+			color = { 186 52 116 }
+			color2 = { 255 255 255 }
 			
-			capital = 1738 # c_san_luis_potosi
-			dignity = 6 #so lesser departments in SLP (Matehuala, Rioverde) don't override it
-			
+			capital = 1737
+
 			c_matehuala = { # 1737
 				color={ 194 22 21 }
 				color2={ 255 255 255 }
@@ -414,14 +415,19 @@ e_mexico = {
 				b_jesus_maria_SD_SL = {}
 				b_el_estribo_SL = {}
 			}
+		} #d_matehuala
 
+		d_huasteca_potosina = {
+			color = { 225 109 113 }
+			color2 = { 255 255 255 }
+			
+			capital = 1739 #ciudad_valles
 			
 			c_ciudad_valles = { # 1739
 				color={ 134 79 36 }
 				color2={ 255 255 255 }
 				
-				holy_site = sol_invicta
-				
+							
 				b_ciudad_valles_SL = {
 					short_name = yes
 					used_for_dynasty_names = no
@@ -467,8 +473,10 @@ e_mexico = {
 				color = { 198 101 46 }
 				color2 = { 255 255 255 }
 				
+				holy_site = sol_invicta
+				
 				b_tamanzunchale_SL = {}
-				b_xilitla_SL = {}
+				b_xilitla_SL = {} # holy site
 				b_matlapa_SL = {}
 				b_axtla_de_terrazas_SL = {}
 				b_san_martin_chalchicuautla_SL = {}
@@ -476,6 +484,13 @@ e_mexico = {
 				b_tampacan_SL = {}
 				b_huichihuayan_SL = {}
 			}
+		} #End of d_huasteca_potosina
+		
+		d_rioverde = {
+			color = { 194 136 132 }
+			color2 = { 255 255 255 }
+			
+			capital = 2695 #Rioverde
 			
 			c_mesas_del_durazno = { #2693
  				color = { 51 61 28 }
@@ -536,10 +551,15 @@ e_mexico = {
 				b_mezquites_SL = {}
 				b_pozo_del_carmen_SL = {}
 			}
+		} #End of d_rioverde
+		
+		d_san_luis_potosi = {
+			color={ 224 52 116 }
+			color2={ 255 255 255 }
 			
-
-
-			
+			capital = 1738 # c_san_luis_potosi
+			dignity = 6 #so lesser departments in SLP (Matehuala, Rioverde) don't override it
+					
 
 			c_san_luis_potosi = { # 1738
 				color={ 173 185 56 }
@@ -640,19 +660,6 @@ e_mexico = {
 				b_centro_ZA = {}
 
 			}
-			c_mixton = { # 1734
-				color={ 216 64 15 }
-				color2={ 255 255 255 }
-				
-				b_tlaltenango_ZA = {}
-				b_juchipila_ZA = {}
-				b_teul_ZA = {}
-				b_villanueva_ZA = {}
-				b_jalpa_ZA = {}
-				b_mixton_ZA = {}
-				b_nochistlan_ZA = {}
-					
-			}
 			c_zacatecas = { # 1736
 				color={ 118 55 67 }
 				color2={ 255 255 255 }
@@ -728,6 +735,53 @@ e_mexico = {
 			}
 						
 		} #End of d_zacatecas
+		
+		d_mixton = { 
+			color = { 239 62 41 }
+			color2 = { 255 255 255 }
+			
+			capital = 2709 #Nochistlan
+			
+			c_mixton = { # 1734
+				color={ 216 64 15 }
+				color2={ 255 255 255 }
+				
+				b_teul_ZA = {}
+				b_florencia_de_benito_juarez = {}
+				b_santa_maria_de_la_paz_ZA = {}
+				b_garcia_de_la_cadena_ZA = {}
+				b_mixton_ZA = {}
+				b_moyahua_de_estrada_ZA = {}
+				b_mezquital_del_oro_ZA = {}	
+			}
+			c_tlaltenango = { #2708
+				color = { 244 45 11 }
+				color2 = { 255 255 255 }
+				
+				b_tlaltenango_ZA ={}
+				b_tabasco_ZA ={}
+				b_momax_ZA ={}
+				b_tepechitlan_ZA ={}
+				b_atolinga_ZA ={}
+				b_el_plateado_ZA ={}
+				b_san_antonio_de_la_calera_ZA ={}
+			}
+			
+			c_nochistlan = { #2709
+				color = { 183 45 11 }
+				color2 = { 255 255 255 }
+				
+				b_nochistlan_ZA = {}
+				b_jalpa_ZA = {}
+				b_juchipila_ZA = {}
+				b_huanusco_ZA = {}
+				b_apozol_ZA = {}
+				b_apulco_ZA = {}
+				b_tlachichila_ZA = {}
+				b_daniel_camarena_ZA = {}
+			}
+		} #End of d_mixton
+
 	}
 	k_jalisco = {
 		color={ 67 145 161 }
