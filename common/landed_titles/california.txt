@@ -92,7 +92,45 @@ e_california = {
 				b_carranza_BAJ = {}
 				b_tecolotes_BAJ = {}
 				b_bataquez_BAJ = {}
+				b_puebla_BAJ = {}
+			}
+			c_laguna_salada = { #2726
+				color = { 255 221 181 }
+				color2 = { 255 255 255 }
+				
+				b_laguna_salada_BAJ = {}
+				b_cucapah_BAJ = {}
+				b_la_ventana_BAJ = {}
+				b_pozo_cenizo_BAJ = {}
+				b_la_ponderosa_BAJ = {}
+				b_tres_pozos_BAJ = {}
+				b_campo_ramona_BAJ = {}
+			}
+
+
+			c_san_felipe = {
+				color={ 58 121 56 }
+				color2={ 255 255 255 }
+	
+				# paiute = "Tudupögoteze"
+	
+				b_san_felipe_BAJ = {}
+				b_puertecitos_BAJ = {}
+				b_bahía_san_luis_gonzaga_BAJ = {}
+				b_calamajue_BAJ = {}
+				b_carriso_BAJ = {}
+				b_bufeo_BAJ = {}
+				b_matomi_BAJ = {}
 			}	
+			
+		} #End of d_baja
+
+		d_tijuana = { 
+			color = { 196 96 117 }
+			color2 = { 255 255 255 }
+			
+			capital = 2002 #Tijuana
+			
 			c_tijuana = { # 2002	
 				color={ 0 255 163 }
 				color2={ 255 255 255 }
@@ -103,14 +141,45 @@ e_california = {
 	
 				b_la_joya_BAJ = {}
 				b_tijuana_BAJ = {}
+				b_mariano_matamoros_BAJ = {}
+				b_portico_de_san_antonio_BAJ = {}
+				b_playas_de_coronado_BAJ = {}
+				b_lomas_taurinas_BAJ = {}
+				b_san_luis_BAJ = {}
+				b_granjas_familiares_division_del_norte_BAJ = {}
+			}	
+			
+			c_rosarito = { #2724
+				color = { 0 183 116 }
+				color2 = { 255 255 255 }
+				
+				b_calafia_BAJ = {}
 				b_rosarito_BAJ = {}
+				b_popotla_del_mar_BAJ = {}
+				b_puerto_nuevo_BAJ = {}
+				b_ampliacion_ejido_plan_libertador_BAJ = {}
+				b_ejido_morelos_BAJ = {}
+				b_cumbre_del_mar_BAJ = {}
+				b_playa_blanca_BAJ = {}
+			}
+			
+			c_tecate = { #2725
+				color = { 0 206 130 }
+				color2 = { 255 255 255 }
+				
 				b_tecate_BAJ = {}
-				b_guadalupe_BAJ = {}
 				b_la_rumorosa_BAJ = {}
 				b_lomas_de_santa_ana_BAJ = {}
-				b_la_mision_BAJ = {}
-			}		
-		}
+				b_paso_del_aguila_BAJ = {}
+				b_ejido_nueva_colonia_hindu_BAJ = {}
+				b_valle_de_las_palmas_BAJ = {}
+				b_heroes_del_desierto_BAJ = {}
+				b_colonia_luis_echeverria_BAJ = {}
+			}
+
+		} #End of d_tijuana
+		
+
 		d_baja_sur = {		
 			color={ 245 212 251 }	
 			color2={ 255 255 255 }	
@@ -125,15 +194,111 @@ e_california = {
 	
 				holy_site = navegante
 	
+				b_paraiso_del_mar_BAJ = {}
 				b_la_paz_BAJ = {}
-				b_el_pescadero_BAJ = {}
-				b_el_centenario_BAJ = {}
 				b_todos_santos_BAJ = {}
-				b_los_barriles_BAJ = {}
 				b_chametla_BAJ = {}
 				b_san_antonio_BAJ = {}
-				b_puerto_chale_BAJ = {}
+				b_el_centenario_BAJ = {}
+				b_el_pescadero_BAJ = {}
+				b_puerto_mexia_BAJ = {}
+
 			}	
+			c_islas_de_la_paz = { #2712
+				color = { 255 234 158 }
+				color2 = { 255 255 255 }
+				
+			
+				b_isla_espiritu_santo_BAJ = {}
+				b_isla_san_jose_BAJ = {}
+				b_isla_partida_BAJ = {}
+				b_isla_ceralvo_BAJ = {}
+				b_isla_coronado_BAJ = {}
+				b_isla_santa_cruz_BAJ = {}
+			}
+			c_dolores_BAJA = { #2713
+				color = { 255 221 102 }
+				color2 = { 255 255 255 }
+				
+			
+				b_los_dolores_BAJ = {}
+				b_san_juan_de_la_costa_BAJ = {}
+				b_mision_de_nuestra_senora_de_los_dolores_del_norte_apate_BAJ = {}
+				b_tambobiche_BAJ = {}
+				b_san_evaristo_BAJ = {}
+				b_mision_de_nuestra_senora_de_los_dolores_del_sur_BAJ = {}
+				b_el_camaron_sureno_BAJ = {}
+				b_ensenada_de_cortes_BAJ = {}
+			}
+		} #End of d_baja_sur
+		
+		d_la_giganta = {
+			color = { 248 224 213 }
+			color2 = { 255 255 255 }
+			capital = 2716 #c_santo_domingo_BAJA
+
+			c_santo_domingo_BAJA = { #2716
+				color = { 229 173 255 }
+				color2 = { 255 255 255 }
+				
+				b_ciudad_constitucion_BAJ = {}
+				b_ciudad_insurgentes_BAJ = {}
+				b_ley_federal_de_aguas_BAJ = {}
+				b_benito_juarez_BAJ = {}
+				b_villa_hidalgo_BAJ = {}
+				b_villa_morelos_BAJ = {}
+				b_tepentu_BAJ = {}
+			}
+			
+			c_magdalena = { #2715
+				color = { 158 119 175 }
+				color2 = { 255 255 255 }
+				
+			
+				b_magdalena_BAJ = {}
+				b_puerto_san_carlos_BAJ = {}
+				b_puerto_chale_BAJ = {}
+				b_puerto_cortes_BAJ = {}
+				b_adolfo_lopez_mateos_BAJ = {}
+				b_angel_de_la_toba_dominguez_BAJ = {}
+				b_san_buto_BAJ = {}
+				b_creciente_BAJ = {}
+			}
+			c_comondu = { # 2008	
+				color={ 173 164 177 }
+				color2={ 255 255 255 }
+	
+				# paiute = "Komoduu"
+	
+				b_san_jose_de_comondu_BAJ = {}
+				b_san_isidro_de_carambuche_BAJ = {}
+				b_la_purisima_BAJ = {}
+				b_las_barrancas_BAJ  = {}
+				b_la_poza_grande_BAJ  = {}
+				b_san_juanico_BAJ  = {}
+				b_ejido_luis_echeverria_alvarez_BAJ = {}
+			}
+			c_mulege = { #2727
+				color = { 119 113 122 }
+				color2 = { 255 255 255 }
+				
+				b_mulege_BAJ = {}
+				b_santa_rosalia_BAJ = {}
+				b_palo_verde_BAJ = {}
+				b_san_bruno_BAJ = {}
+				b_san_marcos_BAJ = {}
+				b_ejido_san_lucas_BAJ = {}
+				b_el_marasal_BAJ = {}
+				b_san_ignacio_BAJ = {}
+			}
+		}#End of d_la_giganta
+
+		d_loreto = {
+			color = {	236 190 221 }
+			color2 = {	255 255 255 }
+			
+			capital = 2009 #c_loreto
+			
 			c_loreto = { # 2009	
 				color={ 210 255 251 }
 				color2={ 255 255 255 }
@@ -150,37 +315,73 @@ e_california = {
 				b_la_danzante_BAJ = {}
 				b_puerto_agua_verde_BAJ = {}
 			}	
-			c_comondu = { # 2008	
-				color={ 173 164 177 }
-				color2={ 255 255 255 }
-	
-				# paiute = "Komoduu"
-	
-				b_san_jose_de_comondu_BAJ = {}
-				b_ciudad_insurgentes_BAJ = {}
-				b_puerto_san_carlos_BAJ = {}
-				b_adolfo_lopez_mateos_BAJ = {}
-				b_ciudad_constitucion_BAJ = {}
-				b_las_barrancas_BAJ = {}
-				b_san_juanico_BAJ = {}
-				b_la_poza_grande_BAJ = {}
-			}	
+			c_concepcion = { #2718
+				color = { 178 255 247 }
+				color2 = { 255 255 255 }
+
+				b_san_juan_bautista_londo_BAJ = {}
+				b_san_sebastian_BAJ = {}
+				b_san_juaniquito_BAJ = {}
+			}
+			
+			c_isla_el_carmen = { #2717
+				color = { 118 142 140 }
+				color2 = { 255 255 255 }
+				
+				b_isla_el_carmen_BAJ = {}
+				b_puerto_ballandra_BAJ = {}
+				b_isla_danzante_BAJ = {}
+			}
+		} #End of d_loreto
+		
+		d_los_cabos = { 
+			color = { 124 184 219 }
+			color2 = { 255 255 255 }
+			
+			capital = 2001
+			
 			c_los_cabos = { # 2001	
 				color={ 149 255 0 }
 				color2={ 255 255 255 }
 	
 				# paiute = "Udogaabosö"
 	
-				b_san_jose_BAJ = {}
-				b_cabo_san_lucas_BAJ = {}
-				b_miraflores_BAJ = {}
-				b_la_ribera_BAJ = {}
-				b_santiago_BAJ = {}
-				b_caduano_BAJ = {}
+				b_san_jose_BAJ	= {}
+				b_caduano_BAJ	= {}
+				b_san_jose_viejo_BAJ	= {}
 				b_tsegyalgar_BAJ = {}
-				b_santa_anita_BAJ = {}
+				b_santa_anita_BAJ	= {}
+				b_santa_catarina_BAJ = {}	
+				b_animas_bajas_BAJ = {}	
+				b_la_playa_BAJ	= {} 
 			}	
-		}
+			c_cabo_san_lucas = { #2711
+				color = { 88 204 0 }
+				color2 = { 255 255 255 }
+				
+				b_cabo_san_lucas_BAJ = {}
+				b_colonia_del_sol_BAJ = {}
+				b_cabo_bello_BAJ = {}
+				b_migrino_BAJ = {}
+				b_san_cristobal_BAJ = {}
+				b_san_jacinto_BAJ = {}
+				b_san_vicente_de_la_sierra_BAJ = {}
+			}
+			c_la_ribera = { #2710
+				color = { 113 204 44 }
+				color2 = { 255 255 255 }
+				
+				b_la_ribera_BAJ ={}
+				b_los_barriles_BAJ ={}
+				b_miraflores_BAJ ={}
+				b_santiago_BAJ ={}
+				b_cabo_pulmo_BAJ ={}
+				b_boca_del_salado_BAJ ={}
+				b_santa_cruz_BAJ ={}
+				b_campamento_BAJ ={}
+			}			
+		} #End of d_los_cabos
+		
 		d_ensenada = {	
 			color={ 120 28 58 }	
 			color2={ 255 255 255 }	
@@ -195,31 +396,82 @@ e_california = {
 	
 				# paiute = "Essenaada"
 	
-				b_ensenada_BAJ = {}
 				b_maneadero_BAJ = {}
-				b_san_quentin_BAJ = {}
+				b_ensenada_BAJ = {}
+				b_la_mision_BAJ = {}
 				b_san_vicente_BAJ = {}
 				b_santo_tomas_BAJ = {}
-				b_real_del_castillo_BAJ = {}
-				b_camalu_BAJ = {}
-				b_vicente_guerrero_BAJ = {}
 				b_erendira_BAJ = {}
 				b_la_bufadora_BAJ = {}
+				b_canon_buenavista_BAJ = {}
+
 			}
+			c_guadalupe = { #2723
+				color = { 196 23 60 }
+				color2 = { 255 255 255 }
+				
+				b_guadalupe_BAJ = {}
+				b_villa_de_juarez_BAJ = {}
+				b_ejido_el_porvenir_BAJ = {}
+				b_ejido_santa_rosa_BAJ = {}
+				b_lucio_blanco_BAJ = {}
+				b_rouzand_noriega_BAJ = {}
+				b_ceniceros_BAJ = {}
+				b_dinuwa_BAJ = {}
+			}
+			
+			c_ojos_negros = { # 2722
+				color = { 242 84 118 }
+				color2 = { 255 255 255 }
+				
+				b_real_del_castillo_BAJ = {}
+				b_heroes_de_la_independencia_BAJ = {}
+				b_valle_de_la_trinidad_BAJ = {}
+				b_real_del_castillo_viejo_BAJ = {}
+				b_sangre_de_cristo_BAJ = {}
+				b_leyes_de_reforma_BAJ = {}
+				b_lazaro_cardenas_BAJ = {}
+				b_ejido_francisco_r_serrano_BAJ = {}
+			}
+			
+			c_san_quintin = { # 2721
+				color = {  196 68 96 }
+				color2 = { 255 255 255 } 
+				b_san_quentin_BAJ = {}
+				b_camalu_BAJ = {}
+				b_vicente_guerrero_BAJ = {}
+				b_lazaro_cardenas_SQ_BAJ = {}
+				b_vicente_guerrero_SQ_BAJ = {}
+				b_ejido_profesor_graciano_sanchez_BAJ = {}
+				b_santa_fe_BAJ = {}
+				b_chulavista_BAJ = {}
+			}
+
+			
+			
+		} #End of d_ensenada
+		
+		d_vizcaino = { 
+			color = { 100 100 100 }
+			color2 = { 255 255 255 }
+			
+			capital = 2006 #c_el_arco
+			
 			c_el_arco = { # 2006	
 				color={ 255 197 39 }
 				color2={ 255 255 255 }
 	
 				# paiute = "Waadö" #bow
+				californiano = "Cataviñá"
 	
-				b_el_arco_BAJ = {}
+				b_catavina_BAJ = {}
 				b_mision_san_francisco_borja_BAJ = {}
-				b_rancho_BAJ = {}	
-				b_isla_san_lorenzo_BAJ = {}
-				b_agua_amarga_BAJ = {}
-				b_isla_angel_de_la_guarda_BAJ = {}
-				b_valle_de_los_cirios_BAJ = {}
 				b_bahia_de_los_angeles_BAJ = {}
+				#b_agua_amarga_BAJ = {}
+				b_el_arco_BAJ = {}
+				b_rancho_BAJ = {}
+				b_valle_de_los_cirios_BAJ = {}
+
 			}	
 			c_el_rosario = { # 2005	
 				color={ 200 205 127 }
@@ -227,45 +479,51 @@ e_california = {
 	
 				# paiute = "Udosaayo"
 	
-				b_catavina_BAJ = {}
-				b_punta_prieta_BAJ = {}
 				b_el_rosario_BAJ = {}
+				b_san_fernando_de_velicata_BAJ = {}
+				b_punta_prieta_BAJ = {}
 				b_santa_rosalita_BAJ = {}
 				b_el_aguajito_BAJ = {}
 				b_agua_leon_BAJ = {}
 				b_el_marron_BAJ = {}
 				b_el_rosarito_BAJ = {}
+
 			}
+			
 			c_el_vizcaino = { # 2007	
 				color={ 93 73 26 }
 				color2={ 255 255 255 }
 	
 				# paiute = "Piizökaino"
 			
+			}
+			
+			c_eugenia = { #2719
+				color = { 173 135 48 }
+				color2 = { 255 255 255 }
+				
 				b_guerrero_negro_BAJ = {}
-				b_isla_cedros_BAJ = {}
 				b_bahia_asuncion_BAJ = {}
 				b_bahia_tortugas_BAJ = {}
 				b_el_vizcaino_BAJ = {}
+				b_punta_eugenia_BAJ = {}
 				b_punta_abreojos_BAJ = {}
 				b_los_santitos_BAJ = {}
-				b_el_marasal_BAJ = {} 
 			}
-			c_san_felipe = {
-				color={ 58 121 56 }
-				color2={ 255 255 255 }
-	
-				# paiute = "Tudupögoteze"
-	
-				b_san_felipe_BAJ = {}
-				b_puertecitos_BAJ = {}
-				b_bahía_san_luis_gonzaga_BAJ = {}
-				b_calamajue_BAJ = {}
-				b_carriso_BAJ = {}
-				b_bufeo_BAJ = {}
-				b_matomi_BAJ = {}
+			c_cedros = { # 2720
+				color = { 247 190 69 }
+				color2 = { 255 255 255 }
+				
+				b_isla_cedros_BAJ = {}
+				b_el_morro_BAJ = {}
+				b_san_agustin_BAJ = {}
+				b_la_colorada_BAJ = {}
+				b_cerros_blancos_BAJ = {}
+				b_el_playon_BAJ = {}
+				b_punta_prieta_CEDROS_BAJ = {}
 			}
-		}
+
+		} # End of d_vizcaino
 	}
 
 	k_jefferson = {
