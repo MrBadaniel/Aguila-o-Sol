@@ -1,31 +1,25 @@
 #START OF NEW HISTORY BEGINS WITH ARTHUR AND HIS FAMILY
-#4000045={
-#    name="Arthur"
- #   dynasty=90000034 # Garneau
- #   culture=acadien
-#	disallow_random_traits = yes
- #   religion=sedevacantist
-#	trait=legendary
-#	add_trait=saint
-#	occluded=yes
- #   add_trait=ambitious
- #   add_trait=brilliant_strategist
-  #  add_trait=kind
-#    give_nickname = nick_the_pendragon
-#   2030.1.1={birth=yes}
-#   2070.1.1={
-#		create_bloodline={
-#			type=bloodline_arthur
-#			has_dlc="Holy Fury"
-#		}
-#	}
-#   2120.1.1={
-#			add_trait = maimed
-#		death = {		
-#			death_reason = death_missing
-#		}
-#	}
-#}
+4000045={
+    name="Arthur"
+   dynasty=90000034 # Garneau
+   culture=ontarian
+	disallow_random_traits = yes
+    religion=sedevacantist
+	trait=legendary
+	add_trait=saint
+	occluded=yes
+   add_trait=ambitious
+   add_trait=brilliant_strategist
+   add_trait=kind
+   give_nickname = nick_the_pendragon
+   2020.4.11={birth=yes}
+   2084.10.12={
+			add_trait = maimed
+		death = {		
+			death_reason = death_missing
+		}
+	}
+}
 #4000046={
 #   name="Gretzky"
 #    dynasty=90000034 # Garneau
@@ -1096,8 +1090,10 @@
 }
 4000123={
     name="Erwin"
-	dynasty=90000062 # Smith
-	culture=ontarois
+	dynasty=1867020
+	culture=ontarian
+	father=1857098
+	mother=1867164
 	religion=high_church
     martial=5
 	disallow_random_traits = yes
@@ -1261,8 +1257,8 @@
 }
 4000138={
 	name="Lydia"
-	dynasty=90000062 # Smith
-    	culture=ontarian
+	dynasty=1867020
+    culture=ontarian
    	religion=high_church
 	female = yes
 	father=4000123
@@ -2542,4 +2538,23 @@
    	religion=high_church
 	2663.9.3={birth=yes culture=ontarian}
     2750.1.1={death=yes}
+}
+### BENEDICT THE MONK ###
+4000246={
+	name="Benedict"
+	disallow_random_traits=yes
+    culture=ontarian
+   	religion=high_church
+	add_trait=mastermind_theologian
+	add_trait=charitable
+	add_trait=just
+	add_trait=architect
+	add_trait=scholar
+	add_trait=monk
+	add_trait=high_anglican
+	add_trait=erudite
+	add_trait=diligent
+	2622.12.11={birth=yes}
+	2663.1.1={employer=1899083}
+	2700.1.1={death=yes}
 }
