@@ -563,7 +563,8 @@ character_event = {
 
 	option = { #Work hard as possible
 		name = EVTOPTA_lh_harvest_1
-		hidden_toolip = {
+		custom_tooltip = { text = TXT_LHE_1 }
+		hidden_tooltip = {
 			random_list = {
 				10 = {
 					character_event = { id = LHE.9 days = 1 }
@@ -582,7 +583,8 @@ character_event = {
 	}
 	option = { #Do only what is necessary
 		name = EVTOPTB_lh_harvest_1
-		hidden_toolip = {
+		custom_tooltip = { text = TXT_LHE_2 }
+		hidden_tooltip = {
 			random_list = {
 				5 = {
 					character_event = { id = LHE.9 days = 1 }

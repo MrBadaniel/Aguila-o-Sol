@@ -458,10 +458,13 @@ reconquista_cid_bloodline = {
 #earned by a female celtic ruler who successfully gains e_britannia
 boudica = {
 	combat_rating = 5
-	celtic_pagan_opinion = 5
-	celtic_pagan_reformed_opinion = 5
-	light_infantry_morale = 0.05
-	monthly_character_prestige = 0.1
+	celtic_pagan_opinion = 15
+	celtic_pagan_reformed_opinion = 15
+	command_modifier = {
+		religious_enemy = 0.2
+		morale_offence = 0.1
+	}
+	monthly_character_prestige = 0.5
 	inheritance = matrilineal
 	allow_bastards = yes
 	picture = GFX_bloodlines_symbol_bull
