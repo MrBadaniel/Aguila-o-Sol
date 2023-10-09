@@ -1681,7 +1681,7 @@ trait= chest_pain
 	2520.1.1 ={death=yes}
 }
 
-######## Albertos Dynasty, current dukes of Campeche. Hail from camino real
+######## Albertos Dynasty, current dukes of Campeche. Hail from Champotón
 1431221 = {
 	name = "Francisco" 
 	dynasty = 5200088
@@ -2043,6 +2043,21 @@ trait= chest_pain
 	2570.1.1={birth=yes}
 	2675.1.1={death=yes}
 }
+1431244 = {
+	name = "Eliseo" 
+	female=no
+	dynasty = 5200088 #Albertos
+	culture=yucatanense
+	religion=sacred_heart
+	father = 1431223 #Olegario Albertos
+	diplomacy = 8
+	trait=content
+	trait=patient
+	trait=devout
+	father=1431237
+	2595.7.3={birth=yes}
+	2675.1.1={death=yes}
+}
 1431245 = {
 	name = "Otón" 
 	dynasty = 5200112
@@ -2203,9 +2218,58 @@ trait= chest_pain
 #	1853.7.26={death=yes}
 #	}
 #}
-
-
-
+#Lord of Calakmul
+1432004 = {
+	name="Silvano" 
+	dynasty=154164 		#Uxte'
+	culture=yucateco
+	religion=qabantajik
+	2619.12.15={birth=yes}
+	2693.7.30={	death= yes	}
+}
+1432005 = {
+	name="Itsel" #Older daughter of Pacal Xocmo'
+	dynasty=1697000		#Xocmo'
+	culture=lacandon
+	father = 1650124
+	religion=qabantajik
+	2625.12.15={birth=yes}
+	2663.7.30={	death= 
+		{ death_reason = death_childbirth
+		}
+	}
+}
+1432006 = {
+	name="Ciro" 
+	dynasty=154164 		#Uxte'
+	father = 1432004
+	mother = 1432005
+	culture=yucateco
+	religion=qabantajik
+	2648.12.15={birth=yes}
+	2727.1.1={	death= yes	}
+}
+1432007 = {
+	name="Linda" 
+	dynasty=154164 		#Uxte'
+	father = 1432004
+	mother = 1432005
+	culture=yucateco
+	religion=qabantajik
+	2653.12.15={birth=yes}
+	2747.1.1={	death= yes	}
+}
+1432008 = {
+	name="Guillermo Folano" 
+	dynasty=154164 		#Uxte'
+	father = 1432004
+	mother = 1432005
+	culture=yucateco
+	religion=qabantajik
+	trait= weak
+	2663.7.29={birth=yes}
+	2666.12.1={	death= yes	}
+}
 ###PAGAN PAST OF YUCATAN
 1432500 = {
 	name = "Ixchel" #Mythical goddess founder of Cancun
