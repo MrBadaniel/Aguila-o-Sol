@@ -2,28 +2,46 @@
 
 namespace = fallingstar
 
+character_event = {
+	id = fallingstar.0
+	desc = EVTDESC_fallingstar_0
+	picture = GFX_evt_pilgrims_epic_journey
+	border = GFX_event_normal_frame_religion
+
+	is_triggered_only = yes
+
+	option = {
+		name = EVTOPT_fallingstar_0
+		piety = 20
+		hidden_tooltip = {
+			character_event = { id = fallingstar.1 }
+		}
+	}
+}
+
 #Choose destination as Falling Star
 character_event = {
 	id = fallingstar.1
-	desc = EVTDESC_SoA_5011
-	picture = GFX_evt_icon
+	desc = EVTDESC_fallingstar_1
+	picture = GFX_evt_comet
 	border = GFX_event_normal_frame_religion
 	
 	is_triggered_only = yes
+	trigger = { trait = on_pilgrimage }
 
 	option = {
 		name = EVTOPTA_fallingstar_1
 		trigger = {
-			NOT = { capital_scope = { province_id = 1889 } } #Panama
+			NOT = { capital_scope = { province_id = 1728 } } #Roswell
 		}
-		set_character_flag = pilgrimage_to_panama
+		set_character_flag = pilgrimage_to_roswell
 		hidden_tooltip = {
 			character_event = { id = fallingstar.2 days = 15 }
 		}
 		if = {
 			limit = { ai = no }
 			chronicle = {
-				entry = CHRONICLE_PILGRIMAGE_TO_PANAMA
+				entry = CHRONICLE_PILGRIMAGE_TO_ROSWELL
 				picture = GFX_evt_pilgrims_epic_journey
 			}
 		}
@@ -32,16 +50,16 @@ character_event = {
 	option = {
 		name = EVTOPTB_fallingstar_1
 		trigger = {
-			NOT = { capital_scope = { province_id = 1848 } } #San Salvador
+			NOT = { capital_scope = { province_id = 2112 } } #Eastern Ranges / Area 51
 		}
-		set_character_flag = pilgrimage_to_san_salvador
+		set_character_flag = pilgrimage_to_eastern_ranges
 		hidden_tooltip = {
 			character_event = { id = fallingstar.3 days = 15 }
 		}
 		if = {
 			limit = { ai = no }
 			chronicle = {
-				entry = CHRONICLE_PILGRIMAGE_TO_SAN_SALVADOR
+				entry = CHRONICLE_PILGRIMAGE_TO_EASTERN_RANGES
 				picture = GFX_evt_pilgrims_epic_journey
 			}
 		}
@@ -49,153 +67,63 @@ character_event = {
 	option = {
 		name = EVTOPTC_fallingstar_1
 		trigger = {
-			NOT = { capital_scope = { province_id = 1832 } } #Belize
+			NOT = { capital_scope = { province_id = 2264 } } #Rainier
 		}
-		set_character_flag = pilgrimage_to_belize
+		set_character_flag = pilgrimage_to_rainier
 		hidden_tooltip = {
 			character_event = { id = fallingstar.4 days = 15 }
 		}
 		if = {
 			limit = { ai = no }
 			chronicle = {
-				entry = CHRONICLE_PILGRIMAGE_TO_BELIZE
+				entry = CHRONICLE_PILGRIMAGE_TO_RAINIER
 				picture = GFX_evt_pilgrims_epic_journey
 			}
 		}
 	}
 }
 
-# Setting out for Panama (also selects events for road)
+# Setting out for Roswell (also selects events for road)
 character_event = {
 	id = fallingstar.2
 	desc = EVTDESC_fallingstar_2
-	picture = GFX_evt_pilgrims_epic_journey
+	picture = GFX_evt_pilgrims_epic_journey_desert
 	border = GFX_event_normal_frame_religion
 	
 	is_triggered_only = yes
+	trigger = { trait = on_pilgrimage }
 	
 	option = {
-		name = EVTOPTA_SoA_5021
+		name = EVTOPTA_fallingstar_2
 		clr_character_flag = preparing_pilgrimage
 		hidden_tooltip = {
-			add_trait = on_pilgrimage
 			set_character_flag = good_pilgrimage
 			narrative_event = { id = fallingstar.5 days = 30 }
 		}
-		hidden_tooltip = {
-			if = {
-				limit = {
-					location = {
-						distance = {
-							where = 1889 # Panama
-							value = 400	# Longer journey
-						}
-					}
-				}
-				random_list = {
-					10 = { character_event = { id = SoA.5026 days = 5 random = 9 } } # List for longer journeys only
-					10 = { character_event = { id = SoA.5027 days = 5 random = 9 } }
-					10 = { narrative_event = { id = SoA.5028 days = 5 random = 9 } }
-					10 = { character_event = { id = SoA.5029 days = 5 random = 9 } }
-					10 = { character_event = { id = SoA.5030 days = 5 random = 9 } }
-				}
-			}
-	
-			random_list = {
-				10 = { character_event = { id = SoA.5031 days = 15 random = 7 } } # List that is always checked
-				10 = { character_event = { id = SoA.5032 days = 15 random = 7 } }
-				10 = { narrative_event = { id = SoA.5033 days = 15 random = 7 } }
-				10 = { character_event = { id = SoA.5034 days = 15 random = 7 } }
-				10 = { character_event = { id = SoA.5035 days = 15 random = 7 } }
-				10 = { character_event = { id = SoA.5036 days = 15 random = 7 } }
-				10 = { character_event = { id = SoA.5037 days = 15 random = 7 } }
-				10 = { character_event = { id = SoA.5038 days = 15 random = 7 } }
-				10 = { character_event = { id = SoA.5039 days = 15 random = 7 } }
-			}
-			#if = {
-			#	limit = {
-			#			OR = {
-			#				is_title_active = d_knights_templar
-			#				is_title_active = d_teutonic_order
-			#				is_title_active = d_knights_hospitaler
-			#			}
-			#	}
-			#	random_list = {
-			#		10 = { narrative_event = { id = SoA.5045 days = 23 random = 4 } } # Holy orders events, close to destination
-			#		10 = { character_event = { id = SoA.5046 days = 23 random = 4 } }
-			#		10 = { character_event = { id = SoA.5047 days = 23 random = 4 } }
-			#	}
-			#}
-		}
 	}
 }
 
-# Setting out for San Salvador (also selects events for road)
+# Setting out for Eastern Ranges (also selects events for road)
 character_event = {
 	id = fallingstar.3
 	desc = EVTDESC_fallingstar_3
-	picture = GFX_evt_pilgrims_epic_journey
+	picture = GFX_evt_pilgrims_epic_journey_desert
 	border = GFX_event_normal_frame_religion
 	
 	is_triggered_only = yes
+	trigger = { trait = on_pilgrimage }
 	
 	option = {
-		name = EVTOPTA_SoA_5021
+		name = EVTOPTA_fallingstar_3
 		clr_character_flag = preparing_pilgrimage
 		hidden_tooltip = {
-			add_trait = on_pilgrimage
 			set_character_flag = good_pilgrimage
 			narrative_event = { id = fallingstar.6 days = 30 }
-		}
-		hidden_tooltip = {
-			if = {
-				limit = {
-					location = {
-						distance = {
-							where = 1889 # Panama
-							value = 400	# Longer journey
-						}
-					}
-				}
-				random_list = {
-					10 = { character_event = { id = SoA.5026 days = 5 random = 9 } } # List for longer journeys only
-					10 = { character_event = { id = SoA.5027 days = 5 random = 9 } }
-					10 = { narrative_event = { id = SoA.5028 days = 5 random = 9 } }
-					10 = { character_event = { id = SoA.5029 days = 5 random = 9 } }
-					10 = { character_event = { id = SoA.5030 days = 5 random = 9 } }
-				}
-			}
-	
-			random_list = {
-				10 = { character_event = { id = SoA.5031 days = 15 random = 7 } } # List that is always checked
-				10 = { character_event = { id = SoA.5032 days = 15 random = 7 } }
-				10 = { narrative_event = { id = SoA.5033 days = 15 random = 7 } }
-				10 = { character_event = { id = SoA.5034 days = 15 random = 7 } }
-				10 = { character_event = { id = SoA.5035 days = 15 random = 7 } }
-				10 = { character_event = { id = SoA.5036 days = 15 random = 7 } }
-				10 = { character_event = { id = SoA.5037 days = 15 random = 7 } }
-				10 = { character_event = { id = SoA.5038 days = 15 random = 7 } }
-				10 = { character_event = { id = SoA.5039 days = 15 random = 7 } }
-			}
-			#if = {
-			#	limit = {
-			#			OR = {
-			#				is_title_active = d_knights_templar
-			#				is_title_active = d_teutonic_order
-			#				is_title_active = d_knights_hospitaler
-			#			}
-			#	}
-			#	random_list = {
-			#		10 = { narrative_event = { id = SoA.5045 days = 23 random = 4 } } # Holy orders events, close to destination
-			#		10 = { character_event = { id = SoA.5046 days = 23 random = 4 } }
-			#		10 = { character_event = { id = SoA.5047 days = 23 random = 4 } }
-			#	}
-			#}
 		}
 	}
 }
 
-# Setting out for Belize (also selects events for road)
+# Setting out for Rainier (also selects events for road)
 character_event = {
 	id = fallingstar.4
 	desc = EVTDESC_fallingstar_4
@@ -203,137 +131,91 @@ character_event = {
 	border = GFX_event_normal_frame_religion
 	
 	is_triggered_only = yes
+	trigger = { trait = on_pilgrimage }
 	
 	option = {
-		name = EVTOPTA_SoA_5021
+		name = EVTOPTA_fallingstar_4
 		clr_character_flag = preparing_pilgrimage
 		hidden_tooltip = {
-			add_trait = on_pilgrimage
 			set_character_flag = good_pilgrimage
 			narrative_event = { id = fallingstar.7 days = 30 }
-		}
-		hidden_tooltip = {
-			if = {
-				limit = {
-					location = {
-						distance = {
-							where = 1848 # San Salvador
-							value = 400	# Longer journey
-						}
-					}
-				}
-				random_list = {
-					10 = { character_event = { id = SoA.5026 days = 5 random = 9 } } # List for longer journeys only
-					10 = { character_event = { id = SoA.5027 days = 5 random = 9 } }
-					10 = { narrative_event = { id = SoA.5028 days = 5 random = 9 } }
-					10 = { character_event = { id = SoA.5029 days = 5 random = 9 } }
-					10 = { character_event = { id = SoA.5030 days = 5 random = 9 } }
-				}
-			}
-	
-			random_list = {
-				10 = { character_event = { id = SoA.5031 days = 15 random = 7 } } # List that is always checked
-				10 = { character_event = { id = SoA.5032 days = 15 random = 7 } }
-				10 = { narrative_event = { id = SoA.5033 days = 15 random = 7 } }
-				10 = { character_event = { id = SoA.5034 days = 15 random = 7 } }
-				10 = { character_event = { id = SoA.5035 days = 15 random = 7 } }
-				10 = { character_event = { id = SoA.5036 days = 15 random = 7 } }
-				10 = { character_event = { id = SoA.5037 days = 15 random = 7 } }
-				10 = { character_event = { id = SoA.5038 days = 15 random = 7 } }
-				10 = { character_event = { id = SoA.5039 days = 15 random = 7 } }
-			}
-			#if = {
-			#	limit = {
-			#			OR = {
-			#				is_title_active = d_knights_templar
-			#				is_title_active = d_teutonic_order
-			#				is_title_active = d_knights_hospitaler
-			#			}
-			#	}
-			#	random_list = {
-			#		10 = { narrative_event = { id = SoA.5045 days = 23 random = 4 } } # Holy orders events, close to destination
-			#		10 = { character_event = { id = SoA.5046 days = 23 random = 4 } }
-			#		10 = { character_event = { id = SoA.5047 days = 23 random = 4 } }
-			#	}
-			#}
 		}
 	}
 }
 
-# Arrived at Panama
+# Arrived at Roswell
 narrative_event = {
 	id = fallingstar.5
 	title = EVTNAME_fallingstar_5
 	desc = EVTDESC_fallingstar_5
-	picture = GFX_evt_cathedral
+	picture = GFX_evt_kaaba
 	border = GFX_event_narrative_frame_religion
 	
 	is_triggered_only = yes
+	trigger = { trait = on_pilgrimage }
 
 	option = {
 		name = EVTOPTA_fallingstar_5
-		hidden_tooltip = { character_event = { id = SoA.5055 days = 5 } }
+		character_event = { id = fallingstar.8 days = 7 }
 	}
 }
 
-# Arrived at San Salvador
+# Arrived at Eastern Ranges
 narrative_event = {
 	id = fallingstar.6
 	title = EVTNAME_fallingstar_6
 	desc = EVTDESC_fallingstar_6
-	picture = GFX_evt_cathedral
+	picture = GFX_evt_sand_desert
 	border = GFX_event_narrative_frame_religion
 	
 	is_triggered_only = yes
+	trigger = { trait = on_pilgrimage }
 
 	option = {
 		name = EVTOPTA_fallingstar_6
-		hidden_tooltip = { character_event = { id = SoA.5055 days = 5 } }
+		character_event = { id = fallingstar.8 days = 7 }
 	}
 }
 
-# Arrived at Belize
+# Arrived at Rainier
 narrative_event = {
 	id = fallingstar.7
 	title = EVTNAME_fallingstar_7
 	desc = EVTDESC_fallingstar_7
-	picture = GFX_evt_cathedral
+	picture = GFX_evt_mt_rainier
 	border = GFX_event_narrative_frame_religion
 	
 	is_triggered_only = yes
+	trigger = { trait = on_pilgrimage }
 
 	option = {
 		name = EVTOPTA_fallingstar_7
-		hidden_tooltip = { character_event = { id = SoA.5055 days = 5 } }
+		character_event = { id = fallingstar.8 days = 7 }
 	}
 }
 
-# Impressed by Cult of Saints/Mesoamerican (San Salvador only)
+# Returning Home from the Pilgrimage
 character_event = {
 	id = fallingstar.8
 	desc = EVTDESC_fallingstar_8
-	picture = GFX_evt_aztec_explorers
+	picture = GFX_evt_pilgrims_epic_journey
 	border = GFX_event_normal_frame_religion
 	
 	is_triggered_only = yes
+	trigger = { trait = on_pilgrimage }
+
+	immediate = {
+		clr_character_flag = pilgrimage_to_roswell
+		clr_character_flag = pilgrimage_to_eastern_ranges
+		clr_character_flag = pilgrimage_to_rainier
+	}
 
 	option = {
 		name = EVTOPTA_fallingstar_8
-		if = {
-			limit = { trait = zealous }
-			remove_trait = zealous
-		}
-		add_trait = sympathy_mesoamerican_gods
-		hidden_tooltip = { character_event = { id = SoA.5090 days = 10 } } # Stay a little longer then go home
-	}
-	option = {
-		name = EVTOPTB_fallingstar_8
-		if = {
-			limit = { trait = zealous }
-			remove_trait = zealous
-		}
-		add_trait = sympathy_cult_of_saints
-		hidden_tooltip = { character_event = { id = SoA.5090 days = 10 } } # Stay a little longer then go home
+		piety = 50
+		prestige = 50
+		remove_trait = on_pilgrimage
+		add_trait = pilgrim
 	}
 }
 
@@ -345,6 +227,11 @@ character_event = { #Find a drunkard across the street from the cathedral
 	border = GFX_event_normal_frame_religion
 	
 	is_triggered_only = yes
+
+	trigger = {
+		trait = on_pilgrimage
+		NOT = { has_global_flag = falling_star_exposed }
+	}
 	
 	option = {
 		name = EVTOPTA_fallingstar_9
@@ -358,12 +245,12 @@ character_event = { #Find a drunkard across the street from the cathedral
 	option = {
 		name = EVTOPTB_fallingstar_9
 		custom_tooltip = { text = EVTOPTB_falling_star_9_tt }
-		hidden_tooltip = { character_event = { id = SoA.5090 days = 10 } } # Stay a little longer then go home
 		#Does nothing
+		character_event = { id = fallingstar.8 days = 7 }
 	}
 }
 
-#Falling Star Exposed - Enter the Church
+#Falling Star Exposed - Enter the Sanctum
 character_event = { #Enter the church and proceed underground
 	id = fallingstar.10
 	desc = EVTDESC_fallingstar_10
@@ -386,51 +273,57 @@ character_event = { #Enter the church and proceed underground
 		clr_character_flag = good_pilgrimage
 		clr_character_flag = abominable_pilgrimage
 		set_character_flag = bad_pilgrimage
-
-		hidden_tooltip = { character_event = { id = SoA.5090 days = 10 } } # Stay a little longer then go home
+		remove_trait = on_pilgrimage
 	}
 }
 
-#Falling Star Exposed - Go beneath the church, satellite found. (End of event chain)
+#Falling Star Exposed - Go below Ground Zero, weather balloon found. (End of event chain)
 narrative_event = {
 	id = fallingstar.11
 	title = EVTTITLE_fallingstar_11
 	desc = EVTDESC_fallingstar_11
-	picture = GFX_evt_great_schism
+	picture = GFX_evt_comet
 	border = GFX_event_narrative_frame_religion
 	
 	is_triggered_only = yes
 	
-	option = { #Convert to Moravianism on the spot
+	option = { #Stay as Xenoclast OR Convert to Xenoclast
 		name = EVTOPTA_fallingstar_11
 		custom_tooltip = { text = EVTOPTA_fallingstar_11_tt }
 		hidden_tooltip = {
-			religion = moravian
+			religion = xenoclast
 			remove_trait = cynical
 			add_trait = zealous
 			falling_star = { religion_authority = { modifier = falling_star_exposed } } #Falling Star MA tanks
-			moravian = { religion_authority = { modifier = rise_of_moravian } } #Moravian MA soars
+			xenoclast = { religion_authority = { modifier = rise_of_xenoclasm } } #Xenoclast MA soars
 		
 			clr_character_flag = abominable_pilgrimage
 			clr_character_flag = bad_pilgrimage
 			set_character_flag = good_pilgrimage
+			clr_character_flag = pilgrimage_to_roswell
+			remove_trait = on_pilgrimage
 
 			narrative_event = { id = fallingstar.12 days = 1 } #Notifies world of this happening
-			character_event = { id = SoA.5090 days = 10 } # Stay a little longer then go home
 		}
 	}
 	
-	option = { #Secretly convert to Moravian
+	option = { #Stay as Falling Star OR Convert to Falling Star
 		name = EVTOPTB_fallingstar_11
 		custom_tooltip = { text = EVTOPTB_fallingstar_11_tt }
+		if = {
+			limit = {
+				religion = xenoclast
+			}
+			religion = falling_star
+			remove_trait = cynical
+			add_trait = zealous
+		}
 		hidden_tooltip = {
-			set_secret_religion = moravian
-
 			clr_character_flag = abominable_pilgrimage
 			clr_character_flag = bad_pilgrimage
 			set_character_flag = good_pilgrimage
-
-			character_event = { id = SoA.5090 days = 10 } # Stay a little longer then go home
+			clr_character_flag = pilgrimage_to_roswell
+			remove_trait = on_pilgrimage
 		}
 	}
 	
@@ -444,8 +337,8 @@ narrative_event = {
 		clr_character_flag = good_pilgrimage
 		clr_character_flag = bad_pilgrimage
 		set_character_flag = abominable_pilgrimage
-		
-		hidden_tooltip = { character_event = { id = SoA.5090 days = 10 } } # Stay a little longer then go home
+		clr_character_flag = pilgrimage_to_roswell
+		remove_trait = on_pilgrimage
 	}
 }
 
@@ -456,7 +349,7 @@ narrative_event = {
 	desc = EVTDESC_fallingstar_12
 	picture = GFX_evt_great_schism
 	border = GFX_event_narrative_frame_religion
-	religion_group = christian
+	religion_group = oldworld
 	is_triggered_only = yes
 	major = yes
 	
@@ -464,10 +357,10 @@ narrative_event = {
 		set_global_flag = falling_star_exposed
 	}
 
-	option = { #Moravians very happy
+	option = { #Xenoclasts very happy
 		name = EVTOPTA_fallingstar_12
 		trigger = {
-			religion = moravian
+			religion = xenoclast
 		}
 	}
 	
@@ -482,7 +375,7 @@ narrative_event = {
 		name = EVTOPTC_fallingstar_12
 		trigger = {
 			NOR = {
-				religion = moravian
+				religion = xenoclast
 				religion = falling_star
 			}
 		}
@@ -552,6 +445,7 @@ character_event = {
 		set_character_flag = ai_flag_refuse_conversion
 	}
 }
+
 character_event = {
 	id = fallingstar.14
 	desc = "EVTDESC_renovator"
@@ -612,4 +506,6 @@ character_event = {
 		set_character_flag = ai_flag_refuse_conversion
 	}
 }
+
+
 

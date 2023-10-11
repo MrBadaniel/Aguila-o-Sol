@@ -1,0 +1,771 @@
+namespace = newfallingstar
+
+narrative_event = {
+	id = newfallingstar.1
+	title = EVTNAME_cosmic_oracle
+	desc = EVTDESC_cosmic_oracle
+	picture = GFX_evt_comet
+	border = GFX_event_narrative_frame_religion
+
+	is_triggered_only = yes
+
+	major = yes
+
+	trigger = {
+		NOT = { has_global_flag = cosmic_oracle_incarnated }
+	}
+
+	immediate = {
+		set_global_flag = cosmic_oracle_incarnated
+		d_falling_star = { grant_title = ROOT }
+		set_global_flag = fallingstar_outer_invasions_unlocked
+	}
+
+	option = {
+		name = EVTOPTA_cosmic_oracle
+		trigger = {
+			religion = falling_star
+			has_landed_title = d_falling_star
+		}
+	}
+
+	option = {
+		name = EVTOPTB_cosmic_oracle
+		trigger = {
+			religion = falling_star
+		}
+	}
+
+	option = {
+		name = EVTOPTC_cosmic_oracle
+		trigger = {
+			NOT = {
+				religion = falling_star
+			}
+		}
+	}
+}
+
+# FALLING STAR OUTER INVASIONS
+# Called from 'on_crusade_creation'
+# new_character is the targetted enemy
+# ROOT is the religious head
+# FROM is the attacked kingdom title
+narrative_event = {
+	id = newfallingstar.2
+	title = EVTNAME200
+	picture = GFX_evt_battle
+	border = GFX_event_narrative_frame_war
+	
+	desc = {
+		text = EVTDESC_outer_invasion
+		trigger = {
+			OR = {
+				new_character = {
+					NOT = { religion_group = christian }
+					NOT = { religion_group = pagan_group }
+				}
+				has_alternate_start_parameter = { key = religion_names value = random }
+			}
+		}
+	}
+	desc = {
+		text = EVTDESC_outer_invasion_pagan
+		trigger = {
+			new_character = {
+				religion_group = pagan_group
+			}
+			NOT = {
+				has_alternate_start_parameter = { key = religion_names value = random }
+			}
+		}
+	}
+	desc = {
+		text = EVTDESC_outer_invasion_christ
+		trigger = {
+			new_character = {
+				religion_group = christian
+			}
+			NOT = {
+				has_alternate_start_parameter = { key = religion_names value = random }
+			}
+		}
+	}
+	
+	is_triggered_only = yes
+	major = yes
+	show_ROOT = yes
+	hide_new = yes
+	
+	trigger = {
+		can_call_crusade = yes
+		ROOT = { religion = falling_star }
+	}
+	
+	option = {
+		name = EVTOPTA324 # For [God Name]!
+		trigger = { religion = ROOT }
+	}
+	option = {
+		name = EVTOPTB200 # No concern of ours
+		trigger = {
+			NOT = { religion = ROOT }
+			new_character = {
+				NOT = { religion = PREV }
+				NOT = { character = PREV }
+			}
+		}
+	}
+	option = {
+		name = EVTOPTD200 # To Arms!
+		trigger = {
+			new_character = {
+				character = PREV
+			}
+		}
+	}
+	option = {
+		name = EVTOPTE200 # Terrible News!
+		trigger = {
+			new_character = {
+				religion = PREV
+				NOT = { character = PREV }
+			}
+		}
+	}
+}
+
+character_event = { #Beginning of UFO Day
+	id = newfallingstar.3
+	title = EVTTITLE_ufo_day
+	desc = EVTDESC_ufo_day_1
+	picture = GFX_evt_desert
+	border = GFX_event_normal_frame_religion
+
+	is_triggered_only = yes
+
+	trigger = {
+		religion = falling_star
+		has_character_flag = ufo_day_celebrations
+	}
+
+	immediate = {
+		character_event = { id = newfallingstar.4 days = 1 }
+	}
+
+	option = {
+		name = EVTOPT_ufo_day_1
+		piety = 30
+	}
+}
+
+character_event = { #Feast of Commemmoration
+	id = newfallingstar.4
+	desc = EVTDESC_ufo_day_2
+	picture = GFX_evt_feast
+	border = GFX_event_normal_frame_religion
+
+	is_triggered_only = yes
+
+	trigger = {
+		religion = falling_star
+		has_character_flag = ufo_day_celebrations
+	}
+
+	immediate = {
+		character_event = { id = newfallingstar.5 days = 1 }
+	}
+
+	option = {
+		name = EVTOPT_ufo_day_2
+	}
+}
+
+character_event = { #Stargazing
+	id = newfallingstar.5
+	desc = EVTDESC_ufo_day_3
+	picture = GFX_evt_comet
+	border = GFX_event_normal_frame_religion
+
+	is_triggered_only = yes
+
+	trigger = {
+		religion = falling_star
+		has_character_flag = ufo_day_celebrations
+	}
+
+	immediate = {
+		clr_character_flag = ufo_day_celebrations
+		clr_character_flag = do_not_disturb
+		clr_character_flag = recent_minor_decision
+		add_character_modifier = { name = celebrated_ufo_day years = 3 }
+	}
+
+	option = {
+		name = EVTOPT_ufo_day_3
+		prestige = 50
+		piety = 100
+		custom_tooltip = { text = TXT_ufo_day_end }
+	}
+}
+
+character_event = {
+	id = newfallingstar.6
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		clr_character_flag = ufo_day_celebrations
+		clr_character_flag = do_not_disturb
+		clr_character_flag = recent_minor_decision
+	}
+}
+
+### Astral Projection ###
+narrative_event = {
+	id = newfallingstar.7
+	title = EVTNAME_astral_projection_1
+	desc = EVTDESC_astral_projection_1
+	picture = GFX_evt_dark_prayer
+	border = GFX_event_narrative_frame_intrigue
+	is_triggered_only = yes
+
+	trigger = {
+		has_character_flag = cosmicist_astral_projecting
+	}
+
+	option = { #Drink the alien jungle juice
+		name = EVTOPTA_astral_projection_1
+		custom_tooltip = { text = EVTOPTA_drinking_alien_concoction_TXT }
+		hidden_tooltip = {
+			random_list = {
+				10 = {
+					narrative_event = { id = newfallingstar.8 days = 1 } 
+				}
+				10 = {
+					narrative_event = { id = newfallingstar.9 days = 1 }
+				}
+				10 = {
+					narrative_event = { id = newfallingstar.10 days = 1 }
+				}
+				10 = {
+					narrative_event = { id = newfallingstar.11 days = 1 }
+				}
+				10 = {
+					narrative_event = { id = newfallingstar.12 days = 1 }
+				}
+				20 = {
+					narrative_event = { id = newfallingstar.13 days = 1 }
+				}
+				20 = {
+					narrative_event = { id = newfallingstar.14 days = 1 }
+				}
+				10 = {
+					narrative_event = { id = newfallingstar.15 days = 1 }
+				}
+			}
+		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				trait = zealous
+				factor = 10
+			}
+		}
+	}
+	
+	option = { #Back out at the last minute
+		name = EVTOPTB_astral_projection_1
+		piety = -30
+		custom_tooltip = { text = astral_projection_end_TXT }
+		hidden_tooltip = { clr_character_flag = cosmicist_astral_projecting }
+		hidden_tooltip = { clr_character_flag = recent_minor_decision }
+		hidden_tooltip = { clr_character_flag = do_not_disturb }
+		hidden_tooltip = { add_character_modifier = { name = recently_astral_projected years = 3 } } 
+		ai_chance = {
+			factor = 50
+		}
+	}
+}
+
+# Initial Visions
+narrative_event = { #Mysterious Forest
+	id = newfallingstar.8
+	title = EVTNAME_astral_projection_2
+	desc = EVTDESC_astral_projection_2
+	picture = GFX_evt_mysterious_forest
+	border = GFX_event_narrative_frame_religion
+	is_triggered_only = yes
+
+	trigger = {
+		has_character_flag = cosmicist_astral_projecting
+	}
+
+	immediate = {
+		narrative_event = { id = newfallingstar.16 days = 1 }
+	}
+
+	option = {
+		name = EVTOPT_astral_projection_2
+		custom_tooltip = {
+			text = EVTOPT_astral_projection_2
+		}
+	}
+}
+
+narrative_event = { #Palace of Pleasures
+	id = newfallingstar.9
+	title = EVTNAME_astral_projection_3
+	desc = EVTDESC_astral_projection_3
+	picture = GFX_evt_feast
+	border = GFX_event_narrative_frame_religion
+	is_triggered_only = yes
+
+	trigger = {
+		has_character_flag = cosmicist_astral_projecting
+	}
+
+	immediate = {
+		narrative_event = { id = newfallingstar.17 days = 1 }
+	}
+
+	option = {
+		name = EVTOPT_astral_projection_3
+		custom_tooltip = {
+			text = EVTOPT_astral_projection_3
+		}
+	}
+}
+
+narrative_event = { #Churning Abyss
+	id = newfallingstar.10
+	title = EVTNAME_astral_projection_4
+	desc = EVTDESC_astral_projection_4
+	picture = GFX_evt_kraken
+	border = GFX_event_narrative_frame_religion
+	is_triggered_only = yes
+
+	trigger = {
+		has_character_flag = cosmicist_astral_projecting
+	}
+
+	immediate = {
+		narrative_event = { id = newfallingstar.18 days = 1 }
+	}
+
+	option = {
+		name = EVTOPT_astral_projection_4
+		custom_tooltip = {
+			text = EVTOPT_astral_projection_4
+		}
+	}
+}
+
+narrative_event = { #Tomb of a Dead God
+	id = newfallingstar.11
+	title = EVTNAME_astral_projection_5
+	desc = EVTDESC_astral_projection_5
+	picture = GFX_evt_comet
+	border = GFX_event_narrative_frame_religion
+	is_triggered_only = yes
+
+	trigger = {
+		has_character_flag = cosmicist_astral_projecting
+	}
+
+	immediate = {
+		narrative_event = { id = newfallingstar.19 days = 1 }
+	}
+
+	option = {
+		name = EVTOPT_astral_projection_5
+		custom_tooltip = {
+			text = EVTOPT_astral_projection_5
+		}
+	}
+}
+
+narrative_event = { #Precursor Sighting
+	id = newfallingstar.12
+	title = EVTNAME_astral_projection_6
+	desc = EVTDESC_astral_projection_6
+	picture = GFX_evt_comet
+	border = GFX_event_narrative_frame_religion
+	is_triggered_only = yes
+
+	trigger = {
+		has_character_flag = cosmicist_astral_projecting
+	}
+
+	immediate = {
+		narrative_event = { id = newfallingstar.20 days = 1 }
+	}
+
+	option = {
+		name = EVTOPT_astral_projection_6
+		custom_tooltip = {
+			text = EVTOPT_astral_projection_6
+		}
+	}
+}
+
+narrative_event = { #Precursor Destruction
+	id = newfallingstar.13
+	title = EVTNAME_astral_projection_7
+	desc = EVTDESC_astral_projection_7
+	picture = GFX_evt_comet
+	border = GFX_event_narrative_frame_religion
+	is_triggered_only = yes
+
+	trigger = {
+		has_character_flag = cosmicist_astral_projecting
+	}
+
+	immediate = {
+		narrative_event = { id = newfallingstar.21 days = 1 }
+	}
+
+	option = {
+		name = EVTOPT_astral_projection_7
+		custom_tooltip = {
+			text = EVTOPT_astral_projection_7
+		}
+	}
+}
+
+narrative_event = { #Abandoned Precursor City
+	id = newfallingstar.14
+	title = EVTNAME_astral_projection_8
+	desc = EVTDESC_astral_projection_8
+	picture = GFX_evt_comet
+	border = GFX_event_narrative_frame_religion
+	is_triggered_only = yes
+
+	trigger = {
+		has_character_flag = cosmicist_astral_projecting
+	}
+
+	immediate = {
+		narrative_event = { id = newfallingstar.22 days = 1 }
+	}
+
+	option = {
+		name = EVTOPT_astral_projection_8
+		custom_tooltip = {
+			text = EVTOPT_astral_projection_8
+		}
+	}
+}
+
+narrative_event = { #Abandoned Alien City
+	id = newfallingstar.15
+	title = EVTNAME_astral_projection_9
+	desc = EVTDESC_astral_projection_9
+	picture = GFX_evt_comet
+	border = GFX_event_narrative_frame_religion
+	is_triggered_only = yes
+
+	trigger = {
+		has_character_flag = cosmicist_astral_projecting
+	}
+
+	immediate = {
+		narrative_event = { id = newfallingstar.23 days = 1 }
+	}
+
+	option = {
+		name = EVTOPT_astral_projection_9
+		custom_tooltip = {
+			text = EVTOPT_astral_projection_9
+		}
+	}
+}
+
+#Visions Continued
+
+narrative_event = { #Mysterious Forest
+	id = newfallingstar.16
+	title = EVTNAME_astral_projection_10
+	desc = EVTDESC_astral_projection_10
+	picture = GFX_evt_mysterious_forest
+	border = GFX_event_narrative_frame_religion
+	is_triggered_only = yes
+
+	trigger = {
+		has_character_flag = cosmicist_astral_projecting
+	}
+
+	immediate = {
+		narrative_event = { id = newfallingstar.24 days = 1 }
+	}
+
+	option = {
+		name = EVTOPT_astral_projection_10
+		custom_tooltip = {
+			text = EVTOPT_astral_projection_10
+		}
+	}
+}
+
+narrative_event = { #Palace of Pleasures
+	id = newfallingstar.17
+	title = EVTNAME_astral_projection_11
+	desc = EVTDESC_astral_projection_11
+	picture = GFX_evt_feast
+	border = GFX_event_narrative_frame_religion
+	is_triggered_only = yes
+
+	trigger = {
+		has_character_flag = cosmicist_astral_projecting
+	}
+
+	immediate = {
+		narrative_event = { id = newfallingstar.24 days = 1 }
+	}
+
+	option = {
+		name = EVTOPT_astral_projection_11
+		custom_tooltip = {
+			text = EVTOPT_astral_projection_11
+		}
+	}
+}
+
+narrative_event = { #Churning Abyss
+	id = newfallingstar.18
+	title = EVTNAME_astral_projection_12
+	desc = EVTDESC_astral_projection_12
+	picture = GFX_evt_kraken
+	border = GFX_event_narrative_frame_religion
+	is_triggered_only = yes
+
+	trigger = {
+		has_character_flag = cosmicist_astral_projecting
+	}
+
+	immediate = {
+		narrative_event = { id = newfallingstar.24 days = 1 }
+	}
+
+	option = {
+		name = EVTOPT_astral_projection_12
+		custom_tooltip = {
+			text = EVTOPT_astral_projection_12
+		}
+	}
+}
+
+narrative_event = { #Tomb of a Dead God
+	id = newfallingstar.19
+	title = EVTNAME_astral_projection_13
+	desc = EVTDESC_astral_projection_13
+	picture = GFX_evt_comet
+	border = GFX_event_narrative_frame_religion
+	is_triggered_only = yes
+
+	trigger = {
+		has_character_flag = cosmicist_astral_projecting
+	}
+
+	immediate = {
+		narrative_event = { id = newfallingstar.24 days = 1 }
+	}
+
+	option = {
+		name = EVTOPT_astral_projection_13
+		custom_tooltip = {
+			text = EVTOPT_astral_projection_13
+		}
+	}
+}
+
+narrative_event = { #Precursor Conversation
+	id = newfallingstar.20
+	title = EVTNAME_astral_projection_14
+	desc = EVTDESC_astral_projection_14
+	picture = GFX_evt_comet
+	border = GFX_event_narrative_frame_religion
+	is_triggered_only = yes
+
+	trigger = {
+		has_character_flag = cosmicist_astral_projecting
+	}
+
+	immediate = {
+		narrative_event = { id = newfallingstar.25 days = 1 }
+	}
+
+	option = {
+		name = EVTOPT_astral_projection_14
+		custom_tooltip = {
+			text = EVTOPT_astral_projection_14
+		}
+	}
+}
+
+narrative_event = { #Precursor Destruction
+	id = newfallingstar.21
+	title = EVTNAME_astral_projection_15
+	desc = EVTDESC_astral_projection_15
+	picture = GFX_evt_comet
+	border = GFX_event_narrative_frame_religion
+	is_triggered_only = yes
+
+	trigger = {
+		has_character_flag = cosmicist_astral_projecting
+	}
+
+	immediate = {
+		narrative_event = { id = newfallingstar.26 days = 1 }
+	}
+
+	option = {
+		name = EVTOPT_astral_projection_15
+		custom_tooltip = {
+			text = EVTOPT_astral_projection_15
+		}
+	}
+}
+
+narrative_event = { #Abandoned Precursor City
+	id = newfallingstar.22
+	title = EVTNAME_astral_projection_16
+	desc = EVTDESC_astral_projection_16
+	picture = GFX_evt_comet
+	border = GFX_event_narrative_frame_religion
+	is_triggered_only = yes
+
+	trigger = {
+		has_character_flag = cosmicist_astral_projecting
+	}
+
+	immediate = {
+		narrative_event = { id = newfallingstar.24 days = 1 }
+	}
+
+	option = {
+		name = EVTOPT_astral_projection_16
+		custom_tooltip = {
+			text = EVTOPT_astral_projection_16
+		}
+	}
+}
+
+narrative_event = { #Abandoned Alien City
+	id = newfallingstar.23
+	title = EVTNAME_astral_projection_17
+	desc = EVTDESC_astral_projection_17
+	picture = GFX_evt_comet
+	border = GFX_event_narrative_frame_religion
+	is_triggered_only = yes
+
+	trigger = {
+		has_character_flag = cosmicist_astral_projecting
+	}
+
+	immediate = {
+		narrative_event = { id = newfallingstar.24 days = 1 }
+	}
+
+	option = {
+		name = EVTOPT_astral_projection_17
+		custom_tooltip = {
+			text = EVTOPT_astral_projection_17
+		}
+	}
+}
+
+#Snapping Back To Reality (ope there goes gravity)
+
+narrative_event = { #Generic return
+	id = newfallingstar.24
+	title = EVTNAME_astral_projection_18
+	desc = EVTDESC_astral_projection_18
+	picture = GFX_evt_dark_prayer
+	border = GFX_event_narrative_frame_religion
+	is_triggered_only = yes
+
+	trigger = {
+		has_character_flag = cosmicist_astral_projecting
+	}
+
+	immediate = {
+		hidden_tooltip = { clr_character_flag = cosmicist_astral_projecting }
+		hidden_tooltip = { clr_character_flag = recent_minor_decision }
+		hidden_tooltip = { clr_character_flag = do_not_disturb }
+		hidden_tooltip = { add_character_modifier = { name = recently_astral_projected years = 3 } } 
+	}
+
+	option = {
+		name = EVTOPTA_astral_projection_18
+		piety = 20
+	}
+}
+
+narrative_event = { #Miraculous return
+	id = newfallingstar.25
+	title = EVTNAME_astral_projection_19
+	desc = EVTDESC_astral_projection_19
+	picture = GFX_evt_dark_prayer
+	border = GFX_event_narrative_frame_religion
+	is_triggered_only = yes
+
+	trigger = {
+		has_character_flag = cosmicist_astral_projecting
+	}
+
+	immediate = {
+		hidden_tooltip = { clr_character_flag = cosmicist_astral_projecting }
+		hidden_tooltip = { clr_character_flag = recent_minor_decision }
+		hidden_tooltip = { clr_character_flag = do_not_disturb }
+		hidden_tooltip = { add_character_modifier = { name = recently_astral_projected years = 3 } } 
+	}
+
+	option = {
+		name = EVTOPTA_astral_projection_19
+		piety = 100
+		add_trait = mystic
+		add_trait = zealous
+	}
+}
+
+narrative_event = { #Catastrophic return
+	id = newfallingstar.26
+	title = EVTNAME_astral_projection_20
+	desc = EVTDESC_astral_projection_20
+	picture = GFX_evt_dark_prayer
+	border = GFX_event_narrative_frame_religion
+	is_triggered_only = yes
+
+	trigger = {
+		has_character_flag = cosmicist_astral_projecting
+	}
+
+	immediate = {
+		hidden_tooltip = { clr_character_flag = cosmicist_astral_projecting }
+		hidden_tooltip = { clr_character_flag = recent_minor_decision }
+		hidden_tooltip = { clr_character_flag = do_not_disturb }
+		hidden_tooltip = { add_character_modifier = { name = recently_astral_projected years = 3 } } 
+	}
+
+	option = {
+		name = EVTOPTA_astral_projection_20
+		hidden_tooltip = {
+			random_list = {
+				15 = {
+					add_trait = cynical
+				}
+				15 = {
+					add_trait = stressed
+				}
+				15 = {
+					add_trait = depressed
+				}
+				55 = {
+				
+				}
+			}
+		}
+	}
+}
+		
