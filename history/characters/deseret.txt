@@ -161,14 +161,35 @@
 
 1830014={
 	name="Grahmua"
-	dynasty=1830024
+	dynasty=1830024 #Malpais
+	father=1830028
+	mother=1830029
+	diplomacy=5
+	martial=7
+	stewardship=5
+	intrigue=3
+	learning=10
 	culture=utahn
 	religion=mormon
-	trait=cruel
+	trait=zealous
 	trait=just
 	trait=wroth
-	trait=scarred
-	2633.1.1={birth=yes}
+	trait=humble
+	trait=erudite
+	trait=shrewd
+	trait=robust
+	trait=skilled_tactician
+	trait=disfigured
+	trait=twin
+	trait=scarred_high
+	disallow_random_traits=yes
+	give_nickname=nick_the_burned
+	2633.1.1={birth=yes
+		effect={set_character_flag=no_historical_family}}
+	2660.12.25={
+		effect={add_artifact=ate_firearm_whip
+			add_artifact=king_james_bible}
+		}
 	2700.1.1={death=yes}
 }
 
@@ -241,3 +262,60 @@
 	2662.9.16={add_spouse=1890002}
 	2700.1.1={death=yes}
 }
+1830027={
+	name="Johoshua"
+	dynasty=1830024 #Malpais
+	father=1830028
+	mother=1830029
+	diplomacy=3
+	martial=7
+	stewardship=5
+	intrigue=3
+	learning=10
+	culture=utahn
+	religion=latinate
+	trait=zealous
+	trait=arbitrary
+	trait=wroth
+	trait=proud
+	trait=shrewd
+	trait=robust
+	trait=tough_soldier
+	trait=twin
+	trait=scarred_high
+	disallow_random_traits=yes
+	give_nickname=nick_the_legatus
+	2633.1.1={birth=yes
+		effect={set_character_flag=no_historical_family}
+		}
+	2665.3.15={death = {
+            death_reason = death_execution_burning #burned by Kaiser
+            killer = 1491022}
+	    }
+}
+1830028={
+	name="Johoshua"
+	dynasty=1830024 #Malpais
+	culture=utahn
+	religion=mormon
+	trait=martial_cleric
+	trait=zealous
+	trait=robust
+	trait=diligent
+	trait=ambitious
+	2580.1.23={birth=yes
+		   create_bloodline={
+		   type=malpais_bloodline
+		   has_dlc="Holy Fury"}
+		  }
+	2600.10.1={add_spouse=1830029}
+	2632.12.30={death=yes}	
+}
+1830029={
+	name="Sofea"
+	female=yes
+	culture=utahn
+	religion=mormon
+	2582.4.12={birth=yes}
+	2652.5.7={death=yes}
+		

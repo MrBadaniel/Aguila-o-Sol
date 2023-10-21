@@ -173,3 +173,22 @@ pangaea_emperor_female = {
 		}
 	}
 }
+malpais_bloodline = { 
+	combat_rating = 10
+	command_modifier = {
+		religious_enemy = 0.15
+		morale_defence = -0.10
+	}	
+	health = 1
+	inheritance = patrilineal
+	allows_malpais_artifacts_modifier = 1
+	active = {
+		OR = {
+			religion_group = latter_day_saints
+			religion_group = christian
+			religion_group = cult_of_saints
+		}
+	}
+	picture = GFX_bloodlines_symbol_mormon
+	flags = { historical_bloodline malpais_bloodline }
+}
