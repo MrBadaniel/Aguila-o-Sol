@@ -1,0 +1,22 @@
+ ate_firearm_whip = {
+    monthly_character_prestige = 0.5
+    martial = 2
+    learning = 1
+    combat_rating = 10
+    brave_opinion = 10 # Brave enough to get close and personal to fight with a "Hunk of Metal"
+    dynasty_opinion = 10 # An honourable heirloom
+    quality = 4
+    indestructible = yes
+    active = {
+        is_adult = yes
+	custom_tooltip = {
+	text = HAS_MALPAIS_BLOODLINE_CT
+        any_owned_bloodline = {has_bloodline_flag = malpais_bloodline}
+	}
+	
+    }
+    flags = {oldworld combat_weapon sword unique}
+    stacking = no
+    picture ="GFX_ate_firearm_old"
+    slot = weapon
+}
