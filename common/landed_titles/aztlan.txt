@@ -1960,12 +1960,6 @@ e_aztlan = {
 				b_topolobampo_SI = {
 				
 				}
-				b_choix_SI = {
-					yaqui = "Choim"
-					seri = "Choim"
-				}
-				b_el_fuerte_SI = {}
-				b_las_vacas_SI = {}
 				b_higuera_de_zaragoza_SI = {
 					arixan = "Higuera"
 					texan = "Higuera"
@@ -1973,7 +1967,30 @@ e_aztlan = {
 					bayfolk = "Higuera"				
 				}
 				b_ahome_SI = {}
+				b_mochicahui_SI = {}
+				b_mayocoba_SI = {}
+				b_cohuibampo_SI = {}
+
 			}
+			
+			c_choix = { #2747
+				color = { 170 155 152 }
+				color2 = { 255 255 255 }
+				
+				b_el_fuerte_SI = {}
+				b_choix_SI = {
+					yaqui = "Choim"
+					seri = "Choim"
+				}
+				b_san_blas_SI = {}
+				b_constancia_SI = {}
+				b_chinobampo_SI = {}
+				b_charay_SI = {}
+				b_agua_caliente_grande_SI = {}
+				b_baroten_SI = {}
+			}
+				
+			
 			c_guasave = { 
 				color={ 134 185 150 }
 				color2={ 255 255 255 }
@@ -1985,7 +2002,26 @@ e_aztlan = {
 					yaqui = "Huazaba"
 					seri = "Huazaba"
 				}
-				b_guamuchil_SI = {}
+				b_cortines_SI = {}				
+				b_bamoa_SI = {}
+				b_las_vacas_SI = { #AKA Juan José Ríos
+				}
+				b_leyva_solano_SI = {
+					arixan = "Solano"
+					texan = "Solano"
+					bayfolk = "Solano"				
+					valleyan = "Solano"				
+				}
+				b_las_glorias_SI = {}
+				b_la_trinidad_SI = {}
+				b_las_brisas_SI = {}
+
+			}
+			
+			c_sinaloa = { #2748
+				color = { 158 108 88 }
+				color2 = { 255 255 255 }
+				
 				b_sinaloa_de_leyva_SI = {
 					yaqui = "Sinalobola"
 					seri = "Sinalobola"
@@ -1996,43 +2032,49 @@ e_aztlan = {
 					bayfolk = "Sinaloa"				
 					valleyan = "Sinaloa"					
 				}
-				b_leyva_solano_SI = {
-					arixan = "Levy Solano"
-					texan = "Levy Solano"
-					bayfolk = "Levy Solano"				
-					valleyan = "Levy Solano"				
-				}
-				b_angostura_SI = {}
 				b_estacion_naranjo_SI = {
-					arixan = "Naranjo Station"
-					texan = "Naranjo Station"
-					bayfolk = "Naranjo Station"				
-					valleyan = "Naranjo Station"
-				}
-				b_bacubirito_SI = {}
-				b_cortines_SI = {}
-				b_mocorito_SI = {}
+					arixan = "Naranjo"
+					texan = "Naranjo"
+					bayfolk = "Naranjo"				
+					valleyan = "Naranjo"
+				}		
+				b_ocoroni_SI = {}
+				b_bacubirito_SI = {}				
+				b_topobampo_SI
+				b_llano_grande_SI = {}
+				b_cubiri_de_portelas_SI = {}
+				b_nacaveba_SI = {}
+			}
+			
+			c_guamuchil = { #2749
+				color = { 206 156 136 }
+				color2 = { 255 255 255 }
+				
+	
+				b_guamuchil_SI = {}
+				b_angostura_SI = {}
+				b_mocorito_SI = {}			
+				b_pericos_SI = {}
+				b_villa_benito_juarez_SI = {}
+				b_la_reforma_SI = {}
+				b_colonia_agricola_SI = {}
+				b_batury_SI = {}
 			}
 
+		} #End of d_sinaloa
+		
+		d_culiacan = { 
+			color={ 175 98 103 }
+			color2={ 255 255 255 }
+			
+			capital = 796 #c_culiacan
+			
 			c_culiacan = { # 796
 				color={ 146 128 106 }
 				color2={ 255 255 255 }
 	
 				holy_site = navegante
 	
-				chino = "Culiacán"
-				menomex = "Culiacán"
-				altiplanense = "Culiacán"
-				bravo = "Culiacán"
-				abajeno = "Culiacán"
-				chilango = "Culiacán"
-				tapatio = "Culiacán"
-				jarocho = "Culiacán"
-				yucatanense = "Culiacán"
-				choco = "Culiacán"
-				calentano = "Culiacán"
-				californiano = "Culiacán"
-				occidental = "Culiacán"
 				nahua = "Colhuahcan"
 				yaqui = "Colhuahcan"
 				seri = "Colhuahcan"
@@ -2041,41 +2083,43 @@ e_aztlan = {
 					nahua = "Colhuahcan"
 					yaqui = "Colhuahcan"
 					seri = "Colhuahcan"				
-					chino = "Culiacán"
-					menomex = "Culiacán"
-					altiplanense = "Culiacán"
-					bravo = "Culiacán"
-					abajeno = "Culiacán"
-					chilango = "Culiacán"
-					tapatio = "Culiacán"
-					jarocho = "Culiacán"
-					yucatanense = "Culiacán"
-					choco = "Culiacán"
-					calentano = "Culiacán"
-					californiano = "Culiacán"
-					occidental = "Culiacán"
 				}
-				b_navalato_SI = {}
-				b_quila_SI = {}
-				b_costa_rica_SI = {}
-				b_eldorado_SI = {}
-				b_cosala_SI = {
-					chino = "Cosalá"
-					menomex = "Cosalá"
-					altiplanense = "Cosalá"
-					bravo = "Cosalá"
-					abajeno = "Cosalá"
-					chilango = "Cosalá"
-					tapatio = "Cosalá"
-					jarocho = "Cosalá"
-					yucatanense = "Cosalá"
-					choco = "Cosalá"
-					calentano = "Cosalá"
-					californiano = "Cosalá"
-					occidental = "Cosalá"					
-				}
-				b_altata_SI = {}
 				b_culiacancito_SI = {}
+				b_bacurumi_SI = {}
+				b_aguaruto_SI = {}
+				b_el_diez_SI = {}
+				b_el_limon_de_los_ramos_SI = {}
+				b_sanalona_SI = {}
+				b_san_roman_SI = {}
+
+			}
+			
+			c_navalato = { #2750
+				color = { 188 165 137 }
+				color2 = { 255 255 255 }
+				
+				b_navalato_SI = {}
+				b_altata_SI  = {}
+				b_san_pedro_de_rosales_SI = {}
+				b_general_angel_flores_SI = {}
+				b_licenciado_benito_juarez_SI = {}
+				b_nuevo_altata_SI = {}
+				b_dautillos_SI = {}
+				b_el_castillo_NAV_SI = {} 
+			}
+
+			c_san_lorenzo = { #2752
+				color = { 114 100 83 }
+				color2 = { 255 255 255 }
+				
+				b_costa_rica_SI = {}
+				b_eldorado_SI  = {}
+				b_quila_SI  = {}
+				b_el_salado_SI = {}
+				b_leopoldo_sanchez_celis_SI = {}
+				b_miguel_valdez_quintero_SI = {}
+				b_pueblos_unidos_SI = {}
+				b_guadalupe_victoria_SI = {}
 			}
 
 			c_badiraguato = { 
@@ -2091,7 +2135,23 @@ e_aztlan = {
 				b_san_jose_del_llano_SI = {}
 				b_surutato_SI = {}
 			}
-		}
+			
+			c_cosala = { #2751
+				color = { 186 154 119 }
+				color2 = { 255 255 255 }
+				
+				b_ceuta_SI = {}
+				b_la_cruz_SI  = {}
+				b_cosala_SI  = {}
+				b_tayoltita_SI = {}
+				b_el_saladito_SI = {}
+				b_casas_viejas_SI = {}
+				b_la_llama_SI = {}
+				b_tanques_SI = {}
+			}
+			
+		} #End of d_culiacan
+		
 		d_mazatlan = {
 			color={ 200 93 40 }
 			color2={ 255 255 255 }
@@ -2105,38 +2165,12 @@ e_aztlan = {
 				nahua = "Mazatltlan"
 				yaqui = "Masatlan"
 				seri = "Masatlan"
-				chino = "Mazatlán"
-				menomex = "Mazatlán"
-				altiplanense = "Mazatlán"
-				bravo = "Mazatlán"
-				abajeno = "Mazatlán"
-				chilango = "Mazatlán"
-				tapatio = "Mazatlán"
-				jarocho = "Mazatlán"
-				yucatanense = "Mazatlán"
-				choco = "Mazatlán"
-				calentano = "Mazatlán"
-				californiano = "Mazatlán"
-				occidental = "Mazatlán"
-				
+			
 				
 				b_mazatlan_SI = {
 					nahua = "Mazatltlan"
 					yaqui = "Masatlan"
-					seri = "Masatlan"
-					chino = "Mazatlán"
-					menomex = "Mazatlán"
-					altiplanense = "Mazatlán"
-					bravo = "Mazatlán"
-					abajeno = "Mazatlán"
-					chilango = "Mazatlán"
-					tapatio = "Mazatlán"
-					jarocho = "Mazatlán"
-					yucatanense = "Mazatlán"
-					choco = "Mazatlán"
-					calentano = "Mazatlán"
-					californiano = "Mazatlán"
-					occidental = "Mazatlán"				
+					seri = "Masatlan"			
 				}
 				b_el_castillo_SI = {}
 				b_el_roble_SI = {
@@ -2144,11 +2178,28 @@ e_aztlan = {
 				
 				}
 				b_la_cruz_SI = {}
-				b_san_ignacio_SI = {}
-				b_villa_union_SI = {}
-				b_el_walamo_SI = {}
 				b_ceuta_SI = {}
+				b_el_habal_SI = {}
+				b_cofradia_SI = {}
+				b_marmol_de_salcido_SI = {}
+				b_isla_de_la_piedra_SI = {}
+
 			}
+			
+			c_san_ignacio = { #2753
+				color = { 122 81 42 }
+				color2 = { 255 255 255 }
+				
+				b_san_ignacio_SI = {}
+				b_piaxtla_SI = {}
+				b_coyotitan_SI = {}
+				b_san_javier_SI = {}
+				b_ixpalino_SI = {}
+				b_el_limon_de_los_peraza_SI = {}
+				b_lo_de_ponce_SI = {}
+				b_tenchoquelite_SI = {}
+			}
+
 			c_concordia = { 
 				color={ 110 141 142 }
 				color2={ 255 255 255 }
@@ -2158,8 +2209,30 @@ e_aztlan = {
 				b_copala_SI = {}
 				b_el_huajote_SI = {}
 				b_cacalotan_SI = {}
-				b_teodoro_beltran_SI = {}
+				b_chele_SI = {}
+				b_la_concepcion_SI = {}
 				b_el_rosario_SI = {}
+
+			}
+			c_huizache = { #2754
+				color = { 97 112 104 }
+				color2 = { 255 255 255 }
+				
+				b_teodoro_beltran_SI = {
+					occidental = "Los Pozos"
+				}
+				b_villa_union_SI = {}
+				b_el_walamo_SI  = {}
+				b_agua_caliente_de_garate_SI = {}
+				b_la_guasima_SI = {}
+				b_el_matadero_SI = {}
+				b_loma_de_las_garzas_SI = {}
+				b_amapa_SI = {}
+			}
+			c_escuinapa = { #2755
+				color = { 170 196 182 }
+				color2 = { 255 255 255 }
+				
 				b_escuinapa_de_hidalgo = {
 					arixan = "Escuinapa"
 					texan = "Escuinapa"
@@ -2168,8 +2241,17 @@ e_aztlan = {
 					valleyan = "Escuinapa"
 					bayfolk = "Escuinapa"	
 				}
+				b_isla_del_bosque_SI = {}
+				b_teacapan_SI = {}
+				b_tecualilla_SI = {}
+				b_ojo_de_agua_de_palmillas_SI = {}
+				b_palmito_del_verde_SI = {}
+				b_ejido_de_la_campana_numero_uno_SI = {}
+				b_la_estacada_SI = {}
 			}
-		}
+			
+		} #End of d_mazatlan
+		
 		d_mar_de_cortes = {
 			color={ 200 1 78 }
 			color2={ 255 255 255 }
