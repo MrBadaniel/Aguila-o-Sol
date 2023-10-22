@@ -908,7 +908,7 @@ e_mexico = {
 				b_la_huerta_JA = {}
 			}
 		}	
-		d_nayarit = {
+		d_nayarit = { #tepic
 			color={ 124 131 147 }
 			color2={ 255 255 255 }
 			
@@ -918,28 +918,58 @@ e_mexico = {
 				color={ 134 121 152 }
 				color2={ 255 255 255 }
 				
+				b_xalisco_NT = {}
 				b_tepic_NT = {}
 				b_santa_maria_del_oro_NT = {}
 				b_compostela_NT = {}
+				b_san_pedro_lagunillas_NT = {}
+				b_san_cayetano_NT = {}
+				b_camichin_de_jauja_NT = {}
+				b_chapalilla_NT = {}
+
+			}
+			c_banderas = { #2759
+				color = { 186 67 123 }
+				color2 = { 255 255 255 }
+				
+				b_punta_mita_NT = {}
+				b_san_jose_del_valle_NT = {}
+				b_mezcales_NT  = {}
+				b_bucerias_NT  = {}
+				b_san_juan_de_abajo_NT  = {}
+				b_cruz_de_huanacaxtle_NT = {}
+				b_valle_de_banderas_NT = {}
+				b_sayulita_JA = {}
+			}
+			
+			c_san_blas = { #2758 
+				color = { 186 121 152 }
+				color2 = { 255 255 255 }
+				
 				b_san_blas_NT = {}
+				b_las_varas_NT = {}
+				b_zacualpan_NT = {}
+				b_santa_cruz_de_miramar_NT = {}
+				b_aticama_NT = {}
+				b_ixtapa_de_la_concepcion_NT = {}
+				b_navarrete_NT = {}
+				b_matanchen_NT = {}
+			}
+			
+			c_jala = { #2760 
+				color = { 153 100 126 }
+				color2 = { 255 255 255 }
+				
+				b_ahuacatlan_NT = {}
 				b_ixtlan_del_rio_NT = {}
 				b_jala_NT = {}
-				b_san_pedro_lagunillas_NT = {}
-				b_xalisco_NT = {}
+				b_amatlan_de_las_canas_NT = {}
+				b_el_rosario_NT = {}
+				b_tepuzhuacan_NT = {}
+				b_mexpan_NT = {}
+				b_jomulco_NT = {}
 			}
-			c_acaponeta = { # 1747
-				color={ 179 167 200 }
-				color2={ 255 255 255 }
-				
-				b_acaponeta_NT = {}
-				b_rosamorada_NT = {}
-				b_huajicori_JA = {}
-				b_villa_hidalgo_NT = {}
-				b_san_felipe_aztatan_JA = {}
-				b_santa_barbara_JA = {}
-				b_tecuala_NT = {}
-				b_santiago_ixcuintla_NT = {}
-			}
+			
 			c_islas_marias = { # 1748
 				color={ 67 158 188 }
 				color2={ 255 255 255 }
@@ -953,7 +983,93 @@ e_mexico = {
 				b_maria_cleofas_JA = {}
 				b_roca_blanca_JA = {}
 			}
-		}
+		} #End of d_nayarit
+		
+		d_ixcuintla = {
+			color = { 93 109 145 }
+			color2 = { 255 255 255 }
+			
+			capital = 2757 #c_santiago_ixcuintla
+			
+			c_acaponeta = { # 1747
+				color={ 179 167 200 }
+				color2={ 255 255 255 }
+				
+				b_acaponeta_NT = {}
+				b_tecuala_NT = {}
+				b_san_felipe_aztatan_JA = {}
+				b_novillero_NT = {}
+				b_quimichis_NT = {}
+				b_milpas_viejas_NT = {}
+				b_rio_viejo_NT = {}
+				b_la_bayona_NT = {}
+			}			
+			
+			c_ixcuintla = { #2757
+				color = { 203 190 226 }
+				color2 = { 255 255 255 }
+				
+				b_santiago_ixcuintla_NT = {}
+				b_ruiz_NT = {}
+				b_tuxpan_NT = {}
+				b_rosamorada_NT = {}
+				b_villa_hidalgo_NT = {}
+				b_mayorquin_NT = {}
+				b_estacion_yago_NT = {}
+				b_sentispac_NT = {}
+			}
+			
+			c_huajicori = { #2756
+				color = { 160 139 198 }
+				color2 = { 255 255 255 }
+				
+				b_huajicori_JA = {}
+				b_quiviquinta_NT = {}
+				b_san_francisco_del_caiman_NT = {}
+				b_milipillas_de_san_andres_NT = {}
+				b_mineral_de_cucharas_NT = {}
+				b_contadero_NT = {}
+				b_acatita_NT = {}
+				b_tamazole_NT = {}
+			}
+		} #End of d_ixcuintla
+		
+		d_el_nayar = {
+			color = { 93 85 145 }
+			color2 = { 255 255 255 }
+			
+			capital = 2762 # c_el_nayar
+			
+			c_el_nayar = { #2762
+				color = { 115 70 206 }
+				color2 = { 255 255 255 }
+				
+				b_jesus_maria_NT = {}
+				b_mesa_del_nayar_NT = {}
+				b_santa_teresa_NT = {}
+				b_linda_vista_NT = {}
+				b_santa_barbara_JA = {}
+				b_huaynamota_NT = {}
+				b_san_francisco_del_nayar_NT = {}
+			}
+			
+			c_la_yesca = { #2761 
+				color = { 139 86 255 }
+				color2 = { 255 255 255 }
+				
+				b_puente_de_camotlan_NT = {}
+				b_guadalupe_ocotan_NT = {}
+				b_la_yesca_NT = {}
+				b_huajimic_NT = {}
+				b_mesa_del_tirador_NT = {}
+				b_apozolco_NT = {}
+				b_amatlan_de_jora_NT = {}
+			}
+		} # End of d_el_nayar
+
+			
+			
+			
 	} #End of k_jalisco
 	
 	k_mexico = {
