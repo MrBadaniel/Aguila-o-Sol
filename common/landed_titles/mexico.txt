@@ -244,8 +244,13 @@ e_mexico = {
 				color={ 206 191 191 }
 				color2={ 255 255 255 }
 				
-				b_celaya_GT = {}
-				b_comonfort_GT = {}
+				b_celaya_GT = {
+					nahua = "Mizquitlán"
+					purepecha = "Tzirizecuaro"
+				}
+				b_comonfort_GT = {
+					purepecha = "Chamacuero"
+				}
 				b_apaseo_el_grande_GT = {
 					purepecha = "Apatzeo"
 				}
@@ -391,32 +396,65 @@ e_mexico = {
 				nahua = "Tlaxco"
 				purepecha = "K'erenda"
 				
-				b_san_juan_del_rio_QE = {}
 				b_santiago_de_queretaro_QE = {
 					nahua = "Tlaxco"
 					purepecha = "K'erenda"
 				}
 				b_el_pueblito_QE = {}
-				b_tequisquiapan_QE = {}
-				b_huimilpan_QE = {}
 				b_la_canada_QE = {}
+				b_santa_rosa_jauregui_QE = {}
+				b_pedro_escobedo_QE = {}
+				b_juriquilla_QE = {}
+				b_tlacote_el_bajo_QE = {}
+				b_charco_blanco_QE = {}
+				b_palmas_QE = {}
+
+			}
+			c_tequisquiapan = { #2798
+				color = { 130 116 114 }
+				color2 = { 255 255 255 }
+				
+				b_tequisquiapan_QE = {}
+				b_san_juan_del_rio_QE = {}
+				b_amealco_de_bonfil_QE = {}
+				b_huimilpan_QE = {}
 				b_paso_de_mata_QE = {}
+				b_san_sebastian_de_las_barrancas_QE = {}
+				b_san_nicolas_QE = {}
 				b_el_sauz_QE = {}
 			}
+			
+			c_montes = { #2799
+				color = { 198 170 113 }
+				color2 = { 255 255 255 }
+				
+				b_cadereyta_de_montes_QE = {}
+				b_ezequiel_montes_QE = {}
+				b_colon_QE = {
+					nahua = "Tzopilotlán"
+				}
+				b_toliman_QE = {}
+				b_vizarron_de_montes_QE = {}
+				b_bernal_QE = {}
+				b_cerrito_parado_QE = {}
+				b_san_pablo_toliman_QE = {}
+			}
+
 			c_jalpan_de_serra = { # 1792
 				color={ 227 243 194 }
 				color2={ 255 255 255 }
 				
+				b_jalpan_de_serra_QE = {}
 				b_penamiller_QE = {}
 				b_landa_de_matamoros_QE = {}
-				b_san_pablo_toliman_QE = {}
-				b_jalpan_de_serra_QE = {}
 				b_arroyo_seco_QE = {}
-				b_toliman_QE = {}
-				b_palmas_QE = {}
-				b_cerrito_parado_QE = {}
+				b_pinal_de_amoles_QE = {}
+				b_san_joaquin_QE = {}
+
+				b_noria_del_maltrato_QE = {}
+
 			}
-		}
+		} #End of d_queretaro
 	}
 	k_gran_chichimeca = {
 		color={ 201 41 24 }
