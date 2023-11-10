@@ -2020,6 +2020,13 @@ liberate_religion = { # New6
 										}
 									}
 									AND = {
+										religion = phantasmic
+										custom_tooltip = {
+											text = CTT_ACQUISITIONS_UNLOCKED
+											has_global_flag = phantasmic_acquisitions_unlocked
+										}
+									}
+									AND = {
 										religion = exovedate
 										custom_tooltip = {
 											text = CTT_EXOVEDATE_CRUSADES_UNLOCKED
