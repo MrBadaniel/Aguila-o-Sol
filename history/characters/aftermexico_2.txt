@@ -2927,3 +2927,247 @@
 				culture=abajeno
 	}
 }
+
+##New Characters in k_jalisco
+6900900 = {
+	name= "Tomás"
+	dynasty= 5001266 #Cícero
+	culture=tapatio
+	religion=sol_invicta
+	trait = charismatic_negotiator
+	trait = zealous
+	trait = inspiring_leader
+	trait = just
+	trait = trusting
+	2561.5.10 = {birth=yes}
+	2610.1.1 = { death = yes }
+}
+6900901 = {
+	name= "Javier"
+	dynasty= 5001266 #Cícero
+	culture=neomexicano
+	religion=sol_invicta
+	father = 6900900
+	trait = dutiful_cleric
+	trait = cynical
+	trait = content
+	trait = craven
+	2606.1.4 = {birth=yes}
+}
+6900902 = {
+	name= "Javier"
+	dynasty= 5001266 #Cícero
+	culture=neomexicano
+	religion=cristo_rey
+	father = 6900901
+	dna= bahkjdldcai
+	properties = 0aaaa
+	trait = skilled_tactician
+	trait = cynical
+	trait = ambitous
+	trait = lustful
+	trait = trusting
+	trait = diligent
+	2631.6.1 = {birth=yes
+				culture=tapatio}
+	2660.3.19 = { add_spouse = 	6900905}			
+}
+
+6900903 = {
+	name= "Noé"
+	dynasty= 5001266 #Cícero
+	culture=bayfolk
+	religion=cristo_rey
+	father = 6900902
+	mother = 6900905	
+	real_father=6900906
+	trait = fair
+	2665.1.1 = {birth=yes
+				culture=tapatio}
+}
+6900904= {
+	name= "Natalia"
+	female = yes
+	dynasty= 5001266 #Cícero
+	culture=bayfolk
+	religion=cristo_rey
+	father = 6900902
+	mother = 6900905
+	real_father=6900907
+	2666.5.1 = {birth=yes
+				culture=tapatio}
+}
+6900905= {
+	name= "Sarah"
+	female = yes
+#	dynasty= 5001266 #Cícero
+	culture=bayfolk
+	religion=cristo_rey
+	trait = charismatic_negotiator
+	trait = fair
+	trait = lustful
+	trait = gregarious
+	2637.5.13 = {birth=yes
+				culture=tapatio}
+	2660.3.19 = { add_spouse = 	6900902}	
+	2663.12.31 = { effect = { add_lover = 6900906 } }	
+}
+6900906= {
+	name= "Diego"
+#	dynasty= 5001266 #Cícero
+	culture=chilango
+	religion=cristo_rey
+	properties = 0kaaa
+	trait = charismatic_negotiator
+	trait = cynical
+	trait = ambitous
+	trait = lustful
+	trait = deceitful
+	trait = diligent
+	trait = greedy
+	trait = arbitrary
+	employer = 6900901
+	2623.12.23 = {birth=yes}
+	2662.1.1 = { effect = { add_friend = 6900902 } }
+	2663.12.31 = { effect = { add_lover = 6900905 } }
+		
+}
+6900909 = {
+	name= "Prisco"
+	dynasty= 5001272 #Árpad
+	culture=hungarian
+	religion=cristo_rey
+	2521.1.1 = {birth=yes}
+	2560.1.1 = {give_nickname = nick_the_culture}
+	2561.1.1 = {culture = tapatio }
+	2585.1.1 = { death = yes }
+}
+
+##De la Torre 1542048
+6900910 = {
+	name= "Luis"
+	dynasty= 1542048 #De la Torre
+	culture=abajeno
+	religion=cristo_rey
+	2525.6.1 = {birth=yes}
+	2607.1.1 = {death=yes}
+}
+6900911 = {
+	name= "Javier"
+	dynasty= 1542048 #De la Torre
+	culture=abajeno
+	religion=cristo_rey
+	father = 6900910
+	trait = brilliant_strategist
+	trait = unyielding_leader
+	trait = holy_warrior
+	trait = architect
+	trait = devout
+	trait = diligent
+	2554.1.1 = {birth=yes}
+	2595.1.1 = { give_nickname = nick_the_architect }
+	2616.1.1 = { death = { death_reason = death_hunting_accident}}
+}
+6900912 = {
+	name= "Luis"
+	dynasty= 1542048 #De la Torre
+	culture=abajeno
+	religion=cristo_rey
+	father = 6900910
+	trait = dutiful_cleric
+	trait = flanker
+	trait = devout
+	trait = content
+	trait = monk
+	2559.1.1 = { birth = yes}
+	2625.1.1 = { death = yes}
+}
+6900913 = {
+	name= "Eduardo"
+	dynasty= 1542048 #De la Torre
+	culture=tapatio
+	religion=cristo_rey
+	father = 6900911
+	trait = tough_soldier
+	trait = experimenter
+	trait = zealous
+	trait = gregarious
+	trait = brave
+	2596.1.1 = { birth = yes }
+	2619.7.19 = { death = { death_reason = death_battle_ojinaga } }
+}
+6900914 = {
+	name= "Néstor"
+	dynasty= 1542048 #De la Torre
+	culture=tapatio
+	religion=cristo_rey
+	father = 6900912
+	trait = misguided_warrior
+	trait = administrator
+	trait = devout
+	trait = diligent
+	trait = greedy
+	2595.1.1 = { birth = yes }
+}
+6900915 = {
+	name= "José"
+	dynasty= 1542048 #De la Torre
+	culture=tapatio
+	religion=cristo_rey
+	father = 6900912
+	trait = skilled_tactician
+	trait = defensive_leader
+	trait = organzier
+	trait = shy
+	trait = wroth
+	trait = depressed
+	2599.1.1 = { birth = yes }
+}	
+6900916 = {
+	name= "Manuel"
+	dynasty= 1542048 #De la Torre
+	culture=tapatio
+	father = 6900915
+	religion=cristo_rey
+	2642.1.1 = { birth = yes}
+}
+6900917 = {
+	name= "Álvaro"
+	dynasty= 1542048 #De la Torre
+	culture=tapatio
+	father = 6900911
+	religion=cristo_rey
+	trait = fortune_builder
+	trait = brave
+	trait = cavalry_leader
+	2599.1.1 = { birth = yes}
+	2621.1.1 = { death = {  death_reason = death_battle killer=1325000}}
+}
+6900918 = {
+	name= "Luis"
+	dynasty= 1542048 #De la Torre
+	culture=tapatio
+	father = 6900911
+	religion=cristo_rey
+	trait = underhanded_rogue
+	trait = zealous
+	trait = cavalry_leader
+	2600.1.1 = { birth = yes}
+	2621.1.1 = { death = { death_reason = death_battle killer=1325000}}
+}
+6900919 = {
+	name= "Luis"
+	dynasty= 1542048 #De la Torre
+	culture=tapatio
+	father = 6900915
+	religion=cristo_rey
+	trait = strong
+	trait = fair
+	trait = tough_soldier
+	trait = patient
+	trait = gregarious
+	trait = cavalry_leader
+	2639.1.1 = { birth = yes}
+	2657.1.1 = { give_nickname = nick_the_gallant }
+	2660.11.15 = { death = { death_reason = death_battle_duel killer=1325002}}
+}

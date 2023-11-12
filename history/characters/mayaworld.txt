@@ -2225,16 +2225,19 @@ trait= chest_pain
 	culture=yucateco
 	religion=qabantajik
 	2619.12.15={birth=yes}
+	#2647.5.12={add_spouse=1432005}	
 	2693.7.30={	death= yes	}
 }
 1432005 = {
 	name="Itsel" #Older daughter of Pacal Xocmo'
+	female = yes
 	dynasty=1697000		#Xocmo'
 	culture=lacandon
 	father = 1650124
 	religion=qabantajik
-	2625.12.15={birth=yes}
-	2663.7.30={	death= 
+	2625.1.18={birth=yes}
+	2647.5.12={add_spouse=1432004}
+	2663.7.29={	death= 
 		{ death_reason = death_childbirth
 		}
 	}
@@ -2251,6 +2254,7 @@ trait= chest_pain
 }
 1432007 = {
 	name="Linda" 
+	female = yes
 	dynasty=154164 		#Uxte'
 	father = 1432004
 	mother = 1432005
@@ -2267,6 +2271,7 @@ trait= chest_pain
 	culture=yucateco
 	religion=qabantajik
 	trait= weak
+	trait= feeble
 	2663.7.29={birth=yes}
 	2666.12.1={	death= yes	}
 }
