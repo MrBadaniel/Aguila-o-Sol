@@ -2901,6 +2901,7 @@
 	2590.1.1 = {birth=yes}
 }
 
+
 6900680 = {
 	name= "Francisco" #test
 	religion=sacred_heart
@@ -2911,7 +2912,205 @@
 	}
 }
 
-
+6900690 = {
+	name= "Gonzalo"
+	dynasty = 5001322 # O'tacú de Maspuerta
+	religion=sacred_heart
+	culture=chilango
+	father = 6900691
+	mother = 6900700
+	martial = 15
+	trait = tough_soldier
+	trait = strong
+	trait = gluttonous
+	trait = brave
+	trait = kind
+	trait = trusting
+	trait = duelist
+	trait = robust
+	trait = unyielding_leader
+	trait = severely_injured
+	2648.11.20 = {birth=yes}
+	2662.1.1 = { add_spouse = 6900697}	
+	
+}
+6900691 = {
+	name= "Bartolomeo"
+	dynasty = 5001322 # O'tacú de Maspuerta
+	religion=sacred_heart
+	culture=chilango
+	martial = 8
+	trait = tough_soldier
+	trait = strong
+	trait = brave
+	trait = just
+	trait = inspiring_leader
+	trait = unyielding_leader
+	trait = scarred_high
+	2623.10.17 = {birth=yes}
+    2645.1.1 = { add_spouse = 6900700}
+	2655.10.1 =  {death = {
+		death_reason = death_battle_duel
+				killer = 6901017 #Freezer
+		}
+	}
+	
+}
+6900692 = {
+	name= "Radamel"
+	dynasty = 5001322 # O'tacú de Maspuerta
+	religion=sacred_heart
+	culture=chilango
+	father = 6900691
+	mother = 6900700
+	martial = 5
+	trait = tough_soldier
+	trait = robust
+	trait = brave
+	trait = arbitrary
+	trait = aggressive_leader
+	trait = wroth
+	2644.4.26 = {birth=yes}
+	2666.7.1 =  {death = {
+		death_reason = death_duel 
+		killer = 6900694
+		}
+	}
+}
+6900693 = {
+	name= "Gedeón"
+	dynasty = 5001322 # O'tacú de Maspuerta
+	religion=sacred_heart
+	culture=chilango
+	father = 6900690
+	mother = 6900697
+	martial = 5
+	trait = strong
+	trait = kind
+	trait = craven
+	2664.5.18 = {birth=yes}
+	2666.7.2 = { effect = { add_guardian = 6900694} }
+		
+}
+6900694 = {
+	name= "P’ikukua"
+	dynasty = 5001323 # Picoló
+	religion=sacred_heart
+	culture=purepecha
+	father = 6900695
+	martial = 7
+	employer = 6900690
+	trait = skilled_tactician
+	trait = robust
+	trait = brave
+	trait = kind
+	trait = aggressive_leader
+	trait = wroth
+	trait = duelist
+	2649.4.26 = {birth=yes}
+	2666.7.1 = { effect = { add_friend = 6900693} }
+		
+}
+6900695 = {
+	name= "Dámaso"
+	dynasty = 5001323 # Picoló
+	religion=sol_invicta
+	culture=purepecha
+	martial = 7
+	father = 6900696
+	trait = skilled_tactician
+	trait = robust
+	trait = brave
+	trait = strategist
+	trait = envious
+	trait = arbitrary
+	trait = impaler
+	trait = aggressive_leader
+	trait = wroth
+	trait = duelist
+	2623.4.26 = {birth=yes}
+	2660.1.1 = { death = { death_reason = death_duel killer = 6900690}	}
+		
+}
+6900696 = {
+	name= "Komarhini"
+	dynasty = 5001323 # Picoló
+	religion=sol_invicta
+	culture=purepecha
+	trait = mastermind_theologian
+	trait = kind
+	trait = patient
+	trait = brave
+	trait = just
+	2598.1.20 = {birth=yes}	
+}
+6900697 = {
+	name= "Galatea"
+	female = yes
+	dynasty = 5001324 # de Bós
+	father = 6900698
+	mother = 6900699
+	religion=sacred_heart
+	culture=chilango
+	trait = fortune_builder
+	trait = wroth
+	trait = honest
+	trait = brave
+	trait = robust
+	trait = fair
+	2646.11.5 = {birth=yes}	
+	2661.1.1 = { add_spouse = 6900690}
+}
+6900698 = {
+	name= "Guillermo"
+	female = no
+	dynasty = 5001324 # de Bós
+	religion=sacred_heart
+	culture=chilango
+	trait = tough_soldier
+	trait = wroth
+	trait = giant
+	trait = robust
+	trait = kind
+	trait = just
+	trait = content
+	trait = mountain_terrain_leader
+	2620.5.6 = {birth=yes}
+	2645.1.1 = { add_spouse = 6900699}	
+}
+6900699 = {
+	name= "Reyna"
+	female = yes
+	religion=sacred_heart
+	culture=chilango
+	trait = charismatic_negotiator
+	trait = patient
+	trait = honest
+	trait = kind
+	trait = fair
+	trait = ill
+	2627.1.20 = {birth=yes}
+    2645.1.1 = { add_spouse = 6900698}
+	2646.12.30 = { death = { death_reason = death_trait } }
+	
+}
+6900700 = {
+	name= "Ginés"
+	female = yes
+	religion=sacred_heart
+	culture=chilango
+	trait = dutiful_cleric
+	trait = patient
+	trait = kind
+	trait = brave
+	2625.1.20 = {birth=yes}
+    2645.1.1 = { add_spouse = 6900691}
+	2655.10.1 =  {death = {
+		death_reason = death_execution
+				#killer = 6901017 #Freezer
+		}
+	}
+}
 #Gran Chichimeca new characters
 6900800 = {
 	name= "Francisco"
@@ -3170,4 +3369,249 @@
 	2639.1.1 = { birth = yes}
 	2657.1.1 = { give_nickname = nick_the_gallant }
 	2660.11.15 = { death = { death_reason = death_battle_duel killer=1325002}}
+}
+
+###New Characters in Michoacan
+6901000 = {
+	name = "Hipólita"
+	dynasty = 5001288 #Mireles
+	female = yes
+	father = 6901001
+	culture = calentano
+	religion = reformista #OW mexican cultist placeholder
+	trait = intricate_webweaver
+	trait = shrewd
+	trait = ambitious
+	2629.11.11 = { birth = yes }
+	2648.1.1 = { add_spouse = 1325010 } #Beljjw Jorhénati
+	2700.1.1 = { death = yes }
+ 	
+}
+6901001 = {
+	name = "Hipólito"
+	dynasty = 5001288 #Mireles
+	female = no
+	culture = calentano
+	religion = reformista #OW mexican cultist placeholder
+	2600.10.23 = { birth = yes }
+	#2648.1.1 = { add_spouse = 1325010 } #Beljjw Jorhénati
+	2660.11.5 = { death = { death_reason = death_battle } }
+ 	
+}
+6901002 = {
+	name = "Apolonio"
+	dynasty = 5001288 #Mireles
+	female = no
+	father = 6901001
+	culture = calentano
+	religion = reformista #OW mexican cultist placeholder
+	trait = indulgent_wastrel
+	trait = slow
+	2633.5.13 = { birth = yes }
+	#2648.1.1 = { add_spouse = 1325010 } #Beljjw Jorhénati
+	2700.1.1 = { death = yes }
+ 	
+}
+
+6901010 = {
+	name = "Álvaro"
+	dynasty = 5001289 #Pásquaro
+	female = no
+	father = 6901011
+	mother = 6901012
+	culture = purepecha
+	religion = sacred_heart
+	martial = 10
+	trait = charismatic_negotiator
+	trait = devout
+	trait = brave
+	trait = inspiring_leader
+	trait = fair
+	trait = robust
+	2629.8.9 = { birth = yes }
+	#2648.1.1 = { add_spouse = 1325010 } #Beljjw Jorhénati
+	2700.1.1 = { death = yes }
+ 	
+}
+6901011 = {
+	name = "Alfonso"
+	dynasty = 5001289 #Pásquaro
+	female = no
+	#father = 6901011
+	culture = purepecha
+	religion = sacred_heart
+	trait = skilled_tactician
+	trait = heavy_infantry_leader
+	trait = flanker
+	trait = gregarious
+	trait = brave
+	trait = chaste
+	trait = just
+	2588.7.12 = { birth = yes }
+	2623.1.1 = { add_spouse = 6901012 } #Imelda, daughter of the lord of Zitácuaro
+	2645.1.1 = { death = yes }
+ 	
+}
+6901012 = {
+	name = "Imelda"
+	dynasty = 5001319
+	female = yes
+	father = 6901013
+	culture = calentano
+	religion = sacred_heart
+	trait = thrifty_clerk
+	trait = chaste
+	trait = devout
+	trait = kind
+	2597.1.3 = { birth = yes }
+	2623.1.1 = { add_spouse = 6901011 } #Alfonso Pásquaro
+	2690.1.1 = { death = yes }
+ 	
+}
+6901013 = {
+	name = "Godofredo"
+	dynasty = 5001319
+	female = no
+	#father = 6901011
+	culture = calentano
+	religion = sacred_heart
+	trait = grey_eminence
+	trait = chaste
+	trait = devout
+	trait = kind
+	2575.12.27 = { birth = yes }
+	#2623.1.1 = { add_spouse = 6901011 } #Alfonso Pásquaro
+	2666.1.1 = { give_nickname = nick_the_old}
+	2670.1.1 = { death = yes }
+ 	
+}
+6901014 = {
+	name = "Felipe"
+	dynasty = 5001319
+	female = no
+	father = 6901013
+	culture = calentano
+	religion = cristo_rey
+	trait = mastermind_theologian
+	trait = brave
+	trait = administrator
+	trait = monk
+	employer = 6900002 #Prelate Nicolás
+	2601.3.30 = { birth = yes }
+	2618.1.1 = { add_spouse = 6901015 } #Margarita
+	2640.1.1 = { remove_spouse = 6901014 } Year they became nun and monk
+	2670.1.1 = { death = yes }
+ 	
+}
+6901015 = {
+	name = "Margarita"
+	#dynasty = 5001319
+	female = yes
+	#father = 6901011
+	culture = calentano
+	religion = cristo_rey
+	trait = thrifty_clerk
+	trait = devout
+	trait = gregarious
+	trait = nun
+	employer = 6900002 #Prelate Nicolás
+	2599.5.15 = { birth = yes }
+	2618.1.1 = { add_spouse = 6901014 } #Felipe Hinojosa
+	2640.1.1 = { remove_spouse = 6901014 } Year they became nun and monk
+	2670.1.1 = { death = yes }
+ 	
+}
+6901016 = {
+	name = "Felipe"
+	dynasty = 5001319
+	female = no
+	father = 6901013
+	culture = calentano
+	religion = cristo_rey
+	trait = thrifty_clerk
+	trait = diligent
+	trait = devout
+	2625.12.30 = { birth = yes }
+	2660.11.15 = { death = { death_reason = death_battle killer = 6900919 } }
+ 	
+}
+6901017 = {
+	name = "Federico"
+	dynasty = 5001325 #Ts’irari
+	female = no
+	father = 6901018
+	culture = purepecha
+	religion = cristo_rey
+	trait = elusive_shadow
+	trait = diligent
+	trait = proud
+	trait = arbitrary
+	trait = impaler
+	trait = zealous
+	trait = feeble
+	2621.12.30 = { birth = yes }
+	#2660.11.15 = { death = { death_reason = death_battle killer = 6900919 } }
+ 	
+}
+6901018 = {
+	name = "Clodoveo"
+	dynasty = 5001325 #Ts’irari
+	female = no
+	culture = purepecha
+	father = 6901021
+	religion = cristo_rey
+	trait = naive_appeaser
+	trait = craven
+	trait = proud
+	trait = strong
+	trait = wroth
+	trait = arbitrary
+	2603.1.3 = { birth = yes }
+	#2660.11.15 = { death = { death_reason = death_battle killer = 6900919 } }
+ 	
+}
+6901019 = {
+	name = "Clodomiro"
+	dynasty = 5001325 #Ts’irari
+	female = no
+	father = 6901018
+	culture = purepecha
+	religion = cristo_rey
+	trait = skilled_tactician
+	trait = patient
+	trait = diligent
+	trait = robust
+	trait = sympathy_mesoamerican_gods
+	2619.12.30 = { birth = yes }
+	#2660.11.15 = { death = { death_reason = death_battle killer = 6900919 } }
+ 	
+}
+6901020 = {
+	name = "Clotario" #Son of Federico
+	dynasty = 5001325 #Ts’irari
+	female = no
+	father = 6901017
+	culture = purepecha
+	religion = cristo_rey
+	trait = thrifty_clerk
+	trait = diligent
+	trait = devout
+	2641.12.30 = { birth = yes }
+	
+ 	
+}
+6901021 = {
+	name = "Childerico" #Founder
+	dynasty = 5001325 #Ts’irari
+	female = no
+	culture = purepecha
+	religion = cristo_rey
+	trait = flamboyant_schemer
+	trait = deceitful
+	trait = craven
+	trait = proud
+	trait = severely_injured
+	2585.1.1 = { birth = yes }
+	2636.1.1 = { death = { death_reason = death_trait } }
+ 	
 }
