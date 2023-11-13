@@ -1,4 +1,5 @@
 ###########################################
+###########################################
 #
 # Holy Order Decisions for Sons of Abraham
 #
@@ -3212,8 +3213,9 @@ decisions = {
 
 		potential = {
 			OR = {
-				religion = rust_cultist
-				religion = chrome_cultist
+				religion = phantasmic
+				religion = renaissancist
+				#religion = igerist
 			}
 			is_heretic = no
 			higher_tier_than = DUKE
@@ -3274,8 +3276,9 @@ decisions = {
 			is_playable = yes
 
 			OR = {
-				religion = rust_cultist
-				religion = chrome_cultist
+				religion = phantasmic
+				religion = renaissancist
+				#religion = igerist
 			}
 			is_heretic = no
 
@@ -3294,7 +3297,7 @@ decisions = {
 
 			is_title_active = d_iron_workers
 
-			NOT = { has_character_modifier = expelled_d_uaw }
+			NOT = { has_character_modifier = expelled_d_iron_workers }
 
 			has_dlc = "Sons of Abraham"
 
@@ -3368,8 +3371,9 @@ decisions = {
 			is_playable = yes
 
 			OR = {
-				religion = rust_cultist
-				religion = chrome_cultist
+				religion = phantasmic
+				religion = renaissancist
+				#religion = igerist
 			}
 
 			is_heretic = no
@@ -3389,7 +3393,7 @@ decisions = {
 
 			is_title_active = d_iron_workers
 
-			has_landed_title = k_allegheny
+			has_landed_title = k_florida
 
 			has_dlc = "Sons of Abraham"
 
