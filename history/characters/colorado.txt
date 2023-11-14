@@ -766,6 +766,7 @@
 	trait=temperate
 	father=1875045
 	2478.11.22= {birth=yes
+	2496.1.1={add_spouse=1875096}
 	give_nickname=nick_the_avenger}
 	2545.1.1= {death=yes}
 }
@@ -781,6 +782,7 @@
 	trait=proud
 	trait=chaste
 	trait=depressed
+	father=1875096
 	mother=1875047
 	2504.2.2= {birth=yes}
 	2557.1.1= {death=yes}
@@ -798,8 +800,9 @@
 	trait=kind
 	trait=humble
 	trait=just
-	father=1875048
-	2525.5.25= {birth=yes}
+	father=1875096
+	mother=1875047
+	2505.5.25= {birth=yes}
 	2577.1.1= {death=yes}
 }
 
@@ -1463,8 +1466,131 @@
 	2658.1.1={add_spouse=1876006}
 	2700.1.1={death=yes}
 }
-
-
-
-
-
+1875095 = { 
+		name="Kenny"
+        dynasty=5001184
+        culture=coloradan
+        religion=montane
+        trait=fortune_builder
+        trait=shrewd
+        trait=content
+        trait=diligent
+        trait=humble
+        trait=charitable
+        trait=chaste
+        father=1875042
+        2421.10.31= {birth=yes}
+        2501.1.1={death=yes}
+}
+1875096 = { name="Carl"
+        dynasty=5001184
+        culture=coloradan
+        religion=montane
+        trait=tough_soldier
+        trait=scarred_high
+        trait=maimed
+        trait=proud
+        trait=ambitious
+        trait=brave
+        trait=kind
+        father=1875095
+        2459.10.31= {birth=yes}
+		2496.1.1={add_spouse=1875047}
+        2510.1.1= {death=yes}
+}
+#Marceline Silbern
+1875097= { 
+	name="Marceline"
+    dynasty=5001184
+    culture=coloradan
+    religion=montane
+	female=yes
+    trait=charismatic_negotiator
+    trait=celibate
+    trait=kind
+    trait=humble
+    trait=mountain_mother
+    mother=1875047
+    father=1875096
+    2507.1.1= {birth=yes}
+    2601.1.1= {death=yes}
+}
+1875098= { 
+		name="Cole"
+        dynasty=5001184
+        culture=coloradan
+        religion=montane
+        trait=scholarly_theologian
+        trait=zealous
+        trait=chaste 
+        trait=kind
+        trait=humble
+        mother=1875047
+        father=1875096
+        2506.1.1= {birth=yes}
+        2580.1.1= {death=yes}
+}
+1875099= { name="Amy"
+        dynasty=5001184
+        culture=coloradan
+             female=yes
+        religion=montane
+        trait=martial_cleric
+        trait=chaste
+        trait=scholar
+        trait=genius
+             trait=shy
+             father=1875098
+        2575.1.1= {birth=yes}
+        2620.1.1= {death={death_reason=death_execution_hanging}}
+}
+1875100= { name="Damon"
+        dynasty=5001184
+        culture=coloradan
+        religion=montane
+        trait=underhanded_rogue
+        trait=gregarious
+        trait=humble
+        trait=diligent
+             trait=content
+             father=1875098
+        2576.1.1= {birth=yes}
+        2635.1.1= {death=yes}
+}
+1875101= { name="Lana"
+        dynasty=5001184
+             female=yes
+        culture=coloradan
+        religion=montane
+             trait=fair
+             trait=rowdy
+             trait=playful
+             trait=curious
+             father=1875098
+        2577.1.1= {birth=yes}
+        2595.1.1= {death=yes}
+}
+#Anna Silbern the Last Landed Silbern
+1875102= { name="Anna"
+    dynasty=5001184 # Silbern
+    culture=coloradan
+    religion=montane
+	female=yes
+    martial=4
+    diplomacy=3
+    stewardship=5
+    intrigue=5
+    learning=3
+    trait=charismatic_negotiator
+    trait=scarred_high
+    trait=robust
+    trait=devout
+    trait=ambitious
+    trait=chaste
+    trait=diligent
+    trait=proud
+    trait=wroth
+    father=1875100
+    2628.1.1={birth=yes}
+    2700.1.1={death=yes}
+}
