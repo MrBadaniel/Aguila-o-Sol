@@ -185,7 +185,7 @@
 			has_dlc="Holy Fury"
 		}
 	}
-	2350.1.1={death=yes}
+	2346.1.1={death=yes}
 	
 }
 4000004={
@@ -197,7 +197,9 @@
 	trait=high_anglican
 	trait=just
 	trait=dead_crown_ontario
-	#trait=born_in_the_purple
+	trait=genius
+	trait=ambitious
+	give_nickname=nick_the_magnificent
 	2301.1.1={birth=yes}
 	2375.1.1={death=yes}
 	
@@ -270,28 +272,28 @@
 	trait=dead_crown_ontario
 	#trait=born_in_the_purple
 	trait=tough_soldier
+	trait=cancer
 	give_nickname=nick_the_avenger
 	2400.1.1={birth=yes}
-	2475.1.1={death=yes}
+	2442.4.11={death=yes}
 	
 }
-#4000009={
-#	name="John"
-#	dynasty=1867101 # Cornouailles
-#	culture=ontarian
-#	religion=high_church
-#	father=4000007
-#	trait=born_in_the_purple
-#	2400.1.1={birth=yes}
-#    2425.1.1={
-#		death = {		
-#			death_reason = death_battle
-#				killer=4000008
-#		}
-#	}
-#}
+4000009={
+	name="John"
+	dynasty=1867101 # Cornouailles
+	culture=ontarian
+	religion=high_church
+	father=4000008
+	2422.11.1={birth=yes}
+    2464.2.14={
+		death = {		
+			death_reason = death_battle
+				#killer=4000008
+		}
+	}
+}
 4000010={
-	name="Robert"
+	name="Theodore"
 	dynasty=1867101 # Cornouailles
 	culture=ontarian
 	religion=high_church
@@ -299,7 +301,7 @@
 	father=4000008
 	#trait=born_in_the_purple
 	trait=dead_crown_ontario
-	2416.1.1={birth=yes}
+	2432.1.1={birth=yes}
 	2478.1.1={death=yes}
 	
 }
@@ -316,17 +318,23 @@
 	2485.1.1={death=yes}
 	
 }
-#4000012={
-#	name="Theodore"
-#	dynasty=1867101 # Cornouailles
-#	culture=ontarian
-#	religion=high_church
-#	father=4000008
-#	trait=born_in_the_purple
-#	2432.1.1={birth=yes}
-#	2486.1.1={death=yes}
-#	
-#}
+##### FOR EARLY KINGS BETWEEN THEODORE 1 AND ROBERT 1
+4000012={
+	name="Nicholas"
+	dynasty=1867101 # Cornouailles
+	culture=ontarian
+	religion=high_church
+	father=4000003
+	trait=charitable
+	trait=shrewd
+	trait=just
+	trait=kind
+	trait=is_fat
+	give_nickname=nick_the_generous
+	2295.1.1={birth=yes}
+	2357.1.1={death=yes}
+	
+}
 #4000013={
 #	name="Theodore"
 #	dynasty=1867101 # Cornouailles
@@ -566,7 +574,7 @@
 	}
 }
 4000028={
-	name="Raymond"
+	name="Theodore"
 	dynasty=90000031 # ryerson
 	culture=ontarian
 	religion=high_church

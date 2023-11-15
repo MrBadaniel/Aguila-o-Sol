@@ -7,7 +7,7 @@
 namespace = disneymod
 
 narrative_event = {
-	id = consumer.4
+	id = disneymod.1
 	title = EVTNAME200
 	picture = GFX_evt_battle
 	border = GFX_event_narrative_frame_war
@@ -36,7 +36,7 @@ narrative_event = {
 		}
 	}
 	desc = {
-		text = EVTDESC_acquisition_campaign_christ
+		text = EVTDESC_acquisition_campaign_walt
 		trigger = {
 			new_character = {
 				religion_group = christian
@@ -85,6 +85,74 @@ narrative_event = {
 			new_character = {
 				religion = PREV
 				NOT = { character = PREV }
+			}
+		}
+	}
+}
+
+## Phantasmic Acquisitions ##
+
+# THE START OF THE ACQUISITIONS
+narrative_event = {
+	id = disneymod.2
+	title = EVTNAME_disneys_america
+	desc = EVTDESC_haymarket
+	picture = GFX_event_normal_frame_war
+	border = GFX_event_narrative_frame_religion
+	
+	major = yes
+	
+	show_ROOT = no
+	hide_new = yes
+	hide_from = yes
+	
+	only_playable = yes
+	min_age = 16
+	
+	trigger = {
+		NOT = { #immersion-breaking
+			has_alternate_start_parameter = { key = religion_names value = random }
+		}
+		has_landed_title = d_mouse #fires for the CEO
+		NOT = { has_global_flag = phantasmic_acquisitions_unlocked }
+		
+		93 = { # Disney's Americas
+			NOT = { owner = { religion = phantasmic } }
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 3
+	}
+	
+	immediate = {
+		set_global_flag = phantasmic_acquisitions_unlocked
+	}
+	
+	option = {
+		name = EVTOPTA_haymarket
+		trigger = {
+			religion = phantasmic
+		}
+	}
+	
+	option = {
+		name = EVTOPTB_haymarket
+		trigger = {
+			OR = {
+			religion_group = oldworld
+			culture = gulfard
+			}
+		}
+	}
+	
+	option = {
+		name = EVTOPTC_haymarket
+		trigger = {
+			NOR = {
+				religion = phantasmic
+				religion_group = oldworld
+				culture = gulfard
 			}
 		}
 	}

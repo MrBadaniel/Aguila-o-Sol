@@ -27578,8 +27578,9 @@ character_event = {
 	
 	trigger = {	
 		OR = {
-			religion = rust_cultist
-			religion = chrome_cultist
+			religion = phantasmic
+			religion = renaissancist
+			#religion = igerist
 		}
 		
 		is_heretic = no
@@ -27603,8 +27604,9 @@ character_event = {
 			holy_order = no
 			is_heretic = no
 			OR = {
-				religion = rust_cultist
-				religion = chrome_cultist
+				religion = phantasmic
+				religion = renaissancist
+				#religion = igerist
 			}
 			liege = {
 				holy_order = no
@@ -27854,8 +27856,9 @@ character_event = {
 	
 	trigger = {
 		OR = {
-			religion = rust_cultist
-			religion = chrome_cultist
+			religion = phantasmic
+			religion = renaissancist
+			#religion = igerist
 		}
 	
 		is_heretic = no
@@ -27872,8 +27875,8 @@ character_event = {
 		any_demesne_province = {
 			has_empty_holding = yes
 			OR = {
-				region = custom_great_lakes
-				region = world_northeast
+				region = world_gulf_coast
+				region = custom_mississippi_river
 			}
 		}
 
@@ -27926,8 +27929,8 @@ character_event = {
 			limit = {
 				has_empty_holding = yes
 				OR = {
-					region = custom_great_lakes
-					region = world_northeast
+				region = world_gulf_coast
+				region = custom_mississippi_river
 				}
 			}
 			province_event = {
