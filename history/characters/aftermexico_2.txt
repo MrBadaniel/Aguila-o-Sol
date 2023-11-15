@@ -2916,7 +2916,7 @@
 	name= "Gonzalo"
 	dynasty = 5001322 # O'tacú de Maspuerta
 	religion=sacred_heart
-	culture=chilango
+	culture=tapatio
 	father = 6900691
 	mother = 6900700
 	martial = 15
@@ -2930,15 +2930,16 @@
 	trait = robust
 	trait = unyielding_leader
 	trait = severely_injured
-	2648.11.20 = {birth=yes}
+	2648.11.20 = {birth=yes
+					culture = chilango}
 	2662.1.1 = { add_spouse = 6900697}	
 	
 }
 6900691 = {
 	name= "Bartolomeo"
 	dynasty = 5001322 # O'tacú de Maspuerta
-	religion=sacred_heart
-	culture=chilango
+	religion=sol_invicta
+	culture=tapatio
 	martial = 8
 	trait = tough_soldier
 	trait = strong
@@ -2959,8 +2960,8 @@
 6900692 = {
 	name= "Radamel"
 	dynasty = 5001322 # O'tacú de Maspuerta
-	religion=sacred_heart
-	culture=chilango
+	religion=sol_invicta
+	culture=tapatio
 	father = 6900691
 	mother = 6900700
 	martial = 5
@@ -2981,14 +2982,14 @@
 	name= "Gedeón"
 	dynasty = 5001322 # O'tacú de Maspuerta
 	religion=sacred_heart
-	culture=chilango
+	culture=tapatio
 	father = 6900690
 	mother = 6900697
 	martial = 5
 	trait = strong
 	trait = kind
 	trait = craven
-	2664.5.18 = {birth=yes}
+	2664.5.18 = {birth=yes culture = chilango}
 	2666.7.2 = { effect = { add_guardian = 6900694} }
 		
 }
@@ -3107,7 +3108,7 @@
     2645.1.1 = { add_spouse = 6900691}
 	2655.10.1 =  {death = {
 		death_reason = death_execution
-				#killer = 6901017 #Freezer
+				killer = 6901017 #Freezer
 		}
 	}
 }
@@ -3371,6 +3372,89 @@
 	2660.11.15 = { death = { death_reason = death_battle_duel killer=1325002}}
 }
 
+6900925 = {
+	name= "Vinicio" 
+	dynasty= 5001326 #Verdaguer
+	culture=tapatio
+	religion=cristo_rey
+	father = 6900926
+	trait = flamboyant_schemer
+	trait = robust
+	trait = patient
+	trait = cruel
+	trait = just
+	2609.1.1 = { birth = yes}
+	2655.11.1 = { death = { death_reason = death_murder_unknown killer=6901017}}
+}
+6900926 = {
+	name= "Vinicio"
+	dynasty= 5001326 #Verdaguer
+	culture=tapatio
+	religion=sol_invicta
+	father = 6900927
+	2577.1.1 = { birth = yes}
+	2630.1.1 = { death = yes}
+}
+6900927 = {
+	name= "Vinicio" #Founder
+	dynasty= 5001326 #Verdaguer
+	culture=tapatio
+	religion=sol_invicta
+	2552.1.1 = { birth = yes}
+	2615.11.1 = { death = yes}
+}
+6900928 = {
+	name= "Vinicio"
+	dynasty= 5001326 #Verdaguer
+	culture=tapatio
+	religion=sol_invicta
+	father = 6900925
+	employer = 6901017
+	trait = brilliant_strategist
+	trait = strong
+	trait = proud
+	trait = cruel
+	trait = patient
+	trait = stubborn
+	trait = deceitful
+	trait = duelist
+	trait = quick
+	trait = envious
+	trait = ambitious
+	2642.7.12 = { birth = yes}
+}
+6900929 = {
+	name= "Tadeo"
+	dynasty= 5001326 #Verdaguer
+	culture=tapatio
+	religion=cristo_rey
+	father = 6900925
+	employer = 1810006
+	trait = misguided_warrior
+	trait = kind
+	trait = content
+	trait = humble
+	2650.9.21 = { birth = yes}
+	2665.10.1 = { effect = {add_lover = 6900930} }
+	2666.2.14 = { add_spouse = 6900930 }
+}
+
+6900930 = {
+	name= "Griselda"
+	female = yes
+	dynasty= 1542021 #Minerva
+	culture=tapatio
+	religion=cristo_rey
+	father = 6900508
+	employer = 1810006
+	trait = thrifty_clerk
+	trait = kind
+	trait = content
+	trait = humble
+	2650.9.21 = { birth = yes}
+	2665.10.1 = { effect = {add_lover = 6900929} }
+	2666.2.14 = { add_spouse = 6900929 }
+}	
 ###New Characters in Michoacan
 6901000 = {
 	name = "Hipólita"
@@ -3525,7 +3609,8 @@
 	name = "Felipe"
 	dynasty = 5001319
 	female = no
-	father = 6901013
+	father = 6901014
+	mother = 6901015
 	culture = calentano
 	religion = cristo_rey
 	trait = thrifty_clerk
@@ -3549,6 +3634,7 @@
 	trait = impaler
 	trait = zealous
 	trait = feeble
+	trait = cruel
 	2621.12.30 = { birth = yes }
 	#2660.11.15 = { death = { death_reason = death_battle killer = 6900919 } }
  	
@@ -3614,4 +3700,33 @@
 	2585.1.1 = { birth = yes }
 	2636.1.1 = { death = { death_reason = death_trait } }
  	
+}
+6901022 = {
+	name = "Dorian" 
+	female = no
+	culture = huichol
+	religion = cristo_rey
+	employer = 6901017
+	trait = tough_soldier
+	trait = sturdy
+	trait = cruel
+	trait = proud
+	trait = honest
+	2637.1.1 = { birth = yes }
+	2660.1.1 = { effect = {add_friend = 6901017 } }
+
+}
+6901023 = {
+	name = "Zabulón" 
+	female = no
+	culture = occidental
+	religion = cristo_rey
+	employer = 6901017
+	trait = flamboyant_schemer
+	trait = robust
+	trait = fair
+	trait = proud
+	trait = cruel
+	2641.1.1 = { birth = yes }
+	2660.1.1 = { effect = {add_friend = 6901017 } }
 }
