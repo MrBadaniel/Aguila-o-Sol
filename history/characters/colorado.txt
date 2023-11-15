@@ -889,7 +889,7 @@
 	2618.10.1= {death=yes}
 }
 
-1875054= { name="Carson"
+1875054= { name="Hudson"
 	dynasty=5001185
 	culture=coloradan
 	religion=montane
@@ -901,6 +901,7 @@
 	trait=dull
 	father=1875044
 	2445.8.11= {birth=yes}
+	#2512.1.1={add_spouse=1875047}
 	2501.10.10= {death=yes}
 }
 
@@ -920,7 +921,7 @@
 	2616.10.1={death=yes}
 }
 
-1875056= { name="Bessemer"
+1875056= { name="Mason"
 	dynasty=5001185
 	culture=coloradan
 	religion=montane
@@ -930,6 +931,7 @@
 	trait=thrifty_clerk
 	father=1875054
 	2471.10.2= {birth=yes}
+	2512.1.1={add_spouse=1875047}
 	2529.11.4= {death=yes}
 }
 
@@ -945,6 +947,7 @@
 	trait=stubborn
 	trait=scholarly_theologian
 	father=1875056
+	mother=1875047
 	2501.4.22= {birth=yes}
 	2561.6.19= {death=yes}
 }
@@ -1593,4 +1596,29 @@
     father=1875100
     2628.1.1={birth=yes}
     2700.1.1={death=yes}
+}
+#Percy Silbern (2499-2501, Claimant)
+1875103= { name="Percy"
+        dynasty=5001184
+        culture=coloradan
+        religion=montane
+        trait=skilled_tactician
+        trait=kinslayer
+        trait=cynical
+        trait=ambitious
+        trait=proud
+        trait=diligent
+        trait=robust
+        father=1875045
+        2478.6.15= {birth=yes}
+        2501.1.1= {death={death_reason=death_battle}}
+}
+#Luke Silbern (2501-2502)
+1875104= { name="Percy"
+        dynasty=5001184
+        culture=coloradan
+        religion=montane
+        father=1875103
+        2498.6.15= {birth=yes}
+        2502.1.1= {death=yes}
 }
