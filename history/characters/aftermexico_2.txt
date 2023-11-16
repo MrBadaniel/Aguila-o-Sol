@@ -3232,16 +3232,6 @@
 	2663.12.31 = { effect = { add_lover = 6900905 } }
 		
 }
-6900909 = {
-	name= "Prisco"
-	dynasty= 5001272 #Árpad
-	culture=hungarian
-	religion=cristo_rey
-	2521.1.1 = {birth=yes}
-	2560.1.1 = {give_nickname = nick_the_culture}
-	2561.1.1 = {culture = tapatio }
-	2585.1.1 = { death = yes }
-}
 
 ##De la Torre 1542048
 6900910 = {
@@ -3266,6 +3256,7 @@
 	trait = diligent
 	2554.1.1 = {birth=yes}
 	2595.1.1 = { give_nickname = nick_the_architect }
+	2588.1.1 = { add_spouse = 6900939 } #Elizabeth Árpad
 	2616.1.1 = { death = { death_reason = death_hunting_accident}}
 }
 6900912 = {
@@ -3288,6 +3279,7 @@
 	culture=tapatio
 	religion=cristo_rey
 	father = 6900911
+	mother = 6900939
 	trait = tough_soldier
 	trait = experimenter
 	trait = zealous
@@ -3336,18 +3328,20 @@
 	dynasty= 1542048 #De la Torre
 	culture=tapatio
 	father = 6900911
+	mother = 6900939
 	religion=cristo_rey
 	trait = fortune_builder
 	trait = brave
 	trait = cavalry_leader
 	2599.1.1 = { birth = yes}
-	2621.1.1 = { death = {  death_reason = death_battle killer=1325000}}
+	2619.7.19 = { death = {  death_reason = death_battle_ojinaga }}
 }
 6900918 = {
 	name= "Luis"
 	dynasty= 1542048 #De la Torre
 	culture=tapatio
 	father = 6900911
+	mother = 6900939
 	religion=cristo_rey
 	trait = underhanded_rogue
 	trait = zealous
@@ -3368,7 +3362,7 @@
 	trait = gregarious
 	trait = cavalry_leader
 	2639.1.1 = { birth = yes}
-	2657.1.1 = { give_nickname = nick_the_gallant }
+	2657.1.1 = { give_nickname = nick_el_gallardo }
 	2660.11.15 = { death = { death_reason = death_battle_duel killer=1325002}}
 }
 
@@ -3455,6 +3449,124 @@
 	2665.10.1 = { effect = {add_lover = 6900929} }
 	2666.2.14 = { add_spouse = 6900929 }
 }	
+6900931 = {
+	name= "Marta"
+	female = yes
+	dynasty= 1542021 #Minerva
+	culture=tapatio
+	religion=cristo_rey
+	father = 6900508
+	trait = fortune_builder
+	trait = ambitious
+	trait = honest
+	trait = just
+	trait = greedy
+	2628.5.31 = { birth = yes}
+	2650.1.1 = { add_spouse = 6900935 }
+}	
+
+6900935 = {
+	name= "Federico"
+	dynasty= 5001272 #Árpad
+	father = 6900936
+	culture=deitsch
+	religion=cristo_rey
+	give_nickname = nick_el_bombardero
+	trait = skilled_tactician
+	trait = siege_leader
+	trait = diligent
+	trait = humble
+	2625.1.1 = {birth=yes
+				culture = tapatio
+	}
+	2650.1.1 = { add_spouse = 6900931 }
+}
+6900936 = {
+	name= "Federico"
+	dynasty= 5001272 #Árpad
+	father = 6900937
+	mother = 6900938
+	culture=deitsch
+	religion=cristo_rey
+	2583.1.1 = {birth=yes
+				culture = tapatio
+				}
+	2660.1.23 = { death = yes }
+}
+6900937 = {
+	name= "Prisco"
+	dynasty= 5001272 #Árpad
+	culture=deitsch
+	religion=cristo_rey
+	2537.1.1 = {birth=yes}
+	2560.1.1 = {give_nickname = nick_the_culture}
+	2561.1.1 = {culture = tapatio }
+	2595.1.1 = { death = yes }
+}
+6900938 = {
+	name= "Ersébet"
+	female = yes
+	#dynasty= 5001272 #Árpad
+	culture=deitsch
+	religion=cristo_rey
+	2545.1.1 = {birth=yes}
+	2639.1.1 = { death = yes }
+}
+6900939 = {
+	name= "Elizabeth"
+	female = yes
+	dynasty= 5001272 #Árpad
+	culture=deitsch
+	father = 6900937
+	mother = 6900938
+	religion=cristo_rey
+	trait = thrifty_clerk
+	trait = gardener
+	trait = kind
+	trait = nun
+	trait = depressed
+	trait = celibate
+	2575.1.1 = {birth=yes
+	culture = tapatio
+	}
+	2588.1.1 = { add_spouse = 6900911 } #Javier the Architect
+	2626.1.1 = { death = { death_reason = death_trait}}
+}
+6900940 = {
+	name= "Prisco"
+	female = no
+	dynasty= 5001272 #Árpad
+	culture=deitsch
+	father = 6900936
+#	mother = 6900938
+	religion=cristo_rey	
+	trait = skilled_tactician
+	trait = robust
+	trait = zealous
+	trait = chaste
+	trait = gregarious
+	2601.7.3 = {birth=yes
+	culture = tapatio
+	}
+	2619.7.19 = { death = { death_reason = death_battle_ojinaga } }
+}
+6900941 = {
+	name= "Andrés"
+	female = no
+	dynasty= 5001272 #Árpad
+	culture=deitsch
+	father = 6900935
+	mother = 6900931
+	religion=cristo_rey	
+	trait = skilled_tactician
+	trait = robust
+	trait = zealous
+	trait = chaste
+	trait = gregarious
+	2655.9.22 = {birth=yes
+	culture = tapatio
+	}
+}
 ###New Characters in Michoacan
 6901000 = {
 	name = "Hipólita"
@@ -3635,6 +3747,7 @@
 	trait = zealous
 	trait = feeble
 	trait = cruel
+	give_nickname = nick_el_frio
 	2621.12.30 = { birth = yes }
 	#2660.11.15 = { death = { death_reason = death_battle killer = 6900919 } }
  	
