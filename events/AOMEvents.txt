@@ -1397,35 +1397,40 @@ character_event = {
 	}
 	
 	option = {
-		name = EVTOPTA_AoM.300 ## Follow the King/Emperor's branch ##
+		name = EVTOPTA_AoM.300 ## force the King/Emperor's branch ##
 
 		any_realm_character = { 
 			limit = { religion = high_church }
 			character_event = { id = AoM.301 days = 3 } 
 			}
 		set_character_flag = enforced_branch
-		add_character_modifier = { name = enforced_branch_modifier = -1 }
+		add_character_modifier = { name = high_church_enforced_edict duration = -1 }
 		ai_chance = {
-			factor = 10
-			modifier = { factor = 2	learning = 10 }
+			factor = 70
+		#	modifier = { factor = 20	zealous }
+		#	modifier = { factor = 10	devout }
+		#	modifier = { factor = 5	proud }
+		#	modifier = { factor = 5	brave }
 			}
 		
 	}
 	option = {
 		name = EVTOPTB_AoM.300 ## Toleration ##
-		add_character_modifier = { name = high_anglican_toleration = -1 }
+		add_character_modifier = { name = high_church_toleration_edict	duration = -1 }
 		set_character_flag = toleration_branch
 		ai_chance = {
-			factor = 10
-			modifier = { factor = 2	learning = 5 }
-			modifier = { factor = 2	diplomacy = 5 }
-		}
+			factor = 20
+			#modifier = { factor = 20	cynical }
+			#modifier = { factor = 10	kind }
+			#modifier = { factor = 5	humble }
+			#modifier = { factor = 5	just }
+			}
 	}
 	option = {
 		name = EVTOPTC_AoM.300 ## Nevermind, not picking ##
 		ai_chance = {
 			factor = 10
-			modifier = { factor = 1.5 diplomacy = 10 }
+			#modifier = { factor = 1.5 diplomacy = 10 }
 		}
 	}
 }
@@ -1445,7 +1450,14 @@ character_event = { #event to vassals to give them the option to accept or rejec
 						#	NOT = { trait = zealous }
 						}    
 					factor = 75
-					#modifier = { factor = 1.5 diplomacy = 10 }
+					modifier = { factor = 1.5 trait = cynical }
+					#modifier = { factor = 0.5 trait = devout }
+					mult_modifier = { factor = 1.5 enforce_branch_trigger = yes }
+					mult_modifier = { 
+									factor = 1.5
+									enforce_branch_trigger = yes 
+									trait = zealot        
+									}
 					}
 		#		opinion = {
 		#				modifier = supported_high_anglican_branch
@@ -1466,7 +1478,13 @@ character_event = { #event to vassals to give them the option to accept or rejec
 						#NOT = { trait = cynical }
 					}     
 					factor = 25
-					#modifier = { factor = 1.5 diplomacy = 10 }
+					modifier = { factor = 0.1 trait = cynical }
+					#modifier = { factor = 1.5 trait = devout }
+					mult_modifier = { 
+									factor = 1.5
+									enforce_branch_trigger = no
+									trait = zealot        
+									}
 				}
 			}	 
 }
