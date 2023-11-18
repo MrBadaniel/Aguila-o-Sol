@@ -1480,6 +1480,11 @@ character_event = { #event to vassals to give them the option to accept or rejec
 					factor = 25
 					modifier = { factor = 0.1 trait = cynical }
 					#modifier = { factor = 1.5 trait = devout }
+					mult_modifier = { 
+									factor = 1.5
+									enforce_branch_trigger = no
+									trait = zealot        
+									}
 				}
 			}	 
 }
