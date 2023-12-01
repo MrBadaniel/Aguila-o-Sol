@@ -3300,78 +3300,87 @@ high_church_elective = {
 
 		FROM = {
 			
-			# Either the candidate is in the realm, or is landless, or the title is independent, or the realm of the title does NOT have protected inheritance
+#			# Either the candidate is in the realm, or is landless, or the title is independent, or the realm of the title does NOT have protected inheritance
 			religion = high_church 
 			NOT = {
 			is_landed = yes
 			is_adult = no
 			is_female = yes
 			}
-	#		always = yes
-	#		is_vassal_or_below_of = ROOT
-	#		OR = { is_vassal_or_below_of = ROOT }
-			OR = { any_courtier = yes } #### MIGHT NEED TO HASHTAG OUT!!!! ############################
-			OR = {
-				same_realm = ROOT
-				is_ruler = no
-
-				ROOT_FROMFROM = {
-					OR = {
-						holder_scope = {
-							independent = yes
-						}
-
-						NOR = {
-							has_law = out_of_realm_inheritance_law_1
-							has_law = crown_authority_3
-							has_law = crown_authority_4
-						}
-					}
-				}
+			OR = { 
+			AND = {	same_realm = ROOT }
+#				any_courtier = yes			
 			}
-			OR = {
-				has_minor_title = title_high_church_deacon
-
-			
-			}
-			OR = {
-				# Title claimant
-				has_claim = ROOT_FROMFROM
-				
-				#Has high_church_bishop_heir trait
-				trait = high_church_bishop_heir
-				
-				# Family relations
-				trigger_if = {
-					limit = { is_close_relative = ROOT }
-
-					OR = {
-						dynasty = ROOT
-
-						AND = {
-							is_landed = yes
-							higher_real_tier_than = BARON
-						}
-					}
-				}
-
-				trigger_if = {
-					limit = {
-						# Either defacto direct vassal, or independent ruler who is dejure vassal
-						OR = {
-							vassal_of = ROOT
-
-							AND = {
-								independent = yes
-
-								any_dejure_liege = {
-									title = FROMFROM
-								}
-							}
-						}
-					}
-
-					# Tier requirements
+#			
+#			limit = {
+#			OR = { de_facto_liege = FROMFROM }  # something like this to limit it to courtiers of the liege
+#			any_courtier = yes
+#			}
+#			always = yes
+#			is_vassal_or_below_of = ROOT
+#			OR = { is_vassal_or_below_of = ROOT }
+#			OR = { any_courtier = yes } #### MIGHT NEED TO HASHTAG OUT!!!! ############################
+#			OR = {
+#				same_realm = ROOT
+#				is_ruler = no
+#
+#				ROOT_FROMFROM = {
+#					OR = {
+#						holder_scope = {
+#							independent = yes
+#						}
+#
+#						NOR = {
+#							has_law = out_of_realm_inheritance_law_1
+#							has_law = crown_authority_3
+#							has_law = crown_authority_4
+#						}
+#					}
+#				}
+#			}
+#			OR = {
+#				has_minor_title = title_high_church_deacon
+#
+#			
+#			}
+#			OR = {
+#				# Title claimant
+#				has_claim = ROOT_FROMFROM
+#				
+#				#Has high_church_bishop_heir trait
+#				trait = high_church_bishop_heir
+#				
+#				# Family relations
+#				trigger_if = {
+#					limit = { is_close_relative = ROOT }
+#
+#					OR = {
+#						dynasty = ROOT
+#
+#						AND = {
+#							is_landed = yes
+#							higher_real_tier_than = BARON
+#						}
+#					}
+#				}
+#
+#				trigger_if = {
+#					limit = {
+#						# Either defacto direct vassal, or independent ruler who is dejure vassal
+#						OR = {
+#							vassal_of = ROOT
+#
+#							AND = {
+#								independent = yes
+#
+#								any_dejure_liege = {
+#									title = FROMFROM
+#								}
+#							}
+#						}
+#					}
+#
+#					# Tier requirements
 #					OR = {
 #						# Or Duke-tier...
 #						higher_real_tier_than = COUNT
@@ -3388,24 +3397,26 @@ high_church_elective = {
 #							is_landed = yes
 #						}
 #					}
-				}
-			}
-
-			# Candidate should not be a landless Courtier who is about to inherit a Theocracy or Republic
+#				}
+#			}
+#
+#			# Candidate should not be a landless Courtier who is about to inherit a Theocracy or Republic
 			trigger_if = {
 				limit = {
 					any_heir_title = {
 						OR = {
 							is_republic = yes
-#							is_theocracy = yes
+							is_theocracy = yes
+							is_feudal = yes
+							is_tribal = yes
 						}
 					}
 				}
 
-#				is_landed = yes
+				is_landed = yes
 				is_landed = no
 				is_republic = no
-#				is_theocracy = no
+				is_theocracy = no
 			}
 
 			# If the current ruler controls the religion, candidates must be of the same religion
@@ -3413,17 +3424,17 @@ high_church_elective = {
 				limit = { ROOT = { controls_religion = yes } }
 				religion = high_church
 			}
-
+#
 #			trigger_if = {
 #				limit = { trait = bastard }
 #				is_ruler = yes
 #			}
-
+#
 #			is_ascetic_trigger = no
-			is_theocracy = no
-			is_republic = no
-
-			NOR = {
+#			is_theocracy = no
+#			is_republic = no
+#
+#			NOR = {
 				# Uncommenting this condition provokes that a ruler's son is not a valid candidate if the parent is married to the ruler and a candidate
 				# mother = {
 				#	is_alive = yes
@@ -3435,14 +3446,15 @@ high_church_elective = {
 				#	is_married = ROOT
 				#	parent_for_elective_succession_trigger = yes
 				# }
-
-				trait = cat
+#
+#				trait = cat
 #				trait = disinherited
-				trait = horse
+#				trait = horse
 #				trait = eunuch
-				trait = crusader_king
-				trait = crusader_queen
-				character = ROOT # Not the current ruler
-			}
-		}
-	}
+#				trait = crusader_king
+#				trait = crusader_queen
+#				character = ROOT # Not the current ruler
+##			}
+	#	}
+	#}
+}

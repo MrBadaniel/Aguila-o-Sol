@@ -1501,3 +1501,99 @@ character_event = { #on birth event to maintain for newborns
 	}
 	enforce_branch_on_birth_effect = yes
 }
+
+
+######## Anglican Investiture Maintaince Events
+
+character_event = {
+  #Basic event information
+  id = AoM.350
+
+is_triggered_only = yes
+hide_window = yes
+  #Fast event triggers
+		trigger = {
+			#Event eligibility condition block
+			is_theocracy = yes
+			religion = high_church
+		}
+  immediate = {
+    #Command block executed once the target is eligible, but before displaying the event
+		primary_title ={
+					 add_law = {
+							   law= succ_high_church_elective
+								cooldown = no
+								opinion_effect = no
+					}
+		}  
+	}
+}
+character_event = {
+  #Basic event information
+  id = AoM.351
+
+is_triggered_only = yes
+hide_window = yes
+  #Fast event triggers
+		trigger = {
+			#Event eligibility condition block
+			is_theocracy = yes
+			religion = high_church
+		}
+  immediate = {
+    #Command block executed once the target is eligible, but before displaying the event
+	primary_title ={
+				 add_law = {
+						   law= succ_high_church_elective
+							cooldown = no
+							opinion_effect = no
+				}
+	}
+  }
+}
+character_event = {
+  #Basic event information
+  id = AoM.352
+
+is_triggered_only = yes
+hide_window = yes
+  #Fast event triggers
+		trigger = {
+			#Event eligibility condition block
+			is_theocracy = yes
+			religion = high_church
+		}
+  immediate = {
+    #Command block executed once the target is eligible, but before displaying the event
+		primary_title ={
+					 add_law = {
+							   law= succ_high_church_elective
+								cooldown = no
+								opinion_effect = no
+					}
+		}
+  }
+}
+character_event = {
+  #Basic event information
+  id = AoM.353
+
+is_triggered_only = yes
+hide_window = yes
+  #Fast event triggers
+		trigger = {
+			#Event eligibility condition block
+			is_theocracy = yes
+			religion = high_church
+		}
+  immediate = {
+    #Command block executed once the target is eligible, but before displaying the event
+		primary_title ={
+					 add_law = {
+							   law= succ_high_church_elective
+								cooldown = no
+								opinion_effect = no
+					}
+		}
+  }
+}
