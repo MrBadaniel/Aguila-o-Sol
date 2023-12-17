@@ -1506,98 +1506,61 @@ character_event = { #on birth event to maintain for newborns
 ######## Anglican Investiture Maintaince Events
 
 character_event = {
-  #Basic event information
-  id = AoM.350
+    id = AoM.350
 
-is_triggered_only = yes
-hide_window = yes
-  #Fast event triggers
-		trigger = {
-			#Event eligibility condition block
-			is_theocracy = yes
-			religion = high_church
-		}
-  immediate = {
-    #Command block executed once the target is eligible, but before displaying the event
-		primary_title ={
-					 add_law = {
-							   law= succ_high_church_elective
-							   law = agnatic_succession
-								cooldown = no
-								opinion_effect = no
-					}
-		}  
-	}
+    is_triggered_only = yes
+    hide_window = yes
+
+    trigger = {
+        any_demesne_title = {
+            is_law_potential = succ_high_church_elective
+        }
+    }
+
+    immediate = {
+        any_demesne_title = {
+            limit = { is_law_potential = succ_high_church_elective }
+
+            add_law = {
+                law = succ_high_church_elective
+                cooldown = no
+                opinion_effect = no
+            }
+
+            add_law = {
+                law = agnatic_succession
+                cooldown = no
+                opinion_effect = no
+            }
+        }
+    }
 }
-character_event = {
-  #Basic event information
-  id = AoM.351
 
-is_triggered_only = yes
-hide_window = yes
-  #Fast event triggers
-		trigger = {
-			#Event eligibility condition block
-			is_theocracy = yes
-			religion = high_church
-		}
-  immediate = {
-    #Command block executed once the target is eligible, but before displaying the event
-	primary_title ={
-				 add_law = {
-						   law = succ_high_church_elective
-						   law = agnatic_succession
-							cooldown = no
-							opinion_effect = no
-				}
-	}
-  }
-}
 character_event = {
-  #Basic event information
-  id = AoM.352
+    id = AoM.351
 
-is_triggered_only = yes
-hide_window = yes
-  #Fast event triggers
-		trigger = {
-			#Event eligibility condition block
-			is_theocracy = yes
-			religion = high_church
-		}
-  immediate = {
-    #Command block executed once the target is eligible, but before displaying the event
-		primary_title ={
-					 add_law = {
-							   law = succ_high_church_elective
-							   law = agnatic_succession
-								cooldown = no
-								opinion_effect = no
-					}
-		}
-  }
-}
-character_event = {
-  #Basic event information
-  id = AoM.353
+    is_triggered_only = yes
+    hide_window = yes
 
-is_triggered_only = yes
-hide_window = yes
-  #Fast event triggers
-		trigger = {
-			#Event eligibility condition block
-			is_theocracy = yes
-			religion = high_church
-		}
-  immediate = {
-    #Command block executed once the target is eligible, but before displaying the event
-		primary_title ={
-					 add_law = {
-							   law= succ_high_church_elective
-							   law = agnatic_succession
-								cooldown = no
-								opinion_effect = no
-					}
-		}
-  }
+    trigger = {
+        FROM = {
+            is_law_potential = succ_high_church_elective
+        }
+    }
+
+    immediate = {
+        FROM = {
+            add_law = {
+                law = succ_high_church_elective
+                cooldown = no
+                opinion_effect = no
+            }
+
+            add_law = {
+                law = agnatic_succession
+                cooldown = no
+                opinion_effect = no
+            }
+        }
+    }
 }
