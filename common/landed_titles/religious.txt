@@ -1897,3 +1897,26 @@ d_montane = {
 	#	Petros Philotheos Shenouda Simeon Theodoros Theophilus Timotheos Zacharias
 	#}
 }
+
+d_the_renaissancist_mouse = {
+	color={ 165 195 60 }
+	color2={ 220 220 0 }
+
+	creation_requires_capital = yes
+	
+	capital = 2600 # Disneyworld
+	
+	dignity = 100 # Counted as having this many more counties than it does
+	primary = yes
+	title = "GOD_CHAIRMAN"
+	title_female = "GOD_CHAIRWOMAN"
+	title_prefix = "STUDIO_OF"
+	short_name = yes
+	
+	religion = renaissancist
+	
+	# Controls a religion
+	controls_religion = renaissancist
+
+	dynasty_title_names = no 	# Will not be named "Seljuk", etc.
+}
