@@ -1,0 +1,34 @@
+targeted_decisions = {
+	launch_consumerist_revolt = {
+		only_playable = yes
+		ai = no
+		filter = independent_rulers
+		potential = {
+			independent = yes
+		}
+		from_potential = {
+			ai = no
+			total_years_played < 1
+			OR = {
+				NOT = { has_global_flag = consumerist_revolt_ongoing }
+				had_global_flag = { flag = consumerist_revolt_ongoing days = 9125 } # 25 years
+			}
+			NOT = { has_global_flag = consumerist_revolt_ongoing }
+		}
+		allow = {
+			ROOT = {
+				is_landed = yes
+				is_tribal = no
+				realm_size = 15
+				NOT = { religion = consumerist }
+				higher_tier_than = COUNT #DUKE
+			}
+			d_consumerist = {
+				has_holder = no
+			}
+		}
+		effect = {
+			narrative_event = { id = consumer.1 }
+		}
+	}	
+}
