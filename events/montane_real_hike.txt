@@ -1,5732 +1,2021 @@
-# 10	druids demand you switch away from agnatic succession
-# 100-200 end state hike events
-# 300-500 interestiing hike encounters
-# 500- crater lake events
-# 600 - discharge/priesthood events
+# 1		make preparations for the journey
+# 11	visit boston [69]
+# 12	visit Rocky Mountain National Park  [3]
+# 13	visit banff [27]
+# 14	visit zion [63]
+# 15	visit guarden_of_the_gods [75]
+# 20	determine relationship between pilgrim and ruler of city
+# 30	city owned by you, take a quick tour
+# 31	city owned by a lord in the same realm as you
+# 32	city owned by montane foreign lord
+# 33	city owned by infidel foreign lord
+# 40	pilgrim requests access
+# 41	pilgrim presents a gift
+# 42	pilgrim requests access diplomatically
+# 43	pilgrim cites patriotic reasons to be allowed in
+# 44	pilgrim gives inspiring speech, diplo + learning
+# 45	pilgrim demands access with threat of force
+# 46	pilgrim has been observed sneaking to holy sites
+# 50	ruler graciously allows you into the city
+# 51	ruler allows you into the city
+# 52	ruler refuses you entry into the city
+# 53	ruler attempts to have you imprisoned
+# 54	ruler attempts to have you killed
+# 56	you explore the city without the ruler knowing
+# 61	turned away from yellowstone [69]
+# 62	turned away from Rocky Mountain National Park  [3]
+# 63	turned away from banff [27]
+# 64	turned away from zion [63]
+# 65	turned away from guarden_of_the_gods [75]
+# 70	notify new friend
+# 71	notify new rival
+# 90	the pilgrimage has failed, suffer some penalties
+# 91	the pilgrimage has succeeded, gain some benefits
+# 92	clean up flags
 
-namespace = montane_real_hike
-character_event = {
-	id = montane_real_hike.1
-	desc = EVTDESC_montane_hike
-	picture = GFX_evt_rider_adventure
+# 100-106	Thanksgiving events (reusing this file because pilgrims)
 
-	is_triggered_only = yes
-	
-	option = {
-		name = EVTOPT_montane_hike_mountain
-		piety = 20
-		ai_chance = {
-			factor = 10
-			modifier = { factor = 5
-			martial >= 9 
-			}
-		}
-		add_trait = on_hike
-		character_event = { id = montane_real_hike..2 }
-		hidden_tooltip = {
-			set_character_flag = mountain_montane_hike
-		}
-	}
-	
-	option = {
-		name = EVTOPT_montane_hike_river
-		piety = 20
-		ai_chance = {
-			factor = 10
-			modifier = { factor = 5
-			stewardship >= 9 
-			}
-		}
-		add_trait = on_hike
-		character_event = { id = montane_real_hike..3 }
-		hidden_tooltip = {
-			set_character_flag = river_montane_hike
-		}
-	}
-	
-	option = {
-		name = EVTOPT_montane_hike_forest
-		piety = 20
-		ai_chance = {
-			factor = 10
-			modifier = { factor = 5
-			diplomacy >= 9 
-			}
-		}
-		add_trait = on_hike
-		character_event = { id = montane_real_hike.4 }
-		hidden_tooltip = {
-			set_character_flag = forest_montane_hike
-		}
-	}
-	
-	option = {
-		name = EVTOPT_montane_hike_giveup
-		piety = -20
-		random = {
-		chance = 25
-		add_trait = slothful
-		}
-		ai_chance = {
-			factor = 1
-		}
-	}
-}
-
-character_event = {
-	id = montane_real_hike.2
-	desc = {
-		trigger = {
-			OR = {
-				culture = cascadian
-				culture = siskiyouan
-			}
-		}
-		text = EVTDESC_montane_csc_mountain
-	}
-	desc = {
-		trigger = {
-			culture = canuck
-		}
-		text = EVTDESC_montane_cnk_mountain
-	}
-	desc = {
-		trigger = {
-			culture = inlander
-		}
-		text = EVTDESC_gaian_inl_mountain
-	}
-	desc = {
-			trigger = {
-				NOR = {
-					culture = inlander
-					culture = canuck
-					culture = cascadian
-					culture = siskiyouan
-				}
-			}
-			text = EVTDESC_montane_gnr_mountain
-	}
-	picture = GFX_evt_moonlit_mountains_hf
-
-	is_triggered_only = yes
-	
-	option = {
-		name = {
-		trigger = {
-			OR = {
-				culture = cascadian
-				culture = siskiyouan
-			}
-		}
-		text = EVTOPTA_montane_csc_mountain
-		}
-		name = {
-			trigger = {
-				culture = canuck
-			}
-			text = EVTOPTA_montane_cnk_mountain
-		}
-		name = {
-			trigger = {
-				culture = inlander
-			}
-			text = EVTOPTA_montane_inl_mountain
-		}
-		name = {
-			trigger = {
-				NOR = {
-					culture = inlander
-					culture = canuck
-					culture = cascadian
-					culture = siskiyouan
-				}
-			}
-			text = EVTOPTA_montane_gnr_mountain
-		}
-		hidden_tooltip = {
-			set_character_flag = hike_option_a
-		}
-	}
-	
-	option = {
-		name = {
-		trigger = {
-			OR = {
-				culture = cascadian
-				culture = siskiyouan
-			}
-		}
-		text = EVTOPTB_montane_csc_mountain
-		}
-		name = {
-			trigger = {
-				culture = canuck
-			}
-			text = EVTOPTB_montane_cnk_mountain
-		}
-		name = {
-			trigger = {
-				culture = inlander
-			}
-			text = EVTOPTB_montane_inl_mountain
-		}
-		name = {
-			trigger = {
-				NOR = {
-					culture = inlander
-					culture = canuck
-					culture = cascadian
-					culture = siskiyouan
-				}
-			}
-			text = EVTOPTB_montane_gnr_mountain
-		}
-		hidden_tooltip = {
-			set_character_flag = hike_option_b
-		}
-	}
-	
-	option = {
-		name = {
-			trigger = {
-				OR = {
-				culture = cascadian
-				culture = siskiyouan
-				}
-			}
-			text = EVTOPTC_montane_csc_mountain
-		}
-		name = {
-			trigger = {
-				culture = canuck
-			}
-			text = EVTOPTC_montane_cnk_mountain
-		}
-		name = {
-			trigger = {
-				culture = inlander
-			}
-			text = EVTOPTC_montane_inl_mountain
-		}
-		name = {
-			trigger = {
-				NOR = {
-					culture = inlander
-					culture = canuck
-					culture = cascadian
-					culture = siskiyouan
-				}
-			}
-			text = EVTOPTC_montane_gnr_mountain
-		}
-		hidden_tooltip = {
-			set_character_flag = hike_option_c
-		}
-	}
-	
-	option = {
-		name = {
-			trigger = {
-				OR = {
-				culture = cascadian
-				culture = siskiyouan
-				}
-			}
-			text = EVTOPTD_montane_csc_mountain
-		}
-		name = {
-			trigger = {
-				culture = canuck
-			}
-			text = EVTOPTD_montane_cnk_mountain
-		}
-		name = {
-			trigger = {
-				culture = inlander
-			}
-			text = EVTOPTD_montane_inl_mountain
-		}
-		name = {
-			trigger = {
-				NOR = {
-					culture = inlander
-					culture = canuck
-					culture = cascadian
-					culture = siskiyouan
-				}
-			}
-			text = EVTOPTD_montane_gnr_mountain
-		}
-		hidden_tooltip = {
-			set_character_flag = hike_option_d
-		}
-	}
-}
-
-character_event = {
-	id = montane_real_hike.3
-	desc = {
-		trigger = {
-			OR = {
-				culture = cascadian
-				culture = siskiyouan
-			}
-		}
-		text = EVTDESC_montane_csc_river
-	}
-	desc = {
-		trigger = {
-			culture = canuck
-		}
-		text = EVTDESC_montane_cnk_river
-	}
-	desc = {
-		trigger = {
-			culture = inlander
-		}
-		text = EVTDESC_montane_inl_river
-	}
-	desc = {
-			trigger = {
-				NOR = {
-					culture = inlander
-					culture = canuck
-					culture = cascadian
-					culture = siskiyouan
-				}
-			}
-			text = EVTDESC_montane_gnr_river
-	}
-	picture = GFX_evt_fishing
-
-	is_triggered_only = yes
-	
-	option = {
-		name = {
-		trigger = {
-			OR = {
-				culture = cascadian
-				culture = siskiyouan
-			}
-		}
-		text = EVTOPTA_montane_csc_river
-		}
-		name = {
-			trigger = {
-				culture = canuck
-			}
-			text = EVTOPTA_montane_cnk_river
-		}
-		name = {
-			trigger = {
-				culture = inlander
-			}
-			text = EVTOPTA_montane_inl_river
-		}
-		name = {
-			trigger = {
-				NOR = {
-					culture = inlander
-					culture = canuck
-					culture = cascadian
-					culture = siskiyouan
-				}
-			}
-			text = EVTOPTA_montane_gnr_river
-		}
-		hidden_tooltip = {
-			set_character_flag = hike_option_a
-		}
-	}
-	
-	option = {
-		name = {
-		trigger = {
-			OR = {
-				culture = cascadian
-				culture = siskiyouan
-			}
-		}
-		text = EVTOPTB_montane_csc_river
-		}
-		name = {
-			trigger = {
-				culture = canuck
-			}
-			text = EVTOPTB_montane_cnk_river
-		}
-		name = {
-			trigger = {
-				culture = inlander
-			}
-			text = EVTOPTB_montane_inl_river
-		}
-		name = {
-			trigger = {
-				NOR = {
-					culture = inlander
-					culture = canuck
-					culture = cascadian
-					culture = siskiyouan
-				}
-			}
-			text = EVTOPTB_montane_gnr_river
-		}
-		hidden_tooltip = {
-			set_character_flag = hike_option_b
-		}
-	}
-	
-	option = {
-		name = {
-		trigger = {
-			OR = {
-				culture = cascadian
-				culture = siskiyouan
-			}
-		}
-		text = EVTOPTC_montane_csc_river
-		}
-		name = {
-			trigger = {
-				culture = canuck
-			}
-			text = EVTOPTC_montane_cnk_river
-		}
-		name = {
-			trigger = {
-				culture = inlander
-			}
-			text = EVTOPTC_montane_inl_river
-		}
-		name = {
-			trigger = {
-				NOR = {
-					culture = inlander
-					culture = canuck
-					culture = cascadian
-					culture = siskiyouan
-				}
-			}
-			text = EVTOPTC_montane_gnr_river
-		}
-		hidden_tooltip = {
-			set_character_flag = hike_option_c
-		}
-	}
-	
-	option = {
-		name = {
-		trigger = {
-			OR = {
-				culture = cascadian
-				culture = siskiyouan
-			}
-		}
-		text = EVTOPTD_montane_csc_river
-		}
-		name = {
-			trigger = {
-				culture = canuck
-			}
-			text = EVTOPTD_montane_cnk_river
-		}
-		name = {
-			trigger = {
-				culture = inlander
-			}
-			text = EVTOPTD_montane_inl_river
-		}
-		name = {
-			trigger = {
-				NOR = {
-					culture = inlander
-					culture = canuck
-					culture = cascadian
-					culture = siskiyouan
-				}
-			}
-			text = EVTOPTD_montane_gnr_river
-		}
-		hidden_tooltip = {
-			set_character_flag = hike_option_d
-		}
-	}
-}
-
-character_event = {
-	id = montane_real_hike.4
-	desc = {
-		trigger = {
-			OR = {
-				culture = cascadian
-				culture = siskiyouan
-			}
-		}
-		text = EVTDESC_montane_csc_forest
-	}
-	desc = {
-		trigger = {
-			culture = canuck
-		}
-		text = EVTDESC_montane_cnk_forest
-	}
-	desc = {
-		trigger = {
-			culture = inlander
-		}
-		text = EVTDESC_montane_inl_forest
-	}
-	desc = {
-			trigger = {
-				NOR = {
-					culture = inlander
-					culture = canuck
-					culture = cascadian
-					culture = siskiyouan
-				}
-			}
-			text = EVTDESC_montane_gnr_forest
-	}
-	picture = GFX_evt_bandits
-
-	is_triggered_only = yes
-	
-	option = {
-		name = {
-		trigger = {
-			OR = {
-				culture = cascadian
-				culture = siskiyouan
-			}
-		}
-		text = EVTOPTA_montane_csc_forest
-		}
-		name = {
-			trigger = {
-				culture = canuck
-			}
-			text = EVTOPTA_montane_cnk_forest
-		}
-		name = {
-			trigger = {
-				culture = inlander
-			}
-			text = EVTOPTA_montane_inl_forest
-		}
-		name = {
-			trigger = {
-				NOR = {
-					culture = inlander
-					culture = canuck
-					culture = cascadian
-					culture = siskiyouan
-				}
-			}
-			text = EVTOPTA_montane_gnr_forest
-		}
-		hidden_tooltip = {
-			set_character_flag = hike_option_a
-		}
-	}
-	
-	option = {
-		name = {
-		trigger = {
-			OR = {
-				culture = cascadian
-				culture = siskiyouan
-			}
-		}
-		text = EVTOPTB_montane_csc_forest
-		}
-		name = {
-			trigger = {
-				culture = canuck
-			}
-			text = EVTOPTB_montane_cnk_forest
-		}
-		name = {
-			trigger = {
-				culture = inlander
-			}
-			text = EVTOPTB_montane_inl_forest
-		}
-		name = {
-			trigger = {
-				NOR = {
-					culture = inlander
-					culture = canuck
-					culture = cascadian
-					culture = siskiyouan
-				}
-			}
-			text = EVTOPTB_montane_gnr_forest
-		}
-		hidden_tooltip = {
-			set_character_flag = hike_option_b
-		}
-	}
-	
-	option = {
-		name = {
-		trigger = {
-			OR = {
-				culture = cascadian
-				culture = siskiyouan
-			}
-		}
-		text = EVTOPTC_montane_csc_forest
-		}
-		name = {
-			trigger = {
-				culture = canuck
-			}
-			text = EVTOPTC_montane_cnk_forest
-		}
-		name = {
-			trigger = {
-				culture = inlander
-			}
-			text = EVTOPTC_montane_inl_forest
-		}
-		name = {
-			trigger = {
-				NOR = {
-					culture = inlander
-					culture = canuck
-					culture = cascadian
-					culture = siskiyouan
-				}
-			}
-			text = EVTOPTC_montane_gnr_forest
-		}
-		hidden_tooltip = {
-			set_character_flag = hike_option_c
-		}
-	}
-	
-	option = {
-		name = {
-		trigger = {
-			OR = {
-				culture = cascadian
-				culture = siskiyouan
-			}
-		}
-		text = EVTOPTD_montane_csc_forest
-		}
-		name = {
-			trigger = {
-				culture = canuck
-			}
-			text = EVTOPTD_montane_cnk_forest
-		}
-		name = {
-			trigger = {
-				culture = inlander
-			}
-			text = EVTOPTD_montane_inl_forest
-		}
-		name = {
-			trigger = {
-				NOR = {
-					culture = inlander
-					culture = canuck
-					culture = cascadian
-					culture = siskiyouan
-				}
-			}
-			text = EVTOPTD_montane_gnr_forest
-		}
-		hidden_tooltip = {
-			set_character_flag = hike_option_d
-		}
-	}
-}
+namespace = montane_pilgrim
 
 narrative_event = {
-	id = montane_real_hike.5
-	title = EVTTITLE_montane5
-	desc = EVTDESC_montane5
-	picture = GFX_evt_mysterious_forest
-	border = GFX_event_narrative_frame_religion
+	id = montane_pilgrim.1
+	title = EVTNAME_montane_pilgrim_prep
+	desc = EVTDESC_montane_pilgrim_prep
+	picture = GFX_evt_pilgrims_epic_journey
+
 	is_triggered_only = yes
 
 	option = {
-		name = EVTOPTA_montane5
-		trigger = {
-		NOT = { trait = cynical }
-		}
-		add_trait = devout
-		change_learning = 1
-		ai_chance = {
-			factor = 5
-			modifier = {
-				factor = 2
-				OR = {
-					trait = zodiac_scorpio
-					trait = zodiac_sagittarius
-					trait = erudite
-					trait = zodiac_aries
-					trait = diligent
-					trait = trusting
-					trait = scholar
-					trait = theologian
-				}
-			}
-		}
-	}
-	
-	option = {
-		name = EVTOPTB_montane5
-		add_trait = mystic
-		change_diplomacy = 1
-		ai_chance = {
-			factor = 5
-			modifier = {
-				factor = 2
-				OR = {
-					trait = zodiac_leo
-					trait = zodiac_libra
-					trait = zodiac_virgo
-					trait = honest
-					trait = uncouth
-					trait = paranoid
-				}
-			}
-			modifier = {
-				factor = 0
-				OR = {
-					trait = slothful
-					trait = theologian
-					trait = craven
-				}
-			}
-		}
-	}
-	
-	option = {
-		name = EVTOPTC_montane5
-		trigger = {
-		NOT = { trait = cynical }
-		}
-		add_trait = zealous
-		change_learning = 2
-		change_diplomacy = -1
-		ai_chance = {
-			factor = 5
-			modifier = {
-				factor = 0
-				OR = {
-					trait = gregarious
-					trait = kind
-					trait = zodiac_cancer
-					trait = sympathy_christendom
-					trait = sympathy_cult_of_saints
-					trait = sympathy_latter_day_saints
-					trait = sympathy_pacific
-					trait = sympathy_judaism
-					trait = sympathy_islam
-					trait = sympathy_afro_syncretic
-					trait = sympathy_amero_syncretic
-					trait = sympathy_american_native
-					trait = sympathy_mesoamerican_gods
-					trait = sympathy_oldworld
-					trait = sympathy_nautical
-					trait = temperate
-					trait = slothful
-				}
-			}
-			modifier = {
-				factor = 2
-				OR = {
-					trait = shy
-					trait = cruel
-					trait = erudite
-					trait = paranoid 
-					trait = diligent
-				}
-			}
-		}
-	}
-	option = {
-		name = EVTOPTD_montane5
-		add_character_modifier = {
-			name = failed_to_choose_montane
-			months = 24 
-		}
-		ai_chance = {
-			factor = 1
-			modifier = {
-				if = {
-					limit = { 
-					OR = {
-					trait = arbitrary
-					trait = zodiac_libra
-					}
-					}
-					factor = 10
-				}
-				else = {
-					factor = 0
-				}
-			}
-		}
-	}
-}
-
-
-
-
-
-
-narrative_event = {
-	id = montane_real_hike.100
-	title = EVTITLE_garibaldi_ending
-	desc = EVTDESC_garibaldi_ending
-	picture = GFX_evt_garibaldi
-	
-	mean_time_to_happen = {
-		days = 5
-	}
-	
-	trigger = {
-		check_variable = {
-		which = hike_completion
-		value >= 3
-		}
-		has_character_flag = mountain_montane_hike
-		has_character_flag = hike_option_a
-		trait = on_hike
-		NOR = {
-			culture = inlander
-			culture = cascadian
-			culture = siskiyouan
-		}
-		NOT = {
-			has_character_flag = hike_lost
-		}
-	}
-	
-	option = {
-		name = EVTOPT_montanejourneyend
-		remove_trait = on_hike
-		add_character_modifier = {
-			name = peaked_garibaldi
-			years = 5
-		}	
-		piety = 200
-	}
-	
-	option = {
-		name = EVTOPT_modelmyselfgaribaldi
-		remove_trait = on_hike
-		random_list = {
-			30 = {
-				martial = 1
-				add_character_modifier = {
-				name = peaked_garibaldi
-				years = 5
-			}
-			}
-			15 = {
-				add_trait = inspiring_leader
-			}
-			15 = {
-				add_trait = ambitious
-			}
-			40 = { }
-		}
-	}
-	after = {
-		character_event = { id = montane_real_hike.199 }
-	}
-}
-
-narrative_event = {
-	id = montane_real_hike.101
-	title = EVTITLE_van_lions_ending
-	desc = EVTDESC_van_lions_ending
-	picture = GFX_evt_van_lions
-	
-	mean_time_to_happen = {
-		days = 5
-	}
-	
-	trigger = {
-		check_variable = {
-		which = hike_completion
-		value >= 3
-		}
-		has_character_flag = mountain_montane_hike
-		has_character_flag = hike_option_b
-		trait = on_hike
-		culture = canuck
-		NOT = {
-			has_character_flag = hike_lost
-		}
-	}
-	
-	option = {
-		name = EVTOPT_montanejourneyend
-		remove_trait = on_hike
-		add_character_modifier = {
-			name = van_lions
-			years = 5
-		}	
-		piety = 200
-	}
-	
-	after = {
-		character_event = { id = montane_real_hike.199 }
-	}
-}
-
-narrative_event = {
-	id = montane_real_hike.102
-	title = EVTITLE_waddington_ending
-	desc = EVTDESC_waddington_ending
-	picture = GFX_evt_waddington
-	
-	mean_time_to_happen = {
-		days = 5
-	}
-	
-	trigger = {
-		check_variable = {
-		which = hike_completion
-		value >= 3
-		}
-		has_character_flag = mountain_montane_hike
-		has_character_flag = hike_option_c
-		trait = on_hike
-		culture = canuck
-		NOT = {
-			has_character_flag = hike_lost
-		}
-	}
-	
-	option = {
-		name = EVTOPT_montanejourneyend
-		remove_trait = on_hike
-		add_character_modifier = {
-			name = waddington
-			years = 5
-		}	
-		piety = 200
-	}
-	
-	after = {
-		character_event = { id = montane_real_hike.199 }
-	}
-}
-
-narrative_event = {
-	id = montane_real_hike.103
-	title = EVTITLE_golden_hind_ending
-	desc = EVTDESC_golden_hind_ending
-	picture = GFX_evt_golden_hind
-	
-	mean_time_to_happen = {
-		days = 5
-	}
-	
-	trigger = {
-		check_variable = {
-		which = hike_completion
-		value >= 3
-		}
-		has_character_flag = mountain_montane_hike
-		has_character_flag = hike_option_d
-		trait = on_hike
-		NOR = {
-			culture = cascadian
-			culture = siskiyouan
-			culture = inlander
-		}
-		NOT = {
-			has_character_flag = hike_lost
-		}
-	}
-	
-	option = {
-		name = EVTOPT_montanejourneyend
-		remove_trait = on_hike
-		add_character_modifier = {
-			name = golden_hind
-			years = 5
-		}	
-		piety = 200
-	}
-	
-	after = {
-		character_event = { id = montane_real_hike.199 }
-	}
-}
-
-narrative_event = {
-	id = montane_real_hike.105
-	title = EVTITLE_greatbear_ending
-	desc = EVTDESC_greatbear_ending
-	picture = GFX_evt_greatbear
-	
-	mean_time_to_happen = {
-		days = 5
-	}
-	
-	trigger = {
-		check_variable = {
-		which = hike_completion
-		value >= 3
-		}
-		has_character_flag = forest_montane_hike
-		has_character_flag = hike_option_a
-		trait = on_hike
-		culture = canuck
-		NOT = {
-			has_character_flag = hike_lost
-		}
-	}
-	
-	option = {
-		name = EVTOPT_montanejourneyend
-		remove_trait = on_hike
-		add_character_modifier = {
-			name = saw_greatbear
-			years = 5
-		}	
-		piety = 200
-	}
-	
-	after = {
-		character_event = { id = montane_real_hike.199 }
-	}
-}
-
-narrative_event = {
-	id = montane_real_hike.106
-	title = EVTITLE_carmanah_ending
-	desc = EVTDESC_carmanah_ending
-	picture = GFX_evt_carmanah
-	
-	mean_time_to_happen = {
-		days = 5
-	}
-	
-	trigger = {
-		check_variable = {
-		which = hike_completion
-		value >= 3
-		}
-		has_character_flag = forest_montane_hike
-		has_character_flag = hike_option_b
-		trait = on_hike
-		NOR = {
-			culture = cascadian
-			culture = inlander
-			culture = siskiyouan
-		}
-		NOT = {
-			has_character_flag = hike_lost
-		}
-	}
-	
-	option = {
-		name = EVTOPT_montanejourneyend
-		remove_trait = on_hike
-		remove_trait = greedy
-		add_character_modifier = {
-			name = carmanah_hike
-			years = 5
-		}	
-		piety = 200
-	}
-	
-	after = {
-		character_event = { id = montane_real_hike.199 }
-	}
-}
-
-narrative_event = {
-	id = montane_real_hike.107
-	title = EVTITLE_sooke_ending
-	desc = EVTDESC_sooke_ending
-	picture = GFX_evt_sooke
-	
-	mean_time_to_happen = {
-		days = 5
-	}
-	
-	trigger = {
-		check_variable = {
-		which = hike_completion
-		value >= 3
-		}
-		has_character_flag = forest_montane_hike
-		has_character_flag = hike_option_c
-		trait = on_hike
-		culture = canuck
-		NOT = {
-			has_character_flag = hike_lost
-		}
-	}
-	
-	option = {
-		name = EVTOPT_montanejourneyend
-		remove_trait = on_hike
-		add_character_modifier = {
-			name = canadian_muir
-			years = 5
-		}	
-		piety = 200
-	}
-	
-	after = {
-		character_event = { id = montane_real_hike.199 }
-	}
-}
-
-narrative_event = {
-	id = montane_real_hike.108
-	title = EVTITLE_bowen_ending
-	desc = EVTDESC_bowen_ending
-	picture = GFX_evt_bowen
-	
-	mean_time_to_happen = {
-		days = 5
-	}
-	
-	trigger = {
-		check_variable = {
-		which = hike_completion
-		value >= 3
-		}
-		has_character_flag = forest_montane_hike
-		has_character_flag = hike_option_d
-		trait = on_hike
-		culture = canuck
-		NOT = {
-			has_character_flag = hike_lost
-		}
-	}
-	
-	option = {
-		name = EVTOPT_montanejourneyend
-		remove_trait = on_hike
-		add_character_modifier = {
-			name = olympic_canada
-			years = 5
-		}	
-		piety = 200
-	}
-	
-	after = {
-		character_event = { id = montane_real_hike.199 }
-	}
-}
-
-narrative_event = {
-	id = montane_real_hike.109
-	title = EVTITLE_fraser_ending
-	desc = EVTDESC_fraser_ending
-	picture = GFX_evt_fraser
-	
-	mean_time_to_happen = {
-		days = 5
-	}
-	
-	trigger = {
-		check_variable = {
-		which = hike_completion
-		value >= 3
-		}
-		has_character_flag = river_montane_hike
-		has_character_flag = hike_option_a
-		trait = on_hike
-		culture = canuck
-		NOT = {
-			has_character_flag = hike_lost
-		}
-	}
-	
-	option = {
-		name = EVTOPT_montanejourneyend
-		remove_trait = on_hike
-		add_character_modifier = {
-			name = in_prospective
-			years = 5
-		}	
-		piety = 200
-	}
-	
-	after = {
-		character_event = { id = montane_real_hike.199 }
-	}
-}
-
-narrative_event = {
-	id = montane_real_hike.110
-	title = EVTITLE_harrison_ending
-	desc = EVTDESC_harrison_ending
-	picture = GFX_evt_harrison
-	
-	mean_time_to_happen = {
-		days = 5
-	}
-	
-	trigger = {
-		check_variable = {
-		which = hike_completion
-		value >= 3
-		}
-		has_character_flag = river_montane_hike
-		has_character_flag = hike_option_b
-		trait = on_hike
-		culture = canuck
-		NOT = {
-			has_character_flag = hike_lost
-		}
-	}
-	
-	option = {
-		name = EVTOPT_montanejourneyend
-		remove_trait = on_hike
-		add_character_modifier = {
-			name = pleased_hike_doc
-			years = 5
-		}	
-		piety = 200
-	}
-	
-	after = {
-		character_event = { id = montane_real_hike.199 }
-	}
-}
-
-narrative_event = {
-	id = montane_real_hike.111
-	title = EVTITLE_skookumchuk_narrows
-	desc = EVTDESC_skookumchuk_narrows
-	picture = GFX_evt_skookumchuk_narrows
-	
-	mean_time_to_happen = {
-		days = 5
-	}
-	
-	trigger = {
-		check_variable = {
-		which = hike_completion
-		value >= 3
-		}
-		has_character_flag = river_montane_hike
-		has_character_flag = hike_option_c
-		trait = on_hike
-		culture = canuck
-		NOT = {
-			has_character_flag = hike_lost
-		}
-	}
-	
-	option = {
-		name = EVTOPT_montanejourneyend
-		remove_trait = on_hike
-		add_character_modifier = {
-			name = standing_wave
-			years = 5
-		}	
-		piety = 200
-	}
-	
-	after = {
-		character_event = { id = montane_real_hike.199 }
-	}
-}
-
-narrative_event = {
-	id = montane_real_hike.112
-	title = EVTITLE_pacific_rim_ending
-	desc = EVTDESC_pacific_rim_ending
-	picture = GFX_evt_pacific_rim
-	
-	mean_time_to_happen = {
-		days = 5
-	}
-	
-	trigger = {
-		check_variable = {
-		which = hike_completion
-		value >= 3
-		}
-		has_character_flag = river_montane_hike
-		has_character_flag = hike_option_d
-		trait = on_hike
-		NOR = {
-			culture = inlander
-			culture = siskiyouan
-			culture = cascadian
-		}
-		NOT = {
-			has_character_flag = hike_lost
-		}
-	}
-	
-	option = {
-		name = EVTOPT_montanejourneyend
-		remove_trait = on_hike
-		add_character_modifier = {
-			name = braved_graveyard
-			years = 5
-		}	
-		piety = 200
-	}
-	
-	after = {
-		character_event = { id = montane_real_hike.199 }
-	}
-}
-
-narrative_event = {
-	id = montane_real_hike.113
-	title = EVTITLE_canfield_ending
-	desc = EVTDESC_canfield_ending
-	picture = GFX_evt_canfield
-	
-	mean_time_to_happen = {
-		days = 5
-	}
-	
-	trigger = {
-		check_variable = {
-		which = hike_completion
-		value >= 3
-		}
-		has_character_flag = mountain_montane_hike
-		has_character_flag = hike_option_a
-		trait = on_hike
-		culture = inlander
-		NOT = {
-			has_character_flag = hike_lost
-		}
-	}
-	
-	option = {
-		name = EVTOPT_montanejourneyend
-		remove_trait = on_hike
-		add_character_modifier = {
-			name = peaked_canfield
-			years = 5
-		}	
-		piety = 200
-	}
-	
-	after = {
-		character_event = { id = montane_real_hike.199 }
-	}
-}
-
-narrative_event = {
-	id = montane_real_hike.114
-	title = EVTITLE_spokane_ending
-	desc = EVTDESC_spokane_ending
-	picture = GFX_evt_spokane
-	
-	mean_time_to_happen = {
-		days = 5
-	}
-	
-	trigger = {
-		check_variable = {
-		which = hike_completion
-		value = 3
-		}
-		has_character_flag = mountain_montane_hike
-		has_character_flag = hike_option_b
-		trait = on_hike
-		culture = inlander
-		NOT = {
-			has_character_flag = hike_lost
-		}
-	}
-	
-	option = {
-		name = EVTOPT_montanejourneyend
-		remove_trait = on_hike
-		add_character_modifier = {
-			name = spokane_summited
-			years = 5
-		}	
-		piety = 200
-	}
-	
-	after = {
-		character_event = { id = montane_real_hike.199 }
-	}
-}
-
-narrative_event = {
-	id = montane_real_hike.115
-	title = EVTITLE_steptoe_butte
-	desc = EVTDESC_steptoe_butte_winter
-	picture = GFX_evt_steptoe_summer
-	desc={
-			trigger = {
-			month >= 3
-			month < 8
-			}
-			text = EVTDESC_steptoe_butte_summer
-			picture = GFX_evt_steptoe_winter
-		}
-	
-	mean_time_to_happen = {
-		days = 5
-	}
-	
-	trigger = {
-		check_variable = {
-		which = hike_completion
-		value = 3
-		}
-		has_character_flag = mountain_montane_hike
-		has_character_flag = hike_option_c
-		trait = on_hike
-		NOR = {
-			culture = canuck
-			culture = siskiyouan
-			culture = cascadian
-		}
-		NOT = {
-			has_character_flag = hike_lost
-		}
-	}
-	
-	option = {
-		name = EVTOPT_montanejourneyend
-		remove_trait = on_hike
-		add_character_modifier = {
-			name = steptoe_butte
-			years = 5
-		}	
-		piety = 200
-	}
-	
-	after = {
-		character_event = { id = montane_real_hike.199 }
-	}
-}
-
-narrative_event = {
-	id = montane_real_hike.116
-	title = EVTITLE_sacajawea
-	desc = EVTDESC_sacajawea
-	picture = GFX_evt_sacajawea
-	mean_time_to_happen = {
-		days = 5
-	}
-	
-	trigger = {
-		check_variable = {
-		which = hike_completion
-		value = 3
-		}
-		has_character_flag = mountain_montane_hike
-		has_character_flag = hike_option_d
-		trait = on_hike
-		culture = inlander
-		NOT = {
-			has_character_flag = hike_lost
-		}
-	}
-	
-	option = {
-		name = EVTOPT_montanejourneyend
-		remove_trait = on_hike
-		add_character_modifier = {
-			name = sacajawea_sundown
-			years = 5
-		}	
-		piety = 200
-	}
-	
-	after = {
-		character_event = { id = montane_real_hike.199 }
-	}
-}
-
-narrative_event = {
-	id = montane_real_hike.117
-	title = EVTITLE_hells_canyon_ending
-	desc = EVTDESC_hells_canyon_ending
-	picture = GFX_evt_hells_canyon
-	
-	mean_time_to_happen = {
-		days = 5
-	}
-	
-	trigger = {
-		check_variable = {
-		which = hike_completion
-		value >= 3
-		}
-		has_character_flag = river_montane_hike
-		has_character_flag = hike_option_c
-		trait = on_hike
-		culture = inlander
-		NOT = {
-			has_character_flag = hike_lost
-		}
-	}
-	
-	option = {
-		name = EVTOPT_montanejourneyend
-		remove_trait = on_hike
-		add_character_modifier = {
-			name = got_through_hellscanyon
-			years = 5
-		}	
-		piety = 200
-	}
-	
-	after = {
-		character_event = { id = montane_real_hike.199 }
-	}
-}
-narrative_event = {
-	id = montane_real_hike.118
-	title = EVTITLE_pend_orielle_ending
-	desc = EVTDESC_pend_orielle_ending
-	picture = GFX_evt_pend_orielle
-	
-	mean_time_to_happen = {
-		days = 5
-	}
-	
-	trigger = {
-		check_variable = {
-		which = hike_completion
-		value >= 3
-		}
-		has_character_flag = river_montane_hike
-		has_character_flag = hike_option_b
-		trait = on_hike
-		NOR = {
-			culture = cascadian
-			culture = canuck
-			culture = siskiyouan
-		}
-		NOT = {
-			has_character_flag = hike_lost
-		}
-	}
-	
-	option = {
-		name = EVTOPT_montanejourneyend
-		remove_trait = on_hike
-		add_character_modifier = {
-			name = pend_orielle_finished
-			years = 5
-		}	
-		piety = 200
-	}
-	
-	after = {
-		character_event = { id = montane_real_hike.199 }
-	}
-}
-narrative_event = {
-	id = montane_real_hike.119
-	title = EVTITLE_st_joe_ending
-	desc = EVTDESC_st_joe_ending
-	picture = GFX_evt_st_joe
-	
-	mean_time_to_happen = {
-		days = 5
-	}
-	
-	trigger = {
-		check_variable = {
-		which = hike_completion
-		value >= 3
-		}
-		has_character_flag = river_montane_hike
-		has_character_flag = hike_option_d
-		trait = on_hike
-		culture = inlander
-		NOT = {
-			has_character_flag = hike_lost
-		}
-	}
-	
-	option = {
-		trigger = {
-			NOR = {
-				trait = proud
-				trait = stubborn
-				trait = envious
-			}
-		}
-		name = EVTOPTA_dynamicfish
-		narrative_event = { days = 2 id = montane_real_hike.120 }
-	}
-	
-	option = {
-		trigger = {
-			OR = {
-				trait = proud
-				trait = stubborn
-				trait = envious
-			}
-		}
-		name = EVTOPTB_dynamicfish
-		narrative_event = { days = 2 id = montane_real_hike.129 }
-	}
-	
-	after = {
-		character_event = { id = montane_real_hike.199 }
-	}
-}
-
-narrative_event = {
-	id = montane_real_hike.120
-	title = EVTITLE_st_joe_good_ending
-	desc = EVTDESC_st_joe_good_ending
-	picture = GFX_evt_fishing
-	is_triggered_only = yes
-	option = {
-		name = EVTOPT_montanejourneyend
-		remove_trait = on_hike
-		add_character_modifier = {
-			name = st_joe_good
-			years = 5
-		}
-		piety = 200
-	}
-	after = {
-		character_event = { id = montane_real_hike.199 }
-	}
-}
-
-narrative_event = {
-	id = montane_real_hike.121
-	title = EVTITLE_hiawatha_ending
-	desc = EVTDESC_hiawatha_ending
-	picture = GFX_evt_hiawatha
-	
-	mean_time_to_happen = {
-		days = 5
-	}
-	
-	trigger = {
-		check_variable = {
-		which = hike_completion
-		value >= 3
-		}
-		has_character_flag = forest_montane_hike
-		has_character_flag = hike_option_a
-		trait = on_hike
-		culture = inlander
-		NOT = {
-			has_character_flag = hike_lost
-		}
-	}
-	
-	option = {
-		name = EVTOPT_montanejourneyend
-		remove_trait = on_hike
-		add_character_modifier = {
-			name = hiawhata_finished
-			years = 5
-		}	
-		piety = 200
-	}
-	
-	after = {
-		character_event = { id = montane_real_hike.199 }
-	}
-}
-
-narrative_event = {
-	id = montane_real_hike.122
-	title = EVTITLE_trail_courdalenes_ending
-	desc = EVTDESC_trail_courdalenes_ending
-	picture = GFX_evt_trail_courdalenes
-	
-	mean_time_to_happen = {
-		days = 5
-	}
-	
-	trigger = {
-		check_variable = {
-		which = hike_completion
-		value >= 3
-		}
-		has_character_flag = forest_montane_hike
-		has_character_flag = hike_option_b
-		trait = on_hike
-		culture = inlander
-		NOT = {
-			has_character_flag = hike_lost
-		}
-	}
-	
-	option = {
-		name = EVTOPT_montanejourneyend
-		remove_trait = on_hike
-		add_character_modifier = {
-			name = courdalenes_finished
-			years = 5
-		}	
-		piety = 200
-	}
-	
-	after = {
-		character_event = { id = montane_real_hike.199 }
-	}
-}
-
-narrative_event = {
-	id = montane_real_hike.123
-	title = EVTITLE_colville_ending
-	desc = EVTDESC_colville_ending
-	picture = GFX_evt_colville
-	
-	mean_time_to_happen = {
-		days = 5
-	}
-	
-	trigger = {
-		check_variable = {
-		which = hike_completion
-		value >= 3
-		}
-		has_character_flag = forest_montane_hike
-		has_character_flag = hike_option_c
-		trait = on_hike
-		culture = inlander
-		NOT = {
-			has_character_flag = hike_lost
-		}
-	}
-	
-	option = {
-		name = EVTOPT_montanejourneyend
-		remove_trait = on_hike
-		random_list = {
-			20 = { add_trait = lunatic }
-			20 = { add_trait = possessed }
-			20 = { add_trait = paranoid }
-			40 = { piety = 100 }
-		}
-		add_character_modifier = {
-			name = firewalked_with_gaia
-			years = 7
-		}	
-		piety = 100
-	}
-	
-	after = {
-		character_event = { id = montane_real_hike.199 }
-	}
-}
-
-narrative_event = {
-	id = montane_real_hike.124
-	title = EVTITLE_umatilla_ending
-	desc = EVTDESC_umatilla_ending
-	picture = GFX_evt_umatilla
-	
-	mean_time_to_happen = {
-		days = 5
-	}
-	
-	trigger = {
-		check_variable = {
-		which = hike_completion
-		value >= 3
-		}
-		has_character_flag = forest_montane_hike
-		has_character_flag = hike_option_d
-		trait = on_hike
-		culture = inlander
-		NOT = {
-			has_character_flag = hike_lost
-		}
-	}
-	
-	option = {
-		name = EVTOPT_montanejourneyend
-		remove_trait = on_hike
-		add_character_modifier = {
-			name = umatilla_bested
-			years = 5
-		}
-		piety = 200
-	}
-	
-	after = {
-		character_event = { id = montane_real_hike.199 }
-	}
-}
-
-narrative_event = {
-	id = montane_real_hike.125
-	title = EVTITLE_hoh_forest_ending
-	desc = EVTDESC_hoh_forest_ending
-	picture = GFX_evt_hoh_forest
-	
-	mean_time_to_happen = {
-		days = 5
-	}
-	
-	trigger = {
-		check_variable = {
-		which = hike_completion
-		value >= 3
-		}
-		has_character_flag = forest_montane_hike
-		has_character_flag = hike_option_a
-		trait = on_hike
-		NOR = {
-			culture = inlander
-			culture = canuck
-		}
-		NOT = {
-			has_character_flag = hike_lost
-		}
-	}
-	
-	option = {
-		name = EVTOPT_montanejourneyend
-		remove_trait = on_hike
-		add_character_modifier = {
-			name = hoh_forest
-			years = 5
-		}	
-		piety = 200
-	}
-	
-	after = {
-		character_event = { id = montane_real_hike.199 }
-	}
-}
-
-narrative_event = {
-	id = montane_real_hike.126
-	title = EVTITLE_indian_heaven_ending
-	desc = EVTDESC_indian_heaven_ending
-	picture = GFX_evt_indian_heaven
-	
-	mean_time_to_happen = {
-		days = 5
-	}
-	
-	trigger = {
-		check_variable = {
-		which = hike_completion
-		value >= 3
-		}
-		has_character_flag = forest_montane_hike
-		has_character_flag = hike_option_b
-		trait = on_hike
-		OR = {
-			culture = cascadian
-			culture = siskiyouan
-		}
-		NOT = {
-			has_character_flag = hike_lost
-		}
-	}
-	
-	option = {
-		name = EVTOPT_montanejourneyend
-		remove_trait = on_hike
-		add_character_modifier = {
-			name = encountered_bigfoot
-			years = 5
-		}	
-		piety = 200
-	}
-	
-	after = {
-		character_event = { id = montane_real_hike.199 }
-	}
-}
-
-narrative_event = {
-	id = montane_real_hike.127
-	title = EVTITLE_redwoods_ending
-	desc = EVTDESC_redwoods_ending
-	picture = GFX_evt_redwoods
-	
-	mean_time_to_happen = {
-		days = 5
-	}
-	
-	trigger = {
-		check_variable = {
-		which = hike_completion
-		value >= 3
-		}
-		has_character_flag = forest_montane_hike
-		has_character_flag = hike_option_c
-		trait = on_hike
-		NOR = {
-			culture = inlander
-			culture = canuck
-		}
-		NOT = {
-			has_character_flag = hike_lost
-		}
-	}
-	
-	option = {
-		name = EVTOPT_montanejourneyend
-		remove_trait = on_hike
-		add_character_modifier = {
-			name = redwoods_power
-			years = 5
-		}	
-		piety = 200
-	}
-	
-	after = {
-		character_event = { id = montane_real_hike.199 }
-	}
-}
-
-narrative_event = {
-	id = montane_real_hike.128
-	title = EVTITLE_forest_park_ending
-	desc = EVTDESC_forest_park_ending
-	picture = GFX_evt_forest_park
-	
-	mean_time_to_happen = {
-		days = 5
-	}
-	
-	trigger = {
-		check_variable = {
-		which = hike_completion
-		value >= 3
-		}
-		has_character_flag = forest_montane_hike
-		has_character_flag = hike_option_d
-		trait = on_hike
-		OR = {
-			culture = cascadian
-			culture = siskiyouan
-		}
-		NOT = {
-			has_character_flag = hike_lost
-		}
-	}
-	
-	option = {
-		name = EVTOPT_montanejourneyend
-		remove_trait = on_hike
-		add_character_modifier = {
-			name = forest_park
-			years = 5
-		}	
-		piety = 200
-	}
-	
-	after = {
-		character_event = { id = montane_real_hike.199 }
-	}
-}
-
-narrative_event = {
-	id = montane_real_hike.129
-	title = EVTITLE_st_joe_bad_ending
-	desc = EVTDESC_st_joe_bad_ending
-	picture = GFX_evt_fishing
-	is_triggered_only = yes
-	option = {
-		name = EVTOPT_montanejourneyend_bad
-		remove_trait = on_hike
-		add_character_modifier = {
-			name = st_joe_bad
-			years = 5
-		}
-		piety = -100
-	}
-	after = {
-		character_event = { id = montane_real_hike.199 }
-	}
-}
-
-narrative_event = {
-	id = montane_real_hike.130
-	title = EVTITLE_celilo_falls_ending
-	desc = EVTDESC_celilo_falls_ending
-	picture = GFX_evt_celilo_falls
-	
-	mean_time_to_happen = {
-		days = 5
-	}
-	
-	trigger = {
-		check_variable = {
-		which = hike_completion
-		value >= 3
-		}
-		has_character_flag = river_montane_hike
-		has_character_flag = hike_option_a
-		trait = on_hike
-		NOT = {
-			culture = canuck
-		}
-		NOT = {
-			has_character_flag = hike_lost
-		}
-	}
-	
-	option = {
-		name = EVTOPT_montanejourneyend
-		remove_trait = on_hike
-		add_character_modifier = {
-			name = went_to_celilo
-			years = 5
-		}	
-		piety = 200
-	}
-}
-narrative_event = {
-	id = montane_real_hike.131
-	title = EVTITLE_olympic_springs_ending
-	desc = EVTDESC_olympic_springs_ending
-	picture = GFX_evt_olympic_hs
-	
-	mean_time_to_happen = {
-		days = 5
-	}
-	
-	trigger = {
-		check_variable = {
-		which = hike_completion
-		value >= 3
-		}
-		has_character_flag = river_montane_hike
-		has_character_flag = hike_option_b
-		trait = on_hike
-		OR = {
-			culture = cascadian
-			culture = siskiyouan
-		}
-		NOT = {
-			has_character_flag = hike_lost
-		}
-	}
-	
-	option = {
-		name = EVTOPT_montanejourneyend
-		remove_trait = on_hike
-		remove_trait = stressed
-		add_character_modifier = {
-			name = hot_spring_olympia
-			years = 5
-		}	
-		piety = 200
-	}
-	
-	after = {
-		character_event = { id = montane_real_hike.199 }
-	}
-}
-narrative_event = {
-	id = montane_real_hike.132
-	title = EVTITLE_crater_lake_ending
-	desc = EVTDESC_crater_lake_ending
-	picture = GFX_evt_crater_lake
-	
-	mean_time_to_happen = {
-		days = 5
-	}
-	
-	trigger = {
-		check_variable = {
-		which = hike_completion
-		value >= 3
-		}
-		has_character_flag = river_montane_hike
-		has_character_flag = hike_option_c
-		trait = on_hike
-		NOR = {
-			culture = inlander
-			culture = canuck
-		}
-		NOT = {
-			has_character_flag = hike_lost
-		}
-	}
-	
-	option = {
-		name = EVTOPT_montanejourneyend
-		remove_trait = on_hike
-		add_character_modifier = {
-			name = lake_heart
-			years = 5
-		}
-		hidden_tooltip = {
-			character_event = { id = montane_real_hike.199 }
-		}
-		piety = 200
-	}
-	### Removed if bow master doesnt finish it
-	###option = {
-	###	trigger = {
-	###		OR = {
-	###			trait = lunatic
-	###			trait = possessed
-	###		}
-	###	}
-	###	name = EVTOPT_theheartoflaochain
-	###	set_character_flag = the_heart_of_lao
-	###}
-}
-narrative_event = {
-	id = montane_real_hike.133
-	title = EVTITLE_multnomah_falls_ending
-	desc = EVTDESC_multnomah_falls_ending
-	picture = GFX_evt_multnomah_falls
-	
-	mean_time_to_happen = {
-		days = 5
-	}
-	
-	trigger = {
-		check_variable = {
-		which = hike_completion
-		value >= 3
-		}
-		has_character_flag = river_montane_hike
-		has_character_flag = hike_option_d
-		trait = on_hike
-		OR = {
-			culture = cascadian
-			culture = siskiyouan
-		}
-		NOT = {
-			has_character_flag = hike_lost
-		}
-	}
-	
-	option = {
-		name = EVTOPT_montanejourneyend
-		remove_trait = on_hike
-		add_character_modifier = {
-			name = multnomah_falls
-			years = 5
-		}	
-		piety = 200
-	}
-	
-	after = {
-		character_event = { id = montane_real_hike.199 }
-	}
-}
-
-narrative_event = {
-	id = montane_real_hike.134
-	title = EVTITLE_mt_rainier_ending
-	desc = EVTDESC_mt_rainier_ending
-	picture = GFX_evt_mt_rainier
-	
-	mean_time_to_happen = {
-		days = 5
-	}
-	
-	trigger = {
-		check_variable = {
-		which = hike_completion
-		value >= 3
-		}
-		has_character_flag = mountain_montane_hike
-		has_character_flag = hike_option_a
-		trait = on_hike
-		OR = {
-			culture = cascadian
-			culture = siskiyouan
-		}
-		NOT = {
-			has_character_flag = hike_lost
-		}
-	}
-	
-	option = {
-		name = EVTOPT_montanejourneyend
-		remove_trait = on_hike
-		add_character_modifier = {
-			name = rainier_topping
-			years = 5
-		}	
-		piety = 200
-	}
-	
-	after = {
-		character_event = { id = montane_real_hike.199 }
-	}
-}
-
-narrative_event = {
-	id = montane_real_hike.135
-	title = EVTITLE_mt_saint_helens_ending
-	desc = EVTDESC_mt_saint_helens_ending
-	picture = GFX_evt_saint_helens
-	
-	mean_time_to_happen = {
-		days = 5
-	}
-	
-	trigger = {
-		check_variable = {
-		which = hike_completion
-		value >= 3
-		}
-		has_character_flag = mountain_montane_hike
-		has_character_flag = hike_option_b
-		trait = on_hike
-		NOR = {
-			culture = inlander
-			culture = canuck
-		}
-		NOT = {
-			has_character_flag = hike_lost
-		}
-	}
-	
-	option = {
-		name = EVTOPT_montanejourneyend
-		remove_trait = on_hike
-		add_character_modifier = {
-			name = braved_helens
-			years = 5
-		}	
-		piety = 200
-	}
-	
-	after = {
-		character_event = { id = montane_real_hike.199 }
-	}
-}
-
-narrative_event = {
-	id = montane_real_hike.136
-	title = EVTITLE_mount_hood_ending
-	desc = EVTDESC_mount_hood_ending
-	picture = GFX_evt_mount_hood
-	
-	mean_time_to_happen = {
-		days = 5
-	}
-	
-	trigger = {
-		check_variable = {
-		which = hike_completion
-		value >= 3
-		}
-		has_character_flag = mountain_montane_hike
-		has_character_flag = hike_option_c
-		trait = on_hike
-		OR = {
-			culture = cascadian
-			culture = siskiyouan
-		}
-		NOT = {
-			has_character_flag = hike_lost
-		}
-	}
-	
-	option = {
-		name = EVTOPT_montanejourneyend
-		remove_trait = on_hike
-		add_character_modifier = {
-			name = mount_hood
-			years = 5
-		}	
-		piety = 200
-	}
-	
-	after = {
-		character_event = { id = montane_real_hike.199 }
-	}
-}
-narrative_event = {
-	id = montane_real_hike.137
-	title = EVTITLE_three_sisters_ending
-	desc = EVTDESC_three_sisters_ending
-	picture = GFX_evt_three_sisters
-	
-	mean_time_to_happen = {
-		days = 5
-	}
-	
-	trigger = {
-		check_variable = {
-		which = hike_completion
-		value >= 3
-		}
-		has_character_flag = mountain_montane_hike
-		has_character_flag = hike_option_d
-		trait = on_hike
-		OR = {
-			culture = cascadian
-			culture = siskiyouan
-		}
-		NOT = {
-			has_character_flag = hike_lost
-		}
-	}
-	
-	option = {
-		name = EVTOPT_montanejourneyend
-		remove_trait = on_hike
-		add_character_modifier = {
-			name = climbed_south_sis
-			years = 5
-		}	
-		piety = 200
-	}
-	
-	after = {
-		character_event = { id = montane_real_hike.199 }
-	}
-}
-
-character_event = {
-	id = montane_real_hike.150
-	hide_window = yes
-	
-	is_triggered_only = yes
-	
-	has_global_flag = general_of_gaia_appears
-	
-	trigger = {
-		OR = {
-			mother = { trait = general_of_gaia }
-			father = { trait = general_of_gaia }
-			mother = { trait = general_of_gaia_descendant }
-			father = { trait = general_of_gaia_descendant } 
-		}
-		NOT = { trait = general_of_gaia_descendant }
-	}
-	
-	immediate = {
-		add_trait = general_of_gaia_descendant
-		any_child = {
-			character_event = { id = montane_real_hike.18 }
-		}
-	}
-}
-
-character_event = {
-	id = montane_real_hike.199
-	hide_window = yes
-	is_triggered_only = yes
-	
-	immediate = {
-		clr_character_flag = mountain_montane_hike
-		clr_character_flag = forest_montane_hike
-		clr_character_flag = river_montane_hike
-		clr_character_flag = hike_option_a
-		clr_character_flag = hike_option_b
-		clr_character_flag = hike_option_c
-		clr_character_flag = hike_option_d
-		clr_character_flag = hike_lost
-		clr_character_flag = lost_in_forest
-		clr_character_flag = lost_in_mountain
-		clr_character_flag = was_lost
-		clr_character_flag = encountered_bear_already
-		clr_character_flag = encountered_rain_already
-		clr_character_flag = hike_inecessible
-		hidden_tooltip = {
-		set_variable = { which = hike_completion value = 0 }
-		}
-
-	}
-}
-
-character_event = {
-	id = montane_real_hike.300
-	desc = EVTDESC_hike_branchtrip
-	picture = GFX_evt_bandits
-	
-	only_playable = yes
-	religion = montane
-	
-	mean_time_to_happen = {
-		months = 3
-	}
-
-	trigger = {
-		NOT = {check_variable = {
-		which = hike_completion
-		value >= 3
-		}}
-		trait = on_hike
-		OR = {
-			has_character_flag = mountain_montane_hike
-			has_character_flag = forest_montane_hike
-			has_character_flag = river_montane_hike
-		}
-		OR = {
-			has_character_flag = hike_option_a
-			has_character_flag = hike_option_b
-			has_character_flag = hike_option_c
-			has_character_flag = hike_option_d
-		}
-	}
-	
-	option = {
-		name = evt_DAMNEDROOT
-		prestige = -15
-		hidden_tooltip = {
-		change_variable = {
-		which = hike_completion
-		value = 1
-		}
-		}
-		random_list = {
-			80 = {}
-			19 = { add_trait = wounded }
-			1 = { death = { death_reason = death_accident }
-		}
-	}
-	}
-}
-
-character_event = {
-	id = montane_real_hike.302
-	desc = EVTDESC_hike_raining
-	picture = GFX_evt_campfire_hf
-	
-	only_playable = yes
-	religion = montane
-	
-	mean_time_to_happen = {
-		months = 3
-	}
-
-	trigger = {
-		trait = on_hike
-		NOT = {check_variable = {
-		which = hike_completion
-		value >= 3
-		}}
-		OR = {
-			has_character_flag = mountain_montane_hike
-			has_character_flag = forest_montane_hike
-			has_character_flag = river_montane_hike
-		}
-		OR = {
-			has_character_flag = hike_option_a
-			has_character_flag = hike_option_b
-			has_character_flag = hike_option_c
-			has_character_flag = hike_option_d
-		}
-		NOT = { has_character_flag = encountered_rain_already }
-	}
-	
-	option = {
-		name = EVTOPTA_hike_raining
-		piety = -20	
-		hidden_tooltip = {
-			set_character_flag = encountered_rain_already
-		}
-	}
-	option = {
-		name = EVTOPTB_hike_raining
-		piety = 10
-		random_courtier = {
-			opinion = { who = ROOT modifier = opinion_didnt_hear_rain }
-		}
-		hidden_tooltip = {
-			random_list = {
-			50 = { character_event = { id = montane_real_hike.303 days=2 }}
-			50 = { character_event = { id = montane_real_hike.304 days=2 }}
-			}
-			set_character_flag = encountered_rain_already
-		}
-	}
-}
-character_event = {
-	id = montane_real_hike.303
-	desc = EVTDESC_hike_rain_comes
-	picture = GFX_evt_campfire_hf
-	
-	is_triggered_only = yes
-	
-	option = {
-		name = EVTOPTA_hike_rain_comes
-		prestige = -10
-		any_vassal = { opinion = {
-		who = ROOT
-		modifier = opinion_didnt_hear_rain
-		}
-		random = {
-			chance = 10
-			add_trait = flu
-		}
-	}
-	}
-}
-
-character_event = {
-	id = montane_real_hike.304
-	desc = EVTDESC_hike_rain_doesnt_come
-	picture = GFX_evt_campfire_hf
-	
-	only_playable = yes
-	religion = montane
-	
-	is_triggered_only = yes
-	
-	option = {
-		name = EVTOPTA_hike_rain_didntcome
-		prestige = 10
-		any_vassal = { opinion = {
-		who = ROOT
-		modifier = opinion_right_about_rain
-		months = 6
-		}
-		hidden_tooltip = {
-		change_variable = {
-		which = hike_completion
-		value = 1
-	}}}
-	}
-}
-
-character_event = {
-	id = montane_real_hike.305
-	desc = EVTDESC_hike_bear_encounter
-	picture = GFX_evt_mysterious_forest
-	
-	only_playable = yes
-	religion = montane
-	
-	mean_time_to_happen = { 
-		months = 8
-	}
-	
-	trigger = {
-		trait = on_hike
-		NOT = {check_variable = {
-		which = hike_completion
-		value >= 3
-		}}
-		OR = {
-			has_character_flag = mountain_montane_hike
-			has_character_flag = forest_montane_hike
-			has_character_flag = river_montane_hike
-		}
-		OR = {
-			has_character_flag = hike_option_a
-			has_character_flag = hike_option_b
-			has_character_flag = hike_option_c
-			has_character_flag = hike_option_d
-		}
-		NOT = { has_character_flag = encountered_bear_already }
-	}
-	
-	option = {
-		name = EVTOPTA_hike_bear_encounter
-		prestige = -20
-		trigger = {
-			NOR = {
-			trait = brave
-			trait = lunatic
-			trait = possessed
-			}
-		}
-		random = {
-			chance = 25 
-			add_trait = craven
-		}
-		hidden_tooltip = {
-		random_list = {
-			20 = { character_event = { id=montane_real_hike.306 days=2 }}
-			30 = { mult_modifier = { factor = 2 trait = is_fat } character_event = {id=montane_real_hike.307 days=2 }}
-			50 = { character_event = {id=montane_real_hike.308 days=2 }}
-		}
-		}
-	}
-	
-	option = {
-		name = EVTOPTB_hike_bear_encounter
-		prestige = -10
-		trigger = {}
-		hidden_tooltip = {
-		random_list = {
-			50 = { character_event = {id=montane_real_hike.309 days=2 }} 
-			25 = { character_event = {id=montane_real_hike.310 days=2}} 
-			25 = { character_event = {id=montane_real_hike.311 days=2}}
-			}
-		}
-	}
-	
-	option = {
-		name = EVTOPTC_hike_bear_encounter
-		prestige = 10
-		trigger = {}
-		hidden_tooltip = {
-		random_list = {
-			50 = { mult_modifier = { factor = 2 trait = is_fat } character_event = {id=montane_real_hike.316 days=2}} 
-			25 = { mult_modifier = { factor = 2 trait = strong } character_event = {id=montane_real_hike.317 days=2}} 
-			25 = { mult_modifier = { factor = 2 trait = strong } character_event = {id=montane_real_hike.318 days=2}}
-			}
-		}
-	}
-	option = {
-		name = EVTOPTD_hike_bear_encounter
-		prestige = 10
-		NOT = {
-			trait = craven
-		}
-		hidden_tooltip = {
-		random_list = {
-			95 = { character_event = {id=montane_real_hike.319 days=2 }} 
-			5 = { character_event = {id=montane_real_hike.320 days=2}}
-		}
-		}
-	}
-	option = {
-		name = EVTOPTE_hike_bear_encounter
-		prestige = 10
-		trigger = {
-			OR = {
-			trait = brave
-			trait = lunatic
-			}
-		}
-		hidden_tooltip = {
-			character_event = {id=montane_real_hike.321 days=2 }
-		}
-	}	
-}
-
-character_event = {
-	id = montane_real_hike.306
-	desc = EVTDESC_hike_bear_encounter_1
-	picture = GFX_evt_mysterious_forest
-	
-	is_triggered_only = yes
-	
-	option = {
-	name = EVTOPT_hike_bear_encounter_1
-	hidden_tooltip = {
-		change_variable = {
-		which = hike_completion
-		value = 1
-		}
-		set_character_flag = encountered_bear_already
-	}}
-}
-
-character_event = {
-	id = montane_real_hike.307
-	desc = EVTDESC_hike_bear_encounter_2
-	picture = GFX_evt_mysterious_forest
-	
-	is_triggered_only = yes
-	
-	option = {
-	name = EVTOPT_hike_bear_encounter_2
-	death = { death_reason = death_accident_bear }
-	}
-}
-
-character_event = {
-	id = montane_real_hike.308
-	desc = EVTDESC_hike_bear_encounter_3
-	picture = GFX_evt_mysterious_forest
-	
-	is_triggered_only = yes
-	
-	option = {
-	name = EVTOPT_hike_bear_encounter_3
-	random_courtier = {
-		death = { death_reason = death_accident_bear }
-	}
-	hidden_tooltip = {
-		change_variable = {
-		which = hike_completion
-		value = 1
-		}
-		set_character_flag = encountered_bear_already
-	}}
-}
-
-character_event = {
-	id = montane_real_hike.309
-	desc = EVTDESC_hike_bear_encounter_4
-	picture = GFX_evt_mysterious_forest
-	
-	is_triggered_only = yes
-	
-	option = {
-	name = EVTOPT_hike_bear_encounter_4
-	hidden_tooltip = {
-		change_variable = {
-		which = hike_completion
-		value = 1
-		}
-		set_character_flag = encountered_bear_already
-	}}
-}
-
-character_event = {
-	id = montane_real_hike.310
-	desc = EVTDESC_hike_bear_encounter_5
-	picture = GFX_evt_mysterious_forest
-	
-	is_triggered_only = yes
-	
-	option = {
-	name = EVTOPTA_hike_bear_encounter_5
-	hidden_tooltip = {
-		random_list = {
-		75 = { character_event = {id=montane_real_hike.312 days=2}} 
-		25 = { character_event = {id=montane_real_hike.313 days=2}} 
-	}}
-	}
-	option = {
-	name = EVTOPTB_hike_bear_encounter_5
-	hidden_tooltip = {
-		random_list = {
-		75 = { character_event = {id=montane_real_hike.314 days=2}} 
-		25 = { character_event = {id=montane_real_hike.315 days=2}} 
-	}}
-	}
-}
-character_event = {
-	id = montane_real_hike.312
-	desc = EVTDESC_hike_bear_encounter_6
-	picture = GFX_evt_mysterious_forest
-	
-	is_triggered_only = yes
-	
-	option = {
-	name = EVTOPT_hike_bear_encounter_6
-	death = { death_reason = death_accident_bear }
-	}
-}
-character_event = {
-	id = montane_real_hike.313
-	desc = EVTDESC_hike_bear_encounter_7
-	picture = GFX_evt_mysterious_forest
-	
-	is_triggered_only = yes
-	
-	option = {
-	name = EVTOPT_hike_bear_encounter_7
-	add_trait = wounded
-	hidden_tooltip = {
-		character_event = {id=montane_real_hike.325 days=2}
-	}
-	random = {
-		chance = 15 
-		add_trait = one_handed
-		}
-	}
-}
-character_event = {
-	id = montane_real_hike.314
-	desc = EVTDESC_hike_bear_encounter_8
-	picture = GFX_evt_mysterious_forest
-	
-	is_triggered_only = yes
-	
-	option = {
-	name = EVTOPT_hike_bear_encounter_8
-	add_trait = wounded
-	hidden_tooltip = {
-		character_event = {id=montane_real_hike.325 days=2}
-	}
-	}
-}
-character_event = {
-	id = montane_real_hike.315
-	desc = EVTDESC_hike_bear_encounter_9
-	picture = GFX_evt_mysterious_forest
-	
-	is_triggered_only = yes
-	
-	option = {
-	name = EVTOPT_hike_bear_encounter_9
-	death = { death_reason = death_accident_bear }
-	}
-}
-character_event = {
-	id = montane_real_hike.316
-	desc = EVTDESC_hike_bear_encounter_10
-	picture = GFX_evt_mysterious_forest
-	
-	is_triggered_only = yes
-	
-	option = {
-	name = EVTOPT_hike_bear_encounter_10
-	random = {
-		chance = 50 
-		add_trait = wounded
-	}
-	random = {
-		chance = 10
-		death = { death_reason = death_accident_fall}
-	}
-	hidden_tooltip = {
-		random_list = {
-			50 = { character_event = {id=montane_real_hike.309 days=2}} 
-			25 = { character_event = {id=montane_real_hike.310 days=2}} 
-			25 = { character_event = {id=montane_real_hike.311 days=2}}
-			}
-		}	
-	}
-}
-character_event = {
-	id = montane_real_hike.317
-	desc = EVTDESC_hike_bear_encounter_11
-	picture = GFX_evt_mysterious_forest
-	
-	is_triggered_only = yes
-	
-	option = {
-	name = EVTOPT_hike_bear_encounter_11
-	random_list = {
-			50 = { add_trait = wounded hidden_tooltip = {character_event = {id=montane_real_hike.325 days=2}}}
-			20 = { death = { death_reason = death_accident_fall} }
-			10 = { add_trait = one_eyed }
-			10 = { add_trait = one_legged }
-			10 = { add_trait = one_handed }
-		}
-	}
-}
-character_event = {
-	id = montane_real_hike.318
-	desc = EVTDESC_hike_bear_encounter_12
-	picture = GFX_evt_mysterious_forest
-	
-	is_triggered_only = yes
-	
-	option = {
-	name = EVTOPT_hike_bear_encounter_12
-	random_courtier = {	
-		random_list = {
-			50 = { add_trait = wounded hidden_tooltip = {character_event = {id=montane_real_hike.325 days=2}}}
-			20 = { death = { death_reason = death_accident_fall} }
-			10 = { add_trait = one_eyed }
-			10 = { add_trait = one_legged }
-			10 = { add_trait = one_handed }
-			}
-		}
-	}
-}
-
-character_event = {
-	id = montane_real_hike.319
-	desc = EVTDESC_hike_bear_encounter_13
-	picture = GFX_evt_mysterious_forest
-	
-	is_triggered_only = yes
-	
-	option = {
-	name = EVTOPT_hike_bear_encounter_13
-	prestige = 20
-	piety = 20
-	hidden_tooltip = {
-		change_variable = {
-		which = hike_completion
-		value = 1
-		}
-		set_character_flag = encountered_bear_already
-	}}
-}
-
-character_event = {
-	id = montane_real_hike.320
-	desc = EVTDESC_hike_bear_encounter_14
-	picture = GFX_evt_mysterious_forest
-	
-	is_triggered_only = yes
-	
-	option = {
-	name = EVTOPT_hike_bear_encounter_14
-	prestige = 20
-	piety = 20
-	random_list = {
-			50 = { death = { death_reason = death_accident_bear} }
-			20 = { add_trait = wounded hidden_tooltip = {character_event = {id=montane_real_hike.325 days=2}}}
-			10 = { add_trait = one_eyed hidden_tooltip = {character_event = {id=montane_real_hike.325 days=2}}}
-			10 = { add_trait = one_legged hidden_tooltip = {character_event = {id=montane_real_hike.325 days=2}}}
-			10 = { add_trait = one_handed hidden_tooltip = {character_event = {id=montane_real_hike.325 days=2}}}
-		}
-	hidden_tooltip = {	
-		set_character_flag = encountered_bear_already
-	}
-	}
-	
-}
-
-character_event = {
-	id = montane_real_hike.321
-	desc = EVTDESC_hike_bear_encounter_15
-	picture = GFX_evt_mysterious_forest
-	
-	is_triggered_only = yes
-	
-	option = {
-	name = EVTOPT_hike_bear_encounter_15
-	hidden_tooltip = {
-	random_list = {
-		10 = { mult_modifier = { factor = 3 combat_rating >= 50 } character_event = {id=montane_real_hike.322 days=2} }
-		30 = { mult_modifier = { factor = 2 combat_rating >= 40 } add_trait = wounded character_event = {id=montane_real_hike.323 days=2} }
-		10 = { add_trait = wounded character_event = {id=montane_real_hike.324 days=2} }
-		10 = { add_trait = one_eyed character_event = {id=montane_real_hike.324 days=2} }
-		10 = { add_trait = one_legged character_event = {id=montane_real_hike.324 days=2} }
-		10 = { add_trait = one_handed character_event = {id=montane_real_hike.324 days=2} }
-		10 = { mult_modifier = { factor = 2 combat_rating >= 20 } death = { death_reason = death_accident_bear } }
-	}
-	}
-	}
-}
-
-character_event = {
-	id = montane_real_hike.322
-	desc = EVTDESC_hike_bear_encounter_16
-	picture = GFX_evt_mysterious_forest
-	
-	is_triggered_only = yes
-	
-	option = {
-	name = EVTOPT_hike_bear_encounter_16to18
-	prestige = 200
-	piety = -200
-	hidden_tooltip = {
-		change_variable = {
-		which = hike_completion
-		value = 1
-		}
-		set_character_flag = encountered_bear_already
-	}}
-}
-
-character_event = {
-	id = montane_real_hike.323
-	desc = EVTDESC_hike_bear_encounter_17
-	picture = GFX_evt_mysterious_forest
-	
-	is_triggered_only = yes
-	
-	option = {
-	name = EVTOPT_hike_bear_encounter_16to18
-	prestige = 200
-	piety = -200
-	hidden_tooltip = {
-		change_variable = {
-		which = hike_completion
-		value = 1
-		}
-		set_character_flag = encountered_bear_already
-	}}
-}
-
-character_event = {
-	id = montane_real_hike.324
-	desc = EVTDESC_hike_bear_encounter_18
-	picture = GFX_evt_mysterious_forest
-	
-	is_triggered_only = yes
-	
-	option = {
-	name = EVTOPT_hike_bear_encounter_16to18
-	prestige = -200
-	piety = -100
-	set_character_flag = encountered_bear_already
-	}
-}
-
-character_event = {
-	id = montane_real_hike.325
-	desc = EVTDESC_hike_bear_encounter_19
-	picture = GFX_evt_mysterious_forest
-	
-	is_triggered_only = yes
-	
-	option = {
-	name = EVTOPT_hike_bear_encounter_19
-	set_character_flag = encountered_bear_already
-	}
-}
-
-character_event = {
-	id = montane_real_hike.326
-	desc = EVTDESC_hike_hot_river
-	picture = GFX_evt_fishing
-	
-	only_playable = yes
-	religion = montane
-	
-	mean_time_to_happen = {
-		months = 4
-	}
-
-	trigger = {
-		trait = on_hike
-		NOT = {check_variable = {
-		which = hike_completion
-		value >= 3
-		}}
-		has_character_flag = river_montane_hike
-		OR = {
-			has_character_flag = hike_option_a
-			has_character_flag = hike_option_b
-			has_character_flag = hike_option_c
-			has_character_flag = hike_option_d
-		}
-	}
-	
-	option = {
-		name = EVTOPTA_hike_hot_river
-		piety = 10
-		hidden_tooltip = {
-		change_variable = {
-		which = hike_completion
-		value = 1
-		}
-		}
-		random_list = {
-			75 = { remove_trait = stressed prestige = 10 }
-			15 = { add_trait = wounded }
-			5 = { death = { death_reason = death_accident_drowning }}
-			5 = { random_courtier = { death = { death_reason = death_accident_drowning }}}
-		}
-	}
-	
-	option = {
-		name = EVTOPTB_hike_hot_river
-		prestige = -10
-		hidden_tooltip = {
-		change_variable = {
-		which = hike_completion
-		value = 1
-		}
-		}
-		random_courtier = {
-			opinion = { who = ROOT modifier = opinion_annoyed }
-		}
-	}
-}
-
-character_event = {
-	id = montane_real_hike.327
-	desc = EVTDESC_hike_mushroomstew
-	picture = GFX_evt_uncomfortable
-	
-	only_playable = yes
-	religion = montane
-	
-	mean_time_to_happen = {
-		months = 5
-	}
-
-	trigger = {
-		trait = on_hike
-		NOT = {check_variable = {
-		which = hike_completion
-		value >= 3
-		}}
-		OR = {
-			has_character_flag = mountain_montane_hike
-			has_character_flag = forest_montane_hike
-			has_character_flag = river_montane_hike
-		}
-		OR = {
-			has_character_flag = hike_option_a
-			has_character_flag = hike_option_b
-			has_character_flag = hike_option_c
-			has_character_flag = hike_option_d
-		}
-	}
-	
-	option = {
-		name = EVTOPTA_hike_mushroomstew
-		
-		random_courtier = {
-			opinion = { who = ROOT modifier = opinion_ate_my_soup }
-		}
-		hidden_tooltip = {
-		random_list = {
-			40 = { add_character_modifier = { name = well_fed months = 2 }}
-			20 = { add_trait = diarrhea }
-			19 = { narrative_event = { id = montane_real_hike.328 days = 2 } }
-			1 = { add_trait = food_poisoning death = { death_reason = death_trait }}
-		}
-		change_variable = {
-		which = hike_completion
-		value = 1
-		}
-		}
-	}
-	
-	
-	option = {
-		name = EVTOPTB_hike_mushroomstew
-		random_courtier = {
-			opinion = { who = ROOT modifier = opinion_annoyed }
-		}
-		random = {
-			chance = 25
-			add_trait = is_malnourished
-		}
-		hidden_tooltip = {
-		change_variable = {
-		which = hike_completion
-		value = 1
-		}
-		}
-	}
-}
-
-narrative_event = {
-	id = montane_real_hike.328
-	title = EVTNAME_vision_madness
-	desc = EVTDESC_vision_madness
-	picture = GFX_evt_vision_quest
-	is_triggered_only = yes
-	option = {
-		name = EVTOPTC_hike_mushroomstew
-		random = {
-		chance = 25
-		add_trait = food_poisoning
-		}
-	}
-}
-
-character_event = {
-	id = montane_real_hike.329
-	desc = EVTDESC_rock_skipping
-	picture = GFX_evt_fishing
-	
-	trigger = {
-		trait = on_hike
-		NOT = {check_variable = {
-		which = hike_completion
-		value >= 3
-		}}
-		OR = {
-			has_character_flag = forest_montane_hike
-			has_character_flag = river_montane_hike
-		}
-		OR = {
-			has_character_flag = hike_option_a
-			has_character_flag = hike_option_b
-			has_character_flag = hike_option_c
-			has_character_flag = hike_option_d
-		}
-	}
-	
-	mean_time_to_happen = {
-		months = 10
-	}
-	
-	option = {
-		name = EVTOPTA_rock_skipping
-		piety = 10
-		hidden_tooltip = {
-		random_list = {
-		33 = { character_event = { id = montane_real_hike.330 days = 2 }}
-		33 = { character_event = { id = montane_real_hike.331 days = 2 }}
-		33 = { character_event = { id = montane_real_hike.332 days = 2 }}
-		}
-		}
-	}
-	option = {
-		name = EVTOPTE_rock_skipping
-		prestige = -5
-	}
-}
-
-character_event = {
-	id = montane_real_hike.330
-	desc = EVTDESC_rock_skipping2
-	picture = GFX_evt_fishing
-	
-	is_triggered_only = yes
-	
-	option = {
-		name = EVTOPTB_rock_skipping
-		any_courtier = {
-			opinion = { who = ROOT modifier = opinion_impressed_by_rock_throw }
-		}
-		prestige = 50
-		hidden_tooltip = {
-		change_variable = {
-		which = hike_completion
-		value = 1
-		}
-		}
-	}
-}
-character_event = {
-	id = montane_real_hike.331
-	desc = EVTDESC_rock_skipping3
-	picture = GFX_evt_fishing
-	
-	is_triggered_only = yes
-	
-	option = {
-		name = EVTOPTC_rock_skipping
-		prestige = 5
-		hidden_tooltip = {
-		change_variable = {
-		which = hike_completion
-		value = 1
-		}
-		}
-	}
-}
-character_event = {
-	id = montane_real_hike.332
-	desc = EVTDESC_rock_skipping4
-	picture = GFX_evt_fishing
-	
-	is_triggered_only = yes
-	
-	option = {
-		name = EVTOPTD_rock_skipping
-		prestige = -25
-		random = {
-			chance = 10
-			add_trait = stressed
-		}
-		hidden_tooltip = {
-		change_variable = {
-		which = hike_completion
-		value = 1
-		}
-		}
-	}
-}
-character_event = {
-	id = montane_real_hike.333
-	desc = EVTDESC_getting_lost
-	picture = GFX_evt_bandits
-	mean_time_to_happen = {
-		months = 6
-	}
-	
-	trigger = {
-		trait = on_hike
-		NOT = {check_variable = {
-		which = hike_completion
-		value >= 3
-		}}
-		OR = {
-			has_character_flag = mountain_montane_hike
-			has_character_flag = forest_montane_hike
-		}
-		OR = {
-			has_character_flag = hike_option_a
-			has_character_flag = hike_option_b
-			has_character_flag = hike_option_c
-			has_character_flag = hike_option_d
-		}
-		NOR = {
-			has_character_flag = hike_lost
-			has_character_flag = was_lost
-		}
-	}
-	
-	option = {
-		name = EVTOPTD_getting_lost
-		trigger ={
-			has_character_flag = forest_montane_hike
-		}
-		set_character_flag = lost_in_forest
-		set_character_flag = hike_lost
-	}
-	option = {
-		name = EVTOPTD_getting_lost
-		trigger ={
-			has_character_flag = mountain_montane_hike
-		}
-		set_character_flag = lost_in_mountain
-		set_character_flag = hike_lost
-	}
-}
-character_event = {
-	id = montane_real_hike.334
-	desc = EVTDESC_lost_fixing1
-	picture = GFX_evt_bandits
-	mean_time_to_happen = {
-		months = 3
-	}
-	
-	trigger = {
-		trait = on_hike
-		NOT = {check_variable = {
-		which = hike_completion
-		value >= 3
-		}}
-		OR = {
-			has_character_flag = lost_in_mountain
-			has_character_flag = lost_in_forest
-		}
-		OR = {
-			has_character_flag = hike_option_a
-			has_character_flag = hike_option_b
-			has_character_flag = hike_option_c
-			has_character_flag = hike_option_d
-		}
-	}
-	
-	option = {
-		name = EVTOPTA_lost_fixing1
-		hidden_tooltip = {
-			random_list = {
-				40 = { character_event = { id = montane_real_hike.341 days = 5 }}
-				50 = { character_event = { id = montane_real_hike.342 days = 5 }}
-				10 = { character_event = { id = montane_real_hike.343 days = 5 }}
-			}
-		}
-	}
-	option = {
-		name = EVTOPTB_lost_fixing1
-	}
-}
-character_event = {
-	id = montane_real_hike.335
-	desc = EVTDESC_lost_fixing2
-	picture = GFX_evt_bandits
-	mean_time_to_happen = {
-		months = 2
-	}
-	
-	trigger = {
-		trait = on_hike
-		NOT = {check_variable = {
-		which = hike_completion
-		value >= 3
-		}}
-		OR = {
-			has_character_flag = lost_in_mountain
-			has_character_flag = lost_in_forest
-		}
-		OR = {
-			has_character_flag = hike_option_a
-			has_character_flag = hike_option_b
-			has_character_flag = hike_option_c
-			has_character_flag = hike_option_d
-		}
-	}
-	
-	option = {
-		name = EVTOPTA_lost_fixing2
-		hidden_tooltip = {
-			random_list = {
-				65 = { character_event = { id = montane_real_hike.341 days = 5 }}
-				35 = { character_event = { id = montane_real_hike.342 days = 5 }}
-			}
-		}
-	}
-	option = {
-		name = EVTOPTB_lost_fixing2
-		hidden_tooltip = {
-			random_list = {
-				80 = { character_event = { id = montane_real_hike.341 days = 5 }}
-				20 = { character_event = { id = montane_real_hike.342 days = 5 }}
-			}
-		}
-	}
-	option = {
-		name = EVTOPTC_lost_fixing2
-	}
-}
-character_event = {
-	id = montane_real_hike.336
-	desc = EVTDESC_lost_fixing3
-	picture = GFX_evt_bandits
-	mean_time_to_happen = {
-		months = 2
-	}
-	
-	trigger = {
-		trait = on_hike
-		NOT = {check_variable = {
-		which = hike_completion
-		value >= 3
-		}}
-		OR = {
-			has_character_flag = lost_in_mountain
-			has_character_flag = lost_in_forest
-		}
-		OR = {
-			has_character_flag = hike_option_a
-			has_character_flag = hike_option_b
-			has_character_flag = hike_option_c
-			has_character_flag = hike_option_d
-		}
-	}
-	
-	option = {
-		name = EVTOPTA_lost_fixing3
-		hidden_tooltip = {
-			random_list = {
-				50 = { character_event = { id = montane_real_hike.341 days = 5 }}
-				50 = { character_event = { id = montane_real_hike.342 days = 5 }}
-			}
-		}
-	}
-	option = {
-		name = EVTOPTB_lost_fixing3
-	}
-}
-long_character_event = {
-	id = montane_real_hike.337
-	desc = EVTDESC_lost_fixing_magical_1
-	picture = GFX_evt_bandits
-	mean_time_to_happen = {
-		months = 12
-	}
-	
-	trigger = {
-		trait = on_hike
-		NOT = {check_variable = {
-		which = hike_completion
-		value >= 3
-		}}
-		OR = {
-			has_character_flag = lost_in_mountain
-			has_character_flag = lost_in_forest
-		}
-		OR = {
-			has_character_flag = hike_option_a
-			has_character_flag = hike_option_b
-			has_character_flag = hike_option_c
-			has_character_flag = hike_option_d
-		}
-	}
-	
-	option = {
-		name = EVTOPTA_lost_fixing_magic
-		hidden_tooltip = {
-			random_list = {
-				50 = { character_event = { id = montane_real_hike.341 days = 5 }}
-				50 = { character_event = { id = montane_real_hike.342 days = 5 }}
-			}
-		}
-	}
-	option = {
-		name = EVTOPTB_lost_fixing_magic
-		hidden_tooltip = {
-			random_list = {
-				50 = { character_event = { id = montane_real_hike.341 days = 5 }}
-				50 = { character_event = { id = montane_real_hike.342 days = 5 }}
-			}
-		}
-	}
-}
-long_character_event = {
-	id = montane_real_hike.338
-	desc = EVTDESC_lost_fixing_magical_2
-	picture = GFX_evt_bandits
-	mean_time_to_happen = {
-		months = 12
-	}
-	
-	trigger = {
-		trait = on_hike
-		OR = {
-			has_character_flag = lost_in_mountain
-			has_character_flag = lost_in_forest
-		}
-		OR = {
-			has_character_flag = hike_option_a
-			has_character_flag = hike_option_b
-			has_character_flag = hike_option_c
-			has_character_flag = hike_option_d
-		}
-	}
-	
-	option = {
-		name = EVTOPTA_lost_fixing_magic
-		hidden_tooltip = {
-			random_list = {
-				50 = { character_event = { id = montane_real_hike.341 days = 5 }}
-				50 = { character_event = { id = montane_real_hike.342 days = 5 }}
-			}
-		}
-	}
-	option = {
-		name = EVTOPTB_lost_fixing_magic
-		hidden_tooltip = {
-			random_list = {
-				50 = { character_event = { id = montane_real_hike.341 days = 5 }}
-				50 = { character_event = { id = montane_real_hike.342 days = 5 }}
-			}
-		}
-	}
-}
-character_event = {
-	id = montane_real_hike.339
-	desc = EVTDESC_lostgoinghome
-	picture = GFX_evt_bandits
-	mean_time_to_happen = {
-		months = 8
-	}
-	
-	trigger = {
-		trait = on_hike
-		NOT = {check_variable = {
-		which = hike_completion
-		value >= 3
-		}}
-		OR = {
-			has_character_flag = lost_in_mountain
-			has_character_flag = lost_in_forest
-		}
-		OR = {
-			has_character_flag = hike_option_a
-			has_character_flag = hike_option_b
-			has_character_flag = hike_option_c
-			has_character_flag = hike_option_d
-		}
-	}
-	
-	option = {
-		name = EVTOPTA_lostgoinghome
-		hidden_tooltip = {
-			random = {
-				chance = 10
-				character_event = { id = montane_real_hike.341 days = 5 }
-			}
-		}
-	}
-	option = {
-		name = EVTOPTB_lostgoinghome
-		remove_trait = on_hike
-		random = {
-		chance = 25
-		add_trait = depressed
-		}
-		hidden_tooltip = {
-			character_event = { id = montane_real_hike.199 }
-		}
-		prestige = -10
-	}
-}
-
-character_event = {
-	id = montane_real_hike.341
-	desc = EVTDESC_montanelostresultgood
-	
-	picture = GFX_evt_bandits
-	
-	is_triggered_only = yes
-	
-	option = {
-		name = EVTOPTA_montanelostresultgood
-		prestige = 10
-		hidden_tooltip = {
-			set_character_flag = was_lost
-			clr_character_flag = hike_lost
-			clr_character_flag = lost_in_forest
-			clr_character_flag = lost_in_mountain
-			change_variable = {
-			which = hike_completion
-			value = 1
-			}
-		}	
-	}
-}
-
-character_event = {
-	id = montane_real_hike.342
-	desc = EVTDESC_montanelostresultbad
-	
-	picture = GFX_evt_bandits
-	
-	is_triggered_only = yes
-	
-	option = {
-		name = EVTOPTA_montanelostresultbad
-		prestige = -10
+		name = EVTOPT_montane_pilgrim_prep_cancel
 		piety = -10
-		random = {
-			chance = 10
-			add_trait = stressed
-		}
+		remove_trait = on_pilgrimage
 	}
-}
-
-character_event = {
-	id = montane_real_hike.343
-	desc = EVTDESC_montanelostresultforestfire
-	
-	picture = GFX_evt_bandits
-	
-	is_triggered_only = yes
 	
 	option = {
-		name = EVTOPTA_montanelostresultforestfire
-		death = { death_reason = death_murder_unknown_combustion }
+		name = EVTOPT_montane_pilgrim_prep_humble
+		piety = 20
+		random_list = {
+			20 = { add_trait = humble }
+			10 = { add_trait = trusting }
+			70 = { }
+		}	
+		narrative_event = { id = montane_pilgrim.11 days = 7 random = 10 }
+		ai_chance = { factor = 5 }
+	}
+	
+	option = {
+		name = EVTOPT_montane_pilgrim_prep_carriage
+		trigger = { wealth = 10 }
+		prestige = 20
+		wealth = -10
+		set_character_flag = pilgrim_carriage
+		random_list = {
+			20 = { add_trait = proud }
+			10 = { add_trait = shy }
+			70 = { }
+		}
+		narrative_event = { id = montane_pilgrim.11 days = 12 random = 10 }
+		ai_chance = { factor = 10 }
+	}
+	
+	option = {
+		name = EVTOPT_montane_pilgrim_prep_retinue
+		trigger = { wealth = 25 }
+		prestige = 20
+		wealth = -25
+		set_character_flag = pilgrim_bodyguards
+		random = { chance = 20 add_trait = paranoid }
+		narrative_event = { id = montane_pilgrim.11 days = 15 random = 10 }
+		ai_chance = { factor = 20 }
 	}
 }
 
+narrative_event = {
+	id = montane_pilgrim.11
+	title = EVTNAME_pilgrim_yellowstone
+	desc = EVTDESC_montane_pilgrim_yellowstone
+	picture = GFX_evt_busy_trading_dock_republic
 
-character_event = { #ping the court chaplain 
-	id = montane_real_hike.600
-	picture = GFX_evt_campfire_hf
-	hide_window = yes	
-	only_playable = yes
-	only_capable = yes
-	prisoner = no
-	min_age = 16
-	religion = montane
-
-	trigger = {
-		AND = {
-			calc_true_if = {
-				amount >= 3
-				trait = greedy
-				trait = envious
-				trait = wroth
-				trait = slothful
-				trait = gluttonous
-				trait = lustful
-				trait = cruel
-				trait = drunkard
-				trait = craven
-				trait = hedonist
-				trait = impaler
-				trait = paranoid
-				trait = kinslayer
-				has_character_modifier = adulterer
-				has_character_modifier = adultress
-				has_character_modifier = incestuous_adulterer
-				has_character_modifier = incestuous_adultress
-				has_character_modifier = known_murderer
-				has_character_modifier = uncivilized_dueler
-			}
-			job_spiritual = { 
-				opinion = {
-					who = ROOT
-					value < -15
-					}
-				}
-			}
-		NOR = {
-			trait = discharged 
-			trait = honorably_discharged 
-		}
-		any_courtier_or_vassal = {
-			has_job_title = job_spiritual
-		}
-		is_feudal=yes
-	}
-	
-	mean_time_to_happen = {
-		years = 6
-	}
-	
+	is_triggered_only = yes
+	trigger = { trait = on_pilgrimage }
 	immediate = {
-		job_spiritual = {
-			character_event = { id = montane_real_hike.601 }
-		}
+		set_character_flag = on_pilgrimage_yellowstone
+		clr_character_flag = pilgrim_entry_retried
+	}
+	
+	option = {
+		name = EVTOPT_pilgrim_approach
+		69 = { owner = { character_event = { id = montane_pilgrim.20 } } }
+		narrative_event = { id = montane_pilgrim.12 days = 20 random = 10 }
+	}
+}
+
+narrative_event = {
+	id = montane_pilgrim.12
+	title = EVTNAME_pilgrim_rocky_mountain_national_park 
+	desc = EVTDESC_montane_pilgrim_rocky_mountain_national_park 
+	picture = GFX_evt_busy_trading_dock_republic
+
+	is_triggered_only = yes
+	trigger = { trait = on_pilgrimage }
+	immediate = {
+		clr_character_flag = on_pilgrimage_yellowstone
+		set_character_flag = on_pilgrimage_rocky_mountain_national_park 
+		clr_character_flag = pilgrim_entry_retried
+	}
+
+	option = {
+		name = EVTOPT_pilgrim_approach
+		3 = { owner = { character_event = { id = montane_pilgrim.20 } } }
+		narrative_event = { id = montane_pilgrim.13 days = 20 random = 10 }
+	}
+}
+
+narrative_event = {
+	id = montane_pilgrim.13
+	title = EVTNAME_pilgrim_banff
+	desc = EVTDESC_montane_pilgrim_banff
+	picture = GFX_evt_busy_trading_dock_republic
+
+	is_triggered_only = yes
+	trigger = { trait = on_pilgrimage }
+	immediate = {
+		clr_character_flag = on_pilgrimage_rocky_mountain_national_park 
+		set_character_flag = on_pilgrimage_banff
+		clr_character_flag = pilgrim_entry_retried
+	}
+
+	option = {
+		name = EVTOPT_pilgrim_approach
+		27 = { owner = { character_event = { id = montane_pilgrim.20 } } }
+		narrative_event = { id = montane_pilgrim.14 days = 20 random = 10 }
+	}
+}
+
+narrative_event = {
+	id = montane_pilgrim.14
+	title = EVTNAME_pilgrim_zion
+	desc = EVTDESC_montane_pilgrim_zion
+	picture = GFX_evt_busy_trading_dock_republic
+
+	is_triggered_only = yes
+	trigger = { trait = on_pilgrimage }
+	immediate = {
+		clr_character_flag = on_pilgrimage_banff
+		set_character_flag = on_pilgrimage_zion
+		clr_character_flag = pilgrim_entry_retried
+	}
+
+	option = {
+		name = EVTOPT_pilgrim_approach
+		63 = { owner = { character_event = { id = montane_pilgrim.20 } } }
+		narrative_event = { id = montane_pilgrim.15 days = 20 random = 10 }
+	}
+}
+
+narrative_event = {
+	id = montane_pilgrim.15
+	title = EVTNAME_pilgrim_guarden_of_the_gods
+	desc = EVTDESC_montane_pilgrim_guarden_of_the_gods
+	picture = GFX_evt_busy_trading_dock_republic
+
+	is_triggered_only = yes
+	trigger = { trait = on_pilgrimage }
+	immediate = {
+		clr_character_flag = on_pilgrimage_zion
+		set_character_flag = on_pilgrimage_guarden_of_the_gods
+		clr_character_flag = pilgrim_entry_retried
+	}
+
+	option = {
+		name = EVTOPT_pilgrim_approach
+		75 = { owner = { character_event = { id = montane_pilgrim.20 } } }
+		narrative_event = { id = montane_pilgrim.91 days = 5 random = 5 }
 	}
 }
 
 character_event = {
-	id = montane_real_hike.601
+	id = montane_pilgrim.20
+
 	hide_window = yes
-	
 	is_triggered_only = yes
 	
-	
 	immediate = {
-		piety = 50
+		# 30	city owned by pilgrim
+		if = {
+			limit = { character = FROM }
+			FROM = { character_event = { id = montane_pilgrim.30 } }
+		}
+
+		# 31	city owned by a lord in the same realm as pilgrim
 		if = {
 			limit = {
-				has_character_flag = montane_repent
-				NOR = {
-					trait = greedy
-					trait = envious
-					trait = wroth
-					trait = slothful
-					trait = gluttonous
-					trait = lustful
-					trait = cruel
-					trait = drunkard
-					trait = craven
-					trait = hedonist
-					trait = impaler
-					trait = paranoid
-					trait = kinslayer
-					has_character_modifier = adulterer
-					has_character_modifier = adultress
-					has_character_modifier = incestuous_adulterer
-					has_character_modifier = incestuous_adultress
-					has_character_modifier = known_murderer
-					has_character_modifier = uncivilized_dueler
-				}
+				NOT = { character = FROM }
+				NOT = { FROM = { has_opinion_modifier = { who = ROOT modifier = allowed_pilgrim } } }
+				same_realm = FROM #does this actually work?
 			}
-			employer = {
-				letter_event = { id = montane_real_hike.603 }
-			}
+			FROM = { character_event = { id = montane_pilgrim.31 } }
 		}
-		else = {
-			employer = {
-				letter_event = { id = montane_real_hike.602 }
-			}
-		}
-	}
-	
-}
 
-letter_event = { #the court chaplain sends a letter
-	id = montane_real_hike.602
-	border = GFX_event_letter_frame_religion
-	desc = {
-		trigger = {
-			FROM = {
-				NOT = { has_character_flag = montane_repent }
-			}
-		}
-		text = EVTDESC_discharged_montane
-	}
-	desc = {
-		trigger = {
-			FROM = {
-				has_character_flag = montane_repent
-			}
-		}
-		text = EVTDESC_discharged_montane_round_2
-	}
-	
-	is_triggered_only = yes
-
-	trigger = {
-		religion = montane
-	}
-	
-	
-	option = {
-		name = EVTOPTA_discharged_montane
-		abdicate = yes
-		add_trait = honorably_discharged
-		piety = 50
-	}
-	option = {
-		name = EVTOPTB_discharged_montane
-		add_trait = discharged
-		job_spiritual = {
-			opinion = {
-				who = ROOT
-				modifier = refused_discharging 
-			}
-		}
-	}
-	option = {
-		trigger = {
-			NOT = {
-				has_character_flag = montane_repent
-			}
-		}
-		name = EVTOPTC_discharged_montane
-		set_character_flag = montane_repent
-		character_event = { id = montane_real_hike.600 days = 360 }
-	}
-}
-
-letter_event = { #the court chaplain sends a letter
-	id = montane_real_hike.603
-	border = GFX_event_letter_frame_religion
-	desc = EVTDESC_repented_montane
-	
-	is_triggered_only = yes
-
-	trigger = {
-		religion = montane
-	}
-	
-	
-	option = {
-		name = EVTOPTA_repented_montane
-		job_spiritual = {
-			opinion = {
-				who = ROOT
-				modifier = impressed_dryads
-			}
-		}
-		piety = 250
-	}
-}
-
-character_event = { #the court chaplain event to screw you up
-	id = montane_real_hike.604
-	border = GFX_event_letter_frame_religion
-	hide_window = yes
-	
-	is_triggered_only = yes
-
-	trigger = {
-		religion = montane
-	}
-	
-	immediate = {
-		liege = { letter_event = { id = montane_real_hike.605 days = 5 }}
-	}
-}
-
-letter_event = { #the court chaplain event to screw you up
-	id = montane_real_hike.605
-	border = GFX_event_letter_frame_religion
-	desc = EVTDESC_smalldischarge
-	
-	is_triggered_only = yes
-
-	trigger = {
-		religion = montane
-	}
-	
-	option = {
-		name = EVTOPTA_discharged_montane
-		abdicate = yes
-		piety = 50
-		add_trait = honorably_discharged
-	}
-	option = {
-		name = EVTOPTB_discharged_montane
-		add_trait = discharged
-		job_spiritual = {
-			opinion = {
-				who = ROOT
-				modifier = refused_discharging
-			}
-		}
-	}
-}
-
-letter_event = { #response
-	id = montane_real_hike.606
-	border = GFX_event_letter_frame_religion
-	desc = EVTDESC_manageddischarging
-	
-	is_triggered_only = yes
-
-	trigger = {
-		religion = montane
-	}
-	
-	option = {
-		name = Ok
-		piety = 200
-	}
-}
-
-character_event = { #ping the court chaplain 
-	id = montane_real_hike.610
-	picture = GFX_evt_campfire_hf
-	hide_window = yes	
-	only_playable = yes
-	only_capable = yes
-	prisoner = no
-	min_age = 16
-	religion = montane
-
-	trigger = {
-		NOT = { has_character_modifier = lost_official_diplomacy_authorization }
-		OR = {
-			trait = shy
-			trait = paranoid
-			trait = stubborn
-			trait = midas_touched
-		}
-		any_courtier_or_vassal = {
-			has_job_title = job_spiritual
-		}
-		job_spiritual = {
-			opinion = {
-			who = ROOT
-			value < 15
-			}
-		}
-		is_feudal = yes
-	}
-	
-	mean_time_to_happen = {
-		years = 2
-	}
-	
-	immediate = {
-		job_spiritual = {
-			character_event = { id = montane_real_hike.611 }
-		}
-	}
-}
-
-character_event = { #ping liege
-	id = montane_real_hike.611
-	picture = GFX_evt_campfire_hf
-	hide_window = yes
-	is_triggered_only = yes
-	
-	immediate = {
-		liege = {
-			letter_event = { id = montane_real_hike.612 }
-		}
-	}
-}	
-
-letter_event = {
-	id = montane_real_hike.612
-	picture = GFX_evt_courtiers_talking
-	desc = EVTDESC_montane612
-	border = GFX_event_letter_frame_diplomacy
-	is_triggered_only = yes
-	
-	option = {
-		name = EVTOPTA_montane612
-		add_character_modifier = {
-			name = lost_official_diplomacy_authorization
-			years = 2
-		}
-		piety = -100
-	}
-}
-	
-character_event = {
-	id = montane_real_hike.800
-	hide_window = yes
-	
-	only_rulers = yes
-	
-	trigger = {
-		religion = montane
-		is_feudal = yes
-		NOT = {
-			any_courtier_or_vassal = {
-			has_job_title = job_spiritual
-			}
-		}
-	}
-	mean_time_to_happen = {
-	days = 1
-	modifier = {
-		factor = 0.25
-		religion = montane
-		}
-	}
-	immediate = {
-	if = {
-		limit = {
-		any_courtier_or_vassal = {
-				is_female = yes
-				OR = {
-					is_priest = yes
-					is_landed = false
-				}
-				NOT = {
-				dynasty = ROOT
-				}
-				has_job_title = no
-			}
-		}
-		random_courtier_or_vassal = {
-			limit = {
-					is_female = yes
-					OR = {
-						is_priest = yes
-						is_landed = false
-					}
-					NOT = {
-						dynasty = ROOT
-					}
-					has_job_title = no
-			}
-			preferred_limit = {
-				learning > 35
-			}
-			preferred_limit = {
-				learning > 30
-			}
-			preferred_limit = {
-				learning > 25
-			}
-			preferred_limit = {
-				learning > 20
-			}
-			preferred_limit = {
-				learning > 15
-			}
-			preferred_limit = {
-				learning > 10
-			}
-			give_job_title = job_spiritual
-		}
-	}
-		else = {
-			create_random_priest = {
-				dynasty = random
-				religion = ROOT
-				culture = ROOT
-				female = yes
-				age = 34
-				trait = zealous
-				learning = 6
-				random_traits = yes
-			}
-			new_character = {
-				give_job_title = job_spiritual
-				character_event = { id = misc.3 }
-			}
-	}
-	}
-}
-
-character_event = {
-	id = montane_real_hike.801
-	hide_window = yes
-	
-	only_rulers = yes
-	
-	trigger = {
-		religion = montane
-		is_feudal = yes
-		NOT = { has_character_modifier = official_stewardship_authorization }
-		NOT = {
-			any_courtier_or_vassal = {
-			has_job_title = job_treasurer
-			}
-		}
-	}
-	mean_time_to_happen = {
-	days = 1
-	modifier = {
-		factor = 0.25
-		religion = montane
-		}
-	}
-	immediate = {
-	if = {
-		limit = {
-		any_courtier_or_vassal = {
-				NOT = {
-				dynasty = ROOT
-				}
-				has_job_title = no
-			}
-		}
-		random_courtier_or_vassal = {
-			limit = {
-				NOT = {
-					dynasty = ROOT
-				}
-				has_job_title = no
-			}
-			preferred_limit = {
-				stewardship > 35
-			}
-			preferred_limit = {
-				stewardship > 30
-			}
-			preferred_limit = {
-				stewardship > 25
-			}
-			preferred_limit = {
-				stewardship > 20
-			}
-			preferred_limit = {
-				stewardship > 15
-			}
-			preferred_limit = {
-				stewardship > 10
-			}
-			give_job_title = job_treasurer
-		}
-	}
-		else = {
-			create_random_steward = {
-				dynasty = random
-				religion = ROOT
-				culture = ROOT
-				female = yes
-				age = 30
-				stewardship = 8
-				random_traits = yes
-			}
-			new_character = {
-				give_job_title = job_treasurer
-				character_event = { id = misc.3 }
-			}
-	}
-	}
-}
-
-character_event = {
-	id = montane_real_hike.802
-	hide_window = yes
-	
-	only_rulers = yes
-	
-	trigger = {
-		religion = montane
-		is_feudal = yes
-		has_character_modifier = lost_official_diplomacy_authorization
-		NOT = {
-			any_courtier_or_vassal = {
-			has_job_title = job_chancellor
-			}
-		}
-	}
-	mean_time_to_happen = {
-	days = 1
-	modifier = {
-		factor = 0.25
-		religion = montane
-		}
-	}
-	immediate = {
+		# 32	city owned by montane foreign lord
 		if = {
-		limit = {
-		any_courtier_or_vassal = {
-				NOT = {
-				dynasty = ROOT
-				}
-				has_job_title = no
-			}
-		}
-		random_courtier_or_vassal = {
 			limit = {
-				NOT = {
-					dynasty = ROOT
-				}
-				has_job_title = no
+				NOT = { character = FROM }
+				NOT = { same_realm = FROM }
+				NOT = { FROM = { has_opinion_modifier = { who = ROOT modifier = allowed_pilgrim } } }
+				religion = montane
 			}
-			preferred_limit = {
-				diplomacy > 35
+			FROM = { character_event = { id = montane_pilgrim.32 } }
+		}
+
+		# 33	city owned by infidel foreign lord
+		if = {
+			limit = {
+				NOT = { character = FROM }
+				NOT = { same_realm = FROM }
+				NOT = { religion = montane }
+				NOT = { FROM = { has_opinion_modifier = { who = ROOT modifier = allowed_pilgrim } } }
 			}
-			preferred_limit = {
-				diplomacy > 30
+			FROM = { character_event = { id = montane_pilgrim.33 } }
+		}
+		
+		# 34	city owned by another lord who has already granted you access
+		if = {
+			limit = {
+				NOT = { character = FROM }
+				FROM = { has_opinion_modifier = { who = ROOT modifier = allowed_pilgrim } }
 			}
-			preferred_limit = {
-				diplomacy > 25
-			}
-			preferred_limit = {
-				diplomacy > 20
-			}
-			preferred_limit = {
-				diplomacy > 15
-			}
-			preferred_limit = {
-				diplomacy > 10
-			}
-			give_job_title = job_chancellor
+			FROM = { character_event = { id = montane_pilgrim.34 } }
 		}
 	}
-		else = {
-			create_random_diplomat = {
-				dynasty = random
-				religion = ROOT
-				culture = ROOT
-				female = yes
-				age = 41
-				diplomacy = 6
-				random_traits = yes
-			}
-			new_character = {
-				give_job_title = job_chancellor
-				character_event = { id = misc.3 }
-			}
+	
+	option = { }
+}
+
+# ************************* Pilgrim Choices ************************
+
+character_event = {
+	id = montane_pilgrim.30
+	desc = EVTDESC_montane_pilgrim_owncity
+	picture = GFX_evt_market
+	border = GFX_event_normal_frame_economy
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPT_pilgrim_owncity_admire
+		prestige = 10
+		piety = 5
+		random_list = {
+			60 = { remove_trait = stressed }
+			30 = { remove_trait = depressed }
+			10 = { add_trait = content }
+		}
+		ai_chance = {
+			factor = 25
+			modifier = { factor = 2 trait = proud }
+		}
 	}
+	
+	option = {
+		name = EVTOPT_pilgrim_owncity_donate
+		trigger = { wealth = 20 }
+		piety = 10
+		wealth = -20
+		add_character_modifier = { name = donated_to_holy_order duration = 180 }
+		ai_chance = {
+			factor = 25
+			modifier = { factor = 2 trait = zealous }
+			modifier = { factor = 2 trait = charitable }
+		}
 	}
 }
 
 character_event = {
-	id = montane_real_hike.900
-	hide_window = yes
-	religion = montane
+	id = montane_pilgrim.31
+	desc = EVTDESC_montane_pilgrim_samerealm
+	picture = GFX_evt_carriage
+	border = GFX_event_normal_frame_diplomacy
+	
 	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPT_pilgrim_requestinspire
+		trigger = {
+			diplomacy = 8
+			learning = 8
+			FROM = { religion = montane }
+		}
+		tooltip_info = diplomacy
+		random = { chance = 25 add_trait = zealous }
+		FROM = { character_event = { id = montane_pilgrim.44 } }
+		ai_chance = {
+			factor = 500
+		}
+	}
+	
+	option = {
+		name = EVTOPT_pilgrim_requestnormal
+		trigger = {
+			NOT = { diplomacy = 8 }
+			NOT = { learning = 8 }
+		}
+		random = { chance = 10 add_trait = trusting }
+		FROM = { character_event = { id = montane_pilgrim.40 } }
+		ai_chance = {
+			factor = 10
+		}
+	}
+	
+	option = {
+		name = EVTOPT_pilgrim_requestgift
+		trigger = { wealth = 10 }
+		wealth = -10
+		FROM = { wealth = 10 }
+		FROM = { character_event = { id = montane_pilgrim.41 } }
+		ai_chance = {
+			factor = 25
+		}
+	}
+	
+	option = {
+		name = EVTOPT_pilgrim_sneakpoorly
+		trigger = { NOT = { intrigue = 8 } }
+		random = { chance = 10 add_trait = shy }
+		random_list = {
+			40 = { 
+				custom_tooltip = { text = TXT_pilgrim_sneaksucceed_tooltip }
+				hidden_tooltip = { character_event = { id = montane_pilgrim.56 } }
+			}
+			60 = { 
+				custom_tooltip = { text = TXT_pilgrim_sneakfail_tooltip }
+				hidden_tooltip = { FROM = { character_event = { id = montane_pilgrim.46 } } }
+			}
+		}
+		ai_chance = {
+			factor = 10
+			modifier = { factor = 2 trait = shy }
+		}
+	}
 
 	option = {
-		name = EVTOPTA_montane_901 #grant boon
+		name = EVTOPT_pilgrim_sneakintrigue
+		trigger = { intrigue = 8 }
+		tooltip_info = intrigue
+		random = { chance = 10 add_trait = paranoid }
+		random_list = {
+			75 = { 
+				custom_tooltip = { text = TXT_pilgrim_sneaksucceed_tooltip }
+				hidden_tooltip = { character_event = { id = montane_pilgrim.56 } }
+			}
+			25 = { 
+				custom_tooltip = { text = TXT_pilgrim_sneakfail_tooltip }
+				hidden_tooltip = { FROM = { character_event = { id = montane_pilgrim.46 } } }
+			}
+		}
+		ai_chance = {
+			factor = 50
+			modifier = { factor = 2 trait = shy }
+		}
+	}
+	
+	option = {
+		name = EVTOPT_pilgrim_requestdiplomatic
+		trigger = {
+			diplomacy = 8
+			OR = {
+				NOT = { FROM = { religion = montane } }
+				NOT = { learning = 8 }
+			}
+		}
+		tooltip_info = diplomacy
+		random = { chance = 10 add_trait = gregarious }
+		FROM = { character_event = { id = montane_pilgrim.42 } }
+		ai_chance = {
+			factor = 50
+		}
+	}
+	
+	option = {
+		name = EVTOPT_pilgrim_requestlearning
+		trigger = {
+			NOT = { diplomacy = 8 }
+			learning = 8
+			FROM = { religion = montane }
+		}
+		tooltip_info = learning
+		random = { chance = 10 add_trait = zealous }
+		FROM = { character_event = { id = montane_pilgrim.43 } }
+		ai_chance = {
+			factor = 50
+			modifier = { factor = 2 trait = zealous }
+		}
+	}
+
+	option = {
+		name = EVTOPT_pilgrim_requestmartial
+		trigger = {
+			martial = 8
+			NOT = { FROM = { religion = montane } }
+		}
+		tooltip_info = martial
+		random = { chance = 25 add_trait = wroth }
+		FROM = { character_event = { id = montane_pilgrim.45 } }
+		ai_chance = {
+			factor = 10
+			modifier = { factor = 3 realm_size = 100 }
+			modifier = { factor = 2 realm_size = 50 }
+			modifier = { factor = 2 realm_size = 25 }
+			modifier = { factor = 2 realm_size = 10 }
+			modifier = { factor = 2 trait = wroth }
+		}
+	}
+}
+
+character_event = {
+	id = montane_pilgrim.32
+	desc = EVTDESC_montane_pilgrim_foreign
+	picture = GFX_evt_carriage
+	border = GFX_event_normal_frame_diplomacy
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPT_pilgrim_requestinspire
+		trigger = {
+			diplomacy = 8
+			learning = 8
+		}
+		tooltip_info = diplomacy
+		random = { chance = 25 add_trait = zealous }
+		FROM = { character_event = { id = montane_pilgrim.44 } }
+		ai_chance = {
+			factor = 500
+		}
+	}
+	
+	option = {
+		name = EVTOPT_pilgrim_requestnormal
+		trigger = { 
+			NOT = { diplomacy = 8 }	
+			NOT = { learning = 8 }
+		}
+		random = { chance = 20 add_trait = trusting }
+		FROM = { character_event = { id = montane_pilgrim.40 } }
+		ai_chance = {
+			factor = 10
+		}
+	}
+	
+	option = {
+		name = EVTOPT_pilgrim_requestgift
+		trigger = {	wealth = 20	}
+		wealth = -20
+		FROM = { wealth = 20 }
+		FROM = { character_event = { id = montane_pilgrim.41 } }
+		ai_chance = {
+			factor = 25
+		}
+	}
+	
+	option = {
+		name = EVTOPT_pilgrim_sneakpoorly
+		trigger = { NOT = { intrigue = 8 } }
+		random = { chance = 10 add_trait = shy }
+		random_list = {
+			40 = { 
+				custom_tooltip = { text = TXT_pilgrim_sneaksucceed_tooltip }
+				hidden_tooltip = { character_event = { id = montane_pilgrim.56 } }
+			}
+			60 = { 
+				custom_tooltip = { text = TXT_pilgrim_sneakfail_tooltip }
+				hidden_tooltip = { FROM = { character_event = { id = montane_pilgrim.46 } } }
+			}
+		}
+		ai_chance = {
+			factor = 10
+		}
+	}
+
+	option = {
+		name = EVTOPT_pilgrim_sneakintrigue
+		trigger = { intrigue = 8 }
+		tooltip_info = intrigue
+		random = { chance = 10 add_trait = paranoid }
+		random_list = {
+			75 = { 
+				custom_tooltip = { text = TXT_pilgrim_sneaksucceed_tooltip }
+				hidden_tooltip = { character_event = { id = montane_pilgrim.56 } }
+			}
+			25 = { 
+				custom_tooltip = { text = TXT_pilgrim_sneakfail_tooltip }
+				hidden_tooltip = { FROM = { character_event = { id = montane_pilgrim.46 } } }
+			}
+		}
+		ai_chance = {
+			factor = 50
+		}
+	}
+	
+	option = {
+		name = EVTOPT_pilgrim_requestdiplomatic
+		trigger = {
+			diplomacy = 8
+			NOT = { learning = 8 }
+		}
+		tooltip_info = diplomacy
+		random = { chance = 10 add_trait = gregarious }
+		FROM = { character_event = { id = montane_pilgrim.42 } }
+		ai_chance = {
+			factor = 50
+			modifier = { factor = 2 trait = gregarious }
+		}
+	}
+	
+	option = {
+		name = EVTOPT_pilgrim_requestlearning
+		trigger = {
+			learning = 8
+			NOT = { diplomacy = 8 }
+		}
+		tooltip_info = learning
+		random = { chance = 10 add_trait = zealous }
+		FROM = { character_event = { id = montane_pilgrim.43 } }
+		ai_chance = {
+			factor = 50
+			modifier = { factor = 2 trait = zealous }
+		}
+	}
+
+	option = {
+		name = EVTOPT_pilgrim_requestmartial
+		trigger = { martial = 8 }
+		tooltip_info = martial
+		random = { chance = 15 add_trait = wroth }
+		FROM = { character_event = { id = montane_pilgrim.45 } }
 		ai_chance = {
 			factor = 20
-			modifier = {
-				factor = 0
-				is_rival = FROMFROM
-			}
-			modifier = {
-				factor = 5
-				is_friend = FROMFROM
-			}
-			modifier = {
-				factor = 0.1
-				NOT = { opinion = { who = FROMFROM value = -25 } }
-			}
-			modifier = {
-				factor = 4
-				FROMFROM = { trait = just }
-			}
-			modifier = {
-				factor = 2
-				FROMFROM = { trait = zealous }
-			}
-			modifier = {
-				factor = 0.1
-				FROMFROM = { trait = arbitrary }
-			}
-			modifier = {
-				factor = 0.5
-				FROMFROM = { trait = greedy }
-			}
+			modifier = { factor = 3 realm_size = 100 }
+			modifier = { factor = 2 realm_size = 50 }
+			modifier = { factor = 2 realm_size = 25 }
+			modifier = { factor = 2 realm_size = 10 }
+			modifier = { factor = 2 trait = wroth }
 		}
-		if = {
-			limit = {
-				OR = {
-				FROMFROM = { trait = discharged }
-				FROMFROM = { has_character_modifier = lost_official_diplomacy_authorization }
-				}
-			}
-			hidden_tooltip = { FROMFROM = { character_event = { id = montane_real_hike.904 days = 7 } } }
-		}
-		else = {
-			hidden_tooltip = { FROMFROM = { character_event = { id = montane_real_hike.902 days = 7 } } }
-		}
-	}
-	option = {
-		name = EVTOPTB_montane_901 #decline boon
-		ai_chance = {
-			factor = 1
-		}
-		FROMFROM = {
-			opinion = {
-				modifier = denied_boon
-				who = FROMFROM
-				years = 2
-			}
-		}
-		hidden_tooltip = { FROMFROM = { character_event = { id = montane_real_hike.903 days = 7 } } }
 	}
 }
+
 character_event = {
-	id = montane_real_hike.901
-	desc = EVTDESC_boon_choice
-	picture = GFX_evt_courtiers_talking
-	religion = montane
+	id = montane_pilgrim.33
+	desc = EVTDESC_montane_pilgrim_foreigninfidel
+	picture = GFX_evt_carriage
+	border = GFX_event_normal_frame_diplomacy
+	
 	is_triggered_only = yes
-
-	option = {
-		name = EVTOPTA_boon_stewardship
-		add_character_modifier = {
-			name = official_stewardship_authorization
-			years = 2
-		}
-		add_character_modifier = {
-				modifier = boon_timer
-				years = 2
-		}
-	}
-	option = {
-		name = EVTOPTB_boon_sponsorship
-		add_character_modifier = {
-			name = official_druid_sponsorship
-			years = 2
-		}
-		add_character_modifier = {
-				modifier = boon_timer
-				years = 2
-		}
-	}
-	option = {
-		name = EVTOPTC_boon_delegation
-		add_character_modifier = {
-			name = druidic_delegation
-			years = 2
-		}
-		add_character_modifier = {
-				modifier = boon_timer
-				years = 2
-		}
-	}
-	option = {
-		name = EVTOPTD_boon_next
-		hidden_tooltip = { character_event = { id = montane_real_hike.902 } }
-	}
-}
-character_event = {
-	id = montane_real_hike.902
-	desc = EVTDESC_boon_choice
-	picture = GFX_evt_courtiers_talking
-	religion = montane
-	is_triggered_only = yes
-
-	option = {
-		name = EVTOPTA_boon_martial
-		add_character_modifier = {
-			name = martial_land_focus
-			years = 2
-		}
-		add_character_modifier = {
-				modifier = boon_timer
-				years = 2
-		}
-	}
-	option = {
-		name = EVTOPTB_boon_defensive
-		add_character_modifier = {
-			name = defensive_land_focus
-			years = 2
-		}
-		add_character_modifier = {
-				modifier = boon_timer
-				years = 2
-		}
-	}
-	option = {
-		name = EVTOPTC_boon_tax
-		add_character_modifier = {
-			name = tax_land_focus
-			years = 2
-		}
-		add_character_modifier = {
-				modifier = boon_timer
-				years = 2
-		}
-	}
-	option = {
-		name = EVTOPTD_boon_next
-		hidden_tooltip = { character_event = { id = montane_real_hike.901 } }
-	}
-}
-character_event = {
-	id = montane_real_hike.903
-	desc = EVTDESC_boon_denied
-	picture = GFX_evt_courtiers_talking
-	religion = montane
-	is_triggered_only = yes
-
-	option = {
-		name = EVTOPT_boon
-		add_character_modifier = {
-				modifier = boon_timer
-				years = 2
-		}
-	}
-}
-character_event = {
-	id = montane_real_hike.904
-	desc = EVTDESC_boon_choice_discharge
-	picture = GFX_evt_courtiers_talking
-	religion = montane
-	is_triggered_only = yes
-
-	option = {
-		name = EVTOPTA_boon_reinstate
-		remove_trait = discharged
-		trigger = {
-			trait = discharged
-		}
-		add_character_modifier = {
-				modifier = boon_timer
-				years = 2
-		}
-	}
-	option = {
-		name = EVTOPTB_diplomacy_auth
-		remove_character_modifier = lost_official_diplomacy_authorization
-		trigger = {
-			has_character_modifier = lost_official_diplomacy_authorization
-		}
-		add_character_modifier = {
-				modifier = boon_timer
-				years = 2
-		}
-	}
-}
-
-character_event = {
-	id = montane_real_hike.1000
-	desc = EVTDESC_yousholuldnotbeseeingthis
-	picture = GFX_evt_courtiers_talking
-	religion = montane
-	mean_time_to_happen = {
-		years = 5
-	}
-	trigger = {
-		has_job_title = job_spiritual
-		liege = {
-			religion = montane
-			government = theocratic_feudal_government
-		}
-		NOT = {
-			has_character_flag = selected_succ_law_already
-		}
-	}
 	
 	option = {
-		name = montane_succ_eldership
-		trigger = {
-			NOR = {
-				trait = content
-				AND = {
-				diplomacy < 8
-				martial > 10
-				stewardship > 10
-				learning > 15
-				}
-				diplomacy < 15
-				liege = {
-				primary_title = {
-						has_law = succ_eldership
-					}
-				}
-			}
-		}
-		liege = { character_event = { id = montane_real_hike.1001 } }
-		piety = 20
-		ai_chance = {
-			factor = 10
-			modifier = { factor = 5 trait = zealous }
-		}
-	}
-	
-	option = {
-		name = montane_succ_religious
-		trigger = {
-			NOR = {
-				trait = content
-				trait = cynical
-				AND = {
-				diplomacy > 8
-				martial > 10
-				stewardship > 10
-				learning < 15
-				}
-				learning < 16
-				liege = {
-				primary_title = {
-						has_law = succ_rel_montane_elective
-					}
-				}
-			}
-		}
-		liege = { character_event = { id = montane_real_hike.1002 } }
-		piety = 20
-		ai_chance = {
-			factor = 10
-			modifier = { factor = 5 trait = zealous }
-		}
-	}
-	
-	option = {
-		name = montane_succ_military
-		trigger = {
-			NOR = {
-				trait = content
-				AND ={
-				diplomacy > 8
-				martial < 10
-				stewardship > 10
-				learning > 15
-				}
-				martial < 12
-				liege = {
-				primary_title = {
-						has_law = succ_mil_montane_elective
-					}
-				}
-			}
-		}
-		liege = { character_event = { id = montane_real_hike.1003 } }
-		piety = 20
-		ai_chance = {
-			factor = 10
-			modifier = { factor = 5 trait = zealous }
-		}
-	}
-	
-	option = {
-		name = montane_succ_gavelkind
-		trigger = {
-			NOR = {
-				trait = content
-				AND = {
-				diplomacy > 8
-				martial > 10
-				stewardship < 10
-				learning > 15
-				}
-				stewardship < 16
-				}
-	
-				liege = {
-				primary_title = {
-						has_law = succ_gavelkind
-					}
-				}
-			}
-
-		liege = { character_event = { id = montane_real_hike.1004 } }
-		piety = 20
-		ai_chance = {
-			factor = 10
-			modifier = { factor = 5 trait = zealous }
-		}
-	}
-	
-	option = {
-		name = montane_succ_content
-		piety = 50
+		name = EVTOPT_pilgrim_requestnormal
+		trigger = { NOT = { diplomacy = 10 } }
+		random = { chance = 30 add_trait = trusting}
+		FROM = { character_event = { id = montane_pilgrim.40 } }
 		ai_chance = {
 			factor = 10
 		}
 	}
-	immediate = {
-		set_character_flag = selected_succ_law_already
-	}
-}
-
-character_event = {
-	id = montane_real_hike.1001
-	desc = EVTDESC_montane_succ_eldership
-	picture = GFX_evt_courtiers_talking
-	is_triggered_only = yes
 	
 	option = {
-		name = EVTOPT_montane_laws_succ_approve
-		primary_title = { add_law = { law = succ_eldership opinion_effect = no }}
-		piety = 200
+		name = EVTOPT_pilgrim_requestgift
+		trigger = { wealth = 30 }
+		wealth = -30
+		FROM = { wealth = 30 }
+		FROM = { character_event = { id = montane_pilgrim.41 } }
 		ai_chance = {
-			factor = 10
-			modifier = { factor = 10 trait = zealous }
-			modifier = { factor = 5 trait = devout }
+			factor = 25
 		}
 	}
 	
 	option = {
-		name = EVTOPT_montane_laws_succ_deny
-		piety = -50
-		add_character_modifier = { name = refused_succ_law_change years = 3 }
-		
-		ai_chance = { factor = 5 }
-	}
-}
-
-character_event = {
-	id = montane_real_hike.1002
-	desc = EVTDESC_montane_succ_rel_montane_elective
-	picture = GFX_evt_courtiers_talking
-	is_triggered_only = yes
-	
-	option = {
-		name = EVTOPT_montane_laws_succ_approve
-		primary_title = { add_law = { law = succ_rel_montane_elective opinion_effect = no }}
-		piety = 200
-		ai_chance = {
-			factor = 10
-			modifier = { factor = 10 trait = zealous }
-			modifier = { factor = 5 trait = devout }
-		}
-	}
-	
-	option = {
-		name = EVTOPT_montane_laws_succ_deny
-		piety = -50
-		add_character_modifier = { name = refused_succ_law_change years = 3 }
-		
-		ai_chance = { factor = 5 }
-	}
-}
-
-character_event = {
-	id = montane_real_hike.1003
-	desc = EVTDESC_montane_succ_mil_montane_elective
-	picture = GFX_evt_courtiers_talking
-	is_triggered_only = yes
-	
-	option = {
-		name = EVTOPT_montane_laws_succ_approve
-		primary_title = { add_law = { law = succ_mil_montane_elective opinion_effect = no }}
-		piety = 200
-		ai_chance = {
-			factor = 10
-			modifier = { factor = 10 trait = zealous }
-			modifier = { factor = 5 trait = devout }
-		}
-	}
-	
-	option = {
-		name = EVTOPT_montane_laws_succ_deny
-		piety = -50
-		add_character_modifier = { name = refused_succ_law_change years = 3 }
-		
-		ai_chance = { factor = 5 }
-	}
-}
-
-character_event = {
-	id = montane_real_hike.1004
-	desc = EVTDESC_montane_succ_gavelkind
-	picture = GFX_evt_courtiers_talking
-	is_triggered_only = yes
-	
-	option = {
-		name = EVTOPT_montane_laws_succ_approve
-		primary_title = { add_law = { law = succ_gavelkind opinion_effect = no }}
-		piety = 200
-		ai_chance = {
-			factor = 10
-			modifier = { factor = 10 trait = zealous }
-			modifier = { factor = 5 trait = devout }
-		}
-	}
-	
-	option = {
-		name = EVTOPT_montane_laws_succ_deny
-		piety = -50
-		add_character_modifier = { name = refused_succ_law_change years = 3 }
-		
-		ai_chance = { factor = 5 
-		modifier = { factor = 5 trait = cynical }
-		}
-	}
-}
-
-character_event = {
-	id = montane_real_hike.1005
-	desc = EVTDESC_yousholuldnotbeseeingthis
-	picture = GFX_evt_courtiers_talking
-	religion = montane
-	mean_time_to_happen = {
-		months = 18
-	}
-	trigger = {
-		has_job_title = job_spiritual
-		liege = {
-			religion = montane
-			government = theocratic_feudal_government
-			primary_title = { has_law = captaincy_mobilization_3 }
-		}
-		OR = {
-			trait = kind
-			trait = craven
-			trait = cynical
-			trait = charismatic_negotiator
-			trait = grey_eminence
-			trait = temperate
-			trait = just
-			trait = arbitrary
-			trait = content
-			trait = paranoid
-			trait = stubborn
-		}
-	}
-	
-	option = {
-		name = screwyouinthatgeneralarea
-		liege = { character_event = { id = montane_real_hike.1006 } }
-		piety = 500
-	}
-}
-
-character_event = {
-	id = montane_real_hike.1006
-	desc = EVTDESC_montane_demiliterize
-	picture = GFX_evt_courtiers_talking
-	is_triggered_only = yes
-	
-	option = {
-		name = EVTOPTA_montane_demiliterize
-		
-		piety = -500
-		add_character_modifier = { name = refused_demilitarize years = 3 }
-		
-		ai_chance = { factor = 5 
-		modifier = { factor = 5 trait = cynical }
-		modifier = { factor = 5 trait = ambitious }
-		modifier = { factor = 5 trait = proud }
-		}
-	}
-	
-	option = {
-		name = EVTOPTB_montane_demiliterize
-		primary_title = { add_law = { law = captaincy_mobilization_2 opinion_effect = no }}
-		piety = 50
-		
-		ai_chance = { factor = 5 }
-		
-	}
-	option = {
-		name = EVTOPTB_montane_demiliterize
-		primary_title = { add_law = { law = captaincy_mobilization_1 opinion_effect = no }}
-		piety = 100
-		
-		ai_chance = { factor = 5 
-		modifier = { factor = 5 trait = temperate }
-		}
-		
-	}
-	option = {
-		name = EVTOPTB_montane_demiliterize
-		primary_title = { add_law = { law = captaincy_mobilization_0 opinion_effect = no }}
-		piety = 200
-		
-		ai_chance = { factor = 5 
-		modifier = { factor = 5 trait = devout }
-		}
-		
-	}
-}
-
-character_event = {
-	id = montane_real_hike.2000
-	desc = EVTDESC_montane_militerize
-	picture = GFX_evt_armory
-	is_triggered_only = yes
-	
-	option = {
-		name = EVTOPTA_montane_militarize
-		primary_title = { add_law = { law = captaincy_mobilization_2 opinion_effect = no }}
-		ai_chance = { factor = 5 }
-	}
-	
-	option = {
-		trigger = {
-			piety > 500
-			NOT = { has_character_modifier = mobilized_druidic_reserves }
-		}
-		name = EVTOPTB_montane_militarize
-		primary_title = { add_law = { law = captaincy_mobilization_2 opinion_effect = no }}
-		add_character_modifier = { name = mobilized_druidic_reserves years = 5 }
-		capital_scope = {
-		ROOT = {
-		spawn_unit = {
-			owner = THIS
-			province = PREV
-			troops ={
-				light_infantry = { 300 300 }
-				heavy_infantry = { 250 250 }
-				pikemen = { 500 500 }
-				archers = { 100 100 }
-			}
-			earmark = druidic_mobilized_reserves
-			attrition = 0.25
-			reinforces = yes
-		}
-		}
-		}
-		piety = -500
-		
-		ai_chance = { factor = 1 }
-	}
-}
-
-character_event = {
-	id = montane_real_hike.2001
-	desc = EVTDESC_montane_demiliterize
-	picture = GFX_evt_armory
-	is_triggered_only = yes
-	
-	option = {
-		name = EVTOPTA_montane_demilitarize
-		primary_title = { add_law = { law = captaincy_mobilization_1 opinion_effect = no }}
-		ai_chance = { factor = 5 }
-		disband_event_forces = druidic_mobilized_reserves
-	}
-	
-	option = {
-		name = EVTOPTB_montane_demilitarize
-		primary_title = { add_law = { law = captaincy_mobilization_0 opinion_effect = no }}
-		piety = 200
-		disband_event_forces = druidic_mobilized_reserves
-		remove_character_modifier = mobilized_druidic_reserves
-		ai_chance = { factor = 1 }
-	}
-}
-
-character_event = {
-	id = montane_real_hike.5000
-	hide_window = yes
-	trigger = {
-		any_war = {
-			using_cb = montane_reclamation_cb
-		}
-		religion = montane
-		NOT = {
-			has_character_flag = the_cycle_that_binds
-		}
-	}
-	mean_time_to_happen = {
-		days = 5
-	}
-	immediate = {
-		any_war = {
-			limit = { defender = { using_cb = montane_reclamation_cb } }
-			defender = { save_event_target_as = reclamation_war_targ }
-		}
-		any_neighbor_independent_ruler = {
-			limit = {
-				war = no
-				religion = montane
-				NOR = {
-					has_character_modifier = refused_reclamation
-					has_character_modifier = montane_took_part_in_reclamation
-					event_target:reclamation_war_targ = {
-						reverse_has_truce = PREV
-					}
-				}
-				OR = {
-					any_realm_province = {
-						any_neighbor_province = {
-							OR = {
-								AND = {
-									has_owner = yes
-									owner = {
-										OR = {
-											character = event_target:reclamation_war_targ
-											is_liege_or_above = event_target:reclamation_war_targ
-										}
-									}
-								}
-								AND = {
-									is_land = no
-									any_neighbor_province = {
-										OR = {
-											AND = {
-												has_owner = yes
-												owner = {
-													OR = {
-														character = event_target:reclamation_war_targ
-														is_liege_or_above = event_target:reclamation_war_targ
-													}
-												}
-											}
-											AND = {
-												is_land = no
-												any_neighbor_province = {
-													owner = {
-														OR = {
-															character = event_target:reclamation_war_targ
-															is_liege_or_above = event_target:reclamation_war_targ
-														}
-													}
-												}
-											}
-										}
-									}
-								}
-							}
-						}
-					}
-					event_target:reclamation_war_targ = {
-						any_realm_province = {
-							dejure_liege_title = {
-								owner = {
-									OR = {
-										character = PREVPREV
-										is_liege_or_above = PREVPREV
-									}
-								}
-							}
-						}
-					}
-				}
-			}
-			character_event = { id = montane_real_hike.5001 days=2 } 
-		}
-		any_vassal = {
-			limit = {
-				war = no
-				religion = montane
-				NOR = {
-					has_character_modifier = refused_reclamation
-					has_character_modifier = montane_took_part_in_reclamation
-					event_target:reclamation_war_targ = {
-						reverse_has_truce = ROOT 
-					}
-				}
-				OR = {
-					any_realm_province = {
-						any_neighbor_province = {
-							OR = {
-								AND = {
-									has_owner = yes
-									owner = {
-										OR = {
-											character = event_target:reclamation_war_targ
-											is_liege_or_above = event_target:reclamation_war_targ
-										}
-									}
-								}
-								AND = {
-									borders_major_river = yes
-									any_neighbor_province = {
-									has_owner = yes
-										owner = {
-											OR = {
-											character = event_target:reclamation_war_targ
-											is_liege_or_above = event_target:reclamation_war_targ
-											}
-										}
-									}
-								}
-								AND = {
-									is_land = no
-									any_neighbor_province = {
-										OR = {
-											AND = {
-												has_owner = yes
-												owner = {
-													OR = {
-														character = event_target:reclamation_war_targ
-														is_liege_or_above = event_target:reclamation_war_targ
-													}
-												}
-											}
-											AND = {
-												borders_major_river = yes
-												any_neighbor_province = {
-												has_owner = yes
-													owner = {
-														OR = {
-														character = event_target:reclamation_war_targ
-														is_liege_or_above = event_target:reclamation_war_targ
-														}
-													}
-												}
-											}
-											AND = {
-												is_land = no
-												any_neighbor_province = {
-													OR = {
-														AND = {
-															has_owner = yes
-															owner = {
-																OR = {
-																	character = event_target:reclamation_war_targ
-																	is_liege_or_above = event_target:reclamation_war_targ
-																}
-															}
-														}
-														AND = {
-															borders_major_river = yes
-															any_neighbor_province = {
-															has_owner = yes
-																owner = {
-																	OR = {
-																	character = event_target:reclamation_war_targ
-																	is_liege_or_above = event_target:reclamation_war_targ
-																	}
-																}
-															}
-														}
-														AND = {
-															is_land = no
-															any_neighbor_province = {
-																owner = {
-																	OR = {
-																		character = event_target:reclamation_war_targ
-																		is_liege_or_above = event_target:reclamation_war_targ
-																	}
-																}
-															}
-														}
-													}
-												}
-											}
-										}
-									}
-								}
-							}
-						}
-					}
-					event_target:reclamation_war_targ = {
-						any_realm_province = {
-							dejure_liege_title = {
-								owner = {
-									OR = {
-										character = PREVPREV
-										is_liege_or_above = PREVPREV
-									}
-								}
-							}
-						}
-					}
-				}
-			}
-			character_event = { id = montane_real_hike.5001 days=2 } 
-		}
-		set_character_flag = the_cycle_that_binds
-	}
-}
-
-character_event = {
-	id = montane_real_hike.5001
-	title = EVTITLE_neighbor_reclamation_war
-	desc = EVTDESC_neighbor_reclamation_war
-	picture = GFX_evt_armory
-	is_triggered_only = yes
-	
-	option = {
-		name = EVTOPTA_neighbor_reclamation_war
-		ai_chance = { factor = 65
-		modifier = { factor = 10 trait = ambitious }
-		modifier = { factor = 5 trait = zealous }
-		modifier = { factor = 5 trait = wroth }
-		}
-		add_character_modifier = { name = montane_took_part_in_reclamation years = 5 }
-		random_landed_title = {
-			limit = {
-				tier = COUNT
-				region = custom_montane_core_region
-				owner = {
-					OR = {
-						character = event_target:reclamation_war_targ
-						vassal_of = event_target:reclamation_war_targ
-					}
-				}
-			}
-			ROOT = {
-				war = {
-					target = event_target:reclamation_war_targ
-					casus_belli = montane_reclamation_cb
-					thirdparty_title = PREV
-					tier = COUNT
-				}
-			}
-		}
-	}
-	
-	option = {
-		name = EVTOPTB_neighbor_reclamation_war
-		prestige = 200
-		ai_chance = { factor = 35
-		modifier = { factor = 10 trait = cynical }
-		modifier = { factor = 10 trait = proud }
-		modifier = { factor = 10 trait = temperate }
-		}
-		add_character_modifier = { name = refused_reclamation years = 2 }
-	}
-}
-
-narrative_event = {
-	id = montane_real_hike.5002
-	title = EVTITLE_victoria_fallen
-	desc = EVTDESC_victoria_fallen
-	picture = GFX_evt_magic_ritual
-	
-	trigger = {
-		completely_controls = k_vancouver
-		NOT = {
-			religion = montane
-		}
-		NOT = {
-			has_global_flag = global_cycle_that_binds
-		}
-	}
-	mean_time_to_happen = {
-		days = 2
-	}
-	
-	major = yes
-	
-	major_trigger = {
-		OR = {
-		capital_scope = {
-			NOT = {
-				distance = {
-					where = 548
-					value = 700	# Same part of the world
-				}
-			}
-		}
-			religion = montane
-		}
-	}
-	
-	option = {
-		name = EVTOPTA_the_great_bind
-		trigger = {
-			OR = {
-				religion = raven_tales
-				religion = raven_tales_reformed
-			}
-		}
-	}
-	option = {
-		name = EVTOPTB_the_great_bind
-		trigger = {
-			religion = montane
-		}
-		piety = 200
-		prestige = 100
-	}
-	option = {
-		name = EVTOPTC_the_great_bind
-		trigger = {
-			OR = {
-			religion = trailwalker
-			religion = trailwalker_reformed
-			}
-		}
-	}
-	option = {
-		name = EVTOPTD_the_great_bind
-		trigger = {
-			OR = {
-			religion = peyotist
-			religion = nazarene
-			religion = true_cross
-			}
-		}
-	}
-	option = {
-		name = EVTOPTE_the_great_bind
-		trigger = {
-			religion = cetic
-		}
-	}
-	option = {
-		name = EVTOPTF_the_great_bind
-		trigger = {
-			NOR = {
-				religion = peyotist
-				religion = cetic
-				religion = trailwalker
-				religion = trailwalker_reformed
-				religion = raven_tales
-				religion = raven_tales_reformed
-				religion = montane
-				religion = nazarene
-				religion = true_cross
-			}
-		}
-	}
-	
-	immediate = {
-		set_global_flag = global_cycle_that_binds
-	}
-}
-
-narrative_event = {
-	id = montane_real_hike.5003
-	title = EVTITLE_caledonia_fallen
-	desc = EVTDESC_caledonia_fallen
-	picture = GFX_evt_magic_ritual
-	
-	trigger = {
-		completely_controls = k_caledonia
-		NOT = {
-			religion = montane
-		}
-		NOT = {
-			has_global_flag = global_cycle_that_binds
-		}
-	}
-	mean_time_to_happen = {
-		days = 2
-	}
-	
-	major = yes
-	
-	major_trigger = {
-		OR = {
-		capital_scope = {
-			NOT = {
-				distance = {
-					where = 567
-					value = 700	# Same part of the world
-				}
-			}
-		}
-			religion = montane
-		}
-	}
-	
-	option = {
-		name = EVTOPTA_the_great_bind
-		trigger = {
-			OR = {
-				religion = raven_tales
-				religion = raven_tales_reformed
-			}
-		}
-	}
-	option = {
-		name = EVTOPTB_the_great_bind
-		trigger = {
-			religion = montane
-		}
-		piety = 200
-		prestige = 100
-	}
-	option = {
-		name = EVTOPTC_the_great_bind
-		trigger = {
-			OR = {
-			religion = trailwalker
-			religion = trailwalker_reformed
-			}
-		}
-	}
-	option = {
-		name = EVTOPTD_the_great_bind
-		trigger = {
-			OR = {
-			religion = peyotist
-			religion = nazarene
-			religion = true_cross
-			}
-		}
-	}
-	option = {
-		name = EVTOPTE_the_great_bind
-		trigger = {
-			religion = cetic
-		}
-	}
-	option = {
-		name = EVTOPTF_the_great_bind
-		trigger = {
-			NOR = {
-				religion = peyotist
-				religion = cetic
-				religion = trailwalker
-				religion = trailwalker_reformed
-				religion = raven_tales
-				religion = raven_tales_reformed
-				religion = montane
-				religion = nazarene
-				religion = true_cross
-			}
-		}
-	}
-	
-	immediate = {
-		set_global_flag = global_cycle_that_binds
-	}
-}
-
-narrative_event = {
-	id = montane_real_hike.5004
-	title = EVTITLE_cascadia_fallen
-	desc = EVTDESC_cascadia_fallen
-	picture = GFX_evt_magic_ritual
-	
-	trigger = {
-		completely_controls = k_cascadia
-		NOT = {
-			religion = montane
-		}
-		NOT = {
-			has_global_flag = global_cycle_that_binds
-		}
-	}
-	mean_time_to_happen = {
-		days = 2
-	}
-	
-	major = yes
-	
-	major_trigger = {
-		OR = {
-		capital_scope = {
-			NOT = {
-				distance = {
-					where = 543
-					value = 700	# Same part of the world
-				}
-			}
-		}
-		religion = montane
-		}
-	}
-	
-	option = {
-		name = EVTOPTA_the_great_bind
-		trigger = {
-			OR = {
-				religion = raven_tales
-				religion = raven_tales_reformed
-			}
-		}
-	}
-	option = {
-		name = EVTOPTB_the_great_bind
-		trigger = {
-			religion = montane
-		}
-		piety = 200
-		prestige = 100
-	}
-	option = {
-		name = EVTOPTC_the_great_bind
-		trigger = {
-			OR = {
-			religion = trailwalker
-			religion = trailwalker_reformed
-			}
-		}
-	}
-	option = {
-		name = EVTOPTD_the_great_bind
-		trigger = {
-			OR = {
-			religion = peyotist
-			religion = nazarene
-			religion = true_cross
-			}
-		}
-	}
-	option = {
-		name = EVTOPTE_the_great_bind
-		trigger = {
-			religion = cetic
-		}
-	}
-	option = {
-		name = EVTOPTF_the_great_bind
-		trigger = {
-			NOR = {
-				religion = peyotist
-				religion = cetic
-				religion = trailwalker
-				religion = trailwalker_reformed
-				religion = raven_tales
-				religion = raven_tales_reformed
-				religion = montane
-				religion = nazarene
-				religion = true_cross
-			}
-		}
-	}
-	
-	immediate = {
-		set_global_flag = global_cycle_that_binds
-	}
-}
-
-narrative_event = {
-	id = montane_real_hike.5005
-	title = EVTITLE_jefferson_fallen
-	desc = EVTDESC_jefferson_fallen
-	picture = GFX_evt_steppe_mercenaries
-	
-	trigger = {
-		completely_controls = k_jefferson
-		NOT = {
-			religion = montane
-		}
-		NOT = {
-			has_global_flag = global_cycle_that_binds
-		}
-	}
-	mean_time_to_happen = {
-		days = 2
-	}
-	
-	major = yes
-	
-	major_trigger = {
-		OR = {
-		capital_scope = {
-			NOT = {
-				distance = {
-					where = 2059
-					value = 700	# Same part of the world
-				}
-			}
-		}
-		religion=montane
-		}
-	}
-	
-	option = {
-		name = EVTOPTA_the_great_bind
-		trigger = {
-			OR = {
-				religion = raven_tales
-				religion = raven_tales_reformed
-			}
-		}
-	}
-	option = {
-		name = EVTOPTB_the_great_bind
-		trigger = {
-			religion = montane
-		}
-		piety = 200
-		prestige = 100
-	}
-	option = {
-		name = EVTOPTC_the_great_bind
-		trigger = {
-			OR = {
-			religion = trailwalker
-			religion = trailwalker_reformed
-			}
-		}
-	}
-	option = {
-		name = EVTOPTD_the_great_bind
-		trigger = {
-			OR = {
-			religion = peyotist
-			religion = nazarene
-			religion = true_cross
-			}
-		}
-	}
-	option = {
-		name = EVTOPTE_the_great_bind
-		trigger = {
-			religion = cetic
-		}
-	}
-	option = {
-		name = EVTOPTF_the_great_bind
-		trigger = {
-			NOR = {
-				religion = peyotist
-				religion = cetic
-				religion = trailwalker
-				religion = trailwalker_reformed
-				religion = raven_tales
-				religion = raven_tales_reformed
-				religion = montane
-				religion = nazarene
-				religion = true_cross
-			}
-		}
-	}
-	
-	immediate = {
-		set_global_flag = global_cycle_that_binds
-	}
-}
-
-narrative_event = {
-	id = montane_real_hike.5006
-	title = EVTITLE_lincoln_fallen
-	desc = EVTDESC_lincoln_fallen
-	picture = GFX_evt_steppe_mercenaries
-	
-	trigger = {
-		completely_controls = k_lincoln
-		NOT = {
-			religion = montane
-		}
-		NOT = {
-			has_global_flag = global_cycle_that_binds
-		}
-	}
-	mean_time_to_happen = {
-		days = 2
-	}
-	
-	major = yes
-	
-	major_trigger = {
-		OR = {
-		capital_scope = {
-			NOT = {
-				distance = {
-					where = 505
-					value = 700	# Same part of the world
-				}
-			}
-		}
-		religion = montane
-		}
-	}
-	
-	option = {
-		name = EVTOPTA_the_great_bind
-		trigger = {
-			OR = {
-				religion = raven_tales
-				religion = raven_tales_reformed
-			}
-		}
-	}
-	option = {
-		name = EVTOPTB_the_great_bind
-		trigger = {
-			religion = montane
-		}
-		piety = 200
-		prestige = 100
-	}
-	option = {
-		name = EVTOPTC_the_great_bind
-		trigger = {
-			OR = {
-			religion = trailwalker
-			religion = trailwalker_reformed
-			}
-		}
-	}
-	option = {
-		name = EVTOPTD_the_great_bind
-		trigger = {
-			OR = {
-			religion = peyotist
-			religion = nazarene
-			religion = true_cross
-			}
-		}
-	}
-	option = {
-		name = EVTOPTE_the_great_bind
-		trigger = {
-			religion = cetic
-		}
-	}
-	option = {
-		name = EVTOPTF_the_great_bind
-		trigger = {
-			NOR = {
-				religion = peyotist
-				religion = cetic
-				religion = trailwalker
-				religion = trailwalker_reformed
-				religion = raven_tales
-				religion = raven_tales_reformed
-				religion = montane
-				religion = nazarene
-				religion = true_cross
-			}
-		}
-	}
-	
-	immediate = {
-		set_global_flag = global_cycle_that_binds
-	}
-}
-
-narrative_event = {
-	id = montane_real_hike.5007
-	title = EVTITLE_the_end_of_reclamation
-	desc = EVTDESC_the_end_of_reclamation
-	picture = GFX_evt_the_great_unbind
-	is_triggered_only = yes
-	
-	major = yes
-	
-	major_trigger = {
-		capital_scope = {
-			NOT = {
-				distance = {
-					where = 543
-					value = 800	# Same part of the world
-				}
-			}
-		}
-	}
-	
-	option = {
-		name = EVTOPTA_the_great_unbind
-		trigger = {
-			OR = {
-				religion = raven_tales
-				religion = raven_tales_reformed
-			}
-		}
-	}
-	option = {
-		name = EVTOPTB_the_great_unbind
-		trigger = {
-			religion = montane
-		}
-		piety = -250
-		prestige = -500
-	}
-	option = {
-		name = EVTOPTC_the_great_unbind
-		trigger = {
-			OR = {
-			religion = trailwalker
-			religion = trailwalker_reformed
-			}
-		}
-	}
-	option = {
-		name = EVTOPTD_the_great_unbind
-		trigger = {
-			OR = {
-			religion = peyotist
-			religion = nazarene
-			religion = true_cross
-			}
-		}
-	}
-	option = {
-		name = EVTOPTE_the_great_unbind
-		trigger = {
-			religion = cetic
-		}
-	}
-	option = {
-		name = EVTOPTF_the_great_unbind
-		trigger = {
-			NOR = {
-				religion = peyotist
-				religion = cetic
-				religion = trailwalker
-				religion = trailwalker_reformed
-				religion = raven_tales
-				religion = raven_tales_reformed
-				religion = montane
-				religion = nazarene
-				religion = true_cross
-			}
-		}
-	}
-	
-	immediate = {
-		set_global_flag = the_great_unbind
-		montane = {
-			religion_authority = { modifier = the_great_unbinding }
-		}
-	}
-}
-
-narrative_event = {
-	id = montane_real_hike.5008
-	title = EVTITLE_sagebrush_fallen
-	desc = EVTDESC_sagebrush_fallen
-	picture = GFX_evt_steppe_mercenaries
-	
-	trigger = {
-		completely_controls = k_sagebrush
-		NOT = {
-			religion = montane
-		}
-		NOT = {
-			has_global_flag = global_cycle_that_binds
-		}
-	}
-	mean_time_to_happen = {
-		days = 2
-	}
-	
-	major = yes
-	
-	major_trigger = {
-		OR = {
-		capital_scope = {
-			NOT = {
-				distance = {
-					where = 526
-					value = 700	# Same part of the world
-				}
-			}
-		}
-		religion = montane
-		}
-	}
-	
-	option = {
-		name = EVTOPTA_the_great_bind
-		trigger = {
-			OR = {
-				religion = raven_tales
-				religion = raven_tales_reformed
-			}
-		}
-	}
-	option = {
-		name = EVTOPTB_the_great_bind
-		trigger = {
-			religion = montane
-		}
-		piety = 200
-		prestige = 100
-	}
-	option = {
-		name = EVTOPTC_the_great_bind
-		trigger = {
-			OR = {
-			religion = trailwalker
-			religion = trailwalker_reformed
-			}
-		}
-	}
-	option = {
-		name = EVTOPTD_the_great_bind
-		trigger = {
-			OR = {
-			religion = peyotist
-			religion = nazarene
-			religion = true_cross
-			}
-		}
-	}
-	option = {
-		name = EVTOPTE_the_great_bind
-		trigger = {
-			religion = cetic
-		}
-	}
-	option = {
-		name = EVTOPTF_the_great_bind
-		trigger = {
-			NOR = {
-				religion = peyotist
-				religion = cetic
-				religion = trailwalker
-				religion = trailwalker_reformed
-				religion = raven_tales
-				religion = raven_tales_reformed
-				religion = montane
-				religion = nazarene
-				religion = true_cross
-			}
-		}
-	}
-	
-	immediate = {
-		set_global_flag = global_cycle_that_binds
-	}
-}
-
-character_event = {
-	id = montane_real_hike.6000
-	hide_window = yes
-	religion = montane
-	only_playable = yes
-	mean_time_to_happen = {
-		days = 2
-	}
-	trigger = {
-		religion = montane
-		government = theocratic_feudal_government
-		primary_title = {
-			NOR = {
-				has_law = succ_eldership
-				has_law = succ_rel_montane_elective
-				has_law = succ_mil_montane_elective
-				has_law = succ_gavelkind
-			}
-		}
-	}
-	immediate = {
+		name = EVTOPT_pilgrim_sneakpoorly
+		trigger = { NOT = { intrigue = 10 } }
+		random = { chance = 10 add_trait = paranoid }
 		random_list = {
-			25 = {
-				primary_title = { add_law = { law = succ_eldership opinion_effect = no }}
+			40 = { 
+				custom_tooltip = { text = TXT_pilgrim_sneaksucceed_tooltip }
+				hidden_tooltip = { character_event = { id = montane_pilgrim.56 } }
 			}
-			25 = {
-				primary_title = { add_law = { law = succ_rel_montane_elective opinion_effect = no }}
-			}
-			25 = {
-				primary_title = { add_law = { law = succ_mil_montane_elective opinion_effect = no }}
-			}
-			25 = {
-				primary_title = { add_law = { law = succ_gavelkind opinion_effect = no }}
+			60 = { 
+				custom_tooltip = { text = TXT_pilgrim_sneakfail_tooltip }
+				hidden_tooltip = { FROM = { character_event = { id = montane_pilgrim.46 } } }
 			}
 		}
+		ai_chance = {
+			factor = 10
+		}
+	}
+
+	option = {
+		name = EVTOPT_pilgrim_sneakintrigue
+		trigger = { intrigue = 10 }
+		tooltip_info = intrigue
+		random = { chance = 10 add_trait = paranoid }
+		random_list = {
+			75 = { 
+				custom_tooltip = { text = TXT_pilgrim_sneaksucceed_tooltip }
+				hidden_tooltip = { character_event = { id = montane_pilgrim.56 } }
+			}
+			25 = { 
+				custom_tooltip = { text = TXT_pilgrim_sneakfail_tooltip }
+				hidden_tooltip = { FROM = { character_event = { id = montane_pilgrim.46 } } }
+			}
+		}
+		ai_chance = {
+			factor = 50
+		}
+	}
+	
+	option = {
+		name = EVTOPT_pilgrim_requestdiplomatic
+		trigger = { diplomacy = 10 }
+		tooltip_info = diplomacy
+		random = { chance = 10 add_trait = gregarious }
+		FROM = { character_event = { id = montane_pilgrim.42 } }
+		ai_chance = {
+			factor = 50
+			modifier = { factor = 2 trait = gregarious }
+		}
+	}
+	
+	option = {
+		name = EVTOPT_pilgrim_requestmartial
+		trigger = { martial = 8 }
+		tooltip_info = martial
+		random = { chance = 15 add_trait = wroth }
+		random = { chance = 15 add_trait = zealous }
+		FROM = { character_event = { id = montane_pilgrim.45 } }
+		ai_chance = {
+			factor = 30
+			modifier = { factor = 3 realm_size = 100 }
+			modifier = { factor = 2 realm_size = 50 }
+			modifier = { factor = 2 realm_size = 25 }
+			modifier = { factor = 2 realm_size = 10 }
+			modifier = { factor = 2 trait = wroth }
+		}
+	}
+}
+
+character_event = {
+	id = montane_pilgrim.34
+	desc = EVTDESC_montane_pilgrim_haveaccess
+	picture = GFX_evt_market
+	border = GFX_event_normal_frame_religion
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPT_pilgrim_haveaccess
+		FROM = { character_event = { id = montane_pilgrim.35 } }
+	}
+}
+
+character_event = {
+	id = montane_pilgrim.35
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = { FROM = { character_event = { id = montane_pilgrim.51 } } }
+	option = { }
+}
+
+# ************************* Holy City Ruler Receives Requests ************************
+
+character_event = {
+	id = montane_pilgrim.40
+	desc = EVTDESC_montane_pilgrim_requestnormal
+	picture = GFX_evt_courtiers_talking
+	border = GFX_event_normal_frame_diplomacy
+	
+	is_triggered_only = yes
+	
+	option = {
+		trigger = {
+			opinion = { who = FROM value = 20 }
+			religion = montane
+			wealth = 5
+		}
+		name = EVTOPT_pilgrim_respondpolite
+		prestige = 5
+		wealth = -5
+		FROM = { character_event = { id = montane_pilgrim.50 } }
+		FROM = { opinion = { who = ROOT modifier = allowed_pilgrim months = 120 multiplier = 2 } }
+		ai_chance = {
+			factor = 5
+			modifier = { factor = 2 trait = gregarious }
+		}
+	}
+	
+	option = {
+		name = EVTOPT_pilgrim_respondneutral
+		FROM = { character_event = { id = montane_pilgrim.51 } }
+		FROM = { opinion = { who = ROOT modifier = allowed_pilgrim months = 120 multiplier = 1 } }
+		ai_chance = {
+			factor = 50
+		}
+	}
+	
+	option = {
+		name = EVTOPT_pilgrim_respondrefuse
+		FROM = { character_event = { id = montane_pilgrim.52 } }
+		FROM = { opinion = { who = ROOT modifier = denied_pilgrim months = 120 multiplier = 1 } }
+		ai_chance = {
+			factor = 20
+			modifier = { factor = 2 NOT = { religion = montane } }
+
+		}
+	}
+	
+	option = {
+		name = EVTOPT_pilgrim_respondimprison
+		trigger = {
+			OR = {
+				NOT = { opinion = { who = FROM value = 0 } }
+				trait = lunatic
+				trait = arbitrary
+			}
+		}
+		FROM = { character_event = { id = montane_pilgrim.53 } }
+		FROM = { opinion = { who = ROOT modifier = denied_pilgrim months = 120 multiplier = 1 } }
+		custom_tooltip = { text = TXT_pilgrim_respondimprison }
+		hidden_tooltip = { any_vassal = { opinion = {
+					who = ROOT
+					modifier = opinion_tyrant
+					months = 120
+					multiplier = 2
+				}
+			}
+		}
+		ai_chance = {
+			factor = 5
+			modifier = { factor = 2 NOT = { religion = montane } }
+			modifier = { factor = 4 trait = arbitrary }
+		}
+	}
+}
+
+character_event = {
+	id = montane_pilgrim.41
+	desc = EVTDESC_montane_pilgrim_requestgift
+	picture = GFX_evt_courtiers_talking
+	border = GFX_event_normal_frame_diplomacy
+	
+	is_triggered_only = yes
+	
+	option = {
+		trigger = {
+			wealth = 5
+			opinion = { who = FROM value = 20 }
+		}
+		name = EVTOPT_pilgrim_respondpolite
+		prestige = 10
+		wealth = -5
+		FROM = { character_event = { id = montane_pilgrim.50 } }
+		FROM = { opinion = { who = ROOT modifier = allowed_pilgrim months = 120 multiplier = 2 } }
+		ai_chance = {
+			factor = 10
+			modifier = { factor = 4 religion = montane }
+			modifier = { factor = 2 trait = greedy }
+			modifier = { factor = 2 trait = gregarious }
+		}
+	}
+	
+	option = {
+		name = EVTOPT_pilgrim_respondneutral
+		FROM = { character_event = { id = montane_pilgrim.51 } }
+		FROM = { opinion = { who = ROOT modifier = allowed_pilgrim months = 120 multiplier = 1 } }
+		ai_chance = {
+			factor = 50
+		}
+	}
+	
+	option = {
+		name = EVTOPT_pilgrim_respondrefuse
+		FROM = { character_event = { id = montane_pilgrim.52 } }
+		FROM = { opinion = { who = ROOT modifier = denied_pilgrim months = 120 multiplier = 1 } }
+		ai_chance = {
+			factor = 10
+			modifier = { factor = 2 NOT = { religion = montane } }
+		}
+	}
+	
+	option = {
+		name = EVTOPT_pilgrim_respondimprison
+		trigger = {
+			OR = {
+				NOT = { opinion = { who = FROM value = 0 } }
+				trait = lunatic
+				trait = arbitrary
+			}
+		}
+		FROM = { character_event = { id = montane_pilgrim.53 } }
+		FROM = { opinion = { who = ROOT modifier = denied_pilgrim months = 120 multiplier = 1 } }
+		custom_tooltip = { text = TXT_pilgrim_respondimprison }
+		hidden_tooltip = { any_vassal = { opinion = {
+					who = ROOT
+					modifier = opinion_tyrant
+					months = 120
+					multiplier = 2
+				}
+			}
+		}
+		ai_chance = {
+			factor = 5
+			modifier = { factor = 2 NOT = { religion = montane } }
+			modifier = { factor = 4 trait = arbitrary }
+		}
+	}
+}
+
+character_event = {
+	id = montane_pilgrim.42
+	desc = EVTDESC_montane_pilgrim_requestdiplomacy
+	picture = GFX_evt_bishop_pagan_group
+	border = GFX_event_normal_frame_diplomacy
+	
+	is_triggered_only = yes
+	
+	option = {
+		trigger = {
+			wealth = 5
+			opinion = { who = FROM value = 20 }
+			religion = montane
+		}
+		name = EVTOPT_pilgrim_respondpolite
+		prestige = 10
+		wealth = -5
+		FROM = { character_event = { id = montane_pilgrim.50 } }
+		FROM = { opinion = { who = ROOT modifier = allowed_pilgrim months = 120 multiplier = 2 } }
+		ai_chance = {
+			factor = 20
+			modifier = { factor = 4 religion = montane }
+			modifier = { factor = 2 trait = gregarious }
+		}
+	}
+	
+	option = {
+		name = EVTOPT_pilgrim_respondneutral
+		FROM = { character_event = { id = montane_pilgrim.51 } }
+		FROM = { opinion = { who = ROOT modifier = allowed_pilgrim months = 120 multiplier = 1 } }
+		ai_chance = {
+			factor = 50
+		}
+	}
+	
+	option = {
+		name = EVTOPT_pilgrim_respondrefuse
+		FROM = { character_event = { id = montane_pilgrim.52 } }
+		FROM = { opinion = { who = ROOT modifier = denied_pilgrim months = 120 multiplier = 1 } }
+		ai_chance = {
+			factor = 10
+			modifier = { factor = 2 NOT = { religion = montane } }
+		}
+	}
+	
+	option = {
+		name = EVTOPT_pilgrim_respondimprison
+		trigger = {
+			OR = {
+				NOT = { opinion = { who = FROM value = 0 } }
+				trait = lunatic
+				trait = arbitrary
+			}
+		}
+		FROM = { character_event = { id = montane_pilgrim.53 } }
+		FROM = { opinion = { who = ROOT modifier = denied_pilgrim months = 120 multiplier = 1 } }
+		custom_tooltip = { text = TXT_pilgrim_respondimprison }
+		hidden_tooltip = { any_vassal = { opinion = {
+					who = ROOT
+					modifier = opinion_tyrant
+					months = 120
+					multiplier = 2
+				}
+			}
+		}
+		ai_chance = {
+			factor = 5
+			modifier = { factor = 2 NOT = { religion = montane } }
+			modifier = { factor = 2 trait = arbitrary }
+		}
+	}
+}
+
+character_event = {
+	id = montane_pilgrim.43
+	desc = EVTDESC_montane_pilgrim_requestlearning
+	picture = GFX_evt_bishop_pagan_group
+	border = GFX_event_normal_frame_diplomacy
+	
+	is_triggered_only = yes
+	
+	option = {
+		trigger = {
+			wealth = 5
+			opinion = { who = FROM value = 20 }
+		}
+		name = EVTOPT_pilgrim_respondpolite
+		prestige = 10
+		wealth = -5
+		FROM = { character_event = { id = montane_pilgrim.50 } }
+		FROM = { opinion = { who = ROOT modifier = allowed_pilgrim months = 120 multiplier = 2 } }
+		ai_chance = {
+			factor = 20
+			modifier = { factor = 2 FROM = { learning = 15 } }
+			modifier = { factor = 2 trait = zealous }
+		}
+	}
+	
+	option = {
+		name = EVTOPT_pilgrim_respondneutral
+		FROM = { character_event = { id = montane_pilgrim.51 } }
+		FROM = { opinion = { who = ROOT modifier = allowed_pilgrim months = 120 multiplier = 1 } }
+		ai_chance = {
+			factor = 50
+		}
+	}
+	
+	option = {
+		name = EVTOPT_pilgrim_respondrefuse
+		piety = -5
+		FROM = { character_event = { id = montane_pilgrim.52 } }
+		FROM = { opinion = { who = ROOT modifier = denied_pilgrim months = 120 multiplier = 1 } }
+		ai_chance = {
+			factor = 10
+			modifier = { factor = 2 trait = cynical }
+			modifier = { factor = 2 trait = arbitrary }
+			modifier = { factor = 0 trait = zealous }
+		}
+	}
+	
+	option = {
+		name = EVTOPT_pilgrim_respondimprison
+		trigger = {
+			OR = {
+				NOT = { opinion = { who = FROM value = 0 } }
+				trait = lunatic
+				trait = arbitrary
+			}
+		}
+		piety = -20
+		FROM = { opinion = { who = ROOT modifier = denied_pilgrim months = 120 multiplier = 1 } }
+		custom_tooltip = { text = TXT_pilgrim_respondimprison }
+		hidden_tooltip = { any_vassal = { opinion = {
+					who = ROOT
+					modifier = opinion_tyrant
+					months = 120
+					multiplier = 2
+				}
+			}
+		}
+		FROM = { character_event = { id = montane_pilgrim.53 } }
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+character_event = {
+	id = montane_pilgrim.44
+	desc = EVTDESC_montane_pilgrim_requestinspire
+	picture = GFX_evt_bishop_pagan_group
+	border = GFX_event_normal_frame_diplomacy
+	
+	is_triggered_only = yes
+	
+	option = {
+		trigger = {
+			wealth = 5
+			opinion = { who = FROM value = 20 }
+		}
+		name = EVTOPT_pilgrim_respondpolite
+		prestige = 10
+		piety = 10
+		wealth = -5
+		random = { chance = 5 add_trait = zealous }
+		FROM = { character_event = { id = montane_pilgrim.50 } }
+		FROM = { opinion = { who = ROOT modifier = allowed_pilgrim months = 120 multiplier = 2 } }
+		ai_chance = {
+			factor = 30
+			modifier = { factor = 4 trait = zealous }
+			modifier = { factor = 2 trait = gregarious }
+			modifier = { factor = 2 trait = kind }
+			modifier = { factor = 2 trait = just }
+			modifier = { factor = 0.5 trait = shy }
+			modifier = { factor = 0.5 trait = cynical }
+		}
+	}
+	
+	option = {
+		name = EVTOPT_pilgrim_respondneutral
+		FROM = { character_event = { id = montane_pilgrim.51 } }
+		FROM = { opinion = { who = ROOT modifier = allowed_pilgrim months = 120 multiplier = 1 } }
+		ai_chance = {
+			factor = 20
+		}
+	}
+	
+	option = {
+		name = EVTOPT_pilgrim_respondrefuse
+		piety = -10
+		FROM = { character_event = { id = montane_pilgrim.52 } }
+		FROM = { opinion = { who = ROOT modifier = denied_pilgrim months = 120 multiplier = 1 } }
+		ai_chance = {
+			factor = 10
+			modifier = { factor = 4 trait = arbitrary }
+			modifier = { factor = 2 trait = paranoid }
+			modifier = { factor = 0.5 trait = trusting }
+			modifier = { factor = 0 NOT = { trait = lunatic trait = possessed } }
+		}
+	}
+	
+	option = {
+		name = EVTOPT_pilgrim_respondimprison
+		trigger = {
+			OR = { 
+				trait = lunatic
+				trait = arbitrary
+				trait = cruel
+			}
+			NOT = { opinion = { who = FROM value = 0 } }
+		}
+		piety = -20
+		FROM = { opinion = { who = ROOT modifier = denied_pilgrim months = 120 multiplier = 1 } }
+		custom_tooltip = { text = TXT_pilgrim_respondimprison }
+		hidden_tooltip = { any_vassal = { opinion = {
+					who = ROOT
+					modifier = opinion_tyrant
+					months = 120
+					multiplier = 2
+				}
+			}
+		}
+		FROM = { character_event = { id = montane_pilgrim.53 } }
+		ai_chance = {
+			factor = 10
+		}
+	}
+}
+
+character_event = {
+	id = montane_pilgrim.45
+	desc = EVTDESC_montane_pilgrim_requestmartial
+	picture = GFX_evt_courtiers_talking
+	border = GFX_event_normal_frame_diplomacy
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPT_pilgrim_respondneutral
+		FROM = { character_event = { id = montane_pilgrim.51 } }
+		FROM = { opinion = { who = ROOT modifier = allowed_pilgrim months = 120 multiplier = 1 } }
+		ai_chance = {
+			factor = 50
+			modifier = { factor = 3 FROM = { realm_size = 100 } }
+			modifier = { factor = 2 FROM = { realm_size = 50 } }
+			modifier = { factor = 2 FROM = { realm_size = 25 } }
+			modifier = { factor = 2 FROM = { realm_size = 10 } }
+		}
+	}
+	
+	option = {
+		name = EVTOPT_pilgrim_respondrefuse
+		FROM = { opinion = { who = ROOT modifier = denied_pilgrim months = 120 multiplier = 1 } }
+		FROM = { character_event = { id = montane_pilgrim.52 } }
+		ai_chance = {
+			factor = 50
+			modifier = { factor = 2 NOT = { religion = montane } }
+			modifier = { factor = 0.5 FROM = { realm_size = 35 } }
+		}
+	}
+	
+	option = {
+		name = EVTOPT_pilgrim_respondimprison
+		FROM = { opinion = { who = ROOT modifier = denied_pilgrim months = 120 multiplier = 1 } }
+		FROM = { character_event = { id = montane_pilgrim.53 } }
+		ai_chance = {
+			factor = 25
+			modifier = { factor = 2 NOT = { religion = montane } }
+			modifier = { factor = 0.5 FROM = { realm_size = 20 } }
+		}
+	}
+	
+	option = {
+		name = EVTOPT_pilgrim_respondmurder
+		trigger = {
+			NOT = { opinion = { who = FROM value = 0 } }
+		}
+		random = { chance = 20 add_trait = wroth }
+		FROM = { opinion = { who = ROOT modifier = denied_pilgrim months = 120 multiplier = 1 } }
+		FROM = { opinion = { who = ROOT modifier = attempted_murder months = 250 multiplier = 1 } } 
+		FROM = { character_event = { id = montane_pilgrim.54 } }
+		ai_chance = {
+			factor = 10
+			modifier = { factor = 2 NOT = { religion = montane } }
+			modifier = { factor = 4 trait = lunatic }
+			modifier = { factor = 2 trait = arbitrary }
+			modifier = { factor = 2 trait = wroth }
+			modifier = { factor = 0.5 FROM = { realm_size = 20 } }
+			modifier = { factor = 0 trait = kind }
+		}
+	}
+}
+
+character_event = {
+	id = montane_pilgrim.46
+	desc = EVTDESC_montane_pilgrim_requestintrigue
+	picture = GFX_evt_knight_kneeling
+	border = GFX_event_normal_frame_diplomacy
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPT_pilgrim_respondneutral
+		FROM = { character_event = { id = montane_pilgrim.51 } }
+		FROM = { opinion = { who = ROOT modifier = allowed_pilgrim months = 120 multiplier = 1 } }
+		ai_chance = {
+			factor = 50
+			modifier = { factor = 2 religion = montane }
+		}
+	}
+	
+	option = {
+		name = EVTOPT_pilgrim_respondrefuse
+		FROM = { opinion = { who = ROOT modifier = denied_pilgrim months = 120 multiplier = 1 } }
+		FROM = { character_event = { id = montane_pilgrim.52 } }
+		ai_chance = {
+			factor = 50
+		}
+	}
+	
+	option = {
+		name = EVTOPT_pilgrim_respondimprison
+		FROM = { opinion = { who = ROOT modifier = denied_pilgrim months = 120 multiplier = 1 } }
+		FROM = { character_event = { id = montane_pilgrim.53 } }
+		ai_chance = {
+			factor = 25
+			modifier = { factor = 2 NOT = { religion = montane } }
+		}
+	}
+	
+	option = {
+		name = EVTOPT_pilgrim_respondmurder
+		trigger = {
+			NOT = { religion = montane }
+			NOT = { opinion = { who = FROM value = 0 } }
+		}
+		random = { chance = 20 add_trait = wroth }
+		FROM = { opinion = { who = ROOT modifier = denied_pilgrim months = 120 multiplier = 1 } }
+		FROM = { opinion = { who = ROOT modifier = attempted_murder months = 250 multiplier = 1 } } 
+		FROM = { character_event = { id = montane_pilgrim.54 } }
+		ai_chance = {
+			factor = 10
+			modifier = { factor = 2 trait = lunatic }
+			modifier = { factor = 2 trait = arbitrary }
+			modifier = { factor = 2 trait = wroth }
+			modifier = { factor = 0 trait = kind }
+		}
+	}
+}
+
+# ************************* Responses ************************
+
+character_event = {
+	id = montane_pilgrim.50
+	desc = EVTDESC_montane_pilgrim_respondpolite
+	picture = GFX_evt_feast
+	border = GFX_event_normal_frame_diplomacy
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPT_pilgrim_respondpolite_friends
+		prestige = 10
+		piety = 10
+		random_list = {
+			50 = { change_diplomacy = 1 }
+			30 = {
+				custom_tooltip = { text = TXT_pilgrim_newfriend }
+				hidden_tooltip = { FROM = { character_event = { id = montane_pilgrim.70 } } }
+			}
+			10 = { add_trait = gregarious }
+			10 = { add_trait = kind }
+		}
+		ai_chance = {
+			factor = 10
+			modifier = { factor = 2 trait = gregarious }
+			modifier = { factor = 2 trait = kind }
+		}
+	}
+	
+	option = {
+		name = EVTOPT_pilgrim_respondpolite_zeal
+		piety = 20
+		random_list = {
+			50 = { change_martial = 1 }
+			20 = { add_trait = zealous }
+			20 = { add_trait = ambitious }
+			10 = { add_trait = diligent }
+		}
+		ai_chance = {
+			factor = 10
+			modifier = { factor = 2 trait = zealous }
+			modifier = { factor = 2 trait = diligent }
+		}
+	}
+	
+	option = {
+		name = EVTOPT_pilgrim_respondpolite_hedonist
+		prestige = 25
+		piety = -10
+		random_list = {
+			30 = { change_martial = 1 }
+			20 = { wealth = 25 }
+			20 = { wealth = -25 }
+			15 = { add_trait = gluttonous }
+			10 = { add_trait = lustful }
+			5 = { add_trait = drunkard }
+		}
+		ai_chance = {
+			factor = 10
+			modifier = { factor = 2 trait = hedonist }
+			modifier = { factor = 2 trait = gluttonous }
+		}
+	}
+	
+	option = {
+		name = EVTOPT_pilgrim_respondpolite_convert
+		trigger = {
+			learning = 12
+			religion_authority = 0.6
+			NOT = { FROM = { religion = montane } }
+		}
+		piety = 30
+		random_list = {
+			50 = { change_learning = 1 }
+			40 = { FROM = { religion = ROOT } }
+			10 = { add_trait = zealous }
+		}
+		ai_chance = {
+			factor = 50
+			modifier = { factor = 2 trait = zealous }
+		}
+	}
+}
+
+character_event = {
+	id = montane_pilgrim.51
+	desc = EVTDESC_montane_pilgrim_respondneutral
+	picture = GFX_evt_courtiers_talking
+	border = GFX_event_normal_frame_diplomacy
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPT_pilgrim_respondneutral_learn
+		piety = 10
+		random_list = {
+			40 = { change_learning = 1 }
+			40 = { change_stewardship = 1 }
+			10 = { add_trait = diligent }
+			10 = { add_trait = humble }
+		}
+		ai_chance = {
+			factor = 20
+			modifier = { factor = 2 trait = diligent }
+			modifier = { factor = 2 trait = humble }
+		}
+	}
+	
+	option = {
+		name = EVTOPT_pilgrim_talkpilgrims
+		prestige = 10
+		random_list = {
+			60 = { change_diplomacy = 1 }
+			20 = { add_trait = gregarious }	
+			20 = { add_trait = kind }
+		}
+		ai_chance = {
+			factor = 20
+			modifier = { factor = 2 trait = gregarious }
+			modifier = { factor = 2 trait = kind }
+		}
+	}
+	
+	option = {
+		name = EVTOPT_pilgrim_stealrelic
+		wealth = 20
+		random_list = {
+			40 = { change_intrigue = 1 }
+			20 = { add_trait = greedy }
+			20 = { add_trait = deceitful }
+			20 = { add_trait = cynical }
+		}
+		ai_chance = {
+			factor = 10
+			modifier = { factor = 2 trait = greedy }
+			modifier = { factor = 2 trait = cynical }
+		}
+	}
+	
+	option = {
+		name = EVTOPT_pilgrim_respondpolite_hedonist
+		prestige = 25
+		piety = -10
+		random_list = {
+			30 = { change_martial = 1 }
+			20 = { wealth = 25 }
+			20 = { wealth = -25 }
+			15 = { add_trait = gluttonous }
+			10 = { add_trait = lustful }
+			5 = { add_trait = drunkard }
+		}
+		ai_chance = {
+			factor = 10
+			modifier = { factor = 2 trait = hedonist }
+			modifier = { factor = 2 trait = gluttonous }
+		}
+	}
+}
+
+character_event = {
+	id = montane_pilgrim.52
+	desc = EVTDESC_montane_pilgrim_respondrefuse
+	picture = GFX_evt_emissary
+	border = GFX_event_normal_frame_war
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPT_pilgrim_respondrefuse_failure
+		prestige = -25
+		random_list = {
+			50 = {
+				custom_tooltip = { text = TXT_pilgrim_newrival }
+				hidden_tooltip = { FROM = { character_event = { id = montane_pilgrim.71 } } }
+			}
+			30 = { }
+			20 = { add_trait = stressed }
+		}
+		if = { limit = { has_character_flag = on_pilgrimage_yellowstone }
+			character_event = { id = montane_pilgrim.61 } }	
+		if = { limit = { has_character_flag = on_pilgrimage_rocky_mountain_national_park  }
+			character_event = { id = montane_pilgrim.62 } }	
+		if = { limit = { has_character_flag = on_pilgrimage_banff }
+			character_event = { id = montane_pilgrim.63 } }	
+		if = { limit = { has_character_flag = on_pilgrimage_zion }
+			character_event = { id = montane_pilgrim.64 } }	
+		if = { limit = { has_character_flag = on_pilgrimage_guarden_of_the_gods }
+			character_event = { id = montane_pilgrim.65 } }
+		ai_chance = {
+			factor = 10
+		}
+	}
+	
+	option = {
+		name = EVTOPT_pilgrim_respondrefuse_liege
+		trigger = {
+			is_liege_of = FROM
+		}
+		prestige = -10
+		random = { chance = 25 add_trait = wroth }
+		random = { chance = 25 add_trait = proud }
+		character_event = { id = montane_pilgrim.51 }
+		ai_chance = {
+			factor = 50
+			modifier = { factor = 2 trait = wroth }
+			modifier = { factor = 2 trait = proud }
+		}
+	}
+	
+	option = {
+		name = EVTOPT_pilgrim_requestmartial
+		trigger = {
+			NOT = { is_liege_or_above = FROM }
+			martial = 8
+			NOT = { has_character_flag = pilgrim_entry_retried }
+		}
+		prestige = -10
+		tooltip_info = martial
+		random = { chance = 15 add_trait = wroth }
+		set_character_flag = pilgrim_entry_retried
+		FROM = { character_event = { id = montane_pilgrim.45 } }
+		ai_chance = {
+			factor = 10
+			modifier = { factor = 3 realm_size = 100 }
+			modifier = { factor = 2 realm_size = 50 }
+			modifier = { factor = 2 realm_size = 25 }
+			modifier = { factor = 2 realm_size = 10 }
+		}
+	}
+	
+	option = {
+		name = EVTOPT_pilgrim_sneakpoorly
+		trigger = {
+			NOT = { intrigue = 10 }
+			NOT = { has_character_flag = pilgrim_entry_retried }
+		}
+		set_character_flag = pilgrim_entry_retried
+		random_list = {
+			40 = { 
+				custom_tooltip = { text = TXT_pilgrim_sneaksucceed_tooltip }
+				hidden_tooltip = { character_event = { id = montane_pilgrim.56 } }
+			}
+			60 = { 
+				custom_tooltip = { text = TXT_pilgrim_sneakfail_tooltip }
+				hidden_tooltip = { FROM = { character_event = { id = montane_pilgrim.46 } } }
+			}
+		}
+		ai_chance = {
+			factor = 10
+		}
+	}
+
+	option = {
+		name = EVTOPT_pilgrim_sneakintrigue
+		trigger = {
+			intrigue = 10
+			NOT = { has_character_flag = pilgrim_entry_retried }
+		}
+		tooltip_info = intrigue
+		set_character_flag = pilgrim_entry_retried
+		random_list = {
+			75 = { 
+				custom_tooltip = { text = TXT_pilgrim_sneaksucceed_tooltip }
+				hidden_tooltip = { character_event = { id = montane_pilgrim.56 } }
+			}
+			25 = { 
+				custom_tooltip = { text = TXT_pilgrim_sneakfail_tooltip }
+				hidden_tooltip = { FROM = { character_event = { id = montane_pilgrim.46 } } }
+			}
+		}
+		ai_chance = {
+			factor = 50
+		}
+	}
+	
+	option = {
+		name = EVTOPT_pilgrim_requeststewardship
+		trigger = {
+			stewardship = 8
+			wealth = 20
+			NOT = { has_character_flag = pilgrim_entry_retried }
+		}
+		wealth = -20
+		tooltip_info = stewardship
+		set_character_flag = pilgrim_entry_retried
+		FROM = { wealth = 20 }
+		FROM = { character_event = { id = montane_pilgrim.41 } }
+		ai_chance = {
+			factor = 10
+			modifier = { factor = 2 wealth = 100 }
+		}
+	}
+}
+
+character_event = {
+	id = montane_pilgrim.53
+	desc = EVTDESC_montane_pilgrim_respondimprison
+	picture = GFX_evt_into_the_dungeon
+	border = GFX_event_normal_frame_war
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPT_pilgrim_respondimprison_surrender
+		imprison = FROM
+		prestige = -10
+		random_list = {
+			40 = { add_trait = content }
+			30 = { add_trait = trusting }
+			30 = { add_trait = craven }
+		}
+		narrative_event = { id = montane_pilgrim.90 days = 1 }
+		ai_chance = {
+			factor = 10
+			modifier = { factor = 2 trait = content }
+			modifier = { factor = 0 trait = brave }
+		}
+	}
+	
+	option = {
+		name = EVTOPT_pilgrim_respondimprison_fight
+		trigger = { NOT = { has_character_flag = pilgrim_bodyguards } }
+		random_list = {
+			50 = { imprison = FROM }
+			50 = {
+				custom_tooltip = { text = TXT_pilgrim_respondimprison_regroup }
+				hidden_tooltip = { 
+					if = { limit = { has_character_flag = on_pilgrimage_yellowstone }
+						character_event = { id = montane_pilgrim.61 } }	
+					if = { limit = { has_character_flag = on_pilgrimage_rocky_mountain_national_park  }
+						character_event = { id = montane_pilgrim.62 } }	
+					if = { limit = { has_character_flag = on_pilgrimage_banff }
+						character_event = { id = montane_pilgrim.63 } }	
+					if = { limit = { has_character_flag = on_pilgrimage_zion }
+						character_event = { id = montane_pilgrim.64 } }	
+					if = { limit = { has_character_flag = on_pilgrimage_guarden_of_the_gods }
+						character_event = { id = montane_pilgrim.65 } }
+				}
+			}
+		}
+		random_list = {
+			40 = { add_trait = brave }
+			25 = { add_trait = wroth }
+			25 = { add_trait = wounded }
+			10 = { add_maimed_trait_effect = yes }
+		}
+		#narrative_event = { id = montane_pilgrim.90 days = 1 } #this event is set up to automatically fire during the claim event anyway
+		ai_chance = {
+			factor = 10
+			modifier = { factor = 4 trait = brave }
+			modifier = { factor = 2 trait = wroth }
+		}
+	}
+	
+	option = {
+		name = EVTOPT_pilgrim_respondimprison_fight
+		trigger = { has_character_flag = pilgrim_bodyguards }
+		random_list = {
+			25 = { imprison = FROM }
+			75 = { 
+				custom_tooltip = { text = TXT_pilgrim_respondimprison_regroup }
+				hidden_tooltip = { 
+					if = { limit = { has_character_flag = on_pilgrimage_yellowstone }
+						character_event = { id = montane_pilgrim.61 } }	
+					if = { limit = { has_character_flag = on_pilgrimage_rocky_mountain_national_park  }
+						character_event = { id = montane_pilgrim.62 } }	
+					if = { limit = { has_character_flag = on_pilgrimage_banff }
+						character_event = { id = montane_pilgrim.63 } }	
+					if = { limit = { has_character_flag = on_pilgrimage_zion }
+						character_event = { id = montane_pilgrim.64 } }	
+					if = { limit = { has_character_flag = on_pilgrimage_guarden_of_the_gods }
+						character_event = { id = montane_pilgrim.65 } }
+				}
+			}
+		}
+		random_list = {
+			40 = { add_trait = brave }
+			40 = { add_trait = wroth }
+			15 = { add_trait = wounded }
+			5 = { add_maimed_trait_effect = yes }
+		}
+		#narrative_event = { id = montane_pilgrim.90 days = 1 } #this event is set up to automatically fire during the claim event anyway
+		ai_chance = {
+			factor = 20
+			modifier = { factor = 4 trait = brave }
+			modifier = { factor = 2 trait = wroth }
+		}
+	}
+	
+	option = {
+		name = EVTOPT_pilgrim_respondimprison_escape
+		trigger = { intrigue = 8 }
+		prestige = -10
+		tooltip_info = intrigue
+		custom_tooltip = { text = TXT_pilgrim_respondimprison_regroup }
+		random_list = {
+			40 = { change_intrigue = 1 }
+			30 = { add_rival = FROM }
+			30 = { add_trait = paranoid }
+		}
+		hidden_tooltip = { 
+			if = { limit = { has_character_flag = on_pilgrimage_yellowstone }
+				character_event = { id = montane_pilgrim.61 } }	
+			if = { limit = { has_character_flag = on_pilgrimage_rocky_mountain_national_park  }
+				character_event = { id = montane_pilgrim.62 } }	
+			if = { limit = { has_character_flag = on_pilgrimage_banff }
+				character_event = { id = montane_pilgrim.63 } }	
+			if = { limit = { has_character_flag = on_pilgrimage_zion }
+				character_event = { id = montane_pilgrim.64 } }	
+			if = { limit = { has_character_flag = on_pilgrimage_guarden_of_the_gods }
+				character_event = { id = montane_pilgrim.65 } }
+		}
+		ai_chance = {
+			factor = 100
+			modifier = { factor = 4 trait = ambitious }
+		}
+	}
+}
+
+character_event = {
+	id = montane_pilgrim.54
+	desc = EVTDESC_montane_pilgrim_respondmurder
+	picture = GFX_evt_shadow
+	border = GFX_event_normal_frame_war
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPT_pilgrim_respondmurder
+		trigger = { NOT = { has_character_flag = pilgrim_bodyguards } }
+		random_list = {
+			10 = { add_trait = brave }
+			30 = { add_trait = wounded }
+			30 = { add_maimed_trait_effect = yes }
+			30 = { death = { death_reason = death_murder killer = FROM } }
+
+		}
+		narrative_event = { id = montane_pilgrim.90 days = 1 }
+	}
+	
+	option = {
+		name = EVTOPT_pilgrim_respondmurder_bodyguards
+		trigger = { has_character_flag = pilgrim_bodyguards }
+		random_list = {
+			40 = { add_trait = brave }
+			30 = { add_trait = wounded }
+			20 = { add_maimed_trait_effect = yes }
+			10 = { death = { death_reason = death_murder killer = FROM } }
+		}
+		narrative_event = { id = montane_pilgrim.90 days = 1 }
+	}
+}
+
+character_event = {
+	id = montane_pilgrim.56
+	desc = EVTDESC_montane_pilgrim_sneakexplore
+	picture = GFX_evt_knight_kneeling
+	border = GFX_event_normal_frame_intrigue
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPT_pilgrim_privatepiety
+		piety = 10
+		random_list = {
+			40 = { change_learning = 1 }
+			40 = { add_trait = humble }
+			20 = { add_trait = shy }
+		}
+		ai_chance = {
+			factor = 10
+			modifier = { factor = 2 trait = humble }
+			modifier = { factor = 2 trait = shy }
+		}
+	}
+	
+	option = {
+		name = EVTOPT_pilgrim_talkpilgrims
+		prestige = 10
+		random_list = {
+			50 = { change_diplomacy = 1 }
+			10 = { 
+				custom_tooltip = { text = TXT_pilgrim_sneakfail_tooltip }
+				hidden_tooltip = { FROM = { character_event = { id = montane_pilgrim.46 } } }
+			}
+			30 = { add_trait = trusting }
+			10 = { add_trait = gregarious }
+		}
+		ai_chance = {
+			factor = 10
+			modifier = { factor = 2 trait = trusting }
+			modifier = { factor = 2 trait = gregarious }
+		}
+	}
+	
+	option = {
+		name = EVTOPT_pilgrim_stealrelic
+		wealth = 20
+		random_list = {
+			45 = { change_intrigue = 1 }
+			10 = { 
+				custom_tooltip = { text = TXT_pilgrim_sneakfail_tooltip }
+				hidden_tooltip = { FROM = { character_event = { id = montane_pilgrim.46 } } }
+			}
+			15 = { add_trait = greedy }
+			15 = { add_trait = deceitful }
+			15 = { add_trait = cynical }
+		}
+		ai_chance = {
+			factor = 10
+			modifier = { factor = 2 trait = greedy }
+			modifier = { factor = 2 trait = cynical }
+		}
+	}
+}
+
+# ************************* Get Claims on Cities ************************
+
+character_event = {
+	id = montane_pilgrim.61
+	desc = EVTDESC_montane_pilgrim_claimyellowstone
+	picture = GFX_evt_council
+	border = GFX_event_normal_frame_war
+	
+	is_triggered_only = yes
+	
+	immediate = { narrative_event = { id = montane_pilgrim.90 days = 1 } }
+	
+	option = {
+		name = EVTOPT_pilgrim_claimcity
+		69 = { county = { add_claim = ROOT } }
+		random_list = {
+			20 = { add_trait = greedy }
+			20 = { add_trait = envious }
+			20 = { add_trait = cynical }
+			20 = { add_trait = proud }
+			20 = { add_trait = ambitious }
+		}
+		ai_chance = {
+			factor = 10
+			modifier = { factor = 2 trait = ambitious }
+			modifier = { factor = 2 trait = proud }
+		}
+	}
+	
+	option = {
+		name = EVTOPT_pilgrim_claimnothing
+		random_list = {
+			40 = { change_diplomacy = 1 }
+			20 = { add_trait = humble }
+			20 = { add_trait = patient }
+			20 = { add_trait = content }
+		}
+		ai_chance = {
+			factor = 10
+			modifier = { factor = 2 trait = content }
+			modifier = { factor = 2 trait = humble }
+		}
+	}
+}
+
+character_event = {
+	id = montane_pilgrim.62
+	desc = EVTDESC_montane_pilgrim_claimrocky_mountain_national_park 
+	picture = GFX_evt_council
+	border = GFX_event_normal_frame_war
+	
+	is_triggered_only = yes
+	
+	immediate = { narrative_event = { id = montane_pilgrim.90 days = 1 } }
+	
+	option = {
+		name = EVTOPT_pilgrim_claimcity
+		3 = { county = { add_claim = ROOT } }
+		random_list = {
+			20 = { add_trait = greedy }
+			20 = { add_trait = envious }
+			20 = { add_trait = cynical }
+			20 = { add_trait = proud }
+			20 = { add_trait = ambitious }
+		}
+		ai_chance = {
+			factor = 10
+			modifier = { factor = 2 trait = ambitious }
+			modifier = { factor = 2 trait = proud }
+		}
+	}
+	
+	option = {
+		name = EVTOPT_pilgrim_claimnothing
+		random_list = {
+			40 = { change_diplomacy = 1 }
+			20 = { add_trait = humble }
+			20 = { add_trait = patient }
+			20 = { add_trait = content }
+		}
+		ai_chance = {
+			factor = 10
+			modifier = { factor = 2 trait = content }
+			modifier = { factor = 2 trait = humble }
+		}
+	}
+}
+
+character_event = {
+	id = montane_pilgrim.63
+	desc = EVTDESC_montane_pilgrim_claimbanff
+	picture = GFX_evt_council
+	border = GFX_event_normal_frame_war
+	
+	is_triggered_only = yes
+	
+	immediate = { narrative_event = { id = montane_pilgrim.90 days = 1 } }
+	
+	option = {
+		name = EVTOPT_pilgrim_claimcity
+		27 = { county = { add_claim = ROOT } }
+		random_list = {
+			20 = { add_trait = greedy }
+			20 = { add_trait = envious }
+			20 = { add_trait = cynical }
+			20 = { add_trait = proud }
+			20 = { add_trait = ambitious }
+		}
+		ai_chance = {
+			factor = 10
+			modifier = { factor = 2 trait = ambitious }
+			modifier = { factor = 2 trait = proud }
+		}
+	}
+	
+	option = {
+		name = EVTOPT_pilgrim_claimnothing
+		random_list = {
+			40 = { change_diplomacy = 1 }
+			20 = { add_trait = humble }
+			20 = { add_trait = patient }
+			20 = { add_trait = content }
+		}
+		ai_chance = {
+			factor = 10
+			modifier = { factor = 2 trait = content }
+			modifier = { factor = 2 trait = humble }
+		}
+	}
+}
+
+character_event = {
+	id = montane_pilgrim.64
+	desc = EVTDESC_montane_pilgrim_claimzion
+	picture = GFX_evt_council
+	border = GFX_event_normal_frame_war
+	
+	is_triggered_only = yes
+	
+	immediate = { narrative_event = { id = montane_pilgrim.90 days = 1 } }
+	
+	option = {
+		name = EVTOPT_pilgrim_claimcity
+		63 = { county = { add_claim = ROOT } }
+		random_list = {
+			20 = { add_trait = greedy }
+			20 = { add_trait = envious }
+			20 = { add_trait = cynical }
+			20 = { add_trait = proud }
+			20 = { add_trait = ambitious }
+		}
+		ai_chance = {
+			factor = 10
+			modifier = { factor = 2 trait = ambitious }
+			modifier = { factor = 2 trait = proud }
+		}
+	}
+	
+	option = {
+		name = EVTOPT_pilgrim_claimnothing
+		random_list = {
+			40 = { change_diplomacy = 1 }
+			20 = { add_trait = humble }
+			20 = { add_trait = patient }
+			20 = { add_trait = content }
+		}
+		ai_chance = {
+			factor = 10
+			modifier = { factor = 2 trait = content }
+			modifier = { factor = 2 trait = humble }
+		}
+	}
+}
+
+character_event = {
+	id = montane_pilgrim.65
+	desc = EVTDESC_montane_pilgrim_claimguarden_of_the_gods
+	picture = GFX_evt_council
+	border = GFX_event_normal_frame_war
+	
+	is_triggered_only = yes
+	
+	immediate = { narrative_event = { id = montane_pilgrim.90 days = 1 } }
+	
+	option = {
+		name = EVTOPT_pilgrim_claimcity
+		75 = { county = { add_claim = ROOT } }
+		random_list = {
+			20 = { add_trait = greedy }
+			20 = { add_trait = envious }
+			20 = { add_trait = cynical }
+			20 = { add_trait = proud }
+			20 = { add_trait = ambitious }
+		}
+		ai_chance = {
+			factor = 10
+			modifier = { factor = 2 trait = ambitious }
+			modifier = { factor = 2 trait = proud }
+		}
+	}
+	
+	option = {
+		name = EVTOPT_pilgrim_claimnothing
+		random_list = {
+			40 = { change_diplomacy = 1 }
+			20 = { add_trait = humble }
+			20 = { add_trait = patient }
+			20 = { add_trait = content }
+		}
+		ai_chance = {
+			factor = 10
+			modifier = { factor = 2 trait = content }
+			modifier = { factor = 2 trait = humble }
+		}
+	}
+}
+
+# ************************* Notify Relationship Changes ************************
+
+character_event = {
+	id = montane_pilgrim.70
+	desc = EVTNAME_pilgrim_newfriend
+	picture = GFX_evt_feast
+	
+	is_triggered_only = yes
+	trigger = { NOT = { is_friend = FROM } }
+	
+	option = {
+		name = EVTOPT_pilgrim_newfriend
+		custom_tooltip = { text = TXT_pilgrim_newfriend }
+		hidden_tooltip = { add_friend = FROM }
+	}
+}
+
+character_event = {
+	id = montane_pilgrim.71
+	desc = EVTNAME_pilgrim_newrival
+	picture = GFX_evt_scandal
+	
+	is_triggered_only = yes
+	trigger = { NOT = { is_rival = FROM } }
+	
+	option = {
+		name = EVTOPT_pilgrim_newrival
+		custom_tooltip = { text = TXT_pilgrim_newrival }
+		hidden_tooltip = { add_rival = FROM }
+	}
+}
+
+# ************************* Final Results ************************
+
+narrative_event = {
+	id = montane_pilgrim.90
+	title = EVTNAME_pilgrim_failure
+	desc = EVTDESC_montane_pilgrim_failure
+	picture = GFX_evt_bad_news
+	border = GFX_event_narrative_frame_religion
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		set_character_flag = failed_pilgrim
+		character_event = { id = montane_pilgrim.92 days = 2 }
+	}
+	
+	option = {
+		name = EVTOPT_pilgrim_failure
+		piety = -50
+		prestige = -50
+		random_list = {
+			40 = { add_trait = cynical }
+			20 = { add_trait = depressed }
+			40 = { }
+		}
+		remove_trait = on_pilgrimage
+	}
+}
+
+narrative_event = {
+	id = montane_pilgrim.91
+	title = EVTNAME_pilgrim_success
+	desc = EVTDESC_montane_pilgrim_success
+	picture = GFX_evt_carriage
+	border = GFX_event_narrative_frame_religion
+	
+	is_triggered_only = yes
+	trigger = { trait = on_pilgrimage }
+	immediate = {
+		character_event = { id = montane_pilgrim.92 days = 2 }
+	}
+	
+	option = {
+		name = EVTOPT_pilgrim_success
+		piety = 50
+		prestige = 50
+		add_trait = pilgrim
+		remove_trait = on_pilgrimage
+		if = {
+			limit = { higher_tier_than = BARON }
+			religion_authority = { modifier = ruler_pilgrimage }
+		}
+	}
+}
+
+character_event = {
+	id = montane_pilgrim.92
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		clr_character_flag = pilgrim_carriage
+		clr_character_flag = pilgrim_bodyguards
+		clr_character_flag = pilgrim_entry_retried
+		clr_character_flag = on_pilgrimage_yellowstone
+		clr_character_flag = on_pilgrimage_rocky_mountain_national_park 
+		clr_character_flag = on_pilgrimage_banff
+		clr_character_flag = on_pilgrimage_zion
+		clr_character_flag = on_pilgrimage_guarden_of_the_gods
 	}
 }
