@@ -1,9 +1,9 @@
 # 1		make preparations for the journey
-# 11	visit boston [69]
-# 12	visit Rocky Mountain National Park  [3]
-# 13	visit banff [27]
-# 14	visit zion [63]
-# 15	visit guarden_of_the_gods [75]
+# 11	visit Yellowstone [448]
+# 12	visit Rocky Mountain National Park  [769]
+# 13	visit banff [500]
+# 14	visit zion [436]
+# 15	visit guarden_of_the_gods [391]
 # 20	determine relationship between pilgrim and ruler of city
 # 30	city owned by you, take a quick tour
 # 31	city owned by a lord in the same realm as you
@@ -22,11 +22,11 @@
 # 53	ruler attempts to have you imprisoned
 # 54	ruler attempts to have you killed
 # 56	you explore the city without the ruler knowing
-# 61	turned away from yellowstone [69]
-# 62	turned away from Rocky Mountain National Park  [3]
-# 63	turned away from banff [27]
+# 61	turned away from yellowstone [448]
+# 62	turned away from Rocky Mountain National Park  [769]
+# 63	turned away from banff [500]
 # 64	turned away from zion [63]
-# 65	turned away from guarden_of_the_gods [75]
+# 65	turned away from guarden_of_the_gods [391]
 # 70	notify new friend
 # 71	notify new rival
 # 90	the pilgrimage has failed, suffer some penalties
@@ -105,7 +105,7 @@ narrative_event = {
 	
 	option = {
 		name = EVTOPT_pilgrim_approach
-		69 = { owner = { character_event = { id = montane_pilgrim.20 } } }
+		448 = { owner = { character_event = { id = montane_pilgrim.20 } } }
 		narrative_event = { id = montane_pilgrim.12 days = 20 random = 10 }
 	}
 }
@@ -126,7 +126,7 @@ narrative_event = {
 
 	option = {
 		name = EVTOPT_pilgrim_approach
-		3 = { owner = { character_event = { id = montane_pilgrim.20 } } }
+		 769 = { owner = { character_event = { id = montane_pilgrim.20 } } }
 		narrative_event = { id = montane_pilgrim.13 days = 20 random = 10 }
 	}
 }
@@ -147,7 +147,7 @@ narrative_event = {
 
 	option = {
 		name = EVTOPT_pilgrim_approach
-		27 = { owner = { character_event = { id = montane_pilgrim.20 } } }
+		500 = { owner = { character_event = { id = montane_pilgrim.20 } } }
 		narrative_event = { id = montane_pilgrim.14 days = 20 random = 10 }
 	}
 }
@@ -168,7 +168,7 @@ narrative_event = {
 
 	option = {
 		name = EVTOPT_pilgrim_approach
-		63 = { owner = { character_event = { id = montane_pilgrim.20 } } }
+		436 = { owner = { character_event = { id = montane_pilgrim.20 } } }
 		narrative_event = { id = montane_pilgrim.15 days = 20 random = 10 }
 	}
 }
@@ -189,7 +189,7 @@ narrative_event = {
 
 	option = {
 		name = EVTOPT_pilgrim_approach
-		75 = { owner = { character_event = { id = montane_pilgrim.20 } } }
+		391 = { owner = { character_event = { id = montane_pilgrim.20 } } }
 		narrative_event = { id = montane_pilgrim.91 days = 5 random = 5 }
 	}
 }
@@ -1713,7 +1713,7 @@ character_event = {
 	
 	option = {
 		name = EVTOPT_pilgrim_claimcity
-		69 = { county = { add_claim = ROOT } }
+		448 = { county = { add_claim = ROOT } }
 		random_list = {
 			20 = { add_trait = greedy }
 			20 = { add_trait = envious }
@@ -1756,7 +1756,7 @@ character_event = {
 	
 	option = {
 		name = EVTOPT_pilgrim_claimcity
-		3 = { county = { add_claim = ROOT } }
+		769 = { county = { add_claim = ROOT } }
 		random_list = {
 			20 = { add_trait = greedy }
 			20 = { add_trait = envious }
@@ -1799,7 +1799,7 @@ character_event = {
 	
 	option = {
 		name = EVTOPT_pilgrim_claimcity
-		27 = { county = { add_claim = ROOT } }
+		500 = { county = { add_claim = ROOT } }
 		random_list = {
 			20 = { add_trait = greedy }
 			20 = { add_trait = envious }
@@ -1842,7 +1842,7 @@ character_event = {
 	
 	option = {
 		name = EVTOPT_pilgrim_claimcity
-		63 = { county = { add_claim = ROOT } }
+		436 = { county = { add_claim = ROOT } }
 		random_list = {
 			20 = { add_trait = greedy }
 			20 = { add_trait = envious }
@@ -1885,7 +1885,7 @@ character_event = {
 	
 	option = {
 		name = EVTOPT_pilgrim_claimcity
-		75 = { county = { add_claim = ROOT } }
+		391 = { county = { add_claim = ROOT } }
 		random_list = {
 			20 = { add_trait = greedy }
 			20 = { add_trait = envious }
