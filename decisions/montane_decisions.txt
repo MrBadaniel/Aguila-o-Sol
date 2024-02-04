@@ -537,8 +537,10 @@ decisions = {
 			prisoner = no
 			in_seclusion = no
 			NOT = { is_incapable = yes }
-			NOT = { trait = pilgrim }
-			NOT = { trait = on_pilgrimage }
+		#	NOT = { trait = pilgrim }
+		#	NOT = { trait = on_pilgrimage }
+			NOT = { trait = montane_hiker }
+			NOT = { trait = montane_on_hike }
 			NOT = { has_character_flag = failed_pilgrim }
 			NOT = { trait = legendary }
 			NOT = { #immersion-breaking
@@ -551,7 +553,8 @@ decisions = {
 			wealth = 50
 		}
 		effect = {
-			add_trait = on_pilgrimage
+		#	add_trait = on_pilgrimage
+			add_trait = montane_on_hike
 			wealth = -50
 			hidden_tooltip = {
 				character_event = {
