@@ -1570,19 +1570,19 @@ character_event = {
 character_event = {
 	id = AoM.400
 	desc = EVTDESC_anglican_conference
-	picture = GFX_evt_feast
+	picture = GFX_evt_bishop
 	border = GFX_event_normal_frame_religion
 	
 	is_triggered_only = yes
 	
 	hide_from = yes
 	
-	option = {
-		name = EVTOPTA_anglican_conference_400
+	option = { #Tolerant of All Christians
+		name = EVTOPTA_anglican_conference_4001
 		any_vassal = {
 			limit = {
 				OR = { # a time when everyone comes together
-					trait = board_anglican
+					religion_group = christian
 				}
 				age = 16
 				prisoner = no
@@ -1590,6 +1590,54 @@ character_event = {
 				NOT = { is_incapable = yes }
 			}
 			character_event = { id = AoM.401 days = 2 tooltip = EVTTOOLTIP_anglican_conference_101 }
+		}
+		add_character_modifier = {
+			name = high_church_christian_ecumenical
+			duration = 3600
+		}	
+		custom_tooltip = { text = conference_invitations_sent }
+		hidden_tooltip = { character_event = { id = AoM.403 days = 10 } }
+		hidden_tooltip = { character_event = { id = AoM.404 days = 12 } }
+	}
+	option = { Tolerant of all Anglicans
+		name = EVTOPTA_anglican_conference_4002
+		any_vassal = {
+			limit = {
+				OR = { # a time when everyone comes together
+					religion = high_church
+				}
+				age = 16
+				prisoner = no
+				war = no
+				NOT = { is_incapable = yes }
+			}
+			character_event = { id = AoM.401 days = 2 tooltip = EVTTOOLTIP_anglican_conference_101 }
+		}
+		add_character_modifier = {
+			name = high_church_branch_ecumenical
+			duration = 3600
+		}
+		custom_tooltip = { text = conference_invitations_sent }
+		hidden_tooltip = { character_event = { id = AoM.403 days = 10 } }
+		hidden_tooltip = { character_event = { id = AoM.404 days = 12 } }
+	}
+	option = { Tolerant only of Board Anglicans
+		name = EVTOPTA_anglican_conference_4013
+		any_vassal = {
+			limit = {
+				OR = { # a time when everyone comes together
+					trait = broad_anglican
+				}
+				age = 16
+				prisoner = no
+				war = no
+				NOT = { is_incapable = yes }
+			}
+			character_event = { id = AoM.401 days = 2 tooltip = EVTTOOLTIP_anglican_conference_101 }
+		}
+		add_character_modifier = {
+			name = high_church_not_ecumenical
+			duration = 3600
 		}
 		custom_tooltip = { text = conference_invitations_sent }
 		hidden_tooltip = { character_event = { id = AoM.403 days = 10 } }
@@ -1601,7 +1649,7 @@ character_event = {
 character_event = {
 	id = AoM.401
 	desc = EVTDESC_anglican_conference_401
-	picture = GFX_evt_feast
+	picture = GFX_evt_cathedral
 	border = GFX_event_normal_frame_religion
 	
 	is_triggered_only = yes
@@ -1651,7 +1699,7 @@ character_event = {
 character_event = {
 	id = AoM.402
 	desc = EVTDESC_anglican_conference_402
-	picture = GFX_evt_feast
+	picture = GFX_evt_accused
 	border = GFX_event_normal_frame_religion
 	
 	is_triggered_only = yes
@@ -1670,7 +1718,7 @@ character_event = {
 character_event = {
 	id = AoM.403
 	desc = EVTDESC_anglican_conference_403
-	picture = GFX_evt_feast
+	picture = GFX_evt_papal_coronation
 	border = GFX_event_normal_frame_religion
 	
 	hide_from = yes
@@ -1687,7 +1735,7 @@ character_event = {
 character_event = {
 	id = AoM.404
 	desc = EVTDESC_anglican_conference_404
-	picture = GFX_evt_feast
+	picture = GFX_evt_beatification
 	border = GFX_event_normal_frame_religion
 	
 	hide_from = yes
@@ -1698,13 +1746,13 @@ character_event = {
 		name = {
 			text = EVTOPTA_anglican_conference_404
 			trigger = {
-				NOT = { religion = libertarian }
+				NOT = { religion = high_church }
 			}
 		}
 		name = {
 			text = EVTOPTB_anglican_conference_404
 			trigger = {
-				religion = libertarian
+				religion = high_church
 			}
 		}
 		any_vassal = {
@@ -1736,27 +1784,27 @@ character_event = {
 
 # Thanksgiving Feast Ends (Guest)
 character_event = {
-	id = america_pilgrim.105
-	desc = EVTDESC_america_pilgrim_105
-	picture = GFX_evt_feast
+	id = AoM.405
+	desc = EVTDESC_anglican_conference_405
+	picture = GFX_evt_beatification
 	border = GFX_event_normal_frame_religion
 	
 	is_triggered_only = yes
 	
 	option = {
 		name = {
-			text = EVTOPTA_america_pilgrim_104
+			text = EVTOPTA_anglican_conference_404
 			trigger = {
-				NOT = { religion = libertarian }
+				NOT = { religion = high_church }
 			}
 		}
 		name = {
-			text = EVTOPTB_america_pilgrim_104
+			text = EVTOPTB_anglican_conference_404
 			trigger = {
-				religion = libertarian
+				religion = high_church
 			}
 		}
-		clr_character_flag = attending_thanksgiving
+		clr_character_flag = attending_conference
 		clr_character_flag = do_not_disturb
 		clr_character_flag = recent_minor_decision
 	}
@@ -1764,7 +1812,7 @@ character_event = {
 
 # Safety catch - clears character flags and modifiers
 character_event = {
-	id = america_pilgrim.106
+	id = AoM.406
 
 	hide_window = yes
 	
@@ -1773,7 +1821,7 @@ character_event = {
 	immediate = {
 		clr_character_flag = do_not_disturb
 		clr_character_flag = recent_minor_decision
-		clr_character_flag = holding_thanksgiving
-		clr_character_flag = attending_thanksgiving
+		clr_character_flag = holding_conference
+		clr_character_flag = attending_conference
 	}
 }
