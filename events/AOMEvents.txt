@@ -1501,3 +1501,327 @@ character_event = { #on birth event to maintain for newborns
 	}
 	enforce_branch_on_birth_effect = yes
 }
+
+
+######## Anglican Investiture Maintaince Events
+
+character_event = {
+    id = AoM.350
+
+    is_triggered_only = yes
+    hide_window = yes
+
+    trigger = {
+        any_demesne_title = {
+            is_law_potential = succ_high_church_elective
+        }
+    }
+
+    immediate = {
+        any_demesne_title = {
+            limit = { is_law_potential = succ_high_church_elective }
+
+            add_law = {
+                law = succ_high_church_elective
+                cooldown = no
+                opinion_effect = no
+            }
+
+            add_law = {
+                law = agnatic_succession
+                cooldown = no
+                opinion_effect = no
+            }
+        }
+    }
+}
+
+character_event = {
+    id = AoM.351
+
+    is_triggered_only = yes
+    hide_window = yes
+
+    trigger = {
+        FROM = {
+            is_law_potential = succ_high_church_elective
+        }
+    }
+
+    immediate = {
+        FROM = {
+            add_law = {
+                law = succ_high_church_elective
+                cooldown = no
+                opinion_effect = no
+            }
+
+            add_law = {
+                law = agnatic_succession
+                cooldown = no
+                opinion_effect = no
+            }
+        }
+    }
+}
+## Board Anglican Conferences ##
+
+# Invitations Sent
+character_event = {
+	id = AoM.400
+	desc = EVTDESC_anglican_conference
+	picture = GFX_evt_bishop
+	border = GFX_event_normal_frame_religion
+	
+	is_triggered_only = yes
+	
+	hide_from = yes
+	
+	option = { #Tolerant of All Christians
+		name = EVTOPTA_anglican_conference_4001
+		any_vassal = {
+			limit = {
+				OR = { # a time when everyone comes together
+					religion_group = christian
+				}
+				age = 16
+				prisoner = no
+				war = no
+				NOT = { is_incapable = yes }
+			}
+			character_event = { id = AoM.401 days = 2 tooltip = EVTTOOLTIP_anglican_conference_101 }
+		}
+		add_character_modifier = {
+			name = high_church_christian_ecumenical
+			duration = 3600
+		}	
+		custom_tooltip = { text = conference_invitations_sent }
+		hidden_tooltip = { character_event = { id = AoM.403 days = 10 } }
+		hidden_tooltip = { character_event = { id = AoM.404 days = 12 } }
+	}
+	option = { Tolerant of all Anglicans
+		name = EVTOPTA_anglican_conference_4002
+		any_vassal = {
+			limit = {
+				OR = { # a time when everyone comes together
+					religion = high_church
+				}
+				age = 16
+				prisoner = no
+				war = no
+				NOT = { is_incapable = yes }
+			}
+			character_event = { id = AoM.401 days = 2 tooltip = EVTTOOLTIP_anglican_conference_101 }
+		}
+		add_character_modifier = {
+			name = high_church_branch_ecumenical
+			duration = 3600
+		}
+		custom_tooltip = { text = conference_invitations_sent }
+		hidden_tooltip = { character_event = { id = AoM.403 days = 10 } }
+		hidden_tooltip = { character_event = { id = AoM.404 days = 12 } }
+	}
+	option = { Tolerant only of Board Anglicans
+		name = EVTOPTA_anglican_conference_4013
+		any_vassal = {
+			limit = {
+				OR = { # a time when everyone comes together
+					trait = broad_anglican
+				}
+				age = 16
+				prisoner = no
+				war = no
+				NOT = { is_incapable = yes }
+			}
+			character_event = { id = AoM.401 days = 2 tooltip = EVTTOOLTIP_anglican_conference_101 }
+		}
+		add_character_modifier = {
+			name = high_church_not_ecumenical
+			duration = 3600
+		}
+		custom_tooltip = { text = conference_invitations_sent }
+		hidden_tooltip = { character_event = { id = AoM.403 days = 10 } }
+		hidden_tooltip = { character_event = { id = AoM.404 days = 12 } }
+	}
+}
+
+# Invitation Received
+character_event = {
+	id = AoM.401
+	desc = EVTDESC_anglican_conference_401
+	picture = GFX_evt_cathedral
+	border = GFX_event_normal_frame_religion
+	
+	is_triggered_only = yes
+
+	trigger = { NOT = { is_inaccessible_trigger = yes } }
+	
+	option = {
+		name = EVTOPTA_anglican_conference_401
+		ai_chance = {
+			factor = 80
+			modifier = {
+				factor = 0
+				NOT = {
+					opinion = {
+						who = ROOT
+						value = -20
+					}
+				}
+			}
+		}
+		custom_tooltip = { text = conference_accepted }
+		set_character_flag = attending_conference
+		set_character_flag = do_not_disturb
+		hidden_tooltip = { character_event = { id = AoM.403 days = 8 } }
+		hidden_tooltip = { character_event = { id = AoM.406 days = 20 } } # Safety catch flag clearing
+	}
+	option = {
+		name = EVTOPTB_anglican_conference_401
+		ai_chance = {
+			factor = 20
+		}
+		FROM = {
+			opinion = {
+				modifier = opinion_dislike
+				who = ROOT
+				years = 2
+			}
+		}
+		custom_tooltip = { text = conference_declined }
+		hidden_tooltip = {
+			FROM = { character_event = { id = AoM.402 } }
+		}
+	}
+}
+
+# Invitation Refused
+character_event = {
+	id = AoM.402
+	desc = EVTDESC_anglican_conference_402
+	picture = GFX_evt_accused
+	border = GFX_event_normal_frame_religion
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_anglican_conference_402
+		opinion = {
+			modifier = opinion_dislike
+			who = FROM
+			years = 2
+		}
+	}
+}
+
+# Anglican conference Begins
+character_event = {
+	id = AoM.403
+	desc = EVTDESC_anglican_conference_403
+	picture = GFX_evt_papal_coronation
+	border = GFX_event_normal_frame_religion
+	
+	hide_from = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_anglican_conference_403
+		gain_weight_small_effect = yes
+	}
+}
+
+# Thanksgiving Feast Ends (Host)
+character_event = {
+	id = AoM.404
+	desc = EVTDESC_anglican_conference_404
+	picture = GFX_evt_beatification
+	border = GFX_event_normal_frame_religion
+	
+	hide_from = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = {
+			text = EVTOPTA_anglican_conference_404
+			trigger = {
+				NOT = { religion = high_church }
+			}
+		}
+		name = {
+			text = EVTOPTB_anglican_conference_404
+			trigger = {
+				religion = high_church
+			}
+		}
+		any_vassal = {
+			limit = { has_character_flag = attending_conference }
+			opinion = {
+				modifier = opinion_enjoyed_conference
+				who = ROOT
+				years = 2
+			}
+		}
+		hidden_tooltip = {
+			any_vassal = {
+				limit = { has_character_flag = attending_conference }
+				character_event = { id = AoM.405 }
+			}
+		}
+		add_character_modifier = {
+			name = held_conference_timer
+			duration = 1095
+			hidden = yes
+		}
+		prestige = 75
+		piety = 75
+		clr_character_flag = holding_conference
+		clr_character_flag = do_not_disturb
+		clr_character_flag = recent_minor_decision
+	}
+}
+
+# Thanksgiving Feast Ends (Guest)
+character_event = {
+	id = AoM.405
+	desc = EVTDESC_anglican_conference_405
+	picture = GFX_evt_beatification
+	border = GFX_event_normal_frame_religion
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = {
+			text = EVTOPTA_anglican_conference_404
+			trigger = {
+				NOT = { religion = high_church }
+			}
+		}
+		name = {
+			text = EVTOPTB_anglican_conference_404
+			trigger = {
+				religion = high_church
+			}
+		}
+		clr_character_flag = attending_conference
+		clr_character_flag = do_not_disturb
+		clr_character_flag = recent_minor_decision
+	}
+}
+
+# Safety catch - clears character flags and modifiers
+character_event = {
+	id = AoM.406
+
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		clr_character_flag = do_not_disturb
+		clr_character_flag = recent_minor_decision
+		clr_character_flag = holding_conference
+		clr_character_flag = attending_conference
+	}
+}

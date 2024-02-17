@@ -1,5 +1,107 @@
 decisions = {
-	
+		conference_0 = {
+		ai_check_interval = 12
+
+		only_playable = yes
+
+		potential = {
+			OR = {
+				is_feudal = yes
+				is_tribal = yes
+				is_nomadic = yes
+			}
+
+			OR = {
+				religion_group = high_church
+				has_alternate_start_parameter = {
+					key = religion_names
+					value = random
+				}
+			}
+
+			#num_of_vassals >= 1
+			prisoner = no
+
+			NOR = {
+				has_character_modifier = holding_large_conference
+				has_character_modifier = large_conference_timer
+				has_character_modifier = fabulous_conference
+				has_character_flag = guest_conference_started
+
+				liege = {
+					has_character_modifier = holding_large_conference
+				}
+			}
+		}
+
+		allow = {
+
+			custom_tooltip = {
+				text = UNOCCUPIED_DEMESNE_TITLE
+
+				any_demesne_title = {
+					#lower_real_tier_than = DUKE
+					lower_real_tier_than = COUNT
+					is_occupied = no
+				}
+			}
+
+			war = no
+			prisoner = no
+			is_inaccessible_trigger = no
+			wealth >= 25
+			piety >= 25
+			prestige >= 100
+		}
+
+		effect = {
+			wealth = -25
+
+			add_character_modifier = {
+				name = holding_large_conference
+				duration = -1
+			}
+
+			save_event_target_as = conference_host
+			set_character_flag = recent_minor_decision
+			set_character_flag = do_not_disturb
+			character_event = { id = AoM.400 } # Feast
+
+			if = {
+				limit = { has_dlc = "Reapers" }
+
+				custom_tooltip = {
+					text = capital_prospers_custom_tooltip
+
+					capital_scope = {
+						change_variable = {
+							which = prosperity_value
+							value = 8
+						}
+					}
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+
+			trigger = {
+				wealth > 200
+				diplomacy >= 10
+				NOT = { trait = shy }
+
+				trigger_if = {
+					limit = { has_character_flag = recent_minor_decision }
+
+					had_character_flag = {
+						flag = recent_minor_decision
+						years >= 2
+					}
+				}
+			}
+		}
+	}
 	enforce_branch = { ### Anglican King/Emperor issues Edict with tacit approval of their Patriarch, forcing every church in the realm to become his branch of anglicanism, mainly for RP, but gives piety and prestige at cost of vassal Opinion, additionally wish to add a mechanic to overrule this edict be it through the King choosing to do so (unlikely though for a king of the same dynasty since it undermine's his dynasty's legitimacy} or via faction demands or civil war. 
 		only_playable = yes
 		is_high_prio = yes

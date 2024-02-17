@@ -113,7 +113,7 @@ narrative_event = {
 		NOT = { #immersion-breaking
 			has_alternate_start_parameter = { key = religion_names value = random }
 		}
-		has_landed_title = d_mouse #fires for the CEO
+		has_landed_title = d_the_mouse #fires for the CEO
 		NOT = { has_global_flag = phantasmic_acquisitions_unlocked }
 		
 		93 = { # Disney's Americas
@@ -155,5 +155,98 @@ narrative_event = {
 				culture = gulfard
 			}
 		}
+	}
+}
+
+# Provincia Anaheim
+narrative_event = {
+	id = disneymod.3
+	title = EVTNAMEdisneymod.3
+	desc = EVTDESCdisneymod.3
+	
+	picture = GFX_evt_the_sword_in_stone
+	
+	ai = no
+	
+	trigger = {
+		is_alternate_start = no
+		OR = {
+			religion = phantasmic
+			religion = renaissancist
+		}
+		NOT = { has_global_flag = disneys_anaheim }
+		completely_controls = c_orange
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = EVTOPTAdisneymod.3
+		set_global_flag = disneys_anaheim
+		prestige = 100
+	}
+}
+
+# Provincia Haymarket
+narrative_event = {
+	id = disneymod.4
+	title = EVTNAMEdisneymod.4
+	desc = EVTDESCdisneymod.4
+	
+	picture = GFX_evt_colonial_america
+	
+	ai = no
+	
+	trigger = {
+		is_alternate_start = no
+		OR = {
+			religion = phantasmic
+			religion = renaissancist
+		}
+		NOT = { has_global_flag = disneys_haymarket }
+		completely_controls = c_bull_run
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = EVTOPTAdisneymod.4
+		set_global_flag = disneys_haymarket
+		prestige = 100
+	}
+}
+
+# Provincia Chicago
+narrative_event = {
+	id = disneymod.5
+	title = EVTNAMEdisneymod.5
+	desc = EVTDESCdisneymod.5
+	
+	picture = GFX_evt_walt_disneys_porch
+	
+	ai = no
+	
+	trigger = {
+		is_alternate_start = no
+		OR = {
+			religion = phantasmic
+			religion = renaissancist
+		}
+		NOT = { has_global_flag = disneys_chicago }
+		completely_controls = c_chicago
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = EVTOPTAdisneymod.5
+		set_global_flag = disneys_chicago
+		prestige = 100
 	}
 }
