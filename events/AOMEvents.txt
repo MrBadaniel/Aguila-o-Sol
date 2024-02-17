@@ -1569,7 +1569,7 @@ character_event = {
 # Invitations Sent
 character_event = {
 	id = AoM.400
-	desc = EVTDESC_anglican_conference
+	desc = EVTDESC_anglican_conference_400
 	picture = GFX_evt_bishop
 	border = GFX_event_normal_frame_religion
 	
@@ -1731,7 +1731,7 @@ character_event = {
 	}
 }
 
-# Thanksgiving Feast Ends (Host)
+# Conference Ends (Host)
 character_event = {
 	id = AoM.404
 	desc = EVTDESC_anglican_conference_404
@@ -1743,12 +1743,12 @@ character_event = {
 	is_triggered_only = yes
 	
 	option = {
-		name = {
-			text = EVTOPTA_anglican_conference_404
-			trigger = {
-				NOT = { religion = high_church }
-			}
-		}
+		#name = {
+		#	text = EVTOPTA_anglican_conference_404
+		#	trigger = {
+		#		NOT = { religion = high_church }
+		#	}
+		#}
 		name = {
 			text = EVTOPTB_anglican_conference_404
 			trigger = {
@@ -1769,11 +1769,6 @@ character_event = {
 				character_event = { id = AoM.405 }
 			}
 		}
-		add_character_modifier = {
-			name = held_conference_timer
-			duration = 1095
-			hidden = yes
-		}
 		prestige = 75
 		piety = 75
 		clr_character_flag = holding_conference
@@ -1782,7 +1777,7 @@ character_event = {
 	}
 }
 
-# Thanksgiving Feast Ends (Guest)
+# Conference Ends (Guest)
 character_event = {
 	id = AoM.405
 	desc = EVTDESC_anglican_conference_405
@@ -1793,15 +1788,22 @@ character_event = {
 	
 	option = {
 		name = {
-			text = EVTOPTA_anglican_conference_404
+			text = EVTOPTA_anglican_conference_405
 			trigger = {
 				NOT = { religion = high_church }
 			}
 		}
 		name = {
+			text = EVTOPTB_anglican_conference_405
+			trigger = {
+			NOT = {	trait = broad_anglican }
+			religion = high_church
+			}
+		}
+		name = {
 			text = EVTOPTB_anglican_conference_404
 			trigger = {
-				religion = high_church
+				trait = broad_anglican
 			}
 		}
 		clr_character_flag = attending_conference
