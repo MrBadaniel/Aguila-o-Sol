@@ -10,18 +10,7 @@ decisions = {
 				is_tribal = yes
 				is_nomadic = yes
 			}
-
-			OR = {
-				religion_group = high_church
-				has_alternate_start_parameter = {
-					key = religion_names
-					value = random
-				}
-			}
-
-			#num_of_vassals >= 1
-			prisoner = no
-
+			religion = high_church
 			NOR = {
 				has_character_modifier = holding_large_conference
 				has_character_modifier = large_conference_timer
@@ -52,6 +41,7 @@ decisions = {
 			wealth >= 25
 			piety >= 25
 			prestige >= 100
+			trait = broad_anglican
 		}
 
 		effect = {
