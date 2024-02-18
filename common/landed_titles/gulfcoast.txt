@@ -151,6 +151,7 @@ e_gulfcoast = {
 				b_lutcher_LA = {}
 				b_chalmet_LA = {
 					pentarchy = evangelical
+					name_tier = duke
 				}
 				b_meraux_LA = {}
 				b_treme_LA = {}
@@ -539,12 +540,14 @@ e_gulfcoast = {
 			allow = {
 				always = no
 			}
-
-			capital = 2600 # Disneyland
+			controls_religion = phantasmic
+			religion = phantasmic
+			primary = yes
+			capital = 2600 # Disneyworld
 			culture = gulfard
-			title = "HIGH_CHIEF"
-			foa = "HIGH_CHIEF_FOA"
-			title_prefix = "TRIBE_OF"
+			title = "GOD_CHAIRMAN"
+			title_female = "GOD_CHAIRWOMAN"
+			title_prefix = "STUDIO_OF"
 		}
 
 		d_muskogee = {

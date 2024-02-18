@@ -8,3 +8,12 @@ fallen_saint = {
 	customizer = no
 	church_opinion = 100
 }
+high_church_bishop_heir = {
+	potential = {
+		religion = high_church
+	}
+	hidden = yes
+	cached = yes # Keep a cache of all trait holders, to use with the corresponding event trigger 
+	random = no
+	customizer = no
+}

@@ -3730,6 +3730,7 @@ crusade = {
 					has_global_flag = christian_crusades_unlocked
 					has_global_flag = rust_cultist_industrial_actions_unlocked
 					has_global_flag = la_hermandad_huelgas_unlocked
+					has_global_flag = phantasmic_acquisitions_unlocked
 					has_global_flag = patria_grande_liberation_wars_unlocked
 					has_global_flag = fallingstar_outer_invasions_unlocked
 				}
@@ -3785,13 +3786,13 @@ crusade = {
 							has_global_flag = ursuline_crusades_unlocked
 						}
 					}
-					AND = {
-						religion = la_hermandad
-						custom_tooltip = {
-							text = CTT_HUELGAS_UNLOCKED
-							has_global_flag = la_hermandad_huelgas_unlocked
-						}
-					}
+					#AND = {
+					#	religion = la_hermandad
+					#	custom_tooltip = {
+					#		text = CTT_HUELGAS_UNLOCKED
+					#		has_global_flag = la_hermandad_huelgas_unlocked
+					#	}
+					#}
 					AND = {
 						religion = exovedate
 						custom_tooltip = {
@@ -3864,6 +3865,13 @@ crusade = {
 						custom_tooltip = {
 							text = CTT_HUELGAS_UNLOCKED
 							has_global_flag = la_hermandad_huelgas_unlocked
+						}
+					}
+					AND = {
+						religion = phantasmic
+						custom_tooltip = {
+							text = CTT_ACQUISITIONS_UNLOCKED
+							has_global_flag = phantasmic_acquisitions_unlocked
 						}
 					}
 					religion = revivalist # doesn't need no fancy event to begin declaring jihads
@@ -4484,6 +4492,7 @@ new_crusade = {
 					has_global_flag = ursuline_crusades_unlocked
 					has_global_flag = rust_cultist_industrial_actions_unlocked
 					has_global_flag = la_hermandad_huelgas_unlocked
+					has_global_flag = phantasmic_acquisitions_unlocked
 					has_global_flag = mormon_expeditions_unlocked
 					has_global_flag = pagan_ghws_unlocked
 					has_global_flag = christian_crusades_unlocked
@@ -4521,6 +4530,13 @@ new_crusade = {
 						custom_tooltip = {
 							text = CTT_HUELGAS_UNLOCKED
 							has_global_flag = la_hermandad_huelgas_unlocked
+						}
+					}
+					AND = {
+						religion = phantasmic
+						custom_tooltip = {
+							text = CTT_ACQUISITIONS_UNLOCKED
+							has_global_flag = phantasmic_acquisitions_unlocked
 						}
 					}
 					AND = {
@@ -5801,12 +5817,23 @@ new_crusade = {
 			# Checks if First Crusade (Bracero)
 			if = {
 				limit = {
-					most_participating_crusader = { religion = ursuline }
+					most_participating_crusader = { religion = la_hermandad }
 					NOT = {
 						has_global_flag = first_la_hermandad_crusade_complete
 					}
 				}
 				set_global_flag = first_la_hermandad_crusade_complete
+			}
+			
+			# Checks if First Acquisition
+			if = {
+				limit = {
+					most_participating_crusader = { religion = phantasmic }
+					NOT = {
+						has_global_flag = first_phantasmic_crusade_complete
+					}
+				}
+				set_global_flag = first_phantasmic_crusade_complete
 			}
 
 			# Adds a negative opinion modifier for selfish Crusaders
@@ -6424,6 +6451,10 @@ religious = {
 									AND = {
 										ROOT = { religion = la_hermandad }
 										has_global_flag = la_hermandad_huelgas_unlocked
+									}
+									AND = {
+										ROOT = { religion = phantasmic }
+										has_global_flag = phantasmic_acquisitions_unlocked
 									}
 									AND = {
 										ROOT = { religion_group = latter_day_saints }

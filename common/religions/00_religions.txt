@@ -1611,9 +1611,10 @@ christian = {
 			SATAN LUCIFER THE_DEVIL
 		}
 		
-		pentarchy = yes
+		#pentarchy = yes
 		autocephaly = yes
 		#investiture = yes
+		investiture = no
 		#can_have_antipopes = yes
 		can_excommunicate = yes
 		can_grant_divorce = yes
@@ -2519,6 +2520,7 @@ cult_of_saints= {
 		evil_god_names = {
 			SATAN LUCIFER THE_DEVIL
 		}
+		allow_in_ruler_designer = no
 		autocephaly = yes
 		#pentarchy = yes
 		can_excommunicate = yes
@@ -4351,7 +4353,8 @@ oldworld = {
         can_excommunicate = yes
         can_grant_claim = yes
         can_grant_divorce = yes
-        can_grant_invasion_cb = invasion
+		can_grant_invasion_cb = invasion
+		can_call_crusade = yes
         allow_rivermovement = yes
         female_temple_holders = yes
         

@@ -1,0 +1,26 @@
+enforce_branch_trigger = { ### get ai to check if same branch to then click right option ###
+            trigger_if = {
+                limit = {
+                    top_liege = {
+                        trait = high_anglican
+                    }
+                }
+				trait = high_anglican
+            }
+			trigger_else_if = {
+                limit = {
+                    top_liege = {
+                        trait = broad_anglican
+                    }
+                }
+				trait = broad_anglican
+            }
+			trigger_else_if = {
+                limit = {
+                    top_liege = {
+                        trait = low_anglican
+                    }
+                }
+				trait = low_anglican
+            }
+}

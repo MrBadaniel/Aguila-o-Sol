@@ -185,7 +185,7 @@
 			has_dlc="Holy Fury"
 		}
 	}
-	2350.1.1={death=yes}
+	2346.1.1={death=yes}
 	
 }
 4000004={
@@ -197,7 +197,9 @@
 	trait=high_anglican
 	trait=just
 	trait=dead_crown_ontario
-	#trait=born_in_the_purple
+	trait=genius
+	trait=ambitious
+	give_nickname=nick_the_magnificent
 	2301.1.1={birth=yes}
 	2375.1.1={death=yes}
 	
@@ -270,28 +272,28 @@
 	trait=dead_crown_ontario
 	#trait=born_in_the_purple
 	trait=tough_soldier
+	trait=cancer
 	give_nickname=nick_the_avenger
 	2400.1.1={birth=yes}
-	2475.1.1={death=yes}
+	2442.4.11={death=yes}
 	
 }
-#4000009={
-#	name="John"
-#	dynasty=1867101 # Cornouailles
-#	culture=ontarian
-#	religion=high_church
-#	father=4000007
-#	trait=born_in_the_purple
-#	2400.1.1={birth=yes}
-#    2425.1.1={
-#		death = {		
-#			death_reason = death_battle
-#				killer=4000008
-#		}
-#	}
-#}
+4000009={
+	name="John"
+	dynasty=1867101 # Cornouailles
+	culture=ontarian
+	religion=high_church
+	father=4000008
+	2422.11.1={birth=yes}
+    2464.2.14={
+		death = {		
+			death_reason = death_battle
+				#killer=4000008
+		}
+	}
+}
 4000010={
-	name="Robert"
+	name="Theodore"
 	dynasty=1867101 # Cornouailles
 	culture=ontarian
 	religion=high_church
@@ -299,7 +301,7 @@
 	father=4000008
 	#trait=born_in_the_purple
 	trait=dead_crown_ontario
-	2416.1.1={birth=yes}
+	2432.1.1={birth=yes}
 	2478.1.1={death=yes}
 	
 }
@@ -316,17 +318,23 @@
 	2485.1.1={death=yes}
 	
 }
-#4000012={
-#	name="Theodore"
-#	dynasty=1867101 # Cornouailles
-#	culture=ontarian
-#	religion=high_church
-#	father=4000008
-#	trait=born_in_the_purple
-#	2432.1.1={birth=yes}
-#	2486.1.1={death=yes}
-#	
-#}
+##### FOR EARLY KINGS BETWEEN THEODORE 1 AND ROBERT 1
+4000012={
+	name="Nicholas"
+	dynasty=1867101 # Cornouailles
+	culture=ontarian
+	religion=high_church
+	father=4000003
+	trait=charitable
+	trait=shrewd
+	trait=just
+	trait=kind
+	trait=is_fat
+	give_nickname=nick_the_generous
+	2295.1.1={birth=yes}
+	2357.1.1={death=yes}
+	
+}
 #4000013={
 #	name="Theodore"
 #	dynasty=1867101 # Cornouailles
@@ -566,7 +574,7 @@
 	}
 }
 4000028={
-	name="Raymond"
+	name="Theodore"
 	dynasty=90000031 # ryerson
 	culture=ontarian
 	religion=high_church
@@ -1133,11 +1141,11 @@
 	dynasty=90000063
     culture=ontarois
     religion=high_church
-	martial=8
-	diplomacy=15
-	stewardship=14
-	intrigue=9
-	learning=22
+	martial=5
+	diplomacy=5
+	stewardship=5
+	intrigue=4
+	learning=5
         trait=zealous
         trait=kind
         trait=charitable
@@ -1149,9 +1157,14 @@
         trait=temperate
 	trait=ambitious
 	trait=high_anglican
-	give_job_title = job_court_chaplain
-	2590.1.1={birth=yes}
-        2680.1.1={death=yes}
+	give_title=job_spiritual
+	2630.1.1={birth=yes}
+	2666.1.1={
+		effect={
+			give_job_title = job_spiritual
+		}
+	}
+    2680.1.1={death=yes}
 }
 4000126={
 	name="Peter"
@@ -1544,16 +1557,22 @@
 	}
 }
 4000152={
-	name="Constantine"
+	name="Augustine"
     culture=ontarian
    	religion=high_church
-	give_nickname = nick_the_restorer
+	give_nickname = nick_the_great
 	disallow_random_traits = yes
 	add_trait=brilliant_strategist
 	add_trait=zealous
 	add_trait=just
 	add_trait=brave
-	2276.1.1={birth=yes}
+	add_trait=high_anglican
+	add_trait=scholar
+	add_trait=administrator
+	add_trait=saint
+	add_trait=monk
+	add_trait=celibate
+	2266.1.1={birth=yes}
     2323.1.1={death=yes}
 }
 4000153={
@@ -1730,6 +1749,8 @@
 	trait=erudite
 	trait=quick
 	trait=poet
+	trait=mountie
+	trait=adventurer
 	2470.1.1={birth=yes}
 	2517.7.4={death={
 			death_reason=death_battle
@@ -2556,5 +2577,138 @@
 	add_trait=diligent
 	2622.12.11={birth=yes}
 	2663.1.1={employer=1899083}
+	2700.1.1={death=yes}
+}
+4000247={
+	name="Joseph"
+	disallow_random_traits=yes
+    culture=ontarian
+   	religion=high_church
+	add_trait=mastermind_theologian
+	add_trait=charitable
+	add_trait=just
+	add_trait=architect
+	add_trait=scholar
+	#add_trait=monk
+	add_trait=high_anglican
+	add_trait=erudite
+	add_trait=diligent
+	add_claim=b_scarborough_ON
+	2622.12.11={birth=yes}
+	2663.1.1={employer=4000125}
+	2700.1.1={death=yes}
+}
+4000248={
+	name="Andrew"
+	disallow_random_traits=yes
+    culture=ontarian
+   	religion=high_church
+	add_trait=mastermind_theologian
+	add_trait=charitable
+	add_trait=just
+	add_trait=architect
+	add_trait=scholar
+	#add_trait=monk
+	add_trait=high_anglican
+	add_trait=erudite
+	add_trait=diligent
+	add_claim=b_scarborough_ON
+	2622.12.11={birth=yes}
+	2663.1.1={employer=4000125}
+	2700.1.1={death=yes}
+}
+4000249={
+	name="Charles"
+	disallow_random_traits=yes
+    culture=ontarian
+   	religion=high_church
+	add_trait=mastermind_theologian
+	add_trait=charitable
+	add_trait=just
+	add_trait=architect
+	add_trait=scholar
+	#add_trait=monk
+	add_trait=high_anglican
+	add_trait=erudite
+	add_trait=diligent
+	add_claim=b_scarborough_ON
+	2622.12.11={birth=yes}
+	2665.1.1={employer=1857082}
+	2700.1.1={death=yes}
+}
+4000250={
+	name="Bruce"
+	disallow_random_traits=yes
+    culture=ontarian
+   	religion=high_church
+	add_trait=mastermind_theologian
+	add_trait=charitable
+	add_trait=just
+	add_trait=architect
+	add_trait=high_church_bishop_heir
+	#add_trait=monk
+	add_trait=high_anglican
+	add_trait=erudite
+	add_trait=diligent
+	#add_claim=b_scarborough_ON
+	2622.12.11={birth=yes}
+	2665.1.1={employer=1857082}
+	2700.1.1={death=yes}
+}
+4000251={
+	name="Peter"
+	disallow_random_traits=yes
+    culture=ontarian
+   	religion=high_church
+	add_trait=mastermind_theologian
+	add_trait=charitable
+	add_trait=just
+	add_trait=architect
+	add_trait=scholar
+	#add_trait=monk
+	add_trait=high_anglican
+	add_trait=erudite
+	add_trait=diligent
+	add_claim=b_scarborough_ON
+	2622.12.11={birth=yes}
+	2665.1.1={employer=1857082}
+	2700.1.1={death=yes}
+}
+4000252={
+	name="Thomas"
+	disallow_random_traits=yes
+    culture=ontarian
+   	religion=high_church
+	add_trait=mastermind_theologian
+	add_trait=charitable
+	add_trait=just
+	add_trait=architect
+	add_trait=scholar
+	#add_trait=monk
+	add_trait=high_anglican
+	add_trait=high_church_bishop_heir
+	add_trait=diligent
+	#add_claim=b_scarborough_ON
+	2622.12.11={birth=yes}
+	2665.1.1={employer=1857082}
+	2700.1.1={death=yes}
+}
+4000253={
+	name="John"
+	disallow_random_traits=yes
+    culture=ontarian
+   	religion=evangelical
+	add_trait=mastermind_theologian
+	add_trait=charitable
+	add_trait=just
+	add_trait=architect
+	add_trait=scholar
+	#add_trait=monk
+	#add_trait=high_anglican
+	add_trait=erudite
+	add_trait=diligent
+	add_claim=b_scarborough_ON
+	2622.12.11={birth=yes}
+	2665.1.1={employer=1857082}
 	2700.1.1={death=yes}
 }

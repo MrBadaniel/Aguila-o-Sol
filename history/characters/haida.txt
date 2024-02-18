@@ -1976,9 +1976,10 @@
 	trait=humble
 	trait=mountain_father
 	trait=zealous
+	trait=cancer
 	give_nickname=nick_the_glorious
-	2601.5.21={birth=yes}
-	2655.12.1={death=yes}
+	2590.5.21={birth=yes}
+	2635.12.1={death=yes}
 }
 1200125={
 	name="Nitlksaq'"
@@ -1991,10 +1992,10 @@
 	trait=erudite
 	learning=10
 	trait=mastermind_theologian
-	2597.8.23={birth=yes}
+	2572.8.23={birth=yes}
 	2623.6.14={death=yes}
 }
-1200126{
+1200126={
 	name="Ray Watak"
 	dynasty=2027041
 	culture=ktunaxa
@@ -2015,6 +2016,7 @@
 	culture=ktunaxa
 	religion=montane
 	father=1200128
+	mother=1200145
 	give_nickname=nick_the_great
 	trait=scholar
 	trait=quick
@@ -2036,6 +2038,7 @@
 	religion=montane
 	father=1200129
 	2505.4.21={birth=yes}
+	2523.1.1={add_spouse=1200145}
 	2550.3.10={death=yes}
 }
 1200129={
@@ -2170,7 +2173,7 @@
 	female=yes
 	culture=coloradan
 	religion=montane
-	father=1875048
+	father=1875049
 	female=yes
 	trait=fair
 	2528.3.17={birth=yes}
@@ -2188,4 +2191,88 @@
 	trait=erudite
 	2657.1.15={birth=yes}
 	2740.10.10={death=yes}
+}
+1200142={
+	name="Namqatku"
+	dynasty=2027041
+	father=1200124
+	culture=ktunaxa
+	religion=montane
+	trait=honest
+	trait=erudite
+	give_nickname=nick_the_goliath
+	trait=giant
+	trait=cancer
+	2627.1.15={birth=yes}
+	2660.1.10={death=yes}
+}
+1200143={
+	name="Mata"
+	disallow_random_traits = yes
+	dynasty=2027041
+	father=1200129
+	culture=ktunaxa
+	religion=montane
+	female=yes
+	trait=honest
+	trait=erudite
+	trait=kind
+	trait=saint
+	trait=chaste
+	trait=fair
+	trait=celibate
+	trait=mountain_mother
+	trait=humble
+	trait=charitable
+	give_nickname=nick_the_maid_of_virgin
+	2481.1.1={birth=yes}
+	2504.1.1={add_spouse=1200144}
+	2560.1.10={death=yes}
+}
+1200144={
+	name="John"
+	disallow_random_traits = yes
+	dynasty=5001184
+	father=1875045
+	culture=coloradan
+	religion=montane
+	trait=honest
+	trait=erudite
+	trait=kind
+	trait=saint
+	trait=chaste
+	trait=celibate
+	trait=mountain_father
+	trait=humble
+	trait=charitable
+	trait=brave
+	trait=pilgrim
+	trait=dwarf
+	give_nickname=nick_the_holy_dwarf
+	2474.1.1={birth=yes}
+	2504.1.1={add_spouse=1200143}
+	2560.1.10={death=yes}
+}
+1200145={
+	name="Mary"
+	disallow_random_traits = yes
+	dynasty=5001184
+	father=1200144
+	mother=1200143
+	female=yes
+	culture=ktunaxa
+	religion=montane
+	trait=honest
+	trait=fair
+	trait=kind
+	trait=quick
+	trait=chaste
+	trait=humble
+	trait=charitable
+	trait=brave
+	trait=adopted_child
+	give_nickname=nick_the_holy
+	2506.1.1={birth=yes}
+	2523.1.1={add_spouse=1200128}
+	2580.1.10={death=yes}
 }

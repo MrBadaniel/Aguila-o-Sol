@@ -1,0 +1,252 @@
+###################################
+#
+# DISNEY MOD
+# - Phantasmic Events
+#
+###################################
+namespace = disneymod
+
+narrative_event = {
+	id = disneymod.1
+	title = EVTNAME200
+	picture = GFX_evt_battle
+	border = GFX_event_narrative_frame_war
+	
+	desc = {
+		text = EVTDESC_acquisition_campaign
+		trigger = {
+			OR = {
+				new_character = {
+					NOT = { religion_group = christian }
+					NOT = { religion_group = pagan_group }
+				}
+				has_alternate_start_parameter = { key = religion_names value = random }
+			}
+		}
+	}
+	desc = {
+		text = EVTDESC_acquisition_campaign_pagan
+		trigger = {
+			new_character = {
+				religion_group = pagan_group
+			}
+			NOT = {
+				has_alternate_start_parameter = { key = religion_names value = random }
+			}
+		}
+	}
+	desc = {
+		text = EVTDESC_acquisition_campaign_walt
+		trigger = {
+			new_character = {
+				religion_group = christian
+			}
+			NOT = {
+				has_alternate_start_parameter = { key = religion_names value = random }
+			}
+		}
+	}
+	
+	is_triggered_only = yes
+	major = yes
+	show_ROOT = yes
+	hide_new = yes
+	
+	trigger = {
+		can_call_crusade = yes
+		ROOT = { religion = phantasmic }
+	}
+	
+	option = {
+		name = EVTOPTA324 # For [God Name]!
+		trigger = { religion = ROOT }
+	}
+	option = {
+		name = EVTOPTB200 # No concern of ours
+		trigger = {
+			NOT = { religion = ROOT }
+			new_character = {
+				NOT = { religion = PREV }
+				NOT = { character = PREV }
+			}
+		}
+	}
+	option = {
+		name = EVTOPTD200 # To Arms!
+		trigger = {
+			new_character = {
+				character = PREV
+			}
+		}
+	}
+	option = {
+		name = EVTOPTE200 # Terrible News!
+		trigger = {
+			new_character = {
+				religion = PREV
+				NOT = { character = PREV }
+			}
+		}
+	}
+}
+
+## Phantasmic Acquisitions ##
+
+# THE START OF THE ACQUISITIONS
+narrative_event = {
+	id = disneymod.2
+	title = EVTNAME_disneys_america
+	desc = EVTDESC_haymarket
+	picture = GFX_evt_colonial_america
+	border = GFX_event_narrative_frame_religion
+	
+	major = yes
+	
+	show_ROOT = no
+	hide_new = yes
+	hide_from = yes
+	
+	only_playable = yes
+	min_age = 16
+	
+	trigger = {
+		NOT = { #immersion-breaking
+			has_alternate_start_parameter = { key = religion_names value = random }
+		}
+		has_landed_title = d_the_mouse #fires for the CEO
+		NOT = { has_global_flag = phantasmic_acquisitions_unlocked }
+		
+		93 = { # Disney's Americas
+			NOT = { owner = { religion = phantasmic } }
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 3
+	}
+	
+	immediate = {
+		set_global_flag = phantasmic_acquisitions_unlocked
+	}
+	
+	option = {
+		name = EVTOPTA_haymarket
+		trigger = {
+			religion = phantasmic
+		}
+	}
+	
+	option = {
+		name = EVTOPTB_haymarket
+		trigger = {
+			OR = {
+			religion_group = oldworld
+			culture = gulfard
+			}
+		}
+	}
+	
+	option = {
+		name = EVTOPTC_haymarket
+		trigger = {
+			NOR = {
+				religion = phantasmic
+				religion_group = oldworld
+				culture = gulfard
+			}
+		}
+	}
+}
+
+# Provincia Anaheim
+narrative_event = {
+	id = disneymod.3
+	title = EVTNAMEdisneymod.3
+	desc = EVTDESCdisneymod.3
+	
+	picture = GFX_evt_the_sword_in_stone
+	
+	ai = no
+	
+	trigger = {
+		is_alternate_start = no
+		OR = {
+			religion = phantasmic
+			religion = renaissancist
+		}
+		NOT = { has_global_flag = disneys_anaheim }
+		completely_controls = c_orange
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = EVTOPTAdisneymod.3
+		set_global_flag = disneys_anaheim
+		prestige = 100
+	}
+}
+
+# Provincia Haymarket
+narrative_event = {
+	id = disneymod.4
+	title = EVTNAMEdisneymod.4
+	desc = EVTDESCdisneymod.4
+	
+	picture = GFX_evt_colonial_america
+	
+	ai = no
+	
+	trigger = {
+		is_alternate_start = no
+		OR = {
+			religion = phantasmic
+			religion = renaissancist
+		}
+		NOT = { has_global_flag = disneys_haymarket }
+		completely_controls = c_bull_run
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = EVTOPTAdisneymod.4
+		set_global_flag = disneys_haymarket
+		prestige = 100
+	}
+}
+
+# Provincia Chicago
+narrative_event = {
+	id = disneymod.5
+	title = EVTNAMEdisneymod.5
+	desc = EVTDESCdisneymod.5
+	
+	picture = GFX_evt_walt_disneys_porch
+	
+	ai = no
+	
+	trigger = {
+		is_alternate_start = no
+		OR = {
+			religion = phantasmic
+			religion = renaissancist
+		}
+		NOT = { has_global_flag = disneys_chicago }
+		completely_controls = c_chicago
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = EVTOPTAdisneymod.5
+		set_global_flag = disneys_chicago
+		prestige = 100
+	}
+}

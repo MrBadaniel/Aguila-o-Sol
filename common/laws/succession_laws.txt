@@ -1144,6 +1144,48 @@ succession_laws = {
 			always = no
 		}			
 	}
+	succ_high_church_elective = {
+		#oldest_child_opinion = -15
+		#child_opinion = -5
+		#dynasty_opinion = -5
+		vassal_opinion = 10
+		potential = {
+			
+			holder_scope = { ### INSIDE THIS BLOCK YOU TELL IT ONLY ANGLICAN BISHOPS WITH ANGLICAN LEIGES CAN USE THE LAW	
+				religion = high_church
+				is_theocracy = yes
+				independent = no
+				liege = {
+				religion = high_church
+				}				
+			}
+			#is_primary_type_title = no
+			#NOT = { tier = baron }
+			holder_scope = { ### FOR VOTING LAWS
+				OR = {
+					is_theocracy = yes
+					has_law = succession_voting_power_1
+				}
+			}
+		}
+		allow = {
+			custom_tooltip = {
+				text = not_forced_tt
+				hidden_tooltip = {
+					holder_scope = { NOT = { has_character_flag = liege_forced_succ_law } }
+				}
+			}
+		}
+		effect = {
+			succession = {
+				base_type = feudal_elective
+				voting_rules = high_church_elective
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}			
+	}
 	succ_hre_elective = {
 		oldest_child_opinion = -15
 		child_opinion = -5
@@ -2070,12 +2112,81 @@ succession_laws = {
 }
 
 gender_laws = {
+	agnatic_succession = {
+		female_dynasty_opinion = -5
+	
+		potential = {
+			holder_scope = {
+				NOT = { religion = gaian }
+				NOT = { religion = neomayan }
+				NOT = { religion = edenite }
+				NOT = { religion = furiegi }
+				NOT = { has_religion_feature = religion_matriarchal } 
+				NOT = { has_religion_feature = religion_equal }
+				NOT = { has_religion_feature = religion_feature_aria_de_machete }
+				NOT = { has_religion_feature = religion_feature_midewiwin }
+				NOT = { trait = machete_female }
+				NOT = { trait = machete_female_ref }
+				NAND = {
+					OR = {
+						is_theocracy = yes
+						holy_order = yes
+					}
+					OR = {
+						religion = ursuline
+						religion = gaian
+					}
+				}
+				#OR = { has_law = succ_high_church_elective }
+			}
+		}
+		effect = {
+			gender_succ = agnatic
+		}
+		revoke_allowed = {
+			always = no
+		}			
+		default = yes
+		default_selection = {
+			factor = 1
+			
+			modifier = {
+				factor = 0
+				has_game_rule = {
+					name = gender
+					value = all
+				}
+			}
+			
+			modifier = {
+				factor = 100
+				holder_scope = {
+					NOR = {
+						religion_group = christian
+						religion_group = afro_syncretic
+						religion_group = oldworld
+						culture_group = californian
+						culture = iroquois
+					}
+					primary_title = {
+						NOT = { has_law = status_of_women_3 }
+						NOT = { has_law = status_of_women_4 }
+					}
+				}
+			}
+		}
+	}
+
+
+
 	cognatic_succession = {
 		potential = {
+		#always = no
 			holder_scope = {
 				NOT = { has_religion_feature = religion_matriarchal }
 				NOT = { has_religion_feature = religion_equal }
 				NOT = { has_religion_feature = religion_feature_midewiwin }
+				NOT = { has_law = succ_high_church_elective }
 				OR = {
 					has_bloodline_flag = bloodline_effect_cognatic
 					AND = {
@@ -2172,76 +2283,16 @@ gender_laws = {
 			factor = 10
 		}
 	}
-	agnatic_succession = {
-		female_dynasty_opinion = -5
-	
-		potential = {
-			holder_scope = {
-				NOT = { religion = gaian }
-				NOT = { religion = neomayan }
-				NOT = { religion = edenite }
-				NOT = { religion = furiegi }
-				NOT = { has_religion_feature = religion_matriarchal } 
-				NOT = { has_religion_feature = religion_equal }
-				NOT = { has_religion_feature = religion_feature_aria_de_machete }
-				NOT = { has_religion_feature = religion_feature_midewiwin }
-				NOT = { trait = machete_female }
-				NOT = { trait = machete_female_ref }
-				NAND = {
-					OR = {
-						is_theocracy = yes
-						holy_order = yes
-					}
-					OR = {
-						religion = ursuline
-						religion = gaian
-					}
-				}
-			}
-		}
-		effect = {
-			gender_succ = agnatic
-		}
-		revoke_allowed = {
-			always = no
-		}			
-		default = yes
-		default_selection = {
-			factor = 1
-			
-			modifier = {
-				factor = 0
-				has_game_rule = {
-					name = gender
-					value = all
-				}
-			}
-			
-			modifier = {
-				factor = 100
-				holder_scope = {
-					NOR = {
-						religion_group = christian
-						religion_group = afro_syncretic
-						religion_group = oldworld
-						culture_group = californian
-						culture = iroquois
-					}
-					primary_title = {
-						NOT = { has_law = status_of_women_3 }
-						NOT = { has_law = status_of_women_4 }
-					}
-				}
-			}
-		}
-	}
+
 	
 	true_cognatic_succession = {
 		male_dynasty_opinion = -5
 		
 		potential = { 
+		#always = no
 			holder_scope = { NOT = { has_religion_feature = religion_matriarchal } }
 			holder_scope = { NOT = { has_religion_feature = religion_patriarchal } }
+			NOT = { has_law = succ_high_church_elective }
 			OR = {
 				AND = {
 					has_dlc = "Zeus"
@@ -2272,7 +2323,8 @@ gender_laws = {
 										has_bloodline_flag = bloodline_effect_cognatic
 									}
 								}
-							}
+								
+							
 							has_horde_culture = no
 							#is_tribal = no
 							#is_nomadic = no
@@ -2356,6 +2408,7 @@ gender_laws = {
 							has_bloodline_flag = bloodline_tanistry
 						}
 					}
+					NOT = { has_law = succ_high_church_elective }
 				}
 				OR = {
 					ROOT = { holder_scope = { primary_title = { has_law = status_of_women_4 } } }
@@ -2522,4 +2575,7 @@ gender_laws = {
 			}
 		}		
 	}	
+}
+
+
 }

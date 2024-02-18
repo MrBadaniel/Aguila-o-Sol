@@ -1,9 +1,43 @@
-
-
-high_anglican_toleration = {
+held_conference_timer = {
+	icon = 17
+	monthly_character_prestige = 0.01
+	monthly_character_piety = 0.01
+}
+high_church_christian_ecumenical = {
+	icon = 17
+	monthly_character_prestige = 0.05
+	monthly_character_piety = 0.05
+	christian_opinion = 5
+	zealous_opinion = -10
+}
+high_church_branch_ecumenical = {
+	icon = 17
+	monthly_character_prestige = 0.05
+	monthly_character_piety = 0.05
+	high_church_opinion = 10
+	zealous_opinion = -15
+}
+high_church_not_ecumenical = {
+	icon = 17
+	monthly_character_prestige = 0.05
+	monthly_character_piety = 0.05
+	broad_anglican_opinion = 10
+	high_anglican_opinion = -15
+	low_anglican_opinion = -15
+	zealous_opinion = 10
+}
+high_church_toleration_edict = {
 	icon = 17
 	zealous_opinion = -10
 	vassal_opinion = 10
+	global_revolt_risk = -0.01
+}
+high_church_enforced_edict = {
+	icon = 17
+	monthly_character_prestige = 0.05
+	monthly_character_piety = 0.05
+	global_revolt_risk = 0.01
+	
 }
 Gregorian_Saint_Michael = {
 	icon = 17
