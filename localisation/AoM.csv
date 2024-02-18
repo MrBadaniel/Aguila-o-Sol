@@ -51,7 +51,7 @@ TXT_enforce_branch;Let's decide this matter...;;;;;;;;;;;;;x
 enforce_branch_desc;Throughout history various Monarchs of the Anglican Church have sought to leave their mark on the Church and realm. In recent centuries it has become common for Kings to issue an Edict of Uniformity to enforce one Tradition in their realms - often at the risk of revolt or even civil war.;;;;;;;;;;;;;x
 EVTDESC_AoM.300;Throughout history various Monarchs of the Anglican Church have sought to leave their mark on the Church and realm. In recent centuries it has become common for Kings to issue an Edict of Uniformity to enforce one Tradition in their realms - often at the risk of revolt or even civil war.;;;;;;;;;;;;;x
 
-EVTDESC_AoM.301;Throughout all the realm in every inn, church and fortress agents of [From.GetTitledName] annouce the issuing of the Edict of Uniformity. All Anglicans of the realm are to follow the holy traditions of [From.GetTitledName], and his vassals are expected to carry it out. Whether the local Lord will or not remains to be seen...;;;;;;;;;;;;;x
+EVTDESC_AoM.301;Throughout all the realm in every inn, church and fortress agents of [From.GetTitledName] annouce the issuing of the Edict of Uniformity. All Anglicans of the realm are to follow the holy traditions of [From.GetTitledName], and [From.GetHerHis] vassals are expected to carry it out. Whether their vassals will or not remains to be seen...;;;;;;;;;;;;;x
 
 EVTOPTA_AoM.300;The other Traditions are in error, I shall issue an Edict of Uniformity.;;;;;;;;;;;;;x
 EVTOPTB_AoM.300;Let my reign be known for tolerance, I shall issue an Edict of Tolerance!;;;;;;;;;;;;;x
@@ -77,9 +77,12 @@ conference_0;Host an Episcopal Conference;;;;;;;;;;;;;x
 conference_0_desc;An ancient tradition among the Anglican church, the Episcopal Conference is a regularly held gathering of clergy to discuss various matters. This gathering is most beloved by those of the Broad Tradition.;;;;;;;;;;;;;x
 TXT_conference_0;Let us join the clergy in such a gathering!;;;;;;;;;;;;;x
 
-high_church_christian_ecumenical;Welcoming of all Christians.;;;;;;;;;;;;;x
-high_church_branch_ecumenical;Welcoming of all Anglicans.;;;;;;;;;;;;;x
-high_church_not_ecumenical;Intolerant zealot!;;;;;;;;;;;;;x
+high_church_christian_ecumenical;Interdenominational Conference;;;;;;;;;;;;;x
+high_church_christian_ecumenical_desc;A tradition among some Anglicans especially of the broad rite was to always seek to be ecumenical with other Christians such as through inviting them to Conferences. This however tends to anger zealots seeing it as a corruption of the faith.;;;;;;;;;;;;;x
+high_church_branch_ecumenical;Faithwide Conference;;;;;;;;;;;;;x
+high_church_branch_ecumenical_desc;This Ruler has sought to be seen welcoming to all those of the Anglican faithful, though there is difference in belief and practice among the branches. This ruler has sought to be welcoming and unitive to all the faithful.;;;;;;;;;;;;;x
+high_church_not_ecumenical;Intolerant Conference;;;;;;;;;;;;;x
+high_church_not_ecumenical_desc;This ruler has insulted many of the Anglican faithful, deeming only men and clergy of his tradition as able to come to his conference. Only zealots of his tradition approve of these actions.;;;;;;;;;;;;;x
 opinion_enjoyed_conference;Enjoyed Episcopal Conference;;;;;;;;;;;;;x
 
 
@@ -89,19 +92,20 @@ EVTOPTA_anglican_conference_4001;Let us invite all Christians to attend this con
 EVTOPTA_anglican_conference_4002;Let us invite all clergy and lords of the Anglican faithful.;;;;;;;;;;;;;x
 EVTOPTA_anglican_conference_4003;If they do not worship the same as me, I will not tolerant them.;;;;;;;;;;;;;x
 EVTTOOLTIP_anglican_conference_101;Invited to Conference.;;;;;;;;;;;;;x
+conference_invitations_sent;Conference Invitations are sent out.;;;;;;;;;;;;;x
 
 AoM.401;Invitation to Conference;;;;;;;;;;;;;x
-EVTDESC_anglican_conference_401;You have received an invitation from your leige to attend an episcopal conference, a common tradition among broad anglican lords is to take part in and host local conferences. Shall you accept the invitation?;;;;;;;;;;;;;x
+EVTDESC_anglican_conference_401;You have received an invitation from your liege to attend an episcopal conference, a common tradition among broad anglican lords is to take part in and host local conferences. Shall you accept the invitation?;;;;;;;;;;;;;x
 EVTOPTA_anglican_conference_401;I would be honored to attend.;;;;;;;;;;;;;x
 conference_accepted;accepted invitation.;;;;;;;;;;;;;x
 EVTOPTB_anglican_conference_401;I won't be attending this.;;;;;;;;;;;;;x
 
 AoM.402;Refused Invitation;;;;;;;;;;;;;x
-EVTDESC_anglican_conference_402;[From.GetTitledName] has refused to come to the conference. However clergy from their domain have happily accepted invites they have recieved.;;;;;;;;;;;;;x
+EVTDESC_anglican_conference_402;[From.GetTitledName] has refused to come to the conference. However clergy from [From.GetHerHis] domain have happily accepted invitations they have recieved.;;;;;;;;;;;;;x
 EVTOPTA_anglican_conference_402; How rude of them...;;;;;;;;;;;;;x
 
 AoM.403;The Conference Begins;;;;;;;;;;;;;x
-EVTDESC_anglican_conference_403;As guests pour into the court, [FROM.GetLordSpiritualName] begins the conference, being sure to honor you and your piety for hosting this Conference. You gain fame and piety for treating the clergy as you have.;;;;;;;;;;;;;x
+EVTDESC_anglican_conference_403;As guests pour into the court, your [Root.GetMyLordSpiritualName] begins the conference, being sure to honor you and your piety for hosting this Conference. You gain fame and piety for treating the clergy as you have.;;;;;;;;;;;;;x
 EVTOPTA_anglican_conference_403;Praise be to God.;;;;;;;;;;;;;x
 
 
@@ -110,7 +114,7 @@ EVTDESC_anglican_conference_404;The Episcopal Conference was run without much is
 EVTOPTB_anglican_conference_404;Wonderful, Praise be to God!;;;;;;;;;;;;;x
 
 AoM.405;Conclusion of the Conference;;;;;;;;;;;;;x
-EVTDESC_anglican_conference_405;The Episcopal Conference was run without much issue, your fellow vassals and clergy got to brush shoulders with eachother and your leige. Hopefully this shall improve relations in the Church.;;;;;;;;;;;;;x
+EVTDESC_anglican_conference_405;The Episcopal Conference was run without much issue, your fellow vassals and clergy got to brush shoulders with eachother and your liege. Hopefully this shall improve relations in the Church.;;;;;;;;;;;;;x
 EVTOPTA_anglican_conference_405;It was certainly interesting interacting with these sorts of Christians.;;;;;;;;;;;;;x
 EVTOPTB_anglican_conference_405;It was a pleausre to converse with fellow Anglicans, our differences aside.;;;;;;;;;;;;;x
 
