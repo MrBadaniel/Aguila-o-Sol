@@ -207,9 +207,10 @@ targetted_decisions = {
 			has_regent = no
 			prisoner = no
 			is_adult = yes
+			is_landed = yes
 			NOT = { trait = incapable }
-			NOT = {any_realm_character = {trait = tapado}}
-			NOT = {any_realm_character = {trait = destapado}}
+			NOT = {any_vassal = {trait = tapado}}
+			NOT = {any_vassal = {trait = destapado}}
 		}
 
 		potential = {
@@ -230,6 +231,7 @@ targetted_decisions = {
 						has_claim = e_mexico
 						has_claim = k_mexico
 						family = FROM
+						is_powerful_vassal = yes
 					}
 					FROM = { is_liege_of = ROOT	}
 					is_republic = no
@@ -247,6 +249,7 @@ targetted_decisions = {
 				}
 				ROOT = {is_close_relative = FROM}
 			}
+			is_landed = yes
 		}
 					
 		allow = {			
@@ -255,6 +258,10 @@ targetted_decisions = {
 				NOT = { trait = incapable }
 				NOT = { trait = inbred }
 				NOT = { trait = imbecile }
+			}
+			custom_tooltip = {
+				text = designate_tapado_custom_tooltip_2
+				is_landed = yes
 			}
             custom_tooltip = { #must not have refused or been recently relieved of this duty...
 				text = designate_tapado_custom_tooltip_3

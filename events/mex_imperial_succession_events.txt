@@ -66,7 +66,7 @@ narrative_event = {
 		hidden_tooltip = {
 
 			# Call invitation event
-			any_realm_lord = {
+			any_vassal = {
 				limit = {
 					is_adult = yes
 					NOT = { trait = incapable }
@@ -100,8 +100,10 @@ narrative_event = {
 	# Display invitation event to every vassal limited to the realm
 	trigger = {
 		AND = {
-			NOT = { has_character_flag = attending_destape }
-			NOT = { has_character_flag = holding_destape }
+			NOR = { 
+				has_character_flag = attending_destape 
+				has_character_flag = holding_destape
+			}
 			OR = {
 				is_landed = yes
 				has_landed_title = d_sagrado_corazon
@@ -143,6 +145,9 @@ narrative_event = {
 
 	immediate = {
 		set_character_flag = destape_begins
+		top_liege = { 
+			save_event_target_as = target_benemerito
+		}
 	}
 			
 	option = {
@@ -152,7 +157,7 @@ narrative_event = {
 				limit = {
 					has_character_flag = destape_begins
 				}
-				narrative_event = { id = destape.7 }
+				narrative_event = { id = destape.7 days = 5 }
 			}
 		}
 	}
@@ -183,11 +188,13 @@ narrative_event = {
 	option = {
 		name = EVTOPTA_destape_7
 		hidden_tooltip = {	
+			clr_character_flag = destape_begins
 			remove_trait = tapado
 			add_trait = destapado			
 			top_liege = {
 				narrative_event = { id = destape.8 }
 			}
+			narrative_event = { id = destape.10 days = 5 }
 		}
 	}
 }
@@ -218,7 +225,7 @@ narrative_event = {
 	option = {
 		name = EVTOPTA_destape_8
 		hidden_tooltip = {
-			any_realm_lord = {
+			any_vassal = {
 				narrative_event = { id = destape.9 }
 			}
 		}
@@ -281,6 +288,48 @@ narrative_event = {
 				ai = yes
 				is_rival = FROM
 			}
+			modifier = {
+				factor = 100
+				ai = yes
+				is_rival = FROMFROM
+			}
+			modifier = {
+				factor = 50
+				ai = yes
+				FROMFROM = { 
+					NOT = { is_powerful_vassal = yes }
+				}
+			}
+			modifier = {
+				factor = 50
+				ai = yes
+				FROMFROM = { 
+					NOT = { is_landed = yes }
+				}
+			}
+			modifier = {
+				factor = 50
+				ai = yes
+				FROMFROM = { 
+					NOT = { is_female = no }
+				}
+			}
+			modifier = {
+				factor = 2
+				ai = yes
+				opinion = {
+					who = FROM
+					value < 0
+				}
+			}
+			modifier = {
+				factor = 2
+				ai = yes
+				opinion = {
+					who = FROMFROM
+					value < 0
+				}
+			}
 		}
 
 		hidden_tooltip = {
@@ -288,6 +337,11 @@ narrative_event = {
 			add_character_modifier = {
 				name = opposes_destapado
 				duration = 1826
+			}
+			opinion = {
+				modifier = opposes_destapado
+				who = FROM
+				years = 5
 			}
 			narrative_event = {
 				id = destape.10
@@ -302,13 +356,12 @@ narrative_event = {
 	title = "TITLE_DESTAPE"
 	desc = EVTDESC_destape_10
 	picture = GFX_evt_feast
+	portrait = none
 
 	is_triggered_only = yes
 
 	trigger = {
-		AND = {
-			has_character_flag = attending_destape
-		}
+		has_character_flag = attending_destape
 	}
 
 	option = {
@@ -316,7 +369,6 @@ narrative_event = {
 		hidden_tooltip = {
 			clr_character_flag = attending_destape
 			clr_character_flag = destape_begins
-			clr_character_flag = destape_has_ended
 			clr_character_flag = do_not_disturb
 		}
 	}
@@ -327,16 +379,37 @@ letter_event = {
 	id = destape.11
 	title = "TITLE_DESTAPE"
 	desc = EVTDESC_destape_11
-	picture = GFX_evt_joust
+	picture = GFX_evt_courier
 
-	is_triggered_only = yes
+	trigger = {
+		has_landed_title = e_mexico
+		has_character_flag = holding_destape
+		OR = {
+			war = yes
+		
+		}
+		NOT = { 
+			any_vassal = { trait = tapado }
+		}
+	}
+
+	immediate = {	
+		any_vassal = {
+			limit = {
+				has_character_flag = attending_destape
+			}
+			clr_character_flag = do_not_disturb
+			clr_character_flag = attending_destape
+			clr_character_flag = destape_begins
+		}	
+	}
 
 	option = {
 		name = "EVTOPTA_destape_11"
 		clr_character_flag = attending_destape
-		clr_character_flag = hosting_destape
 		clr_character_flag = destape_begins
 		clr_character_flag = do_not_disturb
+		clr_character_flag = holding_destape
 	}
 }
 
@@ -357,13 +430,13 @@ character_event = {
 		clr_character_flag = destape_has_ended
 		clr_character_flag = holding_destape
 		clr_character_flag = destape_begins
-		any_realm_character = {
+		any_vassal = {
 			limit = {
 				has_character_flag = attending_destape
 			}
 			clr_character_flag = attending_destape
 		}
-		any_realm_character = {
+		any_vassal = {
 			limit = {
 				has_character_flag = destape_has_ended
 			}
@@ -392,8 +465,8 @@ character_event = {
 			if = {
 				limit = { has_trait = tapado }
 				remove_trait = tapado
+				add_trait = outsider_benemerito
 			}
-			add_trait = outsider_benemerito
 		}
 	}
 	
@@ -490,7 +563,7 @@ character_event = {
 	}
 
 	mean_time_to_happen = {
-		months = 60
+		months = 180
 		modifier = {
 			factor = 0.25
 			trait = infirm
@@ -670,6 +743,9 @@ character_event = {
 				age >= 30
 			}
 			preferred_limit = {
+				is_female = no
+			}
+			preferred_limit = {
 				has_minor_title = commander
 			}
 			preferred_limit = {
@@ -681,15 +757,54 @@ character_event = {
 			preferred_limit = {
 				tier = COUNT
 			}
+			# preferred_limit = {
+			# 	if {
+			# 		limit = {
+			# 			NOR = {
+			# 				AND = {
+			# 					has_dlc = "Zeus"
+			# 					has_game_rule = {
+			# 						name = gender
+			# 						value = all
+			# 					}
+			# 				}
+			# 				has_religion_feature = religion_equal
+			# 				has_religion_feature = religion_feature_aria_de_machete
+			# 				has_religion_feature = religion_feature_midewiwin
+			# 				AND = {
+			# 					has_dlc = "Zeus"
+			# 					ROOT = { holder_scope = { primary_title = { has_law = status_of_women_4 } } }
+			# 					OR = {
+			# 						is_patrician = no
+			# 						liege = {
+			# 							primary_title = {
+			# 								OR = {
+			# 									has_law = true_cognatic_succession
+			# 									has_law = cognatic_succession
+			# 								}
+			# 							}
+			# 						}
+			# 					}
+			# 				}
+			# 			} 
+			# 		}
+			# 		is_female = no
+			# 	}
+			# }
 			character_event = { id = destape.17 }
 		}
     }
 
     option = {
         name = EVTOPTC_DESTAPE_16
-        ai_chance = { factor = 1 }
+        ai_chance = { factor = 0.25 }
 		random_realm_character = {
 			limit = {
+				is_ruler = yes
+				is_landed = yes
+				is_republic = no
+				is_merchant_republic = no
+				is_theocracy = no
 				family = ROOT
 				age >= 25
 				is_merchant_republic = no
