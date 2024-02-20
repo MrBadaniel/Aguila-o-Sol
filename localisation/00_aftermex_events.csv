@@ -199,7 +199,7 @@ EVTOPT_PL1;Viva Cristo Rey!;;;;;;;;;;;;;x
 designate_tapado;Designate Tapado;;;;;;;;;x
 designate_tapado_desc;The §YTapado§! - or the "covered one" - is the hidden heir apparent of the Mexican Empire. The Tapado must first be selected from a list of potential candidates and then revealed in the §Y"Destape"§! ceremony when the [ROOT.GetTitle] feels [ROOT.GetHerHis] end draws near. It is important to land your prospective heir to introduce them to the dark underbelly of imperial politics before they are selected.;;;;;;;;;x
 designate_tapado_TOOLTIP_1;Must be landed and either a powerful vassal, on the imperial §Ycouncil§!, a §Ycommander§!, a §Yclaimant§! of the Empire, or a §Yrelative§! of the current ruler;;;;;;;;;x
-designate_tapado_TOOLTIP_2;The candidate must be landed;;;;;;;;;x
+designate_tapado_custom_tooltip_2;The candidate must be landed;;;;;;;;;x
 designate_tapado_custom_tooltip_3;Must NOT have been disgraced or lost status as the Tapado;;;;;;;;;x
 relieve_tapado_TOOLTIP_1;Relieve my Tapado so that a new one may be selected.;;;;;;;;;x
 
@@ -240,8 +240,11 @@ EVTOPTC_DESTAPE_16;It should be someone of my own family.;;;;;;;;;;;;;x
 EVTOPTD_DESTAPE_16;I still need more time to decide...;;;;;;;;;;;;;x
 TT_TAPADO_CHOOSE_ANOTHER_DAY;You may select or relieve a Tapado of your choice with a targeted decision on the desired character at any time.;;;;;;;;;;;;;x
 
-opposes_destapado;Opposes of the chosen heir;;;;;;;;;x
-approves_destapado;Approves of the chosen heir;;;;;;;;;x
+opposes_destapado;Disapproves of the Chosen Heir;;;;;;;;;x
+approves_destapado;Approves of the Chosen Heir;;;;;;;;;x
+
+faction_opposes_destapado;Heir Reconsideration Faction;;;;;;;;;x
+faction_opposes_destapado_desc;This faction represents a group of courtiers and vassals who believe the current designated heir, the "Destapado", is unsuitable for the throne. They demand the selection of a new heir, deeming the last one insufficient.;;;;;;;;;;;;;x
 
 #####PILGRIMAGE EVENTS#####
 CHRONICLE_PILGRIMAGE_TO_MEXICO;[Root.GetTitledName] made a pilgrimage to the city of Mexico.;;;;;;;;;x

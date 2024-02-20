@@ -259,19 +259,14 @@ narrative_event = {
 	option = {
 		name = EVTOPTA_destape_9 # fall in line
 		ai_chance = {
-			factor = 100
-			modifier = {
-				factor = 0.2
-				ai = yes
-				is_rival = FROM
-			}
+			factor = 1
 		}
 
 		hidden_tooltip = {
 			clr_character_flag = destape_begins
 			add_character_modifier = {
 				name = approves_destapado
-				duration = 1826
+				duration = 3652
 			}
 			character_event = {
 				id = destape.10
@@ -301,33 +296,143 @@ narrative_event = {
 				}
 			}
 			modifier = {
-				factor = 50
+				factor = 0.1
 				ai = yes
-				FROMFROM = { 
-					NOT = { is_landed = yes }
+				FROMFROM = {
+					intrigue >= 10
 				}
 			}
 			modifier = {
-				factor = 50
+				factor = 35
 				ai = yes
-				FROMFROM = { 
-					NOT = { is_female = no }
+				FROMFROM = {
+					is_female = yes
+					NAND = {
+						has_dlc = "Zeus"
+						OR = {
+							has_law = status_of_women_4
+							has_religion_feature = religion_equal
+							has_religion_feature = religion_matriarchal
+							has_game_rule = {
+								name = gender
+								value = all
+							}
+						}
+					}
 				}
 			}
 			modifier = {
-				factor = 2
+				factor = 1
 				ai = yes
 				opinion = {
 					who = FROM
-					value < 0
+					value <= -25
+				}
+			}
+			modifier = {
+				factor = 1
+				ai = yes
+				opinion = {
+					who = FROMFROM
+					value <= -10
+				}
+			}
+			modifier = {
+				factor = 0.01
+				ai = yes
+				trait = content
+			}
+			modifier = {
+				factor = 0.1
+				ai = yes
+				trait = humble
+			}
+			modifier = {
+				factor = 0.1
+				ai = yes
+				trait = kind
+			}
+			modifier = {
+				factor = 0.1
+				ai = yes
+				trait = trusting
+			}
+			modifier = {
+				factor = 0.01
+				ai = yes
+				trait = imbecile
+			}
+			modifier = {
+				factor = 0.1
+				ai = yes
+				trait = inbred
+			}
+			modifier = {
+				factor = 0.1
+				ai = yes
+				trait = craven
+			}
+			modifier = {
+				factor = 0.2
+				ai = yes
+				OR = {
+					trait = slow
+					trait = dull
+				}
+			}
+			modifier = {
+				factor = 0.75
+				ai = yes
+				trait = proud
+			}
+			modifier = {
+				factor = 0.75
+				ai = yes
+				trait = brave
+			}
+			modifier = {
+				factor = 1.5
+				ai = yes
+				trait = arbitrary
+			}
+			modifier = {
+				factor = 2.5
+				ai = yes
+				trait = envious
+			}
+			modifier = {
+				factor = 2.5
+				ai = yes
+				trait = greedy
+			}
+			modifier = {
+				factor = 2
+				ai = yes
+				trait = impaler
+			}
+			modifier = {
+				factor = 2.0
+				ai = yes
+				trait = deceitful
+			}
+			modifier = {
+				factor = 4.0
+				ai = yes
+				trait = ambitious
+			}
+			modifier = {
+				factor = 2
+				ai = yes
+				OR = {
+					has_opinion_modifier = { who = FROM modifier = opinion_evil_tyrant }
+					has_opinion_modifier = { who = FROM modifier = opinion_tyrant }
 				}
 			}
 			modifier = {
 				factor = 2
 				ai = yes
-				opinion = {
-					who = FROMFROM
-					value < 0
+				FROM = {
+					is_close_relative = FROMFROM
 				}
 			}
 		}
@@ -336,7 +441,7 @@ narrative_event = {
 			clr_character_flag = destape_begins
 			add_character_modifier = {
 				name = opposes_destapado
-				duration = 1826
+				duration = 3652
 			}
 			opinion = {
 				modifier = opposes_destapado
@@ -458,14 +563,26 @@ character_event = {
 	
 	immediate = {
 		if = {
-			limit = { has_trait = destapado }
+			limit = { trait = destapado }
 			add_trait = chosen_benemerito
 		}
 		else = {
 			if = {
-				limit = { has_trait = tapado }
+				limit = { trait = tapado }
 				remove_trait = tapado
 				add_trait = outsider_benemerito
+			}
+		}
+		any_realm_character = {
+			if = {
+				limit { has_character_modifier = opposes_destapado }
+				remove_character_modifier = opposes_destapado
+			}
+			else = {
+				if = {
+					limit = { has_character_modifier = approves_destapado }
+					remove_character_modifier = approves_destapado
+				}
 			}
 		}
 	}
@@ -550,7 +667,8 @@ character_event = {
 	is_playable = yes
 
 	trigger = {
-		has_law = succ_mex_elective 
+		has_landed_title = e_mexico 
+		has_law = succ_mex_elective
 		has_regent = no
 		is_adult = yes
 		NOT = { trait = incapable }
