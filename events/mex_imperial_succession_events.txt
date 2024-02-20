@@ -5,7 +5,6 @@ long_character_event = {
 	id = destape.1
 	desc = EVTDESC_destape_1
 	picture = GFX_evt_powerful_ruler
-	#border = GFX_event_normal_frame_war
 
 	is_triggered_only = yes
 	
@@ -67,7 +66,7 @@ narrative_event = {
 		hidden_tooltip = {
 
 			# Call invitation event
-			any_realm_character = {
+			any_vassal = {
 				limit = {
 					is_adult = yes
 					NOT = { trait = incapable }
@@ -101,8 +100,10 @@ narrative_event = {
 	# Display invitation event to every vassal limited to the realm
 	trigger = {
 		AND = {
-			NOT = { has_character_flag = attending_destape }
-			NOT = { has_character_flag = holding_destape }
+			NOR = { 
+				has_character_flag = attending_destape 
+				has_character_flag = holding_destape
+			}
 			OR = {
 				is_landed = yes
 				has_landed_title = d_sagrado_corazon
@@ -131,34 +132,32 @@ narrative_event = {
 	desc = EVTDESC_destape_6
 	picture = GFX_evt_shadowy_cabal
 
-	# is_triggered_only = yes
-	
-	#war = no
-
-	# pretrigger = {
-	# 	only_playable
-	# }
-
 	trigger = {
-			NOR = { 
-				has_character_flag = destape_begins 
-				has_character_flag = destape_has_ended
-			}
-			OR = {
-				has_character_flag = attending_destape
-				has_character_flag = holding_destape
-			}
+		NOR = { 
+			has_character_flag = destape_begins 
+			has_character_flag = destape_has_ended
+		}
+		OR = {
+			has_character_flag = attending_destape
+			has_character_flag = holding_destape
+		}
+	}
+
+	immediate = {
+		set_character_flag = destape_begins
+		top_liege = { 
+			save_event_target_as = target_benemerito
+		}
 	}
 			
 	option = {
 		name = EVTOPTA_destape_6 # time for the dedazo
 		hidden_tooltip = {
-			set_character_flag = destape_begins
-			any_realm_character = {
+			tapado = {
 				limit = {
-					trait = tapado
+					has_character_flag = destape_begins
 				}
-				narrative_event = { id = destape.7 }
+				narrative_event = { id = destape.7 days = 5 }
 			}
 		}
 	}
@@ -170,6 +169,7 @@ narrative_event = {
 	title = "TITLE_DESTAPADO"
 	desc = EVTDESC_destape_7
 	picture = GFX_evt_society_joining
+	portrait = top_liege
 
 	is_triggered_only = yes
 	
@@ -180,16 +180,52 @@ narrative_event = {
 			has_character_flag = destape_begins
 		}
 	}
+
+	immediate = {
+		clr_character_flag = destape_begins
+	}
 	
 	option = {
 		name = EVTOPTA_destape_7
 		hidden_tooltip = {	
-			remove_trait = tapado
-			add_trait = destapado
 			clr_character_flag = destape_begins
-			set_character_flag = destape_has_ended
-			
+			remove_trait = tapado
+			add_trait = destapado			
 			top_liege = {
+				narrative_event = { id = destape.8 }
+			}
+			narrative_event = { id = destape.10 days = 5 }
+		}
+	}
+}
+
+### Destape outcome - Let emperor know the ceremony is over
+narrative_event = {
+	id = destape.8
+	title = "TITLE_DESTAPADO"
+	desc = EVTDESC_destape_8
+	picture = GFX_evt_feast
+	portrait = FROM
+
+	is_triggered_only = yes
+	
+	trigger = {
+		AND = {
+			has_character_flag = holding_destape
+			has_character_flag = destape_begins
+		}
+	}
+
+	immediate = {
+		clr_character_flag = holding_destape
+		clr_character_flag = destape_begins
+		clr_character_flag = do_not_disturb
+	}
+
+	option = {
+		name = EVTOPTA_destape_8
+		hidden_tooltip = {
+			any_vassal = {
 				narrative_event = { id = destape.9 }
 			}
 		}
@@ -198,9 +234,9 @@ narrative_event = {
 
 ### Tapado is unveiled - sent to vassals for decision
 narrative_event = {
-	id = destape.8
+	id = destape.9
 	title = "TITLE_DESTAPADO"
-	desc = EVTDESC_destape_8
+	desc = EVTDESC_destape_9
 	picture = GFX_evt_society_joining
 	portrait = FROMFROM
 
@@ -214,32 +250,24 @@ narrative_event = {
 		NOR = { 
 			trait = destapado 
 			trait = tapado
-			has_character_flag = destape_has_ended
+			has_character_flag = holding_destape
 		}
-		has_character_flag = destape_begins
 		has_character_flag = attending_destape
+		has_character_flag = destape_begins
 	}
 	
 	option = {
-		name = EVTOPTA_destape_8 # fall in line
-		trigger = {
-		}
+		name = EVTOPTA_destape_9 # fall in line
 		ai_chance = {
-			factor = 100
-			modifier = {
-				factor = 0.2
-				ai = yes
-				is_rival = FROM
-			}
+			factor = 1
 		}
 
 		hidden_tooltip = {
 			clr_character_flag = destape_begins
 			add_character_modifier = {
 				name = approves_destapado
-				duration = 1826
+				duration = 3652
 			}
-			set_character_flag = destape_has_ended
 			character_event = {
 				id = destape.10
 			}
@@ -247,9 +275,7 @@ narrative_event = {
 	}
 
 	option = {
-		name = EVTOPTB_destape_8 # Oppose the destapado
-		trigger = {
-		}
+		name = EVTOPTB_destape_9 # Oppose the destapado
 		ai_chance = {
 			factor = 0.1
 			modifier = {
@@ -257,57 +283,173 @@ narrative_event = {
 				ai = yes
 				is_rival = FROM
 			}
+			modifier = {
+				factor = 100
+				ai = yes
+				is_rival = FROMFROM
+			}
+			modifier = {
+				factor = 50
+				ai = yes
+				FROMFROM = { 
+					NOT = { is_powerful_vassal = yes }
+				}
+			}
+			modifier = {
+				factor = 0.1
+				ai = yes
+				FROMFROM = {
+					intrigue >= 10
+				}
+			}
+			modifier = {
+				factor = 35
+				ai = yes
+				FROMFROM = {
+					is_female = yes
+					NAND = {
+						has_dlc = "Zeus"
+						OR = {
+							has_law = status_of_women_4
+							has_religion_feature = religion_equal
+							has_religion_feature = religion_matriarchal
+							has_game_rule = {
+								name = gender
+								value = all
+							}
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 1
+				ai = yes
+				opinion = {
+					who = FROM
+					value <= -25
+				}
+			}
+			modifier = {
+				factor = 1
+				ai = yes
+				opinion = {
+					who = FROMFROM
+					value <= -10
+				}
+			}
+			modifier = {
+				factor = 0.01
+				ai = yes
+				trait = content
+			}
+			modifier = {
+				factor = 0.1
+				ai = yes
+				trait = humble
+			}
+			modifier = {
+				factor = 0.1
+				ai = yes
+				trait = kind
+			}
+			modifier = {
+				factor = 0.1
+				ai = yes
+				trait = trusting
+			}
+			modifier = {
+				factor = 0.01
+				ai = yes
+				trait = imbecile
+			}
+			modifier = {
+				factor = 0.1
+				ai = yes
+				trait = inbred
+			}
+			modifier = {
+				factor = 0.1
+				ai = yes
+				trait = craven
+			}
+			modifier = {
+				factor = 0.2
+				ai = yes
+				OR = {
+					trait = slow
+					trait = dull
+				}
+			}
+			modifier = {
+				factor = 0.75
+				ai = yes
+				trait = proud
+			}
+			modifier = {
+				factor = 0.75
+				ai = yes
+				trait = brave
+			}
+			modifier = {
+				factor = 1.5
+				ai = yes
+				trait = arbitrary
+			}
+			modifier = {
+				factor = 2.5
+				ai = yes
+				trait = envious
+			}
+			modifier = {
+				factor = 2.5
+				ai = yes
+				trait = greedy
+			}
+			modifier = {
+				factor = 2
+				ai = yes
+				trait = impaler
+			}
+			modifier = {
+				factor = 2.0
+				ai = yes
+				trait = deceitful
+			}
+			modifier = {
+				factor = 4.0
+				ai = yes
+				trait = ambitious
+			}
+			modifier = {
+				factor = 2
+				ai = yes
+				OR = {
+					has_opinion_modifier = { who = FROM modifier = opinion_evil_tyrant }
+					has_opinion_modifier = { who = FROM modifier = opinion_tyrant }
+				}
+			}
+			modifier = {
+				factor = 2
+				ai = yes
+				FROM = {
+					is_close_relative = FROMFROM
+				}
+			}
 		}
 
 		hidden_tooltip = {
 			clr_character_flag = destape_begins
 			add_character_modifier = {
 				name = opposes_destapado
-				duration = 1826
+				duration = 3652
 			}
-			set_character_flag = destape_has_ended
+			opinion = {
+				modifier = opposes_destapado
+				who = FROM
+				years = 5
+			}
 			narrative_event = {
 				id = destape.10
-			}
-		}
-	}
-}
-
-### Destape outcome - Let emperor know the ceremony is over
-narrative_event = {
-	id = destape.9
-	title = "TITLE_DESTAPADO"
-	desc = EVTDESC_destape_9
-	picture = GFX_evt_feast
-	portrait = FROM
-
-	is_triggered_only = yes
-	
-	trigger = {
-		AND = {
-			has_character_flag = holding_destape
-			has_character_flag = destape_begins
-			# has_character_flag = destape_has_ended
-		}
-	}
-
-	option = {
-		name = EVTOPTA_destape_9
-		hidden_tooltip = {
-			clr_character_flag = holding_destape
-			clr_character_flag = destape_begins
-			clr_character_flag = do_not_disturb
-			# clr_character_flag = destape_has_ended
-			any_realm_character = {
-				limit = {
-					has_character_flag = attending_destape
-					has_character_flag = destape_begins
-					NOT = { trait = tapado }
-					NOT = { trait = destapado }
-					NOT = { has_character_flag = destape_has_ended }
-					NOT = { has_character_flag = hosting_destape }						
-				}
-				narrative_event = { id = destape.8 }
 			}
 		}
 	}
@@ -319,18 +461,12 @@ narrative_event = {
 	title = "TITLE_DESTAPE"
 	desc = EVTDESC_destape_10
 	picture = GFX_evt_feast
+	portrait = none
 
-	# is_triggered_only = yes
-	
-	# pretrigger = {
-	# 	only_playable
-	# }
+	is_triggered_only = yes
 
 	trigger = {
-		AND = {
-			has_character_flag = attending_destape
-			has_character_flag = destape_has_ended
-		}
+		has_character_flag = attending_destape
 	}
 
 	option = {
@@ -338,7 +474,6 @@ narrative_event = {
 		hidden_tooltip = {
 			clr_character_flag = attending_destape
 			clr_character_flag = destape_begins
-			clr_character_flag = destape_has_ended
 			clr_character_flag = do_not_disturb
 		}
 	}
@@ -349,16 +484,37 @@ letter_event = {
 	id = destape.11
 	title = "TITLE_DESTAPE"
 	desc = EVTDESC_destape_11
-	picture = GFX_evt_joust
+	picture = GFX_evt_courier
 
-	is_triggered_only = yes
+	trigger = {
+		has_landed_title = e_mexico
+		has_character_flag = holding_destape
+		OR = {
+			war = yes
+		
+		}
+		NOT = { 
+			any_vassal = { trait = tapado }
+		}
+	}
+
+	immediate = {	
+		any_vassal = {
+			limit = {
+				has_character_flag = attending_destape
+			}
+			clr_character_flag = do_not_disturb
+			clr_character_flag = attending_destape
+			clr_character_flag = destape_begins
+		}	
+	}
 
 	option = {
 		name = "EVTOPTA_destape_11"
 		clr_character_flag = attending_destape
-		clr_character_flag = hosting_destape
 		clr_character_flag = destape_begins
 		clr_character_flag = do_not_disturb
+		clr_character_flag = holding_destape
 	}
 }
 
@@ -379,13 +535,13 @@ character_event = {
 		clr_character_flag = destape_has_ended
 		clr_character_flag = holding_destape
 		clr_character_flag = destape_begins
-		any_realm_character = {
+		any_vassal = {
 			limit = {
 				has_character_flag = attending_destape
 			}
 			clr_character_flag = attending_destape
 		}
-		any_realm_character = {
+		any_vassal = {
 			limit = {
 				has_character_flag = destape_has_ended
 			}
@@ -407,15 +563,27 @@ character_event = {
 	
 	immediate = {
 		if = {
-			limit = { has_trait = destapado }
+			limit = { trait = destapado }
 			add_trait = chosen_benemerito
 		}
 		else = {
 			if = {
-				limit = { has_trait = tapado }
+				limit = { trait = tapado }
 				remove_trait = tapado
+				add_trait = outsider_benemerito
 			}
-			add_trait = outsider_benemerito
+		}
+		any_realm_character = {
+			if = {
+				limit { has_character_modifier = opposes_destapado }
+				remove_character_modifier = opposes_destapado
+			}
+			else = {
+				if = {
+					limit = { has_character_modifier = approves_destapado }
+					remove_character_modifier = approves_destapado
+				}
+			}
 		}
 	}
 	
@@ -499,16 +667,21 @@ character_event = {
 	is_playable = yes
 
 	trigger = {
-		has_law = succ_mex_elective 
+		has_landed_title = e_mexico 
+		has_law = succ_mex_elective
 		has_regent = no
 		is_adult = yes
 		NOT = { trait = incapable }
-		NOT = {any_realm_character = {trait = tapado}}
-		NOT = {any_realm_character = {trait = destapado}}
+		NOT = { 
+			any_realm_character = { trait = tapado }
+		}
+		NOT = {
+			any_realm_character = { trait = destapado }
+		}
 	}
 
 	mean_time_to_happen = {
-		months = 48
+		months = 180
 		modifier = {
 			factor = 0.25
 			trait = infirm
@@ -688,6 +861,9 @@ character_event = {
 				age >= 30
 			}
 			preferred_limit = {
+				is_female = no
+			}
+			preferred_limit = {
 				has_minor_title = commander
 			}
 			preferred_limit = {
@@ -699,15 +875,54 @@ character_event = {
 			preferred_limit = {
 				tier = COUNT
 			}
+			# preferred_limit = {
+			# 	if {
+			# 		limit = {
+			# 			NOR = {
+			# 				AND = {
+			# 					has_dlc = "Zeus"
+			# 					has_game_rule = {
+			# 						name = gender
+			# 						value = all
+			# 					}
+			# 				}
+			# 				has_religion_feature = religion_equal
+			# 				has_religion_feature = religion_feature_aria_de_machete
+			# 				has_religion_feature = religion_feature_midewiwin
+			# 				AND = {
+			# 					has_dlc = "Zeus"
+			# 					ROOT = { holder_scope = { primary_title = { has_law = status_of_women_4 } } }
+			# 					OR = {
+			# 						is_patrician = no
+			# 						liege = {
+			# 							primary_title = {
+			# 								OR = {
+			# 									has_law = true_cognatic_succession
+			# 									has_law = cognatic_succession
+			# 								}
+			# 							}
+			# 						}
+			# 					}
+			# 				}
+			# 			} 
+			# 		}
+			# 		is_female = no
+			# 	}
+			# }
 			character_event = { id = destape.17 }
 		}
     }
 
     option = {
         name = EVTOPTC_DESTAPE_16
-        ai_chance = { factor = 1 }
+        ai_chance = { factor = 0.25 }
 		random_realm_character = {
 			limit = {
+				is_ruler = yes
+				is_landed = yes
+				is_republic = no
+				is_merchant_republic = no
+				is_theocracy = no
 				family = ROOT
 				age >= 25
 				is_merchant_republic = no
@@ -744,10 +959,6 @@ character_event = {
 
 	hide_window = yes
 	is_triggered_only = yes
-
-	trigger = {
-
-	}
 
 	immediate = {
 		add_trait = tapado
