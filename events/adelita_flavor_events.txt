@@ -87,6 +87,7 @@ character_event = {
 		OR = {
 			culture_group = norteno
 			religion = fidencista
+			trait = qab_votanzapatismo
 			is_member_of_any_warrior_lodge_trigger = yes
 		}
 		age = 16
@@ -1543,8 +1544,8 @@ character_event = {
 }
 
 character_event = {
-	id = dorado.1
-	desc = dorado.1_DESC
+	id = dorado.0
+	desc = EVTDESCDORADO.0
 	picture = GFX_evt_riots_byzantine
 	
 	ai = no
@@ -1568,19 +1569,19 @@ character_event = {
 	}
 	
 	option = {
-		name = EVTOPTALoR.840
-		character_event = { id = LoR.841 days = 3 tooltip = EVTTOOLTIPLoR.841 }
+		name = EVTOPTADORADO.0
+		character_event = { id = dorado.1 days = 3 tooltip = EVTTOOLTIPDORADO.1 }
 	}
 	option = {
-		name = EVTOPTBLoR.840
-		character_event = { id = LoR.842 days = 3 tooltip = EVTTOOLTIPLoR.842 }
+		name = EVTOPTBDORADo.0
+		character_event = { id = dorado.2 days = 3 tooltip = EVTTOOLTIPDORADO.2 }
 	}
 }
 
 # Dorado Guard unleashed
 character_event = {
-	id = LoR.841
-	desc = EVTDESCLoR.841
+	id = dorado.1
+	desc = EVTDESCDORADO.1
 	picture = GFX_evt_battle_byzantine
 	
 	hide_from = yes
@@ -1588,7 +1589,7 @@ character_event = {
 	is_triggered_only = yes
 	
 	option = {
-		name = EVTOPTALoR.841
+		name = EVTOPTADORADO.841
 		scaled_wealth = -0.25
 		prestige = -100
 	}
@@ -1596,8 +1597,8 @@ character_event = {
 
 # City Guard handles it
 character_event = {
-	id = LoR.842
-	desc = EVTDESCLoR.842
+	id = dorado.2
+	desc = EVTDESCDORADO.2
 	picture = GFX_evt_riots_byzantine
 	
 	hide_from = yes
@@ -1605,7 +1606,7 @@ character_event = {
 	is_triggered_only = yes
 	
 	option = {
-		name = EVTOPTALoR.842
+		name = EVTOPTADORADO.2
 		scaled_wealth = -0.1
 	}
 }
@@ -1613,7 +1614,7 @@ character_event = {
 ### The Dorado and the Princess
 
 character_event = {
-	id = LoR.844
+	id = dorado.3
 	hide_window = yes
 	
 	only_playable = yes
@@ -1624,10 +1625,7 @@ character_event = {
 	
 	trigger = {
 		has_dlc = "Legacy of Rome"
-		OR = {
-			has_landed_title = e_mexico
-			has_landed_title = k_mexico
-		}
+		has_landed_title = e_mexico
 		any_vassal = {
 			has_landed_title = d_dorados
 		}
@@ -1658,14 +1656,14 @@ character_event = {
 				NOT = { trait = chaste }
 				NOT = { trait = homosexual }
 			}
-			character_event = { id = LoR.845 }
+			character_event = { id = dorado.4 }
 		}
 	}
 }
 
 # AI Event for Daughter
 character_event = {
-	id = LoR.845
+	id = dorado.4
 	hide_window = yes
 	
 	is_triggered_only = yes
@@ -1673,7 +1671,7 @@ character_event = {
 	immediate = {
 		hidden_tooltip = {
 			father = { 
-				character_event = { id = LoR.846 days = 3 }
+				character_event = { id = dorado.5 days = 3 }
 			}
 		}
 	}
@@ -1681,14 +1679,14 @@ character_event = {
 
 # Your Daughter Approaches
 character_event = {
-	id = LoR.846
-	desc = EVTDESCLoR.846
+	id = dorado.5
+	desc = EVTDESCDORADO.5
 	picture = GFX_evt_princess_byzantine
 	
 	is_triggered_only = yes
 	
 	option = {
-		name = EVTOPTALoR.846
+		name = EVTOPTADORADO.5
 		create_character = {
 			random_traits = yes
 			dynasty = NONE
@@ -1723,7 +1721,7 @@ character_event = {
 		}
 	}
 	option = {
-		name = EVTOPTBLoR.846
+		name = EVTOPTBDORADO.5
 		FROM = {
 			opinion = {
 				modifier = opinion_unhappy
@@ -1733,7 +1731,7 @@ character_event = {
 		}
 	}
 	option = {
-		name = EVTOPTCLoR.846
+		name = EVTOPTCDORADO.5
 		FROM = {
 			opinion = {
 				modifier = evil_murderer
@@ -1748,7 +1746,7 @@ character_event = {
 
 # AI Mayor Event
 character_event = {
-	id = LoR.850
+	id = dorado.6
 	hide_window = yes
 	
 	capable_only = yes
@@ -1767,10 +1765,7 @@ character_event = {
 		}
 		liege = {
 			ai = no
-			OR = {
-				has_landed_title = e_mexico
-				has_landed_title = k_mexico
-			}
+			has_landed_title = e_mexico
 			any_vassal = {
 				has_landed_title = d_dorados
 			}
@@ -1783,7 +1778,7 @@ character_event = {
 	
 	immediate = {
 		liege = {
-			character_event = { id = LoR.851 }
+			character_event = { id = dorado.7 }
 		}
 	}
 	
@@ -1794,14 +1789,14 @@ character_event = {
 
 # Drunken Dorados
 character_event = {
-	id = LoR.851
-	desc = EVTDESCLoR.851
+	id = dorado.7
+	desc = EVTDESCDORADO.7
 	picture = GFX_evt_riots_byzantine
 	
 	is_triggered_only = yes
 	
 	option = {
-		name = EVTOPTALoR.851
+		name = EVTOPTADORADO.7
 		FROM = {
 			opinion = {
 				modifier = opinion_happy
@@ -1820,7 +1815,7 @@ character_event = {
 		custom_tooltip = { text = punish_dorados }
 	}
 	option = {
-		name = EVTOPTBLoR.851
+		name = EVTOPTBDORADO.7
 		any_vassal = {
 			limit = { has_landed_title = d_dorados }
 			opinion = {
