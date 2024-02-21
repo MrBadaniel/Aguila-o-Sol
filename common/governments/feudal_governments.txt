@@ -1042,11 +1042,13 @@ feudal_governments = {
 	}
 	
 	usos_y_costumbres_government = {
-		 preferred_holdings = { CASTLE }
+		 preferred_holdings = { CASTLE TEMPLE }
 		 allowed_holdings = { 
 			 CASTLE 
 			 FORT
 			 HOSPITAL
+			 TEMPLE
+			 CITY
 		 }
 		allowed_holdings_culture = { # Will not get the wrong government type penalty for tribes of the same culture
 			TRIBAL
