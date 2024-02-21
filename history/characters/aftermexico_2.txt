@@ -2405,6 +2405,7 @@
 	2630.05.12={birth=yes
 		culture=yucatanense
 	}
+	2666.1.1 = { religion = neomayan}
 }
 6900653={
 	name="Joviano"
@@ -3884,15 +3885,14 @@
 	dynasty= 5001345 #Totoro
 	culture=neomexicano
 	religion = sacred_heart
-	secret_religion = sol_invicta
+#	secret_religion = cristo_rey
 	trait = grey_eminence
 	trait = patient
 	trait = kind
 	trait = gregarious
 	trait = scholar
 	trait = is_fat
-	2630.
-	2.15 = {birth=yes culture = tapatio}
+	2625.2.15 = {birth=yes culture = tapatio}
 	2730.1.1 = { death = yes }
 }
 6900961 = {
@@ -3922,6 +3922,40 @@
 	name= "Cecilia"
 	female = yes
 	dynasty= 5001266 #Cícero
+	culture=tapatio
+	religion = sol_invicta
+	father = 6900901
+	2628.7.22 = {birth=yes}
+	2730.1.1 = { death = yes }
+}
+6900964 = {
+	name= "Federico"
+	female = no
+	dynasty= 5001345 #Totoro
+	culture=neomexicano
+	religion = cristo_rey
+	trait = fortune_builder
+	trait = ambitious
+	2587.12.29 = {birth=yes culture = tapatio}
+	2630.1.1 = { death = {death_reason = death_battle } }	
+}
+6900965 = {
+	name= "Federico"
+	female = no
+	dynasty= 5001345 #Totoro
+	culture=neomexicano
+	religion = cristo_rey
+	trait = thrifty_clerk
+	trait = ambitious
+	trait = wroth
+	trait = brave
+	2625.1.30 = {birth=yes culture = tapatio}
+	2657.2.18 = { death = {death_reason = death_battle killer = 1810180 } }	
+}
+6900966 = {
+	name= "Cecilio"
+	female = no
+	dynasty= 5001346 #Gómez
 	culture=tapatio
 	religion = sol_invicta
 	father = 6900901
@@ -4056,7 +4090,7 @@
 	employer = 6900002 #Prelate Nicolás
 	2601.3.30 = { birth = yes }
 	2618.1.1 = { add_spouse = 6901015 } #Margarita
-	2640.1.1 = { remove_spouse = 6901014 } Year they became nun and monk
+	2640.1.1 = { remove_spouse = 6901014 } #Year they became nun and monk
 	2670.1.1 = { death = yes }
  	
 }
@@ -4074,7 +4108,7 @@
 	employer = 6900002 #Prelate Nicolás
 	2599.5.15 = { birth = yes }
 	2618.1.1 = { add_spouse = 6901014 } #Felipe Hinojosa
-	2640.1.1 = { remove_spouse = 6901014 } Year they became nun and monk
+	2640.1.1 = { remove_spouse = 6901014 } #Year they became nun and monk
 	2670.1.1 = { death = yes }
  	
 }
