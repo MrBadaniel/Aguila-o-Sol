@@ -31014,6 +31014,36 @@ abdicate_holy_order_if_religion_changes_effect = { #why. why did you add this ef
 		}
 	}
 
+	d_san_patricios = {
+		if = {
+			limit = {
+				is_title_active = d_san_patricios
+				religion = cristo_rey
+				owner = { 
+					ai = yes
+					holy_order = yes 
+					NOT = { religion = cristo_rey } 
+				}
+			}
+			log = "[d_san_patricios.owner.GetTitledFirstName] was found to be unfit to lead the [d_san_patricios.GetName] and therefore removed by the abdicate holy order effect!"
+		}
+	}
+
+	d_cristo_rey = {
+		if = {
+			limit = {
+				is_title_active = d_cristo_rey
+				religion = cristo_rey
+				owner = { 
+					ai = yes
+					holy_order = yes 
+					NOT = { religion = cristo_rey } 
+				}
+			}
+			log = "[d_cristo_rey.owner.GetTitledFirstName] was found to be unfit to lead the [d_cristo_rey.GetName] and therefore removed by the abdicate holy order effect!"
+		}
+	}
+
 	d_fh = {
 		if = {
 			limit = {
