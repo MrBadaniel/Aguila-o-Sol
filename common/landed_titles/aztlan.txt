@@ -2726,139 +2726,9 @@ e_aztlan = {
 				b_manuel_benavides_CH = {}
 				b_ojinaga_CH = {}
 			}
-		}
+		} #End of loc project...for now
 		
-		d_comarca_lagunera = {
-			color={ 155 115 56 }
-			color2={ 255 255 255 }
 
-			plautdietsch = "Lagunenregion"
-			arixan = "Lagunas"
-			texan = "Lagunas"
-			czexan = "Lagunas"
-			texaner = "Lagunas"
-			valleyan = "Lagunas"
-			bayfolk = "Lagunas"
-				
-			capital = 816 # c_torreon
-
-			c_torreon = { # 816
-				color={ 154 143 82 }
-				color2={ 255 255 255 }
-	
-				plautdietsch = "Der Turm"
-	
-				holy_site = fidencista
-	
-				b_torreon_COA = {
-					arixan = "Torreon"
-					texan = "Torreon"
-					czexan = "Torreon"
-					texaner = "Torreon"
-					valleyan = "Torreon"
-					bayfolk = "Torreon"	
-					chino = "Torreón"
-					menomex = "Torreón"
-					altiplanense = "Torreón"
-					bravo = "Torreón"
-					abajeno = "Torreón"
-					chilango = "Torreón"
-					tapatio = "Torreón"
-					jarocho = "Torreón"
-					yucatanense = "Torreón"
-					choco = "Torreón"
-					calentano = "Torreón"
-					californiano = "Torreón"
-					occidental = "Torreón"	
-					yaqui = "Torreón"				
-				}
-				b_gomez_palacio_DU = {
-					arixan = "Gomez Palace"
-					texan = "Gomez Palace"
-					czexan = "Gomez Palace"
-					texaner = "Gomez Palace"
-					valleyan = "Gomez Palace"
-					bayfolk = "Gomez Palace"
-				}
-				b_ciudad_lerdo_DU = {
-					used_for_dynasty_names = no
-					short_name = yes
-					arixan = "Lerdo City"
-					texan = "Lerdo City"
-					czexan = "Lerdo City"
-					texaner = "Lerdo City"
-					valleyan = "Lerdo City"
-					bayfolk = "Lerdo City"					
-				}
-				b_matamoros_COA = {}
-				b_viesca_COA = {}
-				b_hacienda_de_hornos_COA = {
-					arixan = "Hornos"
-					texan = "Hornos"
-					czexan = "Hornos"
-					texaner = "Hornos"
-					valleyan = "Hornos"
-					bayfolk = "Hornos"				
-				}
-				b_la_sagra_COA = {}
-			}
-			c_cuencame = {
-				color={ 116 58 52 }
-				color2={ 255 255 255 }
-	
-				plautdietsch = "Kuenkam"
-	
-				b_nazas_DU = {}
-				#b_guadalupe_victoria_DU = {}
-				b_rodeo_DU = {}
-				b_la_cadena_DU = {}
-				b_santa_clara_DU = {}
-				b_san_juan_guadalupe_DU = {}
-				b_simon_bolivar_DU = {}
-				b_cuencame_DU = {}
-			}
-			c_mapimi = {
-				color={ 142 64 66 }
-				color2={ 255 255 255 }
-	
-				b_villa_hidalgo_DU = {
-					arixan = "Hidalgoville"
-					texan = "Hidalgoville"
-					czexan = "Hidalgoville"
-					texaner = "Hidalgoville"
-					valleyan = "Hidalgoville"
-					bayfolk = "Hidalgoville"					
-				}
-				b_mapimi_DU = {}
-				b_inde_DU = {}
-				b_san_pedro_del_gallo_DU = {
-					arixan = "San Pedro Gallo"
-					texan = "San Pedro Gallo"
-					czexan = "San Pedro Gallo"
-					texaner = "San Pedro Gallo"
-					valleyan = "San Pedro Gallo"
-					bayfolk = "San Pedro Gallo"					
-				}
-				b_villa_ocampo_DU = {
-					arixan = "Ocampoville"
-					texan = "Ocampoville"
-					czexan = "Ocampoville"
-					texaner = "Ocampoville"
-					valleyan = "Ocampoville"
-					bayfolk = "Ocampoville"	
-				}
-				b_el_ciento_veinte_DU = {}
-				b_tlahualilo_de_zaragoza_DU = {
-					arixan = "Tlahualilo"
-					texan = "Tlahualilo"
-					czexan = "Tlahualilo"
-					texaner = "Tlahualilo"
-					valleyan = "Tlahualilo"
-					bayfolk = "Tlahualilo"
-				
-				}
-			}
-		}		#end of the loc project Metaluis90
 		d_casas_altas = {
 			color={ 189 162 87 }
 			color2={ 255 255 255 }
@@ -3113,15 +2983,259 @@ e_aztlan = {
 				plautdietsch = "Der Wache"
 	
 				b_santa_maria_del_oro_DU = {}
-				b_villa_hidalgo_DU = {}
+				b_villa_hidalgo_DU = {
+					arixan = "Hidalgoville"
+					texan = "Hidalgoville"
+					czexan = "Hidalgoville"
+					texaner = "Hidalgoville"
+					valleyan = "Hidalgoville"
+					bayfolk = "Hidalgoville"					
+				}
 				b_inde_DU = {}
-				b_villa_ocampo_DU = {}
+				b_villa_ocampo_DU = {
+					arixan = "Ocampoville"
+					texan = "Ocampoville"
+					czexan = "Ocampoville"
+					texaner = "Ocampoville"
+					valleyan = "Ocampoville"
+					bayfolk = "Ocampoville"	
+				}
 				b_el_ciento_veinte_DU = {}
 
 			}
 			
 		} #End of d_tepehuan
+		
+		
 	}
+	
+	k_la_laguna = { #Should be created by decision
+		color = { 47 127 111 }
+		color2 = { 255 255 255 }
+		
+		capital = 816 # c_torreon
+		
+		d_comarca_lagunera = {
+			color={ 155 115 56 }
+			color2={ 255 255 255 }
+
+			plautdietsch = "Lagunenregion"
+			arixan = "Lagunas"
+			texan = "Lagunas"
+			czexan = "Lagunas"
+			texaner = "Lagunas"
+			valleyan = "Lagunas"
+			bayfolk = "Lagunas"
+				
+			capital = 816 # c_torreon
+
+			c_torreon = { # 816
+				color={ 154 143 82 }
+				color2={ 255 255 255 }
+	
+				plautdietsch = "Der Turm"
+	
+				holy_site = fidencista
+	
+				b_torreon_COA = {
+					arixan = "Torreon"
+					texan = "Torreon"
+					czexan = "Torreon"
+					texaner = "Torreon"
+					valleyan = "Torreon"
+					bayfolk = "Torreon"	
+					chino = "Torreón"
+					menomex = "Torreón"
+					altiplanense = "Torreón"
+					bravo = "Torreón"
+					abajeno = "Torreón"
+					chilango = "Torreón"
+					tapatio = "Torreón"
+					jarocho = "Torreón"
+					yucatanense = "Torreón"
+					choco = "Torreón"
+					calentano = "Torreón"
+					californiano = "Torreón"
+					occidental = "Torreón"	
+					yaqui = "Torreón"				
+				}
+				b_matamoros_COA = {}
+				b_san_antonio_del_coyote_COA = {}
+				b_la_barranca_COA = {}
+				b_la_union_COA = {}
+				b_santo_nino_aguanaval_COA = {}
+				b_la_partida_COA = {}
+				b_la_sagra_COA = {}
+
+			}
+			
+			c_lerdo	= { #2816
+				color = { 242 199 150 }
+				color2 = { 255 255 255 }
+				
+				b_gomez_palacio_DU = {}
+				b_ciudad_lerdo_DU = {
+					used_for_dynasty_names = no
+					short_name = yes
+					arixan = "Lerdo City"
+					texan = "Lerdo City"
+					czexan = "Lerdo City"
+					texaner = "Lerdo City"
+					valleyan = "Lerdo City"
+					bayfolk = "Lerdo City"					
+				}
+				b_san_felipe_DU	= {}
+				b_leon_guzman_DU = {}	
+				b_ciudad_juarez_DU = {}
+				b_la_loma_DU = {}
+				b_santa_cruz_lujan_DU = {}
+				b_santa_barbara_DU = {}
+
+			}
+			
+			c_viesca = { #2818
+				color = { 199 116 27 }
+				color2 = { 255 255 255 }
+				
+				b_viesca_COA = {}
+				b_hacienda_de_hornos_COA = {
+					arixan = "Hornos"
+					texan = "Hornos"
+					czexan = "Hornos"
+					texaner = "Hornos"
+					valleyan = "Hornos"
+					bayfolk = "Hornos"				
+				}
+				b_zaragoza_COA = {}
+				b_tejaban_de_la_rosita_COA = {}
+				b_villa_de_bilbao_COA = {}
+				b_emiliano_zapata_COA = {}
+				b_barreal_de_guadalupe_COA = {}
+				b_la_ventana_COA = {}
+			}
+			
+			c_madero = { #2819
+				color = { 206 189 169 }
+				color2 = { 255 255 255 }
+			
+				b_san_pedro_COA = {}
+				b_francisco_i_madero_COA = {}
+				b_concordia_COA = {}
+				b_el_pilar_COA = {}
+				b_nuevo_leon_COA = {}
+				b_san_esteban_de_abajo_COA = {}
+				b_luchana_COA = {}
+				b_san_miguel_COA = {}
+			}
+		} #End of d_comarca_lagunera
+		
+		d_cuencame = {
+			color = { 97 108 77 }
+			color2 = { 255 255 255 }
+			
+			capital = 808 #c_cuencame
+			
+			c_cuencame = {
+				color={ 116 58 52 }
+				color2={ 255 255 255 }
+	
+				plautdietsch = "Kuenkam"
+	
+					b_cuencame_DU = {
+						plautdietsch = "Kuenkam"
+					}
+					b_cuauhtemoc_DU = {}
+					b_velardena_DU = {}
+					b_pedricena_DU = {}
+					b_emiliano_zapata_DU = {}
+					b_santa_cruz_de_la_cuchilla_DU = {}
+					b_ramon_corona_DU = {}
+					b_las_mercedes_DU = {}
+			}
+			
+			c_aguanaval = { #2822
+				color = { 107 87 85 }
+				
+				b_san_juan_guadalupe_DU = {}
+				b_santa_clara_DU = {}
+				b_san_antonio_de_la_laguna_DU = {}
+				b_simon_bolivar_DU = {}
+			}	
+
+		} #End of d_cuencame
+		
+		d_mapimi = { 
+			color = { 97 108 124 }
+			color2 = { 255 255 255 }
+			
+			capital = 744 #mapimi
+			
+			c_mapimi = {
+				color={ 142 64 66 }
+				color2={ 255 255 255 }
+	
+				b_mapimi_DU = {}
+
+				b_bermejillo_DU = {}
+				b_santa_ines_DU = {}
+				b_jaral_grande_DU = {}
+				b_el_diamante_DU = {}
+				b_ceballos_DU = {}
+				b_treinta_de_noviembre_DU = {}
+				b_la_cadena_DU = {}
+			}
+			c_tlahualillo = { #2817
+				color = {  181 135 97 }
+				color2 = { 255 255 255 }
+				
+				b_tlahualilo_de_zaragoza_DU = {
+					arixan = "Tlahualillo"
+					texan = "Tlahualillo"
+					czexan = "Tlahualillo"
+					texaner = "Tlahualillo"
+					valleyan = "Tlahualillo"
+					bayfolk = "Tlahualillo"
+				}
+				b_el_lucero_DU = {}
+				b_san_francisco_de_horizonte_DU = {}
+				b_banco_nacional_DU = {}
+				b_pamplona_DU = {}
+				b_cartagena_DU = {}
+				b_pompeya_DU = {}
+				b_amapolas_DU = {}
+			}
+			
+			c_nazas = { #2810
+				color = { 135 87 82 }
+				color2 = { 255 255 255 }
+				
+				b_rodeo_DU = {}	#c_rodeo
+				b_nazas_DU = {}
+				b_san_luis_de_cordero_DU
+					b_san_pedro_del_gallo_DU = {
+						arixan = "San Pedro Gallo"
+						texan = "San Pedro Gallo"
+						czexan = "San Pedro Gallo"
+						texaner = "San Pedro Gallo"
+						valleyan = "San Pedro Gallo"
+						bayfolk = "San Pedro Gallo"					
+					}
+				b_coneto_de_comonfort_DU = {}	#c_rodeo
+				b_abasolo_DU = {}	#c_rodeo
+				b_hidalgo_de_san_antonio_DU = {}	#c_rodeo
+				b_san_jose_del_pajarito_DU = {}	#c_rodeo
+				b_leandro_valle_DU = {}	#c_rodeo
+				b_san_francisco_javier_de_las_lajas_DU = {} #c_rodeo
+				b_paso_nacional_DU = {}
+				b_santa_teresa_de_la_una_DU ={}
+				b_general_lazaro_cardenas_DU ={}
+				b_diez_de_abril_DU ={}
+				b_benito_juarez_DU ={}
+			}
+
+		} #End of d_mapimi
+		
+	} #End of k_laguna
 
 	k_rio_bravo = {
 		color = { 201 163 154 }
@@ -3198,8 +3312,8 @@ e_aztlan = {
 				plautdietsch = "Vier Sümpfe"
 	
 				b_cuatrocienegas_COA = {}
-				b_san_pedro_COA = {}
-				b_francisco_i_madero_COA = {}
+			#	b_san_pedro_COA = {}
+			#	b_francisco_i_madero_COA = {}
 				b_laqueitio_COA = {}
 				b_la_florida_COA = {}
 				b_la_rosita_COA = {}
