@@ -553,11 +553,11 @@ trait= chest_pain
 1431098 = {
 	name = "Lina" 
 	female=yes
-	dynasty=5200102
-	culture=yucatanense
+	dynasty=5200107 #Marín
+	culture=neomexicano
 	religion=cristo_rey
 	father=6900645
-	2608.04.24 = {birth=yes}
+	2608.04.24 = {birth=yes culture = yucatanense}
 	2640.1.1 = {add_spouse=1431121}
 	2705.1.1 = {death=yes}
 	
@@ -615,8 +615,10 @@ trait= chest_pain
 	trait=inspiring_leader
 	trait=zealous
 	trait=gluttonous
+	trait=adventurer
 	father=1431100
 	mother=1431103
+	employer=1431131
 	2635.11.3={birth=yes}
 	2657.1.1= {
 		effect={
@@ -2319,6 +2321,45 @@ trait= chest_pain
 	}
 }
 # Flores family, trifinio pagan ruler of Nojpetén, austed by the Itzá rebellion
+1431416={
+	name="Justina"
+	female = yes
+	dynasty=4600111 #Flores
+	culture=trifinio
+	religion=moravian
+	father=1431417
+	2618.1.1={birth=yes}
+	2690.1.1={death= yes }
+	2640.1.1={add_spouse=1438161}	
+}	
+1431417={
+	name="Jaime"
+	dynasty=4600111 #Flores
+	culture=trifinio
+	religion=moravian
+	father=1431418
+	2592.1.1={birth=yes}
+	2667.1.1={death= yes }
+}	
+1431418={
+	name="Juan"
+	dynasty=4600111 #Flores
+	culture=trifinio
+	religion=moravian
+	father=1431419
+	2567.1.1={birth=yes}
+	2620.1.1={death= yes }
+}
+1431419={
+	name="Pedro"
+	dynasty=4600111 #Flores
+	culture=trifinio
+	religion=moravian
+	trait=content
+	father=1431422
+	2529.1.1={birth=yes}
+	2608.1.1={death= yes }
+}
 1431420={
 	name="Gómez"
 	dynasty=4600111 #Flores
@@ -2447,25 +2488,85 @@ trait= chest_pain
 	}
 }
 # Itzá family that rules Nojpetén
+1431425 ={ #Kaan-Ek' Itza' the First
+	name= "Kaan-Ek'"
+	female=no
+	dynasty=4600220 #Itsja', ancient Mayan drip
+	culture = yucateco
+	religion = pagan
+	occluded = yes
+	1495.1.1 = { birth = yes }
+	1550.1.1 = { death = yes }
+}
+1431426 ={ #Kaan-Ek' Itza'
+	name= "Kaan-Ek'"
+	father = 1431425
+	dynasty=4600220 #Itsja'
+	culture = yucateco
+	religion = pagan
+	occluded = yes
+	1528.1.1 = { birth = yes }
+	1600.1.1 = { death = yes }
+}
+1431427 ={ #Kaan-Ek' Itza'
+	name= "Kaan-Ek'"
+	father = 1431426
+	dynasty=4600220 #Itsja'
+	culture = yucateco
+	religion = pagan
+	occluded = yes
+	1570.1.1 = { birth = yes }
+	1635.1.1 = { death = yes }
+}
+
+1431428 ={ #Kaan-Ek' Itza'
+	name= "Kaan-Ek'"
+	father = 1431427
+	dynasty=4600220 #Itsja'
+	culture = yucateco
+	religion = pagan
+	occluded = yes
+	1615.1.1 = { birth = yes }
+	1697.1.1 = { death = yes }
+}
+
+1431429 ={
+	name= "Blood of"
+	female=no
+	father = 1431428
+	dynasty=1697092
+	occluded = yes
+	culture = yucateco
+	religion = pagan	
+	trait = mastermind_theologian
+	trait = proud
+	disallow_random_traits = yes
+	1697.1.1 = { birth = yes }
+	2492.1.1 = { death = yes }	
+}
 1431430 ={
 	name= "Marina"
 	female=yes
 	dynasty=1697092
-	dna="babgc0bdcd0"
-	properties="bd000k0000000000000000000000000000000"
-	culture=lacandon
+	#dna="babgc0bdcd0"
+	dna="aheid0ga0c0"
+	properties="ah0d0k00000000000000000000000000000000000"
+	culture=yucateco
 	religion=qabantajik
 	martial=5
 	diplomacy=10
 	stewardship=2
 	intrigue=5
 	learning=10	
+
 	trait=fair
 	trait=ambitious
 	trait=master_seductress
 	trait=bastard
 	trait=deceitful
 	father=1431432
+	employer = 1431131
+	
 	2645.1.1={birth=yes}
 	2664.1.1={
 		effect = {
@@ -2535,6 +2636,7 @@ trait= chest_pain
 	trait=holy_warrior
 	trait=strong
 	father=1431431
+	mother=1438165
 	2630.1.1={birth=yes}
 
 }
@@ -2561,9 +2663,9 @@ trait= chest_pain
 	2600.1.1={death=yes}
 }
 1431435={
-	name="Betty" #Betty Bolom, daughter of the deceased Batabob of LacandÃ³n
+	name="Betty" #Betty Bolom, daughter of the deceased Batabob of Lacandón
 	female=yes
-	dynasty=1546094 #BolÃ³n
+	dynasty=1546094 #Bolom
 	culture=lacandon
 	religion=qabantajik
 	martial=6
@@ -2623,9 +2725,11 @@ trait= chest_pain
 	2662.1.1={birth=yes}
 }
 1431438={
-	name="Itzá"
-	culture=lacandon
+	name="Canek"
+	culture=yucateco
 	religion=qabantajik
+	dynasty=1697092	
+	father = 1431429
 	martial=15
 	diplomacy=0
 	stewardship=8
@@ -2657,7 +2761,8 @@ trait= chest_pain
 	trait=chaste
 	trait=underhanded_rogue
 	trait=kind
-		2520.1.1={birth=yes}
+	2520.1.1={birth=yes}
+	2537.1.1 = { add_spouse = 1431438 }
 	2549.1.1={		
 		death={
 			death_reason=death_murder
@@ -3421,11 +3526,11 @@ trait= chest_pain
 
 ####### GUATEMALA KINGDOM
 
-#### GUATEMALA DUCHY
 
-1438130 = {
+#### GUATEMALA DUCHY
+1438130 = { 
 	name="Serapio" 
-	dynasty=4600136 		
+	dynasty=4600136 	 #Vejol	
 	culture=trifinio
 	religion=moravian
 	trait= strong
@@ -3438,23 +3543,360 @@ trait= chest_pain
 		}
 	} 
 }
-
+1438135 = { #Pedro de Alvarado
+	name="Tonatiú" 
+	dynasty=4600210 	 #de Alvarado	
+	culture=trifinio
+	religion=penitente
+	trait = tough_soldier
+	trait= strong
+	trait= fair
+	trait= giant
+	occluded = yes
+	1485.1.1={birth=yes}
+	1600.1.1={
+		death=yes
+		}
+}
+1438136 = { #Tata Lapo Barrios
+	name="Tata Lapo" 
+	dynasty=4600211 	 #Barrios	
+	culture=trifinio
+	religion=purificador
+	occluded = yes
+	trait = skilled_tactician
+	trait = robust
+	trait = honest
+	1815.11.13={birth=yes}
+	1900.1.1={
+		death=yes
+		}
+}
+1438137 = { #Señor Presidente
+	name="Señor" 
+	dynasty=4600212 	 #Presidente	
+	culture=trifinio
+	religion=penitente
+	occluded = yes
+	trait = deceitful
+	1860.1.1={birth=yes}
+	1930.1.1={
+		death=yes
+		}
+}
+1438138 = { #Juan José de Primavera
+	name="Juan José" 
+	dynasty=4600213 	 #de Primavera	
+	culture=trifinio
+	religion=penitente
+	occluded = yes
+	1887.1.1={birth=yes}
+	1940.1.1={
+		death=yes
+		}
+}
+1438139 = { #Jacobo de Primavera
+	name="Jacobo" 
+	dynasty=4600213 	 #de Primavera	
+	culture=trifinio
+	religion=penitente
+	father = 1438138
+	occluded = yes
+	1923.1.1={birth=yes}
+	1950.1.1={
+		death= {
+			death_reason = {	death_murder }
+		}
+	}
+}
+1438140 = { #Ufco Chafarote
+	name="Ufco" 
+	dynasty=4600214 	 #Chafarote
+	culture=trifinio
+	religion=penitente
+	occluded = yes
+	trait = cynical
+	1883.1.1={birth=yes}
+	1960.1.1={
+		death= yes
+		}
+}
+1438141 = { #Lucas Chafarote
+	name="Lucas" 
+	dynasty=4600214 	 #Chafarote
+	culture=trifinio
+	religion=penitente
+	father = 1438140
+	occluded = yes
+	trait = cynical
+	1908.1.1={birth=yes}
+	1970.1.1={
+		death= yes
+		}
+}
+1438142 = { #Kjell Chafarote
+	name="Kjell" 
+	dynasty=4600214 	 #Chafarote
+	culture=trifinio
+	religion=purificador
+	father = 1438141
+	occluded = yes
+	trait = cynical
+	1935.1.1={birth=yes}
+	2000.1.1={
+		death= yes
+		}
+}
+1438143 = { #Tonatiú Q'asif
+	name="Tonatiú" 
+	dynasty=4600215 	 #Q'asif
+	culture=trifinio
+	religion=penitente
+	occluded = yes
+	trait = cruel
+	trait = greedy
+	trait = proud
+	trait = deceitful
+	1980.1.1={birth=yes}
+	2100.1.1={
+		death= yes
+		}
+}
+#Los Altos Lore
+1438144 = { #Tekún Umán
+	name="Tekún" 
+	dynasty=4600216 	 #Umán
+	culture=quichean
+	religion=pagan
+	occluded = yes
+	1470.1.1={birth=yes}
+	1524.1.1={
+		death= {
+			death_reason = death_battle 
+			#killer = 143135 #Pedro de Alvarado
+		}
+	}
+}
+1438145 = { #Atanasio Tzul
+	name="Atanasio" 
+	dynasty=4600217	 #Tzul
+	culture=quichean
+	religion=qabantajik
+	occluded = yes
+	trait = qab_suuk_chilam
+	1485.1.1={birth=yes}
+	1560.1.1={
+		death= yes
+		}
+}
+1438146 = { #Gaspar Orpa
+	name="Gaspar" 
+	dynasty=4600218 #Orpa
+	culture=quichean
+	religion=qabantajik
+	occluded = yes
+	trait = qab_votanzapatismo
+	1910.1.1={birth=yes}
+	1980.1.1={
+		death= yes
+		}
+}
+1438147 = { #Kaibil Balam
+	name="Kaibil" 
+	dynasty=4600219 #Balam
+	culture=quichean
+	religion=pagan
+	occluded = yes
+	1468.1.1={birth=yes}
+	1532.1.1={
+		death= yes
+		}
+}
 
 #Historical Petén
+
 1438150 = {
 	name="Virgilio" 
-	dynasty=4600137 		
-	culture=trifinio
+	dynasty=4600137  #Serpentino		
+	culture=trifinio 
 	religion=charismatic
 	trait= just
 	trait= ambitious
 	trait= diligent
 	trait= sympathy_mesoamerican_gods
-	2034.1.1={birth=yes}
-	2120.1.1={death= yes} 
+	trait = scholar
+	trait = grey_eminence
+	2264.1.1={birth=yes}
+	2350.1.1={death= yes} 
+}
+1438151 = {
+	name="Valentín" 
+	dynasty=4600137 		
+	culture=trifinio
+	religion=charismatic
+	trait= sympathy_mesoamerican_gods
+	father = 1438150
+	2299.1.1={birth=yes}
+	2381.1.1={death= yes} 
+}
+1438152 = {
+	name="Rodrigo" 
+	dynasty=4600137 		
+	culture=trifinio
+	religion=charismatic
+	trait= sympathy_mesoamerican_gods
+	father = 1438151	
+	2335.1.1={birth=yes}
+	2420.1.1={death= yes} 
+}
+1438153 = {
+	name="Marcial" 
+	dynasty=4600137 		
+	culture=trifinio
+	religion=charismatic
+	trait= sympathy_mesoamerican_gods
+	father = 1438152	
+	2377.1.1={birth=yes}
+	2455.1.1={death= yes} 
+}
+1438154 = {
+	name="Ofidio" 
+	dynasty=4600137 		
+	culture=trifinio
+	religion=moravian
+	trait= sympathy_mesoamerican_gods
+	father = 1438153	
+	2405.1.1={birth=yes}
+	2470.1.1={
+		death= {
+			death_reason = death_murder
+				killer = 1431423
+				}
+		}
+}
+1438155 = {
+	name="Ovidio" 
+	dynasty=4600137 		
+	culture=trifinio
+	religion=moravian
+	trait= sympathy_mesoamerican_gods
+	father = 1438154	
+	2440.1.1={birth=yes}
+	2525.1.1={death= yes }
+}
+1438156 = {
+	name="Serendipio" 
+	dynasty=4600137 		
+	culture=trifinio
+	religion=moravian
+	trait= sympathy_mesoamerican_gods
+	father = 1438155	
+	2468.1.1={birth=yes}
+	2560.1.1={death= yes }
+}
+1438157 = {
+	name="Polibio" 
+	dynasty=4600137 		
+	culture=trifinio
+	religion=moravian
+	trait= sympathy_mesoamerican_gods
+	father = 1438156	
+	2497.1.1={birth=yes}
+	2580.1.1={death= yes }
+}
+1438158 = {
+	name="Horacio" 
+	dynasty=4600137 		
+	culture=trifinio
+	religion=moravian
+	trait= sympathy_mesoamerican_gods
+	father = 1438157	
+	2539.1.1={birth=yes}
+	2610.1.1={death= yes }
+}
+1438159 = {
+	name="Amiano" 
+	dynasty=4600137 		
+	culture=trifinio
+	religion=moravian
+	trait= sympathy_mesoamerican_gods
+	father = 1438158
+	2572.1.1={birth=yes}
+	2658.1.1={death= yes }
+}
+1438160 = {
+	name="Rodrigo" 
+	dynasty=4600137 		
+	culture=trifinio
+	religion=moravian
+	trait= sympathy_mesoamerican_gods
+	father = 1438158
+	2579.1.1={birth=yes}
+	2658.1.1={death= yes }
+}
+1438161 = {
+	name="Virgilio" 
+	dynasty=4600137 		
+	culture=trifinio
+	religion=moravian
+	trait= sympathy_mesoamerican_gods
+	father = 1438160
+	2595.1.1={birth=yes}
+	2670.1.1={death= yes }
+}
+1438162 = {
+	name="Lucio" 
+	dynasty=4600137 		
+	culture=trifinio
+	religion=moravian
+	trait= sympathy_mesoamerican_gods
+	father = 1438161
+	2610.1.1={birth=yes}
+	2690.1.1={death= yes }
+}
+1438163 = {
+	name="Marcelino" 
+	dynasty=4600137 		
+	culture=trifinio
+	religion=moravian
+	trait= sympathy_mesoamerican_gods
+	father = 1438162
+	2633.1.1={birth=yes}
+	2710.1.1={death= yes }
+}
+1438164 = {
+	name="Virginia" 
+	dynasty=4600137 
+	female = yes
+	culture=trifinio
+	religion=moravian
+	dna="aiabd0mac00"
+	properties="a00d0k000000000000000000000000000000000000"
+	trait = naive_appaiser
+	trait = shy
+	trait = devout	
+	trait= groomed
+	father = 1438161
+	mother = 1431416
+	2642.1.1={birth=yes}
+	2710.1.1={death= yes }
+	2666.3.8={add_spouse=1431131}
+	2666.3.8={religion = cristo_rey }
+}
+1438165 = {
+	name="Marcelina" 
+	dynasty=4600137 
+	female = yes
+	culture=trifinio
+	religion=moravian
+	trait= groomed
+	father = 1438157
+	2545.1.1={birth=yes}
+	2610.1.1={death= yes }
+	2562.7.1={add_spouse = 1431434}
 }
 
-1438160 = {
+1438199 = { 
 	name=Morgan
 	dynasty=5200209
 	culture=garinagu
@@ -3463,6 +3905,7 @@ trait= chest_pain
 }
 
 ####New Guatemalans
+
 1438200 = {	
 name="Virgilio" #Lord of Escuintla
 culture=trifinio
