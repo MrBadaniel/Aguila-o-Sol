@@ -2809,7 +2809,7 @@ e_aztlan = {
 				plautdietsch = "Kuenkam"
 	
 				b_nazas_DU = {}
-				b_guadalupe_victoria_DU = {}
+				#b_guadalupe_victoria_DU = {}
 				b_rodeo_DU = {}
 				b_la_cadena_DU = {}
 				b_santa_clara_DU = {}
@@ -2942,16 +2942,72 @@ e_aztlan = {
 				plautdietsch = "Duranken"
 	
 				b_victoria_de_durango_DU = {}
-				b_el_salto_DU = {}
-				b_tayoltita_DU = {}
+				b_las_guadianas_DU = {}
+				b_el_nayar_DU = {}
+				b_contreras_DU = {}
+				b_el_pueblito_DU = {}
+				b_morcillos_DU = {}
+				b_san_vicente_de_chupanderos_DU = {}
+				b_el_durazno_DU = {}
+			}
+
+			c_canatlan = { #2808
+				color = {  188 104 66 }
+				color2 = { 255 255 255 }
+				
 				b_ciudad_canatlan_DU = {
 					used_for_dynasty_names = no
 					short_name = yes
 				}
-				b_vencedores_DU = {}
-				b_el_nayar_DU = {}
 				b_nuevo_ideal_DU = {}
+				b_guatipame_DU = {}
+				b_tejamen_DU = {}
+				b_guadalupe_aguilera_DU = {}
+				b_san_jose_de_gracia_DU = {}
+				b_bruno_martinez_DU = {}
+				b_el_llano_DU = {}
 			}
+			
+			c_gamon = { #2809
+				color = { 216 120 75 }
+				color2 = { 255 255 255 }
+				
+				b_panuco_de_coronado_DU = {}
+				b_guadalupe_victoria_DU = {}
+				b_san_juan_del_rio_DU = {}
+				b_penon_blanco_DU = {}
+				b_ignacio_allende_DU = {}
+				b_santa_catalina_de_siena_DU = {}
+				b_yerbanis_DU = {}
+				b_francisco_primo_de_verdad_DU = {}
+			}
+			
+			c_organos = { #2805
+				color = { 198 41 88 }
+				color2 = { 255 255 255 }
+				
+				b_villa_union_DU = {}
+				b_vicente_guerrero_DU = { #Ciudad Vicente Guerrero
+					used_for_dynasty_names = no
+					short_name = yes
+				}
+				b_nombre_de_dios_DU = {}
+				b_suchil_DU = {}
+				b_san_jose_de_la_parrilla_DU = {}
+				b_villa_insurgentes_ZA = {}
+				b_san_jose_de_las_corrientes_DU = {}
+				b_la_joya_DU = {}
+			}
+
+
+		} #End of d_durango
+		
+		d_sierra_duranguense = { 
+			color = { 183 80 85 }
+			color2 = { 255 255 255 }
+			
+			capital = 745 #c_mezquital
+			
 			c_mezquital = {
 				color={ 115 105 72 }
 				color2={ 255 255 255 }
@@ -2959,31 +3015,112 @@ e_aztlan = {
 				plautdietsch = "Baumallee"
 	
 				b_san_francisco_del_mezquital_DU = {}
-				b_suchil_DU = {}
-				b_vicente_guerrero_DU = {}
-				b_nombre_de_dios_DU = {}
-				b_muruata_DU = {}
 				b_huazamota_DU = {}
-				b_las_milpas_DU = {}
+				b_muruata_DU = {}
+				b_san_antonio_de_padua_DU = {}
 				b_yonora_DU = {}
+				b_las_milpas_DU = {}
+				b_fortines_DU = {}
+				b_san_francisco_ocotan_DU = {}
+			
 			}
-			c_altamirano = { # 809
+			
+			c_pueblo_nuevo = { #2806
+				color = { 255 66 122 }
+				color2 = { 255 255 255 } 
+				
+				b_el_salto_DU = {
+					plautdietsch = "Dee Hupst"
+				}
+				b_la_ciudad_DU = {
+					plautdietsch = "De Staut"
+				}
+				b_san_bernardino_de_milpillas_DU = {}
+				b_san_jernonimo_DU = {}
+				b_chavarria_DU = {}
+				b_santa_lucia_DU = {}
+				b_san_francisco_de_lajas_DU = {}
+				b_valle_de_la_bufa_DU = {}
+			}
+
+			c_san_dimas = { #2807
+				color = { 255 112 155 }
+				color2 = { 255 255 255 }
+				
+				b_tayoltita_DU = {}
+				b_san_miguel_de_cruces_DU = {}
+				b_vencedores_DU = {}
+				b_san_luis_de_villa_corona_DU = {}
+				b_espadanal_de_san_jeronimo_DU = {}
+				b_neveros_DU = {}
+				b_tambores_de_abajo_DU = {}
+				b_veracruz_de_la_sierra_DU = {}
+			}
+		} #End of d_sierra_duranguense
+		
+		d_tepehuan = {
+			color = { 180 68 62 }
+			color2 = { 255 255 255 }
+			
+			capital = 2812 #c_papasquiaro
+			
+			c_papasquiaro = {  #2812
+				color = { 155 68 62 }
+				color2 = { 255 255 255 }
+				
+				b_santiago_papasquiaro_DU = {}
+				b_garames_DU = {}
+				b_san_miguel_de_papasquiaro_DU = {}
+				b_aranas_DU = {}
+				b_los_herrera_DU = {}
+				b_los_martinez_DU = {}
+				b_el_pachon_DU = {}
+				b_la_lagunita_DU = {}
+			}
+			
+			c_tepehuanes = { #2813
+				color = { 181 111 106 }
+				color2 = { 255 255 255 }
+				
+				b_tepehuanes_DU = {}
+				b_los_presidios_DU = {}
+				b_san_jose_de_la_boca_DU = {}
+				b_carreras_DU = {}
+				b_san_ignacio_de_la_sierra_DU = {}
+				b_mesa_de_los_nayar_DU = {}
+				b_los_bagres_DU = {}
+				b_el_corazon = {}
+			}
+			
+			c_guanacevi = {  #2814
+				color = { 255 114 104 }
+				color2 = { 255 255 255 }
+				
+				b_guanacevi_DU = {}
+				b_la_rosilla_DU = {}
+				b_cienega_de_la_vaca_DU = {}
+				b_quelites_DU = {}
+				b_el_zape_DU = {}
+				b_laguna_seca_DU = {}
+				b_las_pomas_DU = {}
+				b_aguacaliente_DU = {}
+			}
+			
+			c_altamirano = { # 809 El Oro
 				color={ 158 91 85 }
 				color2={ 255 255 255 }
 	
 				plautdietsch = "Der Wache"
 	
-				b_tamazula_DU = {}
-				b_tepehuanes_DU = {}
-				b_la_luz_DU = {}
-				b_santiago_papasquiaro_DU = {}
 				b_santa_maria_del_oro_DU = {}
-				b_canelas_DU = {}
-				b_guanacevi_DU = {}
-				b_otaez_DU = {}
-			}
+				b_villa_hidalgo_DU = {}
+				b_inde_DU = {}
+				b_villa_ocampo_DU = {}
+				b_el_ciento_veinte_DU = {}
 
-		}
+			}
+			
+		} #End of d_tepehuan
 	}
 
 	k_rio_bravo = {
