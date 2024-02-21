@@ -111,7 +111,7 @@ narrative_event = {
 	}
 }
 
-# Informed about Restoration of Rome
+# Informed about Restoration of Mexico
 narrative_event = {
 	id = MXR.21
 	title = EVTNAMEMXR.21
@@ -135,7 +135,13 @@ narrative_event = {
 	option = {
 		name = EVTOPTAMXR.21
 		trigger = {
-			NOT = { has_landed_title = e_dixie }
+			NOT = { religion_group = mesoamerican_gods }
+		}
+	}
+	option = {
+		name = EVTOPTBMXR.21
+		trigger = {
+			religion_group = mesoamerican_gods
 		}
 	}
 }
@@ -220,7 +226,7 @@ narrative_event = {
 	is_triggered_only = yes
 	
 	option = {
-		name = EVTOPTAMXR.200
+		name = EVTOPTAMXR.210
 
 		if = {
 			limit = { religion = cristo_rey }
