@@ -97,7 +97,7 @@ narrative_event = {
 	id = disneymod.2
 	title = EVTNAME_disneys_america
 	desc = EVTDESC_haymarket
-	picture = GFX_event_normal_frame_war
+	picture = GFX_evt_colonial_america
 	border = GFX_event_narrative_frame_religion
 	
 	major = yes
@@ -119,6 +119,8 @@ narrative_event = {
 		93 = { # Disney's Americas
 			NOT = { owner = { religion = phantasmic } }
 		}
+
+		has_global_flag = christian_crusades_unlocked
 	}
 	
 	mean_time_to_happen = {

@@ -31,7 +31,7 @@ decisions = {
 				limit = { NOT = { religion_group = christian }	}
 				set_global_flag = no_more_cristiadas
 			}
-			narrative_event = { id = MXR.20 tooltip = EVTTOOLTIPLoR.20 }
+			narrative_event = { id = MXR.20 tooltip = EVTTOOLTIPMXR.20 }
 		}
 		ai_will_do = {
 			factor = 1
@@ -46,16 +46,13 @@ decisions = {
 		potential = {
 			is_adult = yes
 			prisoner = no
-			OR = {
-				has_landed_title = e_mexico
-				has_landed_title = k_mexico
-			}
+			has_landed_title = e_mexico
 			NOT = {
-				any_realm_character = {
+				any_vassal = {
 					trait = destapado
 				}
 			}
-			any_realm_character = {
+			any_vassal = {
 				trait = tapado
 			}
 		}
