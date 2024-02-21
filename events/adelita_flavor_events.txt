@@ -11,7 +11,7 @@
 namespace = adelita
 namespace = dorado
 
-# Adelita comes to the aid of her liege (from event 79010)
+# Adelita comes to the aid of her liege (from event 79010) - battle aftermath
 character_event = {
 	id = adelita.0  # Adelita defends liege
 	picture = GFX_evt_melee
@@ -33,7 +33,7 @@ character_event = {
 	}
 
 	option = {
-		name = adelita.0_OPTA
+		name = EVTOPTA_adelita0
 		custom_tooltip = { text = EVTOPTA_79000_TOOLTIP }
 		add_character_modifier = {
 			name = lucky_to_be_alive
@@ -44,7 +44,7 @@ character_event = {
 		trigger = { FROM = { has_character_flag = protected_liege } }
 	}
 	option = {
-		name = adelita.0_OPTB
+		name = EVTOPTB_adelita0
 		custom_tooltip = { text = EVTOPTA_79000_TOOLTIP }
 				
 		opinion = {
@@ -85,6 +85,7 @@ character_event = {
 	
 	trigger = {
 		OR = {
+			culture_group = norteno
 			religion = fidencista
 			is_member_of_any_warrior_lodge_trigger = yes
 		}
@@ -113,8 +114,8 @@ character_event = {
 	}
 
 	option = {
-		name = adelita.1_OPTA
-		custom_tooltip = { text = adelita.1_OPTA_TOOLTIP }
+		name = EVTOPTA_adelita1
+		custom_tooltip = { text = EVTOPTA_adelita1_TOOLTIP }
 
 		show_portrait = event_target:my_adelita
 
@@ -142,8 +143,8 @@ character_event = {
 	}
 	
 	option = {
-		name = adelita.2_OPTA
-		custom_tooltip = { text = adelita.2_OPTA_TOOLTIP }
+		name = EVTOPTA_adelita2
+		custom_tooltip = { text = EVTOPTA_adelita2_TOOLTIP }
 		add_blood_splatter_effect = yes
 		add_maimed_trait_effect = yes
 		hidden_tooltip = {
@@ -215,8 +216,8 @@ character_event = {
 	}
 	#Let my physician look at you
 	option = {
-		name = adelita.3_OPTA
-		custom_tooltip = { text = adelita.3_OPTA_TOOLTIP }
+		name = EVTOPTA_adelita3
+		custom_tooltip = { text = EVTOPTA_adelita3_TOOLTIP }
 		
 		tooltip = {
 			FROM = {
@@ -237,8 +238,8 @@ character_event = {
 
 	#You're amazing
 	option = {
-		name = adelita.3_OPTB
-		custom_tooltip = { text = adelita.3_OPTB_TOOLTIP }
+		name = EVTOPTB_adelita3
+		custom_tooltip = { text = EVTOPTB_adelita3_TOOLTIP }
 
 		tooltip = {
 			opinion = {
@@ -263,8 +264,8 @@ character_event = {
 
 	#You're the best adelita ever
 	option = {
-		name = adelita.3_OPTC
-		custom_tooltip = { text = adelita.3_OPTC_TOOLTIP }
+		name = EVTOPTC_adelita3
+		custom_tooltip = { text = EVTOPTC_adelita3_TOOLTIP }
 
 		tooltip = {
 			opinion = {
@@ -310,7 +311,7 @@ character_event = {
 	}
 	
 	option = {
-		name = adelita.4_OPTA
+		name = EVTOPTA_adelita4
 		
 		if = {
 			limit = { has_character_flag = was_diagnosed_lucky }
@@ -370,10 +371,10 @@ character_event = {
 	
 	trigger = {
 		event_target:my_adelita = {
-		is_alive = yes
-		prisoner = no
-		NOT = { trait = incapable }
-		trait = adelita
+			is_alive = yes
+			prisoner = no
+			NOT = { trait = incapable }
+			trait = adelita
 		}
 	}
 
@@ -392,8 +393,8 @@ character_event = {
 	
 	#Oooh, can I keep it?
 	option = {
-		name = adelita.5_OPTA
-		custom_tooltip = { text = adelita.5_OPTA_TOOLTIP }
+		name = EVTOPTA_adelita5
+		custom_tooltip = { text = EVTOPTA_adelita5_TOOLTIP }
 		
 		add_cat_effect = yes
 
@@ -410,8 +411,8 @@ character_event = {
 
 	#Adelita should keep it!
 	option = {
-		name = adelita.5_OPTB
-		custom_tooltip = { text = adelita.5_OPTB_TOOLTIP }
+		name = EVTOPTB_adelita5
+		custom_tooltip = { text = EVTOPTB_adelita5_TOOLTIP }
 
 		tooltip = {		
 			FROM = {
@@ -436,8 +437,8 @@ character_event = {
 
 	#Give it to my child!
 	option = {
-		name = adelita.5_OPTC
-		custom_tooltip = { text = adelita.5_OPTC_TOOLTIP }
+		name = EVTOPTC_adelita5
+		custom_tooltip = { text = EVTOPTC_adelita5_TOOLTIP }
 
 		random_child = {
 			show_scope_change = no
@@ -475,8 +476,8 @@ character_event = {
 
 	#Let it be
 	option = {
-		name = adelita.5_OPTD
-		custom_tooltip = { text = adelita.5_OPTD_TOOLTIP }
+		name = EVTOPTD_adelita5
+		custom_tooltip = { text = EVTOPTD_adelita5_TOOLTIP }
 		
 		tooltip = { add_friend = FROM }
 		tiered_prestige_reward_effect = yes
@@ -512,15 +513,15 @@ character_event = {
 	
 	option = {
 		name = { 
-			text = adelita.6_OPTA
+			text = EVTOPTA_adelita6
 			trigger = { has_character_flag = liege_took_cat }
 		}
 		name = { 
-			text = adelita.6_OPTB
+			text = EVTOPTB_adelita6
 			trigger = { has_character_flag = I_got_cat }
 		}
 		name = { 
-			text = adelita.6_OPTC
+			text = EVTOPTC_adelita6
 			trigger = { has_character_flag = no_cat }
 		}
 
@@ -555,7 +556,11 @@ character_event = {
 	is_triggered_only = yes
 	
 	trigger = {
-		religion = fidencista
+		OR = {
+			religion = fidencista
+			culture_group = norteno
+			trait = qab_votanzapatismo
+		}
 		trait = adelita
 
 		NOR = { 
@@ -579,7 +584,7 @@ character_event = {
 	}
 
 	option = { #I'll go rowing every morning	
-		name = adelita.7_OPTA
+		name = EVTOPTA_adelita7
 		random_list = {
 			50 = {
 				modifier = {
@@ -610,7 +615,7 @@ character_event = {
 	}
 
 	option = { #I'll take runs with my dog!
-		name = adelita.7_OPTB
+		name = EVTOPTB_adelita7
 		random_list = {
 			70 = {
 				modifier = {
@@ -645,7 +650,7 @@ character_event = {
 	}
 
 	option = { #Brand new armor is the way to go!
-		name = adelita.7_OPTC
+		name = EVTOPTC_adelita7
 		scaled_wealth = -0.4
 		add_character_modifier = {
 			name = fake_it_til_you_make_it
@@ -654,8 +659,8 @@ character_event = {
 	}
 	
 	option = {
-		name = adelita.7_OPTD
-		custom_tooltip = { text = adelita.7_OPTD_TOOLTIP }
+		name = EVTOPTD_adelita7
+		custom_tooltip = { text = EVTOPTD_adelita7 }
 	}
 }
 
@@ -681,11 +686,11 @@ character_event = {
 	
 	option = {
 		name = {
-			text = adelita.8_OPTA
+			text = EVTOPTA_adelita8
 			trigger = { has_character_modifier = pet_hunting_dog }
 		}
 		name = {
-			text = adelita.8_OPTB
+			text = EVTOPTB_adelita8
 			trigger = { NOT = { has_character_modifier = pet_hunting_dog } }
 		}
 		remove_character_modifier = lost_dog
@@ -703,6 +708,8 @@ character_event = {
 	
 	trigger = {
 		OR = {
+			culture_group = norteno
+			trait = qab_votanzapatismo
 			religion = fidencista
 			liege = { is_member_of_any_warrior_lodge_trigger = yes }
 		}
@@ -732,21 +739,21 @@ character_event = {
 	}
 
 	option = { #Throw my shield (defensive)
-		name = adelita.9_OPTA
-		custom_tooltip = { text = adelita.9_OPTA_TOOLTIP }
+		name = EVTOPTA_adelita9
+		custom_tooltip = { text = EVTOPTA_adelita9_TOOLTIP }
 		random_list = {
 			30 = {
 				good_soldier_outcome_score = yes
 				#success
 				hidden_tooltip = { change_martial = 1 }
 				set_character_flag = protected_liege
-				character_event = { id = adelita.10 tooltip = adelita.9_OPTA_TOOLTIP_1 } # decent outcome
+				character_event = { id = adelita.10 tooltip = EVTOPTA_adelita9_TOOLTIP_1 } # decent outcome
 			}
 			10 = {
 				bad_soldier_outcome_score = yes
 				#fail
 				set_character_flag = failed_to_protect_liege
-				character_event = { id = adelita.10 tooltip = adelita.9_OPTA_TOOLTIP_2 } # bad outcome
+				character_event = { id = adelita.10 tooltip = EVTOPTA_adelita9_TOOLTIP_2 } # bad outcome
 			}
 		}
 		ai_chance = {
@@ -783,7 +790,7 @@ character_event = {
 	}
 
 	option = { #Throw my spear (offensive)
-		name = adelita.9_OPTB
+		name = EVTOPTB_adelita9
 		custom_tooltip = { text = adelita.9_OPTB_TOOLTIP }
 		random_list = {
 			20 = {
@@ -791,13 +798,13 @@ character_event = {
 				#success
 				hidden_tooltip = { change_martial = 2 }
 				set_character_flag = protected_liege_well
-				character_event = { id = adelita.10 tooltip = adelita.9_OPTB_TOOLTIP_1 } # great outcome
+				character_event = { id = adelita.10 tooltip = EVTOPTB_adelita9_TOOLTIP_1 } # great outcome
 			}
 			20 = {
 				bad_soldier_outcome_score = yes
 				#fail
 				set_character_flag = failed_terribly_to_protect_liege
-				character_event = { id = adelita.10 tooltip = adelita.9_OPTB_TOOLTIP_2 } # terrible outcome
+				character_event = { id = adelita.10 tooltip = EVTOPTB_adelita9_TOOLTIP_2 } # terrible outcome
 			}
 		}
 
@@ -835,8 +842,8 @@ character_event = {
 	}
 
 	option = { # Let them die (betrayal!)
-		name = adelita.9_OPTC
-		custom_tooltip = { text = adelita.9_OPTC_TOOLTIP }
+		name = EVTOPTC_adelita9
+		custom_tooltip = { text = EVTOPTC_adelita9_TOOLTIP }
 		
 		random_list = {
 			10 = {
@@ -868,7 +875,7 @@ character_event = {
 				}
 
 				set_character_flag = liege_bites_the_dust
-				character_event = { id = adelita.11 tooltip = adelita.9_OPTC_TOOLTIP_1 } # liege is slain on the battlefield
+				character_event = { id = adelita.11 tooltip = EVTOPTC_adelita9_TOOLTIP_1 } # liege is slain on the battlefield
 			}
 
 			10 = {
@@ -917,7 +924,7 @@ character_event = {
 					event_target:my_liege = { martial = 20 }
 				}
 				set_character_flag = liege_is_confounded
-				character_event = { id = adelita.11 tooltip = adelita.9_OPTC_TOOLTIP_2 } # liege handles themselves well, survives
+				character_event = { id = adelita.11 tooltip = EVTOPTC_adelita9_TOOLTIP_2 } # liege handles themselves well, survives
 			}
 		}
 
@@ -1015,7 +1022,7 @@ character_event = {
 	}
 
 	option = { #I succeeded!
-		name = adelita.10_OPTA
+		name = EVTOPTA_adelita10
 
 		tooltip = {
 			event_target:my_liege = {
@@ -1032,8 +1039,8 @@ character_event = {
 	}
 
 	option = { #I failed - liege is maimed
-		name = adelita.10_OPTB
-		custom_tooltip = { text = adelita.10_OPTB_TOOLTIP }
+		name = EVTOPTB_adelita10
+		custom_tooltip = { text = EVTOPTB_adelita10_TOOLTIP }
 
 		tooltip = {
 			event_target:my_liege = {
@@ -1051,8 +1058,8 @@ character_event = {
 	}
 
 	option = { #I succeeded greatly!
-		name = adelita.10_OPTC
-		custom_tooltip = { text = adelita.10_OPTC_TOOLTIP }
+		name = EVTOPTC_adelita10
+		custom_tooltip = { text = EVTOPTC_adelita10_TOOLTIP }
 
 		tooltip = {
 			event_target:my_liege = {
@@ -1077,8 +1084,8 @@ character_event = {
 	}
 
 	option = { #I failed terribly!
-		name = adelita.10_OPTD
-		custom_tooltip = { text = adelita.10_OPTD_TOOLTIP }
+		name = EVTOPTD_adelita10
+		custom_tooltip = { text = EVTOPTD_adelita10_TOOLTIP }
 
 		tooltip = { 
 			add_maimed_trait_effect = yes
@@ -1111,7 +1118,7 @@ character_event = {
 	}
 
 	option = { #Success! They got hurt/died
-		name = adelita.11_OPTA
+		name = EVTOPTA_adelita11
 
 		tooltip = {
 			event_target:my_liege = {
@@ -1128,7 +1135,7 @@ character_event = {
 	}
 
 	option = { #I failed - I'm suspected of being a crappy soldadera
-		name = adelita.11_OPTB
+		name = EVTOPTB_adelita11
 
 		tooltip = {
 			add_character_modifier = {
@@ -1167,7 +1174,7 @@ character_event = {
 	}
 
 	option = { #I am killed on the battlefield - OH NOES
-		name = adelita.12_OPTA
+		name = EVTOPTA_adelita12
 
 		hidden_tooltip = { FROM = { clr_character_flag = liege_bites_the_dust } }
 
@@ -1179,7 +1186,7 @@ character_event = {
 	}
 
 	option = { # My Adelita is the worst bodyguard ever
-		name = adelita.12_OPTB
+		name = EVTOPTB_adelita12
 
 		FROM = {
 			show_scope_change = no
@@ -1223,8 +1230,8 @@ character_event = {
 
 
 	option = { #I am badly injured
-		name = adelita.13_OPTA
-		custom_tooltip = { text = adelita.13_OPTA_TOOLTIP }
+		name = EVTOPTA_adelita13
+		custom_tooltip = { text = EVTOPTA_adelita13_TOOLTIP }
 
 		add_maimed_trait_effect = yes
 		FROM = {
@@ -1244,8 +1251,8 @@ character_event = {
 	}
 
 	option = { # My adelita is injured
-		name = adelita.13_OPTB
-		custom_tooltip = { text = EVTOPTB_79013_TOOLTIP }
+		name = EVTOPTB_adelita13
+		custom_tooltip = { text = EVTOPTB_adelita13_TOOLTIP }
 
 		FROM = {
 			show_scope_change = no
@@ -1277,7 +1284,7 @@ character_event = {
 	is_triggered_only = yes
 	
 	option = { #heck yeah
-		name = adelita.20_OPTA
+		name = EVTOPTA_adelita20
 		set_character_flag = special_marshal		
 		add_trait = adelita
 
@@ -1297,8 +1304,8 @@ character_event = {
 		}
 	}
 	option = { #well, I don't wanna
-		name = adelita.20_OPTB
-		custom_tooltip = { text = adelita.20_OPTB_TOOLTIP }
+		name = EVTOPTB_adelita20
+		custom_tooltip = { text = EVTOPTB_adelita20_TOOLTIP }
 		hidden_tooltip = {
 			#FROM = {
 				add_character_modifier = {
@@ -1353,7 +1360,7 @@ character_event = {
 	is_triggered_only = yes
 	
 	option = {
-		name = adelita.21_OPTA
+		name = EVTOPTA_adelita21
 		hidden_tooltip = {
 			wealth = -50
 			prestige = 50
@@ -1371,7 +1378,7 @@ character_event = {
 	is_triggered_only = yes
 	
 	option = {
-		name = adelita.22_OPTA
+		name = EVTOPTA_adelita22
 	}
 }
 
@@ -1423,8 +1430,8 @@ character_event = {
 	}
 
 	option = { #I understand
-		name = adelita.23_OPTA
-		custom_tooltip = { text = adelita.23_OPTA_TOOLTIP }
+		name = EVTOPTA_adelita23
+		custom_tooltip = { text = EVTOPTA_adelita23_TOOLTIP }
 		
 		#hidden_tooltip = {
 			random_list = {
@@ -1549,10 +1556,7 @@ character_event = {
 	trigger = {
 		has_dlc = "Legacy of Rome"
 		in_command = no
-		OR = {
-			has_landed_title = e_mexico
-			has_landed_title = k_mexico
-		}
+		has_landed_title = e_mexico
 		capital_scope = { province_id = 496 }
 		any_vassal = {
 			has_landed_title = d_dorados
