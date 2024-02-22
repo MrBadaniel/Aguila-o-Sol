@@ -39,7 +39,13 @@ targetted_decisions = {
 		allow = {			
 			conditional_tooltip = {
 				trigger = {
-					FROM = { religion_openly_fidencista_trigger = yes }
+					FROM = { 
+						OR = {
+							religion = fidencista
+							trait = qab_votanzapatismo
+							trait = marian_santo_nino_fidencio			
+					 	}
+					}
 				}
 				martial = 10
 				custom_tooltip = {
@@ -229,7 +235,6 @@ targetted_decisions = {
 						has_minor_title = title_councilmember_emperor
 						has_minor_title = title_regent
 						has_claim = e_mexico
-						has_claim = k_mexico
 						family = FROM
 						is_powerful_vassal = yes
 					}
