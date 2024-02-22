@@ -280,11 +280,11 @@
 	name="Pinopiaa"
 	dynasty=1115031
 	female=yes
-	dna="a0bil0ggba0"
-	culture=cherokee
+	dna="0adcg0gc000"
+	culture=zapotec
 	religion=mictlantec
-	martial=7
-	diplomacy=7
+	martial=3
+	diplomacy=3
 	stewardship=4
 	intrigue=4
 	learning=1
@@ -295,12 +295,15 @@
 	trait=proud
 	trait=zealous
 	father=1325021
-	2645.11.28={
+	2648.11.28={
 		birth=yes
-		culture=zapotec
 	}
-	2662.1.2={effect={add_lover=1325051}}
-	2664.11.2={add_spouse=1325051}
+	2664.11.2={
+		add_spouse=1325051
+		effect = {
+			set_character_flag = pinopiaa
+		}
+	}
 	2706.6.3={death=yes}
 }
 
@@ -486,7 +489,7 @@
 1325051={
 	name="Diegu"
 	dynasty=1386001
-	dna="nejejjmccpc"
+	dna="bdckd0jl000"
 	culture=mixtec
 	religion=mictlantec
 	martial=4
@@ -499,8 +502,7 @@
 	trait=wroth
 	trait=honest
 	father=1325117
-	2643.6.24={birth=yes}
-	2662.1.2={effect={add_lover=1325022}}
+	2646.6.24={birth=yes}
 	2664.1.1={add_spouse=1325022}
 	2690.11.26={death=yes}
 }

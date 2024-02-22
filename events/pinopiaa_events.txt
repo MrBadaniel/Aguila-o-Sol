@@ -1,0 +1,96 @@
+# <event_type> = {
+#     #Basic event information
+#     id = pinopiaa.<id>
+#     desc = EVTDESCpinopiaa.<id>
+  
+#     #Fast event triggers
+#     only_playable = yes
+  
+#     trigger = {
+#       #Event eligibility condition block
+#       religion_group = pagan_group
+#     }
+#     mean_time_to_happen = {
+#       #Randomness of the event (not applicable for triggered-only events)
+#     }
+#     immediate = {
+#       #Command block executed once the target is eligible, but before displaying the event
+#     }
+#     option = {
+#       name = EVTOPTApinopiaa.<id>
+#       trigger = {
+#         #Option A eligibility condition block
+#       }
+#       ai_chance = {
+#         #Option A modifiers
+#       }
+#       #Option A command block
+#     }
+#     option = {
+#       name = EVTOPTBpinopiaa.<id>
+#       trigger = {
+#         #Option B eligibility condition block
+#       }
+#       ai_chance = {
+#         #Option B modifiers
+#       }
+#       #Option B command block
+#     }
+#     after = {
+#        #Command block executed after any option is chosen. It is the counterpart of the immediate block.
+#     }
+#   }
+
+namespace = pinopiaa
+
+narrative_event = {
+    #Basic event information
+    id = pinopiaa.1
+    title = EVTTITLE_pinopiaa_1
+    desc = EVTDESC_pinopiaa_1
+    picture = GFX_evt_woman_at_window_hf
+    frame = GFX_event_narrative_frame_intrigue
+
+    #Fast event triggers
+    only_playable = yes
+    has_character_flag = pinopiaa
+    prisoner = no
+    only_capable = yes
+
+    trigger = {
+        #Event eligibility condition block
+        c_1325117 = {
+			has_landed_title = d_mixteca
+		}
+    }
+
+    mean_time_to_happen = {
+        days = 1
+    }
+
+    option = {
+        name = EVTOPTA_pinopiaa_1
+        trigger = {
+        #Option A eligibility condition block
+        }
+        ai_chance = {
+        #Option A modifiers
+        }
+        #Option A command block
+    }
+    option = {
+        name = EVTOPTB_pinopiaa_1
+        trigger = {
+        #Option B eligibility condition block
+        }
+        ai_chance = {
+        #Option B modifiers
+        }
+        #Option B command block
+
+        custom_tooltip = { text = EVTOPTB_pinopiaa_1_TOOLTIP }
+    }
+    after = {
+        #Command block executed after any option is chosen. It is the counterpart of the immediate block.
+    }
+}
