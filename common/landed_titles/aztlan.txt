@@ -2585,50 +2585,7 @@ e_aztlan = {
 					yaqui = Wata
 				}
 			}
-			c_paso_del_norte = { # 800
-				color={ 200 109 128 }
-				color2={ 255 255 255 }
-				
-				holy_site = la_hermandad
-	
-				b_ciudad_juarez_CH = {
-				short_name = yes
-				
-					arixan = "Juarez City"
-					texan = "Juarez City"
-					czexan = "Juarez City"
-					texaner = "Juarez City"
-					valleyan = "Juarez City"
-					bayfolk = "Juarez City"	
-					yaqui = "Bwe’u jo’ara Jwarez"
-					chino = "Ciudad Juárez"
-					menomex = "Ciudad Juárez"
-					altiplanense = "Ciudad Juárez"
-					bravo = "Ciudad Juárez"
-					abajeno = "Ciudad Juárez"
-					chilango = "Ciudad Juárez"
-					tapatio = "Ciudad Juárez"
-					jarocho = "Ciudad Juárez"
-					yucatanense = "Ciudad Juárez"
-					choco = "Ciudad Juárez"
-					calentano = "Ciudad Juárez"
-					californiano = "Ciudad Juárez"
-					occidental = "Ciudad Juárez"					
-				}
-				b_samalayuca_CH = {}
-				b_villa_ahumada_CH = {
-					texan = "Ahumadaville"
-					czexan = "Ahumadaville"
-					texaner = "Ahumadaville"
-					arixan = "Ahumadaville"
-					valleyan = "Ahumadaville"
-					bayfolk = "Ahumadaville"				
-				}
-				b_anapra_CH = {}
-				b_san_isidro_CH = {}
-				b_sauzal_CH = {}	   
-				b_granjero_CH = {}
-			}
+			
 			c_guerrero = { # 802
 				color={ 137 118 128 }
 				color2={ 255 255 255 }
@@ -2704,31 +2661,161 @@ e_aztlan = {
 				b_san_francisco_del_oro_CH = {}
 				b_coronado_CH = {}
 			}
+		} #End of d_chihuahua #End of loc project...for now			
+		
+		d_llanuras_boreales = {
+			color = { 232 222 224 }
+			color2 = { 255 255 255 }
+			
+			capital = 2828 #Ojinaga
+			
+			
 			c_santa_elena = { # 803
 				color={ 155 112 109 }
 				color2={ 255 255 255 }
 	
 				plautdietsch = "Helena"
 	
-				b_carmargo_CH = {}
-				b_meoqui_CH = {}
-				b_santa_eulalia_CH = {}
-				b_san_francisco_de_conchos_CH = {
-					arixan = "San Francisco Conchos"
-					texan = "San Francisco Conchos"
-					czexan = "San Francisco Conchos"
-					texaner = "San Francisco Conchos"
-					valleyan = "San Francisco Conchos"
-					bayfolk = "San Francisco Conchos"					
-				}
-				b_coyame_CH = {}
-				b_julimes_CH = {}
 				b_manuel_benavides_CH = {}
-				b_ojinaga_CH = {}
+				b_el_oasis_CH = {}
+				b_santa_elena_CH = {}
+				b_alamos_de_san_antonio_CH = {}
+				b_paso_de_san_antonio_CH = {}
+				b_nuevo_lajitas_CH = {}
+				b_lajitas_CH = {}
+				
+			#	b_san_francisco_de_conchos_CH = {
+			#		arixan = "San Francisco Conchos"
+			#		texan = "San Francisco Conchos"
+			#		czexan = "San Francisco Conchos"
+			#		texaner = "San Francisco Conchos"
+			#		valleyan = "San Francisco Conchos"
+			#		bayfolk = "San Francisco Conchos"					
+			#	}
 			}
-		} #End of loc project...for now
-		
+			
+			c_aldama = { #2827
+				color = { 193 140 137 }
+				color2 = { 255 255 255 }
+				
+				b_juan_aldama_CH = {}
+				b_el_morrion_CH = {}
+				b_la_mesa_CH = {}
+				b_maclovio_herrera_CH = {}
+				b_el_pueblito_CH = {}
+				b_luis_l_leon_CH = {}
+				b_boquilla_tendida_CH = {}
+				b_emiliano_zapata_CH = {}
+			}
 
+			c_ojinaga = { #2828
+				color = { 234 187 197 }
+				color2 = { 255 255 255 }
+				
+				b_ojinaga_CH = {}
+				b_valverde_CH = {}
+				b_la_esmeralda_CH = {}
+				b_el_tecolote_CH = {}
+				b_saburniaga_CH = {}
+				b_santa_teresa_CH = {}
+				b_toribio_ortega_CH = {}
+				b_san_juan_CH = {}
+			}
+
+			c_coyame = { #2836
+				color = { 188 156 154 }
+				color2 = { 255 255 255 }
+				
+				b_coyame_CH = {}
+				b_la_paz_de_mexico_CH = {}
+				b_san_pedro_CH = {}
+				b_cuchillo_parado_CH = {}
+				b_santa_lucia_CH = {}
+				b_lomita_blanca_CH = {}
+				b_francisco_i_portillo_CH = {}
+			}
+		} #End of d_llanuras_boreales
+			
+		d_paso_del_norte = { 
+			color = { 196 166 173 }
+			color2 = { 255 255 255 }
+			
+			capital = 800 #Juarez
+			
+			c_paso_del_norte = { # 800
+					color={ 200 109 128 }
+					color2={ 255 255 255 }
+					
+					holy_site = la_hermandad
+		
+					b_anapra_CH = {}
+					b_ciudad_juarez_CH = {
+						short_name = yes
+					
+						arixan = "Juarez City"
+						texan = "Juarez City"
+						czexan = "Juarez City"
+						texaner = "Juarez City"
+						valleyan = "Juarez City"
+						bayfolk = "Juarez City"	
+						yaqui = "Bwe’u jo’ara Jwarez"
+						chino = "Ciudad Juárez"
+						menomex = "Ciudad Juárez"
+						altiplanense = "Ciudad Juárez"
+						bravo = "Ciudad Juárez"
+						abajeno = "Ciudad Juárez"
+						chilango = "Ciudad Juárez"
+						tapatio = "Ciudad Juárez"
+						jarocho = "Ciudad Juárez"
+						yucatanense = "Ciudad Juárez"
+						choco = "Ciudad Juárez"
+						calentano = "Ciudad Juárez"
+						californiano = "Ciudad Juárez"
+						occidental = "Ciudad Juárez"					
+					}
+					b_samalayuca_CH = {}
+					b_sauzal_CH = {}
+					b_san_isidro_CH = {}
+					b_resplandor_de_vida_CH = {}
+					b_granjero_CH = {}
+			}
+			
+			c_guadalupe_praxedis = { #2829
+				color = { 198 79 105 }
+				color2 = { 255 255 255 }
+				
+				b_guadalupe_CH = {}
+				b_praxedis_guerrero_CH = {}
+				b_porfirio_parra_CH = {}
+				b_juarez_y_reforma_CH = {}
+				b_barreales_CH = {}
+				b_rinconada_del_mimbre_CH = {}
+				b_vado_de_cedillos_CH = {}
+				b_el_porvenir_CH = {}
+			}
+			
+			c_ahumada = { #2830
+				color = { 198 43 77 }
+				color2 = { 255 255 255 }
+				
+				b_villa_ahumada_CH = {
+						texan = "Ahumadaville"
+						czexan = "Ahumadaville"
+						texaner = "Ahumadaville"
+						arixan = "Ahumadaville"
+						valleyan = "Ahumadaville"
+						bayfolk = "Ahumadaville"				
+				}
+				b_ojo_caliente_CH = {}
+				b_alamos_de_pena_CH = {}
+				b_kokopeli_CH = {}
+				b_san_lorencito_CH = {}
+				b_moctezuma_CH = {}
+				b_carrizal_CH = {}
+			}
+
+		} #End of d_paso_del_norte
+		
 		d_casas_altas = {
 			color={ 189 162 87 }
 			color2={ 255 255 255 }
