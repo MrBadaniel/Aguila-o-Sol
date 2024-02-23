@@ -43,13 +43,13 @@
 
 namespace = pinopiaa
 
+# overview - defy? y/n 
 narrative_event = {
-    #Basic event information
     id = pinopiaa.1
     title = EVTTITLE_pinopiaa_1
     desc = EVTDESC_pinopiaa_1
     picture = GFX_evt_woman_at_window_hf
-    frame = GFX_event_narrative_frame_intrigue
+    border = GFX_event_narrative_frame_intrigue
 
     #Fast event triggers
     only_playable = yes
@@ -58,10 +58,20 @@ narrative_event = {
     only_capable = yes
 
     trigger = {
-        #Event eligibility condition block
-        c_1325117 = {
-			has_landed_title = d_mixteca
-		}
+        OR = {
+            # FIL
+            c_1325117 = {
+                has_landed_title = d_mixteca
+            }
+            # Diegu
+            c_1325051 = {
+                has_landed_title = d_mixteca
+            }
+        }
+        # marriage still valid
+        c_1325051 = {
+            is_alive = yes
+        }
     }
 
     mean_time_to_happen = {
@@ -70,27 +80,280 @@ narrative_event = {
 
     option = {
         name = EVTOPTA_pinopiaa_1
-        trigger = {
-        #Option A eligibility condition block
-        }
+
         ai_chance = {
-        #Option A modifiers
+            factor = 10
         }
-        #Option A command block
+
+        hidden_tooltip = {
+			character_event = { id = pinopiaa.2 days = 1 }
+		}
+
+        add_trait = proud
+        piety = -20
+        clr_character_flag = pinopiaa
+        custom_tooltip = { text = EVTOPTA_pinopiaa_1_TOOLTIP }
     }
     option = {
         name = EVTOPTB_pinopiaa_1
-        trigger = {
-        #Option B eligibility condition block
-        }
-        ai_chance = {
-        #Option B modifiers
-        }
-        #Option B command block
 
+        ai_chance = {
+            factor = 1
+        }
+
+        add_trait = content
+        piety = 20
+        clr_character_flag = pinopiaa
         custom_tooltip = { text = EVTOPTB_pinopiaa_1_TOOLTIP }
     }
-    after = {
-        #Command block executed after any option is chosen. It is the counterpart of the immediate block.
+}
+
+# defy y - which path?
+narrative_event = {
+    id = pinopiaa.2
+    title = EVTTITLE_pinopiaa_2
+    picture = GFX_evt_recovery
+    border = GFX_event_narrative_frame_intrigue
+
+    desc = {
+        trigger = {
+            # FIL
+            c_1325117 = {
+                has_landed_title = d_mixteca
+            }
+        }
+        text = EVTDESC_pinopiaa_2_A
     }
+
+    desc = {
+        trigger = {
+            # Diegu
+            c_1325051 = {
+                has_landed_title = d_mixteca
+            }
+        }
+        text = EVTDESC_pinopiaa_2_B
+    }
+
+    is_triggered_only = yes
+
+    #Fast event triggers
+    only_playable = yes
+    prisoner = no
+    only_capable = yes
+
+    trigger = {
+        OR = {
+            # FIL
+            c_1325117 = {
+                has_landed_title = d_mixteca
+            }
+            # Diegu
+            c_1325051 = {
+                has_landed_title = d_mixteca
+            }
+        }
+        # marriage still valid
+        c_1325051 = {
+            is_alive = yes
+        }
+    }
+
+    # diplomacy path option
+    option = {
+        name = EVTOPTA_pinopiaa_2
+        tooltip_info = diplomacy
+
+        ai_chance = {
+            factor = 0.45
+        }
+
+        hidden_tooltip = {
+            set_character_flag = pinopiaa_diplomacy
+
+            d_puebla {
+                    holder_scope = { 
+                        character_event = { id = pinopiaa.3 days = 10 } 
+                        set_character_flag = pinopiaa_recieved_letter
+                    }
+            }
+		}
+
+        custom_tooltip = { text = EVTOPTA_pinopiaa_2_TOOLTIP }
+    }
+
+    # intrigue path option
+    option = {
+        name = EVTOPTB_pinopiaa_2
+        tooltip_info = intrigue
+
+        ai_chance = {
+            factor = 0.28
+        }
+
+        hidden_tooltip = {
+			character_event = { id = pinopiaa.9 days = 30 }
+		}
+
+        custom_tooltip = { text = EVTOPTB_pinopiaa_2_TOOLTIP }
+    }
+
+    # learning path option
+    option = {
+        name = EVTOPTC_pinopiaa_2
+        tooltip_info = learning
+
+        ai_chance = {
+            factor = 0.28
+        }
+
+        hidden_tooltip = {
+			character_event = { id = pinopiaa.15 days = 30 }
+		}
+
+        custom_tooltip = { text = EVTOPTC_pinopiaa_2_TOOLTIP }
+    }
+}
+
+########### diplomacy path events 3-8 #####################
+
+# letter to puebla
+letter_event = {
+    id = pinopiaa.3
+    title = EVTTITLE_pinopiaa_3
+    border = GFX_event_letter_frame_diplomacy
+    desc = EVTDESC_pinopitaa_3
+
+    is_triggered_only = yes
+
+    trigger = {
+        has_character_flag = pinopiaa_recieved_letter
+    }
+
+    # let's see if we can come to an agreement
+    option = {
+        name = EVTOPTA_pinopiaa_3
+
+        ai_chance = {
+            factor = 1
+        }
+
+        hidden_tooltip = {
+            FROM = {
+                character_event = { id = pinopiaa.5 days = 10 }
+            }
+        }
+        # custom_tooltip = { EVTOPTA_pinopiaa_3_TOOLTIP }
+        clr_character_flag = pinopiaa_recieved_letter
+    }
+
+    # no way
+    option = {
+        name = EVTOPTB_pinopiaa_3
+
+        ai_chance = {
+            factor = 0
+        }
+
+        hidden_tooltip = {
+            FROM = { 
+                character_event = { id = pinopiaa.4 days = 10 }
+            }
+        }
+        # custom_tooltip = { EVTOPTB_pinopiaa_3_TOOLTIP }
+        clr_character_flag = pinopiaa_recieved_letter
+    }
+
+}
+
+# deal declined by puebla
+letter_event = {
+    id = pinopiaa.4
+    # title = EVTTITLE_pinopiaa_4
+    desc = EVTDESC_pinopiaa_4
+    border = GFX_event_letter_frame_diplomacy
+
+    is_triggered_only = yes
+
+    trigger = {
+        OR = {
+            # FIL
+            c_1325117 = {
+                has_landed_title = d_mixteca
+            }
+            # Diegu
+            c_1325051 = {
+                has_landed_title = d_mixteca
+            }
+        }
+        # marriage still valid
+        c_1325051 = {
+            is_alive = yes
+        }
+        has_character_flag = pinopiaa_diplomacy
+    }
+
+    option = {
+        name = EVTOPTA_pinopiaa_4
+    }
+}
+
+
+# correspondence with lord of Puebla
+narrative_event = {
+    id = pinopiaa.5
+    title = EVTTITLE_pinopiaa_5
+    desc = EVTDESC_pinopiaa_5
+    picture = GFX_evt_book_carolingian_script_cm
+    border = GFX_event_narrative_frame_diplomacy
+
+    is_triggered_only = yes
+
+    trigger = {
+        OR = {
+            # FIL
+            c_1325117 = {
+                has_landed_title = d_mixteca
+            }
+            # Diegu
+            c_1325051 = {
+                has_landed_title = d_mixteca
+            }
+        }
+        # marriage still valid
+        c_1325051 = {
+            is_alive = yes
+        }
+        has_character_flag = pinopiaa_diplomacy
+    }
+
+    # these terms are agreeable
+    option = {
+        name = EVTOPTA_pinopiaa_5
+
+        ai_chance = {
+            factor = 0.55
+        }
+
+        hidden_tooltip = {
+            clr_character_flag = pinopiaa_diplomacy
+        }
+
+        set_character_flag = pinopiaa_secret_alliance_puebla
+
+        random_playable_ruler = { 
+            limit = { has_landed_title = d_puebla }
+            set_character_flag = pinopiaa_secret_alliance_oaxaca
+        }
+    }
+
+    # no thank you
+    option = {
+        name = EVTOPTB_pinopiaa_5
+
+        ai_chance = {
+            factor = 0.45
+        }
+    }
+
 }
