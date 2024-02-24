@@ -171,11 +171,23 @@ narrative_event = {
         hidden_tooltip = {
             set_character_flag = pinopiaa_diplomacy
 
+            # send out the letters
             d_puebla {
                     holder_scope = { 
-                        character_event = { id = pinopiaa.3 days = 10 } 
-                        set_character_flag = pinopiaa_recieved_letter
+                        set_character_flag = pinopiaa_puebla
                     }
+            }
+
+            d_morelos {
+                holder_scope = { 
+                    set_character_flag = pinopiaa_morelos
+                }
+            }
+
+            d_guerrero {
+                holder_scope = { 
+                    set_character_flag = pinopiaa_guerrero
+                }
             }
 		}
 
@@ -215,62 +227,97 @@ narrative_event = {
     }
 }
 
-########### diplomacy path events 3-8 #####################
+########### diplomacy path events 3-9 #####################
 
 # letter to puebla
 letter_event = {
     id = pinopiaa.3
     title = EVTTITLE_pinopiaa_3
     border = GFX_event_letter_frame_diplomacy
-    desc = EVTDESC_pinopitaa_3
+    desc = EVTDESC_pinopitaa_letter_proposal
+    portrait = c_1325022
 
-    is_triggered_only = yes
+
+    # is_triggered_only = yes
+
+    #Fast event triggers
+    only_playable = yes
+    has_character_flag = pinopiaa_puebla
+    prisoner = no
+    only_capable = yes
 
     trigger = {
-        has_character_flag = pinopiaa_recieved_letter
+        c_1325022 = {
+            has_character_flag = pinopiaa_diplomacy
+            NOT = { has_character_flag = pinopiaa_allies_correspondence }
+            NOT = { has_character_flag = pinopiaa_has_secret_ally }
+        }
+        OR = {
+            # FIL
+            c_1325117 = {
+                has_landed_title = d_mixteca
+            }
+            # Diegu
+            c_1325051 = {
+                has_landed_title = d_mixteca
+            }
+        }
+        # marriage still valid
+        c_1325051 = {
+            is_alive = yes
+        }
+    }
+
+    mean_time_to_happen = {
+        days = 100
     }
 
     # let's see if we can come to an agreement
     option = {
-        name = EVTOPTA_pinopiaa_3
+        name = EVTOPTA_pinopiaa_letter_accept
 
         ai_chance = {
             factor = 1
         }
 
         hidden_tooltip = {
-            FROM = {
+            c_1325022 = {
                 character_event = { id = pinopiaa.5 days = 10 }
             }
         }
-        # custom_tooltip = { EVTOPTA_pinopiaa_3_TOOLTIP }
-        clr_character_flag = pinopiaa_recieved_letter
+        clr_character_flag = pinopiaa_puebla
+        tooltip_info_custom  = EVTOPTA_pinopiaa_3_TOOLTIP
     }
 
     # no way
     option = {
-        name = EVTOPTB_pinopiaa_3
+        name = EVTOPTA_pinopiaa_letter_reject
 
         ai_chance = {
             factor = 0
         }
 
+        modifier = {
+            factor = 100
+            has_landed_title = d_mixteca_poblana
+        }
+
         hidden_tooltip = {
-            FROM = { 
+            c_1325022 = { 
                 character_event = { id = pinopiaa.4 days = 10 }
             }
         }
-        # custom_tooltip = { EVTOPTB_pinopiaa_3_TOOLTIP }
-        clr_character_flag = pinopiaa_recieved_letter
+        clr_character_flag = pinopiaa_puebla
+        custom_tooltip = { text = EVTOPTB_pinopiaa_letter_reject_TOOLTIP }
     }
 
 }
 
-# deal declined by puebla
+# deal declined
 letter_event = {
     id = pinopiaa.4
     # title = EVTTITLE_pinopiaa_4
-    desc = EVTDESC_pinopiaa_4
+    desc = EVTDESC_pinopiaa_reject
     border = GFX_event_letter_frame_diplomacy
 
     is_triggered_only = yes
@@ -294,7 +341,7 @@ letter_event = {
     }
 
     option = {
-        name = EVTOPTA_pinopiaa_4
+        name = EVTDESC_pinopiaa_reject_response
     }
 }
 
@@ -304,7 +351,7 @@ narrative_event = {
     id = pinopiaa.5
     title = EVTTITLE_pinopiaa_5
     desc = EVTDESC_pinopiaa_5
-    picture = GFX_evt_book_carolingian_script_cm
+    picture = GFX_evt_princess_byzantine
     border = GFX_event_narrative_frame_diplomacy
 
     is_triggered_only = yes
@@ -325,6 +372,11 @@ narrative_event = {
             is_alive = yes
         }
         has_character_flag = pinopiaa_diplomacy
+        NOT = { has_character_flag = pinopiaa_exhausted_alliances_all }
+    }
+
+    immediate = {
+        set_character_flag = pinopiaa_allies_correspondence
     }
 
     # these terms are agreeable
@@ -337,14 +389,19 @@ narrative_event = {
 
         hidden_tooltip = {
             clr_character_flag = pinopiaa_diplomacy
+            clr_character_flag = pinopiaa_exhausted_alliances_1
+            clr_character_flag = pinopiaa_exhausted_alliances_2
+            clr_character_flag = pinopiaa_exhausted_alliances_3
+            
+            FROM = {
+                set_character_flag = pinopiaa_secret_alliance_oaxaca
+            }
         }
 
         set_character_flag = pinopiaa_secret_alliance_puebla
+        set_character_flag = pinopiaa_has_secret_ally
 
-        random_playable_ruler = { 
-            limit = { has_landed_title = d_puebla }
-            set_character_flag = pinopiaa_secret_alliance_oaxaca
-        }
+        custom_tooltip = { text = EVTOPTA_pinopiaa_5_TOOLTIP }
     }
 
     # no thank you
@@ -354,6 +411,409 @@ narrative_event = {
         ai_chance = {
             factor = 0.45
         }
+
+        # if = {
+        #     limit = {
+        #         has_character_flag = pinopiaa_exhausted_alliances_3
+        #     }
+        #     tooltip_info_custom = EVTOPT_pinopiaa_last_chance
+        #     set_character_flag = pinopiaa_exhausted_alliances_all
+        # }
+        if = {
+            limit = {
+                has_character_flag = pinopiaa_exhausted_alliances_1
+            }
+            clr_character_flag = pinopiaa_exhausted_alliances_1
+            set_character_flag = pinopiaa_exhausted_alliances_2
+        }
+        else_if = {
+            limit = {
+                has_character_flag = pinopiaa_exhausted_alliances_2
+            }
+            clr_character_flag = pinopiaa_exhausted_alliances_2
+            # set_character_flag = pinopiaa_exhausted_alliances_3
+            tooltip_info_custom = EVTOPT_pinopiaa_last_chance
+            set_character_flag = pinopiaa_exhausted_alliances_all
+            clr_character_flag = pinopiaa_diplomacy
+        }
+        else = {
+            set_character_flag = pinopiaa_exhausted_alliances_1
+        }
+        custom_tooltip = { text = EVTOPTB_pinopiaa_5_TOOLTIP }
     }
 
+    after = {
+        clr_character_flag = pinopiaa_allies_correspondence
+    }
+}
+
+# letter to Morelos
+letter_event = {
+    id = pinopiaa.6
+    title = EVTTITLE_pinopiaa_3
+    border = GFX_event_letter_frame_diplomacy
+    desc = EVTDESC_pinopitaa_letter_proposal
+    portrait = c_1325022
+
+
+    # is_triggered_only = yes
+
+    #Fast event triggers
+    only_playable = yes
+    has_character_flag = pinopiaa_morelos
+    prisoner = no
+    only_capable = yes
+
+    trigger = {
+        c_1325022 = {
+            has_character_flag = pinopiaa_diplomacy
+            NOT = { has_character_flag = pinopiaa_allies_correspondence }
+            NOT = { has_character_flag = pinopiaa_has_secret_ally }
+        }
+        OR = {
+            # FIL
+            c_1325117 = {
+                has_landed_title = d_mixteca
+            }
+            # Diegu
+            c_1325051 = {
+                has_landed_title = d_mixteca
+            }
+        }
+        # marriage still valid
+        c_1325051 = {
+            is_alive = yes
+        }
+    }
+
+    mean_time_to_happen = {
+        days = 100
+    }
+
+    # let's see if we can come to an agreement
+    option = {
+        name = EVTOPTA_pinopiaa_letter_accept
+
+        ai_chance = {
+            factor = 1
+        }
+
+        hidden_tooltip = {
+            c_1325022 = {
+                character_event = { id = pinopiaa.7 days = 10 }
+            }
+        }
+        clr_character_flag = pinopiaa_morelos
+        tooltip_info_custom  = EVTOPTA_pinopiaa_3_TOOLTIP
+    }
+
+    # no way
+    option = {
+        name = EVTOPTB_pinopiaa_letter_reject
+
+        ai_chance = {
+            factor = 0
+        }
+
+        hidden_tooltip = {
+            c_1325022 = { 
+                character_event = { id = pinopiaa.4 days = 10 }
+            }
+        }
+        clr_character_flag = pinopiaa_morelos
+        custom_tooltip = { text = EVTOPTB_pinopiaa_letter_reject_TOOLTIP }
+    }
+
+}
+
+# correspondence with lord of Morelos
+narrative_event = {
+    id = pinopiaa.7
+    title = EVTTITLE_pinopiaa_7
+    desc = EVTDESC_pinopiaa_7
+    picture = GFX_evt_princess_byzantine
+    border = GFX_event_narrative_frame_diplomacy
+
+    is_triggered_only = yes
+
+    trigger = {
+        OR = {
+            # FIL
+            c_1325117 = {
+                has_landed_title = d_mixteca
+            }
+            # Diegu
+            c_1325051 = {
+                has_landed_title = d_mixteca
+            }
+        }
+        # marriage still valid
+        c_1325051 = {
+            is_alive = yes
+        }
+        has_character_flag = pinopiaa_diplomacy
+        NOT = { has_character_flag = pinopiaa_exhausted_alliances_all }
+    }
+
+    immediate = {
+        set_character_flag = pinopiaa_allies_correspondence
+    }
+
+    # these terms are agreeable
+    option = {
+        name = EVTOPTA_pinopiaa_7
+
+        ai_chance = {
+            factor = 0.55
+        }
+
+        hidden_tooltip = {
+            clr_character_flag = pinopiaa_diplomacy
+            clr_character_flag = pinopiaa_exhausted_alliances_1
+            clr_character_flag = pinopiaa_exhausted_alliances_2
+            clr_character_flag = pinopiaa_exhausted_alliances_3
+
+            # Apply negative effects on Pinopiaa's realm
+            effect = {
+                every_realm_province = {
+                    random_province = {
+                        limit = {
+                            NOT = { is_capital = yes }
+                        }
+                        add_province_modifier = {
+                            name = trade_disruption
+                            duration = 365 # Adjust the duration as needed
+                        }
+                    }
+                }
+        }
+            
+            FROM = {
+                set_character_flag = pinopiaa_secret_alliance_oaxaca
+            }
+        }
+
+        set_character_flag = pinopiaa_secret_alliance_morelos
+        set_character_flag = pinopiaa_has_secret_ally
+
+        custom_tooltip = { text = EVTOPTA_pinopiaa_7_TOOLTIP }
+    }
+
+    # no thank you
+    option = {
+        name = EVTOPTB_pinopiaa_7
+
+        ai_chance = {
+            factor = 0.45
+        }
+
+        # if = {
+        #     limit = {
+        #         has_character_flag = pinopiaa_exhausted_alliances_3
+        #     }
+        #     tooltip_info_custom = EVTOPT_pinopiaa_last_chance
+        #     set_character_flag = pinopiaa_exhausted_alliances_all
+        # }
+        if = {
+            limit = {
+                has_character_flag = pinopiaa_exhausted_alliances_1
+            }
+            clr_character_flag = pinopiaa_exhausted_alliances_1
+            set_character_flag = pinopiaa_exhausted_alliances_2
+        }
+        else_if = {
+            limit = {
+                has_character_flag = pinopiaa_exhausted_alliances_2
+            }
+            clr_character_flag = pinopiaa_exhausted_alliances_2
+            # set_character_flag = pinopiaa_exhausted_alliances_3
+            tooltip_info_custom = EVTOPT_pinopiaa_last_chance
+            set_character_flag = pinopiaa_exhausted_alliances_all
+            clr_character_flag = pinopiaa_diplomacy
+        }
+        else = {
+            set_character_flag = pinopiaa_exhausted_alliances_1
+        }
+        custom_tooltip = { text = EVTOPTB_pinopiaa_7_TOOLTIP }
+    }
+
+    after = {
+        clr_character_flag = pinopiaa_allies_correspondence
+    }
+}
+
+# letter to Guerrero
+letter_event = {
+    id = pinopiaa.8
+    border = GFX_event_letter_frame_diplomacy
+    desc = EVTDESC_pinopitaa_letter_proposal_guerrero
+    portrait = c_1325022
+
+
+    # is_triggered_only = yes
+
+    #Fast event triggers
+    only_playable = yes
+    has_character_flag = pinopiaa_guerrero
+    prisoner = no
+    only_capable = yes
+
+    trigger = {
+        c_1325022 = {
+            has_character_flag = pinopiaa_diplomacy
+            NOT = { has_character_flag = pinopiaa_allies_correspondence }
+            NOT = { has_character_flag = pinopiaa_has_secret_ally }
+        }
+        OR = {
+            # FIL
+            c_1325117 = {
+                has_landed_title = d_mixteca
+            }
+            # Diegu
+            c_1325051 = {
+                has_landed_title = d_mixteca
+            }
+        }
+        # marriage still valid
+        c_1325051 = {
+            is_alive = yes
+        }
+    }
+
+    mean_time_to_happen = {
+        days = 120
+    }
+
+    # let's see if we can come to an agreement
+    option = {
+        name = EVTOPTA_pinopiaa_letter_accept
+
+        ai_chance = {
+            factor = 1
+        }
+
+        hidden_tooltip = {
+            c_1325022 = {
+                character_event = { id = pinopiaa.9 days = 10 }
+            }
+        }
+        clr_character_flag = pinopiaa_guerrero
+        tooltip_info_custom  = EVTOPTA_pinopiaa_8_TOOLTIP
+    }
+
+    # no way
+    option = {
+        name = EVTOPTA_pinopiaa_letter_reject_guerrero
+
+        ai_chance = {
+            factor = 0
+        }
+
+        hidden_tooltip = {
+            c_1325022 = { 
+                character_event = { id = pinopiaa.4 days = 10 }
+            }
+        }
+        clr_character_flag = pinopiaa_guerrero
+        custom_tooltip = { text = EVTOPTB_pinopiaa_letter_reject_TOOLTIP }
+    }
+
+}
+
+# correspondence with lord of Guerrero
+narrative_event = {
+    id = pinopiaa.9
+    title = EVTTITLE_pinopiaa_9
+    desc = EVTDESC_pinopiaa_9
+    picture = GFX_evt_princess_byzantine
+    border = GFX_event_narrative_frame_diplomacy
+
+    is_triggered_only = yes
+
+    trigger = {
+        OR = {
+            # FIL
+            c_1325117 = {
+                has_landed_title = d_mixteca
+            }
+            # Diegu
+            c_1325051 = {
+                has_landed_title = d_mixteca
+            }
+        }
+        # marriage still valid
+        c_1325051 = {
+            is_alive = yes
+        }
+        has_character_flag = pinopiaa_diplomacy
+        NOT = { has_character_flag = pinopiaa_exhausted_alliances_all }
+    }
+
+    immediate = {
+        set_character_flag = pinopiaa_allies_correspondence
+    }
+
+    # these terms are agreeable
+    option = {
+        name = EVTOPTA_pinopiaa_9
+
+        ai_chance = {
+            factor = 0.55
+        }
+
+        hidden_tooltip = {
+            clr_character_flag = pinopiaa_diplomacy
+            
+            FROM = {
+                set_character_flag = pinopiaa_secret_alliance_oaxaca
+            }
+        }
+
+        set_character_flag = pinopiaa_secret_alliance_guerrero
+        set_character_flag = pinopiaa_has_secret_ally
+
+        custom_tooltip = { text = EVTOPTA_pinopiaa_9_TOOLTIP }
+    }
+
+    # no thank you
+    option = {
+        name = EVTOPTB_pinopiaa_9
+
+        ai_chance = {
+            factor = 0.45
+        }
+
+        # if = {
+        #     limit = {
+        #         has_character_flag = pinopiaa_exhausted_alliances_3
+        #     }
+        #     tooltip_info_custom = EVTOPT_pinopiaa_last_chance
+        #     set_character_flag = pinopiaa_exhausted_alliances_all
+        # }
+        if = {
+            limit = {
+                has_character_flag = pinopiaa_exhausted_alliances_1
+            }
+            clr_character_flag = pinopiaa_exhausted_alliances_1
+            set_character_flag = pinopiaa_exhausted_alliances_2
+        }
+        else_if = {
+            limit = {
+                has_character_flag = pinopiaa_exhausted_alliances_2
+            }
+            clr_character_flag = pinopiaa_exhausted_alliances_2
+            # set_character_flag = pinopiaa_exhausted_alliances_3
+            tooltip_info_custom = EVTOPT_pinopiaa_last_chance
+            set_character_flag = pinopiaa_exhausted_alliances_all
+            clr_character_flag = pinopiaa_diplomacy
+        }
+        else = {
+            set_character_flag = pinopiaa_exhausted_alliances_1
+        }
+        custom_tooltip = { text = EVTOPTB_pinopiaa_9_TOOLTIP }
+    }
+
+    after = {
+        clr_character_flag = pinopiaa_allies_correspondence
+    }
 }
