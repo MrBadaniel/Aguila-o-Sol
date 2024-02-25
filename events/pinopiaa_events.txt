@@ -189,6 +189,12 @@ narrative_event = {
                     set_character_flag = pinopiaa_guerrero
                 }
             }
+
+            d_tabasco {
+                holder_scope = { 
+                    set_character_flag = pinopiaa_tabasco
+                }
+            }
 		}
 
         custom_tooltip = { text = EVTOPTA_pinopiaa_2_TOOLTIP }
@@ -269,7 +275,7 @@ letter_event = {
     }
 
     mean_time_to_happen = {
-        days = 100
+        days = 50
     }
 
     # let's see if we can come to an agreement
@@ -412,34 +418,37 @@ narrative_event = {
             factor = 0.45
         }
 
-        # if = {
-        #     limit = {
-        #         has_character_flag = pinopiaa_exhausted_alliances_3
-        #     }
-        #     tooltip_info_custom = EVTOPT_pinopiaa_last_chance
-        #     set_character_flag = pinopiaa_exhausted_alliances_all
-        # }
         if = {
-            limit = {
-                has_character_flag = pinopiaa_exhausted_alliances_1
-            }
-            clr_character_flag = pinopiaa_exhausted_alliances_1
-            set_character_flag = pinopiaa_exhausted_alliances_2
-        }
-        else_if = {
-            limit = {
-                has_character_flag = pinopiaa_exhausted_alliances_2
-            }
-            clr_character_flag = pinopiaa_exhausted_alliances_2
-            # set_character_flag = pinopiaa_exhausted_alliances_3
-            tooltip_info_custom = EVTOPT_pinopiaa_last_chance
+            limit = { has_character_flag = pinopiaa_exhausted_alliances_3 }
+            clr_character_flag =  pinopiaa_exhausted_alliances_3
             set_character_flag = pinopiaa_exhausted_alliances_all
+
+            custom_tooltip = { text = EVTOPT_pinopiaa_last_chance }
+
             clr_character_flag = pinopiaa_diplomacy
         }
+
+        else_if = {
+            limit = { has_character_flag = pinopiaa_exhausted_alliances_2 }
+            clr_character_flag = pinopiaa_exhausted_alliances_2
+            set_character_flag = pinopiaa_exhausted_alliances_3
+
+            custom_tooltip = { text = EVTOPTB_pinopiaa_5_TOOLTIP }
+        }
+
+        else_if = {
+            limit = { has_character_flag = pinopiaa_exhausted_alliances_1 }
+            clr_character_flag = pinopiaa_exhausted_alliances_1
+            set_character_flag = pinopiaa_exhausted_alliances_2
+
+            custom_tooltip = { text = EVTOPTB_pinopiaa_5_TOOLTIP }
+        }
+
         else = {
             set_character_flag = pinopiaa_exhausted_alliances_1
+
+            custom_tooltip = { text = EVTOPTB_pinopiaa_5_TOOLTIP }
         }
-        custom_tooltip = { text = EVTOPTB_pinopiaa_5_TOOLTIP }
     }
 
     after = {
@@ -487,7 +496,7 @@ letter_event = {
     }
 
     mean_time_to_happen = {
-        days = 100
+        days = 50
     }
 
     # let's see if we can come to an agreement
@@ -567,6 +576,20 @@ narrative_event = {
             factor = 0.55
         }
 
+        wealth = -150
+
+        every_realm_province = {
+            random_province = {
+                limit = {
+                    NOT = { is_capital = yes }
+                }
+                add_province_modifier = {
+                    name = trade_disruption
+                    duration = 365 # Adjust the duration as needed
+                }
+            }
+        }
+
         hidden_tooltip = {
             clr_character_flag = pinopiaa_diplomacy
             clr_character_flag = pinopiaa_exhausted_alliances_1
@@ -607,34 +630,37 @@ narrative_event = {
             factor = 0.45
         }
 
-        # if = {
-        #     limit = {
-        #         has_character_flag = pinopiaa_exhausted_alliances_3
-        #     }
-        #     tooltip_info_custom = EVTOPT_pinopiaa_last_chance
-        #     set_character_flag = pinopiaa_exhausted_alliances_all
-        # }
         if = {
-            limit = {
-                has_character_flag = pinopiaa_exhausted_alliances_1
-            }
-            clr_character_flag = pinopiaa_exhausted_alliances_1
-            set_character_flag = pinopiaa_exhausted_alliances_2
-        }
-        else_if = {
-            limit = {
-                has_character_flag = pinopiaa_exhausted_alliances_2
-            }
-            clr_character_flag = pinopiaa_exhausted_alliances_2
-            # set_character_flag = pinopiaa_exhausted_alliances_3
-            tooltip_info_custom = EVTOPT_pinopiaa_last_chance
+            limit = { has_character_flag = pinopiaa_exhausted_alliances_3 }
+            clr_character_flag =  pinopiaa_exhausted_alliances_3
             set_character_flag = pinopiaa_exhausted_alliances_all
+
+            custom_tooltip = { text = EVTOPT_pinopiaa_last_chance }
+
             clr_character_flag = pinopiaa_diplomacy
         }
+
+        else_if = {
+            limit = { has_character_flag = pinopiaa_exhausted_alliances_2 }
+            clr_character_flag = pinopiaa_exhausted_alliances_2
+            set_character_flag = pinopiaa_exhausted_alliances_3
+
+            custom_tooltip = { text = EVTOPTB_pinopiaa_7_TOOLTIP }
+        }
+
+        else_if = {
+            limit = { has_character_flag = pinopiaa_exhausted_alliances_1 }
+            clr_character_flag = pinopiaa_exhausted_alliances_1
+            set_character_flag = pinopiaa_exhausted_alliances_2
+
+            custom_tooltip = { text = EVTOPTB_pinopiaa_7_TOOLTIP }
+        }
+
         else = {
             set_character_flag = pinopiaa_exhausted_alliances_1
+
+            custom_tooltip = { text = EVTOPTB_pinopiaa_7_TOOLTIP }
         }
-        custom_tooltip = { text = EVTOPTB_pinopiaa_7_TOOLTIP }
     }
 
     after = {
@@ -681,7 +707,7 @@ letter_event = {
     }
 
     mean_time_to_happen = {
-        days = 120
+        days = 70
     }
 
     # let's see if we can come to an agreement
@@ -783,34 +809,252 @@ narrative_event = {
             factor = 0.45
         }
 
-        # if = {
-        #     limit = {
-        #         has_character_flag = pinopiaa_exhausted_alliances_3
-        #     }
-        #     tooltip_info_custom = EVTOPT_pinopiaa_last_chance
-        #     set_character_flag = pinopiaa_exhausted_alliances_all
-        # }
         if = {
-            limit = {
-                has_character_flag = pinopiaa_exhausted_alliances_1
-            }
-            clr_character_flag = pinopiaa_exhausted_alliances_1
-            set_character_flag = pinopiaa_exhausted_alliances_2
-        }
-        else_if = {
-            limit = {
-                has_character_flag = pinopiaa_exhausted_alliances_2
-            }
-            clr_character_flag = pinopiaa_exhausted_alliances_2
-            # set_character_flag = pinopiaa_exhausted_alliances_3
-            tooltip_info_custom = EVTOPT_pinopiaa_last_chance
+            limit = { has_character_flag = pinopiaa_exhausted_alliances_3 }
+            clr_character_flag =  pinopiaa_exhausted_alliances_3
             set_character_flag = pinopiaa_exhausted_alliances_all
+
+            custom_tooltip = { text = EVTOPT_pinopiaa_last_chance }
+
             clr_character_flag = pinopiaa_diplomacy
         }
+
+        else_if = {
+            limit = { has_character_flag = pinopiaa_exhausted_alliances_2 }
+            clr_character_flag = pinopiaa_exhausted_alliances_2
+            set_character_flag = pinopiaa_exhausted_alliances_3
+
+            custom_tooltip = { text = EVTOPTB_pinopiaa_9_TOOLTIP }
+        }
+
+        else_if = {
+            limit = { has_character_flag = pinopiaa_exhausted_alliances_1 }
+            clr_character_flag = pinopiaa_exhausted_alliances_1
+            set_character_flag = pinopiaa_exhausted_alliances_2
+
+            custom_tooltip = { text = EVTOPTB_pinopiaa_9_TOOLTIP }
+        }
+
         else = {
             set_character_flag = pinopiaa_exhausted_alliances_1
+
+            custom_tooltip = { text = EVTOPTB_pinopiaa_9_TOOLTIP }
         }
-        custom_tooltip = { text = EVTOPTB_pinopiaa_9_TOOLTIP }
+    }
+
+    after = {
+        clr_character_flag = pinopiaa_allies_correspondence
+    }
+}
+
+# letter to tabasco
+letter_event = {
+    id = pinopiaa.10
+    title = EVTTITLE_pinopiaa_10
+    border = GFX_event_letter_frame_diplomacy
+    desc = EVTDESC_pinopitaa_letter_proposal
+    portrait = c_1325022
+
+
+    # is_triggered_only = yes
+
+    #Fast event triggers
+    only_playable = yes
+    has_character_flag = pinopiaa_tabasco
+    prisoner = no
+    only_capable = yes
+
+    trigger = {
+        c_1325022 = {
+            has_character_flag = pinopiaa_diplomacy
+            NOT = { has_character_flag = pinopiaa_allies_correspondence }
+            NOT = { has_character_flag = pinopiaa_has_secret_ally }
+        }
+        OR = {
+            # FIL
+            c_1325117 = {
+                has_landed_title = d_mixteca
+            }
+            # Diegu
+            c_1325051 = {
+                has_landed_title = d_mixteca
+            }
+        }
+        # marriage still valid
+        c_1325051 = {
+            is_alive = yes
+        }
+        NOT = {
+            e_mexico = {
+                holder_scope = {
+                    is_liege_of = ROOT
+                }
+            }
+        }
+    }
+
+    mean_time_to_happen = {
+        days = 70
+    }
+
+    # let's see if we can come to an agreement
+    option = {
+        name = EVTOPTA_pinopiaa_letter_accept
+
+        ai_chance = {
+            factor = 1
+        }
+
+        hidden_tooltip = {
+            c_1325022 = {
+                character_event = { id = pinopiaa.11 days = 10 }
+            }
+        }
+        clr_character_flag = pinopiaa_tabasco
+        tooltip_info_custom  = EVTOPTA_pinopiaa_10_TOOLTIP
+    }
+
+    # no way
+    option = {
+        name = EVTOPTA_pinopiaa_letter_reject
+
+        ai_chance = {
+            factor = 0
+        }
+
+        modifier = {
+            factor = 100
+            NOT = { 
+                d_istmo = {
+                    holder_scope = {
+                        pays_tribute_to = c_1325022
+                    }
+                }
+             }
+        }
+
+        hidden_tooltip = {
+            c_1325022 = { 
+                character_event = { id = pinopiaa.4 days = 10 }
+            }
+        }
+        clr_character_flag = pinopiaa_puebla
+        custom_tooltip = { text = EVTOPTB_pinopiaa_letter_reject_TOOLTIP }
+    }
+
+}
+
+# correspondence with lady of tabasco
+narrative_event = {
+    id = pinopiaa.11
+    title = EVTTITLE_pinopiaa_11
+    desc = EVTDESC_pinopiaa_11
+    picture = GFX_evt_princess_byzantine
+    border = GFX_event_narrative_frame_diplomacy
+
+    is_triggered_only = yes
+
+    trigger = {
+        OR = {
+            # FIL
+            c_1325117 = {
+                has_landed_title = d_mixteca
+            }
+            # Diegu
+            c_1325051 = {
+                has_landed_title = d_mixteca
+            }
+        }
+        # marriage still valid
+        c_1325051 = {
+            is_alive = yes
+        }
+        has_character_flag = pinopiaa_diplomacy
+        NOT = { has_character_flag = pinopiaa_exhausted_alliances_all }
+    }
+
+    immediate = {
+        set_character_flag = pinopiaa_allies_correspondence
+    }
+
+    # these terms are agreeable
+    option = {
+        name = EVTOPTA_pinopiaa_11
+
+        trigger = {
+            d_istmo = {
+                holder_scope = {
+                    pays_tribute_to = c_1325022
+                }
+            }
+        }
+
+        ai_chance = {
+            factor = 0.55
+        }
+
+        hidden_tooltip = {
+            clr_character_flag = pinopiaa_diplomacy
+            
+            FROM = {
+                set_character_flag = pinopiaa_secret_alliance_oaxaca
+            }
+        }
+
+        set_character_flag = pinopiaa_secret_alliance_tabasco
+        set_character_flag = pinopiaa_has_secret_ally
+
+        remove_tributary = d_istmo
+
+        FROM = {
+            make_tributary = {
+                who = d_istmo = { holder_scope }
+                percentage = 0.40
+            }
+        }
+
+        custom_tooltip = { text = EVTOPTA_pinopiaa_11_TOOLTIP }
+    }
+
+    # no thank you
+    option = {
+        name = EVTOPTB_pinopiaa_9
+
+        ai_chance = {
+            factor = 0.45
+        }
+
+        if = {
+            limit = { has_character_flag = pinopiaa_exhausted_alliances_3 }
+            clr_character_flag =  pinopiaa_exhausted_alliances_3
+            set_character_flag = pinopiaa_exhausted_alliances_all
+
+            custom_tooltip = { text = EVTOPT_pinopiaa_last_chance }
+
+            clr_character_flag = pinopiaa_diplomacy
+        }
+
+        else_if = {
+            limit = { has_character_flag = pinopiaa_exhausted_alliances_2 }
+            clr_character_flag = pinopiaa_exhausted_alliances_2
+            set_character_flag = pinopiaa_exhausted_alliances_3
+
+            custom_tooltip = { text = EVTOPTB_pinopiaa_11_TOOLTIP }
+        }
+
+        else_if = {
+            limit = { has_character_flag = pinopiaa_exhausted_alliances_1 }
+            clr_character_flag = pinopiaa_exhausted_alliances_1
+            set_character_flag = pinopiaa_exhausted_alliances_2
+
+            custom_tooltip = { text = EVTOPTB_pinopiaa_11_TOOLTIP }
+        }
+
+        else = {
+            set_character_flag = pinopiaa_exhausted_alliances_1
+
+            custom_tooltip = { text = EVTOPTB_pinopiaa_11_TOOLTIP }
+        }
     }
 
     after = {
