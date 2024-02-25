@@ -210,7 +210,9 @@ narrative_event = {
         }
 
         hidden_tooltip = {
-			character_event = { id = pinopiaa.9 days = 30 }
+            set_character_flag = pinopiaa_intrigue
+
+			character_event = { id = pinopiaa.20 days = 30 }
 		}
 
         custom_tooltip = { text = EVTOPTB_pinopiaa_2_TOOLTIP }
@@ -233,7 +235,7 @@ narrative_event = {
     }
 }
 
-########### diplomacy path events 3-9 #####################
+########### initial diplomacy path events 3-19 #####################
 
 # letter to puebla
 letter_event = {
@@ -1060,4 +1062,40 @@ narrative_event = {
     after = {
         clr_character_flag = pinopiaa_allies_correspondence
     }
+}
+
+########### initial intrigue path events 20-30 #####################
+
+# intrigue path overview - gain 5-7 favors to secure victory
+narrative_event = {
+    id = pinopiaa.20
+    picture = GFX_evt_meeting_hf
+    title = EVTTITLE_pinopiaa_20
+    desc = EVTDESC_pinopiaa_20
+
+    is_triggered_only = yes
+
+    trigger = {
+        OR = {
+            # FIL
+            c_1325117 = {
+                has_landed_title = d_mixteca
+            }
+            # Diegu
+            c_1325051 = {
+                has_landed_title = d_mixteca
+            }
+        }
+        # marriage still valid
+        c_1325051 = {
+            is_alive = yes
+        }
+        has_character_flag = pinopiaa_intrigue
+    }
+
+    option = {
+        name = EVTOPTA_pinopiaa_20
+
+        tooltip_info_custom = pinopiaa_intrigue_path_details
+    }   
 }
