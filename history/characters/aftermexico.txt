@@ -160,17 +160,24 @@
 	}
 }
 6900009={ #abajeno Bishop Zacatecas - post Luis
-	name="Jacob"
+	name="José Luis"
 	trait=stubborn
 	trait=proud
 	trait=brave
 	trait=gardener
 	trait=mastermind_theologian
+	trait = zealous
+	trait = honest
+	dynasty = 5001349 #Loret
+	father = 181330 #José María Loret
 	culture=abajeno
 	religion=cristo_rey
 	2603.2.28={birth=yes}
-	2665.1.1={
-		death=yes
+	2662.9.7={
+		death= {
+			death_reason = death_execution
+				killer = 181300
+			}
 	}
 }
 6900010={ #abajeno Bishop Zacatecas - pre Luis
@@ -1882,7 +1889,8 @@
 	trait=intricate_webweaver
 	father=6900084
 	2556.1.31={birth=yes}
-		2581.11.24={
+
+	2581.11.24={
 			death={
 			death_reason=death_duel
 			killer=6900109

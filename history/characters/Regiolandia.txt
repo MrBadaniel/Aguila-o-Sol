@@ -1198,7 +1198,423 @@
 }	
 
 #####181300
+### Gran Chichimeca region
+##Zacatecas
+181300 = {
+	name="Amador"
+	dynasty=4201112 #Mejía
+	culture=abajeno
+	religion=sacred_heart
+	father = 181302
+	trait=elusive_shadow
+	trait=ambitious
+	trait=diligent
+	trait=gregarious
+	trait=deceitful
+	trait=chest_pain
+	2615.8.11={birth=yes}
+	2665.11.30={death=
+					{ death_reason = death_trait}
+				}
+}
+181301 = {
+	name="Roberto"
+	dynasty=4201112 #Mejía
+	culture=abajeno
+	religion=sacred_heart
+	father = 181300
+	trait=dutiful_cleric
+	trait=content
+	trait=zealous
+	trait=charitable
+	trait=chest_pain
+	trait=monk
+	2638.8.11={birth=yes}
+	2691.11.30={death=yes}
+}
+181302 = {
+	name="Elías"
+	dynasty=4201112 #Mejía
+	culture=abajeno
+	religion=sacred_heart
+	father = 181303
+	trait=chest_pain
+	2585.9.12={birth=yes}
+	2633.11.11={death=
+					{ death_reason = death_trait}
+				}
+}
+181303 = {
+	name="Pedro Pablo"
+	dynasty=4201112 #Mejía
+	culture=abajeno
+	religion=cristo_rey
+	2560.1.22={birth=yes}
+	2619.7.19={death=
+					{ death_reason = death_battle_ojinaga}
+				}
+}
+181304 = {
+	name="Arturo"
+	dynasty=4201112 #Mejía
+	culture=abajeno
+	religion=sacred_heart
+	trait=chest_pain
+	father = 181303
+	2590.9.12={birth=yes}
+	2619.7.19={death=
+					{ death_reason = death_battle_ojinaga}
+				}
+}
 
+
+#Jauregui
+181310 ={
+	name="Plutarco"
+	dynasty = 5001131 #Jáuregui
+	father = 6900107 #Herodes Nájera
+	mother = 181322 #Matilda Jerez
+	culture=abajeno
+	religion=sacred_heart
+	trait = skilled_tactician
+	trait = patient
+	trait = brave
+	2579.2.12={birth=yes}
+	2619.7.19={death=
+				{death_reason = death_battle_ojinaga}
+			}
+}
+
+181311 ={
+	name="Elías"
+	dynasty = 5001131 #Jáuregui
+	culture=abajeno
+	religion=sacred_heart
+	father = 181310 #Plutarco Jáuregui
+	trait = mangled
+	trait = aggressive_leader
+	trait = cavalry_leader
+	trait = tough_soldier
+	2598.9.12={birth=yes}
+	2619.7.25={death=
+				{death_reason = death_trait}
+			}
+}
+181312 ={
+	name="Herodes"
+	dynasty = 5001131 #Jáuregui
+	father = 181311 #Elías Jáuregui
+	culture=abajeno
+	religion=sacred_heart
+	trait = dutiful_cleric
+	trait = patient
+	trait = charitable
+	trait = gregarious
+	2615.9.12={birth=yes}
+	2679.7.19={death=yes}
+}
+181313 ={
+	name="Alejandro"
+	dynasty = 5001131 #Jáuregui
+	culture=abajeno
+	religion=sacred_heart
+	father = 181310 #Plutarco Jáuregui
+	trait = mangled
+	trait = flanker
+	trait = cavalry_leader
+	trait = tough_soldier
+	2596.9.12={birth=yes}
+	2619.7.19={death=
+				{death_reason = death_battle_ojinaga}
+			}
+}
+181314 ={
+	name="Plutarco"
+	dynasty = 5001131 #Jáuregui
+	culture=abajeno
+	religion=sacred_heart
+	father = 181313 #Alejandro Jáuregui
+	trait = mangled
+	trait = flanker
+	trait = cavalry_leader
+	trait = tough_soldier
+	2618.3.4={birth=yes}
+	2633.8.25={death=
+				{death_reason = death_battle
+					killer = 181344}
+			}
+}
+#### Jerez
+181320 ={
+	name="Javier"
+	father = 181323
+	mother = 181325
+	dynasty = 5001347 #Jerez
+	culture=abajeno
+	religion=cristo_rey
+	trait = dutiful_cleric
+	trait = patient
+	trait = charitable
+	trait = gregarious
+	trait = devout
+	2520.9.12={birth=yes}
+	2591.1.19={death=yes}
+}
+181321 ={
+	name="Javier"
+	dynasty = 5001347 #Jerez
+	father = 181320
+	culture=abajeno
+	religion=cristo_rey
+	trait = indulgent_wastrel
+	trait = hedonist
+	trait = lustful
+	2551.9.12={birth=yes}
+	2587.2.3={death =
+				{ death_reason = death_murder_unknown}
+			}
+}
+181322 ={
+	name="Matilda"
+	female = yes
+	dynasty = 5001347 #Jerez
+	father = 181320
+	culture=abajeno
+	religion=sacred_heart
+	trait = fortune_builder
+	trait = diligent
+	trait = proud
+	trait = ill
+	2555.12.29={birth=yes}
+	2577.3.18 = {add_spouse = 6900107}
+	2605.2.3={death = {
+				death_reason = death_trait
+			}
+		}
+}
+181323 ={
+	name="Javier"
+	dynasty = 5001347 #Jerez
+	culture=abajeno
+	religion=cristo_rey
+	2481.1.1={birth=yes}
+	2538.12.31={death =yes}
+}
+
+
+##Oclayo
+181324 ={
+	name="Octavio"
+	dynasty = 5001348 #Oclayo
+	culture=abajeno
+	religion=cristo_rey
+	2463.1.20 = { birth = yes }
+	2541.12.31={death =yes}
+}
+181325 ={
+	name="Linda"
+	female = yes
+	dynasty = 5001348 #Oclayo
+	father = 181324
+	culture=abajeno
+	religion=cristo_rey
+	2497.1.20 = { birth = yes }
+	2516.1.1 = { add_spouse = 181323 } #Javier Jerez the Grandfather
+	2580.12.31={death =yes}
+}
+181326 ={
+	name="Julio"
+	female = no
+	dynasty = 5001348 #Oclayo
+	father = 181324
+	culture=abajeno
+	religion=cristo_rey
+	2494.10.20 = { birth = yes }
+	2550.12.31={death =yes}
+}
+181327 ={
+	name="Caetano"
+	female = no
+	dynasty = 5001348 #Oclayo
+	father = 181326
+	culture=abajeno
+	religion=cristo_rey
+	trait = scholarly_theologian
+	trait = patient
+	trait = scholar
+	trait = devout
+	trait = shy
+	trait = craven
+	trait = celibate
+	trait = absent-minded
+	2529.10.20 = { birth = yes }
+	2610.12.31={death =yes}
+}
+
+#Loret from Loreto
+181330 ={
+	name="José María"
+	female = no
+	dynasty = 5001349 #Loret
+	father = 181331
+	culture=abajeno
+	religion=cristo_rey
+	martial = 8
+	trait = intricate_webweaver
+	trait = patient
+	trait = scholar
+	trait = zealous
+	trait = greedy
+	trait = deceitful
+	trait = heavy_infantry_leader
+	trait = scarred
+	2584.12.20 = { birth = yes }
+	2670.12.31={death =yes}
+}
+181331 ={
+	name="Francisco"
+	female = no
+	father = 181334
+	dynasty = 5001349 #Loret
+	culture=abajeno
+	religion=cristo_rey
+	trait = thrifty_clerk
+	trait = diligent
+	trait = content
+	2561.12.20 = { birth = yes }
+	2623.12.31={death =yes}
+}
+181332 ={
+	name="José María"
+	female = no
+	dynasty = 5001349 #Loret
+	father = 181330
+	culture=abajeno
+	religion=cristo_rey
+	2617.5.25 = { birth = yes }
+	2699.1.1={death =yes}
+}
+181333 ={
+	name="Francisco"
+	female = no
+	dynasty = 5001349 #Loret
+	father = 181332
+	culture=abajeno
+	religion=cristo_rey
+	2648.9.3 = { birth = yes }
+	2710.1.1={death =yes}
+}
+181334 ={
+	name="José"
+	female = no
+	dynasty = 5001349 #Loret
+	culture=abajeno
+	religion=cristo_rey
+	trait = thrifty_clerk
+	trait = diligent
+	trait = content
+	2536.11.11 = { birth = yes }
+	2577.1.1={death =yes}
+}
+
+##Quintanilla
+181340 ={
+	name="Eduardo"
+	female = no
+	dynasty = 5001350 #Quintanilla
+	culture=abajeno
+	religion=sacred_heart
+	trait = thrifty_clerk
+	trait = diligent
+	trait = content
+	2572.11.11 = { birth = yes }
+	2637.8.7={death =yes}
+}
+181341 ={
+	name="Eduardo"
+	female = no
+	father = 181340
+	dynasty = 5001350 #Quintanilla
+	culture=abajeno
+	religion=sacred_heart
+	trait = tough_soldier
+	trait = robust
+	2599.11.11 = { birth = yes }
+	2619.7.19={death ={
+				death_reason = death_battle_ojinaga
+				}
+			}
+}
+181342 ={
+	name="Eduarda"
+	female = yes
+	father = 181340
+	dynasty = 5001350 #Quintanilla
+	culture=abajeno
+	religion=sacred_heart
+	trait = tough_soldier
+	trait = robust
+	2604.11.11 = { birth = yes }
+	2700.7.19={death = yes }
+}
+
+##Sagitario
+181343 ={
+	name="Abram"
+	female = no
+	mother = 181342
+	father = 181344
+	dynasty = 5001351 #Sagitario
+	culture=altiplanense
+	religion=fidencista
+	martial = 7
+	intrigue = 8
+	trait = cavalry_leader
+	trait = skilled_tactician
+	trait = hunter
+	trait = robust
+	trait = gregarious
+	trait = lustful
+	trait = ambitious
+	give_nickname = nick_the_hunter
+	2641.12.18 = { birth = yes }
+	2700.7.19={death = yes }
+}
+181344 ={
+	name="Abram"
+	female = no
+	dynasty = 5001352 #Tauro
+	culture=altiplanense
+	religion=fidencista
+	trait = cavalry_leader
+	trait = fortune_builder
+	trait = hunter
+	trait = content
+	trait = is_fat
+	2591.1.1 = { birth = yes }
+	2630.1.1 = { add_spouse = 181342 }
+	2657.12.18={death = {
+					death_reason = death_hunting_accident}
+				}
+}
+181345 ={
+	name="Salomé"
+	female = yes
+	dynasty = 5001352 #Tauro
+	culture=altiplanense
+	religion=fidencista
+	mother = 181342
+	father = 181344
+	martial = 8
+	trait = tough_soldier
+	trait = cavalry_leader
+	trait = brave
+	trait = adelita
+	employer = 181343
+	give_nickname = nick_la_tora
+	2637.5.9 = { birth = yes }
+	2700.1.1 = { death = yes }
+}
 181400 = { #Placeholder... for now
 	name="José"
 	female=no
@@ -1207,5 +1623,114 @@
 	religion=sacred_heart
 	2610.11.1 = { birth=yes }
 	2710.12.1 = {death=yes	}
+
+}
+####Chihuahua
+##House Casavantes
+181401	= {
+	name="Francisco"
+	female = no
+	dynasty = 5001353 #Casavantes
+	culture=altiplanense
+	religion=reformista
+	trait = thrifty_clerk
+	trait = diligent
+	trait = proud
+	trait = cruel
+	2533.2.3 = { birth = yes }
+	2569.1.1 = { add_spouse = 181406 }
+	2605.5.5 = { death = yes }
+}
+181402	= {
+	name="Abraham"
+	female = no
+	dynasty = 5001353 #Casavantes
+	culture=altiplanense
+	religion=reformista
+	father = 181401
+	mother = 181406
+	trait = grey_eminence
+	trait = gregarious
+	trait = brave
+	trait = diligent
+	2571.2.3 = { birth = yes }
+	2619.11.15 = { death = {
+			death_reason = death_murder
+							killer = 1810200 #La Cucaracha
+			}
 	}
-}	
+}
+181403	= {
+	name="Fernando"
+	female = no
+	dynasty = 5001353 #Casavantes
+	culture=altiplanense
+	religion=reformista
+	father = 181401
+	mother = 181406
+	trait = misguided_warrior
+	trait = craven
+	trait = shy
+	trait = paranoid
+	trait = content
+	2579.6.19 = { birth = yes }
+	2608.1.1 = { add_spouse = 181407}
+	2649.11.13 = { death = yes	}
+}
+181404	= {
+	name="Fernando"
+	female = no
+	dynasty = 5001353 #Casavantes
+	culture=altiplanense
+	religion=reformista
+	father = 181403
+	mother = 181407
+	trait = charismatic_negotiator
+	trait = kind
+	trait = deceitful
+	trait = shy
+	trait = chaste
+	2613.2.19 = { birth = yes }
+	2709.11.13 = { death = yes	}
+}
+181405	= {
+	name="Abraham"
+	female = no
+	dynasty = 5001353 #Casavantes
+	culture=altiplanense
+	religion=reformista
+	father = 181403
+	mother = 181407
+	trait = intricate_webweaver
+	trait = brave
+	trait = stubborn
+	trait = diligent
+	trait = master_schemer
+	2618.8.1 = { birth = yes }
+	2705.11.13 = { death = yes	}
+}
+181406	= {
+	name="Manuela"
+	female = yes
+#	dynasty = 5001353 #Casavantes
+	culture=altiplanense
+	religion=reformista
+	trait = flamboyant_schemer
+	trait = kind
+	trait = brave
+	trait = zealous
+	2547.9.13 = { birth = yes }
+	2605.2.1 = { death = yes	}
+}
+181407	= {
+	name="Gloria"
+	female = yes
+#	dynasty = 5001353 #Casavantes
+	culture=altiplanense
+	religion=reformista
+	trait = thrifty_clerk
+	trait = kind
+	trait = gluttonous
+	2591.1.20 = { birth = yes }
+	2670.1.1 = { death = yes	}
+}

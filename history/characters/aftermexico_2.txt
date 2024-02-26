@@ -967,10 +967,11 @@
 	dynasty=5001126
 	culture=chilango
 	religion=sacred_heart
-	trait=attractive
+	trait=fair
 	trait=feeble
 	trait=sickly
 	trait=fair
+	trait = twin
 	father=6900061
 	mother=6900479
 	2649.12.1={birth=yes}
@@ -999,6 +1000,7 @@
 	trait=humble
 	trait=shy
 	trait=diligent 
+	trait = twin	
 	father=6900061
 	mother=6900479
 	2649.12.1={birth=yes}
@@ -1130,7 +1132,7 @@
 }
 
 6900487={ #altiplanense Bishop Zacatecas
-	name="José Luis"
+	name="Jacob"
 	trait=stubborn
 	trait=proud
 	trait=envious
@@ -2953,7 +2955,7 @@
 	trait = unyielding_leader
 	trait = scarred_high
 	2623.10.17 = {birth=yes}
-    2645.1.1 = { add_spouse = 6900700}
+    2643.1.1 = { add_spouse = 6900700}
 	2655.10.1 =  {death = {
 		death_reason = death_battle_duel
 				killer = 6901017 #Freezer
@@ -3152,7 +3154,7 @@
 	culture=neomexicano
 	religion=sol_invicta
 	father = 6900900
-	trait = dutiful_cleric
+	trait = martial_cleric
 	trait = cynical
 	trait = content
 	trait = craven
@@ -3170,7 +3172,7 @@
 	properties = 0aaaa
 	trait = skilled_tactician
 	trait = cynical
-	trait = ambitous
+	trait = ambitious
 	trait = lustful
 	trait = trusting
 	trait = diligent
@@ -3228,7 +3230,7 @@
 	properties = 0kaaa
 	trait = charismatic_negotiator
 	trait = cynical
-	trait = ambitous
+	trait = ambitious
 	trait = lustful
 	trait = deceitful
 	trait = diligent
@@ -3247,7 +3249,7 @@
 	culture=tapatio
 	religion=cristo_rey
 	father = 6900900
-	trait = ambitous
+	trait = ambitious
 	trait = diligent
 	trait = greedy
 	trait = arbitrary
@@ -3262,7 +3264,7 @@
 	culture=tapatio
 	religion=sol_invicta
 	father = 6900900
-	trait = ambitous
+	trait = ambitious
 	trait = diligent
 	trait = greedy
 	trait = arbitrary
@@ -3282,7 +3284,7 @@
 	religion=sol_invicta
 	father = 6900901
 	mother = 6900920
-	trait = frail
+	trait = feeble
 	trait = chaste
 	trait = devout
 	trait = celibate
@@ -3314,7 +3316,7 @@
 	2544.1.1 = {birth=yes}
 	2595.1.1 = { give_nickname = nick_the_architect }
 	2588.1.1 = { add_spouse = 6900939 } #Elizabeth Árpad
-	2606.1.1 = { death = { death_reason = death_hunting_accident}}
+	2606.1.1 = { death = { death_reason = death_accident_generic_beast}}
 }
 6900912 = {
 	name= "Luis"
@@ -3322,7 +3324,7 @@
 	culture=abajeno
 	religion=cristo_rey
 	father = 6900910
-	trait = dutiful_cleric
+	trait = martial_cleric
 	trait = flanker
 	trait = devout
 	trait = content
@@ -3367,7 +3369,7 @@
 	father = 6900912
 	trait = skilled_tactician
 	trait = defensive_leader
-	trait = organzier
+	trait = organizer
 	trait = shy
 	trait = wroth
 	trait = depressed
@@ -3850,7 +3852,7 @@
 	mother = 6900921
 	2659.11.6 = {birth=yes}
 }
-6900953 = {
+6900955 = {
 	name= "Fernando"
 	female = no
 	dynasty= 5001327 #Quirarte
@@ -3865,14 +3867,14 @@
 	2660.1.1 = { add_spouse = 6900922 }
 	2690.1.1 = { death = yes }
 }
-6900954 = {
+6900956 = {
 	name= "Fernando"
 	female = no
 	dynasty= 5001327 #Quirarte
 	culture=tapatio
 	religion=cristo_rey
 	employer = 1810006
-	father = 6900953
+	father = 6900955
 	mother = 6900922
 	2665.2.15 = {birth=yes}
 	2730.1.1 = { death = yes }
@@ -3893,7 +3895,7 @@
 	trait = scholar
 	trait = is_fat
 	2625.2.15 = {birth=yes culture = tapatio}
-	2730.1.1 = { death = yes }
+	2682.1.1 = { death = yes }
 }
 6900961 = {
 	name= "Mariana"
@@ -3903,8 +3905,7 @@
 	religion = sacred_heart
 	father = 6900960
 	mother = 6900963
-	religion = sacred_heart
-	2642.9.10 = {birth=yes culture = tapatio}
+	2646.9.10 = {birth=yes culture = tapatio}
 	2730.1.1 = { death = yes }
 }
 6900962 = {
@@ -3915,7 +3916,7 @@
 	religion = sacred_heart
 	father = 6900960
 	mother = 6900963
-	2645.11.22 = {birth=yes}
+	2649.11.22 = {birth=yes}
 	2730.1.1 = { death = yes }
 }
 6900963 = {
@@ -3926,7 +3927,8 @@
 	religion = sol_invicta
 	father = 6900901
 	2628.7.22 = {birth=yes}
-	2730.1.1 = { death = yes }
+	2645.1.1 = { add_spouse = 6900960 }
+	2700.1.1 = { death = yes }
 }
 6900964 = {
 	name= "Federico"
@@ -3960,7 +3962,7 @@
 	religion = sol_invicta
 	father = 6900901
 	2628.7.22 = {birth=yes}
-	2730.1.1 = { death = yes }
+	2700.1.1 = { death = yes }
 }
 ###New Characters in Michoacan
 6901000 = {
@@ -4340,7 +4342,7 @@
 	capital = c_tamanzuchale
  	2616.2.14 = { birth = yes }
 	2635.1.1 = { add_matrilineal_spouse = 6901301}	
-	2729.7.19 = { death = yes }	
+	2693.7.19 = { death = yes }	
 }	
 6901301 = {
 	name = "Adolfo"
@@ -4354,7 +4356,7 @@
 	give_nickname = nick_the_culture
  	2609.1.28 = { birth = yes }
 	2635.1.1 = { add_matrilineal_spouse = 6901300}
-	2729.7.19 = { death = yes }	
+	2680.7.19 = { death = yes }	
 }
 6901302 = {
 	name = "Adolfo"
@@ -4367,9 +4369,9 @@
 	trait = just
 	trait = brave
 	trait = patient
-	trati = ambitious
+	trait = ambitious
  	2637.11.3 = { birth = yes }
-	2750.7.19 = { death = yes }	
+	2702.7.19 = { death = yes }	
 }
 6901303 = {
 	name = "Alabél"
@@ -4382,7 +4384,7 @@
 	trait = fair
 	trait = groomed
 	trait = lustful
-	trati = cynical
+	trait = cynical
  	2639.7.30 = { birth = yes }
-	2750.7.19 = { death = yes }	
+	2700.7.19 = { death = yes }	
 }
