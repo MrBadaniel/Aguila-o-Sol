@@ -2565,102 +2565,75 @@ e_aztlan = {
 				plautdietsch = "Tschihuahua"
 				nahua = "Chihuahhua"
 				raramuri = "Taba'ráopa"
-	
-				b_riva_palacio_CH = {
-					arixan = "Riva Palace"
-					texan = "Riva Palace"
-					valleyan = "Riva Palace"
-					bayfolk = "Riva Palace"					
-				}
+
+				b_sacramento_CH = {}
 				b_chihuahua_CH = {
+					plautdietsch = "Tschihuahua"
 					nahua = "Chihuahhua"
 					raramuri = "Taba'ráopa"
 				}
-				b_juan_aldama_CH = {}
-				b_rosales_CH = {}
-				b_satevo_CH = {}
-				b_santa_rosa_CH = {}
-				b_nombre_de_dios_CH = {}
+				b_santa_eulalia_CH = {}
+				b_ojo_laguna_CH = {}
+				b_nombre_de_dios_CH  = {}
+				b_el_sauz_CH = {}
+				b_san_guillermo_CH = {}
+				b_saucito_CH = {}
 				b_el_saucito_CH = {
-					yaqui = Wata
+					yaqui = "Wata"
 				}
 			}
 			
-			c_guerrero = { # 802
-				color={ 137 118 128 }
-				color2={ 255 255 255 }
-	
-				plautdietsch = "Kämpfer"
-	
+			c_cuauhtemoc = { #2838
+				color = { 137 118 128 }
+				color2 = { 255 255 255 }
+				
 				b_manitoba_CH = {}
-				b_rubio_CH = {}
-				b_anahuac_CH = {}
-				b_guerrero_CH = {}
-				b_los_jagueyes_CH = {
-					chino = "Los Jagüeyes"
-					menomex = "Los Jagüeyes"
-					altiplanense = "Los Jagüeyes"
-					bravo = "Los Jagüeyes"
-					abajeno = "Los Jagüeyes"
-					chilango = "Los Jagüeyes"
-					tapatio = "Los Jagüeyes"
-					jarocho = "Los Jagüeyes"
-					yucatanense = "Los Jagüeyes"
-					choco = "Los Jagüeyes"
-					calentano = "Los Jagüeyes"
-					californiano = "Los Jagüeyes"
-					occidental = "Los Jagüeyes"				
-				}
-				b_namiquipa_CH = {}
-				b_ciudad_cuauhtemoc_CH = {
-					used_for_dynasty_names = no
-					short_name = yes
-					
-					arixan = "Cuauhtemoc CityCuauhtemoc City"
-					texan = "Cuauhtemoc City"
-					czexan = "Cuauhtemoc City"
-					texaner = "Cuauhtemoc City"
-					valleyan = "Cuauhtemoc City"
-					bayfolk = "Cuauhtemoc City"	
-					chino = "Ciudad Cuauhtémoc"
-					menomex = "Ciudad Cuauhtémoc"
-					altiplanense = "Ciudad Cuauhtémoc"
-					bravo = "Ciudad Cuauhtémoc"
-					abajeno = "Ciudad Cuauhtémoc"
-					chilango = "Ciudad Cuauhtémoc"
-					tapatio = "Ciudad Cuauhtémoc"
-					jarocho = "Ciudad Cuauhtémoc"
-					yucatanense = "Ciudad Cuauhtémoc"
-					choco = "Ciudad Cuauhtémoc"
-					calentano = "Ciudad Cuauhtémoc"
-					californiano = "Ciudad Cuauhtémoc"
-					occidental = "Ciudad Cuauhtémoc"	
-					yaqui = "Bwe’u jo’ara Cwawtemok"
-				}
+				b_ciudad_cuauhtemoc_CH = {}
 				b_bachiniva_CH = {}
-			}
-			c_parral = { # 801
-				color={ 209 137 128 }
-				color2={ 255 255 255 }
-	
-				b_hidalgo_del_parral_CH = {}
-				b_jimenez_CH = {}
-				b_valle_de_allende_CH = {
-					arixan = "Allende Valley"
-					texan = "Allende Valley"
-					czexan = "Allende Valley"
-					texaner = "Allende Valley"
-					valleyan = "Allende Valley"
-					bayfolk = "Allende Valley"	
+				b_riva_palacio_CH  = {}
+				b_anahuac_CH = {}
+				b_rubio_CH = {
+					chilango = "Colonia Obregón"
+					bravo = "Colonia Obregón"
 				}
-				b_saucillo_CH = {
-					yaqui = Wata
-				}
-				b_santa_barbara_CH = {}
-				b_delicias_CH = {}
-				b_san_francisco_del_oro_CH = {}
-				b_coronado_CH = {}
+				b_la_quemada_CH = {}
+				b_colonia_lazaro_cardenas_CH = {}
 			}
+			
+			c_babicora = { #2834
+				color = { 229 199 215 }
+				color2 = { 255 255 255 }
+				
+				b_gomez_farias_CH = {}
+				b_zaragoza_CH = {}
+				b_namiquipa_CH = {}
+				b_santa_ana_CH = {}
+				b_el_terrero_CH = {}
+				b_el_molino_CH = {}
+				b_benito_juarez_NQ_CH = {}
+				b_cruces_CH = {}
+			}
+			c_la_meseta = { #2835
+				color = { 205 144 156 }
+				color2 = { 255 255 255 }
+				
+				b_san_francisco_de_borja_CH = {}
+				b_santa_isabel_CH = {} #General Trías
+				b_satevo_CH = {}
+				b_san_lorenzo_CH = {} #Teteaqui
+				b_teporachi_CH = {}
+				b_carichi_CH = {}
+				b_nonoava_CH = {}
+				b_cusihuirachi_CH = {}
+				b_santa_maria_de_cuevas_CH = {}
+				b_san_jose_del_sitio_CH = {}
+				b_san_nicolas_de_carretas_CH = {}
+				b_san_miguel_de_los_anchondo_CH = {}
+				b_babayonaba_CH = {}
+				b_santa_rosa_CH = {}
+			}
+
+
 		} #End of d_chihuahua #End of loc project...for now			
 		
 		d_llanuras_boreales = {
@@ -2813,9 +2786,208 @@ e_aztlan = {
 				b_moctezuma_CH = {}
 				b_carrizal_CH = {}
 			}
+			c_ascension = { #804
+				color = { 196 102 124 }
+				color2 = { 255 255 255 }
+				
+				b_el_camello_CH = { }
+				b_ascension_CH = { }
+				b_palomas_de_villa_CH = { }
+				b_guadalupe_victoria_CH = { }
+				b_el_bismarck_CH = { }
+				b_entronque_CH = { }
+				b_las_chepas_CH = { }
+			}
+
 
 		} #End of d_paso_del_norte
 		
+		d_casas_grandes = {
+			color = { 175 128 128 }
+			color2 = { 255 255 255 }
+			
+			capital = 2831 #Casas Grandes
+			
+			plautdietsch = "Hohe Häuser"
+			
+			c_casas_grandes = { #2831
+				color = { 196 102 124 }
+				color2 = { 255 255 255 }
+				
+				plautdietsch = "Hohe Häuser"
+				raramuri = "Pakimé"
+				
+				b_dublan_CH = {} #Menonita settlement
+				b_nuevo_casas_grandes_CH = {}
+				b_casas_grandes_CH = {
+					raramuri = "Pakimé"
+				}
+				b_juan_mata_ortiz_CH  = {
+					plautdietsch = "Pearson"
+					texan = "Pearson"
+					czexan = "Pearson"
+					texaner = "Pearson"
+					arixan = "Pearson"
+					valleyan = "Pearson"
+					bayfolk = "Pearson"	
+				}
+				b_hidalgo_CH = {}
+				b_colonia_juarez_CH = {}
+				b_seccion_enriquez_CH = {}
+				b_buena_fe_CH = {}
+			}
+			
+			c_janos = { #2832
+				color = { 178 89 89 }
+				color2 = { 255 255 255 }
+				
+				b_janos_CH = {}
+				b_monte_verde_CH = {}
+				b_fernandez_leal_CH = {}
+				b_pancho_villa_CH = {}
+				b_tres_alamos_CH = {}
+				b_casa_de_janos_CH = {}
+				b_san_pedro_CH = {}
+				b_el_medio_CH = {}
+			}
+			
+			c_buenaventura_galeana = {  #2833
+				color = { 219 140 109 }
+				color2 = { 255 255 255 }
+				
+				b_galeana_CH = {}
+				b_buenaventura_CH = {}
+				b_juarez_CH = {}
+				b_lagunitas_CH = {}
+				b_le_baron_CH = {}
+				b_constitucion_CH = {}
+				b_flores_magon_CH = {}
+				b_san_lorenzo_CH = {}
+			}
+
+
+		} #End of d_casas_grandes
+
+		d_tutuaca  = {
+			color = { 239 182 213 }
+			color2 = { 255 255 255 }
+			
+			capital = 802 #Guerrero
+			
+			c_madera_CH = { #2837
+				color = { 196 115 174 }
+				color2 = { 255 255 255 }
+
+				b_el_largo_maderal_CH = {}
+				b_ciudad_madera_CH = {}
+				b_nicolas_bravo_CH = {}
+				b_las_varas_CH = {}
+				b_mesa_del_huracan_CH = {}
+				b_la_nortena_CH = {}
+				b_nuevo_madera_CH = {}
+				b_mesa_de_la_simona_CH = {}
+			}
+				
+			#c_tutuaca = { # 806
+			#	color={ 197 152 185 }
+			#	color2={ 255 255 255 }
+	
+			#	b_yepachi_CH = {}
+			#	b_gomez_farias_CH = {}
+			#	b_cascada_de_basaseachi_CH = {
+			#		raramuri = "Basasachí"
+			#	}
+			#	b_ciudad_madera_CH = {
+			#		used_for_dynasty_names = no
+			#		short_name = yes
+			#	}
+			#	b_zaragoza_CH = {}
+			#	b_tomochi_CH = {}
+			#	b_huajumar_CH = {}
+			#	b_temosachic_CH = {}
+			#}	
+			
+			c_guerrero = { # 802
+				color={ 193 127 176 }
+				color2={ 255 255 255 }
+	
+				plautdietsch = "Kämpfer"
+	
+				b_guerrero_CH = {}
+				b_el_largo_CH = {}
+				b_tomochi_CH = {}			
+				b_basuchil_CH = {}
+				b_pascual_orozco_CH = {}
+				b_pachera_CH = {}
+				b_pahuirachi_CH = {}
+				b_los_jagueyes_CH = {}
+		
+				
+				
+				
+				#	b_manitoba_CH = {}
+				#	b_rubio_CH = {}
+				#	b_anahuac_CH = {}
+				#	b_namiquipa_CH = {}
+				#	b_ciudad_cuauhtemoc_CH = {
+
+				#		chino = "Ciudad Cuauhtémoc"
+				#		menomex = "Ciudad Cuauhtémoc"
+				#		altiplanense = "Ciudad Cuauhtémoc"
+				#		bravo = "Ciudad Cuauhtémoc"
+				#		abajeno = "Ciudad Cuauhtémoc"
+				#		chilango = "Ciudad Cuauhtémoc"
+				#		tapatio = "Ciudad Cuauhtémoc"
+				#		jarocho = "Ciudad Cuauhtémoc"
+				#		yucatanense = "Ciudad Cuauhtémoc"
+				#		choco = "Ciudad Cuauhtémoc"
+				#		calentano = "Ciudad Cuauhtémoc"
+				#		californiano = "Ciudad Cuauhtémoc"
+				#		occidental = "Ciudad Cuauhtémoc"	
+				#		yaqui = "Bwe’u jo’ara Cwawtemok"
+				#	}
+				#	b_bachiniva_CH = {}
+			}
+			
+			c_temosachic = { #2839
+				color = { 193 137 178 }
+				color2 = { 255 255 255 }
+				
+				b_temosachic_CH = {}
+				b_matachi_CH = {}
+				b_yepachic_CH = {}
+				b_yepomera_CH = {}
+				b_cocomorachich_CH = {}
+				b_tejolocachi_CH = {}
+				b_buenavista_CH = {}
+				b_san_isidro_de_lomas_CH = {}
+			}
+			
+			c_parral = { # 801
+				color={ 209 137 128 }
+				color2={ 255 255 255 }
+	
+				b_hidalgo_del_parral_CH = {}
+				b_jimenez_CH = {}
+				b_valle_de_allende_CH = {
+					arixan = "Allende Valley"
+					texan = "Allende Valley"
+					czexan = "Allende Valley"
+					texaner = "Allende Valley"
+					valleyan = "Allende Valley"
+					bayfolk = "Allende Valley"	
+				}
+				b_saucillo_CH = {
+					yaqui = Wata
+				}
+				b_santa_barbara_CH = {}
+				b_delicias_CH = {}
+				b_san_francisco_del_oro_CH = {}
+				b_coronado_CH = {}
+			}
+				
+		} #End of d_tutuaca
+			
 		d_casas_altas = {
 			color={ 189 162 87 }
 			color2={ 255 255 255 }
@@ -2825,23 +2997,6 @@ e_aztlan = {
 			raramuri = "Wérachi"
 			plautdietsch = "Hohe Häuser"
 
-			c_ascension = { # 804
-				color={ 179 112 112 }
-				color2={ 255 255 255 }
-	
-				raramuri = "Pakimé"
-	
-				b_casas_grandes_CH = {
-					raramuri = "Pakimé"
-				}
-				b_ascension_CH = {}
-				b_dublan_CH = {}
-				b_juarez_CH = {}
-				b_janos_CH = {}
-				b_el_medio_CH = {}
-				b_buenaventura_CH = {}
-				b_galeana_CH = {}
-			}
 			c_guachochi = { # 805
 				color={ 149 103 128 }
 				color2={ 255 255 255 }
@@ -2864,25 +3019,8 @@ e_aztlan = {
 				}
 				b_norogachi_CH = {}
 			}
-			c_tutuaca = { # 806
-				color={ 197 152 185 }
-				color2={ 255 255 255 }
-	
-				b_yepachi_CH = {}
-				b_gomez_farias_CH = {}
-				b_cascada_de_basaseachi_CH = {
-					raramuri = "Basasachí"
-				}
-				b_ciudad_madera_CH = {
-					used_for_dynasty_names = no
-					short_name = yes
-				}
-				b_zaragoza_CH = {}
-				b_tomochi_CH = {}
-				b_huajumar_CH = {}
-				b_temosachic_CH = {}
-			}
-		}
+
+		} #End of d_casas_altas
 		d_durango = {
 			color={ 162 75 57 }
 			color2={ 255 255 255 }
@@ -3298,8 +3436,8 @@ e_aztlan = {
 				
 				b_rodeo_DU = {}	#c_rodeo
 				b_nazas_DU = {}
-				b_san_luis_de_cordero_DU
-					b_san_pedro_del_gallo_DU = {
+				b_san_luis_de_cordero_DU = {}
+				b_san_pedro_del_gallo_DU = {
 						arixan = "San Pedro Gallo"
 						texan = "San Pedro Gallo"
 						czexan = "San Pedro Gallo"
@@ -3880,18 +4018,8 @@ e_aztlan = {
 				b_melchor_ocampo_NL = {}
 				b_paras_NL = {}
 			}
-		}
-
-				
-
-
-
-			#	b_colombia_NLE = {}
-			#	b_las_artistas_TAM = {}
-			#	b_el_campanario_TAM = {}
-			#	b_america_TAM = {}
-			#	b_el_desierio_TAM = {}
-			#	b_el_ebano_TAM = {}
-			#	b_el_urribeno_TAM = {}
-	}
+			
+		} #End of d_la_punta
+		
+	} #End of k_rio_bravo
 }
