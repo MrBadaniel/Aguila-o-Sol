@@ -4,14 +4,14 @@ namespace = montane_pilgrimage
 
 character_event = {
 	id = montane_pilgrimage.5000
-	desc = EVTDESC_SoA_5000
+	desc = EVTDESC_montane_pilgrimage_5000
 	picture = GFX_evt_bishop
 	border = GFX_event_normal_frame_religion
 
 	is_triggered_only = yes # christian_pilgrimage, minor_decisions.txt
 
 	option = {
-		name = EVTOPTA_SoA_5000
+		name = EVTOPTA_montane_pilgrimage_5000
 
 		piety = 20
 		set_character_flag = preparing_pilgrimage
@@ -100,7 +100,7 @@ character_event = {
 character_event = {
 	id = montane_pilgrimage.5017
 	desc = EVTDESC_montane_pilgrimage_5017
-	picture = GFX_evt_victory_arch_byzantine
+	picture = GFX_evt_desert
 	border = GFX_event_normal_frame_religion
 
 	is_triggered_only = yes
@@ -111,7 +111,7 @@ character_event = {
 		set_character_flag = pilgrimage_to_banff
 
 		character_event = {
-			id = SoA.5021 # Set out
+			id = montane_pilgrimage.5021 # Set out
 			days = 15
 		}
 
@@ -244,7 +244,7 @@ character_event = {
 character_event = {
 	id = montane_pilgrimage.5020
 	desc = EVTDESC_montane_pilgrimage_5020
-	picture = GFX_evt_victory_arch_byzantine
+	picture = GFX_evt_desert
 	border = GFX_event_normal_frame_religion
 
 	is_triggered_only = yes
@@ -357,7 +357,7 @@ character_event = {
 
 		hidden_effect = {
 			clr_character_flag = preparing_pilgrimage
-			add_trait = on_pilgrimage
+			add_trait = montane_on_hike
 			set_character_flag = good_pilgrimage
 
 			narrative_event = {
@@ -467,30 +467,30 @@ character_event = {
 					trigger_else_if = {
 						limit = { has_character_flag = pilgrimage_to_grand }
 
-						OR = {
-							is_title_active = d_knights_templar
-							is_title_active = d_knights_hospitaller
-							is_title_active = d_teutonic_order
-							is_title_active = k_teutonic_state
-						}
+					#	OR = {
+					#		is_title_active = d_knights_templar
+					#		is_title_active = d_knights_hospitaller
+					#		is_title_active = d_teutonic_order
+					#		is_title_active = k_teutonic_state
+					#	}
 					}
 					trigger_else_if = {
 						limit = { has_character_flag = pilgrimage_to_banff }
 
-						OR = {
-							is_title_active = d_knights_templar
-							is_title_active = d_knights_hospitaller
-							is_title_active = d_teutonic_order
-							is_title_active = k_teutonic_state
-						}
+					#	OR = {
+					#		is_title_active = d_knights_templar
+					#		is_title_active = d_knights_hospitaller
+					#		is_title_active = d_teutonic_order
+					#		is_title_active = k_teutonic_state
+					#	}
 					}
 					trigger_else_if = {
 						limit = { has_character_flag = pilgrimage_to_mesa_verde }
 
-						OR = {
-							is_title_active = d_knights_mesa_verde
-							is_title_active = d_knights_calatrava
-						}
+					#	OR = {
+					#		is_title_active = d_knights_mesa_verde
+					#		is_title_active = d_knights_calatrava
+					#	}
 					}
 				}
 
@@ -501,5 +501,1598 @@ character_event = {
 				}
 			}
 		}
+	}
+}
+
+# Trouble on road - weather
+character_event = {
+	id = montane_pilgrimage.5026
+	desc = EVTDESC_montane_pilgrimage_5026
+	picture = GFX_evt_pilgrims_epic_journey
+
+	is_triggered_only = yes
+
+	option = {
+		name = EVTOPTA_montane_pilgrimage_5026
+
+		piety = 50
+
+		random_list = {
+			10 = { give_pneumonic_effect = yes }
+			30 = { give_ill_effect = yes }
+			60 = { }
+		}
+
+		ai_chance = { factor = 10 }
+	}
+
+	option = {
+		name = EVTOPTB_montane_pilgrimage_5026
+
+		add_trait_fully_silently_cynical_effect = yes
+
+		random_list = {
+			 5 = { give_pneumonic_effect = yes }
+			15 = { give_ill_effect = yes }
+			80 = { }
+		}
+
+		ai_chance = { factor = 90 }
+	}
+}
+
+# Trouble on road - lost
+character_event = {
+	id = montane_pilgrimage.5027
+	desc = EVTDESC_montane_pilgrimage_5027
+	picture = GFX_evt_pilgrims_epic_journey
+
+	is_triggered_only = yes
+
+	option = {
+		name = EVTOPTA_montane_pilgrimage_5027
+
+		random = {
+			chance = 30
+			add_trait_fully_wroth_effect = yes
+		}
+	}
+
+	option = {
+		name = EVTOPTB_montane_pilgrimage_5027
+
+		random = {
+			chance = 30
+			add_trait_fully_patient_effect = yes
+		}
+	}
+}
+
+# Trouble on road - inn on fire
+narrative_event = {
+	id = montane_pilgrimage.5028
+	title = EVTNAME_montane_pilgrimage_5028
+	desc = EVTDESC_montane_pilgrimage_5028
+	picture = GFX_evt_burning_house
+
+	is_triggered_only = yes
+
+	option = {
+		name = EVTOPTA_montane_pilgrimage_5028
+
+		random = {
+			chance = 10
+			add_trait_wounded_effect = yes
+		}
+
+		random = {
+			chance = 30
+			add_trait_fully_brave_effect = yes
+		}
+
+		ai_chance = { factor = 80 }
+	}
+
+	option = {
+		name = EVTOPTB_montane_pilgrimage_5028
+
+		add_trait_fully_silently_craven_effect = yes
+
+		ai_chance = { factor = 20 }
+	}
+}
+
+# Danger on road - robbers
+character_event = {
+	id = montane_pilgrimage.5029
+	desc = EVTDESC_montane_pilgrimage_5029
+	picture = GFX_evt_bandits
+
+	is_triggered_only = yes
+
+	option = {
+		name = EVTOPTA_montane_pilgrimage_5029
+
+		wealth = -10
+
+		ai_chance = { factor = 90 }
+	}
+
+	option = {
+		name = EVTOPTB_montane_pilgrimage_5029
+		tooltip_info = martial
+
+		trigger = { martial >= 10 }
+
+		add_trait_fully_silently_brave_effect = yes
+
+		random = {
+			chance = 10
+			add_trait_wounded_effect = yes
+		}
+
+		ai_chance = { factor = 10 }
+	}
+}
+
+# Danger on road  - broken bridge
+character_event = {
+	id = montane_pilgrimage.5030
+	desc = EVTDESC_montane_pilgrimage_5030
+	picture = GFX_evt_pilgrims_epic_journey
+
+	is_triggered_only = yes
+
+	option = {
+		name = EVTOPTA_montane_pilgrimage_5030
+
+		random = {
+			chance = 20
+			add_trait_wounded_effect = yes
+		}
+
+		ai_chance = { factor = 10 }
+	}
+
+	option = {
+		name = EVTOPTB_montane_pilgrimage_5030
+
+		wealth = -10
+
+		ai_chance = { factor = 45 }
+	}
+
+	option = {
+		name = EVTOPTC_montane_pilgrimage_5030
+
+		wealth = -30
+		add_trait_fully_silently_charitable_effect = yes
+
+		ai_chance = { factor = 45 }
+	}
+}
+
+# Philosophical ponderings
+character_event = {
+	id = montane_pilgrimage.5031
+	desc = EVTDESC_montane_pilgrimage_5031
+	picture = GFX_evt_pilgrims_epic_journey
+	border = GFX_event_normal_frame_religion
+
+	is_triggered_only = yes
+
+	option = {
+		name = EVTOPTA_montane_pilgrimage_5031
+
+		if = {
+			limit = {
+				lifestyle_traits < 1
+				NOT = { has_dlc = "Way of Life" }
+			}
+
+			random_list = {
+				10 = { add_trait = scholar }
+				10 = { add_trait = mystic }
+				10 = { add_trait_poet_effect = yes }
+				10 = { add_trait_fully_zealous_effect = yes }
+				10 = { add_trait_depressed_effect = yes }
+				50 = { }
+			}
+		}
+		else = {
+			random_list = {
+				20 = { add_trait_poet_effect = yes }
+				20 = { add_trait_fully_zealous_effect = yes }
+				10 = { add_trait_depressed_effect = yes }
+				50 = { }
+			}
+		}
+	}
+
+	option = {
+		name = EVTOPTB_montane_pilgrimage_5031
+
+		random = {
+			chance = 20
+			add_trait_fully_cynical_effect = yes
+		}
+	}
+}
+# Meeting people on travels - good Samaritan
+character_event = {
+	id = montane_pilgrimage.5032
+	desc = EVTDESC_montane_pilgrimage_5032
+	picture = GFX_evt_pilgrims_epic_journey
+
+	is_triggered_only = yes
+
+	option = {
+		name = EVTOPTA_montane_pilgrimage_5032
+
+		wealth = -10
+		add_trait_fully_silently_kind_effect = yes
+
+		ai_chance = { factor = 90 }
+	}
+
+	option = {
+		name = EVTOPTB_montane_pilgrimage_5032
+
+		remove_trait_silently_kind_effect = yes
+
+		ai_chance = { factor = 10 }
+	}
+}
+
+# Meeting people on travels - Noah's ark
+narrative_event = {
+	id = montane_pilgrimage.5033
+	title = EVTNAME_montane_pilgrimage_5033
+	desc = EVTDESC_montane_pilgrimage_5033
+	picture = GFX_evt_pilgrims_epic_journey
+
+	is_triggered_only = yes
+
+	option = {
+		name = EVTOPTA_montane_pilgrimage_5033
+
+		add_trait_fully_silently_arbitrary_effect = yes
+	}
+
+	option = {
+		name = EVTOPTB_montane_pilgrimage_5033
+
+		add_trait_fully_silently_charitable_effect = yes
+	}
+
+	option = {
+		name = EVTOPTC_montane_pilgrimage_5033
+
+		custom_tooltip = { text = noahs_ark_cats_dogs }
+	}
+}
+
+# Meeting people on travels - bread and fish
+character_event = {
+	id = montane_pilgrimage.5034
+	desc = EVTDESC_montane_pilgrimage_5034
+	picture = GFX_evt_pilgrims_epic_journey
+
+	is_triggered_only = yes
+
+	option = {
+		name = EVTOPTA_montane_pilgrimage_5034
+
+		wealth = -5
+		add_trait_fully_silently_charitable_effect = yes
+	}
+
+	option = {
+		name = EVTOPTB_montane_pilgrimage_5034
+
+		remove_trait_silently_charitable_effect = yes
+	}
+}
+# Learning something about boats
+character_event = {
+	id = montane_pilgrimage.5035
+	desc = EVTDESC_montane_pilgrimage_5035
+	picture = GFX_evt_merchant_ship_at_sea_republic
+
+	is_triggered_only = yes
+
+	option = {
+		name = EVTOPTA_montane_pilgrimage_5035
+
+		random_list = {
+			15 = { change_martial = 1 }
+			15 = { change_learning = 1 }
+			70 = { }
+		}
+	}
+
+	option = {
+		name = EVTOPTB_montane_pilgrimage_5035
+
+		piety = 30
+	}
+}
+
+# Learning something about bridges
+character_event = {
+	id = montane_pilgrimage.5036
+	desc = EVTDESC_montane_pilgrimage_5036
+	picture = GFX_evt_pilgrims_epic_journey
+
+	is_triggered_only = yes
+
+	option = {
+		name = EVTOPTA_montane_pilgrimage_5036
+
+		random = {
+			chance = 30
+			change_learning = 1
+		}
+	}
+
+	option = {
+		name = EVTOPTB_montane_pilgrimage_5036
+
+		random = {
+			chance = 30
+			add_trait_fully_proud_effect = yes
+		}
+	}
+}
+
+# Falls ill from trials on journey
+character_event = {
+	id = montane_pilgrimage.5037
+	desc = EVTDESC_montane_pilgrimage_5037
+	picture = GFX_evt_pilgrims_epic_journey
+
+	is_triggered_only = yes
+
+	option = {
+		name = EVTOPTA_montane_pilgrimage_5037
+
+		piety = 10
+
+		random = {
+			chance = 40
+
+			if = {
+				limit = { has_dlc = "Reapers" }
+				add_symptom_effect = yes
+			}
+			else = {
+				add_trait_ill_effect = yes
+			}
+		}
+
+		ai_chance = { factor = 10 }
+	}
+
+	option = {
+		name = EVTOPTB_montane_pilgrimage_5037
+
+		random = {
+			chance = 20
+
+			if = {
+				limit = { has_dlc = "Reapers" }
+				add_symptom_effect = yes
+			}
+			else = {
+				add_trait_ill_effect = yes
+			}
+		}
+
+		random = {
+			chance = 50
+			add_trait_fully_cynical_effect = yes
+		}
+
+		ai_chance = { factor = 90 }
+	}
+}
+
+# Moral choice - steal or give
+character_event = {
+	id = montane_pilgrimage.5038
+	desc = EVTDESC_montane_pilgrimage_5038
+	picture = GFX_evt_pilgrims_epic_journey
+
+	is_triggered_only = yes
+
+	option = {
+		name = EVTOPTA_montane_pilgrimage_5038
+	}
+
+	option = {
+		name = EVTOPTB_montane_pilgrimage_5038
+
+		wealth = -10
+		add_trait_fully_silently_charitable_effect = yes
+	}
+
+	option = {
+		name = EVTOPTC_montane_pilgrimage_5038
+
+		wealth = 10
+
+		remove_trait_silently_charitable_effect = yes
+		add_trait_fully_silently_deceitful_effect = yes
+	}
+
+	option = {
+		name = EVTOPTD_montane_pilgrimage_5038
+
+		remove_trait_silently_charitable_effect = yes
+	}
+}
+
+# Sees a guiding star - religious experience
+character_event = {
+	id = montane_pilgrimage.5039
+	desc = EVTDESC_montane_pilgrimage_5039
+	picture = GFX_evt_pilgrims_epic_journey
+	border = GFX_event_normal_frame_religion
+
+	is_triggered_only = yes
+
+	option = {
+		name = EVTOPTA_montane_pilgrimage_5039
+
+		random = {
+			chance = 20
+			add_trait_fully_zealous_effect = yes
+		}
+	}
+
+	option = {
+		name = EVTOPTB_montane_pilgrimage_5039
+
+		random = {
+			chance = 20
+			add_trait_fully_cynical_effect = yes
+		}
+	}
+}
+
+# Holy knights come to meet and escort - feels safe
+narrative_event = {
+	id = montane_pilgrimage.5045
+	title = EVTNAME_montane_pilgrimage_5045
+	desc = EVTDESC_montane_pilgrimage_5045
+	picture = GFX_evt_crusaders
+
+	is_triggered_only = yes
+
+	option = {
+		name = EVTOPTA_montane_pilgrimage_5045
+
+		piety = 20
+
+		ai_chance = { factor = 90 }
+	}
+
+	option = {
+		name = EVTOPTB_montane_pilgrimage_5045
+
+		random = {
+			chance = 20
+			add_trait_fully_paranoid_effect = yes
+		}
+
+		ai_chance = { factor = 10 }
+	}
+}
+
+# Comes upon holy knights at camp - talks to them and learns something
+character_event = {
+	id = montane_pilgrimage.5046
+	desc = EVTDESC_montane_pilgrimage_5046
+	picture = GFX_evt_crusaders
+
+	is_triggered_only = yes
+
+	option = {
+		name = EVTOPTA_montane_pilgrimage_5046
+
+		piety = 10
+
+		random = {
+			chance = 30
+			change_learning = 1
+		}
+	}
+
+	option = {
+		name = EVTOPTB_montane_pilgrimage_5046
+
+		random = {
+			chance = 30
+			change_martial = 1
+		}
+	}
+}
+
+### Skipping montane_pilgrimage.5047 and montane_pilgrimage.5087 requires holy order to exist, montane has none. pray it doesnt result in bugs
+
+######################################################
+#                                                    #
+# Pilgrim arrives                                    #
+#                                                    #
+# ID montane_pilgrimage.5050-montane_pilgrimage.5054 #
+#    montane_pilgrimage.5094-5096                    #
+#                                                    #
+######################################################
+
+
+# Arrived at Canterbury
+narrative_event = {
+	id = montane_pilgrimage.5050
+	border = GFX_event_narrative_frame_religion
+
+	title = {
+		text = EVTNAME_montane_pilgrimage_5050
+		trigger = { has_character_flag = pilgrimage_to_yellowstone }
+	}
+	title = {
+		text = EVTNAME_montane_pilgrimage_5051
+		trigger = { has_character_flag = pilgrimage_to_pikes_peak }
+	}
+	title = {
+		text = EVTNAME_montane_pilgrimage_5052
+		trigger = { has_character_flag = pilgrimage_to_grand }
+	}
+	title = {
+		text = EVTNAME_montane_pilgrimage_5053
+		trigger = { has_character_flag = pilgrimage_to_banff }
+	}
+	title = {
+		text = EVTNAME_montane_pilgrimage_5054
+		trigger = { has_character_flag = pilgrimage_to_mesa_verde }
+	}
+
+	desc = {
+		text = EVTDESC_montane_pilgrimage_5050
+		picture = GFX_evt_cathedral
+		trigger = { has_character_flag = pilgrimage_to_yellowstone }
+	}
+	desc = {
+		text = EVTDESC_montane_pilgrimage_5051
+		picture = GFX_evt_nomad_camp
+		trigger = { has_character_flag = pilgrimage_to_pikes_peak }
+	}
+	desc = {
+		text = EVTDESC_montane_pilgrimage_5052
+		picture = GFX_evt_cathedral
+		trigger = { has_character_flag = pilgrimage_to_grand }
+	}
+	desc = {
+		text = EVTDESC_montane_pilgrimage_5053
+		picture = GFX_evt_desert
+		trigger = { has_character_flag = pilgrimage_to_banff }
+	}
+	desc = {
+		text = EVTDESC_montane_pilgrimage_5054
+		picture = GFX_evt_cathedral
+		trigger = { has_character_flag = pilgrimage_to_mesa_verde }
+	}
+
+	is_triggered_only = yes
+
+	option = {
+		name = {
+			text = EVTOPTA_montane_pilgrimage_5050
+			trigger = { has_character_flag = pilgrimage_to_yellowstone }
+		}
+		name = {
+			text = EVTOPTA_montane_pilgrimage_5051
+			trigger = { has_character_flag = pilgrimage_to_pikes_peak }
+		}
+		name = {
+			text = EVTOPTA_montane_pilgrimage_5052
+			trigger = { has_character_flag = pilgrimage_to_grand }
+		}
+		name = {
+			text = EVTOPTA_montane_pilgrimage_5053
+			trigger = { has_character_flag = pilgrimage_to_banff }
+		}
+		name = {
+			text = EVTOPTA_montane_pilgrimage_5054
+			trigger = { has_character_flag = pilgrimage_to_mesa_verde }
+		}
+
+		character_event = {
+			id = montane_pilgrimage.5055
+			days = 5
+		}
+	}
+}
+
+#######################################################
+#                                                     #
+# Events occurring at pilgrimage                      #
+# destination                                         #
+#                                                     #
+# ID montane_pilgrimage.5055-montane_pilgrimage.5080  #
+#                                                     #
+#######################################################
+
+# Hidden event that selects what interesting things will happen at destination
+character_event = {
+	id = montane_pilgrimage.5055
+
+	is_triggered_only = yes
+	hide_window = yes
+
+	immediate = {
+		random_list = {
+			10 = {
+				if = {
+					limit = { trait = cynical }
+					character_event = { id = montane_pilgrimage.5056 } # Stimulated to learning
+				}
+				else = {
+					random_list = {
+						20 = { character_event = { id = montane_pilgrimage.5057 } } # Strong religious experience
+						10 = { character_event = { id = montane_pilgrimage.5058 } } # Disappointed in the place
+						20 = { character_event = { id = montane_pilgrimage.5060 } } # Learns things of the world - cosmopolitan
+						20 = { character_event = { id = montane_pilgrimage.5061 } } # Generally impressed
+					}
+				}
+			}
+
+			10 = {
+				if = {
+					limit = {
+						OR = {
+							trait = mastermind_theologian
+							trait = scholarly_theologian
+						}
+					}
+
+					character_event = { id = montane_pilgrimage.5059 } # Mastermind theologian impresses everyone
+				}
+				else = {
+					random_list = {
+						20 = { character_event = { id = montane_pilgrimage.5057 } } # Strong religious experience
+						10 = { character_event = { id = montane_pilgrimage.5058 } } # Disappointed in the place
+						20 = { character_event = { id = montane_pilgrimage.5060 } } # Learns things of the world - cosmopolitan
+						20 = { character_event = { id = montane_pilgrimage.5061 } } # Generally impressed
+					}
+				}
+			}
+
+			10 = {
+				if = {
+					limit = { trait = lustful }
+					character_event = { id = montane_pilgrimage.5062 } # Lustful tourist having fun
+				}
+				else = {
+					random_list = {
+						20 = { character_event = { id = montane_pilgrimage.5057 } } # Strong religious experience
+						10 = { character_event = { id = montane_pilgrimage.5058 } } # Disappointed in the place
+						20 = { character_event = { id = montane_pilgrimage.5060 } } # Learns things of the world - cosmopolitan
+						20 = { character_event = { id = montane_pilgrimage.5061 } } # Generally impressed
+					}
+				}
+			}
+
+			10 = {
+				if = {
+					limit = { trait = homosexual }
+					character_event = { id = montane_pilgrimage.5063 } # Freedom
+				}
+				else = {
+					random_list = {
+						20 = { character_event = { id = montane_pilgrimage.5057 } } # Strong religious experience
+						10 = { character_event = { id = montane_pilgrimage.5058 } } # Disappointed in the place
+						20 = { character_event = { id = montane_pilgrimage.5060 } } # Learns things of the world - cosmopolitan
+						20 = { character_event = { id = montane_pilgrimage.5061 } } # Generally impressed
+					}
+				}
+			}
+
+			10 = { # Monks cure pilgrim of disease - attributed to God's hand?
+				if = {
+					limit = {
+						trigger_if = {
+							limit = { is_ill = no }
+
+							has_symptom_trigger = yes
+							has_character_flag = developing_illness
+						}
+					}
+
+					narrative_event = { id = montane_pilgrimage.5064 }
+				}
+				else = {
+					random_list = {
+						20 = { character_event = { id = montane_pilgrimage.5057 } } # Strong religious experience
+						10 = { character_event = { id = montane_pilgrimage.5058 } } # Disappointed in the place
+						20 = { character_event = { id = montane_pilgrimage.5060 } } # Learns things of the world - cosmopolitan
+						20 = { character_event = { id = montane_pilgrimage.5061 } } # Generally impressed
+					}
+				}
+			}
+
+			10 = {
+				if = {
+					limit = {
+						OR = {
+							trait = lunatic
+							trait = possessed
+						}
+					}
+
+					character_event = { id = montane_pilgrimage.5065 } # Lunatic/possessed decides (s)he is God
+				}
+				else = {
+					random_list = {
+						20 = { character_event = { id = montane_pilgrimage.5057 } } # Strong religious experience
+						10 = { character_event = { id = montane_pilgrimage.5058 } } # Disappointed in the place
+						20 = { character_event = { id = montane_pilgrimage.5060 } } # Learns things of the world - cosmopolitan
+						20 = { character_event = { id = montane_pilgrimage.5061 } } # Generally impressed
+					}
+				}
+			}
+
+			10 = {
+				if = {
+					limit = {
+						OR = {
+							trait = drunkard
+							trait = hedonist
+						}
+					}
+
+					character_event = { id = montane_pilgrimage.5066 } # Drunkard/hedonist event
+				}
+				else = {
+					random_list = {
+						20 = { character_event = { id = montane_pilgrimage.5057 } } # Strong religious experience
+						10 = { character_event = { id = montane_pilgrimage.5058 } } # Disappointed in the place
+						20 = { character_event = { id = montane_pilgrimage.5060 } } # Learns things of the world - cosmopolitan
+						20 = { character_event = { id = montane_pilgrimage.5061 } } # Generally impressed
+					}
+				}
+			}
+
+			10 = { # Impressed by Islam or Judaism (Jerusalem only)
+				if = {
+					limit = {
+						has_character_flag = pilgrimage_to_pikes_peak
+
+						NAND = {
+							trait = sympathy_pacific
+							trait = sympathy_latter_day_saints
+						}
+					}
+
+					character_event = { id = montane_pilgrimage.5067 }
+				}
+				else = {
+					random_list = {
+						20 = { character_event = { id = montane_pilgrimage.5057 } } # Strong religious experience
+						10 = { character_event = { id = montane_pilgrimage.5058 } } # Disappointed in the place
+						20 = { character_event = { id = montane_pilgrimage.5060 } } # Learns things of the world - cosmopolitan
+						20 = { character_event = { id = montane_pilgrimage.5061 } } # Generally impressed
+					}
+				}
+			}
+		}
+	}
+}
+
+# Stimulated to theological learning
+character_event = {
+	id = montane_pilgrimage.5056
+	desc = EVTDESC_montane_pilgrimage_5056
+	picture = GFX_evt_library
+	border = GFX_event_normal_frame_religion
+
+	is_triggered_only = yes
+
+	option = {
+		name = EVTOPTA_montane_pilgrimage_5056
+
+		if = {
+			limit = {
+				lifestyle_traits < 1
+				NOT = { has_dlc = "Way of Life" }
+			}
+
+			add_trait = scholar
+		}
+
+		random = {
+			chance = 20
+			add_trait_fully_zealous_effect = yes
+		}
+	}
+
+	option = {
+		name = EVTOPTB_montane_pilgrimage_5056
+
+		piety = 30
+	}
+
+	after = {
+		character_event = {
+			id = montane_pilgrimage.5090 # Stay a little longer then go home
+			days = 10
+		}
+	}
+}
+
+# Strong religious experience
+character_event = {
+	id = montane_pilgrimage.5057
+	desc = EVTDESC_montane_pilgrimage_5057
+	picture = GFX_evt_knight_kneeling
+	border = GFX_event_normal_frame_religion
+
+	is_triggered_only = yes
+
+	option = {
+		name = EVTOPTA_montane_pilgrimage_5057
+
+		add_trait_fully_silently_zealous_effect = yes
+
+		character_event = {
+			id = montane_pilgrimage.5090 # Stay a little longer then go home
+			days = 10
+		}
+	}
+}
+
+# Disappointed in the place
+character_event = {
+	id = montane_pilgrimage.5058
+	desc = EVTDESC_montane_pilgrimage_5058
+	picture = GFX_evt_bishop
+	border = GFX_event_normal_frame_religion
+
+	is_triggered_only = yes
+
+	option = {
+		name = EVTOPTA_montane_pilgrimage_5058
+
+		add_trait_fully_silently_cynical_effect = yes
+
+		clr_character_flag = good_pilgrimage
+		clr_character_flag = abominable_pilgrimage
+		set_character_flag = bad_pilgrimage
+
+		character_event = {
+			id = montane_pilgrimage.5090 # Stay a little longer then go home
+			days = 10
+		}
+	}
+}
+
+# Mastermind theologian impresses everyone
+character_event = {
+	id = montane_pilgrimage.5059
+	desc = EVTDESC_montane_pilgrimage_5059
+	picture = GFX_evt_heretic
+	border = GFX_event_normal_frame_religion
+
+	is_triggered_only = yes
+
+	option = {
+		name = EVTOPTA_montane_pilgrimage_5059
+
+		prestige = 30
+
+		character_event = {
+			id = montane_pilgrimage.5090 # Stay a little longer then go home
+			days = 10
+		}
+	}
+}
+
+# Learns things of the big world - cosmopolitan experience
+character_event = {
+	id = montane_pilgrimage.5060
+	desc = EVTDESC_montane_pilgrimage_5060
+	picture = GFX_evt_market
+
+	is_triggered_only = yes
+
+	option = {
+		name = EVTOPTA_montane_pilgrimage_5060
+
+		random_list = {
+			15 = { change_learning = 1 }
+			15 = { change_intrigue = 1 }
+			70 = { }
+		}
+	}
+
+	option = {
+		name = EVTOPTB_montane_pilgrimage_5060
+
+		random = {
+			chance = 50
+			add_trait_fully_gregarious_effect = yes
+		}
+
+		if = {
+			limit = { trait = gregarious }
+
+			random = {
+				chance = 20
+				change_diplomacy = 1
+			}
+		}
+	}
+
+	after = {
+		character_event = {
+			id = montane_pilgrimage.5090 # Stay a little longer then go home
+			days = 10
+		}
+	}
+}
+
+# Generally impressed
+character_event = {
+	id = montane_pilgrimage.5061
+	desc = EVTDESC_montane_pilgrimage_5061
+	picture = GFX_evt_bishop
+	border = GFX_event_normal_frame_religion
+
+	is_triggered_only = yes
+
+	option = {
+		name = EVTOPTA_montane_pilgrimage_5061
+
+		piety = 20
+
+		character_event = {
+			id = montane_pilgrimage.5090 # Stay a little longer then go home
+			days = 10
+		}
+	}
+}
+
+# Lustful character enjoys freedom far from home
+character_event = {
+	id = montane_pilgrimage.5062
+	desc = EVTDESC_montane_pilgrimage_5062
+	picture = GFX_evt_lovers
+
+	is_triggered_only = yes
+
+	option = {
+		name = EVTOPTA_montane_pilgrimage_5062 # Let's go!
+
+		if = {
+			limit = {
+				is_female = yes
+				practical_age < 45
+				NOT = { trait = homosexual }
+			}
+
+			random = {
+				chance = 50
+
+				custom_tooltip = {
+					text = becomes_pregnant_no_father
+					impregnate = 0
+				}
+
+				clr_character_flag = good_pilgrimage
+				clr_character_flag = abominable_pilgrimage
+				set_character_flag = bad_pilgrimage
+			}
+		}
+
+		if = {
+			limit = {
+				NOT = { trait = great_pox }
+			}
+
+			random = {
+				chance = 5
+
+				give_great_pox_effect = yes
+				clr_character_flag = good_pilgrimage
+				clr_character_flag = abominable_pilgrimage
+				set_character_flag = bad_pilgrimage
+			}
+		}
+	}
+
+	option = {
+		name = EVTOPTB_montane_pilgrimage_5062 # Control yourself
+
+		piety = 10
+
+		random = {
+			chance = 40
+			add_trait_fully_chaste_effect = yes
+		}
+	}
+
+	after = {
+		character_event = {
+			id = montane_pilgrimage.5090 # Stay a little longer then go home
+			days = 10
+		}
+	}
+}
+
+# Homosexual character enjoys freedom far from home
+character_event = {
+	id = montane_pilgrimage.5063
+	desc = EVTDESC_montane_pilgrimage_5063
+	picture = GFX_evt_feast
+
+	is_triggered_only = yes
+
+	option = {
+		name = EVTOPTA_montane_pilgrimage_5063 # Do it
+
+		remove_trait_silently_stressed_effect = yes
+	}
+
+	option = {
+		name = EVTOPTB_montane_pilgrimage_5063 # Don't do it
+
+		add_trait_silently_stressed_effect = yes
+
+		random = {
+			chance = 20
+			add_trait_fully_zealous_effect = yes
+		}
+	}
+
+	after = {
+		character_event = {
+			id = montane_pilgrimage.5090 # Stay a little longer then go home
+			days = 10
+		}
+	}
+}
+
+# Monks cure pilgrim of disease - pilgrim attributes it to God's hand
+narrative_event = {
+	id = montane_pilgrimage.5064
+	title = EVTNAME_montane_pilgrimage_5064
+	desc = EVTDESC_montane_pilgrimage_5064
+	picture = GFX_evt_monastery_monks
+	border = GFX_event_narrative_frame_religion
+
+	is_triggered_only = yes
+
+	option = {
+		name = EVTOPTA_montane_pilgrimage_5064
+
+		if = {
+			limit = { has_disease_trigger = yes }
+			remove_disease_trait_effect = yes
+		}
+		else = {
+			# Used later in blessing_removes_disease_effect
+			set_character_flag = pilgrim_blessing
+
+			add_character_modifier = {
+				name = blessing_of_health
+				duration = -1
+			}
+		}
+
+		if = {
+			limit = { trait = wounded }
+
+			remove_trait = wounded
+			add_scarred_tiered_effect = yes
+		}
+
+		add_trait_fully_silently_zealous_effect = yes
+
+		ai_chance = { factor = 70 }
+	}
+
+	option = {
+		name = EVTOPTB_montane_pilgrimage_5064
+
+		if = {
+			limit = { has_disease_trigger = yes }
+			remove_disease_trait_effect = yes
+		}
+		else = {
+			# Used later in blessing_removes_disease_effect
+			set_character_flag = pilgrim_blessing
+
+			add_character_modifier = {
+				name = blessing_of_health
+				duration = -1
+			}
+		}
+
+		if = {
+			limit = { trait = wounded }
+
+			remove_trait = wounded
+			add_scarred_tiered_effect = yes
+		}
+
+		add_trait_fully_silently_cynical_effect = yes
+
+		ai_chance = { factor = 20 }
+	}
+
+	option = {
+		name = EVTOPTC_montane_pilgrimage_5064
+
+		trigger = {
+			lifestyle_traits < 1
+			NOT = { has_dlc = "Way of Life" }
+		}
+
+		if = {
+			limit = { has_disease_trigger = yes }
+			remove_disease_trait_effect = yes
+		}
+		else = {
+			# Used later in blessing_removes_disease_effect
+			set_character_flag = pilgrim_blessing
+
+			add_character_modifier = {
+				name = blessing_of_health
+				duration = -1
+			}
+		}
+
+		if = {
+			limit = { trait = wounded }
+
+			remove_trait = wounded
+			add_scarred_tiered_effect = yes
+		}
+
+		add_trait = mystic
+
+		ai_chance = { factor = 10 }
+	}
+
+	after = {
+		character_event = {
+			id = montane_pilgrimage.5090 # Stay a little longer then go home
+			days = 10
+		}
+	}
+}
+# Blessing of health cures disease after having visited the monks
+character_event = {
+	id = montane_pilgrimage.5068
+	desc = EVTDESC_TOG_7015 # copied from Ancestor's blessing event
+	picture = GFX_evt_monastery_monks
+	border = GFX_event_normal_frame_religion
+
+	trigger = {
+		has_disease_trigger = yes
+	}
+
+	is_triggered_only = yes # blessing_removes_disease_effect, see montane_pilgrimage.5064
+
+	option = {
+		name = EVTOPTA_montane_pilgrimage_5064
+
+		remove_disease_trait_effect = yes
+		remove_character_modifier = blessing_of_health
+		clr_character_flag = pilgrim_blessing
+		remove_trait_silently_cynical_effect = yes
+	}
+}
+
+# Lunatic/possessed pilgrim decides (s)he is God
+character_event = {
+	id = montane_pilgrimage.5065
+	desc = EVTDESC_montane_pilgrimage_5065
+	picture = GFX_evt_lunatic
+	border = GFX_event_normal_frame_religion
+
+	is_triggered_only = yes
+
+	option = {
+		name = EVTOPTA_montane_pilgrimage_5065
+
+		character_event = { id = montane_pilgrimage.5080 } # Results of speaking to the masses
+
+		ai_chance = { factor = 10 }
+	}
+
+	option = {
+		name = EVTOPTB_montane_pilgrimage_5065
+
+		ai_chance = { factor = 90 }
+	}
+
+	after = {
+		character_event = {
+			id = montane_pilgrimage.5090 # Stay a little longer then go home
+			days = 10
+		}
+	}
+}
+
+# Drunkard/hedonist at holy site
+character_event = {
+	id = montane_pilgrimage.5066
+	desc = EVTDESC_montane_pilgrimage_5066
+	picture = GFX_evt_feast
+
+	is_triggered_only = yes
+
+	option = {
+		name = EVTOPTA_montane_pilgrimage_5066
+
+		if = {
+			limit = {
+				lifestyle_traits < 1
+				NOT = { has_dlc = "Way of Life" }
+			}
+
+			random = {
+				chance = 30
+				add_trait = hedonist
+			}
+		}
+
+		random = {
+			chance = 30
+			add_trait_drunkard_effect = yes
+		}
+
+		add_character_modifier = {
+			name = good_times
+			years = 2
+		}
+
+		ai_chance = { factor = 80 }
+	}
+
+	option = {
+		name = EVTOPTB_montane_pilgrimage_5066
+
+		piety = 10
+
+		random = {
+			chance = 30
+			add_trait_stressed_effect = yes
+		}
+
+		ai_chance = { factor = 20 }
+	}
+
+	after = {
+		character_event = {
+			id = montane_pilgrimage.5090 # Stay a little longer then go home
+			days = 10
+		}
+	}
+}
+
+# Impressed by pacific faiths or mormons (pikespeak only)
+character_event = {
+	id = montane_pilgrimage.5067
+	desc = EVTDESC_montane_pilgrimage_5067
+	picture = GFX_evt_imam
+	border = GFX_event_normal_frame_religion
+
+	is_triggered_only = yes
+
+	option = {
+		name = EVTOPTA_montane_pilgrimage_5067
+
+		trigger = {
+			NOT = { trait = sympathy_pacific }
+		}
+
+		remove_trait_silently_zealous_effect = yes
+		add_trait = sympathy_pacific
+	}
+
+	option = {
+		name = EVTOPTB_montane_pilgrimage_5067
+
+		trigger = {
+			NOT = { trait = sympathy_latter_day_saints }
+		}
+
+		remove_trait_silently_zealous_effect = yes
+		add_trait = sympathy_latter_day_saints
+	}
+
+	after = {
+		character_event = {
+			id = montane_pilgrimage.5090 # Stay a little longer then go home
+			days = 10
+		}
+	}
+}
+# Self-styled God speaks to the masses - consequences
+character_event = {
+	id = montane_pilgrimage.5080
+	desc = EVTDESC_montane_pilgrimage_5080
+	picture = GFX_evt_lunatic
+	border = GFX_event_normal_frame_religion
+
+	is_triggered_only = yes
+
+	option = {
+		name = EVTOPTA_montane_pilgrimage_5080
+
+		prestige = -10
+		clr_character_flag = good_pilgrimage
+		clr_character_flag = bad_pilgrimage
+		set_character_flag = abominable_pilgrimage
+		add_trait_silently_lunatic_effect = yes
+
+		random = {
+			chance = 50
+			add_trait_fully_wroth_effect = yes
+		}
+	}
+}
+
+#####################################################
+#                                                   #
+# Homecoming                                        #
+#                                                   #
+# ID montane_pilgrimage5090-montane_pilgrimage5093  #
+#                                                   #
+#####################################################
+
+# Event checking result of pilgrimage and sending us on to the respective homecoming event
+character_event = {
+	id = montane_pilgrimage.5090
+
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		trigger_switch = {
+			on_trigger = has_character_flag
+
+			good_pilgrimage = { character_event = { id = montane_pilgrimage.5091 } }
+			bad_pilgrimage = { character_event = { id = montane_pilgrimage.5092 } }
+			abominable_pilgrimage = { character_event = { id = montane_pilgrimage.5093 } }
+		}
+
+	#	if = {
+	#		limit = { has_quest = quest_monastic_order_pilgrimage_christian }
+	#
+	#		letter_event = {
+	#			id = MNM.4020
+	#			days = 1
+	#		}
+	#	}
+	}
+}
+
+# Good pilgrimage
+character_event = {
+	id = montane_pilgrimage.5091
+	desc = EVTDESC_montane_pilgrimage_5091
+	picture = GFX_evt_castle_construction
+	border = GFX_event_normal_frame_religion
+
+	is_triggered_only = yes
+
+	immediate = {
+		character_event = { id = montane_pilgrimage.5999 } # Clean-up
+
+		if = {
+			limit = {
+				ai = no
+				is_ironman = yes
+				NOT = { has_character_flag = achievement_pilgrim }
+			}
+
+			set_character_flag = achievement_pilgrim
+		}
+	}
+
+	option = {
+		name = EVTOPTA_montane_pilgrimage_5091
+
+		add_trait = montane_hiker
+		piety = 30
+	}
+}
+
+# Disappointing pilgrimage
+character_event = {
+	id = montane_pilgrimage.5092
+	desc = EVTDESC_montane_pilgrimage_5092
+	picture = GFX_evt_castle_construction
+	border = GFX_event_normal_frame_religion
+
+	is_triggered_only = yes
+
+	immediate = {
+		character_event = { id = montane_pilgrimage.5999 } # Clean-up
+
+		if = {
+			limit = {
+				ai = no
+				is_ironman = yes
+				NOT = { has_character_flag = achievement_pilgrim }
+			}
+
+			set_character_flag = achievement_pilgrim
+		}
+	}
+
+	option = {
+		name = EVTOPTA_montane_pilgrimage_5092
+
+		add_trait = montane_hiker
+		piety = -10
+
+		random = {
+			chance = 20
+			add_trait_fully_cynical_effect = yes
+		}
+	}
+}
+
+# Abominable pilgrimage - very unusual outcome
+character_event = {
+	id = montane_pilgrimage.5093
+	desc = EVTDESC_montane_pilgrimage_5093
+	picture = GFX_evt_lunatic
+	border = GFX_event_normal_frame_religion
+
+	is_triggered_only = yes
+
+	immediate = {
+		character_event = { id = montane_pilgrimage.5999 } # Clean-up
+
+		if = {
+			limit = {
+				ai = no
+				is_ironman = yes
+				NOT = { has_character_flag = achievement_pilgrim }
+			}
+
+			set_character_flag = achievement_pilgrim
+		}
+	}
+
+	option = {
+		name = EVTOPTA_montane_pilgrimage_5093
+
+		add_trait = montane_hiker
+		piety = -100
+	}
+}
+
+character_event = {
+	id = montane_pilgrimage.5998
+
+	is_triggered_only = yes # on_character_convert_religion
+	hide_window = yes
+
+	trigger = {
+		OR = {
+			has_character_flag = preparing_pilgrimage
+			has_character_flag = activated_pilgrimage
+		}
+
+		NOT = { religion_group = christian }
+	}
+
+	immediate = {
+		character_event = { id = montane_pilgrimage.5999 }
+	}
+}
+# Clean-up
+character_event = {
+	id = montane_pilgrimage.5999 # originally HFP.23024
+
+	is_triggered_only = yes # on_become_imprisoned_any_reason and on coming home
+	hide_window = yes
+
+	immediate = {
+		clr_character_flag = pilgrimage_to_yellowstone
+		clr_character_flag = pilgrimage_to_pikes_peak
+		clr_character_flag = pilgrimage_to_grand
+		clr_character_flag = pilgrimage_to_banff
+		clr_character_flag = pilgrimage_to_mesa_verde
+		clr_character_flag = pilgrimage_to_constantinople
+		clr_character_flag = pilgrimage_to_axum
+		clr_character_flag = pilgrimage_to_antioch
+		clr_character_flag = abominable_pilgrimage
+		clr_character_flag = do_not_disturb
+		clr_character_flag = preparing_pilgrimage
+		clr_character_flag = activated_pilgrimage
+		clr_character_flag = cold_saintly_pilgrimage
+		clr_character_flag = mild_saintly_pilgrimage
+		clr_character_flag = exotic_saintly_pilgrimage
+		clr_character_flag = generic_saintly_pilgrimage
+		clr_character_flag = pilgrimage_st_augustine
+		clr_character_flag = pilgrimage_st_christopher
+		clr_character_flag = pilgrimage_st_patrick
+		remove_trait = montane_on_hike
+		clear_delayed_event = { id = montane_pilgrimage.5000 }
+		clear_delayed_event = { id = montane_pilgrimage.5011 }
+		clear_delayed_event = { id = montane_pilgrimage.5016 }
+		clear_delayed_event = { id = montane_pilgrimage.5017 }
+		clear_delayed_event = { id = montane_pilgrimage.5018 }
+		clear_delayed_event = { id = montane_pilgrimage.5019 }
+		clear_delayed_event = { id = montane_pilgrimage.5020 }
+		clear_delayed_event = { id = montane_pilgrimage.5021 }
+		clear_delayed_event = { id = montane_pilgrimage.5026 }
+		clear_delayed_event = { id = montane_pilgrimage.5027 }
+		clear_delayed_event = { id = montane_pilgrimage.5028 }
+		clear_delayed_event = { id = montane_pilgrimage.5029 }
+		clear_delayed_event = { id = montane_pilgrimage.5030 }
+		clear_delayed_event = { id = montane_pilgrimage.5031 }
+		clear_delayed_event = { id = montane_pilgrimage.5032 }
+		clear_delayed_event = { id = montane_pilgrimage.5033 }
+		clear_delayed_event = { id = montane_pilgrimage.5034 }
+		clear_delayed_event = { id = montane_pilgrimage.5035 }
+		clear_delayed_event = { id = montane_pilgrimage.5036 }
+		clear_delayed_event = { id = montane_pilgrimage.5037 }
+		clear_delayed_event = { id = montane_pilgrimage.5038 }
+		clear_delayed_event = { id = montane_pilgrimage.5039 }
+		clear_delayed_event = { id = montane_pilgrimage.5045 }
+		clear_delayed_event = { id = montane_pilgrimage.5046 }
+		clear_delayed_event = { id = montane_pilgrimage.5047 }
+		clear_delayed_event = { id = montane_pilgrimage.5050 }
+		clear_delayed_event = { id = montane_pilgrimage.5055 }
+		clear_delayed_event = { id = montane_pilgrimage.5056 }
+		clear_delayed_event = { id = montane_pilgrimage.5057 }
+		clear_delayed_event = { id = montane_pilgrimage.5058 }
+		clear_delayed_event = { id = montane_pilgrimage.5059 }
+		clear_delayed_event = { id = montane_pilgrimage.5060 }
+		clear_delayed_event = { id = montane_pilgrimage.5061 }
+		clear_delayed_event = { id = montane_pilgrimage.5062 }
+		clear_delayed_event = { id = montane_pilgrimage.5063 }
+		clear_delayed_event = { id = montane_pilgrimage.5064 }
+		clear_delayed_event = { id = montane_pilgrimage.5068 }
+		clear_delayed_event = { id = montane_pilgrimage.5065 }
+		clear_delayed_event = { id = montane_pilgrimage.5066 }
+		clear_delayed_event = { id = montane_pilgrimage.5067 }
+		clear_delayed_event = { id = montane_pilgrimage.5080 }
+		clear_delayed_event = { id = montane_pilgrimage.5087 }
+		clear_delayed_event = { id = montane_pilgrimage.5090 }
+		clear_delayed_event = { id = montane_pilgrimage.5091 }
+		clear_delayed_event = { id = montane_pilgrimage.5092 }
+		clear_delayed_event = { id = montane_pilgrimage.5093 }
+		clear_delayed_event = { id = HF.41300 }
+		clear_delayed_event = { id = HF.41310 }
+		clear_delayed_event = { id = HF.41312 }
+		clear_delayed_event = { id = HF.41314 }
+		clear_delayed_event = { id = HF.41316 }
+		clear_delayed_event = { id = HF.41320 }
+		clear_delayed_event = { id = HF.41340 }
+		clear_delayed_event = { id = HF.41350 }
+		clear_delayed_event = { id = HF.41352 }
+		clear_delayed_event = { id = HF.41354 }
+		clear_delayed_event = { id = HF.41356 }
+		clear_delayed_event = { id = HF.41360 }
+		clear_delayed_event = { id = HF.41365 }
+		clear_delayed_event = { id = HF.41370 }
+		clear_delayed_event = { id = HF.41375 }
+		clear_delayed_event = { id = HF.41390 }
+		clear_delayed_event = { id = HF.41400 }
+		clear_delayed_event = { id = HF.41410 }
+		clear_delayed_event = { id = HF.41411 }
+		clear_delayed_event = { id = HF.41412 }
+		clear_delayed_event = { id = HF.41413 }
+		clear_delayed_event = { id = HF.41419 }
+		clear_delayed_event = { id = HF.41420 }
+		clear_delayed_event = { id = HF.41450 }
 	}
 }
