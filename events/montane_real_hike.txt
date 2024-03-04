@@ -1,2030 +1,2104 @@
-# 1		make preparations for the journey
-# 11	visit Yellowstone [448]
-# 12	visit Rocky Mountain National Park  [769]
-# 13	visit banff [500]
-# 14	visit zion [436]
-# 15	visit guarden_of_the_gods [391]
-# 20	determine relationship between pilgrim and ruler of city
-# 30	city owned by you, take a quick tour
-# 31	city owned by a lord in the same realm as you
-# 32	city owned by montane foreign lord
-# 33	city owned by infidel foreign lord
-# 40	pilgrim requests access
-# 41	pilgrim presents a gift
-# 42	pilgrim requests access diplomatically
-# 43	pilgrim cites patriotic reasons to be allowed in
-# 44	pilgrim gives inspiring speech, diplo + learning
-# 45	pilgrim demands access with threat of force
-# 46	pilgrim has been observed sneaking to holy sites
-# 50	ruler graciously allows you into the city
-# 51	ruler allows you into the city
-# 52	ruler refuses you entry into the city
-# 53	ruler attempts to have you imprisoned
-# 54	ruler attempts to have you killed
-# 56	you explore the city without the ruler knowing
-# 61	turned away from yellowstone [448]
-# 62	turned away from Rocky Mountain National Park  [769]
-# 63	turned away from banff [500]
-# 64	turned away from zion [63]
-# 65	turned away from guarden_of_the_gods [391]
-# 70	notify new friend
-# 71	notify new rival
-# 90	the pilgrimage has failed, suffer some penalties
-# 91	the pilgrimage has succeeded, gain some benefits
-# 92	clean up flags
+namespace = montane_pilgrimage
+# holy mountains to see are 
+# Yellowstone, 
+# Banff,  
+# Mesa Verde
+# Pikes peak ie Garden of the Gods
+# c_grand which is meant to be Rocky Mountain National Park
+#
+# Confirm decision and check religion
 
+character_event = {
+	id = montane_pilgrimage.5000
+	desc = EVTDESC_montane_pilgrimage_5000
+	picture = GFX_evt_bishop
+	border = GFX_event_normal_frame_religion
 
+	is_triggered_only = yes # christian_pilgrimage, minor_decisions.txt
 
-namespace = montane_pilgrim
+	option = {
+		name = EVTOPTA_montane_pilgrimage_5000
 
-narrative_event = {
-	id = montane_pilgrim.1
-	title = EVTNAME_montane_pilgrim_prep
-	desc = EVTDESC_montane_pilgrim_prep
+		piety = 20
+		set_character_flag = preparing_pilgrimage
+		clr_character_flag = activated_pilgrimage
+
+		if = {
+			limit = {
+				OR = {
+					#is_orthodox_branch = yes
+					#is_nestorian_branch = yes
+					#is_miaphysite_branch = yes
+				}
+			}
+
+			character_event = { id = montane_pilgrimage.5011 } # Jeru, Const, Antio, Axum
+		}
+		else_if = {
+			#limit = { is_catholic_branch = yes }
+
+			if = {
+				limit = {
+					capital_scope = {
+						OR = {
+							province_id = c_yellowstone #c_kent
+							province_id = c_grand #c_koln
+							province_id = c_banff #c_roma
+							province_id = c_mesa_verde #c_santiago
+						}
+					}
+				}
+
+				character_event = {
+					id = montane_pilgrimage.5016 # Go to pikes peak    # Jerusalem
+					days = 4
+				}
+			}
+			else_if = {
+				limit = {
+					capital_scope = { province_id = c_pikes_peak }
+				}
+
+				character_event = {
+					id = montane_pilgrimage.5017 # Go to Banff #Rome
+					days = 4
+				}
+			}
+			else = {
+				character_event = {
+					id = montane_pilgrimage.5018 # May choose destination
+					days = 4
+				}
+			}
+		}
+	}
+}
+# Montane - Always go to Pikes Peak if already living at one of the other sites
+character_event = {
+	id = montane_pilgrimage.5016
+	desc = EVTDESC_montane_pilgrimage_5016
+	picture = GFX_evt_nomad_camp
+	border = GFX_event_normal_frame_religion
+
+	is_triggered_only = yes
+
+	option = {
+		name = EVTOPTA_montane_pilgrimage_5016
+
+		set_character_flag = pilgrimage_to_pikes_peak 
+
+		character_event = {
+			id = montane_pilgrimage.5021 # Set out
+			days = 15
+		}
+
+		if = {
+			limit = { ai = no }
+
+			chronicle = {
+				entry = CHRONICLE_PILGRIMAGE_TO_pikes_peak   #CHRONICLE_PILGRIMAGE_TO_JERUSALEM
+				picture = GFX_evt_pilgrims_epic_journey
+			}
+		}
+	}
+}
+# Montane - Always go to Banff if living in pikes peak    # Jerusalem province
+character_event = {
+	id = montane_pilgrimage.5017
+	desc = EVTDESC_montane_pilgrimage_5017
+	picture = GFX_evt_desert
+	border = GFX_event_normal_frame_religion
+
+	is_triggered_only = yes
+
+	option = {
+		name = EVTOPTA_montane_pilgrimage_5017
+
+		set_character_flag = pilgrimage_to_banff
+
+		character_event = {
+			id = montane_pilgrimage.5021 # Set out
+			days = 15
+		}
+
+		if = {
+			limit = { ai = no }
+
+			chronicle = {
+				entry = CHRONICLE_PILGRIMAGE_TO_BANFF
+				picture = GFX_evt_pilgrims_epic_journey
+			}
+		}
+	}
+}
+# Montane - May decide where to go - Western Europe (Canterbury/yellowstone, Santiago/c_mesa_verde, Cologne/c_grand) or the ancient sites (Jerusalem/Pikes Peak, Rome/Banff)
+character_event = {
+	id = montane_pilgrimage.5018
+	desc = EVTDESC_montane_pilgrimage_5018
+	picture = GFX_evt_wolf
+	border = GFX_event_normal_frame_religion
+
+	is_triggered_only = yes
+
+	option = {
+		name = EVTOPTA_montane_pilgrimage_5018 # Go to Holy Mountains
+
+		trigger = { year >= 814 }
+
+		character_event = { id = montane_pilgrimage.5019 }
+	}
+
+	option = {
+		name = EVTOPTB_montane_pilgrimage_5018 # Go to the old Holy sites,
+
+		character_event = { id = montane_pilgrimage.5020 }
+	}
+
+#	option = {
+#		name = EVTOPTC_montane_pilgrimage_5018 # Find a Saintly Burial Site to visit
+#
+#		trigger = { has_dlc = "Holy Fury" }
+#
+#		character_event = {
+#			id = HF.41300
+#			days = 15
+#		}
+#	}
+}
+
+# Montane - Where to go - Mountains
+character_event = {
+	id = montane_pilgrimage.5019
+	desc = EVTDESC_montane_pilgrimage_5019
+	picture = GFX_evt_wolf
+	border = GFX_event_normal_frame_religion
+
+	is_triggered_only = yes
+
+	option = {
+		name = EVTOPTA_montane_pilgrimage_5019
+
+		trigger = { year >= 1170 }
+
+		set_character_flag = pilgrimage_to_yellowstone
+
+		character_event = {
+			id = montane_pilgrimage.5021 # Set out
+			days = 15
+		}
+
+		if = {
+			limit = { ai = no }
+
+			chronicle = {
+				entry = CHRONICLE_PILGRIMAGE_TO_yellowstone
+				picture = GFX_evt_pilgrims_epic_journey
+			}
+		}
+
+		ai_chance = { factor = 25 }
+	}
+
+	option = {
+		name = EVTOPTB_montane_pilgrimage_5019
+
+		trigger = { year >= 1164 }
+
+		set_character_flag = pilgrimage_to_grand
+
+		character_event = {
+			id = montane_pilgrimage.5021 # Set out
+			days = 15
+		}
+
+		if = {
+			limit = { ai = no }
+
+			chronicle = {
+				entry = CHRONICLE_PILGRIMAGE_TO_GRAND
+				picture = GFX_evt_pilgrims_epic_journey
+			}
+		}
+
+		ai_chance = { factor = 25 }
+	}
+
+	option = {
+		name = EVTOPTC_montane_pilgrimage_5019
+
+		set_character_flag = pilgrimage_to_mesa_verde
+
+		character_event = {
+			id = montane_pilgrimage.5021 # Set out
+			days = 15
+		}
+
+		if = {
+			limit = { ai = no }
+
+			chronicle = {
+				entry = CHRONICLE_PILGRIMAGE_TO_MESA_VERDE
+				picture = GFX_evt_pilgrims_epic_journey
+			}
+		}
+
+		ai_chance = { factor = 50 }
+	}
+}
+
+# Catholic - Where to go - Med - the oldest sites
+character_event = {
+	id = montane_pilgrimage.5020
+	desc = EVTDESC_montane_pilgrimage_5020
+	picture = GFX_evt_desert
+	border = GFX_event_normal_frame_religion
+
+	is_triggered_only = yes
+
+	option = {
+		name = EVTOPTA_montane_pilgrimage_5020
+
+		set_character_flag = pilgrimage_to_jerusalem
+
+		character_event = {
+			id = montane_pilgrimage.5021 # Set out
+			days = 15
+		}
+
+		if = {
+			limit = { ai = no }
+
+			chronicle = {
+				entry = CHRONICLE_PILGRIMAGE_TO_pikes_peak
+				picture = GFX_evt_pilgrims_epic_journey
+			}
+		}
+	}
+
+	option = {
+		name = EVTOPTB_montane_pilgrimage_5020
+
+		set_character_flag = pilgrimage_to_banff
+
+		character_event = {
+			id = montane_pilgrimage.5021 # Set out
+			days = 15
+		}
+
+		if = {
+			limit = { ai = no }
+
+			chronicle = {
+				entry = CHRONICLE_PILGRIMAGE_TO_pikes_peak
+				picture = GFX_evt_pilgrims_epic_journey
+			}
+		}
+	}
+}
+
+###########################################
+#                                         #
+# The journey                             #
+#                                         #
+# ID montane_pilgrimage.5021-5049         #
+#    montane_pilgrimage.5081-5087         #
+#    montane_pilgrimage.5094-5096         #
+#                                         #
+###########################################
+
+# Setting out (also selects events for road)
+character_event = {
+	id = montane_pilgrimage.5021
+	border = GFX_event_normal_frame_religion
+
+	desc = {
+		text = EVTDESC_montane_pilgrimage_5021
+		picture = GFX_evt_pilgrims_epic_journey
+		trigger = { has_character_flag = pilgrimage_to_yellowstone }
+	}
+	desc = {
+		text = EVTDESC_montane_pilgrimage_5022
+		picture = GFX_evt_pilgrims_epic_journey_desert
+		trigger = { has_character_flag = pilgrimage_to_pikes_peak }
+	}
+	desc = {
+		text = EVTDESC_montane_pilgrimage_5023
+		picture = GFX_evt_pilgrims_epic_journey
+		trigger = { has_character_flag = pilgrimage_to_grand }
+	}
+	desc = {
+		text = EVTDESC_montane_pilgrimage_5024
+		picture = GFX_evt_pilgrims_epic_journey
+		trigger = { has_character_flag = pilgrimage_to_banff }
+	}
+	desc = {
+		text = EVTDESC_montane_pilgrimage_5025
+		picture = GFX_evt_pilgrims_epic_journey
+		trigger = { has_character_flag = pilgrimage_to_mesa_verde }
+	}
+
+	is_triggered_only = yes
+
+	option = {
+		name = {
+			text = EVTOPTA_montane_pilgrimage_5021
+			trigger = { has_character_flag = pilgrimage_to_yellowstone }
+		}
+		name = {
+			text = EVTOPTA_montane_pilgrimage_5022
+			trigger = { has_character_flag = pilgrimage_to_pikes_peak }
+		}
+		name = {
+			text = EVTOPTA_montane_pilgrimage_5023
+			trigger = { has_character_flag = pilgrimage_to_grand }
+		}
+		name = {
+			text = EVTOPTA_montane_pilgrimage_5024
+			trigger = { has_character_flag = pilgrimage_to_banff }
+		}
+		name = {
+			text = EVTOPTA_montane_pilgrimage_5025
+			trigger = { has_character_flag = pilgrimage_to_mesa_verde }
+		}
+
+		hidden_effect = {
+			clr_character_flag = preparing_pilgrimage
+			add_trait = montane_on_hike
+			set_character_flag = good_pilgrimage
+
+			narrative_event = {
+				id = montane_pilgrimage.5050
+				days = 30
+			}
+
+			if = {
+				limit = {
+					trigger_if = {
+						limit = { has_character_flag = pilgrimage_to_yellowstone }
+
+						capital_scope = {
+							distance = {
+								where = c_kent
+								value >= 400 # Longer journey
+							}
+						}
+					}
+					trigger_else_if = {
+						limit = { has_character_flag = pilgrimage_to_pikes_peak }
+
+						capital_scope = {
+							distance = {
+								where = c_pikes_peak
+								value >= 400 # Longer journey
+							}
+						}
+					}
+					trigger_else_if = {
+						limit = { has_character_flag = pilgrimage_to_grand }
+
+						capital_scope = {
+							distance = {
+								where = c_grand
+								value >= 400 # Longer journey
+							}
+						}
+					}
+					trigger_else_if = {
+						limit = { has_character_flag = pilgrimage_to_banff }
+
+						capital_scope = {
+							distance = {
+								where = c_roma
+								value >= 400 # Longer journey
+							}
+						}
+					}
+					trigger_else_if = {
+						limit = { has_character_flag = pilgrimage_to_mesa_verde }
+
+						capital_scope = {
+							distance = {
+								where = c_mesa_verde
+								value >= 400 # Longer journey
+							}
+						}
+					}
+				}
+
+				# List for longer journeys only
+				random_list = {
+					20 = { character_event = { id = montane_pilgrimage.5026 days = 5 random = 9 } }
+					20 = { character_event = { id = montane_pilgrimage.5027 days = 5 random = 9 } }
+					20 = { narrative_event = { id = montane_pilgrimage.5028 days = 5 random = 9 } }
+					20 = { character_event = { id = montane_pilgrimage.5029 days = 5 random = 9 } }
+					20 = { character_event = { id = montane_pilgrimage.5030 days = 5 random = 9 } }
+				}
+			}
+
+			# List that is always checked
+			random_list = {
+				10 = { character_event = { id = montane_pilgrimage.5031 days = 15 random = 7 } }
+				10 = { character_event = { id = montane_pilgrimage.5032 days = 15 random = 7 } }
+				10 = { narrative_event = { id = montane_pilgrimage.5033 days = 15 random = 7 } }
+				10 = { character_event = { id = montane_pilgrimage.5034 days = 15 random = 7 } }
+				10 = { character_event = { id = montane_pilgrimage.5035 days = 15 random = 7 } }
+				10 = { character_event = { id = montane_pilgrimage.5036 days = 15 random = 7 } }
+				10 = { character_event = { id = montane_pilgrimage.5037 days = 15 random = 7 } }
+				10 = { character_event = { id = montane_pilgrimage.5038 days = 15 random = 7 } }
+				10 = { character_event = { id = montane_pilgrimage.5039 days = 15 random = 7 } }
+			}
+
+			# Holy orders events, close to destination
+			if = {
+				limit = {
+					trigger_if = {
+						limit = { has_character_flag = pilgrimage_to_yellowstone }
+
+					#	OR = {
+					#		is_title_active = d_knights_templar
+					#		is_title_active = d_knights_hospitaller
+					#	}
+					}
+					trigger_else_if = {
+						limit = { has_character_flag = pilgrimage_to_pikes_peak }
+
+					#	OR = {
+					#		is_title_active = d_knights_templar
+					#		is_title_active = d_knights_hospitaller
+					#		is_title_active = d_holy_sepulchre
+					#		is_title_active = d_teutonic_order
+					#		is_title_active = k_teutonic_state
+					#	}
+					}
+					trigger_else_if = {
+						limit = { has_character_flag = pilgrimage_to_grand }
+
+					#	OR = {
+					#		is_title_active = d_knights_templar
+					#		is_title_active = d_knights_hospitaller
+					#		is_title_active = d_teutonic_order
+					#		is_title_active = k_teutonic_state
+					#	}
+					}
+					trigger_else_if = {
+						limit = { has_character_flag = pilgrimage_to_banff }
+
+					#	OR = {
+					#		is_title_active = d_knights_templar
+					#		is_title_active = d_knights_hospitaller
+					#		is_title_active = d_teutonic_order
+					#		is_title_active = k_teutonic_state
+					#	}
+					}
+					trigger_else_if = {
+						limit = { has_character_flag = pilgrimage_to_mesa_verde }
+
+					#	OR = {
+					#		is_title_active = d_knights_mesa_verde
+					#		is_title_active = d_knights_calatrava
+					#	}
+					}
+				}
+
+				random_list = {
+					33 = { narrative_event = { id = montane_pilgrimage.5045 days = 23 random = 4 } }
+					33 = { character_event = { id = montane_pilgrimage.5046 days = 23 random = 4 } }
+					33 = { character_event = { id = montane_pilgrimage.5047 days = 23 random = 4 } }
+				}
+			}
+		}
+	}
+}
+
+# Trouble on road - weather
+character_event = {
+	id = montane_pilgrimage.5026
+	desc = EVTDESC_montane_pilgrimage_5026
 	picture = GFX_evt_pilgrims_epic_journey
 
 	is_triggered_only = yes
 
 	option = {
-		name = EVTOPT_montane_pilgrim_prep_cancel
-		piety = -10
-		remove_trait = on_pilgrimage
-	}
-	
-	option = {
-		name = EVTOPT_montane_pilgrim_prep_humble
-		piety = 20
+		name = EVTOPTA_montane_pilgrimage_5026
+
+		piety = 50
+
 		random_list = {
-			20 = { add_trait = humble }
-			10 = { add_trait = trusting }
-			70 = { }
-		}	
-		narrative_event = { id = montane_pilgrim.11 days = 7 random = 10 }
-		ai_chance = { factor = 5 }
-	}
-	
-	option = {
-		name = EVTOPT_montane_pilgrim_prep_carriage
-		trigger = { wealth = 10 }
-		prestige = 20
-		wealth = -10
-		set_character_flag = pilgrim_carriage
-		random_list = {
-			20 = { add_trait = proud }
-			10 = { add_trait = shy }
-			70 = { }
+			10 = { give_pneumonic_effect = yes }
+			30 = { give_ill_effect = yes }
+			60 = { }
 		}
-		narrative_event = { id = montane_pilgrim.11 days = 12 random = 10 }
+
 		ai_chance = { factor = 10 }
 	}
-	
+
 	option = {
-		name = EVTOPT_montane_pilgrim_prep_retinue
-		trigger = { wealth = 25 }
-		prestige = 20
-		wealth = -25
-		set_character_flag = pilgrim_bodyguards
-		random = { chance = 20 add_trait = paranoid }
-		narrative_event = { id = montane_pilgrim.11 days = 15 random = 10 }
+		name = EVTOPTB_montane_pilgrimage_5026
+
+		add_trait_fully_silently_cynical_effect = yes
+
+		random_list = {
+			 5 = { give_pneumonic_effect = yes }
+			15 = { give_ill_effect = yes }
+			80 = { }
+		}
+
+		ai_chance = { factor = 90 }
+	}
+}
+
+# Trouble on road - lost
+character_event = {
+	id = montane_pilgrimage.5027
+	desc = EVTDESC_montane_pilgrimage_5027
+	picture = GFX_evt_pilgrims_epic_journey
+
+	is_triggered_only = yes
+
+	option = {
+		name = EVTOPTA_montane_pilgrimage_5027
+
+		random = {
+			chance = 30
+			add_trait_fully_wroth_effect = yes
+		}
+	}
+
+	option = {
+		name = EVTOPTB_montane_pilgrimage_5027
+
+		random = {
+			chance = 30
+			add_trait_fully_patient_effect = yes
+		}
+	}
+}
+
+# Trouble on road - inn on fire
+narrative_event = {
+	id = montane_pilgrimage.5028
+	title = EVTNAME_montane_pilgrimage_5028
+	desc = EVTDESC_montane_pilgrimage_5028
+	picture = GFX_evt_horsemanship
+
+	is_triggered_only = yes
+
+	option = {
+		name = EVTOPTA_montane_pilgrimage_5028
+
+		random = {
+			chance = 10
+			add_trait_wounded_effect = yes
+		}
+
+		random = {
+			chance = 30
+			add_trait_fully_brave_effect = yes
+		}
+
+		ai_chance = { factor = 80 }
+	}
+
+	option = {
+		name = EVTOPTB_montane_pilgrimage_5028
+
+		add_trait_fully_silently_craven_effect = yes
+
 		ai_chance = { factor = 20 }
 	}
 }
 
-narrative_event = {
-	id = montane_pilgrim.11
-	title = EVTNAME_pilgrim_yellowstone
-	desc = EVTDESC_montane_pilgrim_yellowstone
-	picture = GFX_evt_busy_trading_dock_republic
-
-	is_triggered_only = yes
-	#trigger = { trait = on_pilgrimage }
-	trigger = { trait = montane_on_hike }
-	immediate = {
-		set_character_flag = on_pilgrimage_yellowstone
-		clr_character_flag = pilgrim_entry_retried
-	}
-	
-	option = {
-		name = EVTOPT_pilgrim_approach
-		448 = { owner = { character_event = { id = montane_pilgrim.20 } } }
-		narrative_event = { id = montane_pilgrim.12 days = 20 random = 10 }
-	}
-}
-
-narrative_event = {
-	id = montane_pilgrim.12
-	title = EVTNAME_pilgrim_rocky_mountain_national_park 
-	desc = EVTDESC_montane_pilgrim_rocky_mountain_national_park 
-	picture = GFX_evt_busy_trading_dock_republic
-
-	is_triggered_only = yes
-	#trigger = { trait = on_pilgrimage }
-	trigger = { trait = montane_on_hike }
-	immediate = {
-		clr_character_flag = on_pilgrimage_yellowstone
-		set_character_flag = on_pilgrimage_rocky_mountain_national_park 
-		clr_character_flag = pilgrim_entry_retried
-	}
-
-	option = {
-		name = EVTOPT_pilgrim_approach
-		 769 = { owner = { character_event = { id = montane_pilgrim.20 } } }
-		narrative_event = { id = montane_pilgrim.13 days = 20 random = 10 }
-	}
-}
-
-narrative_event = {
-	id = montane_pilgrim.13
-	title = EVTNAME_pilgrim_banff
-	desc = EVTDESC_montane_pilgrim_banff
-	picture = GFX_evt_busy_trading_dock_republic
-
-	is_triggered_only = yes 
-	trigger = { trait = montane_on_hike }
-#	trigger = { trait = on_pilgrimage }
-	immediate = {
-		clr_character_flag = on_pilgrimage_rocky_mountain_national_park 
-		set_character_flag = on_pilgrimage_banff
-		clr_character_flag = pilgrim_entry_retried
-	}
-
-	option = {
-		name = EVTOPT_pilgrim_approach
-		500 = { owner = { character_event = { id = montane_pilgrim.20 } } }
-		narrative_event = { id = montane_pilgrim.14 days = 20 random = 10 }
-	}
-}
-
-narrative_event = {
-	id = montane_pilgrim.14
-	title = EVTNAME_pilgrim_zion
-	desc = EVTDESC_montane_pilgrim_zion
-	picture = GFX_evt_busy_trading_dock_republic
-
-	is_triggered_only = yes
-	#trigger = { trait = on_pilgrimage }
-	trigger = { trait = montane_on_hike }
-	immediate = {
-		clr_character_flag = on_pilgrimage_banff
-		set_character_flag = on_pilgrimage_zion
-		clr_character_flag = pilgrim_entry_retried
-	}
-
-	option = {
-		name = EVTOPT_pilgrim_approach
-		436 = { owner = { character_event = { id = montane_pilgrim.20 } } }
-		narrative_event = { id = montane_pilgrim.15 days = 20 random = 10 }
-	}
-}
-
-narrative_event = {
-	id = montane_pilgrim.15
-	title = EVTNAME_pilgrim_guarden_of_the_gods
-	desc = EVTDESC_montane_pilgrim_guarden_of_the_gods
-	picture = GFX_evt_busy_trading_dock_republic
-
-	is_triggered_only = yes
-	#trigger = { trait = on_pilgrimage }
-	trigger = { trait = montane_on_hike }
-	immediate = {
-		clr_character_flag = on_pilgrimage_zion
-		set_character_flag = on_pilgrimage_guarden_of_the_gods
-		clr_character_flag = pilgrim_entry_retried
-	}
-
-	option = {
-		name = EVTOPT_pilgrim_approach
-		391 = { owner = { character_event = { id = montane_pilgrim.20 } } }
-		narrative_event = { id = montane_pilgrim.91 days = 5 random = 5 }
-	}
-}
-
+# Danger on road - robbers
 character_event = {
-	id = montane_pilgrim.20
+	id = montane_pilgrimage.5029
+	desc = EVTDESC_montane_pilgrimage_5029
+	picture = GFX_evt_bandits
 
-	hide_window = yes
 	is_triggered_only = yes
-	
-	immediate = {
-		# 30	city owned by pilgrim
-		if = {
-			limit = { character = FROM }
-			FROM = { character_event = { id = montane_pilgrim.30 } }
-		}
 
-		# 31	city owned by a lord in the same realm as pilgrim
-		if = {
-			limit = {
-				NOT = { character = FROM }
-				NOT = { FROM = { has_opinion_modifier = { who = ROOT modifier = allowed_pilgrim } } }
-				same_realm = FROM #does this actually work?
-			}
-			FROM = { character_event = { id = montane_pilgrim.31 } }
-		}
-
-		# 32	city owned by montane foreign lord
-		if = {
-			limit = {
-				NOT = { character = FROM }
-				NOT = { same_realm = FROM }
-				NOT = { FROM = { has_opinion_modifier = { who = ROOT modifier = allowed_pilgrim } } }
-				religion = montane
-			}
-			FROM = { character_event = { id = montane_pilgrim.32 } }
-		}
-
-		# 33	city owned by infidel foreign lord
-		if = {
-			limit = {
-				NOT = { character = FROM }
-				NOT = { same_realm = FROM }
-				NOT = { religion = montane }
-				NOT = { FROM = { has_opinion_modifier = { who = ROOT modifier = allowed_pilgrim } } }
-			}
-			FROM = { character_event = { id = montane_pilgrim.33 } }
-		}
-		
-		# 34	city owned by another lord who has already granted you access
-		if = {
-			limit = {
-				NOT = { character = FROM }
-				FROM = { has_opinion_modifier = { who = ROOT modifier = allowed_pilgrim } }
-			}
-			FROM = { character_event = { id = montane_pilgrim.34 } }
-		}
-	}
-	
-	option = { }
-}
-
-# ************************* Pilgrim Choices ************************
-
-character_event = {
-	id = montane_pilgrim.30
-	desc = EVTDESC_montane_pilgrim_owncity
-	picture = GFX_evt_market
-	border = GFX_event_normal_frame_economy
-	
-	is_triggered_only = yes
-	
 	option = {
-		name = EVTOPT_pilgrim_owncity_admire
-		prestige = 10
-		piety = 5
-		random_list = {
-			60 = { remove_trait = stressed }
-			30 = { remove_trait = depressed }
-			10 = { add_trait = content }
-		}
-		ai_chance = {
-			factor = 25
-			modifier = { factor = 2 trait = proud }
-		}
-	}
-	
-	option = {
-		name = EVTOPT_pilgrim_owncity_donate
-		trigger = { wealth = 20 }
-		piety = 10
-		wealth = -20
-		add_character_modifier = { name = donated_to_holy_order duration = 180 }
-		ai_chance = {
-			factor = 25
-			modifier = { factor = 2 trait = zealous }
-			modifier = { factor = 2 trait = charitable }
-		}
-	}
-}
+		name = EVTOPTA_montane_pilgrimage_5029
 
-character_event = {
-	id = montane_pilgrim.31
-	desc = EVTDESC_montane_pilgrim_samerealm
-	picture = GFX_evt_carriage
-	border = GFX_event_normal_frame_diplomacy
-	
-	is_triggered_only = yes
-	
-	option = {
-		name = EVTOPT_pilgrim_requestinspire
-		trigger = {
-			diplomacy = 8
-			learning = 8
-			FROM = { religion = montane }
-		}
-		tooltip_info = diplomacy
-		random = { chance = 25 add_trait = zealous }
-		FROM = { character_event = { id = montane_pilgrim.44 } }
-		ai_chance = {
-			factor = 500
-		}
-	}
-	
-	option = {
-		name = EVTOPT_pilgrim_requestnormal
-		trigger = {
-			NOT = { diplomacy = 8 }
-			NOT = { learning = 8 }
-		}
-		random = { chance = 10 add_trait = trusting }
-		FROM = { character_event = { id = montane_pilgrim.40 } }
-		ai_chance = {
-			factor = 10
-		}
-	}
-	
-	option = {
-		name = EVTOPT_pilgrim_requestgift
-		trigger = { wealth = 10 }
 		wealth = -10
-		FROM = { wealth = 10 }
-		FROM = { character_event = { id = montane_pilgrim.41 } }
-		ai_chance = {
-			factor = 25
-		}
-	}
-	
-	option = {
-		name = EVTOPT_pilgrim_sneakpoorly
-		trigger = { NOT = { intrigue = 8 } }
-		random = { chance = 10 add_trait = shy }
-		random_list = {
-			40 = { 
-				custom_tooltip = { text = TXT_pilgrim_sneaksucceed_tooltip }
-				hidden_tooltip = { character_event = { id = montane_pilgrim.56 } }
-			}
-			60 = { 
-				custom_tooltip = { text = TXT_pilgrim_sneakfail_tooltip }
-				hidden_tooltip = { FROM = { character_event = { id = montane_pilgrim.46 } } }
-			}
-		}
-		ai_chance = {
-			factor = 10
-			modifier = { factor = 2 trait = shy }
-		}
+
+		ai_chance = { factor = 90 }
 	}
 
 	option = {
-		name = EVTOPT_pilgrim_sneakintrigue
-		trigger = { intrigue = 8 }
-		tooltip_info = intrigue
-		random = { chance = 10 add_trait = paranoid }
-		random_list = {
-			75 = { 
-				custom_tooltip = { text = TXT_pilgrim_sneaksucceed_tooltip }
-				hidden_tooltip = { character_event = { id = montane_pilgrim.56 } }
-			}
-			25 = { 
-				custom_tooltip = { text = TXT_pilgrim_sneakfail_tooltip }
-				hidden_tooltip = { FROM = { character_event = { id = montane_pilgrim.46 } } }
-			}
-		}
-		ai_chance = {
-			factor = 50
-			modifier = { factor = 2 trait = shy }
-		}
-	}
-	
-	option = {
-		name = EVTOPT_pilgrim_requestdiplomatic
-		trigger = {
-			diplomacy = 8
-			OR = {
-				NOT = { FROM = { religion = montane } }
-				NOT = { learning = 8 }
-			}
-		}
-		tooltip_info = diplomacy
-		random = { chance = 10 add_trait = gregarious }
-		FROM = { character_event = { id = montane_pilgrim.42 } }
-		ai_chance = {
-			factor = 50
-		}
-	}
-	
-	option = {
-		name = EVTOPT_pilgrim_requestlearning
-		trigger = {
-			NOT = { diplomacy = 8 }
-			learning = 8
-			FROM = { religion = montane }
-		}
-		tooltip_info = learning
-		random = { chance = 10 add_trait = zealous }
-		FROM = { character_event = { id = montane_pilgrim.43 } }
-		ai_chance = {
-			factor = 50
-			modifier = { factor = 2 trait = zealous }
-		}
-	}
-
-	option = {
-		name = EVTOPT_pilgrim_requestmartial
-		trigger = {
-			martial = 8
-			NOT = { FROM = { religion = montane } }
-		}
+		name = EVTOPTB_montane_pilgrimage_5029
 		tooltip_info = martial
-		random = { chance = 25 add_trait = wroth }
-		FROM = { character_event = { id = montane_pilgrim.45 } }
-		ai_chance = {
-			factor = 10
-			modifier = { factor = 3 realm_size = 100 }
-			modifier = { factor = 2 realm_size = 50 }
-			modifier = { factor = 2 realm_size = 25 }
-			modifier = { factor = 2 realm_size = 10 }
-			modifier = { factor = 2 trait = wroth }
+
+		trigger = { martial >= 10 }
+
+		add_trait_fully_silently_brave_effect = yes
+
+		random = {
+			chance = 10
+			add_trait_wounded_effect = yes
 		}
+
+		ai_chance = { factor = 10 }
 	}
 }
 
+# Danger on road  - broken bridge
 character_event = {
-	id = montane_pilgrim.32
-	desc = EVTDESC_montane_pilgrim_foreign
-	picture = GFX_evt_carriage
-	border = GFX_event_normal_frame_diplomacy
-	
+	id = montane_pilgrimage.5030
+	desc = EVTDESC_montane_pilgrimage_5030
+	picture = GFX_evt_pilgrims_epic_journey
+
 	is_triggered_only = yes
-	
+
 	option = {
-		name = EVTOPT_pilgrim_requestinspire
-		trigger = {
-			diplomacy = 8
-			learning = 8
+		name = EVTOPTA_montane_pilgrimage_5030
+
+		random = {
+			chance = 20
+			add_trait_wounded_effect = yes
 		}
-		tooltip_info = diplomacy
-		random = { chance = 25 add_trait = zealous }
-		FROM = { character_event = { id = montane_pilgrim.44 } }
-		ai_chance = {
-			factor = 500
-		}
-	}
-	
-	option = {
-		name = EVTOPT_pilgrim_requestnormal
-		trigger = { 
-			NOT = { diplomacy = 8 }	
-			NOT = { learning = 8 }
-		}
-		random = { chance = 20 add_trait = trusting }
-		FROM = { character_event = { id = montane_pilgrim.40 } }
-		ai_chance = {
-			factor = 10
-		}
-	}
-	
-	option = {
-		name = EVTOPT_pilgrim_requestgift
-		trigger = {	wealth = 20	}
-		wealth = -20
-		FROM = { wealth = 20 }
-		FROM = { character_event = { id = montane_pilgrim.41 } }
-		ai_chance = {
-			factor = 25
-		}
-	}
-	
-	option = {
-		name = EVTOPT_pilgrim_sneakpoorly
-		trigger = { NOT = { intrigue = 8 } }
-		random = { chance = 10 add_trait = shy }
-		random_list = {
-			40 = { 
-				custom_tooltip = { text = TXT_pilgrim_sneaksucceed_tooltip }
-				hidden_tooltip = { character_event = { id = montane_pilgrim.56 } }
-			}
-			60 = { 
-				custom_tooltip = { text = TXT_pilgrim_sneakfail_tooltip }
-				hidden_tooltip = { FROM = { character_event = { id = montane_pilgrim.46 } } }
-			}
-		}
-		ai_chance = {
-			factor = 10
-		}
+
+		ai_chance = { factor = 10 }
 	}
 
 	option = {
-		name = EVTOPT_pilgrim_sneakintrigue
-		trigger = { intrigue = 8 }
-		tooltip_info = intrigue
-		random = { chance = 10 add_trait = paranoid }
-		random_list = {
-			75 = { 
-				custom_tooltip = { text = TXT_pilgrim_sneaksucceed_tooltip }
-				hidden_tooltip = { character_event = { id = montane_pilgrim.56 } }
-			}
-			25 = { 
-				custom_tooltip = { text = TXT_pilgrim_sneakfail_tooltip }
-				hidden_tooltip = { FROM = { character_event = { id = montane_pilgrim.46 } } }
-			}
-		}
-		ai_chance = {
-			factor = 50
-		}
-	}
-	
-	option = {
-		name = EVTOPT_pilgrim_requestdiplomatic
-		trigger = {
-			diplomacy = 8
-			NOT = { learning = 8 }
-		}
-		tooltip_info = diplomacy
-		random = { chance = 10 add_trait = gregarious }
-		FROM = { character_event = { id = montane_pilgrim.42 } }
-		ai_chance = {
-			factor = 50
-			modifier = { factor = 2 trait = gregarious }
-		}
-	}
-	
-	option = {
-		name = EVTOPT_pilgrim_requestlearning
-		trigger = {
-			learning = 8
-			NOT = { diplomacy = 8 }
-		}
-		tooltip_info = learning
-		random = { chance = 10 add_trait = zealous }
-		FROM = { character_event = { id = montane_pilgrim.43 } }
-		ai_chance = {
-			factor = 50
-			modifier = { factor = 2 trait = zealous }
-		}
+		name = EVTOPTB_montane_pilgrimage_5030
+
+		wealth = -10
+
+		ai_chance = { factor = 45 }
 	}
 
 	option = {
-		name = EVTOPT_pilgrim_requestmartial
-		trigger = { martial = 8 }
-		tooltip_info = martial
-		random = { chance = 15 add_trait = wroth }
-		FROM = { character_event = { id = montane_pilgrim.45 } }
-		ai_chance = {
-			factor = 20
-			modifier = { factor = 3 realm_size = 100 }
-			modifier = { factor = 2 realm_size = 50 }
-			modifier = { factor = 2 realm_size = 25 }
-			modifier = { factor = 2 realm_size = 10 }
-			modifier = { factor = 2 trait = wroth }
-		}
-	}
-}
+		name = EVTOPTC_montane_pilgrimage_5030
 
-character_event = {
-	id = montane_pilgrim.33
-	desc = EVTDESC_montane_pilgrim_foreigninfidel
-	picture = GFX_evt_carriage
-	border = GFX_event_normal_frame_diplomacy
-	
-	is_triggered_only = yes
-	
-	option = {
-		name = EVTOPT_pilgrim_requestnormal
-		trigger = { NOT = { diplomacy = 10 } }
-		random = { chance = 30 add_trait = trusting}
-		FROM = { character_event = { id = montane_pilgrim.40 } }
-		ai_chance = {
-			factor = 10
-		}
-	}
-	
-	option = {
-		name = EVTOPT_pilgrim_requestgift
-		trigger = { wealth = 30 }
 		wealth = -30
-		FROM = { wealth = 30 }
-		FROM = { character_event = { id = montane_pilgrim.41 } }
-		ai_chance = {
-			factor = 25
-		}
-	}
-	
-	option = {
-		name = EVTOPT_pilgrim_sneakpoorly
-		trigger = { NOT = { intrigue = 10 } }
-		random = { chance = 10 add_trait = paranoid }
-		random_list = {
-			40 = { 
-				custom_tooltip = { text = TXT_pilgrim_sneaksucceed_tooltip }
-				hidden_tooltip = { character_event = { id = montane_pilgrim.56 } }
-			}
-			60 = { 
-				custom_tooltip = { text = TXT_pilgrim_sneakfail_tooltip }
-				hidden_tooltip = { FROM = { character_event = { id = montane_pilgrim.46 } } }
-			}
-		}
-		ai_chance = {
-			factor = 10
-		}
-	}
+		add_trait_fully_silently_charitable_effect = yes
 
-	option = {
-		name = EVTOPT_pilgrim_sneakintrigue
-		trigger = { intrigue = 10 }
-		tooltip_info = intrigue
-		random = { chance = 10 add_trait = paranoid }
-		random_list = {
-			75 = { 
-				custom_tooltip = { text = TXT_pilgrim_sneaksucceed_tooltip }
-				hidden_tooltip = { character_event = { id = montane_pilgrim.56 } }
-			}
-			25 = { 
-				custom_tooltip = { text = TXT_pilgrim_sneakfail_tooltip }
-				hidden_tooltip = { FROM = { character_event = { id = montane_pilgrim.46 } } }
-			}
-		}
-		ai_chance = {
-			factor = 50
-		}
-	}
-	
-	option = {
-		name = EVTOPT_pilgrim_requestdiplomatic
-		trigger = { diplomacy = 10 }
-		tooltip_info = diplomacy
-		random = { chance = 10 add_trait = gregarious }
-		FROM = { character_event = { id = montane_pilgrim.42 } }
-		ai_chance = {
-			factor = 50
-			modifier = { factor = 2 trait = gregarious }
-		}
-	}
-	
-	option = {
-		name = EVTOPT_pilgrim_requestmartial
-		trigger = { martial = 8 }
-		tooltip_info = martial
-		random = { chance = 15 add_trait = wroth }
-		random = { chance = 15 add_trait = zealous }
-		FROM = { character_event = { id = montane_pilgrim.45 } }
-		ai_chance = {
-			factor = 30
-			modifier = { factor = 3 realm_size = 100 }
-			modifier = { factor = 2 realm_size = 50 }
-			modifier = { factor = 2 realm_size = 25 }
-			modifier = { factor = 2 realm_size = 10 }
-			modifier = { factor = 2 trait = wroth }
-		}
+		ai_chance = { factor = 45 }
 	}
 }
 
+# Philosophical ponderings
 character_event = {
-	id = montane_pilgrim.34
-	desc = EVTDESC_montane_pilgrim_haveaccess
-	picture = GFX_evt_market
+	id = montane_pilgrimage.5031
+	desc = EVTDESC_montane_pilgrimage_5031
+	picture = GFX_evt_pilgrims_epic_journey
 	border = GFX_event_normal_frame_religion
-	
+
 	is_triggered_only = yes
-	
-	option = {
-		name = EVTOPT_pilgrim_haveaccess
-		FROM = { character_event = { id = montane_pilgrim.35 } }
-	}
-}
-
-character_event = {
-	id = montane_pilgrim.35
-	hide_window = yes
-	is_triggered_only = yes
-	immediate = { FROM = { character_event = { id = montane_pilgrim.51 } } }
-	option = { }
-}
-
-# ************************* Holy City Ruler Receives Requests ************************
-
-character_event = {
-	id = montane_pilgrim.40
-	desc = EVTDESC_montane_pilgrim_requestnormal
-	picture = GFX_evt_courtiers_talking
-	border = GFX_event_normal_frame_diplomacy
-	
-	is_triggered_only = yes
-	
-	option = {
-		trigger = {
-			opinion = { who = FROM value = 20 }
-			religion = montane
-			wealth = 5
-		}
-		name = EVTOPT_pilgrim_respondpolite
-		prestige = 5
-		wealth = -5
-		FROM = { character_event = { id = montane_pilgrim.50 } }
-		FROM = { opinion = { who = ROOT modifier = allowed_pilgrim months = 120 multiplier = 2 } }
-		ai_chance = {
-			factor = 5
-			modifier = { factor = 2 trait = gregarious }
-		}
-	}
-	
-	option = {
-		name = EVTOPT_pilgrim_respondneutral
-		FROM = { character_event = { id = montane_pilgrim.51 } }
-		FROM = { opinion = { who = ROOT modifier = allowed_pilgrim months = 120 multiplier = 1 } }
-		ai_chance = {
-			factor = 50
-		}
-	}
-	
-	option = {
-		name = EVTOPT_pilgrim_respondrefuse
-		FROM = { character_event = { id = montane_pilgrim.52 } }
-		FROM = { opinion = { who = ROOT modifier = denied_pilgrim months = 120 multiplier = 1 } }
-		ai_chance = {
-			factor = 20
-			modifier = { factor = 2 NOT = { religion = montane } }
-
-		}
-	}
-	
-	option = {
-		name = EVTOPT_pilgrim_respondimprison
-		trigger = {
-			OR = {
-				NOT = { opinion = { who = FROM value = 0 } }
-				trait = lunatic
-				trait = arbitrary
-			}
-		}
-		FROM = { character_event = { id = montane_pilgrim.53 } }
-		FROM = { opinion = { who = ROOT modifier = denied_pilgrim months = 120 multiplier = 1 } }
-		custom_tooltip = { text = TXT_pilgrim_respondimprison }
-		hidden_tooltip = { any_vassal = { opinion = {
-					who = ROOT
-					modifier = opinion_tyrant
-					months = 120
-					multiplier = 2
-				}
-			}
-		}
-		ai_chance = {
-			factor = 5
-			modifier = { factor = 2 NOT = { religion = montane } }
-			modifier = { factor = 4 trait = arbitrary }
-		}
-	}
-}
-
-character_event = {
-	id = montane_pilgrim.41
-	desc = EVTDESC_montane_pilgrim_requestgift
-	picture = GFX_evt_courtiers_talking
-	border = GFX_event_normal_frame_diplomacy
-	
-	is_triggered_only = yes
-	
-	option = {
-		trigger = {
-			wealth = 5
-			opinion = { who = FROM value = 20 }
-		}
-		name = EVTOPT_pilgrim_respondpolite
-		prestige = 10
-		wealth = -5
-		FROM = { character_event = { id = montane_pilgrim.50 } }
-		FROM = { opinion = { who = ROOT modifier = allowed_pilgrim months = 120 multiplier = 2 } }
-		ai_chance = {
-			factor = 10
-			modifier = { factor = 4 religion = montane }
-			modifier = { factor = 2 trait = greedy }
-			modifier = { factor = 2 trait = gregarious }
-		}
-	}
-	
-	option = {
-		name = EVTOPT_pilgrim_respondneutral
-		FROM = { character_event = { id = montane_pilgrim.51 } }
-		FROM = { opinion = { who = ROOT modifier = allowed_pilgrim months = 120 multiplier = 1 } }
-		ai_chance = {
-			factor = 50
-		}
-	}
-	
-	option = {
-		name = EVTOPT_pilgrim_respondrefuse
-		FROM = { character_event = { id = montane_pilgrim.52 } }
-		FROM = { opinion = { who = ROOT modifier = denied_pilgrim months = 120 multiplier = 1 } }
-		ai_chance = {
-			factor = 10
-			modifier = { factor = 2 NOT = { religion = montane } }
-		}
-	}
-	
-	option = {
-		name = EVTOPT_pilgrim_respondimprison
-		trigger = {
-			OR = {
-				NOT = { opinion = { who = FROM value = 0 } }
-				trait = lunatic
-				trait = arbitrary
-			}
-		}
-		FROM = { character_event = { id = montane_pilgrim.53 } }
-		FROM = { opinion = { who = ROOT modifier = denied_pilgrim months = 120 multiplier = 1 } }
-		custom_tooltip = { text = TXT_pilgrim_respondimprison }
-		hidden_tooltip = { any_vassal = { opinion = {
-					who = ROOT
-					modifier = opinion_tyrant
-					months = 120
-					multiplier = 2
-				}
-			}
-		}
-		ai_chance = {
-			factor = 5
-			modifier = { factor = 2 NOT = { religion = montane } }
-			modifier = { factor = 4 trait = arbitrary }
-		}
-	}
-}
-
-character_event = {
-	id = montane_pilgrim.42
-	desc = EVTDESC_montane_pilgrim_requestdiplomacy
-	picture = GFX_evt_bishop_pagan_group
-	border = GFX_event_normal_frame_diplomacy
-	
-	is_triggered_only = yes
-	
-	option = {
-		trigger = {
-			wealth = 5
-			opinion = { who = FROM value = 20 }
-			religion = montane
-		}
-		name = EVTOPT_pilgrim_respondpolite
-		prestige = 10
-		wealth = -5
-		FROM = { character_event = { id = montane_pilgrim.50 } }
-		FROM = { opinion = { who = ROOT modifier = allowed_pilgrim months = 120 multiplier = 2 } }
-		ai_chance = {
-			factor = 20
-			modifier = { factor = 4 religion = montane }
-			modifier = { factor = 2 trait = gregarious }
-		}
-	}
-	
-	option = {
-		name = EVTOPT_pilgrim_respondneutral
-		FROM = { character_event = { id = montane_pilgrim.51 } }
-		FROM = { opinion = { who = ROOT modifier = allowed_pilgrim months = 120 multiplier = 1 } }
-		ai_chance = {
-			factor = 50
-		}
-	}
-	
-	option = {
-		name = EVTOPT_pilgrim_respondrefuse
-		FROM = { character_event = { id = montane_pilgrim.52 } }
-		FROM = { opinion = { who = ROOT modifier = denied_pilgrim months = 120 multiplier = 1 } }
-		ai_chance = {
-			factor = 10
-			modifier = { factor = 2 NOT = { religion = montane } }
-		}
-	}
-	
-	option = {
-		name = EVTOPT_pilgrim_respondimprison
-		trigger = {
-			OR = {
-				NOT = { opinion = { who = FROM value = 0 } }
-				trait = lunatic
-				trait = arbitrary
-			}
-		}
-		FROM = { character_event = { id = montane_pilgrim.53 } }
-		FROM = { opinion = { who = ROOT modifier = denied_pilgrim months = 120 multiplier = 1 } }
-		custom_tooltip = { text = TXT_pilgrim_respondimprison }
-		hidden_tooltip = { any_vassal = { opinion = {
-					who = ROOT
-					modifier = opinion_tyrant
-					months = 120
-					multiplier = 2
-				}
-			}
-		}
-		ai_chance = {
-			factor = 5
-			modifier = { factor = 2 NOT = { religion = montane } }
-			modifier = { factor = 2 trait = arbitrary }
-		}
-	}
-}
-
-character_event = {
-	id = montane_pilgrim.43
-	desc = EVTDESC_montane_pilgrim_requestlearning
-	picture = GFX_evt_bishop_pagan_group
-	border = GFX_event_normal_frame_diplomacy
-	
-	is_triggered_only = yes
-	
-	option = {
-		trigger = {
-			wealth = 5
-			opinion = { who = FROM value = 20 }
-		}
-		name = EVTOPT_pilgrim_respondpolite
-		prestige = 10
-		wealth = -5
-		FROM = { character_event = { id = montane_pilgrim.50 } }
-		FROM = { opinion = { who = ROOT modifier = allowed_pilgrim months = 120 multiplier = 2 } }
-		ai_chance = {
-			factor = 20
-			modifier = { factor = 2 FROM = { learning = 15 } }
-			modifier = { factor = 2 trait = zealous }
-		}
-	}
-	
-	option = {
-		name = EVTOPT_pilgrim_respondneutral
-		FROM = { character_event = { id = montane_pilgrim.51 } }
-		FROM = { opinion = { who = ROOT modifier = allowed_pilgrim months = 120 multiplier = 1 } }
-		ai_chance = {
-			factor = 50
-		}
-	}
-	
-	option = {
-		name = EVTOPT_pilgrim_respondrefuse
-		piety = -5
-		FROM = { character_event = { id = montane_pilgrim.52 } }
-		FROM = { opinion = { who = ROOT modifier = denied_pilgrim months = 120 multiplier = 1 } }
-		ai_chance = {
-			factor = 10
-			modifier = { factor = 2 trait = cynical }
-			modifier = { factor = 2 trait = arbitrary }
-			modifier = { factor = 0 trait = zealous }
-		}
-	}
-	
-	option = {
-		name = EVTOPT_pilgrim_respondimprison
-		trigger = {
-			OR = {
-				NOT = { opinion = { who = FROM value = 0 } }
-				trait = lunatic
-				trait = arbitrary
-			}
-		}
-		piety = -20
-		FROM = { opinion = { who = ROOT modifier = denied_pilgrim months = 120 multiplier = 1 } }
-		custom_tooltip = { text = TXT_pilgrim_respondimprison }
-		hidden_tooltip = { any_vassal = { opinion = {
-					who = ROOT
-					modifier = opinion_tyrant
-					months = 120
-					multiplier = 2
-				}
-			}
-		}
-		FROM = { character_event = { id = montane_pilgrim.53 } }
-		ai_chance = {
-			factor = 0
-		}
-	}
-}
-
-character_event = {
-	id = montane_pilgrim.44
-	desc = EVTDESC_montane_pilgrim_requestinspire
-	picture = GFX_evt_bishop_pagan_group
-	border = GFX_event_normal_frame_diplomacy
-	
-	is_triggered_only = yes
-	
-	option = {
-		trigger = {
-			wealth = 5
-			opinion = { who = FROM value = 20 }
-		}
-		name = EVTOPT_pilgrim_respondpolite
-		prestige = 10
-		piety = 10
-		wealth = -5
-		random = { chance = 5 add_trait = zealous }
-		FROM = { character_event = { id = montane_pilgrim.50 } }
-		FROM = { opinion = { who = ROOT modifier = allowed_pilgrim months = 120 multiplier = 2 } }
-		ai_chance = {
-			factor = 30
-			modifier = { factor = 4 trait = zealous }
-			modifier = { factor = 2 trait = gregarious }
-			modifier = { factor = 2 trait = kind }
-			modifier = { factor = 2 trait = just }
-			modifier = { factor = 0.5 trait = shy }
-			modifier = { factor = 0.5 trait = cynical }
-		}
-	}
-	
-	option = {
-		name = EVTOPT_pilgrim_respondneutral
-		FROM = { character_event = { id = montane_pilgrim.51 } }
-		FROM = { opinion = { who = ROOT modifier = allowed_pilgrim months = 120 multiplier = 1 } }
-		ai_chance = {
-			factor = 20
-		}
-	}
-	
-	option = {
-		name = EVTOPT_pilgrim_respondrefuse
-		piety = -10
-		FROM = { character_event = { id = montane_pilgrim.52 } }
-		FROM = { opinion = { who = ROOT modifier = denied_pilgrim months = 120 multiplier = 1 } }
-		ai_chance = {
-			factor = 10
-			modifier = { factor = 4 trait = arbitrary }
-			modifier = { factor = 2 trait = paranoid }
-			modifier = { factor = 0.5 trait = trusting }
-			modifier = { factor = 0 NOT = { trait = lunatic trait = possessed } }
-		}
-	}
-	
-	option = {
-		name = EVTOPT_pilgrim_respondimprison
-		trigger = {
-			OR = { 
-				trait = lunatic
-				trait = arbitrary
-				trait = cruel
-			}
-			NOT = { opinion = { who = FROM value = 0 } }
-		}
-		piety = -20
-		FROM = { opinion = { who = ROOT modifier = denied_pilgrim months = 120 multiplier = 1 } }
-		custom_tooltip = { text = TXT_pilgrim_respondimprison }
-		hidden_tooltip = { any_vassal = { opinion = {
-					who = ROOT
-					modifier = opinion_tyrant
-					months = 120
-					multiplier = 2
-				}
-			}
-		}
-		FROM = { character_event = { id = montane_pilgrim.53 } }
-		ai_chance = {
-			factor = 10
-		}
-	}
-}
-
-character_event = {
-	id = montane_pilgrim.45
-	desc = EVTDESC_montane_pilgrim_requestmartial
-	picture = GFX_evt_courtiers_talking
-	border = GFX_event_normal_frame_diplomacy
-	
-	is_triggered_only = yes
-	
-	option = {
-		name = EVTOPT_pilgrim_respondneutral
-		FROM = { character_event = { id = montane_pilgrim.51 } }
-		FROM = { opinion = { who = ROOT modifier = allowed_pilgrim months = 120 multiplier = 1 } }
-		ai_chance = {
-			factor = 50
-			modifier = { factor = 3 FROM = { realm_size = 100 } }
-			modifier = { factor = 2 FROM = { realm_size = 50 } }
-			modifier = { factor = 2 FROM = { realm_size = 25 } }
-			modifier = { factor = 2 FROM = { realm_size = 10 } }
-		}
-	}
-	
-	option = {
-		name = EVTOPT_pilgrim_respondrefuse
-		FROM = { opinion = { who = ROOT modifier = denied_pilgrim months = 120 multiplier = 1 } }
-		FROM = { character_event = { id = montane_pilgrim.52 } }
-		ai_chance = {
-			factor = 50
-			modifier = { factor = 2 NOT = { religion = montane } }
-			modifier = { factor = 0.5 FROM = { realm_size = 35 } }
-		}
-	}
-	
-	option = {
-		name = EVTOPT_pilgrim_respondimprison
-		FROM = { opinion = { who = ROOT modifier = denied_pilgrim months = 120 multiplier = 1 } }
-		FROM = { character_event = { id = montane_pilgrim.53 } }
-		ai_chance = {
-			factor = 25
-			modifier = { factor = 2 NOT = { religion = montane } }
-			modifier = { factor = 0.5 FROM = { realm_size = 20 } }
-		}
-	}
-	
-	option = {
-		name = EVTOPT_pilgrim_respondmurder
-		trigger = {
-			NOT = { opinion = { who = FROM value = 0 } }
-		}
-		random = { chance = 20 add_trait = wroth }
-		FROM = { opinion = { who = ROOT modifier = denied_pilgrim months = 120 multiplier = 1 } }
-		FROM = { opinion = { who = ROOT modifier = attempted_murder months = 250 multiplier = 1 } } 
-		FROM = { character_event = { id = montane_pilgrim.54 } }
-		ai_chance = {
-			factor = 10
-			modifier = { factor = 2 NOT = { religion = montane } }
-			modifier = { factor = 4 trait = lunatic }
-			modifier = { factor = 2 trait = arbitrary }
-			modifier = { factor = 2 trait = wroth }
-			modifier = { factor = 0.5 FROM = { realm_size = 20 } }
-			modifier = { factor = 0 trait = kind }
-		}
-	}
-}
-
-character_event = {
-	id = montane_pilgrim.46
-	desc = EVTDESC_montane_pilgrim_requestintrigue
-	picture = GFX_evt_knight_kneeling
-	border = GFX_event_normal_frame_diplomacy
-	
-	is_triggered_only = yes
-	
-	option = {
-		name = EVTOPT_pilgrim_respondneutral
-		FROM = { character_event = { id = montane_pilgrim.51 } }
-		FROM = { opinion = { who = ROOT modifier = allowed_pilgrim months = 120 multiplier = 1 } }
-		ai_chance = {
-			factor = 50
-			modifier = { factor = 2 religion = montane }
-		}
-	}
-	
-	option = {
-		name = EVTOPT_pilgrim_respondrefuse
-		FROM = { opinion = { who = ROOT modifier = denied_pilgrim months = 120 multiplier = 1 } }
-		FROM = { character_event = { id = montane_pilgrim.52 } }
-		ai_chance = {
-			factor = 50
-		}
-	}
-	
-	option = {
-		name = EVTOPT_pilgrim_respondimprison
-		FROM = { opinion = { who = ROOT modifier = denied_pilgrim months = 120 multiplier = 1 } }
-		FROM = { character_event = { id = montane_pilgrim.53 } }
-		ai_chance = {
-			factor = 25
-			modifier = { factor = 2 NOT = { religion = montane } }
-		}
-	}
-	
-	option = {
-		name = EVTOPT_pilgrim_respondmurder
-		trigger = {
-			NOT = { religion = montane }
-			NOT = { opinion = { who = FROM value = 0 } }
-		}
-		random = { chance = 20 add_trait = wroth }
-		FROM = { opinion = { who = ROOT modifier = denied_pilgrim months = 120 multiplier = 1 } }
-		FROM = { opinion = { who = ROOT modifier = attempted_murder months = 250 multiplier = 1 } } 
-		FROM = { character_event = { id = montane_pilgrim.54 } }
-		ai_chance = {
-			factor = 10
-			modifier = { factor = 2 trait = lunatic }
-			modifier = { factor = 2 trait = arbitrary }
-			modifier = { factor = 2 trait = wroth }
-			modifier = { factor = 0 trait = kind }
-		}
-	}
-}
-
-# ************************* Responses ************************
-
-character_event = {
-	id = montane_pilgrim.50
-	desc = EVTDESC_montane_pilgrim_respondpolite
-	picture = GFX_evt_feast
-	border = GFX_event_normal_frame_diplomacy
-	
-	is_triggered_only = yes
-	
-	option = {
-		name = EVTOPT_pilgrim_respondpolite_friends
-		prestige = 10
-		piety = 10
-		random_list = {
-			50 = { change_diplomacy = 1 }
-			30 = {
-				custom_tooltip = { text = TXT_pilgrim_newfriend }
-				hidden_tooltip = { FROM = { character_event = { id = montane_pilgrim.70 } } }
-			}
-			10 = { add_trait = gregarious }
-			10 = { add_trait = kind }
-		}
-		ai_chance = {
-			factor = 10
-			modifier = { factor = 2 trait = gregarious }
-			modifier = { factor = 2 trait = kind }
-		}
-	}
-	
-	option = {
-		name = EVTOPT_pilgrim_respondpolite_zeal
-		piety = 20
-		random_list = {
-			50 = { change_martial = 1 }
-			20 = { add_trait = zealous }
-			20 = { add_trait = ambitious }
-			10 = { add_trait = diligent }
-		}
-		ai_chance = {
-			factor = 10
-			modifier = { factor = 2 trait = zealous }
-			modifier = { factor = 2 trait = diligent }
-		}
-	}
-	
-	option = {
-		name = EVTOPT_pilgrim_respondpolite_hedonist
-		prestige = 25
-		piety = -10
-		random_list = {
-			30 = { change_martial = 1 }
-			20 = { wealth = 25 }
-			20 = { wealth = -25 }
-			15 = { add_trait = gluttonous }
-			10 = { add_trait = lustful }
-			5 = { add_trait = drunkard }
-		}
-		ai_chance = {
-			factor = 10
-			modifier = { factor = 2 trait = hedonist }
-			modifier = { factor = 2 trait = gluttonous }
-		}
-	}
-	
-	option = {
-		name = EVTOPT_pilgrim_respondpolite_convert
-		trigger = {
-			learning = 12
-			religion_authority = 0.6
-			NOT = { FROM = { religion = montane } }
-		}
-		piety = 30
-		random_list = {
-			50 = { change_learning = 1 }
-			40 = { FROM = { religion = ROOT } }
-			10 = { add_trait = zealous }
-		}
-		ai_chance = {
-			factor = 50
-			modifier = { factor = 2 trait = zealous }
-		}
-	}
-}
-
-character_event = {
-	id = montane_pilgrim.51
-	desc = EVTDESC_montane_pilgrim_respondneutral
-	picture = GFX_evt_courtiers_talking
-	border = GFX_event_normal_frame_diplomacy
-	
-	is_triggered_only = yes
-	
-	option = {
-		name = EVTOPT_pilgrim_respondneutral_learn
-		piety = 10
-		random_list = {
-			40 = { change_learning = 1 }
-			40 = { change_stewardship = 1 }
-			10 = { add_trait = diligent }
-			10 = { add_trait = humble }
-		}
-		ai_chance = {
-			factor = 20
-			modifier = { factor = 2 trait = diligent }
-			modifier = { factor = 2 trait = humble }
-		}
-	}
-	
-	option = {
-		name = EVTOPT_pilgrim_talkpilgrims
-		prestige = 10
-		random_list = {
-			60 = { change_diplomacy = 1 }
-			20 = { add_trait = gregarious }	
-			20 = { add_trait = kind }
-		}
-		ai_chance = {
-			factor = 20
-			modifier = { factor = 2 trait = gregarious }
-			modifier = { factor = 2 trait = kind }
-		}
-	}
-	
-	option = {
-		name = EVTOPT_pilgrim_stealrelic
-		wealth = 20
-		random_list = {
-			40 = { change_intrigue = 1 }
-			20 = { add_trait = greedy }
-			20 = { add_trait = deceitful }
-			20 = { add_trait = cynical }
-		}
-		ai_chance = {
-			factor = 10
-			modifier = { factor = 2 trait = greedy }
-			modifier = { factor = 2 trait = cynical }
-		}
-	}
-	
-	option = {
-		name = EVTOPT_pilgrim_respondpolite_hedonist
-		prestige = 25
-		piety = -10
-		random_list = {
-			30 = { change_martial = 1 }
-			20 = { wealth = 25 }
-			20 = { wealth = -25 }
-			15 = { add_trait = gluttonous }
-			10 = { add_trait = lustful }
-			5 = { add_trait = drunkard }
-		}
-		ai_chance = {
-			factor = 10
-			modifier = { factor = 2 trait = hedonist }
-			modifier = { factor = 2 trait = gluttonous }
-		}
-	}
-}
-
-character_event = {
-	id = montane_pilgrim.52
-	desc = EVTDESC_montane_pilgrim_respondrefuse
-	picture = GFX_evt_emissary
-	border = GFX_event_normal_frame_war
-	
-	is_triggered_only = yes
-	
-	option = {
-		name = EVTOPT_pilgrim_respondrefuse_failure
-		prestige = -25
-		random_list = {
-			50 = {
-				custom_tooltip = { text = TXT_pilgrim_newrival }
-				hidden_tooltip = { FROM = { character_event = { id = montane_pilgrim.71 } } }
-			}
-			30 = { }
-			20 = { add_trait = stressed }
-		}
-		if = { limit = { has_character_flag = on_pilgrimage_yellowstone }
-			character_event = { id = montane_pilgrim.61 } }	
-		if = { limit = { has_character_flag = on_pilgrimage_rocky_mountain_national_park  }
-			character_event = { id = montane_pilgrim.62 } }	
-		if = { limit = { has_character_flag = on_pilgrimage_banff }
-			character_event = { id = montane_pilgrim.63 } }	
-		if = { limit = { has_character_flag = on_pilgrimage_zion }
-			character_event = { id = montane_pilgrim.64 } }	
-		if = { limit = { has_character_flag = on_pilgrimage_guarden_of_the_gods }
-			character_event = { id = montane_pilgrim.65 } }
-		ai_chance = {
-			factor = 10
-		}
-	}
-	
-	option = {
-		name = EVTOPT_pilgrim_respondrefuse_liege
-		trigger = {
-			is_liege_of = FROM
-		}
-		prestige = -10
-		random = { chance = 25 add_trait = wroth }
-		random = { chance = 25 add_trait = proud }
-		character_event = { id = montane_pilgrim.51 }
-		ai_chance = {
-			factor = 50
-			modifier = { factor = 2 trait = wroth }
-			modifier = { factor = 2 trait = proud }
-		}
-	}
-	
-	option = {
-		name = EVTOPT_pilgrim_requestmartial
-		trigger = {
-			NOT = { is_liege_or_above = FROM }
-			martial = 8
-			NOT = { has_character_flag = pilgrim_entry_retried }
-		}
-		prestige = -10
-		tooltip_info = martial
-		random = { chance = 15 add_trait = wroth }
-		set_character_flag = pilgrim_entry_retried
-		FROM = { character_event = { id = montane_pilgrim.45 } }
-		ai_chance = {
-			factor = 10
-			modifier = { factor = 3 realm_size = 100 }
-			modifier = { factor = 2 realm_size = 50 }
-			modifier = { factor = 2 realm_size = 25 }
-			modifier = { factor = 2 realm_size = 10 }
-		}
-	}
-	
-	option = {
-		name = EVTOPT_pilgrim_sneakpoorly
-		trigger = {
-			NOT = { intrigue = 10 }
-			NOT = { has_character_flag = pilgrim_entry_retried }
-		}
-		set_character_flag = pilgrim_entry_retried
-		random_list = {
-			40 = { 
-				custom_tooltip = { text = TXT_pilgrim_sneaksucceed_tooltip }
-				hidden_tooltip = { character_event = { id = montane_pilgrim.56 } }
-			}
-			60 = { 
-				custom_tooltip = { text = TXT_pilgrim_sneakfail_tooltip }
-				hidden_tooltip = { FROM = { character_event = { id = montane_pilgrim.46 } } }
-			}
-		}
-		ai_chance = {
-			factor = 10
-		}
-	}
 
 	option = {
-		name = EVTOPT_pilgrim_sneakintrigue
-		trigger = {
-			intrigue = 10
-			NOT = { has_character_flag = pilgrim_entry_retried }
-		}
-		tooltip_info = intrigue
-		set_character_flag = pilgrim_entry_retried
-		random_list = {
-			75 = { 
-				custom_tooltip = { text = TXT_pilgrim_sneaksucceed_tooltip }
-				hidden_tooltip = { character_event = { id = montane_pilgrim.56 } }
-			}
-			25 = { 
-				custom_tooltip = { text = TXT_pilgrim_sneakfail_tooltip }
-				hidden_tooltip = { FROM = { character_event = { id = montane_pilgrim.46 } } }
-			}
-		}
-		ai_chance = {
-			factor = 50
-		}
-	}
-	
-	option = {
-		name = EVTOPT_pilgrim_requeststewardship
-		trigger = {
-			stewardship = 8
-			wealth = 20
-			NOT = { has_character_flag = pilgrim_entry_retried }
-		}
-		wealth = -20
-		tooltip_info = stewardship
-		set_character_flag = pilgrim_entry_retried
-		FROM = { wealth = 20 }
-		FROM = { character_event = { id = montane_pilgrim.41 } }
-		ai_chance = {
-			factor = 10
-			modifier = { factor = 2 wealth = 100 }
-		}
-	}
-}
+		name = EVTOPTA_montane_pilgrimage_5031
 
-character_event = {
-	id = montane_pilgrim.53
-	desc = EVTDESC_montane_pilgrim_respondimprison
-	picture = GFX_evt_into_the_dungeon
-	border = GFX_event_normal_frame_war
-	
-	is_triggered_only = yes
-	
-	option = {
-		name = EVTOPT_pilgrim_respondimprison_surrender
-		imprison = FROM
-		prestige = -10
-		random_list = {
-			40 = { add_trait = content }
-			30 = { add_trait = trusting }
-			30 = { add_trait = craven }
-		}
-		narrative_event = { id = montane_pilgrim.90 days = 1 }
-		ai_chance = {
-			factor = 10
-			modifier = { factor = 2 trait = content }
-			modifier = { factor = 0 trait = brave }
-		}
-	}
-	
-	option = {
-		name = EVTOPT_pilgrim_respondimprison_fight
-		trigger = { NOT = { has_character_flag = pilgrim_bodyguards } }
-		random_list = {
-			50 = { imprison = FROM }
-			50 = {
-				custom_tooltip = { text = TXT_pilgrim_respondimprison_regroup }
-				hidden_tooltip = { 
-					if = { limit = { has_character_flag = on_pilgrimage_yellowstone }
-						character_event = { id = montane_pilgrim.61 } }	
-					if = { limit = { has_character_flag = on_pilgrimage_rocky_mountain_national_park  }
-						character_event = { id = montane_pilgrim.62 } }	
-					if = { limit = { has_character_flag = on_pilgrimage_banff }
-						character_event = { id = montane_pilgrim.63 } }	
-					if = { limit = { has_character_flag = on_pilgrimage_zion }
-						character_event = { id = montane_pilgrim.64 } }	
-					if = { limit = { has_character_flag = on_pilgrimage_guarden_of_the_gods }
-						character_event = { id = montane_pilgrim.65 } }
-				}
-			}
-		}
-		random_list = {
-			40 = { add_trait = brave }
-			25 = { add_trait = wroth }
-			25 = { add_trait = wounded }
-			10 = { add_maimed_trait_effect = yes }
-		}
-		#narrative_event = { id = montane_pilgrim.90 days = 1 } #this event is set up to automatically fire during the claim event anyway
-		ai_chance = {
-			factor = 10
-			modifier = { factor = 4 trait = brave }
-			modifier = { factor = 2 trait = wroth }
-		}
-	}
-	
-	option = {
-		name = EVTOPT_pilgrim_respondimprison_fight
-		trigger = { has_character_flag = pilgrim_bodyguards }
-		random_list = {
-			25 = { imprison = FROM }
-			75 = { 
-				custom_tooltip = { text = TXT_pilgrim_respondimprison_regroup }
-				hidden_tooltip = { 
-					if = { limit = { has_character_flag = on_pilgrimage_yellowstone }
-						character_event = { id = montane_pilgrim.61 } }	
-					if = { limit = { has_character_flag = on_pilgrimage_rocky_mountain_national_park  }
-						character_event = { id = montane_pilgrim.62 } }	
-					if = { limit = { has_character_flag = on_pilgrimage_banff }
-						character_event = { id = montane_pilgrim.63 } }	
-					if = { limit = { has_character_flag = on_pilgrimage_zion }
-						character_event = { id = montane_pilgrim.64 } }	
-					if = { limit = { has_character_flag = on_pilgrimage_guarden_of_the_gods }
-						character_event = { id = montane_pilgrim.65 } }
-				}
-			}
-		}
-		random_list = {
-			40 = { add_trait = brave }
-			40 = { add_trait = wroth }
-			15 = { add_trait = wounded }
-			5 = { add_maimed_trait_effect = yes }
-		}
-		#narrative_event = { id = montane_pilgrim.90 days = 1 } #this event is set up to automatically fire during the claim event anyway
-		ai_chance = {
-			factor = 20
-			modifier = { factor = 4 trait = brave }
-			modifier = { factor = 2 trait = wroth }
-		}
-	}
-	
-	option = {
-		name = EVTOPT_pilgrim_respondimprison_escape
-		trigger = { intrigue = 8 }
-		prestige = -10
-		tooltip_info = intrigue
-		custom_tooltip = { text = TXT_pilgrim_respondimprison_regroup }
-		random_list = {
-			40 = { change_intrigue = 1 }
-			30 = { add_rival = FROM }
-			30 = { add_trait = paranoid }
-		}
-		hidden_tooltip = { 
-			if = { limit = { has_character_flag = on_pilgrimage_yellowstone }
-				character_event = { id = montane_pilgrim.61 } }	
-			if = { limit = { has_character_flag = on_pilgrimage_rocky_mountain_national_park  }
-				character_event = { id = montane_pilgrim.62 } }	
-			if = { limit = { has_character_flag = on_pilgrimage_banff }
-				character_event = { id = montane_pilgrim.63 } }	
-			if = { limit = { has_character_flag = on_pilgrimage_zion }
-				character_event = { id = montane_pilgrim.64 } }	
-			if = { limit = { has_character_flag = on_pilgrimage_guarden_of_the_gods }
-				character_event = { id = montane_pilgrim.65 } }
-		}
-		ai_chance = {
-			factor = 100
-			modifier = { factor = 4 trait = ambitious }
-		}
-	}
-}
-
-character_event = {
-	id = montane_pilgrim.54
-	desc = EVTDESC_montane_pilgrim_respondmurder
-	picture = GFX_evt_shadow
-	border = GFX_event_normal_frame_war
-	
-	is_triggered_only = yes
-	
-	option = {
-		name = EVTOPT_pilgrim_respondmurder
-		trigger = { NOT = { has_character_flag = pilgrim_bodyguards } }
-		random_list = {
-			10 = { add_trait = brave }
-			30 = { add_trait = wounded }
-			30 = { add_maimed_trait_effect = yes }
-			30 = { death = { death_reason = death_murder killer = FROM } }
-
-		}
-		narrative_event = { id = montane_pilgrim.90 days = 1 }
-	}
-	
-	option = {
-		name = EVTOPT_pilgrim_respondmurder_bodyguards
-		trigger = { has_character_flag = pilgrim_bodyguards }
-		random_list = {
-			40 = { add_trait = brave }
-			30 = { add_trait = wounded }
-			20 = { add_maimed_trait_effect = yes }
-			10 = { death = { death_reason = death_murder killer = FROM } }
-		}
-		narrative_event = { id = montane_pilgrim.90 days = 1 }
-	}
-}
-
-character_event = {
-	id = montane_pilgrim.56
-	desc = EVTDESC_montane_pilgrim_sneakexplore
-	picture = GFX_evt_knight_kneeling
-	border = GFX_event_normal_frame_intrigue
-	
-	is_triggered_only = yes
-	
-	option = {
-		name = EVTOPT_pilgrim_privatepiety
-		piety = 10
-		random_list = {
-			40 = { change_learning = 1 }
-			40 = { add_trait = humble }
-			20 = { add_trait = shy }
-		}
-		ai_chance = {
-			factor = 10
-			modifier = { factor = 2 trait = humble }
-			modifier = { factor = 2 trait = shy }
-		}
-	}
-	
-	option = {
-		name = EVTOPT_pilgrim_talkpilgrims
-		prestige = 10
-		random_list = {
-			50 = { change_diplomacy = 1 }
-			10 = { 
-				custom_tooltip = { text = TXT_pilgrim_sneakfail_tooltip }
-				hidden_tooltip = { FROM = { character_event = { id = montane_pilgrim.46 } } }
-			}
-			30 = { add_trait = trusting }
-			10 = { add_trait = gregarious }
-		}
-		ai_chance = {
-			factor = 10
-			modifier = { factor = 2 trait = trusting }
-			modifier = { factor = 2 trait = gregarious }
-		}
-	}
-	
-	option = {
-		name = EVTOPT_pilgrim_stealrelic
-		wealth = 20
-		random_list = {
-			45 = { change_intrigue = 1 }
-			10 = { 
-				custom_tooltip = { text = TXT_pilgrim_sneakfail_tooltip }
-				hidden_tooltip = { FROM = { character_event = { id = montane_pilgrim.46 } } }
-			}
-			15 = { add_trait = greedy }
-			15 = { add_trait = deceitful }
-			15 = { add_trait = cynical }
-		}
-		ai_chance = {
-			factor = 10
-			modifier = { factor = 2 trait = greedy }
-			modifier = { factor = 2 trait = cynical }
-		}
-	}
-}
-
-# ************************* Get Claims on Cities ************************
-
-character_event = {
-	id = montane_pilgrim.61
-	desc = EVTDESC_montane_pilgrim_claimyellowstone
-	picture = GFX_evt_council
-	border = GFX_event_normal_frame_war
-	
-	is_triggered_only = yes
-	
-	immediate = { narrative_event = { id = montane_pilgrim.90 days = 1 } }
-	
-	option = {
-		name = EVTOPT_pilgrim_claimcity
-		448 = { county = { add_claim = ROOT } }
-		random_list = {
-			20 = { add_trait = greedy }
-			20 = { add_trait = envious }
-			20 = { add_trait = cynical }
-			20 = { add_trait = proud }
-			20 = { add_trait = ambitious }
-		}
-		ai_chance = {
-			factor = 10
-			modifier = { factor = 2 trait = ambitious }
-			modifier = { factor = 2 trait = proud }
-		}
-	}
-	
-	option = {
-		name = EVTOPT_pilgrim_claimnothing
-		random_list = {
-			40 = { change_diplomacy = 1 }
-			20 = { add_trait = humble }
-			20 = { add_trait = patient }
-			20 = { add_trait = content }
-		}
-		ai_chance = {
-			factor = 10
-			modifier = { factor = 2 trait = content }
-			modifier = { factor = 2 trait = humble }
-		}
-	}
-}
-
-character_event = {
-	id = montane_pilgrim.62
-	desc = EVTDESC_montane_pilgrim_claimrocky_mountain_national_park 
-	picture = GFX_evt_council
-	border = GFX_event_normal_frame_war
-	
-	is_triggered_only = yes
-	
-	immediate = { narrative_event = { id = montane_pilgrim.90 days = 1 } }
-	
-	option = {
-		name = EVTOPT_pilgrim_claimcity
-		769 = { county = { add_claim = ROOT } }
-		random_list = {
-			20 = { add_trait = greedy }
-			20 = { add_trait = envious }
-			20 = { add_trait = cynical }
-			20 = { add_trait = proud }
-			20 = { add_trait = ambitious }
-		}
-		ai_chance = {
-			factor = 10
-			modifier = { factor = 2 trait = ambitious }
-			modifier = { factor = 2 trait = proud }
-		}
-	}
-	
-	option = {
-		name = EVTOPT_pilgrim_claimnothing
-		random_list = {
-			40 = { change_diplomacy = 1 }
-			20 = { add_trait = humble }
-			20 = { add_trait = patient }
-			20 = { add_trait = content }
-		}
-		ai_chance = {
-			factor = 10
-			modifier = { factor = 2 trait = content }
-			modifier = { factor = 2 trait = humble }
-		}
-	}
-}
-
-character_event = {
-	id = montane_pilgrim.63
-	desc = EVTDESC_montane_pilgrim_claimbanff
-	picture = GFX_evt_council
-	border = GFX_event_normal_frame_war
-	
-	is_triggered_only = yes
-	
-	immediate = { narrative_event = { id = montane_pilgrim.90 days = 1 } }
-	
-	option = {
-		name = EVTOPT_pilgrim_claimcity
-		500 = { county = { add_claim = ROOT } }
-		random_list = {
-			20 = { add_trait = greedy }
-			20 = { add_trait = envious }
-			20 = { add_trait = cynical }
-			20 = { add_trait = proud }
-			20 = { add_trait = ambitious }
-		}
-		ai_chance = {
-			factor = 10
-			modifier = { factor = 2 trait = ambitious }
-			modifier = { factor = 2 trait = proud }
-		}
-	}
-	
-	option = {
-		name = EVTOPT_pilgrim_claimnothing
-		random_list = {
-			40 = { change_diplomacy = 1 }
-			20 = { add_trait = humble }
-			20 = { add_trait = patient }
-			20 = { add_trait = content }
-		}
-		ai_chance = {
-			factor = 10
-			modifier = { factor = 2 trait = content }
-			modifier = { factor = 2 trait = humble }
-		}
-	}
-}
-
-character_event = {
-	id = montane_pilgrim.64
-	desc = EVTDESC_montane_pilgrim_claimzion
-	picture = GFX_evt_council
-	border = GFX_event_normal_frame_war
-	
-	is_triggered_only = yes
-	
-	immediate = { narrative_event = { id = montane_pilgrim.90 days = 1 } }
-	
-	option = {
-		name = EVTOPT_pilgrim_claimcity
-		436 = { county = { add_claim = ROOT } }
-		random_list = {
-			20 = { add_trait = greedy }
-			20 = { add_trait = envious }
-			20 = { add_trait = cynical }
-			20 = { add_trait = proud }
-			20 = { add_trait = ambitious }
-		}
-		ai_chance = {
-			factor = 10
-			modifier = { factor = 2 trait = ambitious }
-			modifier = { factor = 2 trait = proud }
-		}
-	}
-	
-	option = {
-		name = EVTOPT_pilgrim_claimnothing
-		random_list = {
-			40 = { change_diplomacy = 1 }
-			20 = { add_trait = humble }
-			20 = { add_trait = patient }
-			20 = { add_trait = content }
-		}
-		ai_chance = {
-			factor = 10
-			modifier = { factor = 2 trait = content }
-			modifier = { factor = 2 trait = humble }
-		}
-	}
-}
-
-character_event = {
-	id = montane_pilgrim.65
-	desc = EVTDESC_montane_pilgrim_claimguarden_of_the_gods
-	picture = GFX_evt_council
-	border = GFX_event_normal_frame_war
-	
-	is_triggered_only = yes
-	
-	immediate = { narrative_event = { id = montane_pilgrim.90 days = 1 } }
-	
-	option = {
-		name = EVTOPT_pilgrim_claimcity
-		391 = { county = { add_claim = ROOT } }
-		random_list = {
-			20 = { add_trait = greedy }
-			20 = { add_trait = envious }
-			20 = { add_trait = cynical }
-			20 = { add_trait = proud }
-			20 = { add_trait = ambitious }
-		}
-		ai_chance = {
-			factor = 10
-			modifier = { factor = 2 trait = ambitious }
-			modifier = { factor = 2 trait = proud }
-		}
-	}
-	
-	option = {
-		name = EVTOPT_pilgrim_claimnothing
-		random_list = {
-			40 = { change_diplomacy = 1 }
-			20 = { add_trait = humble }
-			20 = { add_trait = patient }
-			20 = { add_trait = content }
-		}
-		ai_chance = {
-			factor = 10
-			modifier = { factor = 2 trait = content }
-			modifier = { factor = 2 trait = humble }
-		}
-	}
-}
-
-# ************************* Notify Relationship Changes ************************
-
-character_event = {
-	id = montane_pilgrim.70
-	desc = EVTNAME_pilgrim_newfriend
-	picture = GFX_evt_feast
-	
-	is_triggered_only = yes
-	trigger = { NOT = { is_friend = FROM } }
-	
-	option = {
-		name = EVTOPT_pilgrim_newfriend
-		custom_tooltip = { text = TXT_pilgrim_newfriend }
-		hidden_tooltip = { add_friend = FROM }
-	}
-}
-
-character_event = {
-	id = montane_pilgrim.71
-	desc = EVTNAME_pilgrim_newrival
-	picture = GFX_evt_scandal
-	
-	is_triggered_only = yes
-	trigger = { NOT = { is_rival = FROM } }
-	
-	option = {
-		name = EVTOPT_pilgrim_newrival
-		custom_tooltip = { text = TXT_pilgrim_newrival }
-		hidden_tooltip = { add_rival = FROM }
-	}
-}
-
-# ************************* Final Results ************************
-
-narrative_event = {
-	id = montane_pilgrim.90
-	title = EVTNAME_pilgrim_failure
-	desc = EVTDESC_montane_pilgrim_failure
-	picture = GFX_evt_bad_news
-	border = GFX_event_narrative_frame_religion
-	
-	is_triggered_only = yes
-	
-	immediate = {
-		set_character_flag = failed_pilgrim
-		character_event = { id = montane_pilgrim.92 days = 2 }
-	}
-	
-	option = {
-		name = EVTOPT_pilgrim_failure
-		piety = -50
-		prestige = -50
-		random_list = {
-			40 = { add_trait = cynical }
-			20 = { add_trait = depressed }
-			40 = { }
-		}
-		#remove_trait = on_pilgrimage
-		remove_trait = montane_on_hike
-	}
-}
-
-narrative_event = {
-	id = montane_pilgrim.91
-	title = EVTNAME_pilgrim_success
-	desc = EVTDESC_montane_pilgrim_success
-	picture = GFX_evt_carriage
-	border = GFX_event_narrative_frame_religion
-	
-	is_triggered_only = yes
-#	trigger = { trait = on_pilgrimage }
-	trigger = { trait = montane_on_hike }
-	immediate = {
-		character_event = { id = montane_pilgrim.92 days = 2 }
-	}
-	
-	option = {
-		name = EVTOPT_pilgrim_success
-		piety = 50
-		prestige = 50
-		#add_trait = pilgrim
-		add_trait = montane_hiker
-		#remove_trait = on_pilgrimage
-		remove_trait = montane_on_hike
 		if = {
-			limit = { higher_tier_than = BARON }
-			religion_authority = { modifier = ruler_pilgrimage }
+			limit = {
+				lifestyle_traits < 1
+				NOT = { has_dlc = "Way of Life" }
+			}
+
+			random_list = {
+				10 = { add_trait = scholar }
+				10 = { add_trait = mystic }
+				10 = { add_trait_poet_effect = yes }
+				10 = { add_trait_fully_zealous_effect = yes }
+				10 = { add_trait_depressed_effect = yes }
+				50 = { }
+			}
+		}
+		else = {
+			random_list = {
+				20 = { add_trait_poet_effect = yes }
+				20 = { add_trait_fully_zealous_effect = yes }
+				10 = { add_trait_depressed_effect = yes }
+				50 = { }
+			}
+		}
+	}
+
+	option = {
+		name = EVTOPTB_montane_pilgrimage_5031
+
+		random = {
+			chance = 20
+			add_trait_fully_cynical_effect = yes
+		}
+	}
+}
+# Meeting people on travels - good Samaritan
+character_event = {
+	id = montane_pilgrimage.5032
+	desc = EVTDESC_montane_pilgrimage_5032
+	picture = GFX_evt_pilgrims_epic_journey
+
+	is_triggered_only = yes
+
+	option = {
+		name = EVTOPTA_montane_pilgrimage_5032
+
+		wealth = -10
+		add_trait_fully_silently_kind_effect = yes
+
+		ai_chance = { factor = 90 }
+	}
+
+	option = {
+		name = EVTOPTB_montane_pilgrimage_5032
+
+		remove_trait_silently_kind_effect = yes
+
+		ai_chance = { factor = 10 }
+	}
+}
+
+# Meeting people on travels - Noah's ark
+narrative_event = {
+	id = montane_pilgrimage.5033
+	title = EVTNAME_montane_pilgrimage_5033
+	desc = EVTDESC_montane_pilgrimage_5033
+	picture = GFX_evt_pilgrims_epic_journey
+
+	is_triggered_only = yes
+
+	option = {
+		name = EVTOPTA_montane_pilgrimage_5033
+
+		add_trait_fully_silently_arbitrary_effect = yes
+	}
+
+	option = {
+		name = EVTOPTB_montane_pilgrimage_5033
+
+		add_trait_fully_silently_charitable_effect = yes
+	}
+
+	option = {
+		name = EVTOPTC_montane_pilgrimage_5033
+
+		custom_tooltip = { text = noahs_ark_cats_dogs }
+	}
+}
+
+# Meeting people on travels - bread and fish
+character_event = {
+	id = montane_pilgrimage.5034
+	desc = EVTDESC_montane_pilgrimage_5034
+	picture = GFX_evt_pilgrims_epic_journey
+
+	is_triggered_only = yes
+
+	option = {
+		name = EVTOPTA_montane_pilgrimage_5034
+
+		wealth = -5
+		add_trait_fully_silently_charitable_effect = yes
+	}
+
+	option = {
+		name = EVTOPTB_montane_pilgrimage_5034
+
+		remove_trait_silently_charitable_effect = yes
+	}
+}
+# Learning something about boats
+character_event = {
+	id = montane_pilgrimage.5035
+	desc = EVTDESC_montane_pilgrimage_5035
+	picture = GFX_evt_fishing
+
+	is_triggered_only = yes
+
+	option = {
+		name = EVTOPTA_montane_pilgrimage_5035
+
+		random_list = {
+			15 = { change_martial = 1 }
+			15 = { change_learning = 1 }
+			70 = { }
+		}
+	}
+
+	option = {
+		name = EVTOPTB_montane_pilgrimage_5035
+
+		piety = 30
+	}
+}
+
+# Learning something about bridges
+character_event = {
+	id = montane_pilgrimage.5036
+	desc = EVTDESC_montane_pilgrimage_5036
+	picture = GFX_evt_pilgrims_epic_journey
+
+	is_triggered_only = yes
+
+	option = {
+		name = EVTOPTA_montane_pilgrimage_5036
+
+		random = {
+			chance = 30
+			change_learning = 1
+		}
+	}
+
+	option = {
+		name = EVTOPTB_montane_pilgrimage_5036
+
+		random = {
+			chance = 30
+			add_trait_fully_proud_effect = yes
 		}
 	}
 }
 
+# Falls ill from trials on journey
 character_event = {
-	id = montane_pilgrim.92
+	id = montane_pilgrimage.5037
+	desc = EVTDESC_montane_pilgrimage_5037
+	picture = GFX_evt_pilgrims_epic_journey
+
+	is_triggered_only = yes
+
+	option = {
+		name = EVTOPTA_montane_pilgrimage_5037
+
+		piety = 10
+
+		random = {
+			chance = 40
+
+			if = {
+				limit = { has_dlc = "Reapers" }
+				add_symptom_effect = yes
+			}
+			else = {
+				add_trait_ill_effect = yes
+			}
+		}
+
+		ai_chance = { factor = 10 }
+	}
+
+	option = {
+		name = EVTOPTB_montane_pilgrimage_5037
+
+		random = {
+			chance = 20
+
+			if = {
+				limit = { has_dlc = "Reapers" }
+				add_symptom_effect = yes
+			}
+			else = {
+				add_trait_ill_effect = yes
+			}
+		}
+
+		random = {
+			chance = 50
+			add_trait_fully_cynical_effect = yes
+		}
+
+		ai_chance = { factor = 90 }
+	}
+}
+
+# Moral choice - steal or give
+character_event = {
+	id = montane_pilgrimage.5038
+	desc = EVTDESC_montane_pilgrimage_5038
+	picture = GFX_evt_pilgrims_epic_journey
+
+	is_triggered_only = yes
+
+	option = {
+		name = EVTOPTA_montane_pilgrimage_5038
+	}
+
+	option = {
+		name = EVTOPTB_montane_pilgrimage_5038
+
+		wealth = -10
+		add_trait_fully_silently_charitable_effect = yes
+	}
+
+	option = {
+		name = EVTOPTC_montane_pilgrimage_5038
+
+		wealth = 10
+
+		remove_trait_silently_charitable_effect = yes
+		add_trait_fully_silently_deceitful_effect = yes
+	}
+
+	option = {
+		name = EVTOPTD_montane_pilgrimage_5038
+
+		remove_trait_silently_charitable_effect = yes
+	}
+}
+
+# Sees a guiding star - religious experience
+character_event = {
+	id = montane_pilgrimage.5039
+	desc = EVTDESC_montane_pilgrimage_5039
+	picture = GFX_evt_pilgrims_epic_journey
+	border = GFX_event_normal_frame_religion
+
+	is_triggered_only = yes
+
+	option = {
+		name = EVTOPTA_montane_pilgrimage_5039
+
+		random = {
+			chance = 20
+			add_trait_fully_zealous_effect = yes
+		}
+	}
+
+	option = {
+		name = EVTOPTB_montane_pilgrimage_5039
+
+		random = {
+			chance = 20
+			add_trait_fully_cynical_effect = yes
+		}
+	}
+}
+
+# Holy knights come to meet and escort - feels safe
+narrative_event = {
+	id = montane_pilgrimage.5045
+	title = EVTNAME_montane_pilgrimage_5045
+	desc = EVTDESC_montane_pilgrimage_5045
+	picture = GFX_evt_crusaders
+
+	is_triggered_only = yes
+
+	option = {
+		name = EVTOPTA_montane_pilgrimage_5045
+
+		piety = 20
+
+		ai_chance = { factor = 90 }
+	}
+
+	option = {
+		name = EVTOPTB_montane_pilgrimage_5045
+
+		random = {
+			chance = 20
+			add_trait_fully_paranoid_effect = yes
+		}
+
+		ai_chance = { factor = 10 }
+	}
+}
+
+# Comes upon holy knights at camp - talks to them and learns something
+character_event = {
+	id = montane_pilgrimage.5046
+	desc = EVTDESC_montane_pilgrimage_5046
+	picture = GFX_evt_crusaders
+
+	is_triggered_only = yes
+
+	option = {
+		name = EVTOPTA_montane_pilgrimage_5046
+
+		piety = 10
+
+		random = {
+			chance = 30
+			change_learning = 1
+		}
+	}
+
+	option = {
+		name = EVTOPTB_montane_pilgrimage_5046
+
+		random = {
+			chance = 30
+			change_martial = 1
+		}
+	}
+}
+
+### Skipping montane_pilgrimage.5047 and montane_pilgrimage.5087 requires holy order to exist, montane has none. pray it doesnt result in bugs
+
+######################################################
+#                                                    #
+# Pilgrim arrives                                    #
+#                                                    #
+# ID montane_pilgrimage.5050-montane_pilgrimage.5054 #
+#    montane_pilgrimage.5094-5096                    #
+#                                                    #
+######################################################
+
+
+# Arrived at Canterbury
+narrative_event = {
+	id = montane_pilgrimage.5050
+	border = GFX_event_narrative_frame_religion
+
+	title = {
+		text = EVTNAME_montane_pilgrimage_5050
+		trigger = { has_character_flag = pilgrimage_to_yellowstone }
+	}
+	title = {
+		text = EVTNAME_montane_pilgrimage_5051
+		trigger = { has_character_flag = pilgrimage_to_pikes_peak }
+	}
+	title = {
+		text = EVTNAME_montane_pilgrimage_5052
+		trigger = { has_character_flag = pilgrimage_to_grand }
+	}
+	title = {
+		text = EVTNAME_montane_pilgrimage_5053
+		trigger = { has_character_flag = pilgrimage_to_banff }
+	}
+	title = {
+		text = EVTNAME_montane_pilgrimage_5054
+		trigger = { has_character_flag = pilgrimage_to_mesa_verde }
+	}
+
+	desc = {
+		text = EVTDESC_montane_pilgrimage_5050
+		picture = GFX_evt_nomad_camp
+		trigger = { has_character_flag = pilgrimage_to_yellowstone }
+	}
+	desc = {
+		text = EVTDESC_montane_pilgrimage_5051
+		picture = GFX_evt_nomad_camp
+		trigger = { has_character_flag = pilgrimage_to_pikes_peak }
+	}
+	desc = {
+		text = EVTDESC_montane_pilgrimage_5052
+		picture = GFX_evt_nomad_camp
+		trigger = { has_character_flag = pilgrimage_to_grand }
+	}
+	desc = {
+		text = EVTDESC_montane_pilgrimage_5053
+		picture = GFX_evt_nomad_camp
+		trigger = { has_character_flag = pilgrimage_to_banff }
+	}
+	desc = {
+		text = EVTDESC_montane_pilgrimage_5054
+		picture = GFX_evt_nomad_camp
+		trigger = { has_character_flag = pilgrimage_to_mesa_verde }
+	}
+
+	is_triggered_only = yes
+
+	option = {
+		name = {
+			text = EVTOPTA_montane_pilgrimage_5050
+			trigger = { has_character_flag = pilgrimage_to_yellowstone }
+		}
+		name = {
+			text = EVTOPTA_montane_pilgrimage_5051
+			trigger = { has_character_flag = pilgrimage_to_pikes_peak }
+		}
+		name = {
+			text = EVTOPTA_montane_pilgrimage_5052
+			trigger = { has_character_flag = pilgrimage_to_grand }
+		}
+		name = {
+			text = EVTOPTA_montane_pilgrimage_5053
+			trigger = { has_character_flag = pilgrimage_to_banff }
+		}
+		name = {
+			text = EVTOPTA_montane_pilgrimage_5054
+			trigger = { has_character_flag = pilgrimage_to_mesa_verde }
+		}
+
+		character_event = {
+			id = montane_pilgrimage.5055
+			days = 5
+		}
+	}
+}
+
+#######################################################
+#                                                     #
+# Events occurring at pilgrimage                      #
+# destination                                         #
+#                                                     #
+# ID montane_pilgrimage.5055-montane_pilgrimage.5080  #
+#                                                     #
+#######################################################
+
+# Hidden event that selects what interesting things will happen at destination
+character_event = {
+	id = montane_pilgrimage.5055
+
+	is_triggered_only = yes
+	hide_window = yes
+
+	immediate = {
+		random_list = {
+			10 = {
+				if = {
+					limit = { trait = cynical }
+					character_event = { id = montane_pilgrimage.5056 } # Stimulated to learning
+				}
+				else = {
+					random_list = {
+						20 = { character_event = { id = montane_pilgrimage.5057 } } # Strong religious experience
+						10 = { character_event = { id = montane_pilgrimage.5058 } } # Disappointed in the place
+						20 = { character_event = { id = montane_pilgrimage.5060 } } # Learns things of the world - cosmopolitan
+						20 = { character_event = { id = montane_pilgrimage.5061 } } # Generally impressed
+					}
+				}
+			}
+
+			10 = {
+				if = {
+					limit = {
+						OR = {
+							trait = mastermind_theologian
+							trait = scholarly_theologian
+						}
+					}
+
+					character_event = { id = montane_pilgrimage.5059 } # Mastermind theologian impresses everyone
+				}
+				else = {
+					random_list = {
+						20 = { character_event = { id = montane_pilgrimage.5057 } } # Strong religious experience
+						10 = { character_event = { id = montane_pilgrimage.5058 } } # Disappointed in the place
+						20 = { character_event = { id = montane_pilgrimage.5060 } } # Learns things of the world - cosmopolitan
+						20 = { character_event = { id = montane_pilgrimage.5061 } } # Generally impressed
+					}
+				}
+			}
+
+			10 = {
+				if = {
+					limit = { trait = lustful }
+					character_event = { id = montane_pilgrimage.5062 } # Lustful tourist having fun
+				}
+				else = {
+					random_list = {
+						20 = { character_event = { id = montane_pilgrimage.5057 } } # Strong religious experience
+						10 = { character_event = { id = montane_pilgrimage.5058 } } # Disappointed in the place
+						20 = { character_event = { id = montane_pilgrimage.5060 } } # Learns things of the world - cosmopolitan
+						20 = { character_event = { id = montane_pilgrimage.5061 } } # Generally impressed
+					}
+				}
+			}
+
+			10 = {
+				if = {
+					limit = { trait = homosexual }
+					character_event = { id = montane_pilgrimage.5063 } # Freedom
+				}
+				else = {
+					random_list = {
+						20 = { character_event = { id = montane_pilgrimage.5057 } } # Strong religious experience
+						10 = { character_event = { id = montane_pilgrimage.5058 } } # Disappointed in the place
+						20 = { character_event = { id = montane_pilgrimage.5060 } } # Learns things of the world - cosmopolitan
+						20 = { character_event = { id = montane_pilgrimage.5061 } } # Generally impressed
+					}
+				}
+			}
+
+			10 = { # Monks cure pilgrim of disease - attributed to God's hand?
+				if = {
+					limit = {
+						trigger_if = {
+							limit = { is_ill = no }
+
+							has_symptom_trigger = yes
+							has_character_flag = developing_illness
+						}
+					}
+
+					narrative_event = { id = montane_pilgrimage.5064 }
+				}
+				else = {
+					random_list = {
+						20 = { character_event = { id = montane_pilgrimage.5057 } } # Strong religious experience
+						10 = { character_event = { id = montane_pilgrimage.5058 } } # Disappointed in the place
+						20 = { character_event = { id = montane_pilgrimage.5060 } } # Learns things of the world - cosmopolitan
+						20 = { character_event = { id = montane_pilgrimage.5061 } } # Generally impressed
+					}
+				}
+			}
+
+			10 = {
+				if = {
+					limit = {
+						OR = {
+							trait = lunatic
+							trait = possessed
+						}
+					}
+
+					character_event = { id = montane_pilgrimage.5065 } # Lunatic/possessed decides (s)he is God
+				}
+				else = {
+					random_list = {
+						20 = { character_event = { id = montane_pilgrimage.5057 } } # Strong religious experience
+						10 = { character_event = { id = montane_pilgrimage.5058 } } # Disappointed in the place
+						20 = { character_event = { id = montane_pilgrimage.5060 } } # Learns things of the world - cosmopolitan
+						20 = { character_event = { id = montane_pilgrimage.5061 } } # Generally impressed
+					}
+				}
+			}
+
+			10 = {
+				if = {
+					limit = {
+						OR = {
+							trait = drunkard
+							trait = hedonist
+						}
+					}
+
+					character_event = { id = montane_pilgrimage.5066 } # Drunkard/hedonist event
+				}
+				else = {
+					random_list = {
+						20 = { character_event = { id = montane_pilgrimage.5057 } } # Strong religious experience
+						10 = { character_event = { id = montane_pilgrimage.5058 } } # Disappointed in the place
+						20 = { character_event = { id = montane_pilgrimage.5060 } } # Learns things of the world - cosmopolitan
+						20 = { character_event = { id = montane_pilgrimage.5061 } } # Generally impressed
+					}
+				}
+			}
+
+			10 = { # Impressed by Islam or Judaism (Jerusalem only)
+				if = {
+					limit = {
+						has_character_flag = pilgrimage_to_pikes_peak
+
+						NAND = {
+							trait = sympathy_pacific
+							trait = sympathy_latter_day_saints
+						}
+					}
+
+					character_event = { id = montane_pilgrimage.5067 }
+				}
+				else = {
+					random_list = {
+						20 = { character_event = { id = montane_pilgrimage.5057 } } # Strong religious experience
+						10 = { character_event = { id = montane_pilgrimage.5058 } } # Disappointed in the place
+						20 = { character_event = { id = montane_pilgrimage.5060 } } # Learns things of the world - cosmopolitan
+						20 = { character_event = { id = montane_pilgrimage.5061 } } # Generally impressed
+					}
+				}
+			}
+		}
+	}
+}
+
+# Stimulated to theological learning
+character_event = {
+	id = montane_pilgrimage.5056
+	desc = EVTDESC_montane_pilgrimage_5056
+	picture = GFX_evt_desert
+	border = GFX_event_normal_frame_religion
+
+	is_triggered_only = yes
+
+	option = {
+		name = EVTOPTA_montane_pilgrimage_5056
+
+		if = {
+			limit = {
+				lifestyle_traits < 1
+				NOT = { has_dlc = "Way of Life" }
+			}
+
+			add_trait = scholar
+		}
+
+		random = {
+			chance = 20
+			add_trait_fully_zealous_effect = yes
+		}
+	}
+
+	option = {
+		name = EVTOPTB_montane_pilgrimage_5056
+
+		piety = 30
+	}
+
+	after = {
+		character_event = {
+			id = montane_pilgrimage.5090 # Stay a little longer then go home
+			days = 10
+		}
+	}
+}
+
+# Strong religious experience
+character_event = {
+	id = montane_pilgrimage.5057
+	desc = EVTDESC_montane_pilgrimage_5057
+	picture = GFX_evt_religious_exultation
+	border = GFX_event_normal_frame_religion
+
+	is_triggered_only = yes
+
+	option = {
+		name = EVTOPTA_montane_pilgrimage_5057
+
+		add_trait_fully_silently_zealous_effect = yes
+
+		character_event = {
+			id = montane_pilgrimage.5090 # Stay a little longer then go home
+			days = 10
+		}
+	}
+}
+
+# Disappointed in the place
+character_event = {
+	id = montane_pilgrimage.5058
+	desc = EVTDESC_montane_pilgrimage_5058
+	picture = GFX_evt_bad_news
+	border = GFX_event_normal_frame_religion
+
+	is_triggered_only = yes
+
+	option = {
+		name = EVTOPTA_montane_pilgrimage_5058
+
+		add_trait_fully_silently_cynical_effect = yes
+
+		clr_character_flag = good_pilgrimage
+		clr_character_flag = abominable_pilgrimage
+		set_character_flag = bad_pilgrimage
+
+		character_event = {
+			id = montane_pilgrimage.5090 # Stay a little longer then go home
+			days = 10
+		}
+	}
+}
+
+# Mastermind theologian impresses everyone
+character_event = {
+	id = montane_pilgrimage.5059
+	desc = EVTDESC_montane_pilgrimage_5059
+	picture = GFX_evt_heretic
+	border = GFX_event_normal_frame_religion
+
+	is_triggered_only = yes
+
+	option = {
+		name = EVTOPTA_montane_pilgrimage_5059
+
+		prestige = 30
+
+		character_event = {
+			id = montane_pilgrimage.5090 # Stay a little longer then go home
+			days = 10
+		}
+	}
+}
+
+# Learns things of the big world - cosmopolitan experience
+character_event = {
+	id = montane_pilgrimage.5060
+	desc = EVTDESC_montane_pilgrimage_5060
+	picture = GFX_evt_nomad_camp
+
+	is_triggered_only = yes
+
+	option = {
+		name = EVTOPTA_montane_pilgrimage_5060
+
+		random_list = {
+			15 = { change_learning = 1 }
+			15 = { change_intrigue = 1 }
+			70 = { }
+		}
+	}
+
+	option = {
+		name = EVTOPTB_montane_pilgrimage_5060
+
+		random = {
+			chance = 50
+			add_trait_fully_gregarious_effect = yes
+		}
+
+		if = {
+			limit = { trait = gregarious }
+
+			random = {
+				chance = 20
+				change_diplomacy = 1
+			}
+		}
+	}
+
+	after = {
+		character_event = {
+			id = montane_pilgrimage.5090 # Stay a little longer then go home
+			days = 10
+		}
+	}
+}
+
+# Generally impressed
+character_event = {
+	id = montane_pilgrimage.5061
+	desc = EVTDESC_montane_pilgrimage_5061
+	picture = GFX_evt_nomad_camp
+	border = GFX_event_normal_frame_religion
+
+	is_triggered_only = yes
+
+	option = {
+		name = EVTOPTA_montane_pilgrimage_5061
+
+		piety = 20
+
+		character_event = {
+			id = montane_pilgrimage.5090 # Stay a little longer then go home
+			days = 10
+		}
+	}
+}
+
+# Lustful character enjoys freedom far from home
+character_event = {
+	id = montane_pilgrimage.5062
+	desc = EVTDESC_montane_pilgrimage_5062
+	picture = GFX_evt_lovers
+
+	is_triggered_only = yes
+
+	option = {
+		name = EVTOPTA_montane_pilgrimage_5062 # Let's go!
+
+		if = {
+			limit = {
+				is_female = yes
+				practical_age < 45
+				NOT = { trait = homosexual }
+			}
+
+			random = {
+				chance = 50
+
+				custom_tooltip = {
+					text = becomes_pregnant_no_father
+					impregnate = 0
+				}
+
+				clr_character_flag = good_pilgrimage
+				clr_character_flag = abominable_pilgrimage
+				set_character_flag = bad_pilgrimage
+			}
+		}
+
+		if = {
+			limit = {
+				NOT = { trait = great_pox }
+			}
+
+			random = {
+				chance = 5
+
+				give_great_pox_effect = yes
+				clr_character_flag = good_pilgrimage
+				clr_character_flag = abominable_pilgrimage
+				set_character_flag = bad_pilgrimage
+			}
+		}
+	}
+
+	option = {
+		name = EVTOPTB_montane_pilgrimage_5062 # Control yourself
+
+		piety = 10
+
+		random = {
+			chance = 40
+			add_trait_fully_chaste_effect = yes
+		}
+	}
+
+	after = {
+		character_event = {
+			id = montane_pilgrimage.5090 # Stay a little longer then go home
+			days = 10
+		}
+	}
+}
+
+# Homosexual character enjoys freedom far from home
+character_event = {
+	id = montane_pilgrimage.5063
+	desc = EVTDESC_montane_pilgrimage_5063
+	picture = GFX_evt_moonlit_mountains_hf
+
+	is_triggered_only = yes
+
+	option = {
+		name = EVTOPTA_montane_pilgrimage_5063 # Do it
+
+		remove_trait_silently_stressed_effect = yes
+	}
+
+	option = {
+		name = EVTOPTB_montane_pilgrimage_5063 # Don't do it
+
+		add_trait_silently_stressed_effect = yes
+
+		random = {
+			chance = 20
+			add_trait_fully_zealous_effect = yes
+		}
+	}
+
+	after = {
+		character_event = {
+			id = montane_pilgrimage.5090 # Stay a little longer then go home
+			days = 10
+		}
+	}
+}
+
+# Monks cure pilgrim of disease - pilgrim attributes it to God's hand
+narrative_event = {
+	id = montane_pilgrimage.5064
+	title = EVTNAME_montane_pilgrimage_5064
+	desc = EVTDESC_montane_pilgrimage_5064
+	picture = GFX_evt_monastery_monks
+	border = GFX_event_narrative_frame_religion
+
+	is_triggered_only = yes
+
+	option = {
+		name = EVTOPTA_montane_pilgrimage_5064
+
+		if = {
+			limit = { has_disease_trigger = yes }
+			remove_disease_trait_effect = yes
+		}
+		else = {
+			# Used later in blessing_removes_disease_effect
+			set_character_flag = pilgrim_blessing
+
+			add_character_modifier = {
+				name = blessing_of_health
+				duration = -1
+			}
+		}
+
+		if = {
+			limit = { trait = wounded }
+
+			remove_trait = wounded
+			add_scarred_tiered_effect = yes
+		}
+
+		add_trait_fully_silently_zealous_effect = yes
+
+		ai_chance = { factor = 70 }
+	}
+
+	option = {
+		name = EVTOPTB_montane_pilgrimage_5064
+
+		if = {
+			limit = { has_disease_trigger = yes }
+			remove_disease_trait_effect = yes
+		}
+		else = {
+			# Used later in blessing_removes_disease_effect
+			set_character_flag = pilgrim_blessing
+
+			add_character_modifier = {
+				name = blessing_of_health
+				duration = -1
+			}
+		}
+
+		if = {
+			limit = { trait = wounded }
+
+			remove_trait = wounded
+			add_scarred_tiered_effect = yes
+		}
+
+		add_trait_fully_silently_cynical_effect = yes
+
+		ai_chance = { factor = 20 }
+	}
+
+	option = {
+		name = EVTOPTC_montane_pilgrimage_5064
+
+		trigger = {
+			lifestyle_traits < 1
+			NOT = { has_dlc = "Way of Life" }
+		}
+
+		if = {
+			limit = { has_disease_trigger = yes }
+			remove_disease_trait_effect = yes
+		}
+		else = {
+			# Used later in blessing_removes_disease_effect
+			set_character_flag = pilgrim_blessing
+
+			add_character_modifier = {
+				name = blessing_of_health
+				duration = -1
+			}
+		}
+
+		if = {
+			limit = { trait = wounded }
+
+			remove_trait = wounded
+			add_scarred_tiered_effect = yes
+		}
+
+		add_trait = mystic
+
+		ai_chance = { factor = 10 }
+	}
+
+	after = {
+		character_event = {
+			id = montane_pilgrimage.5090 # Stay a little longer then go home
+			days = 10
+		}
+	}
+}
+# Blessing of health cures disease after having visited the monks
+character_event = {
+	id = montane_pilgrimage.5068
+	desc = EVTDESC_TOG_7015 # copied from Ancestor's blessing event
+	picture = GFX_evt_monastery_monks
+	border = GFX_event_normal_frame_religion
+
+	trigger = {
+		has_disease_trigger = yes
+	}
+
+	is_triggered_only = yes # blessing_removes_disease_effect, see montane_pilgrimage.5064
+
+	option = {
+		name = EVTOPTA_montane_pilgrimage_5064
+
+		remove_disease_trait_effect = yes
+		remove_character_modifier = blessing_of_health
+		clr_character_flag = pilgrim_blessing
+		remove_trait_silently_cynical_effect = yes
+	}
+}
+
+# Lunatic/possessed pilgrim decides (s)he is God
+character_event = {
+	id = montane_pilgrimage.5065
+	desc = EVTDESC_montane_pilgrimage_5065
+	picture = GFX_evt_moonlit_mountains_hf
+	border = GFX_event_normal_frame_religion
+
+	is_triggered_only = yes
+
+	option = {
+		name = EVTOPTA_montane_pilgrimage_5065
+
+		character_event = { id = montane_pilgrimage.5080 } # Results of speaking to the masses
+
+		ai_chance = { factor = 10 }
+	}
+
+	option = {
+		name = EVTOPTB_montane_pilgrimage_5065
+
+		ai_chance = { factor = 90 }
+	}
+
+	after = {
+		character_event = {
+			id = montane_pilgrimage.5090 # Stay a little longer then go home
+			days = 10
+		}
+	}
+}
+
+# Drunkard/hedonist at holy site
+character_event = {
+	id = montane_pilgrimage.5066
+	desc = EVTDESC_montane_pilgrimage_5066
+	picture = GFX_evt_feast
+
+	is_triggered_only = yes
+
+	option = {
+		name = EVTOPTA_montane_pilgrimage_5066
+
+		if = {
+			limit = {
+				lifestyle_traits < 1
+				NOT = { has_dlc = "Way of Life" }
+			}
+
+			random = {
+				chance = 30
+				add_trait = hedonist
+			}
+		}
+
+		random = {
+			chance = 30
+			add_trait_drunkard_effect = yes
+		}
+
+		add_character_modifier = {
+			name = good_times
+			years = 2
+		}
+
+		ai_chance = { factor = 80 }
+	}
+
+	option = {
+		name = EVTOPTB_montane_pilgrimage_5066
+
+		piety = 10
+
+		random = {
+			chance = 30
+			add_trait_stressed_effect = yes
+		}
+
+		ai_chance = { factor = 20 }
+	}
+
+	after = {
+		character_event = {
+			id = montane_pilgrimage.5090 # Stay a little longer then go home
+			days = 10
+		}
+	}
+}
+
+# Impressed by pacific faiths or mormons (pikespeak only)
+character_event = {
+	id = montane_pilgrimage.5067
+	desc = EVTDESC_montane_pilgrimage_5067
+	picture = GFX_evt_imam
+	border = GFX_event_normal_frame_religion
+
+	is_triggered_only = yes
+
+	option = {
+		name = EVTOPTA_montane_pilgrimage_5067
+
+		trigger = {
+			NOT = { trait = sympathy_pacific }
+		}
+
+		remove_trait_silently_zealous_effect = yes
+		add_trait = sympathy_pacific
+	}
+
+	option = {
+		name = EVTOPTB_montane_pilgrimage_5067
+
+		trigger = {
+			NOT = { trait = sympathy_latter_day_saints }
+		}
+
+		remove_trait_silently_zealous_effect = yes
+		add_trait = sympathy_latter_day_saints
+	}
+
+	after = {
+		character_event = {
+			id = montane_pilgrimage.5090 # Stay a little longer then go home
+			days = 10
+		}
+	}
+}
+# Self-styled God speaks to the masses - consequences
+character_event = {
+	id = montane_pilgrimage.5080
+	desc = EVTDESC_montane_pilgrimage_5080
+	picture = GFX_evt_lunatic
+	border = GFX_event_normal_frame_religion
+
+	is_triggered_only = yes
+
+	option = {
+		name = EVTOPTA_montane_pilgrimage_5080
+
+		prestige = -10
+		clr_character_flag = good_pilgrimage
+		clr_character_flag = bad_pilgrimage
+		set_character_flag = abominable_pilgrimage
+		add_trait_silently_lunatic_effect = yes
+
+		random = {
+			chance = 50
+			add_trait_fully_wroth_effect = yes
+		}
+	}
+}
+
+#####################################################
+#                                                   #
+# Homecoming                                        #
+#                                                   #
+# ID montane_pilgrimage5090-montane_pilgrimage5093  #
+#                                                   #
+#####################################################
+
+# Event checking result of pilgrimage and sending us on to the respective homecoming event
+character_event = {
+	id = montane_pilgrimage.5090
+
 	hide_window = yes
 	is_triggered_only = yes
-	
+
 	immediate = {
-		clr_character_flag = pilgrim_carriage
-		clr_character_flag = pilgrim_bodyguards
-		clr_character_flag = pilgrim_entry_retried
-		clr_character_flag = on_pilgrimage_yellowstone
-		clr_character_flag = on_pilgrimage_rocky_mountain_national_park 
-		clr_character_flag = on_pilgrimage_banff
-		clr_character_flag = on_pilgrimage_zion
-		clr_character_flag = on_pilgrimage_guarden_of_the_gods
+		trigger_switch = {
+			on_trigger = has_character_flag
+
+			good_pilgrimage = { character_event = { id = montane_pilgrimage.5091 } }
+			bad_pilgrimage = { character_event = { id = montane_pilgrimage.5092 } }
+			abominable_pilgrimage = { character_event = { id = montane_pilgrimage.5093 } }
+		}
+
+	#	if = {
+	#		limit = { has_quest = quest_monastic_order_pilgrimage_christian }
+	#
+	#		letter_event = {
+	#			id = MNM.4020
+	#			days = 1
+	#		}
+	#	}
+	}
+}
+
+# Good pilgrimage
+character_event = {
+	id = montane_pilgrimage.5091
+	desc = EVTDESC_montane_pilgrimage_5091
+	picture = GFX_evt_castle_construction
+	border = GFX_event_normal_frame_religion
+
+	is_triggered_only = yes
+
+	immediate = {
+		character_event = { id = montane_pilgrimage.5999 } # Clean-up
+
+		if = {
+			limit = {
+				ai = no
+				is_ironman = yes
+				NOT = { has_character_flag = achievement_pilgrim }
+			}
+
+			set_character_flag = achievement_pilgrim
+		}
+	}
+
+	option = {
+		name = EVTOPTA_montane_pilgrimage_5091
+
+		add_trait = montane_hiker
+		piety = 30
+	}
+}
+
+# Disappointing pilgrimage
+character_event = {
+	id = montane_pilgrimage.5092
+	desc = EVTDESC_montane_pilgrimage_5092
+	picture = GFX_evt_castle_construction
+	border = GFX_event_normal_frame_religion
+
+	is_triggered_only = yes
+
+	immediate = {
+		character_event = { id = montane_pilgrimage.5999 } # Clean-up
+
+		if = {
+			limit = {
+				ai = no
+				is_ironman = yes
+				NOT = { has_character_flag = achievement_pilgrim }
+			}
+
+			set_character_flag = achievement_pilgrim
+		}
+	}
+
+	option = {
+		name = EVTOPTA_montane_pilgrimage_5092
+
+		add_trait = montane_hiker
+		piety = -10
+
+		random = {
+			chance = 20
+			add_trait_fully_cynical_effect = yes
+		}
+	}
+}
+
+# Abominable pilgrimage - very unusual outcome
+character_event = {
+	id = montane_pilgrimage.5093
+	desc = EVTDESC_montane_pilgrimage_5093
+	picture = GFX_evt_lunatic
+	border = GFX_event_normal_frame_religion
+
+	is_triggered_only = yes
+
+	immediate = {
+		character_event = { id = montane_pilgrimage.5999 } # Clean-up
+
+		if = {
+			limit = {
+				ai = no
+				is_ironman = yes
+				NOT = { has_character_flag = achievement_pilgrim }
+			}
+
+			set_character_flag = achievement_pilgrim
+		}
+	}
+
+	option = {
+		name = EVTOPTA_montane_pilgrimage_5093
+
+		add_trait = montane_hiker
+		piety = -100
+	}
+}
+
+character_event = {
+	id = montane_pilgrimage.5998
+
+	is_triggered_only = yes # on_character_convert_religion
+	hide_window = yes
+
+	trigger = {
+		OR = {
+			has_character_flag = preparing_pilgrimage
+			has_character_flag = activated_pilgrimage
+		}
+
+		NOT = { religion_group = christian }
+	}
+
+	immediate = {
+		character_event = { id = montane_pilgrimage.5999 }
+	}
+}
+# Clean-up
+character_event = {
+	id = montane_pilgrimage.5999 # originally HFP.23024
+
+	is_triggered_only = yes # on_become_imprisoned_any_reason and on coming home
+	hide_window = yes
+
+	immediate = {
+		clr_character_flag = pilgrimage_to_yellowstone
+		clr_character_flag = pilgrimage_to_pikes_peak
+		clr_character_flag = pilgrimage_to_grand
+		clr_character_flag = pilgrimage_to_banff
+		clr_character_flag = pilgrimage_to_mesa_verde
+		clr_character_flag = pilgrimage_to_constantinople
+		clr_character_flag = pilgrimage_to_axum
+		clr_character_flag = pilgrimage_to_antioch
+		clr_character_flag = abominable_pilgrimage
+		clr_character_flag = do_not_disturb
+		clr_character_flag = preparing_pilgrimage
+		clr_character_flag = activated_pilgrimage
+		clr_character_flag = cold_saintly_pilgrimage
+		clr_character_flag = mild_saintly_pilgrimage
+		clr_character_flag = exotic_saintly_pilgrimage
+		clr_character_flag = generic_saintly_pilgrimage
+		clr_character_flag = pilgrimage_st_augustine
+		clr_character_flag = pilgrimage_st_christopher
+		clr_character_flag = pilgrimage_st_patrick
+		remove_trait = montane_on_hike
+		clear_delayed_event = { id = montane_pilgrimage.5000 }
+		clear_delayed_event = { id = montane_pilgrimage.5011 }
+		clear_delayed_event = { id = montane_pilgrimage.5016 }
+		clear_delayed_event = { id = montane_pilgrimage.5017 }
+		clear_delayed_event = { id = montane_pilgrimage.5018 }
+		clear_delayed_event = { id = montane_pilgrimage.5019 }
+		clear_delayed_event = { id = montane_pilgrimage.5020 }
+		clear_delayed_event = { id = montane_pilgrimage.5021 }
+		clear_delayed_event = { id = montane_pilgrimage.5026 }
+		clear_delayed_event = { id = montane_pilgrimage.5027 }
+		clear_delayed_event = { id = montane_pilgrimage.5028 }
+		clear_delayed_event = { id = montane_pilgrimage.5029 }
+		clear_delayed_event = { id = montane_pilgrimage.5030 }
+		clear_delayed_event = { id = montane_pilgrimage.5031 }
+		clear_delayed_event = { id = montane_pilgrimage.5032 }
+		clear_delayed_event = { id = montane_pilgrimage.5033 }
+		clear_delayed_event = { id = montane_pilgrimage.5034 }
+		clear_delayed_event = { id = montane_pilgrimage.5035 }
+		clear_delayed_event = { id = montane_pilgrimage.5036 }
+		clear_delayed_event = { id = montane_pilgrimage.5037 }
+		clear_delayed_event = { id = montane_pilgrimage.5038 }
+		clear_delayed_event = { id = montane_pilgrimage.5039 }
+		clear_delayed_event = { id = montane_pilgrimage.5045 }
+		clear_delayed_event = { id = montane_pilgrimage.5046 }
+		clear_delayed_event = { id = montane_pilgrimage.5047 }
+		clear_delayed_event = { id = montane_pilgrimage.5050 }
+		clear_delayed_event = { id = montane_pilgrimage.5055 }
+		clear_delayed_event = { id = montane_pilgrimage.5056 }
+		clear_delayed_event = { id = montane_pilgrimage.5057 }
+		clear_delayed_event = { id = montane_pilgrimage.5058 }
+		clear_delayed_event = { id = montane_pilgrimage.5059 }
+		clear_delayed_event = { id = montane_pilgrimage.5060 }
+		clear_delayed_event = { id = montane_pilgrimage.5061 }
+		clear_delayed_event = { id = montane_pilgrimage.5062 }
+		clear_delayed_event = { id = montane_pilgrimage.5063 }
+		clear_delayed_event = { id = montane_pilgrimage.5064 }
+		clear_delayed_event = { id = montane_pilgrimage.5068 }
+		clear_delayed_event = { id = montane_pilgrimage.5065 }
+		clear_delayed_event = { id = montane_pilgrimage.5066 }
+		clear_delayed_event = { id = montane_pilgrimage.5067 }
+		clear_delayed_event = { id = montane_pilgrimage.5080 }
+		clear_delayed_event = { id = montane_pilgrimage.5087 }
+		clear_delayed_event = { id = montane_pilgrimage.5090 }
+		clear_delayed_event = { id = montane_pilgrimage.5091 }
+		clear_delayed_event = { id = montane_pilgrimage.5092 }
+		clear_delayed_event = { id = montane_pilgrimage.5093 }
+		clear_delayed_event = { id = HF.41300 }
+		clear_delayed_event = { id = HF.41310 }
+		clear_delayed_event = { id = HF.41312 }
+		clear_delayed_event = { id = HF.41314 }
+		clear_delayed_event = { id = HF.41316 }
+		clear_delayed_event = { id = HF.41320 }
+		clear_delayed_event = { id = HF.41340 }
+		clear_delayed_event = { id = HF.41350 }
+		clear_delayed_event = { id = HF.41352 }
+		clear_delayed_event = { id = HF.41354 }
+		clear_delayed_event = { id = HF.41356 }
+		clear_delayed_event = { id = HF.41360 }
+		clear_delayed_event = { id = HF.41365 }
+		clear_delayed_event = { id = HF.41370 }
+		clear_delayed_event = { id = HF.41375 }
+		clear_delayed_event = { id = HF.41390 }
+		clear_delayed_event = { id = HF.41400 }
+		clear_delayed_event = { id = HF.41410 }
+		clear_delayed_event = { id = HF.41411 }
+		clear_delayed_event = { id = HF.41412 }
+		clear_delayed_event = { id = HF.41413 }
+		clear_delayed_event = { id = HF.41419 }
+		clear_delayed_event = { id = HF.41420 }
+		clear_delayed_event = { id = HF.41450 }
 	}
 }
