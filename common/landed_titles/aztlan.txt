@@ -2963,13 +2963,75 @@ e_aztlan = {
 				b_san_isidro_de_lomas_CH = {}
 			}
 			
+
+				
+		} #End of d_tutuaca
+		
+		d_conchos = { 
+			color = { 204 162 159 }
+			color2 = { 255 255 255 }
+			
 			c_parral = { # 801
 				color={ 209 137 128 }
 				color2={ 255 255 255 }
 	
+				b_santa_barbara_CH = {}
 				b_hidalgo_del_parral_CH = {}
+				b_san_francisco_del_oro_CH = {}
+				b_valle_del_rosario_CH = {}
+				b_el_tule_CH = {}
+				b_huejotitan_CH = {}
+
+			}
+			
+			
+			c_delicias	= { # 2826
+				color = { 206 89 76 }
+				color2 = { 255 255 255 }
+				
+				b_meoqui_CH = {}
+				b_delicias_CH = {} 
+				b_rosales_CH = {}
+				b_saucillo_CH = {
+					yaqui = Wata
+				}
+				b_julimes_CH = {}
+				b_lazaro_cardenas_CH = {}	
+				b_las_puentes_CH = {}	
+				b_colonia_esperanza_CH = {}	
+			}
+			
+			c_conchos = { #2825
+				color = { 219 109 109 }
+				color2 = { 255 255 255 }
+				
+				b_la_cruz_CH = {}
+				b_carmargo_CH = {}
+				b_san_francisco_de_conchos_CH = {}
+				b_boquilla_de_conchos_CH = {}
+				b_ortegueno_CH = {}
+				b_san_ignacio_CH = {}
+				b_alta_vista_CH = {}
+			}
+			
+			c_jimenez_CH = { # 2823
+				color = { 255 167 158 }
+				color2 = { 255 255 255 }
+				
+				b_escalon_CH = {}
 				b_jimenez_CH = {}
-				b_valle_de_allende_CH = {
+				b_torreoncitos_CH = {}
+				b_hacienda_de_dolores_CH = {}
+				b_san_felipe_CH = {}
+				b_laguna_de_palomas_CH = {}
+				b_california_CH = {}
+			}
+			
+			c_allende = { # 2824
+				color = { 196 104 96 }
+				color2 = { 255 255 255 }
+				
+			b_valle_de_allende_CH = {
 					arixan = "Allende Valley"
 					texan = "Allende Valley"
 					czexan = "Allende Valley"
@@ -2977,18 +3039,22 @@ e_aztlan = {
 					valleyan = "Allende Valley"
 					bayfolk = "Allende Valley"	
 				}
-				b_saucillo_CH = {
-					yaqui = Wata
-				}
-				b_santa_barbara_CH = {}
-				b_delicias_CH = {}
-				b_san_francisco_del_oro_CH = {}
-				b_coronado_CH = {}
+			b_villa_de_matamoros_CH = {
+				used_for_dynasty_names = no
+				short_name = yes
 			}
-				
-		} #End of d_tutuaca
-			
-		d_casas_altas = {
+			b_coronado_CH = {}
+			b_octaviano_lopez_CH = {}
+			b_pueblito_de_allende_CH = {}
+			b_san_juan_de_allende_CH = {}
+			b_talamantes_CH = {}
+		}
+
+
+
+		} #End of d_conchos
+		
+		d_casas_altas = { #Alta Tarahumara
 			color={ 189 162 87 }
 			color2={ 255 255 255 }
 
@@ -3002,25 +3068,121 @@ e_aztlan = {
 				color2={ 255 255 255 }
 	
 				plautdietsch = "Waschotschien"
-	
-				b_guachochi_CH = {}
-				b_batopilas_CH = {
-					raramuri = "Bachotigori"
+				
+				b_guachochi_CH = {
+					plautdietsch = "Waschotschien"
 				}
+				b_san_juanito_CH = {}
+				b_norogachi_CH = {}
+				b_nonoava_CH = {}
+				b_rocheachi_CH = {}
+				b_tonachi_CH = {}
+				b_aboreachi_CH = {} 
+				b_siquirichi_CH = {}
+
+			}
+			
+			c_arareco = { #2843
+				color = { 209 163 166 }
+				color2 = { 255 255 255 }
+				
+			
+				b_bocoyna_CH = {}
 				b_creel_CH = {
 					raramuri = "Nariachi"
 				}
-				b_baborigame_CH = {}
-				b_temoris_CH = {}
+				b_sisoguichi_CH = {}
+				b_carichi_CH = {}
+				b_cienega_de_ojos_azules_CH = {}
+				b_awatos_CH = {}
+				b_tajirachi_CH = {}
+				b_tehuerichi_CH = {}
+			
+			}
+			
+			c_balleza = { #2844
+				color = { 188 160 175 }
+				color2 = { 255 255 255 }
+				
+				b_balleza_CH = {}
+				b_el_vergel_CH = {}
+				b_la_magdalena_CH = {}
+				b_el_terrero_balleza_CH = {}
+				b_baquiriachi_CH = {}
+				b_la_cruz_balleza_CH = {}
+				b_san_juan_de_atotonilco_CH = {}
+			}
+			
+			c_guadalupe_y_calvo = { #2845 
+				color = { 224 192 210 }
+				color2 = { 255 255 255 }
+				
 				b_guadalupe_y_calvo_CH = {}
-				b_cerocahui_CH = {}
+				b_baborigame_CH = {}
+				b_turuachi_CH = {}
+				b_atascaderos_CH = {}
+				b_las_yerbitas_CH = {}
+				b_dolores_CH = {}
+				b_mesa_de_san_rafael_CH = {}
+				b_san_pedro_de_chinatu_CH = {}
+			}
+
+
+		} #End of d_casas_altas
+		
+		d_baja_tarahumara = { 
+			color = { 195 130 139 }
+			color2 = { 255 255 255 }
+			
+			capital = 2842
+			
+			c_urique = { #2842
+			
+				raramuri = "Urike"
+			
 				b_urique_CH = {
 					raramuri = "Urike"
 				}
-				b_norogachi_CH = {}
+				b_san_rafael_CH = {}
+				b_batopilas_CH = {
+					raramuri = "Bachotigori"
+				}
+				b_morelos_CH = {}
+				b_cerocahui_CH = {}
+				b_yoquivo_CH = {}
+				b_bahuichivo_CH = {}
+				b_polanco_CH = {}
+			}
+			
+			c_guazapares = { #2841
+				color = { 145 66 110 }
+				color2 = { 255 255 255 }
+				
+				b_guazapares_CH = {}
+				b_temoris_CH = {}
+				b_chinipa_de_almada_CH = {}
+				b_milpillas_CH = {}
+				b_santa_matilda_CH = {}
+				b_aremoibo_CH = {}
+				b_hormigueros_CH = {}
+				b_las_chinacas_CH = {}
+			}
+			
+			c_uruachi = { #2840
+				color = { 198 99 120 }
+				color2 = { 255 255 255 }
+				
+				b_uruachi_CH = {}
+				b_maguarichi_CH = {}
+				b_basaseachi_CH = {}
+				b_moris_CH = {}
+				b_melchor_ocampo_CH = {}
+				b_jicamorachi_CH = {}
+				b_ocoviachi_CH = {}
 			}
 
-		} #End of d_casas_altas
+		}
+		
 		d_durango = {
 			color={ 162 75 57 }
 			color2={ 255 255 255 }
