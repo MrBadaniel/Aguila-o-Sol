@@ -2698,6 +2698,7 @@
 	name="Oswaldo"
 	dynasty=1542007
 	culture=chilango
+	father = 1810285
 	religion=sacred_heart
 	martial=10
 	diplomacy=1
@@ -2712,7 +2713,7 @@
 	trait=greedy
 	trait=cruel
 	trait=lustful
-	trait=bastard
+#	trait=bastard
 	give_nickname=nick_mascara_de_oro
 	2637.1.8={
 		birth=yes
@@ -4117,4 +4118,58 @@
 	disallow_random_traits = yes
 	2658.2.12={birth=yes effect={ dynasty=none }}
 	2664.2.17={employer=1810274 effect = { add_friend=1810276 add_friend=1810279 add_friend=1810282 add_friend=1810275 }}
+}
+1810285={
+	name="Benito"
+	dynasty=1542007
+	culture=chilango
+	father=1810068
+	religion=sacred_heart
+	martial=10
+	diplomacy=1
+	stewardship=3
+	intrigue=8
+	learning=2
+	trait=brilliant_strategist
+	trait=adventurer
+	trait=strong
+	trait=dorado
+	trait=ambitious
+	trait=greedy
+	trait=cruel
+	trait=just
+	trait=bastard
+	give_nickname=nick_the_fox
+	2597.1.7={
+		birth=yes
+		add_claim=d_mexico
+		add_claim=c_tlaxcala
+	}
+	2657.6.3={ death = {death_reason=death_battle}}
+}
+1810286={
+	name="Teodosio"
+	dynasty=1542007
+	culture=chilango
+	father=1810285
+	religion=sacred_heart
+	martial=10
+	diplomacy=5
+	stewardship=6
+	intrigue=8
+	learning=12
+	trait=skilled_tactician
+	trait=quick
+	trait=erudite
+	trait=ambitious
+	trait=greedy
+	trait=defensive_leader
+	trait=just
+	give_nickname=nick_the_defender
+	2642.11.27={
+		birth=yes
+		add_claim=d_mexico
+		add_claim=c_tlaxcala
+	}
+	2710.6.3={death=yes}
 }
