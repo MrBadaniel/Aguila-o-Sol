@@ -1052,7 +1052,8 @@ feudal_governments = {
 		 }
 		allowed_holdings_culture = { # Will not get the wrong government type penalty for tribes of the same culture
 			TRIBAL
-		}
+		}		
+		
 		 accepts_liege_governments = { # Gets the wrong religion modifier instead
 			 bureaucratic_government
 			 ghazi_government
@@ -1115,14 +1116,6 @@ feudal_governments = {
 		 can_demand_religious_conversion = no
 		 gives_religion_opinion_penalties = no
 		 demesne_size = 2
-		 
-		 builds_with_prestige = {
-			 CASTLE
-		 }
-		 
-		 builds_with_piety = {
-			 TEMPLE
-		 }
 		
 		can_build_tribal = no
 		
@@ -1444,6 +1437,7 @@ feudal_governments = {
         ignore_in_vassal_limit_calculation = {
             tribal_government
         }
+		
         capital_move_delay = 200
         ## Modifiers
         court_size_modifier = 10
