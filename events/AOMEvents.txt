@@ -1854,29 +1854,63 @@ character_event = {
 	}
 }
 character_event = { #sex change all women bishops
-	id = AoM.501
+    id = AoM.501
 
-	hide_window = yes
-	
-	is_triggered_only = yes
-	trigger = {
-		has_law = anglican_priesthood_0
-	}
-	allow = {
-		limit = {
-			top_liege = {
-				has_law = anglican_priesthood_0
-			}
-			AND = {
-			is_landed = yes
-			religion = high_church
-			theocracy = yes
-			is_female = yes
-			}
+    is_triggered_only = yes
+    hide_window = yes
+    
+    trigger = {
+        top_liege = {
+            has_law = anglican_priesthood_0
+        }
+        is_landed = yes
+        religion = high_church
+        is_theocracy = yes
+        is_female = yes
+    }
+    immediate = {
+        set_gender = opposite
+        random_list = {
+            1 = { set_name = "Peter" }
+            1 = { set_name = "Thomas" }
+			1 = { set_name = "Theodore" }
+			1 = { set_name = "James" }
+			1 = { set_name = "John" }
+			1 = { set_name = "Patrick" }
+			1 = { set_name = "Andrew" }
+			1 = { set_name = "Philip" }
+			1 = { set_name = "Matthew" }
+			1 = { set_name = "Simon" }
+			1 = { set_name = "Paul" }
+			1 = { set_name = "Bartholomew" }
+			1 = { set_name = "Joseph" }
+			1 = { set_name = "Francis" }
+			1 = { set_name = "Anthony" }
+			1 = { set_name = "Christopher" }
+			1 = { set_name = "Victor" }
+			1 = { set_name = "Sebastian" }
+			1 = { set_name = "David" }
+			1 = { set_name = "Pius" }
+			1 = { set_name = "Alexander" }
+			1 = { set_name = "Issac" }
+			1 = { set_name = "Jacob" }
+			1 = { set_name = "Columba" }
+			1 = { set_name = "Michael" }
+			1 = { set_name = "Constantine" }
+			1 = { set_name = "Arron" }
+			1 = { set_name = "Gregory" }
+			1 = { set_name = "Augustine" }
+			1 = { set_name = "Fulton" }
+			1 = { set_name = "Thomas Moore" }
+			1 = { set_name = "George" }
+			1 = { set_name = "Gerald" }
+			1 = { set_name = "Walter" }
+			1 = { set_name = "Franklin" }
+			1 = { set_name = "William" }
+			1 = { set_name = "Edward" }
+			1 = { set_name = "Edmund" }
+			1 = { set_name = "Oscar" }
+			1 = { set_name = "Rowan" }
 		}
-	}
-	immediate = {
-	set_gender = opposite
-
-	}
+    }
 }
