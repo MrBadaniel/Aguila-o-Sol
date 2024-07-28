@@ -1948,6 +1948,10 @@ character_event = { #sex change all women bishops
             new_character = {
                 gain_title = FROM
             }
+			remove_opinion = {
+				name = opinion_granted_barony
+				who = FROMFROM
+			}
         }
     }
 }
