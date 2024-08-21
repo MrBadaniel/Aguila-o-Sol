@@ -91,24 +91,24 @@ laws = { #kills all women bishops flavor should say they were exiled, also insta
 		group = anglican_priesthood
 		
 		potential = {
-			#higher_tier_than = duke
-			#independent = yes
-			#is_nomadic = no
-			#is_tribal = no
-			#religion = high_church # this one is incorrect
+			higher_tier_than = duke
+			independent = yes
+			is_nomadic = no
+			is_tribal = no
+			religion = high_church # this one is incorrect
 		}
 		allow = {
-		#	independent = yes
-		#	OR = {
-		#		has_law = anglican_priesthood_0
-		#		AND = {
-		#			NOT = {	has_law = anglican_priesthood_1 }
-		#		}
-		#	}		
+			independent = yes
+			OR = {
+				has_law = anglican_priesthood_0
+				AND = {
+					NOT = {	has_law = anglican_priesthood_1 }
+				}
+			}		
 		}
-	#	effect = {
-	#		narrative_event = { id = AoM.501 }
-	#	}
+		effect = {
+			character_event = { id = AoM.501 }
+		}
 	}
 	
 	# CENTRALIZATION LAWS
