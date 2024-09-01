@@ -21,7 +21,8 @@ character_event = {
 
 				OR = {
 					religion = montane
-					religion_openly_montane_or_reformed_trigger = yes
+					religion = edenite
+					religion = forester
 
 				#	trigger_if = {
 				#		limit = { is_nomadic = yes }
@@ -118,19 +119,19 @@ character_event = {
 
 	desc = { # Father
 		text = EVTDESC_montane_5_father
-		trigger = { has_character_flag = frozen_burial_father }
+		trigger = { has_character_flag = frozen_burial_father religion = montane }
 	}
 	desc = { # Mother
 		text = EVTDESC_montane_5_mother
-		trigger = { has_character_flag = frozen_burial_mother }
+		trigger = { has_character_flag = frozen_burial_mother religion = montane }
 	}
 	desc = { # Brother
 		text = EVTDESC_montane_5_brother
-		trigger = { has_character_flag = frozen_burial_brother }
+		trigger = { has_character_flag = frozen_burial_brother religion = montane }
 	}
 	desc = { # Sister
 		text = EVTDESC_montane_5_sister
-		trigger = { has_character_flag = frozen_burial_sister }
+		trigger = { has_character_flag = frozen_burial_sister religion = montane }
 	}
 	desc = { # Any other predecessor
 		text = EVTDESC_montane_5_other
@@ -140,10 +141,67 @@ character_event = {
 				has_character_flag = frozen_burial_brother
 				has_character_flag = frozen_burial_mother
 				has_character_flag = frozen_burial_sister
+				religion = montane
 			}
 		}
 	}
-
+	desc = { # Father
+		text = EVTDESC_`edenite_5_father
+		trigger = { has_character_flag = frozen_burial_father religion = edenite }
+	}
+	desc = { # Mother
+		text = EVTDESC_edenite_5_mother
+		trigger = { has_character_flag = frozen_burial_mother religion = edenite }
+	}
+	desc = { # Brother
+		text = EVTDESC_edenite_5_brother
+		trigger = { has_character_flag = frozen_burial_brother religion = edenite }
+	}
+	desc = { # Sister
+		text = EVTDESC_edenite_5_sister
+		trigger = { has_character_flag = frozen_burial_sister religion = edenite }
+	}
+	desc = { # Any other predecessor
+		text = EVTDESC_edenite_5_other
+		trigger = {
+			NOR = {
+				has_character_flag = frozen_burial_father
+				has_character_flag = frozen_burial_brother
+				has_character_flag = frozen_burial_mother
+				has_character_flag = frozen_burial_sister
+				religion = edenite
+			}
+		}
+	}
+	desc = { # Father
+		text = EVTDESC_reservist_5_father
+		trigger = { has_character_flag = frozen_burial_father religion = forester }
+	}
+	desc = { # Mother
+		text = EVTDESC_reservist_5_mother
+		trigger = { has_character_flag = frozen_burial_mother religion = forester }
+	}
+	desc = { # Brother
+		text = EVTDESC_reservist_5_brother
+		trigger = { has_character_flag = frozen_burial_brother religion = forester }
+	}
+	desc = { # Sister
+		text = EVTDESC_reservist_5_sister
+		trigger = { has_character_flag = frozen_burial_sister religion = forester }
+	}
+	desc = { # Any other predecessor
+		text = EVTDESC_reservist_5_other
+		trigger = {
+			NOR = {
+				has_character_flag = frozen_burial_father
+				has_character_flag = frozen_burial_brother
+				has_character_flag = frozen_burial_mother
+				has_character_flag = frozen_burial_sister
+				religion = forester
+			}
+		}
+	}
+	
 	is_triggered_only = yes
 
 	option = { # Sky Burial
@@ -401,6 +459,22 @@ character_event = {
 
 	option = {
 		name = EVTOPTA_montane_10
+		trigger = { NOT = { religion = forester } }
+		
+		prestige = 100
+
+		random = {
+			chance = 10
+
+			character_event = {
+				id = montane.11
+				days = 10
+			}
+		}
+	}
+	option = {
+		name = EVTOPTA_reservist_10
+		trigger = { religion = forester }
 
 		prestige = 100
 
