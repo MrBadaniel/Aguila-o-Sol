@@ -17,3 +17,21 @@ high_church_bishop_heir = {
 	random = no
 	customizer = no
 }
+female_priests_0 = {
+	hidden = yes
+	random = no
+	opposite_opinion = -25
+	customizer = no
+			opposites = {
+		female_priests_1
+	}
+}
+female_priests_1 = {
+	hidden = yes
+	random = no
+	customizer = no
+	opposite_opinion = -25
+		opposites = {
+		female_priests_0
+	}
+}

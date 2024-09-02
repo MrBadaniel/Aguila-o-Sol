@@ -22,3 +22,26 @@ defined_text = {
 	}
 	
 }
+defined_text = {
+	name = anglican_abbess
+	localisation_key = GetChurchAbbess
+    trigger = {
+        top_liege = {
+            has_law = anglican_priesthood_0
+        }
+        is_landed = yes
+        religion = high_church
+        is_theocracy = yes
+        is_female = yes
+    }
+	localisation_key = GetChurchAbby
+    trigger = {
+        top_liege = {
+            has_law = anglican_priesthood_0
+        }
+        is_landed = yes
+        religion = high_church
+        is_theocracy = yes
+        is_female = yes
+    }
+}
