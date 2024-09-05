@@ -1317,6 +1317,8 @@ e_mexico = {
 				color={ 134 121 152 }
 				color2={ 255 255 255 }
 				
+				huichol = "Tepiki"
+
 				b_xalisco_NT = {}
 				b_tepic_NT = {
 					huichol = "Tepiki"
@@ -1361,6 +1363,8 @@ e_mexico = {
 				color = { 153 100 126 }
 				color2 = { 255 255 255 }
 				
+				huichol = "Hala"
+				
 				b_ahuacatlan_NT = {}
 				b_ixtlan_del_rio_NT = {}
 				b_jala_NT = {}
@@ -1392,12 +1396,23 @@ e_mexico = {
 			
 			capital = 2757 #c_santiago_ixcuintla
 			
+			huichol = "Xukutla"
+
+			
 			c_acaponeta = { # 1747
 				color={ 179 167 200 }
 				color2={ 255 255 255 }
 				
-				b_acaponeta_NT = {}
-				b_tecuala_NT = {}
+				nahua = " Acatlpoletltlan"
+				huichol = "Caulián"
+				
+				b_acaponeta_NT = {
+					nahua = " Acatlpoletltlan"
+					huichol = "Caulián"
+				}
+				b_tecuala_NT = {
+					huichol = "Tekuala"
+				}
 				b_san_felipe_aztatan_JA = {}
 				b_novillero_NT = {}
 				b_quimichis_NT = {}
@@ -1410,9 +1425,16 @@ e_mexico = {
 				color = { 203 190 226 }
 				color2 = { 255 255 255 }
 				
-				b_santiago_ixcuintla_NT = {}
+				huichol = "Xukutla"
+				nahua = "Itzcuintlan"
+				
+				b_santiago_ixcuintla_NT = {
+					huichol = "Xukutla"
+				}
 				b_ruiz_NT = {}
-				b_tuxpan_NT = {}
+				b_tuxpan_NT = {
+					huichol = "Tuxpa"
+				}
 				b_rosamorada_NT = {}
 				b_villa_hidalgo_NT = {}
 				b_mayorquin_NT = {}
@@ -1420,19 +1442,6 @@ e_mexico = {
 				b_sentispac_NT = {}
 			}
 			
-			c_huajicori = { #2756
-				color = { 160 139 198 }
-				color2 = { 255 255 255 }
-				
-				b_huajicori_JA = {}
-				b_quiviquinta_NT = {}
-				b_san_francisco_del_caiman_NT = {}
-				b_milipillas_de_san_andres_NT = {}
-				b_mineral_de_cucharas_NT = {}
-				b_contadero_NT = {}
-				b_acatita_NT = {}
-				b_tamazole_NT = {}
-			}
 		} #End of d_ixcuintla
 		
 		d_el_nayar = {
@@ -1441,12 +1450,20 @@ e_mexico = {
 			
 			capital = 2762 # c_el_nayar
 			
+			huichol = "Tukari Wá"
+			
 			c_el_nayar = { #2762
 				color = { 115 70 206 }
 				color2 = { 255 255 255 }
 				
-				b_jesus_maria_NT = {}
-				b_mesa_del_nayar_NT = {}
+				huichol = "Tukari Wá"	
+				
+				b_jesus_maria_NT = {
+					huichol = "Tukari Wáti"
+				}
+				b_mesa_del_nayar_NT = {
+					huichol = "Tukari Wá"
+				}
 				b_santa_teresa_NT = {}
 				b_linda_vista_NT = {}
 				b_santa_barbara_JA = {}
@@ -1462,16 +1479,36 @@ e_mexico = {
 				color = { 139 86 255 }
 				color2 = { 255 255 255 }
 				
-				b_puente_de_camotlan_NT = {}
+				huichol = "Yechi"
+				
+				b_puente_de_camotlan_NT = {
+					huichol = "Kuwi"
+				}
 				b_guadalupe_ocotan_NT = {
 					huichol = "Warupi Hukupa"
 				}
-				b_la_yesca_NT = {}
+				b_la_yesca_NT = {
+					huichol = "Yechi"
+				}
 				b_huajimic_NT = {}
 				b_mesa_del_tirador_NT = {}
 				b_apozolco_NT = {}
 				b_amatlan_de_jora_NT = {}
 			}
+			c_huajicori = { #2756
+				color = { 160 139 198 }
+				color2 = { 255 255 255 }
+				
+				b_huajicori_JA = {}
+				b_quiviquinta_NT = {}
+				b_san_francisco_del_caiman_NT = {}
+				b_milipillas_de_san_andres_NT = {}
+				b_mineral_de_cucharas_NT = {}
+				b_contadero_NT = {}
+				b_acatita_NT = {}
+				b_tamazole_NT = {}
+			}
+			
 		} # End of d_el_nayar
 
 			
