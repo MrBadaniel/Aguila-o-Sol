@@ -10,6 +10,7 @@ decisions = {
 			OR = {
 				religion = montane
 				religion = edenite
+				religion = forester
 			}
 			NOT = { has_character_modifier = recently_imbibed }
 		}
@@ -19,6 +20,7 @@ decisions = {
 			OR = {
 				religion = montane
 				religion = edenite
+				religion = forester
 			}
 		}
 		effect = {
@@ -133,7 +135,7 @@ decisions = {
 			OR = {
 				religion = montane
 				religion = edenite
-				religion_openly_montane_or_reformed_trigger = yes
+				religion = forester
 
 			#	any_owned_bloodline = {
 			#		has_bloodline_flag = bloodline_sky_burial
