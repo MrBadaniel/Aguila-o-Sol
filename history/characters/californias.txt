@@ -611,15 +611,19 @@
 	dynasty=4401165 # el Toro
 	culture=occidental
 	religion=navegante
+	father=6900039
 	dna="afdfh0da000"
 	properties="jd0bak000000000000000000000000000000"
-	martial=5
+	martial=15
 	diplomacy=5
-	stewardship=7
+	stewardship=10
 	intrigue=6
 	learning=4
 	trait=musician
-	trait=midas_touched 
+	trait=brilliant_strategist
+	trait=ambitious
+	trait=adventurer
+	trait=bastard
 	trait=strong
 	trait=architect
 	trait=duelist
@@ -2647,4 +2651,86 @@ trait=nz_seraph
 	2615.4.27={birth=yes}
 	2643.7.4={death={death_reason=death_murder
 		killer=1910214}}
+}
+1910217={
+	name="Issac"
+	dynasty=4401205 # robles
+	culture=occidental
+	religion=navegante
+	dna="afdfh0da000"
+	properties="jd0bak000000000000000000000000000000"
+	martial=8
+	diplomacy=5
+	stewardship=10
+	intrigue=6
+	learning=4
+	trait=tough_soldier
+	trait=ambitious
+	trait=adventurer
+	trait=peasant_leader
+	trait=strong
+	trait=brave
+	trait=charitable
+	give_nickname=nick_the_liberator
+	2560.2.1={birth=yes}
+	2616.6.25={death=yes}
+}
+1910218={
+	name="Girón"
+	dynasty=4401205 # robles
+	culture=occidental
+	religion=navegante
+	father=1910217
+	martial=8
+	stewardship=10
+	trait=tough_soldier
+	trait=strong
+	trait=brave
+	trait=charitable
+	give_nickname=nick_the_able
+	2590.2.1={birth=yes}
+	2656.6.25={death=yes}
+}
+1910219={
+	name="Luis"
+	dynasty=4401205 # robles
+	culture=occidental
+	religion=navegante
+	father=1910218
+	martial=8
+	stewardship=6
+	trait=skilled_tactician
+	trait=ambitious
+	trait=defensive_leader
+	trait=strong
+	trait=brave
+	trait=charitable
+	give_nickname=nick_the_defender
+	2639.2.1={birth=yes}   
+	2660.11.1={add_spouse=6900042}
+	2700.6.25={death=yes}
+}
+1910220={
+	name="Reizo"
+	dynasty=4401205 # robles
+	culture=occidental
+	religion=navegante
+	father=1910219
+	mother=6900042
+	trait=strong
+	2662.2.1={birth=yes}
+	2750.6.25={death=yes}
+}
+1910221={
+	name="Eleanor"
+	dynasty=4401205 # robles
+	culture=occidental
+	religion=navegante
+	female=yes
+	father=1910219
+	mother=6900042
+	trait=strong
+	give_nickname=nick_the_defender
+	2665.2.1={birth=yes}
+	2750.6.25={death=yes}
 }

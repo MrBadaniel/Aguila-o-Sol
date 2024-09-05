@@ -1478,6 +1478,12 @@ can_be_spiritual_trigger = {
 	prisoner = no
 	NOT = { is_incapable = yes }
 	NOT = { trait = in_hiding }
+	NOT = { 
+		AND = {
+		is_female = yes
+		top_liege = { has_law = anglican_priesthood_0 }	
+		}
+	}
 	NOT = { has_character_modifier = resigned_in_anger }
 	NOT = { 
 		liege = { 

@@ -1144,48 +1144,48 @@ succession_laws = {
 			always = no
 		}			
 	}
-	succ_high_church_elective = {
-		#oldest_child_opinion = -15
-		#child_opinion = -5
-		#dynasty_opinion = -5
-		vassal_opinion = 10
-		potential = {
-			
-			holder_scope = { ### INSIDE THIS BLOCK YOU TELL IT ONLY ANGLICAN BISHOPS WITH ANGLICAN LEIGES CAN USE THE LAW	
-				religion = high_church
-				is_theocracy = yes
-				independent = no
-				liege = {
-				religion = high_church
-				}				
-			}
-			#is_primary_type_title = no
-			#NOT = { tier = baron }
-			holder_scope = { ### FOR VOTING LAWS
-				OR = {
-					is_theocracy = yes
-					has_law = succession_voting_power_1
-				}
-			}
-		}
-		allow = {
-			custom_tooltip = {
-				text = not_forced_tt
-				hidden_tooltip = {
-					holder_scope = { NOT = { has_character_flag = liege_forced_succ_law } }
-				}
-			}
-		}
-		effect = {
-			succession = {
-				base_type = feudal_elective
-				voting_rules = high_church_elective
-			}
-		}
-		revoke_allowed = {
-			always = no
-		}			
-	}
+#	succ_high_church_elective = {
+#		#oldest_child_opinion = -15
+#		#child_opinion = -5
+#		#dynasty_opinion = -5
+#		vassal_opinion = 10
+#		potential = {
+#			
+#			holder_scope = { ### INSIDE THIS BLOCK YOU TELL IT ONLY ANGLICAN BISHOPS WITH ANGLICAN LEIGES CAN USE THE LAW	
+#				religion = high_church
+#				is_theocracy = yes
+#				independent = no
+#				liege = {
+#				religion = high_church
+#				}				
+#			}
+#			#is_primary_type_title = no
+#			#NOT = { tier = baron }
+#			holder_scope = { ### FOR VOTING LAWS
+#				OR = {
+#					is_theocracy = yes
+#					has_law = succession_voting_power_1
+#				}
+#			}
+#		}
+#		allow = {
+#			custom_tooltip = {
+#				text = not_forced_tt
+#				hidden_tooltip = {
+#					holder_scope = { NOT = { has_character_flag = liege_forced_succ_law } }
+#				}
+#			}
+#		}
+#		effect = {
+#			succession = {
+#				base_type = feudal_elective
+#				voting_rules = high_church_elective
+#			}
+#		}
+#		revoke_allowed = {
+#			always = no
+#		}			
+#	}
 	succ_hre_elective = {
 		oldest_child_opinion = -15
 		child_opinion = -5
@@ -1968,7 +1968,7 @@ succession_laws = {
 				holder_scope = { 
 					NOT = { religion = catholic }
 					NOT = { religion = ursuline }
-					NOT = { religion = high_church }
+				#	NOT = { religion = high_church }
 					NOT = { religion = neogodbeite }
 					NOT = { religion = strangite }
 					NOT = { religion = sol_invicta }
@@ -2027,7 +2027,7 @@ succession_laws = {
 				OR = {
 					religion = catholic
 					religion = ursuline
-					religion = high_church
+					#religion = high_church
 					religion = neogodbeite
 					religion = strangite
 					religion = sol_invicta
@@ -2127,6 +2127,11 @@ gender_laws = {
 				NOT = { has_religion_feature = religion_feature_midewiwin }
 				NOT = { trait = machete_female }
 				NOT = { trait = machete_female_ref }
+			#	NOR = {	
+			#		top_liege = { has_law = anglican_priesthood_1 }
+			#		religion = high_church
+			#		is_theocracy = yes
+			3	}
 				NAND = {
 					OR = {
 						is_theocracy = yes
@@ -2185,8 +2190,12 @@ gender_laws = {
 			holder_scope = {
 				NOT = { has_religion_feature = religion_matriarchal }
 				NOT = { has_religion_feature = religion_equal }
-				NOT = { has_religion_feature = religion_feature_midewiwin }
-				NOT = { has_law = succ_high_church_elective }
+				NOT = { has_religion_feature = religion_feature_midewiwin }	
+				NOR = {	
+					top_liege = { has_law = anglican_priesthood_0 }
+					religion = high_church
+					is_theocracy = yes
+				}
 				OR = {
 					has_bloodline_flag = bloodline_effect_cognatic
 					AND = {
@@ -2292,7 +2301,13 @@ gender_laws = {
 		#always = no
 			holder_scope = { NOT = { has_religion_feature = religion_matriarchal } }
 			holder_scope = { NOT = { has_religion_feature = religion_patriarchal } }
-			NOT = { has_law = succ_high_church_elective }
+			
+			NOT = {	
+					top_liege = { has_law = anglican_priesthood_0 }
+					religion = high_church
+					is_theocracy = yes
+				}
+			
 			OR = {
 				AND = {
 					has_dlc = "Zeus"
@@ -2353,6 +2368,11 @@ gender_laws = {
 						}
 					}
 				}
+				NOR = {	
+					top_liege = { has_law = anglican_priesthood_0 }
+					religion = high_church
+					is_theocracy = yes
+				}
 			}
 			
 			is_landless_type_title = no
@@ -2408,7 +2428,6 @@ gender_laws = {
 							has_bloodline_flag = bloodline_tanistry
 						}
 					}
-					NOT = { has_law = succ_high_church_elective }
 				}
 				OR = {
 					ROOT = { holder_scope = { primary_title = { has_law = status_of_women_4 } } }
@@ -2468,6 +2487,11 @@ gender_laws = {
 		potential = {
 			holder_scope = {
 				NOT = { religion = edenite }
+				NOT = {	
+						top_liege = { has_law = anglican_priesthood_0 }
+						religion = high_church
+						is_theocracy = yes
+				}
 				OR = {
 					has_religion_feature = religion_matriarchal
 					religion = gaian
@@ -2484,6 +2508,11 @@ gender_laws = {
 							religion = gaian
 						}
 					}
+				}
+				NOR = {	
+					top_liege = { has_law = anglican_priesthood_0 }
+					religion = high_church
+					is_theocracy = yes
 				}
 			}
 		}
@@ -2531,6 +2560,11 @@ gender_laws = {
 						religion = gaian
 						religion = edenite
 					}
+				}
+				NOR = {	
+					top_liege = { has_law = anglican_priesthood_0 }
+					religion = high_church
+					is_theocracy = yes
 				}
 			}
 			

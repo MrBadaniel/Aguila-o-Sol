@@ -583,6 +583,7 @@
 	trait=low_anglican
 	trait=dead_crown_ontario
 	2540.1.1={birth=yes}
+	2570.1.1={add_spouse=4000243}
 	2572.3.10={death={
 			death_reason=death_rabble
 		}
@@ -628,6 +629,7 @@
 	give_nickname =	nick_the_submissive
 	trait=dead_crown_ontario
 	2546.1.1={birth=yes}
+	2580.1.1={add_spouse=4000243}
 	2597.1.1={death={
 		death_reason=death_execution
 			killer=4000032
@@ -645,7 +647,7 @@
 	trait=dead_crown_ontario
 	#trait=high_church
 	2546.1.1={birth=yes}
-	2596.1.1={add_spouse=4000243}
+	2598.1.1={add_spouse=4000243}
 	2599.1.1={death={
 			death_reason=death_battle
 			killer=1857086
@@ -674,7 +676,7 @@
 	religion=high_church
 	trait=broad_anglican
 	father=4000027
-	trait=dead_crown_ontario
+	#trait=dead_crown_ontario
 	trait=bastard
 	trait=severely_injured
 	2571.5.12={birth=yes culture=ontarian}
@@ -2527,12 +2529,14 @@
 	religion=high_church
 	female=yes
 	father=4000021
-	2560.1.1={birth=yes}
-	2596.1.1={add_spouse=4000032}
+	2550.1.1={birth=yes}
+	#2570.1.1={add_spouse=4000028}
+	#2580.1.1={add_spouse=4000031}
+	#2598.1.1={add_spouse=4000032}
 	2602.1.1={death={
-		death_reason=death_execution
+		death_reason=death_suicide
 		}
-	} # murder
+	} 
 }
 4000244={
 	name="Anna"
