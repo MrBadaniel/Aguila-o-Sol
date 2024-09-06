@@ -4090,7 +4090,7 @@
 	trait = shrewd
 	trait = ambitious
 	2629.11.11 = { birth = yes }
-	2648.1.1 = { add_spouse = 1325010 } #Beljjw Jorhénati
+	2648.1.1 = { add_spouse = 1325010 } #Cayetano Arteaga
 	2700.1.1 = { death = yes }
  	
 }
@@ -4176,10 +4176,10 @@
  	
 }
 6901013 = {
-	name = "Godofredo"
+	name = "Luis"
 	dynasty = 5001319
 	female = no
-	#father = 6901011
+	father = 6901025
 	culture = calentano
 	religion = sacred_heart
 	trait = grey_eminence
@@ -4203,6 +4203,7 @@
 	trait = brave
 	trait = administrator
 	trait = monk
+	trati = ambitious
 	employer = 6900002 #Prelate Nicolás
 	2601.3.30 = { birth = yes }
 	2618.1.1 = { add_spouse = 6901015 } #Margarita
@@ -4360,7 +4361,48 @@
 	2641.1.1 = { birth = yes }
 	2660.1.1 = { effect = {add_lover = 6901017 } }
 }
-
+6901024 = {
+	name = "Luis"
+	dynasty = 5001319 #Calderón
+	female = no
+	father = 6901014
+	mother = 6901015
+	culture = calentano
+	religion = sacred_heart
+	martial = 5
+	diplomacy = 4
+	stewardship = 6
+	intrigue = 6
+	learning = 8
+	trait = underhanded_rogue
+	trait = erudite
+	2639.11.30 = { birth = yes }
+	2701.11.15 = { death = yes }
+ 	
+}
+6901025 = {
+	name = "Luis"
+	dynasty = 5001319 #Calderón #Dynasty founder
+	female = no
+	culture = calentano
+	religion = cristo_rey
+	martial = 8
+	diplomacy = 7
+	stewardship = 6
+	intrigue = 6
+	learning = 10
+	trait = grey_eminence
+	trait = erudite
+	trait = diligent
+	trait = inspiring_leader
+	trait = honest
+	trait = devout
+	trait = theologian
+	give_nickname = nick_the_apostle
+	2549.3.30 = { birth = yes }
+	2606.9.20 = { death = yes }
+ 	
+}
 #### New Characters in Bajío
 
 6901200 = {

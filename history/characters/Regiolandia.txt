@@ -1734,3 +1734,84 @@
 	2591.1.20 = { birth = yes }
 	2670.1.1 = { death = yes	}
 }
+
+#Sonora
+181500={
+	name="Adolfo"
+	dynasty=1700013
+	culture=menomex
+	father = 181504
+	religion=atomicist
+	trait=fortune_builder
+	trait=scholar
+	trait=drunkard
+	trait=temperate
+	2599.12.2={birth=yes culture = occidental}
+	2652.7.13={death= { death_reason = death_trait }}
+}
+181501={
+	name="Adelaida"
+	female = yes
+	dynasty=1700013
+	culture=menomex
+	religion=atomicist
+	father = 181500
+	mother = 181505
+	2631.12.2={birth=yes culture = occidental}
+	2700.7.13={death= yes }
+}
+181503={
+	name="Franco"
+	female = no
+	dynasty=1700013
+	culture=menomex
+	religion=atomicist
+	father = 181500
+	mother = 181505	
+	2633.5.19={birth=yes culture = occidental}
+	2700.7.13={death= yes }
+}
+181504={
+	name="Alberto"
+	female = no
+	dynasty=1700013
+	culture=menomex
+	religion=atomicist
+	2570.5.19={birth=yes culture = occidental}
+	2633.7.13={death= yes }
+}
+181505={
+	name="Adelaida"
+	female = yes
+	culture=occidental
+	religion=atomicist
+	2607.5.19={birth=yes}
+	2626.12.12 = {add_spouse = 181500}
+}
+181506={
+	name="García"
+	culture=occidental
+	religion=reformista
+	trait = peasant_leader
+	trait = zealous
+	2627.12.2={birth=yes}
+	2648.7.13={death= { death_reason = death_execution killer = 1810225 } }
+	2648.1.1 = { effect = {add_lover = 181501 } }
+}
+181507={
+	name="Jesús"
+	dynasty = 4401215 #García Corona
+	culture=occidental
+	religion=reformista
+	father = 181506
+	mother = 181501
+	martial = 8
+	stewardship = 8
+	trait = diligent
+	trait = humble
+	trait = strong
+	trait = inspiring_leader
+	trait = child_of_consort
+	2648.11.7={birth=yes}
+	
+}
