@@ -1868,6 +1868,27 @@ character_event = { #sex change all women bishops
         is_theocracy = yes
         is_female = yes
     }
+	  trigger = {
+	  
+	  OR = {
+			top_liege = {
+				has_law = anglican_priesthood_0
+			}
+			
+			title = k_high_church = {
+				has_law = anglican_priesthood_0
+			}
+			lower_tier_than = KING
+		}
+        is_landed = yes
+        religion = high_church
+        is_theocracy = yes
+        is_female = yes
+		
+    }
+	
+	
+	
     immediate = {
         if = {
             limit = {
@@ -1965,9 +1986,12 @@ character_event = { #Trad Trait
 	is_triggered_only = yes
 	
 	trigger = {
-        top_liege = {
-            has_law = anglican_priesthood_0
-        }
+		OR = {
+			top_liege = {
+				has_law = anglican_priesthood_0
+			}
+			has_law = anglican_priesthood_0
+		}
         religion = high_church
     }
 
@@ -1988,9 +2012,12 @@ character_event = { #Lib Trait
 	is_triggered_only = yes
 	
 	trigger = {
-        top_liege = {
-            has_law = anglican_priesthood_1
-        }
+		OR = {
+			top_liege = {
+				has_law = anglican_priesthood_1
+			}
+			has_law = anglican_priesthood_0
+		}
         religion = high_church
     }
 
