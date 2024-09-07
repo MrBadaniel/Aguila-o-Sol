@@ -1273,6 +1273,7 @@ e_aztlan = {
 			capital = 791 # c_caborca
 
 			seri = "Tepoca"
+
 			
 			c_caborca = { # 791
 				color={ 194 152 128 }
@@ -1511,12 +1512,15 @@ e_aztlan = {
 			}
 		} #End of d_sonora
 		
-		d_nogales = { 
+		d_nogales = { #Alta Pimería
 			color = { 178 93 57 }
 			color2 = { 255 255 255 }
 			
 			capital = 794 # c_nogales
 			
+			raramuri = "Akimel O'odham" 
+			yaqui = "Akimel O'odham"
+
 			c_nogales = { 
 				color={ 146 124 121 }
 				color2={ 255 255 255 }
@@ -1560,14 +1564,6 @@ e_aztlan = {
 				b_cuauhtemoc_SO = {}
 			
 			}
-	
-		} #End of d_nogales
-		
-		d_tehuimas = { 
-			color = { 204 105 48 }
-			color2 = { 255 255 255 }
-			
-			capital = 2735 #Cananea
 			
 			c_cananea = { #2735
 				color = { 224 168 85 }
@@ -1582,6 +1578,14 @@ e_aztlan = {
 				b_cuitaca_SO = {}
 				b_la_mesa_SO = {}
 			}
+		} #End of d_nogales
+		
+		d_tehuimas = { 
+			color = { 204 105 48 }
+			color2 = { 255 255 255 }
+			
+			capital = 2736 #Nacozari
+			
 			c_nacozari = { #2736
 				color = { 211 169 105 }
 				color2 = { 255 255 255 }
@@ -1835,6 +1839,10 @@ e_aztlan = {
 	
 				holy_site = sol_invicta
 				holy_site = fidencista
+				
+				raramuri = "O'ob"
+				yaqui = "O'ob"
+
 				
 				b_yecora_SO = {}
 				b_rosario_SO = {
