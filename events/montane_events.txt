@@ -112,7 +112,7 @@ character_event = {
 }
 
 # Decide on Burial
-character_event = {
+long_character_event = {
 	id = montane.5
 	title = EVTNAME_montane_5
 	picture = GFX_evt_shaman
@@ -211,9 +211,9 @@ character_event = {
 			text = EVTOPTC_montane_5_custom_tooltip_a
 
 			random_list = {
-				25 = { character_event = { id = montane.6 days = 10 } }
-				25 = { character_event = { id = montane.8 days = 10 } }
-				50 = { character_event = { id = montane.10 days = 10 } }
+				25 = { long_character_event = { id = montane.6 days = 10 } }
+				25 = { long_character_event = { id = montane.8 days = 10 } }
+				50 = { long_character_event = { id = montane.10 days = 10 } }
 			}
 		}
 	}
@@ -291,7 +291,7 @@ character_event = {
 }
 
 # Sky Burial - Bad weather
-character_event = {
+long_character_event = {
 	id = montane.6
 	title = EVTNAME_montane_6
 	desc = EVTDESC_montane_6
@@ -385,7 +385,7 @@ character_event = {
 }
 
 # Sky Burial - Hermit encountered
-character_event = {
+long_character_event = {
 	id = montane.8
 	title = EVTNAME_montane_8
 	desc = EVTDESC_montane_8
@@ -449,7 +449,7 @@ character_event = {
 }
 
 # Perform Sky Burial
-character_event = {
+long_character_event = {
 	id = montane.10
 	title = EVTNAME_montane_10
 	desc = EVTDESC_montane_10
