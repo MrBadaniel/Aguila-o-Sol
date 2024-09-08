@@ -16,6 +16,9 @@ law_groups = {
 	feudal_contract = {
 		law_type = realm
 	}
+	anglican_branch = {
+		law_type = realm
+	}
 	anglican_priesthood = {
 		law_type = realm
 	}
@@ -43,6 +46,7 @@ law_groups = {
 }
 
 laws = { 
+
 	#kills all women bishops flavor should say they were exiled, also instantly name and sex change any possible women to be men
 	# Anglican Priesthood laws
 	
@@ -108,6 +112,7 @@ laws = {
 		}
         allow = {
 			always = yes
+			
         }
 		effect = {
 			character_event = { id = AoM.501 }

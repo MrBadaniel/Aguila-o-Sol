@@ -1858,35 +1858,19 @@ character_event = { #sex change all women bishops
 
     is_triggered_only = yes
     hide_window = yes
-
-    trigger = {
-        top_liege = {
-            has_law = anglican_priesthood_0
+	only_rulers = yes
+	religion = high_church
+        trigger = {  # for forcing it unless you allow female bishops 
+        NOT = {
+            top_liege = {
+                has_law = anglican_priesthood_1
+            }
         }
         is_landed = yes
         religion = high_church
         is_theocracy = yes
         is_female = yes
     }
-	  trigger = {
-	  
-	  OR = {
-			top_liege = {
-				has_law = anglican_priesthood_0
-			}
-			
-			title = k_high_church = {
-				has_law = anglican_priesthood_0
-			}
-			lower_tier_than = KING
-		}
-        is_landed = yes
-        religion = high_church
-        is_theocracy = yes
-        is_female = yes
-		
-    }
-	
 	
 	
     immediate = {
