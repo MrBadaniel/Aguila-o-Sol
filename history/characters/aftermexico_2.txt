@@ -3129,12 +3129,9 @@
 	trait = inspiring_leader
 	trait = wroth
 	trait = just
-	trait = strong
-	trait = sympathy_christendom
-	2592.10.5 = {birth=yes
+	2628.10.5 = {birth=yes
 				culture=abajeno
 	}
-	2670.1.1 = { death = yes}
 }
 
 ##New Characters in k_jalisco
@@ -3883,6 +3880,16 @@
 	2730.1.1 = { death = yes }
 }
 
+6900957 = {
+	name= "Mario"
+	female = no
+	dynasty= 1542006 #de Guzmán
+	culture=tapatio
+	religion=cristo_rey
+	employer = 1810006
+	2638.2.15 = {birth=yes}
+	2665.8.16 = { death = { death_reason = death_battle killer = 6900928 } }
+}
 
 6900960 = {
 	name= "Guillermo"
@@ -3890,7 +3897,8 @@
 	dynasty= 5001345 #Totoro
 	culture=neomexicano
 	religion = sacred_heart
-#	secret_religion = cristo_rey
+	secret_religion = cristo_rey
+	father = 6900964
 	trait = grey_eminence
 	trait = patient
 	trait = kind
@@ -3910,6 +3918,7 @@
 	mother = 6900963
 	2646.9.10 = {birth=yes culture = tapatio}
 	2730.1.1 = { death = yes }
+	2666.7.1 = { add_spouse = 1810180 }
 }
 6900962 = {
 	name= "Marisa"
@@ -3949,6 +3958,7 @@
 	female = no
 	dynasty= 5001345 #Totoro
 	culture=neomexicano
+	father = 6900964
 	religion = cristo_rey
 	trait = thrifty_clerk
 	trait = ambitious
@@ -3958,14 +3968,115 @@
 	2657.2.18 = { death = {death_reason = death_battle killer = 1810180 } }	
 }
 6900966 = {
-	name= "Cecilio"
+	name= "Natan"
 	female = no
-	dynasty= 5001346 #Gómez
 	culture=tapatio
+	dynasty = 5001356 #Colón
 	religion = sol_invicta
-	father = 6900901
 	2628.7.22 = {birth=yes}
 	2700.1.1 = { death = yes }
+	trait = tough_soldier
+	trait = giant
+	trait = proud
+	trait = cruel
+	trait = trusting
+	trait = aggressive_leader
+	trait = strong
+	2650.8.12 = { effect = { add_friend = 6900928 }}
+}
+
+6900980 = {
+	name= "Manuel"
+	female = no
+	dynasty= 5001354 #Álica
+	culture=huichol
+	religion = sol_invicta
+	martial = 9
+	trait = skilled_tactician
+	trait = cruel
+	trait = lustful
+	trait = mountain_terrain_leader
+	2643.7.19 = {birth=yes}
+	2673.7.19 = { death = yes }
+}
+6900981 = {
+	name= "Elpidio"
+	female = no
+	dynasty= 5001354 #Álica
+	father = 6900980
+	mother = 6900982
+	culture=huichol
+	religion = sol_invicta
+	trait = legit_bastard
+	2663.4.20 = {birth=yes}
+	2710.7.19 = { death = yes }
+}
+6900982 = {
+	name= "María Dolores"
+	female = yes
+	dynasty= 5001355 #whatever dynasty rules Tepic
+	father = 6900983 #his father should be or should have been ruler of Tepic
+	mother = 6900987
+	culture=tapatio
+	religion = cristo_rey
+	2645.1.20 = {birth=yes}
+	2710.7.19 = { death = yes }
+	2661.1.1 = { effect = {add_lover = 6900980 } }
+}
+6900983 = {
+	name= "Ramón"
+	female = no
+	dynasty= 5001355 #Padilla
+	father = 6900984
+	culture=tapatio
+	religion = cristo_rey
+	2618.11.20 = {birth=yes}
+	2710.7.19 = { death = yes }
+	
+}
+6900984 = {
+	name= "Prisciliano"
+	female = no
+	 dynasty= 5001355 #Padilla
+	culture=tapatio
+	religion = cristo_rey
+	2589.1.23 = {birth=yes}
+	2648.7.19 = { death = yes }
+}
+6900985 = {
+	name= "Sancho"
+	female = no
+	dynasty= 5001355 #Padilla
+	father = 6900983
+	mother = 6900987
+	culture=tapatio
+	religion = cristo_rey
+	2643.9.23 = {birth=yes}
+	2690.7.19 = { death = yes }
+}
+6900986 = {
+	name= "Román"
+	female = no
+	dynasty= 5001355 #Padilla
+	culture=tapatio
+	father = 6900984	
+	religion = cristo_rey
+	2627.11.23 = {birth=yes}
+	2660.1.20 = { death = {
+				death_reason = death_execution 
+				killer = 1810180  }
+				}
+
+}
+6900987 = {
+	name= "María"
+	female = yes
+	# dynasty= 5001355 #Padilla
+	culture=tapatio
+	religion = cristo_rey
+	2626.7.23 = {birth=yes}
+	2690.7.19 = { death = yes }
+	2642.12.15 = {add_spouse=6900983}
 }
 ###New Characters in Michoacan
 6901000 = {
@@ -3979,7 +4090,7 @@
 	trait = shrewd
 	trait = ambitious
 	2629.11.11 = { birth = yes }
-	2648.1.1 = { add_spouse = 1325010 } #Beljjw Jorhénati
+	2648.1.1 = { add_spouse = 1325010 } #Cayetano Arteaga
 	2700.1.1 = { death = yes }
  	
 }
@@ -4065,10 +4176,10 @@
  	
 }
 6901013 = {
-	name = "Godofredo"
+	name = "Luis"
 	dynasty = 5001319
 	female = no
-	#father = 6901011
+	father = 6901025
 	culture = calentano
 	religion = sacred_heart
 	trait = grey_eminence
@@ -4092,6 +4203,7 @@
 	trait = brave
 	trait = administrator
 	trait = monk
+	trati = ambitious
 	employer = 6900002 #Prelate Nicolás
 	2601.3.30 = { birth = yes }
 	2618.1.1 = { add_spouse = 6901015 } #Margarita
@@ -4221,31 +4333,76 @@
 	female = no
 	culture = huichol
 	religion = cristo_rey
+	dynasty = 5001358 #Guerrero
 	employer = 6901017
 	trait = tough_soldier
 	trait = sturdy
 	trait = cruel
 	trait = proud
 	trait = honest
+	trait = ugly
 	2637.1.1 = { birth = yes }
-	2660.1.1 = { effect = {add_friend = 6901017 } }
-
+	2663.1.1 = { effect = {add_friend = 6901023 } }
 }
+
 6901023 = {
 	name = "Zabulón" 
 	female = no
 	culture = occidental
 	religion = cristo_rey
 	employer = 6901017
+	dynasty = 5001357 #Soto
 	trait = flamboyant_schemer
 	trait = robust
 	trait = fair
 	trait = proud
 	trait = cruel
+	trait = bisexual
 	2641.1.1 = { birth = yes }
 	2660.1.1 = { effect = {add_lover = 6901017 } }
 }
-
+6901024 = {
+	name = "Luis"
+	dynasty = 5001319 #Calderón
+	female = no
+	father = 6901014
+	mother = 6901015
+	culture = calentano
+	religion = sacred_heart
+	martial = 5
+	diplomacy = 4
+	stewardship = 6
+	intrigue = 6
+	learning = 8
+	trait = underhanded_rogue
+	trait = erudite
+	2639.11.30 = { birth = yes }
+	2701.11.15 = { death = yes }
+ 	
+}
+6901025 = {
+	name = "Luis"
+	dynasty = 5001319 #Calderón #Dynasty founder
+	female = no
+	culture = calentano
+	religion = cristo_rey
+	martial = 8
+	diplomacy = 7
+	stewardship = 6
+	intrigue = 6
+	learning = 10
+	trait = grey_eminence
+	trait = erudite
+	trait = diligent
+	trait = inspiring_leader
+	trait = honest
+	trait = devout
+	trait = theologian
+	give_nickname = nick_the_apostle
+	2549.3.30 = { birth = yes }
+	2606.9.20 = { death = yes }
+ 	
+}
 #### New Characters in Bajío
 
 6901200 = {

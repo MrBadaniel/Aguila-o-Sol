@@ -1847,7 +1847,7 @@ character_event = {
 					is_female = yes
 				}
 				death = {
-					death_reason = death_vanished
+					death_reason = death_anglican_exile
 				}
 			}
 
@@ -1858,16 +1858,21 @@ character_event = { #sex change all women bishops
 
     is_triggered_only = yes
     hide_window = yes
-
-    trigger = {
-        top_liege = {
-            has_law = anglican_priesthood_0
+	only_rulers = yes
+	religion = high_church
+        trigger = {  # for forcing it unless you allow female bishops 
+        NOT = {
+            top_liege = {
+                has_law = anglican_priesthood_1
+            }
         }
         is_landed = yes
         religion = high_church
         is_theocracy = yes
         is_female = yes
     }
+	
+	
     immediate = {
         if = {
             limit = {
@@ -1954,4 +1959,58 @@ character_event = { #sex change all women bishops
 			}
         }
     }
+}
+
+
+character_event = { #Trad Trait
+	id = AoM.550
+
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		OR = {
+			top_liege = {
+				has_law = anglican_priesthood_0
+			}
+			has_law = anglican_priesthood_0
+		}
+        religion = high_church
+    }
+
+	immediate = {
+			any_realm_character = {
+				limit = {
+					religion = high_church
+				}
+				add_trait = female_priests_0
+			}
+	}
+}
+character_event = { #Lib Trait
+	id = AoM.560
+
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		OR = {
+			top_liege = {
+				has_law = anglican_priesthood_1
+			}
+			has_law = anglican_priesthood_0
+		}
+        religion = high_church
+    }
+
+	immediate = {
+			any_realm_character = {
+				limit = {
+					religion = high_church
+				}
+				add_trait = female_priests_1
+			}
+	}
 }

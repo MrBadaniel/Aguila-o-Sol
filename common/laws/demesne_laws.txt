@@ -16,6 +16,9 @@ law_groups = {
 	feudal_contract = {
 		law_type = realm
 	}
+	anglican_branch = {
+		law_type = realm
+	}
 	anglican_priesthood = {
 		law_type = realm
 	}
@@ -42,7 +45,9 @@ law_groups = {
 	}
 }
 
-laws = { #kills all women bishops flavor should say they were exiled, also instantly name and sex change any possible women to be men
+laws = { 
+
+	#kills all women bishops flavor should say they were exiled, also instantly name and sex change any possible women to be men
 	# Anglican Priesthood laws
 	
 	anglican_priesthood_0 = {
@@ -55,23 +60,20 @@ laws = { #kills all women bishops flavor should say they were exiled, also insta
                 higher_tier_than = duke
                 is_nomadic = no
                 is_tribal = no
-                religion = high_church # this one is incorrect
+                religion = high_church 
             }
         }
         
         allow = {
-            holder_scope = {
-                OR = {
-                    has_law = anglican_priesthood_1
-                    NOT = { has_law = anglican_priesthood_0 }
-                }
-            }
+		always = yes
         }
         
         effect = {
             holder_scope = {
                  character_event = { id = AoM.500 }
-                
+               
+			hidden_tooltip = {   
+			   
                 any_realm_lord = {
                     limit = {
                         is_landed = yes
@@ -81,9 +83,18 @@ laws = { #kills all women bishops flavor should say they were exiled, also insta
                     }
                     
                     death = {
-                        death_reason = death_vanished
+                        death_reason = death_anglican_exile 
                     }
                 }
+				any_realm_character = {
+                limit = {
+                    religion = high_church
+                }
+                add_trait = female_priests_0
+                }
+			}	
+				
+				
             }
         }
     }
@@ -91,23 +102,30 @@ laws = { #kills all women bishops flavor should say they were exiled, also insta
 		group = anglican_priesthood
 		
 		potential = {
-			higher_tier_than = duke
-			independent = yes
-			is_nomadic = no
-			is_tribal = no
-			religion = high_church # this one is incorrect
+			holder_scope = {
+				higher_tier_than = duke
+				independent = yes
+				is_nomadic = no
+				is_tribal = no
+				religion = high_church 
+			}
 		}
-		allow = {
-			independent = yes
-			OR = {
-				has_law = anglican_priesthood_0
-				AND = {
-					NOT = {	has_law = anglican_priesthood_1 }
-				}
-			}		
-		}
+        allow = {
+			always = yes
+			
+        }
 		effect = {
 			character_event = { id = AoM.501 }
+			 holder_scope = {
+				hidden_tooltip = {
+					any_realm_character = {
+					limit = {
+						religion = high_church
+					}
+					add_trait = female_priests_1
+					}
+				}
+			}
 		}
 	}
 	
