@@ -4589,13 +4589,12 @@ trait=legit_bastard
 
 ##Placeholder MIXE
 1438338 = {
-	name="Jarocho"	
+	name="Mijxy"	
 	female = no
-	dynasty = 2058000
+	dynasty = 5001360 #Yuuk
 	culture=zoque
 	religion=mictlantec
 	trait = ambitious
-	trait = dorado
 	trait = skilled_tactician
 	2642.4.1={birth=yes}
 	2703.1.1={death= yes }
@@ -4729,3 +4728,38 @@ trait=legit_bastard
 	2640.1.1={birth=yes}
 	2700.1.1={death= yes }
 } 
+
+### MIXE cont.
+1438351 = {
+	name="Aa Joot"	
+	female = yes
+	dynasty = 5001360 #Yuuk
+	culture=zoque
+	religion=mictlantec
+	trait = twin
+	father = 1438338	
+	2665.4.24={birth=yes}
+	2703.1.1={death= yes }
+}
+1438352 = {
+	name="Ane'em"	
+	female = no
+	dynasty = 5001360 #Yuuk
+	culture=zoque
+	religion=mictlantec
+	trait = twin
+	father = 1438338
+	2665.4.24={birth=yes}
+	2703.1.1={death= yes }
+}  
+1438353 = {
+	name="Amatsk"	
+	female = yes
+#	dynasty = 5001360 #Yuuk
+	culture=zoque
+	religion=mictlantec
+	trait = weak
+	2644.11.20={birth=yes}
+	2703.1.1={death= yes }
+	2663.8.12 = {add_spouse = 1438338}
+}  

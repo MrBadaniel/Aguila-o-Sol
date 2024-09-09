@@ -448,7 +448,20 @@
 1210030 = { name="Chehalis" culture=shuswap }
 
 
-1260000 = { name="Cubesare" culture=raramuri }
+1260000 = { name="Cubesare" culture=raramuri 
+            coat_of_arms = {
+		religion = mictlantec
+        template = 0
+        layer = {
+            texture = 4
+            texture_internal = 1
+            emblem = 0
+            color = 0
+            color = 0
+            color = 0
+        }
+	}
+}
 1260001 = { name="Kímare" culture=raramuri }
 1260002 = { name="Sisoguichic" culture=raramuri }
 1260003 = { name="Vela" culture=raramuri }
