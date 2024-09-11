@@ -527,6 +527,7 @@
 	health=9
 	diplomacy=8
 	learning=8
+	father= 181218
 	trait=strong
 	trait=tough_soldier
 	trait=erudite
@@ -574,31 +575,7 @@
 			#	killer	= 1810200
 		}
 	}
-}
-181217 = {
-	name="Juan"
-	female=no
-	dynasty= 1810062 #Garcùa Huerta
-	culture=italian
-	religion=cristo_rey
-	father=181207
-	martial=9
-	learning=10
-	health=10
-	trait=martial_cleric
-	trait=theologian
-	trait=holy_warrior
-	trait=zealous
-	trait=monk
-	trait=celibate
-	trait=strong
-	trait=bastard
-	employer=6900002
-	2625.5.29 = { 
-		birth=yes
-		culture=bravo
-	}
-}		
+}	
 
 181210 = {
 	name="Marcos"
@@ -714,8 +691,50 @@
 		}
 	}
 }		
-	
-
+181217 = {
+	name="Juan"
+	female=no
+	dynasty= 1810062 #Garcùa Huerta
+	culture=italian
+	religion=cristo_rey
+	father=181207
+	martial=9
+	learning=10
+	health=10
+	trait=martial_cleric
+	trait=theologian
+	trait=holy_warrior
+	trait=zealous
+	trait=monk
+	trait=celibate
+	trait=strong
+	trait=bastard
+	employer=6900002
+	2625.5.29 = { 
+		birth=yes
+		culture=bravo
+	}
+}	
+181218 = { #Dynasty Founder
+	name="Abel"
+	female=no
+	dynasty= 1810062 #Garcùa Huerta
+	culture=bravo
+	religion=sacred_heart
+	2518.2.11 = { birth=yes }
+	2586.12.31 = { death = yes }	
+}
+181219 = { 
+	name="Carla"
+	female=yes
+	dynasty= 1810062 #Garcùa Huerta
+	culture=bravo
+	religion=sacred_heart
+	father = 181218
+	2571.12.5 = { birth=yes }
+	2650.7.31 = { death = yes }	
+	2587.1.30 = { add_spouse = 1810002 }
+}
 ###GARZAS; son muchos
 181229 = {
 	name="Eugenio"
@@ -1123,7 +1142,7 @@
 181265 = {
 	name="JosÈ Francisco"
 	female=no
-	dynasty=1810016 #Reyes
+	dynasty=1810075 #Reyes
 	culture=bravo
 	religion=fidencista
 	#mother=
@@ -1134,7 +1153,7 @@
 181266 = {
 	name="JosÈ Francisco"
 	female=no
-	dynasty=1810016 #Reyes
+	dynasty=1810075 #Reyes
 	culture=bravo
 	religion=fidencista
 	trait=dorado
@@ -1156,12 +1175,13 @@
 181267 = {
 	name="Marco"
 	female=no
-	dynasty=1810016 #Reyes
+	dynasty=1810075 #Reyes
 	culture=bravo
 	religion=fidencista
 	trait=sickly
 	trait=vomiting
 	trait=cramps
+	trait=ill
 	mother=181216
 	father=181266
 	2610.11.1 = { birth=yes }
@@ -1266,7 +1286,18 @@
 					{ death_reason = death_battle_ojinaga}
 				}
 }
-
+181305 = {
+	name="Elizabeth"
+	female = yes
+	dynasty=4201112 #MejÌa
+	culture=abajeno
+	religion=sacred_heart
+	trait=chest_pain
+	father = 181300
+	2633.9.12={birth=yes}
+	2648.7.29={add_spouse = 181312 }
+	2700.7.19={death= yes }
+}
 
 #Jauregui
 181310 ={
