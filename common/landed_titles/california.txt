@@ -178,6 +178,33 @@ e_california = {
 				b_heroes_del_desierto_BAJ = {}
 				b_colonia_luis_echeverria_BAJ = {}
 			}
+			c_guadalupe = { #2723
+				color = { 196 23 60 }
+				color2 = { 255 255 255 }
+				
+				b_guadalupe_BAJ = {}
+				b_villa_de_juarez_BAJ = {}
+				b_ejido_el_porvenir_BAJ = {}
+				b_ejido_santa_rosa_BAJ = {}
+				b_lucio_blanco_BAJ = {}
+				b_rouzand_noriega_BAJ = {}
+				b_ceniceros_BAJ = {}
+				b_dinuwa_BAJ = {}
+			}
+			
+			c_ojos_negros = { # 2722
+				color = { 242 84 118 }
+				color2 = { 255 255 255 }
+				
+				b_real_del_castillo_BAJ = {}
+				b_heroes_de_la_independencia_BAJ = {}
+				b_valle_de_la_trinidad_BAJ = {}
+				b_real_del_castillo_viejo_BAJ = {}
+				b_sangre_de_cristo_BAJ = {}
+				b_leyes_de_reforma_BAJ = {}
+				b_lazaro_cardenas_BAJ = {}
+				b_ejido_francisco_r_serrano_BAJ = {}
+			}			
 
 		} #End of d_tijuana
 		
@@ -293,14 +320,6 @@ e_california = {
 				b_el_marasal_BAJ = {}
 				b_san_ignacio_BAJ = {}
 			}
-		}#End of d_la_giganta
-
-		d_loreto = {
-			color = {	236 190 221 }
-			color2 = {	255 255 255 }
-			
-			capital = 2009 #c_loreto
-			
 			c_loreto = { # 2009	
 				color={ 210 255 251 }
 				color2={ 255 255 255 }
@@ -308,7 +327,7 @@ e_california = {
 				# paiute = "Odetoo"
 	
 				b_loreto_BAJ = {}
-				b_mulege_BAJ = {}
+				b_isla_el_carmen_BAJ = {}
 				b_ligui_BAJ = {}
 				b_el_huatamote_BAJ = {}
 				b_santa_rosalia_BAJ = {}
@@ -317,24 +336,32 @@ e_california = {
 				b_la_danzante_BAJ = {}
 				b_puerto_agua_verde_BAJ = {}
 			}	
-			c_concepcion = { #2718
-				color = { 178 255 247 }
-				color2 = { 255 255 255 }
+	#		c_concepcion = { #2718
+	#			color = { 178 255 247 }
+	#			color2 = { 255 255 255 }
 
-				b_san_juan_bautista_londo_BAJ = {}
-				b_san_sebastian_BAJ = {}
-				b_san_juaniquito_BAJ = {}
-			}
+	#			b_san_juan_bautista_londo_BAJ = {}
+	#			b_san_sebastian_BAJ = {}
+	#			b_san_juaniquito_BAJ = {}
+	#		}
 			
-			c_isla_el_carmen = { #2717
-				color = { 118 142 140 }
-				color2 = { 255 255 255 }
+	#		c_isla_el_carmen = { #2717
+	#			color = { 118 142 140 }
+	#			color2 = { 255 255 255 }
 				
-				b_isla_el_carmen_BAJ = {}
-				b_puerto_ballandra_BAJ = {}
-				b_isla_danzante_BAJ = {}
-			}
-		} #End of d_loreto
+
+	#			b_puerto_ballandra_BAJ = {}
+	#			b_isla_danzante_BAJ = {}
+	#		}			
+		}#End of d_la_giganta
+
+#		d_loreto = {
+#			color = {	236 190 221 }
+#			color2 = {	255 255 255 }
+#			
+#			capital = 2009 #c_loreto
+#			
+#		} #End of d_loreto
 		
 		d_los_cabos = { 
 			color = { 124 184 219 }
@@ -408,33 +435,7 @@ e_california = {
 				b_canon_buenavista_BAJ = {}
 
 			}
-			c_guadalupe = { #2723
-				color = { 196 23 60 }
-				color2 = { 255 255 255 }
-				
-				b_guadalupe_BAJ = {}
-				b_villa_de_juarez_BAJ = {}
-				b_ejido_el_porvenir_BAJ = {}
-				b_ejido_santa_rosa_BAJ = {}
-				b_lucio_blanco_BAJ = {}
-				b_rouzand_noriega_BAJ = {}
-				b_ceniceros_BAJ = {}
-				b_dinuwa_BAJ = {}
-			}
-			
-			c_ojos_negros = { # 2722
-				color = { 242 84 118 }
-				color2 = { 255 255 255 }
-				
-				b_real_del_castillo_BAJ = {}
-				b_heroes_de_la_independencia_BAJ = {}
-				b_valle_de_la_trinidad_BAJ = {}
-				b_real_del_castillo_viejo_BAJ = {}
-				b_sangre_de_cristo_BAJ = {}
-				b_leyes_de_reforma_BAJ = {}
-				b_lazaro_cardenas_BAJ = {}
-				b_ejido_francisco_r_serrano_BAJ = {}
-			}
+
 			
 			c_san_quintin = { # 2721
 				color = {  196 68 96 }
@@ -492,13 +493,13 @@ e_california = {
 
 			}
 			
-			c_el_vizcaino = { # 2007	
-				color={ 93 73 26 }
-				color2={ 255 255 255 }
+		#	c_el_vizcaino = { # 2007	
+		#		color={ 93 73 26 }
+		#		color2={ 255 255 255 }
 	
-				# paiute = "Piizökaino"
+		#		# paiute = "Piizökaino"
 			
-			}
+		#	}
 			
 			c_eugenia = { #2719
 				color = { 173 135 48 }

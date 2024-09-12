@@ -505,6 +505,12 @@ e_yucatan = {
 					quichean = "Zizilha" 
 					cholano = "Chi'kiljá"
 				}
+				b_holbox_QR = {
+					yucateco = "Jool Boox"
+					lacandon = "Habän Box" 
+					quichean = "Uorel Quek" #I literally don't know which is the last letter of quichean black, since the reference I used had a very strange symbol (inverted E) which represented a sound I don't know how to reproduce
+					cholano = "Hol Box"
+				}					
 				b_nuevo_xcan_QR = {
 				}
 				b_popolnah_QR ={
@@ -540,22 +546,18 @@ e_yucatan = {
 
 			}
 			
-			c_holbox = {
-				color={ 0 29 221 }
-				color2={ 255 255 255 }
-				
-				b_holbox_QR = {
-					yucateco = "Jool Boox"
-					lacandon = "Habän Box" 
-					quichean = "Uorel Quek" #I literally don't know which is the last letter of quichean black, since the reference I used had a very strange symbol (inverted E) which represented a sound I don't know how to reproduce
-					cholano = "Hol Box"}
-				b_catoche_QR = {
-				}
-				b_bahia_ceviche_QR = {
-				}
-				b_boca_iglesia_QR = {
-				}
-			}
+		#	c_holbox = {
+		#		color={ 0 29 221 }
+		#		color2={ 255 255 255 }
+		#		
+
+		#		b_catoche_QR = {
+		#		}
+		#		b_bahia_ceviche_QR = {
+		#		}
+		#		b_boca_iglesia_QR = {
+		#		}
+		#	}
 			
 			c_riviera_maya = {
 				color={ 99 68 140 }
@@ -681,39 +683,20 @@ e_yucatan = {
 			yucatanense = "Mérida"
 			
 
-			c_celestun = { # 1814
-				color={ 61 152 197 }
-				color2={ 255 255 255 }
-	
-				yucateco = "Ke'el Tuun"
-				lacandon = "Ke'el Tuun"
-				quichean = "Ke'el Tuun"
-				cholano = "Ke'el Tuun"
-				
-				b_celestun_YU = {
-					yucateco = "Ke'el Tuun"
-					lacandon = "Ke'el Tuun"
-					quichean = "Ke'el Tuun"
-					cholano = "Ke'el Tuun"
-				}
-				b_maxcanu_YU = {
-					yucateco = "Me'ex Kanul"
-					lacandon = "Me'ex Kanul"
-					quichean = "Me'ex Kanul"
-					cholano = "Me'ex Kanul"
-				}
-
-				b_halacho_YU = {
-					yucateco = "Jalal Ch'o"
-					lacandon = "Jalal Ch'o"
-					quichean = "Jalal Ch'o"
-					cholano = "Jalal Ch'o"
-				}
-				b_chactun_YU = {}
-				b_oxkintok_YU = {#archeological site
-				short_name=yes
-				}
-			}
+		#	c_celestun = { # 1814
+		#		color={ 61 152 197 }
+		#		color2={ 255 255 255 }
+		
+		#		yucateco = "Ke'el Tuun"
+		#		lacandon = "Ke'el Tuun"
+		#		quichean = "Ke'el Tuun"
+		#		cholano = "Ke'el Tuun"
+		#		
+		#
+		#
+		#		b_chactun_YU = {}
+		#
+		#	}
 			
 			c_progreso = { #2370
 				color = { 16 93 113 }
@@ -835,6 +818,12 @@ e_yucatan = {
 					quichean = "Joron Al"
 					cholano = "Síis Aal"
 				}
+				b_celestun_YU = {
+					yucateco = "Ke'el Tuun"
+					lacandon = "Ke'el Tuun"
+					quichean = "Ke'el Tuun"
+					cholano = "Ke'el Tuun"
+				}				
 				b_kinchil_YU = {
 					yucateco = "Kinichil"
 					lacandon = "Kinichtuj"
@@ -1117,6 +1106,13 @@ e_yucatan = {
 					cholano = "Te' Ts'iimin"
 					yucatanense = "Tizimín"				
 				}
+				b_espita_YU = { #former c_espita barony
+					yucateco = "X Pit Há"
+					lacandon = "X Pit Há"
+					quichean = "X Pit Há"
+					cholano = "X Pit Há"
+					
+				}				
 				b_panaba_YU = {
 					yucateco = "Páanab Ja'"
 					lacandon = "Páanab Ja'"
@@ -1130,6 +1126,13 @@ e_yucatan = {
 					quichean = "Aktáan Chuleb"
 					cholano = "Aktáan Chuleb"
 				}
+				b_sucila_YU = { #former c_espita barony
+					yucateco = "Su'ukil Ja'"
+					lacandon = "Su'ukil Ja'"
+					quichean = "Su'ukil Ja'"
+					cholano = "Su'ukil Ja'"
+					yucatanense = "Sucilá"
+				}				
 				b_calotmul_YU = {
 					yucateco = "Ka'a lot Múul"
 					lacandon = "Ka'a lot Múul"
@@ -1158,46 +1161,46 @@ e_yucatan = {
 
 			}
 			
-			c_espita = { 
-				color={ 38 127 132 }
-				color2={ 255 255 255 }
+		#	c_espita = { ##scrapped
+		#		color={ 38 127 132 }
+		#		color2={ 255 255 255 }
+	
+		#		yucateco = "X Pit Há"
+		#		lacandon = "X Pit Há"
+		#		quichean = "X Pit Há"
+		#		cholano = "X Pit Há"
 
-				yucateco = "X Pit Há"
-				lacandon = "X Pit Há"
-				quichean = "X Pit Há"
-				cholano = "X Pit Há"
-
-				b_espita_YU = {
-					yucateco = "X Pit Há"
-					lacandon = "X Pit Há"
-					quichean = "X Pit Há"
-					cholano = "X Pit Há"
+		#		b_espita_YU = {
+		#			yucateco = "X Pit Há"
+		#			lacandon = "X Pit Há"
+		#			quichean = "X Pit Há"
+		#			cholano = "X Pit Há"
 					
-				}
-				b_cenotillo_YU = {
-					yucateco = "Chan Ts'ono'ot"
-					lacandon = "Chan Ts'ono'ot"
-					quichean = "Chan Ts'ono'ot"
-					cholano = "Chan Ts'ono'ot"
-				}
-				b_sucila_YU = {
-					yucateco = "Su'ukil Ja'"
-					lacandon = "Su'ukil Ja'"
-					quichean = "Su'ukil Ja'"
-					cholano = "Su'ukil Ja'"
-					yucatanense = "Sucilá"
-				}
-				b_tuzik_YU = {				}
-				b_yasilhon_YU = {
-					yucatanense = "Yasilhón"
-				}
-				b_dzitas_YU = {
-					yucatanense = "Dzitás"
-				}
-				b_tinum_YU = {}
+		#		}
+		#		b_cenotillo_YU = {
+		#			yucateco = "Chan Ts'ono'ot"
+		#			lacandon = "Chan Ts'ono'ot"
+		#			quichean = "Chan Ts'ono'ot"
+		#			cholano = "Chan Ts'ono'ot"
+		#		}
+		#		b_sucila_YU = {
+		#			yucateco = "Su'ukil Ja'"
+		#			lacandon = "Su'ukil Ja'"
+		#			quichean = "Su'ukil Ja'"
+		#			cholano = "Su'ukil Ja'"
+		#			yucatanense = "Sucilá"
+		#		}
+		#		b_tuzik_YU = {				}
+		#		b_yasilhon_YU = {
+		#			yucatanense = "Yasilhón"
+		#		}
+		#		b_dzitas_YU = {
+		#			yucatanense = "Dzitás"
+		#		}
+		#		b_tinum_YU = {}
 
 
-			}
+		#	}
 			
 			c_dzilam = { 
 				color={ 120 115 125 }
@@ -1313,13 +1316,29 @@ e_yucatan = {
 				short_name = yes
 								yucateco = "Óoxmáal"
 				}
-				b_anya_YU = {#archeological site
+				b_oxkintok_YU = {#archeological site
 				short_name=yes
-				}
+				}				
 				b_muna_YU = {}
+				b_maxcanu_YU = {
+					yucateco = "Me'ex Kanul"
+					lacandon = "Me'ex Kanul"
+					quichean = "Me'ex Kanul"
+					cholano = "Me'ex Kanul"
+				}
+
+				b_halacho_YU = {
+					yucateco = "Jalal Ch'o"
+					lacandon = "Jalal Ch'o"
+					quichean = "Jalal Ch'o"
+					cholano = "Jalal Ch'o"
+				}				
 				b_opichen_YU = {}
 				b_kopoma_YU = {}
 				b_sanakte_YU = {}
+				b_anya_YU = {#archeological site
+				short_name=yes
+				}
 				b_lazaro_cardenas_YU = {}
 			}
 			c_puuc =  {
@@ -1582,61 +1601,61 @@ e_yucatan = {
 					}
 			}
 		
-			c_cochuah = { # 2289
-				color={ 190 204 69 }
-				color2={ 255 255 255 }
+		#	c_cochuah = { # 2289
+		#		color={ 190 204 69 }
+		#		color2={ 255 255 255 }
 			
 				
-				b_tepich_QR = { #cochuah
-					yucateco = "Te' Piich" #Lugar del Pich (árbol orejón, Guanacaste)
-					lacandon = "Piichte'"
-					quichean = "Xiquinchetzak" #Ídem
-					cholano = "Te'piich"
-				}			
-				b_macario_gomez_QR = {
-					yucateco = "Ta'ankaaj" #House of lime. Tankah is a town where ruins of the same name lie. It's closer to Tulum than Macario Gómez
-					lacandon = "K'ul-taankaaj"  
-					quichean = "Chunha"  
-					cholano = "Tankaj"
-					yucatanense = "Villa Tanká" 
-				}				
-				b_coba_QR = { #archeological site
-					short_name = yes
-					yucateco = "Kob Ja'" # According to INAH Abundance of Water (Like in a river that carries a lot of water, caudaloso in spanish) though I couldn't find in any dictionary that Kob means "Abundant" or "abundance". 
-					lacandon = "Kob Ha'" #ídem. 
-					quichean = "Kob Ha" 
-					cholano = "Kobah"
-					yucatanense = "Cobá"
-					chilango = "Cobá"
-					tapatio = "Cobá"
-					abajeno = "Cobá"
-					jarocho = "Cobá"
-					choco = "Cobá"
-					calentano = "Cobá"
-					bravo = "Cobá"
-					altiplanense = "Cobá"
-					californiano = "Cobá"
-					occidental = "Cobá"						
-				}
-				b_chanchen_primero_QR = {
-					yucateco = "Chan Ch'e'en" # Little waterhole
-					lacandon = "Chan Ha'habän" #ídem. I joined Habän hole and ha' water to form Ha'habän.
-					quichean = "Chuti Hulha" #Pag. 417 https://www.iifilologicas.unam.mx/ebooks/vocabulario-quiche/index.html
-					cholano = "Chanch'e'en"
-					yucatanense = "Chanchén"
-					chilango = "Chanchén"
-					tapatio = "Chanchén"
-					abajeno = "Chanchén"
-					jarocho = "Chanchén"
-					choco = "Chanchén"
-					calentano = "Chanchén"
-					bravo = "Chanchén"
-					altiplanense = "Chanchén"
-					californiano = "Chanchén"
-					occidental = "Chanchén"							
-				}
-				b_muyil_QR = {}
-			}
+		#		b_tepich_QR = { #cochuah
+		#			yucateco = "Te' Piich" #Lugar del Pich (árbol orejón, Guanacaste)
+		#			lacandon = "Piichte'"
+		#			quichean = "Xiquinchetzak" #Ídem
+		#			cholano = "Te'piich"
+		#		}			
+		#		b_macario_gomez_QR = {
+		#			yucateco = "Ta'ankaaj" #House of lime. Tankah is a town where ruins of the same name lie. It's closer to Tulum than Macario Gómez
+		#			lacandon = "K'ul-taankaaj"  
+		#			quichean = "Chunha"  
+		#			cholano = "Tankaj"
+		#			yucatanense = "Villa Tanká" 
+		#		}				
+		#		b_coba_QR = { #archeological site
+		#			short_name = yes
+		#			yucateco = "Kob Ja'" # According to INAH Abundance of Water (Like in a river that carries a lot of water, caudaloso in spanish) though I couldn't find in any dictionary that Kob means "Abundant" or "abundance". 
+		#			lacandon = "Kob Ha'" #ídem. 
+		#			quichean = "Kob Ha" 
+		#			cholano = "Kobah"
+		#			yucatanense = "Cobá"
+		#			chilango = "Cobá"
+		#			tapatio = "Cobá"
+		#			abajeno = "Cobá"
+		#			jarocho = "Cobá"
+		#			choco = "Cobá"
+		#			calentano = "Cobá"
+		#			bravo = "Cobá"
+		#			altiplanense = "Cobá"
+		#			californiano = "Cobá"
+		#			occidental = "Cobá"						
+		#		}
+		#		b_chanchen_primero_QR = {
+		#			yucateco = "Chan Ch'e'en" # Little waterhole
+		#			lacandon = "Chan Ha'habän" #ídem. I joined Habän hole and ha' water to form Ha'habän.
+		#			quichean = "Chuti Hulha" #Pag. 417 https://www.iifilologicas.unam.mx/ebooks/vocabulario-quiche/index.html
+		#			cholano = "Chanch'e'en"
+		#			yucatanense = "Chanchén"
+		#			chilango = "Chanchén"
+		#			tapatio = "Chanchén"
+		#			abajeno = "Chanchén"
+		#			jarocho = "Chanchén"
+		#			choco = "Chanchén"
+		#			calentano = "Chanchén"
+		#			bravo = "Chanchén"
+		#			altiplanense = "Chanchén"
+		#			californiano = "Chanchén"
+		#			occidental = "Chanchén"							
+		#		}
+		#		b_muyil_QR = {}
+		#	}
 		}
 		d_sian_kaan = {
 			color = { 93 138 157 }
