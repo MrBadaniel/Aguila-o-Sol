@@ -1943,7 +1943,7 @@ succession_laws = {
 				title = d_quorum_of_the_twelve
 				title = d_celtic_pagan_reformed
 				title = d_quorum_of_the_lamanites
-			#	title = d_toronto #using a titular duchy based in toronto, havent renamed it yet in code
+				title = d_anglo_catholic #using a titular duchy based in toronto, havent renamed it yet in code
 			}
 			temporary = no
 			OR = {
@@ -2016,7 +2016,7 @@ succession_laws = {
 	}
 	succ_catholic_bishopric = {
 		potential = {
-			is_landless_type_title = no
+			#is_landless_type_title = no
 			OR = {
 				AND = {
 					tier = baron
@@ -2034,7 +2034,7 @@ succession_laws = {
 					religion = strangite
 					religion = sol_invicta
 					religion = anglo_catholic
-					has_landed_title = d_toronto #new heresy hof title
+
 				}
 				is_merchant_republic = no
 				OR = {
@@ -2047,8 +2047,16 @@ succession_laws = {
 					}
 				}
 			}
-			is_primary_type_title = no
+			#is_primary_type_title = no
 			NOT = { holder_scope = { government = military_governorate } }
+			trigger_if = {
+                limit = {
+                    is_landless_type_title = yes
+                    is_primary_type_title = yes
+                }
+                
+                title = d_anglo_catholic
+            }
 		}
 		effect = {
 			succession = catholic_bishopric
