@@ -16,12 +16,12 @@ law_groups = {
 	feudal_contract = {
 		law_type = realm
 	}
-	anglican_branch = {
-		law_type = realm
-	}
-	anglican_priesthood = {
-		law_type = realm
-	}
+#	anglican_branch = {
+#		law_type = realm
+#	}
+#	anglican_priesthood = {
+#		law_type = realm
+#	}
 	feudal_tax = {
 		law_type = realm
 	}
@@ -46,88 +46,6 @@ law_groups = {
 }
 
 laws = { 
-
-	#kills all women bishops flavor should say they were exiled, also instantly name and sex change any possible women to be men
-	# Anglican Priesthood laws
-	
-	anglican_priesthood_0 = {
-        group = anglican_priesthood
-        default = yes
-        
-        potential = {
-            holder_scope = {
-                independent = yes
-                higher_tier_than = duke
-                is_nomadic = no
-                is_tribal = no
-                religion = high_church 
-            }
-        }
-        
-        allow = {
-		always = yes
-        }
-        
-        effect = {
-            holder_scope = {
-                 character_event = { id = AoM.500 }
-               
-			hidden_tooltip = {   
-			   
-                any_realm_lord = {
-                    limit = {
-                        is_landed = yes
-                        religion = high_church
-                        is_theocracy = yes
-                        is_female = yes
-                    }
-                    
-                    death = {
-                        death_reason = death_anglican_exile 
-                    }
-                }
-				any_realm_character = {
-                limit = {
-                    religion = high_church
-                }
-                add_trait = female_priests_0
-                }
-			}	
-				
-				
-            }
-        }
-    }
-	anglican_priesthood_1 = { #allow women bishops to spawn
-		group = anglican_priesthood
-		
-		potential = {
-			holder_scope = {
-				higher_tier_than = duke
-				independent = yes
-				is_nomadic = no
-				is_tribal = no
-				religion = high_church 
-			}
-		}
-        allow = {
-			always = yes
-			
-        }
-		effect = {
-			character_event = { id = AoM.501 }
-			 holder_scope = {
-				hidden_tooltip = {
-					any_realm_character = {
-					limit = {
-						religion = high_church
-					}
-					add_trait = female_priests_1
-					}
-				}
-			}
-		}
-	}
 	
 	# CENTRALIZATION LAWS
 	##############################
