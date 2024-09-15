@@ -1325,8 +1325,15 @@ e_aztlan = {
 					texan = "Reforma"
 					valleyan = "Reforma"
 					bayfolk = "Reform"	
+					short_name = yes
+					used_for_dynasty_names = no
+					
 				}
-				b_ejido_del_desierto_de_sonora_SO = {}
+				b_ejido_del_desierto_de_sonora_SO = {
+					short_name = yes
+					used_for_dynasty_names = no
+				
+				}
 				b_los_nortenos_SO = {}
 				b_alfredo_lopez_aceves_SO = {}
 				b_jose_maria_davila_SO = {}
@@ -1390,7 +1397,11 @@ e_aztlan = {
 				}
 				b_mesas_ricas_SO = {}
 				b_nuevo_michoacan_SO = {}
-				b_ejido_plan_de_ayala_SO = {}
+				b_ejido_plan_de_ayala_SO = {
+					short_name = yes
+					used_for_dynasty_names = no
+				
+				}
 			}
 			c_altar = { #2731
 				color = { 145 76 33 }
@@ -1705,7 +1716,9 @@ e_aztlan = {
 				b_moscobampo_SO = {}
 				b_san_fernando_de_guaymas_SO = {}
 				b_santa_maria_de_guaymas_SO = {}
-				b_general_lazaro_cardenas_SO = {}
+				b_general_lazaro_cardenas_SO = {
+					used_for_dynasty_names = no 
+				}
 				b_francisco_marquez_SO = {}
 				b_mi_patria_es_primero_SO = {}
 				b_la_palma_SO = {}
@@ -2063,9 +2076,14 @@ e_aztlan = {
 				b_angostura_SI = {}
 				b_mocorito_SI = {}			
 				b_pericos_SI = {}
-				b_villa_benito_juarez_SI = {}
+				b_villa_benito_juarez_SI = {
+					used_for_dynasty_names = no 				
+				}
 				b_la_reforma_SI = {}
-				b_colonia_agricola_SI = {}
+				b_colonia_agricola_SI = {
+					used_for_dynasty_names = no
+					short_name = yes
+				}
 				b_batury_SI = {}
 			}
 
@@ -2110,7 +2128,9 @@ e_aztlan = {
 				b_altata_SI  = {}
 				b_san_pedro_de_rosales_SI = {}
 				b_general_angel_flores_SI = {}
-				b_licenciado_benito_juarez_SI = {}
+				b_licenciado_benito_juarez_SI = {
+					used_for_dynasty_names = no 				
+				}
 				b_nuevo_altata_SI = {}
 				b_dautillos_SI = {}
 				b_el_castillo_NAV_SI = {} 
@@ -2254,7 +2274,11 @@ e_aztlan = {
 				b_tecualilla_SI = {}
 				b_ojo_de_agua_de_palmillas_SI = {}
 				b_palmito_del_verde_SI = {}
-				b_ejido_de_la_campana_numero_uno_SI = {}
+				b_ejido_de_la_campana_numero_uno_SI = {
+					short_name = yes
+					used_for_dynasty_names = no
+				
+				}
 				b_la_estacada_SI = {}
 			}
 			
@@ -2605,7 +2629,10 @@ e_aztlan = {
 					bravo = "Colonia Obregón"
 				}
 				b_la_quemada_CH = {}
-				b_colonia_lazaro_cardenas_CH = {}
+				b_colonia_lazaro_cardenas_CH = {
+					short_name = yes
+					used_for_dynasty_names = no
+				}
 			}
 			
 			c_babicora = { #2834
@@ -2618,7 +2645,9 @@ e_aztlan = {
 				b_santa_ana_CH = {}
 				b_el_terrero_CH = {}
 				b_el_molino_CH = {}
-				b_benito_juarez_NQ_CH = {}
+				b_benito_juarez_NQ_CH = {
+					used_for_dynasty_names = no 				
+				}
 				b_cruces_CH = {}
 			}
 			c_la_meseta = { #2835
@@ -2686,7 +2715,9 @@ e_aztlan = {
 				b_el_pueblito_CH = {}
 				b_luis_l_leon_CH = {}
 				b_boquilla_tendida_CH = {}
-				b_emiliano_zapata_CH = {}
+				b_emiliano_zapata_CH = {
+					used_for_dynasty_names = no 				
+				}
 			}
 
 			c_ojinaga = { #2828
@@ -2732,7 +2763,8 @@ e_aztlan = {
 					b_anapra_CH = {}
 					b_ciudad_juarez_CH = {
 						short_name = yes
-					
+						used_for_dynasty_names = no 
+						
 						arixan = "Juarez City"
 						texan = "Juarez City"
 						czexan = "Juarez City"
@@ -2840,7 +2872,10 @@ e_aztlan = {
 					bayfolk = "Pearson"	
 				}
 				b_hidalgo_CH = {}
-				b_colonia_juarez_CH = {}
+				b_colonia_juarez_CH = {
+									short_name = yes
+					used_for_dynasty_names = no
+				}
 				b_seccion_enriquez_CH = {}
 				b_buena_fe_CH = {}
 			}
@@ -2951,7 +2986,8 @@ e_aztlan = {
 				#	b_anahuac_CH = {}
 				#	b_namiquipa_CH = {}
 				#	b_ciudad_cuauhtemoc_CH = {
-
+						short_name = yes
+						used_for_dynasty_names = no
 				#		chino = "Ciudad Cuauhtémoc"
 				#		menomex = "Ciudad Cuauhtémoc"
 				#		altiplanense = "Ciudad Cuauhtémoc"
@@ -3017,9 +3053,14 @@ e_aztlan = {
 					yaqui = Wata
 				}
 				b_julimes_CH = {}
-				b_lazaro_cardenas_CH = {}	
+				b_lazaro_cardenas_CH = {
+					used_for_dynasty_names = no 				
+				}	
 				b_las_puentes_CH = {}	
-				b_colonia_esperanza_CH = {}	
+				b_colonia_esperanza_CH = {
+					short_name = yes
+					used_for_dynasty_names = no	
+				}	
 			}
 			
 			c_conchos = { #2825
@@ -3042,7 +3083,9 @@ e_aztlan = {
 				b_escalon_CH = {}
 				b_jimenez_CH = {}
 				b_torreoncitos_CH = {}
-				b_hacienda_de_dolores_CH = {}
+				b_hacienda_de_dolores_CH = {
+					used_for_dynasty_names = no
+				}
 				b_san_felipe_CH = {}
 				b_laguna_de_palomas_CH = {}
 				b_california_CH = {}
@@ -3494,7 +3537,10 @@ e_aztlan = {
 				}
 				b_san_felipe_DU	= {}
 				b_leon_guzman_DU = {}	
-				b_ciudad_juarez_DU = {}
+				b_ciudad_juarez_DU = {
+					short_name = yes
+					used_for_dynasty_names = no 
+				}
 				b_la_loma_DU = {}
 				b_santa_cruz_lujan_DU = {}
 				b_santa_barbara_DU = {}
@@ -3512,12 +3558,15 @@ e_aztlan = {
 					czexan = "Hornos"
 					texaner = "Hornos"
 					valleyan = "Hornos"
-					bayfolk = "Hornos"				
+					bayfolk = "Hornos"		
+					used_for_dynasty_names = no
 				}
 				b_zaragoza_COA = {}
 				b_tejaban_de_la_rosita_COA = {}
 				b_villa_de_bilbao_COA = {}
-				b_emiliano_zapata_COA = {}
+				b_emiliano_zapata_COA = {
+					used_for_dynasty_names = no 				
+				}
 				b_barreal_de_guadalupe_COA = {}
 				b_la_ventana_COA = {}
 			}
@@ -3555,7 +3604,9 @@ e_aztlan = {
 					b_cuauhtemoc_DU = {}
 					b_velardena_DU = {}
 					b_pedricena_DU = {}
-					b_emiliano_zapata_DU = {}
+					b_emiliano_zapata_DU = {
+					used_for_dynasty_names = no 					
+					}
 					b_santa_cruz_de_la_cuchilla_DU = {}
 					b_ramon_corona_DU = {}
 					b_las_mercedes_DU = {}
@@ -3636,9 +3687,13 @@ e_aztlan = {
 				b_san_francisco_javier_de_las_lajas_DU = {} #c_rodeo
 				b_paso_nacional_DU = {}
 				b_santa_teresa_de_la_una_DU ={}
-				b_general_lazaro_cardenas_DU ={}
+				b_general_lazaro_cardenas_DU ={
+					used_for_dynasty_names = no 				
+				}
 				b_diez_de_abril_DU ={}
-				b_benito_juarez_DU ={}
+				b_benito_juarez_DU ={
+					used_for_dynasty_names = no 
+				}
 			}
 
 		} #End of d_mapimi
@@ -3687,7 +3742,10 @@ e_aztlan = {
 				color = { 137 91 16 }
 				color2 = { 255 255 255 }
 				
-					b_ejido_alto_de_norias_COA = {}
+					b_ejido_alto_de_norias_COA = {
+						short_name = yes
+						used_for_dynasty_names = no
+					}
 					b_paredon_COA = {}
 					b_san_ignacio_COA = {}
 					b_la_leona_COA = {}
@@ -3740,7 +3798,9 @@ e_aztlan = {
 				b_san_miguel_COA = {}
 				b_chula_vista_COA = {}
 				b_laguna_del_rey_COA = {}
-				b_hacienda_la_mora_COA = {}
+				b_hacienda_la_mora_COA = {
+					used_for_dynasty_names= no
+				}
 			}
 		}
 		d_nuevo_leon = {
@@ -4100,7 +4160,11 @@ e_aztlan = {
 				b_nuevo_progresso_TAM = {
 					used_for_dynasty_names = no
 				}
-				b_ejido_los_cavazos_TAM = {}
+				b_ejido_los_cavazos_TAM = {
+					short_name = yes
+					used_for_dynasty_names = no
+				
+				}
 				b_buenavista_TAM = {}
 				b_balcones_de_alcala_TAM = {}
 				b_el_ebanito_TAM = {}
@@ -4134,7 +4198,11 @@ e_aztlan = {
 				color2= { 255 255 255 }
 
 				b_matamoros_TAM = {}
-				b_ejido_longoreno_TAM = {}
+				b_ejido_longoreno_TAM = {
+					short_name = yes
+					used_for_dynasty_names = no
+				
+				}
 				b_valle_hermoso_TAM = {
 					used_for_dynasty_names = no
 				}

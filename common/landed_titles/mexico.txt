@@ -153,6 +153,8 @@ e_mexico = {
 			
 			capital = 1785 # c_atenas
 			
+			short_name = yes
+			
 
 			c_atenas = { # 1785
 				color={ 249 212 203 }
@@ -429,7 +431,9 @@ e_mexico = {
 				color2 = { 255 255 255 }
 				
 				b_cadereyta_de_montes_QE = {}
-				b_ezequiel_montes_QE = {}
+				b_ezequiel_montes_QE = {
+					used_for_dynasty_names = no
+				}
 				b_colon_QE = {
 					nahua = "Tzopilotlán"
 				}
@@ -481,13 +485,20 @@ e_mexico = {
 				holy_site = sacred_heart
 				
 				b_sombrerete_ZA = {}
-				b_juan_aldama_ZA = {}
+				b_juan_aldama_ZA = {
+					used_for_dynasty_names = no
+				}
 				b_chalchihuites_ZA = {}
 				b_miguel_auza_ZA = {}
 				b_jimenez_de_teul_ZA = {}
 				b_nora_de_san_pantaleon_ZA = {} #holy site
-				b_colonia_gonzalez_ortega_ZA = {}
-				b_emiliano_zapata_ZA = {}
+				b_colonia_gonzalez_ortega_ZA = {
+					short_name = yes
+					used_for_dynasty_names = no
+				}
+				b_emiliano_zapata_ZA = {
+					used_for_dynasty_names = no
+				}
 			
 
 			}
@@ -498,7 +509,9 @@ e_mexico = {
 				b_mazapil_ZA = {}
 				b_concepcion_del_oro_ZA = {}
 				b_el_salvador_ZA = {}
-				b_melchor_ocampo_ZA = {}
+				b_melchor_ocampo_ZA = {
+					used_for_dynasty_names = no
+				}
 				b_avalos_ZA = {}
 				b_la_pardita_ZA = {}
 				b_pozo_colorado_ZA = {}
@@ -631,7 +644,9 @@ e_mexico = {
 				b_ebano_SL = {}
 				b_santa_martha_SL = {}
 				b_nuevo_tampaon_SL = {}
-				b_ponciano_arriaga_SL = {}
+				b_ponciano_arriaga_SL = {
+					used_for_dynasty_names = no
+				}
 				b_pujal_coy_SL = {}
 				b_aurelio_manrique_SL = {}
 				b_nuevo_aquismon_SL = {}
@@ -768,7 +783,10 @@ e_mexico = {
 				b_la_hincada_SL = {}
 				b_el_leon_SL = {}
 				b_santo_domingo_SL = {}
-				b_entronque_de_matehuala_SL = {}
+				b_entronque_de_matehuala_SL = {
+					used_for_dynasty_names = no
+					short_name = yes
+				}
 				b_los_amoles_SL = {}
 			}
 			c_mexquitic = { #2697
@@ -819,7 +837,9 @@ e_mexico = {
 				b_huejuquilla_el_alto_JA = {}
 				b_monte_escobedo_ZA = {}
 				b_ameca_ZA = {}
-				b_jesus_gonzalez_ortega_ZA = {}
+				b_jesus_gonzalez_ortega_ZA = {
+					used_for_dynasty_names = no
+				}
 				b_coloatlan_JA = {}
 				b_villa_guerrero_JA = {}
 				b_mezquitic_JA = {}
@@ -833,7 +853,10 @@ e_mexico = {
 				
 				b_victor_rosales_ZA = {}
 				b_fresnillo_ZA = {}
-				b_general_enrique_estrada_ZA = {}
+				b_general_enrique_estrada_ZA = {
+					used_for_dynasty_names = no
+					
+				}
 				b_altamira_ZA = {}
 				b_san_jose_de_lourdes_ZA = {}
 				b_plateros_ZA = {}
@@ -858,7 +881,9 @@ e_mexico = {
 				b_vetagrande_ZA = {}
 				b_sauceda_de_la_borda_ZA = {}
 				b_panuco = {}
-				b_benito_juarez_ZA = {}
+				b_benito_juarez_ZA = {
+					used_for_dynasty_names = no
+				}
 
 			}
 			c_loreto_zacatecas	= { # 2703
@@ -875,7 +900,9 @@ e_mexico = {
 			#	b_las_jaulas_ZA		= {}
 				b_estancia_de_animas_ZA		= {}
 				b_maravillas_ZA		= {}
-				b_general_lauro_g_caloca_ZA	= {}	
+				b_general_lauro_g_caloca_ZA	= {
+					used_for_dynasty_names = no
+				}	
 			}
 			
 			c_ojocaliente = { #2704	
@@ -1030,7 +1057,7 @@ e_mexico = {
 				color2={ 255 255 255 }
 				holy_site = cristo_rey
 				
-				short_name = yes
+				short_name = no
 				
 				nahua = "Atemaxac"
 				
@@ -1271,7 +1298,9 @@ e_mexico = {
 				b_tequesquite_JA = {}
 				b_la_cruz_de_loreto_JA = {}
 				b_san_rafael_de_los_moreno_JA = {}
-				b_jose_maria_morelos_JA = {}
+				b_jose_maria_morelos_JA = {
+					used_for_dynasty_names = no
+				}
 				b_campo_acosta_JA = {}
 				b_la_cumbre_JA = {}
 				b_llano_grande_JA = {} 
@@ -1302,7 +1331,9 @@ e_mexico = {
 				b_agua_caliente_de_apazulco_JA = {}
 				b_perula_JA = {}
 				b_jaluco_JA = {}
-				b_emiliano_zapata_JA = {}
+				b_emiliano_zapata_JA = {
+					used_for_dynasty_names = no
+				}
 				b_san_nicolas_JA  = {}
 			}
 			
@@ -2297,7 +2328,9 @@ e_mexico = {
 				b_cuitlahuac_VE = {}
 				b_yanga_VE = {} 
 				b_monte_blanco_VE = {}
-				b_general_miguel_aleman_VE = {}
+				b_general_miguel_aleman_VE = {
+					used_for_dynasty_names = no
+				}
 				b_coscomatepec_VE = {}
 				b_fortin_de_las_flores_VE = {}
 			}			
@@ -2347,7 +2380,9 @@ e_mexico = {
 				b_tolome_VE = {}
 				b_tierra_colorada_VE = {}
 				b_manlio_fabio_altamirano_VE = {}
-				b_villa_emiliano_zapata_VE = {}
+				b_villa_emiliano_zapata_VE = {
+					used_for_dynasty_names = no
+				}
 			}
 
 			c_coatzacoalcos = { # 1781
@@ -2467,8 +2502,13 @@ e_mexico = {
 				b_el_escundido_VE = {}
 				b_suchilapan_del_rio_VE = {}
 				b_la_laguna_VE = {}
-				b_colonia_nuevo_morelos_VE = {}
-				b_jesus_carranza_VE = {}
+				b_colonia_nuevo_morelos_VE = {
+					short_name = yes
+					used_for_dynasty_names = no				
+				}
+				b_jesus_carranza_VE = {
+					used_for_dynasty_names = no
+				}
 			
 			}	
 			
@@ -2491,7 +2531,9 @@ e_mexico = {
 				b_linda_vista_VE = {}
 				b_la_nueva_esperanza_VE = {}
 				b_abasolo_del_valle_VE = {}
-				b_juan_rodriguez_clara_VE = {}
+				b_juan_rodriguez_clara_VE = {
+					used_for_dynasty_names = no
+				}
 			}
 						
 			c_tuxtepec = { #2678
@@ -2522,7 +2564,7 @@ e_mexico = {
 				
 				b_santiago_choapam_OA = {}
 				b_maria_lombardo_de_caso_OA = {}
-				b_san_juan_comaltepec_OA = {}
+		#		b_san_juan_comaltepec_OA = {}
 				b_santiago_yaveo_OA = {}
 				b_totontepec_villa_de_morelos_OA = {}
 				b_santa_cruz_tierra_negra_OA = {}
@@ -2579,7 +2621,9 @@ e_mexico = {
 				b_texcatepec_VE = {}
 				b_cuatecomaco_VE = {}
 				b_ixhuatlan_de_madero_VE = {}
-				b_benito_juarez_VE = {}
+				b_benito_juarez_VE = {
+					used_for_dynasty_names = no
+				}
 				b_colatlan_VE = {}
 				b_rio_pantepec_VE = {}
 
@@ -2771,6 +2815,7 @@ e_mexico = {
 				b_venustiano_carranza_MC = {
 					nahua = "Cahro"
 					purepecha = "Cariri"
+					used_for_dynasty_names = no
 				}
 				b_vista_hermosa_de_negrete_MC = {}
 				b_cojumatlan_MC = {}
@@ -2922,7 +2967,9 @@ e_mexico = {
 				b_villa_morelos_MC = {}
 				b_santa_ana_maya_MC = {}
 				b_compandaro_de_galeana_MC = {}
-				b_alvaro_obregon_MC = {}
+				b_alvaro_obregon_MC = {
+					used_for_dynasty_names = no
+				}
 			}
 
 
@@ -2954,6 +3001,7 @@ e_mexico = {
 				
 				b_lazaro_cardenas_MC = {
 					nahua = "Ueyitlaco"
+					used_for_dynasty_names = no					
 				}
 				b_las_guacamayas_MC = {}
 				b_la_mira_MC = {}
@@ -3085,10 +3133,6 @@ e_mexico = {
 					short_name = yes
 					used_for_dynasty_names = no
 				}
-				b_ciudad_de_armeria_CL = {
-					short_name = yes
-					used_for_dynasty_names = no
-				}
 				b_comala_CL = {}
 				b_coquimatlan_CL = {}
 				b_cuauhtemoc_CL = {}
@@ -3189,7 +3233,9 @@ e_mexico = {
 				b_tafetan_MC = {}
 				b_el_limon_papatzidan_MC = {}
 				b_caramecuaro_MC = {}
-				b_melchor_ocampo_MC = {}
+				b_melchor_ocampo_MC = {
+					used_for_dynasty_names = no
+				}
 				b_ceibas_de_trujillo_MC = {}
 			}
 			
@@ -3365,7 +3411,9 @@ e_mexico = {
 				nahua = "Teotzapotlan"
 				
 				b_zimatlan_de_alvarez_OA = {}
-				b_vicente_guerrero_OA = {}
+				b_vicente_guerrero_OA = {
+					used_for_dynasty_names = no
+				}
 				b_villa_de_zaachila_OA = {
 					zapotec = "Zaadxil"
 					mixtec = "Tocuisi"
@@ -3387,7 +3435,7 @@ e_mexico = {
 				b_san_miguel_ejutla_OA = {}	
 				b_san_martin_de_los_cansecos_OA	 = {}
 				b_coatecas_altas_OA	= {}
-				b_ayoquezco_de_aldama_OA	 = {}
+			#	b_ayoquezco_de_aldama_OA	 = {}
 				b_santa_marta_chichihualtepec_OA = {}	
 				b_san_andres_zabache_OA	 = {}
 			}
@@ -3581,7 +3629,9 @@ e_mexico = {
 				b_santa_maria_del_mar_OA = {}
 				b_huazantlan_del_rio_OA = {}
 				b_san_jose_del_palmar_OA = {}
-				b_alvaro_obregon_OA = {}
+				b_alvaro_obregon_OA = {
+					used_for_dynasty_names = no
+				}
 			}
 			
 			c_chahuites	= { #2615
@@ -3874,6 +3924,8 @@ e_mexico = {
 			color2 = { 255 255 255 } 
 			
 			capital = 2621 #c_ixtlan
+			
+			short_name = yes
 			
 
 			c_mixe = { #2619
@@ -4376,7 +4428,9 @@ e_mexico = {
 				b_tecpan_de_galeana_GR = {}
 				b_papanoa_GR = {}
 				b_san_luis_de_la_loma_GR = {}
-				b_puerto_vicente_guerrero_GR = {}
+				b_puerto_vicente_guerrero_GR = {
+					used_for_dynasty_names = no
+				}
 				b_san_luis_san_pedro_GR	= {}
 				b_nuxco_GR		= {}
 				b_tenexpa_GR = {}
