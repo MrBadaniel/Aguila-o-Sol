@@ -186,11 +186,13 @@ narrative_event = {
 	immediate = {
 		d_superior = { holder_scope = { grant_title = k_superior } }
 		destroy_landed_title = k_ontario
+		d_superior = { holder_scope = { grant_title = c_york } }
 		d_iroquois = { holder_scope = { set_defacto_liege = THIS } }
 		d_quinte = { holder_scope = { set_defacto_liege = THIS } }
 		c_elgin = { holder_scope = { set_defacto_liege = d_iroquois } }
 		c_bruce = { holder_scope = { grant_title = d_huronia } }
 		c_bruce = { holder_scope = { set_defacto_liege = THIS } }
+		c_manitoulin = { holder_scope = { set_defacto_liege = THIS } }
 		destroy_landed_title = d_gregorian
 		d_remembrant_legion = { holder_scope = { set_defacto_liege = THIS } }
 	}

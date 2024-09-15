@@ -618,12 +618,13 @@
 	name="Christopher"
 	dynasty=1780012
 	culture=yankee
+	father=1620249
 	religion=sedevacantist
-	martial=5
-	diplomacy=4
-	stewardship=4
+	martial=10
+	diplomacy=8
+	stewardship=8
 	intrigue=6
-	learning=4
+	learning=8
 	trait=mastermind_theologian
 	trait=ambitious
 	trait=paranoid
@@ -2951,4 +2952,30 @@
 	trait=lore_old_ones
 	2553.6.12={birth=yes}
 	2604.2.27={death=yes}
+}
+1620249={
+	name="Robert"
+	dynasty=1780012
+	culture=yankee
+	religion=sedevacantist
+	martial=15
+	diplomacy=4
+	stewardship=4
+	intrigue=6
+	learning=4
+	trait=brilliant_strategist
+	trait=ambitious
+	trait=peasant_leader
+	trait=zealous
+	trait=hunter
+	trait=wroth
+	give_nickname=nick_the_hunter
+	trait=diligent
+	2580.5.10={birth=yes
+		#effect={
+		#	set_character_flag=no_historical_family
+		#}
+	}
+	#2660.1.1={effect={add_lover=1763030}}
+	2649.2.17={death=yes}
 }

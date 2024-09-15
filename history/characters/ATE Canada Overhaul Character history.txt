@@ -166,13 +166,12 @@
 	name="Theodore"
 	dynasty=1867101 # Cornouailles
 	culture=ontarian
-	religion=high_church
+	religion=anglo_catholic
 	father=4000002
 	trait=ambitious
 	trait=brave
 	trait=saint
-	trait=high_anglican
-	trait=dead_crown_ontario
+#	trait=dead_crown_ontario
 	trait=just
 	trait=brilliant_strategist
 	trait=mountie
@@ -192,9 +191,9 @@
 	name="Arthur"
 	dynasty=1867101 # Cornouailles
 	culture=ontarian
-	religion=high_church
+	religion=anglo_catholic
 	father=4000003
-	trait=high_anglican
+#	trait=high_anglican
 	trait=just
 	trait=dead_crown_ontario
 	trait=genius
@@ -232,7 +231,7 @@
 	father=4000005
 	trait=dead_crown_ontario
 	#trait=born_in_the_purple
-	2370.1.1={birth=yes}
+	2350.1.1={birth=yes}
 	2405.1.1={	death = {		
 			death_reason = death_murder
 				killer=4000007
@@ -244,9 +243,9 @@
 	name="Justin"
 	dynasty=1867101 # Cornouailles
 	culture=ontarian
-	religion=low_church
-	trait=high_anglican
+	religion=anglo_catholic
 	trait=kinslayer
+	trait=legit_bastard
 	#trait=high_church
 	trait=schemer
 	trait=dead_crown_ontario
@@ -254,7 +253,7 @@
 	father=4000005
 	#trait=born_in_the_purple
 	2375.1.1={birth=yes}
-    2425.1.1={
+    2415.1.1={
 		death = {		
 			death_reason = death_battle
 				killer=4000008
@@ -274,40 +273,50 @@
 	trait=tough_soldier
 	trait=cancer
 	give_nickname=nick_the_avenger
-	2400.1.1={birth=yes}
-	2442.4.11={death=yes}
+	2380.1.1={birth=yes}
+	2420.4.11={death=yes}
 	
 }
 4000009={
-	name="John"
+	name="Edward"
 	dynasty=1867101 # Cornouailles
+	disallow_random_traits = yes
 	culture=ontarian
 	religion=high_church
 	father=4000008
-	2422.11.1={birth=yes}
-    2464.2.14={
-		death = {		
-			death_reason = death_battle
-				#killer=4000008
-		}
-	}
+	trait=high_anglican
+	trait=brilliant_strategist
+	trait=quick
+	trait=humble
+	#rait=beatified
+	trait=dead_crown_ontario
+	trait=ambitious
+	trait=scholar
+	trait=just
+	trait-=strategist
+	trait=brave
+	trait=celibate
+	trait=saint
+	give_nickname=nick_the_overlord_of_north
+	2401.11.1={birth=yes}
+    2464.2.14={death=yes}
 }
 4000010={
 	name="Theodore"
-	dynasty=1867101 # Cornouailles
+	dynasty=90000102 # Bruce, Founder of the Bruce Dynasty, second Dynasty of Ontario
 	culture=ontarian
 	religion=high_church
 	trait=high_anglican
 	father=4000008
-	#trait=born_in_the_purple
+	trait=legit_bastard
 	trait=dead_crown_ontario
-	2432.1.1={birth=yes}
+	2415.1.1={birth=yes}
 	2478.1.1={death=yes}
 	
 }
 4000011={
 	name="Joseph"
-	dynasty=1867101 # Cornouailles
+	dynasty=90000102 # Bruce
 	culture=ontarian
 	religion=high_church
 	trait=high_anglican
@@ -323,7 +332,7 @@
 	name="Nicholas"
 	dynasty=1867101 # Cornouailles
 	culture=ontarian
-	religion=high_church
+	religion=anglo_catholic
 	father=4000003
 	trait=charitable
 	trait=shrewd
@@ -341,14 +350,14 @@
 #	culture=ontarian
 #	religion=high_church
 #	father=4000010
-#	trait=legitimized_bastard
+#	trait=legit_bastard
 #	give_nickname=nick_the_bastard
 #	2450.1.1={birth=yes}
 #    2501.1.1={death=yes}
 #}
 4000014={
 	name="Arthur"
-	dynasty=1867101 # Cornouailles
+	dynasty=90000102 # Bruce
 	culture=ontarian
 	religion=high_church
 	father=4000011
@@ -380,7 +389,7 @@
 #}
 4000016={
 	name="Thomas"
-	dynasty=1867101 # Cornouailles
+	dynasty=90000102 # Bruce
 	culture=ontarian
 	religion=high_church
 	father=4000011
@@ -399,7 +408,7 @@
 #	culture=ontarian
 #	religion=norse
 #	father=4000013
-#	trait=legitimized_bastard
+#	trait=legit_bastard
 #	give_nickname=nick_the_heathen
 #	2473.1.1={birth=yes}
 #	2523.1.1={death={
@@ -423,33 +432,17 @@
 #	} # illness
 #}
 4000019={
-	name="Edward"
-	dynasty=1867101 # Cornouailles
-	disallow_random_traits = yes
+	name="John"
+	dynasty=90000102 # Bruce
 	culture=ontarian
-	religion=high_church
+	religion=anglo_catholic
 	father=4000011
-	#trait=born_in_the_purple
-	trait=high_anglican
-	trait=brilliant_strategist
-	trait=quick
-	trait=humble
-	#rait=beatified
-	trait=dead_crown_ontario
-	trait=ambitious
-	trait=scholar
-	trait=just
-	trait-=strategist
-	trait=brave
-	trait=celibate
-	trait=saint
-	give_nickname=nick_the_overlord_of_north
 	2470.1.1={birth=yes}
 	2547.3.7={death=yes}
 }
 4000020={
 	name="Charles"
-	dynasty=1867101 # Cornouailles
+	dynasty=90000102 # Bruce
 	culture=ontarian
 	religion=high_church
 	father=4000016
@@ -468,7 +461,7 @@
 }
 4000021={
 	name="Theodore"
-	dynasty=1867101 # Cornouailles
+	dynasty=90000102 # Bruce
 	culture=ontarian
 	trait=high_anglican
 	religion=high_church
@@ -493,7 +486,7 @@
 #}
 4000023={
 	name="Arthur"
-	dynasty=1867101 # Cornouailles
+	dynasty=90000102 # Bruce
 	culture=ontarian
 	religion=high_church
 	father=4000021
@@ -501,7 +494,7 @@
 	#trait=born_in_the_purple
 	trait=high_anglican
 	trait=dead_crown_ontario
-	2534.1.1={birth=yes}
+	2530.1.1={birth=yes}
 	2568.3.7={death={
 			death_reason=death_battle
 			killer=1763040
@@ -510,7 +503,7 @@
 }
 4000024={
 	name="Jacob"
-	dynasty=1867101 # Cornouailles
+	dynasty=90000102 # Bruce
 	culture=ontarian
 	religion=high_church
 	father=4000021
@@ -526,7 +519,7 @@
 }
 4000025={
 	name="Constantine"
-	dynasty=1867101 # Cornouailles
+	dynasty=90000102 # Bruce
 	culture=ontarian
 	religion=high_church
 	father=4000021
@@ -542,14 +535,14 @@
 }
 4000026={
 	name="Connor"
-	dynasty=1867101 # Cornouailles
+	dynasty=90000102 # Bruce
 	culture=ontarian
-	religion=high_church
+	religion=nonconformist
 	father=4000014
 	#trait=born_in_the_purple
 	trait=hedonist
 	trait=dead_crown_ontario
-	trait=high_anglican
+	#trait=high_anglican
 	give_nickname=nick_the_depraved
 	2508.1.1={birth=yes}
 	2549.1.1={death={
@@ -559,7 +552,7 @@
 }
 4000027={
 	name="Thomas"
-	dynasty=1867101 # Cornouailles
+	dynasty=90000102 # Bruce
 	culture=ontarian
 	religion=high_church
 	father=4000023
@@ -591,7 +584,7 @@
 }
 4000029={
 	name="Philip"
-	dynasty=1867101 # Cornouailles
+	dynasty=90000102 # Bruce
 	culture=ontarian
 	religion=high_church
 	father=4000023
@@ -608,31 +601,33 @@
 	name="Edward"
 	dynasty=90000000 # Cornwallis
 	culture=ontarian
-	religion=high_church
+	religion=anglo_catholic
 	father=4000023
 	trait=adventurer
-	trait=high_anglican
+	trait=legit_bastard
+	#trait=high_anglican
 	trait=trickster
-	#trait=born_in_the_purple
+	trait=ill
 	trait=skilled_tactician
+	trait=dead_crown_ontario
 	give_nickname = nick_the_survivor
-	2556.3.5={birth=yes}
-	2590.1.14={death=yes}
+	2546.3.5={birth=yes}
+	2580.1.14={death=yes}
 }
 4000031={
 	name="Augustus"
 	dynasty=90000002 # Thompson
 	culture=ontarian
-	trait=broad_anglican
-	religion=high_church
+	#trait=broad_anglican
+	religion=nonconformist
 	father=4000241
 	give_nickname =	nick_the_submissive
 	trait=dead_crown_ontario
 	2546.1.1={birth=yes}
 	2580.1.1={add_spouse=4000243}
-	2597.1.1={death={
+	2582.1.1={death={
 		death_reason=death_execution
-			killer=4000032
+			killer=4000030
 		}
 	} 
 }
@@ -644,7 +639,7 @@
 	trait=severely_injured
 	trait=low_anglican
 	trait=one_eyed
-	trait=dead_crown_ontario
+	trait=mountie
 	#trait=high_church
 	2546.1.1={birth=yes}
 	2598.1.1={add_spouse=4000243}
@@ -676,7 +671,7 @@
 	religion=high_church
 	trait=broad_anglican
 	father=4000027
-	#trait=dead_crown_ontario
+	trait=mountie
 	trait=bastard
 	trait=severely_injured
 	2571.5.12={birth=yes culture=ontarian}
@@ -689,8 +684,8 @@
 	name="Philip"
 	dynasty=1867003
 	culture=west_indian
-	religion=high_church
-	trait=low_anglican
+	religion=nonconformist
+	#trait=low_anglican
 	father=4000033
 	mother=4000244
 	trait=dead_crown_ontario
@@ -1382,9 +1377,8 @@
 	trait=just
 	trait=brave
 	trait=strong
-	trait=high_anglican
     culture=ontarian
-   	religion=high_church
+   	religion=anglo_catholic
 	2645.1.1={birth=yes}
 	2666.6.15={
 		add_spouse=1763128
@@ -1416,7 +1410,7 @@
 	trait=brave
 	trait=low_anglican
     culture=chilango
-   	religion=high_church
+   	religion=anglo_catholic
 	2644.9.3={birth=yes culture=ontarian}
     2700.1.1={death=yes}
 }
@@ -1439,7 +1433,7 @@
 	trait=just
 	trait=brave
     culture=ontarian
-   	religion=high_church
+   	religion=anglo_catholic
 	2647.1.1={birth=yes}
 	2665.4.10={
 		add_spouse=1867160
@@ -1561,7 +1555,7 @@
 4000152={
 	name="Augustine"
     culture=ontarian
-   	religion=high_church
+   	religion=anglo_catholic
 	give_nickname = nick_the_great
 	disallow_random_traits = yes
 	add_trait=brilliant_strategist
@@ -1580,103 +1574,114 @@
 4000153={
 	name="Conrad"
     culture=ontarian
-   	religion=high_church
+   	religion=anglo_catholic
 	2293.1.1={birth=yes}
     2365.1.1={death=yes}
 }
 4000154={
 	name="Thayendanegea"
     culture=iroquois
-   	religion=high_church
+   	religion=anglo_catholic
+	disallow_random_traits = yes
+	give_nickname = nick_the_holy
+	trait=just
+	trait=kind
+	trait=charitable
 	2330.1.1={birth=yes}
     2382.1.1={death=yes}
 }
 4000155={
 	name="Michael"
     culture=ontarian
-   	religion=high_church
+   	religion=anglo_catholic
 	2336.1.1={birth=yes}
     2390.1.1={death=yes}
 }
 4000156={
 	name="Thomas"
     culture=ontarian
-   	religion=high_church
+   	religion=anglo_catholic
 	2341.1.1={birth=yes}
     2401.1.1={death=yes}
 }
 4000157={
 	name="Peter"
     culture=ontarian
-   	religion=high_church
+   	religion=anglo_catholic
+	give_nickname = nick_the_pilgrim
+	trait=pilgrim
 	2356.1.1={birth=yes}
     2423.1.1={death=yes}
 }
 4000158={
 	name="Constantine"
     culture=ontarian
-   	religion=high_church
+   	religion=anglo_catholic
 	2354.1.1={birth=yes}
     2440.1.1={death=yes}
 }
 4000159={
 	name="Richard"
     culture=ontarian
-   	religion=high_church
+   	religion=anglo_catholic
 	2367.1.1={birth=yes}
     2450.1.1={death=yes}
 }
 4000160={
 	name="Thomas"
     culture=ontarian
-   	religion=high_church
+   	religion=anglo_catholic
 	2390.1.1={birth=yes}
     2475.1.1={death=yes}
 }
 4000161={
 	name="Theodore"
     culture=ontarian
-   	religion=high_church
+   	religion=anglo_catholic
 	2422.1.1={birth=yes}
     2493.1.1={death=yes}
 }
 4000162={
 	name="Thomas"
     culture=ontarian
-   	religion=high_church
+   	religion=anglo_catholic
 	2432.1.1={birth=yes}
     2501.1.1={death=yes}
 }
 4000163={
 	name="Joseph"
     culture=ontarian
-   	religion=high_church
+   	religion=anglo_catholic
+	give_nickname=nick_the_kind
+	trait=kind
 	2449.1.1={birth=yes}
     2517.1.1={death=yes}
 }
 4000164={
 	name="Matthew"
     culture=ontarian
-   	religion=high_church
+   	religion=anglo_catholic
 	2452.1.1={birth=yes}
     2535.1.1={death=yes}
 }
 4000165={
 	name="Raymond"
     culture=ontarian
-   	religion=high_church
+   	religion=anglo_catholic
 	2494.1.1={birth=yes}
     2547.1.1={death=yes}
 }
 4000166={
 	name="Michael"
     culture=ontarian
-   	religion=high_church
+   	religion=anglo_catholic
 	disallow_random_traits = yes
 	add_trait=brilliant_strategist
 	add_trait=zealous
 	add_trait=adventurer
+	trait=brave
 	add_trait=just
+	give_nickname=nick_the_fearless
 	2509.1.1={birth=yes}
 	2568.3.7={death={
 			death_reason=death_execution
@@ -1687,7 +1692,7 @@
 4000167={
 	name="Edward"
     culture=ontarian
-   	religion=high_church
+   	religion=anglo_catholic
 	2516.1.1={birth=yes}
     2573.1.1={death={
 			death_reason=death_murder
@@ -1697,7 +1702,7 @@
 4000168={
 	name="Roger"
     culture=ontarian
-   	religion=high_church
+   	religion=anglo_catholic
 	2512.1.1={birth=yes}
     2581.1.1={death={
 			death_reason=death_murder
@@ -1707,14 +1712,14 @@
 4000169={
 	name="Joseph"
     culture=iroquois
-   	religion=high_church
+   	religion=anglo_catholic
 	2552.1.1={birth=yes}
     2596.1.1={death=yes}
 }
 4000170={
 	name="Jacob"
     culture=ontarian
-   	religion=high_church
+   	religion=anglo_catholic
 	2572.1.1={birth=yes}
     2611.1.1={death={
 			death_reason=death_missing
@@ -1724,14 +1729,14 @@
 4000171={
 	name="Erwin"
     culture=ontarian
-   	religion=high_church
+   	religion=anglo_catholic
 	2580.1.1={birth=yes}
     2628.1.1={death=yes}
 }
 4000172={
 	name="Constantine"
     culture=ontarian
-   	religion=high_church
+   	religion=anglo_catholic
 	2593.1.1={birth=yes}
     2640.1.1={death=yes}
 }
@@ -2524,7 +2529,7 @@
 }
 4000243={
 	name="Maria"
-	dynasty=1867101 # Cornouailles
+	dynasty=90000102 # Bruce
 	culture=ontarian
 	religion=high_church
 	female=yes
@@ -2540,7 +2545,7 @@
 }
 4000244={
 	name="Anna"
-	dynasty=1867101 # Cornouailles
+	dynasty=90000102 # Bruce
 	culture=ontarian
 	religion=high_church
 	female=yes
@@ -2558,9 +2563,8 @@
 	dynasty=90000074 #du Cornwall
 	father=4000142
 	trait=child_of_consort
-	trait=low_anglican
     culture=chilango
-   	religion=high_church
+   	religion=anglo_catholic
 	2663.9.3={birth=yes culture=ontarian}
     2750.1.1={death=yes}
 }
