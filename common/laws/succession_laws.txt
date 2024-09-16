@@ -2016,7 +2016,7 @@ succession_laws = {
 	}
 	succ_catholic_bishopric = {
 		potential = {
-			#is_landless_type_title = no
+			#is_landless_type_title = no #This must remain # out otherwise Anglo Catholicism will break
 			OR = {
 				AND = {
 					tier = baron
@@ -2047,7 +2047,7 @@ succession_laws = {
 					}
 				}
 			}
-			#is_primary_type_title = no
+			#is_primary_type_title = no #This must remain # out otherwise Anglo Catholicism will break
 			NOT = { holder_scope = { government = military_governorate } }
 			trigger_if = {
                 limit = {
