@@ -1316,6 +1316,11 @@ letter_event = {
 				modifier = {
 					factor = 0
 					religion_group = latter_day_saints
+					
+				}
+				modifier = {
+					factor = 0
+					NOT = { religion = anglo_catholic }
 				}
 				modifier = {
 					factor = 2
@@ -1532,6 +1537,12 @@ letter_event = {
 					factor = 0
 					FROM = { NOT = { primary_title = { has_law = investiture_law_1 } } }
 				}
+				modifier = {
+					factor = 0
+					 NOT = { religion = anglo_catholic } 
+				}
+				
+				
 				modifier = {
 					factor = 2
 					has_opinion_modifier = { #Opinion modifier keeps track of the Pope's previous decision, should the player deny his first request and then attempt to ask again immediately after for a different result.
@@ -2895,7 +2906,7 @@ letter_event = {
 			religion = catholic
 			religion = ursuline
 			religion = mormon
-			religion = high_church
+			#religion = high_church
 			religion = cristo_rey
 		}
 	}
