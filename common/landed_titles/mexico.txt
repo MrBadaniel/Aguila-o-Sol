@@ -682,14 +682,6 @@ e_mexico = {
 				b_tampacan_SL = {}
 				b_huichihuayan_SL = {}
 			}
-		} #End of d_huasteca_potosina
-		
-		d_rioverde = {
-			color = { 194 136 132 }
-			color2 = { 255 255 255 }
-			
-			capital = 2695 #Rioverde
-			
 			c_mesas_del_durazno = { #2693
  				color = { 51 61 28 }
 				color2 = { 255 255 255 }
@@ -719,7 +711,26 @@ e_mexico = {
 				b_sartenejo_SL = {}
 				b_puerto_de_san_juan_de_dios_SL = {}
 				b_el_sabinito_SL = {}
-			}
+			}			
+		} #End of d_huasteca_potosina
+		
+	#	d_rioverde = {
+	#		color = { 194 136 132 }
+	#		color2 = { 255 255 255 }
+	#		
+	#		capital = 2695 #Rioverde
+	#		
+	#
+	#
+	#	} #End of d_rioverde
+		
+		d_san_luis_potosi = {
+			color={ 224 52 116 }
+			color2={ 255 255 255 }
+			
+			capital = 1738 # c_san_luis_potosi
+			dignity = 6 #so lesser departments in SLP (Matehuala, Rioverde) don't override it
+					
 			c_rioverde = { #2695
 				color = { 82 99 45 }
 				color2 = { 255 255 255 }
@@ -749,16 +760,6 @@ e_mexico = {
 				b_mezquites_SL = {}
 				b_pozo_del_carmen_SL = {}
 			}
-		} #End of d_rioverde
-		
-		d_san_luis_potosi = {
-			color={ 224 52 116 }
-			color2={ 255 255 255 }
-			
-			capital = 1738 # c_san_luis_potosi
-			dignity = 6 #so lesser departments in SLP (Matehuala, Rioverde) don't override it
-					
-
 			c_san_luis_potosi = { # 1738
 				color={ 173 185 56 }
 				color2={ 255 255 255 }
@@ -3827,7 +3828,7 @@ e_mexico = {
 			capital = 1807 # c_jamiltepec
 			
 			mixtec = "Ñuu Andivi"
-		
+			nahua = "Cihuatlampa"
 			
 			c_jamiltepec = { # 1807
 				color={ 64 115 149 }
@@ -3927,6 +3928,8 @@ e_mexico = {
 			
 			short_name = yes
 			
+			zoque = "Ayuujk Jää'y"
+			nahua = "Mixtlitlan"
 
 			c_mixe = { #2619
 				color = { 188 147 0 }
@@ -4181,6 +4184,7 @@ e_mexico = {
 			
 			nahua = "Zempoaltépetl"
 			mixtec = "Ñuñume"
+			tlapanec = "Me'phaa"
 			
 			c_tlapa = { # 1802
 				color={ 158 106 179 }
@@ -4408,6 +4412,8 @@ e_mexico = {
 			color = { 167 64 62 }
 			color2 = { 255 255 255 }
 			
+			nahua = "Cihuatlampa" #west
+			
 			c_zihuatanejo = {
 				color={ 112 151 123 }
 				color2={ 255 255 255 }
@@ -4503,6 +4509,11 @@ e_mexico = {
 			color2 = { 255 255 255 }
 			
 			capital = 1806
+			
+			mixtec = "Ñuuñama" #Amuzgo people
+			nahua = "Amoxco"
+			amuzgo = "Nn'anncue"
+			
 			
 			c_ometepec = { # 1806
 				color={ 118 88 197 }
