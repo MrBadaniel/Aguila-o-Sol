@@ -1109,7 +1109,11 @@ e_mexico = {
 				color = { 42 63 96 }
 				color2 = { 255 255 255 }
 
-				b_ocotlan_JA = {}
+				zapotec = "Lachiroo"
+				
+				b_ocotlan_JA = {
+					zapotec = "Lachiroo"
+				}
 				b_la_barca_JA = {
 					nahua = "Chicunahutenco"
 				}
@@ -1736,6 +1740,9 @@ e_mexico = {
 			color2 = { 255 255 255 }
 			
 			capital = 1769 # c_morelos
+			
+			mixtec = "Yucu Chatuta"
+			nahua = "Cuauhnahuac"
 			
 			c_morelos = { # 1769
 				color={ 13 118 137 }
@@ -2521,6 +2528,8 @@ e_mexico = {
 			
 				capital = 2678 #Tuxtepec
 				
+			#chinantec = "
+				
 			c_papaloapam = { # 1783
 				color={ 234 158 176 }
 				color2={ 255 255 255 }
@@ -2542,6 +2551,7 @@ e_mexico = {
 				color2 = { 255 255 255 }
 				
 				nahua = "Tochtepec"
+				chinantec = "Gueumaló"
 				
 				b_tuxtepec_OA = {
 					nahua = "Tochtepec"
@@ -2562,6 +2572,8 @@ e_mexico = {
 			c_choapam = { #2677
 				color = { 95 142 173 }
 				color2 = { 255 255 255 }
+				
+				zapotec = "Guimbetsi"
 				
 				b_santiago_choapam_OA = {}
 				b_maria_lombardo_de_caso_OA = {}
@@ -3289,9 +3301,9 @@ e_mexico = {
 		
 		short_name = yes
 		
-		mixtec = "Ñuu Savi"
-		nahua = " Mixtecah"
-		
+		mixtec = "Ñuu Dzahui"
+		nahua = "Mixtecapan" #" Mixtecapah"
+		zapotec = "Midxi" #"Binni záa"
 		
 		capital = 1803 #Acatlán
 	}	
@@ -3393,8 +3405,13 @@ e_mexico = {
 				color = { 64 137 183 }
 				color2 = { 255 255 255 }
 				
+				zapotec = "Lachi Xirooba"
+				
 				b_san_antonino_castillo_velasco_OA = {}
-				b_ocotlan_de_morelos_OA = {}
+				b_ocotlan_de_morelos_OA = {
+					nahua = "Ocotlan"
+					zapotec = "Lachi Xirooba"
+				}
 				b_santa_catarina_minas_OA = {}
 				b_san_juan_chilateca_OA = {}
 				b_santa_ana_zegache_OA = {}
@@ -3411,7 +3428,9 @@ e_mexico = {
 				mixtec = "Tocuisi"
 				nahua = "Teotzapotlan"
 				
-				b_zimatlan_de_alvarez_OA = {}
+				b_zimatlan_de_alvarez_OA = {
+					zapotec = "Guidxibui"
+				}
 				b_vicente_guerrero_OA = {
 					used_for_dynasty_names = no
 				}
@@ -3431,8 +3450,14 @@ e_mexico = {
 				color = { 25 123 183 }
 				color2 = { 255 255 255 }
 				
+				zapotec = "Luhubisaá"
+				nahua = "Ejutlan"
+				
 				b_taniche_OA = {}
-				b_ejutla_de_crespo_OA = {}
+				b_ejutla_de_crespo_OA = {
+					zapotec = "Luhubisaá"
+					nahua = "Ejutlan"
+				}
 				b_san_miguel_ejutla_OA = {}	
 				b_san_martin_de_los_cansecos_OA	 = {}
 				b_coatecas_altas_OA	= {}
@@ -3444,6 +3469,8 @@ e_mexico = {
 			c_etla = { #2629
 				color = { 59 90 122 }
 				color2 = { 255 255 255 }
+				
+				zapotec = "Loobanaa"
 				
 				b_san_pablo_etla_OA = {}
 				b_villa_de_etla_OA = {}
@@ -3464,11 +3491,16 @@ e_mexico = {
 			
 			capital = 1795 
 			
+			mixtec = "Ñuu Ñuu Maa"
+			zapotec = "Yezhe Doo"
+			nahua = "Miahuatlan"
+			
 			c_miahuatlan = { # 1795
 				color={ 49 85 149 }
 				color2={ 255 255 255 }
 				
 				zapotec = "Guiesdoo"
+				#zapotec = "Pelopenitza"
 				
 				b_miahuatlan_OA = {
 					zapotec = "Guiesdoo"
@@ -3488,7 +3520,10 @@ e_mexico = {
 				mixtec = "Ñucaa"
 				zapotec = "Huash"
 			
-				b_villa_sola_de_vega_OA = {}
+				b_villa_sola_de_vega_OA = {
+					mixtec = "Ñucaa"
+					zapotec = "Huash"
+				}
 				b_san_vicente_coatlan_OA = {}
 				b_santa_maria_sola_OA = {}
 				b_ayoquezco_de_aldama_OA = {}
@@ -3510,12 +3545,12 @@ e_mexico = {
 				color2 = { 255 255 255 }
 				
 				nahua = "Poctlan" 
-				mixtec = "Ñuu Kaa"
+				mixtec = "Ñuu Ñuu Ma"
 				amuzgo = "Tzjon Non"
 				
 				b_putla_villa_de_guerrero_OA = { 
 					nahua = "Poctlan" 
-					mixtec = "Ñuu Kaa"
+					mixtec = "Ñuu Ñuu Ma"
 				}
 				b_mesones_hidalgo_OA = {}
 				b_santa_maria_zacatepec_OA = {}
@@ -3535,6 +3570,8 @@ e_mexico = {
 				color =  { 32 55 160 }
 				color2 = { 255 255 255 }
 				
+				zapotec = "Latzezina"Latzezina
+				
 				b_san_carlos_yautepec_COA = {}
 				b_san_pedro_quiatoni_OA = {}
 				b_nejapa_de_madero_OA = {}
@@ -3546,17 +3583,22 @@ e_mexico = {
 			}
 
 		} #End of d_sierra_sur
+		
 		d_istmo = {
 			color={ 198 234 239 }
 			color2={ 255 255 255 }
 			
 			capital = 1799 # c_juchitan
 			
+			zapotec = "Guissi'i"
+			nahua = "Tecuantepec"
+			zoque = "Anepaan"				
+			
 			c_tehuantepec = { # 1798
 				color={ 118 134 154 }
 				color2={ 255 255 255 }
 				
-				zapotec = "Guissi"
+				zapotec = "Guissi'i"
 				nahua = "Tecuantepec"
 				
 				b_tehuantepec_OA = {
@@ -3596,7 +3638,7 @@ e_mexico = {
 				color2={ 255 255 255 }
 				
 				nahua = "Xochitlan"
-				zapotec = "Xabizende"
+				zapotec = "Xabizende" #Guidxhi'
 				
 				b_juchitan_de_zaragoza_OA = {
 					zapotec = "Xabizende"
@@ -3735,9 +3777,11 @@ e_mexico = {
 				color2={ 255 255 255 }
 				
 				mixtec = "Ñudee"
+				nahua = " Huajapam"
 				
 				b_huajuapan_de_leon_OA = {
 					mixtec = "Ñudee"
+					nahua = "Huajapam"
 				}
 				b_san_jeronimo_silacayoapilla_OA = {}
 				b_san_marcos_arteaga_OA = {}
@@ -3754,10 +3798,12 @@ e_mexico = {
 				color2={ 255 255 255 }
 				
 				
-				mixtec = "Ñundiku"
+				mixtec = "Ndijiinu"
+				nahua = "Tlachquiauhco"
 				
 				b_tlaxiaco_OA = {
-					mixtec = "Ndinuu"
+					mixtec = "Ndisi Nuu"
+					nahua = "Tlachquiauhco"
 				}
 				b_san_martin_itunyoso_OA = {
 					mixtec = "Itunyoso"
@@ -3785,8 +3831,11 @@ e_mexico = {
 				color = { 125 101 196 }
 				color2 = { 255 255 255 }
 				
+					mixtec = "Ñu Ñu Ma"
+					
 				b_santiago_juxtlahuaca_OA = {
-					mixtec = "Yosocuiya"
+				#	mixtec = "Ñu Ñu Ma"
+					mixtec = "Yosocuiya" #prehispanic name
 				}
 				b_san_sebastian_tecomaxtlahuaca_OA = {}
 				b_silacayoapam_OA = {}
@@ -3827,8 +3876,9 @@ e_mexico = {
 			
 			capital = 1807 # c_jamiltepec
 			
-			mixtec = "Ñuu Andivi"
+			mixtec = "Yucu Dzaa" 
 			nahua = "Cihuatlampa"
+			
 			
 			c_jamiltepec = { # 1807
 				color={ 64 115 149 }
@@ -3836,7 +3886,7 @@ e_mexico = {
 				holy_site = sacred_heart
 				holy_site = cristo_rey
 				
-				mixtec = "Casandó"
+				mixtec = "Casa Ndoo"
 				nahua = "Xamiltepec" 
 				
 				b_pinotepa_OA = {
@@ -3930,11 +3980,12 @@ e_mexico = {
 			
 			zoque = "Ayuujk Jää'y"
 			nahua = "Mixtlitlan"
+			zapotec = "Layetzi"
 
 			c_mixe = { #2619
 				color = { 188 147 0 }
 				color2 = { 255 255 255 }
-				
+						
 				b_san_juan_mazatlan_OA = {}
 				b_nuevo_santiago_tutla_OA = {}
 				b_san_antonio_tutla_OA = {}
@@ -3949,7 +4000,11 @@ e_mexico = {
 				color = {  204 102 0 }
 				color2 = { 255 255 255 }
 				
-				b_ixtlan_de_juarez_OA = {}
+				zapotec = "Layetzi"
+				
+				b_ixtlan_de_juarez_OA = {
+					zapotec = "Layetzi"
+				}
 				b_capulalpam_de_mendez_OA = {}
 				b_san_juan_xicomezuchil_OA = {}
 				b_san_miguel_amatlan_OA = {}
@@ -3962,6 +4017,8 @@ e_mexico = {
 			c_mixistlan = { #2620
 				color = {  232 147 0 }
 				color2 = { 255 255 255 }
+				
+				zoque = "Huotac Huim"
 				
 				b_santa_maria_tlahuitoltepec_OA = {}
 				b_mixistlan_de_la_reforma_OA = {}
@@ -4510,7 +4567,7 @@ e_mexico = {
 			
 			capital = 1806
 			
-			mixtec = "Ñuuñama" #Amuzgo people
+			mixtec = ""Ñuu Andivi"" #"Ñuuñama" #Amuzgo people
 			nahua = "Amoxco"
 			amuzgo = "Nn'anncue"
 			
