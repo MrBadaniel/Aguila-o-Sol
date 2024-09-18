@@ -25,20 +25,29 @@
 	}
 
 	spriteType = {
-		name = "GFX_nahua_female_headgear_mid"
-		texturefile = "gfx\\characters\\nahua_female\\nahua_female_headgear_mid.dds"
-		noOfFrames = 12
-		norefcount = yes
-		can_be_lowres = yes
-	}
-
-	spriteType = {
 		name = "GFX_nahua_female_headgear"
 		texturefile = "gfx\\characters\\nahua_female\\nahua_female_headgear.dds"
 		noOfFrames = 12
 		norefcount = yes
 		can_be_lowres = yes
 	}
+	# children
+	spriteType = {
+		name = "PORTRAIT_nahuagfx_child_male"
+		texturefile = "gfx\\characters\\default_son_indigena.tga"
+		noOfFrames = 1
+		norefcount = yes
+		can_be_lowres = yes
+	}
+	
+	spriteType = {
+		name = "PORTRAIT_nahuagfx_child_female"
+		texturefile = "gfx\\characters\\default_daughter_indigena.tga"
+		noOfFrames = 1
+		norefcount = yes
+		can_be_lowres = yes
+	}
+	
 	# nahua Male
 	portraitType = {
 		name = "PORTRAIT_nahuagfx_male"
