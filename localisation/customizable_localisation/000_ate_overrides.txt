@@ -5633,6 +5633,12 @@ defined_text = { #for coronation events
 	}
 	text = {
 		trigger = {
+			religion = anglo_catholic
+		}
+		localisation_key = PRIMATE
+	}
+	text = {
+		trigger = {
 			religion = ursuline
 		}
 		localisation_key = ABBESS_GENERAL
@@ -5663,6 +5669,7 @@ defined_text = { #for coronation events
 				religion = mormon
 				religion = high_church
 				religion = cristo_rey
+				religion = anglo_catholic
 			}
 		}
 		localisation_key = PRESIDENT #fallback
@@ -5709,6 +5716,7 @@ defined_text = { #for coronation events
 				religion = ursuline
 				religion = mormon
 				religion = high_church
+				religion = anglo_catholic
 			}
 		}
 		localisation_key = String_Bishop #fallback

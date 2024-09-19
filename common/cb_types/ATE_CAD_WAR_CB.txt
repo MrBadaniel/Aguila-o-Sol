@@ -172,11 +172,12 @@ cad_civil_war = {
 	on_reverse_demand = {
 		ROOT = {
 			prestige = -200
-			imprison = FROM
-			set_defacto_liege = ROOT
+			#imprison = FROM
+			#set_defacto_liege = ROOT #this made ottawa independent
+			set_defacto_liege = FROM
 		}
 		FROM = {
-			make_tributary = { who = ROOT percentage = 0.4 }
+			#make_tributary = { who = ROOT percentage = 0.4 }
 			participation_scaled_prestige = 100
 			hidden_tooltip = {
 				disband_event_forces = faction_revolters
