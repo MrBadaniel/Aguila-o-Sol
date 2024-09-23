@@ -2139,11 +2139,7 @@ gender_laws = {
 				NOT = { has_religion_feature = religion_feature_midewiwin }
 				NOT = { trait = machete_female }
 				NOT = { trait = machete_female_ref }
-			#	NOR = {	
-			#		top_liege = { has_law = anglican_priesthood_1 }
-			#		religion = high_church
-			#		is_theocracy = yes
-			3	}
+
 				NAND = {
 					OR = {
 						is_theocracy = yes
@@ -2154,7 +2150,6 @@ gender_laws = {
 						religion = gaian
 					}
 				}
-				#OR = { has_law = succ_high_church_elective }
 			}
 		}
 		effect = {
@@ -2198,16 +2193,11 @@ gender_laws = {
 
 	cognatic_succession = {
 		potential = {
-		#always = no
+
 			holder_scope = {
 				NOT = { has_religion_feature = religion_matriarchal }
 				NOT = { has_religion_feature = religion_equal }
 				NOT = { has_religion_feature = religion_feature_midewiwin }	
-				NOR = {	
-					top_liege = { has_law = anglican_priesthood_0 }
-					religion = high_church
-					is_theocracy = yes
-				}
 				OR = {
 					has_bloodline_flag = bloodline_effect_cognatic
 					AND = {
@@ -2310,15 +2300,11 @@ gender_laws = {
 		male_dynasty_opinion = -5
 		
 		potential = { 
-		#always = no
+
 			holder_scope = { NOT = { has_religion_feature = religion_matriarchal } }
 			holder_scope = { NOT = { has_religion_feature = religion_patriarchal } }
 			
-			NOT = {	
-					top_liege = { has_law = anglican_priesthood_0 }
-					religion = high_church
-					is_theocracy = yes
-				}
+
 			
 			OR = {
 				AND = {
@@ -2354,7 +2340,7 @@ gender_laws = {
 							
 							has_horde_culture = no
 							#is_tribal = no
-							#is_nomadic = no
+							is_nomadic = no
 							#is_merchant_republic = no
 							#is_patrician = no
 						}
@@ -2379,11 +2365,6 @@ gender_laws = {
 							}
 						}
 					}
-				}
-				NOR = {	
-					top_liege = { has_law = anglican_priesthood_0 }
-					religion = high_church
-					is_theocracy = yes
 				}
 			}
 			
@@ -2499,11 +2480,7 @@ gender_laws = {
 		potential = {
 			holder_scope = {
 				NOT = { religion = edenite }
-				NOT = {	
-						top_liege = { has_law = anglican_priesthood_0 }
-						religion = high_church
-						is_theocracy = yes
-				}
+
 				OR = {
 					has_religion_feature = religion_matriarchal
 					religion = gaian
@@ -2520,11 +2497,6 @@ gender_laws = {
 							religion = gaian
 						}
 					}
-				}
-				NOR = {	
-					top_liege = { has_law = anglican_priesthood_0 }
-					religion = high_church
-					is_theocracy = yes
 				}
 			}
 		}
@@ -2572,11 +2544,6 @@ gender_laws = {
 						religion = gaian
 						religion = edenite
 					}
-				}
-				NOR = {	
-					top_liege = { has_law = anglican_priesthood_0 }
-					religion = high_church
-					is_theocracy = yes
 				}
 			}
 			
