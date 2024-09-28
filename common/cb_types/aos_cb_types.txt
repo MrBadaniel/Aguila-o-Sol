@@ -678,8 +678,8 @@ purification = {
 }
 
 justo_adventure = {
-	name = CB_NAME_KINGDOM_ADVENTURE
-	war_name = WAR_KINGDOM_ADVENTURE
+	name = CB_NAME_JUSTO_ADVENTURE
+	war_name = WAR_JUSTO_ADVENTURE
 	sprite = 9
 	truce_days = 3650
 	hostile_against_others = yes
@@ -749,7 +749,8 @@ justo_adventure = {
 				disband_event_forces = yes
 				clr_character_flag = duchy_adventurer
 				destroy_landed_title = d_justo
-				death = { death_reason = death_vanished }
+				death = { death_reason = death_vanished }	
+				c_6900469 = { remove_will_not_marry_effect = yes } #sofi can marry
 			}
 		}
 	
@@ -777,6 +778,7 @@ justo_adventure = {
 				clr_character_flag = duchy_adventurer
 				destroy_landed_title = d_justo
 				death = { death_reason = death_vanished }
+				c_6900469 = { remove_will_not_marry_effect = yes } #sofi can marry
 			}
 		}
 	}

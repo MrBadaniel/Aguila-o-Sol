@@ -27,8 +27,11 @@ character_event = { # event to start the main event chain in a few days
 	}
 	
 	immediate = {
+		c_6900449 = { 
+			save_event_target_as = el_justo 
+			will_not_marry_effect = yes
+		}
 		ROOT = { save_event_target_as = the_prelate }
-		c_6900449 = { save_event_target_as = el_justo }
 		narrative_event = { id = justo.1  days = 30 }
 		set_global_flag = justo_chain
 	}
@@ -294,6 +297,9 @@ narrative_event = { #an offer you can refuse
 		custom_tooltip = {
 			text = EVTOPTB_justo6_TT	
 			hidden_tooltip = {
+				c_6900449 = { 
+					remove_will_not_marry_effect = yes
+				}
 				narrative_event = { id = justo.7 days = 3 }
 			}
 		}
@@ -314,6 +320,9 @@ narrative_event = { #an offer you can refuse
 		custom_tooltip = {
 			text = EVTOPTC_justo6_TT
 			hidden_effect = {
+				c_6900449 = { 
+					remove_will_not_marry_effect = yes
+				}
 				e_mexico = {
 					holder_scope = {
 						narrative_event = { id = justo.10 days = 5 }
@@ -2471,6 +2480,7 @@ character_event = { #either fires a war or the last event
 				} 
 			}
 			narrative_event = { id = justo.53 days = 1 }
+			narrative_event = { id = justo.61 days = 30 } #brazilian marriage event
 		}
 	}
 }
@@ -2727,7 +2737,11 @@ narrative_event = { #A man of his word
 			}
 		}
 		d_friends = {
+			owner = { save_event_target_as = friends_leader }
 			unsafe_destroy_landed_title = THIS
+		}
+		d_veracruz = {
+			set_defacto_liege = ROOT
 		}
 	}
 	
@@ -2748,18 +2762,10 @@ narrative_event = { #A man of his word
 		}
 		prestige = 2000
 		piety = 1000
-		if = { #kills Ledonnant if he's still alive
-			limit = {
-				any_realm_character	= {
-					has_character_flag = is_the_gringo
-				}
-			}
-			any_realm_character	= {
-				limit = { has_character_flag = is_the_gringo }
-				death = {
-					death_reason = death_execution
-					killer = ROOT
-				}
+		event_target:friends_leader = {
+			death = {
+				death_reason = death_execution
+				killer = ROOT
 			}
 		}
 	}
@@ -2767,6 +2773,9 @@ narrative_event = { #A man of his word
 		name = EVTOPTB_justo56
 		trigger = {
 			religion = cristo_rey
+			NOT = {
+				has_landed_title = e_mexico
+			}
 		}
 	}
 	option = {
@@ -2780,6 +2789,9 @@ narrative_event = { #A man of his word
 		name = EVTOPTD_justo56
 		trigger = {
 			de_facto_liege  = e_mexico
+			NOT = {
+				has_landed_title = e_mexico
+			}
 		}
 	}
 	
@@ -3224,6 +3236,188 @@ narrative_event = {
 				de_facto_liege = e_mexico
 				de_facto_liege = e_latino
 				has_character_flag = the_justo_armas
+			}
+		}
+	}
+}
+
+character_event = { #checker event to see if The Princess Arrives should be sent, otherwise let Justo marry
+	id = justo.61
+	
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		if = {
+			limit = {
+				china_is_fine_trigger = yes
+			}
+			narrative_event = { id = justo.62 }
+		}
+		else = {
+			c_6900449 = { 
+				remove_will_not_marry_effect = yes
+			}
+		}
+	}
+}
+
+narrative_event = { #Offer of Alliance
+	id = justo.62
+	title = "justo.62.name"
+	desc = justo.62.desc
+	picture = GFX_evt_brazilian_princess
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		is_married = no
+	}
+	
+	option = { #I accept this proposal
+		name = EVTOPTA_justo62
+		custom_tooltip = {
+			text = EVTOPTA_justo62_TT
+			hidden_effect = { offmap_china = { governor = { character_event = { id = justo.63 days = 7 } } } }
+		}
+	}
+	
+	option = { #A painting? Bah!
+		name = EVTOPTB_justo62
+		custom_tooltip = {
+			text = EVTOPTB_justo62_TT
+			c_6900449 = { 
+				remove_will_not_marry_effect = yes
+			}
+		}
+	}
+}
+
+character_event = { #creating spouse event
+	id = justo.63
+	
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		offmap_china = {
+			offmap_ruler = { 
+				ROOT = {
+					create_character = {
+						age = 16
+						dynasty = PREV
+						religion = PREV
+						culture = PREV
+						female = yes
+						health = 6
+						random_traits = no
+						attributes = {
+							martial = 5
+							diplomacy = 7
+							stewardship = 7
+							intrigue = 4
+							learning = 5
+						}
+					}
+					new_character = {
+						character_event = { id = misc.3 } # Diversity
+						character_event = { id = misc.4 } # Physique
+						set_character_flag = always_show_in_marriage_selection
+						save_event_target_as = justo_spouse
+						set_character_flag = originated_from_chinese_court
+						set_character_flag = is_chinese_imperial_marriage
+						add_trait = underhanded_rogue
+						add_trait = humble
+						add_trait = patient
+						add_trait = diligent
+						add_trait = gregarious
+						add_trait = is_fat
+						random_list = {
+							25 = { add_trait = content }
+							25 = { add_trait = charitable }
+							25 = { add_trait = kind }
+							25 = { add_trait = trusting }
+						}
+
+						if = {
+							limit = {
+								offmap_china = {
+									has_status = china_golden_age
+								}
+							}
+							change_diplomacy = 3
+							change_martial = 3
+							change_stewardship = 3
+							change_intrigue = 3
+							change_learning = 3
+						}
+						character_event = { id = justo.65 days = 1}
+					}
+				}
+			}
+		}
+	}
+}
+
+character_event = { #ping event for the Princess
+	id = justo.65 #sorry about the mess...
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		FROMFROM = {
+			narrative_event = { id = justo.64 }
+		}
+	}
+}
+
+narrative_event = { #The Princess Arrives
+	id = justo.64
+	title = "justo.64.name"
+	desc = justo.64.desc
+	picture = GFX_evt_brazilian_ship
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		is_married = no
+	}
+	
+	option = { #The wedding is on! 
+		name = EVTOPTA_justo64
+		add_spouse = event_target:justo_spouse 
+		if = {
+			limit = { has_dlc = "Jade Dragon" }
+			custom_tooltip = {
+				text = chinese_imperial_marriage_peace_deal_effect_tt
+				add_character_modifier = {
+					inherit = yes
+					name = peace_deal_with_china
+					years = 50
+				}
+			}
+			add_offmap_currency = {
+				offmap = offmap_china
+				value = 500
+			}
+		}
+	}
+	
+	option = { #This was not what I was promised.
+		name = EVTOPTB_justo64
+		custom_tooltip = {
+			text = EVTOPTB_justo62_TT
+			c_6900449 = { 
+				remove_will_not_marry_effect = yes
+			}
+		}
+		if = {
+			limit = { has_dlc = "Jade Dragon" }
+			add_offmap_currency = {
+				offmap = offmap_china
+				value = -250
 			}
 		}
 	}

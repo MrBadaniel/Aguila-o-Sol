@@ -196,7 +196,9 @@ claim = {
 						ROOT = { has_landed_title = d_friends }
 						#has_global_flag = friends_rebel
 					}
-					ROOT = { narrative_event = { id = justo.60 days = 2 } }
+					ROOT = { 
+						narrative_event = { id = justo.60 days = 2 } 
+					}
 				}
 			}
 		}
@@ -338,7 +340,7 @@ claim = {
 					}
 					FROM = { narrative_event = { id = justo.59 } }
 				}
-				
+				FROM = { character_event = { id = justo.61 days = 30 } } #brazilian marriage event				
 			}
 		}
 	}
@@ -457,6 +459,7 @@ claim = {
 					}
 					FROM = { narrative_event = { id = justo.59 } }
 				}
+				FROM = { character_event = { id = justo.61 days = 30 } }#brazilian marriage event	
 			}
 		}
 	}
