@@ -126,11 +126,12 @@
 	learning=8
 	culture=ontarois
 	religion=high_church
+	secret_religion=angeline
 	trait=proud
 	trait=shrewd
 	trait=just
 	trait=broad_anglican
-	trait=chaste
+	trait=lustful
 	trait=scarred
 	#add_trait=born_in_the_purple
 	add_trait=skilled_tactician
@@ -138,6 +139,7 @@
 	father=1857078
 	mother=1763050
 	effect = {add_lover=4000138}
+	effect = {add_lover=4000247}
 	effect = {add_friend=4000123}
 	effect = {add_rival=1857082}
 	effect = {add_alliance = {
@@ -1268,7 +1270,7 @@
 #######
 
 1857068={#Countess of Nagagamisis
-	name="Ang�le"
+	name="Angele"
 	female=yes
 	dynasty=2014042
 	culture=ontarois
@@ -1592,11 +1594,9 @@
 	trait=ambitious
 	trait=high_anglican
 	trait=brave
-	#trait=born_in_the_purple
+	#trait=crowned_by_pope
 	trait=knight
-	trait=impaler
 	trait=strong
-	#trait=giant
 	trait=holy_warrior
 	trait=brilliant_strategist
 	trait=adventurer
@@ -3067,9 +3067,6 @@
 	trait=tough_soldier
 	effect = {add_friend=1867194}
 	2630.7.27={birth=yes}
-	2660.1.1={
-		employer=1867194
-	}
 	2700.1.15={death=yes}
 }
 1867194={
@@ -3086,5 +3083,8 @@
 	trait=tough_soldier
 	effect = {add_friend=1867193}
 	2630.7.27={birth=yes}
+	2660.1.1={
+		employer=1867194
+	}
 	2700.1.15={death=yes}
 }

@@ -1089,7 +1089,7 @@
 	2560.7.1={birth=yes}
         2630.7.1={death={
 			death_reason=death_battle
-			killer=1867151
+			killer=1857082
 		}
 	}
 }
@@ -1270,9 +1270,16 @@
 	dynasty=1867020
     culture=ontarian
    	religion=high_church
+	secret_religion=angeline
 	female = yes
 	father=4000123
+	add_trait=bisexual
+	effect = {add_lover=1867007}
+	effect = {add_lover=4000247}
 	2644.10.2={birth=yes}
+	2661.1.1={
+		employer=1867007
+	}
     2720.1.1={death=yes}
 }
 4000139={
@@ -1824,7 +1831,7 @@
 	add_trait=just
 	add_trait=brave
 	add_trait=knight
-	2627.5.21={birth=yes}
+	2617.5.21={birth=yes}
 	effect = {add_friend=1857082}
     2700.1.1={death=yes}
 }
@@ -2483,7 +2490,7 @@
 	add_trait=just
 	add_trait=strong
 	2584.1.1={birth=yes}
-	2630.12.14={death=yes}
+	2624.1.1={death=yes}
 }
 4000231={
 	name="John"
@@ -2493,7 +2500,7 @@
 	add_trait=just
 	add_trait=strong
 	2593.1.1={birth=yes}
-	2645.6.27={death=yes}
+	2650.3.1={death=yes}
 }
 
 
@@ -2573,14 +2580,13 @@
 	name="Benedict"
 	disallow_random_traits=yes
     culture=ontarian
-   	religion=high_church
+   	religion=anglo_catholic
 	add_trait=mastermind_theologian
 	add_trait=charitable
 	add_trait=just
 	add_trait=architect
 	add_trait=scholar
 	add_trait=monk
-	add_trait=high_anglican
 	add_trait=erudite
 	add_trait=diligent
 	2622.12.11={birth=yes}
@@ -2588,39 +2594,33 @@
 	2700.1.1={death=yes}
 }
 4000247={
-	name="Joseph"
+	name="Anna"
+	female=yes
 	disallow_random_traits=yes
     culture=ontarian
    	religion=high_church
+	secret_religion=angeline
 	add_trait=mastermind_theologian
-	add_trait=charitable
+	add_trait=bisexual
 	add_trait=just
-	add_trait=architect
+	add_trait=lustful
 	add_trait=scholar
-	#add_trait=monk
+	add_trait=fair
 	add_trait=high_anglican
 	add_trait=erudite
 	add_trait=diligent
-	add_claim=b_scarborough_ON
-	2622.12.11={birth=yes}
-	2663.1.1={employer=4000125}
+	effect = {add_lover=1867007}
+	effect = {add_lover=4000138}
+	2646.12.11={birth=yes}
 	2700.1.1={death=yes}
 }
 4000248={
 	name="Andrew"
 	disallow_random_traits=yes
     culture=ontarian
-   	religion=high_church
-	add_trait=mastermind_theologian
-	add_trait=charitable
-	add_trait=just
-	add_trait=architect
-	add_trait=scholar
-	#add_trait=monk
-	add_trait=high_anglican
+   	religion=anglo_catholic
 	add_trait=erudite
 	add_trait=diligent
-	add_claim=b_scarborough_ON
 	2622.12.11={birth=yes}
 	2663.1.1={employer=4000125}
 	2700.1.1={death=yes}
@@ -2629,17 +2629,12 @@
 	name="Charles"
 	disallow_random_traits=yes
     culture=ontarian
-   	religion=high_church
+   	religion=anglo_catholic
 	add_trait=mastermind_theologian
 	add_trait=charitable
 	add_trait=just
-	add_trait=architect
-	add_trait=scholar
-	#add_trait=monk
-	add_trait=high_anglican
-	add_trait=erudite
 	add_trait=diligent
-	add_claim=b_scarborough_ON
+
 	2622.12.11={birth=yes}
 	2665.1.1={employer=1857082}
 	2700.1.1={death=yes}
@@ -2648,17 +2643,9 @@
 	name="Bruce"
 	disallow_random_traits=yes
     culture=ontarian
-   	religion=high_church
-	add_trait=mastermind_theologian
-	add_trait=charitable
-	add_trait=just
-	add_trait=architect
-	add_trait=high_church_bishop_heir
-	#add_trait=monk
-	add_trait=high_anglican
+   	religion=anglo_catholic
 	add_trait=erudite
 	add_trait=diligent
-	#add_claim=b_scarborough_ON
 	2622.12.11={birth=yes}
 	2665.1.1={employer=1857082}
 	2700.1.1={death=yes}
@@ -2667,17 +2654,14 @@
 	name="Peter"
 	disallow_random_traits=yes
     culture=ontarian
-   	religion=high_church
+   	religion=anglo_catholic
 	add_trait=mastermind_theologian
 	add_trait=charitable
 	add_trait=just
 	add_trait=architect
 	add_trait=scholar
-	#add_trait=monk
-	add_trait=high_anglican
-	add_trait=erudite
+	add_trait=monk
 	add_trait=diligent
-	add_claim=b_scarborough_ON
 	2622.12.11={birth=yes}
 	2665.1.1={employer=1857082}
 	2700.1.1={death=yes}
@@ -2686,17 +2670,13 @@
 	name="Thomas"
 	disallow_random_traits=yes
     culture=ontarian
-   	religion=high_church
-	add_trait=mastermind_theologian
+   	religion=anglo_catholic
 	add_trait=charitable
 	add_trait=just
 	add_trait=architect
 	add_trait=scholar
-	#add_trait=monk
-	add_trait=high_anglican
-	add_trait=high_church_bishop_heir
+	add_trait=monk
 	add_trait=diligent
-	#add_claim=b_scarborough_ON
 	2622.12.11={birth=yes}
 	2665.1.1={employer=1857082}
 	2700.1.1={death=yes}
@@ -2705,7 +2685,7 @@
 	name="John"
 	disallow_random_traits=yes
     culture=ontarian
-   	religion=evangelical
+   	religion=anglo_catholic
 	add_trait=mastermind_theologian
 	add_trait=charitable
 	add_trait=just
@@ -2715,7 +2695,6 @@
 	#add_trait=high_anglican
 	add_trait=erudite
 	add_trait=diligent
-	add_claim=b_scarborough_ON
 	2622.12.11={birth=yes}
 	2665.1.1={employer=1857082}
 	2700.1.1={death=yes}
