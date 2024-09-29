@@ -3053,3 +3053,38 @@
     2666.4.1={birth=yes}
     2750.1.1={death=yes}
 }
+1867193={
+	name="Baljeet"
+	martial=7
+	diplomacy=5
+	intrigue=5
+	stewardship=4
+	learning=5
+	culture=indie
+	religion=traditionalist
+	trait=brave
+	trait=erudite
+	trait=tough_soldier
+	effect = {add_friend=1867194}
+	2630.7.27={birth=yes}
+	2660.1.1={
+		employer=1867194
+	}
+	2700.1.15={death=yes}
+}
+1867194={
+	name="Buford"
+	martial=12
+	diplomacy=5
+	intrigue=5
+	stewardship=4
+	learning=5
+	culture=ontarian
+	religion=anglo_catholic
+	trait=brave
+	trait=ambitious
+	trait=tough_soldier
+	effect = {add_friend=1867193}
+	2630.7.27={birth=yes}
+	2700.1.15={death=yes}
+}

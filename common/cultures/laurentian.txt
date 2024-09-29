@@ -374,6 +374,34 @@ laurentian = {
 		mother_name_chance = 5
 	}
 	
+	indie = { # Indo-Aryan
+		graphical_cultures = { indiangfx muslimgfx }
+		unit_graphical_cultures = { muslimgfx }
+
+		
+		color = { 0.8 0.3 0.2 }
+	
+		male_names = {
+			Ajit Amar "Amar Dasi" Amir Angad Arjun Atar Basawa Bhagwant Bhaimani Budh Chand Charat 
+			Damodar Dasu Datu Dayaram Didar Farid Fateh Gobind Gurdita 
+			Hargobind Hari "Har Krishan" "Har Rai" "Jai Ram" Jetha Jujhar 
+			Kalyan Kapur Kehar Kharak Khushal Lahna Lakhmichand Laxman 
+			Mahadev Mohan Mohri Nanak Narayan Nodha Partap Pheru Prithichand Prithvi "Ram Rai" Ranjit Ranjor 
+			Sahdev Shamsher Sher Srichand "Tegh Bahadur" "Tej Bhan" Thakur Zorawar
+		}
+		female_names = {
+			Amro Anokhi Anup Begum Bhani Dani Gujri Jodhabai Khivi Kishan 
+			Lachmi Nanaki Nihal Ramo Sabhirai Sahib Sulakhni Sundari Tripta 
+		}
+		
+		dynasty_title_names = yes
+		founder_named_dynasties = yes
+		
+		castes = yes
+		
+		modifier = default_culture_modifier
+	}
+	
 	prodnanici = {
 		graphical_cultures = { croatsouthslavicgfx }
 		
