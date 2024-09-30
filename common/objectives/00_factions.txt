@@ -4424,12 +4424,16 @@ faction_independence = {
 			FROM = { pacifist = yes }
 		}
 		
-		modifier = {
+		modifier = { #UyC goes nuts for independence
+			factor = 2
+			government = usos_y_costumbres_government
+	
+		}
+		modifier = { 
 			factor = 0
 			is_patrician = yes
 			is_merchant_republic = no
 		}
-	
 		modifier = {
 			factor = 0
 			liege = {
