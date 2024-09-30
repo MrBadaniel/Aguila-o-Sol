@@ -612,6 +612,7 @@
 	trait=dead_crown_ontario
 	give_nickname = nick_the_survivor
 	2546.3.5={birth=yes}
+	2582.3.1={add_spouse=4000243}
 	2580.1.14={death=yes}
 }
 4000031={
@@ -624,7 +625,7 @@
 	give_nickname =	nick_the_submissive
 	trait=dead_crown_ontario
 	2546.1.1={birth=yes}
-	2580.1.1={add_spouse=4000243}
+	2572.6.1={add_spouse=4000243}
 	2582.1.1={death={
 		death_reason=death_execution
 			killer=4000030
@@ -642,7 +643,6 @@
 	trait=mountie
 	#trait=high_church
 	2546.1.1={birth=yes}
-	2598.1.1={add_spouse=4000243}
 	2599.1.1={death={
 			death_reason=death_battle
 			killer=1857086
@@ -2540,9 +2540,11 @@
 	female=yes
 	father=4000021
 	2550.1.1={birth=yes}
-	#2570.1.1={add_spouse=4000028}
-	#2580.1.1={add_spouse=4000031}
-	#2598.1.1={add_spouse=4000032}
+	2570.1.1={add_spouse=4000028}
+#	2572.3.10={remove_spouse=4000028}
+	2572.6.1={add_spouse=4000031}
+#	2582.1.1={remove_spouse=4000031}
+	2582.3.1={add_spouse=4000030}
 	2602.1.1={death={
 		death_reason=death_suicide
 		}
