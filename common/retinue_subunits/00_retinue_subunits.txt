@@ -25,6 +25,7 @@ TRIBAL_PIETY_RET_1 = {
 			religion = celtic_pagan
 			religion = revelationist_reformed
 			religion = revelationist
+			government = usos_y_costumbres_government
 		}
 	}
 	
@@ -56,6 +57,7 @@ TRIBAL_PIETY_RET_2 = {
 			religion = celtic_pagan
 			religion = revelationist_reformed
 			religion = revelationist
+			government = usos_y_costumbres_government
 		}
 	}
 	
@@ -75,7 +77,10 @@ TRIBAL_RET_1 = {
 	first_amount = 150
 	
 	potential = {
+		OR= {
 		is_tribal = yes
+		government = usos_y_costumbres_government
+		}
 	}
 	
 	hire_cost = 25
@@ -98,7 +103,10 @@ TRIBAL_RET_2 = {
 	second_amount = 50
 	
 	potential = {
+		OR= {
 		is_tribal = yes
+		government = usos_y_costumbres_government
+		}
 	}
 	
 	hire_cost = 50
@@ -123,7 +131,10 @@ TRIBAL_RET_3 = {
 	second_amount = 50
 	
 	potential = {
+		OR= {
 		is_tribal = yes
+		government = usos_y_costumbres_government
+		}
 	}
 	
 	hire_cost = 75
@@ -148,7 +159,10 @@ TRIBAL_RET_4 = {
 	second_amount = 50
 	
 	potential = {
+		OR= {
 		is_tribal = yes
+		government = usos_y_costumbres_government
+		}
 	}
 	
 	hire_cost = 75
@@ -212,8 +226,11 @@ RETTYPE_INF1 =
 	second_amount = 50
 	
 	potential = {
-		is_nomadic = no
-		is_tribal = no		
+		NOT = {
+		is_nomadic = yes
+		is_tribal = yes	
+		government = usos_y_costumbres_government
+		}
 	}
 	
 	modifier = {
@@ -231,8 +248,11 @@ RETTYPE_INF2 =
 	second_amount = 50
 	
 	potential = {
-		is_nomadic = no
-		is_tribal = no		
+		NOT = {
+		is_nomadic = yes
+		is_tribal = yes	
+		government = usos_y_costumbres_government
+		}
 	}
 	
 	modifier = {
@@ -250,8 +270,11 @@ RETTYPE_CAV1 =
 	second_amount = 185
 	
 	potential = {
-		is_nomadic = no
-		is_tribal = no		
+		NOT = {
+		is_nomadic = yes
+		is_tribal = yes	
+		government = usos_y_costumbres_government
+		}
 	}
 	
 	modifier = {
@@ -268,8 +291,11 @@ RETTYPE_SKIR1 =
 	second_amount = 50
 	
 	potential = {
-		is_nomadic = no
-		is_tribal = no		
+		NOT = {
+		is_nomadic = yes
+		is_tribal = yes	
+		government = usos_y_costumbres_government
+		}
 	}
 	
 	modifier = {
@@ -287,8 +313,11 @@ RETTYPE_SKIR2 =
 	second_amount = 400
 	
 	potential = {
-		is_nomadic = no
-		is_tribal = no		
+		NOT = {
+		is_nomadic = yes
+		is_tribal = yes	
+		government = usos_y_costumbres_government
+		}
 	}
 	
 	modifier = {
