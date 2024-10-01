@@ -4334,6 +4334,7 @@ faction_independence = {
 					clan_opinion = { who = LIEGE value = 0 }
 				}
 			}
+			OR = { government = usos_y_costumbres_government }
 
 			# No independence factions in merchant republics
 			NOT = {
@@ -4425,7 +4426,7 @@ faction_independence = {
 		}
 		
 		modifier = { #UyC goes nuts for independence
-			factor = 2
+			factor = 12
 			government = usos_y_costumbres_government
 	
 		}
@@ -4446,6 +4447,7 @@ faction_independence = {
 		modifier = {
 			factor = 0
 			lower_tier_than = DUKE
+			ROOT = { NOT = { government = usos_y_costumbres_government } }
 			OR = {
 				NOT = { religion_group = pagan_group }
 				is_reformed_religion = yes
@@ -4718,6 +4720,11 @@ faction_independence = {
 				}
 			}
 		}
+		modifier = { #UyC goes nuts for independence
+            factor = 12
+            ROOT = { government = usos_y_costumbres_government }
+    
+        }
 		modifier = {
 			factor = 0.01
 			ROOT = {
@@ -4833,6 +4840,7 @@ faction_independence = {
 		modifier = {
 			factor = 0
 			lower_tier_than = KING
+			ROOT = { NOT = { government = usos_y_costumbres_government } }
 			OR = {
 				NOT = { religion_group = pagan_group }
 				is_reformed_religion = yes
@@ -4930,6 +4938,7 @@ faction_independence = {
 		
 		modifier = {
 			factor = 0
+			ROOT = { NOT = { government = usos_y_costumbres_government } }
 			liege = { 
 				NOT = { year = 2950 }
 				primary_title = { is_tribal_type_title = yes }
