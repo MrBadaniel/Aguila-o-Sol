@@ -632,11 +632,12 @@
 	trait=wroth
 	trait=diligent
 	2629.6.19={birth=yes
-		effect={
-			set_character_flag=no_historical_family
-		}
+		#effect={
+		#	set_character_flag=no_historical_family
+		#}
 	}
 	2660.1.1={effect={add_lover=1763030}}
+	2660.1.1={add_spouse=1763030}
 	2670.1.28={death=yes}
 }
 
@@ -2956,6 +2957,7 @@
 1620249={
 	name="Robert"
 	dynasty=1780012
+	father=1620250
 	culture=yankee
 	religion=sedevacantist
 	martial=15
@@ -2965,7 +2967,7 @@
 	learning=4
 	trait=brilliant_strategist
 	trait=ambitious
-	trait=peasant_leader
+#	trait=peasant_leader
 	trait=zealous
 	trait=hunter
 	trait=wroth
@@ -2978,4 +2980,114 @@
 	}
 	#2660.1.1={effect={add_lover=1763030}}
 	2649.2.17={death=yes}
+}
+1620250={
+	name="William"
+	dynasty=1780012
+	father=1620251
+	culture=yankee
+	religion=sedevacantist
+	martial=7
+	diplomacy=7
+	stewardship=6
+	intrigue=3
+	learning=4
+	trait=tough_soldier
+	trait=content
+	trait=zealous
+	trait=kind
+	trait=diligent
+	2560.1.1={birth=yes
+		#effect={
+		#	set_character_flag=no_historical_family
+		#}
+	}
+	#2660.1.1={effect={add_lover=1763030}}
+	2605.5.17={death=yes}
+}
+1620251={
+	name="Fredrick"
+	dynasty=1780012
+	father=1620252
+	culture=yankee
+	religion=sedevacantist
+	martial=15
+	diplomacy=4
+	stewardship=4
+	intrigue=6
+	learning=14
+	trait=mastermind_theologian
+	trait=ambitious
+	trait=kind
+	trait=zealous
+	trait=charitable
+	trait=saint
+	trait=chaste
+	trait=humble
+	give_nickname=nick_the_saint
+	trait=diligent
+	2535.1.1={birth=yes
+		#effect={
+		#	set_character_flag=no_historical_family
+		#}
+	}
+	#2660.1.1={effect={add_lover=1763030}}
+	2590.1.1={death=yes}
+}
+1620252={
+	name="Robert"
+	dynasty=1780012
+	culture=yankee
+	religion=sedevacantist
+	martial=18
+	diplomacy=4
+	stewardship=4
+	intrigue=6
+	learning=4
+	trait=brilliant_strategist
+	trait=ambitious
+	trait=peasant_leader
+	trait=zealous
+	trait=strategist
+	trait=wroth
+	give_nickname=nick_of_the_nine_hostages
+	trait=diligent
+	2490.5.10={birth=yes
+		#effect={
+		#	set_character_flag=no_historical_family
+		#}
+	}
+	#2660.1.1={effect={add_lover=1763030}}
+	2579.1.1={death=yes}
+}
+1620253={
+	name="Christopher"
+	dynasty=1780012
+	culture=yankee
+	father=1620036
+	mother=1763030
+	religion=sedevacantist
+	martial=10
+	diplomacy=8
+	stewardship=8
+	intrigue=6
+	learning=8
+	trait=mastermind_theologian
+	trait=ambitious
+	trait=paranoid
+	trait=zealous
+	trait=wroth
+	trait=diligent
+	2662.6.10={birth=yes}
+	2700.1.28={death=yes}
+}
+1620254={
+	name="Bruce"
+	dynasty=1780012
+	culture=yankee
+	father=1620036
+	mother=1763030
+	religion=sedevacantist
+	2663.5.19={birth=yes}
+	2700.1.28={death=yes}
 }
