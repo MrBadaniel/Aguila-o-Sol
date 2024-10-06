@@ -687,7 +687,7 @@ christian = {
 		intermarry = fidencista
 		intermarry = sacred_heart
 		intermarry = patria_grande
-		intermarry = Gregorian
+		intermarry = anglo_catholic
 		####intermarry = la_hermandad
 	}
 	neognostic = {
@@ -797,11 +797,11 @@ christian = {
 		intermarry = purificador
 		intermarry = celeste
 		intermarry = exovedate
-
+	
 		intermarry = fidencista
 		intermarry = sacred_heart
 		intermarry = true_cross
-		intermarry = Gregorian
+		intermarry = anglo_catholic
 		####intermarry = la_hermandad
 	}
 	nestorian = {
@@ -857,7 +857,7 @@ christian = {
 
 		intermarry = sacred_heart
 		intermarry = fidencista
-		intermarry = Gregorian
+		intermarry = anglo_catholic
 		####intermarry = la_hermandad
 	}
 	latinate = {
@@ -923,7 +923,7 @@ christian = {
 		intermarry = true_cross
 		intermarry = cristo_rey
 		intermarry = reformista
-		intermarry = Gregorian
+		intermarry = anglo_catholic
 		intermarry = sacred_heart
 		intermarry = fidencista
 		####intermarry = la_hermandad
@@ -996,7 +996,7 @@ christian = {
 		intermarry = true_cross
 		intermarry = cristo_rey
 		intermarry = reformista
-		intermarry = Gregorian
+		intermarry = anglo_catholic
 		####intermarry = la_hermandad
 	}
 
@@ -1051,7 +1051,7 @@ christian = {
 		intermarry = true_cross
 		intermarry = cristo_rey
 		intermarry = reformista
-		intermarry = Gregorian
+		intermarry = anglo_catholic
 		####intermarry = la_hermandad
 		
 		features = {
@@ -1129,7 +1129,7 @@ christian = {
 		intermarry = true_cross
 		intermarry = cristo_rey
 		intermarry = reformista
-		intermarry = Gregorian
+		intermarry = anglo_catholic
 		####intermarry = la_hermandad
 	}
 
@@ -1247,7 +1247,7 @@ christian = {
 		intermarry = true_cross
 		intermarry = cristo_rey
 		intermarry = reformista
-		intermarry = Gregorian
+		intermarry = anglo_catholic
 		####intermarry = la_hermandad
 	}
 
@@ -1353,7 +1353,7 @@ christian = {
 		intermarry = celeste
 		intermarry = nazarene
 		intermarry = true_cross
-		intermarry = Gregorian
+		intermarry = anglo_catholic
 		####intermarry = la_hermandad
 
 		intermarry = revelationist
@@ -1405,7 +1405,7 @@ christian = {
 		intermarry = alurista
 		intermarry = celeste
 		intermarry = true_cross
-		intermarry = Gregorian
+		intermarry = anglo_catholic
 		####intermarry = la_hermandad
 	}
 
@@ -1702,7 +1702,7 @@ christian = {
 		intermarry = high_church
 		intermarry = anabaptist
 		intermarry = apostolic
-
+		intermarry = anglo_catholic
 		intermarry = neognostic
 		intermarry = sedevacantist
 		intermarry = latinate
@@ -1755,7 +1755,7 @@ christian = {
 		intermarry = high_church
 		intermarry = anabaptist
 		intermarry = apostolic
-
+		intermarry = anglo_catholic
 		intermarry = neognostic
 		intermarry = sedevacantist
 		intermarry = latinate
@@ -1817,7 +1817,7 @@ christian = {
 		intermarry = high_church
 		intermarry = anabaptist
 		#intermarry = apostolic
-
+		intermarry = anglo_catholic
 		intermarry = neognostic
 		intermarry = sedevacantist
 		intermarry = latinate
@@ -1983,7 +1983,7 @@ christian = {
 		intermarry = cetic
 		intermarry = orthodox
 		intermarry = true_cross
-		intermarry = Gregorian
+		intermarry = anglo_catholic
 		####intermarry = la_hermandad
 		intermarry = imamite
 		intermarry = qingzhen
@@ -2125,7 +2125,7 @@ christian = {
 		female_temple_holders = no
 		
         intermarry = edenite 		
-		
+		intermarry = anglo_catholic
 		religious_clothing_head = 10
 		religious_clothing_priest = 10
 	}
@@ -2256,7 +2256,7 @@ christian = {
 		intermarry = moravian
 		intermarry = penitente
 		intermarry = purificador
-		intermarry = Gregorian
+		intermarry = anglo_catholic
 		####intermarry = la_hermandad
 	}
 
@@ -2563,6 +2563,58 @@ cult_of_saints= {
 
 	#default interface
 
+	mama_tatda = {
+	icon = 9
+		high_god_name = GOD_DIOS
+		god_names = {
+			GOD_MAMA GOD_MARIA_VIRGEN GOD_JESUCRISTO  GOD_TATA
+		}
+		evil_god_names = {
+			EL_DIABLO WHITE_MAN
+		}
+		color = { 0.1 0.5 0.3 }
+		unit_modifier = {				#Special features are added via reformation. If HF is not installed, default features are applied on reformed religion by event.
+			garrison_size = 0.3
+			levy_size = 0.2
+
+			key = "DEF_RELIGION"
+		}
+		unit_home_modifier = {
+			land_morale = 0.8
+			light_infantry_defensive = 0.8
+			heavy_infantry_defensive = 0.8
+			pikemen_defensive = 0.8
+			light_cavalry_defensive = 0.8
+			knights_defensive = 0.8
+			archers_defensive = 0.8
+			horse_archers_defensive = 0.8
+			camel_cavalry_defensive = 0.8
+			war_elephants_defensive = 0.8
+			mushers_defensive = 0.8
+			ballestero_defensive = 0.8
+			cossacks_defensive = 0.8
+			cowboys_defensive = 0.8
+			pike_cavalry_defensive = 0.8
+			samurai_defensive = 0.8
+
+			garrison_size = 0.4
+
+			key = "DEF_RELIGION_HOME_TERRITORY"
+		}
+
+		can_grant_divorce = yes
+		female_temple_holders = yes
+		priests_can_inherit = no
+		priests_can_marry = yes
+		allow_rivermovement = yes
+		allow_looting = yes
+
+
+		defensive_attrition = yes
+		aggression = 0.5
+		hard_to_convert = yes
+
+	}
 	Gregorian = {
 		graphical_culture = gregoriangfx
 
