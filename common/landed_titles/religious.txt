@@ -285,7 +285,30 @@ d_norse_pagan_reformed = {
 	
 	dynasty_title_names = no 	# Will not be named "Seljuk", etc.
 }
+d_mama_tatda = {
+	color={ 160 220 10 }
+	color2={ 220 220 0 }
+	
+	capital = 2574 # Chiriqui Grande
+	
+	title = "MAMA_PROPHET"
+	title_female = "MAMA_PROPHETESS"
+	foa = "POPE_FOA"
+	short_name = yes
+	creation_requires_capital = yes
+	controls_religion = mama_tatda
+	
+	dignity = 100
+	caliphate = yes
+	
+	allow = {
+		has_landed_title = c_chiriqui_grande
+		num_of_holy_sites = 3
+		piety = 500
+		wealth = 250
+	}
 
+}
 d_occultist_reformed = {
 	color={ 60 120 100 }
 	color2={ 220 220 0 }
