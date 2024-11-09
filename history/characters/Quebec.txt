@@ -538,7 +538,7 @@
 	give_nickname=nick_the_bold
 	father=1763004
 	mother=1763005
-	2536.3.7={birth=yes}
+	2550.3.7={birth=yes}
 	2588.3.25={
 		effect={
 			set_character_flag=recieved_royal_marriage_aid_duty
@@ -577,7 +577,7 @@
 	trait=pneumonic
 	father=1763129
 	mother=1763142
-	2571.11.2={birth=yes}
+	2551.11.2={birth=yes}
 	2588.3.25={add_spouse=1763040}
 	2647.3.12={death={death_reason=death_trait}
 	}
@@ -675,19 +675,21 @@
 	dna="cjjchoeohod"
 	culture=quebecois
 	religion=ursuline
-	martial=3
+	martial=6
 	diplomacy=5
 	stewardship=1
 	intrigue=4
 	learning=3
-	trait=fortune_builder
+	trait=skilled_tactician
 	trait=envious
+	trait=cavalry_leader
 	trait=honest
+	claim = d_aroostook
 	father=1763041
 	mother=1763040
 	2599.5.30={birth=yes}
 	2621.1.6={add_spouse=1763047}
-	2678.3.21={death=yes}
+	2700.3.21={death=yes}
 }
 
 1763047={
@@ -2884,4 +2886,23 @@
 	religion=ursuline
 	2612.2.3={birth=yes}
 	2665.7.12={death=yes}
+}
+1763182={
+	name="Lionel"
+	dynasty=1796003
+	dna="cjjchoeohod"
+	culture=quebecois
+	religion=ursuline
+	father=1763041
+	mother=1763040
+	trait=scarred
+	trait=brave
+	trait=ambitious
+	trait=kind
+	2590.1.1={birth=yes}
+	2629.12.5={death={
+			death_reason=death_murder
+			killer=1763059
+		}
+	}
 }
