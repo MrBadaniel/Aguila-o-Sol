@@ -148,7 +148,7 @@
 	name="Simon"
 	dynasty=1867027
 	culture=ontarian
-	religion=nonconformist
+	religion=Gregorian
 	father=1667011
 	trait=strategist
 	trait=skilled_tactician
@@ -218,22 +218,57 @@
 	2700.1.1={death=yes}
 }
 
-1667019={
+1667019={ # REMEMBRANT PROPHET
 	name="Michael"
 	dynasty=1867027
 	culture=ontarian
-	religion=nonconformist
+	religion=Gregorian
 	father=1667011
-	martial=6
+	martial=16
 	diplomacy=6
 	trait=drunkard
-	trait=flamboyant_schemer
+	trait=brilliant_strategist
 	trait=gregarious
 	trait=brave
-	add_claim=c_lakehead
+	trait=ambitious
+	trait=possessed
 	2644.1.1={birth=yes}
 	2660.1.1={add_spouse=1667044}
-	2665.1.1={capital=c_aguasabon}
+	#2665.1.1={capital=c_aguasabon}
+	2666.1.1 = {
+    effect = {
+        spawn_unit = {
+            owner = ROOT
+            province = capital_scope
+            home = capital_scope
+            
+            troops = {
+				horse_archers = { 10000 }
+            }
+            
+            attrition = 0
+            disband_on_peace = no
+            maintenance_multiplier = 0
+			}
+		
+		}
+	   effect = {
+        spawn_unit = {
+            owner = ROOT
+            province = capital_scope
+            home = capital_scope
+            
+            troops = {
+                knights = { 10000 }
+            }
+            
+            attrition = 0
+            disband_on_peace = no
+            maintenance_multiplier = 0
+			}
+		}
+	}
+
 	2700.1.1={death=yes}
 }
 
@@ -566,10 +601,9 @@
 
 1667044={
 	name="Janice"
-	female=yes
-				
+	female=yes	
 	culture=ojibwe
-	religion=nonconformist
+	religion=Gregorian
 	trait=fair
 	trait=honest
 	trait=kind
@@ -585,7 +619,7 @@
 	name="Lindsay"
 	dynasty=1867027
 	culture=ontarian
-	religion=nonconformist
+	religion=Gregorian
 	father=1667019
 	mother=1667044
 	trait=fair
