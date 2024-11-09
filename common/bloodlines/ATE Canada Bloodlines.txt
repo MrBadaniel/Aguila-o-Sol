@@ -47,9 +47,13 @@ bloodline_theodore = {
 	}
 
 bloodline_grand_patron = {
-	Gregorian_opinion_opinion = 20
+	Gregorian_opinion = 20
 	monthly_character_prestige = 1
 	monthly_character_piety = 1
+	command_modifier = {
+		religious_enemy = 0.3
+		speed = 0.15
+	}
 	inheritance = patrilineal
 	allow_bastards = no
 	picture = GFX_bloodlines_symbol_cross_crusader

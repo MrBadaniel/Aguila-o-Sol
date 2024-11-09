@@ -142,7 +142,10 @@ decisions = {
 			is_playable = yes
 			is_adult = yes
 			prisoner = no
+			OR = {
 			religion = high_church
+			religion = nonconformist
+			}
 			NOT = { has_character_modifier = bible_study_timer }
 			NOT = {	has_character_flag = studying_bible }
 			NOT = {
@@ -150,7 +153,14 @@ decisions = {
 			}
 		}
 		allow = {
+		OR = {
+			religion = nonconformist
+			AND = {
+			religion = high_church
 			trait = low_anglican
+			}
+			
+		}
 			war = no
 			custom_tooltip = {
 				text = UNOCCUPIED_DEMESNE_TITLE
@@ -529,7 +539,10 @@ decisions = {
 			NOT = {
 				has_alternate_start_parameter = { key = religion_names value = random }
 			}
+			OR = {
 			religion = high_church
+			religion = anglo_catholic
+			}
 			is_adult = yes
 			#has_anglican_select_trigger = no
 			#NOT = {has_character_flag = anglican_select}
@@ -544,8 +557,10 @@ decisions = {
 			NOT = {
 				trait = cynical
 			}
-			AND = {
+			
+			OR = {
 				trait = high_anglican
+				religion = anglo_catholic
 			}
 		}
 		effect = {
