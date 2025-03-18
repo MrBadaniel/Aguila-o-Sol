@@ -64,7 +64,6 @@ nick_the_stolen = {}
 nick_born_in_crimson = {}
 nick_the_maid = {}
 nick_the_witch_of_ventura = {}
-nick_el_guero = {}
 nick_the_lark = {}
 nick_the_purple_cow = {}
 nick_the_golden_mouthed = {}
@@ -106,8 +105,116 @@ nick_the_only_mountain_of_chac={}
 nick_la_madrina={}
 nick_el_toro={}
 nick_el_caballero={}
-nick_el_indio={}
 nick_el_frio={}
 nick_el_gallardo={}
 nick_el_bombardero={}
-nick_el_diamante_negro=}
+nick_el_diamante_negro={}
+
+#######
+nick_el_guero = {
+	allow = {
+		is_adult = yes
+		is_female = no
+		AND = {
+			OR = {
+				culture_group = mexicano
+				culture_group = centrolatino
+				culture_group = mesoamerican
+				culture_group = mayan
+				culture_group = norteno
+			}
+			OR = {
+				race = german
+				race = guero
+				race = white
+				race = italian
+				race = mediterranean
+			}
+		}
+	}
+	chance = {
+		factor = 1500
+		modifier =	{
+			factor = 0.5
+			culture = menomex
+		}
+		modifier = {
+			factor = 1.5
+			culture_group = norteno
+		}
+		modifier = {
+			factor = 0.2
+			is_playable = no
+		}
+	}
+}
+nick_la_guera = {
+	allow = {
+		is_adult = yes
+		is_female = yes
+		AND = {
+			OR = {
+				culture_group = mexicano
+				culture_group = centrolatino
+				culture_group = mesoamerican
+				culture_group = mayan
+				culture_group = norteno
+			}
+			OR = {
+				race = german
+				race = guero
+				race = white
+				race = italian
+				race = mediterranean
+			}
+		}
+	}
+	chance = {
+		factor = 1200
+		modifier =	{
+			factor = 0.5
+			culture = menomex
+		}
+		modifier = {
+			factor = 1500
+			culture_group = norteno
+		}
+		modifier ={
+			factor = 0.2
+			is_playable = no
+		}
+	}
+}			
+nick_el_rotoplas = {
+	allow = {
+		age >= 15
+		OR = {
+			culture_group = mexicano
+			culture_group = norteno
+		}
+		AND = {
+			trait = is_fat
+			OR = {
+				trait = hedonist
+				trait = gluttonous
+			}
+		}
+	}
+	chance = {
+		factor = 1
+		modifier = {
+			factor 1.5
+			OR = {
+			trait = hedonist
+			trait = gluttonous
+			}
+		} 
+	}
+			
+}
+nick_el_gringo = {}
+nick_la_gringa = {}
+nick_el_macho = {}
+nick_la_matrona = {}
+nick_el_indio={}				
+		
