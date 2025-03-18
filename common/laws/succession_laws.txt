@@ -1943,6 +1943,7 @@ succession_laws = {
 				title = d_quorum_of_the_twelve
 				title = d_celtic_pagan_reformed
 				title = d_quorum_of_the_lamanites
+				title = d_montane
 				title = d_anglo_catholic #using a titular duchy based in toronto, havent renamed it yet in code
 			}
 			temporary = no
@@ -1969,6 +1970,7 @@ succession_laws = {
 				holder_scope = { 
 					NOT = { religion = catholic }
 					NOT = { religion = anglo_catholic }
+					NOT = { religion = montane }
 					NOT = { religion = ursuline }
 				#	NOT = { religion = high_church }
 					NOT = { religion = neogodbeite }
@@ -2034,6 +2036,7 @@ succession_laws = {
 					religion = strangite
 					religion = sol_invicta
 					religion = anglo_catholic
+					religion = montane
 
 				}
 				is_merchant_republic = no
@@ -2054,9 +2057,19 @@ succession_laws = {
                     is_landless_type_title = yes
                     is_primary_type_title = yes
                 }
-                
-                title = d_anglo_catholic
+                OR = {
+                	title = d_anglo_catholic
+					title = d_montane
+				}
             }
+	#		trigger_else_if = {
+    #            limit = {
+    #                is_landless_type_title = yes
+    #                is_primary_type_title = yes
+    #            }
+    #            
+    #            title = d_montane
+    #        }
 		}
 		effect = {
 			succession = catholic_bishopric
