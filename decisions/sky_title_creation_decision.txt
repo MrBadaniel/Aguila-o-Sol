@@ -43,34 +43,41 @@ decisions = {
 
 		allow = {
 			war = no
-			has_landed_title = d_belize
-			completely_controls = d_belize
-			has_landed_title = d_belmopan
-			completely_controls = d_belmopan
+			AND = {
+				OR = {
+					has_landed_title = d_belize
+					completely_controls = d_belize
+				}
+				OR = {
+					has_landed_title = d_belmopan
+					completely_controls = d_belmopan
+				}
+			}
 			OR = {
-				AND = {
+				OR = {
 					has_landed_title = d_corozal
 					completely_controls = d_corozal
 				}
-				AND = {
+				OR = {
 					has_landed_title = d_orange_walk
 					completely_controls = d_orange_walk
 				}
-				AND = {
+				OR = {
 					has_landed_title = d_toledo
 					completely_controls = d_toledo
 				}
 			}
-			prestige = 800
-			piety = 500
+			prestige = 1000
+			piety = 250
 			wealth = 600
 		}
 
 		effect = {
 			prestige = 500
-			piety = -500
+			piety = -250
 			wealth = -600
-			give_nickname = nick_the_great
+		#	give_nickname = nick_the_great
+			set_character_flag = belize_founder
 			activate_title = { title = k_belize status = yes }
  			k_belize = {
 				grant_title = ROOT

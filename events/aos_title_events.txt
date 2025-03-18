@@ -1,0 +1,56 @@
+namespace = aos_title
+
+## BELIZE EVENTS
+character_event = { #Set up the narrative event for BELIZE
+    id = aos_title.0000
+
+	is_triggered_only = yes
+	hide_window = yes
+	
+	trigger = {
+		has_landed_title = k_belize
+		any_character = {
+			has_character_flag = belize_founder	#you got this upong taken the decision "create_belize" which is found in sky_title_creation_decision.txt
+			is_alive = yes
+		}
+	}
+	
+	immediate = {
+		ROOT = {
+			set_character_flag = first_belize_king
+			save_event_target_as = first_belize_king
+		}
+		narrative_event = {
+			id = aos_title.0001
+			days = 3
+		}
+	}
+}
+
+	
+narrative_event = { #Creation of Belize for the founder
+    id = aos_title.0001
+	title = "aos_title.0001.name"
+	picture = GFX_evt_jungle_kingdom
+    desc = aostitle.0001
+	
+	only_playable = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		any_character = {
+			has_character_flag = first_belize_king
+			is_alive = yes
+	}
+	
+	immediate = {
+		   event_target:first_belize_king = { 
+			clr_character_flag = belize_founder
+			clr_character_flag = first_belize_king
+		}
+	}
+	   
+    option = {
+       name = EVTOPTAaos_title.0001
+    }
+}
