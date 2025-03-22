@@ -575,7 +575,7 @@ character_event = {
 		}
 		any_realm_character = {
 			if = {
-				limit { has_character_modifier = opposes_destapado }
+				limit = { has_character_modifier = opposes_destapado }
 				remove_character_modifier = opposes_destapado
 			}
 			else = {
