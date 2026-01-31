@@ -1606,7 +1606,7 @@
 1650089={
 	name="Jacawitz"
 	dynasty=1546041
-	culture=yucateco
+	culture=yucatanense
 	religion=neomayan
 	trait=grey_eminence
 	trait=fair
@@ -1617,9 +1617,9 @@
 }
 
 1650090={
-	name="Blanca Sacnite"
+	name="Helena"
 	female=yes
-	culture=yucateco
+	culture=neoladino
 	religion=neomayan
 	trait=misguided_warrior
 	trait=cruel
@@ -1633,7 +1633,7 @@
 	name="Gabriela"
 	female=yes
 	dynasty=1546041
-	culture=yucateco
+	culture=neoladino
 	religion=neomayan
 	trait=grey_eminence
 	trait=fair
@@ -1641,14 +1641,16 @@
 	trait=honest
 	father=1650089
 	mother=1650090
-	2643.1.12={birth=yes}
+	2643.1.12={birth=yes
+		culture = yucatanense
+	}
 	2695.1.1={death=yes}
 }
 
 1650092={
 	name="Fausto"
 	dynasty=1546041
-	culture=yucateco
+	culture=yucatanense
 	religion=neomayan
 	trait=proud
 	trait=fair
@@ -2763,15 +2765,19 @@
 1670006={
 	name="Andrés"
 	dynasty=1546092
-	culture=yucateco
-	religion=sacred_heart
+	culture= mediterranean
+	religion=cristo_rey
 	diplomacy=7
 	learning=7
-	trait=marian_guadalupe
+#	trait=marian_guadalupe
 	trait=poet
 	trait=erudite
 	trait=just
-	2622.8.11={birth=yes}
+	father = 1431300
+	mother = 1431301
+	2622.8.11={birth=yes
+	culture = yucatanense
+	}
 	2679.5.30={death=yes}
 }
 

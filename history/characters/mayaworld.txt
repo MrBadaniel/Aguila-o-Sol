@@ -102,14 +102,81 @@ name="Gaspar"
 dynasty=154160
 culture=yucateco
 religion=qabantajik
-father=1431005
+father=1431007
 trait= martial_cleric
 trait= zealous
 trait= wroth
-2613.6.07={birth=yes}
+2613.11.17={birth=yes}
 2690.1.1={death=yes}
 }
-
+1431009 = {
+name="Antonio"
+dynasty=154160
+culture=yucateco
+religion=qabantajik
+trait = cynical
+trait = proud
+father=1431007
+2619.1.12={birth=yes}
+2690.1.1={death=yes}
+}
+1431010 = {
+name="Román"
+dynasty=154160
+culture=yucateco
+religion=qabantajik
+trait = cynical
+trait = proud
+father=1431007
+2619.3.30={birth=yes}
+2690.1.1={death=yes}
+}
+1431011 = {
+name="Gaspar"
+dynasty=154160
+culture=yucateco
+religion=qabantajik
+trait = cynical
+trait = proud
+father=1431009
+2638.1.07={birth=yes}
+2690.1.1={death=yes}
+}
+1431011 = {
+name="José"
+dynasty=154160
+culture=yucateco
+religion=qabantajik
+trait = cynical
+trait = proud
+father=1431010
+2641.12.17={birth=yes}
+2690.1.1={death=yes}
+}
+1431012 = {
+name="Francisca"
+female = yes
+dynasty=154160
+culture=yucateco
+religion=qabantajik
+trait = cynical
+trait = proud
+father=1431010
+2643.2.4={birth=yes}
+2690.1.1={death=yes}
+}
+1431012 = {
+name="Antonia"
+female = yes
+dynasty=154160
+culture=yucateco
+religion=qabantajik
+trait = cynical
+trait = proud
+father=1431010
+2647.12.31={birth=yes}
+2690.1.1={death=yes}
+}
 #Yucatan Republic past
 1431062 = {
 name = "Edmundo"
@@ -389,7 +456,6 @@ trait = idolizer
 		}
 	}
 }	
-
 ####LOUISVILLE
 1670051 = {
 	name="Roger" #This dude was the brother of Wilbur the adventurer; he was killed by the current family holding everglades
@@ -411,7 +477,7 @@ trait = idolizer
 	name="Guillermo" 
 	dynasty=1546040
 	culture=yucatanense
-	religion=americanist
+	religion=neomayan
     father = 1670049
 	trait = bastard
 	2661.11.13={birth=yes}
@@ -490,7 +556,7 @@ trait = idolizer
 	name = "Beatriz"
 	female=yes
 	dynasty=5200107 #Marin
-	culture=neomexicano
+	culture=mediterranean
 	religion=cristo_rey
 	father=6900645
 	2610.11.11={
@@ -515,7 +581,7 @@ trait = idolizer
 	name = "Beatriz" 
 	female=yes
 	dynasty=5200107
-	culture=neomexicano
+	culture=mediterranean
 	religion=cristo_rey
 	father=1431090
 	dna="cbaki0bcba0"
@@ -554,7 +620,7 @@ trait= chest_pain
 	name = "Lina" 
 	female=yes
 	dynasty=5200107 #Marín
-	culture=neomexicano
+	culture=mediterranean
 	religion=cristo_rey
 	father=6900645
 	2608.04.24 = {birth=yes culture = yucatanense}
@@ -656,7 +722,7 @@ trait= chest_pain
 	female=yes
 	dynasty=5200107 #Marín
 	dna=dcdflalaaa
-	culture=neomexicano
+	culture=mediterranean
 	religion=cristo_rey
 	martial=6
 	diplomacy=8
@@ -698,7 +764,7 @@ trait= chest_pain
 1431105= {
 	name="Eduardo"
 	dynasty=5200106 #Leomarín
-	culture=neomexicano
+	culture=mediterranean
 	dna="cgfjgaeddd" #neck chin mouth nose cheeks unused eyes ears hair_color eye_color
 	properties="acafek"
 	religion=cristo_rey
@@ -726,7 +792,7 @@ trait= chest_pain
 1431106= {
 	name="Fernando"
 	dynasty=5200106 #Leomarín
-	culture=neomexicano
+	culture=mediterranean
 	religion=cristo_rey
 	dna="agffd0dbe00"
 	properties="cc0h0k00000000000000000000000000000"
@@ -832,7 +898,7 @@ trait= chest_pain
 1431111 = {
 	name="Julio César"
 	dynasty=5200113 #Correa
-	culture=neomexicano
+	culture=mediterranean
 	dna="0k0kk0j0e00"
 	properties="ci000k00000000000000000000000000000"
 	religion=cristo_rey
@@ -1033,7 +1099,7 @@ trait= chest_pain
 	name="José"
 	female=no
 	dynasty=5200104 #Peniche
-	culture=neomexicano
+	culture=mediterranean
 	religion=cristo_rey
 	martial=9
 	diplomacy=3
@@ -1053,7 +1119,7 @@ trait= chest_pain
 	name="Paulino"
 	female=no
 	dynasty=5200104 #Peniche
-	culture=neomexicano
+	culture=mediterranean
 	religion=cristo_rey
 	martial=8
 	diplomacy=3
@@ -1156,7 +1222,7 @@ trait= chest_pain
 	name = "Miguel" 
 	female=no
 	dynasty=5200037 #de Montejo
-	culture=neomexicano
+	culture=mediterranean
 	religion=cristo_rey
 	martial=9
 	diplomacy=4
@@ -1178,7 +1244,7 @@ trait= chest_pain
 	name = "Francisco" #Adventurer ruler of Tayasal (d_nojpeten)
 	female=no
 	dynasty=5200037 #de Montejo
-	culture=neomexicano
+	culture=mediterranean
 	religion=cristo_rey
 	martial=9
 	diplomacy=4
@@ -1203,7 +1269,7 @@ trait= chest_pain
 	name = "Álvaro" #He kills the Lousville adventurer dude
 	female=no
 	dynasty=5200037 #de Montejo
-	culture=neomexicano
+	culture=mediterranean
 	religion=cristo_rey
 	martial=9
 	diplomacy=4
@@ -1231,7 +1297,7 @@ trait= chest_pain
 	name = "Álvaro" #Killed by Lousville in the conquest of Mérida
 	female=no
 	dynasty=5200037 #de Montejo
-	culture=neomexicano
+	culture=mediterranean
 	religion=cristo_rey
 	martial=9
 	diplomacy=4
@@ -1252,6 +1318,119 @@ trait= chest_pain
 		death_reason=death_battle_duel
 			killer= 1650085
 		}
+	}
+}
+
+####Ancona Dynasty
+1431140= { #Current head
+	name = "Antonio"
+	female=no
+	dynasty=5200000 #Ancona
+	culture=yucatanense
+	religion=sacred_heart
+	mother = 1431141
+	father = 1431143
+	give_nickname = nick_the_old
+   	2579.4.3={
+		birth=yes
+	}
+	2625.1.1 = {
+		add_spouse = 	1431141
+	}
+	2670.2.1={
+		death =  yes
+	}
+}
+1431141= {
+	name = "Antonia"
+	female=yes
+	dynasty=5200088 #Albertos wife of Eligio Ancona
+	culture=yucatanense
+	religion=sacred_heart
+	martial=6
+	diplomacy=7
+	stewardship=7
+	intrigue=5
+	learning=8
+	trait=grey_eminence
+	trait=poet
+	trait=erudite
+	trait=patient
+	trait=just
+	father = 1431223
+   	2560.4.3={
+		birth=yes
+	}
+	2575.1.1 = {
+		add_spouse = 	1431143
+		religion = cristo_rey
+	}	
+	2645.2.1={
+		death =  yes
+	}
+}	
+1431142= {
+	name = "Enrique"
+	female=no
+	dynasty=5200000 #Ancona
+	culture=yucatanense
+	religion=reformista
+	learning = 7
+	trait = martial_cleric
+	trait=erudite
+	father = 1431140
+   	2633.4.30={
+		birth=yes
+	}
+	2690.2.1={
+		death =  yes
+	}
+}
+1431143= { #El Benemérito
+	name = "Eligio"
+	female=no
+	dynasty=5200000 #Ancona
+	culture=yucatanense
+	religion=sacred_heart
+	martial=6
+	diplomacy=7
+	stewardship=7
+	intrigue=5
+	learning=8
+	trait=grey_eminence
+	trait=poet
+	trait=erudite
+	trait=patient
+	trait=just
+	trait = chaste
+   	2529.4.3={
+		birth=yes
+	}
+	2575.1.1 = {
+		add_spouse = 	1431141
+	}	
+	2590.2.1={
+		death = {
+			death_reason = death_murder
+			killer = 1650070 #Israel Salazar
+		}
+	}		
+}
+1431144= {
+	name = "Enriqueta"
+	female=yes
+#	dynasty=5200000 #Ancona
+	culture=yucatanense
+	religion=reformista
+	learning = 7
+	trait = martial_cleric
+	trait=erudite
+	father = 1431140
+   	2638.11.9={
+		birth=yes
+	}
+	2690.2.1={
+		death =  yes
 	}
 }
 #Campeche Republic
@@ -1415,7 +1594,7 @@ trait= chest_pain
 	name = "Otón" #Sotomayor Comisar of Yucatan, sent during the reign of
 	female=no
 	dynasty=5001139 #Sotomayor
-	culture=neomexicano
+	culture=mediterranean
 	religion=cristo_rey
 	martial=8
 	trait=martial_cleric
@@ -1882,7 +2061,7 @@ trait= chest_pain
 	name = "Pulqueria"
 	dynasty = 5001139 #Daughter of Otón Sotomayor, Comissar of Yucatan
 	female=yes
-	culture=neomexicano
+	culture=mediterranean
 	religion=cristo_rey
 	trait=devout
 	trait=patient
@@ -1915,7 +2094,7 @@ trait= chest_pain
 	name = "Cornelia"
 	dynasty = 5001139 #2nd Daughter of Otón Sotomayor, Comissar of Yucatan
 	female=yes
-	culture=neomexicano
+	culture=mediterranean
 	religion=cristo_rey
 	trait=devout
 	trait=patient
@@ -1940,7 +2119,7 @@ trait= chest_pain
 1431237 = {
 	name = "Otón"
 	dynasty = 5200112 #Primicio of Chetumal
-	culture=neomexicano
+	culture=mediterranean
 	religion=cristo_rey
 	trait=strong
 	trait=zealous
@@ -2056,7 +2235,6 @@ trait= chest_pain
 	trait=content
 	trait=patient
 	trait=devout
-	father=1431237
 	2595.7.3={birth=yes}
 	2675.1.1={death=yes}
 }
@@ -2069,6 +2247,34 @@ trait= chest_pain
 	mother=1431264 #Olivia Rojo
 	2652.1.1={birth=yes}
 	2720.1.1={death=yes}
+}
+1431246 = {
+	name = "Manuel" 
+	female=no
+	dynasty = 5200088 #Albertos
+	culture=yucatanense
+	religion=sacred_heart
+	father = 1431244 #Eliseo Albertos
+	diplomacy = 8
+	trait=content
+	trait=patient
+	trait=devout
+	2622.12.3={birth=yes}
+	2695.1.1={death=yes}
+}
+1431247 = {
+	name = "Francisco" 
+	female=no
+	dynasty = 5200088 #Albertos
+	culture=yucatanense
+	religion=sacred_heart
+	father = 1431244 #Eliseo Albertos
+	diplomacy = 8
+	trait=content
+	trait=patient
+	trait=devout
+	2625.11.5={birth=yes}
+	2699.1.1={death=yes}
 }
 #Chilango adventurer from Pachuca founder of the Rojo dynasty in Chetumal
 1431260 = {
@@ -2157,6 +2363,8 @@ trait= chest_pain
 	trait = wroth
 	2635.1.20 = {birth=yes	}
 }
+
+###Palazuelos family
 1431270 = { #El Diamante Negro
 	name = "Roberto"
 	dynasty = 5001361 #Palazuelos
@@ -2171,6 +2379,82 @@ trait= chest_pain
 	trait = gregarious
 	2637.1.31 = {birth=yes	}
 	2700.1.1 = {death=yes}
+}
+
+
+##Eligio Patrician family in Quintana Roo
+1431300 = { 
+	name="Quinto"
+	dynasty=1546092
+	culture= mediterranean
+	religion=cristo_rey
+	2587.10.12={birth=yes
+	culture = yucatanense
+	}
+	2679.5.30={death=yes}
+}
+1431301 = { 
+	name="María"
+	female = yes
+	culture= mediterranean
+	religion=cristo_rey
+	2592.1.12={birth=yes
+	culture = yucatanense
+	}
+	2620.1.13 = { add_spouse = 1431100 }
+	2660.5.30={death=yes}
+}
+1431302 = { 
+	name="Tomás"
+	dynasty=1546092
+	culture= mediterranean
+	religion=cristo_rey
+	father = 1431300
+	mother = 1431301
+	trait = scholarly_theologian
+	trait = devout
+	2625.1.12={birth=yes
+	culture = yucatanense
+	}
+	2679.5.30={death=yes}
+}
+1431303 = { 
+	name="José"
+	dynasty=1546092
+	culture= mediterranean
+	religion=cristo_rey
+	father = 1670006
+	mother = 1431305
+	2648.12.12={birth=yes
+	culture = yucatanense
+	}
+	2900.5.30={death=yes}
+}
+1431304 = { 
+	name="Matías"
+	dynasty=1546092
+	culture= mediterranean
+	religion=cristo_rey
+	father = 1670006
+	mother = 1431105
+	2653.1.18={birth=yes
+	culture = yucatanense
+	}
+	2900.5.30={death=yes}
+}
+1431305 = { 
+	name="Leona"
+	female = yes
+#	dynasty=1546092
+	culture= chilango
+	religion=cristo_rey
+	trait = grey_eminence
+	trait = sturdy
+	2627.1.18={birth=yes
+	culture = yucatanense
+	}
+	2647.1.1 = {add_spouse = 1670006}
+	2900.5.30={death=yes}
 }
 
 ###### MAYAN STRONG DUKES WHICH HAVE TO RESIST THE YUCATECAN CONQUEST OF THEIR TERRITORIES. THEY'RE BASED ON THE CACIQUES
@@ -4031,7 +4315,7 @@ religion=moravian
 }
 1438260 = {
 name="Elías" #Lord of San Vicente
-culture=neomexicano
+culture=mediterranean
 religion=purificador
 2635.5.20={birth=yes
 			culture = trifinio
@@ -4113,7 +4397,7 @@ trait = sympathy_mesoamerican_gods
 name="Henry" 
 female = no
 dynasty = 4600139
-culture=neomexicano
+culture=mediterranean
 religion=moravian
 2635.3.31={birth=yes
 	culture = kriol}

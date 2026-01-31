@@ -133,17 +133,17 @@ nick_el_guero = {
 		}
 	}
 	chance = {
-		factor = 1500
+		factor = 100
 		modifier =	{
-			factor = 0.5
+			factor = 100
 			culture = menomex
 		}
 		modifier = {
-			factor = 1.5
+			factor = 100
 			culture_group = norteno
 		}
 		modifier = {
-			factor = 0.2
+			factor = 100
 			is_playable = no
 		}
 	}
@@ -170,17 +170,17 @@ nick_la_guera = {
 		}
 	}
 	chance = {
-		factor = 1200
+		factor = 100
 		modifier =	{
-			factor = 0.5
+			factor = 100
 			culture = menomex
 		}
 		modifier = {
-			factor = 1500
+			factor = 100
 			culture_group = norteno
 		}
 		modifier ={
-			factor = 0.2
+			factor = 100
 			is_playable = no
 		}
 	}
@@ -203,7 +203,7 @@ nick_el_rotoplas = {
 	chance = {
 		factor = 1
 		modifier = {
-			factor 1.5
+			factor = 1.5
 			OR = {
 			trait = hedonist
 			trait = gluttonous

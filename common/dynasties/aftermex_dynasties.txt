@@ -1744,7 +1744,7 @@ coat_of_arms = {
 5001356 = { name = "Colón" culture = tapatio}
 5001357 = { name = "Soto" culture = tapatio}
 5001358 = { name = "Guerrero" culture = tapatio}
-5001359 = { name = "Arteaga" culture = calentano
+5001359 = { name = "Cayetano" culture = calentano
             coat_of_arms = {
 		religion = mictlantec
         template = 0
@@ -1904,6 +1904,33 @@ coat_of_arms = {
 
 5100157 = { name="Ngoy" culture=towner }
 
+5199999 = { name = "Salazar Blanco" culture = yucatanense 
+            coat_of_arms = {
+		religion = mictlantec
+        template = 0
+        layer = {
+            texture = 4
+            texture_internal = 3
+            emblem = 0
+            color = 0
+            color = 0
+            color = 0
+        }
+	}
+}
+5200000 = { name = "Ancona" culture = yucatanense 
+			coat_of_arms = {
+		template = 0
+		layer = {
+			texture = 12
+			texture_internal = 49
+			emblem = 0
+			color = 0
+			color = 0
+			color = 0
+		}
+	} 
+}
 #### Mayan surnames
 5200001 = { name="Aban" culture=yucatanense } #Scrub
 5200002 = { name="Ac" culture=yucatanense } #Turtle
@@ -2086,7 +2113,7 @@ coat_of_arms = {
 5200097 = { name="Cepeda Peraza" culture=yucatanense }
 5200098 = { name="Rosado" culture=yucatanense }
 5200099 = { name="Cicerol" culture=yucatanense }
-5200100 = { name="León Marín" culture=yucatanense }
+5200100 = { name="Castillo" culture=yucatanense }
 5200101 = { name="Zoreda" culture=yucatanense }
 5200102 = { name="Triay" culture=yucatanense 		
 			coat_of_arms = {
@@ -2117,7 +2144,7 @@ coat_of_arms = {
 		}
 }
 5200105 = { name="Luna" culture=yucatanense}
-5200106 = { name="Leon y Marín" culture=yucatanense 
+5200106 = { name="León y Marín" culture=yucatanense 
 		coat_of_arms = {
 				religion = sacred_heart
         template = 0
@@ -2168,16 +2195,17 @@ coat_of_arms = {
 5200109 = {name="Luna Kan" culture=yucatanense} #CoA Moon and Snake
 5200110 = {name="Piña" culture=yucatanense}
 5200111 = {name="Chan Piña" culture=yucatanense
-	coat_of_arms = {
-		template = 0
-		layer = {
-			texture = 11
-			texture_internal = 34
-			emblem = 0
-			color = 0
-			color = 0
-			color = 0
-		}
+            coat_of_arms = {
+		religion = mictlantec
+        template = 0
+        layer = {
+            texture = 4
+            texture_internal = 2
+            emblem = 0
+            color = 0
+            color = 0
+            color = 0
+        }
 	}
 }
 5200112 = {name="Blanco" culture =yucatanense
@@ -2208,9 +2236,9 @@ coat_of_arms = {
 			}
 		}
 	}
-5200116 = {name="de Cancún" culture=yucatanense} #For the mythical goddess founder of the republic
-5200117 = {name="de Mérida" culture=yucatanense} #For the mythical goddess founder of the republic
-5200118 = {name="de Chetumal" culture = yucatanense} #For the mythical goddess founder of the republic
+5200116 = {name="de Cancún" culture=yucatanense used_for_random = no} #For the mythical goddess founder of the republic
+5200117 = {name="de Mérida" culture=yucatanense used_for_random = no} #For the mythical goddess founder of the republic
+5200118 = {name="de Chetumal" culture = yucatanense used_for_random = no} #For the mythical goddess founder of the republic
 5200119 = {name="Imán" culture = yucatanense
 		coat_of_arms = {
 		template = 0
@@ -2224,6 +2252,7 @@ coat_of_arms = {
 			}
 		}
 }
+
 5200120 = {name="Candameña" culture = raramuri} #From the Leyenda of Basaseachi
 
 5200200 = {name="Chanona" culture=choco}

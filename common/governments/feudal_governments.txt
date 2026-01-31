@@ -1058,7 +1058,7 @@ feudal_governments = {
 			 FORT
 			 HOSPITAL
 			 TEMPLE
-			 CITY
+			 #CITY
 		 }
 		allowed_holdings_culture = { # Will not get the wrong government type penalty for tribes of the same culture
 			TRIBAL
@@ -1133,7 +1133,7 @@ feudal_governments = {
 		 gets_religion_opinion_penalties = no
 		 can_demand_religious_conversion = no
 		 gives_religion_opinion_penalties = no
-		 demesne_size = 2
+		 demesne_size = -2
 		
 		can_build_tribal = no
 		
